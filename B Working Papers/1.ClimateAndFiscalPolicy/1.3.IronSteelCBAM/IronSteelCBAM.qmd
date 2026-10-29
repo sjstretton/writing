@@ -138,7 +138,7 @@ r_{c,s} = p_{c,s} + \rho\,\big(t^{\mathrm{sig}}_{c,s} - p_{c,s}\big)^{+},
 $$ {#eq-liability}
 *where $\hat e$ is embodied carbon measured at the country-sector average $\bar e_{c,s}$ without mark-up (or at a firm's verified whole-output intensity under @sec-tradeoff), $p_{c,s}$ the sector's average price paid, $t^{\mathrm{sig}}_{c,s}$ its price signal and $\rho \in [0,1]$ the recognition weight on the unpaid part of the signal.* In certificates, the declarant surrenders $(1 - r_{c,s}/\tau)^{+}\hat e$ per tonne, which is how the draft regulation already converts a price paid into fewer certificates [@EU2026DraftCarbonPrice, Art. 6].
 
-The formula nests the current rule and the brief's proposal. With $\rho = 0$, recognition is the price paid, applied at country-sector level. With $\rho = 1$, it is the full signal, $(\tau - t^{\mathrm{sig}})^{+}\bar e_{c,s}$. For a flat tax $p = t^{\mathrm{sig}}$ and $\rho$ is irrelevant, so countries with explicit, unrebated carbon taxes are treated exactly as now. Only instruments whose signal exceeds their average payment, feebates, output-based rebating, tradable performance standards, gain.
+The formula nests the current rule and the brief's proposal. With $\rho = 0$, recognition is the price paid, applied at country-sector level. With $\rho = 1$, it is the full signal, $(\tau - t^{\mathrm{sig}})^{+}\bar e_{c,s}$. For a flat tax $p = t^{\mathrm{sig}}$ and $\rho$ is irrelevant, so countries with explicit, unrebated carbon taxes receive the same credit as now. Only instruments whose signal exceeds their average payment, feebates, output-based rebating, tradable performance standards, gain.
 
 **Proposition 5 (signal recognition).** *Under @eq-liability:*
 
