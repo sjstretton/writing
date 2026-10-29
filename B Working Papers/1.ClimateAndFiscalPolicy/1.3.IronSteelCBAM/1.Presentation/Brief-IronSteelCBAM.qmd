@@ -22,7 +22,7 @@ format:
 
 **The problem.** From 2026 the EU's Carbon Border Adjustment Mechanism (CBAM) charges importers of steel, aluminum, cement, fertilizers, hydrogen and electricity for the carbon embodied in what they buy. The charge falls by any carbon price the exporter has "effectively paid", net of rebates, plant by plant. That rule is right for its first purpose, stopping the same tonne being priced twice. It fails the second, encouraging trading partners to decarbonize, in two ways.
 
-**Recognition.** Most developing countries price carbon, if at all, through fuel taxes, subsidy reform or rebated schemes. None of these leaves a certified payment on an export consignment, so all of them earn nothing. A revenue-neutral feebate is the clearest case: it charges every tonne of emissions above a sector benchmark at the full rate, yet the average producer pays zero net. The Commission's default carbon price, the only route most exporters can reach, still has no published methodology.
+**Recognition.** Most developing countries price carbon, if at all, through fuel taxes, subsidy reform or rebated schemes. None of these leaves a certified payment on an export consignment, so all of them earn nothing. A revenue-neutral feebate is the clearest case: it charges every tonne of emissions above a sector benchmark at the full rate, yet the average producer pays zero net. The Commission's default carbon price, the only route most exporters can reach, has no published criteria and has not been consulted on.
 
 **Shuffling.** A steelmaker with blast furnaces and scrap-fed electric arc furnaces can send the scrap-based steel to the EU and sell the rest at home or in third markets. In this brief's stylized case, emissions reported on EU-bound steel fall by 76 percent and the CBAM bill by €102 million a year, while the exporter's emissions do not change. Aluminum made from scrap allows the same move.
 
@@ -50,7 +50,7 @@ The mechanism rests on two measurements: embodied carbon, from verified plant da
 
 # Four gaps in recognition
 
-**First, the default carbon price has no published methodology.** For a country whose instrument generates no certifiable payment, the default is the only route, and without a stated rule it is effectively zero. That is a policy choice made without being stated [@Stretton2026Submission].
+**First, the default carbon price has no published criteria.** For a country whose instrument generates no certifiable payment, the default is the only route, and without a stated rule it is effectively zero. That is a policy choice made without being stated [@Stretton2026Submission].
 
 **Second, implicit carbon pricing is invisible.** Fuel excises above efficient levels, the removal of fossil fuel subsidies and administered energy price reform all raise the cost of carbon-intensive production in proportion to emissions. None is a "carbon price" under the Regulation unless it is levied on greenhouse gases as such. Implicit prices are negative where fuel is subsidized, so a country reforming subsidies bears real costs the framework cannot see. Measures exist: the World Bank's total carbon price combines explicit prices with fuel taxes net of subsidies [@Agnolucci2024], the IMF estimates subsidies against efficient fuel prices [@Black2023], and the OECD publishes effective carbon rates by country and sector [@OECD2023].
 
@@ -87,7 +87,7 @@ Shuffling cuts the charge by €102 million while emissions stay at 16.8 MtCO₂
 
 # One fix for both: measure the price signal by country and sector
 
-**Recognize the relative carbon price alongside the price paid.** Keep the price paid as the basis of the Article 9 deduction, which prevents double charging, and add the sector-wide price signal to the default carbon price. The TECP gives the method: it expresses any instrument, a tax, feebate, subsidy reform, performance standard or obligation, as the uniform carbon tax that would cut emissions by as much [@CFPB17].
+**Recognize the relative carbon price alongside the price paid.** Keep the price paid as the basis of the Article 9 deduction, which prevents double charging, and add the sector-wide price signal to the default carbon price. The TECP gives the method: it expresses any instrument, a tax, feebate, subsidy reform, performance standard or obligation, as the uniform carbon tax that would cut emissions by as much [@CFPB17]. Recognition on this basis credits the emission effect of the foreign policy, not its cost to firms: a standard usually costs producers less than a tax with the same equivalent, so the two should not be read as equal competitive burdens.
 
 **Offer non-punitive defaults to exporters with a sector-wide signal.** The submission's central proposal is a third route between plant data and punitive defaults: country-level default values without the mark-up, available where the exporting country runs a domestic relative carbon price in the sector [@Stretton2026Submission]. Credit would follow the additional costs the instrument imposes on producers, not only its net revenue, which lets a country rebate output. Every tonne from the country is then charged at the sector average, so routing earns nothing (Table 1), while the domestic feebate gives every plant the full incentive; the exporter's best feebate rate rises with the importer's charge [@CFPB11].
 

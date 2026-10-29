@@ -1,0 +1,82 @@
+Area,ISO 3 code,Year,Category,Variable,Unit,Value
+India,IND,2024,Capacity,Bioenergy,GW,10.93
+India,IND,2024,Capacity,Coal,GW,241.49
+India,IND,2024,Capacity,Gas,GW,31.32
+India,IND,2024,Capacity,Hydro,GW,47.51
+India,IND,2024,Capacity,Nuclear,GW,8.18
+India,IND,2024,Capacity,Other Fossil,GW,19.2
+India,IND,2024,Capacity,Solar,GW,98.48
+India,IND,2024,Capacity,Wind,GW,48.16
+India,IND,2024,Electricity generation,Bioenergy,TWh,22.25
+India,IND,2024,Electricity generation,Coal,TWh,1517.9
+India,IND,2024,Electricity generation,Gas,TWh,56.44
+India,IND,2024,Electricity generation,Hydro,TWh,156.53
+India,IND,2024,Electricity generation,Nuclear,TWh,54.7
+India,IND,2024,Electricity generation,Other Fossil,TWh,4.09
+India,IND,2024,Electricity generation,Solar,TWh,143.07
+India,IND,2024,Electricity generation,Wind,TWh,81.54
+India,IND,2024,Electricity generation,Total Generation,TWh,2036.52
+India,IND,2024,Power sector emissions,CO2 intensity,gCO2/kWh,706.67
+India,IND,2024,Power sector emissions,Bioenergy,mtCO2,4.81
+India,IND,2024,Power sector emissions,Coal,mtCO2,1380.38
+India,IND,2024,Power sector emissions,Gas,mtCO2,39.12
+India,IND,2024,Power sector emissions,Hydro,mtCO2,3.72
+India,IND,2024,Power sector emissions,Nuclear,mtCO2,0.32
+India,IND,2024,Power sector emissions,Other Fossil,mtCO2,2.69
+India,IND,2024,Power sector emissions,Solar,mtCO2,6.8
+India,IND,2024,Power sector emissions,Wind,mtCO2,1.31
+India,IND,2024,Power sector emissions,Total emissions,mtCO2,1439.15
+Indonesia,IDN,2024,Capacity,Bioenergy,GW,3.06
+Indonesia,IDN,2024,Capacity,Coal,GW,56.69
+Indonesia,IDN,2024,Capacity,Gas,GW,23.58
+Indonesia,IDN,2024,Capacity,Hydro,GW,7.05
+Indonesia,IDN,2024,Capacity,Other Fossil,GW,5.84
+Indonesia,IDN,2024,Capacity,Other Renewables,GW,0.02
+Indonesia,IDN,2024,Capacity,Solar,GW,0.94
+Indonesia,IDN,2024,Capacity,Wind,GW,0.15
+Indonesia,IDN,2024,Electricity generation,Bioenergy,TWh,21.33
+Indonesia,IDN,2024,Electricity generation,Coal,TWh,228.43
+Indonesia,IDN,2024,Electricity generation,Gas,TWh,68.78
+Indonesia,IDN,2024,Electricity generation,Hydro,TWh,27.29
+Indonesia,IDN,2024,Electricity generation,Other Fossil,TWh,7.12
+Indonesia,IDN,2024,Electricity generation,Other Renewables,TWh,16.77
+Indonesia,IDN,2024,Electricity generation,Solar,TWh,1.35
+Indonesia,IDN,2024,Electricity generation,Wind,TWh,0.47
+Indonesia,IDN,2024,Electricity generation,Total Generation,TWh,371.54
+Indonesia,IDN,2024,Power sector emissions,CO2 intensity,gCO2/kWh,681.11
+Indonesia,IDN,2024,Power sector emissions,Bioenergy,mtCO2,4.61
+Indonesia,IDN,2024,Power sector emissions,Coal,mtCO2,194.0
+Indonesia,IDN,2024,Power sector emissions,Gas,mtCO2,48.42
+Indonesia,IDN,2024,Power sector emissions,Hydro,mtCO2,0.65
+Indonesia,IDN,2024,Power sector emissions,Other Fossil,mtCO2,4.68
+Indonesia,IDN,2024,Power sector emissions,Other Renewables,mtCO2,0.63
+Indonesia,IDN,2024,Power sector emissions,Solar,mtCO2,0.06
+Indonesia,IDN,2024,Power sector emissions,Wind,mtCO2,0.01
+Indonesia,IDN,2024,Power sector emissions,Total emissions,mtCO2,253.06
+South Africa,ZAF,2024,Capacity,Bioenergy,GW,0.26
+South Africa,ZAF,2024,Capacity,Coal,GW,46.69
+South Africa,ZAF,2024,Capacity,Gas,GW,1.29
+South Africa,ZAF,2024,Capacity,Hydro,GW,0.75
+South Africa,ZAF,2024,Capacity,Nuclear,GW,1.93
+South Africa,ZAF,2024,Capacity,Other Fossil,GW,2.42
+South Africa,ZAF,2024,Capacity,Solar,GW,9.06
+South Africa,ZAF,2024,Capacity,Wind,GW,3.44
+South Africa,ZAF,2024,Electricity generation,Bioenergy,TWh,0.47
+South Africa,ZAF,2024,Electricity generation,Coal,TWh,206.81
+South Africa,ZAF,2024,Electricity generation,Gas,TWh,0.0
+South Africa,ZAF,2024,Electricity generation,Hydro,TWh,1.1
+South Africa,ZAF,2024,Electricity generation,Nuclear,TWh,7.8
+South Africa,ZAF,2024,Electricity generation,Other Fossil,TWh,1.94
+South Africa,ZAF,2024,Electricity generation,Solar,TWh,18.3
+South Africa,ZAF,2024,Electricity generation,Wind,TWh,11.1
+South Africa,ZAF,2024,Electricity generation,Total Generation,TWh,247.52
+South Africa,ZAF,2024,Power sector emissions,CO2 intensity,gCO2/kWh,717.72
+South Africa,ZAF,2024,Power sector emissions,Bioenergy,mtCO2,0.1
+South Africa,ZAF,2024,Power sector emissions,Coal,mtCO2,175.22
+South Africa,ZAF,2024,Power sector emissions,Gas,mtCO2,0.0
+South Africa,ZAF,2024,Power sector emissions,Hydro,mtCO2,0.03
+South Africa,ZAF,2024,Power sector emissions,Nuclear,mtCO2,0.04
+South Africa,ZAF,2024,Power sector emissions,Other Fossil,mtCO2,1.28
+South Africa,ZAF,2024,Power sector emissions,Solar,mtCO2,0.87
+South Africa,ZAF,2024,Power sector emissions,Wind,mtCO2,0.11
+South Africa,ZAF,2024,Power sector emissions,Total emissions,mtCO2,177.65

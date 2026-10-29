@@ -36,7 +36,7 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 CACHE = Path(os.environ.get("CCT_CACHE", Path.home() / ".cache" / "cct_figaro"))
-YEAR = "2022"
+YEAR = os.environ.get("CCT_YEAR", "2022")
 API = "https://ec.europa.eu/eurostat/api/dissemination"
 EU27 = ["AT", "BE", "BG", "CY", "CZ", "DE", "DK", "EE", "EL", "ES", "FI", "FR",
         "HR", "HU", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "PL", "PT", "RO",
@@ -195,7 +195,7 @@ def main():
                   f"total {em[('WORLD', 'TOTAL')]/1e6:.2f} Gt")
         # multipliers: m = s (I - A)^-1  <=>  (I - A)^T m^T = s^T
         m = np.linalg.solve((np.eye(N) - A).T, s)
-        results[gas] = (m, f.sum())
+        results[gas] = (m, f.sum(), s)
 
     # EU-27 final demand by origin-product
     eu = fd[fd.dest.isin(EU27)]
@@ -246,10 +246,61 @@ def main():
         row["import_share"] = spend_x / spend
         cat_rows.append(row)
     cats = pd.DataFrame(cat_rows)
+    # Purchasers' prices (excluding taxes on products): spread household
+    # purchases of trade services (G45-G47, i.e. trade margins) over goods
+    # categories in proportion to their basic-price value.
+    goods = cats.cpa.str.split().apply(lambda cs: all(c[0] in "ABC" for c in cs))
+    trade = cats.category == "Wholesale and retail trade services"
+    mu = float(cats.loc[trade, "hh_spend_beur"].iloc[0] / cats.loc[goods, "hh_spend_beur"].sum())
+    print(f"trade-margin ratio on goods (margin / basic value): {mu:.3f}")
+    for gas in ("ghg", "co2"):
+        e_tr = float(cats.loc[trade, f"{gas}_all"].iloc[0])
+        cats[f"{gas}_purchasers"] = np.where(goods, (cats[f"{gas}_all"] + mu * e_tr) / (1 + mu),
+                                             cats[f"{gas}_all"])
+    cats["margin_ratio"] = np.where(goods, mu, 0.0)
     used = set(sum((c for _, c, _ in CATEGORIES), []))
     missing = [p for p in products if p.replace("CPA_", "") not in used]
     assert not missing, missing
     cats.to_csv(HERE / "defaults_by_category.csv", index=False, float_format="%.4f")
+
+    # Where the emissions embodied in taxable household demand occur.
+    taxable_mask = np.isin(prod_of, ["CPA_" + c for n, cs, v in CATEGORIES if v == "taxable" for c in cs])
+    ets_like = {"D35", "C17", "C19", "C20", "C23", "C24"}
+    src_rows = []
+    for gas in ("ghg", "co2"):
+        s_vec = results[gas][2]
+        y = g["hh"] * taxable_mask
+        out = np.linalg.solve(np.eye(N) - A, y)      # output required, by origin-product
+        em_src = s_vec * out                           # emissions by origin-product
+        tot = em_src.sum()
+        prod_short = np.array([q.replace("CPA_", "") for q in prod_of])
+        is_eu = origin_group == "EU"
+        groups = {
+            "EU power and energy-intensive industry (D35, C17, C19, C20, C23, C24)":
+                is_eu & np.isin(prod_short, list(ets_like)),
+            "EU agriculture (A01-A03)": is_eu & np.isin(prod_short, ["A01", "A02", "A03"]),
+            "EU other industries and services": is_eu & ~np.isin(prod_short, list(ets_like) + ["A01", "A02", "A03"]),
+            "Outside the EU": ~is_eu,
+        }
+        for k, msk in groups.items():
+            src_rows.append({"gas": gas, "source": k, "mt": em_src[msk].sum() / 1000,
+                             "share": em_src[msk].sum() / tot})
+        if gas == "ghg":
+            # share of each category's footprint emitted by EU power and
+            # energy-intensive industry (the ETS-type share), for deductions
+            ets_mask = is_eu & np.isin(prod_short, list(ets_like))
+            shares = []
+            for name, codes, vat in CATEGORIES:
+                cm = np.isin(prod_of, ["CPA_" + c for c in codes])
+                yc = g["hh"] * cm
+                oc = np.linalg.solve(np.eye(N) - A, yc)
+                ec = s_vec * oc
+                shares.append(ec[ets_mask].sum() / ec.sum() if ec.sum() > 0 else np.nan)
+            cats["ghg_ets_share"] = shares
+            cats.to_csv(HERE / "defaults_by_category.csv", index=False, float_format="%.4f")
+    src = pd.DataFrame(src_rows)
+    src.to_csv(HERE / "footprint_sources.csv", index=False, float_format="%.4f")
+    print(src.round(3).to_string())
 
     # basket summaries
     taxable = np.isin(prod_of, ["CPA_" + c for n, cs, v in CATEGORIES if v == "taxable" for c in cs])

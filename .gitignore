@@ -10,9 +10,9 @@ Thumbs.db
 **/*.quarto_ipynb
 
 # Written by the scripts on every run - regenerated, never edited by hand
-A Writing/9.Scripts/Reports/
-A Writing/9.Scripts/_Deleted/
-A Writing/_Purged/
+B Working Papers/8.Scripts/Reports/
+B Working Papers/8.Scripts/_Deleted/
+B Working Papers/_Purged/
 
 # Credentials. Never commit these. deploy.bat reads the FTP login from _ftp.txt.
 B Working Papers/8.Scripts/Reference/_ftp.txt
