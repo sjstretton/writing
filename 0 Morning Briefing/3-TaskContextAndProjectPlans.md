@@ -4,7 +4,7 @@ Text copy of the **Context** tab of the master Google Sheet (the master). Rules:
 
 The printable tracker (`Me-Printable-Tracker.docx`, in this folder) is built from this file: run `python3 Scripts/update.py build`. The Context, Plan and list tabs of the Sheet are kept in step by `Scripts/update.py` (`NORMS.md`, "Keeping everything consistent").
 
-Last reviewed: Thu 29 Oct 2026, 4:30pm (Philippines, after checkout). Open task points: 4,000.
+Last reviewed: Thu 29 Oct 2026, 4:30pm (Philippines, after checkout). Open task points: 4,600.
 
 **Points.** Task 100 (quick) or 200. Milestone 1000 when complete. Kriya 10 x current streak (days), daily. CPAP 1 per minute. Gym session 100. Daily points live on the Tracker tab.
 **Key.** Energy needed: H/M/L. Q: Q1 Do now, Q2 Schedule, Q3 Batch or delegate, Q4 Not now. %: progress on the milestone (estimate).
@@ -25,7 +25,7 @@ Last reviewed: Thu 29 Oct 2026, 4:30pm (Philippines, after checkout). Open task 
 | T24 | Warm up the programme: read the Energy GP papers | 200 | M | Q2 | Open | 0% | 3c_m1 | Where: at a desk or on the plane. This week, light: skim the Energy GP papers; note 3 lines on where CPAT could help |
 | T25 | Read Klaus's paper (maybe) | 100 | L | Q3 | Open | 0% | S_m1 | Where: anywhere, offline. Optional this week: read it; note one idea worth following up (links to parked P11) |
 | T26 | OECP paper proposal: improve it with AI | 200 | M | Q2 | Open | 0% | P_m1 | The paper for the work programme is Open Economy Carbon Pricing (OECP), for Climate Policy. Run AI over the proposal: tighten the question, contribution and method. Low priority, in parallel (the PhD first): this week and next, due the week of 9 Nov (Fri 13 Nov), as on Track 2. Other proposals later (T06, parked P10) |
-| T27 | Submit my work programme (WPA) | 200 | L | Q1 | Open | 90% | PR8 | Already written (Stephen, 29 Oct): it only needs submitting. Submit it the week of 2 Nov, back at work (about 5 minutes). The paper proposal (T26) follows later |
+| T27 | Submit my work programme (WPA) and invoices | 200 | L | Q1 | Open | 90% | PR8 | Already written (Stephen, 29 Oct): it only needs submitting. Submit it the week of 2 Nov, back at work (about 5 minutes). Send the invoices the same week (Track 2, C8). The paper proposal (T26) follows later |
 | T37 | Edmundo: next steps after the meeting | 100 | L | Q2 | Open | 0% | PR2 | After the trip: check Edmundo has run the CPAT copy; agree the next integration date (meeting notes in CPAT-CDPM) |
 | T41 | Decide the plan for the beach | 100 | M | Q1 | Open | 0% | PR6 | Where: phone. Sun 25 Oct: pick where, the dates (holiday 26 Oct - 1 Nov), transport and a place to stay; book Mon 26 |
 | T42 | Writing in good order: act on the writing status report | 200 | M | Q2 | Open | 0% | P_m1 | Where: at a desk. Read writing/Writing-Status-Report.md (AI, 29 Oct): paper inventory, housekeeping fixes, the paper closest to a journal and candidate journals; pick the journal paper; then fix the repo README folder names |
@@ -38,6 +38,10 @@ Last reviewed: Thu 29 Oct 2026, 4:30pm (Philippines, after checkout). Open task 
 | T50 | MFMod: set up a meeting with the MFMod team | 100 | L | Q2 | Open | 0% | 2b_m2 | Where: phone or email. MFMod is in (29 Oct); the next step is a meeting with the MFMod team: propose two times and hold the meeting by end Nov (Fri 27 Nov); agree how MFMod is added to FTT by mid Feb (Fri 12 Feb) |
 | T52 | Single Python platform: agree the spec | 200 | H | Q2 | Open | 0% | PR1 | Where: with the team (a team meeting topic). Agree one spec for the single Python platform by end Nov (Fri 27 Nov) for fiscal policy (AI tools + Python): which models (CPAT mitigation, FTT, MFMod, CDPM, macro-fiscal), one repo, one interface, one set of instructions. Blurb in Team meeting topics; related: parked P01 |
 | T53 | CPAT-LTS: write the methodology document | 200 | M | Q2 | Open | 0% | 2e_m2 | Where: at a desk or an AI all-day task (T48). A methodology document for the limited-scope close of CPAT-LTS: macro-fiscal projections, public investment and derisking, planning policies, CBAM and process emissions in CPAT. Draws on the macro-fiscal prototype (DIGNAR modelling in AI tools). Agree the outline with Dirk and Sebastian next week; due end Nov |
+| T54 | CPAT-LTS: updates and agreements with Klaus, Phil, Dirk and Sebastian | 200 | M | Q2 | Open | 0% | 2e_m2 | Where: email or calls, week of 2 Nov (Mon 2 - Fri 6 Nov; Track 2, C3). One short update each; agree the close-out scope and the methodology outline (T53) with Dirk and Sebastian; Phil also covers Energy GP (T49) |
+| T55 | Plan for work frameworks | 100 | M | Q3 | Open | 0% | PR8 | Where: at a desk, week of 2 Nov (Mon 2 - Fri 6 Nov; Track 2, C7). First step (15 min): write down which frameworks the plan covers (?: added on Track 2 without detail) |
+| T56 | AI safety proposal (second PhD application) | 200 | M | Q2 | Open | 0% | C9_m1 | Where: at a desk. Start now; main effort the week after the paper; deliver by Fri 20 Nov (Track 2, C9). First step: answer the open questions in C Research Proposal/3-SystemicAISafety-Outline.md (core question, angle, programmes and supervisors) by Fri 6 Nov |
+| T57 | Regular blogging, automated | 100 | L | Q3 | Open | 0% | PR4 | Where: ask AI (Track 2, C10). Brief AI once: which papers become posts, how often, and where they publish (the website, under the standing publishing rules); then it runs on its own |
 | T47 | Fun distraction: redo one paper | 200 | M | Q3 | Open | 0% | P_m1 | Where: anywhere. The allowed distraction: pick one paper and redo it (structure, framing, figures). It still moves the journal paper |
 
 ## Strategic priorities
@@ -59,6 +63,7 @@ Burndown: "Time used" is how much of the start-to-due window has passed. If "Don
 | P_m1 | Journal paper submitted | Personal | 18 Oct 26 | tbc |  | Paper: Open Economy Carbon Pricing, for the journal Climate Policy; note word limit and format; set a target date |
 | G_m1 | Girlfriend | Personal | 18 Oct 26 | tbc |  | Journal priorities; follow up; send messages |
 | C_m1 | Celebrate others: birthdays in the calendar | Personal | 18 Oct 26 | 31 Oct 26 | 0 | Add the other key birthdays |
+| C9_m1 | AI safety proposal delivered | Personal | 26 Oct 26 | 20 Nov 26 | 0 | Answer the outline's open questions by Fri 6 Nov (T56) |
 | B_m1 | Bike resolved (found or reported) | Personal | 15 Oct 26 | 6 Nov 26 | 50 | Mon 2 Nov 9am, back home: Metro Lost & Found |
 | H_m1 | Home sorted | Personal | 18 Oct 26 | tbc | 0 | One home task at a time |
 | S_m1 | Strategic positioning set | Personal | 28 Sep 26 | tbc | 10 | Sort the papers (3 weeks carried over) |
@@ -209,6 +214,7 @@ The ones that keep slipping. Each next step takes 15 minutes or less.
 | S_m1 | Strategic positioning set | 1000 | M | - | tbc | 10% | PR4 | Papers sorted; 3 lines on what I want to be known for; pitch deck updated; who backs it |
 | P_m1 | Journal paper submitted | 1000 | H | - | tbc | ? | PR5 | Which journal; what is left; submit |
 | P_m2 | PhD application submitted | 1000 | H | - | Due 31 Oct | ? | PR5 | What is left on the application; submit |
+| C9_m1 | AI safety proposal delivered | 1000 | M | - | Due 20 Nov | 0% | PR5 | Proposal 3 (systemic AI safety), the second PhD application: answer the outline's open questions, then draft about 2,500 words (T56) |
 | B_m1 | Bike resolved (found or reported) | 1000 | L | - | Due 6 Nov | 50% | PR6 | Case number from Metro, or a police report |
 | H_m1 | Home sorted | 1000 | L | - | tbc | 0% | PR6 | Wires, clothes, stationery cupboards, printouts all done |
 | G_m1 | Girlfriend | 1000 | M | - | tbc | ? | PR6 | Journal my priorities; follow up with people I know; send messages (strategic priority) |
@@ -222,7 +228,7 @@ The ones that keep slipping. Each next step takes 15 minutes or less.
 | PR2 | Applications (Obj 2) | M | Open | 2b_m1, 2c_m1, 2b_m2, 2a_m1, 2e_m2, 2d_m1 (done), 2e_m1 (done) | Apply the tools to GHG accounting, crediting, FFI, pathways and pilot countries; FTT and MFMod working. 35 days; due 20 Mar 2027 |
 | PR3 | Other tools (Obj 3) | L | Mostly done | 3c_m1 | Excise Diagnostic and Tax and Macro-Fiscal Dashboard handed to Dirk (all 4 milestones done); follow-up 8-12 Mar; Energy GP tbc |
 | PR4 | Strategic positioning | M | Open | S_m1 | What I want to be known for, and who backs it. Feeds parked P10 (papers, strategy deck) and P11 (DAIS plan) |
-| PR5 | PhD and journal paper | H | Open | P_m1, P_m2 | My PhD application and a journal paper submission. Josh is chasing |
+| PR5 | PhD and journal paper | H | Open | P_m1, P_m2, C9_m1 | My PhD applications (Oxford DPhil; then systemic AI safety) and a journal paper submission. Josh is chasing |
 | PR6 | Personal and home | L | Open | B_m1, H_m1, G_m1, C_m1 | Louise, bike, home, trip, relationship |
 | PR7 | Wellbeing (daily points) | M | Daily | Tracker tab | Kriya: 10 x current streak (days). CPAP: 1 point per minute. Gym session: 100. Logged on the Tracker tab |
 | PR8 | Admin and contract | L | Open | E_m1 | Work programme goals; payment verification; charge code TF-CSF-LTS: AA-P508228-GPLG-TF0C8701; printer: try cvv9734tpkx94@hpeprint.com, else front desk |

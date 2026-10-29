@@ -1,11 +1,11 @@
 {
  "printable": {
   "built": "2026-10-29",
-  "docx": "23722109916b0691",
-  "sources": "c867d9ad80befec5",
+  "docx": "2b5cff379203c6b6",
+  "sources": "5322a1882c5d1e2c",
   "version": "0.6"
  },
- "synced": "2026-10-29T15:07:47",
+ "synced": "2026-10-29T15:26:09",
  "units": {
   "list:anxiety + sleep protocol": "699d7fe5f886ebf8",
   "list:evening": "e08384bf2c0dffd3",
@@ -30,7 +30,7 @@
   "table:Dashboard selections": "188d15dd96e6e0d4",
   "table:Key decisions": "0cb8a7d6e87a1810",
   "table:Lists by place": "5a249c0c34594d07",
-  "table:Milestones (burndown)": "55f20d13040b9bf4",
+  "table:Milestones (burndown)": "d1e17e8f9c744bdd",
   "table:Strategic priorities": "dd95eafe9c71a42c",
   "table:Task scripts": "fcf2e82377d80e06",
   "task:1a_m1": "8232c9317341ef39",
@@ -46,6 +46,7 @@
   "task:2e_m2": "11619e8f3c9e82b9",
   "task:3c_m1": "45ce130f751164ff",
   "task:B_m1": "c8b7c8b4d92afe8b",
+  "task:C9_m1": "b1be6dbe7bde23c8",
   "task:C_m1": "3dc27233968687b1",
   "task:E_m1": "7d17b05fd39ccd3d",
   "task:G_m1": "5cd338c8308729c4",
@@ -68,7 +69,7 @@
   "task:PR2": "efe88f3c914bd858",
   "task:PR3": "d1b19643deccb3ab",
   "task:PR4": "dea7073a09914820",
-  "task:PR5": "d55a6e77e208324f",
+  "task:PR5": "fd3681d8e59ffb1f",
   "task:PR6": "c0d2be7632af37ad",
   "task:PR7": "e3032f996f8ffd42",
   "task:PR8": "ceb90a87eeb4c546",
@@ -97,7 +98,7 @@
   "task:T24": "0b26d29806093ba9",
   "task:T25": "39545846e180b005",
   "task:T26": "1174c7c1949238f3",
-  "task:T27": "c205ff72afeadb0d",
+  "task:T27": "c783dfdfe6f5622f",
   "task:T28": "f82083fe13bdda05",
   "task:T29": "5216a452b3d0a460",
   "task:T30": "75ef956bad675f46",
@@ -122,6 +123,10 @@
   "task:T50": "40dbbdb8dd0d755c",
   "task:T51": "feb4ab2fc850867d",
   "task:T52": "573a2ca632f31570",
-  "task:T53": "c3fd53239b4a660b"
+  "task:T53": "c3fd53239b4a660b",
+  "task:T54": "95825739487980be",
+  "task:T55": "0d545905cf1046ba",
+  "task:T56": "623424b548d307bc",
+  "task:T57": "6a631f16d26d743e"
  }
 }
