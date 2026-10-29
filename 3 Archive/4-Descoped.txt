@@ -1,0 +1,72 @@
+PROJECT PLANS
+-------------
+
+Tools and Country Work
+1) Unified Platform and user guide for Python based models.
+2) Investment framework for PFRs, focus on Morocco. Four CPAT Upgrades (September)
+- Upgrade to CPAT Investment Model
+- Process emissions for carbon pricing in CPAT LTS
+3) UNFCCC: Operationalizing Climate Finance through Cost of Capital
+4) I am away in August working on research.
+
+
+CODING WORK
+Common Python Platforms
+- Requirements of Single Platform
+  a) have a single repo and 
+  b) a single set of instructions (including a preferred IDE such as Positron or VSCode) for running model; &
+  c) a user Interface for the coded-CPAT parts.
+- Models part of single platform 
+  - CPAT coded-mitigation and CPAT coded-air pollution, fully coded and integrated.
+  - FTT, with national data
+  - Sisepuede, initially only for a few countries
+  - MFMod-Python with ModelFlow.
+- To operationalize the coded conversion. That means:
+  - To integrate CPAT mitigation and air pollution
+  - To put a user interface online.
+  - A dataset for FTT so that the FTTs can be run (Zoe task)
+  - A coding of the power model.
+- Global CPAT
+  - Model of sovereign incentives. Includes three policies in power: investment contracts, public investment and feebates/OBR, plus CPAT or Sisepuede for the rest.
+- (Optional) A simplified Excel-based mitigation module consisting of price module and the main fuel use equations and (when coded) the power module.
+
+NEXT STEPS
+C1) Investigate single Python framework.
+- Check requirements for CPAT Mitigation, CPAT AP, FTT, Sisepuede, MFMod.
+- Copy the parts over
+
+C2) Reviews
+- Quick review of year to Hari and Samuel
+- Feedback to Dave.
+- Finishing CPAT-LTS
+
+
+
+A Define research proposal: core idea is a marginal abatement cost curve for policies.
+
+
+
+
+DESCOPED
+---------
+
+
+Approach Paper: An approach to fiscal and climate policy that focuses on three main constraints.
+1. Political (Domestic and International)
+2. Financial
+3. Energy System
+
+To build an approach for the LTS in terms of 'how to pay for it' (how the investment needs for energy-fiscal resilience and cost-efficiency can be built). On the policy side, a focus on targets. That means practically:
+- Integration of CCDR (and other) investment needs information into CPAT
+- Integration of fiscal space projections
+- Output reports for PFRs.
+- Small changes to the investment model
+
+DAIS Plan
+Overarching objective - move teams or move jobs.
+- Update CV; finalise pitch deck
+- Reach out to Stephane, Klaus, Jasmine
+- Reach out to contacts in Energy 
+- Drop certain papers from my portfolio and finalise the rest.
+- Concrete plan for August complete.
+- Research: Approach to Turkiye Proposal complete.

@@ -1,0 +1,65 @@
+•	Overall CI HTN structure: Similar to now, but make the deep dive chapter an expenditure deep dive and include brief contextual features.
+•	For each subquestion add/clarify:
+1.	Why is it fiscally relevant
+2.	What do we have now and what should CE do.
+3.	Limitations, where CE needs to do something.
+1. Nice graphs in R: priority CCDR and then others.
+
+
+On Scan:
+-	Presentation ideally compatible with Julio spreadsheet eg separate climate tab. (but scan is not especially high priority). Three components:
+1.	Main country scan
+2.	Good quality data we can explain
+3.	Other data
+-	Article IV appendix is relevant but only medium priority, not high.
+
+
+================
+
+Peers: What are peers in terms of population density, emissions, and development level?
+Balance: What is the balance of green vs brown expenditure/investment and resilient/non-resilient spending? 
+Allocative Efficiency: How does my spending match up to the sectoral needs (big chunks: emissions and climate and energy risks)?
+On Track: Are we on track for investment needs for paris-compliant resilient future?
+Technical Efficiency: How many outputs (investment, private, public and resilient investments) do we get given the inputs? What is the unit cost and cost of finance?
+Outcome: How do outcomes (greenness, resileince) compare with peers?
+Policy Gap: What is the overall policy gap? (Subsidy + Public Investment Gap + Private sector policy gap)
+Scenario Analysis: What is the outcome if the policy gap is overcome?
+
+
+
+
+This folder contains data organised by the core question:
+1. Raw data used in the climate scan
+2. IMF database
+Other data (often very good quality and useful, just often not yet processed) organised by question:
+MF1: Macro-fiscal Risks
+MF2: Macro-fiscal Scenarios
+CF1: Climate-fiscal Investment needs
+CF2: Policy and Institutions
+E1: Expenditure on Green and Brown
+E2: Expenditure on Resilience
+R1: Green and Brown Taxes
+R2: Impact of CC/transition on Revenue
+
+
+For reference here are the full climate-informed PFR questions
+
+Macro-fiscal:
+MF1: 1a What are the main climate-related (natural disaster and transition) and energy-related risks and what is their impact on the macro-economy and fiscal account? 1b What is the adequacy of fiscal buffers to protect against inevitable shocks?
+MF2: What gains are there from strengthening the climate dimension of fiscal policy on the economy, fiscal-account, and climate [mitigation and adaptation]?
+
+Climate-Fiscal Deep-Dive: (when PFR has an additional climate special chapter)
+CF1: What is the fiscal cost of investment needs to transition to a Paris-compliant and resilient economy? 
+CF2: How can overall long-term costs be minimized?
+
+Expenditures: 
+What is the effectiveness and efficiency of climate-related expenditures (including subsidies and public investments)?
+-	E1 Climate Mitigation-Related (Green and Brown) Expenditures
+-	E2 Climate Resilience and Adaptation-Related Expenditures.
+
+Revenues:
+R1: What is the impact of revenue policy on climate mitigation (and adaptation, if applicable) outcomes? 
+•	Impact of taxation of fuel including carbon pricing
+•	Impact of other instruments (vehicle tax/feebates, land-use fiscal instruments incl. ecological fiscal transfers, others)
+R2: What is the likely impact of decarbonization and climate trends on revenue (e.g., on excises, extractives incl. minerals)?
+
