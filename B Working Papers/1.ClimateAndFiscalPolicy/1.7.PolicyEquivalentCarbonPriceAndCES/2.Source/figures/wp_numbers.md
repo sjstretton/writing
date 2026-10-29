@@ -15,6 +15,7 @@ Covered-emissions-weighted shadow price of the standard 51.1 $/t
 | mix | 27.06 | 6.14 | 33.21 | 36.23 | 36.86 | 40.72 | 52.95 | 34.78 | 20.8 | 71.8 |
 Sum of stand-alone exact TECPs 32.74; sum of stand-alone exact cuts 40.96
 Old (1 - w) form TECP of the mix: 31.66
+Tax salience theta=3 on the demand margin of taxes (first order): tax 27.08; subsidy 2.42; standard 0.76; mix 30.27
 
 Accuracy, mix scaled by k: k, linear, second, exact, err lin %, err 2nd %
   0.5: 16.60, 17.36, 17.44, -4.8, -0.4
@@ -51,5 +52,6 @@ Short run (one year; adjustment speeds drawn):
   subsidy_exact: median 0.5, 5th -0.6, 95th 1.8
   standard_exact: median 0.7, 5th 0.5, 95th 0.9
   share of LR draws with mix TECP > explicit metric: 1.000
+  share of one-year draws with mix TECP > explicit metric: 1.000; min LR 30.8, min one-year 22.6
   LR ratio exact/linear: median 1.088, 5th 1.037, 95th 1.139
 Central case, one year: mix lin 28.33, exact 28.28; tax 25.40; subsidy 1.16; standard 0.79 (credit price held at 166)
