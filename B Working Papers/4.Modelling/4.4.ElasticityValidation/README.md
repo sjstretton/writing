@@ -37,7 +37,7 @@ Run: `cd 2.Source && python3 elasticity_check.py` (numpy, matplotlib). Render: r
 Plain pandoc cannot resolve Quarto cross-references. Render with:
 
 ```bash
-python3 2.Source/xref.py <Name>.qmd > /tmp/x.qmd   # numbers sections, tables, figures, equations
+python3 2.Source/xref.py <Name>.qmd /tmp/x.qmd   # numbers sections, tables, figures, equations
 pandoc /tmp/x.qmd -f markdown --citeproc --bibliography=<Name>.bib --csl=chicago-author-date.csl --resource-path=. -o <Name>.docx
 ```
 

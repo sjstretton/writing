@@ -34,7 +34,10 @@ Details for each item: `C Research Proposal/PhD-Application-Status.md`.
 - [ ] **Finance-and-risk and sovereign-incentives series (2.1, 2.2, 3.1, 3.2, 3.3): read and peer review.** Done 29 Oct by agents: five briefs (Climate Fiscal Policy Briefs 2.1–3.3) and five working papers with models and verified bibliographies; overviews 2.0 and 3.0 rewritten; CIT moved to 3.2, SLL to 3.3. No decks or peer-review notes yet. Start with 3.1 and 2.1 (proposal 1) — S reads, A peer-reviews and upgrades — 13 Nov
 - [ ] Decks for the five series 2–3 papers and two theme decks: done 29 Oct. Referee reports still to do — A — after Stephen's read
 - [ ] **Sections 4 (CPAT) and 5 (analytics tools): read.** Done 29 Oct by agents: ten medium-length papers (4.1–4.7, 5.1–5.3) and overviews 4.0, 5.0. Decide whether any country results from the private tools repository may be used; answer the README questions (AI tools used, Egypt figures in 4.3, air-pollution module credit) — S — 13 Nov
-- [ ] Decks for sections 4 and 5 (one per paper + theme decks), after agenda confirmed — A — next
+- [x] 29 Oct 2026 — Sections 4 and 5: consistency pass, ten paper decks and two theme decks, website pages (ready to deploy); series 3 now leads with the MDB loss record (~80 per donor dollar; 2.7 stress case); TFFF cited to its Concept Note 3.0 — A
+- [ ] Rule on sources marked "Draft for discussion" / "Not for citation" (Sierra Leone, Liberia excise results for 5.1): usable or not? — S — 6 Nov
+- [ ] Clear the three CBAM `[VERIFY]` items in 4.5 (benchmarks vs Regulation 2025/2620; free-allocation phase-out; read 2026/1740 and COM(2026) 616); EUR-Lex needs your PC — S downloads, A edits — 13 Nov
+- [ ] Run render.bat then deploy.bat to put sections 2–5 live — S — after reading
 - [ ] Run `deploy.bat` to put the series live (source pushed to main 29 Oct) — S — Fri 30 Oct (T59)
 - [ ] Clear remaining `VERIFY` entries in the five working-paper bibs (about 45 across the series; court judgments and EU texts need EUR-Lex, which the cloud cannot reach) — A, with S downloads — 12 Nov
 - [ ] Flag: the 1.7 TECP formula in all earlier versions and in the xlsx workbook carries an extra (1−w) factor; v0.3 corrects it and marks the workbook superseded. Rebuild the workbook or retire it — S decides
