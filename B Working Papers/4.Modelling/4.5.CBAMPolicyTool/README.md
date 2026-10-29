@@ -45,3 +45,14 @@ Run: `cd 2.Source && python3 cbam_example.py && python3 egypt_example.py`. Rende
 - Free-allocation schedule (97.5% in 2026 … 14% in 2033, zero from 2034) confirmed only from secondary sources; check the consolidated ETS Directive, Art. 10a(1a).
 - Implementing Regulation (EU) 2026/1740 (correction of default values) and the proposal COM(2026) 616 (slower phase-out) are reported but not read.
 - The conversion of a carbon price paid into certificates is in a draft implementing act; the example deducts the price paid per tonne.
+
+## Rendering
+
+Plain pandoc cannot resolve Quarto cross-references. Render with:
+
+```bash
+python3 2.Source/xref.py <Name>.qmd > /tmp/x.qmd   # numbers sections, tables, figures, equations
+pandoc /tmp/x.qmd -f markdown --citeproc --bibliography=<Name>.bib --csl=chicago-author-date.csl --resource-path=. -o <Name>.docx
+```
+
+Check the script header for its exact usage.

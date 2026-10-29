@@ -31,3 +31,14 @@ Run: `cd 2.Source && python3 elasticity_check.py` (numpy, matplotlib). Render: r
 - Labandeira et al.'s means are taken as reproduced in CPAT's documentation, and Dahl's survey values as reported by Huntington et al.; check against the originals before changing CPAT defaults.
 - No coal evidence outside China and no biomass meta-analysis were found.
 - Nothing confidential is used; the Total Carbon Price data are the World Bank's published dataset as kept in the public CPAT-AI repository.
+
+## Rendering
+
+Plain pandoc cannot resolve Quarto cross-references. Render with:
+
+```bash
+python3 2.Source/xref.py <Name>.qmd > /tmp/x.qmd   # numbers sections, tables, figures, equations
+pandoc /tmp/x.qmd -f markdown --citeproc --bibliography=<Name>.bib --csl=chicago-author-date.csl --resource-path=. -o <Name>.docx
+```
+
+Check the script header for its exact usage.
