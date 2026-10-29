@@ -13,12 +13,15 @@ lam = P["p"] * P["L"]
 b0 = buffer_ratio_mc(P["n"], P["p"], P["rho"], P["L"], P["alpha"])
 plt.rcParams.update({"font.size": 9, "axes.spines.top": False, "axes.spines.right": False})
 fig, (a1, a2) = plt.subplots(1, 2, figsize=(8, 3.4))
-labels = ["Payout\nfund", "Buffer\n37% loss", "Buffer\n10% loss"]
-vals = [1.0, incentive_per_donor_dollar(P["s"], lam), incentive_per_donor_dollar(P["s"], P["p"] * 0.10)]
-bars = a1.bar(labels, vals, color=["#9a9a9a", "#1f5f8b", "#1f5f8b"])
+labels = ["Payout\nfund", "Buffer:\nstress", "Buffer:\nmiddle", "Buffer:\nMDB record"]
+vals = [1.0, incentive_per_donor_dollar(P["s"], 0.03 * 0.37), incentive_per_donor_dollar(P["s"], 0.03 * 0.10),
+        incentive_per_donor_dollar(P["s"], lam)]
+bars = a1.bar(labels, vals, color=["#9a9a9a", "#7fa7c6", "#4f86b0", "#1f5f8b"])
 for bar, v in zip(bars, vals):
-    a1.text(bar.get_x() + bar.get_width() / 2, v + 0.2, f"{v:.1f}", ha="center")
-a1.set_ylabel("Spread savings per donor dollar (PV)")
+    a1.text(bar.get_x() + bar.get_width() / 2, v * 1.12, f"{v:.0f}" if v >= 10 else f"{v:.1f}", ha="center")
+a1.set_yscale("log"); a1.set_ylim(0.5, 200)
+a1.set_yticks([1, 3, 10, 30, 100]); a1.set_yticklabels(["1", "3", "10", "30", "100"])
+a1.set_ylabel("Spread savings per donor dollar (PV, log)")
 a1.set_title("A. Holding beats spending", loc="left", fontsize=9)
 for lab, E_p, f, col in (("$95bn private, fee = EL/2", 95, lam / 2, "#4a8c3f"),
                          ("$95bn private, no fee", 95, 0.0, "#1f5f8b"),

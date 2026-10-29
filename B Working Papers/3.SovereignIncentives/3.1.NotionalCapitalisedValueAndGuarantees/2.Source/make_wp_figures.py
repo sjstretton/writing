@@ -40,23 +40,30 @@ def fig_balance(path):
 
 
 def fig_ratio(path):
-    el = np.linspace(0.0005, 0.03, 300)
+    el = np.geomspace(0.0002, 0.03, 300)
     fig, ax = plt.subplots(figsize=(6.4, 3.6))
     for ds, c in ((0.015, GREY), (0.03, BLUE), (0.045, ORANGE)):
-        ax.plot(el * 100, [M.ratio(ds=ds, el=x) for x in el], color=c, lw=2,
+        ax.plot(el * 100, [M.ratio(ds=ds, el=x, k=0.0) for x in el], color=c, lw=2,
                 label=f"spread saved {ds*100:.1f} pp")
     ax.axhline(1, color="black", lw=0.8)
-    for x, lab in ((M.EL_SERIES, "Series base case\n(3% calls × 37% loss)"),
-                   (0.003, "10% loss\nper call")):
+    for x, lab in ((M.EL_GEMS, "Base: MDB record\n(0.77% × 4.9%)\nratio 80"),
+                   (M.EL_MID, "Middle: 3% × 10%\nratio 10"),
+                   (M.EL_SERIES, "Stress:\n3% × 37%\nratio 2.7")):
         ax.axvline(x * 100, color=GREY, ls=":", lw=1)
-        ax.text(x * 100 + 0.06, 13.5, lab, fontsize=8, color=GREY, va="top")
-    ax.set_xlabel("Guarantor's expected loss, % of exposure a year")
-    ax.set_ylabel("Incentive value ÷ guarantor cost")
-    ax.set_ylim(0, 15)
-    ax.set_title("A guarantee is worth several times what it costs", fontsize=10, loc="left")
+        ax.text(x * 100 * 1.08, 0.27, lab, fontsize=7, color="#444444", va="bottom")
+    ax.set_xscale("log")
+    ax.set_yscale("log")
+    ax.set_xticks([0.02, 0.05, 0.1, 0.3, 1, 3])
+    ax.set_xticklabels(["0.02", "0.05", "0.1", "0.3", "1", "3"])
+    ax.set_yticks([1, 3, 10, 30, 100])
+    ax.set_yticklabels(["1", "3", "10", "30", "100"])
+    ax.set_ylim(0.25, 250)
+    ax.set_xlabel("Guarantor's expected loss, % of exposure a year (log scale)")
+    ax.set_ylabel("Incentive value ÷ guarantor cost (log)")
+    ax.set_title("A guarantee is worth many times what it costs", fontsize=10, loc="left")
     ax.legend(frameon=False, fontsize=8, loc="upper right")
-    fig.text(0.01, 0.01, "Buffer earns the discount rate, so cost = expected loss. "
-             "MDB sovereign record (GEMs, 1984–2024): 0.04% a year, ratio about 80.", fontsize=7, color=GREY)
+    fig.text(0.01, 0.01, "Buffer earns the discount rate, so cost = expected loss. Base: MDB sovereign record, "
+             "GEMs 1984–2024 (preferred creditors).", fontsize=7, color=GREY)
     fig.tight_layout(rect=(0, 0.04, 1, 1))
     fig.savefig(path, dpi=200)
     plt.close(fig)

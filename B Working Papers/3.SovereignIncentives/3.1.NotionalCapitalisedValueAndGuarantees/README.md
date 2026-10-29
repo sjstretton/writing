@@ -29,6 +29,6 @@ Render: `python3 2.Source/render.py NotionalCapitalisedValueAndGuarantees.qmd No
 - *The Right Policy at the Wrong Time* chs 5–7 (international feebate needs a trust; forest valuation; an emission as a capital requirement).
 - Research page abstract (`7.Website/research.qmd`), and the Oxford DPhil proposal (three quantities; act-now incentives; climate allowance of guarantee capacity).
 - Supersedes the working title "Guarantee-Based International Incentives for the Delivery of Strong NDCs".
-- No co-authors. The guarantee loss and buffer parameters (3% annual calls, correlation 0.2, 37% loss per call, 9.3% buffer, ratio 2.7, or 10 at a 10% loss) are the series 3 base case, shared with 3.2 (Climate Investment Trust) and 3.3 (Sustainability-Linked Lending).
+- No co-authors. The guarantee loss and buffer parameters are shared with 3.2 (Climate Investment Trust) and 3.3 (Sustainability-Linked Lending). Since 29 Oct 2026 the base case is the MDB sovereign loss record (GEMs 2025: 0.77% annual calls, 4.9% loss, 0.5% buffer, ratio about 80); the middle case is 3% calls × 10% loss (2.5% buffer, ratio 10) and the stress case 3% calls × 37% loss (Cruces and Trebesch 2013; 9.3% buffer, ratio 2.7). All use 20 programs, correlation 0.2 and a 1% annual chance of exhausting the buffer.
 
 Related: 3.0 series overview; 3.2 The Climate Investment Trust (the buffer fund); 3.3 Sustainability-Linked Lending (delivery channel); 2.1 and 2.2 (structures the guarantee capacity can stand behind). Cross-review of both series: `../CrossReview-Notes.md`.

@@ -36,6 +36,9 @@ def fig_size(path):
                     label=None)
     for yi, v in zip(y, vals):
         ax.text(v * 1.08, yi, f"${v:,.0f}m", va="center", fontsize=9)
+    gs = m.guarantee(gstar, 300, m.PD_STRESS, m.LGD_STRESS, m.BUFFER_STRESS, m.R_BUFFER, 10)
+    ax.text(12, y[3], f"funder cost \\${g['cost']:,.0f}m on the MDB record;\n\\${gs['cost']:,.0f}m in the stress case",
+            va="center", fontsize=8, color="white")
     ax.set_xscale("log")
     ax.set_xlim(3, 4000)
     ax.set_yticks(list(y))
@@ -57,20 +60,24 @@ def fig_leverage(path):
     import numpy as np
     pds = np.linspace(0.005, 0.05, 50)
     fig, ax = plt.subplots(figsize=(7, 3.8))
-    for s, ls in ((150, ":"), (300, "-"), (450, "--")):
-        ax.plot(pds * 100, [m.guarantee(1, s, p, m.LGD, m.BUFFER, m.R_BUFFER, 10)['ratio'] for p in pds],
-                ls, color="#2a9d5c", label=f"Guarantee capacity, {s} bp spread saved")
+    for lgd, col, lab in ((m.LGD, "#2a9d5c", "4.9% (MDB recovery record)"),
+                          (m.LGD_MID, "#7a9a2c", "10%"),
+                          (m.LGD_STRESS, "#b2702a", "37% (average sovereign haircut)")):
+        ax.plot(pds * 100, [m.guarantee(1, 300, p, lgd, 0, m.R_BUFFER, 10)['ratio'] for p in pds],
+                "-", color=col, lw=2, label=f"Guarantee, loss per call {lab}")
     ax.axhline(1, color="#1f6f8b", lw=2, label="Interest rebate or cash (ratio 1)")
-    ax.axvline(m.PD * 100, color="grey", lw=0.8, ls=":")
-    ax.text(m.PD * 100 + 0.05, 0.6, "series base case", fontsize=8, color="grey")
+    for (pd_, lgd_, _), lab in zip(m.CASES.values(), ("Base: MDB record, 80", "Middle, 10", "Stress, 2.7")):
+        r = m.guarantee(1, 300, pd_, lgd_, 0, m.R_BUFFER, 10)['ratio']
+        ax.plot(pd_ * 100, r, "o", color="black", ms=5)
+        ax.text(pd_ * 100 + 0.08, r * 1.12, lab, fontsize=8, color="#333333")
     ax.set_yscale("log")
-    ax.set_ylim(0.5, 30)
+    ax.set_ylim(0.5, 300)
     ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:g}"))
-    ax.set_xlabel("Annual probability of a call on the guarantee (%), loss per call 37%")
+    ax.set_xlabel("Annual probability of a call on the guarantee (%); 300 bp spread saved")
     ax.set_ylabel("Incentive value per $1 of funder cost")
     ax.legend(fontsize=8, frameon=False, loc="upper right")
-    for s in ("top", "right"):
-        ax.spines[s].set_visible(False)
+    for s_ in ("top", "right"):
+        ax.spines[s_].set_visible(False)
     fig.tight_layout()
     fig.savefig(path, dpi=200)
     plt.close(fig)

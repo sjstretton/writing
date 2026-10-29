@@ -39,13 +39,26 @@ EL_GEMS = PD_GEMS * LGD_GEMS            # 0.038% a year
 # IBRD policy minimum equity-to-loans ratio: 18% (IBRD MD&A, FY2026).
 K_IBRD = 0.18
 
-# Series base case shared with working paper 3.2 (Climate Investment Trust):
-# 20 guaranteed programs, 3% annual probability that a government fails to
-# honour its first-loss indemnity, correlation 0.2, 37% loss per call (average
-# sovereign haircut, Cruces and Trebesch 2013). Buffer of 9.3% of exposure keeps
-# the annual probability of exhaustion at 1%. See 3.2.ClimateInvestmentTrust/2.Source/model.py.
-EL_SERIES = 0.03 * 0.37               # 1.11% a year
+# Series cases shared with working papers 3.2 (Climate Investment Trust) and
+# 3.3 (sustainability-linked lending). Settled 29 Oct 2026: the MDB record is the
+# base case; the Cruces-Trebesch case is the stress test.
+#   BASE (MDB record): annual call probability 0.77% and loss per call 4.9%
+#     (GEMs 1984-2024 default and recovery rates on MDB sovereign and
+#     sovereign-guaranteed lending; they reflect preferred-creditor status).
+#   MIDDLE: 3% annual calls, 10% loss per call.
+#   STRESS: 3% annual calls, 37% loss per call (average sovereign haircut,
+#     Cruces and Trebesch 2013).
+# In every case: 20 guaranteed programs, asset correlation 0.2, buffer sized so
+# the annual probability of exhaustion is 1%. Buffer ratios come from the Monte
+# Carlo in 3.2.ClimateInvestmentTrust/2.Source/model.py: 0.49% (two calls of
+# 4.9% across 20 programs), 2.5% and 9.25% (rounded to 9.3% in the text).
+EL_SERIES = 0.03 * 0.37               # stress case, 1.11% a year
 K_SERIES = 0.093
+EL_MID, K_MID = 0.03 * 0.10, 0.025
+K_GEMS = 0.0049
+CASES = {"MDB record (base)": (EL_GEMS, K_GEMS),
+         "10% loss per call (middle)": (EL_MID, K_MID),
+         "3% calls x 37% loss (stress)": (EL_SERIES, K_SERIES)}
 
 # Gabon blue bond, Aug 2023 (Reuters): 6.097% coupon with DFC political risk
 # insurance, against 9-10.5% yields on Gabon's other bonds.
@@ -78,8 +91,8 @@ EF_SUB = 18.9 * 96.1 / 1000
 DS = 0.03        # spread saved, close to Gabon and to Time and Chance ch. 21
 R = 0.05         # discount rate
 PHI = 0.0        # net carry cost of buffer: zero when the buffer earns the rate used to discount (as in 3.2)
-K = K_SERIES     # buffer per $ of exposure
-EL = EL_SERIES   # guarantor's expected loss per $ of exposure a year (series base case)
+K = K_GEMS       # buffer per $ of exposure (base case: MDB record)
+EL = EL_GEMS     # guarantor's expected loss per $ of exposure a year (base case: MDB record)
 D_FOREST = 5e9   # eligible green borrowing of the forest country (outstanding)
 P_E = 50.0       # debit price, $/tCO2
 
@@ -144,13 +157,13 @@ def early_action(K0, dE, g, m0, m_inf=0.0, b=0.0, omega=0.0, theta=None, r=R, ho
 
 def main():
     print("=== Proposition 1: incentive-to-cost ratio ===")
-    print(f"series base: EL = {EL*100:.2f}%, buffer {K*100:.1f}%, carry {PHI*100:.0f}% -> c = {cost_rate()*100:.2f}%, R = {ratio():.1f}")
-    print(f"10% loss per call: EL {0.03*0.10*100:.2f}% -> R = {ratio(el=0.003):.1f}")
-    print(f"MDB record (GEMs): EL = {EL_GEMS*100:.3f}% -> R = {ratio(el=EL_GEMS):.0f}")
+    for name, (el, k) in CASES.items():
+        print(f"{name}: EL = {el*100:.4f}%, buffer {k*100:.2f}% -> R = {ratio(el=el, k=k):.1f}; "
+              f"R with 2% carry = {ratio(el=el, k=k, phi=0.02):.1f}; $5bn supports ${5/k:,.0f}bn")
     print(f"MDB record with IBRD-style 18% capital at 2% carry: R = {ratio(el=EL_GEMS, k=K_IBRD, phi=0.02):.1f}")
-    print(f"series base with 2% carry on 9.3% buffer: R = {ratio(phi=0.02):.2f}")
     for ds in (0.015, 0.03, 0.045):
-        print(f"  ds={ds*100:.1f}%: R={ratio(ds=ds):.1f}")
+        print(f"  ds={ds*100:.1f}%: R base={ratio(ds=ds):.0f}, stress={ratio(ds=ds, el=EL_SERIES, k=K_SERIES):.1f}")
+    print(f"donor cost per $ of carbon-price equivalent: base {cost_rate()/DS*100:.2f} cents; stress {EL_SERIES/DS*100:.0f} cents")
     print(f"break-even EL (R=1): {(DS - K*PHI)*100:.1f}%")
     print(f"leverage of buffer: {1/K:.1f}x; $5bn supports ${5/K:.0f}bn")
     print(f"Gabon saving: {GABON_MARKET[0]-GABON_GUARANTEED:.1f} to {GABON_MARKET[1]-GABON_GUARANTEED:.1f} pp")
@@ -181,7 +194,9 @@ def main():
     print(f"single-price NCV (p_e=p_s) CPE: ${cpe(p_s):.2f}/t")
     print(f"annual incentive at full capacity ${D_FOREST*DS/1e6:.0f}m; PV 20y ${D_FOREST*DS*annuity(20)/1e9:.2f}bn")
     print(f"buffer held ${K*D_FOREST/1e9:.2f}bn; annual donor cost ${cost_rate()*D_FOREST/1e6:.1f}m")
-    print(f"donor cost per tonne of CPE: ${tau*cost_rate()/DS:.1f}/t")
+    print(f"donor cost per tonne of CPE: ${tau*cost_rate()/DS:.2f}/t")
+    for name, (el, k) in CASES.items():
+        print(f"  {name}: buffer ${k*D_FOREST/1e9:.3f}bn; annual cost ${el*D_FOREST/1e6:.1f}m; cost per tonne ${tau*el/DS:.2f}")
     print(f"Hess average price ${HESS_USD/HESS_T:.0f}/t; ~${HESS_USD/15/1e6:.0f}m a year over 15 years")
     print(f"TFFF: ${TFFF_PER_HA/dens*1000:.1f} per kt per year -> capitalized at 5%: ${TFFF_PER_HA/dens/R:.3f}/t")
     print(f"TFFF penalty per tonne: ${TFFF_PENALTY[0]/dens:.2f}-{TFFF_PENALTY[1]/dens:.2f}/t")
@@ -198,8 +213,9 @@ def main():
     print("\n=== Scale: what a big incentive needs (ds=3%) ===")
     for target in (0.1e9, 0.5e9, 1e9, 5e9):
         G = target / DS
-        print(f"incentive ${target/1e9:.1f}bn/yr: capacity ${G/1e9:.0f}bn; buffer ${K*G/1e9:.1f}bn; donor cost ${cost_rate()*G/1e6:.0f}m/yr; PV20 value ${target*annuity(20)/1e9:.1f}bn")
-
+        print(f"incentive ${target/1e9:.1f}bn/yr: capacity ${G/1e9:.0f}bn; PV20 value ${target*annuity(20)/1e9:.1f}bn")
+        for name, (el, k) in CASES.items():
+            print(f"    {name}: buffer ${k*G/1e9:.2f}bn; donor cost ${el*G/1e6:.1f}m/yr")
     print("\n=== Coal variant, Indonesia-scale reserves ===")
     co2 = IDN_BIT * EF_BIT + IDN_SUB * EF_SUB
     print(f"factors {EF_BIT:.2f}, {EF_SUB:.2f} tCO2/t; reserves ~{co2/1e9:.0f} GtCO2")
@@ -214,7 +230,8 @@ def main():
     m0 = (R + g) * K0 / dE
     print(f"minimum m0 = (r+g)K0/dE = ${m0:.0f}/t; with option-value multiplier 1.5: ${1.5*m0:.0f}/t")
     for th in (0.0, g):
-        print(f"theta={th:.2f}: p_e needed ${p_e_needed(m0, theta=th):.0f}/t; donor PV cost ${dE*m0/(R+th)*cost_rate()/DS/1e6:.0f}m; same incentive as cash ${dE*m0/(R+th)/1e6:.0f}m")
+        print(f"theta={th:.2f}: p_e needed ${p_e_needed(m0, theta=th):.0f}/t; donor PV cost base ${dE*m0/(R+th)*cost_rate()/DS/1e6:.1f}m, "
+              f"stress ${dE*m0/(R+th)*EL_SERIES/DS/1e6:.0f}m; same incentive as cash ${dE*m0/(R+th)/1e6:.0f}m")
     taus, W = early_action(K0, dE, g, m0 * 1.0)
     print(f"W(0)={W[0]/1e6:.0f}m, argmax tau={taus[np.argmax(W)]:.1f}")
     taus, W = early_action(K0, dE, g, m0 * 0.6)

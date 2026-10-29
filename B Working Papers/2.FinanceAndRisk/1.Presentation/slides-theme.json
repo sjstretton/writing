@@ -114,7 +114,7 @@
           "label": "tariff saving per dollar of expected cost, contract against debt guarantee"
         }
       ],
-      "text": "Stylized 100 MW plant: tariff 5.50 c/kWh unguaranteed, 4.96 with a contract guarantee, 5.33 with a debt guarantee. The contract guarantor's worst case is $8.7m a year of arrears; the debt guarantor's is $60m of debt. (This 5.3 is not series 3's 2.7 multiplier.)"
+      "text": "Stylized 100 MW plant: tariff 5.50 c/kWh unguaranteed, 4.96 with a contract guarantee, 5.33 with a debt guarantee. The contract guarantor's worst case is $8.7m a year of arrears; the debt guarantor's is $60m of debt. (This 5.3 is not series 3's sovereign guarantee multiplier: about 80 on the MDB loss record, 2.7 in its stress case.)"
     },
     {
       "type": "twocol",

@@ -6,7 +6,7 @@
       "type": "title",
       "title": "Reward Governments, Not Projects",
       "subtitle": "International incentives for national climate policy: Briefs 3.1–3.3",
-      "message": "Cash on the needed scale is politically impossible. Reward governments with what the international system supplies cheaply and they value highly: cheaper borrowing, through guarantees and collateral. Each dollar donors hold then delivers several dollars of incentive."
+      "message": "Cash on the needed scale is politically impossible. Reward governments with what the international system supplies cheaply and they value highly: cheaper borrowing, through guarantees and collateral. On the development banks' loss record each donor dollar then delivers about 80 dollars of incentive; 2.7 in a stress case."
     },
     {
       "type": "stats",
@@ -73,15 +73,15 @@
     },
     {
       "type": "figure",
-      "title": "A guarantee is worth more than it costs",
+      "title": "A guarantee is worth many times what it costs",
       "image": "../3.1.NotionalCapitalisedValueAndGuarantees/1.Presentation/figures/fig2-incentive-cost-ratio.png",
       "imageWidth": 5.4,
       "imageHeight": 3.04,
-      "caption": "Ratio of interest savings to the guarantor's expected loss, for three spread savings.",
+      "caption": "Ratio of interest savings to the guarantor's expected loss, for three spread savings; base, middle and stress cases marked (log scales).",
       "points": [
         "The borrower saves the full spread; the guarantor bears only expected loss.",
-        "Base case: 3% calls a year × 37% loss = 1.11% a year.",
-        "At a 3-point spread: 2.7 dollars per dollar; 10 at a 10% loss; about 80 on the MDB record.",
+        "Base case, the MDB sovereign record: 0.77% calls a year × 4.9% loss = 0.038% a year; about 80 dollars per dollar at a 3-point spread.",
+        "MDBs are preferred creditors; a new facility might not be. Middle case (3% × 10%): 10. Stress case (3% × 37%): 2.7.",
         "Gabon's insured 2023 bond: 6.1%, against 9–10.5% on its other bonds."
       ]
     },
@@ -103,7 +103,7 @@
           "$5bn balance, $50 debit, 15 Mt a year against an allowance falling to zero in 2050.",
           "Saves $150m a year; business as usual exhausts the balance by 2042.",
           "Each tonne costs the country about $30; acting is worth about $1bn.",
-          "Donors hold a $0.47bn buffer and expect to lose about $56m a year."
+          "Donor cost about $2m a year on the MDB record, 40 cents a tonne; stress case $56m a year, $11 a tonne."
         ]
       }
     },
@@ -114,11 +114,11 @@
       "image": "../3.2.ClimateInvestmentTrust/1.Presentation/figures/fig1-buffer-vs-payout.png",
       "imageHeight": 2.1,
       "aspect": 2.35,
-      "caption": "A: interest savings per donor dollar. B: Trust capital over 25 years from $5bn at launch (stylized, 3.2).",
+      "caption": "A: interest savings per donor dollar, stress, middle and base (MDB record). B: Trust capital over 25 years from $5bn at launch, base case (3.2).",
       "points": [
-        "A 9.3% buffer keeps exhaustion to 1% a year, so $5bn supports about $54bn of guarantees.",
-        "They save borrowers $1.6bn a year. Paid as cash, that would exhaust $5bn in about three years.",
-        "Growth needs fees: about 0.8% a year on exposure to hold steady; $2.4bn a year from co-investment."
+        "On the MDB record a 0.5% buffer keeps exhaustion to 1% a year: $5bn could back up to ~$1tn on paper.",
+        "Stress case: a 9.3% buffer; $5bn supports $54bn, saving borrowers $1.6bn a year. Hold that buffer until the Trust has a record.",
+        "Growth needs fees: 0.02% a year on exposure to hold steady (0.8% in the stress case); $2.4bn a year from co-investment."
       ]
     },
     {
@@ -127,11 +127,11 @@
       "image": "../3.3.SustainabilityLinkedLending/1.Presentation/figures/fig1-size-problem.png",
       "imageWidth": 5.6,
       "imageHeight": 2.94,
-      "caption": "Present value at 5% over ten years, US$ million, log scale. Hatched: cost to the funder.",
+      "caption": "Present value at 5% over ten years, US$ million, log scale. Hatched: cost to the funder on the MDB record.",
       "points": [
         "Uruguay's $350m loan (2023) can save at most $12.5m, about $8m in present value.",
         "A 100 bp step-down on $1bn: $77m. The stylized reform costs $770m.",
-        "$3.3bn of capacity is worth $772m; the funder expects to lose $286m.",
+        "$3.3bn of capacity is worth $772m; the funder expects to lose about $10m on the MDB record, $286m in the stress case.",
         "Codify the loan and use it to deliver capacity."
       ]
     },
@@ -145,7 +145,7 @@
       "points": [
         "Falling technology costs and the option to wait reward delay.",
         "Minimum incentive to act now: $20/t; about $30 allowing for the value of waiting.",
-        "Capacity declining as technology costs fall halves donor cost: $740m to $370m. Cash: $1bn.",
+        "Capacity declining as technology costs fall halves donor cost: $25m to $13m on the MDB record ($740m to $370m in the stress case). Cash: $1bn.",
         "Forests need a permanent floor."
       ]
     },

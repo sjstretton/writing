@@ -5,7 +5,7 @@
 ## Status
 
 - Version 0.1 (October 2026): first public draft of the brief and the working paper, written for the series 3 restructuring (`../SeriesArchitecture.md`). Awaiting Stephen's peer review.
-- Guarantee leverage now uses the series 3 base case shared with 3.1 and 3.2 (3% annual calls, 37% loss per call, 9.3% buffer; ratio 2.7, or 10 at a 10% loss), aligned in the 29 Oct 2026 cross-review. Open items (Chile and Thailand terms against prospectuses; country calibration of guarantee leverage) are listed in appendix C of the working paper and in the `.bib` notes.
+- Guarantee leverage uses the series 3 cases shared with 3.1 and 3.2. Since 29 Oct 2026 the base case is the MDB sovereign loss record (GEMs 2025: 0.77% annual calls, 4.9% loss, 0.5% buffer; ratio about 80; funder cost of the coal reform about $10m); stress case 3% calls × 37% loss (9.3% buffer, ratio 2.7, cost $286m); middle 3% × 10% (ratio 10). Open items (Chile and Thailand terms against prospectuses; country calibration of guarantee leverage) are listed in appendix C of the working paper and in the `.bib` notes.
 
 ## Files
 

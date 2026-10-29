@@ -18,9 +18,9 @@ from scipy.stats import norm
 # ---------------------------------------------------------------- parameters
 BASE = dict(
     n=20,          # number of equal-sized guaranteed sovereign programs (stylized)
-    p=0.03,        # annual prob. a government fails to honour its first-loss indemnity (stylized)
+    p=0.0077,      # annual prob. of a call: MDB sovereign default rate 1984-2024 (GEMs 2025)
     rho=0.20,      # asset correlation in the one-factor model (stylized)
-    L=0.37,        # loss given call; average sovereign haircut, Cruces and Trebesch (2013)
+    L=0.049,       # loss given call: 1 - 95.1% MDB sovereign recovery (GEMs 2025)
     alpha=0.01,    # target annual probability that the buffer is exhausted
     s=0.03,        # spread saved by the borrower on guaranteed debt (stylized)
     f=0.0,         # guarantee fee charged on exposure, per year
@@ -32,6 +32,16 @@ BASE = dict(
     phi=0.25,      # fee: share of private investment returns paid to the trust
     i_L=0.05,      # rate on the policy loans that finance country stakes (stylized)
 )
+
+
+# Loss cases (settled 29 Oct 2026). BASE uses the MDB record, which reflects
+# preferred-creditor status a new facility might not inherit; hence the cases
+# below. Same n, rho and alpha in every case.
+CASES = {
+    "base (MDB record)": (0.0077, 0.049),
+    "middle (3% x 10%)": (0.03, 0.10),
+    "stress (3% x 37%)": (0.03, 0.37),   # Cruces and Trebesch (2013) haircut
+}
 
 
 # ---------------------------------------------------------- 1. buffer sizing
@@ -117,19 +127,22 @@ def main():
     print(f"buffer ratio b, n={P['n']}: {b_mc:.4f}  (leverage {1/b_mc:.1f}x)")
     print(f"buffer ratio b, large n: {b_inf:.4f}  (leverage {1/b_inf:.1f}x)")
     print(f"exposure supported by $5bn: {P['K0']/b_mc:.0f} $bn")
-    print("\nBuffer ratio table (n=20, L=0.37, alpha=1%):")
-    print("p      rho=0.1  rho=0.2  rho=0.3")
-    for p in (0.01, 0.03, 0.05):
-        row = [buffer_ratio_mc(20, p, r, 0.37, 0.01) for r in (0.1, 0.2, 0.3)]
-        print(f"{p:.2f}   " + "   ".join(f"{x:.3f}" for x in row))
-    print("\nalpha=0.5%, base:", round(buffer_ratio_mc(20, 0.03, 0.2, 0.37, 0.005), 4))
-    print("L=0.10, base:", round(buffer_ratio_mc(20, 0.03, 0.2, 0.10, 0.01), 4))
-    print("\nIncentive per donor dollar (payout fund = 1):")
-    for L in (0.37, 0.10):
-        for f_share in (0.0, 0.5):
-            lamL = P["p"] * L
-            print(f"  L={L:.2f} fee={f_share:.0%} of EL: "
-                  f"{incentive_per_donor_dollar(P['s'], lamL, f_share*lamL):.1f}")
+    print("\nBuffer ratio table by case (n=20, alpha=1%), % of exposure:")
+    print("case                 rho=0.1  rho=0.2  rho=0.3  rho=0.4  | large n rho=0.2")
+    for name, (p, L) in CASES.items():
+        row = [buffer_ratio_mc(20, p, r, L, 0.01) for r in (0.1, 0.2, 0.3, 0.4)]
+        print(f"{name:20s} " + "   ".join(f"{100*x:.2f}" for x in row)
+              + f"  | {100*buffer_ratio_large(p, 0.2, L, 0.01):.2f}")
+    print("\nalpha=0.5%, by case:", [round(buffer_ratio_mc(20, p, 0.2, L, 0.005), 4) for p, L in CASES.values()])
+    print("alpha=0.1%, base:", round(buffer_ratio_mc(20, P["p"], 0.2, P["L"], 0.001), 4))
+    print("\nIncentive per donor dollar (payout fund = 1) and exposure per $5bn:")
+    for name, (p, L) in CASES.items():
+        lamL = p * L
+        bL = buffer_ratio_mc(20, p, 0.2, L, 0.01)
+        print(f"  {name}: EL={lamL*100:.4f}%  no fee {incentive_per_donor_dollar(P['s'], lamL):.1f}; "
+              f"fee=EL/2 {incentive_per_donor_dollar(P['s'], lamL, lamL/2):.1f}; "
+              f"b={bL*100:.2f}% -> $5bn supports ${5/bL:,.0f}bn, saving ${P['s']*5/bL:.1f}bn/yr; "
+              f"expected loss ${lamL*5/bL:.2f}bn/yr")
 
     print("\n== Proposition 2: growth ==")
     fee_income = P["phi"] * P["r_e"] * P["E_p"]
@@ -147,6 +160,15 @@ def main():
     print(f"spread savings delivered by $5bn buffer: {P['s']*P['K0']/b_mc:.2f} $bn/yr")
     carry = (P["i_L"] - P["r_s"]) * 4.0
     print(f"carrying cost of $4bn borrowed country stakes: {carry*1000:.0f} $m/yr")
+    print("Growth in the middle and stress cases (book scale, no fee / fee=EL/2):")
+    for name, (p, L) in list(CASES.items())[1:]:
+        lamc = p * L
+        bL = buffer_ratio_mc(20, p, 0.2, L, 0.01)
+        for f in (0.0, lamc / 2):
+            path = capital_path(T=25, K0=P["K0"], E_p=95, lam=lamc, f=f, b=bL)
+            ks = steady_state_capital(95, P["r_e"], P["phi"], P["r_s"], P["c"], lamc, f, bL)
+            print(f"  {name} f={f:.4f}: K10={path[10]:.1f} K25={path[25]:.1f} K*={ks:.1f}; "
+                  f"f_min={lamc - bL*(P['r_s']-P['c']):.4f}; no-fee burn {lamc/bL - (P['r_s']-P['c']):.3f}")
 
     print("\n== Proposition 3: allocation (stylized 10-country power sector) ==")
     e = np.linspace(0.3, 0.9, 10)      # tCO2/MWh
@@ -161,7 +183,12 @@ def main():
     print(f"  dirtiest country owes {owed_max/1e6:.0f} Mt above benchmark; "
           f"guarantee incentive per country ${V_i*1000:.0f}m/yr; "
           f"participation tau max with base $0.1bn: ${(0.1e9 + V_i*1e9 - 4e7)/owed_max:.1f}/t")
-    for K in (5, 28):
+    for name, (p, L) in CASES.items():
+        bL = buffer_ratio_mc(20, p, 0.2, L, 0.01)
+        Vc = P["s"] * (P["K0"] / bL) / 10
+        print(f"    {name}: V_i ${Vc*1000:.0f}m/yr; participation tau max ${(0.1e9 + Vc*1e9 - 4e7)/owed_max:.1f}/t")
+    kstar0 = steady_state_capital(95, P["r_e"], P["phi"], P["r_s"], P["c"], lam, 0.0, b_mc)
+    for K in (5, round(kstar0)):
         bal = np.full(10, K * 1e9 / 10)
         print(f"  trust ${K}bn split equally: max feasible tau = ${max_feasible_tau(e, Y, bal):.0f}/t")
 
