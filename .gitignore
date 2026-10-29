@@ -14,8 +14,5 @@ A Writing/9.Scripts/Reports/
 A Writing/9.Scripts/_Deleted/
 A Writing/_Purged/
 
-# Credentials. Never commit these.
-# deploy.bat is already tracked, so this line alone does not untrack it:
-#     git rm --cached "A Writing/7.Website/deploy.bat"
-A Writing/9.Scripts/Reference/_ftp.txt
-A Writing/7.Website/deploy.bat
+# Credentials. Never commit these. deploy.bat reads the FTP login from _ftp.txt.
+B Working Papers/8.Scripts/Reference/_ftp.txt
