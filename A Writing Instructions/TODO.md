@@ -24,10 +24,14 @@ Details for each item: `C Research Proposal/PhD-Application-Status.md`.
 - [ ] Literature scan on systemic AI risk; verified sources only — A — 13 Nov
 - [ ] First full draft of proposal 3 (~2,500 words) — A drafts, S revises — 27 Nov
 
+### Housekeeping
+
+- [ ] Only one session syncs the master Sheet at a time (two did on 29 Oct and overwrote each other's tabs). Before any Sheet sync, check no other session is mid-sync; at the next sync, confirm Context still has T54-T62 and the Tracker still has C9_m1 — A — next sync
+
 ### Priority 3: paper upgrades
 
 - [ ] **Carbon-pricing series (1.1, 1.2, 1.3, 1.6, 1.7): read and approve.** Done 29 Oct by agents: five Climate Fiscal Policy Briefs, five working papers (1.1 v0.3, 1.2 v0.3, 1.3 v0.3, 1.6 v0.2, 1.7 v0.3) with models, proofs, calibrations and literature appendices, five 4-slide decks, all in `B Working Papers/7.Website/papers/` — S reads, starting with 1.1 for Dirk — 5 Nov
-- [ ] Run `deploy.bat` to put the series live (source pushed to main 29 Oct) — S — when happy
+- [ ] Run `deploy.bat` to put the series live (source pushed to main 29 Oct) — S — Fri 30 Oct (T59)
 - [ ] Clear remaining `VERIFY` entries in the five working-paper bibs (about 45 across the series; court judgments and EU texts need EUR-Lex, which the cloud cannot reach) — A, with S downloads — 12 Nov
 - [ ] Flag: the 1.7 TECP formula in all earlier versions and in the xlsx workbook carries an extra (1−w) factor; v0.3 corrects it and marks the workbook superseded. Rebuild the workbook or retire it — S decides
 - [ ] Submit 1.1 to *Climate Policy* (research article) after Stephen's read — S — Nov
@@ -39,7 +43,7 @@ Details for each item: `C Research Proposal/PhD-Application-Status.md`.
 - [ ] H1: rotate the FTP password on the server. The old one is still in git history — S — now
 - [ ] H6: fix stale folder paths in `PaperTracker.xlsx` — A
 
-- [ ] Run `B Working Papers/8.Scripts/Run/Download-Literature.bat` on your PC (100 open-access papers the cloud session could not fetch, across all five working papers) — S — when convenient
+- [ ] Run `B Working Papers/8.Scripts/Run/Download-Literature.bat` on your PC (100 open-access papers the cloud session could not fetch, across all five working papers) — S — Fri 30 Oct (T59)
 - [ ] Manual downloads, for later: `B Working Papers/8.Scripts/Reference/Literature-Downloads.md` (125: library login, browser-only or not found) — S — later
 
 ## Decisions needed from Stephen
