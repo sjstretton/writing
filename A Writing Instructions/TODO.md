@@ -26,21 +26,22 @@ Details for each item: `C Research Proposal/PhD-Application-Status.md`.
 
 ### Priority 3: paper upgrades
 
-- [ ] **1.1 Open Economy Carbon Pricing → paper standard** (Dirk asked for this first). Short version (v0.2) is now the master `1.1/OpenEconomyCarbonPricing.qmd`; v0.1 in `8.PreviousVersions`. Next: Stephen reads it; verify every `VERIFY` entry in the bib; calibrate the steel illustration from CBAM default values; then expand to the 7,000-word research article per `5.Notes/Plan-v2-TwoTrackArchitecture-2026-10-29.md` — A — 12 Nov
-- [ ] Decisions taken 29 Oct: title "Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies"; consumption-charge revenue partly replaces VAT, with a forward-announced upstream liability as the preferred form; the consumption-tax paper is 1.6 (moved 29 Oct); 1.3 keeps its content (CBAM flaws incl. price recognition, plus scrap-shuffling solutions): retitle to match; US spelling for the series
+- [ ] **Carbon-pricing series (1.1, 1.2, 1.3, 1.6, 1.7): read and approve.** Done 29 Oct by agents: five Climate Fiscal Policy Briefs, five working papers (1.1 v0.3, 1.2 v0.3, 1.3 v0.3, 1.6 v0.2, 1.7 v0.3) with models, proofs, calibrations and literature appendices, five 4-slide decks, all in `B Working Papers/7.Website/papers/` — S reads, starting with 1.1 for Dirk — 5 Nov
+- [ ] Run `deploy.bat` to put the series live (source pushed to main 29 Oct) — S — when happy
+- [ ] Abstracts of 1.3 and 1.7: Stephen may adjust (agent's suggestions in chat 29 Oct) — S
+- [ ] Clear remaining `VERIFY` entries in the five working-paper bibs (about 45 across the series; court judgments and EU texts need EUR-Lex, which the cloud cannot reach) — A, with S downloads — 12 Nov
+- [ ] Flag: the 1.7 TECP formula in all earlier versions and in the xlsx workbook carries an extra (1−w) factor; v0.3 corrects it and marks the workbook superseded. Rebuild the workbook or retire it — S decides
+- [ ] Submit 1.1 to *Climate Policy* (research article) after Stephen's read — S — Nov
 - [ ] Confirm which file is master for 1.4 Rent Tax (qmd vs docx, H13) — S — before upgrading it. (1.1 and 1.7: the qmd is master, per Stephen 29 Oct)
-- [ ] Draft concept paper 1: policy-equivalent carbon price — A — after 1.1
 
 ## Housekeeping (blocking or risky)
 
 - [ ] **H2: confidential Sustainability-Linked Lending PDF.** Removed from `research.qmd`, `papers/` and `_site/` (29 Oct). Still to do: delete `papers/SustainabilityLinkedLending.pdf` on the web server by hand (deploy.bat syncs without deleting), and remove it from the CV — S
 - [ ] H1: rotate the FTP password on the server. The old one is still in git history — S — now
-- [ ] H3: resolve the 1.3 title/content mismatch — S decides, A edits
 - [ ] H6: fix stale folder paths in `PaperTracker.xlsx` — A
-- [ ] H5: update old paths in `8.Scripts` and `.gitignore` — A — before anyone runs the scripts again
 
-- [ ] Run `B Working Papers/8.Scripts/Run/Download-Literature.bat` on your PC (23 free papers the cloud session can't reach) — S — when convenient
-- [ ] Manual downloads, for later: `B Working Papers/8.Scripts/Reference/Literature-Downloads.md` (41: library login, browser-only or not found) — S — later
+- [ ] Run `B Working Papers/8.Scripts/Run/Download-Literature.bat` on your PC (100 open-access papers the cloud session could not fetch, across all five working papers) — S — when convenient
+- [ ] Manual downloads, for later: `B Working Papers/8.Scripts/Reference/Literature-Downloads.md` (125: library login, browser-only or not found) — S — later
 
 ## Decisions needed from Stephen
 
@@ -52,7 +53,9 @@ Details for each item: `C Research Proposal/PhD-Application-Status.md`.
 
 ## Done
 
-- [x] 29 Oct 2026 — `SPECIALISMS.md` written. Stephen decided: "three constraints" through-line yes; AI-risk angle is incentive and institutional design with systemic financial risk as the analogy; politics essays (8.1–8.3) stay off the academic profile — A/S
+- [x] 29 Oct 2026 — Carbon-pricing series: briefs, working papers, decks, cross-review, website publish (ready to deploy) — A
+- [x] 29 Oct 2026 — Repo combined: planning (0–3) and writing (A–F) under one README/AGENTS — A
+- [x] 29 Oct 2026 — `SPECIALISMS.md` written. Stephen decided: "three constraints" through-line yes; AI-risk angle is incentive and institutional design with systemic financial risk as the analogy; politics essays (8.1–8.3) and the *Finding Frodo* deck stay off the academic profile for now — A/S
 - [x] 29 Oct 2026 — 4.1 (TECP) moved into the series as 1.7; qmd is master (v0.2) — A
 - [x] 29 Oct 2026 — Section 1 reorganised: 1.6 created; `1B.OtherFiscalPolicy` holds 1.4 and 1.5; every series folder has `8.PreviousVersions` with v0.1/v0.2 labels, `3.RelatedPiecesAndLinks` and `RelatedWork.md`; series map in `1.ClimateAndFiscalPolicy/RelatedWork.md` — A
 - [x] 29 Oct 2026 — Template paper for 1.1 read (Keen, Parry and Roaf 2021); notes in `1.1/5.Notes/Review-2026-10-29.md` §6 — A

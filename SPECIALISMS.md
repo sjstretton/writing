@@ -29,7 +29,7 @@ This page maps what Stephen can credibly claim as expert ground, in five groups.
 
 1. Is the "three constraints" through-line right? **Yes.** The 0.0 introductory paper and the website "About" page both use it.
 2. For systemic AI risk, which angle should lead? **Incentive and institutional design, with systemic financial risk as the analogy.** It reuses the sovereign-incentives work and the 2014 systemic-risk review (section 5).
-3. Should the politics essays (8.1–8.3) stay off the academic profile? **Yes** (section 7).
+3. Should the politics essays (8.1–8.3) and the *Finding Frodo* deck stay off the academic profile? **Yes, for now.** Revisit later (section 7).
 
 ---
 
@@ -38,7 +38,7 @@ This page maps what Stephen can credibly claim as expert ground, in five groups.
 These are the things the climate fiscal team can call on Stephen for. Stephen named the first; the rest are added from the material.
 
 **1.1 Quantitative modeling of policy: the Total Effective Carbon Price (TECP).** ●
-The TECP is the uniform, economy-wide carbon tax that would cut emissions as much as a country's actual policy mix does. Existing metrics, including CPAT's Total Carbon Price ("broadly revenue raised divided by carbon emitted"), measure the price signal, not what it achieves. The TECP weights each instrument by how strongly emissions respond to it, split into fuel switching and demand reduction, using a nested CES demand model calibrated once per country from the energy balance, prices and elasticities. It runs in a spreadsheet. In the stylized example the policy mix scores $33–37/t on the TECP against $21/t on explicit prices. A fuel standard with a $166/t credit price adds only about $1/t: "a high price on a small, unresponsive base". Uses include paying for policies under policy crediting, recognition of carbon prices under CBAM, and country diagnostics. An earlier Drive note frames the same idea as an "effectiveness-weighted total carbon price" for setting donor willingness to pay and baselines for results-based climate finance.
+The TECP is the uniform, economy-wide carbon tax that would cut emissions as much as a country's actual policy mix does. Existing metrics, including CPAT's Total Carbon Price ("broadly revenue raised divided by carbon emitted"), measure the price signal, not what it achieves. The TECP weights each instrument by how strongly emissions respond to it, split into fuel switching and demand reduction, using a nested CES demand model calibrated once per country from the energy balance, prices and elasticities. It runs in a spreadsheet. In the stylized example (working paper v0.3) a mix that explicit-price metrics rate at $21/t has a long-run TECP of $37/t ($32–38 across calibrations) and $28/t after one year. A fuel standard with a $166/t credit price adds only about $1/t, because the price is high but its base is small and unresponsive. Uses include paying for policies under policy crediting, recognition of carbon prices under CBAM, and country diagnostics. An earlier Drive note frames the same idea as an "effectiveness-weighted total carbon price" for setting donor willingness to pay and baselines for results-based climate finance.
 *Sources:* 1.7 brief and working paper (`B Working Papers/1.ClimateAndFiscalPolicy/1.7.PolicyEquivalentCarbonPriceAndCES/`); Drive: `WTP and Baseline Project.docx`.
 
 **1.2 Models a finance ministry can audit (CPAT architecture).** ◐
@@ -214,7 +214,7 @@ The prisoner's dilemma, the tragedy of the commons and of the horizons, the race
 
 ## 7. Notes and cautions
 
-- **Keep off the academic profile:** the politics essays (8.1 *Manifesto*, 8.2 the World Trade Center collapse, 8.3 voting patterns) and the Drive deck `Finding Frodo.pptx`. They contain strong partisan claims and would weaken both PhD applications and the World Bank profile. *(Decided 29 Oct, decision 3 above.)*
+- **Keep off the academic profile:** the politics essays (8.1 *Manifesto*, 8.2 the World Trade Center collapse, 8.3 voting patterns) and the Drive deck `Finding Frodo.pptx`. They contain strong partisan claims and would weaken both PhD applications and the World Bank profile. *(Decided 29 Oct, for now; decision 3 above.)*
 - **Confidential or internal:** 3.2 *Sustainability-Linked Lending* is World Bank confidential, yet `9.ResearchTracking/CV-UnpublishedWorks.docx` still lists its URL. `GeoprosperityIntro.docx`, including the copy in the website's `_site/papers/`, has an appendix D marked "not intended for external circulation". The Drive `Geoprosperity_WorkingPaperSeries.docx` is marked "Official Use Only". The work plans, team workshop notes and EFI note are internal.
 - **Numbers to verify before outward use:** the IHLEG debt figure (3.2), the MDB guarantee multiple (4.3), and everything in the 5.4 tables.
 - **Mismatch:** `6.0.CombinedOverview.docx` describes 1.4 as resource and locational rent "alongside carbon pricing", which does not match the 1.4 qmd.
