@@ -1,0 +1,303 @@
+---
+title: "The Climate Investment Trust: Hold Capital, Lend Its Strength"
+subtitle: "A buffer fund that insures policy guarantees, invests in clean energy and holds national climate accounts"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+version: "0.2"
+abstract: |
+  Large international rewards for national climate policy fail because donors will not vote for cash transfers on the needed scale and governments cannot borrow against promised payments. I propose a Climate Investment Trust that holds donor capital rather than spending it, and uses one pool three ways: as second-loss cover behind the guarantees that reward policy, as fee-earning co-investment in clean energy and in regional first-loss funds, and as national beneficiary accounts that countries pledge as collateral now and draw only after 2050. I derive the buffer needed to keep the chance of exhaustion below a target, and show that a held buffer delivers interest savings equal to the spread divided by the expected loss rate per donor dollar, against one dollar for a fund that pays out. In a stylized calibration, $5 billion supports $54 billion of guarantees and delivers 2.7 to 10 dollars per dollar. Growth requires guarantee fees or a fee on private returns, and an allocation rule built as a feebate between accounts rewards early action at no net cost.
+keywords: [climate finance, guarantees, buffer capital, trust funds, sovereign incentives, multilateral development banks]
+jel: [F35, G22, G23, H87, Q54, Q58]
+bibliography: ClimateInvestmentTrust.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+number-sections: true
+crossref:
+  fig-prefix: Figure
+  tbl-prefix: Table
+  sec-prefix: Section
+  eq-prefix: equation
+format:
+  docx: default
+---
+
+*Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No. 3.2 [@CFPB32].*[^credit]
+
+[^credit]: The proposal was first written as the Climate Incentives Trust in May 2024 [@StrettonCIT2024] and developed in the book manuscript *Time and Chance* [@StrettonTC, chs. 14, 18–20]. The regional fund design in Section 6 and the design questions in Section 7 draw on joint work on two-stage clean energy project finance with Jasper Zimmermann. Errors are mine.
+
+# Introduction
+
+Climate mitigation pays off globally while its costs fall on national budgets, so the reward for national climate policy has to come from outside, and the obvious ways to pay it fail on their own arithmetic. A global carbon tax of $100 per tonne of CO₂ would raise nearly $5 trillion a year and require transfers of about $1 trillion a year from China alone before any revenue was recycled [@StrettonTC]. A global subsidy at the same rate that cut emissions by a tenth would cost some $500 billion in its first year and, paid against negotiated baselines, would reward governments for waiting. Even modest pooled funds are hard to raise: the Tropical Forest Forever Facility, launched at COP30 in November 2025 to pay for standing forest, had pledges of $6.7 billion against a $25 billion target for its sponsor capital by late 2025 [@Barber2025TFFF].
+
+This paper asks what institution can stand behind large guarantee-based incentives for climate policy, at a donor cost that is politically possible, and grow without fresh donations.
+
+The answer is a trust that holds capital instead of disbursing it. Donors fund the Climate Investment Trust and hold its votes. Its formal beneficiaries are the post-2050 populations of participating countries, through national beneficiary accounts that can be pledged as collateral now and drawn only later. The Trust does three jobs with one pool. It takes second loss on policy guarantees: the government takes first loss, the Trust second, and a AAA-rated entity stands behind both. It co-invests in the construction stage of clean energy projects and seeds regional funds that hold the first-loss tranche of operating portfolios. And it credits its surplus to national accounts by participation and performance, deducting for policy reversed. Because a guarantee is worth its full spread saving to the borrower but costs the guarantor only its expected loss, a buffer sized to stressed losses delivers several times the incentive of the same money paid out.
+
+The paper makes three contributions, each a proposition with its conditions stated. The first sizes the buffer. In a one-factor portfolio model of guarantee calls [@Vasicek2002; @Gordy2003], the buffer needed for a target annual probability of exhaustion is a few percent to about 15 percent of exposure, and the present value of interest savings delivered per donor dollar is the spread divided by the Trust's expected loss rate, net of any guarantee fee. A fund that pays rewards out delivers one dollar per dollar. In the base calibration the ratio is 2.7, and 10 if the Trust recovers 90 cents of each dollar it pays. The second gives the growth dynamics. A buffer that charges no fee shrinks; growth comes from guarantee fees and from a fee on private co-investment, and it slows as the Trust grows relative to the private capital it manages. Earlier versions' claim that the Trust doubles every two years is true only at launch. The third gives an allocation rule, a feebate between beneficiary accounts, that balances its budget, rewards each tonne cut, makes waiting costly and can be enforced only because deductions come from balances held in trust.
+
+The closest institutions are the IMF's Resilience and Sustainability Trust, which channels reserve assets into long-term lending through loan, deposit and reserve accounts [@IMF_RSTFAQ], and the Tropical Forest Forever Facility, which puts sponsor capital in a first-loss position beneath private capital and pays forest countries from the spread [@Barber2025TFFF]. The Climate Investment Trust differs from both: it insures rather than lends or invests for a spread, and its accounts belong to beneficiaries who cannot yet draw them. Relative to the literature on climate clubs [@Nordhaus2015], which penalizes non-members, it rewards members, and it supplies the enforcement device that an international feebate lacks [@StrettonRPWT].
+
+The paper is the institutional half of a pair. Its companion proposes a notional capitalized value for each country, a climate balance credited for carbon stocks and low emissions and used as guarantee capacity on the country's green borrowing [@StrettonWP31; @CFPB31]. The Trust funds the buffer behind that capacity. It can also deliver the reward in sustainability-linked sovereign lending [@StrettonWP33; @CFPB33], and its regional funds supply the first-loss equity beneath the portfolio bonds of series 2 [@StrettonWP22; @CFPB22]. Section 2 reviews precedents, Section 3 sets out the Trust, Section 4 the model, Section 5 the calibration, Sections 6 and 7 the regional funds and design questions, and Section 8 the policy implications.
+
+# Precedents and literature
+
+**Multilateral development banks hold more capital than their loss record requires, and shareholders have started to let it be stretched.** The G20's independent review of development banks' capital adequacy frameworks, reported in July 2022, recommended that shareholders redefine risk appetite, give credit for callable capital, use financial innovations such as hybrid capital, engage with rating agency methods and improve governance of capital adequacy [@G20CAF2022]. The review's logic is the logic of this paper: a preferred creditor with diversified sovereign exposure loses far less than its capital rules assume, so capital can support more lending. Its limit is that every step consumes the banks' own capital and requires their shareholders' consent, and climate lending that is not additional to existing envelopes is opposed by whoever loses envelope [@StrettonTC, ch. 17]. A separate vehicle with its own capital can protect a bank's guarantees without consuming its balance sheet.
+
+**Hybrid capital and SDR rechannelling show that reserve assets can become loss-absorbing capital.** On 10 May 2024 the IMF Executive Board allowed members to channel up to SDR 15 billion (about $20 billion) of special drawing rights into hybrid capital issued by approved development banks; the African and Inter-American development banks expected to lend about four dollars for each dollar received [@Plant2024]. Hybrid capital sits below senior creditors and absorbs losses before them. It is the closest existing instrument to the Trust's second-loss position, but it is capital of a single bank and earns nothing for the countries whose borrowing it supports.
+
+**IFFIm shows that binding donor commitments can be turned into money now.** Since 2006 the International Finance Facility for Immunisation has received long-term, legally binding pledges from donor countries and, with the World Bank as treasury manager, converted them into bonds whose proceeds fund Gavi immediately; it borrows against only a share of the pledges and keeps the rest as a reserve [@IFFIm_About]. IFFIm front-loads spending. The Trust uses the same reserve logic for the opposite purpose: it holds capital so that it is never spent except on losses.
+
+**The IMF's Resilience and Sustainability Trust shows that donor capital can be lent rather than given, with a reserve to protect it.** The IMF Executive Board approved the RST in April 2022 and it opened in October 2022 [@IMF2022RST; @IMF_RSTFAQ]. Members with strong external positions contribute, including by channelling SDRs, to three accounts: a loan account, a deposit account and a reserve account. Pledges reached SDR 35.8 billion ($48.9 billion) by 28 July 2025 [@IMF_RST]. It lends to eligible members at a 20-year maturity with a 10½-year grace period, and its architecture keeps contributors' claims safe and liquid enough to retain their reserve-asset character [@IMF_RSTFAQ]. The 2024 version of this proposal took the RST's investment accounts as its model [@StrettonCIT2024]. The difference is that the RST's resources are owed back to contributors, while the Trust's accounts belong to beneficiaries.
+
+**The Tropical Forest Forever Facility is the nearest working example of a junior-senior pool that pays for a stock.** It targets $125 billion: $25 billion of sponsor capital, provided as 40-year loans at rates comparable to US Treasury yields and taking first losses, and $100 billion of private capital above it. The pool is invested in emerging-market sovereign and corporate bonds, and the spread over the sponsor and private cost pays forest countries about $4 per hectare of standing forest a year, conditional on deforestation below 0.5 percent a year and reduced for deforestation and fire-related degradation; 20 percent goes to Indigenous peoples and local communities. The World Bank is trustee and interim host [@Barber2025TFFF]. The facility shows that donors will put capital in a first-loss position and that a pool can reward a stock. It pays out each year, and its incentive is bounded by the spread it earns; it does not insure anything.
+
+**Portfolio credit risk theory supplies the buffer arithmetic.** In the one-factor model, each obligor's creditworthiness depends on a common factor and an idiosyncratic shock, and as the portfolio grows its loss rate converges to a deterministic function of the common factor [@Vasicek2002]. The capital needed for a given confidence level then depends only on default probabilities, loss given default and correlation, which is the foundation of ratings-based bank capital rules [@Gordy2003]. Sovereign loss given default is not small for market creditors: the average haircut in sovereign restructurings between 1970 and 2010 was 37 percent [@CrucesTrebesch2013].
+
+**International climate economics explains why incentives must come from outside and why they are hard to pay.** Climate clubs overcome free-riding by penalizing non-members through trade [@Nordhaus2015]. Results-based climate finance rewards measured cuts against baselines, which invites strategic delay. An international feebate on national carbon intensity would net to zero and move far less money than a tax, but it requires sovereigns to pay their peers, which they will not do [@StrettonRPWT, ch. 5].
+
+**The gap is an institution that holds loss-absorbing capital for climate policy guarantees, grows, and allocates its gains to countries by performance.** The development banks' capital is bound by their shareholders' envelopes; hybrid capital and the RST are owed back to their providers; the forest facility pays out and insures nothing. None sizes a buffer against guarantee calls, sets out when it can grow without new donations, or supplies the enforcement device that an international feebate needs.
+
+# The Trust: funding, control and benefit separated
+
+**A trust separates who pays, who decides and who benefits, and the Climate Investment Trust uses all three separations.** Donor countries fund it and hold the voting shares. A multilateral development bank manages it under its trust fund rules. The formal beneficiaries are the post-2050 populations of participating countries: each country has a beneficiary account, credited by participation and performance, that becomes withdrawable after 2050. A global account holds capital not yet allocated to any country and meets the first guarantee calls. Developing countries can also contribute, in which case their own future populations are the beneficiaries.
+
+**Countries benefit long before 2050, through collateral rather than cash.** An account that grows and cannot yet be drawn is still an asset, and an asset can be pledged. A country can pledge its account as additional cover behind its own guarantees, which lowers the rate it pays on guaranteed green borrowing, or as collateral for sustainability-linked loans. The account rewards and secures at the same time.
+
+**Deductions make the incentive two-sided.** The Trust credits accounts for policy adopted and kept, and deducts for policy reversed. Taxing a sovereign is infeasible; deducting from a balance it does not yet control is not. A payment to a government can be reversed by the next government. An account held for the country's future population, which grows when the country acts and shrinks when it retreats, creates a constituency for persistence [@StrettonTC, ch. 20].
+
+**The Trust does three jobs with one pool of loss-absorbing capital.** *Time and Chance* presents the same pool under five names: a risk equity fund, a clean energy equity fund, a policy-lending fund, a Climate Investment and Insurance Fund, and the Climate Incentives Trust [@StrettonTC, ch. 14]. They are views of one structure. This paper uses one name, the Climate Investment Trust, and one vocabulary for who loses first, set out in Table 1.
+
+| Setting | First loss | Second loss | Behind |
+|---|---|---|---|
+| Policy guarantees (a government guarantees a contractual policy commitment, such as guaranteed-price auction contracts or a sustainability-linked bond) | The government, by indemnity to the guarantor, recorded as an obligation to it | The Trust's buffer: the global account and, where pledged, the country's own beneficiary account | A AAA-rated entity: a multilateral development bank or highly rated sovereign |
+| Portfolios of operating clean power plants (series 2) | A regional fund holds the first-loss tranche | Mezzanine | Senior bonds, co-guaranteed by highly rated sovereigns [@CFPB22] |
+
+: Table 1. Who loses first. For policy guarantees the Trust is second loss; for project portfolios the Trust's regional funds hold the first-loss tranche. Source: author, consolidating @StrettonTC, chs. 14 and 19.
+
+**Insurance of policy guarantees comes first, because it needs no deployment.** A government that commits to a policy gives a guarantee: an annual auction of guaranteed-price contracts for clean power is a contract, and its value to investors depends on the probability the state honors it. The government indemnifies the guarantor, as it does under existing multilateral guarantees. If it fails to pay, the Trust pays and holds the government's obligation, which is recovered over time. Only if the buffer is exhausted is the AAA entity called. The investor gets the credit of the strongest party; the incentive to perform stays with the government. The arrangement adds to the government's liabilities: it creates a contingent liability, but one that falls due only on the government's own failure to honor its commitments, which is smaller, contingent and contracted, not a new debt [@StrettonTC, ch. 14]. A Trust that acts only as a buffer, with its capital in high-grade bonds, is useful on its own and is the simplest version to capitalize and explain [@StrettonTC, ch. 20].
+
+**Investment comes second.** The Trust co-invests in the construction stage of clean energy projects, where money is scarce and a credible screen crowds others in, and sells after the plant is connected and refinanced. Through regional funds set up with regional development banks it also takes the first-loss tranche in portfolios of operating plants. Section 6 develops this job.
+
+**Allocation is the third job.** The Trust credits its distributable surplus to accounts by a published rule. Section 4.4 derives one.
+
+**Private capital enters the investment function on limited terms.** Pension funds and sovereign wealth funds may co-invest alongside the Trust in construction-stage equity. They pay a fee of 25 percent of their investment returns to the Trust and vote only on the investment function, not on fees, insurance or allocation. The Trust keeps control of everything that affects the guarantee book.
+
+# A model of the Trust
+
+## Setup
+
+**The Trust holds capital $K$ in safe assets and stands second-loss behind guarantee exposure $G$.** Exposure is spread over $n$ equal guaranteed programs, one per participating country. In a year, country $i$ fails to honor its first-loss indemnity with probability $p$. Failures are correlated through a one-factor structure: country $i$ fails when $X_i = \sqrt{\rho}Z + \sqrt{1-\rho}\,\varepsilon_i < \Phi^{-1}(p)$, where $Z$ and $\varepsilon_i$ are independent standard normal and $\rho$ is the asset correlation. When country $i$ fails, the Trust pays its exposure $G/n$ and ultimately loses a share $L$, the loss given call. The expected loss rate on exposure is $\lambda = pL$.
+
+**The borrower saves a spread $s$ a year on guaranteed debt; the Trust may charge a guarantee fee $f \le s$.** The incentive value to the country is the present value of $s - f$ on the guaranteed debt. The buffer earns a safe yield $r_s$ and incurs running costs $c$, both as shares of $K$. A fund that pays rewards out instead is the benchmark: it delivers a dollar of incentive per dollar of capital.
+
+**The Trust targets a probability $\alpha$ that guarantee losses in a year exceed its capital.** That event is the one in which the AAA entity behind the Trust is called, so $\alpha$ is the AAA backer's attachment probability. The buffer ratio $b = K/G$ is the smallest that meets the target.
+
+## Proposition 1: the leverage of a buffer
+
+**Proposition 1 (Leverage of a buffer).** *(a) With $n$ equal exposures, the buffer ratio is the $(1-\alpha)$ quantile of the annual loss rate $\ell = (L/n)\sum_i \mathbf{1}\{X_i < \Phi^{-1}(p)\}$. As $n \to \infty$ it converges to*
+$$
+b_\infty = L\,\Phi\!\left(\frac{\Phi^{-1}(p) + \sqrt{\rho}\,\Phi^{-1}(1-\alpha)}{\sqrt{1-\rho}}\right), \qquad (1)
+$$
+*which rises with $p$ and $L$, falls with $\alpha$, and rises with $\rho$ whenever $\Phi^{-1}(1-\alpha) > \sqrt{\rho}\,|\Phi^{-1}(p)|$, which holds for all $\rho$ when $\alpha \le p$. A buffer of $K$ supports exposure $K/b$.*
+
+*(b) Suppose the Trust keeps exposure at $G = K/b$ as its capital changes, and value incentive flows at the buffer's net yield $r_s - c$. Then the present value of interest savings delivered per dollar of initial capital is*
+$$
+M = \frac{s - f}{\lambda - f} \qquad (2)
+$$
+*when $f < \lambda$, and is unbounded when $f \ge \lambda$. A payout fund delivers 1. The buffer delivers more than a payout fund if and only if $s > \lambda$: the spread saved exceeds the Trust's expected loss rate.*
+
+*(c) If the assets in which the buffer is held lose a share $k$ of their value in the states that exhaust it, the buffer ratio must rise to $b/(1-k)$.*
+
+**The intuition is that a buffer is consumed only by losses, while the incentive it supports is paid every year.** A dollar paid out is gone. A dollar held behind guarantees supports $1/b$ dollars of exposure each year, on which the borrower saves $s$, and it shrinks only at the expected rate $(\lambda - f)/b$. Equation (2) is the ratio of the incentive flow to the rate of consumption, and it does not depend on $b$: the buffer ratio decides how much exposure a given capital supports at a moment, not how much incentive it delivers over its life. The condition $s > \lambda$ is the series' central claim in precise form. The market charges a sovereign a spread that covers its expected loss to market creditors plus a risk and liquidity premium; the Trust bears only its own expected loss, which is lower again if, as a preferred creditor with recovery rights on the sovereign's obligation, it loses less than market creditors do.
+
+**Part (c) is why the buffer must not be invested in clean power.** Construction-stage equity in clean energy loses value in the same crises, a sovereign debt crisis or a currency collapse, that trigger guarantee calls. A buffer half-invested in such equity, with a 40 percent fall in a stress, would need $b/(1-0.2) = 1.25b$. Holding the buffer in high-grade bonds of other issuers sets $k$ near zero. This resolves a tension in earlier drafts, which described the Trust both as capital "held, not spent" and as an investor in blended project equity [@StrettonTC, ch. 20]: the buffer is held; the investment function uses private capital and the Trust's surplus.
+
+## Proposition 2: growth and self-funding
+
+**The Trust's capital evolves with its yield, fees, expected losses, costs and the fee on private returns.** Let private investors commit equity $E_p$ to the investment function, earning a gross return $r_e$, of which a share $\varphi$ goes to the Trust. In expectation,
+$$
+\dot K = \big(r_s - c - (\lambda - f)/b\big)K + \varphi\, r_e E_p + C, \qquad (3)
+$$
+where $C$ is new contributions. Define the net burn rate $\beta = c + (\lambda - f)/b - r_s$.
+
+**Proposition 2 (Self-funding).** *(a) Without private co-investment or contributions, the Trust's capital grows if and only if $\beta < 0$, that is, if the guarantee fee satisfies*
+$$
+f \ge \lambda - b\,(r_s - c). \qquad (4)
+$$
+*(b) With constant private equity $E_p > 0$, no contributions and $\beta > 0$, capital converges monotonically to*
+$$
+K^* = \frac{\varphi\, r_e E_p}{\beta}, \qquad (5)
+$$
+*and its growth rate $g_t = \varphi r_e E_p/K_t - \beta$ falls as it grows. The Trust funds itself (its capital does not fall) if and only if $K_0 \le K^*$, and it grows at a target rate $g$ only while $K_t \le \varphi r_e E_p/(g + \beta)$.*
+*(c) Private investors with a required return $r_p$ participate only if $(1-\varphi) r_e \ge r_p$. The fee income available to the Trust is therefore at most $(r_e - r_p)E_p$: the excess of the investment return over what private investors require.*
+
+**The proposition settles the growth claims of earlier versions.** A buffer is not a money machine. Its safe yield cannot cover expected losses at high leverage unless borrowers pay most of the expected loss as a fee, and every point of fee is a point of incentive taken back from the borrower. The Trust grows because it earns a share of returns on capital that is not its own. That income is fixed by the size of the private pool, not by the size of the Trust, so growth is fastest at launch and slows as the Trust's capital catches up with what the fee income can sustain. Part (c) gives the fee rule a foundation: the 25 percent fee is acceptable to private investors only if a quarter of the gross return is above their hurdle. It is the same arrangement as the earlier dynamic incentive in which returns above an agreed cap pass to countries and dilute the original investors down to their agreed maximum [@StrettonTC, ch. 18].
+
+**Country stakes financed by borrowing carry a cost the accounts must repay.** In the indicative structure, $4 billion of the Trust's $5 billion launch capital comes from developing countries that finance their stakes through long-term development policy lending [@StrettonTC, ch. 20]. Each such country owes the loan and owns an account of the same size. Its net position improves only if the account's safe yield, its allocations and the value of the guarantees and collateral it secures exceed the loan rate $i_L$. With a stake $S_i$, the annual carrying cost is $(i_L - r_s)S_i$. The stake raises the country's gross debt, which a debt sustainability assessment will record; the matching asset is real but not liquid until 2050.
+
+## Proposition 3: an allocation rule
+
+**The Trust allocates its distributable surplus by a rule that pays for joining and for performance.** Let participating countries $i = 1, \dots, N$ produce output $Y_i$ in a covered sector (power, to start) at emissions intensity $e_i$, with output share $s_i = Y_i/\sum_j Y_j$. Let $\bar e = \sum_j s_j e_j$ be the output-weighted average intensity. Each year country $i$'s account receives
+$$
+A_i = \frac{a}{N} + \tau\,(\bar e - e_i)\,Y_i, \qquad (6)
+$$
+a base allocation from the surplus $a$ the Trust distributes, plus a feebate at rate $\tau$ per tonne: a credit for intensity below the benchmark and a deduction above it. Account balances $B_i$ earn the Trust's yield. Let $V_i$ be the annual value to country $i$ of the guarantees it receives as a participant and $(i_L - r_s)S_i$ its carrying cost.
+
+**Proposition 3 (Allocation).** *(a) Budget balance: the feebate terms sum to zero, so total allocation equals the surplus distributed, $\sum_i A_i = a$.*
+*(b) Performance: a country that cuts its emissions by one tonne through lower intensity raises its allocation by $\tau(1 - s_i)$. A leave-one-out benchmark, the average of the other participants, raises it by exactly $\tau$, at the cost of exact budget balance.*
+*(c) Feasibility and participation: deductions can be enforced only up to the balance, so the rule is feasible in a year if $\tau \le \min_{i:\, e_i > \bar e} (B_i + a/N)/((e_i - \bar e)Y_i)$. A country above the benchmark joins in a static comparison only if $a/N + V_i - (i_L - r_s)S_i \ge \tau(e_i - \bar e)Y_i$.*
+*(d) Early action: a cut of $\Delta$ in intensity made $k$ years later than it could have been costs the country $\sum_{j=0}^{k-1} \tau_{t+j}(1-s_i)\Delta Y_i/(1+\delta)^j > 0$. Waiting is never free, and a declining schedule of rates $\tau_t$ raises the cost of waiting.*
+
+**The rule is the series 1 feebate applied between countries, and its properties carry over.** Part (b) is the dominant-firm result for feebates with a current-average benchmark: a country that is a large share of the covered output partly sets its own benchmark and sees only part of the rate [@CFPB12]. Part (a) is what makes the rule affordable: the feebate moves money between accounts but needs no net money from the Trust. Part (c) is the binding constraint, and it shows why the international feebate needs a trust. Without balances to deduct from, any positive $\tau$ requires the most carbon-intensive participants to pay their peers, which sovereigns will not do [@StrettonRPWT, ch. 5]. With balances, $\tau$ is limited by the size of the accounts relative to the deviations from the benchmark. Part (d) answers the additionality problem. A payment for cuts measured against a baseline is worth as much, or more, if the cut is made later, so it rewards waiting. A feebate is a flow earned every year a country is below the benchmark, so delay forfeits it.
+
+**Participation and strength pull against each other, and a transitional benchmark resolves the conflict.** Part (c) shows that a high feebate rate drives the most carbon-intensive countries away, because their deduction exceeds what they gain from joining. Two remedies are available. The Trust can start the rate low and raise it as balances grow. Or it can give each entrant a transitional benchmark that starts at its own intensity on entry and converges to the common average on a published schedule. That is a baseline, but one fixed at entry and not a counterfactual, so it does not reward delay before entry as long as the convergence schedule is the same for every entrant, whenever it joins.
+
+# Calibration
+
+## Parameters
+
+**Every parameter in the calibration is stylized except the loss given call and the launch capital, and Table 2 lists them.** The model is in `2.Source/model.py`, which prints every number used below.
+
+| Parameter | Symbol | Value | Basis |
+|---|---|---:|---|
+| Guaranteed programs | $n$ | 20 | Stylized |
+| Annual probability a government fails to honor its indemnity | $p$ | 3% | Stylized; sensitivity 1–5% |
+| Asset correlation | $\rho$ | 0.2 | Stylized; sensitivity 0.05–0.4 |
+| Loss given call | $L$ | 37% | Average sovereign haircut, 1970–2010 [@CrucesTrebesch2013]; sensitivity 10% |
+| Target annual probability of exhaustion | $\alpha$ | 1% | Stylized |
+| Spread saved by the borrower | $s$ | 3 percentage points | Stylized |
+| Yield on buffer assets; running costs | $r_s$; $c$ | 4%; 0.5% | Stylized |
+| Launch capital | $K_0$ | $5bn | $1bn donor grants and $4bn country stakes [@StrettonTC, ch. 20] |
+| Rate on policy loans financing country stakes | $i_L$ | 5% | Stylized |
+| Private equity co-invested | $E_p$ | $95bn | Indicative [@StrettonTC, ch. 20]; sensitivity $10bn |
+| Gross return on construction-stage equity; fee | $r_e$; $\varphi$ | 10%; 25% | One consistent set chosen here (Section 5.4) |
+
+: Table 2. Calibration parameters. Stylized values are round and plausible, not estimated.
+
+## Buffer and leverage
+
+**In the base case a buffer of 9.3 percent of exposure keeps the annual chance of exhaustion at 1 percent, so $5 billion supports about $54 billion of guarantees.** The expected loss rate is $\lambda = 0.03 \times 0.37 = 1.1$ percent of exposure a year. With 20 programs the buffer ratio is 9.25 percent, a leverage of 10.8 times. With many small programs the same parameters give 6.4 percent from equation (1), a leverage of 15.6 times; the difference is granularity, because with 20 programs a single failure costs 1.85 percent of exposure. Table 3 and Figure 1 show the range: from under 4 percent of exposure when calls are rare to about 15 percent when they are frequent and highly correlated. If the Trust recovers 90 percent of what it pays, the buffer falls to 2.5 percent. A tighter target of 0.5 percent leaves the base buffer unchanged at 20 programs, because the loss distribution moves in steps of one failure.
+
+| Annual probability of a call | $\rho$ = 0.1 | $\rho$ = 0.2 | $\rho$ = 0.3 |
+|---|---:|---:|---:|
+| 1% | 3.7 | 3.7 | 5.6 |
+| 3% | 7.4 | 9.3 | 11.1 |
+| 5% | 9.3 | 11.1 | 14.8 |
+
+: Table 3. Buffer needed for a 1 percent annual probability of exhaustion, percent of guarantee exposure. Twenty equal programs, 37 percent loss given call, one-factor model with 400,000 simulations. Source: author's calculation, `2.Source/model.py`.
+
+![Buffer needed for a 1 percent annual probability of exhaustion, as a share of guarantee exposure, against the correlation of guarantee calls, for three annual call probabilities. Solid lines: 20 equal programs (steps reflect single failures). Dashed line: many small programs, equation (1). Loss given call 37 percent. Stylized. Source: author's calculation, `2.Source/make_wp_figures.py`.](2.Source/figures/fig1_buffer_ratio.png){width=95%}
+
+**Each donor dollar held as a buffer delivers 2.7 dollars of interest savings in the base case, and 10 dollars if the Trust recovers 90 cents of each dollar it pays.** The $54 billion of exposure saves borrowers $1.6 billion a year at a 3-point spread. Paid out in cash, $1.6 billion a year would use up $5 billion in about three years. From equation (2), with no guarantee fee, the incentive per donor dollar is $0.03/0.0111 = 2.7$. A guarantee fee of half the expected loss raises it to 4.4, because the borrower pays part of the cost and the capital lasts longer. With a 10 percent loss given call, the ratios are 10 and 19 (Figure 2). The loss given call is the parameter that matters most, and it depends on whether the government's first-loss obligation to the Trust ranks like its obligations to development banks, which are repaid far more reliably than its market debt, or like its market debt.
+
+![Present value of interest savings per donor dollar delivered by a buffer fund, against the loss given call, with no guarantee fee and with a fee equal to half the expected loss. A payout fund delivers 1. Call probability 3 percent, spread saving 3 percentage points; stylized. Source: author's calculation, `2.Source/make_wp_figures.py`.](2.Source/figures/fig2_incentive_per_dollar.png){width=95%}
+
+## Growth
+
+**In its insurance-only phase the Trust must charge a guarantee fee of about 0.8 percent of exposure a year to hold its capital steady.** At 10.8 times leverage, expected losses consume $0.0111/0.0925 = 12.0$ percent of capital a year, against 3.5 percent of net yield. From inequality (4), the fee that stops the buffer shrinking is $0.0111 - 0.0925 \times 0.035 = 0.79$ percent of exposure, 71 percent of the expected loss. The borrower keeps 2.2 of the 3 points of spread saving. A Trust that charges no fee and has no other income shrinks by about 8.5 percent a year. That is a legitimate choice, a subsidy that spends the capital slowly, but it is spending, not holding.
+
+**Fee income on private co-investment makes the Trust grow, quickly at first and then more slowly.** With $95 billion of private equity at a 10 percent gross return and a 25 percent fee, the Trust earns $2.4 billion a year. Its capital grows 39 percent in the first year, a doubling time of about two years, as earlier drafts claimed. But the fee income is fixed while the capital grows. With no guarantee fee, the net burn rate is $\beta = 8.5$ percent and capital reaches $18.5 billion after 10 years and approaches $K^* = 2.4/0.085 \approx 28$ billion (equation 5). With a guarantee fee of half the expected loss, $\beta$ falls to 2.5 percent, and capital reaches $25 billion after 10 years and $47 billion after 25, on its way to about $95 billion. With only $10 billion of private co-investment and no guarantee fee, $K^*$ is $2.9 billion, below launch capital, so the Trust shrinks toward it (Figure 3).
+
+![Trust capital over 25 years from $5 billion at launch, under four assumptions on private co-investment and guarantee fees. Exposure kept at 10.8 times capital. Stylized parameters in Table 2. Source: author's calculation, `2.Source/make_wp_figures.py`.](2.Source/figures/fig3_capital_paths.png){width=95%}
+
+**The largest uncertainty is whether $95 billion of private equity will co-invest on these terms.** It is 19 times the Trust's launch capital and well beyond what any blended-finance vehicle has raised; the forest facility, which offers investors a senior position in a bond portfolio, had not closed its sponsor tranche in late 2025 [@Barber2025TFFF]. The calibration treats it as an upper case. The growth result does not depend on the number, only on its sign: without fee income, a Trust that holds rather than spends must charge most of its expected loss as a fee.
+
+**The country stakes cost about $40 million a year to carry.** At a 5 percent policy loan rate and a 4 percent buffer yield, the $4 billion of borrowed country stakes costs participants 1 point, or $40 million a year in total. The guarantees the Trust supports save them $1.6 billion a year at the base spread, so the condition after Proposition 2 holds by a wide margin in aggregate. It may fail for a country that borrows to contribute but receives little guarantee exposure, which argues for linking each country's guarantee capacity to its stake as well as to its notional capitalized value.
+
+## One set of numbers
+
+**Earlier versions of the proposal used two sets of numbers, and this paper uses one.** The May 2024 proposal and *Time and Chance* charge private investors about 25 percent of investment returns and assume a 10 percent return, so that $800 billion of equity across eight funds pays the Trust $20 billion a year; the same chapter, and a 2024 technical summary, use a 10 percent fee on a 15 percent return, $1.5 billion a year on $100 billion [@StrettonCIT2024; @StrettonTC, ch. 20]. The two give similar fee income per dollar of private equity, 2.5 and 1.5 percent a year. This paper uses the 25 percent fee and 10 percent return throughout, because the fee then sits within the participation bound of Proposition 2(c) for private investors with a hurdle of 7.5 percent. The earlier "doubling every two years" and "every three years" both describe launch growth only.
+
+**The headline of $2 trillion a year of investment from eight funds is gross leveraged investment, not the Trust's capacity, and is not carried forward.** It assumes eight funds of the same size as the global fund, $800 billion of equity in total, debt of four times equity and a two-year construction cycle [@StrettonTC, ch. 20]. Each step is plausible, but together they require $760 billion of private equity on the Trust's terms. The earlier list of regional funds also included North America, Europe and Central Asia, and China, which sits oddly with beneficiaries who are the future populations of participating developing countries. This paper restricts the regional funds to regions with participating developing countries.
+
+**Profit allocations cannot pay a full carbon price, and the calibration shows why the design does not depend on them.** Earlier drafts sized the incentive at $100 per tonne on a 10 percent cut in about 10 billion tonnes a year, or about $100 billion [@StrettonTC, ch. 20]. That is about 40 times the Trust's fee income in the upper case. The large rewards come elsewhere: from the guarantees the buffer supports, worth $1.6 billion a year to borrowers at launch and growing with the Trust, and from the feebate between accounts, which costs nothing net.
+
+## The feebate between accounts
+
+**Account balances, not the Trust's income, limit the strength of the feebate between accounts.** In a stylized power sector of ten participating countries, each producing 200 terawatt-hours a year at intensities spread evenly from 0.3 to 0.9 tonnes of CO₂ per megawatt-hour, the benchmark is 0.6 and the most carbon-intensive country is 60 million tonnes above it. A feebate of $10 per tonne moves at most $0.6 billion a year to or from any one account and nets to zero. If a $5 billion Trust were divided equally among the ten accounts, a single year's deduction could not exceed the balance at any rate above about $8 per tonne. At $28 billion, the long-run capital in the no-fee upper case, the limit is about $47 per tonne. The participation constraint binds earlier: with a base allocation of $1 billion shared equally and guarantee savings of $162 million a year per country, the most carbon-intensive country gains from joining only at rates below about $4 per tonne, which is why the transitional benchmark of Section 4.4 is needed.
+
+# Regional funds and the equity layer
+
+**Every de-risking instrument makes debt cheaper, and all of them assume equity underneath that developing countries rarely have.** Payment intermediaries, tiered guarantees and two-stage finance reduce the risk lenders bear [@CFPB21; @CFPB22]. None creates the loss-absorbing capital that must sit beneath the lenders for the structure to be rated. Regional funds, set up by the Trust with regional development banks, supply it.
+
+**In portfolios of operating plants, the regional fund holds the first-loss tranche.** Once plants are built and selling under guaranteed contracts, they can be pooled and refinanced through tranched securities: first-loss equity, a thin mezzanine and senior bonds [@CFPB22]. The regional fund holds the first-loss tranche. The same one-factor arithmetic as Proposition 1 sizes it, with project rather than sovereign default probabilities, and the companion paper derives the tranche needed for a target senior rating [@StrettonWP22]. The vocabulary differs from the policy guarantee case on purpose: for policy guarantees the government is first loss and the Trust second; for portfolios the regional fund is first loss and senior bondholders are protected by it.
+
+**Construction-stage co-investment gives the fund the information to price first loss.** A fund that has sat on the capital table of a hundred projects in a region before financial close knows how projects there fail: grid connection delays, developer insolvency, tariff disputes. That knowledge is what pricing first loss on their operating successors requires.
+
+**Diversification across a region is a resource the fund can sell.** Project failures in different countries are imperfectly correlated, so the capital needed against a regional portfolio is less than the sum needed against its parts. The fund can act as cross-guarantor to portfolios it does not own and charge a fee, extending its effect beyond the projects it holds. The fee should be at least the expected loss on the cover sold, for the reasons in Proposition 2.
+
+**Regional funds can open a local-currency savings channel where there is no bond market.** Senior tranches backed by the fund's first-loss equity can be issued in local currency to domestic savers and pension schemes, giving a deposit-like green instrument with no currency mismatch [@CFPB22].
+
+# Design questions
+
+**Governance decides whether the Trust finances good policy.** A fund that absorbs losses on politically visible assets will be asked, one plausible request at a time, to absorb losses it should not. Four protections should be built in from the start, because a trust that begins informal does not become formal later [@StrettonTC, ch. 20]. Allocation and deduction rules should be written before the first dollar arrives and changeable only by a super-majority of shareholders at the time of the change. Every balance and every movement should be published. Trustees should be independent, with an endowment-style mandate. And the countries whose future populations are the beneficiaries should have a voice on the rules and a right to audit, but no vote on investments, which would bring back the political risk the structure exists to remove. An alternative, in which participants vote on allocation rules weighted by their contribution in money or verified action, would let early movers set the rules; it is worth testing but raises questions of measurement and entry [@StrettonRPWT, ch. 12].
+
+**The price of second loss decides whether the Trust crowds in or subsidizes.** Proposition 2 makes the trade-off explicit. Every point of guarantee fee preserves capital and takes incentive back from the borrower; every point not charged is a subsidy that spends the buffer. The fee should be explicit, published and set by rule: for example, a fee equal to a fixed share of the modeled expected loss, with the share declining for countries that join early. For the regional funds' first-loss tranches the same applies: a tranche priced below its risk transfers value to senior lenders who would have lent anyway.
+
+**The recycling rule decides whether investment capital is used once or many times.** A fund that holds every construction-stage stake to maturity finances its portfolio once. A fund that sells seasoned operating assets into the secondary market, assets that are by then attractive to conventional investors, and reinvests in new construction recycles the same capital; with a two-year construction phase, each dollar finances a new project about every two years. Recycling needs a secondary market deep enough to absorb the sales, which the standard asset classes of series 2 are designed to create [@CFPB22]. The buffer is never recycled into projects.
+
+**Private capital should have limited voting rights and a fee that respects its hurdle.** Private investors vote on the investment function only. Their fee, 25 percent of returns here, should be set so that their net return clears their required return (Proposition 2(c)); a fee above that bound raises nothing, because they do not come.
+
+# Policy implications
+
+**Donors and a multilateral development bank should launch the Trust as a buffer fund for policy guarantees, with capital in high-grade assets.** The insurance-only Trust needs no pipeline of investments and no private partners. It needs donor capital, a manager, a AAA backer that accepts a second-loss buffer with a published exhaustion probability, and a set of policy guarantees to stand behind. The natural first book is the guarantee capacity proposed in the companion paper: a country's notional capitalized value sets the guarantees development banks will provide on its green borrowing, and the Trust's buffer stands second loss behind them [@StrettonWP31].
+
+**The Trust should publish its allocation rule, its second-loss fee and its exhaustion target before it raises money.** These three numbers decide its effect. The allocation rule decides the incentive; the fee decides how fast the buffer is spent; the exhaustion target decides how much the AAA backer is exposed. Publishing them lets donors judge the Trust by the policy it buys and lets countries judge whether joining pays.
+
+**Countries should borrow to fund stakes only where the guarantees their stakes secure are worth more than the carrying cost.** A country's stake raises its gross debt. Its account is a real asset but is illiquid until 2050. The calibration's aggregate carrying cost of $40 million a year against $1.6 billion of interest savings shows the trade is good on average. It is not good for every country, so guarantee capacity should rise with a country's stake.
+
+**The Trust can be the reward channel for sustainability-linked sovereign lending.** A margin step-down of a few basis points on a few hundred million dollars is small against the cost of the policies it is meant to induce. Delivering the reward instead as guarantee capacity or as a credit to the country's beneficiary account, which it can pledge, multiplies its value by the ratio in Proposition 1 [@StrettonWP33].
+
+**The strongest objection is that the Trust is development bank capital under another name, and that donors would do better to recapitalize the banks.** The answer is that the two are complements. Bank capital increases are worth supporting, but they are constrained by shareholder politics and envelopes, and they are owed back to shareholders [@G20CAF2022]. The Trust is additional capital, outside the banks' balance sheets, that protects their guarantees without consuming their capital, and its gains accrue to the countries whose policies it rewards.
+
+**The Trust costs donors its expected losses net of fees, its running costs and the return they forgo on capital held.** In the base case, donors' $1 billion and countries' $4 billion support $54 billion of guarantees; expected losses are $0.6 billion a year before fees. The costs and risks are concrete. The Trust holds capital in safe assets that could have earned more elsewhere. Its guarantees create contingent liabilities for participating governments: smaller than the debt they replace, contingent on the governments' own conduct and contracted, but liabilities all the same. Moral hazard is real, because a government that knows a buffer stands behind its commitments may honor them less carefully; first loss and recovery rights on the government's obligation keep the incentive with the government.
+
+**The recommendation fails under four conditions.** It fails if guarantee calls are far more correlated than assumed, as in a synchronized emerging-market debt crisis; at a correlation of 0.4 the base buffer rises to about 13 percent of exposure (Figure 1), and in the tail the AAA backer pays. It fails if the Trust's loss given call is as high as market creditors' and spreads are close to expected losses, so that $s$ is near $\lambda$ and the ratio in equation (2) approaches one. It fails if governance yields to pressure to cover losses it should not, which turns a buffer into a payout fund by another route. And its growth fails if private co-investment does not come on terms that leave a fee, in which case the Trust holds steady only by charging most of its expected loss to borrowers.
+
+# Conclusion
+
+**A trust that holds donor capital behind policy guarantees delivers several times the incentive of the same money paid out, on a condition that can be checked: the spread saved must exceed the Trust's expected loss.** This paper has shown how large the buffer must be for a given chance of exhaustion, when it grows without new donations, and how an allocation rule built as a feebate between accounts can reward performance and early action at no net cost. Its main limitation is the calibration: the call probabilities, correlations and loss given call of policy guarantees are stylized, because no such book yet exists. The next step is to estimate them from the record of development bank guarantees and sovereign arrears to development banks, and to work through the first application, the buffer behind guarantee capacity under a notional capitalized value, with a named country and real exposures.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+# Appendix A: Proofs {.unnumbered}
+
+**Proposition 1(a).** Conditional on $Z = z$, the indicators $\mathbf{1}\{X_i < \Phi^{-1}(p)\}$ are independent with probability $q(z) = \Phi\big((\Phi^{-1}(p) - \sqrt{\rho}z)/\sqrt{1-\rho}\big)$. By the law of large numbers, $\ell \to L\,q(Z)$ almost surely as $n \to \infty$ [@Vasicek2002; @Gordy2003]. Since $q$ is decreasing in $z$, $P(L q(Z) > x) = P(Z < q^{-1}(x/L))$, and the $(1-\alpha)$ quantile of $L q(Z)$ is $L q(\Phi^{-1}(\alpha)) = L q(-\Phi^{-1}(1-\alpha))$, which is equation (1). It is increasing in $p$ and $L$ and decreasing in $\alpha$ because $\Phi$ and $\Phi^{-1}$ are increasing. Writing $h(\rho) = (\Phi^{-1}(p) + \sqrt{\rho}\,z_\alpha)/\sqrt{1-\rho}$ with $z_\alpha = \Phi^{-1}(1-\alpha)$,
+$$
+h'(\rho) = \frac{z_\alpha/\sqrt{\rho} + \Phi^{-1}(p)}{2(1-\rho)^{3/2}},
+$$
+which is positive if and only if $z_\alpha > \sqrt{\rho}\,|\Phi^{-1}(p)|$ when $p < 1/2$. If $\alpha \le p$ then $z_\alpha \ge |\Phi^{-1}(p)| > \sqrt{\rho}\,|\Phi^{-1}(p)|$ for every $\rho < 1$. For finite $n$ the quantile is computed by simulation. $\square$
+
+**Proposition 1(b).** With exposure kept at $G_t = K_t/b$, expected capital follows $\dot K = (r_s - c)K - (\lambda - f)K/b$, so $K_t = K_0 e^{-\gamma t}$ with $\gamma = (\lambda - f)/b - (r_s - c)$. The incentive flow is $(s - f)G_t = (s-f)K_t/b$. Discounting at $\delta = r_s - c$,
+$$
+\int_0^\infty \frac{(s-f)K_0}{b} e^{-(\gamma + \delta)t}\,dt = \frac{(s-f)K_0}{b(\gamma + \delta)} = \frac{(s-f)K_0}{\lambda - f},
+$$
+since $b(\gamma + \delta) = \lambda - f$. The integral diverges when $f \ge \lambda$. A payout fund that pays $K_0$ out over any schedule delivers present value $K_0$ at its own discount rate. Hence $M = (s-f)/(\lambda-f)$, and $M > 1$ if and only if $s - f > \lambda - f$, that is $s > \lambda$. Because the incentive flow is linear in $K$, the result holds for expected values when losses are random. $\square$
+
+**Proposition 1(c).** If buffer assets worth $K$ fall to $(1-k)K$ in the states in which losses reach the $(1-\alpha)$ quantile $bG$, the buffer is sufficient only if $(1-k)K \ge bG$, so $K/G \ge b/(1-k)$. $\square$
+
+**Proposition 2.** Equation (3) is linear: $\dot K = -\beta K + \varphi r_e E_p + C$. (a) With $E_p = C = 0$, $\dot K / K = -\beta$, positive if and only if $\beta < 0$, which rearranges to inequality (4). (b) With $C = 0$ and $\beta > 0$ the solution is $K_t = K^* + (K_0 - K^*)e^{-\beta t}$ with $K^* = \varphi r_e E_p/\beta$; $K_t$ moves monotonically toward $K^*$, rising if $K_0 < K^*$. The growth rate $\dot K/K = \varphi r_e E_p/K - \beta$ falls as $K$ rises, and exceeds $g$ if and only if $K < \varphi r_e E_p/(g+\beta)$. (c) Private investors receive $(1-\varphi)r_e$ and participate if it is at least $r_p$, so $\varphi \le 1 - r_p/r_e$ and fee income $\varphi r_e E_p \le (r_e - r_p)E_p$. $\square$
+
+**Proposition 3.** (a) $\sum_i (\bar e - e_i)Y_i = \bar e \sum_i Y_i - \sum_i e_i Y_i = 0$ by the definition of $\bar e$. (b) Holding output fixed, a one-tonne cut in emissions $e_i Y_i$ lowers $e_i$ by $1/Y_i$ and $\bar e$ by $s_i/Y_i$. The feebate term changes by $\tau\big((\bar e - s_i/Y_i) - (e_i - 1/Y_i)\big)Y_i - \tau(\bar e - e_i)Y_i = \tau(1 - s_i)$. With a leave-one-out benchmark $\bar e_{-i}$, which does not depend on $e_i$, the change is $\tau$; the terms no longer sum exactly to zero because each country's benchmark differs. (c) A deduction $\tau(e_i - \bar e)Y_i$ can be enforced only against the balance and the year's base allocation, giving the feasibility bound; participation requires the annual gain from joining to exceed the deduction. (d) A cut made at $t$ rather than $t+k$ earns $\tau_{t+j}(1-s_i)\Delta Y_i$ in each of the $k$ intervening years, discounted at $\delta$; each term is positive. If $\tau_t$ declines over time, a cut made at $t$ earns the higher early rates, so the loss from delay rises. $\square$
+
+# Appendix B: Calibration code {.unnumbered}
+
+`2.Source/model.py` implements the one-factor buffer sizing by simulation (400,000 draws, fixed seed) and by equation (1), the incentive ratio of equation (2), the capital path of equation (3) in annual steps, the steady state of equation (5), and the allocation rule of equation (6) with the feasibility and participation bounds. Running `python3 model.py` prints every number in Section 5. `2.Source/make_wp_figures.py` draws Figures 1–3, and `1.Presentation/figures/make_figures.py` draws the brief's figure from the same model.
+
+# Appendix C: Lineage and the facts settled {.unnumbered}
+
+**Name.** The proposal was first written as the Climate Incentives Trust in May 2024, with an appendix sketching a companion Climate Investment Trust as an equity fund [@StrettonCIT2024]. *Time and Chance* calls related vehicles the Climate Investment and Insurance Fund (ch. 19) and the Climate Incentives Trust (ch. 20) [@StrettonTC]. This paper uses Climate Investment Trust for the single pool.
+
+**Fee rule and return.** One set: 25 percent of private investment returns; 10 percent gross return on construction-stage equity (Section 5.4).
+
+**Loss positions.** Policy guarantees: government first loss, Trust second loss, AAA entity behind. Project portfolios: regional fund holds the first-loss tranche, as in the series 2 asset classes [@CFPB22]. *Time and Chance* ch. 8 once called the equity fund a "first-loss fund" beneath bonds; chs. 14 and 19 place it second behind the sovereign. This paper follows chs. 14 and 19 for policy guarantees.
+
+**Country stakes.** The $4 billion of developing-country co-investment is financed by long-term development policy lending, so it is borrowed; Section 4.3 states the carrying-cost condition.
+
+**Fiscal effect.** Earlier text claimed the structure adds nothing to developing-country government liabilities. *Time and Chance* ch. 14 withdrew the claim; this paper says the exposure is a contingent liability, smaller than the debt it replaces, contingent on the government's own conduct and contracted.
+
+**Role in the series.** The previous version of this paper described itself as a mechanism paper in the finance and risk series. It is now a flagship of the sovereign incentives series, paired with the notional capitalized value paper [@StrettonWP31].

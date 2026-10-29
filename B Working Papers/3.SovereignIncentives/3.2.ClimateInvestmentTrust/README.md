@@ -4,8 +4,8 @@ Series 3 (Sovereign Incentives) flagship, paired with 3.1 (notional capitalized 
 
 ## Status (29 Oct 2026)
 
-- Working paper `ClimateInvestmentTrust.qmd` (master), version 0.2, rendered to `ClimateInvestmentTrust.docx`. First full draft in PRWP form: three propositions with proofs, calibrated model, verified comparators. Awaiting Stephen's review.
-- Brief `1.Presentation/Brief-ClimateInvestmentTrust.qmd`, Climate Fiscal Policy Brief No. 3.2, rendered to `.docx`.
+- Working paper `ClimateInvestmentTrust.qmd` (master), version 0.2, rendered to `ClimateInvestmentTrust.docx`. First full draft in PRWP form (about 7,600 words of body): three propositions with proofs, calibrated model, verified comparators. Awaiting Stephen's review.
+- Brief `1.Presentation/Brief-ClimateInvestmentTrust.qmd`, Climate Fiscal Policy Brief No. 3.2, rendered to `.docx` (about 3,000 words including table and captions).
 - Remaining `[VERIFY]` items: page range of Vasicek (2002) in `Risk`.
 
 ## Files
