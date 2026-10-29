@@ -13,7 +13,7 @@ Details for each item: `A Research Proposal/PhD-Application-Status.md`.
 - [ ] **Next step:** email Dr Shrimali the cleaned proposal; ask him to confirm supervision in writing and about a co-supervisor — S — today (15 min)
 - [ ] Settle the deadline on the live Oxford course page. Stephen's working deadline is Sat 31 Oct; the status notes found 13 Nov (early) and 26 Jan (final), unverified. Also check documents and the statement-of-purpose limit — S — 30 Oct — ox.ac.uk is blocked from cloud sessions
 - [ ] Choose and ask 3 referees (at least 2 academic) — S — 13 Nov — highest risk item
-- [ ] Proposal v2: drop appendices B–E, narrow scope, name data sources, sharpen hypothesis — A drafts, S approves — 27 Nov
+- [ ] Proposal v2: narrow scope, name data sources, sharpen hypothesis — A drafts, S approves — 27 Nov
 - [ ] Writing sample: cut 2.1 to ≤2,000 words — A drafts, S approves — 4 Dec
 - [ ] Statement of purpose — A drafts, S approves — 11 Dec
 - [ ] Submit — S — 8 Jan 2027
@@ -26,7 +26,7 @@ Details for each item: `A Research Proposal/PhD-Application-Status.md`.
 
 ### Priority 3: paper upgrades
 
-- [ ] **1.1 Open Economy Carbon Pricing → paper standard.** Verify all 41 references, fix H12 defects, turn Results 1–4 into propositions, decide on the consumption-tax appendix — A — 12 Nov
+- [ ] **1.1 Open Economy Carbon Pricing → paper standard** (Dirk asked for this first). Verify all 41 references, fix H12 defects, turn Results 1–4 into propositions, decide on the consumption-tax appendix — A — 12 Nov
 - [ ] Confirm which file is master for 1.1, 4.1 and 1.4 (qmd vs docx, H13) — S — before upgrading them
 - [ ] Draft concept paper 1: policy-equivalent carbon price — A — after 1.1
 
@@ -41,7 +41,7 @@ Details for each item: `A Research Proposal/PhD-Application-Status.md`.
 ## Decisions needed from Stephen
 
 - [ ] Confirm the specialisms and positioning paragraph in `STRATEGY.md`.
-- [ ] Confirm the rankings in `PAPERS.md` and the positions P1–P8. Which papers did Dirk ask for first? They go to the top.
+- [ ] Confirm the rankings in `PAPERS.md` and the positions P1–P8.
 - [ ] Spelling: convert existing UK-spelled papers to US English, or keep UK for academic papers?
 - [ ] Add 2–3 pieces you are proud of to `E Writing Standards/exemplars.md` ("Stephen's own").
 - [ ] Is the fiscal unit's remit described correctly in `STRATEGY.md`?

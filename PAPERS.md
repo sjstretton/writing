@@ -17,7 +17,7 @@ Order of work. The reason column says why each paper is where it is.
 
 | Rank | No. | Paper | Status | Target | Why this rank |
 |---|---|---|---|---|---|
-| 1 | 1.1 | Open Economy Carbon Pricing | draft | Journal (*Climate Policy*, policy analysis) + PhD writing sample | Flagship idea, best literature base, nearest to submission. References need verifying (status report §3). |
+| 1 | 1.1 | Open Economy Carbon Pricing | draft | Journal (*Climate Policy*, policy analysis) + PhD writing sample | **Dirk asked for this one first.** Also the flagship idea, with the best literature base, and nearest to submission. References need verifying (status report §3). |
 | 2 | 4.1 | Policy-Equivalent Carbon Price and CES Energy Demand (TECP) | draft | Journal (*Energy Economics* / *Energy Policy*) | Most technically complete. Needs literature, sourced calibration and a country application. |
 | 3 | 2.1 | Climate Finance Intermediation for Clean Power | draft | WB working paper; 2,000-word cut as Oxford writing sample | Closest to proposal 1's topic. Needs citations. |
 | 4 | 3.1 | Notional Capitalised Value and Guarantees | idea | WB working paper | The core idea behind proposal 1, but has no draft yet. |
