@@ -6,14 +6,14 @@ Instructions for AI agents, including Claude Code (`CLAUDE.md` points here), wor
 
 | Part | Folders | Read before working | What it is for |
 |---|---|---|---|
-| **Planning** | `0 Planning Instructions`, `1 Day and Week Plans`, `2 Strategic Plans`, `3 Archive` | `0 Planning Instructions/AGENTS.md`, then its `NORMS.md` | Tasks for every repo, day and week plans, strategic plans, the printable tracker, and the master Google Sheet kept in step with the repo |
+| **Planning** | `0 Morning Briefing`, `1 Planning Instructions`, `2 Strategic Plans`, `3 Archive` | `1 Planning Instructions/AGENTS.md`, then its `NORMS.md` | Tasks for every repo, day and week plans, strategic plans, the printable tracker, and the master Google Sheet kept in step with the repo |
 | **Writing** | `A Writing Instructions`, `B Working Papers`, `C Research Proposal`, `D Templates and Info`, `E Climate Econ Course`, `E Writing Standards`, `F Claude + Scripts` | `A Writing Instructions/AGENTS.md`, then its `NORMS.md` | Papers, briefs and decks, the website, PhD proposals, the course |
 
 `README.md` (this folder) maps the layout. Each part's `README.md` gives the detail.
 
 ## Who this is for
 
-Stephen is easily overwhelmed by volume, so planning output must stay short and simple (see "Who this is for" and "Focus" in `0 Planning Instructions/NORMS.md`). Writing for outside readers follows `A Writing Instructions/NORMS.md`: for a busy reader, self-contained, the claim first in every paragraph, sourced.
+Stephen is easily overwhelmed by volume, so planning output must stay short and simple (see "Who this is for" and "Focus" in `1 Planning Instructions/NORMS.md`). Writing for outside readers follows `A Writing Instructions/NORMS.md`: for a busy reader, self-contained, the claim first in every paragraph, sourced.
 
 ## Rules for both parts
 
@@ -22,12 +22,12 @@ Stephen is easily overwhelmed by volume, so planning output must stay short and 
 - Don't invent citations, figures, quotes or results. Mark anything uncertain.
 - Don't commit secrets or credentials. The website's FTP login stays on Stephen's PC (`B Working Papers/8.Scripts/Reference/_ftp.txt`, git-ignored).
 - Treat World Bank internal or confidential material as non-public.
-- Paths in instructions are from the repo root unless the file says otherwise. Planning scripts run from `0 Planning Instructions/` (for example `python3 Scripts/update.py check`).
+- Paths in instructions are from the repo root unless the file says otherwise. Planning scripts run from `1 Planning Instructions/` (for example `python3 Scripts/update.py check`).
 
 ## Connecting the two parts
 
-- **When you finish work in any part**, update the task in `1 Day and Week Plans/3-TaskContextAndProjectPlans.md` (planning's rule). For writing work, also update `A Writing Instructions/TODO.md` and, for papers, `A Writing Instructions/PAPERS.md`.
-- **Before pushing a change to planning files**, follow the consistency procedure in `0 Planning Instructions/AGENTS.md` ("Before every push to main"), which keeps the repo and the master Google Sheet in step. A push that touches only writing files does not need it.
+- **When you finish work in any part**, update the task in `0 Morning Briefing/3-TaskContextAndProjectPlans.md` (planning's rule). For writing work, also update `A Writing Instructions/TODO.md` and, for papers, `A Writing Instructions/PAPERS.md`.
+- **Before pushing a change to planning files**, follow the consistency procedure in `1 Planning Instructions/AGENTS.md` ("Before every push to main"), which keeps the repo and the master Google Sheet in step. A push that touches only writing files does not need it.
 - **Priorities.** `A Writing Instructions/STRATEGY.md` and the FY27 work plan in `2 Strategic Plans/` should agree. If they conflict, ask Stephen.
 
 ## Git
