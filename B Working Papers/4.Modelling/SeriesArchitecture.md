@@ -36,6 +36,6 @@ The older Additional analytics items (`6.Additional/5.Analytics/5.2–5.4`) keep
 
 ## Rules specific to these sections
 
-- **Confidentiality.** CPAT documentation is public. The Climate Fiscal AI Tools repository is private and some country results may be World Bank work. Write method and design from the repos; use only public data or clearly labelled stylized numbers for examples. Do not reproduce country results from the private repository, World Bank program or Public Finance Review material, the Egypt CBAM numbers, or files whose names say internal, unless Stephen clears them. List anything you held back in the folder README.
+- **Confidentiality (updated 29 Oct 2026, Stephen's decision).** Country results from the Climate Fiscal AI Tools and CDPM material may be used in these papers, labelled as illustrative tool results, not official estimates. Still excluded: anything marked "Confidential", "internal", "not for circulation", "Draft for discussion"/"Not for citation" (pending Stephen's ruling), tracked-changes drafts, World Bank internal program documents and internal tool code names. Each folder README lists what is used and what is still held back.
 - **Name the tools consistently:** CPAT (the Climate Policy Assessment Tool); legacy CPAT (the Excel model); Excel-AI (the rebuilt Excel prototype); Coded CPAT (the Python model); CPAT-AI (the project and repository).
 - **Cross-reference** sibling papers by number and title; cite section 1's Total Effective Carbon Price paper as @CFPB17 where the demand system matters.
