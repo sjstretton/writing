@@ -332,6 +332,11 @@ def main():
     print(f"  WACC cut that pays for it: {0.07/2.93/ (dlcoe_dr(0.10)/lcoe(0.10)) * 100:.2f} pp "
           f"(elasticity at 10% WACC: {dlcoe_dr(0.10)/lcoe(0.10)/100:.3f} per pp)")
 
+    kwh = 60e6 * KWH_PER_KW  # ~60 GW under SECI sale agreements, solar capacity factor (STYLIZED)
+    h = haircut(LAM, REC, DELAY, R0, MPR)
+    print(f"  stylized: 60 GW x {KWH_PER_KW:.0f} kWh/kW = {kwh/1e9:.0f} TWh/yr; central-case premium {h/(1-h):.1%} of Rs 2.93 "
+          f"= Rs {2.93*h/(1-h):.2f}/kWh = Rs {kwh*2.93*h/(1-h)/1e7:,.0f} crore a year; SECI margin Rs {kwh*0.07/1e7:,.0f} crore")
+
     with open(HERE / "calibration_tables.csv", "w", newline="") as fh:
         csv.writer(fh).writerows(rows)
 
