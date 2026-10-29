@@ -12,9 +12,9 @@
 
 | File | What |
 |---|---|
-| `NotionalCapitalisedValueAndGuarantees.qmd` | Working paper master, version 0.1 (about 8,600 words of body) |
+| `NotionalCapitalisedValueAndGuarantees.qmd` | Working paper master, version 0.1 (about 10,000 words including appendices) |
 | `NotionalCapitalisedValueAndGuarantees.bib` / `.docx` | Bibliography; rendered Word file |
-| `1.Presentation/Brief-NotionalCapitalisedValueAndGuarantees.qmd` / `.bib` / `.docx` | Climate Fiscal Policy Brief No. 3.1 (about 2,700 words) |
+| `1.Presentation/Brief-NotionalCapitalisedValueAndGuarantees.qmd` / `.bib` / `.docx` | Climate Fiscal Policy Brief No. 3.1, brief version 1.0 (about 2,900 words) |
 | `1.Presentation/figures/make_figures.py` | Draws the brief's two figures (reuses `2.Source`) |
 | `2.Source/model.py` | All calibration numbers (prints them) |
 | `2.Source/make_wp_figures.py` | Working paper figures, written to `2.Source/figures/` |
@@ -29,6 +29,6 @@ Render: `python3 2.Source/render.py NotionalCapitalisedValueAndGuarantees.qmd No
 - *The Right Policy at the Wrong Time* chs 5–7 (international feebate needs a trust; forest valuation; an emission as a capital requirement).
 - Research page abstract (`7.Website/research.qmd`), and the Oxford DPhil proposal (three quantities; act-now incentives; climate allowance of guarantee capacity).
 - Supersedes the working title "Guarantee-Based International Incentives for the Delivery of Strong NDCs".
-- No co-authors. Buffer and loss parameters are shared with 3.2 (Climate Investment Trust).
+- No co-authors. The guarantee loss and buffer parameters (3% annual calls, correlation 0.2, 37% loss per call, 9.3% buffer, ratio 2.7, or 10 at a 10% loss) are the series 3 base case, shared with 3.2 (Climate Investment Trust) and 3.3 (Sustainability-Linked Lending).
 
-Related: 3.2 Climate Investment Trust (the buffer fund), 3.3 Sustainability-Linked Lending (delivery channel).
+Related: 3.0 series overview; 3.2 The Climate Investment Trust (the buffer fund); 3.3 Sustainability-Linked Lending (delivery channel); 2.1 and 2.2 (structures the guarantee capacity can stand behind). Cross-review of both series: `../CrossReview-Notes.md`.

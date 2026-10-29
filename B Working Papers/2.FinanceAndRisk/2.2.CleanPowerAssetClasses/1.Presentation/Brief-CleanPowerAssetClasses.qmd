@@ -39,7 +39,7 @@ The cost of capital, not the cost of panels, now sets the price of clean power i
 | Cost of power (US cents/kWh) | 3.6 | 4.3 | 5.0 | 5.7 | 6.5 |
 | Financing share of the price | 30% | 41% | 49% | 56% | 61% |
 
-: Table 1. The cost of capital is most of the price of solar power (stylized). \$800/kW, capacity factor 20 percent, operation and maintenance \$12/kW/yr, 25-year life. Source: author's calculation [@StrettonWP22].
+: Table 1. The cost of capital is most of the price of solar power (stylized). \$800/kW, capacity factor 20 percent, operation and maintenance \$12/kW/yr, 25-year life, capital spent at commissioning with no interest during construction, the same basis as Brief 2.1 [@CFPB21]. Table 3 adds construction interest. Source: author's calculation [@StrettonWP22].
 
 Removing the risk that the buyer will not pay is the first step, and the companion brief proposes a payment intermediary facility to do it [@CFPB21]. The intermediary buys power from generators under one standard power purchase agreement, pays them in full and on time whatever the distribution company does, and is protected by a guarantee waterfall contracted in advance: the distribution company, its subnational owner, the national government, a multilateral agency and a donor contingency account.
 
@@ -110,7 +110,7 @@ Refinancing operating plants into a tranched pool cuts the cost of solar power b
 | Two-stage, project bond | 12% | 8% | 5.5 | −12% |
 | Two-stage, pooled and tranched | 12% | 5.65% | 4.6 | −27% |
 
-: Table 3. Refinancing into a tranched pool cuts the price of solar power by about a quarter (stylized). Includes interest during a two-year construction period. Source: author's calculation [@StrettonWP22].
+: Table 3. Refinancing into a tranched pool cuts the price of solar power by about a quarter (stylized). Includes interest during a two-year construction period, which is why single-stage finance at 10 percent costs 6.2 cents here against 5.7 cents in Table 1. Source: author's calculation [@StrettonWP22].
 
 ![Figure 2. Cost of power from the stylized plant under single-stage and two-stage finance. Source: author's calculation.](figures/fig2-lcoe-two-stage.png){width=100%}
 
@@ -134,10 +134,11 @@ The host government's exposure shrinks but does not vanish. The national governm
 
 # Related papers in this series {.unnumbered}
 
-- **2.0** Make Clean Power an Asset Class: Standardised De-risking for Developing Countries (series overview).
-- **2.1** Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power [@CFPB21]. Removes payment risk at source; this brief starts where it ends.
-- **3.2** The Climate Investment Trust: Hold Capital, Lend Its Strength [@CFPB32]. The natural provider of the first-loss tranche.
-- **3.1** and **3.3** set out how guarantee capacity and sustainability-linked lending can reward the reforms that the tiered guarantees require [@CFPB31; @CFPB33].
+- **2.0** *Make Clean Power an Asset Class: Standardized De-risking for Developing Countries*. The series overview.
+- **2.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* [@CFPB21]. Removes payment risk at source; this brief starts where it ends.
+- **3.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB32]. The natural provider of the first-loss tranche.
+- **3.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB31]. Guarantee capacity that can stand behind the donor tier of grid guarantees.
+- **3.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB33]. Sustainability-linked lending that can reward the reforms the tiered guarantees require.
 
 # References {.unnumbered}
 

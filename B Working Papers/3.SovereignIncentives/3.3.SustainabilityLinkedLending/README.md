@@ -5,7 +5,7 @@
 ## Status
 
 - Version 0.1 (October 2026): first public draft of the brief and the working paper, written for the series 3 restructuring (`../SeriesArchitecture.md`). Awaiting Stephen's peer review.
-- Open items (Chile and Thailand terms against prospectuses; country calibration of guarantee leverage; consistency with 3.1 parameters) are listed in appendix C of the working paper and in the `.bib` notes.
+- Guarantee leverage now uses the series 3 base case shared with 3.1 and 3.2 (3% annual calls, 37% loss per call, 9.3% buffer; ratio 2.7, or 10 at a 10% loss), aligned in the 29 Oct 2026 cross-review. Open items (Chile and Thailand terms against prospectuses; country calibration of guarantee leverage) are listed in appendix C of the working paper and in the `.bib` notes.
 
 ## Files
 

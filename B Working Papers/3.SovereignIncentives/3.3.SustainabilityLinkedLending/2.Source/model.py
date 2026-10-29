@@ -14,6 +14,19 @@ import numpy as np
 
 R = 0.05  # discount rate for present values (stylized)
 
+# Guarantee loss parameters: the series 3 base case shared with 3.1 and 3.2
+# (StrettonWP31, StrettonWP32): 3% annual probability of a call, 37% loss per call
+# (average sovereign haircut 1970-2010, Cruces and Trebesch 2013), buffer 9.3% of
+# exposure (1% annual chance of exhaustion, 20 programs, correlation 0.2). The buffer
+# is held in safe assets earning the discount rate, so its net carry is zero; a 2%
+# carry and a 10% loss per call are sensitivities.
+PD = 0.03
+LGD = 0.37
+LGD_LOW = 0.10
+BUFFER = 0.093
+R_BUFFER = 0.0
+R_BUFFER_SENS = 0.02
+
 
 def annuity(r, n):
     return (1 - (1 + r) ** -n) / r
@@ -123,19 +136,23 @@ def main():
     print(f"  full interest waiver (6%) on USD 1bn: {waiver:.0f}")
     print(f"  loan needed for 100 bp to match policy cost: {c['pv_cost']/(0.01*annuity(R,10)):.0f}")
     print(f"  loan needed if ALL interest (6%) waived: {loan_needed(c['pv_cost'], 0.06, 10):.0f}")
-    g = guarantee(G=3000, s_bp=300, pd=0.01, lgd=0.4, buffer=0.10, r_buffer=0.02, years=10)
-    print(f"  guarantee capacity USD 3bn, 300 bp: incentive {g['incentive']:.0f}, "
-          f"donor cost {g['cost']:.0f} (EL {g['expected_loss']:.0f} + carry {g['carry']:.0f}), "
-          f"ratio {g['ratio']:.1f}")
     gstar = c['pv_cost'] / (0.03 * annuity(R, 10))
-    g2 = guarantee(G=gstar, s_bp=300, pd=0.01, lgd=0.4, buffer=0.10, r_buffer=0.02, years=10)
-    print(f"  guarantee capacity that matches the policy cost: {gstar:.0f}; donor cost {g2['cost']:.0f}")
+    g2 = guarantee(G=gstar, s_bp=300, pd=PD, lgd=LGD, buffer=BUFFER, r_buffer=R_BUFFER, years=10)
+    print(f"  guarantee capacity that matches the policy cost: {gstar:.0f}; incentive {g2['incentive']:.0f}; "
+          f"donor cost {g2['cost']:.0f} (EL {g2['expected_loss']:.0f} + carry {g2['carry']:.0f}); "
+          f"ratio {g2['ratio']:.2f}; buffer held {BUFFER*gstar:.0f}")
+    g3 = guarantee(G=gstar, s_bp=300, pd=PD, lgd=LGD_LOW, buffer=BUFFER, r_buffer=R_BUFFER, years=10)
+    print(f"  same, 10% loss per call: donor cost {g3['cost']:.0f}, ratio {g3['ratio']:.1f}")
+    g4 = guarantee(G=gstar, s_bp=300, pd=PD, lgd=LGD, buffer=BUFFER, r_buffer=R_BUFFER_SENS, years=10)
+    print(f"  same, 2% carry on the buffer: donor cost {g4['cost']:.0f} (carry {g4['carry']:.0f}), ratio {g4['ratio']:.2f}")
+    print(f"  ratio exceeds 1 while buffer carry b*r_b < {(0.03 - PD*LGD)*1e4:.0f} bp; "
+          f"at 2% carry on a {BUFFER:.1%} buffer it is {BUFFER*R_BUFFER_SENS*1e4:.0f} bp")
     pc = 10 * c['mt'] * annuity(R, 10)
     print(f"  policy crediting at USD 10/t on the coal reform: {pc:.0f}")
-    print("\nLEVERAGE SENSITIVITY (ratio incentive/donor cost)")
+    print("\nLEVERAGE SENSITIVITY (ratio incentive/donor cost; 37% loss per call, zero carry)")
     for s in (150, 300, 450):
-        for pd in (0.005, 0.01, 0.02):
-            print(f"  s={s}bp pd={pd:.3f}: {guarantee(1, s, pd, 0.4, 0.10, 0.02, 10)['ratio']:.1f}")
+        for pd in (0.005, 0.01, 0.03, 0.05):
+            print(f"  s={s}bp pd={pd:.3f}: {guarantee(1, s, pd, LGD, BUFFER, R_BUFFER, 10)['ratio']:.1f}")
 
 
 if __name__ == "__main__":

@@ -123,7 +123,7 @@ The proof is in Appendix A. Diversification across host countries removes the ho
 | Relative to 4% | 1.00 | 1.18 | 1.38 | 1.58 | 1.80 | 2.15 |
 | Financing share of LCOE | 30% | 41% | 49% | 56% | 61% | 68% |
 
-: Table 1. The cost of capital is most of the price of solar power (stylized plant). \$800/kW, capacity factor 20 percent, operation and maintenance \$12/kW/yr, 25 years, capital spent at commissioning. Financing share is one minus the LCOE at a zero cost of capital divided by the LCOE. Source: author's calculation (`2.Source/model.py`), parameters as in @TimeAndChance.
+: Table 1. The cost of capital is most of the price of solar power (stylized plant). \$800/kW, capacity factor 20 percent, operation and maintenance \$12/kW/yr, 25 years, capital spent at commissioning with no interest during construction, the same basis as Table 1 of the companion paper [@StrettonWP21]; Table 4 adds construction interest, which raises the LCOE at 10 percent from 5.7 to 6.2 cents. Financing share is one minus the LCOE at a zero cost of capital divided by the LCOE. Source: author's calculation (`2.Source/model.py`), parameters as in @TimeAndChance.
 
 **Subordination of 5 to 8 percent makes the senior bond near-AAA at moderate correlation.** Table 2 applies Proposition 2. With the base parameters, a near-AAA senior bond needs 4.8 percent subordination at $\rho = 0.10$ and 7.7 percent at $\rho = 0.20$; an investment-grade senior needs 3.4 and 5.0 percent. Halving recovery from 80 to 60 percent doubles every figure. In the stress case for lower-middle-income countries the near-AAA requirement rises to 10.5 percent at $\rho = 0.10$ and 15.3 percent at $\rho = 0.20$. These are not exotic numbers. The 5 percent equity buffer proposed in *Time and Chance* is enough for a near-AAA senior bond only if correlation is low or recovery high; a well-diversified, standardized pool meets that condition, and a single-country pool does not.
 
@@ -159,7 +159,7 @@ The proof is in Appendix A. Diversification across host countries removes the ho
 | Two-stage, project bond | 12% | 8% | 5.48 | −12% |
 | Two-stage, pooled and tranched | 12% | 5.65% | 4.56 | −27% |
 
-: Table 4. Refinancing operating plants into a tranched pool cuts the LCOE by about a quarter (stylized). Construction two years with even drawdown; operation 25 years. Source: author's calculation (`2.Source/model.py`).
+: Table 4. Refinancing operating plants into a tranched pool cuts the LCOE by about a quarter (stylized). Construction two years with even drawdown, with interest during construction at the construction rate, so the single-stage figures exceed those of Table 1; operation 25 years. Source: author's calculation (`2.Source/model.py`).
 
 ![Figure 2. LCOE under single-stage and two-stage finance, stylized plant. Two-stage cases build at 12 percent and refinance at the rate shown. Source: author's calculation.](2.Source/figures/fig2-lcoe-two-stage.png){width=100%}
 

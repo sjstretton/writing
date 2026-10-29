@@ -8,7 +8,7 @@ author:
     note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
-  Climate finance pays for marginal tonnes against baselines nobody can observe and pays nothing for carbon stocks never released. I propose crediting each country with a notional capitalized value: a balance opened by its carbon stock and debited for every tonne emitted above an agreed allowance, used as guarantee capacity on green borrowing rather than paid out. Because a guarantee is worth the full spread to the borrower but costs only expected loss, each donor dollar delivers about three dollars of incentive, and far more on development banks' loss record. For a forest country with Guyana's stock, a $5 billion balance prices emissions at about $30 per tonne.
+  Climate finance pays for marginal tonnes against baselines nobody can observe and pays nothing for carbon stocks never released. I propose crediting each country with a notional capitalized value: a balance opened by its carbon stock and debited for every tonne emitted above an agreed allowance, used as guarantee capacity on green borrowing rather than paid out. Because a guarantee is worth the full spread to the borrower but costs only expected loss, each donor dollar delivers about 2.7 dollars of incentive in a conservative base case, and far more on development banks' loss record. For a forest country with Guyana's stock, a $5 billion balance prices emissions at about $30 per tonne.
 keywords: [sovereign incentives, guarantees, carbon stocks, forests, results-based climate finance]
 bibliography: Brief-NotionalCapitalisedValueAndGuarantees.bib
 csl: https://www.zotero.org/styles/chicago-author-date
@@ -116,10 +116,11 @@ The scheme fails if spreads saved are small, if capacity is so large that it nev
 
 # Related papers in this series {.unnumbered}
 
-- No. 3.2: the Climate Investment Trust, the buffer fund that stands behind the guarantees and holds beneficiary accounts [@CFPB32].
-- No. 3.3: codified sustainability-linked sovereign lending, the delivery channel for the allowance path [@CFPB33].
-- No. 2.1: a payment intermediary for clean power, whose guarantees the capacity can back [@CFPB21].
-- No. 1.7: the Total Effective Carbon Price, the measure used for the carbon-price equivalent [@CFPB17].
+- **3.0** *Reward Governments, Not Projects: International Incentives for National Climate Policy*. The series overview.
+- **3.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB32]. The buffer fund that stands behind the guarantees and holds beneficiary accounts.
+- **3.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB33]. The delivery channel for the allowance path.
+- **2.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* [@CFPB21]. A payment intermediary whose guarantees the capacity can back.
+- **1.7** *Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price* [@CFPB17]. The measure used for the carbon-price equivalent.
 
 # References {.unnumbered}
 

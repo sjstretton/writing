@@ -42,7 +42,7 @@ Solar power is a bond with panels attached: almost all of its cost is paid up fr
 | Relative to 4% | 1.00 | 1.09 | 1.18 | 1.38 | 1.58 | 1.80 | 2.15 |
 | Return on capital, share of cost | 30% | 36% | 41% | 49% | 56% | 61% | 68% |
 
-: Table 1. The same solar plant costs twice as much at 15 percent as at 4 percent (stylized). Capital cost \$800/kW, capacity factor 20 percent (1,752 kWh/kW a year), operation and maintenance \$12/kW a year, 25-year life. "Return on capital" is the capital charge above straight-line depreciation. Code: `2.Source/model.py`.
+: Table 1. The same solar plant costs twice as much at 15 percent as at 4 percent (stylized). Capital cost \$800/kW, capacity factor 20 percent (1,752 kWh/kW a year), operation and maintenance \$12/kW a year, 25-year life. "Return on capital" is the capital charge above straight-line depreciation. Capital is spent at commissioning, with no interest during construction; Brief 2.2 adds two years of construction interest, which raises the cost at 10 percent from 5.72 to 6.2 cents [@CFPB22]. Code: `2.Source/model.py`.
 
 ![Figure 1. Levelized cost of a stylized solar plant by cost of capital. Hardware and operation cost the same in every column; only the return on capital changes.](figures/fig1-lcoe-by-wacc.png){width=95%}
 
@@ -88,7 +88,7 @@ The contract guarantee wins on three counts when defaults are temporary and reco
 | Saving per dollar of expected cost | – | 5.3 | 0.8 |
 | Largest exposure (\$ million) | – | 8.7 a year of arrears | 60 of debt |
 
-: Table 2. A contract guarantee buys more tariff reduction per dollar of risk (stylized). Base WACC 8 percent; offtaker default episodes of one year at 15 per 100 offtaker-years; 60 percent recovered by generators, 95 percent by the facility; debt is 75 percent of the \$80 million cost; a third of the offtaker's losses fall on lenders; the debt guarantee also covers 1 percent a year of non-payment risks such as construction failure. The working paper states the conditions in full [@StrettonWP21].
+: Table 2. A contract guarantee buys more tariff reduction per dollar of risk (stylized). Base WACC 8 percent; offtaker default episodes of one year at 15 per 100 offtaker-years; 60 percent recovered by generators, 95 percent by the facility; debt is 75 percent of the \$80 million cost; 30 percent of the offtaker's losses fall on lenders; the debt guarantee also covers 1 percent a year of non-payment risks such as construction failure. The working paper states the conditions in full [@StrettonWP21].
 
 The reason is in the last line of Table 2. The facility's worst case is a year or two of unpaid bills, which it recovers in large part. The debt guarantor's worst case is the loan.
 
@@ -98,9 +98,9 @@ Nigeria shows the debt-shaped alternative. For the 459-megawatt Azura-Edo gas pl
 
 The Solar Energy Corporation of India (SECI) is the working model of a payment intermediary. It is wholly owned by the central government. It signs power purchase agreements with developers only after signing back-to-back power sale agreements with state distribution companies, earns a trading margin of Rs 0.07 per kilowatt-hour, and had about 60 gigawatts under sale agreements at a weighted average tariff of Rs 2.93 per kilowatt-hour in 2025 [@ICRA2025]. That margin is 2.4 percent of the tariff. In the model of Table 1 it pays for itself if it lowers the WACC by a third of a percentage point.
 
-Its protections are layered much as Section 3 proposes. Distribution companies must open letters of credit; since a Ministry of Power order of June 2019, grid operators may schedule power only after the letter of credit is in place [@Powerline2019]. A payment security fund, financed from the central budget, developer penalties and interest, covers older National Solar Mission capacity, and since 2019 developers deposit Rs 5 lakh per megawatt towards it for newer tenders [@ICRA2025]. Since October 2016 SECI has been a beneficiary of the tripartite agreement among the central government, the states and the Reserve Bank of India, under which the central bank can debit a defaulting state's account and credit the central utility [@ICRA2025; @Kenning2017]. SECI invoked it in 2020–22 against distribution companies in Andhra Pradesh and Karnataka. ICRA rates SECI AAA.
+Its protections are layered much as Section 3 proposes. Distribution companies must open letters of credit; since a Ministry of Power order of June 2019, grid operators may schedule power only after the letter of credit is in place [@Powerline2019]. A payment security fund, financed from the central budget, developer penalties and interest, covers older National Solar Mission capacity, and since 2019 developers deposit Rs 5 lakh per megawatt toward it for newer tenders [@ICRA2025]. Since October 2016 SECI has been a beneficiary of the tripartite agreement among the central government, the states and the Reserve Bank of India, under which the central bank can debit a defaulting state's account and credit the central utility [@ICRA2025; @Kenning2017]. SECI invoked it in 2020–22 against distribution companies in Andhra Pradesh and Karnataka. ICRA rates SECI AAA.
 
-The failure is that the buyers were never fixed. The same rating report records large past delays and letter-of-credit coverage of only 68 percent [@ICRA2025]. Across the sector, the central government announced a Rs 90,000 crore liquidity scheme in May 2020, lent through two public finance companies against state guarantees, so that distribution companies could pay generators [@CRISIL2020]. In June 2022 it allowed them to reschedule their arrears into up to 48 monthly instalments [@Powerline2022]. Legacy arrears fell from Rs 1,39,947 crore in June 2022 to Rs 3,330 crore in March 2026 [@PTI2026]. The waterfall worked: generators were paid, and the arrears were in the end recovered. But the risk was moved to the central government, not removed, and the center paid twice to keep it moving.
+The failure is that the buyers were never fixed. The same rating report records large past delays and letter-of-credit coverage of only 68 percent [@ICRA2025]. Across the sector, the central government announced a Rs 90,000 crore liquidity scheme in May 2020, lent through two public finance companies against state guarantees, so that distribution companies could pay generators [@CRISIL2020]. In June 2022 it allowed them to reschedule their arrears into up to 48 monthly installments [@Powerline2022]. Legacy arrears fell from Rs 1,39,947 crore in June 2022 to Rs 3,330 crore in March 2026 [@PTI2026]. The waterfall worked: generators were paid, and the arrears were in the end recovered. But the risk was moved to the central government, not removed, and the center paid twice to keep it moving.
 
 Nigeria shows what happens without the waterfall. Its bulk trader, set up under the 2010 power sector roadmap as a single buyer [@WBGAzura], had no reliable revenue behind it. In 2017 the government arranged a central bank facility of up to N701 billion so it could pay generators, while it collected on average about a quarter of its invoices from distribution companies [@Okafor2017]. In 2020 the World Bank lent \$750 million to cut the sector's tariff shortfalls [@WorldBank2020PSRO]. An intermediary is only as good as the layer behind it and the reform beneath it.
 
@@ -124,10 +124,11 @@ Finance ministries in countries where distribution companies are the main buyers
 
 # Related papers in this series {.unnumbered}
 
-- No. 2.0: the series overview, which sets out the risk stack and who should hold each layer.
-- No. 2.2: two-stage finance and synthetic sovereign bonds, which refinance the contracts this facility makes safe [@CFPB22].
-- No. 3.2: the Climate Investment Trust, a source of loss-absorbing capital for the donor layer [@CFPB32].
-- No. 3.3: sustainability-linked sovereign lending, a vehicle for the utility reforms that make the guarantee affordable [@CFPB33].
+- **2.0** *Make Clean Power an Asset Class: Standardized De-risking for Developing Countries*. The series overview: the risk stack and who should hold each layer.
+- **2.2** *From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power* [@CFPB22]. Refinances the contracts this facility makes safe as a few standard securities.
+- **3.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB31]. Guarantee capacity earned by climate policy, which can stand behind this facility's waterfall.
+- **3.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB32]. A source of loss-absorbing capital for the donor layer.
+- **3.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB33]. A way to pay for the utility reforms that make the guarantee affordable.
 
 # References {.unnumbered}
 

@@ -16,7 +16,7 @@ def fig_size(path):
     u = m.uruguay_summary()
     c = m.coal_reform()
     gstar = c['pv_cost'] / (0.03 * m.annuity(m.R, 10))
-    g = m.guarantee(gstar, 300, 0.01, 0.4, 0.10, 0.02, 10)
+    g = m.guarantee(gstar, 300, m.PD, m.LGD, m.BUFFER, m.R_BUFFER, 10)
     labels = ["Uruguay 2023 loan:\nmaximum step-down (actual)",
               "Step-down of 100 bp\non a $1bn loan",
               "Entire interest waived\non a $1bn loan (6%)",
@@ -55,15 +55,20 @@ def fig_size(path):
 def fig_leverage(path):
     """Incentive value per dollar of funder cost, guarantee capacity vs cash rebate."""
     import numpy as np
-    pds = np.linspace(0.0025, 0.03, 50)
+    pds = np.linspace(0.005, 0.05, 50)
     fig, ax = plt.subplots(figsize=(7, 3.8))
     for s, ls in ((150, ":"), (300, "-"), (450, "--")):
-        ax.plot(pds * 100, [m.guarantee(1, s, p, 0.4, 0.10, 0.02, 10)['ratio'] for p in pds],
+        ax.plot(pds * 100, [m.guarantee(1, s, p, m.LGD, m.BUFFER, m.R_BUFFER, 10)['ratio'] for p in pds],
                 ls, color="#2a9d5c", label=f"Guarantee capacity, {s} bp spread saved")
     ax.axhline(1, color="#1f6f8b", lw=2, label="Interest rebate or cash (ratio 1)")
-    ax.set_xlabel("Annual probability of default on guaranteed debt (%), loss given default 40%")
+    ax.axvline(m.PD * 100, color="grey", lw=0.8, ls=":")
+    ax.text(m.PD * 100 + 0.05, 0.6, "series base case", fontsize=8, color="grey")
+    ax.set_yscale("log")
+    ax.set_ylim(0.5, 30)
+    ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:g}"))
+    ax.set_xlabel("Annual probability of a call on the guarantee (%), loss per call 37%")
     ax.set_ylabel("Incentive value per $1 of funder cost")
-    ax.legend(fontsize=8, frameon=False)
+    ax.legend(fontsize=8, frameon=False, loc="upper right")
     for s in ("top", "right"):
         ax.spines[s].set_visible(False)
     fig.tight_layout()
