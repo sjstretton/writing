@@ -1,0 +1,17 @@
+gas,basket,kg_per_eur,spend_beur
+ghg,"household basket, all products",0.2156,7440.0084
+ghg,"household basket, VAT-taxable products",0.2914,5137.5790
+ghg,"household basket, taxable goods only (A-C, D-E)",0.4749,2185.3517
+ghg,"household basket, taxable, EU origin",0.2670,4709.7702
+ghg,"household basket, taxable, extra-EU origin",0.5603,427.8088
+ghg,"model EU27 footprint, all final demand (Mt)",,2665.9317
+ghg,model EU27 household footprint excl. direct (Mt),,1604.4161
+ghg,"Eurostat EU27 footprint, all final demand excl. HH (Mt)",,3742.5213
+co2,"household basket, all products",0.1271,7440.0084
+co2,"household basket, VAT-taxable products",0.1689,5137.5790
+co2,"household basket, taxable goods only (A-C, D-E)",0.2417,2185.3517
+co2,"household basket, taxable, EU origin",0.1568,4709.7702
+co2,"household basket, taxable, extra-EU origin",0.3013,427.8088
+co2,"model EU27 footprint, all final demand (Mt)",,1711.1487
+co2,model EU27 household footprint excl. direct (Mt),,945.5895
+co2,"Eurostat EU27 footprint, all final demand excl. HH (Mt)",,2796.6092

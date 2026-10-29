@@ -9,29 +9,49 @@ format:
 
 This research portfolio focuses on climate policy, climate finance, applied modelling, taxation, and sovereign incentives. The common thread is practical climate statecraft: making climate strategy operational for finance ministries, multilateral development banks, and country teams through better models, diagnostics, policy instruments, and financing structures.
 
-# 1. Climate and Fiscal Policy
+# 1. Climate and Fiscal Policy: the carbon-pricing series
 
-Carbon pricing as a finance ministry can actually use it: where the charge lands, what stands in for it when a headline price is unavailable, and where the point of measurement misfires.
+Carbon pricing as a finance ministry can actually use it. The series argues that production and consumption should be priced separately: production intensity with a revenue-neutral feebate, consumption with a destination-based charge, and both measured on one carbon-price-equivalent scale. Paper 1.1 sets out the architecture; the others carry the detail. Each paper comes as a short policy brief in the *Climate Fiscal Policy Briefs* series and as a longer working paper.
 
-### 1.1 Open Economy Carbon Pricing
+### 1.1 Price Production and Consumption Separately
 
-Carbon pricing in open economies faces a trade-off between strong incentives and competitiveness concerns. This paper separates production-side green incentives from consumption-side carbon pricing. Production incentives could use feebates or benchmarked emissions trading, while destination-based consumption pricing could be implemented pragmatically through VAT-style mechanisms and border rebates. The aim is a more realistic route to comprehensive carbon pricing in open economies.
+*A two-track architecture for carbon pricing in open economies*
 
-*Appendix: Carbon Consumption Tax.* The destination-based consumption-pricing argument is developed at length as a substantial appendix, covering the VAT-based implementation route and border rebate treatment in detail.
+Carbon prices stay low in open economies because one instrument does two jobs: it pushes producers to cut emissions per unit of output, and it makes consumers pay for the carbon they use. This paper separates the jobs. A revenue-neutral feebate prices production intensity at no cost to the treasury and with a small price effect. A carbon component of VAT and forward-announced obligations on energy suppliers price consumption, imports included. A carbon-price-equivalent metric measures both. International payments above half the feebate rate make adoption a net gain, and destination-based charges turn leakage into a race to the top.
 
-[Read the paper →](papers/OpenEconomyCarbonPricing.docx)
+[Policy brief (Climate Fiscal Policy Brief No. 1.1) →](papers/Brief-OpenEconomyCarbonPricing.docx) · [Working paper →](papers/OpenEconomyCarbonPricing.docx)
 
-### 1.2 Feebates and Output-Based Rebating
+### 1.2 Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill
 
-Governments that cannot sustain a headline carbon tax can often sustain a revenue-neutral benchmark. This paper treats feebates and output-based rebating as one instrument — a sectoral emissions-intensity benchmark plus a price on deviation from it — and sets out its design, revenue properties, and competitiveness advantages relative to a uniform carbon price. The power sector is the worked case, with a parallel treatment of energy-intensive industry.
+*Decarbonizing coal-heavy power and trade-exposed industry*
 
-[Read the paper →](papers/FeebatesAndOutputBasedRebating.docx)
+Carbon taxes stall where coal dominates power or where industry competes abroad, because the tax charges producers for every tonne they still emit, not only for the tonnes they could avoid. A revenue-neutral feebate charges producers above a sector benchmark of emissions per unit of output and rebates those below it. It gives the same incentive to switch as a tax at the same rate but leaves average costs almost unchanged. Governments should use feebates where carbon taxes stall.
 
-### 1.3 Iron, Steel, CBAM and the Limits of Point-Source Carbon Pricing
+[Policy brief (Climate Fiscal Policy Brief No. 1.2) →](papers/Brief-FeebatesAndOutputBasedRebating.docx) · [Working paper →](papers/FeebatesAndOutputBasedRebating.docx)
 
-CBAM-style border carbon charges can favour scrap-based production in ways that reduce reported emissions without necessarily reducing global emissions. This paper examines the problem in iron and steel, with possible relevance to aluminium, and proposes an opportunity-cost adjustment for scrap-based production. The contribution is to identify a potentially material flaw in point-source carbon pricing and its treatment of primary versus secondary production.
+### 1.3 Credit the Price Signal, Not the Payment
 
-[Read the paper →](papers/IronSteelCBAM.docx)
+*Carbon price recognition and scrap shuffling under the EU's Carbon Border Adjustment Mechanism*
+
+The EU's Carbon Border Adjustment Mechanism cuts an importer's charge by the carbon price the exporter has effectively paid, installation by installation. Two flaws follow. Instruments that send a full price signal but pay little net, such as feebates, rebated carbon taxes and energy subsidy reform, earn no credit. And exporters can ship scrap-based steel to the EU and blast-furnace steel elsewhere, cutting reported embodied carbon with no fall in emissions. Measuring the price signal at country-sector level fixes both.
+
+[Policy brief (Climate Fiscal Policy Brief No. 1.3) →](papers/Brief-IronSteelCBAM.docx) · [Working paper →](papers/IronSteelCBAM.docx)
+
+### 1.6 Carbon Consumption Tax
+
+*A carbon component in VAT and a forward obligation on energy suppliers*
+
+The EU prices the carbon its factories and power plants emit but barely prices the carbon in what Europeans buy, much of it emitted abroad. A carbon component of VAT charges every good consumed in the EU, imported or domestic, for its embodied carbon while the value component of VAT falls; exports are zero-rated and imports start on generous, rebuttable default intensities. A legal obligation announced a decade ahead makes the few large suppliers of road and heating fuel pay for the carbon they sell.
+
+[Policy brief (Climate Fiscal Policy Brief No. 1.6) →](papers/Brief-CarbonConsumptionTax.docx) · [Working paper →](papers/CarbonConsumptionTax.docx)
+
+### 1.7 Measure Carbon Pricing by the Emissions It Cuts
+
+*The Total Effective Carbon Price: one carbon-tax equivalent for any mix of taxes, subsidies and standards*
+
+Countries cut emissions with taxes, subsidies, standards and mandates, yet standard metrics add up explicit prices per tonne, so a clean-fuel standard or a revenue-neutral feebate scores zero. The Total Effective Carbon Price is the single economy-wide carbon tax that would cut emissions by as much as the actual policy mix, with each instrument weighted by how strongly emissions respond. Crediting, border recognition and country diagnostics can all use it.
+
+[Policy brief (Climate Fiscal Policy Brief No. 1.7) →](papers/Brief-PolicyEquivalentCarbonPriceAndCES.docx) · [Working paper →](papers/PolicyEquivalentCarbonPriceAndCES.docx)
 
 # 2. Finance and Risk
 
@@ -61,17 +81,10 @@ Current climate finance mainly rewards marginal emissions reductions against a c
 
 The World Bank has developed several sustainability-linked loans and related structures, but they remain bespoke and hard to replicate. This paper proposes a codified approach with standard key performance indicator menus, simpler verification, and workable pricing. The benefit is a path from one-off transactions to a scalable sovereign incentive instrument.
 
-[Read the paper →](papers/SustainabilityLinkedLending.pdf)
 
 # 4. Modelling
 
-Two requirements for modelling that changes policy — instruments compared by what they do to emissions rather than by their headline rates, and a model a finance ministry can audit.
-
-### 4.1 Policy-Equivalent Carbon Price and Constant Elasticity of Substitution Energy Consumption
-
-Nominal carbon prices often misstate what climate policies actually do to emissions. This paper develops a common carbon-price-equivalent metric for comparing carbon taxes, feebates, subsidies, and other policies based on their emissions effects. It is supported by a nested constant elasticity of substitution demand framework that separates conservation, fuel switching, and heterogeneity within fuels or technologies, providing a low-parameter structure for static comparison and dynamic simulation.
-
-[Read the paper →](papers/PolicyEquivalentCarbonPriceAndCES.docx)
+Modelling that changes policy needs a model a finance ministry can audit. (The companion requirement, comparing instruments by what they do to emissions rather than by their headline rates, is paper 1.7 in the carbon-pricing series above.)
 
 ### 4.2 The Climate Policy Assessment Tool: Architecture, Recoding, and Fiscal Application
 
