@@ -91,6 +91,9 @@ def fetch(url, dest):
 def cpa_to_nace(code):
     """CPA_C10-12 -> C10-C12; CPA_C31_32 -> C31_C32; CPA_L -> L."""
     c = code.replace("CPA_", "")
+    special = {"D35": "D", "O84": "O", "P85": "P"}
+    if c in special:
+        return special[c]
     letter = c[0]
     for sep in ("-", "_"):
         if sep in c:
@@ -177,9 +180,19 @@ def main():
     for gas, ds in (("ghg", "env_ac_ghgfp"), ("co2", "env_ac_co2fp")):
         em = load_emissions(ds)
         f = np.zeros(N)
+        absent = sorted({cc for cc in countries if (cc, "TOTAL") not in em.index})
         for (cc, p), i in idx.items():
             f[i] = em.get((cc, cpa_to_nace(p)), 0.0)
         s = np.where(x > 1e-6, f / xs, 0.0)
+        # Economies in FIGARO but not in the emission data (Western Balkans):
+        # use the rest-of-world intensity per euro of output for each product.
+        for cc in absent:
+            for p in products:
+                s[idx[(cc, p)]] = s[idx[("WRL_REST", p)]]
+        if gas == "ghg":
+            print("economies given rest-of-world intensities:", absent)
+            print(f"mapped industry emissions {f.sum()/1e6:.2f} Gt vs Eurostat world "
+                  f"total {em[('WORLD', 'TOTAL')]/1e6:.2f} Gt")
         # multipliers: m = s (I - A)^-1  <=>  (I - A)^T m^T = s^T
         m = np.linalg.solve((np.eye(N) - A).T, s)
         results[gas] = (m, f.sum())
@@ -264,9 +277,10 @@ def main():
             summ.append({"gas": gas, "basket": "Eurostat EU27 footprint, all final demand excl. HH (Mt)",
                          "kg_per_eur": np.nan, "spend_beur": ef[("TOTAL", "TOTAL")] / 1000})
             summ.append({"gas": gas, "basket": "Eurostat EU27 household direct emissions (Mt)",
-                         "kg_per_eur": np.nan, "spend_beur": ef[("P3_S14", "HH")] / 1000})
+                         "kg_per_eur": np.nan, "spend_beur": ef[("P31_S14", "HH")] / 1000})
             summ.append({"gas": gas, "basket": "Eurostat EU27 household footprint excl. direct (Mt)",
-                         "kg_per_eur": np.nan, "spend_beur": ef[("P3_S14", "TOTAL")] / 1000})
+                         "kg_per_eur": np.nan,
+                         "spend_beur": (ef[("P31_S14", "TOTAL_HH")] - ef[("P31_S14", "HH")]) / 1000})
         except Exception as exc:  # validation is optional
             print("validation download failed:", exc)
     summ = pd.DataFrame(summ)
