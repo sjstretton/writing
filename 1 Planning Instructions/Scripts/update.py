@@ -31,13 +31,13 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]   # 0 Planning Instructions
+ROOT = Path(__file__).resolve().parents[1]   # 1 Planning Instructions
 REPO = ROOT.parent                           # combined repo root (planning 0-3, writing A-F)
 sys.path.insert(0, str(ROOT / "Scripts"))
 import make_printable as mp  # noqa: E402
 
 STATE = ROOT / "Context" / "sync-state.json"
-PLANS = REPO / "1 Day and Week Plans"
+PLANS = REPO / "0 Morning Briefing"
 TASKS = PLANS / "3-TaskContextAndProjectPlans.md"
 NEXT = PLANS / "1-Me-NextStep.txt"
 DAYWEEK = PLANS / "2-Me-DayWeekPlan.txt"
@@ -876,7 +876,7 @@ def check():
             if not (ROOT / ref).exists() and not (REPO / ref).exists() and not list(REPO.glob(f"**/{Path(ref).name}")):
                 errors.append(f"{doc.relative_to(REPO)} refers to `{ref}`, which does not exist")
     if list(PLANS.glob("Me-Printable-Tracker_v*.docx")):
-        errors.append("A versioned printable is in 1 Day and Week Plans; versions belong in 3 Archive/Printable versions/")
+        errors.append("A versioned printable is in 0 Morning Briefing; versions belong in 3 Archive/Printable versions/")
     state = load_state()
     pr = state.get("printable", {})
     if not mp.OUT.exists():

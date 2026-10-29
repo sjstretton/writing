@@ -1,11 +1,11 @@
 {
  "printable": {
   "built": "2026-10-29",
-  "docx": "12fa5f19bc8ab94e",
-  "sources": "196748675a60d1f2",
+  "docx": "8af4295f8964a3fe",
+  "sources": "77c34020ab068f04",
   "version": "0.6"
  },
- "synced": "2026-10-29T12:25:51",
+ "synced": "2026-10-29T15:03:45",
  "units": {
   "list:anxiety + sleep protocol": "699d7fe5f886ebf8",
   "list:evening": "e08384bf2c0dffd3",
@@ -16,7 +16,7 @@
   "plan:dayweek/DONE": "0cb52b77c68de810",
   "plan:dayweek/Decisions": "7da6a132edd9c341",
   "plan:dayweek/THIS WEEK": "6cb1127d211ebdc4",
-  "plan:dayweek/TODAY": "7736590125c5fef9",
+  "plan:dayweek/TODAY": "36b7d7bda3865bbd",
   "plan:next/DECIDE": "6405cc838663dfe8",
   "plan:next/DONE": "0cb52b77c68de810",
   "plan:next/Do later": "2727007339868a08",
@@ -28,7 +28,7 @@
   "table:Avoided projects (next step only)": "c4546674c2ab1f7f",
   "table:Daily decisions": "32fd2cb827724729",
   "table:Dashboard selections": "188d15dd96e6e0d4",
-  "table:Key decisions": "df0df33471834525",
+  "table:Key decisions": "0cb8a7d6e87a1810",
   "table:Lists by place": "5a249c0c34594d07",
   "table:Milestones (burndown)": "55f20d13040b9bf4",
   "table:Strategic priorities": "dd95eafe9c71a42c",
@@ -115,7 +115,7 @@
   "task:T43": "bd835c6a6c895fb4",
   "task:T44": "958cddaa22d32c0e",
   "task:T45": "bc31fd2662ec2000",
-  "task:T46": "bbadffb836890b78",
+  "task:T46": "2f0793d0f2b6a044",
   "task:T47": "acde4dc9773d014b",
   "task:T48": "5595be5e63aa73c9",
   "task:T49": "61ebbca6b5f507ff",
