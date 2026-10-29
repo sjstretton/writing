@@ -13,7 +13,7 @@ This note records what the repo already holds, the revised argument and outline,
 | Race to the top | `1.1/3.RelatedPiecesAndLinks/Background-DesigningARaceToTheTop.qmd` | 690-word stub | Source for the destination-basis argument and the corporate-tax analogy |
 | **Companion C1: the consumption side (EU VAT as a carbon tax)** | `1.6.CarbonConsumptionTax/CarbonConsumptionTax.qmd` (moved 29 Oct) | 8,900 words; a full proposal with numbers | Now paper 1.6. It already argues the split: production instruments (ETS free allocation, CBAM) "can coexist fully" with the consumption tax |
 | **Companion C2: feebates in detail** | `1.2/FeebatesAndOutputBasedRebating.qmd` (power sector); `1.2/3.RelatedPiecesAndLinks/IndustrialFeebates/Background-IndustrialFeebates.qmd` (industry, 6,100 words) | Drafts | Power-sector and household feebates stay here, not in 1.1. The industrial background paper is closest to 1.1's production track |
-| **Companion C3: carbon-price equivalents** | `4.1/PolicyEquivalentCarbonPriceAndCES.qmd` (Total Effective Carbon Price) | Technically complete draft | Supplies the measure that lets a feebate count as a carbon price at the border and in crediting |
+| **Companion C3: carbon-price equivalents** | `1.7/PolicyEquivalentCarbonPriceAndCES.qmd` (Total Effective Carbon Price; moved from 4.1 on 29 Oct) | Technically complete draft | Supplies the measure that lets a feebate count as a carbon price at the border and in crediting |
 | **Companion C4: updating CBAM** | `1.3/IronSteelCBAM.qmd` ("Carbon Price Recognition under CBAM") | Near-final consultation submission | Its recommendation 2.2 ("recognise implicit carbon pricing") is the institutional hinge of 1.1: without it, a feebate country's exporters get no credit at the EU border |
 | Toy model of global incentives | `6.Additional/5.Analytics/5.4…/Toy_Model_Global_Mitigation.pdf` | Working draft | Logit investment share, leader–follower diffusion, and international "augmentation" through carbon-credit purchases and payments: a dynamic version of results 2 and 3 |
 | Book | `6.Additional/6.Books/6.2…/CarbonPricingRightPolicyWrongTime.qmd` | 15,000 words | Chapters 1–2 (why feebates beat carbon taxes), 5 (pricing across borders) and 11 (the sequence). Position paper P1 |
@@ -122,7 +122,7 @@ Appendix A: the model and proofs of Results 1–3. Appendix B: political feasibi
 |---|---|---|---|---|
 | C1 | Turning EU VAT into a carbon consumption tax | `1.6.CarbonConsumptionTax/` | Track 2's administration; numbers on effective rates | Promoted to 1.6 on 29 Oct. Upgrade to the standard |
 | C2 | Feebates and output-based rebating | `1.2` (+ industrial background) | Track 1 design; power sector, kept out of 1.1 | Split into power (1.2) and industry? Clean the conversion (H15) |
-| C3 | Policy-equivalent carbon prices (TECP) | `4.1` | The measure for crediting and border recognition | Literature, calibration, a country case (already rank 2) |
+| C3 | Policy-equivalent carbon prices (TECP) | `1.7` (was 4.1) | The measure for crediting and border recognition | Literature, calibration, a country case (already rank 2) |
 | C4 | Updating CBAM: recognizing carbon prices | `1.3` | Border recognition of feebates; the trilemma for developing-country exporters (its Appendix A) | Resolve the title mismatch (H3); retitle to match its content |
 
 ## 7. Decisions for Stephen

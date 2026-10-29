@@ -28,7 +28,7 @@ Details for each item: `A Research Proposal/PhD-Application-Status.md`.
 
 - [ ] **1.1 Open Economy Carbon Pricing → paper standard** (Dirk asked for this first). Short version (v0.2) is now the master `1.1/OpenEconomyCarbonPricing.qmd`; v0.1 in `8.PreviousVersions`. Next: Stephen reads it; verify every `VERIFY` entry in the bib; calibrate the steel illustration from CBAM default values; then expand to the 7,000-word research article per `5.Notes/Plan-v2-TwoTrackArchitecture-2026-10-29.md` — A — 12 Nov
 - [ ] Decisions taken 29 Oct: title "Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies"; consumption-charge revenue partly replaces VAT, with a forward-announced upstream liability as the preferred form; the consumption-tax paper is 1.6 (moved 29 Oct); 1.3 keeps its content (CBAM flaws incl. price recognition, plus scrap-shuffling solutions): retitle to match; US spelling for the series
-- [ ] Confirm which file is master for 4.1 and 1.4 (qmd vs docx, H13) — S — before upgrading them. (1.1: the qmd is master, per Stephen 29 Oct)
+- [ ] Confirm which file is master for 1.4 Rent Tax (qmd vs docx, H13) — S — before upgrading it. (1.1 and 1.7: the qmd is master, per Stephen 29 Oct)
 - [ ] Draft concept paper 1: policy-equivalent carbon price — A — after 1.1
 
 ## Housekeeping (blocking or risky)
@@ -49,6 +49,7 @@ Details for each item: `A Research Proposal/PhD-Application-Status.md`.
 
 ## Done
 
+- [x] 29 Oct 2026 — 4.1 (TECP) moved into the series as 1.7; qmd is master (v0.2) — A
 - [x] 29 Oct 2026 — Section 1 reorganised: 1.6 created; `1B.OtherFiscalPolicy` holds 1.4 and 1.5; every series folder has `8.PreviousVersions` with v0.1/v0.2 labels, `3.RelatedPiecesAndLinks` and `RelatedWork.md`; series map in `1.ClimateAndFiscalPolicy/RelatedWork.md` — A
 - [x] 29 Oct 2026 — Template paper for 1.1 read (Keen, Parry and Roaf 2021); notes in `1.1/5.Notes/Review-2026-10-29.md` §6 — A
 - [x] 29 Oct 2026 — Proposal 1 cleaned: drafting text and appendices B–E removed; original kept in `A Research Proposal/PreviousVersions/` — A

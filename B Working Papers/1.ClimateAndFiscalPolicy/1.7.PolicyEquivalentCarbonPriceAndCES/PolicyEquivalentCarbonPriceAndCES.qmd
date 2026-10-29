@@ -6,6 +6,7 @@ subtitle: |
 author:
   - name: Stephen Stretton
 date: "May 2026"
+version: "0.2"
 abstract: |
   Countries deploy heterogeneous mixes of climate policy instruments — carbon taxes,
   emissions trading systems, feebates, fuel excise duties, clean fuel standards,

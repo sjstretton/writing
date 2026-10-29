@@ -35,7 +35,7 @@ What Stephen can credibly claim to be expert in, and the angle that makes him di
 
 | Specialism | Evidence in this repo |
 |---|---|
-| Climate fiscal tools: CPAT, the Total Effective Carbon Price (TECP), CBAM analysis | 4.1, 4.2, 1.3, 4.3 |
+| Climate fiscal tools: CPAT, the Total Effective Carbon Price (TECP), CBAM analysis | 1.7, 4.2, 1.3, 4.3 |
 | Country carbon-pricing and excise diagnostics | 5.1 (Sierra Leone); Egypt carbon policy diagnostic (`about-me.md`) |
 | Sustainability-linked sovereign lending and MDB instruments | 3.2 (internal), 3.3–3.5 |
 | De-risking structures for clean power | 2.1, 2.2 |

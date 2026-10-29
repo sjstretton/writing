@@ -18,7 +18,7 @@ Order of work. The reason column says why each paper is where it is.
 | Rank | No. | Paper | Status | Target | Why this rank |
 |---|---|---|---|---|---|
 | 1 | 1.1 | Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies (overarching paper; v0.2; v0.1 was "Open Economy Carbon Pricing") | upgrading: short version is now the master | Journal (*Climate Policy*, research article) + PhD writing sample | **Dirk asked for this one first.** The overarching paper for the carbon-pricing series. Plan: `1.1/5.Notes/Plan-v2-TwoTrackArchitecture-2026-10-29.md` |
-| 2 | 4.1 | Policy-Equivalent Carbon Price and CES Energy Demand (TECP) | draft | Journal (*Energy Economics* / *Energy Policy*) | Most technically complete. Needs literature, sourced calibration and a country application. |
+| 2 | 1.7 | The Total Effective Carbon Price (was 4.1) | draft v0.2 | Journal (*Energy Economics* / *Energy Policy*) | Most technically complete. Needs literature, sourced calibration and a country application. |
 | 3 | 2.1 | Climate Finance Intermediation for Clean Power | draft | WB working paper; 2,000-word cut as Oxford writing sample | Closest to proposal 1's topic. Needs citations. |
 | 4 | 3.1 | Notional Capitalised Value and Guarantees | idea | WB working paper | The core idea behind proposal 1, but has no draft yet. |
 | 5 | 1.2 | Feebates and Output-Based Rebating | draft | WB working paper | Full draft; messy conversion (H15). Underpins 1.1. |
@@ -35,7 +35,7 @@ Order of work. The reason column says why each paper is where it is.
 |---|---|---|---|
 | C1 | Carbon Consumption Tax: A Destination-Based Carbon Price Through VAT | 1.6 | draft v0.1 (8,900 words) |
 | C2 | Feebates and output-based rebating | 1.2 | draft |
-| C3 | Policy-equivalent carbon prices (TECP) | 4.1 | draft |
+| C3 | The Total Effective Carbon Price (policy-equivalent carbon prices) | 1.7 (was 4.1) | draft v0.2 |
 | C4 | Updating CBAM: carbon price recognition and scrap shuffling | 1.3 | near-final consultation note |
 
 Not in the program: 3.2 (World Bank internal, confidential) and the `6.Additional` papers, unless Stephen promotes one.
@@ -50,7 +50,7 @@ Each area gets a short paper (3,000–5,000 words) that a newcomer can read firs
 | 1.0 | Carbon Pricing in Open Economies | Source-based carbon pricing triggers a race to the bottom; separating a production feebate from a destination-based consumption charge allows a race to the top. | `1.0.OverviewClimateAndFiscalPolicy.docx`, 1.1–1.3 | draft (overview) |
 | 2.0 | The Cost of Capital for Clean Power | The cost of capital, not technology, is the binding constraint; it is set by the offtaker's credit risk, which a payment intermediary can remove at source. | `2.0.OverviewMobilisingPrivateCapital.docx`, 2.1–2.2 | draft (overview) |
 | 3.0 | Sovereign Incentives | Reward governments with balances and guarantees they can borrow against, not cash transfers for unobservable counterfactuals. | `3.0.OverviewSovereignIncentives.docx`, 3.1, proposal 1 | draft (overview) |
-| 4.0 | Models a Finance Ministry Can Audit | Compare instruments by their emissions effect, not headline rate; keep models small enough to check. | `4.0.OverviewModelling.docx`, 4.1–4.2 | draft (overview) |
+| 4.0 | Models a Finance Ministry Can Audit | Compare instruments by their emissions effect, not headline rate; keep models small enough to check. | `4.0.OverviewModelling.docx`, 1.7 (was 4.1), 4.2 | draft (overview) |
 | 5.0 | Diagnostics on Data Ministries Already Hold | Read the excise system as a whole against a common externality spine. | `5.0.OverviewAnalytics.docx`, 5.1 | draft (overview) |
 
 ## 3. Concept papers
@@ -59,7 +59,7 @@ A concept paper introduces one idea into World Bank discourse. It is 1,500–2,5
 
 | Order | Concept | One-line definition (draft) | Home paper |
 |---|---|---|---|
-| 1 | Policy-equivalent carbon price | The carbon price that would cut emissions as much as a given policy package does. | 4.1 |
+| 1 | Policy-equivalent carbon price | The carbon price that would cut emissions as much as a given policy package does. | 1.7 |
 | 2 | The two-plus-one functions of carbon pricing | Carbon pricing does three jobs (production incentive, consumption signal and revenue) that different instruments can do better separately. | 1.1 |
 | 3 | Destination-based carbon pricing | Charge carbon where goods are consumed, as VAT does, so exports are zero-rated and imports pay. | 1.1 |
 | 4 | Feebate as benchmark plus price | A feebate is a sectoral emissions-intensity benchmark plus a price on deviation from it. | 1.2 |

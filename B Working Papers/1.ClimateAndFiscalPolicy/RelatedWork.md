@@ -11,12 +11,12 @@ Section 1 holds the carbon-pricing series. Paper 1.1 is the overarching paper; t
 | Industrial Feebates and Competitiveness | `1.2…/3.RelatedPiecesAndLinks/IndustrialFeebates` | Companion C2, industry side | – |
 | Carbon Price Recognition under CBAM (plus benchmark design against scrap shuffling) | `1.3.IronSteelCBAM` | Companion C4: updating CBAM | 0.2 (Oct 2026); 0.1 is June 2026 |
 | Carbon Consumption Tax: A Destination-Based Carbon Price Through VAT | `1.6.CarbonConsumptionTax` | Companion C1: the consumption side | 0.1 |
+| The Total Effective Carbon Price (TECP) | `1.7.PolicyEquivalentCarbonPriceAndCES` | Companion C3: the carbon-price-equivalent measure | 0.2 (qmd master); 0.1 is the earlier pair of working papers |
 
 ## In other main folders
 
 | Piece | Where | Role |
 |---|---|---|
-| The Total Effective Carbon Price (TECP) | `4.Modelling/4.1.PolicyEquivalentCarbonPriceAndCES` | Companion C3: the carbon-price-equivalent measure used for crediting and border recognition. Master file undecided (qmd May 2026 vs `TECP.tex` Sep 2026) |
 | CBAM Policy Dashboard; Egypt CBAM emission factors; EU default values by country | `6.Additional/4.Modelling/4.3.CBAMDashboardAndEmissionFactors` | Data for the worked example in 1.1 and for 1.3 |
 | The Right Policy at the Wrong Time: Carbon Pricing and the Order of Things (book) | `6.Additional/6.Books/6.2.CarbonPricingRightPolicyWrongTime` | Chapters 1, 5 and 11: feebates, pricing across borders, sequencing |
 | Toy Model of Global Mitigation Incentives; Mitigation Economics tables | `6.Additional/5.Analytics/5.4.CarbonPricingPoliticalEconomyAndOptimality` | Dynamic version of 1.1's crediting and race-to-the-top results |

@@ -37,10 +37,10 @@ An index of every document related to 1.1, with its real title as written inside
 
 | Real title | File | Words | Notes |
 |---|---|---|---|
-| *The Total Effective Carbon Price: A CES-based metric for comparing climate policy instruments, with a microeconomic foundation in energy demand and partial adjustment* (May 2026) | `4.1…/PolicyEquivalentCarbonPriceAndCES.qmd` (master; + `.docx`, `2.Source/.docx`, `.tex`) | 4,100 | The website calls it "Policy-Equivalent Carbon Price and CES"; the paper calls it the Total Effective Carbon Price |
-| *Total Effective Carbon Price* (Sep 2026, LaTeX) | `4.1…/TECP.tex` | 1,900 | Newer, shorter LaTeX version. Which is master is still to be confirmed (H13) |
-| Archive: *Total Effective Carbon Price* (working paper); *CES and Isoelastic Forms* (working paper); executive summary; formulae; CES conversion note | `4.1…/9.Archive/*.pdf` | 1,000–2,900 each | Earlier split into two papers |
-| Model workbook (sheets: Dashboard, Tech Parameters, TECP Calcs, Baseline, Policy) | `4.1…/2.Source/PolicyEquivalentCarbonPriceAndCES.xlsx`; `9.Archive/TECP_Prototype.xlsx` | – | |
+| *The Total Effective Carbon Price: A CES-based metric for comparing climate policy instruments, with a microeconomic foundation in energy demand and partial adjustment* (May 2026) | `1.7…/PolicyEquivalentCarbonPriceAndCES.qmd` (master, v0.2; + `.docx`, `2.Source/.docx`, `.tex`) | 4,100 | Moved from 4.1 to 1.7 on 29 Oct 2026. The website calls it "Policy-Equivalent Carbon Price and CES"; the paper calls it the Total Effective Carbon Price |
+| *Total Effective Carbon Price* (Sep 2026, LaTeX) | `1.7…/8.PreviousVersions/TECP-2026-09-shortLaTeXvariant.tex` | 1,900 | Shorter LaTeX variant; the qmd is the master (Stephen, 29 Oct) |
+| Archive: *Total Effective Carbon Price* (working paper); *CES and Isoelastic Forms* (working paper); executive summary; formulae; CES conversion note | `1.7…/8.PreviousVersions/*-v0.1-*.pdf` (the two papers) and `9.Archive/*.pdf` (summary, formulae, notes) | 1,000–2,900 each | v0.1 was the split into two papers |
+| Model workbook (sheets: Dashboard, Tech Parameters, TECP Calcs, Baseline, Policy) | `1.7…/2.Source/PolicyEquivalentCarbonPriceAndCES.xlsx`; `9.Archive/TECP_Prototype.xlsx` | – | |
 
 ## Companion C4: updating CBAM
 

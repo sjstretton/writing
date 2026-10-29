@@ -21,11 +21,11 @@ website, scripting engine, and a shared Claude workspace.
 |---|---|
 | `A Research Proposal` | PhD research proposals and application status (see its `README.md`). |
 | `B Working Papers` | Main body of research and the public-facing website, organized as: |
-| &nbsp;&nbsp;`1.ClimateAndFiscalPolicy` | The carbon-pricing series: 1.1 (overarching), 1.2 feebates, 1.3 CBAM, 1.6 carbon consumption tax. See its `RelatedWork.md`. |
+| &nbsp;&nbsp;`1.ClimateAndFiscalPolicy` | The carbon-pricing series: 1.1 (overarching), 1.2 feebates, 1.3 CBAM, 1.6 carbon consumption tax, 1.7 total effective carbon price. See its `RelatedWork.md`. |
 | &nbsp;&nbsp;`1B.OtherFiscalPolicy` | Fiscal-policy papers outside the series (rent tax, legacy coal PPAs). |
 | &nbsp;&nbsp;`2.FinanceAndRisk` | Climate finance intermediation, climate investment trust, and risk work. |
 | &nbsp;&nbsp;`3.SovereignIncentives` | Sovereign incentives, notional capitalised value and guarantees. |
-| &nbsp;&nbsp;`4.Modelling` | CPAT architecture recoding, fiscal application, and background modelling papers. |
+| &nbsp;&nbsp;`4.Modelling` | CPAT architecture recoding, fiscal application, and background modelling papers (the TECP paper moved to 1.7). |
 | &nbsp;&nbsp;`5.Analytics` | Excise-fiscal diagnostics and related analytics. |
 | &nbsp;&nbsp;`6.Additional` | Papers outside the main portfolio, books, philosophy and politics. |
 | &nbsp;&nbsp;`7.Website` | Quarto site source (`*.qmd`, `_quarto.yml`) that publishes the research. |
