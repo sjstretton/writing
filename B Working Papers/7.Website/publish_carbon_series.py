@@ -7,7 +7,7 @@ Stable permalinks, one per paper and form, overwritten on each publish:
 
 Run from B Working Papers/7.Website:  python publish_carbon_series.py
 Then: quarto render, and deploy.bat (on Stephen's machine) to upload _site.
-Log every publish in E Writing Standards/publishing-log.md.
+Log every publish in A Writing Instructions/Writing Standards/publishing-log.md.
 """
 import shutil
 from pathlib import Path

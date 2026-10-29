@@ -37,7 +37,7 @@ Here the goal is accessibility, and the rules relax. A narrative opening is allo
 
 ## Choosing the persona
 
-`F Claude + Scripts/Setup Claude/_admin/voice.md` defines two writing personas.
+`A Writing Instructions/Claude + Scripts/Setup Claude/_admin/voice.md` defines two writing personas.
 
 - **Dan** (short words, concise sentences, concrete examples) for briefs, concept papers, explainers and the body of working papers.
 - **Clarisa** (*The Economist* at its best; narrative arc, explicit reasoning, confident conclusion) for essays, position papers and introductions.

@@ -2,7 +2,7 @@
 
 One repo for two connected jobs. **Planning** decides what to do next: tasks, day and week plans, strategic plans and the master Google Sheet. **Writing** does the work that matters most: papers, the website, PhD proposals and the course. The planning part tracks tasks for every repo, including this one; the writing part holds the outputs.
 
-Since 29 October 2026 the repo combines the former planning repo (`sjstretton/Planning`, earlier `PlanningPPTsAndGeneral`) with the writing repo (`sjstretton/writing`). Numbered folders (0–3) are planning; lettered folders (A–F) are writing.
+Since 29 October 2026 the repo combines the former planning repo (`sjstretton/Planning`, earlier `PlanningPPTsAndGeneral`) with the writing repo (`sjstretton/writing`). Numbered folders (0–3) are planning; lettered folders (A–D) are writing.
 
 ## Start here
 
@@ -27,17 +27,14 @@ Since 29 October 2026 the repo combines the former planning repo (`sjstretton/Pl
 | `2 Strategic Plans` | FY27 work plan, master plan (link to the Sheet and the last Excel copy), planning templates, past years (FY24, FY26) |
 | `3 Archive` | Old versions and retired files, including printable versions |
 
-### Writing (folders A–F)
+### Writing (folders A–D)
 
 | Folder | Contents |
 |---|---|
-| `A Writing Instructions` | `README.md`, `AGENTS.md`, `CLAUDE.md`, `NORMS.md`, `STRATEGY.md`, `PAPERS.md`, `TODO.md` and the paper status report for the writing |
+| `A Writing Instructions` | `README.md`, `AGENTS.md`, `CLAUDE.md`, `NORMS.md`, `STRATEGY.md`, `PAPERS.md`, `TODO.md` and the paper status report for the writing; `Writing Standards/` (writing principles, writing types, the paper standard, AI tells, exemplars, the briefing-series specification and templates); `Templates and Info/` (Word templates: briefing, one-page pitch); `Claude + Scripts/` (shared Claude workspace: `Setup Claude/_admin/about-me.md` and `voice.md`, and scripts) |
 | `B Working Papers` | The papers, by section. Section 1 is the carbon-pricing series (1.1 overarching, 1.2 feebates, 1.3 CBAM, 1.6 carbon consumption tax, 1.7 total effective carbon price); `1B` other fiscal policy; 2 finance and risk; 3 sovereign incentives; 4 modelling; 5 analytics; 6 additional; `7.Website` the Quarto site; `8.Scripts` the automation engine; `9.ResearchTracking` |
 | `C Research Proposal` | PhD research proposals and the application status |
-| `D Templates and Info` | Word templates (briefing, one-page pitch) |
-| `E Climate Econ Course` | Climate-fiscal economics course materials, topics A–G |
-| `E Writing Standards` | Writing principles, writing types, the paper standard, AI tells, exemplars, the briefing-series specification and templates |
-| `F Claude + Scripts` | Shared Claude workspace: `Setup Claude/_admin/about-me.md` and `voice.md`, and scripts |
+| `D Climate Econ Course` | Climate-fiscal economics course materials, topics A–G |
 
 Folders with their own `README.md` have local conventions; read it first.
 

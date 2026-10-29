@@ -9,7 +9,7 @@ Last updated: Sat 17 Oct 2026 (sjstretton repos; cpmodel dates from 15 Oct) (las
 
 | Repo | Purpose | Visibility | Last push | Open tasks |
 |---|---|---|---|---|
-| [sjstretton/writing](https://github.com/sjstretton/writing) | **Combined repo (from 29 Oct 2026):** planning (folders 0–3, this part) and writing (folders A–F: papers, website, proposals, course) | private | 29 Oct 2026 | T06, T13, T46 |
+| [sjstretton/writing](https://github.com/sjstretton/writing) | **Combined repo (from 29 Oct 2026):** planning (folders 0–3, this part) and writing (folders A–D: papers, website, proposals, course) | private | 29 Oct 2026 | T06, T13, T46 |
 | [sjstretton/Planning](https://github.com/sjstretton/Planning) | Former planning repo (was PlanningPPTsAndGeneral); merged into sjstretton/writing on 29 Oct 2026 | private | 29 Oct 2026 | - |
 | [cpmodel/CPAT-CDPM](https://github.com/cpmodel/CPAT-CDPM) | Coded CPAT integration into CDPM (formerly SiSePuede), with Edmundo: the pathways tool | private (?) | 19 Oct 2026 | T37 |
 | [cpmodelai/cpat_ai](https://github.com/cpmodelai/cpat_ai) | CPAT-AI: Excel-AI-CPAT and coded CPAT (Python), data, documentation (`coded/cpat_documentation/`) | private | 29 Oct 2026 | T43 |

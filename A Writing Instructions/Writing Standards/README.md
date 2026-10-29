@@ -1,4 +1,4 @@
-# E Writing Standards
+# Writing Standards
 
 The standards every paper, proposal and essay in this repo is written to. `A Writing Instructions/NORMS.md` is the short version; these files are the detail.
 

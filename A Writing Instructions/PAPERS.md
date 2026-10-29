@@ -7,7 +7,7 @@ The writing program: which papers to upgrade, in what order, and which new paper
 3. **Concept papers**: one concept each, written to enter World Bank discourse.
 4. **Position papers**: the overarching papers that justify Stephen's positions.
 
-Status key: `idea` · `notes` · `draft` · `upgrading` · `standard` (passes `E Writing Standards/paper-standard.md`) · `submitted` · `published`.
+Status key: `idea` · `notes` · `draft` · `upgrading` · `standard` (passes `A Writing Instructions/Writing Standards/paper-standard.md`) · `submitted` · `published`.
 
 > Rankings and "main result" wording are an agent draft (29 Oct 2026) based on the website abstracts and `Writing-Status-Report.md`. Stephen to confirm.
 

@@ -47,7 +47,7 @@ Details for each item: `C Research Proposal/PhD-Application-Status.md`.
 - [ ] Confirm the specialisms and positioning paragraph in `STRATEGY.md`.
 - [ ] Confirm the rankings in `PAPERS.md` and the positions P1–P8.
 - [ ] Spelling: US for the carbon-pricing series (decided 29 Oct). Other papers: convert, or keep UK?
-- [ ] Add 2–3 pieces you are proud of to `E Writing Standards/exemplars.md` ("Stephen's own").
+- [ ] Add 2–3 pieces you are proud of to `A Writing Instructions/Writing Standards/exemplars.md` ("Stephen's own").
 - [ ] Is the fiscal unit's remit described correctly in `STRATEGY.md`?
 
 ## Done
@@ -61,5 +61,5 @@ Details for each item: `C Research Proposal/PhD-Application-Status.md`.
 - [x] 29 Oct 2026 — Template paper for 1.1 read (Keen, Parry and Roaf 2021); notes in `1.1/5.Notes/Review-2026-10-29.md` §6 — A
 - [x] 29 Oct 2026 — Proposal 1 cleaned: drafting text and appendices B–E removed; original kept in `C Research Proposal/PreviousVersions/` — A
 - [x] 29 Oct 2026 — "Today" tab added to the master plan sheet (short daily view) — A
-- [x] 29 Oct 2026 — Agent infrastructure set up: `AGENTS.md`, `NORMS.md`, `STRATEGY.md`, `PAPERS.md`, `TODO.md`, `E Writing Standards/`, proposals index — A
+- [x] 29 Oct 2026 — Agent infrastructure set up: `AGENTS.md`, `NORMS.md`, `STRATEGY.md`, `PAPERS.md`, `TODO.md`, `A Writing Instructions/Writing Standards/`, proposals index — A
 - [x] 29 Oct 2026 — FTP login removed from deploy scripts (H1) — S
