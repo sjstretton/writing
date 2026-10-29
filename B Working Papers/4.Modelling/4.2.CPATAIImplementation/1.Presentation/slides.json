@@ -1,0 +1,51 @@
+{
+  "series": "CPAT Companion Paper No. 4.2",
+  "title": "CPAT-AI: Rebuilding a Policy Model",
+  "subtitle": "Two AI-assisted rebuilds of the Climate Policy Assessment Tool, and what they found",
+  "message": "Rebuilt twice in October 2026, as code-written Excel and as Python, under one rule (fix bugs, copy and track issues), legacy CPAT turned out to hold 228 bugs, 24 of high priority. Writing it a second time found seven bugs in the first rebuild.",
+  "problem": {
+    "title": "A model nobody could audit",
+    "stats": [
+      {
+        "value": "21 MB",
+        "label": "legacy workbook; main sheet past row 18,000"
+      },
+      {
+        "value": "228",
+        "label": "legacy bugs registered; 24 high priority"
+      },
+      {
+        "value": "135",
+        "label": "issues: intended choices open to question"
+      }
+    ],
+    "text": "Formulas differed from row to row, constants were typed into formulas and the documentation had drifted from the workbook. Egypt's population followed a misread path; a one-off GDP effect compounded every year; a methane fee on farming and waste did nothing."
+  },
+  "mechanism": {
+    "title": "One register, shared codes, tests on every output",
+    "image": "figures/fig_register.png",
+    "imageWidth": 5.6,
+    "imageHeight": 2.58,
+    "caption": "CPAT-AI register, release 1.0.2 (29 October 2026).",
+    "points": [
+      "Bugs are never replicated; issues are replicated and tracked.",
+      "One code per variable in legacy, Excel-AI and Coded CPAT: comparison is a table join.",
+      "Coded CPAT matches Excel-AI on 7,458 output codes within 10⁻⁹.",
+      "Built with Claude Code and GitHub Copilot; every judgment kept by the owner."
+    ]
+  },
+  "action": {
+    "title": "Build policy models twice",
+    "results": [
+      "The CPAT team confirmed 52 fixes; 2 marked fixed were not.",
+      "Verification is not validation: three agreeing models can share a wrong assumption.",
+      "Air pollution and transport co-benefits are not yet rebuilt."
+    ],
+    "todo": [
+      "Require a codes map as a model deliverable.",
+      "Keep one register of bugs, issues, departures and upgrades.",
+      "Build twice and regression-test every release.",
+      "Use AI agents as builders under written norms, not as authorities."
+    ]
+  }
+}
