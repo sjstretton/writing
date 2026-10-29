@@ -155,6 +155,17 @@ def main():
         num += np.sum(Ef * (prod + ee * tau_ext))
     lines.append(f"Old (1 - w) form TECP of the mix: {num / den:.2f}")
 
+    # tax salience: taxes move the demand margin theta times as much as equal market-price changes
+    theta = 3.0
+    LI = sum(a for a, _ in parts.values())
+    LX = sum(b for _, b in parts.values())
+    Lt = LI + theta * LX
+    sal = {"tax": (rows["tax"]["sw"] * L + theta * rows["tax"]["dm"] * L) / Lt,
+           "subsidy": rows["subsidy"]["lin"] * L / Lt, "standard": rows["standard"]["lin"] * L / Lt}
+    sal["mix"] = sum(sal.values())
+    lines.append(f"Tax salience theta={theta:.0f} on the demand margin of taxes (first order): "
+                 + "; ".join(f"{k} {v:.2f}" for k, v in sal.items()))
+
     # ---------------- accuracy (Figure 2) -------------------------------
     ks = np.linspace(0.0, 3.0, 31)
     acc = {"lin": [], "sec": [], "ex": []}
