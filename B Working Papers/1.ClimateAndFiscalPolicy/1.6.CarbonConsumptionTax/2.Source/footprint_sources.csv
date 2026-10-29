@@ -1,0 +1,9 @@
+gas,source,mt,share
+ghg,"EU power and energy-intensive industry (D35, C17, C19, C20, C23, C24)",594.6777,0.2809
+ghg,EU agriculture (A01-A03),305.6820,0.1444
+ghg,EU other industries and services,364.8826,0.1724
+ghg,Outside the EU,851.4630,0.4023
+co2,"EU power and energy-intensive industry (D35, C17, C19, C20, C23, C24)",578.4043,0.3939
+co2,EU agriculture (A01-A03),64.4778,0.0439
+co2,EU other industries and services,290.2949,0.1977
+co2,Outside the EU,535.0596,0.3644
