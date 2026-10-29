@@ -1,0 +1,48 @@
+---
+title: "Diagnostics on Data Ministries Already Hold"
+subtitle: "Three climate-fiscal analytics tools: an overview of section 5"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+version: "0.2"
+abstract: |
+  Analysis changes policy only when the people who hold the budget can reproduce it. The three tools described in this section each take data a finance ministry already holds or can download, put it on a common scale and return something sequenced enough to act on. The Excise-Fiscal Diagnostic reads a whole excise schedule against the damage taxed goods do. The Macro-Fiscal-Energy Scenario Tool links a climate investment program and carbon pricing to growth, revenue and debt in one workbook. The Global Fiscal Indicators dashboard gives a one-page fiscal and energy profile for 217 economies from public data, rebuilt by a script anyone can rerun. Each is built to one standard: every intermediate step visible, defaults defended line by line, and AI drafting checked against the source.
+csl: https://www.zotero.org/styles/chicago-author-date
+format:
+  docx: default
+---
+
+*Overview of section 5, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion to the Climate Fiscal AI Tools. Version 0.1 (September 2026) is in `8.PreviousVersions` at the section level.*
+
+# The standard: a ministry must be able to check it {.unnumbered}
+
+A diagnostic a ministry cannot check is a recommendation it must take on trust, and recommendations taken on trust do not survive the first official who disagrees with them. The tools in this section are therefore built to a reproducibility standard rather than to analytical sophistication. Every intermediate step is visible. Defaults can be defended line by line. Where an AI model drafts a stage, it does so under a written specification and every line is checked against the source text or data.
+
+Each tool answers a question a ministry already asks, from data it already has. None needs a new survey or a model run by another institution. The worked examples in the papers use public data or clearly labelled stylized numbers.
+
+# Read the excise system against its externalities (paper 5.1) {.unnumbered}
+
+Excise schedules grow line by line until nobody can read them whole. The Excise-Fiscal Diagnostic sorts every line into a small typology, maps it onto 30 standard lines and scales each rate three ways: US dollars per standard physical unit, share of the consumer price, and implied revenue as a share of GDP. It then sets fuel rates against a corrective benchmark built from one fixed set of values for carbon, air pollution, accidents, congestion and road damage, and health excises against published health benchmarks. In the paper's stylized country, petrol is taxed about right and diesel at less than half its corrective rate, and diesel's largest unpriced cost is air pollution rather than carbon.
+
+# Link energy investment to growth, revenue and debt (paper 5.2) {.unnumbered}
+
+A ministry weighing a climate investment program needs its budget cost, what carbon pricing could pay for, and what both do to growth and debt, usually from separate teams. The Macro-Fiscal-Energy Scenario Tool chains them in one workbook for 186 countries: mitigation investment needs split by who pays; a screen for the most abatement a carbon tax, a feebate or a mix can deliver within limits on political cost; simplified, open versions of three IMF and World Bank macro-fiscal models; and a debt sustainability test. In a stylized run, how the program is financed and how efficiently public investment is spent move the result more than the size of the program. The lite models are not their parents and do not replace them.
+
+# A one-page fiscal profile from public data (paper 5.3) {.unnumbered}
+
+Before advising on carbon pricing, subsidy reform or climate investment, an analyst needs a quick, comparable view of a country's fiscal space, spending capacity, cost of capital and fossil fuel exposure. The Global Fiscal Indicators dashboard assembles 80 indicators in twelve blocks for 217 economies from about twenty public datasets, scores them on one 1-to-10 scale and shows a one-page profile. A scripted pipeline rebuilds everything from the raw files, never imputes, records the year and source of every value, and stops if its configuration and outputs disagree. A comparison of four middle-income economies shows how the profile separates a revenue problem from a debt-service problem.
+
+# How the tools connect {.unnumbered}
+
+The tools feed the rest of the program. The excise diagnostic can supply checked starting tax rates and externality values for CPAT (section 4) and for the carbon-pricing papers (section 1). The scenario tool's investment needs and debt test carry the cost-of-capital argument of section 2 into a country's budget. The dashboard tells an analyst which of these lenses matters most for a given country before any model is run.
+
+| No. | Paper | Status |
+|---|---|---|
+| 5.1 | The Excise-Fiscal Diagnostic: Reading an Excise System Against Its Externalities | v0.2 |
+| 5.2 | The Macro-Fiscal-Energy Scenario Tool | v0.1 |
+| 5.3 | A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis | v0.1 |
+
+: Table 1. Section 5 papers.
+
+Earlier analytics ideas (a climate-fiscal-financial dashboard, a green growth diagnostic, and the political economy of carbon pricing) are kept with the additional papers.
