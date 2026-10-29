@@ -1,11 +1,11 @@
 {
  "printable": {
   "built": "2026-10-29",
-  "docx": "883026869861de70",
-  "sources": "94651ba2038f236b",
+  "docx": "35c7eaf64b0ada3c",
+  "sources": "6bd44ed88690f5af",
   "version": "0.6"
  },
- "synced": "2026-10-29T18:28:51",
+ "synced": "2026-10-29T20:24:28",
  "units": {
   "list:anxiety + sleep protocol": "699d7fe5f886ebf8",
   "list:evening": "e08384bf2c0dffd3",
@@ -32,7 +32,7 @@
   "table:Lists by place": "5a249c0c34594d07",
   "table:Milestones (burndown)": "33f11d69cb2605a6",
   "table:Strategic priorities": "dd95eafe9c71a42c",
-  "table:Task scripts": "9b5f3837e640f672",
+  "table:Task scripts": "184f93a78491a5df",
   "task:1a_m1": "8232c9317341ef39",
   "task:1a_m2": "3c09f5374ca35738",
   "task:1b_m1": "3c738190677ebdbe",
@@ -136,6 +136,9 @@
   "task:T64": "beffd605546e017f",
   "task:T65": "0551faa3ded7fc6b",
   "task:T66": "0fad1dd5c087cbbc",
-  "task:T67": "4e641194c751d1ed"
+  "task:T67": "4e641194c751d1ed",
+  "task:T68": "78f7d5ceceb47f45",
+  "task:T69": "8cd9fca66b294ecf",
+  "task:T70": "b463669e317be265"
  }
 }

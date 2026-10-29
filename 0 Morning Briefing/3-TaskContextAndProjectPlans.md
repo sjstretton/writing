@@ -4,7 +4,7 @@ Text copy of the **Context** tab of the master Google Sheet (the master). Rules:
 
 The printable tracker (`Me-Printable-Tracker.docx`, in this folder) is built from this file: run `python3 Scripts/update.py build`. The Context, Plan and list tabs of the Sheet are kept in step by `Scripts/update.py` (`NORMS.md`, "Keeping everything consistent").
 
-Last reviewed: Thu 29 Oct 2026, 11:55pm (Philippines). Open task points: 5,300.
+Last reviewed: Thu 29 Oct 2026, 11:55pm (Philippines). Open task points: 5,600.
 
 **Points.** Task 100 (quick) or 200. Milestone 1000 when complete, +4000 if done in its due week, +500 if done before it. Kriya 10 x current streak (days), daily. CPAP 1 per minute. Gym session 100. Daily points live on the Tracker tab.
 **Key.** Energy needed: H/M/L. Q: Q1 Do now, Q2 Schedule, Q3 Batch or delegate, Q4 Not now. %: progress on the milestone (estimate).
@@ -49,6 +49,9 @@ Last reviewed: Thu 29 Oct 2026, 11:55pm (Philippines). Open task points: 5,300.
 | T61 | Read the 1.1 working paper (two-track carbon pricing) for Dirk | 200 | M | Q2 | Open | 0% | P_m1 | Where: at a desk. After the PhD application: read `B Working Papers/1.ClimateAndFiscalPolicy/1.1.OpenEconomyCarbonPricing/OpenEconomyCarbonPricing.docx` (v0.3) and its brief; mark changes; then send to Dirk and pick the journal (Climate Policy) |
 | T62 | Carbon-pricing papers: follow-ups (batch) | 100 | L | Q3 | Open | 0% | P_m1 | Where: at a desk, one sitting. (1) TECP workbook: rebuild or retire (it has the old (1−w) error); (2) AI clears the remaining VERIFY citations (about 45; EU texts need EUR-Lex from your PC); (3) manual downloads, 125 papers, list in `B Working Papers/8.Scripts/Reference/Literature-Downloads.md`; (4) trim the 1.3 and 1.7 abstracts if the journal needs under 200 words |
 | P12 | Year reviews: update Samuel; Hari; feedback to Dave | 100 | L | Q3 | Open | 0% | PR8 | Where: phone or email. Unparked 29 Oct. First (5 min): send Samuel a short update (Task scripts > Samuel update). Then a quick review of the year to Hari; feedback to Dave |
+| T68 | Meeting: Zoe and Unnada | 100 | L | Q3 | Open | 0% | PR8 | Where: phone or email. When Zoe says she can: ask her for two or three times, then set it up with Unnada (Task scripts > Zoe and Unnada meeting) |
+| T69 | Meeting: Alexandra, Thursday | 100 | L | Q3 | Open | 0% | PR8 | Where: phone or email. Thu 5 Nov (?): ask for a time that suits her; send the invite (Task scripts > Alexandra meeting) |
+| T70 | Meeting: Paulina, when convenient | 100 | L | Q3 | Open | 0% | PR8 | Where: phone or email. No date: ask for a couple of times in the next two weeks (Task scripts > Paulina meeting) |
 
 ## Strategic priorities
 
@@ -187,6 +190,9 @@ What to do, word for word. Same as the Task scripts section of the Updateable li
 | eTravel form | etravel.gov.ph, within 72 h before landing. |
 | Out-of-office | Tue: away 21 Oct to about 1 Nov; contact Kacper for CPAT. |
 | Samuel update | Hi Samuel, a quick update. The Python work is finished, six weeks early. Five carbon-pricing working papers are updated and going live on my website. Next is CPAT-LTS, my main goal for November: I'm agreeing a limited scope with Dirk and Sebastian next week to close it by end November. Happy to talk it through if useful. |
+| Zoe and Unnada meeting | Hi Zoe, could we find a time for you, Unnada and me to meet? Send me two or three times that work for you and I'll set it up. |
+| Alexandra meeting | Hi Alexandra, are you free on Thursday 5 Nov? Let me know a time that suits you and I'll send an invite. |
+| Paulina meeting | Hi Paulina, could we find a time to meet in the next couple of weeks? Send me a couple of times that suit you. |
 | Rest | Nothing else today. Rest counts as a done day. |
 
 ## Avoided projects (next step only)
