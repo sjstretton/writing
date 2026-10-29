@@ -63,7 +63,7 @@ Here, we propose a third option: instead of imposing a carbon tax on sectors wit
 
 [Bibliography [22](#bibliography)](#bibliography)
 
-# ![](media/image2.png)**Part 1: Introducing the Problem**
+# ![](../2.Source/media/image2.png)**Part 1: Introducing the Problem**
 
 ## **1.1 Introduction**
 
@@ -79,7 +79,7 @@ However, how should we specify what activities are ‘cleaner’ or ‘dirtier�
 
 This paper discusses a form of feebate called output-based rebating (OBR), where a carbon tax is combined with a subsidy based on physical output – for example per MWh of electricity produced. In this case the relative cleanness or dirtiness is specified by the emissions intensity (in tCO~2~/MWh).
 
-![](media/image3.png)
+![](../2.Source/media/image3.png)
 
 ## **1.2 The Electricity Sector’s Key Role in Decarbonization**
 
@@ -97,7 +97,7 @@ Emissions are price-elastic in some sectors (e.g. some electricity markets) and 
 
 **It should be noted that this decarbonization is an effect due purely to the relative price of coal versus other forms of electricity generation. Hence the same decarbonization is likely under a rebated (OBR) carbon tax as under a simple carbon tax.**
 
-> ![](media/image5.png)![](media/image7.png)\
+> ![](../2.Source/media/image5.png)![](../2.Source/media/image7.png)\
 > In summary, both carbon taxes and OBR are likely to have the effect of reducing the emissions intensity of the activity concerned (in this case, electricity generation).
 
 A decline in a sector's emissions intensity means there are fewer carbon tax revenues to recycle, and therefore the rebate per MWh is likely to decline. OBR is thus a transitional measure to help introduce a carbon tax in a gradual manner.
@@ -108,7 +108,7 @@ A decline in a sector's emissions intensity means there are fewer carbon tax rev
 
 Imposing a carbon tax on all sectors including coal is justified – not only by coal’s severe climate damage, but also by its impact on local air pollution (Parry et al., 2015).
 
-![](media/image8.png)**Assuming a \$70/tCO~2~ carbon tax can be implemented, emissions will be reduced significantly**.[^3] However, the rise in coal prices will impose large transitional costs and may also cause severe political resistance from coal producers, industrial users of coal, and the general population. Since a carbon tax (as opposed to fossil fuel taxes in general) must, by definition, be in proportion to carbon contained per unit of fuel, the politically acceptable and realistic level of a carbon tax is limited by the level of political and economic feasibility in coal-intensive sectors.
+![](../2.Source/media/image8.png)**Assuming a \$70/tCO~2~ carbon tax can be implemented, emissions will be reduced significantly**.[^3] However, the rise in coal prices will impose large transitional costs and may also cause severe political resistance from coal producers, industrial users of coal, and the general population. Since a carbon tax (as opposed to fossil fuel taxes in general) must, by definition, be in proportion to carbon contained per unit of fuel, the politically acceptable and realistic level of a carbon tax is limited by the level of political and economic feasibility in coal-intensive sectors.
 
 Even if a sector is emissions-intensive but not particularly trade-exposed (for example: electricity production), the short-term disruptive impact of a carbon tax may be severe. Changes to the price of an intermediate output such as electricity, steel, or aluminum, may have knock-on effects on sectors using that output, which may themselves be trade-exposed.
 
@@ -148,11 +148,11 @@ In this section we consider alternative approaches to reducing the transitional 
 
 ## **2.2 Strategy B: Slow Introduction of a Carbon Tax**
 
-![](media/image9.png)**Another way to reduce transitional impacts is through a *slow* introduction of a carbon tax.** This means that political constraints must be faced *each time* the carbon tax is increased. Firstly, even small carbon taxes can have large impacts on price of coal prices and are likely to be resisted. Secondly, the resistance will continue and may increase with every subsequent increase in carbon prices.
+![](../2.Source/media/image9.png)**Another way to reduce transitional impacts is through a *slow* introduction of a carbon tax.** This means that political constraints must be faced *each time* the carbon tax is increased. Firstly, even small carbon taxes can have large impacts on price of coal prices and are likely to be resisted. Secondly, the resistance will continue and may increase with every subsequent increase in carbon prices.
 
 Furthermore, such a slow incentive does not maximize the potential for *transformational* change. Once carbon abatement takes place, unit costs of abatement measures often rapidly fall, as investment in solutions is scaled up and learning-curve effects unfold. For example, renewable electricity combined with flow-battery storage is relatively rare at present. Should a high carbon tax encourage large-scale deployment of such low-carbon technology combinations, their combined costs would almost certainly fall. This in turn would provide better low-carbon energy options for other sectors.
 
-## ![](media/image11.png)**2.3 Strategy C: OBR in the Electricity Sector**
+## ![](../2.Source/media/image11.png)**2.3 Strategy C: OBR in the Electricity Sector**
 
 Here we argue that much of the beneficial fuel switching induced by a pure carbon tax can be achieved with an approach that retains the carbon tax element but compensates the short-term increases in electricity costs that would otherwise result. Such a focus on the ‘supply side’ of decarbonization is especially important in the electricity sector, since a policy approach is needed that incentivizes both electricity decarbonization and a switch of sectors like transportation or home heating away towards (decarbonized) electricity.
 
