@@ -1,11 +1,11 @@
 {
  "printable": {
   "built": "2026-10-29",
-  "docx": "2b5cff379203c6b6",
-  "sources": "5322a1882c5d1e2c",
+  "docx": "fa832edc40c0cf54",
+  "sources": "9c8886e12f3f3772",
   "version": "0.6"
  },
- "synced": "2026-10-29T15:26:09",
+ "synced": "2026-10-29T15:30:41",
  "units": {
   "list:anxiety + sleep protocol": "699d7fe5f886ebf8",
   "list:evening": "e08384bf2c0dffd3",
@@ -125,7 +125,7 @@
   "task:T52": "573a2ca632f31570",
   "task:T53": "c3fd53239b4a660b",
   "task:T54": "95825739487980be",
-  "task:T55": "0d545905cf1046ba",
+  "task:T55": "969ec7e7b5155cc9",
   "task:T56": "623424b548d307bc",
   "task:T57": "6a631f16d26d743e"
  }
