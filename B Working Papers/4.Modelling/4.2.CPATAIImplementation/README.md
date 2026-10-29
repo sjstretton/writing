@@ -39,7 +39,7 @@ All from the public CPAT-AI repository, release 1.0.2 / 1.0.2p1.1 (29 October 20
 
 ## Notes for Stephen
 
-- Credits: the first footnote credits the CPAT team and the mitigation documentation authors. The air-pollution module owner (Paulina) is not named because her surname is not in the sources; add if wanted. Distribution (Faustyna Gawryluk) and transport co-benefits (Alexandra Campmas) are credited only through the documentation authorship.
-- The paper says the agents worked "mainly through Claude Code" (from `CLAUDE.md`, branch names and the set-up guide). Confirm.
-- "Egypt's population in 2041: 185 million instead of 147 million" and "+0.5% GDP compounding to about +10%" are from the v1.0.0 deck; confirm they are the Egypt run.
+- Credits (resolved 29 Oct 2026): the first footnote credits Paulina Schulz-Antipa for CPAT's air-pollution module, and the CPAT team and the mitigation documentation authors. Distribution (Faustyna Gawryluk) and transport co-benefits (Alexandra Campmas) are credited through the documentation authorship.
+- AI assistance (resolved 29 Oct 2026, Stephen's decision): described as "Claude Code and GitHub Copilot".
+- Egypt figures (resolved 29 Oct 2026, Stephen's decision): the deck's 185 million and "+0.5% compounding to about +10%" are dropped; the paper cites the UN World Population Prospects 2024 projection for Egypt (147.0 million in 2041, medium variant) and describes the GDP bug (L24) without a size.
 - The count of legacy bugs that are "fixed, or the feature not built" differs slightly between documents (docx stock table: 220 fixed, 8 not built; BUGS.md: 20 marked out of scope); the paper avoids the split.

@@ -37,7 +37,7 @@ Section 2 describes the tool and its dashboard. Section 3 sets out the energy si
 
 **The scenario is a baseline plus levers.** The baseline holds the country's 2024 fiscal position (debt, revenue and spending ratios) except that fossil fuel rents fall on a global net zero path; growth is reported above or below trend. It is a reference point for comparing packages, not a forecast. A user who switches the climate program on adds the country's incremental budget need for mitigation, financed by grants, concessional loans and commercial borrowing in proportions set on the assumptions tab. A user who chooses a carbon pricing mode adds the revenue it raises, and can earmark it for the program.
 
-**Four source models feed it, and each is a separate, documented module.** Table 1 lists them. They share one data layer: the Global Fiscal Indicators panel described in the companion paper on the indicators dashboard (paper 5.3), which supplies each country's debt, revenue, public investment, efficiency score, creditor mix and energy data from public sources.
+**Four source models feed it, and each is a separate, documented module.** Table 1 lists them. They share one data layer: the Global Fiscal Indicators panel described in the companion paper on the indicators dashboard [paper 5.3, @StrettonWP53], which supplies each country's debt, revenue, public investment, efficiency score, creditor mix and energy data from public sources.
 
 | Module | What it computes | Parent or basis | Coverage |
 |---|---|---|---|
@@ -47,13 +47,14 @@ Section 2 describes the tool and its dashboard. Section 3 sets out the energy si
 | LIC-DSF-lite | Five debt-burden indicators against thresholds; mechanical risk rating before and with the program | Bank-Fund LIC Debt Sustainability Framework | 66 low and lower-middle income countries |
 
 : Table 1. The tool's modules
+
 **The workbook is built by script from the source models, so a fix in a model reaches the tool on the next build.** A build script runs each module's extractor, which writes its results in the indicator panel's long format (country, indicator, value, year, source); splices the module's indicator definitions into the panel's configuration; runs the dashboard builder; and adds the live sheets. The build stops if a module names an indicator its extractor does not produce. A full rebuild from raw data takes about six minutes.
 
 # The energy side {#sec-energy}
 
 ## Investment needs and who pays
 
-**The investment module estimates, for each country and year to 2050, what a net zero path needs and who pays for it.** The investment model is a stock-and-flow model built to CPAT conventions: it uses CPAT's energy data and its activity equation, projected with income elasticities and autonomous efficiency improvement at real 2024 prices, and builds investment bottom up for road transport, buildings, industry and power, with spending lines for non-CO₂ gases, land use and other energy emissions. Its method is the subject of paper 4.6 in this series; here what matters is its output, an investment path in two scenarios and its split by payer.
+**The investment module estimates, for each country and year to 2050, what a net zero path needs and who pays for it.** The investment model is a stock-and-flow model built to CPAT conventions: it uses CPAT's energy data and its activity equation, projected with income elasticities and autonomous efficiency improvement at real 2024 prices, and builds investment bottom up for road transport, buildings, industry and power, with spending lines for non-CO₂ gases, land use and other energy emissions. Its method is the subject of paper 4.6 in this series [@StrettonWP46]; here what matters is its output, an investment path in two scenarios and its split by payer.
 
 **Every investment line is split into five payer types, and the split decides the fiscal cost.** The types run from pure public (P1, repaid by taxes: public buildings, access grids, land use), through regulated utility (P2, repaid by tariffs), contracted revenue (P3, repaid under a long-term contract with a public or regulated buyer), and viability gap (P4, market revenue plus a public top-up), to pure private (P5). The starting split of power investment comes from the country's power market structure, coded from the Power Sector Reform Tracker [@UrpelainenYang2019] and updated where it is out of date. Three pressure indices then move investment toward the budget: one for poor utility cost recovery, one for a high cost of capital, one for large explicit fossil fuel subsidies. The direct budget need in year $t$ is
 
@@ -104,6 +105,7 @@ where $e_{\text{hi}}$ is their emissions intensity and $p_{\text{w}}$ the wholes
 | LIC-DSF-lite | Bank-Fund LIC-DSF [@IMFWB2018LICDSF] | Debt-carrying capacity from the Composite Indicator; five debt-burden indicators and thresholds; standard stress tests plus a disaster test; mechanical rating | Realism tools, staff judgment and the small-breach rule; loan cohorts instead of loan-by-loan data; no market-access framework |
 
 : Table 2. The lite models and their parents
+
 ## GIMF-lite
 
 **GIMF-lite keeps the feature of GIMF that matters most for debt-financed investment: households do not fully discount future taxes.** Each household survives each year with probability $\theta$, so its planning horizon is $1/(1-\theta)$, about 20 years at $\theta = 0.95$, and its labor income declines over its life at rate $\chi$ [@Blanchard1985; @Kumhof2010GIMF]. Human wealth is then discounted at a rate above the government's borrowing rate:
@@ -171,6 +173,7 @@ where $IG^{x}$, $G^{x}$ and $R^{x}$ are the program's extra public investment, e
 | All commercial | 51.0 | 54.3 | 57.6 | 58.4 | 53.0 |
 
 : Table 3. Stylized run: 1 percent of GDP of extra public investment for ten years (default illustrative calibrations)
+
 **In DIGNAD-lite, concessional finance changes the debt path, not the growth path.** Output rises more slowly than in GIMF-lite, because labor is fixed and there is no demand stimulus in the first year, and peaks around year 20 as the program tapers. Financing 30 percent of the program by grants and 30 percent by concessional loans keeps debt 2.4 points of GDP lower at its peak than all-commercial financing. GDP is almost the same. For a low-income country the financing package is a debt question; the growth case rests on efficiency and the return on public capital.
 
 **The pricing screen shows the instrument choice mattering for revenue more than for abatement.** Table 4 applies equation (2) and equation (3) to a stylized power sector: average grid intensity 0.60 tCO₂ per MWh, coal and oil generators at 0.95, pass-through 0.6, a residential tariff of USD 150 per MWh, a wholesale price of USD 90, and a three-year phase-in. At the default limits, the concentrated-loser limit $F_3$ binds for every instrument. The best tax (USD 35 per tonne), the best feebate (USD 38) and the best mix deliver almost the same abatement, about a quarter of baseline fossil power emissions, but only the tax raises revenue. If instead a recent tariff protest makes the government cap the first-year tariff rise at 2 percent, the tax alone falls to USD 25 per tonne and 20 percent abatement. The feebate is unaffected, and the best mix (USD 18 tax plus USD 19 feebate) gets 25 percent abatement while keeping some revenue.
@@ -185,6 +188,7 @@ where $IG^{x}$, $G^{x}$ and $R^{x}$ are the program's extra public investment, e
 | | Best mix | 18 | 19 | 25.1 | 1.4 | 15.0 | $F_3$ |
 
 : Table 4. Stylized power sector: best feasible carbon pricing under two sets of limits ($F_2 \le 0.5$ percent in both; it does not bind)
+
 **Put together, the run says where a ministry's attention should go.** Earmarked pricing revenue and concessional finance lower the debt path; efficiency raises the growth path; and the political limit that binds decides whether pricing can raise revenue at all. In the stylized power sector the binding limit is the loss to coal and oil generators, not the household tariff. No amount of rebating to households would raise the feasible price, but compensation to the owners of high-emitting plants, or a faster schedule for retiring them, would.
 
 # A country run: Kenya {#sec-kenya}

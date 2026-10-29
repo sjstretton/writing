@@ -120,6 +120,7 @@ where all terms are in US dollars per liter. $e^{C}_f = \phi_f \, s^{C}$ is the 
 | Accident costs | Road deaths corrected for under-reporting × VSL × morbidity factor | Range from death counts | WHO road safety estimates; European handbook [@EC2019Handbook] |
 
 : Table 1. The externality spine: default valuation parameters
+
 **The value of a statistical life is transferred from a high-income base by income.** For country $c$ with income per head $y_c$,
 
 $$
@@ -153,6 +154,7 @@ where $b$ is the base country group. With $\eta = 1$ the value is proportional t
 | A5 | Peer review: give every line a source reference, check it against the source text, correct the report | Reference register |
 
 : Table 2. Production stages
+
 **A schedule can be run whole or in five parts.** A whole run covers all 30 standard lines and suits a first diagnostic or a small schedule. A sectoral run splits the work into fuel, vehicles, health (with sugar), other lines (plastics, gambling, telecoms, financial transactions, cement and other inputs, luxury), and an overarching part that runs last. Every standard code belongs to exactly one part. The first part to run writes a common header (country, cut-off date, currency notation, exchange rate, GDP, price index, list of legal instruments) that every later part reuses unchanged. The overarching part holds what belongs to no single sector (aggregate revenue, the legal framework, the indexation rule and a reconciliation of collections across the revenue authority and the finance ministry) and stacks the four part workbooks into one. Sectoral runs suit long schedules and teams where different specialists own different taxes; the fuel and vehicle parts line up with a stand-alone fuel and vehicle tax review.
 
 ## Quality rules
@@ -187,6 +189,7 @@ where $b$ is the base country group. With $\eta = 1$ the value is proportional t
 | Sugar-sweetened beverages | Not covered | — | — | — |
 
 : Table 3. Country A, Level 2 view (stylized)
+
 **Four findings come out of the table before any externality is valued.** First, coverage: there is no excise on sugar-sweetened beverages, a gap the report records as a choice rather than an oversight. Second, coherence: spirits pay 44 percent less per liter of pure alcohol than beer, because the spirits rate is ad valorem on a low declared factory value while beer is specific. The same harmful content is taxed at two rates, and the cheaper rate falls on the stronger product. Third, intensity against a health benchmark: the cigarette excise is 20 percent of the retail price, against a WHO benchmark of at least 70 percent [@WHO2021Tobacco]. Fourth, erosion: with every specific rate unchanged since 2020 and prices up 40 percent, each has lost 29 percent of its real value. The petrol excise was worth USD 0.42 per liter in today's prices when it was set.
 
 ## What the externality spine adds
@@ -207,6 +210,7 @@ where $b$ is the base country group. With $\eta = 1$ the value is proportional t
 | Gap at central values | +0.01 | +0.25 |
 
 : Table 4. Country A, corrective benchmark for road fuels (stylized)
+
 **The largest unpriced externality is local air pollution from diesel, not carbon.** At the central values, carbon accounts for about a third of the diesel corrective rate; air pollution and accidents together account for more than half. A reform case for diesel built on carbon would rest on the smaller part of the argument. The report says this in its Level 1 findings and hands it to the reform pathway, where it shapes how a reform is framed: as a health and road-safety measure first.
 
 **Closing the diesel gap would raise about 1.1 percent of GDP in the stylized economy.** At the current volume the static gain is USD 500 million, 1.27 percent of GDP. With a short-run price elasticity of −0.3 and full pass-through to a pump price of USD 1.05, diesel use falls about 7 percent and the gain is about 1.1 percent of GDP. The range is wide. At the low case the gap is USD 0.02 per liter and the case for reform is mainly erosion; at the high case it is USD 0.73. A report that showed only the central figure would invite a ministry to dismiss the whole exercise the first time someone challenged one parameter. The range shows that diesel is undertaxed in every case and by how much the answer depends on what.
@@ -221,7 +225,7 @@ where $b$ is the base country group. With $\eta = 1$ the value is proportional t
 
 ## What it cannot do
 
-**The diagnostic is static.** It does not model pass-through, demand response, cross-border fuel smuggling or tobacco illicit trade. The elasticity adjustment in Section 6 is a first-order correction, not a forecast. A ministry that wants revenue projections should take the diagnostic's rates and gaps into a model that has those responses, such as the Climate Policy Assessment Tool (CPAT) for fuels.
+**The diagnostic is static.** It does not model pass-through, demand response, cross-border fuel smuggling or tobacco illicit trade. The elasticity adjustment in Section 6 is a first-order correction, not a forecast. A ministry that wants revenue projections should take the diagnostic's rates and gaps into a model that has those responses, such as the Climate Policy Assessment Tool (CPAT) for fuels [@StrettonWP41].
 
 **Implied revenue is approximate, within a factor of perhaps 1.5.** Line-level volumes are the weakest input. Prevalence-based volumes include untaxed supply and overstate the base. Shares of consumer price move with the reference price.
 
