@@ -33,7 +33,7 @@ Details for each item: `C Research Proposal/PhD-Application-Status.md`.
 
 ## Housekeeping (blocking or risky)
 
-- [ ] **H2: remove the confidential Sustainability-Linked Lending PDF from the website**, `research.qmd` and the CV — A — now — conflicts with publishing rules
+- [ ] **H2: confidential Sustainability-Linked Lending PDF.** Removed from `research.qmd`, `papers/` and `_site/` (29 Oct). Still to do: delete `papers/SustainabilityLinkedLending.pdf` on the web server by hand (deploy.bat syncs without deleting), and remove it from the CV — S
 - [ ] H1: rotate the FTP password on the server. The old one is still in git history — S — now
 - [ ] H3: resolve the 1.3 title/content mismatch — S decides, A edits
 - [ ] H6: fix stale folder paths in `PaperTracker.xlsx` — A
