@@ -28,7 +28,6 @@ Details for each item: `A Research Proposal/PhD-Application-Status.md`.
 
 - [ ] **1.1 Open Economy Carbon Pricing → paper standard** (Dirk asked for this first). Review: `1.1/5.Notes/Review-2026-10-29.md`. Verify all 41 references, fix H12 defects, turn Results 1–4 into propositions, decide on the consumption-tax appendix — A — 12 Nov
 - [ ] Confirm which file is master for 4.1 and 1.4 (qmd vs docx, H13) — S — before upgrading them. (1.1: the qmd is master, per Stephen 29 Oct)
-- [ ] Read the template paper for 1.1 (Keen, Parry and Roaf 2021, IMF WP/21/239) — A — needs imf.org allowed, or the PDF added to `1.1/4.ExternalPapers/`
 - [ ] Draft concept paper 1: policy-equivalent carbon price — A — after 1.1
 
 ## Housekeeping (blocking or risky)
@@ -49,6 +48,7 @@ Details for each item: `A Research Proposal/PhD-Application-Status.md`.
 
 ## Done
 
+- [x] 29 Oct 2026 — Template paper for 1.1 read (Keen, Parry and Roaf 2021); notes in `1.1/5.Notes/Review-2026-10-29.md` §6 — A
 - [x] 29 Oct 2026 — Proposal 1 cleaned: drafting text and appendices B–E removed; original kept in `A Research Proposal/PreviousVersions/` — A
 - [x] 29 Oct 2026 — "Today" tab added to the master plan sheet (short daily view) — A
 - [x] 29 Oct 2026 — Agent infrastructure set up: `AGENTS.md`, `NORMS.md`, `STRATEGY.md`, `PAPERS.md`, `TODO.md`, `E Writing Standards/`, proposals index — A
