@@ -1,0 +1,171 @@
+---
+title: "The CBAM Policy Tool"
+subtitle: "Measuring Exporters' Exposure to the EU Carbon Border Adjustment and What Domestic Policy Can Do About It"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+version: "0.1"
+abstract: |
+  Since January 2026, importers of steel, aluminum, cement, fertilizers, hydrogen and electricity into the European Union have owed a carbon charge on the emissions embedded in what they buy. For many middle-income exporters the charge is large, it rises every year to 2034, and it depends on choices their own governments control: whether producers file verified emissions data and whether the country prices carbon at home. This paper describes a spreadsheet tool that computes the exposure product by product and year by year, and shows how emissions data, a domestic carbon price and rebates change it. It sets out the method in five equations and the data sources, all public. A worked example for three Turkish exports to the EU shows that, at €80 per tonne of carbon dioxide, the charge on hot-rolled steel declared at the default value rises from about €107 per tonne in 2026 to €252 at full phase-in, close to half its export price, and that verified data and a €20 domestic carbon price would together cut the full charge by two-fifths.
+keywords: [carbon border adjustment, CBAM, embedded emissions, default values, carbon pricing, trade exposure]
+jel: [F18, H23, Q56, Q58, F13]
+bibliography: CBAMPolicyTool.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+number-sections: true
+format:
+  docx: default
+---
+
+*Working paper, version 0.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the Climate Fiscal AI Tools.*[^credit]
+
+[^credit]: The CBAM Policy Tool is one of the Climate Fiscal AI Tools. It was first applied to one country's exports in World Bank work. Results of that application and the tool's country dashboard outputs are not reproduced here; the worked example uses public EU and Eurostat data only. Errors are the author's own.
+
+# Introduction {#sec-intro}
+
+The EU's Carbon Border Adjustment Mechanism (CBAM) turns a domestic climate decision of a trading partner into a line in the EU's budget or its own. Since 1 January 2026, importers of iron and steel, aluminum, cement, fertilizers, hydrogen and electricity have owed certificates for the emissions embedded in their imports, priced in line with the EU Emissions Trading System, with certificate sales from February 2027 [@EU2023; @EU2025Omnibus]. At €80 per tonne of carbon dioxide (CO₂) and full phase-in, a tonne of hot-rolled steel from Türkiye declared at the Commission's default value carries a charge of €252, about 46 percent of its average 2025 import price (@sec-example). The charge falls if the exporter files verified emissions data below the default, if its plants cut emissions, or if its government levies a carbon price that the EU credits. A finance or trade ministry needs to know how large the exposure is, how it rises to 2034 and which of these levers moves it most.
+
+This paper describes a tool built to answer those questions and shows what it does with public data. The CBAM Policy Tool is a spreadsheet that, for each covered product of one exporting country, builds embedded emissions from energy use and process chemistry, compares them with the EU's default values, applies the free-allocation adjustment, the mark-ups and the certificate price year by year, and deducts a domestic carbon price where the rules allow. A second module lets a domestic carbon price change output and emissions per tonne and splits the resulting fall in the border charge into the part from abatement and the part from the credit.
+
+Three results stand out from the method and the worked example. First, emissions above the CBAM benchmark are charged in full from the first year, so for carbon-intensive goods most of the exposure arrives in 2026, not 2034: on Turkish hot-rolled steel declared at the default, the charge is €107 per tonne in 2026 and €196 in 2030 at €80 (@tbl-example), with the 2026–2033 values resting on a benchmark that still has to be checked against the regulation. Second, the mark-up on default values is worth €58 per tonne at full phase-in for that product, the most a producer at the country average gains by filing verified data. Third, a domestic carbon price credited under Article 9 lowers the charge one for one with the price paid and moves the money from the EU to the exporter's treasury: a hypothetical €20 price on the three goods in the example would move about €127 million a year at 2025 volumes. These numbers are only as good as the rules on recognizing foreign carbon prices, which the Commission has proposed but not adopted [@EU2026DraftCarbonPrice].
+
+The tool adds a product-level, year-by-year calculator to a literature that has estimated CBAM's incidence across countries with trade models [@Eicke2021; @Beaufils2023; @Magacho2024; @PerdanaVielle2022] and argued its design [@Mehling2019; @KeenParryRoaf2022]. It implements the liability rules analyzed in the series' paper 1.3 [@CFPB13; @StrettonWP13] and the producer-side track of the two-track architecture in paper 1.1 [@CFPB11; @StrettonWP11], so a ministry can see in its own numbers what those papers argue.
+
+# What CBAM charges {#sec-rules}
+
+**The importer surrenders certificates for embedded emissions above the free allocation that EU producers still receive, less a credit for carbon prices paid abroad.** Embedded emissions are declared either from actual values, verified at the installation, or from default values set by the Commission [@EU2023, Art. 7; @EU2025Methods; @EU2025Verification]. For iron, steel and aluminum only direct emissions count; for cement and fertilizers indirect emissions from electricity count too [@EU2025Defaults]. @tbl-rules lists the parameters the tool needs and where each comes from.
+
+| Parameter | Rule | Source |
+|---|---|---|
+| Coverage | Iron and steel, aluminum, cement, fertilizers, hydrogen, electricity, by CN code | @EU2023, Annex I |
+| Embedded emissions | Actual (verified) or default values; direct only for steel and aluminum | @EU2023; @EU2025Methods |
+| Default values | Country averages by CN code, with mark-ups of 10% (2026), 20% (2027), 30% (2028 on); 1% for fertilizers | @EU2025Omnibus, Annex IV; @EU2025Defaults |
+| Free-allocation adjustment | Benchmark by CN code and production route, times the share of free allocation EU producers keep: 97.5% in 2026, falling to 51.5% in 2030, 14% in 2033 and zero from 2034 | @EU2025FreeAllocation; @EUETSDirective, Art. 10a(1a) |
+| Certificate price | Set from EU allowance auction prices, by implementing act | @EU2025CertPrice |
+| Credit for carbon price paid | Price "effectively paid" at origin, net of rebates or compensation; for default values, only Commission default carbon prices where a carbon price is set by rule | @EU2025Omnibus, Art. 9 |
+
+: The CBAM rules the tool implements, as in force on 29 October 2026. The free-allocation schedule is that of the EU ETS Directive; it was confirmed in the session from secondary sources only. A Commission proposal of 2026 would slow the phase-out from 2028 [VERIFY: COM(2026) 616, reported in secondary sources, not read]. {#tbl-rules}
+
+**Default values are country averages with a penalty on top, so data pay for cleaner plants.** Since the 2025 amendment, a default value is the average emission intensity of the exporting country, raised by a mark-up; where reliable data are lacking, it is the average of the ten most intensive exporters [@EU2025Omnibus, Annex IV point 4.1]. The Commission's values for 2026 cover 119 countries and a residual "other countries" category, by CN code, with a production-route code that sets the benchmark for the free-allocation adjustment [@EU2025Defaults; @EUDVWorkbook2026]. A correcting regulation was reported in 2026 [@EUDVCorrection2026]; the values used below are those of the February 2026 workbook.
+
+**The credit rules decide whether a domestic carbon price keeps money at home.** Under Article 9 as replaced in 2025, a declarant using actual emissions may deduct a carbon price "effectively paid" in the country of origin, net of "any rebate or other form of compensation"; a declarant using default values may deduct only a default carbon price that the Commission "may" publish from 2027 for countries with carbon pricing rules [@EU2025Omnibus]. A revenue-neutral feebate or an output-based rebate therefore earns little or no credit, which paper 1.3 analyzes and proposes to change [@StrettonWP13; @CFPB12].
+
+# What the tool does {#sec-tool}
+
+**The tool answers three questions for one exporting country: how large is the CBAM charge on each product each year, how much would verified data save, and what would a domestic carbon price do to it.** It is an Excel workbook built so that every input sits in a labeled cell with its source and every result can be traced to its inputs by formula. Two versions exist. The exposure version covers ten CBAM product groups (four steel routes, grey clinker, ammonia, urea, ammonium nitrate, other nitrogen fertilizers and primary aluminum) for a set of countries over 2024–2035, with switches for which emission scopes count, whether verified data are filed and whether a domestic price applies to exports only or to all production. The policy version takes one country's CBAM goods and simulates a domestic carbon price, with switches for whether process emissions are priced, whether revenue is rebated per unit of output and whether it finances an abatement fund.
+
+**Each run returns a small set of results.** For the chosen country and year the tool reports: embedded emissions per tonne by component and in total; the gap between those emissions and the EU default; the CBAM charge per tonne and in total at projected export volumes; the domestic carbon price at which the charge would be fully credited; and the revenue a domestic price would raise on EU exports, other exports and domestic sales. The policy version adds the change in the charge per tonne, split into the part from cleaner production and the part from the credit, and the change in emissions of the CBAM goods, split into output and intensity. Hydrogen, electricity and the downstream goods proposed in December 2025 [@EU2025Downstream] are outside the current version.
+
+**The first application built a full emission-factor matrix for one exporter, and its results are held back.** For one country's CBAM exports the tool was paired with an emission-factor workbook that shows the same products at two levels: eight headline products and, beneath them, about two dozen CN-code lines weighted by their share of the product's EU exports, with a reconstruction check that rebuilds each product from its lines. Each component of each factor carries a confidence flag (authoritative, estimated split, or proxy) and each product a quality-assurance line naming its largest uncertainty and the verification that would resolve it. The method transfers to any exporter. The numbers for that country, like the tool's multi-country dashboard outputs, were prepared in World Bank work and are not reproduced here.
+
+# Method {#sec-method}
+
+## Embedded emissions from the bottom up {#sec-see}
+
+**Embedded emissions per tonne are built from energy use, process chemistry and electricity, in the same components the EU uses.** For product $i$ the tool computes direct emissions per tonne as
+$$
+e_i^{\mathrm{dir}} = \sum_k h^{c}_{ik}\,\phi_k + \sum_k h^{p}_{ik}\,\phi_k + e^{np}_i + e^{no}_i ,
+$$ {#eq-see}
+where $h^{c}_{ik}$ is fuel $k$ burned for heat (GJ per tonne), $h^{p}_{ik}$ fuel $k$ used as a reductant or feedstock, such as natural gas in direct reduction of iron or in an ammonia reformer, $\phi_k$ the fuel's CO₂ emission factor (for example 56.1 kg per GJ for natural gas and 74.1 for gas oil [@IPCC2006]), $e^{np}_i$ non-fuel process CO₂ (limestone calcination in clinker, anode consumption in aluminum) and $e^{no}_i$ non-CO₂ gases in CO₂ equivalents (nitrous oxide from nitric acid, perfluorocarbons from smelting). Indirect emissions are electricity use times the grid emission factor, $e^{\mathrm{ind}}_i = u_i\,g$. The CBAM-relevant intensity is $e_i = e^{\mathrm{dir}}_i$ for steel and aluminum and $e^{\mathrm{dir}}_i + e^{\mathrm{ind}}_i$ for cement and fertilizers.
+
+**Precursors are integrated into the goods made from them, so nothing is counted twice.** Urea and ammonium nitrate are made from ammonia, which the EU treats as a precursor whose emissions are embedded in the downstream good [@EU2025Methods]. The tool adds the ammonia content, about 0.567 tonnes per tonne of urea from its molecular formula and a smaller share for ammonium nitrate, times ammonia's own intensity, and counts as standalone ammonia only the net merchant quantity. Without integration urea's own process term is negative, because synthesis absorbs CO₂, and its intensity looks implausibly low.
+
+**The bottom-up intensity is the tool's estimate of what verified data would show.** Comparing it with the default value tells a ministry where filing data pays. Where the estimate is below the marked-up default, producers gain from verification; where it is above, the default is a subsidy to the dirtiest plants and data quality decides the exposure.
+
+## The charge per tonne {#sec-charge}
+
+**The charge per tonne is the certificate price times embedded emissions above the free-allocation adjustment, less any credited carbon price.** Let $e_i$ be the declared embedded emissions, $\bar e_{c,i}$ the country default before mark-up and $m_t$ the mark-up, so that $e_i = (1+m_t)\bar e_{c,i}$ under default values. Let $B_i$ be the CBAM benchmark for the product's route, $f_t$ the share of free allocation EU producers keep in year $t$ (0.975 in 2026, zero from 2034), $P_t$ the certificate price and $\tau^d$ the domestic carbon price effectively paid per tonne of CO₂. The charge per tonne of product is
+$$
+C_{it} = \max\Big\{0,\; P_t\big[e_i - f_t B_i\big]^{+} - \tau^d e_i\Big\}.
+$$ {#eq-charge}
+The tool's exposure version implements this with the free-allocation term written in terms of the phase-in share $1-f_t$ and a switch for whether the declarant uses actual or default values. The deduction of $\tau^d e_i$ follows the logic of Article 9 for actual values; how the Commission will convert a price paid into certificates, and how that conversion interacts with the free-allocation adjustment before 2034, is set by an implementing act still in draft [@EU2026DraftCarbonPrice].
+
+**Emissions above the benchmark are charged in full from the first year.** Because $f_t B_i$ is at most the benchmark, the term $P_t(e_i - f_t B_i)$ is at least $P_t(e_i - B_i)$ in every year. For a good whose embedded emissions are far above the benchmark, most of the charge applies in 2026 and the phase-in adds only the benchmark's share. For a good close to the benchmark the charge starts near zero and rises with $1-f_t$. The phase-in schedule therefore protects efficient exporters, not inefficient ones.
+
+**The capture price is the domestic carbon price that would reduce the charge to zero.** Setting $C_{it} = 0$ in @eq-charge gives
+$$
+\tau^{d*}_{it} = P_t\,\frac{\big[e_i - f_t B_i\big]^{+}}{e_i}.
+$$ {#eq-capture}
+At full phase-in the capture price equals the certificate price. Before 2034 it is lower, because part of the embedded emissions is covered by the free-allocation adjustment. A domestic price at $\tau^{d*}$ moves the whole charge from the EU budget to the exporter's treasury while leaving EU buyers' costs unchanged; it also raises revenue on all other sales the price covers, which in most exporters is the larger sum [@StrettonWP11].
+
+## A domestic carbon price: abatement and credit {#sec-response}
+
+**In the policy version, a domestic carbon price changes output, emissions per tonne and the credit.** For product $i$ with price $p_i$ and carbon cost share $\delta_i = (1-\theta)\tau\,e_i/p_i$, where $\theta$ is the share of the carbon cost rebated per unit of output, output falls along a constant-elasticity curve, $Q_i = Q^0_i(1+\delta_i)^{\varepsilon_i}$, with small elasticities $\varepsilon_i$ for traded goods. Fuel emissions per tonne fall with a semi-elasticity, $e^{f}_i = e^{f0}_i\exp(-\beta^{f}\tau)$, and process emissions per tonne with product-specific semi-elasticities $\beta^{p}_i$. The fuel response is calibrated to CPAT's industrial fuel response, net of the output effect, which links the tool to the elasticities checked in paper 4.4 [@StrettonWP44]; process responses are fitted to published abatement-cost data. A partial-adjustment block scales the long-run responses for a price that has been in force only a few years.
+
+**The fall in the charge splits into abatement and credit.** At full phase-in, without rebates and with the domestic price covering all embedded emissions, @eq-charge gives $C = (P - \tau^d)e$. If the domestic price cuts the export-weighted intensity by a fraction $r$, the proportional change in the charge is
+$$
+\frac{\Delta C}{C^0} = -\,r \;-\; (1-r)\,\frac{\tau^d}{P}.
+$$ {#eq-split}
+The first term is cleaner production; the second is the credit. With $\tau^d = €20$, $P = €80$ and an intensity cut of 10 percent, the charge falls by 32.5 percent, of which 22.5 points come from the credit. For a modest domestic price, the credit does more for the border charge than abatement does. With a full output-based rebate ($\theta = 1$), the marginal incentive survives but, under the current reading of Article 9, the credit disappears, so only the first term remains [@StrettonWP13]. An abatement fund financed by the price keeps the credit and adds abatement.
+
+# Data {#sec-data}
+
+**Every input the method needs is public, and the tool records the source of each.** @tbl-data lists the inputs and the public sources the tool uses or can use. Country-specific engineering data, such as the split of natural gas between fuel and reductant in direct reduction, are the least certain inputs; the tool flags them and reports a range where the evidence allows.
+
+| Input | Unit | Public source |
+|---|---|---|
+| Default values, mark-ups, route codes | tCO₂e per tonne | @EU2025Defaults; @EUDVWorkbook2026 |
+| CBAM benchmarks | tCO₂e per tonne | @EU2025FreeAllocation |
+| Free-allocation schedule | share | @EUETSDirective |
+| Certificate price | € per tCO₂ | EU allowance auction prices [@EU2025CertPrice]; scenarios |
+| EU imports by CN code and partner | tonnes, € | Eurostat Comext [@EurostatComext]; UN Comtrade for other destinations |
+| Production by product | tonnes | Industry associations and national statistics (steel, cement, fertilizer, aluminum) |
+| Energy and process intensities | GJ or tCO₂ per tonne | Sector benchmarks, national energy balances |
+| Fuel emission factors, process factors, global warming potentials | kg CO₂ per GJ; tCO₂e per tonne | @IPCC2006 and IPCC assessment values |
+| Grid emission factors | tCO₂ per MWh | National and international energy statistics |
+| Growth of output | percent a year | IMF growth projections, scaled by an output elasticity |
+
+: Inputs to the CBAM Policy Tool and their public sources. {#tbl-data}
+
+# A worked example: three Turkish exports {#sec-example}
+
+**The example uses only public data: the Commission's default values for Türkiye and Eurostat's record of EU imports from Türkiye in 2025.** Türkiye is a large exporter of steel to the EU and has country-specific default values for its main steel products. The example takes three goods: hot-rolled flat steel (CN 7208), reinforcing bar (CN 7214 20 00) and unwrought aluminum (CN 7601). Their direct default values before mark-up are 2.43, 2.31 and 1.70 tCO₂ per tonne, on production routes (C), blast furnace carbon steel, and (K), primary aluminum [@EUDVWorkbook2026]. In 2025 the EU imported 2.10 million tonnes of the hot-rolled steel from Türkiye, worth €1,154 million; 0.50 million tonnes of rebar, worth €259 million; and 52,000 tonnes of unwrought aluminum, worth €142 million [@EurostatComext]. The certificate price is a stylized €80, as in paper 1.3. The benchmarks, 1.370 for route (C) and 1.423 for route (K), are those entered in the tool and have not been checked against the regulation [VERIFY: CBAM benchmarks for CN 7208, 7214 20 00 and 7601 in Implementing Regulation 2025/2620]; they affect 2026–2033 but not full phase-in.
+
+| Product | Year | Default with mark-up (tCO₂/t) | Charge at default (€/t) | Share of 2025 unit value | Charge, actual data at country average (€/t) | Charge, actual data with €20 credited (€/t) |
+|---|---|---|---|---|---|---|
+| Hot-rolled flat steel (€549/t) | 2026 | 2.67 | 107 | 19% | 87 | 39 |
+|  | 2030 | 3.16 | 196 | 36% | 138 | 89 |
+|  | 2034 | 3.16 | 252 | 46% | 194 | 146 |
+| Rebar (€523/t) | 2026 | 2.54 | 96 | 18% | 78 | 32 |
+|  | 2030 | 3.00 | 184 | 35% | 128 | 82 |
+|  | 2034 | 3.00 | 240 | 46% | 185 | 139 |
+| Unwrought aluminum (€2,744/t) | 2026 | 1.87 | 39 | 1% | 25 | 0 |
+|  | 2030 | 2.21 | 118 | 4% | 77 | 43 |
+|  | 2034 | 2.21 | 177 | 6% | 136 | 102 |
+
+: CBAM charge per tonne on three Turkish exports to the EU at a certificate price of €80/tCO₂. Default values: direct emissions, Türkiye, before mark-up 2.43 (CN 7208), 2.31 (CN 7214 20 00) and 1.70 (CN 7601) tCO₂/t, with mark-ups of 10, 20 and 30 percent in 2026, 2027 and 2028 on [@EU2025Defaults; @EUDVWorkbook2026]. "Actual data at country average" assumes verified emissions equal to the default before mark-up. The credit deducts a hypothetical €20/tCO₂ effectively paid on all embedded emissions (actual-values route only). Free-allocation shares from the ETS Directive; benchmarks 1.370 (route C) and 1.423 (route K) as entered in the tool [VERIFY]. Unit values are 2025 EU import values divided by tonnes [@EurostatComext]. Source: author's calculation, `2.Source/cbam_example.py`. {#tbl-example}
+
+**On steel declared at the default, the charge is large from the first year and reaches almost half the export price.** @tbl-example shows that hot-rolled steel declared at the marked-up default would owe €107 per tonne in 2026, €196 in 2030 and €252 at full phase-in, against an average 2025 import price of €549 per tonne. Rebar follows the same path. The 2026 charge is already 42 percent of the full-phase-in charge, because Türkiye's default for these products is well above the route (C) benchmark, so most embedded emissions are above the free-allocation adjustment from the start (@sec-charge). The same reasoning would apply to any exporter whose default is far above the benchmark. For aluminum the charge is a small share of a much higher price.
+
+![CBAM charge per tonne of Turkish hot-rolled flat steel (CN 7208), 2026–2034, at a certificate price of €80/tCO₂: declared at the default value with mark-up; with verified data equal to the country average; and with verified data and a hypothetical €20/tCO₂ domestic carbon price credited. Before 2034 the curves depend on the route (C) benchmark of 1.370 tCO₂/t as entered in the tool [VERIFY] and, for the credit, on conversion rules still in draft. Source: @EUDVWorkbook2026; author's calculation, `2.Source/cbam_example.py`.](2.Source/figures/fig1_charge_path.png){#fig-path width=95%}
+
+**Filing verified data at the country average saves €58 per tonne of steel at full phase-in; a €20 domestic price saves another €49.** The mark-up is what a producer at the country average avoids by filing data: 30 percent of 2.43 tCO₂ at €80, or €58 per tonne of hot-rolled steel (@fig-path). A producer cleaner than average gains more. A domestic carbon price of €20 effectively paid on all embedded emissions lowers the charge by €20 × 2.43 = €49 per tonne, and the same €49 is collected at home. Together the two levers cut the full-phase-in charge on hot-rolled steel from €252 to €146 per tonne, by 42 percent.
+
+**At 2025 volumes, the three goods would owe about €660 million a year at full phase-in under default values, and a €20 domestic price would move €127 million of the charge home.** The default-value charge at full phase-in sums to €531 million on hot-rolled steel, €119 million on rebar and €9 million on aluminum, against imports worth €1,555 million. Filing data at the country average lowers the total to €507 million; adding the €20 credit lowers it to €380 million, while the domestic price raises €127 million from the same exports. The capture price of @eq-capture is €80 at full phase-in; at that price the whole charge on these goods, about €507 million, would be collected in Türkiye instead of the EU, on top of what the price raised on domestic sales and other exports. Volumes are held at 2025 levels and the €80 price is stylized; the example shows the scale and the mechanics, not a forecast.
+
+# Policy uses {#sec-uses}
+
+**The tool tells a ministry which lever to pull first, product by product.** Where the bottom-up intensity is well below the marked-up default, the cheapest lever is verification capacity: accredited verifiers and monitoring at the plants that export to the EU. Where it is near the default, the mark-up still makes data worthwhile. Where it is above the default, data will not help, and the choice is between abatement and a domestic price that captures the charge.
+
+**It puts a number on the fiscal case for a domestic carbon price on CBAM goods.** @eq-capture and @eq-split show how much revenue a domestic price would move from the EU budget to the exporter's, and how much of the fall in the border charge comes from that credit rather than from abatement. Because a broad price also raises revenue on domestic sales and non-EU exports, the CBAM credit is usually the trigger for a domestic price, not its main revenue source. Paper 1.1 sets out the architecture in which such a producer price sits alongside a destination-based price on consumption [@StrettonWP11; @CFPB11].
+
+**It shows the cost of designing a domestic price to return its revenue to producers.** An output-based rebate or feebate keeps the incentive to cut emissions per tonne and protects output, but under the current reading of Article 9 it forfeits the credit, so the border charge falls only by the abatement term of @eq-split. The tool makes that trade-off explicit, and paper 1.3 argues that the EU should credit the price signal, not only the payment [@StrettonWP13; @CFPB13]. Paper 1.7's Total Effective Carbon Price offers a way to measure that signal across instruments [@CFPB17].
+
+**It supports dialogue with the EU on default values and recognition.** A country whose bottom-up intensities are well below its default values has a documented case for revising them under the review due by 2027 [@EU2025Defaults]; a country with a carbon price can show the Commission what a default carbon price for it should be [@EU2025Omnibus, Art. 9(4)].
+
+# Limits {#sec-limits}
+
+**The tool computes exposure, not incidence.** Export volumes are fixed inputs or grow with GDP; there is no trade model, so the tool does not say who bears the charge, how EU buyers switch suppliers or how trade diverts to other markets. Trade-model studies answer those questions at lower product detail [@Beaufils2023; @Magacho2024]. Emission factors are technology averages, not plant data, while the EU will use verified plant-level emissions; producers can route their cleanest output to the EU, which paper 1.3 analyzes [@StrettonWP13].
+
+**The rules are still moving.** The conversion of a carbon price paid into fewer certificates, the evidence required and the treatment of rebates are set by an implementing act that was in draft on 29 October 2026 [@EU2026DraftCarbonPrice]. Default values were corrected in 2026 and are due for review by 2027 [@EUDVCorrection2026; @EU2025Defaults], and a proposal would slow the phase-out of free allocation [VERIFY: COM(2026) 616]. The benchmarks used for 2026–2033 in the example have not been checked against the regulation. The tool is not a compliance calculator and should not be used to compute a firm's certificate obligation.
+
+**Coverage is partial.** Hydrogen, electricity and the downstream goods proposed in December 2025 are not modeled, and indirect emissions are excluded for steel and aluminum by rule even where electricity is the largest source, as in aluminum smelting [@StrettonWP13].
+
+# Conclusion {#sec-conclusion}
+
+The CBAM Policy Tool turns the EU's border rules into a product-by-product, year-by-year exposure for one exporter, and shows how much verified data, abatement and a domestic carbon price would change it. The worked example shows why a ministry should look early: for steel well above the EU benchmark, most of the charge arrives in 2026, the mark-up alone is worth about €58 per tonne, and a modest domestic price credited under Article 9 lowers the charge one for one and keeps the money at home. The next step is to verify the CBAM benchmarks and the 2026 corrections against the regulations, add the conversion rule once the Commission adopts it, and run the tool for exporters with public plant-level data.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
