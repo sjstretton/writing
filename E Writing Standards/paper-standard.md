@@ -90,11 +90,11 @@ Proofs, derivations, data sources, robustness checks.
 - [ ] Every citation key resolves, and every reference has been checked to exist and to support the claim.
 - [ ] Every number has a unit, a year and a source.
 - [ ] No `[VERIFY]`, `TODO` or placeholder text remains.
-- [ ] Numbers and terms agree with the other papers in `PAPERS.md`.
+- [ ] Numbers and terms agree with the other papers in `A Writing Instructions/PAPERS.md`.
 
 **Form**
 - [ ] Front matter complete: title, author, disclaimer, abstract, keywords, JEL.
 - [ ] Tables and figures stand alone.
-- [ ] One spelling system throughout (see `NORMS.md`).
+- [ ] One spelling system throughout (see `A Writing Instructions/NORMS.md`).
 - [ ] Renders cleanly from the qmd to docx and PDF.
 - [ ] No confidential or World Bank internal material.

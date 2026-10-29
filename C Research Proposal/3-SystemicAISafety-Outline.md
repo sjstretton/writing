@@ -1,6 +1,6 @@
 # Proposal 3: Systemic AI Safety (Outline)
 
-Status: outline, 29 Oct 2026. This is a scaffold for the second PhD application, which `STRATEGY.md` makes the next writing priority. It sets out the structure and the decisions Stephen needs to make. It contains no claims yet; everything substantive is a question.
+Status: outline, 29 Oct 2026. This is a scaffold for the second PhD application, which `A Writing Instructions/STRATEGY.md` makes the next writing priority. It sets out the structure and the decisions Stephen needs to make. It contains no claims yet; everything substantive is a question.
 
 ## Decisions for Stephen first
 
@@ -27,10 +27,10 @@ Follows the "Research proposal" type in `E Writing Standards/writing-types.md`.
 
 ## Material to draw on
 
-- Position paper P7 in `PAPERS.md` (to be written alongside).
+- Position paper P7 in `A Writing Instructions/PAPERS.md` (to be written alongside).
 - P6 and paper 4.2 (AI-assisted recoding of policy models), as evidence of hands-on work with AI systems.
 - Exemplar: Amodei et al., "Concrete Problems in AI Safety" (2016), for how to turn a diffuse worry into named, tractable problems (`E Writing Standards/exemplars.md`).
 
 ## Next steps
 
-See `TODO.md`, "Priority 2".
+See `A Writing Instructions/TODO.md`, "Priority 2".

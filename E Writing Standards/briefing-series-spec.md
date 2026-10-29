@@ -19,7 +19,7 @@ The briefing-paper series for the carbon-pricing papers in `B Working Papers/1.C
 
 ## Style
 
-Follow `NORMS.md`, `E Writing Standards/writing-principles.md` and `ai-tells.md`. In particular:
+Follow `A Writing Instructions/NORMS.md`, `E Writing Standards/writing-principles.md` and `ai-tells.md`. In particular:
 - US spelling.
 - Dense and economical. No throat-clearing, no roadmap paragraphs, no summary ending that repeats the executive summary.
 - Every factual claim cited. Never invent a citation. Unverified entries carry `note = {VERIFY: ...}` in the `.bib`; claims you cannot source are cut or marked `[VERIFY: ...]` in the text.

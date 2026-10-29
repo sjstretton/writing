@@ -6,7 +6,7 @@ Writing worth imitating, grouped by the type of writing it models. For each piec
 
 ## Concept papers: ideas that entered the discourse
 
-These short pieces introduced a term that people still use. They are the models for the concept papers in `PAPERS.md`.
+These short pieces introduced a term that people still use. They are the models for the concept papers in `A Writing Instructions/PAPERS.md`.
 
 - **Albert O. Hirschman, *Exit, Voice, and Loyalty* (Harvard University Press, 1970).** Three plain words that now organize a whole field. *Copy:* name the concept with ordinary words, then show it at work in very different settings.
 - **William Nordhaus, "Climate Clubs: Overcoming Free-Riding in International Climate Policy," *American Economic Review* 105(4), 2015.** A memorable name for a mechanism, with a model behind it. *Copy:* the title is the idea; the model supports a claim a policymaker can repeat.
@@ -38,7 +38,7 @@ The goal here is accessibility without loss of rigor.
 
 ## Stephen's own
 
-*(Stephen to add 2–3 pieces he considers representative. See `TODO.md`.)*
+*(Stephen to add 2–3 pieces he considers representative. See `A Writing Instructions/TODO.md`.)*
 
 - "The Vocative Case" (`B Working Papers/6.Additional/7.Philosophy/7.3.TheVocativeCase`): the reference piece for popular philosophy, per `voice.md`.
 - *TODO: a World Bank or policy piece.*

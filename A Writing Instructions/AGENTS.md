@@ -1,14 +1,14 @@
-# AGENTS.md
+# AGENTS.md (writing)
 
-Instructions for AI agents working in this repository, including Claude Code (`CLAUDE.md` points here). Read this file first, then `NORMS.md`.
+Instructions for AI agents working on the **writing** part of the combined repo: folders A–F. The repo root `AGENTS.md` covers both parts (planning, folders 0–3; writing, folders A–F) and says which instructions apply; read it first, then this file, then `NORMS.md` (in this folder).
 
-## What this repo is for
+## What the writing part is for
 
 This is Stephen Stretton's research workspace. Its job right now is to turn a large set of draft papers into a small set of excellent ones, and to support two PhD applications. Everything an agent does should serve the priorities in `STRATEGY.md`.
 
 ## Where things are
 
-Read the file that matches your task before you start.
+Read the file that matches your task before you start. Files in this folder (`A Writing Instructions/`) are named alone; folders are named from the repo root.
 
 | File or folder | Use it for |
 |---|---|
@@ -17,9 +17,9 @@ Read the file that matches your task before you start.
 | `TODO.md` | The live task list. Take work from the top. Update it when you finish. |
 | `PAPERS.md` | Prioritised papers, introductory papers, concept papers and position papers. |
 | `E Writing Standards/` | Writing principles, writing types, the paper standard, AI tells to avoid, exemplars and templates. |
-| `A Research Proposal/` | The PhD research proposals. Its `README.md` tracks their status. |
+| `C Research Proposal/` | The PhD research proposals. Its `README.md` tracks their status. |
 | `B Working Papers/` | The papers, numbered by section (1.x to 5.x; 6.Additional holds the rest). Also the website (`7.Website`) and scripts (`8.Scripts`). |
-| `C Climate Econ Course/` | Course materials. |
+| `E Climate Econ Course/` | Course materials. |
 | `D Templates and Info/` | Older Word templates (briefing, one-page pitch). |
 | `F Claude + Scripts/Setup Claude/_admin/` | `about-me.md` and `voice.md`: who Stephen is and how he sounds. Read before drafting anything in his name. |
 | `Writing-Status-Report.md` | 29 Oct 2026 audit of every paper and the housekeeping problems (H1–H17). |

@@ -1,7 +1,7 @@
-"""Build the printable tracker (Day and Week Plans/Me-Printable-Tracker.docx) from the master lists.
+"""Build the printable tracker (1 Day and Week Plans/Me-Printable-Tracker.docx) from the master lists.
 
 The root file never carries a version number, so links to it stay valid; a copy of each layout
-version goes to X - Archive/Printable versions/. Normally run through Scripts/update.py build.
+version goes to 3 Archive/Printable versions/. Normally run through Scripts/update.py build.
 
 Changing lists come from 3-TaskContextAndProjectPlans.md, 1-Me-NextStep.txt,
 2-Me-DayWeekPlan.txt and Context/3-Me-WeeklyLog.md; the fixed routines from Context/routines.md.
@@ -27,11 +27,12 @@ from docx.enum.text import WD_BREAK, WD_TAB_ALIGNMENT, WD_TAB_LEADER
 from docx.oxml import parse_xml
 from docx.shared import Pt, RGBColor, Inches
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[1]   # 0 Planning Instructions
+REPO = ROOT.parent                           # combined repo root
 VERSION = "0.6"
-PLANS = ROOT / "Day and Week Plans"
+PLANS = REPO / "1 Day and Week Plans"
 OUT = PLANS / "Me-Printable-Tracker.docx"
-ARCHIVE = ROOT / "X - Archive" / "Printable versions"
+ARCHIVE = REPO / "3 Archive" / "Printable versions"
 TASKS = "3-TaskContextAndProjectPlans.md"
 NAVY = RGBColor(0x1F, 0x4E, 0x79)
 GREY = RGBColor(0x59, 0x59, 0x59)

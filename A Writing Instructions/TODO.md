@@ -8,7 +8,7 @@ Format: `- [ ] Task — owner — due — notes`. Owner is **S** (Stephen) or **
 
 ### Priority 1: PhD in climate policy (proposal 1, send ASAP)
 
-Details for each item: `A Research Proposal/PhD-Application-Status.md`.
+Details for each item: `C Research Proposal/PhD-Application-Status.md`.
 
 - [ ] **Next step:** email Dr Shrimali the cleaned proposal; ask him to confirm supervision in writing and about a co-supervisor — S — today (15 min)
 - [ ] Settle the deadline on the live Oxford course page. Stephen's working deadline is Sat 31 Oct; the status notes found 13 Nov (early) and 26 Jan (final), unverified. Also check documents and the statement-of-purpose limit — S — 30 Oct — ox.ac.uk is blocked from cloud sessions
@@ -20,7 +20,7 @@ Details for each item: `A Research Proposal/PhD-Application-Status.md`.
 
 ### Priority 2: PhD in systemic AI safety (proposal 3)
 
-- [ ] Answer the open questions in `A Research Proposal/3-SystemicAISafety-Outline.md` (target programs, supervisors, core question) — S — 6 Nov
+- [ ] Answer the open questions in `C Research Proposal/3-SystemicAISafety-Outline.md` (target programs, supervisors, core question) — S — 6 Nov
 - [ ] Literature scan on systemic AI risk; verified sources only — A — 13 Nov
 - [ ] First full draft of proposal 3 (~2,500 words) — A drafts, S revises — 27 Nov
 
@@ -52,7 +52,7 @@ Details for each item: `A Research Proposal/PhD-Application-Status.md`.
 - [x] 29 Oct 2026 — 4.1 (TECP) moved into the series as 1.7; qmd is master (v0.2) — A
 - [x] 29 Oct 2026 — Section 1 reorganised: 1.6 created; `1B.OtherFiscalPolicy` holds 1.4 and 1.5; every series folder has `8.PreviousVersions` with v0.1/v0.2 labels, `3.RelatedPiecesAndLinks` and `RelatedWork.md`; series map in `1.ClimateAndFiscalPolicy/RelatedWork.md` — A
 - [x] 29 Oct 2026 — Template paper for 1.1 read (Keen, Parry and Roaf 2021); notes in `1.1/5.Notes/Review-2026-10-29.md` §6 — A
-- [x] 29 Oct 2026 — Proposal 1 cleaned: drafting text and appendices B–E removed; original kept in `A Research Proposal/PreviousVersions/` — A
+- [x] 29 Oct 2026 — Proposal 1 cleaned: drafting text and appendices B–E removed; original kept in `C Research Proposal/PreviousVersions/` — A
 - [x] 29 Oct 2026 — "Today" tab added to the master plan sheet (short daily view) — A
 - [x] 29 Oct 2026 — Agent infrastructure set up: `AGENTS.md`, `NORMS.md`, `STRATEGY.md`, `PAPERS.md`, `TODO.md`, `E Writing Standards/`, proposals index — A
 - [x] 29 Oct 2026 — FTP login removed from deploy scripts (H1) — S

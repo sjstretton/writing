@@ -4,7 +4,7 @@ Running record of what was done each week and what is planned next.
 Newest week at the top. Each Monday (or Friday), add a new entry above the previous one:
 move "Next week" into a new "Last week" section, record what actually happened, then write the next plan.
 
-Related: `1-Me-NextStep.txt`, `2-Me-DayWeekPlan.txt`, `Strategic Plans/Stephen_FY27_Work_Plan_v2.6_15thOct.docx` (the master), `Strategic Plans/Stephen_FY27_Master_Plan_v3.2.xlsx` (the **This Week** tab)
+Related: `1-Me-NextStep.txt`, `2-Me-DayWeekPlan.txt`, `2 Strategic Plans/Stephen_FY27_Work_Plan_v2.6_15thOct.docx` (the master), `2 Strategic Plans/Stephen_FY27_Master_Plan_v3.2.xlsx` (the **This Week** tab)
 
 ---
 

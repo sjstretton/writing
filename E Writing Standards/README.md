@@ -1,6 +1,6 @@
 # E Writing Standards
 
-The standards every paper, proposal and essay in this repo is written to. `NORMS.md` at the repo root is the short version; these files are the detail.
+The standards every paper, proposal and essay in this repo is written to. `A Writing Instructions/NORMS.md` is the short version; these files are the detail.
 
 | File | Read it when |
 |---|---|

@@ -8,8 +8,8 @@ Stephen's strategic priorities and specialisms. Agents use this to decide what m
 
 In order.
 
-1. **Apply for a PhD in climate policy.** Oxford DPhil in Geography and the Environment (Smith School / Oxford Sustainable Finance Group). Proposal 1, *Sovereign Incentives for Decarbonisation*, is written and should go out as soon as possible. Status and checklist: `A Research Proposal/PhD-Application-Status.md`.
-2. **Build a PhD application in systemic AI safety.** Proposal 3 is the next writing priority. Outline: `A Research Proposal/3-SystemicAISafety-Outline.md`.
+1. **Apply for a PhD in climate policy.** Oxford DPhil in Geography and the Environment (Smith School / Oxford Sustainable Finance Group). Proposal 1, *Sovereign Incentives for Decarbonisation*, is written and should go out as soon as possible. Status and checklist: `C Research Proposal/PhD-Application-Status.md`.
+2. **Build a PhD application in systemic AI safety.** Proposal 3 is the next writing priority. Outline: `C Research Proposal/3-SystemicAISafety-Outline.md`.
 3. **Upgrade the papers to a high, uniform standard**, starting with Open Economy Carbon Pricing. The papers are the evidence for both applications and for Stephen's reputation. Order: `PAPERS.md`.
 
 Proposal 2 (McGilchrist) is parked until 1 and 3 are out.

@@ -1,6 +1,6 @@
 # Research Proposals
 
-Stephen's PhD research proposals. There are three, in different states. Priorities come from `STRATEGY.md`.
+Stephen's PhD research proposals. There are three, in different states. Priorities come from `A Writing Instructions/STRATEGY.md`.
 
 | No. | Proposal | Target | Status | Priority | Files |
 |---|---|---|---|---|---|

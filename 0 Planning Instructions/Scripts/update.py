@@ -31,12 +31,13 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[1]   # 0 Planning Instructions
+REPO = ROOT.parent                           # combined repo root (planning 0-3, writing A-F)
 sys.path.insert(0, str(ROOT / "Scripts"))
 import make_printable as mp  # noqa: E402
 
 STATE = ROOT / "Context" / "sync-state.json"
-PLANS = ROOT / "Day and Week Plans"
+PLANS = REPO / "1 Day and Week Plans"
 TASKS = PLANS / "3-TaskContextAndProjectPlans.md"
 NEXT = PLANS / "1-Me-NextStep.txt"
 DAYWEEK = PLANS / "2-Me-DayWeekPlan.txt"
@@ -870,12 +871,12 @@ def check():
             errors.append(f"Lists by place item '{r['Item']}' names unknown task {r['Task']}")
         if len(r) != 3:
             errors.append(f"Lists by place row has the wrong number of columns: {r.get('Item')}")
-    for doc in ("README.md", "AGENTS.md", "NORMS.md", "Day and Week Plans/" + TASKS.name, "Context/routines.md"):
-        for ref in re.findall(r"`([^`*<>]+\.(?:md|txt|docx|py|xlsx|pptx|url|bat|json))`", (ROOT / doc).read_text(encoding="utf-8-sig")):
-            if not (ROOT / ref).exists() and not list(ROOT.glob(f"**/{Path(ref).name}")):
-                errors.append(f"{doc} refers to `{ref}`, which does not exist")
+    for doc in (ROOT / "README.md", ROOT / "AGENTS.md", ROOT / "NORMS.md", TASKS, ROOT / "Context" / "routines.md"):
+        for ref in re.findall(r"`([^`*<>]+\.(?:md|txt|docx|py|xlsx|pptx|url|bat|json))`", doc.read_text(encoding="utf-8-sig")):
+            if not (ROOT / ref).exists() and not (REPO / ref).exists() and not list(REPO.glob(f"**/{Path(ref).name}")):
+                errors.append(f"{doc.relative_to(REPO)} refers to `{ref}`, which does not exist")
     if list(PLANS.glob("Me-Printable-Tracker_v*.docx")):
-        errors.append("A versioned printable is in Day and Week Plans; versions belong in X - Archive/Printable versions/")
+        errors.append("A versioned printable is in 1 Day and Week Plans; versions belong in 3 Archive/Printable versions/")
     state = load_state()
     pr = state.get("printable", {})
     if not mp.OUT.exists():
