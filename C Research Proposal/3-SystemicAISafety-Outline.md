@@ -7,7 +7,7 @@ Status: outline, 29 Oct 2026. This is a scaffold for the second PhD application,
 The draft cannot start until these are answered.
 
 1. **Core question.** In one sentence, what does the PhD ask? For example (agent suggestions only): how incentive and institutional design can reduce risks that arise from the interaction of many AI systems and organizations, rather than from any single model.
-2. **Angle.** Which of Stephen's strengths does it lean on? Options: mechanism and incentive design (from the sovereign-incentives work); public finance and regulation (taxes, liability, insurance, guarantees for AI risk); modelling of systemic risk (from climate and financial-stability analogies); philosophy of agency and institutions.
+2. **Angle.** Which of Stephen's strengths does it lean on? Options: mechanism and incentive design (from the sovereign-incentives work); public finance and regulation (taxes, liability, insurance, guarantees for AI risk); modelling of systemic risk (from climate and financial-stability analogies); philosophy of agency and institutions. **Decided 29 Oct 2026:** incentive and institutional design leads, with systemic financial risk as the analogy (`SPECIALISMS.md`, section 5).
 3. **Programs and supervisors.** Which universities, departments and supervisors? Each must be checked on live pages.
 4. **Relation to proposal 1.** Parallel application, or the fallback? This decides how much effort goes in before January.
 5. **Deadlines.** Per program, verified.

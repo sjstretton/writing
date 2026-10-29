@@ -44,7 +44,7 @@ Details for each item: `C Research Proposal/PhD-Application-Status.md`.
 
 ## Decisions needed from Stephen
 
-- [ ] Confirm the specialisms and positioning paragraph in `STRATEGY.md`, and the three decisions in the executive summary of `SPECIALISMS.md` (through-line, AI-risk angle, politics essays off the profile).
+- [ ] Confirm the specialisms and positioning paragraph in `STRATEGY.md`.
 - [ ] Confirm the rankings in `PAPERS.md` and the positions P1–P8.
 - [ ] Spelling: US for the carbon-pricing series (decided 29 Oct). Other papers: convert, or keep UK?
 - [ ] Add 2–3 pieces you are proud of to `E Writing Standards/exemplars.md` ("Stephen's own").
@@ -52,6 +52,7 @@ Details for each item: `C Research Proposal/PhD-Application-Status.md`.
 
 ## Done
 
+- [x] 29 Oct 2026 — `SPECIALISMS.md` written. Stephen decided: "three constraints" through-line yes; AI-risk angle is incentive and institutional design with systemic financial risk as the analogy; politics essays (8.1–8.3) stay off the academic profile — A/S
 - [x] 29 Oct 2026 — 4.1 (TECP) moved into the series as 1.7; qmd is master (v0.2) — A
 - [x] 29 Oct 2026 — Section 1 reorganised: 1.6 created; `1B.OtherFiscalPolicy` holds 1.4 and 1.5; every series folder has `8.PreviousVersions` with v0.1/v0.2 labels, `3.RelatedPiecesAndLinks` and `RelatedWork.md`; series map in `1.ClimateAndFiscalPolicy/RelatedWork.md` — A
 - [x] 29 Oct 2026 — Template paper for 1.1 read (Keen, Parry and Roaf 2021); notes in `1.1/5.Notes/Review-2026-10-29.md` §6 — A
