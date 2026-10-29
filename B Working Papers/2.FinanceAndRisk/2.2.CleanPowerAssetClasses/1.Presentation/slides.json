@@ -1,0 +1,43 @@
+{
+  "series": "Climate Fiscal Policy Brief No. 2.2",
+  "title": "From Projects to Asset Classes",
+  "subtitle": "Two-stage finance and synthetic sovereign bonds for clean power",
+  "message": "Clean power plants are financed one at a time, on bespoke terms. Split each project at commissioning, pool operating plants under one standard contract and refinance them through first loss, a thin mezzanine and a senior synthetic sovereign bond. Standardization, not subsidy, lowers the price.",
+  "problem": {
+    "title": "Bespoke finance is expensive finance",
+    "stats": [
+      { "value": "56%", "label": "of the price of solar power is financing at a 10% cost of capital (5.7 c/kWh)" },
+      { "value": "$0.37", "label": "private money per development-finance dollar in low-income countries ($0.75 in all developing)" },
+      { "value": "Year 7", "label": "when project defaults fall from high speculative grade to single-A levels" }
+    ],
+    "text": "Once a payment intermediary removes buyer risk, the rest of the premium is packaging: each plant is financed alone, on bespoke documents, by a lender who carries its construction risk for twenty years and cannot sell the loan to a pension fund."
+  },
+  "mechanism": {
+    "title": "Split at commissioning, then pool and tranche",
+    "image": "figures/fig2-lcoe-two-stage.png",
+    "imageWidth": 5.4,
+    "imageHeight": 2.93,
+    "caption": "Cost of power from the stylized plant, US c/kWh, with two years of construction interest.",
+    "points": [
+      "Banks build against a contingent PPA; bond investors hold the operating plant.",
+      "Pool across countries; tranche into first loss, mezzanine and a senior bond.",
+      "4.8% subordination makes the senior bond near-AAA at correlation 0.10; 7.7% at 0.20.",
+      "A 5.65% blended cost gives 4.6 c/kWh against 6.2: 27% less."
+    ]
+  },
+  "action": {
+    "title": "Identical contracts make portfolios",
+    "results": [
+      "A ten-country pool needs 5.3% subordination; one country needs 9.2%.",
+      "Guaranteeing the $460m mezzanine of a $10bn pool costs about $6m over ten years, but it can be fully drawn in a crisis.",
+      "With twice the defaults and 72% recovery, power still costs 4.7 c/kWh.",
+      "The host keeps a contingent liability."
+    ],
+    "todo": [
+      "Write a contingent PPA and standard take-out into every auction.",
+      "Sponsor regional pools under one contract, with published first-loss sizing.",
+      "Regional funds hold first loss; highly rated sovereigns guarantee the mezzanine.",
+      "Tiered conditional guarantees for grids."
+    ]
+  }
+}

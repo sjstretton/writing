@@ -1,0 +1,41 @@
+{
+  "series": "Climate Fiscal Policy Brief No. 3.2",
+  "title": "The Climate Investment Trust",
+  "subtitle": "Hold capital, lend its strength",
+  "message": "Donors will not vote for large cash transfers. A trust that holds capital instead of spending it can take second loss behind policy guarantees: $5 billion supports about $54 billion of guarantees, and each donor dollar delivers 2.7–10 dollars of interest savings rather than one.",
+  "problem": {
+    "title": "Climate money is spent once",
+    "stats": [
+      { "value": "~$5tn", "label": "a year raised by a $100 per tonne global carbon tax" },
+      { "value": "~$1tn", "label": "a year that tax would move out of China alone" },
+      { "value": "$1", "label": "of interest savings per donor dollar from a fund that pays out" }
+    ],
+    "text": "Grants buy one project and are gone. Payments against counterfactual baselines reward delay. And sovereigns do not pay their peers, so an international feebate needs a trust to hold the pot."
+  },
+  "mechanism": {
+    "title": "One pool, three jobs",
+    "image": "figures/fig1-buffer-vs-payout.png",
+    "layout": "wide",
+    "imageHeight": 2.1,
+    "aspect": 2.35,
+    "caption": "A: interest savings per donor dollar. B: Trust capital over 25 years from $5bn at launch (stylized).",
+    "points": [
+      "Second loss: the government first, the Trust second, a AAA entity last. A 9.3% buffer keeps exhaustion to 1% a year.",
+      "Investment: co-invest for 25% of private returns; regional funds hold first-loss tranches (Brief 2.2).",
+      "Accounts: credited by performance, pledgeable as collateral now, drawn after 2050."
+    ]
+  },
+  "action": {
+    "title": "Launch it as insurance first",
+    "results": [
+      "$5bn ($1bn grants, $4bn country stakes) supports $54bn of guarantees, saving borrowers $1.6bn a year.",
+      "Insurance only, it must charge about 0.8% a year on exposure to hold steady.",
+      "$95bn of co-investment yields $2.4bn a year in fees: $18.5bn after 10 years, about $28bn in the long run."
+    ],
+    "todo": [
+      "Launch the insurance function behind 3.1's guarantee capacity, in high-grade assets.",
+      "Publish allocation and deduction rules, fixed by super-majority; price second loss openly.",
+      "Add investment and regional funds once the buffer has a record."
+    ]
+  }
+}
