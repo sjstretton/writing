@@ -1,0 +1,37 @@
+---
+title: "The Concept Name: What It Lets You See"
+author:
+  - name: "Stephen J. Stretton"
+    affiliation: "World Bank Group"
+date: today
+bibliography: references.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+format: docx
+---
+
+<!--
+Concept paper: 1,500–2,500 words. One concept only.
+Test: could a reader use the term correctly in a meeting the next day?
+-->
+
+[Opening paragraph. The problem this concept solves, in the reader's terms, with one concrete case. Then the concept's name and its one-sentence definition.]
+
+# The idea
+
+[The definition, unpacked. What the concept includes and what it excludes. Its relation to the nearest existing term, and why that term is not enough.]
+
+# A worked example
+
+[One real case, with numbers, showing the concept at work and what it reveals that the usual framing misses.]
+
+# What changes if we use it
+
+[Concretely: which operational decision, diagnostic, loan design or policy dialogue changes. Who would use it, and how.]
+
+# Limits
+
+[When the concept does not apply or misleads.]
+
+[Closing: one or two sentences on the implication. Point to the full working paper for detail.]
+
+# References {.unnumbered}
