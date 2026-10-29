@@ -16,7 +16,7 @@ Checks
   P5   non-tradable standard: TECP = (Lambda_F / Lambda)[mu_E + Cov_E(r, mu)/r_bar]
   C1   horizon TECP: omega_T weights
   C2   feebate scores exactly t on the switching margin iff prices per unit are equal
-  A9   v0.2 Appendix A.9 Lambda is not invariant to the energy unit
+  A9   v0.2 Appendix A.7 + A.9: TECP depends on the energy unit; corrected TECP does not
   NUM  numerical checks against the full nonlinear CES in the worked example
 """
 
@@ -200,31 +200,45 @@ check("C2 equal prices: tau_int = t and tau_ext = 0",
       and sp.simplify(pibar_fb.subs(eq)) == 0)
 
 # ----------------------------------------------------------------------------
-# A9: v0.2 Appendix A.7 + A.9. eps_int^A7 = sigma(1-w)(e - ebar)/p, eps_ext^A7 = |eta| ebar / C;
-# Lambda^A9 = sum E [eps_int^A7 (e - ebar) + eps_ext^A7 ebar]; numerator with tau_int = tau_ext = tau.
-# A uniform $1 tax should return $1; it returns a number that depends on the energy unit.
+# A9: v0.2 Appendix A.7 + A.9. A.7 folds (e - ebar) and ebar into the semi-elasticities:
+# eps_int^A7 = sigma(1-w)(e - ebar)/p, eps_ext^A7 = |eta| ebar / C. A.9 multiplies them by
+# (e - ebar) and ebar again in Lambda, and v0.2's main text measures tau_int = dp_f - sum w dp
+# and tau_ext = sum w dp in $/GJ. The weights then carry (e - ebar)^2 and ebar^2: a uniform
+# tax still returns itself, but the TECP of any other policy depends on the energy unit.
 # ----------------------------------------------------------------------------
-def v02_appendix_tecp(unit_scale):
+def v02_appendix_tecp(dps, power_scale=1.0):
     num = den = 0.0
     for sname in M.SECTORS:
         sg, et = M.params(sname)
         _, qv, pv, ev = M.arrays(sname)
-        qv, pv, ev = qv * unit_scale, pv / unit_scale, ev / unit_scale   # same physical economy
+        dp = dps[sname].copy()
+        if sname == "Power":   # re-express power in GJ (power_scale = 3.6 GJ per MWh)
+            qv, pv, ev, dp = qv * power_scale, pv / power_scale, ev / power_scale, dp / power_scale
         wv = qv / qv.sum()
         eb = np.sum(wv * ev)
         C = np.sum(wv * pv)
         Ev = qv * ev
         ei = sg * (1 - wv) * (ev - eb) / pv
         ee = et * eb / C
-        num += np.sum(Ev * (ei + ee))
+        mdp = np.sum(wv * dp)
+        num += np.sum(Ev * (ei * (dp - mdp) + ee * mdp))
         den += np.sum(Ev * (ei * (ev - eb) + ee * eb))
     return num / den
 
 
-a = v02_appendix_tecp(1.0)
-b = v02_appendix_tecp(1000.0)
-check("A9 v0.2 appendix: $1 uniform tax does not return $1 and depends on units",
-      abs(a - 1) > 1e-3 and abs(a - b) > 1e-3, f"(returns {a:.1f} in base units, {b:.0f} with energy in units 1000x smaller)")
+lam0 = M.solve_lcfs_lambda()
+uni = {sn: M.dp_uniform(sn, 1.0) for sn in M.SECTORS}
+mix = M.package_dp(lam0)
+a, b = v02_appendix_tecp(mix, 1.0), v02_appendix_tecp(mix, 3.6)
+check("A9 v0.2 appendix: uniform $1 tax returns $1 in either unit",
+      abs(v02_appendix_tecp(uni, 1.0) - 1) < 1e-9 and abs(v02_appendix_tecp(uni, 3.6) - 1) < 1e-9)
+check("A9 v0.2 appendix: TECP of the mix depends on the energy unit", abs(a - b) > 0.1,
+      f"(power in MWh: {a:.2f}; power in GJ: {b:.2f})")
+# the corrected TECP is unit-invariant
+econ_gj = __import__("copy").deepcopy(M.ECON)
+econ_gj["Power"]["fuels"] = {k: (v[0] * 3.6, v[1] / 3.6, v[2] / 3.6) for k, v in M.ECON["Power"]["fuels"].items()}
+mix_gj = {sn: (mix[sn] / 3.6 if sn == "Power" else mix[sn]) for sn in M.SECTORS}
+check("A9 corrected TECP is unit-invariant", abs(M.tecp_linear(mix) - M.tecp_linear(mix_gj, econ_gj)) < 1e-9)
 
 # ----------------------------------------------------------------------------
 # NUM: numerical checks against the full nonlinear CES (worked example)

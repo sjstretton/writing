@@ -285,8 +285,9 @@ def main():
                        max(mcs["mix_exact"].max(), mc["mix_exact"].max()) + 1, 50)
     ax.hist(mc["mix_exact"], bins=bins, color=BLUE, alpha=0.85, label="Long run", edgecolor="white", linewidth=0.5)
     ax.hist(mcs["mix_exact"], bins=bins, color=ORANGE, alpha=0.75, label="One year", edgecolor="white", linewidth=0.5)
+    ax.set_xlim(explicit - 2, bins[-1])
     ax.axvline(explicit, color=INK2, linewidth=1.2, linestyle="--")
-    ax.text(explicit + 0.4, ax.get_ylim()[1] * 0.92, f"Explicit-price\nmetric ${explicit:.1f}", fontsize=7.5,
+    ax.text(explicit + 0.4, ax.get_ylim()[1] * 0.55, f"Explicit-price\nmetric ${explicit:.1f}", fontsize=7.5,
             color=INK2, va="top")
     ax.axvline(rows["mix"]["ex"], color=INK, linewidth=1.2)
     ax.text(rows["mix"]["ex"] + 0.4, ax.get_ylim()[1] * 0.62, f"Central\ncase ${rows['mix']['ex']:.1f}", fontsize=7.5,
@@ -294,7 +295,7 @@ def main():
     ax.set_xlabel("Exact TECP of the policy mix ($/tCO₂)", fontsize=8.5)
     ax.set_ylabel("Draws", fontsize=8.5)
     ax.set_title("A. Policy mix", fontsize=9, loc="left", color=INK)
-    ax.legend(frameon=False, fontsize=8, loc="upper right")
+    ax.legend(frameon=False, fontsize=8, loc="upper left")
     ax.grid(True, axis="y", color=GRID, linewidth=0.8)
     ax.set_axisbelow(True)
     ax = axes[1]
