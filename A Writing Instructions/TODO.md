@@ -39,6 +39,9 @@ Details for each item: `C Research Proposal/PhD-Application-Status.md`.
 - [ ] H6: fix stale folder paths in `PaperTracker.xlsx` — A
 - [ ] H5: update old paths in `8.Scripts` and `.gitignore` — A — before anyone runs the scripts again
 
+- [ ] Run `B Working Papers/8.Scripts/Run/Download-Literature.bat` on your PC (23 free papers the cloud session can't reach) — S — when convenient
+- [ ] Manual downloads, for later: `B Working Papers/8.Scripts/Reference/Literature-Downloads.md` (41: library login, browser-only or not found) — S — later
+
 ## Decisions needed from Stephen
 
 - [ ] Confirm the specialisms and positioning paragraph in `STRATEGY.md`.

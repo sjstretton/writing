@@ -6,10 +6,12 @@ Run folder:
   8.Scripts/Run/Download-Literature.bat   curl downloads into each paper's 4.ExternalPapers
   8.Scripts/Reference/Literature-Downloads.md   automatic list + manual-download list
 
-Status values: downloaded / open-url-not-fetched / paywalled-manual / not-found.
-"downloaded" and "open-url-not-fetched" items with a URL go in the batch file
-(the cloud session's copies are not kept in the repo). "paywalled-manual" and
-"not-found" go on the manual list with their DOI link.
+Status values (written by check_literature_access.py):
+  downloaded         the cloud session already has it: nothing for Stephen to do
+  open-blocked-here  free direct PDF the cloud session could not reach: in the batch file
+  open-landing-page  free, but only via a web page: open in a browser (manual list)
+  paywalled-manual   needs a library login (manual list)
+  not-found          no record found (manual list)
 Run from the repo root:  python "B Working Papers/8.Scripts/Steps/build_download_list.py"
 """
 import csv
@@ -18,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path("B Working Papers")
 SERIES = ROOT / "1.ClimateAndFiscalPolicy"
-auto, manual, seen = [], [], set()
+auto, manual, have, seen = [], [], [], set()
 for f in sorted(SERIES.glob("*/5.Notes/Downloads-*.csv")):
     paper_dir = f.parent.parent
     with open(f, newline="", encoding="utf-8") as fh:
@@ -31,7 +33,9 @@ for f in sorted(SERIES.glob("*/5.Notes/Downloads-*.csv")):
             doi = (r.get("doi") or "").strip()
             status = (r.get("status") or "").strip()
             title = (r.get("title") or "").strip()
-            if status in ("downloaded", "open-url-not-fetched") and url.startswith("http"):
+            if status == "downloaded":
+                have.append((paper_dir.name, key, title))
+            elif status in ("open-blocked-here", "open-url-not-fetched") and url.startswith("http"):
                 auto.append((paper_dir, key, title, url))
             else:
                 manual.append((paper_dir.name, key, title, doi, url, status))
@@ -47,15 +51,21 @@ for paper_dir, key, title, url in auto:
 bat += ["", "echo Done. See 8.Scripts\\Reference\\Literature-Downloads.md for papers to fetch by hand.", "pause"]
 (ROOT / "8.Scripts" / "Run" / "Download-Literature.bat").write_text("\r\n".join(bat), encoding="utf-8")
 
+label = {"open-landing-page": "free: open the page, then download", "paywalled-manual": "library login needed", "not-found": "not found: search by title"}
 md = ["# Literature downloads for the carbon-pricing series", "",
-      f"Automatic: {len(auto)} open-access papers, fetched by `8.Scripts/Run/Download-Literature.bat` into each paper's `4.ExternalPapers/`.",
-      f"Manual: {len(manual)} papers that need a library login or could not be found. Fetch them by hand into the same folders.", "",
-      "## Manual downloads", "", "| Paper folder | Key | Title | DOI / link | Status |", "|---|---|---|---|---|"]
-for folder, key, title, doi, url, status in sorted(manual):
+      f"- **Automatic, {len(auto)} papers:** free PDFs the cloud session could not reach. Run `B Working Papers/8.Scripts/Run/Download-Literature.bat` on your PC; it saves each into the paper's `4.ExternalPapers/` and prints FAILED for any that refuse (SSRN sometimes needs a browser).",
+      f"- **Manual, {len(manual)} papers:** free-but-via-a-web-page, library login, or not found. For later.",
+      f"- **Already available to the agent, {len(have)} papers:** nothing to do.", "",
+      "## Manual downloads (for later)", "", "| Paper folder | Key | Title | DOI / link | What to do |", "|---|---|---|---|---|"]
+for folder, key, title, doi, url, status in sorted(manual, key=lambda r: (r[5], r[0], r[1])):
+    status = label.get(status, status)
     link = f"https://doi.org/{doi}" if doi else url
     md.append(f"| {folder} | {key} | {title} | {link} | {status} |")
 md += ["", "## Automatic downloads", "", "| Paper folder | Key | Title | URL |", "|---|---|---|---|"]
 for paper_dir, key, title, url in auto:
     md.append(f"| {paper_dir.name} | {key} | {title} | {url} |")
+md += ["", "## Already available to the agent", "", "| Paper folder | Key | Title |", "|---|---|---|"]
+for folder, key, title in have:
+    md.append(f"| {folder} | {key} | {title} |")
 (ROOT / "8.Scripts" / "Reference" / "Literature-Downloads.md").write_text("\n".join(md) + "\n", encoding="utf-8")
-print(f"{len(auto)} automatic, {len(manual)} manual")
+print(f"{len(auto)} automatic, {len(manual)} manual, {len(have)} already available")
