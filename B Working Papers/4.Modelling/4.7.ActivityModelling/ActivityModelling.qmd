@@ -1,0 +1,213 @@
+---
+title: "Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT"
+subtitle: "One Driver Layer So Four Climate Models Can Be Linked"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+version: "0.1"
+abstract: |
+  Every energy and emissions model starts from activity levels: how much electricity is used, how far people and goods travel, how many vehicles are on the road, how many tonnes of steel and cement are made. Four models used for climate-fiscal work build those levels in incompatible ways. The Climate Policy Assessment Tool grows fuel use with GDP and prices. SISEPUEDE grows physical activity with income and population but never with prices. A border-adjustment tool grows output of steel, aluminum, fertilizer and clinker with growth forecasts and a price response. The Future Technology Transformations models take demand as given. This paper maps each model's activity onto a common set of ten activities, sets out a single constant-elasticity rule driven by population, income per person and the cost of the energy service, and shows how the rule lets the four be linked without counting a price response twice. Under stylized growth of 1 percent in population and 2 percent in income per person, cars in use grow 64 percent in ten years while travel grows 41 percent.
+keywords: [activity levels, energy demand, model linking, income elasticity, price elasticity, technology diffusion]
+jel: [Q41, Q43, Q47, C53, R41]
+bibliography: ActivityModelling.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+number-sections: true
+format:
+  docx: default
+---
+
+*Working paper, version 0.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the CPAT-AI repository, https://github.com/cpmodelai/cpat_ai.*[^credit]
+
+[^credit]: This paper condenses the author's design note on activity levels across the four models, which read the public documentation and source code of CPAT, SISEPUEDE and the FTT standalone models. It uses no country results. Errors are the author's own.
+
+# Introduction {#sec-intro}
+
+A finance ministry that wants to know what a carbon price does to its budget, its exporters and its power system now has several open or public models to ask, and they rarely agree on the most basic input: how much activity there will be. The Climate Policy Assessment Tool (CPAT) projects fuel use for about 200 countries from total GDP and prices [@Black2023CPAT]. SISEPUEDE, the open model built by RAND and the Inter-American Development Bank, projects passenger-km, tonne-km, households and tonnes of industrial output from population and income [@Kalra2023]. A border-adjustment tool of the kind described in paper 4.5, *The CBAM Policy Tool*, projects output of the goods covered by the European Union's Carbon Border Adjustment Mechanism [@EU2023CBAM]. The Future Technology Transformations (FTT) models simulate which technologies win market share in power, cars, freight and heating, but take the size of each market as an input [@Mercure2012; @Mercure2018]. Each is good at its job. Linked naively, they give a ministry four baselines built on four GDP forecasts, and a carbon price whose demand response is counted in one model, two, or none.
+
+The problem is practical, not academic. FTT's standalone baseline inputs come from a run of the macroeconometric model E3ME, so its electricity demand and vehicle stocks rest on different GDP and population paths from the IMF forecasts that CPAT, SISEPUEDE and the border-adjustment tool use. SISEPUEDE has no price response, so a carbon tax changes its emissions only if the analyst writes the change into a scenario. CPAT has a price response for every fuel and sector, but its road transport is described three times, in a simple fuel equation, an engineering fleet model and a co-benefits module, and the three disagree on how much people cut their driving when fuel costs rise. Any of these gaps can move the estimated emission cut or revenue from a policy by more than the policy differences an analyst is trying to compare.
+
+This paper asks how the activity levels in CPAT, SISEPUEDE, the border-adjustment tool and FTT can be put on one footing so that the four can be linked. The answer is a common activity layer: one rule that grows each of ten activities with population, income per person and the cost of the energy service it provides, driven by one set of forecasts, set from one base year, and mapped to each model through a sector concordance. The price term is applied only where the receiving model has no price response of its own. Three results organize the paper. The population exponent matters only for activities whose income elasticity is not 1, but there it adds or removes up to 0.4 percentage points of growth a year (Proposition 1). A price response applied both in the layer and in the receiving model doubles the elasticity in logs, so the layer must know which models respond to price (Proposition 2). And a car stock that grows with an income elasticity of 2 inside travel that grows at 1.24 must eventually exceed the travel it carries, so the vehicle chain needs a cap (Proposition 3).
+
+The contribution is a concordance, not a new model. The model-linking literature distinguishes soft links, where one model's outputs are passed to another by hand or script, from hard links, where they are solved together [@HelgesenTomasgard2018]. This paper sets out the soft link for four tools a ministry may actually use, with the demand evidence each link needs: the income elasticities of energy demand [@BurkeCsereklyei2016; @Gertler2016], the price elasticities [@Labandeira2017; @Goodwin2004] and the population term in cross-country emissions studies [@Liddle2014]. It complements paper 4.1, *The CPAT Mitigation Module: Methods in Brief*, which states CPAT's demand system, and paper 4.4, *Are CPAT's Price Elasticities Right?*, which checks its elasticities against the evidence; paper 1.7 uses the same demand system to measure what carbon prices actually cut [@CFPB17].
+
+# How each model represents activity {#sec-models}
+
+## CPAT: fuel use driven by GDP and prices
+
+**CPAT does not model activity directly; it models fuel use, with GDP standing in for activity.** For fuel $f$ in sector $s$ of country $c$,
+
+$$
+\frac{F_{csf,t}}{F_{csf,t-1}} = \Big(\frac{1}{1+\alpha_{sf}}\Big)^{1+\epsilon_{U}} \Big(\frac{Y_{c,t}}{Y_{c,t-1}}\Big)^{\epsilon_{Y}} \Big(\frac{p_{csf,t}}{p_{csf,t-1}}\Big)^{\epsilon_{U}} \Big(\frac{p_{csf,t}}{p_{csf,t-1}}\Big)^{\epsilon_{F}(1+\epsilon_{U})}, \qquad (1)
+$$
+
+where $Y$ is total real GDP, $p$ the retail price including taxes, $\alpha$ an autonomous efficiency gain of 0.5 to 1 percent a year, $\epsilon_Y$ the GDP elasticity, $\epsilon_U$ the usage elasticity (how hard existing equipment is used) and $\epsilon_F$ the efficiency elasticity (what equipment is bought) [@CPATDocs2025]. There are 32 base income elasticities for eight fuels and four sectors, centered on the cross-country sectoral estimates of @BurkeCsereklyei2016, and scaled by a factor that rises to a peak near \$3,000 of GDP per person and falls toward high-income levels around \$22,000, following the asset-ownership pattern in @Gertler2016. Because $Y$ is total GDP, CPAT does not separate population from income per person: a country whose population grows fast and whose income stagnates gets the same fuel growth as one with the reverse.
+
+**CPAT's power demand is bottom-up and its road transport is described three times.** Electricity demand in each sector follows equation (1) with the power price; generation adds base-year shares for losses, own use and net exports. For road transport, CPAT has the simple fuel equation, a newer engineering fleet model in which car ownership per 1,000 people follows an S-shaped Gompertz curve in income and electric vehicles win sales through a logit choice on total cost of ownership [@CPATAI2026], and a separate road transport module that values congestion, accidents and road damage from econometric elasticities of vehicle-km to fuel prices [@CPATDocs2025]. The three are not linked: the co-benefits module ignores electric vehicles and assumes drivers cut driving about twice as much as the fleet model does when fuel prices rise. Industry is driven by GDP, not tonnes, and no fuel substitutes for another within an industrial subsector.
+
+## SISEPUEDE: physical activity driven by income, with no prices
+
+**SISEPUEDE counts physical activity and multiplies it by energy intensity.** Every income-driven demand grows with a factor
+
+$$
+G_t(\varepsilon, x) = \prod_{s=0}^{t-1}\big(1 + \varepsilon\, g_s(x)\big), \qquad (2)
+$$
+
+where $g_s(x)$ is the growth rate of driver $x$ (GDP per person or total GDP) in year $s$ and $\varepsilon$ the elasticity. Passenger-km per person grow with income per person and are multiplied by population, in two pools (urban and regional travel); tonne-km grow with total GDP; useful heat per household grows with income per person and is multiplied by the number of households; output of each industry (metals, cement, chemicals and others) grows with total GDP; electricity demand is the sum of the electricity used by transport, buildings and industry, grossed up for losses and passed to an embedded least-cost model, NemoMod [@Kalra2023; @SISEPUEDECode]. Mode shares, fuel shares and energy per unit are scenario inputs.
+
+**Prices never change demand in SISEPUEDE.** Fuel prices enter only the power-supply optimization and the cost-benefit accounts. Electrification or mode shift happens because a scenario says so. That is a deliberate design for robust decision-making over about a thousand futures, but it means SISEPUEDE cannot say what a carbon tax does to demand. Many of its parameters are also shared templates: the passenger-travel elasticities of 1.12 for urban and 2.64 for regional travel are the same in most of its calibrated countries.
+
+## The border-adjustment tool: output of CBAM goods
+
+**The border-adjustment tool grows output of each covered good from a recent base year and cuts it along a constant-elasticity demand curve when a carbon price raises its cost.** For product $i$,
+
+$$
+Q_{i,t} = Q^{\mathrm{base}}_{i,t}\Big(1 + \frac{C_{i,t}}{p_i}\Big)^{\eta_i}, \qquad (3)
+$$
+
+where $Q^{\mathrm{base}}$ grows with an IMF growth forecast, $C_{i,t}$ is the net carbon cost per tonne after any price paid at home, $p_i$ the product price and $\eta_i$ a long-run output elasticity: −0.4 for electric-arc steel and nitrogen fertilizers, −0.5 for primary aluminum and −0.1 for clinker. These are judgment values; the evidence on output elasticities of heavy industrial goods is thin. The tool covers goods at the product level (steel by process route, gray clinker, ammonia, urea, ammonium nitrate, primary aluminum), which is finer than either CPAT or SISEPUEDE. Paper 4.5 describes it in full.
+
+## FTT: technology shares of a demand taken as given
+
+**FTT decides how demand is met, not how much there is.** In each FTT model, technologies compete for the share of new equipment, chosen by investors whose cost comparisons differ, so that cheaper options gain share at a pace set by retirement and by learning; the result is the S-shaped diffusion seen in practice rather than a least-cost mix [@Mercure2012; @Mercure2016]. Output of technology $i$ is its share of total demand,
+
+$$
+G_{i,t} = S_{i,t}\, D_t, \qquad (4)
+$$
+
+and $D_t$ comes from outside. Inside the full E3ME-FTT model, E3ME supplies it. In the open standalone Python version, which covers power, cars, road freight and household heating for 71 countries and regions, it comes from input files: electricity demand (equal to total generation, so it includes losses and own use and is net of trade), cars in use and km per car, vans and trucks in use by size with load and km per vehicle held fixed, and useful heat for homes [@FTTStandAlone; @Knobloch2019]. FTT never reads passenger-km or tonne-km. Its car data are missing for 21 of its 71 regions, including Nigeria, South Africa, Pakistan and Kenya, and the standalone version has no steel module; FTT:Steel runs only inside E3ME-FTT [@Vercoulen2023].
+
+# The concordance {#sec-concordance}
+
+**The four models share ten activities once units are aligned, and Table 1 maps each one.** The common layer uses the unit the most demanding model needs: vehicles for road transport because FTT needs them, useful heat for buildings because SISEPUEDE and FTT both use it, tonnes by product for industry because the border-adjustment tool needs them, and terawatt-hours of generation for power because FTT reads generation. Each other model then converts from that unit with its own intensity.
+
+| Activity (common unit) | CPAT | SISEPUEDE | Border-adjustment tool | FTT (standalone) |
+|---|---|---|---|---|
+| Electricity (TWh generated) | Sum of sector electricity demand, eq. (1), plus losses, own use, net exports | Sum of electricity used by end uses, grossed up for losses | Not modeled | Power: demand input equal to generation |
+| Passenger travel (passenger-km) | Implicit in road and aviation fuel | Passenger-km per person × population, urban and regional | Not modeled | Not read |
+| Cars in use (vehicles) | Fleet model: Gompertz ownership in income | Not modeled (vehicle-km from passenger-km) | Not modeled | Transport: cars in use (demand input) |
+| Km per car (km a year) | Fleet model: falls with running cost | Implicit in vehicle-km | Not modeled | Transport: km per car (input) |
+| Road freight (tonne-km) | Implicit in diesel fuel | Tonne-km with total GDP | Not modeled | Not read (load fixed) |
+| Vans and trucks (vehicles) | Fleet model: freight vehicles | Not modeled | Not modeled | Freight: vehicles by size (demand input) |
+| Home heat, hot water and cooking (useful heat, GWh) | Residential fuel use, eq. (1) | Useful heat per household × households | Not modeled | Heat: useful heat for homes (demand input) |
+| Steel and aluminum (tonnes) | Industry fuel use with GDP | "Metals" output with GDP | Steel by route; primary aluminum; eq. (3) | Steel only inside E3ME-FTT |
+| Cement and clinker (tonnes) | Industry fuel use with GDP | Cement output with GDP | Gray clinker; eq. (3) | Not modeled |
+| Fertilizers (tonnes) | Industry fuel use with GDP | "Chemicals" output with GDP | Ammonia, urea, ammonium nitrate; eq. (3) | Not modeled |
+| **Responds to price?** | Yes, every fuel and sector | No | Yes, output of covered goods | No (prices move shares, not demand) |
+
+: Table 1. Sector concordance: how each model represents the ten common activities. "Implicit" means the model carries the activity only inside fuel use. Sources: @CPATDocs2025, @CPATAI2026, @Kalra2023, @SISEPUEDECode, @FTTStandAlone, paper 4.5.
+
+**Three gaps in the concordance matter for policy.** First, nobody models steelmaking routes outside the border-adjustment tool and E3ME-FTT: CPAT ties industrial fuel to GDP and SISEPUEDE ties it to tonnes, but neither distinguishes blast furnaces from electric arc furnaces or hydrogen-based steel, which is where the emission cuts in steel come from. Second, neither CPAT nor SISEPUEDE has a cooling demand of its own, although household purchases of energy-using appliances rise steeply as incomes cross middle-income thresholds [@Gertler2016], and cooling is where much of that demand will go in hot countries. Third, the two models that do not respond to price, SISEPUEDE and FTT, are the two that hold the most technology detail, so a carbon price reaches their demand only if the layer supplies it.
+
+**CPAT's GDP elasticity of fuel is the sum of an activity elasticity and an intensity elasticity, which is how the concordance maps between them.** Write fuel use as activity times energy per unit of activity, $F = A \cdot e$. Taking logs and differentiating with respect to GDP, $\epsilon_Y = \varepsilon_A + \varepsilon_e$: CPAT's single elasticity bundles how fast activity grows with how fast energy per unit changes. When the layer supplies activity to a model that already carries its own intensity (SISEPUEDE, FTT), only $\varepsilon_A$ should pass. When CPAT is used as a cross-check on the layer, its $\epsilon_Y$ should be compared with $\varepsilon_A + \varepsilon_e$, not with $\varepsilon_A$ alone. CPAT is therefore a check on the layer, not a target for it.
+
+# A common activity layer {#sec-layer}
+
+## The rule
+
+**Each activity grows with population and income per person and responds to the cost of the energy service it provides.**
+
+$$
+A_{j,t} = A_{j,0}\Big(\frac{P_t}{P_0}\Big)^{\beta_j}\Big(\frac{y_t}{y_0}\Big)^{\varepsilon_j}\Big(\frac{c_{j,t}}{c^{\mathrm{base}}_{j,t}}\Big)^{\eta_j}, \qquad (5)
+$$
+
+where $A_{j,t}$ is activity $j$ in year $t$, $P_t$ population, $y_t$ real GDP per person, $c_{j,t}$ the cost of the energy service and $c^{\mathrm{base}}_{j,t}$ its baseline value. The population exponent $\beta_j$ is 1 for activities that follow people (travel, households, cars) and equal to $\varepsilon_j$ for those that follow the economy (freight, industrial output), because total GDP is population times income per person. $\varepsilon_j$ is the income elasticity and $\eta_j$ the price elasticity. In the baseline the last term equals 1, so the income and population terms describe the baseline alone. The cost of the energy service is the energy price including taxes and any carbon price divided by the efficiency of the equipment: fuel cost per kilometer, or fuel cost per unit of useful heat; for electricity, the electricity price; for border-adjusted goods, the product price plus the net carbon cost per tonne. CPAT supplies the prices; FTT's technology mix in the previous year supplies the efficiency, which avoids a loop. Equation (5) is the constant-elasticity form; SISEPUEDE's compounding in equation (2) differs from it by a negligible amount at normal growth rates.
+
+**Table 2 sets out one value for each parameter, taken from the models where they have one and from the evidence where they do not.**
+
+| Activity | Income elasticity $\varepsilon_j$ | Source | Price elasticity $\eta_j$ | Source |
+|---|---:|---|---:|---|
+| Electricity, homes and industry | 0.75 base; about 0.83 at \$3,000 per person, 0.43 above \$22,000 | CPAT | −0.44 | CPAT usage plus efficiency margins |
+| Passenger travel | 1.24 combined (1.12 urban, 2.64 regional) | SISEPUEDE | 0 (cars carry the response) | Proposal |
+| Road freight, tonne-km | 1.0 | SISEPUEDE | −0.1 | @deJong2010 |
+| Home heat, hot water, cooking | 0.39 (2025) | SISEPUEDE, plus household formation | −0.2 | CPAT; rebound evidence [@Sorrell2009] |
+| Steel and aluminum | 1.17 (2025), falling | SISEPUEDE median | −0.4 steel, −0.5 aluminum | Border-adjustment tool |
+| Cement and clinker | 0.60 (2025) | SISEPUEDE median | −0.1 | Border-adjustment tool |
+| Fertilizers | 0.92 (2025) | SISEPUEDE median | −0.4 | Border-adjustment tool |
+| Cars in use | 2.0 below 300 per 1,000 people, falling to 0 at 800 | @DargayGatelySommer2007 | −0.25 | @Goodwin2004 |
+| Vans and trucks | 1.0 (as freight) | SISEPUEDE | −0.2 | CPAT fleet model; @deJong2010 |
+| Km per car | 0.05 | CPAT fleet model | −0.05 | @Goodwin2004 |
+
+: Table 2. One parameter set for the common layer. Income elasticities are with respect to GDP per person. SISEPUEDE values are medians of its calibrated country inputs and move linearly toward 1.0 by 2050 in its template. Car numbers follow an S-shaped curve whose elasticity peaks near 2.1 at about 90 vehicles per 1,000 people [@DargayGatelySommer2007]; the straight-line approximation is within about 0.25 of it between 30 and 750 vehicles per 1,000. Price elasticities are long-run. Sources: as listed; @CPATDocs2025; @Kalra2023.
+
+**Several of the models' own values fail against the evidence, and the layer corrects them.** Cement and fertilizer elasticities that rise toward 1 by 2050 run against the evidence that material intensity falls as incomes rise; steel's should keep falling below 1. SISEPUEDE's regional travel elasticity of 2.64 has no cap, so regional travel grows without bound. Home heat that rises to an elasticity of 1.1 by 2050 is too high for a saturating need. The car elasticity of 2.0 is the one value the models lack and the evidence supplies well.
+
+## Three propositions
+
+**Proposition 1 (the population exponent).** *Replacing $\beta_j = \varepsilon_j$ by $\beta_j = 1$ changes the growth of activity $j$ by $(1 - \varepsilon_j)\, n$ a year in logs, where $n$ is population growth. The choice matters only when $\varepsilon_j \neq 1$.*
+
+The models choose $\beta_j = \varepsilon_j$ for every activity driven by total GDP. Cross-country studies of energy and emissions that separate population from income per person find population coefficients for emissions clustering near 1 in single-year regressions, but ranging widely over time and across income groups, and the main review concludes that population is best treated as a pure scale factor [@Liddle2014]. With population growing 1 percent a year, setting $\beta_j = 1$ adds about 0.4 percentage points a year to cement and 0.2 to household electricity, and takes 0.2 a year from steel. Over ten years that is 4 percent more cement (Table 3). The layer keeps the models' choice for industrial output, where output follows the economy, and uses $\beta_j = 1$ for electricity used by households.
+
+**Proposition 2 (apply the price response once).** *If the layer applies $\eta_j$ to activity supplied to a model that also applies its own elasticity $\eta^m_j$ to the same activity, the total log response to a cost change is $(\eta_j + \eta^m_j)\,\Delta \ln c$. With $\eta^m_j = \eta_j$ the response doubles.*
+
+The proof is one line: the two power terms multiply. The rule that follows is mechanical. Apply the price term in the layer only for SISEPUEDE and FTT, which have no price response. Do not apply it for CPAT or the border-adjustment tool, which have their own. If CPAT's fleet model is fed from the layer, either switch off the fleet model's driving response or pass the layer's baseline only. CPAT's road co-benefits module, which applies an elasticity of vehicle-km to fuel prices about twice the fleet model's, should be driven by the fleet model's vehicle-km so that the policy response is counted once and electric vehicles are seen.
+
+**Proposition 3 (the vehicle chain needs a cap).** *Let cars grow with income elasticity $\varepsilon_K$, km per car with $\varepsilon_k$, and passenger-km with $\varepsilon_T$, all with population exponent 1. If $\varepsilon_K + \varepsilon_k > \varepsilon_T$ and income per person grows at a positive rate, car passenger-km (cars × km per car × occupancy) eventually exceed total passenger-km.*
+
+The car share of travel grows by a factor $(y_t/y_0)^{\varepsilon_K + \varepsilon_k - \varepsilon_T}$, which is unbounded. With the values in Table 2 and income growing 2 percent a year, a car share that starts at 30 percent of passenger-km reaches 100 percent in about 76 years; one that starts at 50 percent, in 44. The car elasticity falls in practice as ownership approaches saturation, which is what the Gompertz curve in CPAT's fleet model and in @DargayGatelySommer2007 does, so the straight-line approximation must carry the falling elasticity, and the layer checks each year that cars × km per car × about 1.7 people per car stays below total passenger-km.
+
+## Feeding the four models
+
+**The layer feeds each model in its own unit and spliced onto its own last data point.** For an FTT input $X_m$ whose last data year is $b$,
+
+$$
+X_{m,t} = X_{m,b}\,\frac{A_{j,t}}{A_{j,b}}, \qquad (6)
+$$
+
+so FTT keeps its own level and takes the layer's growth. Each FTT input has its own base year (2020 for heat, 2022 for power, 2023 for freight), and equation (6) handles each separately. Because FTT adds the electricity used by electric cars, trucks and heat pumps to power demand in policy runs, the baseline power input should contain only baseline electricity use. SISEPUEDE takes the layer's base-year levels and elasticities in place of its templates, and the price term as its demand scalar. The border-adjustment tool takes its base-year output and price response from its own data and passes product-level output to the layer for the industrial rows. CPAT takes the layer as a cross-check on its baseline and, if its road transport is unified, as the driver of its fleet model and co-benefits module.
+
+**Two drivers and one base year make the four baselines comparable.** Use the IMF World Economic Outlook for GDP and the United Nations World Population Prospects for population, for every model. Set base-year levels from one recent year: energy balances for electricity, national data or SISEPUEDE's calibrated inputs for travel and freight, vehicle registrations for cars and trucks, and the border-adjustment tool's latest output for covered goods. SISEPUEDE's calibrated inputs start in 2015 and must be rolled forward with observed GDP and population.
+
+# A worked example {#sec-example}
+
+**Under stylized growth of 1 percent in population and 2 percent in income per person, activity growth over ten years ranges from 1 percent for km per car to 64 percent for cars in use.** Table 3 applies equation (5) with the 2025 elasticities held fixed. Total GDP grows about 3 percent a year, or 35 percent over the decade, which is exactly the growth of road freight and of vans and trucks, whose elasticity is 1.
+
+| Activity | $\beta_j$ | $\varepsilon_j$ | Change over 10 years | With $\beta_j = 1$ | Response to a 20% rise in service cost |
+|---|---:|---:|---:|---:|---:|
+| Electricity, homes, at \$3,000 per person | 0.83 | 0.83 | +28% | +30% | −7.7% |
+| Passenger travel, combined | 1 | 1.24 | +41% | +41% | 0 |
+| Road freight | 1.0 | 1.0 | +35% | +35% | −1.8% |
+| Home heat, hot water and cooking | 1 | 0.39 | +19% | +19% | −3.6% |
+| Steel and aluminum | 1.17 | 1.17 | +42% | +39% | −7.0% (steel) |
+| Cement and clinker | 0.60 | 0.60 | +20% | +24% | −1.8% |
+| Fertilizers | 0.92 | 0.92 | +31% | +33% | −7.0% |
+| Cars in use, below 300 per 1,000 people | 1 | 2.0 | +64% | +64% | −4.5% |
+| Vans and trucks | 1.0 | 1.0 | +35% | +35% | −3.6% |
+| Km per car | 0 | 0.05 | +1% | +1% | −0.9% |
+
+: Table 3. Cars grow much faster than travel, and the population exponent moves industrial and household activity by a few percent. Stylized drivers: population +1 percent and income per person +2 percent a year for ten years; 2025 elasticities from Table 2 held fixed. "With $\beta_j = 1$" applies Proposition 1. The last column is equation (5)'s price term alone, applied only where the receiving model has no price response of its own (Proposition 2). Source: author's calculation (`2.Source/activity_layer.py`).
+
+**Cars carry a rising share of travel, as they do in middle-income countries.** Cars in use grow 64 percent while passenger-km grow 41 percent, so the share of travel by car rises by about a sixth in a decade. This is the behavior FTT's transport model needs to see, and it is exactly what a GDP-driven fuel equation cannot show: in CPAT's simple form, road fuel grows with one elasticity, whatever happens to the mix of cars and buses.
+
+**A carbon price that raises the energy cost of driving by 20 percent cuts car use by about 5 percent, almost all through fewer cars.** The cut is −4.5 percent in cars and −0.9 percent in km per car, −5.3 percent in all. A 20 percent rise in the energy cost of freight cuts tonne-km by about 2 percent. These are the responses the layer supplies to SISEPUEDE and FTT, which have none. In CPAT, the same carbon price reaches demand through equation (1)'s usage and efficiency margins, and the layer's price column must not be added on top.
+
+**The steel and cement rows show why the border-adjustment tool's product detail matters.** A carbon cost that raises the price of steel by 20 percent cuts output by 7 percent, and the same rise in the cost of clinker cuts it by under 2 percent. But a given carbon price raises the cost of clinker by far more in proportion than the cost of steel, because clinker is cheap and carbon-intensive, so output effects can be large for cement and small for steel. Only a model that carries the product price and the emission intensity separately, as equation (3) does, gets this right.
+
+# Linking the four models, and the limits {#sec-limits}
+
+**The layer turns four separate baselines into one, with one carbon-price response per activity.** In practice the link runs in one direction each year. CPAT computes prices, including carbon and excise, for every fuel and sector. The layer converts them into costs of energy services, using last year's technology mix from FTT for efficiency. It then grows the ten activities from common drivers and applies the price term for the models that need it. SISEPUEDE and FTT take the activities as demand; the border-adjustment tool takes product output; CPAT takes the layer as its cross-check and, for road transport, as one consistent story. Revenue and distribution stay in CPAT, exporter exposure in the border-adjustment tool, investment needs in the extension described in paper 4.6, *Public Investment in CPAT*, and technology diffusion in FTT.
+
+**The link is a soft link, and it inherits the limits of each model it joins.** There is no feedback from technology choice or prices to GDP: the layer takes growth as given, as all four models do in their standalone forms. Where a full macroeconomic feedback matters, E3ME-FTT or a computable general equilibrium model is the right tool [@HelgesenTomasgard2018]. The price elasticities for heavy industrial goods are judgment values with little empirical support; for steel, a Brazilian estimate of −0.14 is one of few [@Schmidt2006]. Industrial output in small open economies depends on export demand and on trade policy such as the border adjustment itself, not only on domestic income. And the layer has no cooling activity, because none of the four models has one.
+
+**The data gaps are as binding as the method.** FTT has no car data for 21 of its 71 regions, so its transport model cannot run for several large developing countries until the number of cars, km per car and the costs of each car type are added. Its standalone industrial heat module ships without data, and its steel model runs only inside E3ME-FTT. SISEPUEDE has calibrated inputs for a few dozen countries, mostly in Latin America, and several of its key parameters are templates. CPAT's road transport needs one story before its co-benefits can be read as more than indicative.
+
+**For a ministry, the practical rule is short.** Pick one GDP and population forecast and give it to every model. Grow activities with equation (5) from one base year. Splice onto each model's own data with equation (6). Apply the price response once, in whichever model has it. Check that cars fit inside travel. Compare CPAT's baseline fuel use with the layer's activity times intensity, and investigate any gap larger than the uncertainty in the elasticities.
+
+# Conclusion {#sec-conclusion}
+
+Four models that a ministry might use to assess a carbon price build activity in four incompatible ways: CPAT from GDP and prices, SISEPUEDE from income and population without prices, the border-adjustment tool from growth forecasts for a handful of goods, and FTT not at all. A single constant-elasticity rule over ten activities, with a sector concordance and three simple propositions about population, double counting and the vehicle chain, is enough to put them on one baseline and one price response. The main limitation is the evidence for heavy industry, where output elasticities are judgment values and trade matters more than income. The next step is to build the layer as a small open data table beside CPAT-AI, run it for one country through all four models, and use the gap between CPAT's fuel-based baseline and the layer's activity-based one as a test of both.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+# Appendix A. Proofs and the cost of the energy service {.unnumbered}
+
+**Proposition 1.** In logs, equation (5) gives $\Delta \ln A_j = \beta_j\, \Delta \ln P + \varepsilon_j\, \Delta \ln y + \eta_j\,\Delta \ln c$. Changing $\beta_j$ from $\varepsilon_j$ to 1 changes $\Delta \ln A_j$ by $(1 - \varepsilon_j)\Delta \ln P$, which is zero iff $\varepsilon_j = 1$ or population is constant.
+
+**Proposition 2.** If the layer supplies $A_j\, (c/c^{\mathrm{base}})^{\eta_j}$ and the receiving model multiplies its input by $(c/c^{\mathrm{base}})^{\eta^m_j}$, the result is $A_j (c/c^{\mathrm{base}})^{\eta_j + \eta^m_j}$, whose log response to $c$ is $\eta_j + \eta^m_j$.
+
+**Proposition 3.** Car passenger-km over total passenger-km is $\sigma_t = \sigma_0 (y_t/y_0)^{\varepsilon_K + \varepsilon_k - \varepsilon_T}$, since the population terms cancel when all three have exponent 1 and occupancy is fixed. If the exponent is positive and $y_t \to \infty$, $\sigma_t$ exceeds 1 in finite time, specifically when $\ln(y_t/y_0) > -\ln \sigma_0 / (\varepsilon_K + \varepsilon_k - \varepsilon_T)$. With $\varepsilon_K + \varepsilon_k - \varepsilon_T = 0.81$ and 2 percent income growth, $\sigma_0 = 0.3$ crosses 1 after about 76 years and $\sigma_0 = 0.5$ after about 44.
+
+**The cost of the energy service.** For a service delivered by fuel $f$ with price $p_f$ (including taxes and carbon) and equipment efficiency $e_f$ (km per unit of energy, or useful heat per unit of fuel), $c_j = \sum_f s_f\, p_f / e_f$, where $s_f$ is the share of the service delivered by fuel $f$. A carbon price $\tau$ adds $\tau\, \mathrm{EF}_f / e_f$ per unit of service, where $\mathrm{EF}_f$ is the emission factor per unit of energy. Only the ratio of policy to baseline cost enters equation (5), so units cancel. Code: `2.Source/activity_layer.py` prints Table 3 and the Proposition 3 crossing times.
