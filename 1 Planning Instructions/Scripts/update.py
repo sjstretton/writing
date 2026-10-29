@@ -352,7 +352,7 @@ def render(units, snapshot=None, today=None):
 
     # ---------------- Context tab ----------------
     rows, fmt = [], []
-    rows.append(["Context", "=\"Open task points: \"&SUMIFS(C4:C{a},F4:F{a},\"<>Parked\")&\". Points: task 100-200; milestone 1000 (+4000 if done in its due week, +2000 if before); Kriya 10 x streak; CPAP 1 per minute; gym 100\""])
+    rows.append(["Context", "=\"Open task points: \"&SUMIFS(C4:C{a},F4:F{a},\"<>Parked\")&\". Points: task 100-200; milestone 1000 (+4000 if done in its due week, +500 if before); Kriya 10 x streak; CPAP 1 per minute; gym 100\""])
     fmt.append("title")
     rows.append(["ID", "Task", "Pts", "Energy", "Q", "Status", "%", "Milestone", "Next action, detail, links"])
     fmt.append("th")
@@ -932,12 +932,12 @@ HABITS = [
 
 
 def target_bonus(due, today):
-    """+4000 if a milestone is done in its due week, +2000 (half) if done before it."""
+    """+4000 if a milestone is done in its due week, +500 (half the milestone) if done before it."""
     if not due:
         return 0
     if due.isocalendar()[:2] == today.isocalendar()[:2]:
         return 4000
-    return 2000 if today < due else 0
+    return 500 if today < due else 0
 
 
 def end_of_day(snapshot_path, date, apply):

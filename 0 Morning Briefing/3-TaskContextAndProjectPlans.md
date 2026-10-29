@@ -6,7 +6,7 @@ The printable tracker (`Me-Printable-Tracker.docx`, in this folder) is built fro
 
 Last reviewed: Thu 29 Oct 2026, 11:55pm (Philippines). Open task points: 4,600.
 
-**Points.** Task 100 (quick) or 200. Milestone 1000 when complete, +4000 if done in its due week, +2000 if done before it. Kriya 10 x current streak (days), daily. CPAP 1 per minute. Gym session 100. Daily points live on the Tracker tab.
+**Points.** Task 100 (quick) or 200. Milestone 1000 when complete, +4000 if done in its due week, +500 if done before it. Kriya 10 x current streak (days), daily. CPAP 1 per minute. Gym session 100. Daily points live on the Tracker tab.
 **Key.** Energy needed: H/M/L. Q: Q1 Do now, Q2 Schedule, Q3 Batch or delegate, Q4 Not now. %: progress on the milestone (estimate).
 
 ## Active tasks
@@ -258,7 +258,7 @@ The ones that keep slipping. Each next step takes 15 minutes or less.
 
 | ID | Task | Pts | Energy | Q | Status | % | Milestone | Next action, detail, links |
 |---|---|---|---|---|---|---|---|---|
-| 1b_m1 | Final Python (Coded-Conversion) delivered | 3000 | H |  | Done 29 Oct | 100% | PR1 | Done 29 Oct (Stephen), six weeks early (due 11 Dec): CPAT Python complete. 1,000 + 2,000 early bonus (50% of the due-week bonus) |
+| 1b_m1 | Final Python (Coded-Conversion) delivered | 1500 | H |  | Done 29 Oct | 100% | PR1 | Done 29 Oct (Stephen), six weeks early (due 11 Dec): CPAT Python complete. 1,000 + 500 early bonus (50% of the milestone) |
 | T63 | Open Economy Carbon Pricing (1.1): working paper updated and published, with brief and deck | 200 | M | Q1 | Done 29 Oct | 100% | P_m1 | Literature review (Appendix A), fuel-price leakage, Article 6 crediting threshold, CBAM Art 9 and shuffling; on the website with the revised brief and deck (29 Oct) |
 | T64 | Working paper 1.2 (feebates and output-based rebating) v0.3, published with brief and deck | 200 | M | Q1 | Done 29 Oct | 100% | P_m1 | Market design, investment, benchmark dynamics, country cases (29 Oct) |
 | T65 | Working paper 1.3 (iron and steel CBAM) v0.3, published with brief and deck | 200 | M | Q1 | Done 29 Oct | 100% | P_m1 | Shuffling model, signal recognition, liability formula, calibration to EU default values (29 Oct) |

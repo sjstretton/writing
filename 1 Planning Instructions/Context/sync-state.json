@@ -1,11 +1,11 @@
 {
  "printable": {
   "built": "2026-10-29",
-  "docx": "5d316aae6c6efedf",
-  "sources": "0d0a37c1ec3a4841",
+  "docx": "735df99065fe401e",
+  "sources": "e39ec307b5eec98b",
   "version": "0.6"
  },
- "synced": "2026-10-29T17:13:57",
+ "synced": "2026-10-29T17:15:03",
  "units": {
   "list:anxiety + sleep protocol": "699d7fe5f886ebf8",
   "list:evening": "e08384bf2c0dffd3",
@@ -35,7 +35,7 @@
   "table:Task scripts": "fcf2e82377d80e06",
   "task:1a_m1": "8232c9317341ef39",
   "task:1a_m2": "3c09f5374ca35738",
-  "task:1b_m1": "dd6ecbe44a1d5378",
+  "task:1b_m1": "3c738190677ebdbe",
   "task:1c_m1": "ed4bff1df65e8b73",
   "task:2a_m1": "8585c67653eed300",
   "task:2b_m1": "3595387e888e27c5",
