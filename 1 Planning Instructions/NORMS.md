@@ -76,21 +76,16 @@ Answer from the Context tab. Each item shows its points and the one thing needed
   a) CPAP 4h30 (270 pts) · Kriya streak day 1 (10 pts)
   b) Done: Louise's birthday milestone (1,000) · presents, payment verification, routine, Panchakosha, data folder, Tile tags, MP3s (7 × 100) · Total 1,990 pts
   ```
-- **"Give me the WhatsApp briefing"** (morning) and **"the end-of-day WhatsApp briefing"** (evening): ready to paste into WhatsApp. **The points are the point:** every line ends with its points, and the last line is the total. Extremely concise: a date line, then one short line each, no other text.
-  - **Morning: points on offer.** Today's milestones (1000, +4000 if done in the due week) and tasks (100-200), 2-4 items in all, from the morning briefing; the morning routine (10 per step, `Context/routines.md`) and last night's CPAP (1 per minute; "not logged" if not given); total available today.
-  - **End of day: points scored.** CPAP and the morning routine (steps ticked), then the milestones and tasks actually done, each with its points; total scored against the morning's total. Leave out what wasn't done: no comment.
+- **"Give me the WhatsApp briefing"** (start of day) and **"the end-of-day WhatsApp briefing"**: ready to paste into WhatsApp. **The points are the point:** every item shows its points, grouped where they share a value, and line c) ends with the day's total. Extremely concise: a date line, then three lines, no other text.
+  - a) CPAP (last night: hours, 1 point per minute) and Kriya streak (days, 10 x streak); "not logged" if not given.
+  - b) Milestones (1,000; 5,000 if done in the due week).
+  - c) Tasks (100-200), then the total.
+  - **Start of day: points on offer**, from the morning briefing. **End of day: points actually scored**: only what was done, total scored against the morning's total; what wasn't done is left out, no comment. Example:
   ```
-  Fri 30 Oct
-  Milestone: PhD application in (5,000)
-  Tasks: Oxford check, Shrimali email, referees (3 × 100 = 300)
-  Routine 90 · CPAP 6h10 (370)
-  Available: 5,760 pts
-  ```
-  ```
-  Fri 30 Oct, end of day
-  CPAP 6h10 (370) · Routine 7/9 (70)
-  Done: Shrimali email, referees (200)
-  Scored: 640 of 5,760 pts
+  Mon 19 Oct - start of day briefing
+  a) CPAP 3h30 (210 pts) · Kriya streak day 2 (20 pts)
+  b) Milestones: Edmundo on track (1,000)
+  c) Edmundo prep, integration slide (2 × 200) · CPAT sent to Edmundo, new CPAT-CDPM repo, meeting notes (3 × 100) · Total 1,930 pts
   ```
 - **Morning update** (Stephen gives last night's CPAP and the Kriya day): log them on the Tracker's daily tracker against the right day. Check the Kriya day against the streak (the day after day n is day n+1; a missed day resets to 1) and say if his number differs; check points as CPAP minutes and 10 x streak.
 - **"Ask me for the milestones and update"**: one short message listing the open priority milestones with their current %; ask for the new figures; then update the Context tab and `0 Morning Briefing/3-TaskContextAndProjectPlans.md`, and report the points earned.
