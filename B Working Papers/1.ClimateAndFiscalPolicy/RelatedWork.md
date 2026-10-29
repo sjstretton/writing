@@ -6,12 +6,12 @@ Section 1 holds the carbon-pricing series. Paper 1.1 is the overarching paper; t
 
 | Paper | Folder | Role | Version |
 |---|---|---|---|
-| Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies | `1.1.OpenEconomyCarbonPricing` | Overarching | 0.2 (short draft, Oct 2026); 0.1 is the earlier "Open Economy Carbon Pricing" in its `8.PreviousVersions` |
-| A Dynamic Approach to Overcoming Transitional Barriers and Decarbonizing the Capital Stock (power-sector feebates) | `1.2.FeebatesAndOutputBasedRebating` | Companion C2: feebates | 0.2 (May 2024); 0.1 is the Feb 2023 Climate Cafe version |
+| Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies | `1.1.OpenEconomyCarbonPricing` | Overarching | Working paper 0.3 (29 Oct 2026); brief CFPB 1.1; earlier versions in `8.PreviousVersions` |
+| Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | `1.2.FeebatesAndOutputBasedRebating` | Companion C2: feebates | Working paper 0.3 (29 Oct 2026); brief CFPB 1.2; 0.2 (May 2024) and 0.1 (Feb 2023) in `8.PreviousVersions` |
 | Industrial Feebates and Competitiveness | `1.2…/3.RelatedPiecesAndLinks/IndustrialFeebates` | Companion C2, industry side | – |
-| Carbon Price Recognition under CBAM (plus benchmark design against scrap shuffling) | `1.3.IronSteelCBAM` | Companion C4: updating CBAM | 0.2 (Oct 2026); 0.1 is June 2026 |
-| Carbon Consumption Tax: A Destination-Based Carbon Price Through VAT | `1.6.CarbonConsumptionTax` | Companion C1: the consumption side | 0.1 |
-| The Total Effective Carbon Price (TECP) | `1.7.PolicyEquivalentCarbonPriceAndCES` | Companion C3: the carbon-price-equivalent measure | 0.2 (qmd master); 0.1 is the earlier pair of working papers |
+| Credit the Price Signal, Not the Payment: Carbon Price Recognition and Scrap Shuffling under CBAM | `1.3.IronSteelCBAM` | Companion C4: updating CBAM | Working paper 0.3 (29 Oct 2026); brief CFPB 1.3; 0.2 (consultation submission) in `8.PreviousVersions` |
+| Carbon Consumption Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers | `1.6.CarbonConsumptionTax` | Companion C1: the consumption side | Working paper 0.2 (29 Oct 2026); brief CFPB 1.6; 0.1 in `8.PreviousVersions` |
+| Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price | `1.7.PolicyEquivalentCarbonPriceAndCES` | Companion C3: the carbon-price-equivalent measure | Working paper 0.3 (29 Oct 2026); brief CFPB 1.7; 0.2 and the 0.1 pair in `8.PreviousVersions` |
 
 ## In other main folders
 
