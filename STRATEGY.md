@@ -14,7 +14,7 @@ In order.
 
 Proposal 2 (McGilchrist) is parked until 1 and 3 are out.
 
-**What this means for agents.** When choosing between tasks, prefer the one that moves priority 1, then 2, then 3. A paper upgrade that also serves as a PhD writing sample (1.1, 2.1, 4.1) beats one that does not.
+**What this means for agents.** When choosing between tasks, prefer the one that moves priority 1, then 2, then 3. A paper upgrade that also serves as a PhD writing sample (1.1, 2.1, 1.7) beats one that does not.
 
 ## Strategic specialisms
 
