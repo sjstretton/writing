@@ -96,3 +96,7 @@ pandoc Brief-<PaperName>.qmd -f markdown --citeproc --bibliography=Brief-<PaperN
 ```
 
 (`/tmp/chicago.csl` is the Chicago author-date style downloaded from `https://www.zotero.org/styles/chicago-author-date`; delete the `csl:` line from a temporary copy if pandoc complains.)
+
+## Sections 2 and 3 (added 29 Oct 2026)
+
+The same series, format and files cover the finance-and-risk papers (2.1, 2.2) and the sovereign-incentives papers (3.1, 3.2, 3.3): `Climate Fiscal Policy Brief No. 2.1` and so on. Each section's plan, shared terms and citation keys (`CFPB21`, `CFPB22`, `CFPB31`, `CFPB32`, `CFPB33`; working papers `StrettonWP21` … `StrettonWP33`) are in `B Working Papers/2.FinanceAndRisk/SeriesArchitecture.md` and `B Working Papers/3.SovereignIncentives/SeriesArchitecture.md`. Shared terms there extend the table above; where a term appears in both, use one meaning across all three sections.
