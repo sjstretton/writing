@@ -18,7 +18,7 @@ Proposal 2 (McGilchrist) is parked until 1 and 3 are out.
 
 ## Strategic specialisms
 
-What Stephen can credibly claim to be expert in, and the angle that makes him distinctive. *(Agent draft. Confirm, cut or reorder.)*
+What Stephen can credibly claim to be expert in, and the angle that makes him distinctive. *(Agent draft. Confirm, cut or reorder.)* The full map, with a short abstract per specialism and the order for nailing them down, is `SPECIALISMS.md` at the repo root.
 
 ### In general
 
