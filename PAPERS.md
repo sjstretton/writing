@@ -17,7 +17,7 @@ Order of work. The reason column says why each paper is where it is.
 
 | Rank | No. | Paper | Status | Target | Why this rank |
 |---|---|---|---|---|---|
-| 1 | 1.1 | Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies (overarching paper; was "Open Economy Carbon Pricing") | upgrading: short version drafted | Journal (*Climate Policy*, research article) + PhD writing sample | **Dirk asked for this one first.** The overarching paper for the carbon-pricing series. Plan: `1.1/5.Notes/Plan-v2-TwoTrackArchitecture-2026-10-29.md` |
+| 1 | 1.1 | Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies (overarching paper; v0.2; v0.1 was "Open Economy Carbon Pricing") | upgrading: short version is now the master | Journal (*Climate Policy*, research article) + PhD writing sample | **Dirk asked for this one first.** The overarching paper for the carbon-pricing series. Plan: `1.1/5.Notes/Plan-v2-TwoTrackArchitecture-2026-10-29.md` |
 | 2 | 4.1 | Policy-Equivalent Carbon Price and CES Energy Demand (TECP) | draft | Journal (*Energy Economics* / *Energy Policy*) | Most technically complete. Needs literature, sourced calibration and a country application. |
 | 3 | 2.1 | Climate Finance Intermediation for Clean Power | draft | WB working paper; 2,000-word cut as Oxford writing sample | Closest to proposal 1's topic. Needs citations. |
 | 4 | 3.1 | Notional Capitalised Value and Guarantees | idea | WB working paper | The core idea behind proposal 1, but has no draft yet. |
@@ -33,7 +33,7 @@ Order of work. The reason column says why each paper is where it is.
 
 | | Companion | Where | Status |
 |---|---|---|---|
-| C1 | Carbon Consumption Tax: A Destination-Based Carbon Price Through VAT (to become 1.6) | `1.1/3.BackgroundPapers/Background-CarbonConsumptionTax.qmd` | draft (8,900 words) |
+| C1 | Carbon Consumption Tax: A Destination-Based Carbon Price Through VAT | 1.6 | draft v0.1 (8,900 words) |
 | C2 | Feebates and output-based rebating | 1.2 | draft |
 | C3 | Policy-equivalent carbon prices (TECP) | 4.1 | draft |
 | C4 | Updating CBAM: carbon price recognition and scrap shuffling | 1.3 | near-final consultation note |

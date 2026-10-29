@@ -26,8 +26,8 @@ Details for each item: `A Research Proposal/PhD-Application-Status.md`.
 
 ### Priority 3: paper upgrades
 
-- [ ] **1.1 Open Economy Carbon Pricing → paper standard** (Dirk asked for this first). Short version drafted 29 Oct: `1.1/OpenEconomyCarbonPricing-v2-short.qmd` (+ `-v2.bib`), ~3,000 words. Next: Stephen reads it; verify every `VERIFY` entry in the bib; calibrate the steel illustration from CBAM default values; then expand to the 7,000-word research article per `5.Notes/Plan-v2-TwoTrackArchitecture-2026-10-29.md` — A — 12 Nov
-- [ ] Decisions taken 29 Oct: title "Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies"; consumption-charge revenue partly replaces VAT, with a forward-announced upstream liability as the preferred form; the consumption-tax paper becomes 1.6 (move it from `1.1/3.BackgroundPapers` to its own folder — A, ask before moving); 1.3 keeps its content (CBAM flaws incl. price recognition, plus scrap-shuffling solutions): retitle to match; US spelling for the series
+- [ ] **1.1 Open Economy Carbon Pricing → paper standard** (Dirk asked for this first). Short version (v0.2) is now the master `1.1/OpenEconomyCarbonPricing.qmd`; v0.1 in `8.PreviousVersions`. Next: Stephen reads it; verify every `VERIFY` entry in the bib; calibrate the steel illustration from CBAM default values; then expand to the 7,000-word research article per `5.Notes/Plan-v2-TwoTrackArchitecture-2026-10-29.md` — A — 12 Nov
+- [ ] Decisions taken 29 Oct: title "Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies"; consumption-charge revenue partly replaces VAT, with a forward-announced upstream liability as the preferred form; the consumption-tax paper is 1.6 (moved 29 Oct); 1.3 keeps its content (CBAM flaws incl. price recognition, plus scrap-shuffling solutions): retitle to match; US spelling for the series
 - [ ] Confirm which file is master for 4.1 and 1.4 (qmd vs docx, H13) — S — before upgrading them. (1.1: the qmd is master, per Stephen 29 Oct)
 - [ ] Draft concept paper 1: policy-equivalent carbon price — A — after 1.1
 

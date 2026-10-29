@@ -7,13 +7,15 @@ The standard shape for every folder under `A Writing\<theme>\<paper>`.
 <PaperName>.bib            its bibliography, beside it
 1.Presentation             briefing papers (BP), slides, abstracts, summaries
 2.Source                   other formats, data, spreadsheets, images, code
-3.BackgroundPapers         other papers of mine in the same folder
+3.RelatedPiecesAndLinks    related pieces of mine kept with the paper (was 3.BackgroundPapers; both names still occur)
 4.ExternalPapers           other people's work
 5.Notes                    notes, comments, outlines
+8.PreviousVersions         older versions, named <PaperName>-v0.1.<ext>; the master carries its version in YAML
 9.Archive                  superseded drafts and old data versions
+RelatedWork.md             related pieces that live in other main folders (listed, not copied)
 ```
 
-Slots 6, 7 and 8 are **reserved, not missing**. Leave the gap.
+Slots 6 and 7 are **reserved, not missing**. Leave the gap. Where no version numbers existed, the older version is 0.1 and the current one 0.2.
 
 A slot exists only if something is in it. Most folders have two or three.
 
