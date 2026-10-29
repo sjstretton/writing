@@ -1,8 +1,8 @@
 # 4.5 The CBAM Policy Tool
 
-**Status:** working paper, version 0.1 (29 October 2026), first full draft for Stephen's review. About 4,600 words of body. Moved here from `6.Additional` (old number 4.3).
+**Status:** working paper, version 0.1 (29 October 2026), first full draft for Stephen's review. About 5,450 words of body. Egypt application added 29 Oct 2026, after Stephen cleared tool country results for use as illustrative results. Moved here from `6.Additional` (old number 4.3).
 
-**What the paper does.** Describes the CBAM Policy Tool (part of the Climate Fiscal AI Tools): what it computes (embedded emissions by component, the gap to EU default values, the CBAM charge per tonne and in total year by year, the capture price, the effect of a domestic carbon price split into abatement and credit), its method in five equations, its public data sources, and a worked example with public data only: three Turkish exports to the EU (CN 7208, 7214 20 00, 7601), Commission default values and Eurostat 2025 trade. Links to papers 1.1 (two-track architecture), 1.3 (carbon price recognition), 1.7 (TECP) and 4.4 (elasticities).
+**What the paper does.** Describes the CBAM Policy Tool (part of the Climate Fiscal AI Tools): what it computes (embedded emissions by component, the gap to EU default values, the CBAM charge per tonne and in total year by year, the capture price, the effect of a domestic carbon price split into abatement and credit), its method in five equations, its public data sources, a worked example with public data only: three Turkish exports to the EU (CN 7208, 7214 20 00, 7601), Commission default values and Eurostat 2025 trade; and a country application (section 7): the tool's Egypt emission factors for seven products against the Commission's default values, with the full-phase-in charge at €80 (about €595 million a year at default values, €177 million at the tool's estimates, 2024 volumes). Links to papers 1.1 (two-track architecture), 1.3 (carbon price recognition), 1.7 (TECP) and 4.4 (elasticities).
 
 ## Files
 
@@ -15,11 +15,12 @@
 | `2.Source/data/default_values_turkiye.csv` | Default values used (from the Commission's "DVs as adopted" workbook, 4 Feb 2026) |
 | `2.Source/data/eurostat_eu_imports_from_tr.csv` | EU imports from Türkiye, 2024–2025, Eurostat Comext DS-045409 (retrieved 29 Oct 2026) |
 | `2.Source/table_example.csv`, `table_aggregate.csv`, `figures/fig1_charge_path.png` | Outputs |
-| `CBAM_policy_dashboard_v1.0_guide.qmd/.docx`, `Egypt_CBAM_EF_v1.1_guide.qmd/.docx` | Source guides (World Bank team documents; not for publication) |
-| `CBAM_dash_v1.6.xlsx`, `cbam_data.xlsx`, `cbam_global_data.xlsx`, `Egypt_CBAM_EF_v1.2.xlsx`, `Egypt_CBAM_EmissionsFactors_v1.1.xlsx` | Source workbooks (internal; see below) |
+| `2.Source/egypt_example.py`, `2.Source/table_egypt.csv` | Egypt application (Table 4): reads `Egypt_CBAM_EF_v1.2.xlsx` and the Commission workbook directly |
+| `CBAM_policy_dashboard_v1.0_guide.qmd/.docx`, `Egypt_CBAM_EF_v1.1_guide.qmd/.docx` | Source guides (method used; the guides themselves are not published) |
+| `CBAM_dash_v1.6.xlsx`, `cbam_data.xlsx`, `cbam_global_data.xlsx`, `Egypt_CBAM_EF_v1.2.xlsx`, `Egypt_CBAM_EmissionsFactors_v1.1.xlsx` | Source workbooks (Egypt EF v1.2 used; see below) |
 | `DVs as adopted_v20260204_.xlsx` | The Commission's public default-value workbook |
 
-Run: `cd 2.Source && python3 cbam_example.py`.
+Run: `cd 2.Source && python3 cbam_example.py && python3 egypt_example.py`. Render: `python3 xref.py CBAMPolicyTool.qmd r.md` (scratchpad cross-reference resolver), then `pandoc r.md --citeproc --number-sections --bibliography=CBAMPolicyTool.bib --csl=chicago.csl -o CBAMPolicyTool.docx`.
 
 ## Sources used
 
@@ -27,11 +28,16 @@ Run: `cd 2.Source && python3 cbam_example.py`.
 - `climate-fiscal-ai-tools/CBAMPolicyTool`: `CBAM_Policy_Tool_Guide_v3.0.docx`, `Egypt/Egypt_Methodology_v3.0.docx` (equations only: output, fuel and process responses; the abatement-versus-credit split).
 - Public: Regulation (EU) 2023/956 and 2025/2083; Implementing Regulations 2025/2547, 2025/2548, 2025/2620, 2025/2621; the Commission's default-value workbook; Eurostat Comext; IPCC 2006 Guidelines.
 
-## Held back for confidentiality
+## Now used (cleared by Stephen, 29 Oct 2026, as illustrative tool results)
 
-- **All Egypt numbers**: the Egypt emission-factor matrix (product and CN-line factors, gaps to defaults, volumes, quality-assurance results) and the Egypt policy results (scenarios 1A–3C: emission cuts, revenue, border-charge changes, deaths avoided). The paper describes the Egypt emission-factor application in method terms only.
-- **Dashboard outputs**: the five-country results (capture prices, CBAM gross, total revenue) and the model-versus-default intensity tables in the dashboard guide and workbooks. The countries covered are not named in the paper.
-- The tool's own reference values for default values and benchmarks were **not** used as data (several look approximate); the worked example uses the Commission's workbook directly, except the two benchmarks below.
+- **Egypt emission factors and EU export volumes** (section 7, Table 4): `Egypt_CBAM_EF_v1.2.xlsx`, sheet EF Section C (CBAM-equivalent intensity and 2024 EU exports by CN line), sheet Quality_Assurance (v1.1 to v1.2 corrections, ammonium nitrate N₂O range, aluminum PFCs). Cited as @CBAMToolEgypt2026 ("CBAM Policy Tool 2026"). Defaults compared are the Commission's (`DVs as adopted_v20260204_.xlsx`, Egypt sheet; "other countries" sheet for carbon steel, where Egypt has no value), not the tool's own reference defaults, which differ (e.g. the tool uses 1.82 for gas-based steel and 1.58 for clinker).
+
+## Still held back
+
+- **Egypt policy-scenario results** (scenarios 1A–3C: revenue, emission cuts, CBAM-obligation cuts, deaths avoided) in `climate-fiscal-ai-tools/CBAMPolicyTool/Egypt/EgyptResultsInitial_UpdatedResults_tracked_v3.0.docx` and `Egypt_CBAM_results_v3.0.xlsx`: the results note is a tracked-changes draft prepared for World Bank country work, so treated as draft-for-comment.
+- **Dashboard outputs**: the five-country results (capture prices, CBAM gross, total revenue) and the model-versus-default intensity tables in the dashboard guide and workbooks (World Bank team outputs; not needed for the paper).
+- Plant and company names from the Egypt workbook are not used.
+- The tool's own reference values for default values and benchmarks were **not** used as data (several look approximate); both examples use the Commission's workbook directly, except the two Türkiye benchmarks below.
 
 ## Open items ([VERIFY] in the paper)
 
