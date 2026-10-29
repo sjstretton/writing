@@ -28,7 +28,7 @@
     "imageHeight": 3.3,
     "caption": "Total VAT rate by embodied-carbon intensity on the illustrative path, 2027–2037.",
     "points": [
-      "Value component falls 15% → 10%; carbon component rises €20/t a year to €200 in 2037.",
+      "Carbon component rises €20/t a year to €200 in 2037; the value component falls by rule, ending near 11–13%.",
       "A good at 0.25 kg CO₂ per euro pays 15% throughout; cleaner goods pay less, dirtier more.",
       "Imports pay on generous, rebuttable defaults, the same for every origin.",
       "Fuel suppliers face a legal obligation fixed ten years ahead."
@@ -39,7 +39,7 @@
     "results": [
       "Imports and domestic goods pay alike: no leakage, no separate border adjustment.",
       "Rebuttable defaults reward exporters who cut emissions.",
-      "Neutral only if the basket averages 0.25 kg per euro; otherwise the value component should fall by less.",
+      "The basket averages about 0.41 kg CO₂e per euro and will fall: set the value cut by rule, not by schedule.",
       "The VAT part probably needs unanimity; the obligation does not."
     ],
     "todo": [

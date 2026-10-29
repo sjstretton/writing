@@ -228,6 +228,8 @@ def main():
         a = mcs[key]
         lines.append(f"  {key}: median {pct(a, 50):.1f}, 5th {pct(a, 5):.1f}, 95th {pct(a, 95):.1f}")
     lines.append(f"  share of LR draws with mix TECP > explicit metric: {np.mean(mc['mix_exact'] > explicit):.3f}")
+    lines.append(f"  share of one-year draws with mix TECP > explicit metric: {np.mean(mcs['mix_exact'] > explicit):.3f}; "
+                 f"min LR {mc['mix_exact'].min():.1f}, min one-year {mcs['mix_exact'].min():.1f}")
     lines.append(f"  LR ratio exact/linear: median {pct(mc['mix_exact'] / mc['mix_lin'], 50):.3f}, "
                  f"5th {pct(mc['mix_exact'] / mc['mix_lin'], 5):.3f}, 95th {pct(mc['mix_exact'] / mc['mix_lin'], 95):.3f}")
     # central short run at central speeds
