@@ -2,8 +2,8 @@
 
 Run from any directory:  python3 make_wp_figures.py
 Reads  ember_yearly_2024_IND_IDN_ZAF.csv  (beside this script)
-Writes figures/fig1_price_effects.png, figures/fig2_fiscal_flows.png,
-       figures/fig3_investment_logit.png, figures/fig4_benchmark_dynamics.png,
+Writes figures/fig3_price_effects.png, figures/fig4_fiscal_flows.png,
+       figures/fig1_investment_logit.png, figures/fig2_benchmark_dynamics.png,
        table_country_cases.csv, and prints every number quoted in the paper.
 
 Data
@@ -220,7 +220,7 @@ def fig1():
     ax.legend(handles=[Patch(color=col, label=lab) for _, lab, col in series], ncol=2, fontsize=7.5,
               frameon=False, loc="upper center", bbox_to_anchor=(0.5, 1.16))
     fig.tight_layout()
-    fig.savefig(FIG / "fig1_price_effects.png", facecolor=SURF)
+    fig.savefig(FIG / "fig3_price_effects.png", facecolor=SURF)
     plt.close(fig)
 
 
@@ -250,7 +250,7 @@ def fig2():
     ax.legend(handles=[Patch(color=col, label=lab) for _, lab, col in kinds], ncol=4, fontsize=7,
               frameon=False, loc="upper center", bbox_to_anchor=(0.5, 1.13))
     fig.tight_layout()
-    fig.savefig(FIG / "fig2_fiscal_flows.png", facecolor=SURF)
+    fig.savefig(FIG / "fig4_fiscal_flows.png", facecolor=SURF)
     plt.close(fig)
 
 
@@ -309,7 +309,7 @@ def fig3():
     ax.set_xlabel("Carbon price or feebate rate, US\\$/tCO$_2$", fontsize=8, color=INK2)
     ax.set_ylabel("Clean share of new capacity, %", fontsize=8, color=INK2)
     fig.tight_layout()
-    fig.savefig(FIG / "fig3_investment_logit.png", facecolor=SURF)
+    fig.savefig(FIG / "fig1_investment_logit.png", facecolor=SURF)
     plt.close(fig)
     for r in (0.06, 0.08, 0.12):
         print(f"r={r:.2f}: LCOE clean {lcoe('clean', r):.1f}, coal {lcoe('coal', r):.1f}, "
@@ -376,7 +376,7 @@ def fig4():
     b.set_ylim(0, 55)
     b.set_title("B. Dominant firms see less of the rate", fontsize=8.5, color=INK, loc="left")
     fig.tight_layout()
-    fig.savefig(FIG / "fig4_benchmark_dynamics.png", facecolor=SURF)
+    fig.savefig(FIG / "fig2_benchmark_dynamics.png", facecolor=SURF)
     plt.close(fig)
     for a_, b_ in zip(sim[:10], sim[1:11]):
         print(f"  true-up {b_['year']}: benchmark fall {a_['ebar'] - b_['ebar']:.3f}, "
