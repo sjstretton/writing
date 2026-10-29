@@ -150,14 +150,14 @@ Analyzes reshuffling of contracts for imported electricity under AB32's first-de
 
 ## 4. Recognition of foreign carbon pricing, implicit prices and equivalence
 
-**Agnolucci2023**: Agnolucci, P., Fischer, C., Heine, D., Montes de Oca Leon, M., Pryor, J., Patroni, K. & Hallegatte, S. (2023). *Measuring Total Carbon Pricing.* World Bank PRWP 10486. Published in *World Bank Research Observer* 39(2): 227–258 (2024). [Full text, PRWP version]
+**Agnolucci2024**: Agnolucci, P., Fischer, C., Heine, D., Montes de Oca Leon, M., Pryor, J., Patroni, K. & Hallegatte, S. (2023). *Measuring Total Carbon Pricing.* World Bank PRWP 10486. Published in *World Bank Research Observer* 39(2): 227–258 (2024). [Full text, PRWP version]
 Develops a Total Carbon Price (TCP) combining direct pricing (taxes, ETS) with indirect pricing: fuel excises net of subsidies, measured against supply-cost benchmarks. Computed for 142 countries, 1991–2021. Direct pricing covers about a quarter of global emissions, but the global TCP "is not that much higher than it was in 1994". Indirect pricing still makes up "the lion's share" and has stagnated. Many developing countries, especially net fuel importers, "contribute substantially to global carbon pricing" once indirect pricing counts. Average carbon-tax rates have stayed between US$30 and 45 per tCO₂.
 *Use in 1.3:* This is the ready-made methodology for the paper's §2.1–2.2. The paper's "World Bank, IMF and OECD frameworks" should cite this specifically, along with the IMF fuel-price benchmarks (Black et al. 2023). The OECD Effective Carbon Rates series could not be accessed (OECD iLibrary blocked).
 
 **Black2023**: see 1.2 appendix. IMF efficient-price benchmarks: $7 trillion in subsidies in 2022, and 80% of coal priced below half its efficient level.
 *Use in 1.3:* The benchmark source for "implicit prices are signed quantities" (§1.2). Negative implicit prices are the norm for coal.
 
-**Hagem2020 / Art. 8(2) link**: Hagem, Hoel and Sterner (2020) (1.2 appendix) analyze *expenditure-based refunding*, which refunds in proportion to abatement spending. **Note:** that is the economic content of the draft's Art. 8(2) carve-out. Their result: EBR needs a *lower* fee than a tax to reach the same abatement, and overweights technology relative to output. Citing it would ground the paper's §2.4 claim that the carve-out "strengthens rather than dilutes the signal".
+**HagemHoelSterner2020 (Art. 8(2) link)**: Hagem, Hoel and Sterner (2020) (1.2 appendix) analyze *expenditure-based refunding*, which refunds in proportion to abatement spending. **Note:** that is the economic content of the draft's Art. 8(2) carve-out. Their result: EBR needs a *lower* fee than a tax to reach the same abatement, and overweights technology relative to output. Citing it would ground the paper's §2.4 claim that the carve-out "strengthens rather than dilutes the signal".
 
 **Gap: fuel-subsidy reform evidence** (Indonesia, India). The paper asserts that Indonesia's and India's reforms moved implicit prices "by amounts comparable to explicit carbon taxes". No source was obtained this session. Agnolucci et al. (2023) country series and the IMF subsidy database are the places to verify it. [VERIFY before submission.]
 

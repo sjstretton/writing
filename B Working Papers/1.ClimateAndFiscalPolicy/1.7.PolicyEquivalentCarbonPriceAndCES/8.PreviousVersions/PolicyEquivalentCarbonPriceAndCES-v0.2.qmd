@@ -50,7 +50,6 @@ format:
     html-math-method: katex
     theme: cosmo
     fig-cap-location: bottom
-    css: styles.css
   pdf:
     documentclass: scrartcl
     toc: true
@@ -68,8 +67,9 @@ format:
     toc: true
     toc-depth: 3
     number-sections: true
-    reference-doc: reference.docx
-bibliography: Background-References.bib
+# Archived 29 Oct 2026 as v0.2 (superseded by v0.3 in the folder above). Paths fixed for the move:
+# the bibliography now points to the master's .bib; styles.css and reference.docx never existed in this folder.
+bibliography: ../PolicyEquivalentCarbonPriceAndCES.bib
 ---
 
 # Executive Summary {.unnumbered}
@@ -476,7 +476,7 @@ plausible ranges by sector:
 : Sector-level CES parameter ranges from the empirical literature {#tbl-calibration}
 
 These ranges are long-run estimates from meta-analyses of fuel demand studies
-[@stern2012; @labandeira2017]. Power generation has the highest $\sigma$ because
+[@Stern2012; @Labandeira2017]. Power generation has the highest $\sigma$ because
 at the margin the dispatch decision is responsive to fuel prices, subject to
 capacity constraints. Road transport has lower $\sigma$ because switching
 requires vehicle replacement; $\sigma$ rises over longer horizons.
