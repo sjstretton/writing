@@ -70,17 +70,12 @@ Answer from the Context tab. Each item shows its points and the one thing needed
 - **"Give me the quick win list"**: 2-3 quick wins for now, then 2-3 for later. Quick win = decided, under about 15 minutes, low energy. Match the day: on a weekend, leave out weekday-only tasks (office-hours calls, work tasks).
 - **"Give me the decide and plan list"**: 2-3 for now, then 2-3 for later. Each: the question, the recommended answer, the milestone it unblocks.
 - **"What is the quickest thing to make a priority milestone?"**: the priority milestone (1000), its %, and the single next task (with points) that moves it most.
-- **"Give me the accountability update"** or **"short retrospective for the day"** (for my accountability contact): ultra concise, ready to paste. A date line, then two lines. a) CPAP (hours, points) and Kriya streak (days, points), from the Tracker's daily tracker; b) "Done:" milestones first, then tasks, grouped with their points, and the day's total. Anything not logged says "not logged". No other text. Example:
-  ```
-  Sun 18 Oct
-  a) CPAP 4h30 (270 pts) · Kriya streak day 1 (10 pts)
-  b) Done: Louise's birthday milestone (1,000) · presents, payment verification, routine, Panchakosha, data folder, Tile tags, MP3s (7 × 100) · Total 1,990 pts
-  ```
-- **"Give me the WhatsApp briefing"** (start of day) and **"the end-of-day WhatsApp briefing"**: ready to paste into WhatsApp. **The points are the point:** every item shows its points, grouped where they share a value, and line c) ends with the day's total. Extremely concise: a date line, then three lines, no other text.
-  - a) CPAP (last night: hours, 1 point per minute) and Kriya streak (days, 10 x streak); "not logged" if not given.
-  - b) Milestones (1,000; 5,000 if done in the due week).
+- **The WhatsApp briefing** (also "the accountability update" or "short retrospective for the day": the same thing, for my accountability contact): ready to paste into WhatsApp. **The points are the point:** every item shows its points, grouped where they share a value, and line c) ends with the day's total. Extremely concise: a date line, then three lines, no other text.
+  - **When.** Two a day, in Stephen's local time (now the Philippines, UTC+8). A request **before 7am** is most likely the start-of-day briefing; a request **after 11:55pm** is most likely the end-of-day briefing, for the day just ending. Otherwise ask which.
+  - a) CPAP (last night: hours, 1 point per minute), Kriya streak (days, 10 x streak) and the morning routine (10 per step, `Context/routines.md`), from the Tracker's daily tracker; "not logged" if not given. Log what Stephen gives (see Morning update).
+  - b) Milestones (1,000; 5,000 if done in the due week); "none" if there are none.
   - c) Tasks (100-200), then the total.
-  - **Start of day: points on offer**, from the morning briefing. **End of day: points actually scored**: only what was done, total scored against the morning's total; what wasn't done is left out, no comment. Example:
+  - **Start of day: points on offer**, from the morning briefing. **End of day: points actually scored**: only what was done (Recently completed with that day's date, and ticks), total scored against the morning's total if there was one; what wasn't done is left out, no comment. Example:
   ```
   Mon 19 Oct - start of day briefing
   a) CPAP 3h30 (210 pts) · Kriya streak day 2 (20 pts)

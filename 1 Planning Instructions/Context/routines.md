@@ -4,16 +4,12 @@ Same as the Regular lists tab of the master Sheet, and printed at the end of `Me
 Format: `## List` starts a printed page, `### List` is a list on that page; `- [ ] label | item` (label in bold, optional).
 List names match the Sheet's headings (ignoring case). A `##` heading with no items (Bags) is a page title only.
 
-## Morning (wake 6:15, Kriya 7:00)
-- [ ] 6:15 | Wake: lights on, incl. the bright light; micro cold coffee
-- [ ] 6:20 | Green slime + coffee; swimsuit on
-- [ ] 6:25 | Teeth; splash face with coffee; then wash with cold water
-- [ ] 6:30 | Main bag; out the door by 6:35
-- [ ] 6:35 | Travel to gym (15 min)
-- [ ] 6:50 | Warm-up (5 min)
-- [ ] 6:55 | Calisthenics (5 min): press-ups, squats, cross crawl
-- [ ] 7:00 | Kriya: Padmasadhana, SKY, meditation
-- [ ] All day | Toe curls
+## Morning (an hour from waking; then full Kriya and breakfast 8-9)
+- [ ] 1 | Wake: wash; light on
+- [ ] 2 | Stretch: yoga, Kriya, meditation
+- [ ] 3 | Drink
+- [ ] 4 | Do: name the one focused thing, then start it
+- [ ] 8-9 | Full Kriya, then breakfast
 
 ### Gym, longer session (~30 min)
 - [ ] 1 | 2k on the ergo: note the time
