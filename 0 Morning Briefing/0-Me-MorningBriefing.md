@@ -14,8 +14,7 @@ Then stop. AI can cut paper 2.1 to a 2,000-word writing sample in parallel.
 ## 2. This week (to Sun 1 Nov; holiday)
 1. PhD application in by Sat 31 Oct (T13, P_m2)
 2. Next paper, Open Economy Carbon Pricing for *Climate Policy*: AI notes the word limit and format and lists what is left (T13, P_m1)
-3. Writing upgrade: PhD to-do, writing samples, priority paper sequence (T46)
-4. Rest: the beach
+3. Rest: the beach
 
 ## 3. Waiting on you (manual; something urgent depends on it)
 - [ ] Shrimali's written OK and the referee requests: the PhD application waits on both (in list 1)
