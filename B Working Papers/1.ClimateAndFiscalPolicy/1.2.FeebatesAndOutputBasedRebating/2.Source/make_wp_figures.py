@@ -140,6 +140,10 @@ def case(c, t=T):
     return out
 
 
+def t_bound(r, t=T):
+    return t * (r["e0"] - r["et"])
+
+
 def report():
     print("Technologies:")
     for k, p in TECH.items():
@@ -151,6 +155,7 @@ def report():
         r = case(c)
         print(f"\n{c}: D={r['D']:.1f} TWh coal {100*r['coal_share']:.1f}% gas {100*r['gas_share']:.1f}% "
               f"oil {100*r['oil_share']:.1f}% clean {100*r['clean_share']:.1f}%")
+        print(f"  Prop 2 bound t(e0-et) = {t_bound(r):.2f} $/MWh")
         print(f"  e_bar (direct, IPCC) {r['e0']:.3f} -> {r['et']:.3f} after re-dispatch; "
               f"Ember lifecycle {r['life']:.0f} g/kWh; direct emissions {r['E0']:.0f} Mt")
         print(f"  re-dispatch: {r['shift']:.1f} TWh coal->gas, cut {r['dE']:.1f} Mt "
@@ -373,6 +378,10 @@ def fig4():
     fig.tight_layout()
     fig.savefig(FIG / "fig4_benchmark_dynamics.png", facecolor=SURF)
     plt.close(fig)
+    for a_, b_ in zip(sim[:10], sim[1:11]):
+        print(f"  true-up {b_['year']}: benchmark fall {a_['ebar'] - b_['ebar']:.3f}, "
+              f"deficit {T * (a_['ebar'] - b_['ebar']):.2f} $/MWh, "
+              f"{T * (a_['ebar'] - b_['ebar']) * sum(GEN['India'].values()) / 1000:.1f} $bn at India 2024 output")
     for s_ in sim[::5]:
         print(f"  {s_['year']}: clean share {100*s_['w']:.0f}% ebar {s_['ebar']:.3f} "
               f"coal fee {s_['coal_fee']:.1f} rebate {s_['rebate']:.1f}")

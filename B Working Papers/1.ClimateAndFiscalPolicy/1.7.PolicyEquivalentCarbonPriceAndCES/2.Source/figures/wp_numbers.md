@@ -35,7 +35,6 @@ Horizon TECP (lambda_int 0.07, lambda_ext 0.35; credit price held at its long-ru
   T=10: tax lin 27.65 exact 26.54; subsidy lin 2.67 exact 3.12; standard lin 1.05 exact 1.05; mix lin 31.37 exact 33.23
   T=20: tax lin 28.09 exact 26.98; subsidy lin 3.29 exact 3.87; standard lin 1.12 exact 1.13; mix lin 32.50 exact 35.35
   T=30: tax lin 28.24 exact 27.13; subsidy lin 3.51 exact 4.13; standard lin 1.14 exact 1.16; mix lin 32.90 exact 36.17
-  T=0 limit (first order): tax 26.45; subsidy 1.00; standard 0.87; mix 28.33
   omega (LR switching share) 0.740; omega_1 0.363
 
 Monte Carlo, 2000 draws, seed 20261029. Long run:
@@ -46,12 +45,11 @@ Monte Carlo, 2000 draws, seed 20261029. Long run:
   standard_exact: median 0.9, 5th 0.7, 95th 1.1
   lambda: median 237.0, 5th 171.1, 95th 381.6
 Short run (one year; adjustment speeds drawn):
-  mix_lin: median 29.3, 5th 27.8, 95th 31.1
-  mix_exact: median 27.2, 5th 23.2, 95th 31.4
+  mix_lin: median 28.1, 5th 26.4, 95th 29.9
+  mix_exact: median 27.5, 5th 24.8, 95th 30.7
   tax_exact: median 25.9, 5th 24.0, 95th 27.5
   subsidy_exact: median 0.5, 5th -0.6, 95th 1.8
-  standard_exact: median 0.4, 5th -0.9, 95th 1.2
-  lambda: median 600.0, 5th 600.0, 95th 600.0
+  standard_exact: median 0.7, 5th 0.5, 95th 0.9
   share of LR draws with mix TECP > explicit metric: 1.000
   LR ratio exact/linear: median 1.088, 5th 1.037, 95th 1.139
-Central case, one year: mix lin 30.61, exact 28.69; tax 25.40; subsidy 1.16; standard 1.10 (credit price 600)
+Central case, one year: mix lin 28.33, exact 28.28; tax 25.40; subsidy 1.16; standard 0.79 (credit price held at 166)
