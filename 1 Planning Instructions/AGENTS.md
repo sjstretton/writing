@@ -14,6 +14,8 @@ When Stephen asks for the quick win list, the decide and plan list, the quickest
 
 ## Before every push to main: keep the repo, the Sheet and the printable consistent
 
+Only one session may write to the Sheet at a time. Before step 5, check that no other session is mid-sync (other sessions' recent activity); if one is, wait for it to finish, then start again from step 1.
+
 Stephen's change is the master wherever he made it (a repo file, a Sheet tab or the printable). If both sides changed the same item differently, ask him which to keep; never pick one yourself.
 
 1. `git pull` main.
