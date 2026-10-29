@@ -1,0 +1,129 @@
+---
+title: "The Climate Investment Trust: Hold Capital, Lend Its Strength"
+subtitle: "A buffer fund that insures policy guarantees, invests in clean energy and holds national climate accounts"
+series: "Climate Fiscal Policy Brief No. 3.2"
+version: "1.0"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+abstract: |
+  International rewards for climate policy fail because donors will not vote for large cash transfers and governments cannot borrow against promises. This brief proposes a Climate Investment Trust that holds capital instead of spending it. One pool takes second loss behind the guarantees that reward policy, earns fees by co-investing in clean energy, and holds national beneficiary accounts that countries pledge as collateral now and draw only after 2050. In a stylized calibration, $5 billion supports about $54 billion of guarantees, and each donor dollar delivers 2.7–10 dollars of interest savings rather than one. Growth needs fee income, not just a buffer's yield.
+keywords: [climate finance, guarantees, trust funds, sovereign incentives, multilateral development banks, buffer capital]
+bibliography: Brief-ClimateInvestmentTrust.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+format:
+  docx: default
+---
+
+*Climate Fiscal Policy Brief No. 3.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The regional fund design draws on joint work on two-stage clean energy finance with Jasper Zimmermann. A fuller treatment, with proofs and code, is in the working paper [@StrettonWP32].*
+
+# Executive summary {.unnumbered}
+
+*The problem.* Cutting emissions pays off globally, but each government bears its own costs, so the reward for national climate policy has to come from outside. Cash on the needed scale is politically impossible: a $100 per tonne global carbon tax would raise nearly $5 trillion a year and move about $1 trillion a year out of China alone. Grants that are possible are spent once. A guarantee saves the borrower the whole credit spread but costs the guarantor only its expected loss; that gap makes a large incentive affordable, if someone holds the capital behind it.
+
+*The proposal.* Set up a Climate Investment Trust. It holds capital and does not spend it. Donors fund it and hold the votes. The formal beneficiaries are the post-2050 populations of participating countries, through national beneficiary accounts. One pool does three jobs. It takes second loss on policy guarantees: the government takes first loss, the Trust second, and a AAA-rated entity stands behind both. It co-invests in clean energy construction and, through regional funds, holds the first-loss tranche of operating portfolios. And it credits its surplus to national accounts by performance, which countries can pledge as collateral now but draw only after 2050.
+
+*Why it works.* In a stylized calibration of 20 guaranteed programs, a buffer of 9.3 percent of exposure keeps the chance of exhausting it in a year to 1 percent. So $5 billion supports about $54 billion of guarantees. Discounted at the buffer's own yield, each donor dollar delivers 2.7 dollars of interest savings if the Trust loses 37 cents of every dollar it pays out, and 10 dollars if it loses 10 cents. A payout fund delivers one.
+
+*What it costs.* Holding is not free. A buffer that charges no guarantee fee shrinks, so in its insurance-only phase the Trust must charge about 0.8 percent a year on exposure, leaving 2.2 of a 3-point spread saving with the borrower. Growth comes from fees on private co-investment: a 25 percent share of a 10 percent return on $95 billion yields $2.4 billion a year. That doubles the Trust in about two years at first, but growth slows as the Trust gets bigger. The $4 billion of country stakes is borrowed through policy lending, so countries carry a cost of about $40 million a year that their accounts must repay.
+
+*What to do.* Donors and a multilateral development bank should launch the Trust in its insurance function first, behind the guarantee capacity proposed in Brief 3.1. They should publish the allocation and deduction rules, fix them by super-majority, and price first loss openly. Investment and regional funds should follow once the buffer has a record.
+
+# 1. Climate money is spent once
+
+Public climate money buys one project at a time and then is gone. A grant pays for one plant; a concessional loan is repaid slowly and lent again, but nothing built along the way makes the next deal cheaper. The reward for adopting climate policy arrives, if at all, after the spending it was meant to induce.
+
+The obvious cash instruments fail on their own arithmetic. A $100 per tonne global carbon tax would need about $1 trillion a year from China before any recycling [@StrettonTC]. A global subsidy at the same rate that cut emissions by a tenth would cost about $500 billion in its first year and, paid against counterfactual baselines, would reward governments for delay. A country that acts early forfeits the payment it would have got for acting late.
+
+A feebate between countries avoids both problems but meets a third. Countries that improve faster than the benchmark would receive; slower ones would pay; the transfers would net to zero [@CFPB12; @StrettonRPWT]. But sovereigns do not pay their peers. If the rebates sit in accounts that grow with performance and shrink with its reverse, a payment becomes a deduction from money the country has not yet received. The international feebate needs a trust to hold the pot.
+
+# 2. Separate funding, control and benefit
+
+A trust separates who pays, who decides and who benefits. In the Climate Investment Trust, donor countries pay in and hold the voting shares. A multilateral development bank manages the Trust. The formal beneficiaries are the post-2050 populations of participating countries, each through a national beneficiary account. A global account holds what no country has yet earned, and meets the first guarantee calls.
+
+Countries benefit long before 2050, because an account is an asset. A balance that cannot yet be drawn can still be pledged, which lowers the rate a country pays on its green borrowing.
+
+A deduction from an account is enforceable where a tax on a sovereign is not. The Trust credits accounts for policy kept and deducts for policy reversed. A payment to a government can be reversed by the next government; an account that grows when the country acts and shrinks when it retreats builds a constituency for persistence [@StrettonTC].
+
+Private capital enters on limited terms. Pension and sovereign wealth funds may co-invest through the Trust's investment function. They pay a fee of 25 percent of their investment returns to the Trust and vote only on investment, not on fees, insurance or allocation.
+
+# 3. One pool, three jobs
+
+**Second loss on policy guarantees.** A government that commits to a policy, such as an annual auction of guaranteed-price clean power contracts, gives a guarantee. Investors value it at the probability the state honors it. The Trust makes that probability matter less. The government takes first loss: it indemnifies the guarantor, as it does under existing multilateral guarantees. The Trust takes second loss if the government does not pay. A AAA-rated entity, a development bank or a highly rated sovereign, stands behind the Trust and is touched only if the buffer runs out. The investor gets the credit of the strongest party; the incentive to perform stays with the government. This is the buffer behind the guarantee capacity of Brief 3.1, in which a country's notional capitalized value caps the guarantees development banks will provide on its green borrowing [@CFPB31].
+
+**Investment.** The Trust, and the regional funds it seeds with regional development banks, co-invest in clean energy projects before financial close and sell after the plant is connected and selling. For portfolios of operating plants the vocabulary changes. A regional fund holds the first-loss tranche, the equity that absorbs portfolio losses before any debt does, beneath the senior bonds described in Brief 2.2 [@CFPB22].
+
+**Beneficiary accounts.** The Trust credits its surplus to national accounts by participation and performance. The same accounts can deliver the reward in sustainability-linked lending: a country that meets its indicators gains collateral or guarantee capacity rather than a few basis points [@CFPB33].
+
+The three jobs share one pool because capital and insurance are substitutes: a bank can hold capital against a loan or buy protection from someone who holds it, but someone has to hold the capital [@StrettonTC].
+
+# 4. Why holding beats spending
+
+A buffer supports exposure several times its own size because guarantee calls do not all come at once. In the stylized base case, the Trust stands behind 20 equal guaranteed programs. Each government has a 3 percent annual chance of failing to honor its first-loss indemnity. Calls are correlated (an asset correlation of 0.2 in a standard one-factor model [@Vasicek2002; @Gordy2003]). The Trust loses 37 cents of each dollar it pays out, the average creditor loss in sovereign restructurings over 1970–2010 [@CrucesTrebesch2013]. A buffer of 9.3 percent of exposure then keeps the chance of exhausting it in any year to 1 percent. That 1 percent is the chance the AAA backer is called. So $5 billion supports about $54 billion of guarantees.
+
+Each donor dollar held as a buffer delivers several dollars of incentive. If the guarantees save borrowers 3 percentage points a year, $54 billion of exposure saves them $1.6 billion a year. Paid as cash, $1.6 billion a year would exhaust $5 billion in about three years. Held as a buffer, the capital is consumed only by losses. Discounted at the buffer's own yield, the incentive per donor dollar equals the spread saved divided by the expected loss rate the Trust bears: 2.7 when the Trust loses 37 cents per dollar called, 10 when it loses 10 cents (Figure 1, panel A). The ratio exceeds one whenever the spread exceeds the Trust's expected loss. That happens when markets charge a risk premium, or when the Trust recovers more than market creditors do.
+
+![Panel A: present value of interest savings delivered per donor dollar, for a fund that pays incentives out and for a buffer fund that holds capital behind guarantees, at two loss rates on guarantee calls. Panel B: Trust capital over 25 years with $5 billion at launch, under three assumptions on private co-investment and guarantee fees (EL = expected loss). Stylized parameters as in Table 1, plus a 4 percent buffer yield and 0.5 percent running costs. Source: author's calculation, `2.Source/model.py`.](figures/fig1-buffer-vs-payout.png){width=100%}
+
+The buffer must sit in safe assets. Clean power equity loses value in the same crises that trigger guarantee calls, so the Trust starts as insurance only, with its capital in high-grade bonds, and adds investment later.
+
+# 5. Indicative scale
+
+The Trust grows without new donations only if its income beats its losses. A buffer earning 4 percent and charging no guarantee fee, at 10.8 times leverage, loses about 12 percent of its capital a year to expected calls and earns 3.5 percent net of costs. It shrinks. To hold steady in the insurance-only phase it must charge about 0.8 percent a year on exposure, 71 percent of expected loss. Who pays that fee, the borrower or a donor, is the price of second loss and a policy choice.
+
+Fee income from private co-investment drives growth, and the growth slows as the Trust gets larger. With $95 billion of private equity earning 10 percent and paying a 25 percent fee, the Trust earns $2.4 billion a year. It grows 39 percent in its first year, but the fee income stays fixed while the Trust grows. Capital reaches $18.5 billion after 10 years and levels off near $28 billion. With half of expected loss charged as a guarantee fee, it reaches $47 billion after 25 years. With only $10 billion of private co-investment, it slowly shrinks (Figure 1, panel B).
+
+| Assumption or result | Value | Basis |
+|---|---:|---|
+| Trust capital at launch | $5bn | $1bn donor grants plus $4bn country stakes [@StrettonTC] |
+| of which country stakes, borrowed through policy lending | $4bn | Carrying cost $40m a year at a 1-point gap between loan rate (5%) and buffer yield (4%), stylized |
+| Buffer needed, share of guarantee exposure | 9.3% | Model: 20 programs, 3% call probability, correlation 0.2, 37% loss, 1% exhaustion |
+| Guarantee exposure supported | $54bn | $5bn ÷ 9.3% |
+| Interest savings to borrowers | $1.6bn a year | 3-point spread, stylized |
+| Fee to hold the buffer steady, insurance only | 0.8% of exposure a year | Model |
+| Private co-investment; gross return; fee | $95bn; 10%; 25% | One set, chosen for this brief; stylized |
+| Fee income | $2.4bn a year | 25% × 10% × $95bn |
+| Trust capital after 10 years / long run (no guarantee fee) | $18.5bn / $28bn | Model |
+
+: Table 1. Indicative scale of the Climate Investment Trust. Every value except the launch capital is a stylized assumption or a model result. Source: author's calculation, `2.Source/model.py`.
+
+Earlier drafts used different numbers, and this brief settles them. The 2024 proposal and *Time and Chance* charge private investors about 25 percent of returns and assume a 10 percent return; a technical summary used a 10 percent fee and a 15 percent return [@StrettonCIT2024; @StrettonTC]. The fee income is similar either way: 2.5 and 1.5 percent of private equity a year. This brief uses 25 percent and 10 percent. Private investors then keep 7.5 percent, which caps the fee at what they will accept.
+
+The $4 billion of country stakes is debt. Countries finance their stakes through development policy loans, so each owes the loan and owns its account, and gains only if the account's yield, allocations and collateral value beat the loan rate. In the base case the carrying cost is about $40 million a year; the guarantees save $1.6 billion.
+
+Allocations from the Trust's profits are too small to pay a carbon price on their own. Earlier drafts sized the incentive at about $100 billion a year, 40 times the Trust's fee income. The large rewards come through the guarantees the buffer supports and through the zero-sum feebate between accounts. Account balances limit the feebate, because no deduction can exceed a balance. In a stylized power sector of ten countries, a $5 billion Trust can carry a feebate of about $8 per tonne. At $28 billion, it can carry about $47.
+
+# 6. Precedents show each piece works
+
+**The IMF's Resilience and Sustainability Trust** is the closest model of donor capital that is lent, not given. The IMF Executive Board approved it in April 2022 [@IMF2022RST]. Members with strong external positions channel SDRs into its loan, deposit and reserve accounts. Pledges reached SDR 35.8 billion ($48.9 billion) by July 2025 [@IMF_RST]. It lends at 20-year maturities with 10½ years' grace, and its structure keeps contributors' claims safe enough to count as reserve assets [@IMF_RSTFAQ]. The Climate Investment Trust differs because it insures and invests rather than lends, and because its accounts belong to beneficiaries.
+
+**The Tropical Forest Forever Facility** shows a junior-senior structure paying for a stock. Launched at COP30 in Belém in November 2025, it targets $125 billion: $25 billion of sponsor capital in a first-loss position and $100 billion of private capital above it. It invests in emerging-market bonds and pays forest countries from the spread, about $4 per hectare of standing forest a year, reduced for deforestation and degradation, with 20 percent reserved for Indigenous peoples and local communities. The World Bank is trustee and interim host. Sponsor pledges stood at $6.7 billion in late 2025 [@Barber2025TFFF]. It rewards a stock, as Brief 3.1 proposes, but pays out each year.
+
+**IFFIm** has, since 2006, issued bonds against binding long-term donor pledges to fund Gavi, borrowing against only part of the pledges and keeping the rest as a reserve [@IFFIm_About].
+
+**Hybrid capital and the G20 review** show that shareholders will let capital be stretched when the loss record allows. The 2022 G20 review of development banks' capital adequacy recommended revisiting risk appetite, counting callable capital and using hybrid capital [@G20CAF2022]. In May 2024 the IMF allowed members to channel up to SDR 15 billion (about $20 billion) into development bank hybrid capital; the African and Inter-American development banks expected to lend about four dollars per dollar received [@Plant2024]. The Trust applies the same logic outside the banks' balance sheets: second-loss capital that lets a AAA guarantor lend its rating without spending it.
+
+# 7. Three design questions decide whether it works
+
+**Governance.** A fund that absorbs losses on politically visible assets will be asked, one plausible request at a time, to absorb losses it should not. Allocation and deduction rules should be published and changeable only by super-majority. Every balance and every movement should be public. Trustees should be independent. Beneficiary countries should have a voice on rules and audit, but no vote on investments.
+
+**The price of second loss.** If the Trust charges less than the risk it absorbs, it subsidizes lenders who would have lent anyway, and its capital runs down faster than it induces investment. The guarantee fee should be explicit and published, so the subsidy is visible and can be judged by the policy it buys. The same applies to the regional funds' price of first loss on portfolios.
+
+**Recycling.** A fund that holds every position to maturity finances its portfolio once. A fund that sells seasoned operating assets and reinvests in construction recycles the same capital. Recycling needs a secondary market deep enough to absorb the sales, which the asset classes of Brief 2.2 are designed to create. The buffer itself is never recycled into projects.
+
+# 8. What to do
+
+Donor governments and a multilateral development bank should launch the Climate Investment Trust as a buffer fund for policy guarantees, with capital held in high-grade assets and a published second-loss fee. They should tie it to the guarantee capacity of Brief 3.1, so a country's notional capitalized value and the Trust's buffer stand behind the same guarantees. They should write the allocation rule before the first dollar arrives: a base allocation for joining, a feebate between accounts for performance, and deductions for reversal capped at the balance. Countries that borrow to fund their stakes should do so only where the guarantees they unlock are worth more than the loan's carrying cost. Private co-investment, the investment function and regional first-loss funds should follow once the buffer has a public loss record.
+
+# Related papers in this series {.unnumbered}
+
+- No. 3.1: notional capitalized value and guarantee capacity, which the Trust's buffer stands behind [@CFPB31].
+- No. 3.3: sustainability-linked sovereign lending, for which the Trust can be the reward channel [@CFPB33].
+- No. 2.2: two-stage finance and synthetic sovereign bonds, whose first-loss tranche the Trust's regional funds can hold [@CFPB22].
+- No. 1.2: feebates, the instrument the Trust's accounts let countries apply to each other [@CFPB12].
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
