@@ -26,7 +26,7 @@ Details for each item: `A Research Proposal/PhD-Application-Status.md`.
 
 ### Priority 3: paper upgrades
 
-- [ ] **1.1 Open Economy Carbon Pricing → paper standard** (Dirk asked for this first). Review: `1.1/5.Notes/Review-2026-10-29.md`. Verify all 41 references, fix H12 defects, turn Results 1–4 into propositions, decide on the consumption-tax appendix — A — 12 Nov
+- [ ] **1.1 Open Economy Carbon Pricing → paper standard** (Dirk asked for this first). Rebuild as the two-track architecture paper: `1.1/5.Notes/Plan-v2-TwoTrackArchitecture-2026-10-29.md` (decisions in its section 7). Review: `1.1/5.Notes/Review-2026-10-29.md`. Verify all 41 references, fix H12 defects, turn Results 1–4 into propositions, decide on the consumption-tax appendix — A — 12 Nov
 - [ ] Confirm which file is master for 4.1 and 1.4 (qmd vs docx, H13) — S — before upgrading them. (1.1: the qmd is master, per Stephen 29 Oct)
 - [ ] Draft concept paper 1: policy-equivalent carbon price — A — after 1.1
 

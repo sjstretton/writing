@@ -17,7 +17,7 @@ Order of work. The reason column says why each paper is where it is.
 
 | Rank | No. | Paper | Status | Target | Why this rank |
 |---|---|---|---|---|---|
-| 1 | 1.1 | Open Economy Carbon Pricing | draft | Journal (*Climate Policy*, policy analysis) + PhD writing sample | **Dirk asked for this one first.** Also the flagship idea, with the best literature base, and nearest to submission. References need verifying (status report §3). |
+| 1 | 1.1 | Open Economy Carbon Pricing: the two-track architecture (overarching paper for the series below) | upgrading | Journal (*Climate Policy*, research article) + PhD writing sample | **Dirk asked for this one first.** The overarching paper for the carbon-pricing series. Plan: `1.1/5.Notes/Plan-v2-TwoTrackArchitecture-2026-10-29.md` |
 | 2 | 4.1 | Policy-Equivalent Carbon Price and CES Energy Demand (TECP) | draft | Journal (*Energy Economics* / *Energy Policy*) | Most technically complete. Needs literature, sourced calibration and a country application. |
 | 3 | 2.1 | Climate Finance Intermediation for Clean Power | draft | WB working paper; 2,000-word cut as Oxford writing sample | Closest to proposal 1's topic. Needs citations. |
 | 4 | 3.1 | Notional Capitalised Value and Guarantees | idea | WB working paper | The core idea behind proposal 1, but has no draft yet. |
@@ -26,6 +26,17 @@ Order of work. The reason column says why each paper is where it is.
 | 7 | 1.3 | Iron, Steel, CBAM and Point-Source Carbon Pricing | draft (mismatched) | Decide: consultation note or paper | Title and content disagree (H3). Resolve before upgrading. |
 | 8 | 5.1 | Automated Excise-Fiscal Reports | draft (report) | WB working paper, cut from 24,800 words | Valuable but report-length. |
 | 9 | 4.2 | CPAT: Architecture, Recoding and Fiscal Application | notes | WB working paper | Background only; no master yet. |
+
+### The carbon-pricing series
+
+1.1 is the overarching paper. Four companions carry the detail:
+
+| | Companion | Where | Status |
+|---|---|---|---|
+| C1 | Turning EU VAT into a carbon consumption tax (proposed 1.6) | `1.1/3.BackgroundPapers/Background-CarbonConsumptionTax.qmd` | draft (8,900 words) |
+| C2 | Feebates and output-based rebating | 1.2 | draft |
+| C3 | Policy-equivalent carbon prices (TECP) | 4.1 | draft |
+| C4 | Updating CBAM: carbon price recognition | 1.3 | near-final consultation note |
 
 Not in the program: 3.2 (World Bank internal, confidential) and the `6.Additional` papers, unless Stephen promotes one.
 
