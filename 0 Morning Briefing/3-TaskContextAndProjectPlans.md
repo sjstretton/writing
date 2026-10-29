@@ -21,7 +21,7 @@ Last reviewed: Thu 29 Oct 2026, 11:55pm (Philippines). Open task points: 4,600.
 | T15 | Online shopping list | 100 | L | Q3 | Open | 0% | H_m1 | Where: online. Long shirts; waterproof jacket; clothes horse (Amazon); another pair of goggles; slippers and trainers (Updateable lists > Online) |
 | T16 | Taxes (medium priority): find what is due and by when | 200 | M | Q3 | Open | 0% | PR8 | Where: at a desk. Medium priority (decided 18 Oct). First step (15 min): list each tax due and its deadline; set Q from the earliest deadline (Updateable lists > Admin) |
 | T18 | Ask AI: presents for romantic prospects; what to do with excess books | 100 | L | Q3 | Open | 0% | PR6 | Where: ask AI, any time. Ask both in one chat: (1) a default list of presents for romantic prospects; (2) what to do with excess books (Updateable lists > Ask AI) |
-| T19 | Strategic priority: celebrate others, birthdays included | 100 | L | Q2 | Open | 0% | C_m1 | Where: phone. Put the key birthdays in the calendar with a reminder a week before |
+| T19 | Strategic priority: celebrate others, birthdays included | 100 | L | Q2 | Open | 0% | PR6 | Where: phone. Put the key birthdays in the calendar with a reminder a week before |
 | T24 | Warm up the programme: read the Energy GP papers | 200 | M | Q2 | Open | 0% | 3c_m1 | Where: at a desk or on the plane. This week, light: skim the Energy GP papers; note 3 lines on where CPAT could help |
 | T25 | Read Klaus's paper (maybe) | 100 | L | Q3 | Open | 0% | S_m1 | Where: anywhere, offline. Optional this week: read it; note one idea worth following up (links to parked P11) |
 | T26 | OECP paper proposal: improve it with AI | 200 | M | Q2 | Open | 0% | P_m1 | The paper for the work programme is Open Economy Carbon Pricing (OECP), for Climate Policy. Run AI over the proposal: tighten the question, contribution and method. Low priority, in parallel (the PhD first): this week and next, due the week of 9 Nov (Fri 13 Nov), as on Track 2. Other proposals later (T06, parked P10) |
@@ -67,7 +67,6 @@ Burndown: "Time used" is how much of the start-to-due window has passed. If "Don
 | P_m2 | PhD application submitted | Personal | 18 Oct 26 | 31 Oct 26 |  | Deadline Sat 31 Oct (confirmed); email Shrimali; list 3 referees |
 | P_m1 | Journal paper submitted | Personal | 18 Oct 26 | tbc |  | Paper: Open Economy Carbon Pricing, for the journal Climate Policy; note word limit and format; set a target date |
 | G_m1 | Girlfriend | Personal | 18 Oct 26 | tbc |  | Journal priorities; follow up; send messages |
-| C_m1 | Celebrate others: birthdays in the calendar | Personal | 18 Oct 26 | 31 Oct 26 | 0 | Add the other key birthdays |
 | C9_m1 | AI safety proposal delivered | Personal | 26 Oct 26 | 20 Nov 26 | 0 | Answer the outline's open questions by Fri 6 Nov (T56) |
 | B_m1 | Bike resolved (found or reported) | Personal | 15 Oct 26 | 6 Nov 26 | 50 | Mon 2 Nov 9am, back home: Metro Lost & Found |
 | H_m1 | Home sorted | Personal | 18 Oct 26 | tbc | 0 | One home task at a time |
@@ -221,7 +220,6 @@ The ones that keep slipping. Each next step takes 15 minutes or less.
 | B_m1 | Bike resolved (found or reported) | 1000 | L | - | Due 6 Nov | 50% | PR6 | Case number from Metro, or a police report |
 | H_m1 | Home sorted | 1000 | L | - | tbc | 0% | PR6 | Wires, clothes, stationery cupboards, printouts all done |
 | G_m1 | Girlfriend | 1000 | M | - | tbc | ? | PR6 | Journal my priorities; follow up with people I know; send messages (strategic priority) |
-| C_m1 | Celebrate others: birthdays in the calendar | 1000 | L | - | Due 31 Oct | 0% | PR6 | Key birthdays in the calendar with a reminder a week before (strategic priority) |
 
 ## Projects
 
@@ -232,7 +230,7 @@ The ones that keep slipping. Each next step takes 15 minutes or less.
 | PR3 | Other tools (Obj 3) | L | Mostly done | 3c_m1 | Excise Diagnostic and Tax and Macro-Fiscal Dashboard handed to Dirk (all 4 milestones done); follow-up 8-12 Mar; Energy GP tbc |
 | PR4 | Strategic positioning | M | Open | S_m1 | What I want to be known for, and who backs it. Feeds parked P10 (papers, strategy deck) and P11 (DAIS plan) |
 | PR5 | PhD and journal paper | H | Open | P_m1, P_m2, C9_m1 | My PhD applications (Oxford DPhil; then systemic AI safety) and a journal paper submission. Josh is chasing |
-| PR6 | Personal and home | L | Open | B_m1, H_m1, G_m1, C_m1 | Louise, bike, home, trip, relationship |
+| PR6 | Personal and home | L | Open | B_m1, H_m1, G_m1 | Louise, bike, home, trip, relationship |
 | PR7 | Wellbeing (daily points) | M | Daily | Tracker tab | Kriya: 10 x current streak (days). CPAP: 1 point per minute. Gym session: 100. Logged on the Tracker tab |
 | PR8 | Admin and contract | L | Open | E_m1 | Work programme goals; payment verification; charge code TF-CSF-LTS: AA-P508228-GPLG-TF0C8701; printer: try cvv9734tpkx94@hpeprint.com, else front desk |
 
