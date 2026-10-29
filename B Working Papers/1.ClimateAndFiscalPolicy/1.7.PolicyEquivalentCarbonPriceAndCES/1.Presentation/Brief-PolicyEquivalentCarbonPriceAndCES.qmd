@@ -8,7 +8,7 @@ author:
     note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
-  Countries cut emissions with taxes, subsidies, standards and mandates, yet standard metrics add up explicit prices per tonne. A clean-fuel standard or a revenue-neutral feebate scores zero, and a dollar on coal counts the same as a dollar on gasoline. This brief sets out the Total Effective Carbon Price: the single economy-wide carbon tax that would cut emissions by as much as the actual policy mix, with each instrument weighted by how strongly emissions respond. In a stylized economy it rates a mix at \$33–37 per tonne where explicit prices show \$21. Crediting, border recognition and country diagnostics can all use it.
+  Countries cut emissions with taxes, subsidies, standards and mandates, yet standard metrics add up explicit prices per tonne. A clean-fuel standard or a revenue-neutral feebate scores zero, and a dollar on coal counts the same as a dollar on gasoline. This brief sets out the Total Effective Carbon Price: the single economy-wide carbon tax that would cut emissions by as much as the actual policy mix, with each instrument weighted by how strongly emissions respond. In a stylized economy it rates a mix at about \$37 per tonne in the long run where explicit prices show \$21. Crediting, border recognition and country diagnostics can all use it.
 keywords: [carbon pricing, effective carbon price, carbon-price equivalent, non-price instruments, policy crediting, CBAM]
 bibliography: Brief-PolicyEquivalentCarbonPriceAndCES.bib
 csl: https://www.zotero.org/styles/chicago-author-date
@@ -103,7 +103,7 @@ where $e_f$ is the emission factor, $p_{fs}$ the delivered price, $s_{fs}$ the f
 
 : Stylized example: one policy mix, two measures (\$ per tonne of CO₂). The explicit-price metric is the emissions-weighted average explicit carbon price, as in effective-carbon-rate measures. TECP columns are first order and add up across instruments; emission cuts are from the full nonlinear model. {#tbl-example}
 
-**The TECP rates the mix at \$33 per tonne; the explicit-price metric says \$21.** The tax alone is worth \$28, not \$21. It leaves out transport, which holds 31 percent of emissions but only 6 percent of the abatement weight. The renewable subsidy adds \$3.7 through switching but loses \$0.4 through demand, because cheaper power raises consumption. The fuel standard's credit price, \$166 per tonne, is the price at which the standard just binds in the model. Both routes value it at \$1.2: a high price on a small, unresponsive base.
+**To first order the TECP rates the mix at \$33 per tonne; the explicit-price metric says \$21.** The tax alone is worth \$28, not \$21. It leaves out transport, which holds 31 percent of emissions but only 6 percent of the abatement weight. The renewable subsidy adds \$3.7 through switching but loses \$0.4 through demand, because cheaper power raises consumption. The fuel standard's credit price, \$166 per tonne, is the price at which the standard just binds in the model. Both routes value it at \$1.2: a high price on a small, unresponsive base.
 
 ![Explicit-price metric and TECP, by instrument (stylized economy). The TECP is split into the fuel-switching and demand margins; the subsidy's demand contribution is negative. Source: `figures/make_figures.py`.](figures/tecp_example.png){#fig-example width=100%}
 

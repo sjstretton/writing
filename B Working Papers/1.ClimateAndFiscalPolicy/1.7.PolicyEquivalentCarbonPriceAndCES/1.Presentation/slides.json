@@ -11,8 +11,8 @@
         "label": "explicit-price metric for a stylized mix of tax, subsidy and fuel standard"
       },
       {
-        "value": "$33–37",
-        "label": "the same mix measured by the emissions it cuts (first order to full model)"
+        "value": "$37",
+        "label": "the same mix measured by the emissions it cuts (long run; $33 on the first-order formula)"
       },
       {
         "value": "$166",
@@ -37,7 +37,7 @@
   "action": {
     "title": "Publish the TECP beside explicit prices",
     "results": [
-      "The mix is worth more than its headline price: $33–37 against $21, because the tax falls on responsive sectors.",
+      "The mix is worth more than its headline price: $37 against $21, because the tax falls on responsive sectors.",
       "It measures abatement, not cost: report it beside instruments' shadow prices.",
       "Data needed: an energy balance, fuel prices and published elasticities."
     ],
