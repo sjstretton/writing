@@ -49,6 +49,7 @@ Details for each item: `A Research Proposal/PhD-Application-Status.md`.
 
 ## Done
 
+- [x] 29 Oct 2026 — Section 1 reorganised: 1.6 created; `1B.OtherFiscalPolicy` holds 1.4 and 1.5; every series folder has `8.PreviousVersions` with v0.1/v0.2 labels, `3.RelatedPiecesAndLinks` and `RelatedWork.md`; series map in `1.ClimateAndFiscalPolicy/RelatedWork.md` — A
 - [x] 29 Oct 2026 — Template paper for 1.1 read (Keen, Parry and Roaf 2021); notes in `1.1/5.Notes/Review-2026-10-29.md` §6 — A
 - [x] 29 Oct 2026 — Proposal 1 cleaned: drafting text and appendices B–E removed; original kept in `A Research Proposal/PreviousVersions/` — A
 - [x] 29 Oct 2026 — "Today" tab added to the master plan sheet (short daily view) — A

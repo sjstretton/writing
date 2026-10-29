@@ -48,9 +48,9 @@ Follow these steps in order. A paper is not finished until it passes the checkli
 
 ## Files
 
-- Keep the existing paper folder layout: `1.Presentation`, `2.Source`, `3.BackgroundPapers`, `5.Notes`, `8.PreviousVersions`, `9.Archive`.
+- Keep the paper folder layout: `1.Presentation`, `2.Source`, `3.RelatedPiecesAndLinks` (older folders still say `3.BackgroundPapers`), `5.Notes`, `8.PreviousVersions`, `9.Archive`, plus `RelatedWork.md` for related pieces that live in other main folders. Convention: `B Working Papers/8.Scripts/Reference/_PaperFolderLayout.md`.
 - The `.qmd` file at the paper's root is the master unless its README says otherwise. Where qmd and docx disagree (status report H13), ask which is the master before editing.
-- Before a major rewrite, copy the current master into `8.PreviousVersions/` with the date: `<Name>-YYYY-MM-DD.qmd`.
+- Versions: the master carries `version:` in its YAML; older versions go in `8.PreviousVersions/` as `<Name>-v0.1.<ext>`, `<Name>-v0.2.<ext>`. Before a major rewrite, move the current master there under its version number and bump the master.
 - New papers start from `E Writing Standards/templates/`.
 
 ## Publishing (standing authorization)
