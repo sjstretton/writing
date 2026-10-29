@@ -138,7 +138,7 @@ Treasury microdata on 322,000 US families. Measured against consumption, with tr
 An ordered-probit meta-analysis of 53 studies (183 effects, 39 countries) on carbon pricing and fossil-fuel subsidy reform. Progressive outcomes are significantly more likely in lower-income countries and for transport policies. They are also more likely in studies that count indirect effects, demand adjustment or lifetime income.
 *Use in 1.2:* Counter-evidence to the paper's implicit premise that power-price rises are a binding regressive constraint in developing countries. The evidence says carbon pricing is often progressive there. The constraint is political salience, not incidence. The paper should say which it means.
 
-**Black2023**: Black, S., Liu, A. A., Parry, I. & Vernon, N. (2023). *IMF Fossil Fuel Subsidies Data: 2023 Update.* IMF WP 23/169. [Abstract]
+**Black2023**: Black, S., Liu, A., Parry, I. & Vernon-Lin, N. (2023). *IMF Fossil Fuel Subsidies Data: 2023 Update.* IMF WP 23/169. [Abstract]
 Global fossil-fuel subsidies were $7 trillion in 2022 (7.1% of GDP), and 18% of that was explicit. **80% of global coal consumption was priced below half its efficient level.** Full price reform would cut CO₂ about 43% below baseline in 2030 and raise 3.6% of global GDP.
 *Use in 1.2:* Current data for the paper's 2019-vintage claim that a $70/t tax "more than triples" coal prices. It replaces the outdated World Bank (2018) and IMF (2019) citations.
 
