@@ -1,0 +1,51 @@
+{
+  "series": "Climate Fiscal Policy Brief No. 1.6",
+  "title": "Carbon Consumption Tax",
+  "subtitle": "A carbon component in VAT and a forward obligation on energy suppliers",
+  "message": "The EU prices the carbon its plants emit but barely prices the carbon in what Europeans buy. Add a carbon component to VAT, imports included and exports zero-rated, while the value component falls; and oblige fuel suppliers, a decade ahead, to pay for the carbon they sell.",
+  "problem": {
+    "title": "Europe prices what it makes, not what it buys",
+    "stats": [
+      {
+        "value": "6",
+        "label": "import categories covered by CBAM: steel, aluminum, cement, fertilizers, hydrogen, electricity"
+      },
+      {
+        "value": "€0",
+        "label": "carbon price on the embodied carbon in most other goods, from machinery to clothing"
+      },
+      {
+        "value": "15%",
+        "label": "minimum EU standard VAT rate, charged on value whatever a good's carbon"
+      }
+    ],
+    "text": "The Emissions Trading System prices power and heavy industry, and CBAM extends that price to six import categories. Everything else Europeans buy carries its carbon unpriced, and much of it is emitted outside the EU. VAT already reaches every good, but it charges value, not carbon."
+  },
+  "mechanism": {
+    "title": "Shift VAT's base from value to carbon",
+    "image": "figures/fig1-effective-rates.png",
+    "imageWidth": 5.5,
+    "imageHeight": 3.3,
+    "caption": "Total VAT rate by embodied-carbon intensity on the illustrative path, 2027–2037.",
+    "points": [
+      "Value component falls 15% → 10%; carbon component rises €20/t a year to €200 in 2037.",
+      "A good at 0.25 kg CO₂ per euro pays 15% throughout; cleaner goods pay less, dirtier more.",
+      "Imports pay on generous, rebuttable defaults, the same for every origin.",
+      "Fuel suppliers face a legal obligation fixed ten years ahead."
+    ]
+  },
+  "action": {
+    "title": "Obligation now; legal basis for VAT next",
+    "results": [
+      "Imports and domestic goods pay alike: no leakage, no separate border adjustment.",
+      "Rebuttable defaults reward exporters who cut emissions.",
+      "Neutral only if the basket averages 0.25 kg per euro; otherwise the value component should fall by less.",
+      "The VAT part probably needs unanimity; the obligation does not."
+    ],
+    "todo": [
+      "Commission: obtain a legal opinion on the basis for the carbon component.",
+      "Propose the forward obligation now, as an ETS2 amendment with a price path to 2037.",
+      "Member states: build product-level default intensities and an automatic neutrality rule."
+    ]
+  }
+}
