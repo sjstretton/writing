@@ -1,0 +1,333 @@
+---
+title: "Codify Sustainability-Linked Sovereign Lending, Then Give It Scale"
+subtitle: "Standard indicators, verification and pricing, and why the reward must be bigger than an interest margin"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+version: "0.1"
+abstract: |
+  Sustainability-linked loans and bonds tie a government's interest rate to climate indicators, so they pay for national results rather than projects. They remain rare, bespoke and small: Uruguay's 2023 World Bank loan, the leading example, can save the country at most \$12.5 million. I propose codifying the instrument: standard indicators measured as outturns, baselines set by rule, verification from published data and a published pricing schedule. I show that a market bond whose coupon moves with results gives the government no expected transfer, and that a fixed coupon with a reward paid by a trusted intermediary delivers the same incentive more cheaply. An interest rebate is bounded by the interest bill, so such rewards are an order of magnitude smaller than the cost of major reforms. Making guarantee capacity the reward multiplies the incentive per dollar of funder cost about fivefold under stylized assumptions.
+keywords: [sustainability-linked loans, sustainability-linked bonds, sovereign debt, climate incentives, guarantees, results-based finance]
+jel: [F34, H63, H87, Q54, Q58]
+bibliography: SustainabilityLinkedLending.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+format:
+  docx: default
+---
+
+*Working paper, version 0.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No. 3.3 [@CFPB33].*[^coauthors]
+
+[^coauthors]: The fixed-coupon, third-party-reward design in Sections 3 and 4 (Sustainability-Linked Intermediated Debt Instruments, or SLIDIs) was developed jointly with Marcello Estevão and Nils Zimmermann [@EstevaoStrettonZimmermann2024], building on Estevão's earlier note on bonds with key performance indicators [@EstevaoKPIBonds] and on Estevão and Zimmermann's draft on trusted intermediaries [@EstevaoZimmermannTrusted]. The size analysis, the propositions and the link to guarantee capacity are new here, and any errors are mine. The paper uses only public documents to describe World Bank practice.
+
+# 1. Introduction
+
+Climate mitigation pays off globally while its costs fall on national governments, so the incentive for a government to adopt a costly climate policy must come partly from outside. Sustainability-linked debt is one of the few instruments that pays a government for national results rather than for individual projects. Its interest rate depends on key performance indicators (KPIs), measured outturns such as the emissions intensity of output or the area of native forest. In November 2023 the World Bank approved a \$350 million development policy loan to Uruguay whose interest rate falls by 50 basis points a year if the methane intensity of beef cattle falls 33 percent below its 1990 reference, and by 100 basis points a year at 36 percent, in each case one percentage point beyond Uruguay's own Paris pledge [@WorldBank2023Uruguay; @MEF2023SSLL]. The most Uruguay can save is \$12.5 million over fifteen years. Chile, Uruguay and Thailand have issued sovereign sustainability-linked bonds since 2022, with coupon steps of 2.5 to 15 basis points per target [@Chile2022SLB; @Uruguay2023Prospectus; @IFR2024Thailand].
+
+These instruments are rare, bespoke and small. Each deal invents its own indicators, baselines and step size. The evidence from the corporate market, which accounts for almost all of the \$227 billion of sustainability-linked bonds issued by early 2023 [@StewartUlHaq2023; @CBI2024SLB], is that targets are easy and investors price the label rather than the target [@KoelbelLambillon2023; @Feldhutter2024]. And the rewards are tiny relative to what climate policy costs. South Africa's Just Energy Transition Investment Plan identifies \$98 billion of financing needs over five years [@UK2022JETIP]; Uruguay's reward is worth about \$8 million in present value.
+
+This paper asks whether sustainability-linked sovereign lending can become a scalable incentive instrument, and how large its reward must be to change policy.
+
+The answer has three parts. First, codify it: a menu of standard indicators measured as outturns, baselines set by rule from the country's own Paris pledge, verification from published national data, and a pricing schedule that sets the reward per unit of outperformance in carbon-price-equivalent terms. Second, separate the investor's return from the government's incentive: investors hold a fixed coupon and a trusted intermediary pays the reward, the SLIDI design of @EstevaoStrettonZimmermann2024. Third, recognize that an interest margin is too small to matter for large reforms, and make guarantee capacity under the notional capitalized value [@StrettonWP31] or collateral in the Climate Investment Trust [@StrettonWP32] the prize for meeting the indicators.
+
+The paper makes four contributions. (1) It sets out what a codified sovereign sustainability-linked loan contains, with an indicator menu (Appendix A) drawn from instruments already in use. (2) It shows that in a competitive market a sustainability-linked bond gives the government no expected transfer: the step-down is priced into the issue yield, so the government buys a lottery on its own performance and pays a risk premium to hold it. A third-party reward on a fixed-coupon loan delivers the same incentive at lower cost (Proposition 2). The pricing literature has measured the label premium and the probability of hitting targets [@KoelbelLambillon2023; @Feldhutter2024] and derived conditions for incentive compatibility in corporate bonds [@Berrada2022]; it has not drawn this sovereign design conclusion. (3) It derives a hard bound: a reward paid as an interest rebate cannot exceed the present value of the interest bill, so to induce a reform with net cost $K$ the loan must exceed $K/[(q_1-q_0)\,i\,A]$, where $q_1 - q_0$ is the effect of the policy on the probability of meeting the target, $i$ the interest rate and $A$ an annuity factor (Proposition 3). For a stylized \$770 million coal reform, no plausible loan meets it. (4) It shows that delivering the reward as guarantee capacity multiplies the incentive per dollar of funder cost by the ratio of the spread saved to the guarantor's expected loss plus buffer cost, about five under stylized assumptions (Proposition 4).
+
+Section 2 reviews the market and the literature. Section 3 sets out the codified design. Section 4 gives the model and propositions. Section 5 applies them to Uruguay's loan and a stylized coal reform. Section 6 describes institutional delivery and the links to other routes. Section 7 takes the risks and the strongest objection, Section 8 the policy implications, and Section 9 concludes.
+
+# 2. Market evidence and literature
+
+## 2.1 Sovereign sustainability-linked debt, 2022–2024
+
+Four sovereign deals define the instrument, and they share a structure: an unrestricted borrowing whose price depends on national outturns. Table 1 summarizes them.
+
+| | Chile bond | Uruguay bond | Uruguay World Bank loan | Thailand bond |
+|---|---|---|---|---|
+| Date | March 2022 | October 2022 | Approved November 2023 | 2024 |
+| Size | \$2bn, 20 years | \$1.5bn, due 2034 (\$2.2bn after 2023 reopening) | \$350m, 15.5 years | Bt30bn (≈\$874m), 15.5 years |
+| KPIs | GHG emissions 95 MtCO₂e by 2030; 60% non-conventional renewable power by 2032 | GHG intensity of output vs 1990; native forest area vs 2012 | Methane intensity of beef cattle vs 1990 | GHG reduction; zero-emission vehicle registrations |
+| Step | +12.5 bp per missed target | ±15 bp per KPI from Oct 2027 | −50 bp/yr (2028–32), −100 bp/yr (2033–37), no step-up | ±2.5 bp |
+| Maximum reward to government | None (step-up only) | 30 bp a year from 2027 | \$12.5m in total | Small |
+| Who pays the reward | — | Bondholders | IBRD Fund for Innovative Global Public Goods Solutions | Bondholders |
+
+: Table 1. Sovereign sustainability-linked debt: the four leading deals. Sources: @Chile2022SLB; @Uruguay2022Framework; @Uruguay2023Prospectus; @MEF2023SSLL; @WorldBank2023Uruguay; @IFR2024Thailand.
+
+Uruguay's loan is the cleanest public example of a sovereign sustainability-linked loan, and its terms are published in detail. The Uruguay Ministry of Economy and Finance's briefing note sets them out [@MEF2023SSLL]. The KPI is methane from enteric fermentation and manure of beef cattle per unit of live weight, computed with the 2006 IPCC Guidelines as in Uruguay's national inventory, on a truncated five-year rolling average. The reference is the truncated average for 1987–1991. The latest official value at approval was a 28 percent reduction, for 2018. The lower target, 33 percent, is one point beyond the unconditional 32 percent in Uruguay's first Nationally Determined Contribution; the higher target, 36 percent, is one point beyond the 35 percent in its second. The United Nations Development Programme verifies the figures each year. The reward is capped at \$6.7 million for performance years 2028–2032 and \$5.8 million for 2033–2037, with one "buffer year" in 2038 that can recover a single missed year. The note presents the loan as a response to the World Bank Group's Evolution Roadmap, which called for "long-term performance-based incentive mechanisms, including interest buydowns" for global public goods [@MEF2023SSLL].
+
+Two features of the loan matter for what follows. It is step-down only: missing the target returns the loan to standard terms rather than raising the rate. And the reward is funded by a third party, a dedicated fund at the World Bank, not by the lender's other borrowers or by bondholders. Both are steps toward the design proposed here.
+
+## 2.2 The corporate market and its critics
+
+The sustainability-linked bond market grew fast and then stalled. Cumulative issuance of sustainability-linked bonds reached \$227 billion by the end of the first quarter of 2023, and new issuance in that quarter was 17 percent below a year earlier [@StewartUlHaq2023]. The International Capital Market Association's Sustainability-Linked Bond Principles, last updated in June 2024, are the market's voluntary standard [@ICMA2024SLBP]. They ask issuers to disclose how they selected KPIs, calibrated targets and set the bond's financial characteristics, and to report and verify. They do not say which KPIs, which targets or what step size.
+
+The step size has no economic basis. The Climate Bonds Initiative finds that coupon step-ups appear in 58 percent of sustainability-linked bonds, with an average of 24.8 basis points per target, and that the sustainability credentials of many bonds have been weak [@CBI2024SLB]. World Bank staff call the 25 basis point norm "arbitrary" and note that loopholes such as late target dates and call options let issuers avoid penalties [@StewartUlHaq2023].
+
+Pricing studies find that investors pay for the label and that targets are easy. @KoelbelLambillon2023 compare each sustainability-linked bond with a conventional bond from the same issuer and find a yield about 9 basis points lower at issue, a premium that shrank over time and that on average exceeds the maximum penalty the issuer would pay for missing its target. The premium is not clearly related to the size of the step-up; it is larger for an issuer's first bond. @Feldhutter2024 find a label premium of 1–2 basis points, estimate the average probability of missing a target at 14–39 percent, and find that prices depend strongly on the size of the potential penalty, with no evidence of mispricing. The green bond literature finds a similar small label premium, about 2 basis points [@Zerbib2019]. @Berrada2022 model sustainability-linked bonds and derive the conditions under which they are incentive-compatible for the issuer.
+
+## 2.3 Sovereign design proposals
+
+The sovereign literature argues that the instrument suits governments because a government's KPIs can be national. @GiraldezFontana2022 set out the case for sovereign sustainability-linked bonds tied to Paris commitments. The OECD identifies six constraints on scaling the market in developing countries and the roles donors can play [@OECD2024SLB]. @StewartUlHaq2023 propose a matrix for judging whether targets are both feasible and ambitious, and argue that step-downs suit sovereigns better than step-ups.
+
+The closest design to this paper is SLIDIs [@EstevaoStrettonZimmermann2024]. It starts from the observation that variable coupons repel investors and proposes two models. In the first, a government issues a fixed-coupon bond tied to KPIs, and a development bank or donor trust fund pays a rebate at maturity if the KPIs are met. In the second, recommended, model, a trusted intermediary backed by a coalition of advanced economies issues fixed-coupon bonds at a low rate, on-lends at a higher fixed rate as sustainability-linked loans, and refunds part of the interest when the KPIs are met. Development agencies monitor the KPIs and give technical help. Estevão's earlier note proposed that meeting the KPIs trigger a further concessional loan, either within the life of the bond or as a precondition for issuing it [@EstevaoKPIBonds]. Estevão and Zimmermann proposed that a missed KPI trigger a surcharge of 1–2 percent of the bond's value, paid into a fund that a development partner spends on getting the country back on track, rather than to bondholders [@EstevaoZimmermannTrusted].
+
+## 2.4 Other routes to a sovereign incentive
+
+Sustainability-linked lending is one of several ways the international system can reward national climate policy, and the series this paper belongs to compares them. Policy crediting pays per tonne cut by a policy, with the cut measured as a carbon-price equivalent, the uniform carbon price that would cut emissions by as much [@CFPB11; @CFPB17]. Conditional de-risking offers guarantees and payment intermediaries for a country's clean power pipeline in return for reform [@CFPB21]. The notional capitalized value credits a country with a climate balance that sets its guarantee capacity [@CFPB31], and the Climate Investment Trust holds the capital behind those guarantees and national beneficiary accounts [@CFPB32]. Climate clubs reward members with trade terms rather than money [@Nordhaus2015].
+
+## 2.5 The gap
+
+The literature describes the instrument and its pricing but leaves three gaps. No one has said what a standard sovereign instrument should contain so that it can be repeated cheaply. No one has shown, for sovereigns, why a market-priced step-down is a poor way to deliver an incentive. And no one has compared the size of the reward with the cost of the policies it is meant to induce. This paper fills all three and proposes a route to scale.
+
+# 3. Codifying the instrument
+
+A codified instrument is a contract written once and used many times: an indicator menu, a baseline rule, a verification rule, a timing rule and a pricing schedule. Each borrowing then specifies only which indicators apply and how much debt is linked. This section sets out each element and the choices it makes.
+
+## 3.1 Indicators measured as outturns
+
+Indicators should measure physical or fiscal outturns that national statistics already report, not process steps. "Methane per kilogram of beef" is an outturn; "methane strategy adopted" is a process step. Outturns have three advantages. They are hard to satisfy on paper. They leave the government free to choose the cheapest policy, so the instrument does not substitute the lender's judgment for the government's. And they connect to tonnes, which lets the reward be priced (Section 3.5). Process indicators have one advantage, speed: a law can be passed this year, while an emissions outturn appears years later. Section 3.4 deals with that trade-off.
+
+Appendix A gives a menu of eleven outturn indicators in six sectors, each with a published source and an example in use. The economy-wide indicator, greenhouse gas emissions per unit of output, is in both Chile's and Uruguay's bonds. Sector indicators (power emissions intensity, the non-fossil share of generation, methane intensity of livestock, native forest area, the zero-emission share of new vehicles) are in Chile's, Uruguay's and Thailand's instruments. Two fiscal indicators measure the policy itself: the Total Effective Carbon Price [@CFPB17] and the gap between domestic and reference fuel prices. A utility cost-recovery ratio, the share of a power utility's costs its tariffs cover, measures the precondition for guaranteeing clean power contracts [@CFPB21].
+
+One indicator class deserves a premium: legally durable commitments. A carbon tax legislated for one year is a gesture; one with a statutory floor trajectory and contractual counterparties is a commitment [@StrettonTimeAndChance]. A codified menu can reward durability by paying more for indicators that stay above target for several consecutive years, as Uruguay's loan does by paying in each of ten years rather than once.
+
+## 3.2 Baselines set by rule
+
+The baseline decides whether a target is ambitious, and an issuer negotiating its own baseline will choose a soft one. Uruguay's loan shows the rule worth copying: the target is the country's own unconditional Paris pledge plus a fixed margin of outperformance, one percentage point [@MEF2023SSLL]. That rule anchors the target to a commitment the government has already made in public, and the margin makes the reward pay only for doing more. A codified menu should fix the margin by indicator and publish it.
+
+Anchoring to the pledge has a cost: countries with weak pledges face weak targets. Two corrections are possible. The menu can set a floor on the target from peer performance, for example the median rate of improvement among countries at similar income. Or the pricing schedule can pay less per unit for outperforming a weak pledge. The first is simpler.
+
+## 3.3 Verification from published data
+
+Verification should check data the country already publishes, not commission new surveys. Uruguay's loan uses the same methodology as its reports to the United Nations Framework Convention on Climate Change, smoothed over five years to remove weather noise, and reviewed by the United Nations Development Programme under the Convention's guide to peer review of national inventories [@MEF2023SSLL]. A codified instrument should name one verifier per indicator class and one methodology, so that verification is a repeated service rather than a bespoke contract.
+
+## 3.4 Timing
+
+Outturn indicators arrive late, and that lag is the instrument's main design problem. Uruguay's methane KPI for observation year 2025 is computed from data for 2022–2026, reported in 2027 and verified by May 2028; the reward for 2034 is paid in 2037 [@MEF2023SSLL]. A government that bears the cost of a reform in 2024 sees the first reward four years later and the last thirteen years later. If the government discounts the future at a political rate above the market rate, the incentive shrinks further (Proposition 1, Corollary 2).
+
+Three design choices shorten the lag. First, reward early achievement: Uruguay's loan makes the higher step available a year early [@MEF2023SSLL]. Second, combine one fast indicator of policy adoption with slow outturn indicators, as Estevão's "Model 2" does by making the KPI a precondition for disbursement [@EstevaoKPIBonds]. Third, pay the reward in a form the government can use immediately: an increase in guarantee capacity or a credit to a beneficiary account that can be pledged now, rather than a rebate on interest due in a decade (Section 6).
+
+## 3.5 A pricing schedule in carbon-price-equivalent terms
+
+The reward per unit of outperformance should be published, not negotiated. The natural unit is the carbon-price equivalent. For an indicator $k$, let $\varepsilon_k$ be the tonnes of CO₂-equivalent a year implied by one unit of outperformance (for example, one percentage point of methane intensity times the sector's output), and let $p$ be a notional price per tonne. The schedule pays $r_k = p\,\varepsilon_k$ per unit per year, capped. This does three things. It makes rewards comparable across indicators and countries, so a funder can allocate a budget. It puts sustainability-linked lending on the same scale as policy crediting [@CFPB11; @CFPB17] and the notional capitalized value [@CFPB31], which both price tonnes. And it reveals how small current rewards are: Section 5 shows that a 100 basis point step-down on \$1 billion pays less than \$1 per tonne for a stylized coal reform.
+
+The schedule need not use one price for every indicator. Standard weights for policy changes, analogous to the standardized risk weights of bank capital rules, could reflect how durable and how certain each indicator's emission effect is [@StrettonTimeAndChance]. What matters is that the weights are published before deals are struck.
+
+## 3.6 Separating the investor from the incentive
+
+The final element decides who pays the reward. In a sustainability-linked bond, bondholders pay a step-down and receive a step-up. In the SLIDI design, bondholders receive a fixed coupon and a third party pays the reward [@EstevaoStrettonZimmermann2024]. Section 4 shows why the second is better for a sovereign. The practical structure is the trusted-intermediary model: an intermediary backed by guarantees from advanced economies issues fixed-coupon bonds at a low rate, on-lends to governments as sustainability-linked loans at a higher fixed rate, and refunds part of the interest already paid when verified KPIs are met. The spread pays the intermediary's costs. Missed targets trigger a surcharge paid into a corrective fund that development partners spend on technical help, rather than a higher coupon to bondholders [@EstevaoZimmermannTrusted].
+
+# 4. A model of the reward
+
+This section asks three questions in turn: how large a reward must be to change a policy, who should pay it, and how large it can be in each form. Proofs are in Appendix B.
+
+## 4.1 Setup
+
+A government chooses whether to adopt a climate policy, $a \in \{0, 1\}$. The policy has net domestic cost $K > 0$ in present value: its fiscal and political cost less its domestic benefits, including local air quality and lower fuel imports. A reward of present value $V$ is paid if a verified KPI meets its target. The target is met with probability $q_1$ if the policy is adopted and $q_0 < q_1$ if not; $q_0$ captures luck, trend and the softness of the target. The government is risk-neutral over the reward and maximizes expected net benefit.
+
+The reward can take three forms. An *interest rebate* of $\Delta_t$ per year on debt outstanding $D_t$ gives $V = \sum_t \delta^t \Delta_t D_t$, where $\delta = 1/(1+r)$ is the discount factor. *Guarantee capacity* $G$ for $T$ years on borrowing that would otherwise pay a spread $s$ above the guaranteed rate gives $V = u\,s\,G\,A_T$, where $u \le 1$ is the share of capacity the government uses and $A_T = \sum_{t=1}^{T}\delta^t$ is the annuity factor. A *credit to a pledgeable account* is analyzed like guarantee capacity, with collateral in place of the guarantee.
+
+## 4.2 How large must the reward be?
+
+**Proposition 1 (minimum reward).** The government adopts the policy if and only if
+$$
+V \ge V^* \equiv \frac{K}{q_1 - q_0}.
+$$
+The funder's expected payout at $V^*$ is $q_1 V^* = K\,q_1/(q_1 - q_0)$, which exceeds $K$ whenever $q_0 > 0$.
+
+The intuition is that a reward paid whatever the government does buys nothing. Only the change in the probability of payment, $q_1 - q_0$, motivates. Two corollaries follow.
+
+*Corollary 1 (soft targets are expensive).* The funder's cost per dollar of policy cost is $q_1/(q_1 - q_0)$. With $q_1 = 0.9$, it is 1.0 when the target is unreachable without the policy ($q_0 = 0$), 1.5 when $q_0 = 0.3$, and 3.0 when $q_0 = 0.6$. @Feldhutter2024 put the probability of missing corporate targets at 14–39 percent, which suggests that $q_0$ is often high. Anchoring targets above the country's own pledge (Section 3.2) lowers $q_0$.
+
+*Corollary 2 (late rewards must be larger).* If the reward is paid $\tau$ years after the cost and the government discounts at a political rate $\rho$ above the market rate $r$, the required reward in market present value rises by the factor $[(1+\rho)/(1+r)]^{\tau}$. With $\rho - r = 5$ percentage points and $\tau = 9$, the midpoint of Uruguay's performance period measured from approval, the factor is about 1.5.
+
+## 4.3 Who should pay the reward?
+
+A sustainability-linked bond sold to investors and a fixed-coupon loan with a third-party rebate can give the government the same incentive: the same swing $\Delta$ per year in what it pays between failing and meeting the target. They differ in who pays. With the target met with probability $q$, the swing makes the government's annual payment uncertain, with standard deviation $\sigma = \Delta\sqrt{q(1-q)}$. Let $\theta \ge 0$ be the premium per unit of $\sigma$ that investors require to hold this KPI risk: a premium for complexity, illiquidity and the poor fit of variable coupons with fund mandates [@EstevaoStrettonZimmermann2024]. Let $\ell \ge 0$ be the label premium, the yield investors forgo to hold a labelled bond whatever its terms [@KoelbelLambillon2023; @Feldhutter2024].
+
+**Proposition 2 (third-party rewards beat market step-downs).** Suppose investors price the bond competitively and know $q$.
+
+(i) Under a market sustainability-linked bond with swing $\Delta$, the government's expected net transfer from the KPI terms is $-\theta\sigma$ per year. The expected step is priced into the issue yield, so the government pays for its own reward and pays $\theta\sigma$ on top for the volatility. The label premium $\ell$ is the same whatever the government does, so it gives no incentive.
+
+(ii) Under a fixed-coupon loan whose reward $\Delta$ is paid by a third party that charges $\theta_I$ per unit of $\sigma$, the government's expected net transfer is $q\Delta$ per year and the third party's cost is $q\Delta + \theta_I\sigma$.
+
+(iii) For the same incentive $\Delta$, the government is better off under (ii) by $q\Delta + \theta\sigma$ a year, and society bears KPI risk more cheaply, by $(\theta - \theta_I)\sigma$ a year, whenever $\theta_I < \theta$.
+
+The condition $\theta_I < \theta$ holds when the third party holds KPI risk across many countries whose outturns are imperfectly correlated, and when its mandate is to bear it. A market step-down is a bet a government places on itself, at odds set by investors who charge for the inconvenience. A step-up is worse in one further way: the money from a missed target goes to bondholders who did nothing to earn it and does nothing to put the country back on track [@EstevaoZimmermannTrusted].
+
+Part (i) explains a puzzle in the evidence. If investors price targets correctly [@Feldhutter2024], a sustainability-linked bond transfers nothing to an issuer that expects to meet its targets; the issuer's gain comes from the label, which @KoelbelLambillon2023 find is larger than the expected penalty. That makes the label, not the target, the reason to issue, and a label rewards issuance rather than results.
+
+## 4.4 How large can each form of reward be?
+
+**Proposition 3 (the interest bound).** An interest rebate cannot exceed the interest bill: if the loan pays interest at rate $i$, then $\Delta_t \le i$ and
+$$
+V \le i \sum_t \delta^t D_t.
+$$
+For a bullet loan $D$ over $T$ years, a rebate can induce a policy of net cost $K$ only if
+$$
+D \ge \frac{K}{(q_1 - q_0)\, i\, A_T}.
+$$
+With a step-down of $\Delta < i$, the required loan rises in proportion to $i/\Delta$.
+
+The bound says that interest rebates scale with debt, not with ambition. A government that wants a larger reward must borrow more, and the reward can never exceed what the loan costs. Section 5 shows the bound binding for a stylized reform.
+
+**Proposition 4 (leverage of guarantee capacity).** Let a guarantor hold buffer capital $b$ per unit of exposure, at an annual opportunity cost $r_b$, and expect an annual default probability $\pi$ with loss given default $L$ on the guaranteed debt. Guarantee capacity $G$ used at rate $u$ gives the government $V = u\,s\,G\,A_T$ and costs the guarantor $C_G = (u\,\pi L + b\,r_b)\,G\,A_T$ if the buffer is held against capacity. The incentive per dollar of guarantor cost is
+$$
+\lambda = \frac{u\,s}{u\,\pi L + b\,r_b},
+$$
+and guarantee capacity delivers more incentive per dollar than a rebate or cash, for which $\lambda = 1$, if and only if $u\,s > u\,\pi L + b\,r_b$.
+
+The condition holds when spreads are large relative to expected losses. Corporate yield spreads are several times what default losses alone would justify, especially for higher-rated debt [@HuangHuang2012], and the excess is a risk and liquidity premium that a diversified, long-horizon guarantor need not charge. The condition fails for a government already near the guarantor's own credit, where $s$ is small, and for a government in distress, where $\pi$ is high. It also fails if capacity goes unused, because the buffer is held against capacity whether or not it is drawn.
+
+*Corollary 3.* With the reward set at $V^*$, the funder's cost falls from $q_1 V^*$ under a rebate to $q_1 V^*/\lambda$ under guarantee capacity.
+
+# 5. Two applications
+
+## 5.1 Uruguay's loan: a signal, not a payment
+
+Uruguay's maximum reward can be reproduced from the published amortization schedule, and it is small. The loan repays \$15.2 million of principal every six months from April 2028 to April 2039 [@MEF2023SSLL]. Applying 50 basis points to the average balance in each of 2028–2032 and 100 basis points in 2033–2037 gives \$6.8 million and \$6.1 million, within \$0.4 million of the published caps of \$6.7 million and \$5.8 million; the difference reflects the timing of interest payments. The total cap of \$12.5 million is 3.6 percent of the principal. Discounted to 2023 at 5 percent, the maximum reward is worth about \$8 million (Table 2).
+
+| Year | Average balance (\$m) | Step-down (bp) | Maximum reward (\$m) |
+|---|---:|---:|---:|
+| 2028 | 335 | 50 | 1.7 |
+| 2030 | 274 | 50 | 1.4 |
+| 2032 | 213 | 50 | 1.1 |
+| 2033 | 183 | 100 | 1.8 |
+| 2035 | 122 | 100 | 1.2 |
+| 2037 | 61 | 100 | 0.6 |
+| **Total, 2028–2037** | | | **12.9 (cap 12.5)** |
+| **Present value at 5%, 2023** | | | **8.4** |
+
+: Table 2. Uruguay's 2023 World Bank loan: the reward is small because the balance falls as the step rises. Selected years shown. Source: terms from @MEF2023SSLL; author's calculation in `2.Source/model.py`.
+
+The loan's design is good and its scale is a signal. The rebate rises to 100 basis points just as the balance falls by half, so the larger step applies to a smaller loan. The reward's value is spread across a decade that starts four years after approval. For Uruguay's beef sector, \$12.5 million is not a payment that could change farm economics on its own. It is what the Bank itself presented it as: an incentive mechanism for global public goods, in line with the Evolution Roadmap, and a template [@MEF2023SSLL]. The question this paper asks is how to turn the template into a payment.
+
+## 5.2 A stylized coal-to-clean reform
+
+Consider a reform that retires 2 GW of coal-fired capacity ten years early and replaces it with procured clean power. The numbers are stylized and chosen for round arithmetic. The plants run 6,000 hours a year at 0.95 tCO₂ per megawatt-hour, so retirement avoids 11.4 MtCO₂ a year. The government's net cost (compensation to plant owners, transition support for coal regions and a higher tariff while the replacement is built, less domestic benefits) is \$100 million a year for ten years, \$772 million in present value at 5 percent, or about \$9 per tonne avoided. Take $q_1 - q_0 = 1$, the most favorable case for every instrument, so the required reward equals $K$.
+
+Figure 1 and Table 3 compare the rewards. A step-down of 100 basis points on a \$1 billion loan for ten years is worth \$77 million, a tenth of the cost and less than \$1 per tonne avoided. Matching the cost at that step needs a \$10 billion loan. Even waiving all interest at 6 percent on \$1 billion for ten years is worth \$463 million, short of the cost; by Proposition 3 the loan would have to exceed \$1.7 billion and be interest-free. Policy crediting at \$10 per tonne, the route of series 1, would be worth \$880 million, enough to pay for the reform, at a cost in cash of the same amount [@CFPB11].
+
+![Figure 1. Interest-rate rewards are an order of magnitude too small; guarantee capacity is not. Present value at 5 percent over ten years, US\$ million, log scale. Solid bars: value to the government. Hatched bars: cost to the funder. The Uruguay row uses the loan's published terms; the other rows are stylized (see Table 3). Source: author's calculations, `2.Source/model.py`.](2.Source/figures/fig1-size-problem.png){width=100%}
+
+| Reward | Value to government (\$m PV) | Cost to funder (\$m PV) | Incentive per \$ of cost |
+|---|---:|---:|---:|
+| Uruguay loan, maximum step-down (actual) | 8 | 8 | 1.0 |
+| Step-down of 100 bp on \$1bn for 10 years | 77 | 77 | 1.0 |
+| All interest waived on \$1bn at 6% for 10 years | 463 | 463 | 1.0 |
+| Policy crediting at \$10/tCO₂ for 10 years | 880 | 880 | 1.0 |
+| Guarantee capacity of \$3.3bn, 300 bp saved, 10 years | 772 | 154 | 5.0 |
+| *Stylized reform cost* | *772* | | |
+
+: Table 3. The size problem in numbers (stylized except the first row). Guarantee: annual default probability 1 percent, loss given default 40 percent, buffer 10 percent of capacity at an opportunity cost of 2 percent a year, full use of capacity. Source: author's calculations, `2.Source/model.py`.
+
+Guarantee capacity reaches the reform's cost at a fifth of the funder's outlay. Capacity of \$3.3 billion on borrowing that saves 300 basis points is worth \$772 million to the government. Its cost to the guarantor is \$154 million: \$103 million of expected loss and \$51 million for holding the buffer. Each dollar of guarantor cost buys five dollars of incentive.
+
+The leverage depends on the spread saved and the default risk, and it disappears for distressed borrowers. Figure 2 shows $\lambda$ across default probabilities from 0.25 to 3 percent a year and spreads of 150, 300 and 450 basis points. At 300 basis points it falls from about 10 to about 2. At 150 basis points and a 3 percent default probability it is close to 1, and guarantee capacity offers no advantage over cash.
+
+![Figure 2. Guarantee capacity multiplies the incentive per dollar most for countries with high spreads and low default risk. Incentive value per dollar of guarantor cost, by annual default probability on the guaranteed debt; loss given default 40 percent, buffer 10 percent of exposure at 2 percent a year, full use. Stylized. Source: author's calculations, `2.Source/make_wp_figures.py`.](2.Source/figures/fig2-leverage.png){width=100%}
+
+These numbers are illustrative, and three of them deserve scrutiny. A 300 basis point saving assumes that a guarantee from a highly rated guarantor removes most of the spread on a sub-investment-grade sovereign's green borrowing, which holds only if the guarantee is credible and covers the risk investors price. A 1 percent annual default probability is plausible for a mid-rated sovereign but low for one near distress. And full use of capacity assumes a pipeline of eligible borrowing; a government with no projects to finance gains little from guarantees.
+
+# 6. Institutional delivery
+
+## 6.1 The trusted intermediary
+
+The intermediary in the SLIDI design is a small, specialized development bank [@EstevaoStrettonZimmermann2024]. It borrows by issuing fixed-coupon bonds backed by guarantees from a coalition of advanced economies, lends to governments as codified sustainability-linked loans at a higher fixed rate, and pays interest refunds when verified KPIs are met. The spread covers its operating costs and expected losses; the coalition's guarantees cover the tail. Development agencies monitor the indicators and help governments meet them. The intermediary could be a financial intermediary fund managed by a multilateral development bank or a separately capitalized vehicle.
+
+The refunds need a funder, and they should come from outside the lender's existing envelope. Uruguay's rebate is paid by a dedicated World Bank fund rather than by other borrowers [@MEF2023SSLL]. That is the right principle. If a government undertakes a difficult reform and receives climate finance that is offset by less concessional finance elsewhere, it has been paid nothing, and the incentive loses its credibility for everyone watching [@StrettonTimeAndChance].
+
+## 6.2 From rebate to guarantee capacity and collateral
+
+The step from a codified loan to scale is to let the same verified indicators earn a larger prize. Under the notional capitalized value, a country's climate balance, credited for carbon stocks and low emissions and debited for business-as-usual emissions, sets its guarantee capacity on eligible green borrowing [@StrettonWP31]. Meeting a KPI from the codified menu would add to the balance at the published price. Under the Climate Investment Trust, meeting a KPI would credit the country's beneficiary account, which can be pledged as collateral now and withdrawn after 2050 [@StrettonWP32]. In both, the reward arrives in a form the government can use immediately, which also addresses the timing problem of Section 3.4.
+
+The two routes fit together in one contract. The sustainability-linked loan supplies the agreed indicator, the baseline, verification and a price. The guarantee supplies the size. One verification report can trigger both the interest refund and the increase in guarantee capacity. The refund then serves as a visible, annual signal, and the guarantee capacity as the incentive.
+
+## 6.3 Relation to policy crediting and conditional de-risking
+
+Sustainability-linked lending, policy crediting and conditional de-risking reward the same thing in different currencies. Policy crediting pays cash per tonne cut by a policy, measured as a carbon-price equivalent [@CFPB11; @CFPB17]. It is the most direct and the most expensive, because every dollar of incentive is a dollar of donor cash, and it faces the counterfactual problem of measuring tonnes against what would have happened. Sustainability-linked lending pays in interest and measures outturns against a pledge-based target, which sidesteps part of the counterfactual problem at the cost of rewarding some outcomes the policy did not cause (a high $q_0$). Conditional de-risking pays in guarantees for a specific clean power pipeline in return for specific reforms [@CFPB21]. The codified pricing schedule of Section 3.5 connects them: it states every reward per tonne-equivalent, so a funder can compare a dollar spent through each.
+
+The guarantee capacity earned under Section 6.2 can stand behind the structures of series 2. A country that meets its indicators gains capacity that multilateral development banks can use for the payment intermediary of @CFPB21, so the incentive and the de-risking draw on one balance sheet.
+
+# 7. Risks and objections
+
+## 7.1 The strongest objection: guarantees move risk, they do not remove it
+
+The strongest objection is that guarantee capacity is cheap only because its cost is hidden in the tail. Expected loss is an average; in a correlated global shock several guaranteed sovereigns default together and the guarantor's loss can be many times the expected loss. A reward that looks five times cheaper than cash may be no cheaper once the guarantor holds capital against the tail.
+
+The objection is right about the tail and wrong about the comparison. The buffer cost in Proposition 4 is the price of holding capital against the tail, and the leverage remains above one unless the buffer must be very large or very expensive. With the stylized parameters, $\lambda$ stays above one as long as the buffer cost $b\,r_b$ is below 260 basis points of capacity a year, thirteen times the assumed 20. The Climate Investment Trust exists to hold that buffer [@CFPB32]. The government's own exposure does not disappear either: it becomes smaller, contingent and contracted, because a called guarantee is a debt owed to the guarantor [@CFPB21]. What the objection does establish is that the leverage figure is only as good as the default and correlation assumptions behind it, and those should be stress-tested before any guarantor commits.
+
+## 7.2 Weak targets and greenwashing
+
+A codified menu can still carry soft targets if the margin over the pledge is small or the pledge is weak. Corollary 1 shows the cost: with $q_0 = 0.6$, the funder pays three dollars for each dollar of policy cost it induces. The defenses are a peer-based floor on targets (Section 3.2), a published margin by indicator, and verification by a named third party from the national inventory.
+
+## 7.3 Indicators that move for other reasons
+
+Outturn indicators move with weather, commodity prices and growth as well as policy. Uruguay's KPI uses a truncated five-year average to smooth weather [@MEF2023SSLL], and the methane intensity indicator divides by output so that a smaller herd does not count as success. Every indicator in the menu should be normalized and smoothed in the same way. Residual noise raises $q_0$ for some countries and lowers it for others; across a portfolio of countries it is partly diversified, which is another reason to pay rewards through an intermediary.
+
+## 7.4 Accounting and fiscal treatment
+
+A KPI-linked rate creates contingent flows that accounting rules may treat differently from fixed-rate debt. For the borrower, the debt is recorded at its contractual terms and the rebate as a contingent reduction in interest; for the lender, the rebate is a cost that must be funded, which is why Uruguay's is pre-funded by a dedicated fund. Guarantee capacity creates a contingent liability for the guarantor and, through counter-indemnity, for the government. These treatments should be settled once, at the level of the codified instrument, rather than deal by deal.
+
+## 7.5 Moral hazard and reversal
+
+A government could meet its indicators, collect guarantee capacity and then reverse the policy. Rewards paid annually for continued performance, as in Uruguay's loan, limit this: the rebate stops when the indicator falls back. Guarantee capacity can be made to decline with the indicator, as the notional capitalized value is debited for emissions [@StrettonWP31]. Capacity already used cannot be withdrawn without hurting investors, so the intermediary should release it gradually.
+
+## 7.6 Fairness
+
+Rewarding outperformance of pledges rewards countries that pledged little and then did more over countries that pledged much. Peer-based floors reduce this, and the pricing schedule can pay for the level of an indicator as well as for outperformance. Guarantee capacity is worth most to countries that borrow; low-income countries with little market access gain more from beneficiary-account credits than from guarantees.
+
+# 8. Policy implications
+
+Multilateral development banks should publish a codified sovereign sustainability-linked loan: an indicator menu measured as outturns, baselines set at the country's own Paris pledge plus a published margin with a peer-based floor, one verifier and one methodology per indicator class, and a pricing schedule stated per tonne of carbon-price equivalent. The World Bank's Uruguay loan is the template; the task is to remove the bespoke parts so that the tenth loan costs a fraction of the first. The cost is the design work and the funding for rebates; the risk is that a standard menu fits some countries badly, which a menu of eleven indicators with country choice limits.
+
+Advanced economies and development banks should set up a trusted intermediary that issues fixed-coupon bonds and lends as codified sustainability-linked loans with interest refunds, rather than encourage more market sustainability-linked bonds with variable coupons. Missed targets should fund corrective technical help, not bondholders. The recommendation fails if the intermediary cannot borrow more cheaply than its borrowers, which requires credible guarantees from its sponsors.
+
+Donors should make guarantee capacity under the notional capitalized value, or credits to beneficiary accounts in the Climate Investment Trust, the main reward for meeting the indicators, and fund the buffer that stands behind it rather than the rebate. Under the stylized assumptions each dollar of buffer cost buys about five dollars of incentive, against one for one under a rebate or policy crediting in cash. The recommendation fails for countries in or near debt distress, where default risk erodes the leverage, and for countries with no pipeline of green borrowing, which should receive account credits instead.
+
+Rewards must be additional. A rebate or guarantee that displaces other concessional finance pays the government nothing and teaches every other government that reform is not rewarded.
+
+# 9. Conclusion
+
+Sustainability-linked sovereign lending works as a contract and fails as an incentive. Uruguay's loan shows that a government, a development bank and a verifier can agree an outturn indicator, a baseline anchored to the Paris pledge and a schedule of rewards. But an interest rebate is bounded by the interest bill, and at the scale of current deals it is worth a few million dollars against reform costs in the hundreds of millions or more. Codifying the instrument makes it cheap to repeat; separating the investor from the incentive makes it cheaper to deliver; and making guarantee capacity the reward gives it size at a fraction of the cost of cash.
+
+The main limitation is the calibration: the leverage of guarantee capacity rests on stylized spreads, default probabilities and buffer costs, and the policy cost of the coal example is illustrative. The next step is to calibrate Proposition 4 for named countries, with their market spreads and default histories, and to price the indicator menu in tonnes for two or three countries that might pilot a codified loan.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+# Appendix A: A starter indicator menu {.unnumbered}
+
+Each indicator is an outturn, has a published source, and has a baseline rule. "Pledge" means the country's unconditional target in its Nationally Determined Contribution for the relevant year.
+
+| Sector | Indicator | Unit | Published source | Baseline and target rule | Example in use |
+|---|---|---|---|---|---|
+| Economy-wide | Gross GHG emissions per unit of real GDP | tCO₂e per \$ | National inventory under the Paris Agreement | Pledge path plus margin | Uruguay bond [@Uruguay2023Prospectus] |
+| Economy-wide | Total GHG emissions | MtCO₂e | National inventory | Pledge level | Chile bond [@Chile2022SLB] |
+| Power | Emissions per unit of generation | tCO₂/MWh | National energy statistics | Pledge path or peer median improvement | Proposed |
+| Power | Non-fossil share of generation | % | National energy statistics | Published national target plus margin | Chile bond [@Chile2022SLB] |
+| Power | Utility cost-recovery ratio | % of costs covered by tariffs | Utility audited accounts | Scheduled path to 100% | Proposed; precondition in @CFPB21 |
+| Agriculture | Methane per unit of livestock output | kg CH₄ per kg live weight | National inventory, IPCC 2006 | Pledge plus 1 point, five-year truncated average | Uruguay loan [@MEF2023SSLL] |
+| Forests | Native forest area | hectares, % of base year | National forest monitoring | No loss; gain for step-down | Uruguay bond [@Uruguay2023Prospectus] |
+| Forests | Gross tree cover loss | hectares a year | National forest monitoring | Below historical average | Proposed |
+| Transport | Zero-emission share of new registrations | % | Vehicle registry | National target | Thailand bond [@IFR2024Thailand] |
+| Fiscal | Total Effective Carbon Price | \$ per tCO₂ | Tax and price data | Rising path, legislated | Proposed [@CFPB17] |
+| Fiscal | Gap between retail and reference fuel prices | % | Published price data | Declining path | Proposed |
+
+: Table A1. Starter indicator menu. Rows marked "Proposed" are not yet used in a sovereign sustainability-linked instrument to the author's knowledge.
+
+# Appendix B: Proofs {.unnumbered}
+
+**Proposition 1.** The government's expected net benefit is $q_1 V - K$ if it adopts and $q_0 V$ if not. It adopts if and only if $q_1 V - K \ge q_0 V$, that is, $V \ge K/(q_1 - q_0)$. The funder's expected payout when the government adopts is $q_1 V$; at $V = V^*$ this is $K q_1/(q_1 - q_0)$, which exceeds $K$ if and only if $q_0 > 0$. Corollary 1 is the ratio $q_1 V^*/K$. Corollary 2: a reward of market present value $V$ paid $\tau$ years after the cost has political present value $V[(1+r)/(1+\rho)]^\tau$; setting this equal to $V^*$ gives the factor. $\square$
+
+**Proposition 2.** (i) Let the coupon be $c_F$ if the target is missed and $c_F - \Delta$ if it is met. The expected coupon is $c_F - q\Delta$ and its standard deviation is $\sigma = \Delta\sqrt{q(1-q)}$. A competitive investor requires $c_F - q\Delta = y - \ell + \theta\sigma$, where $y$ is the yield on the issuer's conventional bond. The government's expected payment is therefore $y - \ell + \theta\sigma$: relative to a conventional bond, the KPI terms cost $\theta\sigma$ in expectation and the label saves $\ell$, which does not depend on the policy. The same holds for any split of the swing between step-up and step-down. (ii) Under a fixed coupon $y$ and a third-party reward $\Delta$ on success, the government's expected payment is $y - q\Delta$. A third party requiring $\theta_I$ per unit of $\sigma$ bears expected cost $q\Delta + \theta_I\sigma$. (iii) Subtracting, the government's expected payment is lower under (ii) by $q\Delta + \theta\sigma$, ignoring the label, which either design can carry. The resource cost of bearing KPI risk is $\theta\sigma$ under (i) and $\theta_I\sigma$ under (ii). $\square$
+
+**Proposition 3.** A rebate cannot make interest negative, as Uruguay's loan states explicitly [@MEF2023SSLL], so $\Delta_t \le i$. Then $V = \sum_t \delta^t \Delta_t D_t \le i \sum_t \delta^t D_t$. For a bullet loan, $\sum_t \delta^t D_t = D A_T$. Combining with Proposition 1, the policy can be induced only if $i D A_T \ge K/(q_1 - q_0)$. With a constant step $\Delta$, replace $i$ by $\Delta$. $\square$
+
+**Proposition 4.** The government saves $s$ per dollar of guaranteed borrowing per year, on $uG$ of borrowing, for $T$ years: $V = u s G A_T$. The guarantor expects to lose $\pi L$ per dollar of drawn exposure per year and pays $r_b$ on capital $b$ per dollar of capacity: $C_G = (u\pi L + b r_b) G A_T$. The ratio is $\lambda = us/(u\pi L + b r_b)$, which exceeds 1 if and only if $us > u\pi L + br_b$. Corollary 3 divides the funder's cost $q_1 V^*$ by $\lambda$. The threshold in Section 7.1: with $u = 1$, $s = 300$ bp and $\pi L = 40$ bp, $\lambda > 1$ if and only if $b r_b < 260$ bp. $\square$
+
+# Appendix C: Calibration, code and open items {.unnumbered}
+
+All numbers in Section 5 are produced by `2.Source/model.py` (run `python3 model.py`), and the figures by `2.Source/make_wp_figures.py`. Public inputs are the Uruguay loan's terms [@MEF2023SSLL]. All other parameters are stylized: a 5 percent discount rate; a 2 GW coal retirement running 6,000 hours a year at 0.95 tCO₂/MWh; a net policy cost of \$100 million a year for ten years; a 6 percent loan rate; a 300 basis point spread saved; a 1 percent annual default probability and 40 percent loss given default; a buffer of 10 percent of capacity at 2 percent a year; and full use of capacity.
+
+Open items for the next version: (1) the Chile bond's step-up terms are taken from the Ministry of Finance's report page and should be checked against the prospectus; (2) Thailand's KPI targets should be checked against the Public Debt Management Office's framework; (3) the leverage calibration should use market spreads and default data for named countries; (4) the guarantee parameters should be made consistent with the companion paper on the notional capitalized value [@StrettonWP31] once its calibration is fixed.
