@@ -30,10 +30,10 @@ EMAIL = "sjstretton@gmail.com"
 SERIES = Path("B Working Papers/1.ClimateAndFiscalPolicy")
 BIBS = {
     "1.1.OpenEconomyCarbonPricing": ["OpenEconomyCarbonPricing.bib", "1.Presentation/Brief-OpenEconomyCarbonPricing.bib"],
-    "1.2.FeebatesAndOutputBasedRebating": ["1.Presentation/Brief-FeebatesAndOutputBasedRebating.bib"],
-    "1.3.IronSteelCBAM": ["1.Presentation/Brief-IronSteelCBAM.bib"],
-    "1.6.CarbonConsumptionTax": ["1.Presentation/Brief-CarbonConsumptionTax.bib"],
-    "1.7.PolicyEquivalentCarbonPriceAndCES": ["1.Presentation/Brief-PolicyEquivalentCarbonPriceAndCES.bib"],
+    "1.2.FeebatesAndOutputBasedRebating": ["FeebatesAndOutputBasedRebating.bib", "1.Presentation/Brief-FeebatesAndOutputBasedRebating.bib"],
+    "1.3.IronSteelCBAM": ["IronSteelCBAM.bib", "1.Presentation/Brief-IronSteelCBAM.bib"],
+    "1.6.CarbonConsumptionTax": ["CarbonConsumptionTax.bib", "1.Presentation/Brief-CarbonConsumptionTax.bib"],
+    "1.7.PolicyEquivalentCarbonPriceAndCES": ["PolicyEquivalentCarbonPriceAndCES.bib", "1.Presentation/Brief-PolicyEquivalentCarbonPriceAndCES.bib"],
 }
 # Key works the working papers still need (from the 1.1 review and the literature plan).
 SUPPLEMENT = {

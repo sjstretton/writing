@@ -17,13 +17,13 @@ Order of work. The reason column says why each paper is where it is.
 
 | Rank | No. | Paper | Status | Target | Why this rank |
 |---|---|---|---|---|---|
-| 1 | 1.1 | Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies (overarching paper; v0.2; v0.1 was "Open Economy Carbon Pricing") | upgrading: short version is now the master | Journal (*Climate Policy*, research article) + PhD writing sample | **Dirk asked for this one first.** The overarching paper for the carbon-pricing series. Plan: `1.1/5.Notes/Plan-v2-TwoTrackArchitecture-2026-10-29.md` |
-| 2 | 1.7 | The Total Effective Carbon Price (was 4.1) | draft v0.2 | Journal (*Energy Economics* / *Energy Policy*) | Most technically complete. Needs literature, sourced calibration and a country application. |
+| 1 | 1.1 | Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies | working paper v0.3 + brief + deck (29 Oct) | Journal (*Climate Policy*, research article) + PhD writing sample | **Dirk asked for this one first.** Overarching paper for the series. Next: Stephen's read |
+| 2 | 1.7 | Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price | working paper v0.3 + brief + deck (29 Oct) | Journal (*Energy Economics* / *Energy Policy*) | Corrected CES derivation; exact and second-order TECP; non-price instruments; Monte Carlo band. Needs a real-country application |
 | 3 | 2.1 | Climate Finance Intermediation for Clean Power | draft | WB working paper; 2,000-word cut as Oxford writing sample | Closest to proposal 1's topic. Needs citations. |
 | 4 | 3.1 | Notional Capitalised Value and Guarantees | idea | WB working paper | The core idea behind proposal 1, but has no draft yet. |
-| 5 | 1.2 | Feebates and Output-Based Rebating | draft | WB working paper | Full draft; messy conversion (H15). Underpins 1.1. |
+| 5 | 1.2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | working paper v0.3 + brief + deck (29 Oct) | WB working paper / journal | Market-design propositions; India, Indonesia, South Africa cases |
 | 6 | 2.2 | The Climate Investment Trust | draft | WB working paper | Good policy draft without citations. |
-| 7 | 1.3 | Iron, Steel, CBAM and Point-Source Carbon Pricing | draft (mismatched) | Decide: consultation note or paper | Title and content disagree (H3). Resolve before upgrading. |
+| 7 | 1.3 | Credit the Price Signal, Not the Payment (CBAM recognition and scrap shuffling) | working paper v0.3 + brief + deck (29 Oct) | Policy journal / Commission consultation | Shuffling model, liability formula, calibration to EU default values |
 | 8 | 5.1 | Automated Excise-Fiscal Reports | draft (report) | WB working paper, cut from 24,800 words | Valuable but report-length. |
 | 9 | 4.2 | CPAT: Architecture, Recoding and Fiscal Application | notes | WB working paper | Background only; no master yet. |
 
@@ -33,10 +33,10 @@ Order of work. The reason column says why each paper is where it is.
 
 | | Companion | Where | Status |
 |---|---|---|---|
-| C1 | Carbon Consumption Tax: A Destination-Based Carbon Price Through VAT | 1.6 | draft v0.1 (8,900 words) |
-| C2 | Feebates and output-based rebating | 1.2 | draft |
-| C3 | The Total Effective Carbon Price (policy-equivalent carbon prices) | 1.7 (was 4.1) | draft v0.2 |
-| C4 | Updating CBAM: carbon price recognition and scrap shuffling | 1.3 | near-final consultation note |
+| C1 | Carbon Consumption Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers | 1.6 | working paper v0.2 (29 Oct) |
+| C2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | 1.2 | working paper v0.3 (29 Oct) |
+| C3 | Measure Carbon Pricing by the Emissions It Cuts (TECP) | 1.7 | working paper v0.3 (29 Oct) |
+| C4 | Credit the Price Signal, Not the Payment (CBAM) | 1.3 | working paper v0.3 (29 Oct) |
 
 Not in the program: 3.2 (World Bank internal, confidential) and the `6.Additional` papers, unless Stephen promotes one.
 
