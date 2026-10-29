@@ -4,7 +4,7 @@ Text copy of the **Context** tab of the master Google Sheet (the master). Rules:
 
 The printable tracker (`Me-Printable-Tracker.docx`, in this folder) is built from this file: run `python3 Scripts/update.py build`. The Context, Plan and list tabs of the Sheet are kept in step by `Scripts/update.py` (`NORMS.md`, "Keeping everything consistent").
 
-Last reviewed: Thu 29 Oct 2026, 11:55pm (Philippines). Open task points: 4,600.
+Last reviewed: Thu 29 Oct 2026, 11:55pm (Philippines). Open task points: 5,300.
 
 **Points.** Task 100 (quick) or 200. Milestone 1000 when complete, +4000 if done in its due week, +500 if done before it. Kriya 10 x current streak (days), daily. CPAP 1 per minute. Gym session 100. Daily points live on the Tracker tab.
 **Key.** Energy needed: H/M/L. Q: Q1 Do now, Q2 Schedule, Q3 Batch or delegate, Q4 Not now. %: progress on the milestone (estimate).
@@ -48,6 +48,7 @@ Last reviewed: Thu 29 Oct 2026, 11:55pm (Philippines). Open task points: 4,600.
 | T60 | PhD: add the information sheet from Google Drive to the repo | 100 | L | Q1 | Open | 0% | P_m1 | Where: phone or desk; AI can do it. Fri 30 Oct, first thing (5 min): find the PhD information sheet on Google Drive and have AI copy it into `C Research Proposal/` (as markdown), so the application checklist, deadlines and documents are in one place. Goes with T13 |
 | T61 | Read the 1.1 working paper (two-track carbon pricing) for Dirk | 200 | M | Q2 | Open | 0% | P_m1 | Where: at a desk. After the PhD application: read `B Working Papers/1.ClimateAndFiscalPolicy/1.1.OpenEconomyCarbonPricing/OpenEconomyCarbonPricing.docx` (v0.3) and its brief; mark changes; then send to Dirk and pick the journal (Climate Policy) |
 | T62 | Carbon-pricing papers: follow-ups (batch) | 100 | L | Q3 | Open | 0% | P_m1 | Where: at a desk, one sitting. (1) TECP workbook: rebuild or retire (it has the old (1−w) error); (2) AI clears the remaining VERIFY citations (about 45; EU texts need EUR-Lex from your PC); (3) manual downloads, 125 papers, list in `B Working Papers/8.Scripts/Reference/Literature-Downloads.md`; (4) trim the 1.3 and 1.7 abstracts if the journal needs under 200 words |
+| P12 | Year reviews: update Samuel; Hari; feedback to Dave | 100 | L | Q3 | Open | 0% | PR8 | Where: phone or email. Unparked 29 Oct. First (5 min): send Samuel a short update (Task scripts > Samuel update). Then a quick review of the year to Hari; feedback to Dave |
 
 ## Strategic priorities
 
@@ -185,6 +186,7 @@ What to do, word for word. Same as the Task scripts section of the Updateable li
 | Metro Lost & Found | 202-962-1195, Mon-Fri 9-5. Have: where/when last seen, make, model, colour, serial, photo. If nothing: Transit Police 202-962-2121. |
 | eTravel form | etravel.gov.ph, within 72 h before landing. |
 | Out-of-office | Tue: away 21 Oct to about 1 Nov; contact Kacper for CPAT. |
+| Samuel update | Hi Samuel, a quick update. The Python work is finished, six weeks early. Five carbon-pricing working papers are updated and going live on my website. Next is CPAT-LTS, my main goal for November: I'm agreeing a limited scope with Dirk and Sebastian next week to close it by end November. Happy to talk it through if useful. |
 | Rest | Nothing else today. Rest counts as a done day. |
 
 ## Avoided projects (next step only)
@@ -198,7 +200,7 @@ The ones that keep slipping. Each next step takes 15 minutes or less.
 | Strategic positioning papers (T06) | Gather all the papers into one pile |
 | Taxes (T16) | List each tax due and its deadline |
 | Girlfriend (T08) | Write three lines in the journal: what I want in a partner |
-| Year reviews (P12) | Draft three lines to Hari and Samuel |
+| Year reviews (P12) | Send Samuel the short update (Task scripts) |
 | DAIS plan (P11) | Open the CV and update the current role |
 
 ## Milestones (1000 points each)
@@ -249,7 +251,6 @@ The ones that keep slipping. Each next step takes 15 minutes or less.
 | P09 | Process emissions and ETS: get the xls | 200 | M | Q4 | Parked |  |  | 1) Project ETS products 2) emissions by emission factor 3) revenues from tax or ETS |
 | P10 | Papers on website; strategy deck | 200 | M | Q4 | Parked |  | PR4 | Sort papers on website; PPT of strategy |
 | P11 | DAIS plan: move teams or jobs | 200 | M | Q4 | Parked |  | PR4 | Update CV; finalise pitch deck; reach out to Stephane, Klaus, Jasmine and Energy contacts |
-| P12 | Year reviews | 100 | L | Q4 | Parked |  |  | Quick review of the year to Hari and Samuel; feedback to Dave; finish CPAT-LTS |
 | P13 | Specialist areas | 0 | L | Q4 | Reference |  |  | Tax: wealth tax, theory of change. International: destination basis |
 
 ## Recently completed (last 14 days)
