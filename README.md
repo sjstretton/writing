@@ -11,6 +11,7 @@ Since 29 October 2026 the repo combines the former planning repo (`sjstretton/Pl
 | See today's plan and next step | `1 Day and Week Plans/1-Me-NextStep.txt`, or the **Dashboard** and **Today** tabs of the [master Google Sheet](https://docs.google.com/spreadsheets/d/1WEHemG3x0kJ3yk-u1RcSheqYsX0T2aAXmiba9veaQag/edit) |
 | See every task, in every repo | `1 Day and Week Plans/3-TaskContextAndProjectPlans.md` |
 | See the strategic priorities | `A Writing Instructions/STRATEGY.md` (PhDs, papers, specialisms) and `2 Strategic Plans/` (work plan, master plan) |
+| See my specialisms and the order for nailing them down | `SPECIALISMS.md` |
 | See which papers come next | `A Writing Instructions/PAPERS.md` and `A Writing Instructions/TODO.md` |
 | Work as an AI agent | `AGENTS.md` (this folder), then the part's own `AGENTS.md` |
 

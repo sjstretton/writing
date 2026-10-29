@@ -44,7 +44,7 @@ Details for each item: `C Research Proposal/PhD-Application-Status.md`.
 
 ## Decisions needed from Stephen
 
-- [ ] Confirm the specialisms and positioning paragraph in `STRATEGY.md`.
+- [ ] Confirm the specialisms and positioning paragraph in `STRATEGY.md`, and the three decisions in the executive summary of `SPECIALISMS.md` (through-line, AI-risk angle, politics essays off the profile).
 - [ ] Confirm the rankings in `PAPERS.md` and the positions P1–P8.
 - [ ] Spelling: US for the carbon-pricing series (decided 29 Oct). Other papers: convert, or keep UK?
 - [ ] Add 2–3 pieces you are proud of to `E Writing Standards/exemplars.md` ("Stephen's own").

@@ -243,7 +243,7 @@ The ones that keep slipping. Each next step takes 15 minutes or less.
 | P10 | Papers on website; strategy deck | 200 | M | Q4 | Parked |  | PR4 | Sort papers on website; PPT of strategy |
 | P11 | DAIS plan: move teams or jobs | 200 | M | Q4 | Parked |  | PR4 | Update CV; finalise pitch deck; reach out to Stephane, Klaus, Jasmine and Energy contacts |
 | P12 | Year reviews | 100 | L | Q4 | Parked |  |  | Quick review of the year to Hari and Samuel; feedback to Dave; finish CPAT-LTS |
-| P13 | Specialist areas | 0 | L | Q4 | Reference |  |  | Tax: wealth tax, theory of change. International: destination basis |
+| P13 | Specialist areas | 0 | L | Q4 | Reference |  |  | Tax: wealth tax, theory of change. International: destination basis. Full map with abstracts and sequence: `SPECIALISMS.md` (29 Oct) |
 
 ## Recently completed (last 14 days)
 
