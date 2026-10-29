@@ -1,9 +1,11 @@
-"""Copy the working-paper series (sections 1, 2 and 3) to the website's papers/ folder.
+"""Copy the working-paper series (sections 1 to 5) to the website's papers/ folder.
 
 Stable permalinks, one per paper and form, overwritten on each publish:
     papers/<PaperName>.docx         the academic working paper (current version)
     papers/Brief-<PaperName>.docx   the Climate Fiscal Policy Brief (current version)
     papers/Slides-<PaperName>.pptx  the four-slide deck, where it exists
+
+Section 5 papers are working paper and slides only (no brief); missing briefs are reported and skipped.
 
 Run from B Working Papers/7.Website:  python publish_series.py
 Then: quarto render, and deploy.bat (on Stephen's machine) to upload _site.
@@ -23,10 +25,25 @@ PAPERS = {
     "3.SovereignIncentives/3.1.NotionalCapitalisedValueAndGuarantees": "NotionalCapitalisedValueAndGuarantees",
     "3.SovereignIncentives/3.2.ClimateInvestmentTrust": "ClimateInvestmentTrust",
     "3.SovereignIncentives/3.3.SustainabilityLinkedLending": "SustainabilityLinkedLending",
+    "4.Modelling/4.1.CPATMitigationMethods": "CPATMitigationMethods",
+    "4.Modelling/4.2.CPATAIImplementation": "CPATAIImplementation",
+    "4.Modelling/4.3.CPATValidation": "CPATValidation",
+    "4.Modelling/4.4.ElasticityValidation": "ElasticityValidation",
+    "4.Modelling/4.5.CBAMPolicyTool": "CBAMPolicyTool",
+    "4.Modelling/4.6.PublicInvestment": "PublicInvestment",
+    "4.Modelling/4.7.ActivityModelling": "ActivityModelling",
+    "5.Analytics/5.1.ExciseFiscalDiagnostic": "ExciseFiscalDiagnostic",
+    "5.Analytics/5.2.MacroFiscalEnergyScenarioTool": "MacroFiscalEnergyScenarioTool",
+    "5.Analytics/5.3.FiscalIndicatorsDashboard": "FiscalIndicatorsDashboard",
 }
 OVERVIEWS = {
     "2.FinanceAndRisk/2.0.OverviewMobilisingPrivateCapital.docx": "OverviewMobilisingPrivateCapital.docx",
     "3.SovereignIncentives/3.0.OverviewSovereignIncentives.docx": "OverviewSovereignIncentives.docx",
+    "4.Modelling/4.0.OverviewModelling.docx": "OverviewModelling.docx",
+    "5.Analytics/5.0.OverviewAnalytics.docx": "OverviewAnalytics.docx",
+    # Section theme decks (sections 4 and 5; the section 2 and 3 theme decks are copied by hand)
+    "4.Modelling/1.Presentation/Slides-Modelling.pptx": "Slides-Modelling.pptx",
+    "5.Analytics/1.Presentation/Slides-Analytics.pptx": "Slides-Analytics.pptx",
 }
 out = Path("papers")
 out.mkdir(exist_ok=True)

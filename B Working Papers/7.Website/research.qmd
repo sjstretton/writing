@@ -102,22 +102,90 @@ Sustainability-linked loans and bonds tie a government's interest rate to climat
 [Policy brief (Climate Fiscal Policy Brief No. 3.3) →](papers/Brief-SustainabilityLinkedLending.docx) · [Working paper →](papers/SustainabilityLinkedLending.docx) · [Slides →](papers/Slides-SustainabilityLinkedLending.pptx)
 
 
-# 4. Modelling
+# 4. Modelling: models a finance ministry can audit
 
-Modelling that changes policy needs a model a finance ministry can audit. (The companion requirement, comparing instruments by what they do to emissions rather than by their headline rates, is paper 1.7 in the carbon-pricing series above.)
+Ministries set carbon prices and sequence subsidy reforms with the help of the Climate Policy Assessment Tool (CPAT), built by the World Bank and the IMF for more than 180 countries, but until 2026 almost nobody could check its numbers. This series is the paper-length companion to the open CPAT-AI project. It states the model's method on a few pages, describes how it was rebuilt twice and what the rebuild found (228 bugs, 24 of them high priority), gathers its validation, checks its price elasticities against the evidence, and sets out three extensions ministries ask for. The rule throughout: a model a ministry can use must be small enough to state, built twice, tested against data and other models, and extended only where policy needs it. Country results are illustrative tool output, not official estimates. [Section overview →](papers/OverviewModelling.docx) · [Series slides →](papers/Slides-Modelling.pptx)
 
-### 4.2 The Climate Policy Assessment Tool: Architecture, Recoding, and Fiscal Application
+### 4.1 The CPAT Mitigation Module: Methods in Brief
 
-Policymakers need mitigation models that are detailed enough to capture sectoral policy interactions, but simple enough for real country work — and transparent enough that a finance ministry can audit what the model did. This paper sets out the core mitigation architecture of the Climate Policy Assessment Tool, with particular attention to the power sector, policy interaction, and country applications.
+*How a finance-ministry climate model turns prices into fuel use, power investment, emissions and revenue*
 
-Three strands run through it. The first replaces CPAT's hard renewable-energy investment-flow constraint with a softer treatment based on system-adjusted marginal costs and shadow prices, representing realistic power-sector adjustment. The second reports on rebuilding the core price and demand logic as a transparent, testable kernel, using AI assistance for the translation and verification steps, and asks what that exercise implies for how policy models should be built and maintained. The third carries the output into fiscal strategy, linking long-term mitigation pathways to public and private investment, revenues, fiscal risk, and debt sustainability through a SiSePuede–CCDR–CPAT framing.
+CPAT's mitigation documentation runs to 57,000 words and disagrees with the model in places. This paper states the module's method in one place, from the rebuilt and tested version, in about eighteen equations: retail prices built up from supply cost, taxes, subsidies and the carbon charge; fuel use responding through income, usage and efficiency elasticities; an engineering power model that dispatches, retires and invests at default costs of capital of 7.5 to 15 percent; emissions and revenue by accounting identities; and GDP moved a year later by fiscal multipliers. A worked example shows why a \$50 carbon price cuts industrial coal by a third and road fuel by about 6 percent. The paper gives the corrected equation wherever the documentation is wrong and proposes a penalty-based alternative to the logit investment rule.
 
-# 5. Analytics
+[Working paper →](papers/CPATMitigationMethods.docx) · [Slides →](papers/Slides-CPATMitigationMethods.pptx)
 
-Diagnostics built to be run by the people who hold the budget, on data they already hold.
+### 4.2 CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool
 
-### 5.1 Automated Excise-Fiscal Reports: Instruments, Externalities, and Policy Pathways
+*What two AI-assisted rebuilds of CPAT found, and how policy models should be maintained*
 
-Finance ministries often read excise systems instrument by instrument, without seeing whether the tax system as a whole addresses externalities. This paper proposes a standardized three-part diagnostic: an excise diagnostic that categorizes each schedule line and scales rates comparably; an externality diagnostic that brings carbon, air pollution, accidents, congestion, and road damage onto a common spine; and a policy pathways section that converts findings into sequenced reform options. Sierra Leone is the worked application.
+Legacy CPAT is a 21-megabyte workbook too large to audit cell by cell. In October 2026 it was rebuilt twice, with AI coding agents (Claude Code and GitHub Copilot) doing most of the construction: once as a readable Excel workbook written by code, once as a Python model that reproduces it to nine significant figures. One rule governed both: bugs are fixed and never copied; questionable but intended choices are copied and tracked. The rebuild registered 228 legacy bugs, 24 of high priority, plus 135 issues and 20 errors in the documentation, and writing the model a second time found seven bugs in the first rebuild. The lesson for ministries: specify a model by shared variable codes, build it twice, and test every release.
 
-[Read the paper →](papers/ExciseFiscalDiagnostic.docx)
+[Working paper →](papers/CPATAIImplementation.docx) · [Slides →](papers/Slides-CPATAIImplementation.pptx)
+
+### 4.3 Validating CPAT: Baselines, Back-Casts and Model Comparisons
+
+*What the published checks show, where the tool fits and where it does not*
+
+This paper gathers CPAT's scattered validation and separates four tests: fit to the base year, back-casts against history, comparison with other models, and replication in independent code. The model fits its base year by calibration, tracks emission trends in back-casts from 2000 for Australia and the United States, misses China badly, and gives baselines and carbon-price responses of the same order as the IEA, Enerdata and the World Bank's power planning model. Results move most with the price elasticities: a \$75 carbon tax cuts G20 emissions by 29 percent at the defaults and by 7 to 39 percent across their plausible range. Every published check predates the bug fixes, so the paper sets out how to rerun them as part of the model's test suite.
+
+[Working paper →](papers/CPATValidation.docx) · [Slides →](papers/Slides-CPATValidation.pptx)
+
+### 4.4 Are CPAT's Price Elasticities Right?
+
+*A check against the evidence*
+
+Price elasticities set the size of every emission cut CPAT reports. This paper checks its default long-run elasticities, fuel by fuel and sector by sector, against published meta-analyses and reviews. Seven of ten fuel-sector pairs lie within the published range; diesel in industry, gasoline in services and electricity in services are too high, and road gasoline is double the estimate corrected for publication bias. Two structural choices matter more than any single value: CPAT applies the full long-run response within one year, overstating five-year responses by about half, and it has no cross-price terms, so there is almost no fuel switching outside power. The paper sets out a validation protocol for future updates.
+
+[Working paper →](papers/ElasticityValidation.docx) · [Slides →](papers/Slides-ElasticityValidation.pptx)
+
+### 4.5 The CBAM Policy Tool
+
+*Measuring exporters' exposure to the EU carbon border adjustment and what domestic policy can do about it*
+
+Since January 2026, EU importers of steel, aluminum, cement, fertilizers, hydrogen and electricity owe a carbon charge on embedded emissions. This paper describes a spreadsheet tool that computes the exposure product by product and year by year, and shows how verified emissions data, a domestic carbon price and rebates change it. At €80 per tonne, Turkish hot-rolled steel declared at the default owes €107 a tonne in 2026 and €252 at full phase-in, close to half its export price. The tool's Egypt application shows why data matter most where a country has no default of its own: verified data would cut the full-phase-in charge on seven Egyptian exports from about €595 million to €177 million a year (illustrative tool results).
+
+[Working paper →](papers/CBAMPolicyTool.docx) · [Slides →](papers/Slides-CBAMPolicyTool.pptx)
+
+### 4.6 Public Investment in CPAT
+
+*Investment needs and the efficiency of public spending*
+
+Carbon-pricing models say what a policy raises and cuts, but not what its clean capital costs or whether the budget should pay. This paper extends CPAT to price investment needs at the cost of capital countries actually face, and to test each use of public money against the cost of raising tax. A stylized clean asset fails the financial test above a 12.6 percent cost of capital, almost exactly CPAT's default for lower-middle-income countries. In a stylized island, a solar plant worth \$108 million fails the budget on a seven-year loan; concessional finance or a guaranteed power purchase agreement rescues it. Country runs put 2030 investment needs in Kenya, Uganda and St Lucia at 4 to 5 percent of GDP (illustrative tool results).
+
+[Working paper →](papers/PublicInvestment.docx) · [Slides →](papers/Slides-PublicInvestment.pptx)
+
+### 4.7 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT
+
+*One driver layer so four climate models can be linked*
+
+Four models used for climate-fiscal work build activity levels in incompatible ways: CPAT from GDP and prices, SISEPUEDE from income and population without prices, a border-adjustment tool from growth forecasts, and the Future Technology Transformations models not at all. This paper maps them onto ten common activities and sets out one constant-elasticity rule driven by population, income per person and the cost of the energy service, so the four can be linked on one baseline without counting a price response twice. Three propositions cover the population term, double counting and the vehicle chain. Under stylized growth, cars in use grow 64 percent in ten years while travel grows 41 percent.
+
+[Working paper →](papers/ActivityModelling.docx) · [Slides →](papers/Slides-ActivityModelling.pptx)
+
+# 5. Analytics: diagnostics on data ministries already hold
+
+Analysis changes policy only when the ministry that holds the budget can reproduce it. Each tool in this series takes data a finance ministry already holds or can download, puts it on a common scale and returns something sequenced enough to act on, built to one standard: every intermediate step visible, defaults defended line by line, and AI drafting checked against the source. The tools feed the other series: checked tax rates and externality values for CPAT and the carbon-pricing papers, and the cost-of-capital and incentive arguments carried into a country's budget and debt. [Section overview →](papers/OverviewAnalytics.docx) · [Series slides →](papers/Slides-Analytics.pptx)
+
+### 5.1 The Excise-Fiscal Diagnostic
+
+*Reading an excise system against its externalities*
+
+Excise schedules grow line by line for decades until nobody can read them whole, and few ministries can say whether their fuel, tobacco or alcohol taxes are high or low against the damage those goods do. The Excise-Fiscal Diagnostic is a light, repeatable report that maps every line onto 30 standard lines, scales each rate three ways (US dollars per unit, share of price, revenue as a share of GDP), and sets fuel rates against a corrective benchmark built from one fixed set of values for carbon, air pollution, accidents, congestion and road damage. An AI model drafts each stage and every line is checked against the legal text. In a stylized country, petrol is taxed about right and diesel at less than half its corrective rate, and diesel's largest unpriced cost is air pollution, not carbon.
+
+[Working paper →](papers/ExciseFiscalDiagnostic.docx) · [Slides →](papers/Slides-ExciseFiscalDiagnostic.pptx)
+
+### 5.2 The Macro-Fiscal-Energy Scenario Tool
+
+*Linking energy investment and carbon pricing to growth, revenue and debt in one workbook*
+
+A ministry weighing a climate investment program needs its budget cost, what carbon pricing could pay for, and what both do to growth and debt, usually from separate teams. This tool chains them in one workbook for 186 countries: investment needs split by who pays, a screen for the most abatement carbon pricing can deliver within limits on political cost, open simplified versions of three IMF and World Bank macro-fiscal models, and a debt test. In a stylized run, financing and the efficiency of public investment move the result more than the program's size. A run for Kenya finds a budget need of 0.5 percent of GDP in 2030, mostly land use and non-CO₂ spending; feasible power-sector pricing covers about 5 percent of it (illustrative tool results).
+
+[Working paper →](papers/MacroFiscalEnergyScenarioTool.docx) · [Slides →](papers/Slides-MacroFiscalEnergyScenarioTool.pptx)
+
+### 5.3 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis
+
+*Eighty public indicators, one country profile, and a build anyone can rerun*
+
+Before advising on carbon pricing, subsidy reform or climate investment, an analyst needs a quick, comparable view of a country's fiscal space, spending capacity, cost of capital and fossil fuel exposure. The dashboard assembles 80 indicators in twelve blocks for 217 economies from about twenty public datasets, scores them on one 1-to-10 scale and shows a one-page profile. A scripted pipeline rebuilds everything from the raw files, never imputes, records the year and source of every value, and stops if its configuration and outputs disagree. A comparison of four middle-income economies shows how the profile separates Indonesia's revenue problem from South Africa's debt-service problem.
+
+[Working paper →](papers/FiscalIndicatorsDashboard.docx) · [Slides →](papers/Slides-FiscalIndicatorsDashboard.pptx)
