@@ -32,7 +32,9 @@ Details for each item: `C Research Proposal/PhD-Application-Status.md`.
 
 - [ ] **Carbon-pricing series (1.1, 1.2, 1.3, 1.6, 1.7): read and approve.** Done 29 Oct by agents: five Climate Fiscal Policy Briefs, five working papers (1.1 v0.3, 1.2 v0.3, 1.3 v0.3, 1.6 v0.2, 1.7 v0.3) with models, proofs, calibrations and literature appendices, five 4-slide decks, all in `B Working Papers/7.Website/papers/` — S reads, starting with 1.1 for Dirk — 5 Nov
 - [ ] **Finance-and-risk and sovereign-incentives series (2.1, 2.2, 3.1, 3.2, 3.3): read and peer review.** Done 29 Oct by agents: five briefs (Climate Fiscal Policy Briefs 2.1–3.3) and five working papers with models and verified bibliographies; overviews 2.0 and 3.0 rewritten; CIT moved to 3.2, SLL to 3.3. No decks or peer-review notes yet. Start with 3.1 and 2.1 (proposal 1) — S reads, A peer-reviews and upgrades — 13 Nov
-- [ ] Decks and referee reports for the five series 2–3 papers, as for series 1 — A — after Stephen's read
+- [ ] Decks for the five series 2–3 papers and two theme decks: done 29 Oct. Referee reports still to do — A — after Stephen's read
+- [ ] **Sections 4 (CPAT) and 5 (analytics tools): read.** Done 29 Oct by agents: ten medium-length papers (4.1–4.7, 5.1–5.3) and overviews 4.0, 5.0. Decide whether any country results from the private tools repository may be used; answer the README questions (AI tools used, Egypt figures in 4.3, air-pollution module credit) — S — 13 Nov
+- [ ] Decks for sections 4 and 5 (one per paper + theme decks), after agenda confirmed — A — next
 - [ ] Run `deploy.bat` to put the series live (source pushed to main 29 Oct) — S — Fri 30 Oct (T59)
 - [ ] Clear remaining `VERIFY` entries in the five working-paper bibs (about 45 across the series; court judgments and EU texts need EUR-Lex, which the cloud cannot reach) — A, with S downloads — 12 Nov
 - [ ] Flag: the 1.7 TECP formula in all earlier versions and in the xlsx workbook carries an extra (1−w) factor; v0.3 corrects it and marks the workbook superseded. Rebuild the workbook or retire it — S decides

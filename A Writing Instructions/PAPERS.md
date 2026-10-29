@@ -24,8 +24,8 @@ Order of work. The reason column says why each paper is where it is.
 | 5 | 1.2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | working paper v0.3 + brief + deck (29 Oct) | WB working paper / journal | Market-design propositions; India, Indonesia, South Africa cases |
 | 6 | 3.2 | The Climate Investment Trust: Hold Capital, Lend Its Strength | working paper v0.2 + brief (29 Oct) | WB working paper | Series 3 flagship with 3.1 (moved from 2.2 on 29 Oct). Buffer, growth and allocation propositions |
 | 7 | 1.3 | Credit the Price Signal, Not the Payment (CBAM recognition and scrap shuffling) | working paper v0.3 + brief + deck (29 Oct) | Policy journal / Commission consultation | Shuffling model, liability formula, calibration to EU default values |
-| 8 | 5.1 | Automated Excise-Fiscal Reports | draft (report) | WB working paper, cut from 24,800 words | Valuable but report-length. |
-| 9 | 4.2 | CPAT: Architecture, Recoding and Fiscal Application | notes | WB working paper | Background only; no master yet. |
+| 8 | 5.1 | The Excise-Fiscal Diagnostic: Reading an Excise System Against Its Externalities | paper v0.2 (29 Oct) | Companion paper to the analytics tools | Cut from the 24,800-word report (now v0.1); stylized example, no country results |
+| 9 | 4.1–4.7 | The CPAT series (methods, CPAT-AI, validation, elasticities, CBAM tool, public investment, activity) | papers v0.1 (29 Oct) | Companion papers to the CPAT-AI repository | See the section 4 table below |
 
 ### The finance-and-risk series (section 2)
 
@@ -47,6 +47,23 @@ Plan: `B Working Papers/3.SovereignIncentives/SeriesArchitecture.md`. 3.1 and 3.
 | 3.1 | Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives | working paper v0.1 + brief CFPB 3.1 (29 Oct) |
 | 3.2 | The Climate Investment Trust: Hold Capital, Lend Its Strength | working paper v0.2 + brief CFPB 3.2 (29 Oct) |
 | 3.3 | Codify Sustainability-Linked Sovereign Lending, Then Give It Scale | working paper v0.1 + brief CFPB 3.3 (29 Oct); public sources and SLIDIs only |
+
+### The CPAT series (section 4) and the analytics tools (section 5)
+
+Plan: `B Working Papers/4.Modelling/SeriesArchitecture.md`. One medium-length paper per item (about 4,000–6,000 words; 4.1 about 9,000), companions to the CPAT-AI repository and the Climate Fiscal AI Tools. All v0.1 drafts of 29 Oct except 5.1 (v0.2). Country results from the private tools repository are held back (see each README).
+
+| No. | Paper |
+|---|---|
+| 4.1 | The CPAT Mitigation Module: Methods in Brief |
+| 4.2 | CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool |
+| 4.3 | Validating CPAT: Baselines, Back-Casts and Model Comparisons |
+| 4.4 | Are CPAT's Price Elasticities Right? A Check Against the Evidence |
+| 4.5 | The CBAM Policy Tool |
+| 4.6 | Public Investment in CPAT: Investment Needs and the Efficiency of Public Spending |
+| 4.7 | Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT |
+| 5.1 | The Excise-Fiscal Diagnostic |
+| 5.2 | The Macro-Fiscal-Energy Scenario Tool |
+| 5.3 | A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis |
 
 ### The carbon-pricing series
 
@@ -71,8 +88,8 @@ Each area gets a short paper (3,000–5,000 words) that a newcomer can read firs
 | 1.0 | Carbon Pricing in Open Economies | Source-based carbon pricing triggers a race to the bottom; separating a production feebate from a destination-based consumption charge allows a race to the top. | `1.0.OverviewClimateAndFiscalPolicy.docx`, 1.1–1.3 | draft (overview) |
 | 2.0 | Make Clean Power an Asset Class | The cost of capital, not technology, prices clean power; remove payment risk at source with an intermediary, then turn projects into standard securities. | `2.0.OverviewMobilisingPrivateCapital.qmd`, 2.1–2.2 | draft v0.2 (29 Oct) |
 | 3.0 | Reward Governments, Not Projects | Reward governments with balances and guarantees they can borrow against, not cash transfers for unobservable counterfactuals. | `3.0.OverviewSovereignIncentives.qmd`, 3.1–3.3, proposal 1 | draft v0.2 (29 Oct) |
-| 4.0 | Models a Finance Ministry Can Audit | Compare instruments by their emissions effect, not headline rate; keep models small enough to check. | `4.0.OverviewModelling.docx`, 1.7 (was 4.1), 4.2 | draft (overview) |
-| 5.0 | Diagnostics on Data Ministries Already Hold | Read the excise system as a whole against a common externality spine. | `5.0.OverviewAnalytics.docx`, 5.1 | draft (overview) |
+| 4.0 | Models a Finance Ministry Can Audit | A model a ministry can use must be small enough to state on a few pages, built twice, tested against data and other models, and extended only where policy needs it. | `4.0.OverviewModelling.qmd`, 4.1–4.7 | draft v0.2 (29 Oct) |
+| 5.0 | Diagnostics on Data Ministries Already Hold | Each tool takes data a ministry already holds, puts it on a common scale and returns a sequenced answer that can be checked. | `5.0.OverviewAnalytics.qmd`, 5.1–5.3 | draft v0.2 (29 Oct) |
 
 ## 3. Concept papers
 
@@ -102,6 +119,6 @@ These justify Stephen's positions on the big questions. Each states a position i
 | P3 | In developing countries, finance is the climate problem: lower the cost of capital before raising the carbon price. | 2.0, 2.1, 2.2 |
 | P4 | Reward sovereigns, not projects. | 3.0, 3.1, proposal 1 |
 | P5 | Development bank balance sheets should take more risk, and can do so safely through guarantees. | 3.1, 3.2, 6.Additional 3.4–3.5 |
-| P6 | Policy models must be small enough for a ministry to audit, and AI now makes that achievable. | 4.0, 4.2 |
+| P6 | Policy models must be small enough for a ministry to audit, and AI now makes that achievable. | 4.0–4.3 |
 | P7 | AI risk is a systems problem as much as a model problem. | To be written with proposal 3 |
 | P8 | *(Philosophy)* Durable order comes from aligned incentives and shared meaning, not from command. | 7.1 *Order Without Ordinance*, 7.2, 7.3 |
