@@ -29,7 +29,7 @@ This page maps what Stephen can credibly claim as expert ground, in five groups.
 
 1. Is the "three constraints" through-line right? **Yes.** The 0.0 introductory paper and the website "About" page both use it.
 2. For systemic AI risk, which angle should lead? **Incentive and institutional design, with systemic financial risk as the analogy.** It reuses the sovereign-incentives work and the 2014 systemic-risk review (section 5).
-3. Should the politics essays (8.1–8.3) stay off the academic profile? **Yes** (section 7).
+3. Should the politics essays (8.1–8.3) and the *Finding Frodo* deck stay off the academic profile? **Yes, for now.** Revisit later (section 7).
 
 ---
 
@@ -214,7 +214,7 @@ The prisoner's dilemma, the tragedy of the commons and of the horizons, the race
 
 ## 7. Notes and cautions
 
-- **Keep off the academic profile:** the politics essays (8.1 *Manifesto*, 8.2 the World Trade Center collapse, 8.3 voting patterns) and the Drive deck `Finding Frodo.pptx`. They contain strong partisan claims and would weaken both PhD applications and the World Bank profile. *(Decided 29 Oct, decision 3 above.)*
+- **Keep off the academic profile:** the politics essays (8.1 *Manifesto*, 8.2 the World Trade Center collapse, 8.3 voting patterns) and the Drive deck `Finding Frodo.pptx`. They contain strong partisan claims and would weaken both PhD applications and the World Bank profile. *(Decided 29 Oct, for now; decision 3 above.)*
 - **Confidential or internal:** 3.2 *Sustainability-Linked Lending* is World Bank confidential, yet `9.ResearchTracking/CV-UnpublishedWorks.docx` still lists its URL. `GeoprosperityIntro.docx`, including the copy in the website's `_site/papers/`, has an appendix D marked "not intended for external circulation". The Drive `Geoprosperity_WorkingPaperSeries.docx` is marked "Official Use Only". The work plans, team workshop notes and EFI note are internal.
 - **Numbers to verify before outward use:** the IHLEG debt figure (3.2), the MDB guarantee multiple (4.3), and everything in the 5.4 tables.
 - **Mismatch:** `6.0.CombinedOverview.docx` describes 1.4 as resource and locational rent "alongside carbon pricing", which does not match the 1.4 qmd.
