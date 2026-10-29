@@ -1,11 +1,11 @@
 {
  "printable": {
   "built": "2026-10-29",
-  "docx": "52a464c080901415",
-  "sources": "bde3e3875ee9d4b2",
+  "docx": "5d316aae6c6efedf",
+  "sources": "0d0a37c1ec3a4841",
   "version": "0.6"
  },
- "synced": "2026-10-29T16:08:37",
+ "synced": "2026-10-29T17:13:57",
  "units": {
   "list:anxiety + sleep protocol": "699d7fe5f886ebf8",
   "list:evening": "e08384bf2c0dffd3",
@@ -30,12 +30,12 @@
   "table:Dashboard selections": "188d15dd96e6e0d4",
   "table:Key decisions": "0cb8a7d6e87a1810",
   "table:Lists by place": "5a249c0c34594d07",
-  "table:Milestones (burndown)": "d1e17e8f9c744bdd",
+  "table:Milestones (burndown)": "dc737206575ac2cc",
   "table:Strategic priorities": "dd95eafe9c71a42c",
   "table:Task scripts": "fcf2e82377d80e06",
   "task:1a_m1": "8232c9317341ef39",
   "task:1a_m2": "3c09f5374ca35738",
-  "task:1b_m1": "374f3511e59892c8",
+  "task:1b_m1": "dd6ecbe44a1d5378",
   "task:1c_m1": "ed4bff1df65e8b73",
   "task:2a_m1": "8585c67653eed300",
   "task:2b_m1": "3595387e888e27c5",
@@ -65,7 +65,7 @@
   "task:P11": "22d8677a694b6992",
   "task:P12": "5494f9b3f25bb84c",
   "task:P13": "3781743fccc61523",
-  "task:PR1": "c24d444b1c733f81",
+  "task:PR1": "6ece35ed138f45a4",
   "task:PR2": "efe88f3c914bd858",
   "task:PR3": "d1b19643deccb3ab",
   "task:PR4": "dea7073a09914820",
@@ -132,6 +132,11 @@
   "task:T59": "29f7fc25be519a4e",
   "task:T60": "be78cd75793e16b8",
   "task:T61": "ae30c0bcd2d90309",
-  "task:T62": "0b864802d94ae5e5"
+  "task:T62": "0b864802d94ae5e5",
+  "task:T63": "477d7a3dc8cd6803",
+  "task:T64": "beffd605546e017f",
+  "task:T65": "0551faa3ded7fc6b",
+  "task:T66": "0fad1dd5c087cbbc",
+  "task:T67": "4e641194c751d1ed"
  }
 }

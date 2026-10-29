@@ -352,7 +352,7 @@ def render(units, snapshot=None, today=None):
 
     # ---------------- Context tab ----------------
     rows, fmt = [], []
-    rows.append(["Context", "=\"Open task points: \"&SUMIFS(C4:C{a},F4:F{a},\"<>Parked\")&\". Points: task 100-200; milestone 1000 (+4000 if done in its due week); Kriya 10 x streak; CPAP 1 per minute; gym 100\""])
+    rows.append(["Context", "=\"Open task points: \"&SUMIFS(C4:C{a},F4:F{a},\"<>Parked\")&\". Points: task 100-200; milestone 1000 (+4000 if done in its due week, +2000 if before); Kriya 10 x streak; CPAP 1 per minute; gym 100\""])
     fmt.append("title")
     rows.append(["ID", "Task", "Pts", "Energy", "Q", "Status", "%", "Milestone", "Next action, detail, links"])
     fmt.append("th")
@@ -931,6 +931,15 @@ HABITS = [
 ]
 
 
+def target_bonus(due, today):
+    """+4000 if a milestone is done in its due week, +2000 (half) if done before it."""
+    if not due:
+        return 0
+    if due.isocalendar()[:2] == today.isocalendar()[:2]:
+        return 4000
+    return 2000 if today < due else 0
+
+
 def end_of_day(snapshot_path, date, apply):
     """Delete everything that is done, wherever it was ticked, and record it once in Recently completed.
 
@@ -986,7 +995,7 @@ def end_of_day(snapshot_path, date, apply):
     ms_done = {i for i, u in tasks.items() if u["section"].startswith("Milestones") and (u["row"][5].startswith("Done") or u["row"][6] == "100%")}
     due_of = {r[0]: mp.parse_date(r[4]) for r in units["table:Milestones (burndown)"]["rows"]}
     ms_points = {i: int(norm(tasks[i]["row"][2]) or 1000)
-                 + (4000 if due_of.get(i) and due_of[i].isocalendar()[:2] == today.isocalendar()[:2] else 0) for i in ms_done}   # +4000 if done in the target week
+                 + target_bonus(due_of.get(i), today) for i in ms_done}
 
     def gone(text, ids):
         return any(same_item(text, t) for t, _, _ in ticked) or (ids and all(i in done for i in ids))
@@ -1013,7 +1022,7 @@ def end_of_day(snapshot_path, date, apply):
     for i in sorted(ms_done):
         row = list(units[f"task:{i}"]["row"])
         status = row[5] if row[5].startswith("Done") else day
-        units[f"task:{i}"] = {"section": "Recently completed (last 14 days)", "row": [row[0], row[1], row[2], row[3], "", status, "100%", row[7], row[8]]}
+        units[f"task:{i}"] = {"section": "Recently completed (last 14 days)", "row": [row[0], row[1], str(ms_points[i]), row[3], "", status, "100%", row[7], row[8]]}
         report.append(f"{i} {row[1]}: milestone done ({ms_points[i]} pts incl. any target-week bonus), moved to Recently completed")
     for k, u in list(units.items()):
         if k.startswith("task:") and u["section"].startswith("Recently"):

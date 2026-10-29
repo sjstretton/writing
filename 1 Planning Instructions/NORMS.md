@@ -34,7 +34,7 @@ Job applications are dropped from the priorities for now (29 Oct): PhD first.
 
 ## General rules
 
-- **Everything earns points (the one points scheme).** Task 100 (quick) or 200. Milestone 1000 when complete, plus a **4000 bonus if it is completed in its target (due) week**: 5000 in all (e.g. the PhD application in the week of 26 Oct). Kriya 10 x current streak (days), daily. CPAP 1 point per minute. Gym session 100. On the Dashboard's morning score: 10 per morning-routine step and per quick reward with no task. Every task and milestone carries its points on the Context tab; daily wellbeing points are on the Tracker tab.
+- **Everything earns points (the one points scheme).** Task 100 (quick) or 200. Milestone 1000 when complete, plus a **4000 bonus if it is completed in its target (due) week**: 5000 in all (e.g. the PhD application in the week of 26 Oct). Completed **before** its due week: half the bonus, **+2000** (3000 in all; e.g. Final Python, 29 Oct, six weeks early). Kriya 10 x current streak (days), daily. CPAP 1 point per minute. Gym session 100. On the Dashboard's morning score: 10 per morning-routine step and per quick reward with no task. Every task and milestone carries its points on the Context tab; daily wellbeing points are on the Tracker tab.
 - **Structure.** Projects (PR1...) hold milestones (1000 each, +4000 if done in the due week); milestones are reached through tasks (100-200). Each task row names its milestone.
 - **Same change, both places.** Edit either side; `Scripts/update.py` brings the other side in line before each push to main (see below). Edit the Sheet in place: same file, same link. The Tracker, Track 2, Strategic plan and Links tabs are not synced: keep them in line by hand.
 - **Here and now.** The top of `0 Morning Briefing/1-Me-NextStep.txt` (and the Plan tab) lists what fits where I am right now, e.g. `HERE AND NOW (home, at a desk, Sun evening)`. Rewrite it whenever the context changes; each item carries its task ID so its points show.
@@ -73,8 +73,9 @@ Answer from the Context tab. Each item shows its points and the one thing needed
 - **The WhatsApp briefing** (also "the accountability update" or "short retrospective for the day": the same thing, for my accountability contact): ready to paste into WhatsApp. **The points are the point:** every item shows its points, grouped where they share a value, and line c) ends with the day's total. Extremely concise: a date line, then three lines, no other text.
   - **When.** Two a day, in Stephen's local time (now the Philippines, UTC+8). A request **before 7am** is most likely the start-of-day briefing; a request **after 11:55pm** is most likely the end-of-day briefing, for the day just ending. Otherwise ask which.
   - a) CPAP (last night: hours, 1 point per minute), Kriya streak (days, 10 x streak) and the morning routine (10 per step, `Context/routines.md`), from the Tracker's daily tracker; "not logged" if not given. Log what Stephen gives (see Morning update).
-  - b) Milestones (1,000; 5,000 if done in the due week); "none" if there are none.
+  - b) Milestones (1,000; 5,000 if done in the due week; 3,000 if done early); "none" if there are none.
   - c) Tasks (100-200), then the total.
+  - **End of day: count everything.** Before totalling, check the day's commits in every repo (AI work counts: papers updated, code finished) and ask "Anything else done today?"; record what is missing as done tasks or milestones first. Never send a total from the ticks alone.
   - **Start of day: points on offer**, from the morning briefing. **End of day: points actually scored**: only what was done (Recently completed with that day's date, and ticks), total scored against the morning's total if there was one; what wasn't done is left out, no comment. Example:
   ```
   Mon 19 Oct - start of day briefing

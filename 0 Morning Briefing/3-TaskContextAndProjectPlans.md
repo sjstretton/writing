@@ -4,9 +4,9 @@ Text copy of the **Context** tab of the master Google Sheet (the master). Rules:
 
 The printable tracker (`Me-Printable-Tracker.docx`, in this folder) is built from this file: run `python3 Scripts/update.py build`. The Context, Plan and list tabs of the Sheet are kept in step by `Scripts/update.py` (`NORMS.md`, "Keeping everything consistent").
 
-Last reviewed: Thu 29 Oct 2026, 4:30pm (Philippines, after checkout). Open task points: 4,600.
+Last reviewed: Thu 29 Oct 2026, 11:55pm (Philippines). Open task points: 4,600.
 
-**Points.** Task 100 (quick) or 200. Milestone 1000 when complete. Kriya 10 x current streak (days), daily. CPAP 1 per minute. Gym session 100. Daily points live on the Tracker tab.
+**Points.** Task 100 (quick) or 200. Milestone 1000 when complete, +4000 if done in its due week, +2000 if done before it. Kriya 10 x current streak (days), daily. CPAP 1 per minute. Gym session 100. Daily points live on the Tracker tab.
 **Key.** Energy needed: H/M/L. Q: Q1 Do now, Q2 Schedule, Q3 Batch or delegate, Q4 Not now. %: progress on the milestone (estimate).
 
 ## Active tasks
@@ -74,7 +74,6 @@ Burndown: "Time used" is how much of the start-to-due window has passed. If "Don
 | S_m1 | Strategic positioning set | Personal | 28 Sep 26 | tbc | 10 | Sort the papers (3 weeks carried over) |
 | 2e_m2 | CPAT-LTS deliverable | Work | 20 Oct 26 | 27 Nov 26 | 50 | MAIN GOAL FOR NOVEMBER. Macro-fiscal half done 20 Oct. Other half: limited scope to close CPAT-LTS (29 Oct); due end Nov; agree with Dirk and Sebastian next week |
 | 2b_m1 | Zoe's FTT project | Work | 1 Oct 26 | 27 Nov 26 |  | FTT finished by end Nov (Zoe delivers by Fri 27 Nov); I review by Wed 25 Nov |
-| 1b_m1 | Final Python | Work | 2 Nov 26 | 11 Dec 26 | 75 | Python-vs-Excel comparison, then write-up (7-11 Dec) |
 | 2c_m1 | Pathways tool | Work | 4 Jan 27 | 15 Jan 27 | 0 | Prices DB check (Kacper); integration 4-8 Jan; pilots 11-15 Jan |
 | 1c_m1 | Shiny app | Work | 18 Jan 27 | 5 Feb 27 | 0 | One input page, one results page |
 | 2b_m2 | FTT + MFMod working | Work | 8 Feb 27 | 12 Feb 27 | 0 | FTT finished by end Nov (2b_m1); MFMod added by mid Feb (Fri 12 Feb); first, a meeting with the MFMod team (T50) |
@@ -208,7 +207,6 @@ The ones that keep slipping. Each next step takes 15 minutes or less.
 | ID | Milestone | Pts | Energy | - | Due | % | Project | What it takes |
 |---|---|---|---|---|---|---|---|---|
 | 2e_m2 | CPAT-LTS deliverable | 1000 | H | - | Due 27 Nov | 50% | PR2 | MAIN GOAL FOR NOVEMBER (other coded work is ahead of schedule: Python 75%, Excel-AI MVP 100%). Limited scope to close CPAT-LTS (29 Oct): put macro-fiscal projections, public investment and derisking, planning policies, CBAM and process emissions into CPAT, once the Excel-AI and Python are complete. Plus a methodology document drawing on the macro-fiscal prototype (DIGNAR modelling in AI tools; T53). Macro-fiscal prototype done 20 Oct (2e_m1). Milestone due end Nov (Fri 27 Nov); agreements with Dirk and Sebastian next week (week of 2 Nov); T53 methodology document |
-| 1b_m1 | Final Python (Coded-Conversion) delivered | 1000 | H | - | Due 11 Dec | 75% | PR1 | Python-vs-Excel comparison on the same inputs, then write-up (7-11 Dec) |
 | 1c_m1 | Shiny app delivered | 1000 | M | - | Due 5 Feb | 0% | PR1 | Minimal Shiny UI over the Python outputs: one input page, one results page |
 | 2b_m1 | Zoe's FTT project complete | 1000 | L | - | Due 27 Nov | ? | PR2 | FTT finished by end Nov (Zoe delivers by Fri 27 Nov); I review by Wed 25 Nov |
 | 2c_m1 | Pathways tool delivered | 1000 | M | - | Due 15 Jan | 0% | PR2 | Close Prices DB verification (Kacper); integration 4-8 Jan; pilots 11-15 Jan |
@@ -229,7 +227,7 @@ The ones that keep slipping. Each next step takes 15 minutes or less.
 
 | ID | Project | Energy | Status | Milestones | Definition |
 |---|---|---|---|---|---|
-| PR1 | Coded-Conversion and Excel-AI-CPAT (Obj 1) | H | Open | 1b_m1, 1c_m1 | One set of equations and scope (basic mitigation, power, remaining mitigation, distribution) in Excel-AI and Python, plus a Shiny dashboard. 50 days; due 20 Mar 2027 |
+| PR1 | Coded-Conversion and Excel-AI-CPAT (Obj 1) | H | Open | 1c_m1 | One set of equations and scope (basic mitigation, power, remaining mitigation, distribution) in Excel-AI and Python, plus a Shiny dashboard. 50 days; due 20 Mar 2027 |
 | PR2 | Applications (Obj 2) | M | Open | 2b_m1, 2c_m1, 2b_m2, 2a_m1, 2e_m2, 2d_m1 (done), 2e_m1 (done) | Apply the tools to GHG accounting, crediting, FFI, pathways and pilot countries; FTT and MFMod working. 35 days; due 20 Mar 2027 |
 | PR3 | Other tools (Obj 3) | L | Mostly done | 3c_m1 | Excise Diagnostic and Tax and Macro-Fiscal Dashboard handed to Dirk (all 4 milestones done); follow-up 8-12 Mar; Energy GP tbc |
 | PR4 | Strategic positioning | M | Open | S_m1 | What I want to be known for, and who backs it. Feeds parked P10 (papers, strategy deck) and P11 (DAIS plan) |
@@ -260,6 +258,12 @@ The ones that keep slipping. Each next step takes 15 minutes or less.
 
 | ID | Task | Pts | Energy | Q | Status | % | Milestone | Next action, detail, links |
 |---|---|---|---|---|---|---|---|---|
+| 1b_m1 | Final Python (Coded-Conversion) delivered | 3000 | H |  | Done 29 Oct | 100% | PR1 | Done 29 Oct (Stephen), six weeks early (due 11 Dec): CPAT Python complete. 1,000 + 2,000 early bonus (50% of the due-week bonus) |
+| T63 | Open Economy Carbon Pricing (1.1): working paper updated and published, with brief and deck | 200 | M | Q1 | Done 29 Oct | 100% | P_m1 | Literature review (Appendix A), fuel-price leakage, Article 6 crediting threshold, CBAM Art 9 and shuffling; on the website with the revised brief and deck (29 Oct) |
+| T64 | Working paper 1.2 (feebates and output-based rebating) v0.3, published with brief and deck | 200 | M | Q1 | Done 29 Oct | 100% | P_m1 | Market design, investment, benchmark dynamics, country cases (29 Oct) |
+| T65 | Working paper 1.3 (iron and steel CBAM) v0.3, published with brief and deck | 200 | M | Q1 | Done 29 Oct | 100% | P_m1 | Shuffling model, signal recognition, liability formula, calibration to EU default values (29 Oct) |
+| T66 | Working paper 1.6 (carbon consumption tax) v0.2, published with brief and deck | 200 | M | Q1 | Done 29 Oct | 100% | P_m1 | VAT-chain propositions, FIGARO-calibrated defaults, distribution, neutrality rule, legal basis (29 Oct) |
+| T67 | Working paper 1.7 (policy-equivalent carbon price) v0.3, published with brief and deck | 200 | M | Q1 | Done 29 Oct | 100% | P_m1 | Corrected CES derivation, exact and second-order TECP, non-price instruments, uncertainty (29 Oct) |
 | 2d_m1 | Edmundo on track (CPAT-CDPM integration) | 1000 | H |  | Done 19 Oct | 100% | PR2 | Meeting went well; CPAT sent to Edmundo; CPAT-CDPM repo created; meeting notes written (Stephen, 19 Oct) |
 | T30 | Prepare for the meeting with Edmundo | 200 | H | Q1 | Done 19 Oct | 100% | PR1 | Read his documents; meeting held 19 Oct, went well |
 | T32 | One slide: the purposes of the integration | 200 | M | Q1 | Done 19 Oct | 100% | PR1 | Presentations/CPAT-CDPM-Integration-Meetings.md (19 Oct) |
