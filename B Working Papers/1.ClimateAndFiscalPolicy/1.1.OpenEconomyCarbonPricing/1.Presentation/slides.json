@@ -1,0 +1,51 @@
+{
+  "series": "Climate Fiscal Policy Brief No. 1.1",
+  "title": "Price Production and Consumption Separately",
+  "subtitle": "A two-track architecture for carbon pricing in open economies",
+  "message": "One carbon price does two jobs and, in an open economy, does neither well. Price production intensity with a revenue-neutral feebate, and consumption with a destination-based charge. Together they give the full carbon price signal without leakage.",
+  "problem": {
+    "title": "A production tax hits exports, spares imports",
+    "stats": [
+      {
+        "value": "~25%",
+        "label": "of global emissions under an explicit carbon price, most below $10/t"
+      },
+      {
+        "value": "$50–100",
+        "label": "per tonne by 2030: the range judged consistent with Paris goals"
+      },
+      {
+        "value": "5–25%",
+        "label": "modeled leakage rates for trade-exposed sectors under unilateral pricing"
+      }
+    ],
+    "text": "A carbon tax raises the average cost of everything a country makes. Exporters lose share to unpriced rivals, so governments exempt heavy industry or keep the rate low. A border charge on imports protects the home market but not exports."
+  },
+  "mechanism": {
+    "title": "Two tracks: who pays the carbon charge",
+    "image": "../2.Source/figures/fig1_incidence_by_regime.png",
+    "imageHeight": 2.3,
+    "caption": "Carbon cost per tonne of steel at $80/tCO₂ (stylized). Under the two tracks exports carry only the cost of abatement.",
+    "points": [
+      "Production track: a feebate charges intensity above a sector benchmark and rebates below it. Full marginal incentive, zero treasury cost.",
+      "Consumption track: a carbon component of VAT, imports included and exports zero-rated, plus forward-announced obligations on energy suppliers.",
+      "Measurement: a carbon-price-equivalent metric puts every instrument, price-based or not, on one scale."
+    ],
+    "layout": "wide",
+    "aspect": 2.9411764705882355
+  },
+  "action": {
+    "title": "From leakage to a race to the top",
+    "results": [
+      "With equal rates, the two tracks reproduce the Pigouvian outcome for home consumption, with no leakage.",
+      "A feebate raises steel prices about a third as much as a tax at the same rate.",
+      "International payments above half the feebate rate make adoption a net gain.",
+      "Each exporter's best feebate rate equals the carbon charge in its export markets."
+    ],
+    "todo": [
+      "Exporters: start with a production feebate.",
+      "Importers: recognize carbon-price equivalents at the border, and move part of VAT onto carbon.",
+      "Development banks: credit policies, not projects."
+    ]
+  }
+}
