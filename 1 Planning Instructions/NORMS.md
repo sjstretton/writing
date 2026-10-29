@@ -76,7 +76,7 @@ Answer from the Context tab. Each item shows its points and the one thing needed
   - b) Milestones (1,000; 5,000 if done in the due week; 1,500 if done early); "none" if there are none.
   - c) Tasks (100-200), then the total.
   - **End of day: count everything.** Before totalling, check the day's commits in every repo (AI work counts: papers updated, code finished) and ask "Anything else done today?"; record what is missing as done tasks or milestones first. Never send a total from the ticks alone.
-  - **Start of day: points on offer**, from the morning briefing. **End of day: points actually scored**: only what was done (Recently completed with that day's date, and ticks), total scored against the morning's total if there was one; what wasn't done is left out, no comment. Example:
+  - **Start of day: potential points**, from the morning briefing; line a) gives the morning routine in a few words (wake, stretch, drink, do; Kriya + breakfast 8-9), and c) ends "Potential total". **End of day: points actually scored**: only what was done (Recently completed with that day's date, and ticks), total scored against the morning's total if there was one; what wasn't done is left out, no comment. Example:
   ```
   Mon 19 Oct - start of day briefing
   a) CPAP 3h30 (210 pts) · Kriya streak day 2 (20 pts)
