@@ -1,11 +1,11 @@
 {
  "printable": {
   "built": "2026-10-29",
-  "docx": "a8dedffc0471e953",
-  "sources": "674d593bc504efc9",
+  "docx": "e8394ef2d2801c86",
+  "sources": "7ed1d536145be60d",
   "version": "0.6"
  },
- "synced": "2026-10-29T15:30:41",
+ "synced": "2026-10-29T15:39:32",
  "units": {
   "list:anxiety + sleep protocol": "699d7fe5f886ebf8",
   "list:evening": "e08384bf2c0dffd3",
@@ -125,8 +125,13 @@
   "task:T52": "573a2ca632f31570",
   "task:T53": "c3fd53239b4a660b",
   "task:T54": "95825739487980be",
-  "task:T55": "969ec7e7b5155cc9",
+  "task:T55": "1c60dc745dc9fad9",
   "task:T56": "623424b548d307bc",
-  "task:T57": "6a631f16d26d743e"
+  "task:T57": "6a631f16d26d743e",
+  "task:T58": "02004fe9862f6711",
+  "task:T59": "29f7fc25be519a4e",
+  "task:T60": "be78cd75793e16b8",
+  "task:T61": "ae30c0bcd2d90309",
+  "task:T62": "0b864802d94ae5e5"
  }
 }
