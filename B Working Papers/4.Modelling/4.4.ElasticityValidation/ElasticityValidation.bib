@@ -1,0 +1,274 @@
+% ElasticityValidation.bib -- paper 4.4, version 0.1 (October 2026)
+% Every entry checked against Crossref (DOI lookup) or the publisher's page on 29 Oct 2026.
+% "note" records what was read.
+
+% ---- Sibling papers ----------------------------------------------------------
+@techreport{CFPB17, author={Stretton, Stephen J.}, title={Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price}, institution={Climate Fiscal Policy Briefs}, number={1.7}, year={2026}}
+
+@misc{StrettonWP17,
+  author = {Stretton, Stephen J.},
+  title = {Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price},
+  howpublished = {Working paper, version 0.3, October 2026},
+  year = {2026},
+  note = {the author's working paper (repo paper 1.7); nested CES demand system, partial adjustment and calibration ranges used here}
+}
+
+@misc{StrettonWP43,
+  author = {Stretton, Stephen J.},
+  title = {Validating {CPAT}: Baselines, Back-Casts and Model Comparisons},
+  howpublished = {Working paper, 2026},
+  year = {2026},
+  note = {the author's working paper (repo paper 4.3); panel-estimate comparison and the plus-or-minus two standard deviation G20 elasticity sensitivity, as supplied by the series editor}
+}
+
+% ---- CPAT -----------------------------------------------------------------------
+@techreport{cpat2022technotes,
+  author      = {{World Bank} and {International Monetary Fund}},
+  title       = {Climate Policy Assessment Tool: Technical Notes},
+  institution = {World Bank},
+  address     = {Washington, DC},
+  year        = {2022},
+  url         = {http://documents.worldbank.org/curated/en/099062323105023013/pdf/P1703010ca4b8603e0886b06871f37b87b3.pdf},
+  note        = {confirmed in paper 1.7 session: World Bank Documents record and PDF; section 3.3 incl. Tables 3-1, 3-2 read}
+}
+
+@misc{CPATAI2026,
+  author = {{CPAT-AI project}},
+  title = {{CPAT-AI}: The Climate Policy Assessment Tool Rebuilt as a Transparent, Testable Model},
+  howpublished = {GitHub repository},
+  year = {2026},
+  url = {https://github.com/cpmodelai/cpat_ai},
+  note = {read: docs/CPAT_full_documentation_qmd/03_Mitigation.qmd (fuel consumption dynamics; income and price elasticities; rebound; panel estimation of energy demand); data/mvp_legacy_extracts/elasticities.csv (legacy CPAT 1.0pre public release); other/tecp_and_validation/}
+}
+
+@techreport{black2022framework,
+  author      = {Black, Simon and Minnett, Danielle and Parry, Ian and Roaf, James and Zhunussova, Karlygash},
+  title       = {A Framework for Comparing Climate Mitigation Policies Across Countries},
+  institution = {International Monetary Fund},
+  type        = {IMF Working Paper},
+  number      = {22/254},
+  year        = {2022},
+  doi         = {10.5089/9798400228285.001},
+  note        = {confirmed: Crossref; read in paper 1.7 session (Annex C, vehicle turnover)}
+}
+
+@techreport{agnolucci2023tcp,
+  author      = {Agnolucci, Paolo and Fischer, Carolyn and Heine, Dirk and Montes de Oca Leon, Mariza and Pryor, Joseph and Patroni, Kathleen and Hallegatte, St{\'e}phane},
+  title       = {Measuring Total Carbon Pricing},
+  institution = {World Bank},
+  type        = {Policy Research Working Paper},
+  number      = {10486},
+  year        = {2023},
+  doi         = {10.1596/1813-9450-10486},
+  note        = {confirmed: Crossref; read in paper 1.7 session}
+}
+
+% ---- Price elasticities: meta-analyses and reviews --------------------------------
+@article{Labandeira2017,
+  author  = {Labandeira, Xavier and Labeaga, Jos{\'e} M. and L{\'o}pez-Otero, Xiral},
+  title   = {A Meta-Analysis on the Price Elasticity of Energy Demand},
+  journal = {Energy Policy},
+  volume  = {102},
+  pages   = {549--568},
+  year    = {2017},
+  doi     = {10.1016/j.enpol.2017.01.002},
+  note    = {confirmed: Crossref; abstract read (RePEc). Long-run means by sector and fuel as reproduced in the CPAT documentation (03_Mitigation.qmd, Table A) and technical notes}
+}
+
+@article{havranek2012,
+  author  = {Havranek, Tomas and Irsova, Zuzana and Janda, Karel},
+  title   = {Demand for Gasoline Is More Price-Inelastic than Commonly Thought},
+  journal = {Energy Economics},
+  volume  = {34},
+  number  = {1},
+  pages   = {201--207},
+  year    = {2012},
+  doi     = {10.1016/j.eneco.2011.09.003},
+  note    = {confirmed: Crossref; abstract read (corrected long-run -0.31, short-run -0.09; published averages exaggerated twofold); uncorrected means -0.69 and -0.23 from the working paper read in the paper 1.7 session}
+}
+
+@article{brons2008,
+  author  = {Brons, Martijn and Nijkamp, Peter and Pels, Eric and Rietveld, Piet},
+  title   = {A Meta-Analysis of the Price Elasticity of Gasoline Demand. {A} {SUR} Approach},
+  journal = {Energy Economics},
+  volume  = {30},
+  number  = {5},
+  pages   = {2105--2122},
+  year    = {2008},
+  doi     = {10.1016/j.eneco.2007.08.004},
+  note    = {confirmed: Crossref; abstract read (RePEc): mean short-run -0.34, long-run -0.84}
+}
+
+@article{dahl2012,
+  author  = {Dahl, Carol A.},
+  title   = {Measuring Global Gasoline and Diesel Price and Income Elasticities},
+  journal = {Energy Policy},
+  volume  = {41},
+  pages   = {2--13},
+  year    = {2012},
+  doi     = {10.1016/j.enpol.2010.11.055},
+  note    = {confirmed: Crossref; abstract read (RePEc): proposes elasticities for over one hundred countries; numbers not read}
+}
+
+@article{huntington2019,
+  author  = {Huntington, Hillard G. and Barrios, James J. and Arora, Vipin},
+  title   = {Review of Key International Demand Elasticities for Major Industrializing Economies},
+  journal = {Energy Policy},
+  volume  = {133},
+  pages   = {110878},
+  year    = {2019},
+  doi     = {10.1016/j.enpol.2019.110878},
+  note    = {confirmed: Crossref; read in the MPRA working-paper version (MPRA Paper 87532), Tables 8, 9 and 13; published figures may differ slightly}
+}
+
+@article{burke2016gas,
+  author  = {Burke, Paul J. and Yang, Hewen},
+  title   = {The Price and Income Elasticities of Natural Gas Demand: International Evidence},
+  journal = {Energy Economics},
+  volume  = {59},
+  pages   = {466--474},
+  year    = {2016},
+  doi     = {10.1016/j.eneco.2016.08.025},
+  note    = {confirmed: Crossref; abstract read (ANU repository): 44 countries, long-run price elasticity about -1.25}
+}
+
+@article{burke2015coal,
+  author  = {Burke, Paul J. and Liao, Hua},
+  title   = {Is the Price Elasticity of Demand for Coal in {China} Increasing?},
+  journal = {China Economic Review},
+  volume  = {36},
+  pages   = {309--322},
+  year    = {2015},
+  doi     = {10.1016/j.chieco.2015.10.004},
+  note    = {confirmed: Crossref; abstract read: provincial panel 1998-2012, elasticity -0.3 to -0.7 as of 2012 over two years}
+}
+
+@article{espey2004,
+  author  = {Espey, James A. and Espey, Molly},
+  title   = {Turning on the Lights: A Meta-Analysis of Residential Electricity Demand Elasticities},
+  journal = {Journal of Agricultural and Applied Economics},
+  volume  = {36},
+  number  = {1},
+  pages   = {65--81},
+  year    = {2004},
+  doi     = {10.1017/S1074070800021866},
+  note    = {confirmed: Crossref and abstract (OpenAlex); means not read, cited only as a source to add}
+}
+
+@article{zhu2018,
+  author  = {Zhu, Xing and Li, Lanlan and Zhou, Kaile and Zhang, Xiaoling and Yang, Shanlin},
+  title   = {A Meta-Analysis on the Price Elasticity and Income Elasticity of Residential Electricity Demand},
+  journal = {Journal of Cleaner Production},
+  volume  = {201},
+  pages   = {169--177},
+  year    = {2018},
+  doi     = {10.1016/j.jclepro.2018.08.027},
+  note    = {confirmed: Crossref; abstract read: 103 articles; near-inelastic in the short run, some demand elastic in the long run; coefficients not read}
+}
+
+@article{Stern2012,
+  author  = {Stern, David I.},
+  title   = {Interfuel Substitution: A Meta-Analysis},
+  journal = {Journal of Economic Surveys},
+  volume  = {26},
+  number  = {2},
+  pages   = {307--331},
+  year    = {2012},
+  doi     = {10.1111/j.1467-6419.2010.00646.x},
+  note    = {confirmed: Crossref; abstract read (47 studies; industrial sector, manufacturing, macroeconomy)}
+}
+
+@article{serletis2010ej,
+  author  = {Serletis, Apostolos and Timilsina, Govinda R. and Vasetsky, Olexandr},
+  title   = {International Evidence on Sectoral Interfuel Substitution},
+  journal = {The Energy Journal},
+  volume  = {31},
+  number  = {4},
+  pages   = {1--30},
+  year    = {2010},
+  doi     = {10.5547/ISSN0195-6574-EJ-Vol31-No4-1},
+  note    = {confirmed in paper 1.7 session: Crossref, OpenAlex abstract, WB PRWP 5026 read}
+}
+
+@article{papageorgiou2017,
+  author  = {Papageorgiou, Chris and Saam, Marianne and Schulte, Patrick},
+  title   = {Substitution between Clean and Dirty Energy Inputs: A Macroeconomic Perspective},
+  journal = {The Review of Economics and Statistics},
+  volume  = {99},
+  number  = {2},
+  pages   = {281--290},
+  year    = {2017},
+  doi     = {10.1162/REST_a_00592},
+  note    = {confirmed: Crossref; abstract read in paper 1.7 session}
+}
+
+@article{galindo2015,
+  author  = {Galindo, Luis Miguel and Samaniego, Joseluis and Alatorre, Jos{\'e} Eduardo and Ferrer Carbonell, Jimy and Reyes, Orlando},
+  title   = {Meta-Analysis of the Income and Price Elasticities of Gasoline Demand: Public Policy Implications for {Latin America}},
+  journal = {CEPAL Review},
+  number  = {117},
+  pages   = {7--24},
+  year    = {2015},
+  url     = {https://hdl.handle.net/11362/40057},
+  note    = {confirmed: CEPAL repository record; figures quoted only as reported in the CPAT documentation's panel-estimation section}
+}
+
+% ---- Income elasticities -----------------------------------------------------------
+@article{burke2016,
+  author  = {Burke, Paul J. and Csereklyei, Zsuzsanna},
+  title   = {Understanding the Energy-{GDP} Elasticity: A Sectoral Approach},
+  journal = {Energy Economics},
+  volume  = {58},
+  pages   = {199--210},
+  year    = {2016},
+  doi     = {10.1016/j.eneco.2016.07.004},
+  note    = {confirmed: Crossref; read in paper 1.7 session (CAMA working paper)}
+}
+
+@article{gertler2016,
+  author  = {Gertler, Paul J. and Shelef, Orie and Wolfram, Catherine D. and Fuchs, Alan},
+  title   = {The Demand for Energy-Using Assets among the World's Rising Middle Classes},
+  journal = {American Economic Review},
+  volume  = {106},
+  number  = {6},
+  pages   = {1366--1401},
+  year    = {2016},
+  doi     = {10.1257/aer.20131455},
+  note    = {confirmed: Crossref; cited for its use in CPAT, not read}
+}
+
+% ---- Rebound, tax salience -----------------------------------------------------------
+@article{dimitropoulos2018,
+  author  = {Dimitropoulos, Alexandros and Oueslati, Walid and Sintek, Christina},
+  title   = {The Rebound Effect in Road Transport: A Meta-Analysis of Empirical Studies},
+  journal = {Energy Economics},
+  volume  = {75},
+  pages   = {163--179},
+  year    = {2018},
+  doi     = {10.1016/j.eneco.2018.07.021},
+  note    = {confirmed: Crossref; 26-29 percent rebound as reported in the CPAT documentation}
+}
+
+@article{li2014,
+  author  = {Li, Shanjun and Linn, Joshua and Muehlegger, Erich},
+  title   = {Gasoline Taxes and Consumer Behavior},
+  journal = {American Economic Journal: Economic Policy},
+  volume  = {6},
+  number  = {4},
+  pages   = {302--342},
+  year    = {2014},
+  doi     = {10.1257/pol.6.4.302},
+  note    = {confirmed in paper 1.7 session: Crossref; NBER WP 17891 read}
+}
+
+@article{andersson2019,
+  author  = {Andersson, Julius J.},
+  title   = {Carbon Taxes and {CO2} Emissions: {Sweden} as a Case Study},
+  journal = {American Economic Journal: Economic Policy},
+  volume  = {11},
+  number  = {4},
+  pages   = {1--30},
+  year    = {2019},
+  doi     = {10.1257/pol.20170144},
+  note    = {confirmed in paper 1.7 session: Crossref + abstract}
+}

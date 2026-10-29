@@ -1,0 +1,11 @@
+pair,fuel,sector,usage_dev,eff_dev,cpat_dev,cpat_hic,lit_least,lit_most,lit_median,bias_corrected,n,sources,verdict
+"Gasoline, transport",gso,tra,-0.4,-0.4,-0.64,-0.58,-0.53,-0.84,-0.69,-0.31,5,Labandeira2017; brons2008; havranek2012; huntington2019,In range
+"Diesel, transport",die,tra,-0.3,-0.3,-0.51,-0.44,-0.39,-0.67,-0.47,,4,Labandeira2017; huntington2019,In range
+"Electricity, residential",ecy,res,-0.3,-0.2,-0.44,-0.36,-0.32,-0.51,-0.43,,5,Labandeira2017; huntington2019,In range
+"Electricity, industry",ecy,ind,-0.3,-0.2,-0.44,-0.36,-0.37,-0.81,-0.48,,4,Labandeira2017; huntington2019,In range
+"Electricity, services",ecy,srv,-0.5,-0.4,-0.7,-0.64,-0.37,-0.51,-0.46,,3,Labandeira2017; huntington2019,High
+"Natural gas, residential",nga,res,-0.4,-0.5,-0.7,-0.65,-0.56,-1.59,-0.68,,5,Labandeira2017; burke2016gas; huntington2019,In range
+"Natural gas, industry",nga,ind,-0.5,-0.5,-0.75,-0.7,-0.57,-1.35,-0.97,,4,Labandeira2017; burke2016gas; huntington2019,In range
+"Coal, industry",coa,ind,-0.3,-0.4,-0.58,-0.52,-0.3,-0.7,-0.5,,2,burke2015coal,In range
+"Diesel, industry",die,ind,-0.7,-1.2,-1.06,-1.08,-0.39,-0.67,-0.47,,4,Labandeira2017; huntington2019,High
+"Gasoline, services",gso,srv,-0.6,-1.1,-1.04,-1.05,-0.53,-0.84,-0.69,-0.31,5,Labandeira2017; brons2008; havranek2012; huntington2019,High

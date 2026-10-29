@@ -1,0 +1,21 @@
+pair,year,cpat,partial,share
+"Gasoline, transport",1,-0.64,-0.144,0.224
+"Gasoline, transport",3,-0.64,-0.318,0.497
+"Gasoline, transport",5,-0.64,-0.411,0.642
+"Gasoline, transport",10,-0.64,-0.511,0.798
+"Gasoline, transport",20,-0.64,-0.58,0.906
+"Electricity, residential",1,-0.44,-0.102,0.232
+"Electricity, residential",3,-0.44,-0.227,0.517
+"Electricity, residential",5,-0.44,-0.294,0.667
+"Electricity, residential",10,-0.44,-0.362,0.824
+"Electricity, residential",20,-0.44,-0.405,0.92
+"Coal, industry",1,-0.58,-0.114,0.197
+"Coal, industry",3,-0.58,-0.257,0.444
+"Coal, industry",5,-0.58,-0.338,0.582
+"Coal, industry",10,-0.58,-0.433,0.747
+"Coal, industry",20,-0.58,-0.51,0.879
+"Diesel, industry",1,-1.06,-0.274,0.258
+"Diesel, industry",3,-1.06,-0.582,0.549
+"Diesel, industry",5,-1.06,-0.729,0.688
+"Diesel, industry",10,-1.06,-0.872,0.823
+"Diesel, industry",20,-1.06,-0.97,0.915

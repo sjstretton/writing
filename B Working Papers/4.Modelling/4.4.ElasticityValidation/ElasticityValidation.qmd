@@ -1,0 +1,193 @@
+---
+title: "Are CPAT's Price Elasticities Right?"
+subtitle: "A Check Against the Evidence"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+version: "0.1"
+abstract: |
+  The Climate Policy Assessment Tool, used by the IMF and the World Bank to estimate what carbon prices and fuel subsidy reforms do in some 150 countries, turns every price change into emission cuts through a table of elasticities. This paper checks the tool's default long-run own-price elasticities, fuel by fuel and sector by sector, against published meta-analyses and reviews. Seven of ten fuel-sector pairs lie within the published range. Three are too high: diesel in industry and gasoline in services, at about −1.05 against evidence of −0.4 to −0.8, and electricity in services. Gasoline in transport matches the uncorrected meta-analytic means but is double the estimate corrected for publication bias, and natural gas sits at the inelastic end of its range. Two structural choices matter more than any single value: the tool applies the full long-run response within one year, which overstates five-year responses by about half or more, and it applies own-price elasticities without cross-price terms. The paper sets out a validation protocol for future updates.
+keywords: [price elasticity, energy demand, meta-analysis, carbon pricing, model validation, CPAT]
+jel: [Q41, Q48, Q54, H23, C52]
+bibliography: ElasticityValidation.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+number-sections: true
+format:
+  docx: default
+---
+
+*Working paper, version 0.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the CPAT-AI repository, https://github.com/cpmodelai/cpat_ai.*[^credit]
+
+[^credit]: The Climate Policy Assessment Tool (CPAT) was developed by staff of the International Monetary Fund and the World Bank; its elasticity tables, their documentation and the panel estimation discussed in @sec-compare are their work [@cpat2022technotes; @CPATAI2026]. The demand system used to interpret them is from the author's paper 1.7 [@CFPB17; @StrettonWP17]. Errors are the author's own.
+
+# Introduction {#sec-intro}
+
+A finance ministry that asks how much a \$50 carbon tax will cut its emissions gets an answer whose size is set mostly by one set of numbers: the price elasticities of energy demand. The Climate Policy Assessment Tool (CPAT), built by the IMF and the World Bank and used in their country work, projects fuel use for each fuel and sector of the 150 countries on which it is calibrated and moves it with prices through elasticities [@cpat2022technotes; @black2022framework]. If the elasticity for diesel in industry is twice the true value, the tool reports twice the cut from industrial diesel and overstates how fast that tax base erodes. The same elasticities weight fuels in the Total Effective Carbon Price, the measure of a policy mix's carbon-pricing effort in paper 1.7 [@CFPB17]. Nobody has published a fuel-by-fuel check of CPAT's defaults against the evidence.
+
+This paper asks whether CPAT's default price elasticities are consistent with the published evidence, and what follows where they are not. The answer is mostly yes, with three exceptions and two structural problems. Of ten fuel-sector pairs that carry most of the emissions, seven lie inside the range of published long-run estimates (@tbl-compare, @fig-compare). Diesel in industry and gasoline in services, at about −1.05, are well above the evidence for those fuels, which runs from −0.4 to −0.8; electricity in services, at −0.70, is above the electricity evidence of −0.37 to −0.51. Gasoline in transport, at −0.64, matches the uncorrected meta-analytic means of −0.53 to −0.84 but is double the mean corrected for publication bias, −0.31 [@havranek2012]. Natural gas sits at the inelastic end of a wide range, so CPAT may understate gas demand responses. The structural problems are larger. CPAT applies the full long-run response in the year the price changes; with standard adjustment speeds, only about a fifth of it has happened after one year and about 60 percent after five (@fig-timing). And it applies each fuel's own-price elasticity without the cross-price terms that a consistent demand system needs, which overstates the cut from any policy that raises all fuel prices together, when the estimates hold other fuel prices constant.
+
+The contribution is a transparent comparison and a protocol. CPAT's documentation reports that its elasticities were calibrated to targets derived from one meta-analysis [@Labandeira2017] and sense-checked against an in-house database; its own panel estimation found lower values for gasoline and residential electricity [@CPATAI2026, "Panel estimation of energy demand"]. This paper puts each default beside every published estimate it could verify, classifies it, quantifies what the differences do to emission cuts and the Total Effective Carbon Price using the demand system of paper 1.7 [@StrettonWP17], and turns the exercise into a repeatable test with code in `2.Source/`.
+
+# How CPAT turns prices into emissions {#sec-cpat}
+
+**CPAT moves each fuel's use with income, price and an efficiency trend, one year at a time.** For fuel $f$ in sector $s$ of country $c$, consumption $F$ grows from one year to the next as
+$$
+\frac{F_{csf,t}}{F_{csf,t-1}} = \Big(\frac{1}{1+\alpha_{sf}}\Big)^{1+\epsilon_U}
+\Big(\frac{Y_{c,t}}{Y_{c,t-1}}\Big)^{\epsilon_Y}
+\Big(\frac{p_{csf,t}}{p_{csf,t-1}}\Big)^{\epsilon_U + \epsilon_F(1+\epsilon_U)},
+$$ {#eq-cpat}
+where $Y$ is real GDP, $p$ the real end-user price including taxes, $\alpha$ an autonomous efficiency gain of 0.5–1 percent a year, $\epsilon_Y$ the income elasticity, $\epsilon_U$ the *usage* elasticity (how intensively existing vehicles, boilers and appliances are used) and $\epsilon_F$ the *efficiency* elasticity (how much more efficient the stock becomes) [@CPATAI2026, "Fuel Consumption Dynamics"]. The total own-price elasticity is therefore
+$$
+\epsilon = \epsilon_U + \epsilon_F + \epsilon_U\epsilon_F ,
+$$ {#eq-total}
+and the positive product term is the direct rebound: a more efficient car is cheaper to drive, so it is driven more. With $\epsilon_U = \epsilon_F = -0.3$, rebound offsets about 15 percent of the response, below the 26–29 percent found for road transport in a meta-analysis of 74 studies [@dimitropoulos2018, as reported in the CPAT documentation].
+
+**The defaults are set by fuel, sector and income group.** The public legacy release of CPAT (version 1.0pre) holds usage elasticities for eight fuels and four end-use sectors in four income groups, and efficiency elasticities that are the same across income groups [@CPATAI2026]. Usage elasticities are 0.1 higher in magnitude in low- and middle-income countries than in high-income ones, following the finding that price elasticities are slightly higher in developing countries [@CPATAI2026, citing @Labandeira2017]. Across fuels and sectors the usage elasticities run from −0.1 to −0.7 and the efficiency elasticities from −0.2 to −1.2 (paper 4.1). The documentation states that the targets come from the Labandeira, Labeaga and López-Otero meta-analysis of about 2,000 estimates from 430 studies, expressed as a transport base plus deviations for the residential, industrial and service sectors, and that all elasticities are long-run [@CPATAI2026; @cpat2022technotes]. A simplified set kept with the tool's carbon-price validation files, by fuel only, uses −0.58 for coal and liquid fuels, −0.70 for natural gas, −0.36 for electricity and −0.44 for biomass [@CPATAI2026, `other/tecp_and_validation`].
+
+**Income elasticities follow a reverse-U in income per head.** CPAT starts from 32 base income elasticities by fuel and sector, chosen so that the cross-fuel average matches sectoral energy–GDP elasticities from 132 countries [@burke2016]. It then scales them with income per head along a curve derived from @gertler2016, rising to a peak near \$3,000 per head and declining toward the high-income level, and calibrated so that the global average equals 0.74 [@CPATAI2026]. The comparison in @sec-income uses the base values.
+
+**Power generation and fuel switching sit outside @eq-cpat.** Electricity demand follows @eq-cpat with its own elasticities. The mix of generation responds to generation costs through a conditional elasticity of −0.5 for every technology in the elasticity-based power model, or through the engineering model's dispatch and investment rules [@CPATAI2026]. Between end-use fuels, CPAT has only three cross-price elasticities: biomass with respect to LPG and kerosene in households, and gasoline with respect to diesel. A carbon tax that raises the price of coal in industry therefore cuts coal use by coal's own-price elasticity, and nothing in the industrial block shifts that demand to gas or electricity.
+
+**The demand system of paper 1.7 gives the yardstick.** In a nested constant-elasticity-of-substitution (CES) system, each sector's fuels combine into an energy service with substitution elasticity $\sigma_s$, and demand for the service has price elasticity $-\eta_s$. The own-price elasticity of fuel $f$ with cost share $s_f$ is then $-\sigma_s + (\sigma_s - \eta_s)s_f$, and the cross-price elasticity with respect to fuel $g$ is $(\sigma_s - \eta_s)s_g$ [@StrettonWP17]. Two parameters and the cost shares generate the whole matrix, and the matrix adds up: a rise of every fuel price in a sector by the same proportion cuts every fuel by $\eta_s$ times that proportion. An own-price elasticity estimated for one fuel identifies a mix of $\sigma_s$ and $\eta_s$, and that is the first thing a check must keep in mind.
+
+# What the evidence says {#sec-evidence}
+
+**Meta-analyses put the long-run own-price elasticity of most fuels between −0.3 and −0.9.** The evidence base is large for gasoline and electricity, thinner for gas and diesel, and very thin for coal and biomass. @tbl-compare lists every estimate used; the paragraphs below summarize what each source contributes.
+
+**For energy as a whole, Labandeira and coauthors give the reference means.** Their meta-analysis covers about 2,000 estimates from 430 studies, for energy as a whole and for electricity, natural gas, gasoline, diesel and heating oil [@Labandeira2017; @CPATAI2026]. As reproduced in CPAT's documentation, the long-run means are −0.51 for electricity, −0.57 for natural gas, −0.53 for gasoline and −0.39 for diesel, with "adjusted" values from the meta-regression of −0.37, −0.68, −0.77 and −0.44; by sector, −0.62 residential, −0.51 industrial, −0.72 commercial and −0.44 for the remaining, mostly transport, estimates; −0.52 for developed and −0.55 for developing countries [@CPATAI2026; @cpat2022technotes]. These are the numbers CPAT was calibrated to, so they test the calibration, not the targets.
+
+**Gasoline has the most evidence and the clearest warning about bias.** Brons and coauthors find mean short- and long-run elasticities of −0.34 and −0.84, working mainly through fuel efficiency and mileage per car [@brons2008]. Havranek, Irsova and Janda find that the literature reports implausibly large negative estimates far more often than insignificant or positive ones, so that published averages are "exaggerated twofold": correcting for publication bias moves the long-run mean from about −0.69 to −0.31 and the short-run mean from −0.23 to −0.09 [@havranek2012]. A review of studies for Brazil, China, India, Mexico and Russia finds a long-run gasoline elasticity of −0.61 and diesel −0.50, and reports Dahl's earlier survey values of −0.61 and −0.67 [@huntington2019]. @dahl2012 proposes country-specific gasoline and diesel elasticities for over one hundred countries, the natural source for a country-level update.
+
+**Electricity demand is less elastic than liquid fuels, and grid access shapes it in developing countries.** The industrializing-economy review gives a long-run average of −0.46, −0.32 for households and −0.81 for industry (the industrial figure from Mexico alone), and warns that electricity use in these countries is constrained more by grid access than by price [@huntington2019]. A meta-analysis of 103 studies of residential demand finds it close to inelastic in the short run and, in some settings, elastic in the long run [@zhu2018].
+
+**Natural gas looks more elastic than CPAT assumes, but the evidence is uneven.** For 44 countries, @burke2016gas find an average long-run price elasticity of about −1.25. The industrializing-economy review finds −1.36 across studies, −1.59 for households and −0.25 for the power sector, and reports Dahl's −1.35 for industry and −0.56 for households [@huntington2019]. The review again warns that pipeline availability, often a government decision, drives gas use in many developing countries.
+
+**Coal and biomass have almost no meta-analytic evidence.** The best-identified recent estimate is for China, where provincial coal demand became more price elastic over 1998–2012 and reached −0.3 to −0.7 by 2012, measured over two years [@burke2015coal]. Neither Labandeira and coauthors nor the industrializing-economy review report a coal mean. For traditional biomass we found no meta-analysis, which matters because CPAT uses biomass to model households' fallback from LPG and kerosene.
+
+**Substitution between fuels is a separate parameter, and its evidence is mostly from industry.** Stern's meta-analysis of 47 studies finds that, for industry as a whole, the shadow elasticities of substitution between oil and coal, oil and gas, oil and electricity, and gas and electricity are significantly greater than one, with less substitution at the macro level [@Stern2012]. Among fossil fuels, sectoral estimates are below one and lowest in power generation and transport [@serletis2010ej]; between clean and dirty energy inputs, above one [@papageorgiou2017]. CPAT's conditional power-sector elasticity of −0.5 sits at the fossil-to-fossil end of this evidence, below the clean-versus-dirty estimates that matter for a shift to renewables.
+
+**Taxes may move demand more than equal price changes.** Gasoline consumption responds about three times as much to a tax rise as to an equal tax-exclusive price rise in US states [@li2014], and Sweden's carbon tax had an elasticity three times its price elasticity [@andersson2019]. A model calibrated to price elasticities may therefore understate the response to a well-publicized carbon tax, which partly offsets the publication-bias warning. The evidence is from road fuels.
+
+# How CPAT compares {#sec-compare}
+
+**Seven of ten fuel-sector pairs are within the published range; three are high.** @tbl-compare gives CPAT's total long-run elasticity from @eq-total for low- and middle-income countries and for high-income countries, beside the range of published long-run estimates for that fuel and sector. A pair is "in range" when either CPAT value lies within 0.05 of the range, "high" when both are more elastic than the most elastic estimate by more than 0.05. @fig-compare shows the same comparison.
+
+| Fuel, sector | CPAT usage, efficiency (LMIC) | CPAT total, LMIC / HIC | Published long-run range (median) | Verdict |
+|---|---|---|---|---|
+| Gasoline, transport | −0.4, −0.4 | −0.64 / −0.58 | −0.53 to −0.84 (−0.69); bias-corrected −0.31 | In range; double the bias-corrected mean |
+| Diesel, transport | −0.3, −0.3 | −0.51 / −0.44 | −0.39 to −0.67 (−0.47) | In range |
+| Electricity, residential | −0.3, −0.2 | −0.44 / −0.36 | −0.32 to −0.51 (−0.43) | In range |
+| Electricity, industry | −0.3, −0.2 | −0.44 / −0.36 | −0.37 to −0.81 (−0.48) | In range |
+| Electricity, services | −0.5, −0.4 | −0.70 / −0.64 | −0.37 to −0.51 (−0.46) | High |
+| Natural gas, residential | −0.4, −0.5 | −0.70 / −0.65 | −0.56 to −1.59 (−0.68) | In range, inelastic half |
+| Natural gas, industry | −0.5, −0.5 | −0.75 / −0.70 | −0.57 to −1.35 (−0.97) | In range, inelastic half |
+| Coal, industry | −0.3, −0.4 | −0.58 / −0.52 | −0.30 to −0.70 (one study) | In range; evidence thin |
+| Diesel, industry | −0.7, −1.2 | −1.06 / −1.08 | −0.39 to −0.67 (diesel, all sectors) | High |
+| Gasoline, services | −0.6, −1.1 | −1.04 / −1.05 | −0.53 to −0.84 (gasoline, all sectors) | High |
+
+: CPAT's default long-run own-price elasticities against the published evidence. CPAT total = usage + efficiency + usage × efficiency (@eq-total); LMIC = low- and middle-income countries (the low, lower-middle and upper-middle groups share one value); HIC = high-income. Published estimates: electricity, natural gas, gasoline and diesel means and adjusted means from @Labandeira2017 as reproduced in the CPAT documentation; gasoline from @brons2008 and @havranek2012 (uncorrected −0.69; bias-corrected −0.31); developing-economy averages and Dahl's survey values as reported in @huntington2019 (working-paper version); natural gas from @burke2016gas; coal from @burke2015coal (China). Where no sector-specific evidence exists, the fuel's evidence for all sectors is used. Source: CPAT legacy 1.0pre defaults [@CPATAI2026]; author's calculation, `2.Source/elasticity_check.py`. {#tbl-compare}
+
+![CPAT's default long-run own-price elasticities against the range of published estimates. Gray bars span the published estimates for each fuel and sector, ticks mark individual estimates, the orange diamond is the gasoline mean after correction for publication bias, and blue dots are CPAT's totals for low- and middle-income (filled) and high-income (open) countries. Sources as in @tbl-compare. Source: author's calculation, `2.Source/elasticity_check.py`.](2.Source/figures/fig1_cpat_vs_literature.png){#fig-compare width=100%}
+
+**The three high values all come from large efficiency elasticities outside the sectors where they were estimated.** Diesel in industry carries an efficiency elasticity of −1.2 and gasoline in services −1.1, which make their totals about −1.05, beyond the most elastic estimate for either fuel. The documentation traces these to the calibration targets: the target for industrial diesel, −1.18, and for gasoline in services, −1.15, come from applying sector deviations estimated over all fuels to fuels with almost no sector-specific studies [@CPATAI2026, Table B]. The service-sector deviation is itself estimated from 61 observations [@CPATAI2026, Table A]. CPAT's own panel estimation flagged both problems: it judged −1.1 for industrial diesel "high" and found service-sector elasticities similar to residential ones, not larger [@CPATAI2026, "Panel estimation of energy demand"].
+
+**Gasoline in transport is in range of the published means but double the bias-corrected mean.** CPAT's −0.64 for developing countries sits near the uncorrected means of @havranek2012 and @huntington2019. But if the twofold exaggeration that Havranek and coauthors find applies, the defensible central value is nearer −0.3. CPAT's documentation compares its own weighted value, −0.61, with a panel estimate on CPAT's 2000–2018 data of −0.19 [@StrettonWP43], and the documentation cites a Latin American meta-analysis giving −0.10 in the short run and −0.30 in the long run [@galindo2015, as reported in the CPAT documentation]. Three independent lines of evidence therefore point below CPAT's value for the single largest fuel-sector pair in most countries' energy emissions.
+
+**Electricity is well calibrated in households and industry, too high in services.** Residential and industrial electricity, at −0.44 and −0.36, sit at the median of the evidence. The panel estimate on CPAT's data is lower, −0.1 against the −0.4 the documentation reports for CPAT [@CPATAI2026; @StrettonWP43], and for countries with rationed supply or unconnected households a lower value is plausible because price does not bind. Services electricity at −0.70 is above every electricity estimate and above the residential value, contrary to the panel finding.
+
+**Natural gas may be too inelastic, but the evidence is the least comparable.** CPAT's −0.65 to −0.75 lies at the inelastic end of a range whose cross-country estimates exceed −1.2. The high estimates come from aggregate demand that includes power generation and from countries building out pipelines [@burke2016gas; @huntington2019]. Where gas competes with coal in power and industry, part of the response that these studies measure is fuel switching, which CPAT handles elsewhere or not at all. Raising CPAT's end-use gas elasticity without adding switching would double-count in some countries and undercount in others.
+
+**Coal is in range only because the range is one study wide.** CPAT's −0.58 for industrial coal fits the Chinese provincial estimates [@burke2015coal]. Industrial coal is a large emission source in several of the largest emitting developing countries, and the evidence for its price response outside China is, as far as this search found, close to nil.
+
+## Income elasticities {#sec-income}
+
+**The base income elasticities are close for gasoline, low for diesel and gas in industry, and high for household electricity.** @tbl-income compares CPAT's base values with the long-run estimates in the industrializing-economy review. The comparison is indicative: CPAT scales its base values with income per head, so a country's effective elasticity can differ from the base, and most surveyed estimates are national rather than sectoral.
+
+| Fuel, sector | CPAT base | Published long-run | Source |
+|---|---|---|---|
+| Gasoline, transport | 0.7 | 0.69 (Dahl); 0.94 (developing economies) | @huntington2019 |
+| Diesel, transport | 0.6 | 1.13 (Dahl) | @huntington2019 |
+| Electricity, residential | 0.8 | 0.53 (developing); 0.60 (Dahl) | @huntington2019 |
+| Electricity, industry | 0.8 | 0.76 (developing) | @huntington2019 |
+| Natural gas, industry | 1.0 | 1.39 (Dahl) | @huntington2019 |
+| Natural gas, residential | 0.3 | 0.11 (Dahl); 0.85 (developing) | @huntington2019 |
+
+: CPAT base income elasticities against published long-run estimates. "Dahl" is Dahl's survey as reported in @huntington2019; "developing" is that review's average for Brazil, China, India, Mexico and Russia. CPAT scales the base values with income per head [@CPATAI2026]. Source: author's calculation, `2.Source/table_income.csv`. {#tbl-income}
+
+**Income elasticities move the baseline, so their errors compound.** A price elasticity error scales the cut from a given baseline; an income elasticity error changes the baseline itself, year after year. CPAT's panel estimation found household electricity's income elasticity at 0.16 against CPAT's adjusted 0.65, and transport fuels at 0.31–0.53 against CPAT's 0.57–0.65 [@CPATAI2026]. Baseline emissions in 2030 or 2035 are where these differences show, which paper 4.3 takes up.
+
+# What the differences do {#sec-implications}
+
+## Timing: CPAT front-loads the response {#sec-timing}
+
+**CPAT reaches the full long-run response in the year the price changes; the evidence says it takes a decade.** The documentation is explicit that "all the effects take place over the course of one year" [@CPATAI2026]. Yet the two margins in @eq-cpat adjust at different speeds. Usage responds within a year or two: the ratio of short- to long-run gasoline elasticity is about 0.29 after correcting for publication bias [@havranek2012]. Efficiency moves with the capital stock: CPAT's own transport module assumes vehicles turn over at 6.7 percent a year [@black2022framework, Annex C]. Write the share of each margin's long-run response achieved $T$ years after a permanent price change as $a(T) = 1 - (1-\lambda)^T$, with $\lambda_U = 0.30$ for usage and $\lambda_F = 0.067$ for efficiency, as in paper 1.7 [@StrettonWP17]. The horizon-$T$ elasticity is $a_U\epsilon_U + a_F\epsilon_F + a_U a_F\epsilon_U\epsilon_F$.
+
+![The own-price elasticity at each horizon after a permanent price rise: CPAT (dashed, full long-run response from year 1) against partial adjustment of the usage margin at 30 percent a year and the efficiency margin at 6.7 percent a year (solid). CPAT defaults for low- and middle-income countries. Source: author's calculation, `2.Source/elasticity_check.py`.](2.Source/figures/fig2_timing.png){#fig-timing width=95%}
+
+**After one year about a fifth of CPAT's response has happened; after five, about 60 percent.** For gasoline in transport, the horizon elasticity is −0.14 after one year, −0.41 after five and −0.51 after ten, against CPAT's −0.64 throughout (@fig-timing). Coal in industry, where the efficiency margin dominates, reaches 20 percent of CPAT's value after one year and 58 percent after five; household electricity and industrial diesel follow the same pattern. Five years out, CPAT's response is therefore 45 to 70 percent larger than the partial-adjustment response, and the overstatement is largest where capital is long-lived. Phased price paths, which CPAT is meant for, reduce the error because each year's increment has had less time to fall short; they do not remove it.
+
+**The timing error also understates near-term carbon tax revenue.** A tax base that falls faster in the model than in the economy produces less modeled revenue in the first years. For a fuel subsidy reform, the same front-loading brings forward the modeled fall in consumption, and with it the fiscal and emission gains.
+
+## Structure: own-price elasticities without cross-price terms {#sec-structure}
+
+**Applying each fuel's own-price elasticity to a simultaneous rise in all fuel prices overstates the cut when the estimates hold other prices constant.** In the CES system of @sec-cpat, a policy that changes fuel prices by proportions $\pi_g$ changes use of fuel $f$ by
+$$
+d\ln q_f = \big[-\sigma + (\sigma-\eta)s_f\big]\pi_f + (\sigma-\eta)\sum_{g\neq f}s_g\pi_g .
+$$ {#eq-cross}
+A model with own-price terms only keeps the first bracket and drops the second. When the substitution elasticity exceeds the demand elasticity and other fuels' prices also rise, the dropped term is positive: the cut in fuel $f$ is overstated by $(\sigma-\eta)\sum_{g\neq f}s_g\pi_g$. For a uniform proportional price rise the correct response is $-\eta\pi$ for every fuel, while the own-price model gives $[-\sigma+(\sigma-\eta)s_f]\pi$, more negative by $(\sigma-\eta)(1-s_f)\pi$. The condition is about what the estimates measure. Single-equation studies that omit other energy prices, common in the meta-analyses, pick up part of the response to the general level of energy prices, and for them the bias is smaller.
+
+**The bias is largest for minor fuels in sectors with easy substitution.** In industry, with $\sigma$ near 0.8 and $\eta$ near 0.3 [@StrettonWP17], a fuel with a 20 percent cost share has its response to a uniform price rise overstated by 0.4 times the price change: CPAT's own-price elasticity of about −0.6 would imply a cut twice the correct $-\eta$ response. CPAT avoids the worst of this because its end-use elasticities are close to demand elasticities, not to substitution elasticities, but the consequence is the mirror image: with almost no cross-price terms, CPAT has almost no fuel switching outside power. A carbon tax that makes coal dearer relative to gas does not move industry from coal to gas in CPAT; it cuts coal and gas each by their own elasticities applied to their own price rises.
+
+## Emission cuts and the Total Effective Carbon Price {#sec-tecp}
+
+**Elasticity errors move emission cuts roughly in proportion but move the Total Effective Carbon Price much less.** The Total Effective Carbon Price (TECP) of a policy mix is the uniform carbon tax that would cut emissions by as much as the mix [@CFPB17]. Because it is a ratio of two cuts computed with the same elasticities, a common error cancels. Formally, at first order the TECP is $\tau^* = R_P/\Lambda$, where $R_P$ is the mix's emission cut and $\Lambda$ the cut from a \$1 uniform tax; both are linear in the elasticities [@StrettonWP17, Proposition 1]. Scaling every substitution and demand elasticity by the same factor $k$ scales $R_P$ and $\Lambda$ by $k$ and leaves $\tau^*$ unchanged. Only errors that differ across sectors or margins move the TECP, by shifting weight toward the sectors whose elasticities are most overstated.
+
+| Demand elasticities used | Power | Road | Industry | Cut from \$30 tax (%) | of which demand, first order (%) | TECP of the mix, first order / exact (\$/t) |
+|---|---|---|---|---|---|---|
+| Paper 1.7 central values | 0.20 | 0.40 | 0.30 | 13.4 | 4.8 | 33.2 / 36.9 |
+| CPAT-implied | 0.53 | 0.58 | 0.66 | 17.5 | 10.8 | 31.5 / 33.1 |
+| CPAT, road bias-corrected | 0.53 | 0.31 | 0.66 | 17.0 | 10.2 | 32.2 / 34.5 |
+| CPAT, all halved | 0.27 | 0.29 | 0.33 | 13.8 | 5.4 | 33.3 / 37.0 |
+
+: Emission cuts and the Total Effective Carbon Price in the stylized three-sector economy of paper 1.7 under alternative demand elasticities (positive numbers). Substitution elasticities are held at paper 1.7's central values (power 2.0, road 1.5, industry 0.8). "CPAT-implied" takes the mean of CPAT's low- and middle-income totals for electricity across end uses (power), gasoline and diesel (road), and coal, gas and other oil (industry). The policy mix is paper 1.7's: a \$30 carbon tax on power and industry, a \$10/MWh renewable subsidy and a 2 percent low-carbon fuel standard. Cuts are long-run, exact CES; the demand column is the first-order demand-margin cut. All numbers are stylized. Source: author's calculation, `2.Source/elasticity_check.py` with paper 1.7's model. {#tbl-tecp}
+
+**With CPAT's demand elasticities, the demand margin's cut more than doubles and the total cut rises by about a third.** In @tbl-tecp, a \$30 economy-wide tax cuts the stylized economy's emissions by 13.4 percent with paper 1.7's central values and by 17.5 percent with CPAT-implied demand elasticities, because the demand margin's share rises from 4.8 to 10.8 percent of emissions while switching is unchanged. Halving CPAT's demand elasticities, the correction Havranek and coauthors find for gasoline, brings the cut back to 13.8 percent. In CPAT, which has little switching, the demand margin carries nearly all of the cut, so an overstatement of demand elasticities by a factor of two overstates CPAT's emission cuts by close to a factor of two.
+
+**The TECP moves by about a tenth.** The exact TECP of paper 1.7's mix is \$36.9 per tonne with the central calibration, \$33.1 with CPAT-implied demand elasticities and \$37.0 with those elasticities halved. The mix leans on switching (the subsidy and the fuel standard work only through relative prices), so raising demand elasticities raises the benchmark's cut more than the mix's and lowers the TECP. Correcting only road fuels for publication bias moves it by \$1.4. For a country comparison of TECPs, then, the elasticity errors found here matter less than they do for estimated emission cuts, provided the same elasticities are used for every country.
+
+**In CPAT itself, the price elasticities are the largest single source of uncertainty in emission cuts.** Paper 4.3 reports that varying CPAT's price elasticities by two standard deviations either way moves the cut in G20 CO₂ emissions from a \$75 carbon tax from 29 percent at the defaults to between 7 and 39 percent [@StrettonWP43]. The checks in this paper narrow that band: the evidence supports most defaults, so the realistic range for a correction is the handful of pairs in @tbl-compare and the timing in @sec-timing, not a uniform shift of all elasticities.
+
+**For the Total Carbon Price, which uses no elasticities, the issue is what it leaves out.** The World Bank's Total Carbon Price adds explicit carbon prices and fuel excises net of subsidies per tonne [@agnolucci2023tcp]. In the dataset kept with CPAT, which covers 155 countries from 1995 to 2022, the mean country's Total Carbon Price in 2022 was \$32 per tonne, made of \$57.7 of net energy taxes, \$8.4 from emissions trading and \$3.5 from carbon taxes, less \$36.0 of net subsidies and \$1.5 of VAT concessions; 54 of the 155 countries had a negative total [@CPATAI2026, `All_data_TCP.xlsx`]. That metric weights a dollar per tonne on every fuel equally. The TECP weights it by how much it cuts emissions, which is where elasticities enter: with CPAT's defaults, a dollar of subsidy on industrial diesel would count about twice as much as the evidence supports.
+
+# A validation protocol for future updates {#sec-protocol}
+
+**Elasticity defaults should be validated by a fixed, repeatable procedure every time CPAT's data or structure change.** The procedure below is what this paper did, written so that the next update can run it mechanically and report any change. `2.Source/elasticity_check.py` implements steps 2 to 5 for the current defaults.
+
+1. *Define the parameter before comparing it.* For each fuel-sector pair, state which elasticity the model uses (usage, efficiency, total; own-price only or with cross-price terms; long-run or horizon-specific) and convert it to the long-run total own-price elasticity of @eq-total. Record which other prices the comparison estimates hold constant.
+2. *Assemble the evidence register.* For each pair, list every published long-run estimate with its source, sample (countries, years, income group), estimator and whether it is corrected for publication bias. Use meta-analyses first [@Labandeira2017; @brons2008; @havranek2012; and for electricity @espey2004; @zhu2018], reviews for developing economies second [@huntington2019; @dahl2012], and well-identified single studies only where no synthesis exists [@burke2016gas; @burke2015coal]. Verify each number against the source, not a secondary table.
+3. *Classify each default.* "In range" if within 0.05 of the published range; "high" or "low" otherwise; "thin" if fewer than three independent estimates. Report the bias-corrected value where one exists, and treat it as the central case for fuels where the bias is documented.
+4. *Weight by what matters.* Rank pairs by their share of baseline emissions in the countries CPAT is most used for. A "high" value on a pair with 1 percent of emissions is a footnote; on industrial coal or road diesel it is a priority.
+5. *Test the consequences.* Rerun a standard scenario, such as a \$25 economy-wide carbon tax phased in over five years, with the defaults, with the bias-corrected values and with the literature medians, and report the range of emission cuts, revenue and TECP in 2030 and 2035. A default is acceptable when its result lies inside the range produced by the evidence.
+6. *Back-cast.* Where countries changed fuel prices sharply, as in subsidy reforms, compare CPAT's predicted consumption change with the outcome, using the model's own timing. This tests timing and level together and is the most direct check available (paper 4.3).
+7. *Re-estimate on CPAT's own data.* Repeat the panel estimation reported in the documentation with dynamic specifications that separate short- and long-run responses, and with sector activity rather than GDP as the scale variable, as that exercise itself recommended [@CPATAI2026].
+8. *Publish the register and the changes.* Every changed default should carry its evidence line, the old value and the effect on the standard scenario, in the tool's change log.
+
+**Three changes follow from the current check and need no new research.** First, bring the efficiency elasticities for industrial diesel, services gasoline and services electricity into the range of the evidence for those fuels, for example by using the transport or residential values. Second, add a partial-adjustment option with separate speeds for usage and efficiency, as paper 1.7 and CPAT's own CBAM work already do, and report horizon-specific results by default. Third, run the standard scenario with gasoline and diesel elasticities halved, as a publication-bias case, and show it beside the central result.
+
+# Limits {#sec-limits}
+
+**The comparison uses published means, which have their own problems.** Meta-analytic means mix countries, periods and estimators, and the publication bias documented for gasoline may affect other fuels to an unknown degree. The developing-economy review covers five large economies and few estimates for gas and electricity [@huntington2019]. Several numbers here are taken as reported in secondary tables, notably Labandeira and coauthors' means as reproduced in CPAT's documentation and Dahl's survey values as reported by Huntington and coauthors; the original tables should be checked before the defaults are changed.
+
+**CPAT's country-specific values may differ from the defaults.** This paper checks the public defaults by income group. Users can override them, and CPAT's full release may hold country-specific values not examined here. The power sector's response, which in many countries carries the largest emission cut from a carbon price, runs through generation costs and the engineering model and is outside this check; paper 4.3 compares it with a power-sector model.
+
+**The implications in @sec-tecp are illustrative.** They use the stylized three-sector economy of paper 1.7, not a CPAT country run. They show the direction and rough size of the effects, not a country's numbers.
+
+# Conclusion {#sec-conclusion}
+
+CPAT's default price elasticities are mostly consistent with the evidence, and where they are not, the errors are identifiable and fixable: three efficiency elasticities applied outside the sectors where the evidence lies, a gasoline value that ignores the documented publication bias, and natural gas at the inelastic end of a wide range. The larger risks are structural. Applying the full long-run response in one year overstates near-term cuts by about half, and the absence of cross-price terms leaves the model with almost no fuel switching outside power. Both matter more for the emission cuts and revenue a finance ministry plans on than for the Total Effective Carbon Price, which is robust to common errors. The next step is to run the protocol of @sec-protocol on a CPAT country run with partial adjustment switched on, and to back-cast it against a subsidy reform.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
