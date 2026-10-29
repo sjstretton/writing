@@ -1,0 +1,136 @@
+---
+title: "Price Production and Consumption Separately"
+subtitle: "A Two-Track Architecture for Carbon Pricing in Open Economies"
+author:
+  - name: "Stephen J. Stretton"
+    affiliation: "World Bank Group"
+date: "October 2026"
+abstract: |
+  Carbon prices stay low in open economies because one instrument is asked to do two jobs. A tax on production emissions gives firms the right incentive to cut emissions per unit of output, but it also raises their average cost, so exporters and import-competing producers lose share and governments keep the rate low. This paper separates the jobs. Production is priced with a revenue-neutral feebate, which preserves the full marginal incentive while raising the producer price only by the resource cost of abatement, about half the intensity cut times the rate. Consumption is priced with a destination-based charge on embodied carbon, collected through the value-added tax, which treats imports and domestic goods alike and exempts exports. Three results follow. The feebate's residual cost is second order and does not depend on trade exposure. An international payment per tonne above half the feebate rate makes the feebate net-beneficial to the adopting country, which justifies crediting policies rather than projects. And once importers charge for embodied carbon, each exporter's most competitive feebate rate equals the charge in its export markets, so production moves toward the countries that price carbon most. Four companion papers give the detail.
+keywords: [carbon pricing, feebates, output-based rebating, border carbon adjustment, destination-based taxation, policy crediting]
+jel: [F18, H23, Q54, Q58]
+bibliography: OpenEconomyCarbonPricing-v2.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+format:
+  docx: default
+  pdf:
+    number-sections: true
+    linestretch: 1.2
+---
+
+*The findings, interpretations, and conclusions expressed in this paper are entirely those of the author. They do not necessarily represent the views of the World Bank and its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.*
+
+# Introduction
+
+Carbon pricing covers about a quarter of global emissions, and most of that coverage is priced below $10 per tonne [@WorldBank2025]. The High-Level Commission on Carbon Prices put the range consistent with the Paris goals at $50–100 per tonne by 2030 [@HLCCP2017]. The gap is not a failure of political will alone. It is built into the instrument.
+
+A conventional carbon price is a tax on the emissions of domestic production. In an open economy that design has a cost its advocates rarely price: it raises the average cost of every unit produced, so exporters and import-competing firms lose share to untaxed foreign supply. Governments respond with exemptions, free allocation and low rates [@KeenParryRoaf2022]. The EU's answer, a border adjustment on imports [@EU2023], protects the home market but not export markets, and it recognizes only explicit carbon prices paid abroad.
+
+This paper argues that production and consumption should be priced separately, with a different instrument for each. **Production**, in the trade sense of what a country makes, is priced with a revenue-neutral feebate: a charge on emissions above a sector benchmark and a rebate below it. **Consumption**, what a country uses, is priced with a destination-based charge on embodied carbon, collected through the value-added tax (VAT). The difference between the two bases is net exports, and that difference is where conventional carbon pricing fails.
+
+The contribution is an architecture and three results. First, the feebate's cost to the producer is second order in the rate and independent of trade exposure (Section 4). Second, an international payment per tonne abated turns the feebate into a net gain for the adopting country whenever the payment exceeds half the feebate rate, which gives a self-interested basis for crediting policies rather than projects (Section 5). Third, with consumption charges in importing markets, each exporter's most competitive feebate rate equals the charge in its export markets, so production moves to the countries that price carbon most (Section 6). The paper draws on four companion papers: on turning VAT into a carbon consumption tax [@StrettonCCT], on feebates [@StrettonFeebates; @StrettonIndustrialFeebates], on measuring any policy as a carbon-price equivalent [@StrettonTECP], and on updating the EU's border mechanism [@StrettonCBAM].
+
+# Why one price cannot do both jobs
+
+A carbon price works on two margins. It lowers emissions per unit of output, the intensity margin, and it lowers output of carbon-intensive goods, the quantity margin. In a closed economy a single tax works both margins at once and is the efficient instrument. In an open economy the quantity margin splits. Part of the fall in domestic output is reduced consumption, which is abatement. The rest is replacement by foreign production, which is leakage. Meta-analyses of the modeling literature put leakage rates for energy-intensive, trade-exposed sectors at 5–25 percent under unilateral pricing [@BrangerQuirion2014; @BoehringerBalistreriRutherford2012], and the competitiveness loss is concentrated in exactly the sectors that hold most industrial emissions.
+
+The political constraint follows from the same arithmetic. Firms in trade-exposed sectors pass through only a fraction of carbon costs, typically under half [@NeuhoffRitz2019], and absorb the rest in margins. They lobby against the rate, and they win: the instruments actually in use, free allocation under the EU ETS, exemptions in South Africa, output-based standards in Canada, all cap the effective price on industry [@KeenParryRoaf2022, Table 2]. Households face the pass-through on the goods they buy, and visible price rises without visible rebates lose public support [@Klenert2018].
+
+The two constraints bind different margins. The competitiveness constraint binds the quantity margin on the production side. The acceptability constraint binds the price level on the consumption side. One instrument cannot relax both. Two can.
+
+This paper's scope is production versus consumption in the trade sense. The separate case for feebates in power generation, which turns on capital turnover and household electricity prices rather than trade, is made in @StrettonFeebates.
+
+# The two-track architecture
+
+**Track 1: a revenue-neutral production feebate.** Each sector has a benchmark emissions intensity $\bar e$, set at the sector average and updated as the average falls. A producer with intensity $e_i$ pays $t(e_i - \bar e)$ per unit of output: a fee above the benchmark, a rebate below it. Payments sum to zero across the sector, so the treasury cost is zero and the sector's average cost does not rise. The marginal incentive to cut intensity is the full rate $t$. Output-based rebating, tradable performance standards and feebates are near-equivalent in this respect: they work the intensity margin and leave the quantity margin alone [@Fischer2001; @FischerFox2007; @KeenParryRoaf2022].
+
+**Track 2: a destination-based consumption charge.** Every good consumed domestically bears a charge $\tau$ per tonne of embodied carbon, whether produced at home or imported. Exports are zero-rated. This is the destination principle on which VAT already operates [@KeenLockwood2010], and the companion paper shows how it can be introduced inside VAT: the value component of VAT falls as a carbon component rises, so the total rate barely moves while its base shifts from value to carbon [@StrettonCCT]. Imports pay on default intensities that are deliberately generous at the outset, to avoid a trade dispute, with firm-specific data allowed to rebut them; the same approach is recommended by @KeenParryRoaf2022 and @Cosbey2019. The charge can sit on consumers at the point of sale or, administratively simpler, as a forward-announced liability on the few firms that control the energy chain: fuel importers, refiners, utilities and large retailers. A liability announced in advance also gives investors the forward price that a tax levied year by year does not.
+
+**Why the two tracks together reproduce a first-best price.** Track 1 restores the intensity margin at no cost to competitiveness. Track 2 restores the quantity margin on the consumption base, where it causes no leakage because imports and domestic goods pay alike. A uniform carbon tax in a closed economy works both margins with one rate; the two tracks work them with two rates, $t$ and $\tau$, which can differ. Separating the rates is the point: $t$ can be high because it does not raise average costs, and $\tau$ is set by what households will accept and by the revenue the VAT reform needs.
+
+# What a feebate costs
+
+Let a competitive sector produce at unit cost $c(e) = c_0 + \tfrac{k}{2}(e_0 - e)^2$, where $e_0$ is the unpriced intensity and $k$ the slope of the marginal cost of cutting it. Demand, domestic and export, has price elasticity $\eta$. Compare a carbon tax and a revenue-neutral feebate at the same rate $t$. Proofs are in the appendix.
+
+**Proposition 1 (equal intensity response).** Both instruments induce the same intensity, $e^* = e_0 - t/k$, because the marginal incentive is $t$ under each.
+
+**Proposition 2 (residual cost).** The feebate raises the producer price by the resource cost of abatement,
+$$
+\Delta p_{F} = \frac{t^2}{2k} = \tfrac{1}{2}\, t\, \Delta e,
+$$
+half the intensity cut times the rate. The tax raises it by $t e_0 - t^2/2k$, roughly the full carbon bill. The ratio is $\Delta e / 2e_0$: a feebate that cuts intensity by 30 percent raises the price 15 percent as much as a tax at the same rate. The output loss is $-\eta\, t^2/2k p_0$ under the feebate, second order in $t$, against $-\eta\, t e_0 / p_0$ under the tax, first order.
+
+**Proposition 3 (the price of giving up the quantity margin).** To cut the same tonnes as a tax at rate $t_T$, a feebate alone needs the higher rate
+$$
+t_F = t_T \left(1 + \frac{\eta\, k\, e_0^2}{p_0}\right).
+$$
+The premium rises with demand elasticity, with carbon intensity per dollar of output and with the steepness of abatement costs. This is the known weakness of intensity standards: they implicitly subsidize output [@HollandHughesKnittel2009; @FowlieReguantRyan2016].
+
+Two points limit the weakness. In a trade-exposed sector, most of the tax's quantity response is foreign supply replacing domestic supply, which is leakage and not abatement, so the premium overstates the feebate's disadvantage from a global view. And Track 2 restores the genuine demand response on the consumption base. The architecture, not the feebate, is what delivers both margins.
+
+*Illustration (stylized).* A steel-like sector with $e_0 = 2$ tCO₂ per tonne, $p_0 = \$600$ per tonne and $t = \$50$ per tCO₂, cutting intensity by 30 percent. The feebate raises the price by \$15 per tonne, 2.5 percent. A tax at the same rate raises it by \$85, 14 percent. A calibrated version using CBAM default intensities is left to the longer paper.
+
+For developing countries this is the result that matters. Their emissions are in production for export and in new industrial capacity, not in a large consumption base. A feebate lets them price production at a rate that would be unthinkable as a tax, with no treasury cost and a price effect of a few percent.
+
+# International payments and policy crediting
+
+Suppose an external buyer pays $\pi$ per tonne abated below the unpriced baseline: results-based climate finance, an Article 6 transfer or a policy-crediting facility [@WorldBankTCAF]. With the cost function above, a feebate at rate $t$ cuts $Qt/k$ tonnes at resource cost $Qt^2/2k$, so the country's net cost is
+$$
+\frac{Q\,t\,(t - 2\pi)}{2k}.
+$$
+
+**Proposition 4 (crediting).** The feebate is net-beneficial whenever $\pi > t/2$, because the payment per tonne exceeds the average abatement cost, which under any rising marginal cost is below the marginal cost $t$. The country's best response is $t = \pi$, with a surplus of $Q\pi^2/2k$.
+
+A crediting price therefore induces a feebate at the same rate, in the adopting country's own interest and at no cost to its treasury. This is the case for crediting policies rather than projects: the buyer pays for a verifiable change in the sector's intensity, which the feebate produces directly, rather than for individual installations whose additionality is contested. The policy's price effect must be measured on a common scale across instruments, which is what the carbon-price-equivalent metric provides [@StrettonTECP]. The open questions are the baseline, which fixes $e_0$, and who pays; both are shared with every other form of results-based finance.
+
+# From leakage to a race to the top
+
+Let an importing market charge $\tau$ per tonne of embodied carbon, through a consumption charge (Track 2) or a border adjustment that measures actual intensity. An exporter running a feebate at rate $t_i$ delivers at cost
+$$
+D_i = c_0 + \frac{t_i^2}{2k} + \tau\left(e_0 - \frac{t_i}{k}\right).
+$$
+
+**Proposition 5 (best response).** $D_i$ is minimized at $t_i = \tau$. Each exporter's most competitive feebate rate equals the carbon charge in its export markets.
+
+As importers raise $\tau$, exporters raise $t_i$, and market share moves toward the producers with the lowest embodied carbon, which are those with the strongest production pricing. Under source-based pricing the opposite holds: production moves to the lowest tax. The mechanism is the one that spread VAT, a destination-based tax, to over 170 countries without coordination [@KeenLockwood2010], and the one proposed for corporate taxation on the same grounds [@Auerbach2017]. It is also a decentralized version of a climate club: @Nordhaus2015 obtains participation through a tariff on non-members; here the incentive is the import charge every exporter already faces [@HelmHepburnRuta2012]. Crediting (Proposition 4) pushes the same way.
+
+The result has one condition: import charges must be based on actual intensity, verified or default, so that lower embodied carbon earns a lower charge. The EU's mechanism meets it on intensity but fails on policy recognition. It deducts only an explicit carbon price paid abroad [@EU2023, Art. 9], so a feebate, which has no "price paid" because it is revenue-neutral, earns nothing. The companion paper sets out how the default carbon price in the implementing regulation can recognize implicit pricing, and how benchmark design can close the scrap-shuffling loophole that lets exporters route low-carbon output to the EU and high-carbon output elsewhere [@StrettonCBAM].
+
+# Design and objections
+
+| Design choice | Incentive | Competitiveness | Leakage | Revenue | Administration | WTO risk |
+|---|---|---|---|---|---|---|
+| Feebate benchmark at sector average, updated | Full rate $t$ | No average-cost rise | None from Track 1 | Zero | Sector intensity data | Low: no specificity if sector-wide |
+| Consumption charge inside VAT | Demand margin | Neutral: imports pay alike | None on consumption base | Replaces part of VAT | Existing VAT chain | Low: destination adjustment, GATT Art. II:2(a), III:2 |
+| Import defaults, generous, rebuttable | Rewards low intensity | Avoids retaliation | Low | Modest | Customs; firm data optional | Moderate: MFN if country-specific |
+| Exports zero-rated | Unchanged | Preserved | None | None forgone | VAT practice | Low: standard VAT treatment |
+| Forward-announced upstream liability | Investment signal | As above | As above | As above | Few taxpayers | Untested |
+
+Five objections need an answer. *Benchmarks.* A sector-average benchmark gives windfalls to firms already below it; an updating rule removes them over time, and the alternative, firm-specific baselines, destroys the incentive. *Verification.* Intensity must be measured at the facility; the EU's monitoring rules and default values already do this for six sectors [@EU2023]. *Subsidy rules.* A sector-wide feebate is not specific under the SCM Agreement, but the rebate side needs drafting care; a full legal analysis is outside this paper [@Mehling2019; @IsmerNeuhoff2007]. *Origin versus destination.* The Paris Agreement assigns responsibility on an origin basis while Track 2 prices on a destination basis [@KeenParryRoaf2022]; the architecture resolves the tension by pricing both bases, each with the instrument suited to it. *Capacity.* Countries without a functioning VAT cannot run Track 2; they can run Track 1, which needs only sector intensity data, and that is where their emissions are.
+
+# Implications
+
+For developing-country exporters: adopt a production feebate first. It prices carbon at a rate a tax could not reach, costs the treasury nothing, and, once the EU and others recognize implicit prices, earns border credit. For the EU: as free allocation phases out, the production side already resembles Track 1; the missing piece is recognition of feebates at the border and a consumption charge inside VAT. For development banks and crediting facilities: pay for policies measured as carbon-price equivalents, at a price per tonne above half the induced feebate rate; the adopting country then gains.
+
+# Conclusion
+
+Carbon pricing has been asked to do two jobs with one instrument, and in open economies it does neither well. Pricing production with a revenue-neutral feebate and consumption with a destination-based charge gives each job the instrument suited to it. The feebate's cost is small and provable; a modest payment per tonne makes it a gain; and once consumption is priced where goods are used, the international race runs toward higher carbon prices rather than lower. What remains is calibration, the legal text and the border rules, and those are the subjects of the companion papers.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+# Appendix: Proofs {.appendix}
+
+*Setup.* Unit cost $c(e) = c_0 + \tfrac{k}{2}(e_0 - e)^2$; competitive pricing, $p = c(e) + \text{policy payment}$; baseline $p_0 = c_0$; demand $Q(p)$ with elasticity $\eta$.
+
+*Proposition 1.* Under the tax the firm minimizes $c(e) + te$; under the feebate, $c(e) + t(e - \bar e)$. The first-order condition in both cases is $k(e_0 - e) = t$, so $e^* = e_0 - t/k$ and $\Delta e = t/k$.
+
+*Proposition 2.* Feebate, with $\bar e = e^*$ so that payments net to zero: $p_F = c(e^*) = c_0 + t^2/2k = c_0 + \tfrac12 t\Delta e$. Tax: $p_T = c(e^*) + te^* = c_0 + te_0 - t^2/2k$. Output: $\Delta Q/Q \approx -\eta\,\Delta p / p_0$.
+
+*Proposition 3.* To first order, tonnes cut under the tax are $Q\Delta e + e_0 |\Delta Q| = Qt_T/k + e_0 Q \eta t_T e_0/p_0$; under the feebate, $Qt_F/k$. Equating gives $t_F = t_T(1 + \eta k e_0^2/p_0)$.
+
+*Proposition 4.* Net cost $N(t) = Qt^2/2k - \pi Qt/k = Qt(t - 2\pi)/2k$; $N < 0 \iff t < 2\pi$; $N'(t) = 0$ at $t = \pi$, where $N = -Q\pi^2/2k$.
+
+*Proposition 5.* $\partial D_i/\partial t_i = t_i/k - \tau/k = 0$ at $t_i = \tau$; $\partial^2 D_i/\partial t_i^2 = 1/k > 0$.
