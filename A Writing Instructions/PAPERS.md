@@ -24,7 +24,7 @@ Order of work. The reason column says why each paper is where it is.
 | 5 | 1.2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | working paper v0.3 + brief + deck (29 Oct) | WB working paper / journal | Market-design propositions; India, Indonesia, South Africa cases |
 | 6 | 3.2 | The Climate Investment Trust: Hold Capital, Lend Its Strength | working paper v0.2 + brief (29 Oct) | WB working paper | Series 3 flagship with 3.1 (moved from 2.2 on 29 Oct). Buffer, growth and allocation propositions |
 | 7 | 1.3 | Credit the Price Signal, Not the Payment (CBAM recognition and scrap shuffling) | working paper v0.3 + brief + deck (29 Oct) | Policy journal / Commission consultation | Shuffling model, liability formula, calibration to EU default values |
-| 8 | 5.1 | The Excise-Fiscal Diagnostic: Reading an Excise System Against Its Externalities | paper v0.2 (29 Oct) | Companion paper to the analytics tools | Cut from the 24,800-word report (now v0.1); stylized example, no country results |
+| 8 | 5.1 | The Excise-Fiscal Diagnostic: Reading an Excise System Against Its Externalities | paper v0.3 (30 Oct) | Companion paper to the analytics tools | Cut from the 24,800-word report (now v0.1); stylized example plus Sierra Leone and Liberia applications (diagnostic results, illustrative) |
 | 9 | 4.1–4.7 | The CPAT series (methods, CPAT-AI, validation, elasticities, CBAM tool, public investment, activity) | papers v0.1 (29 Oct) | Companion papers to the CPAT-AI repository | See the section 4 table below |
 
 ### The finance-and-risk series (section 2)
@@ -50,7 +50,7 @@ Plan: `B Working Papers/3.SovereignIncentives/SeriesArchitecture.md`. 3.1 and 3.
 
 ### The CPAT series (section 4) and the analytics tools (section 5)
 
-Plan: `B Working Papers/4.Modelling/SeriesArchitecture.md`. One medium-length paper per item (about 4,000–6,000 words; 4.1 about 9,000), companions to the CPAT-AI repository and the Climate Fiscal AI Tools. All v0.1 drafts of 29 Oct except 5.1 (v0.2). Country results from the private tools repository are held back (see each README).
+Plan: `B Working Papers/4.Modelling/SeriesArchitecture.md`. One medium-length paper per item (about 4,000–6,000 words; 4.1 about 9,000), companions to the CPAT-AI repository and the Climate Fiscal AI Tools. All v0.1 drafts of 29 Oct except 5.1 (v0.3, 30 Oct). Country results from the private tools repository are used as illustrative results where cleared (see each README); PFR and not-for-citation or draft-for-discussion documents are excluded.
 
 | No. | Paper |
 |---|---|
