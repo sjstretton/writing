@@ -16,7 +16,7 @@ Details for each item: `C PhD Application/PhD-Application-Status.md`.
 - [ ] Find the transcripts (possibly in a box in the UK); order official copies if not — S — 20 Nov
 - [ ] Choose and ask 3 referees (at least 2 academic) — S — 13 Nov — highest risk item
 - [ ] Proposal v2: drafted 31 Oct (`C PhD Application/Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking-v2.docx`; changes and open placeholders in `Proposal-v2-ChangeLog.md`). Review it and resolve the [STEPHEN TO DECIDE] and [VERIFY] notes — S — 27 Nov
-- [ ] Writing sample: cut 2.1 to ≤2,000 words — A drafts, S approves — 4 Dec
+- [ ] Writing sample: drafted 31 Oct, 1,983 words, cut from 2.1 v0.2 (`C PhD Application/Oxford-WritingSample-ClimateFinanceIntermediation.docx`). Review it; check the Azura paraphrase and decide US or UK spelling — S — 4 Dec
 - [ ] Statement of purpose — A drafts, S approves — 11 Dec
 - [ ] Submit — S — 8 Jan 2027
 
