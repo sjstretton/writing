@@ -1,6 +1,6 @@
 # 4.7 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT
 
-**Status:** first full draft, version 0.1 (29 October 2026). One medium-length working paper (about 4,900 words of body), companion to the CPAT-AI repository. Awaiting Stephen's peer review. Series plan: `../SeriesArchitecture.md`.
+**Status:** first full draft, version 0.1 (29 October 2026). One medium-length working paper (about 4,900 words of body), companion to the CPAT-AI repository. Awaiting Stephen's peer review. Series plan: `../SeriesArchitecture.md`. 30 Oct 2026: the CPAT road-transport passage (sections 1, 2 and 5) corrected to match CPAT-AI register issue I100 (co-benefits always use the engineer fleet model's vehicle-km); the earlier claims that the co-benefits module ignores electric vehicles and uses a driving elasticity twice the fleet model's are removed.
 
 **Question.** How can the activity levels in CPAT, SISEPUEDE, the CBAM Policy Tool (paper 4.5) and FTT be put on one footing so that the four models can be linked?
 

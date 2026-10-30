@@ -28,6 +28,6 @@ Editor's consistency pass over the ten papers (4.1–4.7, 5.1–5.3) and the two
 
 ## Open items for Stephen
 
-- 4.4 and 4.5 depend on `xref.py`, which lives in the session scratchpad, not in the repo. Worth adding it to `8.Scripts` or each `2.Source` so the papers can be re-rendered elsewhere.
+- *Resolved.* 4.4 and 4.5 carry `xref.py` in their `2.Source` folders.
 - The CPAT user guide says "covers 192 countries" but its table marks about 190 as covered; the series now says "more than 180". Change if you prefer "about 190".
-- 4.7's claim that the co-benefits module "ignores electric vehicles" sits uneasily with register issue I100 (co-benefit vehicle-km from the engineer road model whatever the road-model switch). The common flag used elsewhere avoids the EV point; check 4.7's wording.
+- *Resolved 30 Oct 2026.* 4.7's claim that the co-benefits module "ignores electric vehicles" contradicted register issue I100 (co-benefit vehicle-km, fuel economy and classes come from the engineer road model whatever the road-model switch; only the road share of each fuel follows the switch). 4.7 now states I100; the EV claim and the "twice the fleet model's elasticity" claim are removed; the common flag in 4.0–4.3 now says the three descriptions are not consistent (co-benefits on fleet-model vehicle-km even when fuel use follows the fuel equation) instead of "not linked", citing I100.
