@@ -8,21 +8,21 @@ Format: `- [ ] Task — owner — due — notes`. Owner is **S** (Stephen) or **
 
 ### Priority 1: PhD in climate policy (proposal 1, send ASAP)
 
-Details for each item: `C Research Proposal/PhD-Application-Status.md`.
+Details for each item: `C PhD Application/PhD-Application-Status.md`.
 
 - [ ] **Next step:** email Dr Shrimali the cleaned proposal; ask him to confirm supervision in writing and about a co-supervisor — S — today (15 min)
-- [ ] Settle the deadline on the live Oxford course page. Stephen's working deadline is Sat 31 Oct; the status notes found 13 Nov (early) and 26 Jan (final), unverified. Josh's information sheet (`C Research Proposal/PhD-Information-Sheet.md`, 30 Oct) gives no Oxford date; "before start of November" there is UCL's February-intake rule, the likely source of 31 Oct. Also check whether a statement of purpose is needed (Josh's five Oxford inputs omit it) — S — 30 Oct — ox.ac.uk is blocked from cloud sessions
+- [ ] Settle the deadline on the live Oxford course page. Stephen's working deadline is Sat 31 Oct; the status notes found 13 Nov (early) and 26 Jan (final), unverified. Josh's information sheet (`C PhD Application/PhD-Information-Sheet.md`, 30 Oct) gives no Oxford date; "before start of November" there is UCL's February-intake rule, the likely source of 31 Oct. Also check whether a statement of purpose is needed (Josh's five Oxford inputs omit it) — S — 30 Oct — ox.ac.uk is blocked from cloud sessions
 - [ ] Find two academic referees: Josh's sheet lists Dirk and Carolyn (both World Bank) and no third — S — 13 Nov
 - [ ] Find the transcripts (possibly in a box in the UK); order official copies if not — S — 20 Nov
 - [ ] Choose and ask 3 referees (at least 2 academic) — S — 13 Nov — highest risk item
-- [ ] Proposal v2: narrow scope, name data sources, sharpen hypothesis — A drafts, S approves — 27 Nov
+- [ ] Proposal v2: drafted 31 Oct (`C PhD Application/Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking-v2.docx`; changes and open placeholders in `Proposal-v2-ChangeLog.md`). Review it and resolve the [STEPHEN TO DECIDE] and [VERIFY] notes — S — 27 Nov
 - [ ] Writing sample: cut 2.1 to ≤2,000 words — A drafts, S approves — 4 Dec
 - [ ] Statement of purpose — A drafts, S approves — 11 Dec
 - [ ] Submit — S — 8 Jan 2027
 
 ### Priority 2: PhD in systemic AI safety (proposal 3)
 
-- [ ] Answer the open questions in `C Research Proposal/3-SystemicAISafety-Outline.md` (target programs, supervisors, core question) — S — 6 Nov
+- [ ] Answer the open questions in `C PhD Application/3-SystemicAISafety-Outline.md` (target programs, supervisors, core question) — S — 6 Nov
 - [ ] Literature scan on systemic AI risk; verified sources only — A — 13 Nov
 - [ ] First full draft of proposal 3 (~2,500 words) — A drafts, S revises — 27 Nov
 
