@@ -83,7 +83,7 @@ Investors should not carry the incentive. The design developed with Marcello Est
 
 A trusted intermediary, backed by guarantees from a coalition of advanced economies, issues fixed-coupon bonds at a low rate. It lends the money to governments as sustainability-linked loans at a somewhat higher fixed rate. When verified KPIs are met, at maturity or at milestone years, it refunds part of the interest already paid. Development agencies monitor the indicators and give technical help. The spread between the intermediary's cost of funds and its lending rate covers its costs, so it runs as a small specialized development bank.
 
-A missed target should not enrich bondholders. An earlier draft by Estevão and Zimmermann proposes that a missed KPI trigger a surcharge of 1–2 percent of the debt, paid into a fund that a development partner spends on getting the country back on track [@EstevaoZimmermannTrusted].
+A missed target should not enrich bondholders. Under this design it costs the government its refund, and the bondholders' coupon does not change.
 
 This design is cheaper for the government for one reason: risk lands where it is cheapest to bear. A pension fund charges a premium to hold a coupon that moves with a country's methane statistics. An intermediary holding loans to many countries diversifies that risk and can bear it near cost. The government receives the same incentive and pays less for it. The working paper states the condition formally.
 
@@ -119,7 +119,7 @@ The two routes fit together. The sustainability-linked loan supplies what the gu
 
 Multilateral development banks should publish a standard indicator menu with baselines set at the country's own Paris pledge plus a fixed margin, verification rules based on national inventories, and a pricing schedule expressed per tonne of carbon-price equivalent. They should offer sustainability-linked loans with step-downs on that schedule, as the World Bank did for Uruguay, without negotiating each deal from scratch.
 
-Advanced economies should back a trusted intermediary that issues fixed-coupon bonds and on-lends as sustainability-linked loans with interest refunds, so investors hold a plain asset and the incentive sits with a public partner. Missed targets should fund corrective technical help, not bondholders.
+Advanced economies should back a trusted intermediary that issues fixed-coupon bonds and on-lends as sustainability-linked loans with interest refunds, so investors hold a plain asset and the incentive sits with a public partner. A missed target should cost the government its refund, not pay bondholders a premium.
 
 Donors should make guarantee capacity, not the interest rebate, the main prize for meeting indicators, and fund the buffer that stands behind it through the Climate Investment Trust. The rebate is the signal; the guarantee is the incentive.
 

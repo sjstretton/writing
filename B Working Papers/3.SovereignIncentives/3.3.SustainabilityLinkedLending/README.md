@@ -22,6 +22,6 @@
 ## Lineage and co-authors
 
 - Public facts only: World Bank press release (Nov 2023) and Uruguay's Ministry of Economy and Finance briefing note on the 2023 loan; Uruguay's 2023 SEC prospectus supplement; Chile, Thailand and market sources in the `.bib`.
-- Design source: *Mobilizing Private Finance for the Climate Agenda: Introducing SLIDIs*, with **Marcello Estevão** and **Nils Zimmermann** (personal capacity, 2024); Estevão's earlier "bonds with KPIs" note; Estevão and Zimmermann's "Trusted Intermediaries" draft (corrective surcharge). Both co-authors are credited in the first-page note of the working paper and the brief.
+- Design source: *Mobilizing Private Finance for the Climate Agenda: Introducing SLIDIs*, with **Marcello Estevão** and **Nils Zimmermann** (personal capacity, 2024); Estevão's earlier "bonds with KPIs" note. Estevão and Zimmermann's "Trusted Intermediaries" draft (marked draft for discussion) and its corrective-surcharge proposal were removed on 30 Oct 2026 under Stephen's ruling that draft-for-discussion documents are not cited. Both co-authors are credited in the first-page note of the working paper and the brief.
 - Book material: *Time and Chance* (Stretton, manuscript), chapter 5 on commitment devices and the additionality requirement.
 - Deliberately not used: the confidential World Bank discussion paper in `9.Archive/` and the internal MDB envelope note (6.Additional 3.4).
