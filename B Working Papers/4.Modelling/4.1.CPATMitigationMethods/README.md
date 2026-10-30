@@ -35,4 +35,4 @@ Render: from this folder, `pandoc CPATMitigationMethods.qmd -f markdown --citepr
 
 - No country results from CPAT runs; the worked examples use stylized prices and costs (labelled) with IPCC default emission factors and legacy default elasticities. Excel-AI's Egypt test numbers are not reproduced.
 - The SharePoint links to internal CPAT methodological notes that appear in `02_Summary.qmd` are not cited.
-- No `[VERIFY]` markers remain.
+- No unverified markers remain.

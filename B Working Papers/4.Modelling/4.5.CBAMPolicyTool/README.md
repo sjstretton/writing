@@ -37,14 +37,15 @@ Run: `cd 2.Source && python3 cbam_example.py && python3 egypt_example.py`. Rende
 - **Egypt policy-scenario results** (scenarios 1A–3C: revenue, emission cuts, CBAM-obligation cuts, deaths avoided) in `climate-fiscal-ai-tools/CBAMPolicyTool/Egypt/EgyptResultsInitial_UpdatedResults_tracked_v3.0.docx` and `Egypt_CBAM_results_v3.0.xlsx`: the results note is a tracked-changes draft prepared for World Bank country work, so treated as draft-for-comment.
 - **Dashboard outputs**: the five-country results (capture prices, CBAM gross, total revenue) and the model-versus-default intensity tables in the dashboard guide and workbooks (World Bank team outputs; not needed for the paper).
 - Plant and company names from the Egypt workbook are not used.
-- The tool's own reference values for default values and benchmarks were **not** used as data (several look approximate); both examples use the Commission's workbook directly, except the two Türkiye benchmarks below.
+- The tool's own reference values for default values and benchmarks were **not** used as data (several look approximate); both examples use the Commission's workbook and Implementing Regulation 2025/2620 directly.
 
-## Open items ([VERIFY] in the paper)
+## Checked 30 Oct 2026 (no unverified markers remain)
 
-- CBAM benchmarks for CN 7208, 7214 20 00 (route C, 1.370) and 7601 (route K, 1.423) are as entered in the tool; check against Implementing Regulation 2025/2620. They affect 2026–2033 results only.
-- Free-allocation schedule (97.5% in 2026 … 14% in 2033, zero from 2034) confirmed only from secondary sources; check the consolidated ETS Directive, Art. 10a(1a).
-- Implementing Regulation (EU) 2026/1740 (correction of default values) and the proposal COM(2026) 616 (slower phase-out) are reported but not read.
-- The conversion of a carbon price paid into certificates is in a draft implementing act; the example deducts the price paid per tonne.
+- CBAM benchmarks: read in Implementing Regulation (EU) 2025/2620, Annex point 5.3, Column B (full text from the Publications Office cellar, CELEX 32025R2620): CN 7208 route (C) 1.370, CN 7214 20 00 route (C) **1.364** (the tool had 1.370; `cbam_example.py` now uses per-product values, which moves the rebar 2026 and 2030 rows by €1 at most), CN 7601 route (K) 1.423.
+- Free-allocation schedule (97.5% in 2026 … 14% in 2033, zero from 2034): read in Directive (EU) 2023/959, Art. 1, which inserted Art. 10a(1a) into the ETS Directive (CELEX 32023L0959).
+- Implementing Regulation (EU) 2026/1740 of 20 July 2026 (OJ 31.7.2026, applies from 1 Jan 2026): read; it leaves the Türkiye values used unchanged.
+- COM(2026) 616 final of 17 July 2026: read; it would set the CBAM factor at 91.5% in 2028 … 27% in 2033 and 15% in 2034–2037, zero from 2038. Cited as a proposal only.
+- Still open (stated in the paper, not a marker): the conversion of a carbon price paid into certificates is in a draft implementing act; the example deducts the price paid per tonne.
 
 ## Rendering
 

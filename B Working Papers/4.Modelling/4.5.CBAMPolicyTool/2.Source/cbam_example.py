@@ -10,10 +10,10 @@ unwrought aluminium (CN 7601). Inputs:
   * mark-ups 10/20/30 percent in 2026/2027/2028+ (Regulation 2025/2621);
   * phase-in: share of embedded emissions not covered by the free-allocation
     adjustment, 1 - CBAM factor, from Directive 2003/87/EC Art. 10a(1a);
-  * CBAM benchmarks: route (C) carbon steel 1.370 and (K) primary aluminium
-    1.423 tCO2/t, as entered in the tool's reference sheet. NOT checked
-    against Implementing Regulation 2025/2620 [VERIFY]; they affect 2026-2033
-    only, not the full phase-in results.
+  * default CBAM benchmarks (Column B) from Implementing Regulation (EU)
+    2025/2620, Annex point 5.3 (read 30 Oct 2026): CN 7208 route (C) 1.370,
+    CN 7214 20 00 route (C) 1.364, CN 7601 route (K) 1.423 tCO2/t. They affect
+    2026-2033 only, not the full phase-in results.
 Stylized: certificate price EUR 80/tCO2 (as in paper 1.3); domestic carbon
 price EUR 20/tCO2 effectively paid on all embedded emissions (actual-values
 route only, Article 9).
@@ -42,7 +42,7 @@ YEAR_TRADE = 2025
 PHASE_IN = {2026: 0.025, 2027: 0.05, 2028: 0.10, 2029: 0.225, 2030: 0.485,
             2031: 0.61, 2032: 0.735, 2033: 0.86, 2034: 1.0}
 MARKUP = {2026: 0.10, 2027: 0.20}           # 0.30 from 2028
-BENCHMARK = {"(C)": 1.370, "(K)": 1.423}    # [VERIFY] against IR 2025/2620
+BENCHMARK = {"7208": 1.370, "72142000": 1.364, "7601": 1.423}  # IR 2025/2620, Annex 5.3, Column B
 SHORT = {"7208": "Hot-rolled flat steel", "72142000": "Rebar", "7601": "Unwrought aluminum"}
 
 
@@ -72,10 +72,10 @@ def refetch():
             print(cn, y, "tonnes", q / 10 if q else None, "EUR", v)
 
 
-def charge_per_tonne(see, route, year, credit_price=0.0):
+def charge_per_tonne(see, cn, year, credit_price=0.0):
     """EUR per tonne: certificate price x certificates net of the free-allocation
     adjustment, less a carbon price effectively paid at origin (per tonne)."""
-    covered = max(0.0, see - (1 - PHASE_IN[year]) * BENCHMARK[route])
+    covered = max(0.0, see - (1 - PHASE_IN[year]) * BENCHMARK[cn])
     gross = P_EU * covered
     return max(0.0, gross - credit_price * see), gross
 
@@ -91,9 +91,9 @@ def example():
         unit = v / q
         for year in (2026, 2030, 2034):
             see_def = see0 * (1 + markup(year))
-            c_def, _ = charge_per_tonne(see_def, route, year)
-            c_avg, _ = charge_per_tonne(see0, route, year)
-            c_avg_cr, _ = charge_per_tonne(see0, route, year, P_DOM)
+            c_def, _ = charge_per_tonne(see_def, cn, year)
+            c_avg, _ = charge_per_tonne(see0, cn, year)
+            c_avg_cr, _ = charge_per_tonne(see0, cn, year, P_DOM)
             rows.append(dict(cn=cn, product=SHORT[cn], year=year, unit_value_eur_t=round(unit),
                              see_default_marked_up=round(see_def, 3), see_country_average=round(see0, 3),
                              charge_default=round(c_def, 1), charge_actual_at_average=round(c_avg, 1),
@@ -117,10 +117,10 @@ def figure():
     see0 = float(dv["7208"]["see_direct_tco2_per_t"])
     years = sorted(PHASE_IN)
     series = [
-        ("Default value with mark-up", [charge_per_tonne(see0 * (1 + markup(y)), "(C)", y)[0] for y in years], "#2a78d6", "-"),
-        ("Actual data at the country average", [charge_per_tonne(see0, "(C)", y)[0] for y in years], "#eb6834", "-"),
+        ("Default value with mark-up", [charge_per_tonne(see0 * (1 + markup(y)), "7208", y)[0] for y in years], "#2a78d6", "-"),
+        ("Actual data at the country average", [charge_per_tonne(see0, "7208", y)[0] for y in years], "#eb6834", "-"),
         ("Actual data, with a EUR 20 domestic carbon price credited",
-         [charge_per_tonne(see0, "(C)", y, P_DOM)[0] for y in years], "#1baf7a", "--"),
+         [charge_per_tonne(see0, "7208", y, P_DOM)[0] for y in years], "#1baf7a", "--"),
     ]
     fig, ax = plt.subplots(figsize=(7.0, 3.8), dpi=200)
     for lab, ys, col, ls in series:
