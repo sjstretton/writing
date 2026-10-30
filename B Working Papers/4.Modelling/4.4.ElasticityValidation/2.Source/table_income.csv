@@ -1,0 +1,7 @@
+pair,cpat_base,lit_min,lit_max,sources
+"Gasoline, transport",0.7,0.69,0.94,Huntington et al. developing 0.94; Dahl (2004) via Huntington et al. 0.69
+"Diesel, transport",0.6,1.13,1.13,Dahl (2004) via Huntington et al. 1.13
+"Electricity, residential",0.8,0.53,0.6,"Huntington et al. developing, residential 0.53; Dahl (2004) residential via Huntington et al. 0.6"
+"Electricity, industry",0.8,0.76,0.76,"Huntington et al. developing, industrial 0.76"
+"Natural gas, industry",1.0,1.39,1.39,Dahl (2004) industry via Huntington et al. 1.39
+"Natural gas, residential",0.3,0.11,0.85,"Huntington et al. developing, residential 0.85; Dahl (2004) residential via Huntington et al. 0.11"

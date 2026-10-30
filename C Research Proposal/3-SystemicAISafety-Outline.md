@@ -14,7 +14,7 @@ The draft cannot start until these are answered.
 
 ## Planned structure (~2,500 words)
 
-Follows the "Research proposal" type in `E Writing Standards/writing-types.md`.
+Follows the "Research proposal" type in `A Writing Instructions/Writing Standards/writing-types.md`.
 
 1. **Title.** States the question.
 2. **The problem.** What "systemic" AI risk is, in plain words, with a concrete scenario. Why model-level safety work does not address it.
@@ -29,7 +29,7 @@ Follows the "Research proposal" type in `E Writing Standards/writing-types.md`.
 
 - Position paper P7 in `A Writing Instructions/PAPERS.md` (to be written alongside).
 - P6 and paper 4.2 (AI-assisted recoding of policy models), as evidence of hands-on work with AI systems.
-- Exemplar: Amodei et al., "Concrete Problems in AI Safety" (2016), for how to turn a diffuse worry into named, tractable problems (`E Writing Standards/exemplars.md`).
+- Exemplar: Amodei et al., "Concrete Problems in AI Safety" (2016), for how to turn a diffuse worry into named, tractable problems (`A Writing Instructions/Writing Standards/exemplars.md`).
 
 ## Next steps
 

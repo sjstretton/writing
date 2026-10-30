@@ -1,0 +1,35 @@
+2030 GDP USD 155.2 bn; WACC 9.66%
+investment net zero 2.31% GDP (USD 3.58 bn); current trends 0.66%; incremental 1.64%
+emissions 2030: baseline 121.3, net zero 89.2 MtCO2e (26% lower)
+  P1 pure public: 0.38% GDP
+  P2 utility: 0.35% GDP
+  P3 contracted: 0.28% GDP
+  P4 viability gap: 0.73% GDP
+  P5 private: 0.56% GDP
+direct budget need 2030 0.60% GDP (USD 0.93 bn)
+model: DIGNAD-lite
+model_reason: lower-middle income relying on concessional finance (56% multilateral)
+budget_need_2030_pct_gdp: 0.4876
+budget_capital_2030_pct_gdp: 0.1002
+budget_spending_2030_pct_gdp: 0.3874
+pricing_tau_t: 88
+pricing_binding: F3
+pricing_abatement_pct: 23.57
+pricing_revenue_2030_pct_gdp: 0.0514
+pricing_share_of_need_pct: 4.844
+financing_gap_2030_pct_gdp: 0.4362
+debt_2024_pct_gdp: 67.34
+gdp_dev_2030_pct: 0.07144
+gdp_dev_2050_pct: 0.2613
+debt_2030_pct_gdp: 68.32
+debt_2050_pct_gdp: 74.58
+debt_change_2050_pp: 7.24
+alt_model: GIMF-lite
+alt_gdp_dev_2050_pct: 4.648
+alt_debt_2050_pct_gdp: 70.54
+energy_saving_2050_pct_gdp: 1.702
+dsf_rating_base: High
+dsf_rating_programme: High
+dsf_capacity: medium
+dsf_ci: 2.728
+dsf_assumptions: exports / GDP; imports / GDP for reserve cover

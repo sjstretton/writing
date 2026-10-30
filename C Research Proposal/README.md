@@ -11,6 +11,6 @@ Stephen's PhD research proposals. There are three, in different states. Prioriti
 ## Conventions
 
 - One proposal per file, named `<No>-<ShortName>-<type>.<ext>`. Keep earlier drafts with a date suffix.
-- Proposals follow `E Writing Standards/writing-types.md` ("Research proposal"): question first, named data and method, three-year feasibility.
-- Nothing in a submitted proposal may read as tool or planning text (see `E Writing Standards/ai-tells.md`, section 1).
+- Proposals follow `A Writing Instructions/Writing Standards/writing-types.md` ("Research proposal"): question first, named data and method, three-year feasibility.
+- Nothing in a submitted proposal may read as tool or planning text (see `A Writing Instructions/Writing Standards/ai-tells.md`, section 1).
 - Supervisor names, deadlines and program rules must be checked on the live source before use.

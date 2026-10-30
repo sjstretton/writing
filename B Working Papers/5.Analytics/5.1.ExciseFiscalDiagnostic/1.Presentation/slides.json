@@ -1,0 +1,49 @@
+{
+  "series": "Climate-Fiscal Analytics Paper No. 5.1",
+  "title": "The Excise-Fiscal Diagnostic",
+  "subtitle": "Reading an excise system against its externalities",
+  "message": "A light, repeatable report maps any excise schedule onto 30 standard lines, scales each rate three ways and sets fuel rates against one fixed set of damage values. In a stylized country petrol is taxed about right and diesel at less than half its corrective rate.",
+  "problem": {
+    "title": "Nobody can read the schedule whole",
+    "stats": [
+      {
+        "value": "30",
+        "label": "standard lines every schedule is mapped onto"
+      },
+      {
+        "value": "29%",
+        "label": "real value lost by rates unchanged since 2020 (stylized)"
+      },
+      {
+        "value": "1/3",
+        "label": "of entries corrected by line-by-line review in one pilot"
+      }
+    ],
+    "text": "Schedules grow by amendment for decades, in mixed units and currencies, and specific rates erode with inflation. Few ministries can say whether a fuel, tobacco or alcohol tax is high or low against the damage the good does."
+  },
+  "mechanism": {
+    "title": "Diesel's gap is mostly air pollution",
+    "image": "figures/fig_corrective.png",
+    "imageWidth": 5.6,
+    "imageHeight": 2.58,
+    "caption": "Country A (stylized): US$ per liter; whiskers span the low and high cases.",
+    "points": [
+      "Corrective rate: carbon and air pollution, plus half of congestion, accidents and road damage.",
+      "Diesel: $0.18 against $0.43; closing the gap raises about 1.1% of GDP.",
+      "AI drafts each stage; every line is checked against the gazetted text."
+    ]
+  },
+  "action": {
+    "title": "Run it every budget cycle",
+    "results": [
+      "Diesel is undertaxed in every case.",
+      "Petrol, tobacco and beer share one problem: no indexation.",
+      "Spirits pay 44% less per liter of alcohol than beer."
+    ],
+    "todo": [
+      "Index every specific excise to inflation.",
+      "Frame diesel reform as health and road safety first.",
+      "Stack country diagnostics into a regional table."
+    ]
+  }
+}

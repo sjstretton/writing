@@ -1,0 +1,50 @@
+{
+  "series": "CPAT Companion Paper No. 4.7",
+  "title": "Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT",
+  "subtitle": "One driver layer so four climate models can be linked",
+  "message": "Four models used for climate-fiscal work build activity in incompatible ways. One constant-elasticity rule over ten activities, driven by population, income and the cost of the energy service, puts them on one baseline and counts the price response once.",
+  "problem": {
+    "title": "Four models, four baselines",
+    "stats": [
+      {
+        "value": "4",
+        "label": "models with incompatible activity drivers"
+      },
+      {
+        "value": "3",
+        "label": "descriptions of road transport inside CPAT, not linked"
+      },
+      {
+        "value": "21/71",
+        "label": "FTT regions without car data, including Kenya"
+      }
+    ],
+    "text": "Linked naively, the models give a ministry four GDP paths and a carbon price whose demand response is counted once, twice or not at all. SISEPUEDE and FTT have no price response; CPAT has one for every fuel."
+  },
+  "mechanism": {
+    "title": "Cars grow much faster than travel",
+    "image": "figures/fig_activity.png",
+    "imageWidth": 5.6,
+    "imageHeight": 2.69,
+    "caption": "Stylized: population +1% and income per person +2% a year for ten years.",
+    "points": [
+      "Ten activities, one rule, one base year, one set of forecasts.",
+      "Apply the price term only where the receiving model has none.",
+      "Cap the vehicle chain so car travel stays inside total travel."
+    ]
+  },
+  "action": {
+    "title": "Link the models with one layer",
+    "results": [
+      "A 20% rise in driving cost cuts car use about 5%.",
+      "Population exponent moves cement and electricity by a few percent.",
+      "Heavy-industry output elasticities are judgment values."
+    ],
+    "todo": [
+      "Give every model one GDP and population forecast.",
+      "Splice the layer onto each model's own data.",
+      "Unify CPAT's road transport.",
+      "Run one country through all four models."
+    ]
+  }
+}

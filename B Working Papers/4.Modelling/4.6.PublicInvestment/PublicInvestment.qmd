@@ -1,0 +1,279 @@
+---
+title: "Public Investment in CPAT"
+subtitle: "Investment Needs and the Efficiency of Public Spending"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+version: "0.1"
+abstract: |
+  Carbon pricing models tell a finance ministry what a policy raises and what it cuts, but not what the clean capital it calls for will cost or whether the budget should pay for it. This paper extends the Climate Policy Assessment Tool in two directions. The first turns physical change into investment needs by country and sector, then prices that capital at three rates: the market cost of capital, a social rate, and a social rate with co-benefits counted. For a stylized asset whose fuel savings are 13.3 cents a year per dollar of capital, the financial case fails above a cost of capital of 12.6 percent, the rate the tool already assumes for lower-middle-income countries. The second extension asks what each dollar of net public money buys: a marginal-value-of-public-funds test against the cost of raising tax, with haircuts for delivery, a fiscal ledger, and capital, operating and contract routes on one footing. In a stylized island case, a solar plant worth \$108 million fails the budget on a seven-year loan; a concessional loan or a guaranteed power purchase agreement rescues it. Country runs put 2030 investment needs in Kenya, Uganda and St Lucia at 4 to 5 percent of GDP, and a SISEPUEDE run for Uganda shows that under a fifth of its net-zero benefits reach the budget as cash.
+keywords: [investment needs, cost of capital, marginal cost of public funds, marginal value of public funds, public investment efficiency, power purchase agreements]
+jel: [H43, H54, H63, Q48, D61]
+bibliography: PublicInvestment.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+number-sections: true
+format:
+  docx: default
+---
+
+*Working paper, version 0.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the CPAT-AI repository, https://github.com/cpmodelai/cpat_ai.*[^credit]
+
+[^credit]: The extensions described here began as the author's design notes on global investment needs and on the efficiency of public spending, written to sit beside the Climate Policy Assessment Tool and the open SISEPUEDE model. The island example is stylized. The country runs in Section 6 are illustrative results from the investment-needs tool and from a SISEPUEDE run for Uganda, not official estimates. Errors are the author's own.
+
+# Introduction {#sec-intro}
+
+Developing countries other than China need about \$2.3 to 2.5 trillion a year of climate investment by 2030, roughly 6.5 percent of their GDP, out of a world total of \$6.3 to 6.7 trillion [@IHLEG2024]. The headline hides two questions a finance minister must answer before any of it is built. The first is what the capital costs to carry. For a solar plant, money is most of the price: the cost of capital in emerging and developing economies has been two to three times that in advanced economies [@IEA2022CoC], and the same plant financed at 12 percent rather than 4 percent sells power for about 80 percent more [@CFPB22]. The second is whether the budget should pay at all, and if so how. A plant that pays back handsomely in economic terms can still break a budget that must service a seven-year loan, and a power purchase agreement that keeps the plant off the debt statistics can cost more than the debt it avoids.
+
+The Climate Policy Assessment Tool (CPAT) does not answer either question. CPAT, built by the International Monetary Fund and the World Bank, projects fuel use, emissions, revenue and welfare for more than 180 countries under carbon taxes, subsidy reform and related policies [@Black2023CPAT]. Its power-sector model chooses new capacity by levelized cost with a cost of capital that rises from 7.5 percent in high-income to 15 percent in low-income countries. But it reports investment spending only for power, no split between public and private payers, and no test of whether a dollar of public spending on clean capital beats a dollar left with taxpayers. Its revenue side is rich; its spending side is a list of uses of revenue.
+
+This paper asks how CPAT can be extended to estimate climate investment needs, price them at the cost of capital countries actually face, and test whether public money should pay for them. The answer has two parts. The first extension (investment needs) multiplies physical change by unit capital cost, converts capital to an annual charge with a capital recovery factor, and reports the result through three lenses: the market cost of capital, the World Bank's 6 percent social rate, and the social rate with co-benefits and carbon counted. The gap between the first and third lens is the case for public finance and de-risking. The second extension (spending efficiency) scores each candidate use of public money by the ratio of what people get to what the budget really pays, after removing what the private sector would have done anyway, money that never becomes a working asset, and money that comes back. A measure is funded if that ratio exceeds the marginal cost of public funds, about 1.2 in African evidence [@AuriolWarlters2012]. With a cost of public funds of 1 and no budget limit, the rule reduces to the World Bank's usual net present value test.
+
+Four results follow. A stylized asset with fuel savings of 13.3 cents a year per dollar of capital and a 25-year life has a financial case only below a cost of capital of 12.6 percent (Proposition 1): CPAT's own default for lower-middle-income countries sits on that line, and its low-income default is above it. The spending test nests World Bank practice and prices revenue returns at the cost of public funds (Proposition 2). Stretching loan tenor eases liquidity but does not change solvency, so a single cost of public funds cannot see a cash trap (Proposition 3). A power purchase agreement priced at a cost of capital above the government's borrowing rate is debt in disguise, worth more than the plant (Proposition 4). A worked example for a stylized small island shows all four at once, and country runs for Kenya, Uganda and St Lucia show the lenses and the budget test on real data.
+
+The paper adds to three strands. Investment-needs studies differ mainly in what they count and at what rate [@RozenbergFay2019; @IHLEG2024; @Kalra2023]; this paper puts the cost of capital inside the estimate by country and technology. The cost-of-capital literature shows the premium and its effect on decarbonization [@Steffen2020; @Ameli2021; @Calcaterra2024] but stops before the budget. The marginal value of public funds framework [@HendrenSprungKeyser2020; @FinkelsteinHendren2020] has been applied mostly to United States social policy; this paper applies it to climate capital in low-capacity states, with delivery haircuts from the public investment efficiency literature [@Pritchett2000; @IMF2015PIM].
+
+# What CPAT computes and what it lacks {#sec-cpat}
+
+**CPAT already computes most of the physical change an investment estimate needs, but only in power does it attach capital to it.** CPAT projects each fuel in each sector from last year's use, total GDP and prices (the core demand equation is set out in paper 4.1 [@StrettonWP41]). Its power model retires plants, dispatches the rest and builds new capacity, splitting new investment across technologies with a logit function of levelized cost and capping how fast wind and solar can grow [@CPATDocs2025]. The levelized costs use a weighted average cost of capital (WACC) by income group: 7.5 percent for high-income, 10 percent for upper-middle-income, 12.5 percent for lower-middle-income and 15 percent for low-income countries, overridable by technology and scenario. So CPAT knows how many megawatts a carbon price adds, at what rate they are financed and what they cost: its power model reports investment spending by technology. Outside power it has no capital at all: an efficiency gain in industry or a shift to electric cars appears as lower fuel use, not as an investment someone must make.
+
+**CPAT's fiscal accounts stop at revenue.** CPAT lets the user recycle revenue through tax cuts, transfers or public investment [@Black2023CPAT], but public investment there is a use of revenue with an assumed return, not a project with a cost of capital, a delivery risk and a financing route.
+
+**Published investment estimates differ for four reasons that have nothing to do with models.** They count total investment or only the increment over a baseline (typically a quarter to a half of the total); capital alone or net of savings; at 6 percent [@RozenbergFay2019], 7 percent [@Kalra2023] or an unstated rate; and with or without co-benefits, which the Independent High-Level Expert Group on Climate Finance puts at 15 to 18 percent of world GDP in 2030 [@IHLEG2024]. The extension makes all four choices explicit.
+
+**No open model yet does all of it.** SISEPUEDE, an open-source model built by RAND and the Inter-American Development Bank, covers every emitting sector at country level, prices costs, savings and co-benefits against a baseline, and runs about a thousand futures [@Kalra2023]. For Latin America and the Caribbean it found net benefits of about \$2.7 trillion from reaching net zero by 2050, with about \$1.3 trillion of technical investment costs. But it discounts at one rate after the run, has no cost of capital by country, and never asks who pays. The extension borrows its accounting structure and adds the financing and public-spending layers that neither model has.
+
+# Extension A: investment needs and the cost of capital {#sec-needs}
+
+## Capital from physical change
+
+**Investment is new physical capacity times a unit capital cost, measured against a baseline.** For country $c$, sector $s$, technology $j$, year $t$ and scenario $S$,
+
+$$
+I^{S}_{c,s,t} = \sum_{j \in s} \Delta Q^{S}_{c,j,t}\; k_{j,t}\; p_{c,s}, \qquad k_{j,t} = k_{j,0}\, g_j^{\,t-t_0}, \qquad (1)
+$$
+
+where $\Delta Q$ is new capacity including replacements (gigawatts of solar, kilometers of line, vehicles sold, buildings retrofitted), $k_{j,t}$ is the unit capital cost with a learning or trend factor $g_j$, and $p_{c,s}$ is the country's price level for investment goods relative to the source of $k$, from the International Comparison Program's purchasing power parities for gross fixed capital formation. Incremental investment is the difference from the baseline run, $\Delta I_{c,s,t} = I^{S}_{c,s,t} - I^{B}_{c,s,t}$. Both are reported, because totals compare with the Independent High-Level Expert Group and the International Energy Agency, and increments compare with country climate and development reports and SISEPUEDE.
+
+**In power, CPAT already supplies $\Delta Q$; elsewhere a share-of-GDP rule fills the gap until a physical model exists.** CPAT's capacity additions by technology plug straight into equation (1). For buildings, industry, transport infrastructure, land use and adaptation, the fallback is
+
+$$
+I_{c,s,t} = \theta_{s,\,\mathrm{inc}(c)}\; \mathrm{GDP}_{c,t}, \qquad (2)
+$$
+
+with $\theta$ calibrated by sector and income group on studies that do model capital: @RozenbergFay2019 for infrastructure (about 4.5 percent of GDP in low- and middle-income countries, in a range of 2 to 8 percent) and the expert group's totals by country group [@IHLEG2024]. The fallback is only as good as its calibration. Where SISEPUEDE has been run, its physical changes replace it.
+
+## The cost of capital
+
+**Capital becomes an annual charge through the capital recovery factor, and the rate in that factor decides the answer.** Over asset life $n_j$ at rate $r$,
+
+$$
+A_{c,j,t} = I_{c,j,t}\,\mathrm{CRF}(r_{c,j}, n_j), \qquad \mathrm{CRF}(r,n) = \frac{r}{1-(1+r)^{-n}}. \qquad (3)
+$$
+
+For the financial case, $r$ is the WACC for that country and technology,
+
+$$
+\mathrm{WACC}_{c,j} = \frac{D}{V}\big(r_f + \pi_c + \pi_j\big)(1-\tau) + \frac{E}{V}\,k^{E}_{c,j}, \qquad (4)
+$$
+
+where $r_f$ is the risk-free rate, $\pi_c$ the country premium, $\pi_j$ the technology premium, $D/V$ and $E/V$ the debt and equity shares, $\tau$ the tax rate and $k^E$ the cost of equity. Observed renewable WACCs cover fewer than a hundred countries [@Steffen2020; @IEA2022CoC]; elsewhere $\pi_c$ comes from sovereign spreads and the formula is calibrated to the observed level. For the economic case, $r$ is the social rate, 6 percent in World Bank guidance, with 2 to 10 percent as the plausible range [@WorldBank2016Discount].
+
+**The financial case nets the capital charge against fuel and operating savings; the economic case adds co-benefits and carbon.**
+
+$$
+N^{F}_{c,t} = \sum_j \big(\Delta F_{c,j,t} - \Delta OM_{c,j,t} - A_{c,j,t}(\mathrm{WACC})\big), \qquad (5)
+$$
+
+$$
+N^{E}_{c,t} = \sum_j \big(\Delta F_{c,j,t} - \Delta OM_{c,j,t} - A_{c,j,t}(r_s)\big) + CB_{c,t} + P^{C}_t\,\Delta E_{c,t}, \qquad (6)
+$$
+
+where $\Delta F$ is fuel saved, $\Delta OM$ the change in operating cost, $CB$ local co-benefits (air pollution, road safety, congestion), $\Delta E$ avoided emissions and $P^C_t$ the shadow price of carbon, \$50 to 100 a ton in 2030 on the path recommended by the High-Level Commission on Carbon Prices [@CPLC2017] and used in World Bank appraisal [@WorldBank2024SPC]. Equation (5) is what investors and households see. Equation (6) is what society gets. CPAT already computes $\Delta F$ at retail and at supply-cost prices, and its air pollution and road transport modules compute most of $CB$, so the economic lens reuses outputs the tool has.
+
+**The three lenses separate two jobs the discount rate is often asked to do at once.** Lens (a) prices capital at each country's WACC: the cost of financing. Lens (b) prices it at 6 percent everywhere: the social value of time. Lens (c) uses 6 percent and adds co-benefits and carbon. The physical investment need is the same in all three. What changes is the cost of carrying it and the benefits set against it.
+
+**Proposition 1 (break-even cost of capital).** *Let an asset cost one dollar, last $n$ years and save $b$ dollars a year in fuel and operating costs. Its financial case $N^F$ is positive if and only if $\mathrm{WACC} < r^*$, where $r^*$ solves $\mathrm{CRF}(r^*, n) = b$; $r^*$ exists and is unique when $b > 1/n$. For $b = 0.133$ and $n = 25$, $r^* = 12.6$ percent.*
+
+The proof is in Appendix A. The value $b = 0.133$ is stylized: it is the savings rate that gives a benefit-cost ratio of 1.70 at 6 percent over 25 years, the order of the results SISEPUEDE reports for Latin America [@Kalra2023]. Against CPAT's default rates, a dollar of such capital nets \$43 a year per \$1,000 in a high-income country at 7.5 percent, \$23 at 10 percent, about \$1 at 12.5 percent and loses \$22 at 15 percent. The same asset is a good investment in Germany and a bad one in Zambia, with nothing different but the money.
+
+## What the lenses show
+
+**At market rates the world gains from its climate investment, but developing countries barely do.** Table 1 applies the lenses to one year's investment at the 2030 level reported by the expert group, using the stylized savings rate for every group so that the differences come from the cost of capital alone.
+
+| Group (market rate / high case) | Investment, 2030 | Charge, market rate | Net, market rate | Net, high case | Charge, 6% | Net, 6% |
+|---|---:|---:|---:|---:|---:|---:|
+| Advanced economies (5.5% / 7%) | 2,750 | 205 | 161 | 130 | 215 | 151 |
+| China (6% / 8%) | 1,350 | 106 | 74 | 53 | 106 | 74 |
+| Developing, excluding China (10.5% / 15%) | 2,400 | 275 | 45 | −52 | 188 | 131 |
+| World | 6,500 | 585 | 279 | 131 | 508 | 356 |
+
+: Table 1. The cost of capital decides whether developing-country climate investment pays its way. US\$ billion a year, for one year's investment, each item an annual flow over a 25-year asset life. Investment is the midpoint of the 2030 ranges in @IHLEG2024. Savings are a stylized 13.3 cents a year per dollar of capital for every group. Market rates are illustrative values within the ranges reported by @IEA2022CoC and @Steffen2020; the high case is a stress. "Net" is savings minus the capital charge, equation (5). Source: author's calculation (`2.Source/investment_lenses.py`).
+
+**In developing countries the margin is thin and turns negative in a stress.** At 10.5 percent, \$2.4 trillion of investment earns \$45 billion a year more than it costs to finance; at 15 percent it loses \$52 billion. Financing at 10.5 rather than 6 percent costs \$87 billion a year more for each year's investment, and the penalty accumulates as vintages build up. At 6 percent the same investment earns \$131 billion. Counting co-benefits, which in SISEPUEDE's Latin American results are about as large as the fuel savings, roughly triples the net benefit again [@Kalra2023].
+
+**The gap between lens (a) and lens (c) is the case for public finance, and the series' payment and refinancing papers are tools for closing it.** A private investor in a developing country sees a thin margin or a loss; society sees a large gain. Three instruments bridge the gap. Pricing carbon and air pollution turns co-benefits into revenue, which is CPAT's home ground. Lending on concessional or multilateral terms substitutes a lower rate for the market rate. And cutting the risk premium in equation (4) lowers the WACC itself: guaranteeing the power purchase contract rather than the debt removes payment risk [@CFPB21], and pooling operating plants into standard securities lets institutional investors refinance them at a blended rate near 5.7 percent instead of 10 [@CFPB22]. In the terms of Proposition 1, these instruments move a country from above $r^*$ to below it. The investment-needs extension tells a ministry how much each point of WACC is worth: about \$36 billion a year, near 6 percent, for each year of the \$4.8 trillion clean energy investment the expert group projects for 2030.
+
+**A high cost of capital also changes what gets built.** Capital-heavy wind, solar and grids lose most from a high rate [@HirthSteckel2016; @Ameli2021]; running CPAT's logit investment choice with country rates from equation (4) makes the physical needs in equation (1) respond to finance.
+
+# Extension B: the efficiency of public spending {#sec-efficiency}
+
+## The rule
+
+**For each candidate use of public money, compare what people get with what the budget really pays.** Let $W_j$ be the present value of benefits of measure $j$ to everyone other than the budget, net of their own costs, and $F_j$ the present value of its net cost to the budget, after revenue that comes back. Then
+
+$$
+\mathrm{ENPV}_j = W_j - F_j, \qquad \mathrm{MVPF}_j = \frac{W_j}{F_j}, \qquad NB_{\lambda,j} = W_j - \lambda F_j, \qquad (7)
+$$
+
+where $\mathrm{MVPF}$ is the marginal value of public funds [@HendrenSprungKeyser2020] and $\lambda$ is the marginal cost of public funds: the cost to the economy of raising one more dollar of tax. Fund measure $j$ if $\mathrm{MVPF}_j > \lambda$, equivalently $NB_{\lambda,j} > 0$. If $F_j \le 0$ the measure pays for itself and is funded whenever $W_j \ge 0$; the binding problem is then financing, not value. When the budget binds, rank by MVPF.
+
+**The cost of public funds is about 1.2 in developing countries, and higher where informality is high.** For 38 African countries, raising a marginal dollar through the existing mix of taxes costs about \$1.20, and about \$1.10 through the cheapest instrument, usually value added tax; the informal sector's size, not national income, predicts the cost [@AuriolWarlters2012]. Estimates for European welfare states run near 2 when the participation margin matters [@KlevenKreiner2006]. The extension defaults to 1.2, uses 1.1 where the marginal tax is value added tax, and applies 1.5 to 2.0 as a stress where the macro-fiscal and debt models say the country cannot borrow more.
+
+**Proposition 2 (the rule nests World Bank practice and prices revenue returns at $\lambda$).** *(a) With $\lambda = 1$ and no budget limit, $NB_{\lambda,j} = \mathrm{ENPV}_j$, the usual economic net present value test. (b) Shifting a dollar of present value from beneficiaries to the budget, for example by keeping part of a fuel saving in the utility, leaves $\mathrm{ENPV}_j$ unchanged and raises $NB_{\lambda,j}$ by $\lambda - 1$.*
+
+Part (b) is the formal reason why revenue returns belong in the denominator, not the numerator. A user fee is a transfer in economic analysis; counting it as a benefit as well as a saving double-counts. But every dollar the budget recovers saves $\lambda$ dollars of taxation, not one. The same logic puts CPAT's pricing policies on the spending ladder. A carbon tax or fuel subsidy reform raises money at a low welfare cost per dollar, so it has a low MVPF as a revenue measure and is the natural first source of funds. A spending measure that a price could achieve more cheaply is flagged "price first": with costly public funds, the best subsidy is smaller than the gap between social and private returns, and smaller still when most subsidized units would have happened anyway, whereas a tax raises money on those same units. Paper 1.7 shows how to measure what such prices actually cut [@CFPB17].
+
+## Five corrections between a project's value and its claim on the budget
+
+**First, public money pays only the gap the private sector will not cover.** The investor's net present value is computed at the market WACC and private prices, including taxes. For a purely public asset the budget pays the full cost; for a viability-gap measure it pays $\max(0, -NPV^{priv}_j)$; for utility and contracted routes it pays nothing up front and carries a contingent liability; for purely private investment it pays nothing. Benefits are scaled by an additionality share $a_j$, the part that would not have happened without the measure.
+
+**Second, money spent is not capital created.** @Pritchett2000 showed that cumulated public investment effort is a poor measure of public capital. The International Monetary Fund estimates that low-income developing countries lose about 40 percent of the potential value of public investment to inefficiency, emerging markets 27 percent and advanced economies 13 percent, and that stronger public investment management could close up to two-thirds of the gap [@IMF2015PIM]. The extension carries an efficiency $s_j$, the share of public spending that becomes effective capital, and an execution rate $e_j$, the share of the budget actually spent:
+
+$$
+C^{\mathrm{eff}}_j = C_j\Big[(1-\pi_j) + \frac{\pi_j}{s_j}\Big], \qquad K^{\mathrm{eff}}_{j,t} = (1-\delta_j)K^{\mathrm{eff}}_{j,t-1} + s_j\, e_j\big(I^{\mathrm{plan}}_{j,t} + \mathrm{backlog}_{j,t-1}\big), \qquad (8)
+$$
+
+where $\pi_j$ is the public share of the capital cost and $\delta_j$ the depreciation rate. Efficiency raises the cost of a unit of public asset; execution delays benefits but loses no money, because unspent appropriations stay in the budget. This is the same efficiency-adjusted capital that the IMF's debt-investment-growth models use [@Buffie2012; @Gupta2014]. The haircut applies once: never also to unit costs taken from the country's own outturns, which already contain its inefficiency.
+
+**Third, efficiency frontiers convert into parameters.** Frontier studies put developing countries' health and education output at roughly 0.8 to 0.9 of best practice [@HerreraPang2005; @GuptaVerhoeven2001]; outcomes of measures costed from international norms are scaled by that score, and those costed from local outturns are not.
+
+**Fourth, capital and current spending go on one footing.** Each capital outlay becomes an equivalent annual cost with its recurrent costs added:
+
+$$
+\mathrm{EAC}_j = K_j\,\mathrm{CRF}(r, n_j) + r^{rc}_j K_j, \qquad (9)
+$$
+
+where $r^{rc}_j$ is the recurrent-cost coefficient, operations, maintenance and staffing per dollar of capital a year: about 1 to 2 percent for solar and single digits for roads, but 10 to 20 percent or more for clinics and schools because of staffing. The rate $r$ is the social rate for the economic view, the government's borrowing rate for the fiscal view, and the market WACC for private and contracted routes. Underfunded maintenance is a measure in its own right, funded before new building of the same asset class, because the recurrent cost problem is one of the main ways public capital in low-income countries loses value [@AdamBevan2014].
+
+**Fifth, the financing route changes the fiscal ledger, the debt statistics and the liabilities, and the extension runs each measure under six of them.** These are a commercial loan, a concessional loan, a utility balance sheet, an independent producer under a power purchase agreement (PPA) with or without a guarantee, a viability-gap contract and a grant. The yearly net fiscal flow is
+
+$$
+F_t = \mathrm{capex}_t - \mathrm{loans}_t + DS_t + OM^{pub}_t + PPA_t + SUB_t - FEE_t - \theta\, SAV_t + XL_t - PIG_t + \mathbb{E}[\mathrm{CALL}_t], \qquad (10)
+$$
+
+with debt service $DS$, public operation and maintenance $OM^{pub}$, contract payments $PPA$, subsidies $SUB$, fees $FEE$, avoided fuel cost $SAV$ of which the budget or state utility keeps a share $\theta$, fuel excise lost $XL$, earmarked corrective revenue $PIG$, and expected guarantee calls. For a PPA the tariff and the liability are
+
+$$
+T = \frac{\big(K + PV(\mathrm{replacements})\big)\,\mathrm{CRF}(\mathrm{WACC}, n) + OM}{E}, \qquad L^{PPA} = \sum_t \frac{P^{\mathrm{committed}}_t}{(1+i_g)^t}, \qquad (11)
+$$
+
+where $E$ is annual energy and $i_g$ the government's borrowing rate.
+
+**Proposition 3 (tenor is not price).** *If a loan's rate equals the government's borrowing rate $i_g$, the present value of its debt service at $i_g$ equals the principal whatever its tenor, so the fiscal net present value at $i_g$ does not depend on tenor. Tenor changes only the timing of cash. A rule with one constant $\lambda$ therefore ranks a short loan at the social rate as cheaper than a long one whenever the loan rate exceeds the social rate, and only a time-varying cost of public funds $\lambda_t$, higher in cash-short years, can reverse that ranking.*
+
+**Proposition 4 (a power purchase agreement is debt in disguise).** *If the producer's WACC exceeds $i_g$ and the PPA is take-or-pay over the asset life, then $L^{PPA} > K + PV_{i_g}(OM) + PV_{i_g}(\mathrm{replacements})$: the present value at the government's rate of the committed payments exceeds the cost of building and running the plant. The excess is the financing premium the country pays for keeping the asset off its headline debt.*
+
+The proofs are in Appendix A. Debt sustainability analysis already sees part of this: in the joint IMF and World Bank framework for low-income countries, when the stock of public-private partnership capital exceeds 3 percent of GDP, 35 percent of it is added to public debt in the contingent-liability stress test [@IMFWB2017LICDSF]. Public-private partnerships do not free public funds; any case for them rests on efficiency gains large enough to beat the financing premium [@EngelFischerGaletovic2013].
+
+## From measures to a portfolio
+
+**Ranking by MVPF within an affordable envelope gives an allocative frontier across sectors.** Measures are ranked by MVPF and cumulative fiscal cost is plotted against cumulative value. Mutually exclusive variants of one measure keep only the efficient ones; indivisible projects need a knapsack:
+
+$$
+\max_{x} \sum_j x_j\, NB_{\lambda,j} \quad \text{s.t.} \quad \sum_j x_j F_{j,t} \le E^{*}_t \;\;\forall t, \qquad \sum_{j \in g} x_j \le 1 \;\;\forall g, \qquad \sum_j x_j I_{j,t} - I_{t-1} \le \Delta I^{\max}, \qquad (12)
+$$
+
+where $x_j$ is 1 if measure $j$ is funded (or a share if divisible), $g$ indexes families of exclusive variants, $E^*_t$ is the fiscal envelope that the macro-fiscal and debt models say is affordable, and $\Delta I^{\max}$ caps the speed of scale-up, which matters most where absorptive capacity is low. Climate measures sit on the same ladder as health, education, roads, water and cash transfers, each on a "sector card" with a unit cost, outcome per dollar and recurrent-cost coefficient, sharing one discount rate, value of a statistical life and shadow price of carbon. A cash transfer, with an MVPF near 1, is the benchmark to beat. The cut-off MVPF is itself a diagnostic: well above $\lambda$ means the envelope is too tight; below it means the envelope is too loose.
+
+**The chosen portfolio then goes back to the macro-fiscal models, which return the envelope and $\lambda$.** Public capital by sector, its efficiency, the financing shares and the contract liabilities pass to the debt-investment-growth and debt sustainability models of paper 5.2 [@StrettonWP52], which return the debt path and the affordable envelope. Non-market benefits such as health enter $W$ but never GDP, so the macro model does not count them twice.
+
+# A worked example: a small island caught in the oil trap {#sec-example}
+
+**The example is stylized: an island of \$2 billion GDP and 85 percent public debt that makes almost all its 300 gigawatt-hours of power from imported diesel.** It replaces 30 percent of its diesel generation with 60 megawatts of solar and a 120 megawatt-hour battery costing \$120 million (6 percent of GDP). Unit costs are anchored to public data with an island premium: solar at \$1,200 a kilowatt against a 2024 global average of \$691 [@IRENA2025]. Diesel generation avoided costs \$0.228 a kilowatt-hour at a Brent price of \$80 a barrel, so the plant saves \$20.5 million a year (1 percent of GDP). The social rate is 6 percent, the government borrows at 8 percent, $\lambda$ is 1.2, and the budget or state utility keeps half the fuel saving ($\theta = 0.5$), passing the rest to consumers. Appendix B lists every parameter.
+
+**Before financing, the plant is excellent.** Its levelized cost at 6 percent is \$0.134 a kilowatt-hour against the \$0.228 it displaces, its economic net present value is \$108 million, and it stays positive down to oil at about \$22 a barrel. SISEPUEDE's method, or a standard World Bank appraisal, would stop here.
+
+**The only loan on offer breaks the budget.** The island can borrow commercially at 8 percent for seven years. Debt service and upkeep come to \$24.8 million a year against \$20.5 million of fuel saved: the net cash flow to the budget is −\$14.6 million a year for seven years, \$102 million in all, and even if the budget kept every dollar saved it would still run \$4.4 million short each year. Headline debt rises from 85 to 91 percent of GDP on day one. Table 2 sets the five financing routes side by side.
+
+| | R1a: loan 8%, 7 yr | R1b: loan 8%, 25 yr | R2: concessional 1.5%, 30 yr | R3: PPA, WACC 11% | R4: PPA, WACC 8.5%, guaranteed |
+|---|---:|---:|---:|---:|---:|
+| Year-1 payment for the plant (\$m) | 24.8 | 13.0 | 3.6 | 16.7 | 14.2 |
+| Year-1 net cash to budget (\$m) | −14.6 | −2.8 | +6.6 | −6.4 | −4.0 |
+| Island ENPV (\$m) | 100 | 85 | 165 | 49 | 80 |
+| MVPF | 4.18 | 2.82 | pays for itself | 1.59 | 2.55 |
+| $NB_{1.2}$ (\$m) | 93 | 75 | 172 | 32 | 69 |
+| $NB$ with liquidity premium (\$m) | 28 | 63 | 197 | 3 | 51 |
+| Fiscal NPV at 8% (\$m) | −38 | −38 | +33 | −69 | −43 |
+| Headline debt added (% of GDP) | 6.0 | 6.0 | 6.0 | 0 | 0 |
+| PV of PPA payments at 8% / capital cost | — | — | — | 1.48 | 1.27 |
+
+: Table 2. A plant worth \$108 million fails the budget on the only commercial loan available; concessional finance or a guaranteed PPA rescues it. Stylized island; US\$ million, present values at 6 percent unless stated; Brent \$80 a barrel; budget keeps half the fuel saving. R1b is shown for comparison and is not available in the base case. Island ENPV is the World Bank financing-neutral value (\$108 million on every route) minus the present value of net payments to non-resident financiers. The liquidity premium sets $\lambda_t = 2.0$ in years 1 to 7 and 1.2 thereafter. R2 has five years' grace. Source: author's calculation (`2.Source/sids_worked_example.py`).
+
+**The trap is a liquidity and debt-statistics problem, not a solvency problem.** The short tenor creates the cash gap, the 8 percent rate sets the fiscal cost, and the debt rule penalizes the gross liability rather than the self-financing asset behind it. Tenor eases the first but not the second: the seven-year and 25-year loans have the same fiscal net present value at 8 percent, −\$38 million (Proposition 3). At a constant $\lambda$ of 1.2, the short loan even ranks higher ($NB$ of \$93 million against \$75 million), because the island pays the two-point spread over the social rate for fewer years. Only when $\lambda$ rises to 2 in the cash-short years does the ranking flip, to \$63 million against \$28 million. A tool with one constant cost of public funds cannot see the trap.
+
+**Concessional finance wins on every count, where it exists.** A 30-year loan at 1.5 percent with five years' grace has a grant element of 48 percent at 6 percent, puts cash into the budget from the first year, and pays for itself in MVPF terms. It still adds 6 percent of GDP to headline debt. The constraint is volume, not merit.
+
+**A PPA turns capital into an annual payment below the fuel bill, but it does not remove the liability.** At an 11 percent WACC the tariff is \$0.186 a kilowatt-hour, and at 8.5 percent with a World Bank or MIGA guarantee \$0.159, both below the \$0.228 avoided cost. Neither adds headline debt. But the present value of the committed payments at 8 percent is 1.48 times the capital cost without a guarantee and 1.27 times with one, 8.9 and 7.6 percent of GDP, more than the 6 percent of GDP of debt kept off the books (Proposition 4). The guaranteed PPA costs only about \$5 million more in fiscal present value than sovereign borrowing at 8 percent, a fair second-best. The unguaranteed PPA halves the island's net benefit and fails at $\lambda = 2$, at oil of \$60, or with capital costs 30 percent higher. The guarantee, cutting the producer's cost of capital by 2.5 points, is worth about \$31 million, a quarter of the plant's cost.
+
+**Who keeps the fuel saving decides the MVPF but not the economic value.** Moving $\theta$ from 0 to 1 leaves each route's economic net present value unchanged but raises the seven-year loan's MVPF from 1.61 to "pays for itself" (Proposition 2b); above $\theta^*$ of 0.37 for the concessional route and 0.62 to 0.81 for the others, the plant finances itself. Tariff design is a fiscal lever worth $\lambda - 1$ per dollar.
+
+**Carbon at the shadow price adds \$47 to 93 million of present value to every route but does not reorder them**, because all five displace the same diesel.
+
+# Country runs: Kenya, Uganda and St Lucia {#sec-country}
+
+**Run for three countries, the investment-needs extension puts 2030 mitigation investment at 4 to 5 percent of GDP, and the lens decides whether the increment is a cost or a gain.** Table 3 reports the tool's 2030 results for Kenya, Uganda and St Lucia [@InvNeedsTool2026]. The tool shares the expert group's totals among countries by physical drivers from CPAT and by GDP, so country values are allocations, not bottom-up estimates; they are illustrative results from the tool, not official estimates.
+
+| | Kenya | Uganda | St Lucia |
+|---|---:|---:|---:|
+| GDP, 2030 (US\$ billion) | 155.7 | 87.5 | 2.9 |
+| Total investment (% of GDP) | 4.7 | 4.0 | 4.4 |
+| Incremental investment (% of GDP) | 1.1 | 1.0 | 1.1 |
+| Market cost of capital (%) | 9.7 | 8.5 | 10.5* |
+| Incremental cost, lens (a), market rate (US\$ million a year) | 120 | 56 | −1.2 |
+| Incremental cost, lens (b), 6% | 68 | 39 | −2.3 |
+| Incremental cost, lens (c), 6% and local co-benefits | −7 | −3.5 | −3.0 |
+| Total investment after the delivery haircut (US\$ billion) | 8.3 (7.2) | 4.3 (3.5) | 0.145 (0.126) |
+
+: Table 3. Climate investment needs and their incremental cost in 2030 for three countries. Incremental cost is the annual capital charge on one year's incremental investment less fuel and operating savings (and, in lens c, local air-pollution co-benefits); positive is a net cost. Cost of capital is the observed renewable-energy rate for Kenya and Uganda; *St Lucia has no observation and takes the developing-country group rate. The haircut row applies each country's public investment efficiency gap to the public share; figures in brackets are before the haircut. Illustrative results from the tool, not official estimates. Sources: @InvNeedsTool2026; author's extraction, `2.Source/country_runs.py`.
+
+**In Kenya and Uganda the increment is a net cost at market rates and at 6 percent, and pays only when cleaner air is counted; in St Lucia it pays at any rate.** Kenya's incremental investment costs \$120 million a year more than it saves at its market rate, \$68 million at 6 percent, and becomes a small gain with co-benefits. St Lucia, which burns imported diesel for almost all its power, saves more than the capital charge even at 10.5 percent, as the stylized island of Section 5 does. Uganda's observed cost of capital, 8.5 percent, is far below the 15 percent CPAT assumes for low-income countries; at the default, the stylized asset of Proposition 1 would fail the financial test there, and at the observed rate it passes. The delivery haircut matters as much: it raises Uganda's investment need by \$0.8 billion, about a fifth, because its public investment efficiency gap is 36 percent.
+
+**A full SISEPUEDE run for Uganda shows what replaces the share-of-GDP fallback, and how little of its value a budget can see.** In the October 2025 run, the net-zero strategy carries \$259 billion of undiscounted technical cost over 2025–2050 against \$675 billion of benefits, a net present value of \$161 billion at 6 percent and \$116 billion at 8.5 percent [@SISEPUEDEUganda2025]. Two NDC strategies score \$185 billion and \$90 billion at 6 percent. Technical cost rises from 1.4 percent of the run's GDP in 2030 to 3.8 percent in 2050. But only the fuel, system-cost and technical-savings lines are cash that a budget, a utility or the balance of payments would see: \$119 billion, 18 percent of the net-zero benefits and under 3 percent in the NDC strategies. The rest is health, indoor air, crops and water quality. And power is only 6 percent of the technical cost; wastewater, buildings, livestock, solid waste and sanitation dominate. A spending test on this run would therefore find large values of $W$ and small cash returns in $F$ (Section 4): strong cases for public money, financed mostly by tax rather than by the savings they generate.
+
+# Validation, limits and use {#sec-limits}
+
+**The extensions are built to reproduce existing results when their new parameters are switched off.** With $\lambda = 1$, no haircuts and no budget limit, the spending layer must return the economic net present value of a standard appraisal (Proposition 2a), and with the investment lenses at a common rate it must return the capital charge of equation (3). With financiers resident, the island's ENPV must equal the financing-neutral ENPV on every route; the worked-example code asserts this, along with the identity that a loan's debt service discounted at its own rate equals the principal. These are the same regression tests that paper 4.2 [@StrettonWP42] applies to the core model.
+
+**The weakest parameters are the savings, co-benefit and abatement rates per dollar, and they matter most.** The stylized 13.3 cents of savings per dollar comes from one region, and the country allocations in Section 6 still use it for buildings and industry. Each should be replaced by a country run of SISEPUEDE, as for Uganda, or by CPAT's own fuel savings, before any number goes into a budget document.
+
+**The country cost of capital is the most influential input and the least measured.** Observed renewable WACCs exist for fewer than a hundred economies (St Lucia is not one); elsewhere equation (4) rests on sovereign spreads, which overstate project risk where contracts are guaranteed and understate it where they are not. An open table of WACC by country and technology is the first job.
+
+**Several simplifications bias the worked example in known directions.** Nominal rates applied to constant-price flows overstate financing costs; take-or-pay is an upper bound on the PPA liability; the guarantee is unpriced; and no delivery haircut is applied to the public routes. CPAT discounts levelized costs from year zero, while the extension uses an end-of-year capital recovery factor; the two conventions should be reconciled.
+
+**For a ministry, the extensions answer three questions in order.** First, how much clean capital a policy package calls for, by sector, and how much of it the public sector must carry: run CPAT, take its capacity changes, apply equations (1) to (6) at the country's WACC and at 6 percent. Second, which of the public measures pass the budget test: tag each by payer and financing route, apply the five corrections and rank by MVPF against $\lambda$. Third, how to finance the survivors: compare routes on the fiscal ledger, the debt statistics and the contract liabilities, with a time-varying $\lambda$ where cash is short. The method uses public data and the outputs CPAT and SISEPUEDE already produce.
+
+# Conclusion {#sec-conclusion}
+
+A carbon price model that cannot price capital tells a finance ministry half of what it needs. Extending CPAT to investment needs shows that the cost of capital, not the size of the bill, decides whether developing-country climate investment pays its way: at CPAT's own default rates, the financial case for a typical clean asset is marginal in lower-middle-income countries and negative in low-income ones, while the economic case is strong everywhere. Extending it to the efficiency of public spending shows that the budget's problem is often not value but liquidity, debt statistics and hidden contract liabilities, and that a single cost of public funds cannot see a cash trap. The country runs show the same pattern on real data: in Kenya and Uganda the increment pays only when co-benefits are counted, and in Uganda's SISEPUEDE run under a fifth of the net-zero benefits reach the budget as cash. The main limitation is that the per-dollar savings and costs of capital that drive every number are still calibrated on one region and a handful of observations. The next step is a country-by-technology table of the cost of capital and more SISEPUEDE runs outside Latin America, so that the lenses rest on country data rather than stylized ratios.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+# Appendix A. Proofs {.unnumbered}
+
+**Proposition 1.** Per dollar of capital, $N^F = b - \mathrm{CRF}(\mathrm{WACC}, n)$. $\mathrm{CRF}(r,n)$ is continuous and strictly increasing in $r$ for $n > 1$: it is the level payment that repays one dollar over $n$ years, and the present value of any fixed payment stream strictly falls as $r$ rises, so a larger payment is needed. As $r \to 0$, $\mathrm{CRF} \to 1/n$; as $r \to \infty$, $\mathrm{CRF} \to \infty$. So if $b > 1/n$ there is a unique $r^* > 0$ with $\mathrm{CRF}(r^*, n) = b$, and $N^F > 0$ iff $\mathrm{WACC} < r^*$. Numerically, $\mathrm{CRF}(0.126, 25) = 0.133$ (`investment_lenses.py`).
+
+**Proposition 2.** (a) Substitute $\lambda = 1$ into $NB_{\lambda,j} = W_j - \lambda F_j$. Without a budget limit the funding rule is $NB > 0$ for each measure independently, which is the ENPV rule. (b) A transfer of $\Delta$ in present value from beneficiaries to the budget changes $W_j$ by $-\Delta$ and $F_j$ by $-\Delta$. So $\mathrm{ENPV}_j = W_j - F_j$ is unchanged and $NB_{\lambda,j}$ changes by $-\Delta + \lambda\Delta = (\lambda - 1)\Delta$.
+
+**Proposition 3.** A level annuity loan of principal $K$ at rate $i$ over $n$ years pays $K\,\mathrm{CRF}(i,n)$ a year, whose present value at $i$ is $K$ for any $n$. With $i = i_g$, the loan's contribution to the fiscal net present value at $i_g$ is $K - K = 0$ for every tenor, so the fiscal NPV is the same for all tenors. At a social rate $r < i$, the present value of the debt service is $K\,\mathrm{CRF}(i,n)\,/\,\mathrm{CRF}(r,n)$, which rises with $n$ because $\mathrm{CRF}(i,n)/\mathrm{CRF}(r,n)$ is increasing in $n$ when $i > r$; so with constant $\lambda$, $F_j$ is larger and $NB_{\lambda,j}$ smaller for the longer tenor. With $\lambda_t$ higher in the early years, the short loan's front-loaded payments are weighted more heavily, which can reverse the ranking; Table 2 gives an instance.
+
+**Proposition 4.** Under take-or-pay the committed payment each year is $TE = (K + PV_w(\mathrm{rep}))\,\mathrm{CRF}(w,n) + OM$, where $w$ is the WACC. Its present value at $i_g$ is $(K + PV_w(\mathrm{rep}))\,\mathrm{CRF}(w,n)/\mathrm{CRF}(i_g,n) + PV_{i_g}(OM)$. Because CRF is strictly increasing in the rate, $w > i_g$ implies $\mathrm{CRF}(w,n)/\mathrm{CRF}(i_g,n) > 1$, so the first term exceeds $K + PV_w(\mathrm{rep})$. In the worked example the replacement falls in year 15, so $PV_w(\mathrm{rep})$ is somewhat smaller than $PV_{i_g}(\mathrm{rep})$; the inequality holds whenever the capital term's markup exceeds that difference, which it does by a wide margin at the rates in Table 2. The excess $L^{PPA} - K - PV_{i_g}(OM + \mathrm{rep})$ is the financing premium.
+
+# Appendix B. Code and parameters {.unnumbered}
+
+`2.Source/investment_lenses.py` prints Table 1 and the break-even rate. `2.Source/sids_worked_example.py` (Python 3, NumPy, pandas) prints Table 2, the switching values and the sensitivities, and writes `sids_worked_example_results.csv` and `sids_worked_example_sensitivity.csv`; it asserts the accounting identities described in Section 7.
+
+Worked-example parameters (all stylized unless a source is given): demand 300 GWh a year, all diesel; GDP \$2.0 billion; public debt 85 percent of GDP; 60 MW solar at \$1,200/kW (IRENA 2024 global average \$691/kW times an island premium); 120 MWh battery at \$350/kWh, replaced in year 15 at 60 percent of cost; integration 5 percent of capital; operation and maintenance 1.5 percent of capital a year; capacity factor 18 percent with 95 percent delivered; 25-year life; Brent \$80 a barrel (sensitivities \$60 and \$110), diesel crack \$25 a barrel, island delivery premium \$0.15 a liter, 3.9 kWh per liter, non-fuel variable cost \$0.02/kWh; fuel excise on power diesel zero; $\theta = 0.5$ (sensitivities 0 and 1); emission factor 2.68 kg CO₂ per liter; shadow price of carbon \$40 a ton in 2020 rising 2.25 percent a year (low path; high path double); social rate 6 percent; government rate 8 percent; $\lambda = 1.2$ (stress 2.0; liquidity case 2.0 in years 1–7); concessional loan 1.5 percent, 30 years, 5 years' grace; producer WACC 11 percent, or 8.5 percent with a guarantee; 25-year PPA treated as take-or-pay; all financiers non-resident; low-income debt framework stress of 35 percent of public-private partnership capital above 3 percent of GDP [@IMFWB2017LICDSF].

@@ -1,0 +1,191 @@
+{
+  "series": "Climate Fiscal Policy Briefs, Section 3: Sovereign Incentives",
+  "title": "Reward Governments, Not Projects",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Reward Governments, Not Projects",
+      "subtitle": "International incentives for national climate policy: Briefs 3.1–3.3",
+      "message": "Cash on the needed scale is politically impossible. Reward governments with what the international system supplies cheaply and they value highly: cheaper borrowing, through guarantees and collateral. On the development banks' loss record each donor dollar then delivers about 80 dollars of incentive; 2.7 in a stress case."
+    },
+    {
+      "type": "stats",
+      "title": "Incentives must come from outside; cash fails",
+      "stats": [
+        {
+          "value": "~$370bn",
+          "label": "a year to pay $100/t for cutting a tenth of global fossil CO₂ (about 3.7 Gt)"
+        },
+        {
+          "value": "~$1tn",
+          "label": "a year moved out of China alone by a $100/t global carbon tax"
+        },
+        {
+          "value": "$1",
+          "label": "of incentive per donor dollar from cash, spent once"
+        }
+      ],
+      "text": "A government that cuts emissions pays the whole cost and gets a small share of the benefit, so the reward must come from outside. Donors will not vote for cash on this scale, and payments against counterfactual baselines reward delay."
+    },
+    {
+      "type": "table",
+      "title": "Four routes to an incentive",
+      "header": [
+        "Route",
+        "What the government gets",
+        "What it costs the giver",
+        "Where"
+      ],
+      "colW": [
+        2.3,
+        3.3,
+        2.4,
+        1.0
+      ],
+      "rows": [
+        [
+          "Carbon pricing and policy crediting",
+          "Payment per tonne cut by a policy, as a carbon-price equivalent",
+          "Cash, per tonne",
+          "1.1, 1.7"
+        ],
+        [
+          "Conditional de-risking",
+          "An intermediary and guarantees for its clean power pipeline, on condition of reform",
+          "Expected loss on contingent exposure",
+          "2.1, 2.2"
+        ],
+        [
+          "Sustainability-linked lending",
+          "A lower interest rate if agreed indicators are met",
+          "Forgone interest; small per loan",
+          "3.3"
+        ],
+        [
+          "Notional capitalized value, backed by the Trust",
+          "A balance credited for carbon stocks, usable as guarantee capacity",
+          "Expected loss and buffer carry, held not paid out",
+          "3.1, 3.2"
+        ]
+      ],
+      "note": "Policy crediting is the cleanest and dearest; de-risking is cheap but small. Section 3 aims for both size and low cost.",
+      "fontSize": 13
+    },
+    {
+      "type": "figure",
+      "title": "A guarantee is worth many times what it costs",
+      "image": "../3.1.NotionalCapitalisedValueAndGuarantees/1.Presentation/figures/fig2-incentive-cost-ratio.png",
+      "imageWidth": 5.4,
+      "imageHeight": 3.04,
+      "caption": "Ratio of interest savings to the guarantor's expected loss, for three spread savings; base, middle and stress cases marked (log scales).",
+      "points": [
+        "The borrower saves the full spread; the guarantor bears only expected loss.",
+        "Base case, the MDB sovereign record: 0.77% calls a year × 4.9% loss = 0.038% a year; about 80 dollars per dollar at a 3-point spread.",
+        "MDBs are preferred creditors; a new facility might not be. Middle case (3% × 10%): 10. Stress case (3% × 37%): 2.7.",
+        "Gabon's insured 2023 bond: 6.1%, against 9–10.5% on its other bonds."
+      ]
+    },
+    {
+      "type": "twocol",
+      "title": "Notional capitalized value (3.1)",
+      "left": {
+        "heading": "Definition",
+        "points": [
+          "Opened by the verified carbon stock at a low stock price.",
+          "Debited at a uniform debit price per tonne above an allowance; credited below.",
+          "Never paid out: it sets guarantee capacity on green borrowing.",
+          "Two prices: Guyana's stock at $100/t is $1.95tn, which never binds."
+        ]
+      },
+      "right": {
+        "heading": "Worked example (stylized forest country)",
+        "points": [
+          "$5bn balance, $50 debit, 15 Mt a year against an allowance falling to zero in 2050.",
+          "Saves $150m a year; business as usual exhausts the balance by 2042.",
+          "Each tonne costs the country about $30; acting is worth about $1bn.",
+          "Donor cost about $2m a year on the MDB record, 40 cents a tonne; stress case $56m a year, $11 a tonne."
+        ]
+      }
+    },
+    {
+      "type": "figure",
+      "layout": "wide",
+      "title": "The Climate Investment Trust: hold, don't spend",
+      "image": "../3.2.ClimateInvestmentTrust/1.Presentation/figures/fig1-buffer-vs-payout.png",
+      "imageHeight": 2.1,
+      "aspect": 2.35,
+      "caption": "A: interest savings per donor dollar, stress, middle and base (MDB record). B: Trust capital over 25 years from $5bn at launch, base case (3.2).",
+      "points": [
+        "On the MDB record a 0.5% buffer keeps exhaustion to 1% a year: $5bn could back up to ~$1tn on paper.",
+        "Stress case: a 9.3% buffer; $5bn supports $54bn, saving borrowers $1.6bn a year. Hold that buffer until the Trust has a record.",
+        "Growth needs fees: 0.02% a year on exposure to hold steady (0.8% in the stress case); $2.4bn a year from co-investment."
+      ]
+    },
+    {
+      "type": "figure",
+      "title": "Sustainability-linked lending is too small",
+      "image": "../3.3.SustainabilityLinkedLending/1.Presentation/figures/fig1-size-problem.png",
+      "imageWidth": 5.6,
+      "imageHeight": 2.94,
+      "caption": "Present value at 5% over ten years, US$ million, log scale. Hatched: cost to the funder on the MDB record.",
+      "points": [
+        "Uruguay's $350m loan (2023) can save at most $12.5m, about $8m in present value.",
+        "A 100 bp step-down on $1bn: $77m. The stylized reform costs $770m.",
+        "$3.3bn of capacity is worth $772m; the funder expects to lose about $10m on the MDB record, $286m in the stress case.",
+        "Codify the loan and use it to deliver capacity."
+      ]
+    },
+    {
+      "type": "figure",
+      "title": "Paying for acting now",
+      "image": "../3.1.NotionalCapitalisedValueAndGuarantees/2.Source/figures/fig3-early-action.png",
+      "imageWidth": 5.4,
+      "imageHeight": 3.04,
+      "caption": "Net present value of adopting a stylized $1bn reform, by year of adoption.",
+      "points": [
+        "Falling technology costs and the option to wait reward delay.",
+        "Minimum incentive to act now: $20/t; about $30 allowing for the value of waiting.",
+        "Capacity declining as technology costs fall halves donor cost: $25m to $13m on the MDB record ($740m to $370m in the stress case). Cash: $1bn.",
+        "Forests need a permanent floor."
+      ]
+    },
+    {
+      "type": "twocol",
+      "title": "How series 2 and 3 compose",
+      "left": {
+        "heading": "Section 2: who bears a loss",
+        "points": [
+          "A payment intermediary and its guarantee waterfall (2.1).",
+          "Two-stage finance, pools and synthetic sovereign bonds (2.2).",
+          "Takes policy as given, and prices or conditions it."
+        ]
+      },
+      "right": {
+        "heading": "Section 3: what the government chooses",
+        "points": [
+          "Capacity earned under 3.1 can stand in 2.1's waterfall or behind 2.2's senior bonds.",
+          "The Trust's regional funds hold 2.2's first-loss tranche.",
+          "One verified indicator can trigger both a rebate and capacity."
+        ]
+      },
+      "text": "A risk mechanism fails when the guarantor cannot pay; an incentive fails when the reward is too small, too late or in the wrong form."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "todo": [
+        "MDB shareholders: rules-based guarantee capacity outside country envelopes, allocated by notional capitalized value.",
+        "Donors: fund the buffer, not the reward, in a Trust launched as insurance first.",
+        "MDBs: publish an indicator menu, baselines and pricing for sustainability-linked loans.",
+        "Make capacity the main prize, declining as clean technology gets cheaper.",
+        "Forest and coal countries: negotiate allowances, not baselines."
+      ],
+      "papers": [
+        "3.0  Reward Governments, Not Projects (overview)",
+        "3.1  Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives",
+        "3.2  The Climate Investment Trust: Hold Capital, Lend Its Strength",
+        "3.3  Codify Sustainability-Linked Sovereign Lending, Then Give It Scale"
+      ]
+    }
+  ]
+}

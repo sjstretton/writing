@@ -1,0 +1,82 @@
+---
+title: "Make Clean Power an Asset Class"
+subtitle: "Standardized de-risking for developing countries: an overview of section 2"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+version: "0.2"
+abstract: |
+  Clean power is cheap to build in most developing countries and expensive to finance, because investors price risks the project cannot control: a distribution company that may not pay, a plant that may not be finished, a currency that may fall and a state that may change the rules. Each risk has a different cheapest holder. This section of papers argues for removing payment risk at its source with a payment intermediary that guarantees the power contract rather than the debt, and then turning projects into a few standard securities: construction loans held by development banks, and pooled operating plants refinanced through first-loss equity and senior synthetic sovereign bonds. In stylized calibrations, the payment premium adds about 11 percent to a solar tariff, and refinancing pooled operating plants cuts the levelized cost of solar power by about a quarter. The host state's exposure becomes smaller, contingent and contracted, but it does not disappear.
+bibliography: 2.0.OverviewMobilisingPrivateCapital.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+format:
+  docx: default
+---
+
+*Overview of section 2, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Version 0.1 (September 2026) is in `8.PreviousVersions` at the section level.*
+
+# The cost of capital, not technology, prices clean power {.unnumbered}
+
+A solar plant has no fuel bill, so the price of its power is mostly the price of the money that built it. In the series' stylized plant (\$800 per kilowatt, a 20 percent capacity factor, 25 years of operation), the levelized cost of power rises by about 80 percent, from 3.6 to 6.5 US cents per kilowatt-hour (excluding interest during construction), when the cost of capital rises from 4 to 12 percent [@StrettonWP21]. Developing-country projects routinely face rates at the top of that range: the International Energy Agency's cost-of-capital work found that the cost of capital for a utility-scale solar plant in 2021 was two to three times higher in key emerging economies than in advanced economies and China [@IEA2022CoC], and studies of investment pathways find that this gap alone can hold back a large share of the low-carbon investment those countries need [@Ameli2021; @Calcaterra2024].
+
+The gap is not explained by engineering. Panels, inverters and trackers are bought on world markets at world prices. What differs is the risk investors price around the plant, and almost none of it is the plant's own [@Steffen2020].
+
+The cost of capital is a stack of separable risks, and each has a cheapest holder. Treating them as one risk is why single instruments disappoint: a guarantee against non-payment does nothing about construction delays, and an equity fund does nothing about a distribution company that will not pay. Table 1 sets out the stack and where the papers in this section put each layer.
+
+| Risk | What it is | Cheapest holder | Instrument | Paper |
+|---|---|---|---|---|
+| Payment (offtaker) risk | The buyer of the power pays late, partly or not at all | An intermediary that can wait for arrears and recover them | Payment intermediary facility with a guarantee waterfall | 2.1 |
+| Construction risk | The plant is late, over budget or never finished | Banks and development finance institutions that can supervise it | Construction loans against a contingent power purchase agreement | 2.2 |
+| Operating risk | A finished plant underperforms | Long-term bond investors, once pooled | Senior synthetic sovereign bonds on pooled operating plants | 2.2 |
+| Residual portfolio loss | The last losses after contracts and pooling | A dedicated equity layer | First-loss tranche held by a regional fund | 2.2, 3.2 |
+| Currency risk | Hard-currency obligations against local-currency revenue | Domestic savers, for local-currency instruments | Local-currency senior tranche; a deliberate denomination rule | 2.1, 2.2 |
+| Sovereign and policy risk | The state changes the rules or cannot stand behind its utilities | Nobody: it can be priced and conditioned, not transferred | Guarantees conditional on utility and tariff reform | 2.1, section 3 |
+
+: Table 1. The risk stack and who should hold each layer.
+
+# Remove payment risk where it starts (paper 2.1) {.unnumbered}
+
+Payment risk comes first because it prices everything downstream. A completed solar plant in a sunny place carries little operating risk. What lenders price is the chance that the state-owned distribution company on the other side of the power purchase agreement pays late or not at all. A weak utility therefore raises the cost of every project that sells to it, however good the project.
+
+The proposal is a payment intermediary facility: a national or regional institution that buys power from generators under one standard contract, pays them in full and on time whatever the distributor does, and recovers arrears itself [@CFPB21]. Behind it sits a guarantee waterfall agreed in advance: the distributor, its subnational owner, the national government, a multilateral agency and a donor contingency account. Because each layer is contracted before the facility operates, a call at a moment of stress is an administrative step rather than a negotiation.
+
+Guaranteeing the contract beats guaranteeing the debt. In the working paper's stylized calibration, offtaker risk adds about 11 percent to the solar tariff, or 1.4 percentage points to the cost of capital [@StrettonWP21]. A contract guarantee removes all of that premium and saves about five dollars for each dollar of the guarantor's expected cost. A guarantee of project debt removes only the lenders' share and saves less than it costs. The contract guarantee also keeps the claim on the distributor alive, so the intermediary can recover over years what a project could not survive for months, and it reaches every project selling to the same buyer rather than one deal at a time.
+
+India's Solar Energy Corporation shows that the design works, and its distributors' arrears show what it does not fix. The corporation buys power under standard contracts, sells it on under back-to-back agreements, and is protected by letters of credit, a payment security fund and a tripartite agreement under which the Reserve Bank of India can debit a defaulting state's account; it is rated AAA [@ICRA2025]. Yet Indian distribution companies built up large arrears that took central liquidity schemes and rescheduling rules to clear [@StrettonWP21]. The intermediary moves payment risk to a party that can carry it; only utility reform reduces it. Guarantees should therefore come with conditions on tariffs, collection and distribution-company finances.
+
+The state's exposure becomes smaller, contingent and contracted, but it does not vanish. Earlier drafts of this work said the structure consumes no host-country fiscal space; that was wrong. The national government stands in the waterfall, and its expected calls should be recorded, capped and reported as a contingent liability [@Irwin2007]. Two further design choices decide whether the structure reduces fiscal risk or stores it up: tariffs that decline over the contract term as technology costs fall, and a deliberate rule on currency denomination rather than a default to dollars.
+
+# Turn projects into asset classes (paper 2.2) {.unnumbered}
+
+Once payment risk is removed, a project's life splits cleanly in two. Construction carries completion, overrun and delay risk, which banks and development finance institutions can supervise. A finished plant selling under a guaranteed contract carries little risk, which long-term bond investors can hold but cannot supervise. Financing both stages with the same money charges the bond investor for risks it cannot manage and the bank for a duration it does not want.
+
+The proposal is to split each project at commissioning and standardize both sides [@CFPB22]. Development banks lend for construction against a contingent purchase contract from the intermediary, so the construction lender is underwriting a project with a guaranteed buyer waiting for it. On completion, plants are pooled and refinanced through three tranches: first-loss equity, a thin mezzanine, and a senior synthetic sovereign bond whose rating comes from the guaranteed contracts, the cushion beneath it and a co-guarantee from highly rated sovereigns rather than from the host state.
+
+Standardization is what makes pooling work, and pooling is what makes the rating. A one-factor portfolio model shows that first-loss subordination of 5 to 10 percent makes the senior bond near-AAA at plausible default correlations, and that pooling across ten host countries rather than one cuts the cushion needed from about 9 to about 5 percent, because it removes the single-country factor [@StrettonWP22]. Refinancing at the resulting blended cost cuts the levelized cost of solar power by about a quarter. A sovereign co-guarantee of the mezzanine on a \$10 billion pool would carry about \$460 million of exposure for an expected cost of about \$6 million over ten years.
+
+Where there is no contract to guarantee, a tiered bond guarantee does the same job, with conditions. Transmission lines, storage and equipment factories do not sell power under a bilateral agreement. For them the guarantee has to attach to the bond: first the government responsible for the energy system, then the national government, then a vehicle backed by highly rated sovereigns, offered only to jurisdictions that adopt agreed reforms.
+
+A local-currency senior tranche gives domestic savers a deposit-like green asset. For countries whose electricity revenue will always be in local currency, this is the only financing that carries no currency mismatch, and in most of them no such instrument now exists.
+
+# How the pieces compose {.unnumbered}
+
+Taken in order, the mechanisms describe a project's life. A regional payment intermediary makes offtake contracts bankable. A developer holding a contingent contract borrows for construction at a market rate rather than a distressed one. The plant is built and connects, and its risk profile changes. It is pooled with others under the same standard contract and refinanced through a synthetic sovereign bond held by pension funds and domestic savers, with first-loss equity beneath. Conditions attached to the guarantees improve the utility finances that created the payment problem in the first place.
+
+Each piece is weaker alone. A payment guarantee without an equity layer leaves the bond rated on the host. An equity layer without a payment intermediary absorbs a risk that need not exist. Two-stage finance without either moves the problem to the refinancing date.
+
+For countries already in debt distress the sequence needs a different end point. Where any new borrowing is the binding constraint, as for many small island states, the intermediary can sell energy as a service, so the country replaces imported fuel with domestic renewable supply. The payment obligation is still a contingent liability and should be accounted for as one [@StrettonWP21].
+
+# The boundary with section 3 {.unnumbered}
+
+Section 2 decides who bears a loss once a government has chosen to build; section 3 changes what the government chooses. The risk mechanisms here take policy as given and price or condition it. The sovereign incentive instruments in section 3 (a notional capitalized value used as guarantee capacity, a Climate Investment Trust that holds capital behind the guarantees, and codified sustainability-linked lending) reward the government for adopting and keeping climate policy [@CFPB31; @CFPB32; @CFPB33]. The two sections compose: guarantee capacity earned under section 3 can stand in the waterfall of 2.1 or behind the senior bonds of 2.2, and the Trust's regional funds are the natural holders of the first-loss tranche.
+
+# The papers in this section {.unnumbered}
+
+**2.1 Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power.** Solar and wind plants are cheap to build in most developing countries but expensive to finance, because lenders price the risk that a state-owned distribution company will not pay. The paper proposes a payment intermediary that buys under one standard contract, pays generators in full and on time, and recovers arrears behind a guarantee waterfall agreed in advance. Guaranteeing the contract removes the whole offtaker premium, about 11 percent of the tariff in a stylized calibration, and saves five dollars per dollar of expected guarantor cost; guaranteeing debt saves less than it costs. Brief: Climate Fiscal Policy Brief No. 2.1 [@CFPB21]. Working paper: [@StrettonWP21].
+
+**2.2 From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power.** Projects financed one at a time on bespoke terms carry every risk to the same investors. The paper splits each project at commissioning, pools operating plants under one standard contract and refinances them through first-loss equity, a thin mezzanine and a senior synthetic sovereign bond. Subordination of 5 to 10 percent makes the senior bond near-AAA, and the refinancing cuts the levelized cost of solar power by about a quarter; tiered conditional bond guarantees cover assets with no contract. Brief: Climate Fiscal Policy Brief No. 2.2 [@CFPB22]. Working paper: [@StrettonWP22].
+
+The Sollar, a proposal for a solar-backed savings unit that avoids the credit question altogether, is kept with the additional papers (`6.Additional/2.FinanceAndRisk/2.3.TheSollar`).
+
+# References {.unnumbered}

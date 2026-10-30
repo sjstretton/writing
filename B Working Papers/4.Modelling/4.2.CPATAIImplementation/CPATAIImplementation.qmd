@@ -1,0 +1,173 @@
+---
+title: "CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool"
+subtitle: "What two AI-assisted rebuilds of the Climate Policy Assessment Tool found, and how policy models should be maintained"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+version: "0.1"
+abstract: |
+  The Climate Policy Assessment Tool is a spreadsheet model that finance ministries and international institutions use to estimate what carbon pricing does to energy use, emissions, revenue and households in more than 180 countries. Its legacy workbook is too large for anyone to audit cell by cell. This paper describes how it was rebuilt twice in October 2026, with AI coding agents doing most of the construction: once as a readable Excel workbook written by code, and once as a Python model that reproduces the workbook number for number. One rule governed both rebuilds: errors in the legacy model are fixed and never copied, while questionable but intended choices are copied and logged. The rebuild found 228 bugs in the legacy model, 24 of them serious enough to change standard results, as well as 135 issues (intended choices that are open to question) and 20 errors in the published documentation. Writing the model a second time found seven further bugs in the first rebuild. The lesson for ministries is that a policy model should be specified by shared variable codes, built at least twice and tested at every change.
+keywords: [climate policy modeling, carbon pricing, model verification, spreadsheet risk, artificial intelligence, software testing]
+jel: [C63, C88, H23, Q48, Q54]
+bibliography: CPATAIImplementation.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+number-sections: true
+format:
+  docx: default
+---
+
+*Working paper, version 0.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the CPAT-AI repository, https://github.com/cpmodelai/cpat_ai.*[^credit]
+
+[^credit]: The legacy Climate Policy Assessment Tool is the joint work of the IMF and World Bank CPAT teams; its mitigation documentation was prepared by Alexandra Campmas, Daniel Bastidas, Olivier Lelouch, Faustyna Gawryluk, Paolo Agnolucci and the author, building on earlier work by Ian Parry, Simon Black, Karlygash Zhunussova, Nate Vernon-Lin and Victor Mylonas [@CPATDocMitigation; @Black2023CPAT]. CPAT's air-pollution module is the work of Paulina Schulz-Antipa, who leads it in CPAT-AI; the distribution and transport co-benefit modules are led by other colleagues on the CPAT team; the mitigation rebuild and this paper are the author's. Every count in this paper is from release 1.0.2 of the repository (29 October 2026) [@CPATAIRepo]. Errors are the author's own.
+
+# Introduction {#sec-intro}
+
+A climate-fiscal model that no one can audit is a liability for the ministry that relies on it. The Climate Policy Assessment Tool (CPAT), built jointly by the International Monetary Fund and the World Bank, estimates what carbon taxes, emissions trading, fuel subsidy reform and related policies do to energy prices, fuel use, emissions, revenue, GDP and households, year by year, for more than 180 countries [@Black2023CPAT; @CPATDocMitigation]. It is used to advise governments on reforms worth billions of dollars a year. Legacy CPAT, the Excel model, is a binary workbook of more than 21 megabytes whose main calculation sheet runs past row 18,000, documented in some 400 pages [@CPATAIDeck; @CPATDocMitigation]. Its formulas differ from row to row, so checking one row says little about the next. No one had checked all of it against what it was meant to compute.
+
+When its mitigation and distribution modules were rebuilt formula by formula in October 2026, and every difference from the original explained, they turned out to be wrong in 228 places. Some of the errors were large. Egypt's population followed a misread growth path instead of the United Nations projection, which puts it at 147 million in 2041 [@UNWPP2024]. The GDP effect of recycled carbon revenue was added to the growth rate every year instead of to the level once, so a one-off effect compounded year after year. A methane fee on farming and waste had no effect at all, because non-energy methane never changed [@CPATAIBugs]. None of these was visible in the workbook's headline results; each needed someone to trace a formula to its source.
+
+This paper asks whether a large spreadsheet policy model can be rebuilt so that every step can be read and tested, and what such a rebuild reveals. The answer is yes, at a cost that AI coding agents have brought within reach of a small team. CPAT-AI, the project and repository, rebuilt CPAT twice: Excel-AI, a readable workbook written and checked by code, and Coded CPAT, a Python model that reproduces Excel-AI to nine significant figures. One rule governed both: **bugs are never replicated; issues are replicated and tracked.** Shared variable codes made the two rebuilds and the original comparable cell by cell. The rebuild registered 228 legacy bugs (24 of high priority), 135 issues, 35 deliberate departures and 20 errors in the published documentation; writing the model a second time in Python found seven bugs in the first rebuild.
+
+The paper adds to three strands of work. Studies of spreadsheet risk show that errors in large spreadsheets are the norm, not the exception [@Panko1998], and that they can change policy-relevant conclusions, as the coding error found in Reinhart and Rogoff's public-debt spreadsheet did [@Herndon2014]. Work on scientific computing recommends version control, automated tests and writing code for people to read [@Wilson2014]. The simulation literature distinguishes verification (is the model built as intended?) from validation (is it the right model?) [@Sargent2013]. This paper applies these ideas to a working policy model, counts what they find, and shows how AI agents change the economics of applying them [@Korinek2023]. Validation against data and other models is the subject of the companion paper 4.3 [@StrettonWP43]; the method itself is summarized in paper 4.1 [@StrettonWP41].
+
+# Why spreadsheet policy models escape audit {#sec-context}
+
+**Spreadsheets are the default platform for policy models because ministries can open them.** A finance ministry economist can open CPAT, change a carbon price and see the result without installing anything. Every number is visible. That transparency is real, and it is why CPAT was built in Excel: its documentation lists "spreadsheet-based with data and formulas readily accessible" as the first step taken to make it transparent [@CPATDocMitigation].
+
+**But visible is not the same as checkable.** A spreadsheet shows each formula in isolation. The structure of the calculation (which row feeds which, which constant is used where, which sector a copied formula points to) is implicit. Panko's review of audits and experiments found that people building spreadsheets make errors in a small but steady fraction of cells and rarely catch them by inspection, so that large spreadsheets almost always contain errors [@Panko1998]. The Reinhart and Rogoff case showed how an averaging range that left out five countries could survive peer attention and enter a policy debate [@Herndon2014]. Economics research more broadly is often hard to reproduce even with the authors' code [@ChangLi2015].
+
+**Legacy CPAT had the features that make errors likely and hard to find.** Its formulas varied from row to row, often with long chains of lookups; constants were typed into formulas; the same quantity could appear under different names in different sheets; and the documentation and the workbook had drifted apart. Twenty errors in the published documentation were later registered, three of them serious: a missing equation for the GDP feedback, a sign error in the electricity price markup, and a mis-stated discount factor [@CPATAIBugs]. A reviewer who checked the equations against the documentation would therefore have been checking against an imperfect standard.
+
+**The remedies are known; what was missing was the labor to apply them.** The remedies (write the model as code, test each block, keep one register of known problems, build it twice) are well known [@Wilson2014; @Sargent2013]. What has been missing is the labor to apply them to a model of several hundred thousand formulas without stopping the work the model supports. This paper reports what happened when that labor was largely supplied by AI coding agents, under rules that kept the human owner in charge of every judgment.
+
+# The design: two rebuilds and one rule {#sec-design}
+
+## Legacy CPAT is the specification
+
+**Both rebuilds take legacy CPAT as ground truth, not the documentation and not anyone's view of what CPAT should be.** The legacy workbook is kept read-only in three versions (CPAT 1.0pre_456, 459 and 465, with proprietary data stripped); work is done on copies [@CPATAIDocs]. The project then proceeds block by block in five steps: replicate a block of legacy formula by formula, with the same section numbers; check it against an independent Python recomputation and against legacy's stored results; classify every difference; release a new version only after the checks pass; and port validated blocks to Python.
+
+The chain that is being replicated is the CPAT mitigation chain set out in paper 4.1 [@StrettonWP41]. Policies set price signals; retail prices build up from international prices, taxes and subsidies; fuel use in 16 sectors and 8 fuels responds to income, prices and efficiency; a power model dispatches plants and invests; and the results feed revenue, emissions, GDP effects and household incidence. Its core is a constant-elasticity demand equation of the form
+
+$$
+Q_{ijt} = Q_{ij,t-1}\,(1-a_{ij})\,(1+g_t)^{\varepsilon^{Y}_{ij}}\left(\frac{P_{ijt}}{P_{ij,t-1}}\right)^{\varepsilon^{P}_{ij}}, \qquad (1)
+$$
+
+for fuel $i$ in sector $j$, where $a_{ij}$ is autonomous efficiency improvement, $g_t$ GDP growth and $\varepsilon^{Y}$, $\varepsilon^{P}$ the income and price elasticities (the full form, with a separate efficiency response to prices, is in paper 4.1 and in the total effective carbon price paper [@CFPB17]). Every block of the rebuild has to reproduce equations like this one exactly as legacy computes them, except where legacy does not compute what it means to.
+
+## The replication rule
+
+**The rule separates two kinds of difference between what legacy does and what it should do.** A *bug* is a place where legacy does not compute what it means to: a reference to the wrong row, a term applied twice, a dead or blank reference, a sign error, a formula that contradicts its own label. An *issue* is a place where legacy does what it means to, but the choice is open to question: an old data vintage, a simplification, a missing feature, a result nobody can yet explain. Bugs are fixed and never copied. Issues are copied exactly and tracked [@CPATAINorms].
+
+Stated compactly, let $L(x)$ be what legacy computes for input $x$, $I(x)$ what its authors intended (read from labels, documentation and the CPAT team), and $P(x)$ what the prototype computes. The rule sets $P(x) = I(x)$ everywhere, and since $I(x) = L(x)$ wherever legacy has no bug,
+
+$$
+P(x) \neq L(x) \;\Longrightarrow\; \text{a registered bug fix, or a departure decided by the model owner}. \qquad (2)
+$$
+
+**This gives the rebuild a closure property: every difference from legacy has a code.** A reviewer who finds that Excel-AI and legacy disagree on a number can look up why. Three rules make the closure hold in practice. When in doubt whether something is a bug or an issue, treat it as an issue, replicate it and ask. Never improve legacy silently: a better method or newer data is an issue, proposed as an upgrade for the owner to decide. And any departure that is not a bug fix needs an explicit decision by the model owner, recorded with the issue [@CPATAINorms].
+
+**Data problems are issues, ranked by whether legacy can fix them.** Where legacy reads data wrongly (a blank VAT cell read as a rate of zero), the formula fix is a legacy bug with a cell-level plan, and the data problem is an issue of priority *Very high*. Where no formula fix is possible because the data themselves are missing or poor, the prototype does exactly what legacy does and the issue is *Extremely high*. Two issues hold that rank in release 1.0.2: combustion emission factors available only as base and final values (the yearly paths are proprietary), and current account data typed in for Egypt only [@CPATAIBugs].
+
+**The rule also runs between the two rebuilds.** Coded CPAT treats Excel-AI as its specification exactly as Excel-AI treats legacy. A bug that Python finds in the Excel prototype is never copied into Python; it is registered as a prototype bug, fixed in Python where the fix is obvious, listed as a "known difference" that the tests check really does differ, and then fixed in the next Excel release, after which the known difference is deleted and the two must agree again [@CPATAINorms].
+
+## Shared codes make three models comparable
+
+**Every input, variable and output has one code, the same in legacy, Excel and Python.** Inputs keep the names and rows of legacy's input sheet (`NameOfParameter`), in legacy units, so a scenario defined for one model means the same thing in the others. Outputs carry codes that state country, module, variable, sector, fuel and scenario: `egy.mit.co2.tot.tot.2` is Egypt's total CO~2~ in scenario 2. A codes map lists every input with its legacy row, its name, its legacy name and its Python key, and Python is forbidden to invent a second name for anything that has a code [@CPATAINorms].
+
+**Shared codes turn comparison into a join.** Without them, comparing two implementations of a 15,000-output model means matching rows by hand. With them, a comparison is a table merge on the code and the year, followed by a tolerance check, and it can be run after every change. This is the single design decision that made the rest affordable.
+
+## Excel written by code, Python written to be read
+
+**Excel-AI is a workbook that no person typed.** Python builders write it with openpyxl and recalculate it in LibreOffice, so it can be built and checked on any machine [@CPATAIDocs]. The norms that govern it are mechanical and checkable: every formula is at most 100 characters; one formula serves a whole block of cells, so that copying, dragging or pasting it anywhere in the block gives the same result; no country numbers appear in formulas; every money unit comes from one vocabulary; and every file passes a lint check before it ships, so Excel never shows a repair prompt. Release 1.0.0 had 452,164 formulas, none longer than 100 characters, and recalculated with no error values [@CPATAIDeck].
+
+**Coded CPAT is written so that a person with the equation list open can check every equation.** Each equation of the list is one small function, named after the CPAT code of the quantity it computes, whose docstring states the equation and the Excel-AI rows it replicates. Names are CPAT codes (`ener` for fuel use, `atp` for after-tax prices); there are no hard-coded numbers apart from 0 and 1; unit conversions live in one place; and a test fails if any equation in the list has no function or any function cites an equation that is not in the list [@CPATAINorms]. Release 1.0.2p1.1 runs one country and two scenarios in 0.8 seconds once the baseline is cached [@CPATAIRepo].
+
+# What the rebuild found {#sec-findings}
+
+**The rebuild registered 228 legacy bugs, 24 of them of high priority, and 135 issues.** Table 1 gives the classes and counts in release 1.0.2. All entries live in one register, from which every list, tracker and document is regenerated at each release; the tracker is shared with the CPAT team that maintains legacy.
+
+| Class | Code | Count | Breakdown | What the rebuild does |
+|:---|:---|---:|:---|:---|
+| Legacy bugs | L | 228 | Core mitigation 149 (high 21, medium 42, low 86); power engineer model 29 (3, 10, 16); road engineer model 17 (0, 9, 8); distribution 31 (all low); inputs 1; data 1 | Fixes each, or leaves the feature out; never replicates; writes a cell-level fix plan for legacy |
+| ...status in legacy 465 | | | Fixed by the CPAT team and confirmed 52; fixed with caveats 9; marked fixed but not fixed 2; still open 165 | Each claimed fix checked cell by cell |
+| Prototype bugs | M | 22 | Fixed 21, withdrawn 1; 8 suspected (7 confirmed) by Coded CPAT | Fixed in Excel; never copied into Python |
+| Documentation bugs | DOC | 20 | High 3, medium 7, low 10 | Models follow the workbook; documentation to be corrected |
+| Issues | I | 135 | Mitigation 109, data 13, distribution 9, inputs 4; major 35, minor 97, very or extremely high 3 | Replicated 93; prototype limitation 16; departs by owner decision 14; out of scope 10; other 2 |
+| Departures | LD | 35 | Rows of the workbook's LegacyDiff sheet that are not "Same" | Kept by owner decision, each with a reason |
+| Upgrades | U | 14 | High 3, medium 4, low 7 | Proposed, not built |
+
+: Table 1. Bugs and issues registered by the CPAT-AI rebuild, by class (release 1.0.2, 29 October 2026).
+
+*Source:* @CPATAIBugs; counts computed from `excel_ai/BUGS.md` and `excel_ai/ISSUES.md`. *Notes:* Priority of bugs by effect on results: high, wrong results in standard runs; medium, wrong results in some runs or countries, or a wrong reported number; low, latent or reporting only. "Data" issues include one legacy bug (L170) listed with the data problems it fixes. Codes are never reused, so the L series runs to L230 with 228 live entries.
+
+**The high-priority bugs cluster where formulas were copied across sectors or years.** Of the 24 high-priority bugs, the biggest affect the demand drivers: services electricity demand grew with the industrial multiple after 2023 (the largest single power-demand error); an income factor on the GDP elasticity was applied twice and anchored to 2023, so the elasticity drifted; and "other oil products" carried a hardcoded pass-through and a zero margin, which priced them at a floor and made their use rise roughly tenfold by 2030 [@CPATAIDeck]. Others switch policies off without warning: regulation scenarios had no effect because a share was fixed at zero, and actual power capacity factors were never used. A third group sits in the macro-fiscal outputs: the compounding GDP effect, subsidies as a share of GDP divided by the previous year's GDP, and a green-investment block in which eight separate formulas read blank rows, header text or the wrong constants [@CPATAIBugs].
+
+**Most bugs are latent rather than visible.** Over 60 percent (142 of 228) are low priority: they affect a path that the standard Egypt run does not take (the standard Egypt run, for instance, uses the simpler elasticity road model, so the 17 bugs of the road engineer model were latent in it), or only a reported number. A latent bug is still a bug. It fires when a ministry switches on the feature it lives in, which is exactly when the ministry is asking a question the default run does not answer.
+
+**The legacy owners have begun fixing what the rebuild found.** Of the bugs registered against the earlier legacy file, the CPAT team marked 63 fixed in its latest file, 1.0pre_465. A cell-by-cell check confirmed 52, found 9 fixed with caveats, and found 2 marked fixed that were not [@CPATAIBugs]. That last number is a small argument for the whole approach: even careful owners fixing a known list need an independent check.
+
+**The 135 issues are mostly questions for the modelers, not errors.** Issues range from data limitations (proprietary tables are available for Egypt only; Egypt's greenhouse gas inventory breaks after 2021, which may understate energy methane by about 19 Mt CO~2~e if legacy's calibration rule is followed) to design choices (household price elasticities are always the overall mean, never varied by decile) [@CPATAIBugs; @CPATAIDocs]. Ninety-three are replicated exactly as legacy has them. Fourteen depart from legacy by explicit owner decision, for example using corrected Egypt electricity prices. The register keeps the questions visible without letting the rebuild answer them unilaterally.
+
+**The documentation needed correcting too.** The 20 documentation bugs include equations written with the wrong sign, an undefined symbol, a derivative computed wrongly, and units that differ between notation tables. None affects the models, because the models follow the workbook, but each would mislead a reader who used the documentation to check the workbook [@CPATAIBugs].
+
+**The count rose as the rebuild went deeper.** At version 0.6.3 of the prototype, on 20 October 2026, the register held 126 legacy bugs; by release 1.0.0 it held 228, after the distribution, revenue, welfare and green-investment blocks were rebuilt and the CPAT team's own issue lists were mapped onto the register [@CPATAIDeck; @CPATAICaveats]. The total is therefore a lower bound on what a full rebuild of the remaining modules (air pollution, transport co-benefits) would find.
+
+# The testing regime {#sec-testing}
+
+**Every number is checked by something that did not produce it.** The regime has four levels. Each level answers a different question, and none of them alone would be enough.
+
+**First, method equals legacy.** For each block, a Python reference implementation is fed legacy's own cached inputs with every bug switched back on, and must reproduce legacy's stored results. The power block's reference reproduces 208 legacy rows of the baseline and a carbon-tax run; the price block reproduced 80 legacy rows with a largest relative difference of 5.6 × 10^-17^; the road engineer model reproduces legacy's cached run (both scenario blocks, about 1,091 series each, 2022–2041) to 3.8 × 10^-14^; the distribution reference reproduces legacy's effects and recycling to 4 × 10^-4^, the precision of the cache [@CPATAIDocs]. This step proves that the rebuild understood the method before fixing anything in it.
+
+**Second, workbook equals Python.** With the bugs fixed and the prototype's own inputs, every row of the workbook must equal the Python reference in every test scenario. Further tests check properties that must hold whatever the numbers: generation equals required generation, the capacity balance holds, a carbon price raises the share of variable renewables and lowers power CO~2~, and totals equal the sum of their parts. A paste test copies a scenario's block of columns, as a user would, and checks that the copies number themselves and reproduce the stored results [@CPATAIDocs].
+
+**Third, Coded CPAT equals Excel-AI.** For Egypt, scenarios 1 and 2, every year 2022–2041, each of the 7,472 reference output codes of Excel-AI's stored results (7,458 with values) must be matched by Coded CPAT within a relative difference of 10^-9^. The distribution module is compared the same way on 1,684 codes. Stored scenarios 3–6 are checked on their 123 key codes each. The Python suite has 64 tests and runs in about a minute; it must pass before every commit, and a failing comparison may not be loosened to pass [@CPATAIRepo; @CPATAIDocs]. Formally, for every code $k$ and year $t$,
+
+$$
+\frac{\left|y^{\text{Python}}_{kt} - y^{\text{Excel}}_{kt}\right|}{\max\left(1, \left|y^{\text{Excel}}_{kt}\right|\right)} \le 10^{-9}, \qquad (3)
+$$
+
+except for codes listed as known differences, which must differ.
+
+**Fourth, every release is a regression test.** Each new version's outputs are compared, code by code, with the previous release, and every difference must be zero or explained in the version table. Release 1.0.0 changed 0 of 15,086 output codes against its predecessor [@CPATAIDeck]. When a release does change results, the version table names the register codes responsible: release 0.9.2, for instance, changed only nominal GDP in the mitigation results, because it fixed a unit error (M19) that Python had found [@CPATAIRepo].
+
+**Writing the model twice is itself a test, and it found bugs that the other checks missed.** When Coded CPAT was written from the equation list and Excel-AI, its comparisons flagged eight places where the prototype did not compute what it meant to: VAT on efficient prices at the 2022 rate in every year, a freight electric-vehicle feebate valued at the diesel truck's distance, a plug-in hybrid cost that mixed electric capital cost with combustion insurance and maintenance, nominal GDP divided by a billion although the source is already in billions, two international gas price series swapped, a division by zero in the methane fee where a curve exponent is zero, and a distribution row that added a percentage to amounts in local currency [@CPATAIBugs]. One of the eight was withdrawn on review. The other seven were fixed in Excel-AI 0.9.2 and in Python, with no known differences left. The checks inside the Excel build had not caught them.
+
+**What the tests prove, and what they do not.** The regime verifies; it does not validate. It shows that three implementations compute the same thing and that every difference from legacy is a registered decision. It does not show that the elasticities are right, that the baseline fits history, or that the power model agrees with a full capacity-expansion model. Those are questions about the model, not the code, and they are taken up in papers 4.3 and 4.4 [@StrettonWP43; @StrettonWP44]. The first systematic comparison of Coded CPAT with legacy's cached Egypt baseline shows the split clearly: base-year energy use and CO~2~ agree closely, because both use the same energy balance, while prices differ by data vintage and by the fixed price bugs [@CPATAIDocs].
+
+# What AI assistance did and did not do {#sec-ai}
+
+**AI coding agents did most of the construction.** The repository is organized so that any AI tool starts from one routing file (`AGENTS.md`), which sends it to the same norms, bug lists, to-do lists and task log that people use; to change how the AI behaves, the team changes the norms, not the AI's own instructions [@CPATAINorms]. Working under those norms, through Claude Code and GitHub Copilot, agents wrote the Python builders that generate the Excel workbook, the independent Python recomputations that check it, the whole of Coded CPAT and its tests, and the generators that turn the one register into the bug document, the tracker, the short lists and the documentation website. They surveyed legacy formula dumps block by block and drafted the cell-level fix plans that the CPAT team can apply to legacy; one task split the remaining 54 plans across five agents working in parallel on one shared dump [@CPATAICaveats].
+
+**The pace changed what was feasible.** The task log records about 250 finished tasks between 2 and 29 October 2026, each with its inputs, outputs and caveats [@CPATAICaveats]. In four weeks the project went from a kernel workbook to a released, replicated model with a register of more than 450 entries. A comparable rebuild by hand would have taken a team many months, which is one reason legacy CPAT had never been fully audited.
+
+**The agents did not make the judgments.** Whether a difference is a bug or an issue is decided by rule, and the rule's default is "issue: replicate it and ask". Every departure from legacy that is not a bug fix carries an explicit decision by the model owner, dated in the register; a typical entry reads "user decision 2026-10-29: legacy prices". The choice of scope (which modules to build, which upgrades to defer), the treatment of data, and acceptance of each release were the owner's. Review in Excel 365, the environment in which ministries will use the workbook, is still the owner's open task (issue I1) [@CPATAIBugs].
+
+**The agents' work needed the same checks as anyone's, and so did the people's.** The task log records where AI output was taken partly on trust and says so: an equation list drafted by a subagent was spot-checked rather than checked line by line [@CPATAICaveats]. The checks caught agent errors as they were meant to; a full check, for instance, stopped a release over one formula of 114 characters. And the same checks found two legacy bugs that the human owners had marked fixed but had not fixed [@CPATAIBugs]. The testing regime in Section 5 exists because neither the agents nor the people can be trusted to be right without an independent test. A further norm makes the regime learn: a mistake whose cause could recur ends with a new norm and a check that would have caught it, added in the same task [@CPATAINorms].
+
+**The strongest objection is common-mode error.** If the same kind of agent writes the Excel builder, the Python recomputation and Coded CPAT from the same reading of legacy, a misreading can be copied into all three, and the tolerance tests in equation (3) would pass. Three features limit this risk without removing it. Coded CPAT was written function by function from the equation list and compared with the workbook's stored values, and it found seven bugs that the Excel checks had missed. The first level of testing ties each block back to legacy's own stored results, which no agent wrote. And external validation against data and other models, in paper 4.3, tests the whole chain against things outside it [@StrettonWP43]. The residual risk is that a shared misunderstanding of what legacy *intends* survives all three. Only human review by the model's owners and users can catch that, which is why the fix plans and the tracker go to the CPAT team.
+
+# Lessons for building and maintaining policy models {#sec-lessons}
+
+**Specify the model by codes, not by cell addresses.** A shared code for every input, variable and output is what made three implementations comparable after every change. Ministries commissioning a model should require a codes map as a deliverable, so that any later reimplementation, audit or comparison is a table join rather than an archaeology project. The cost is a naming protocol agreed at the start; the failure condition is a model whose owners let names drift between versions.
+
+**Keep one register of everything known to be wrong or open.** Bugs, issues, departures and upgrades belong in one list with one set of fields, from which every document is generated. A register shared with the model's owners turns an audit into a work plan: the CPAT team marked 63 legacy bugs fixed in its next file within weeks of receiving the register, and each legacy bug comes with a cell-level fix plan where one is possible. The cost is discipline at every task; the failure condition is a register that is not regenerated, so that documents and code disagree.
+
+**Copy issues, fix bugs, and decide departures in writing.** The replication rule keeps a rebuild faithful where the original is right and correct where it is not, and makes every difference traceable (equation 2). Its value is that it stops a rebuild from becoming a new model by accident. It costs owner time: someone with authority has to decide each departure. It fails if the boundary between bug and issue is drawn by whoever happens to be coding.
+
+**Build the model twice, and test every change against the last release.** A second implementation in a different language finds errors that checks within one implementation miss. Regression tests on every output code make each release a controlled experiment. The cost, once AI agents do most of the writing, is modest: Coded CPAT replicated Excel-AI's mitigation and distribution modules within the same month. The failure condition is common-mode error, which only external validation and human review address.
+
+**Write the methodology for a reader who never saw an earlier version, and keep change history elsewhere.** CPAT-AI separates method notes, which describe the current method only, from version notes and the task log [@CPATAINorms]. Legacy CPAT's documentation had drifted from the workbook partly because the two jobs were mixed.
+
+**Use AI agents as builders under written norms, not as authorities.** The agents in this project wrote code, documents and plans at a pace no small team could match, but every judgment that changes what the model means was kept with a named person, and every output was tested by something independent of its author. That division of labor is the transferable lesson. It applies to any ministry or institution that maintains a model it did not build and cannot fully read.
+
+**The approach has limits a ministry should know.** Excel-AI and Coded CPAT ship with complete data for Egypt only, because four of CPAT's data tables are proprietary; other countries need the full database (issue I90). The independent recomputation of the full mitigation block is being repaired, so the Excel checks currently rely on the block-level references and on Coded CPAT. The air-pollution and transport co-benefit modules are not yet rebuilt, and the rebuild inherits a structural problem it does not fix: CPAT describes road transport three times, in a simple fuel equation, an engineering fleet model and a co-benefits module that values congestion, accidents and road damage, and the three are not linked: they disagree on how much drivers cut their driving when fuel prices rise [Paper 4.7, @StrettonWP47]. And the whole regime proves consistency, not truth: a faithfully replicated wrong elasticity is still wrong.
+
+# Conclusion {#sec-conclusion}
+
+Legacy CPAT was a working model that nobody could fully audit. Rebuilt twice under a rule that fixes bugs and copies issues, with shared codes and tests on every output, it turned out to contain 228 bugs, 24 of which change standard results, alongside 135 issues and 20 errors in its documentation; the second rebuild found seven bugs in the first. What is now known is not only that the model had errors, which was likely, but where each one is, how large it is and how to fix it in the original, with a register the owners are already working through. The main limitation is that verification is not validation: three implementations that agree to nine digits can share an assumption that the world does not. The next step is to rerun CPAT's published validation [paper 4.3, @StrettonWP43] and its elasticity checks [paper 4.4, @StrettonWP44] on the corrected model for every country, so that the model a ministry uses is both the model its authors intended and one that fits the evidence.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

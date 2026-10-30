@@ -1,6 +1,6 @@
 # AGENTS.md (writing)
 
-Instructions for AI agents working on the **writing** part of the combined repo: folders A–F. The repo root `AGENTS.md` covers both parts (planning, folders 0–3; writing, folders A–F) and says which instructions apply; read it first, then this file, then `NORMS.md` (in this folder).
+Instructions for AI agents working on the **writing** part of the combined repo: folders A–D. The repo root `AGENTS.md` covers both parts (planning, folders 0–3; writing, folders A–D) and says which instructions apply; read it first, then this file, then `NORMS.md` (in this folder).
 
 ## What the writing part is for
 
@@ -16,23 +16,23 @@ Read the file that matches your task before you start. Files in this folder (`A 
 | `STRATEGY.md` | Stephen's strategic priorities and specialisms. Decides what matters. |
 | `TODO.md` | The live task list. Take work from the top. Update it when you finish. |
 | `PAPERS.md` | Prioritised papers, introductory papers, concept papers and position papers. |
-| `E Writing Standards/` | Writing principles, writing types, the paper standard, AI tells to avoid, exemplars and templates. |
+| `A Writing Instructions/Writing Standards/` | Writing principles, writing types, the paper standard, AI tells to avoid, exemplars and templates. |
 | `C Research Proposal/` | The PhD research proposals. Its `README.md` tracks their status. |
 | `B Working Papers/` | The papers, numbered by section (1.x to 5.x; 6.Additional holds the rest). Also the website (`7.Website`) and scripts (`8.Scripts`). |
-| `E Climate Econ Course/` | Course materials. |
-| `D Templates and Info/` | Older Word templates (briefing, one-page pitch). |
-| `F Claude + Scripts/Setup Claude/_admin/` | `about-me.md` and `voice.md`: who Stephen is and how he sounds. Read before drafting anything in his name. |
+| `D Climate Econ Course/` | Course materials. |
+| `A Writing Instructions/Templates and Info/` | Older Word templates (briefing, one-page pitch). |
+| `A Writing Instructions/Claude + Scripts/Setup Claude/_admin/` | `about-me.md` and `voice.md`: who Stephen is and how he sounds. Read before drafting anything in his name. |
 | `Writing-Status-Report.md` | 29 Oct 2026 audit of every paper and the housekeeping problems (H1–H17). |
 
 Folders with their own `README.md` have local conventions. Read that first.
 
 ## How to upgrade a paper
 
-Follow these steps in order. A paper is not finished until it passes the checklist in `E Writing Standards/paper-standard.md`.
+Follow these steps in order. A paper is not finished until it passes the checklist in `A Writing Instructions/Writing Standards/paper-standard.md`.
 
 1. Read the paper, its folder README, its entry in `PAPERS.md` and its line in `Writing-Status-Report.md`.
 2. Write down, in two sentences, the paper's question and its answer. If you cannot, the paper's problem is thinking, not prose. Fix that first and tell Stephen.
-3. Decide the writing type (`E Writing Standards/writing-types.md`) and the reader.
+3. Decide the writing type (`A Writing Instructions/Writing Standards/writing-types.md`) and the reader.
 4. Restructure to the paper standard. Then rewrite paragraph by paragraph using `writing-principles.md`.
 5. Run the skim test: read only the title, abstract, headings and the first sentence of every paragraph. A busy reader should get the whole argument.
 6. Check every citation and number. Mark anything you could not verify with `[VERIFY: ...]`. Never invent a source.
@@ -51,7 +51,7 @@ Follow these steps in order. A paper is not finished until it passes the checkli
 - Keep the paper folder layout: `1.Presentation`, `2.Source`, `3.RelatedPiecesAndLinks` (older folders still say `3.BackgroundPapers`), `5.Notes`, `8.PreviousVersions`, `9.Archive`, plus `RelatedWork.md` for related pieces that live in other main folders. Convention: `B Working Papers/8.Scripts/Reference/_PaperFolderLayout.md`.
 - The `.qmd` file at the paper's root is the master unless its README says otherwise. Where qmd and docx disagree (status report H13), ask which is the master before editing.
 - Versions: the master carries `version:` in its YAML; older versions go in `8.PreviousVersions/` as `<Name>-v0.1.<ext>`, `<Name>-v0.2.<ext>`. Before a major rewrite, move the current master there under its version number and bump the master.
-- New papers start from `E Writing Standards/templates/`.
+- New papers start from `A Writing Instructions/Writing Standards/templates/`.
 
 ## Publishing (standing authorization)
 
@@ -62,7 +62,7 @@ This authorization holds only when every item below is true. If any fails, stop 
 - The content passes `NORMS.md`, and papers pass the paper-standard checklist.
 - Nothing is marked confidential, internal, draft-for-comment or "not for circulation", and nothing contains World Bank internal material.
 - Every citation is verified. No `[VERIFY]` or `TODO` markers remain.
-- The change is logged in `E Writing Standards/publishing-log.md` (date, what, where, commit).
+- The change is logged in `A Writing Instructions/Writing Standards/publishing-log.md` (date, what, where, commit).
 
 Social media, email and any channel other than Stephen's own websites still need his explicit approval each time.
 

@@ -1,0 +1,49 @@
+{
+  "series": "Climate Fiscal Policy Brief No. 3.1",
+  "title": "Reward the Stock as Well as the Flow",
+  "subtitle": "Notional capitalized value and guarantee-based climate incentives",
+  "message": "Credit each country with a balance opened by its carbon stock and debited for every tonne emitted above an allowance. Use it as guarantee capacity on green borrowing, not cash. On the development banks' loss record each donor dollar delivers about $80 of incentive; $2.70 in a stress case.",
+  "problem": {
+    "title": "Climate finance pays for flows, not stocks",
+    "stats": [
+      {
+        "value": "19.5 Gt",
+        "label": "of CO₂-equivalent stored in Guyana's forests"
+      },
+      {
+        "value": "~$50m",
+        "label": "a year: what Guyana earns for the flow, from its credit sales to Hess"
+      },
+      {
+        "value": "<$1",
+        "label": "per tonne released: the Tropical Forest Forever Facility's deduction for clearing"
+      }
+    ],
+    "text": "Payments against baselines nobody can observe get gamed and arrive years after the political cost is paid. A country that kept its forest has little to sell, and leaving coal in the ground earns nothing."
+  },
+  "mechanism": {
+    "title": "A guarantee is worth more than it costs",
+    "image": "figures/fig2-incentive-cost-ratio.png",
+    "imageWidth": 5.4,
+    "imageHeight": 3.04,
+    "caption": "Ratio of interest savings to the guarantor's expected loss, for three spread savings: base (MDB record), middle and stress cases marked.",
+    "points": [
+      "The balance opens at a low stock price; each tonne above the allowance is debited at a higher debit price.",
+      "It sets guarantee capacity on green borrowing and is never paid out.",
+      "Base case: the MDB record, 0.77% calls a year × 4.9% loss; ratio about 80 at a 3-point spread. MDBs are preferred creditors and a new facility may not be: middle case 10, stress case (3% × 37%) 2.7."
+    ]
+  },
+  "action": {
+    "title": "Fund the buffer, not the reward",
+    "results": [
+      "$5bn balance, $50 debit: each tonne costs the country about $30; it saves $150m a year.",
+      "Each $1bn a year of incentive needs $33bn of capacity and about $13m a year of expected loss on the MDB record ($370m in the stress case, with a $3.1bn buffer held).",
+      "Capacity that declines as clean technology gets cheaper halves the donor cost of acting now: $25m to $13m on the record ($740m to $370m in the stress case)."
+    ],
+    "todo": [
+      "MDB shareholders: create rules-based guarantee capacity allocated by notional capitalized value.",
+      "Donors: fund the buffer, held in a trust.",
+      "Forest and coal countries: negotiate allowances, not baselines."
+    ]
+  }
+}

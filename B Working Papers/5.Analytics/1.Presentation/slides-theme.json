@@ -1,0 +1,80 @@
+{
+  "series": "Climate-Fiscal Analytics Papers, Section 5: Analytics",
+  "title": "Diagnostics on Data Ministries Already Hold",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Diagnostics on Data Ministries Already Hold",
+      "subtitle": "Three climate-fiscal analytics tools: papers 5.1–5.3",
+      "message": "Analysis changes policy only when the ministry that holds the budget can reproduce it. Each tool takes data the ministry already holds, puts it on a common scale and returns a sequenced answer."
+    },
+    {
+      "type": "statement",
+      "title": "The reproducibility standard",
+      "text": "A diagnostic a ministry cannot check is a recommendation it must take on trust.",
+      "points": [
+        "Every intermediate step visible; every value carries its source and year.",
+        "Defaults defended line by line, with ranges where evidence is thin.",
+        "AI drafts under a written specification; every line is checked against the source."
+      ]
+    },
+    {
+      "type": "figure",
+      "title": "Excise: diesel taxed below half its benchmark",
+      "image": "../5.1.ExciseFiscalDiagnostic/1.Presentation/figures/fig_corrective.png",
+      "imageWidth": 5.4,
+      "imageHeight": 2.48,
+      "caption": "Stylized Country A, US$ per liter; whiskers span the low and high cases (5.1).",
+      "points": [
+        "Any schedule mapped onto 30 standard lines and scaled three ways.",
+        "Diesel: $0.18 against $0.43; the largest unpriced cost is air pollution, not carbon.",
+        "Closing the gap raises about 1.1% of GDP.",
+        "Petrol is about right only because erosion has caught up with it."
+      ]
+    },
+    {
+      "type": "figure",
+      "title": "Scenario tool: financing beats size",
+      "image": "../5.2.MacroFiscalEnergyScenarioTool/1.Presentation/figures/fig_stylized_run.png",
+      "imageWidth": 5.4,
+      "imageHeight": 2.48,
+      "caption": "GIMF-lite, stylized program of 1% of GDP a year for ten years (5.2).",
+      "points": [
+        "One workbook for 186 countries: needs, pricing, lite macro models, debt test.",
+        "Kenya: budget need 0.5% of GDP in 2030, mostly land use and non-CO₂.",
+        "Power-sector pricing covers about 5%; debt +7 points by 2050.",
+        "Illustrative tool results, not forecasts."
+      ]
+    },
+    {
+      "type": "figure",
+      "title": "Dashboard: a one-page profile from public data",
+      "image": "../5.3.FiscalIndicatorsDashboard/1.Presentation/figures/fig_profiles.png",
+      "imageWidth": 5.4,
+      "imageHeight": 2.48,
+      "caption": "2024 values from IMF WoRLD and WEO, as compiled by the pipeline (5.3).",
+      "points": [
+        "80 indicators, 12 blocks, 217 economies, about twenty public datasets.",
+        "Never imputes; stops if configuration and output disagree.",
+        "Indonesia: a revenue problem. South Africa: a debt-service problem.",
+        "No overall index: the triage is the point."
+      ]
+    },
+    {
+      "type": "closing",
+      "title": "How the tools feed sections 1–4",
+      "todo": [
+        "Excise diagnostic: checked tax rates and externality values for CPAT (4) and the carbon-pricing papers (1).",
+        "Scenario tool: carries the cost-of-capital argument (2) and incentives (3) into a country's budget and debt.",
+        "Dashboard: tells the analyst which lens matters before any model runs.",
+        "Next: add carbon prices to the dashboard; rerun the excise diagnostic on a published finance act."
+      ],
+      "papers": [
+        "5.0  Diagnostics on Data Ministries Already Hold (overview)",
+        "5.1  The Excise-Fiscal Diagnostic",
+        "5.2  The Macro-Fiscal-Energy Scenario Tool",
+        "5.3  A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis"
+      ]
+    }
+  ]
+}

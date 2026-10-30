@@ -1,0 +1,242 @@
+---
+title: "The Macro-Fiscal-Energy Scenario Tool"
+subtitle: "Linking Energy Investment and Carbon Pricing to Growth, Revenue and Debt in One Workbook"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+version: "0.1"
+abstract: |
+  A finance ministry weighing a climate investment program needs to know three things at once: how much the program costs the budget, how much carbon pricing could pay for, and what the combination does to growth and debt. The answers usually come from separate teams using separate models. The Macro-Fiscal-Energy Scenario Tool puts them in one workbook for 186 countries. It chains a national model of mitigation investment needs, which splits each need by who pays; a screen that finds the most abatement a carbon tax, a feebate or a mix can deliver within limits on political cost; simplified, open-source versions of three IMF and World Bank macro-fiscal tools (the Global Integrated Monetary and Fiscal Model, the Debt-Investment-Growth and Natural Disasters model and its resource variant, and the low-income Debt Sustainability Framework); and a debt sustainability test. A stylized run shows that the financing choice and the efficiency of public investment move the result more than the size of the program. A run for Kenya shows a net zero program whose budget need, 0.5 percent of GDP in 2030, is mostly land-use and non-CO₂ spending rather than capital; feasible power-sector carbon pricing covers about 5 percent of it, and the program adds 7 points of GDP to public debt by 2050 for little growth. The lite models are not their parents and do not replace them.
+keywords: [climate finance, public investment, debt sustainability, carbon pricing, feebates, macro-fiscal modeling]
+jel: [E62, H54, H63, Q54, Q58]
+bibliography: MacroFiscalEnergyScenarioTool.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+number-sections: true
+format:
+  docx: default
+---
+
+*Working paper, version 0.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the Climate Fiscal AI Tools.*[^credit]
+
+[^credit]: The lite models are simplified re-implementations written from the published descriptions of the parent models cited in the text; they are not endorsed by, and do not reproduce, the IMF or World Bank tools. The stylized run uses the tools' default illustrative calibrations. The Kenya run in Section 7 reports illustrative results from the tool, with income-group defaults where country data are missing; they are not forecasts or official estimates. Errors are the author's own.
+
+# Introduction {#sec-intro}
+
+A finance ministry asked to commit to a climate investment program cannot get a single answer to the question it cares about: what does this do to our debt? The energy team can estimate the investment a net zero path needs. The tax team can estimate what a carbon tax would raise. The macroeconomists can run a public investment scale-up through a growth model, and the debt team can run a debt sustainability analysis. Each answer depends on the others. The growth model needs the investment path and its financing; the debt analysis needs the growth path; the carbon tax revenue depends on the emissions the investment avoids; and how much carbon pricing a government can actually impose depends on who loses and how visibly. In practice the four are run by different teams, on different calibrations, in different years, and the minister gets four numbers that do not add up.
+
+This paper asks how those pieces can be put into one consistent, inspectable scenario that a ministry economist can run for any country in an afternoon. The answer is the Macro-Fiscal-Energy Scenario Tool, a single Excel workbook driven from one dashboard tab. It links four source models: a national model of mitigation investment needs that splits each need by who pays; a screen for carbon pricing under political-feasibility limits; simplified versions of three IMF and World Bank macro-fiscal models; and a simplified debt sustainability test. A country selector and a handful of levers drive everything, and the workbook recalculates live. Its value is consistency. Every module reads the same country data, the outputs of one module are the inputs of the next, and every assumption is a visible yellow cell.
+
+The tool's contribution is integration, not new economics. The IMF's Global Integrated Monetary and Fiscal Model (GIMF) [@Kumhof2010GIMF] and the Debt-Investment-Growth and Natural Disasters model (DIGNAD) [@Marto2018DIGNAD], built on the DIG model of @Buffie2012DIG, are the standard tools for public investment scale-ups in advanced and low-income economies. The joint Bank-Fund Debt Sustainability Framework for low-income countries [@IMFWB2018LICDSF] is the standard debt test. The Climate Policy Assessment Tool (CPAT) [@CPATdocs] estimates the effects of carbon pricing. Each is used on its own. What none does is run a country's own mitigation investment program and its feasible carbon pricing through a macro model and a debt test in one pass, for every country, with the same data. The lite models make that possible by giving up detail the parents have. The paper is explicit about what is given up.
+
+Section 2 describes the tool and its dashboard. Section 3 sets out the energy side: investment needs and carbon pricing under feasibility limits. Section 4 sets out the macro-fiscal side and how each lite model relates to its parent. Section 5 describes the integration and its checks. Section 6 reports a stylized run, Section 7 a run for Kenya, and Section 8 sets out limits and use.
+
+# The tool {#sec-tool}
+
+**The tool is one workbook with one driving tab.** The Dashboard holds the country selector, the main levers and the headline results for 2030 and 2050, with six charts: public debt, revenue and expenditure, GDP against a no-new-measures baseline, green investment, the carbon price in force, and debt sustainability. The main levers are a revenue increase (percentage points of GDP a year, up to a ceiling), a public investment increase, the climate investment program on or off, and a carbon pricing mode (none, a manual tax and feebate, or the best feasible tax, feebate or hybrid). Secondary levers sit on a Policy settings tab: start years and ramp-up, the share of new taxes falling on capital, other new spending, the strength of the fiscal rule, the three feasibility limits, the phase-in of carbon pricing, and how carbon revenue is used (rebated to the bottom 40 percent, spent on green public investment, or kept by the budget). Behind the Dashboard sit detail tabs for the fiscal outlook item by item to 2050, the macro and debt results, green investment, carbon pricing, and the model engines.
+
+**The scenario is a baseline plus levers.** The baseline holds the country's 2024 fiscal position (debt, revenue and spending ratios) except that fossil fuel rents fall on a global net zero path; growth is reported above or below trend. It is a reference point for comparing packages, not a forecast. A user who switches the climate program on adds the country's incremental budget need for mitigation, financed by grants, concessional loans and commercial borrowing in proportions set on the assumptions tab. A user who chooses a carbon pricing mode adds the revenue it raises, and can earmark it for the program.
+
+**Four source models feed it, and each is a separate, documented module.** Table 1 lists them. They share one data layer: the Global Fiscal Indicators panel described in the companion paper on the indicators dashboard [paper 5.3, @StrettonWP53], which supplies each country's debt, revenue, public investment, efficiency score, creditor mix and energy data from public sources.
+
+| Module | What it computes | Parent or basis | Coverage |
+|---|---|---|---|
+| National mitigation investment model | Investment for a net zero path and a current-trends baseline, 2024–2050, by sector; incremental cost; split into five payer types; budget need | CPAT data, codes and activity equation; IEA, IRENA and Ember data | 186 countries |
+| PriceFeasibility | Abatement from a power-sector carbon tax, feebate or mix; three political-cost metrics; best feasible mix | Stand-alone; priors to be replaced by CPAT or country evidence | Countries with Ember power data |
+| Macro-fiscal models | GDP, consumption, interest rates, public debt paths for a financed program | GIMF-lite, DIGNAD-lite, DIGNAR-lite, and DIGNAD-R (a recursive version in formulas) | 186 countries |
+| LIC-DSF-lite | Five debt-burden indicators against thresholds; mechanical risk rating before and with the program | Bank-Fund LIC Debt Sustainability Framework | 66 low and lower-middle income countries |
+
+: Table 1. The tool's modules
+
+**The workbook is built by script from the source models, so a fix in a model reaches the tool on the next build.** A build script runs each module's extractor, which writes its results in the indicator panel's long format (country, indicator, value, year, source); splices the module's indicator definitions into the panel's configuration; runs the dashboard builder; and adds the live sheets. The build stops if a module names an indicator its extractor does not produce. A full rebuild from raw data takes about six minutes.
+
+# The energy side {#sec-energy}
+
+## Investment needs and who pays
+
+**The investment module estimates, for each country and year to 2050, what a net zero path needs and who pays for it.** The investment model is a stock-and-flow model built to CPAT conventions: it uses CPAT's energy data and its activity equation, projected with income elasticities and autonomous efficiency improvement at real 2024 prices, and builds investment bottom up for road transport, buildings, industry and power, with spending lines for non-CO₂ gases, land use and other energy emissions. Its method is the subject of paper 4.6 in this series [@StrettonWP46]; here what matters is its output, an investment path in two scenarios and its split by payer.
+
+**Every investment line is split into five payer types, and the split decides the fiscal cost.** The types run from pure public (P1, repaid by taxes: public buildings, access grids, land use), through regulated utility (P2, repaid by tariffs), contracted revenue (P3, repaid under a long-term contract with a public or regulated buyer), and viability gap (P4, market revenue plus a public top-up), to pure private (P5). The starting split of power investment comes from the country's power market structure, coded from the Power Sector Reform Tracker [@UrpelainenYang2019] and updated where it is out of date. Three pressure indices then move investment toward the budget: one for poor utility cost recovery, one for a high cost of capital, one for large explicit fossil fuel subsidies. The direct budget need in year $t$ is
+
+$$
+N_t = I^{P1}_t + \gamma \, I^{P4}_t, \qquad (1)
+$$
+
+with $\gamma = 0.3$ the public share of the viability gap. The tool adds two wider measures: the need adjusted for public investment efficiency, $N_t / (1 - \epsilon)$, where the efficiency gap $\epsilon$ comes from the country's PEFA score on public investment management where one exists and from income-group averages otherwise [@IMF2015PIE]; and the need including regulated-utility investment, which becomes a contingent liability wherever tariffs do not recover costs.
+
+**Only the incremental need enters the macro models, split into capital and spending.** The program is the net zero need less the baseline need. Its capital part builds public capital in the macro models; its spending part (land use, non-CO₂ abatement and other annual outlays) is financed the same way but builds nothing. In many low-income countries most of the budget need is spending, not capital, which matters for growth: spending raises debt without raising future output.
+
+## Carbon pricing under feasibility limits
+
+**The pricing module asks how much abatement pricing can deliver without breaching limits on political cost.** It covers the power sector only, and compares a carbon tax, a feebate (a charge on generation above a benchmark emissions intensity and a rebate below it, equivalent in this sector to output-based allocation or a tradable performance standard) and a mix of the two. The distinction that drives the module is between the marginal and the average price. Fuel switching responds to the marginal price, which a tax and a feebate raise equally. Electricity demand responds to the average tariff, which only the tax raises, because a feebate's charges and rebates cancel at the benchmark [@CFPB12].
+
+**Abatement has a substitution part and a demand part.** With a tax $\tau_t$ and a feebate rate $\tau_f$ in US dollars per tonne of CO₂,
+
+$$
+A^{\text{sub}} = s_{\max}\left(1 - e^{-(\tau_t + \tau_f)/\tau_{s}}\right), \qquad
+\Delta p = \frac{\phi \, e_{\text{avg}} \, \tau_t}{p_{\text{res}}}, \qquad
+A^{\text{dem}} = |\varepsilon| \, \Delta p, \qquad (2)
+$$
+
+and total abatement as a share of baseline fossil power emissions is $E = 1 - (1 - A^{\text{sub}})(1 - A^{\text{dem}})$. Here $s_{\max}$ is the largest share of fossil output that cleaner supply can displace by about 2030, $\tau_s$ is the price at which switching is well under way (calibrated from coal and gas prices and heat rates), $\phi$ is the pass-through of carbon costs to tariffs (set by power market structure), $e_{\text{avg}}$ is the average grid emissions intensity, $p_{\text{res}}$ is the residential tariff and $\varepsilon$ is the price elasticity of electricity demand. A feebate gets the same substitution as a tax at the same rate, with no tariff rise.
+
+**Three limits stand in for political feasibility.** The first is the visible price: the first-year rise in the residential tariff, $F_1 = \Delta p / n$ for a phase-in over $n$ years. The second is the household loss: the net burden on the bottom 40 percent as a share of their consumption, $F_2 = b_{40}\,\Delta p\,(1 - \min(\rho / (\phi \, r \, q_{40}), 1))$, where $b_{40}$ is their electricity budget share, $\rho$ is the share of revenue rebated to them, $r$ the residential share of sales and $q_{40}$ their share of residential use. The third is the concentrated loser: the net payment by coal and oil generators as a share of their revenue,
+
+$$
+F_3 = \frac{\tau_t \, e_{\text{hi}} (1 - \phi) + \tau_f (e_{\text{hi}} - e_{\text{avg}})}{p_{\text{w}}}, \qquad (3)
+$$
+
+where $e_{\text{hi}}$ is their emissions intensity and $p_{\text{w}}$ the wholesale price. The first term is tax cost that tariffs do not pass on; the second is the feebate's net transfer away from high emitters. The module searches tax and feebate rates from 0 to 200 US dollars per tonne for the mix with the most abatement that satisfies all three limits, and reports which limit binds. The default limits (10 percent for $F_1$, 0.5 percent for $F_2$, 15 percent for $F_3$) are placeholders, not recommendations. Choosing them is a political judgment, and the tool's job is to show what each choice costs in abatement and revenue.
+
+**Revenue links pricing to the budget.** Carbon tax revenue is the tax rate times fossil power emissions, as a share of GDP. A feebate raises nothing. The tool can earmark pricing revenue for the climate program, which lowers its debt financing. The financing gap the dashboard reports is the incremental budget need less feasible pricing revenue.
+
+# The macro-fiscal side {#sec-macro}
+
+## Why simplified models
+
+**The parent models are the right tools, but they cannot be run in one pass for every country.** GIMF and DIGNAD need country calibrations that take weeks, run in specialist software and are maintained by small teams. A ministry economist cannot open them, change an assumption and see the debt path move. The lite models keep the mechanisms that matter for a financed public investment program (non-Ricardian households, productive public capital, an efficiency wedge, a debt-elastic borrowing premium, a fiscal rule) and drop the rest. They are written in Python, solved under perfect foresight with a sparse Newton solver, and calibrated from public data with income-group defaults where data are missing. Table 2 sets out what each keeps and drops.
+
+| Lite model | Parent | Kept | Dropped or simplified |
+|---|---|---|---|
+| GIMF-lite | GIMF [@Kumhof2010GIMF; @Anderson2013GIMF] | Overlapping-generations households with finite horizons [@Blanchard1985]; liquidity-constrained households; private capital with adjustment costs; productive public capital; sticky prices and wages; inflation-targeting rule; uncovered interest parity with a debt-elastic premium; fiscal rule with a chosen instrument | One country facing a fixed world instead of several regions; one good; annual, not quarterly; no oil block, financial accelerator or zero lower bound |
+| DIGNAD-lite | DIGNAD [@Marto2018DIGNAD], built on DIG [@Buffie2012DIG] | Savers and hand-to-mouth households; Tobin's q; standard and adaptation public capital; investment efficiency; concessional and commercial external debt with a debt-elastic rate; fiscal rule on consumption tax and transfers; disasters | One traded good, so no real exchange rate; inelastic labor; no domestic debt; a disaster is a one-off surprise |
+| DIGNAR-lite | DIGNAR [@Melina2016DIGNAR] | Resource rents as an endowment shared between government and savers; a permanent fall in rents as a fiscal and income shock | Everything DIGNAD-lite drops; a firmer fiscal rule is imposed |
+| DIGNAD-R | DIGNAD-lite | The same equations made recursive, in live spreadsheet formulas | One fiscal instrument; no energy savings or private investment push |
+| LIC-DSF-lite | Bank-Fund LIC-DSF [@IMFWB2018LICDSF] | Debt-carrying capacity from the Composite Indicator; five debt-burden indicators and thresholds; standard stress tests plus a disaster test; mechanical rating | Realism tools, staff judgment and the small-breach rule; loan cohorts instead of loan-by-loan data; no market-access framework |
+
+: Table 2. The lite models and their parents
+
+## GIMF-lite
+
+**GIMF-lite keeps the feature of GIMF that matters most for debt-financed investment: households do not fully discount future taxes.** Each household survives each year with probability $\theta$, so its planning horizon is $1/(1-\theta)$, about 20 years at $\theta = 0.95$, and its labor income declines over its life at rate $\chi$ [@Blanchard1985; @Kumhof2010GIMF]. Human wealth is then discounted at a rate above the government's borrowing rate:
+
+$$
+HW_t = (1-\psi)\left[(1-\tau_L) w_t l_t + tr_t\right] + \frac{\theta\chi}{1+r_t} HW_{t+1}, \qquad (4)
+$$
+
+and these households consume a fixed share of financial plus human wealth. A share $\psi$ of households are liquidity constrained and spend current income. Because $\theta\chi < 1$, a debt-financed program feels like wealth to households alive today: Ricardian equivalence fails, and in the long run higher public debt crowds out private capital and net foreign assets.
+
+**Public capital raises output, with an efficiency wedge.** Production is $y_t = A\,(1+sav_t)\,KG_{t-1}^{\alpha_G}\,K_{t-1}^{\alpha}\,l_t^{1-\alpha}$, and public capital accumulates as $KG_t = (1-\delta_G)KG_{t-1} + s\,IG_t$, where only a share $s$ of each dollar of public investment becomes capital. The output elasticity $\alpha_G$ is calibrated from an assumed return on public capital. The climate program enters as extra public investment, extra spending that builds no capital, extra private investment and net energy cost savings ($sav_t$, entered as a value-added gain). A fiscal rule lets a share of the program be debt financed and closes the rest with transfers or the labor tax:
+
+$$
+B_t - B_{t-1} = d\,(IG^{x}_t + G^{x}_t - R^{x}_t) - \lambda_B (B_{t-1} - \bar{B}), \qquad (5)
+$$
+
+where $IG^{x}$, $G^{x}$ and $R^{x}$ are the program's extra public investment, extra spending and earmarked revenue, $d$ is the debt-financed share and $\lambda_B$ is the speed of return to the debt target.
+
+## DIGNAD-lite, DIGNAR-lite and DIGNAD-R
+
+**DIGNAD-lite is the model for low-income and concessional borrowers.** It keeps DIGNAD's split between savers, who borrow abroad at a debt-elastic premium, and hand-to-mouth households, who spend current income. It has two public capital stocks: standard capital and adaptation capital, which costs more and is destroyed less by disasters [@Marto2018DIGNAD]. The government borrows concessionally at a low fixed rate and commercially at $r^c_t = r^{*} + \eta\,e^{(d^c_t - \bar d)}$, and a fiscal rule raises the consumption tax and cuts transfers as commercial debt rises. Programs are financed in stated shares of grants, concessional loans and commercial debt, which is the choice that matters most for low-income countries.
+
+**DIGNAR-lite adds resource rents for fossil exporters.** Rents are an endowment; the government takes a share and savers the rest [@Melina2016DIGNAR]. A permanent fall in rents on a global net zero path is a permanent fiscal and income shock, so the model solves for the steady state at the final rent level and imposes a firmer fiscal rule. In the integrated run, rents start at the country's latest fossil rents and fall 80 percent by 2050, with a government take of 50 percent; both are assumptions.
+
+**DIGNAD-R puts DIGNAD-lite into spreadsheet formulas so the user can see what moves.** It makes the equations recursive, so they run in Excel without a solver and respond at once to the assumptions: disaster size, grant and concessional shares, the pricing earmark, the fiscal rule. It treats every country as DIGNAD-type, has one fiscal instrument and leaves out energy savings, so for upper-middle and high-income countries it sits below the integrated run. The tool shows both on purpose: read the integrated run for the number and DIGNAD-R for the mechanism.
+
+## LIC-DSF-lite
+
+**The debt test follows the structure of the Bank-Fund framework.** Debt-carrying capacity (weak, medium or strong) comes from the Composite Indicator, a weighted sum of the country's CPIA score, growth, reserve cover, remittances and world growth. Five indicators are compared with thresholds that depend on capacity: the present value of external debt to GDP (30, 40 and 55 percent for weak, medium and strong) and to exports, external debt service to exports and to revenue, and the present value of total public debt to GDP [@IMFWB2018LICDSF]. Debt follows the standard dynamics, $d_t = d_{t-1}(1+i)/((1+g)(1+\pi)) - pb_t + \text{other flows}$, with new borrowing on the terms of the country's creditor mix. The lite version applies the standard stress tests and a disaster test and rates risk mechanically: a breach in the baseline is high risk, a breach only under stress is moderate, no breach is low. It then shifts the baseline by the growth and primary-deficit deviations the macro model produces, so the rating before and with the program can be compared.
+
+# Integration and checks {#sec-integration}
+
+**One calibration file sets everything the macro models share, from the indicator panel.** Public investment efficiency is one minus the efficiency gap, from PEFA scores where available and income-group averages otherwise [@IMF2015PIE]. Tax revenue is split 40 percent consumption, 45 percent labor and 15 percent capital. Gross debt comes from the IMF World Economic Outlook, the concessional share from World Bank International Debt Statistics, and the commercial borrowing rate from the private creditor rate less 3 points, bounded between 3 and 8 percent. The return on public capital (20 to 10 percent from low to high income) and the share of constrained households (60 to 25 percent) are income-group defaults. Government consumption closes the starting budget. Every setting carries its source in the file.
+
+**A rule chooses the model for each country.** DIGNAR-lite runs for countries that are not high income with fossil rents of at least 10 percent of GDP; DIGNAD-lite for low-income countries, disaster-prone countries and lower-middle-income countries whose external public debt is at least half multilateral; GIMF-lite for the rest. In the current build that gives 135 GIMF-lite countries, 35 DIGNAD-lite and 16 DIGNAR-lite. Two countries cannot stabilize debt under the fiscal rule even after it is tightened twice and are reported as not financeable, which is itself a result.
+
+**The integrated run chains the modules in a fixed order.** For each country it reads the panel, runs the investment model for the budget need (split into capital and spending), private investment, energy savings and fossil power emissions; runs PriceFeasibility for the best feasible mix and its revenue; runs the chosen macro model with the program and the earmarked revenue; and, for low and lower-middle income countries, runs LIC-DSF-lite. The results feed the dashboard's macro blocks: the financing gap after pricing revenue, GDP against today's path in 2030 and 2050, public debt in 2030 and 2050, the debt the program adds, and the debt risk rating before and with the program.
+
+**Every country is also run through the other model family, as a cross-check.** If the integrated run used GIMF-lite, the cross-check uses DIGNAD-lite, and the reverse. A large gap between the two says the answer depends on the model, not only on the data. The gap has a known source. GIMF-lite lets employment respond to higher productivity; DIGNAD-lite fixes labor. With labor nearly fixed in GIMF-lite the two give similar GDP gains, so the remaining difference is a model choice, not a calibration error.
+
+**The models are checked against theory and against each other.** In GIMF-lite's Ricardian limit (infinite horizons, no constrained households), debt-financed and tax-financed public investment give the same consumption path to 0.001 percent, as theory requires; at the default calibration they differ, as in GIMF. The households' budget constraint, which the solver does not impose, holds to $10^{-15}$, a check on Walras's law. Terminal inflation equals the target, and results do not depend on the solution horizon. The Excel formulas and the Python engine agree to $10^{-14}$ for several countries and lever settings after recalculation, and the investment model's spreadsheet and Python versions agree to $10^{-9}$.
+
+# A stylized run {#sec-run}
+
+**The run uses the tools' default calibrations and a stylized program, not any country's data.** The program is extra public investment of 1 percent of GDP a year for ten years. GIMF-lite starts from public debt at 50 percent of GDP, a 20-year planning horizon, a quarter of households liquidity constrained, a return on public capital of 15 percent and investment efficiency of 0.7. DIGNAD-lite starts from 30 percent of GDP in concessional debt and 20 percent in commercial debt, half of households hand-to-mouth, a return on public capital of 20 percent and efficiency of 0.6, with no disaster. The two calibrations differ, so their results are not directly comparable; each shows how its own levers work. The code is in `2.Source/stylized_run.py`.
+
+**Financing and efficiency move the result more than the program's size.** Table 3 gives the results. In GIMF-lite, the debt-financed program raises GDP by 0.3 percent in the first year and 1.5 percent by year 10, and debt peaks at 57 percent of GDP in year 10 before the fiscal rule brings it back toward 50. Financing the same program by a labor tax keeps debt flat and leaves GDP slightly higher from year 5 on, because debt held by finite-horizon households crowds out private capital. Earmarking carbon revenue of 0.5 percent of GDP for the first ten years cuts the debt peak by 4 points, to 53 percent, with no loss of growth in the model, which does not charge the tariff rise to anyone (Section 8). Lowering investment efficiency from 0.7 to 0.5 cuts the GDP gain by 30 to 40 percent at every horizon while leaving debt where it was: the same borrowing buys less capital.
+
+| | Year 1 | Year 5 | Year 10 | Year 20 | Year 40 |
+|---|---|---|---|---|---|
+| *GIMF-lite: GDP, % deviation from baseline* | | | | | |
+| Debt financed | 0.32 | 0.56 | 1.53 | 1.29 | 0.90 |
+| Tax financed (labor tax) | 0.32 | 0.64 | 1.60 | 1.45 | 1.00 |
+| Debt financed, carbon revenue 0.5% of GDP earmarked | 0.34 | 0.56 | 1.52 | 1.30 | 0.93 |
+| Debt financed, efficiency 0.5 | 0.22 | 0.34 | 1.08 | 0.82 | 0.59 |
+| *GIMF-lite: public debt, % of GDP* | | | | | |
+| Debt financed | 50.8 | 54.2 | 57.2 | 54.1 | 51.3 |
+| Tax financed (labor tax) | 49.8 | 49.7 | 49.2 | 49.3 | 49.5 |
+| Debt financed, carbon revenue earmarked | 50.3 | 52.0 | 53.2 | 51.7 | 50.4 |
+| *DIGNAD-lite: GDP, % deviation from baseline* | | | | | |
+| 30% grants, 30% concessional, 40% commercial | 0.00 | 0.50 | 1.02 | 1.36 | 0.69 |
+| All commercial | 0.00 | 0.51 | 1.04 | 1.36 | 0.66 |
+| *DIGNAD-lite: public debt, % of GDP* | | | | | |
+| 30% grants, 30% concessional, 40% commercial | 50.7 | 52.9 | 55.3 | 56.0 | 52.5 |
+| All commercial | 51.0 | 54.3 | 57.6 | 58.4 | 53.0 |
+
+: Table 3. Stylized run: 1 percent of GDP of extra public investment for ten years (default illustrative calibrations)
+
+**In DIGNAD-lite, concessional finance changes the debt path, not the growth path.** Output rises more slowly than in GIMF-lite, because labor is fixed and there is no demand stimulus in the first year, and peaks around year 20 as the program tapers. Financing 30 percent of the program by grants and 30 percent by concessional loans keeps debt 2.4 points of GDP lower at its peak than all-commercial financing. GDP is almost the same. For a low-income country the financing package is a debt question; the growth case rests on efficiency and the return on public capital.
+
+**The pricing screen shows the instrument choice mattering for revenue more than for abatement.** Table 4 applies equation (2) and equation (3) to a stylized power sector: average grid intensity 0.60 tCO₂ per MWh, coal and oil generators at 0.95, pass-through 0.6, a residential tariff of USD 150 per MWh, a wholesale price of USD 90, and a three-year phase-in. At the default limits, the concentrated-loser limit $F_3$ binds for every instrument. The best tax (USD 35 per tonne), the best feebate (USD 38) and the best mix deliver almost the same abatement, about a quarter of baseline fossil power emissions, but only the tax raises revenue. If instead a recent tariff protest makes the government cap the first-year tariff rise at 2 percent, the tax alone falls to USD 25 per tonne and 20 percent abatement. The feebate is unaffected, and the best mix (USD 18 tax plus USD 19 feebate) gets 25 percent abatement while keeping some revenue.
+
+| Limits | Instrument | Tax (USD/t) | Feebate (USD/t) | Abatement (%) | $F_1$ (%) | $F_3$ (%) | Binding limit |
+|---|---|---|---|---|---|---|---|
+| Default: $F_1 \le 10$, $F_3 \le 15$ | Tax only | 35 | 0 | 25.3 | 2.8 | 14.8 | $F_3$ |
+| | Feebate only | 0 | 38 | 24.5 | 0.0 | 14.8 | $F_3$ |
+| | Best mix | 30 | 6 | 25.4 | 2.4 | 15.0 | $F_3$ |
+| Tight visible price: $F_1 \le 2$ | Tax only | 25 | 0 | 20.1 | 2.0 | 10.6 | $F_1$ |
+| | Feebate only | 0 | 38 | 24.5 | 0.0 | 14.8 | $F_3$ |
+| | Best mix | 18 | 19 | 25.1 | 1.4 | 15.0 | $F_3$ |
+
+: Table 4. Stylized power sector: best feasible carbon pricing under two sets of limits ($F_2 \le 0.5$ percent in both; it does not bind)
+
+**Put together, the run says where a ministry's attention should go.** Earmarked pricing revenue and concessional finance lower the debt path; efficiency raises the growth path; and the political limit that binds decides whether pricing can raise revenue at all. In the stylized power sector the binding limit is the loss to coal and oil generators, not the household tariff. No amount of rebating to households would raise the feasible price, but compensation to the owners of high-emitting plants, or a faster schedule for retiring them, would.
+
+# A country run: Kenya {#sec-kenya}
+
+**Run for Kenya, the tool finds a small mitigation budget need that carbon pricing cannot pay for and that adds debt without adding much growth.** The run is the tool's own output at its current build [@MFESTKenya2026]. Country data come from the indicator panel; four macro inputs (the return on public capital, the hand-to-mouth share, grants and baseline public investment) are income-group defaults, and exports and imports for the debt test are assumptions. Table 5 gives the chain from investment to debt risk. These are illustrative results from the tool, not forecasts.
+
+| Step | Result |
+|---|---|
+| Investment on a net zero path, 2030 | 2.31% of GDP (US\$3.6 billion) |
+| Investment on current trends, 2030 | 0.66% of GDP |
+| Emissions in 2030, net zero path against current trends | 89 against 121 MtCO₂e (−26%) |
+| Direct budget need, equation (1), 2030 | 0.60% of GDP; 0.81% after the efficiency gap |
+| Incremental budget need entering the macro model, 2030 | 0.49% of GDP, of which capital 0.10 and spending 0.39 |
+| Best feasible power-sector carbon tax (binding limit) | US\$88 per tonne ($F_3$, generators' loss) |
+| Pricing revenue, 2030 | 0.05% of GDP; about 5% of the need to 2050 |
+| Financing gap, 2030 | 0.44% of GDP |
+| Macro model (rule) | DIGNAD-lite (56% of external public debt multilateral) |
+| GDP against baseline, 2030 / 2050 | +0.07% / +0.26% |
+| Public debt, 2050, with / without the program | 74.6% / 67.3% of GDP (+7.2 points) |
+| Cross-check, GIMF-lite: GDP 2050 / debt 2050 | +4.6% / 70.5% of GDP |
+| Debt risk rating, before / with the program | High / High (medium capacity) |
+
+: Table 5. Kenya: the tool's run of a net zero program, from investment need to debt risk. Program financed 30 percent by grants, 30 percent by concessional loans and the rest commercially, less pricing revenue. Illustrative results from the tool, not official estimates. Sources: @MFESTKenya2026; author's extraction, `2.Source/kenya_run.py`.
+
+**The need is modest and mostly not energy.** Kenya's power is already mostly renewable, so of the 1.64 percent of GDP of incremental investment in 2030, 0.94 is for land use and non-CO₂ gases and only 0.26 for power and grids [@MFESTKenya2026]. The payer split puts 0.38 percent of GDP on the budget as pure public investment and 0.73 percent in viability-gap contracts, of which the budget carries 30 percent; the direct need is 0.60 percent of GDP. Kenya's PEFA score on public investment management, 2.5 out of 4, maps to an efficiency gap of 26.5 percent, which raises the need to 0.81 percent: weak delivery adds a third to the bill.
+
+**Carbon pricing cannot pay for it, because a clean grid leaves little to tax.** The pricing screen finds a feasible power-sector tax of US\$88 per tonne, limited by the loss to fossil generators, but Kenya's fossil generation is small: the tax raises 0.05 percent of GDP in 2030 and nothing once oil-fired plants retire. That covers about 5 percent of the budget need to 2050, leaving a financing gap of 0.44 percent of GDP in 2030. This is the opposite of the stylized power sector of Section 6, where the same limit binds but the revenue base is large.
+
+**The program adds about 7 points of GDP to public debt by 2050 for a quarter of a percent of GDP.** Kenya runs on DIGNAD-lite because most of its external public debt is multilateral. Most of the incremental need is spending that builds no capital, so the growth effect is small: GDP is 0.26 percent above baseline in 2050, while debt reaches 74.6 percent of GDP against 67.3 without the program. The cross-check with GIMF-lite gives a GDP gain of 4.6 percent and debt of 70.5 percent, because it credits energy savings of 1.7 percent of GDP by 2050 and the private investment that comes with the program. The gap between 0.3 and 4.6 percent is the most important uncertainty in the run, and Section 5 explains its source.
+
+**Kenya is at high risk of debt distress before the program, and the program does not change that.** The debt test rates Kenya's capacity as medium (Composite Indicator 2.73, against cut-offs of 2.69 and 3.05) and finds the present value of public debt at 66.4 percent of GDP at its highest over 2025–2034, above the threshold of 55, before the program and 66.5 with it [@MFESTKenya2026]. The program moves the indicators by less than a point in ten years; the starting position is the problem. One assumption matters: with no trade data in the build, reserve cover uses imports of 40 percent of GDP, and nearer 20 percent the indicator would rise to about 3.07, just into the strong band with its higher thresholds. For a ministry the run says three things: the mitigation bill is a land-use and non-CO₂ bill best financed by grants and concessional loans, not carbon pricing; closing the efficiency gap is worth about 0.2 percent of GDP a year; and financing terms, not the program's size, decide the debt outcome.
+
+# Limits and use {#sec-limits}
+
+## What the tool is not
+
+**The lite models are not their parents.** GIMF-lite has one country and one good, so it cannot show spillovers, the terms-of-trade effect of lower fuel imports, or the zero lower bound. DIGNAD-lite has no real exchange rate and no domestic debt. The calibrations are illustrative: four inputs to the live model (public investment, the return on public capital, the hand-to-mouth share and grants) are income-group defaults, not country estimates. A result from the tool is a scenario to be argued with, not a forecast, and it does not substitute for a calibrated GIMF or DIGNAD run, an IMF or World Bank debt sustainability analysis, or a CPAT run.
+
+**The debt test is simplified.** Exports and imports, the denominators of four of the five external indicators, are assumptions because the build has no country trade series yet. Debt-carrying capacity uses the Composite Indicator only where a CPIA score exists and defaults to medium elsewhere. The coefficients and thresholds follow the 2018 Guidance Note and must be checked against the current note before any use outside the tool. There are no realism tools, no judgment and no market-access framework.
+
+**The energy side has its own simplifications.** The investment model has no price response, and power follows target dates rather than least cost. The payer typology rests on power market codes that end in 2013 for most countries, updated by judgment, and the public share of the viability gap is an assumption. PriceFeasibility covers power only, has no dynamics, ignores indirect effects on households, and its priors (heat rates, displaceable share, pass-through, budget shares) should be replaced by CPAT runs or country data before any number is quoted. Energy savings enter only GIMF-lite; pricing revenue covers power only; and the tariff rise is not fed back into the macro models.
+
+**The two macro families disagree most on the channels that matter most.** Energy savings and private investment drive most of GIMF-lite's long-run gain and are absent from DIGNAD-lite. Which channels to credit is an open decision, and the tool shows both answers rather than hiding the choice.
+
+## How to use it
+
+**Use the tool to compare packages for one country, not to rank countries.** The baseline is a fixed reference, so the useful outputs are differences: debt with and without the program, with and without earmarked pricing revenue, under concessional or commercial financing, at higher or lower efficiency. A ministry economist sets the country, switches the program on, tries the financing and pricing levers, and reads the change in the debt path and the risk rating. The yellow cells show which assumptions are doing the work.
+
+**Treat a large cross-check gap as a finding.** Where the two model families disagree, the honest statement is that the answer depends on whether energy savings and private investment respond, and the next step is evidence on those, not a choice of model.
+
+**Replace defaults with country data in order of influence.** The stylized run suggests the order: investment efficiency and the return on public capital first, then the financing mix, then the feasibility limits and the pricing priors. Each replacement is a yellow cell, and the build records the source of every input. A tool that a ministry can recalibrate itself, one input at a time, is more useful than a better model it has to take on trust.

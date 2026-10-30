@@ -2,7 +2,7 @@
 
 Writing worth imitating, grouped by the type of writing it models. For each piece, the note says what to copy. Read the original before imitating it: these notes are a guide to what to look for, not a substitute.
 
-> These references were listed from memory by an agent and are well known, but check the details before citing any of them in a paper. Copyrighted texts are not stored in this repo. Add PDFs you hold legitimately to `F Claude + Scripts/Setup Claude/_reference/`.
+> These references were listed from memory by an agent and are well known, but check the details before citing any of them in a paper. Copyrighted texts are not stored in this repo. Add PDFs you hold legitimately to `A Writing Instructions/Claude + Scripts/Setup Claude/_reference/`.
 
 ## Concept papers: ideas that entered the discourse
 

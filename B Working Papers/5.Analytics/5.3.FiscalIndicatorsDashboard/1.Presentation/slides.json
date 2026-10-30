@@ -1,0 +1,49 @@
+{
+  "series": "Climate-Fiscal Analytics Paper No. 5.3",
+  "title": "A Global Fiscal Indicators Dashboard",
+  "subtitle": "Eighty public indicators, one country profile, and a build anyone can rerun",
+  "message": "A one-page fiscal and energy profile for 217 economies from about twenty public datasets, rebuilt by a script that never imputes, records the year and source of every value and stops if configuration and output disagree.",
+  "problem": {
+    "title": "Every analysis starts with a scramble",
+    "stats": [
+      {
+        "value": "217",
+        "label": "economies"
+      },
+      {
+        "value": "80",
+        "label": "indicators in twelve blocks, scored 1 to 10"
+      },
+      {
+        "value": "~20",
+        "label": "public datasets, each with its own names and vintages"
+      }
+    ],
+    "text": "Debt, tax take, capital execution, cost of capital, subsidies and the power mix sit in different databases. Assembling them takes a day per country and a week per region, and the next analyst starts again."
+  },
+  "mechanism": {
+    "title": "The profile separates different problems",
+    "image": "figures/fig_profiles.png",
+    "imageWidth": 5.6,
+    "imageHeight": 2.58,
+    "caption": "2024 values from IMF WoRLD and WEO, as compiled by the pipeline.",
+    "points": [
+      "Indonesia: a revenue problem; subsidies of 3% of GDP.",
+      "South Africa: a debt-service problem and the largest implicit subsidies.",
+      "No overall index: the triage is the point."
+    ]
+  },
+  "action": {
+    "title": "Use it to choose the next question",
+    "results": [
+      "Every value carries its year and source file.",
+      "Vintages run from 2013 to 2025; coverage is uneven.",
+      "The same panel feeds the scenario tool (5.2)."
+    ],
+    "todo": [
+      "Add carbon prices and effective carbon rates first.",
+      "Read Appendix C and E series from public sources before release.",
+      "Verify Python–R parity for the new indicators."
+    ]
+  }
+}

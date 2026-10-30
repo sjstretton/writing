@@ -1,0 +1,5 @@
+case,eta_power,eta_road,eta_industry,cut_30_pct,switching_pct_first_order,demand_pct_first_order,tecp_first_order,tecp_exact
+Paper 1.7 central calibration,0.2,0.4,0.3,13.4,13.5,4.8,33.2,36.9
+CPAT-implied demand elasticities,0.53,0.58,0.66,17.5,13.5,10.8,31.5,33.1
+"CPAT, road fuels bias-corrected",0.53,0.31,0.66,17.0,13.5,10.2,32.2,34.5
+"CPAT, all demand elasticities halved",0.265,0.29,0.33,13.8,13.5,5.4,33.3,37.0

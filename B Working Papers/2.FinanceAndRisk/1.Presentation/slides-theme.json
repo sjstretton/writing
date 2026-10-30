@@ -1,0 +1,217 @@
+{
+  "series": "Climate Fiscal Policy Briefs, Section 2: Finance and Risk",
+  "title": "Make Clean Power an Asset Class",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Make Clean Power an Asset Class",
+      "subtitle": "Standardized de-risking for developing countries: Briefs 2.1 and 2.2",
+      "message": "Clean power is cheap to build and dear to finance, because investors price risks the plant cannot control. Remove payment risk at its source, then turn projects into a few standard securities. Standardization, not subsidy, lowers the price."
+    },
+    {
+      "type": "stats",
+      "title": "Capital, not technology, prices clean power",
+      "stats": [
+        {
+          "value": "+80%",
+          "label": "cost of the same solar plant at 12% cost of capital (6.5 c/kWh) against 4% (3.6 c/kWh)"
+        },
+        {
+          "value": "2–3×",
+          "label": "solar cost of capital in key emerging economies, against advanced ones and China (2021)"
+        },
+        {
+          "value": "~50%",
+          "label": "of the cost of solar was financing in developing economies, against 25–30% in advanced ones"
+        }
+      ],
+      "text": "Panels are bought at world prices. What differs is the risk investors price around the plant, and almost none of it is the plant's own. Costs exclude construction interest: 5.7 c/kWh at 10%, or 6.2 c/kWh with two years of it (Brief 2.2)."
+    },
+    {
+      "type": "table",
+      "title": "The risk stack, and who should hold each layer",
+      "header": [
+        "Risk",
+        "Cheapest holder",
+        "Instrument",
+        "Paper"
+      ],
+      "colW": [
+        1.9,
+        2.9,
+        3.3,
+        0.9
+      ],
+      "rows": [
+        [
+          "Payment (offtaker)",
+          "An intermediary that can wait for arrears and recover them",
+          "Payment intermediary with a guarantee waterfall",
+          "2.1"
+        ],
+        [
+          "Construction",
+          "Banks and DFIs that can supervise it",
+          "Construction loans against a contingent PPA",
+          "2.2"
+        ],
+        [
+          "Operating",
+          "Long-term bond investors, once pooled",
+          "Senior synthetic sovereign bonds on pooled plants",
+          "2.2"
+        ],
+        [
+          "Residual portfolio loss",
+          "A dedicated equity layer",
+          "First-loss tranche held by a regional fund",
+          "2.2, 3.2"
+        ],
+        [
+          "Currency",
+          "Domestic savers, for local-currency instruments",
+          "Local-currency senior tranche; a denomination rule",
+          "2.1, 2.2"
+        ],
+        [
+          "Sovereign and policy",
+          "Nobody: it can be priced and conditioned, not transferred",
+          "Guarantees conditional on utility and tariff reform",
+          "2.1, §3"
+        ]
+      ],
+      "note": "Single instruments disappoint because they treat a stack of separable risks as one.",
+      "fontSize": 12
+    },
+    {
+      "type": "figure",
+      "title": "Payment risk first: the intermediary",
+      "image": "../2.1.ClimateFinanceIntermediationForCleanPower/2.Source/figures/fig4_waterfall.png",
+      "imageWidth": 5.3,
+      "imageHeight": 2.36,
+      "caption": "Expected value per year by layer, stylized 2 GW regional facility, $ million.",
+      "points": [
+        "One standard PPA; generators paid in full and on time whatever the distributor does.",
+        "Arrears become a debt to a repeat creditor that can wait and recover.",
+        "Layers agreed before the first tender: offtaker, state owner, national intercept, multilateral agency, donor account.",
+        "A $57m buffer bridges 99.5th-percentile arrears on $174m a year of contracts."
+      ]
+    },
+    {
+      "type": "stats",
+      "title": "Guarantee the contract, not the debt",
+      "stats": [
+        {
+          "value": "$0.94m",
+          "label": "a year saved by the buyer under a contract guarantee, for $0.18m of expected cost"
+        },
+        {
+          "value": "$0.30m",
+          "label": "a year saved under a debt guarantee, for $0.40m of expected cost"
+        },
+        {
+          "value": "5.3 : 0.8",
+          "label": "tariff saving per dollar of expected cost, contract against debt guarantee"
+        }
+      ],
+      "text": "Stylized 100 MW plant: tariff 5.50 c/kWh unguaranteed, 4.96 with a contract guarantee, 5.33 with a debt guarantee. The contract guarantor's worst case is $8.7m a year of arrears; the debt guarantor's is $60m of debt. (This 5.3 is not series 3's sovereign guarantee multiplier: about 80 on the MDB loss record, 2.7 in its stress case.)"
+    },
+    {
+      "type": "twocol",
+      "title": "What India's SECI shows, good and bad",
+      "left": {
+        "heading": "What works",
+        "points": [
+          "Rated AAA: about 60 GW sold at Rs 2.93/kWh on a 7-paise margin, 2.4% of the tariff.",
+          "Letters of credit enforced through grid scheduling since 2019; a payment security fund.",
+          "Tripartite agreement: the RBI can debit a defaulting state's account; invoked in 2020–22."
+        ]
+      },
+      "right": {
+        "heading": "What it did not fix",
+        "points": [
+          "Letter-of-credit coverage only 68%; large past delays.",
+          "Rs 90,000 crore liquidity scheme (2020); arrears rescheduled into up to 48 installments (2022).",
+          "Legacy arrears fell from Rs 1,39,947 crore to Rs 3,330 crore by March 2026: risk moved to the center, not removed."
+        ]
+      },
+      "text": "Nigeria's bulk trader shows the failure case: a single buyer with no reliable revenue behind it. Only utility reform reduces the risk."
+    },
+    {
+      "type": "figure",
+      "title": "Split at commissioning, pool and tranche",
+      "image": "../2.2.CleanPowerAssetClasses/1.Presentation/figures/fig2-lcoe-two-stage.png",
+      "imageWidth": 5.4,
+      "imageHeight": 2.93,
+      "caption": "Cost of power from the stylized plant, US c/kWh, with two years of construction interest.",
+      "points": [
+        "Banks and DFIs build against a contingent PPA: a creditworthy buyer waiting.",
+        "Operating plants are pooled across countries under one contract.",
+        "Three securities: first-loss equity, a thin mezzanine, a senior synthetic sovereign bond.",
+        "Pooled at 5.65%: 4.6 c/kWh against 6.2, 27% less."
+      ]
+    },
+    {
+      "type": "stats",
+      "title": "Subordination and pooling: the results",
+      "stats": [
+        {
+          "value": "4.8%",
+          "label": "subordination for a near-AAA senior bond at correlation 0.10; 7.7% at 0.20"
+        },
+        {
+          "value": "5.3%",
+          "label": "needed by a ten-country pool, against 9.2% for one country"
+        },
+        {
+          "value": "92.3%",
+          "label": "of the pool funded by the senior bond (correlation 0.20)"
+        },
+        {
+          "value": "$6m",
+          "label": "expected cost over ten years of guaranteeing a $460m mezzanine"
+        }
+      ],
+      "text": "Correlation, not the default rate, drives the cushion, and the host sovereign is its main source. With twice the defaults and 72% recovery, power still costs 4.7 c/kWh. The mezzanine guarantee is cheap in expectation but can be fully drawn in a crisis."
+    },
+    {
+      "type": "twocol",
+      "title": "How the pieces compose; what the host owes",
+      "left": {
+        "heading": "A project's life",
+        "points": [
+          "An intermediary makes offtake contracts bankable.",
+          "A contingent contract lets the developer borrow to build at a market rate.",
+          "The finished plant is pooled and refinanced through a synthetic sovereign bond.",
+          "Conditions on guarantees improve the utilities that caused the problem."
+        ]
+      },
+      "right": {
+        "heading": "The host's contingent liability",
+        "points": [
+          "The state stands in the waterfall and in the second tier of grid guarantees.",
+          "Expected national calls: about 2% of contract payments in a 2 GW facility.",
+          "Smaller, contingent and contracted, but not zero: record it at expected cost, cap it, report it."
+        ]
+      },
+      "text": "Each piece is weaker alone. Section 3's guarantee capacity can stand in the waterfall; the Trust's regional funds can hold first loss."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "todo": [
+        "Build national or regional payment intermediaries: one PPA, a waterfall signed before the first tender.",
+        "Contract in local currency on declining tariffs; make utility reform a condition of entry.",
+        "Write a contingent PPA and a published take-out into every auction.",
+        "Sponsor regional pools; regional funds hold first loss, highly rated sovereigns guarantee the mezzanine.",
+        "Record the host's guarantees at expected cost, under a cap."
+      ],
+      "papers": [
+        "2.0  Make Clean Power an Asset Class (overview)",
+        "2.1  Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power",
+        "2.2  From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power",
+        "Each as a Climate Fiscal Policy Brief and a working paper."
+      ]
+    }
+  ]
+}

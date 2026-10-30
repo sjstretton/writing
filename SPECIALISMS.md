@@ -59,7 +59,7 @@ A ministry should read its excise system as a whole, against a common "externali
 
 **1.6 Climate fiscal risk and climate PFM.** ◐ *(added)*
 Climate-informed public finance reviews, fiscal buffers used as collateral, climate debt sustainability, and extending fiscal-risk analysis to extreme shocks. The work-plan decks and course module G hold the material; no paper yet.
-*Sources:* `E Climate Econ Course/G. Climate PFM…`; Drive: `WorkProgramMainPPT.pptx` (internal).
+*Sources:* `D Climate Econ Course/G. Climate PFM…`; Drive: `WorkProgramMainPPT.pptx` (internal).
 
 ---
 

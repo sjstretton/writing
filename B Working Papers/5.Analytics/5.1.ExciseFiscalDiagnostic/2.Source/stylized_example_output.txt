@@ -1,0 +1,15 @@
+Table: three comparable measures, Country A (stylized)
+code line                USD/std unit        unit % of price  % of GDP
+E1   Petrol                      0.30       liter         27      0.75
+E2   Diesel, road                0.18       liter         17      0.90
+T1   Cigarettes                  0.30  pack of 20         20      0.11
+A1   Beer (5% ABV)               8.00         LPA         20      0.30
+A5   Spirits (40% ABV)           4.50         LPA         15      0.07
+
+Erosion: specific rates unchanged since 2020 keep 71% of their real value (a 29% real cut)
+
+Table: corrective benchmark for road fuels, USD per liter (stylized)
+Petrol: carbon 0.12  air 0.04  congestion 0.10  accidents 0.20  road 0.00  naive sum 0.46  corrective t* 0.31  (range 0.13-0.68)  current 0.30  gap +0.01
+   closing the gap: static +0.01% of GDP; with elasticity -0.3, volume -0.2%, revenue +0.01% of GDP
+Diesel: carbon 0.13  air 0.15  congestion 0.05  accidents 0.20  road 0.05  naive sum 0.58  corrective t* 0.43  (range 0.20-0.91)  current 0.18  gap +0.25
+   closing the gap: static +1.27% of GDP; with elasticity -0.3, volume -7.3%, revenue +1.11% of GDP

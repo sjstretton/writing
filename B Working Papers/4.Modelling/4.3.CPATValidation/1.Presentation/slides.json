@@ -1,0 +1,50 @@
+{
+  "series": "CPAT Companion Paper No. 4.3",
+  "title": "Validating CPAT",
+  "subtitle": "Baselines, back-casts and model comparisons: where the tool fits and where it does not",
+  "message": "CPAT's published checks support it for ranges and policy comparisons, not point forecasts. It tracks emission trends in back-casts for Australia and the United States, misses China badly, and agrees with other models in order of magnitude. Every check predates the 228 bug fixes.",
+  "problem": {
+    "title": "Validation exists but is scattered",
+    "stats": [
+      {
+        "value": "11",
+        "label": "documented checks; only four report a summary statistic"
+      },
+      {
+        "value": "7–39%",
+        "label": "G20 CO₂ cut from a $75 tax as elasticities move ±2 s.d. (29% default)"
+      },
+      {
+        "value": "−2.4%",
+        "label": "short-run response to a $10 price, above the 0–2% ex-post band"
+      }
+    ],
+    "text": "Most comparisons with the IEA, Enerdata and the World Bank's planning model are charts with no measure of fit, and none of the published checks tests the three descriptions of road transport against each other."
+  },
+  "mechanism": {
+    "title": "Back-casts track trends, not levels",
+    "image": "figures/fig_backcast.png",
+    "imageWidth": 5.6,
+    "imageHeight": 2.58,
+    "caption": "Back-cast from 2000 with no policy, 2000–2017 (CPAT documentation).",
+    "points": [
+      "China's error comes from projected prices below observed ones.",
+      "Calibration can carry a data break into every year: Egypt's inventory jumps 19% in 2022.",
+      "Independent code reproduces legacy blocks to 10⁻¹⁴ or better."
+    ]
+  },
+  "action": {
+    "title": "Make validation part of the test suite",
+    "results": [
+      "Read a 29% cut as about 20 to 35%.",
+      "Road-fuel and residential-electricity responses look high.",
+      "The evidence is about an earlier model with bugs."
+    ],
+    "todo": [
+      "Rerun back-casts, comparisons and sensitivity on Coded CPAT for every country.",
+      "Report a measure of fit for every comparison.",
+      "Back-cast against real carbon prices and subsidy reforms.",
+      "Settle the elasticities (paper 4.4)."
+    ]
+  }
+}
