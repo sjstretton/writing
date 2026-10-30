@@ -20,16 +20,16 @@
     },
     {
       "type": "figure",
-      "title": "Excise: diesel taxed below half its benchmark",
-      "image": "../5.1.ExciseFiscalDiagnostic/1.Presentation/figures/fig_corrective.png",
+      "title": "Excise: two countries, two different gaps",
+      "image": "../5.1.ExciseFiscalDiagnostic/1.Presentation/figures/fig_countries.png",
       "imageWidth": 5.4,
       "imageHeight": 2.48,
-      "caption": "Stylized Country A, US$ per liter; whiskers span the low and high cases (5.1).",
+      "caption": "Excise-Fiscal Diagnostic, 2026 runs on Sierra Leone and Liberia; illustrative results, not official estimates (5.1).",
       "points": [
         "Any schedule mapped onto 30 standard lines and scaled three ways.",
-        "Diesel: $0.18 against $0.43; the largest unpriced cost is air pollution, not carbon.",
-        "Closing the gap raises about 1.1% of GDP.",
-        "Petrol is about right only because erosion has caught up with it."
+        "Sierra Leone: excise 1.3% of GDP, about 90% from fuel at $0.23 per liter.",
+        "Liberia: excise 0.4% of GDP; fuel levies of $0.095 per liter, below the carbon cost alone.",
+        "Both: health excises legislated but weakly collected."
       ]
     },
     {
@@ -67,7 +67,7 @@
         "Excise diagnostic: checked tax rates and externality values for CPAT (4) and the carbon-pricing papers (1).",
         "Scenario tool: carries the cost-of-capital argument (2) and incentives (3) into a country's budget and debt.",
         "Dashboard: tells the analyst which lens matters before any model runs.",
-        "Next: add carbon prices to the dashboard; rerun the excise diagnostic on a published finance act."
+        "Next: add carbon prices to the dashboard; run the excise diagnostic's externality spine on Sierra Leone and Liberia."
       ],
       "papers": [
         "5.0  Diagnostics on Data Ministries Already Hold (overview)",

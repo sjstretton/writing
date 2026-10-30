@@ -19,11 +19,11 @@ format:
 
 A diagnostic a ministry cannot check is a recommendation it must take on trust, and recommendations taken on trust do not survive the first official who disagrees with them. The tools in this section are therefore built to a reproducibility standard rather than to analytical sophistication. Every intermediate step is visible. Defaults can be defended line by line. Where an AI model drafts a stage, it does so under a written specification and every line is checked against the source text or data.
 
-Each tool answers a question a ministry already asks, from data it already has. None needs a new survey or a model run by another institution. The worked examples in the papers use public data or clearly labelled stylized numbers.
+Each tool answers a question a ministry already asks, from data it already has. None needs a new survey or a model run by another institution. The worked examples in the papers use public data, the tools' own country results labelled as illustrative, or clearly labelled stylized numbers.
 
 # Read the excise system against its externalities (paper 5.1) {.unnumbered}
 
-Excise schedules grow line by line until nobody can read them whole. The Excise-Fiscal Diagnostic sorts every line into a small typology, maps it onto 30 standard lines and scales each rate three ways: US dollars per standard physical unit, share of the consumer price, and implied revenue as a share of GDP. It then sets fuel rates against a corrective benchmark built from one fixed set of values for carbon, air pollution, accidents, congestion and road damage, and health excises against published health benchmarks. In the paper's stylized country, petrol is taxed about right and diesel at less than half its corrective rate, and diesel's largest unpriced cost is air pollution rather than carbon.
+Excise schedules grow line by line until nobody can read them whole. The Excise-Fiscal Diagnostic sorts every line into a small typology, maps it onto 30 standard lines and scales each rate three ways: US dollars per standard physical unit, share of the consumer price, and implied revenue as a share of GDP. It then sets fuel rates against a corrective benchmark built from one fixed set of values for carbon, air pollution, accidents, congestion and road damage, and health excises against published health benchmarks. Run on the 2026 excise law of Sierra Leone and Liberia, it finds excise revenue of 1.25–1.28 and 0.37 percent of GDP, against an African average of 2.4. Sierra Leone draws about nine-tenths of its excise from fuel, taxed at USD 0.23 per liter of petrol on a large base. Liberia taxes fuel only through levies of USD 0.095 per liter, below the cost of carbon alone at USD 50 a tonne, taxes spirits at less than half the beer rate per liter of alcohol, and books no excise on imported tobacco (illustrative results from the diagnostic, not official estimates). In the paper's stylized country, diesel is taxed at less than half its corrective rate, and its largest unpriced cost is air pollution rather than carbon.
 
 # Link energy investment to growth, revenue and debt (paper 5.2) {.unnumbered}
 
@@ -39,7 +39,7 @@ The tools feed the rest of the program. The excise diagnostic can supply checked
 
 | No. | Paper | Status |
 |---|---|---|
-| 5.1 | The Excise-Fiscal Diagnostic: Reading an Excise System Against Its Externalities | v0.2 |
+| 5.1 | The Excise-Fiscal Diagnostic: Reading an Excise System Against Its Externalities | v0.3 |
 | 5.2 | The Macro-Fiscal-Energy Scenario Tool | v0.1 |
 | 5.3 | A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis | v0.1 |
 
