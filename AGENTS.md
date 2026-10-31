@@ -6,7 +6,7 @@ Instructions for AI agents, including Claude Code (`CLAUDE.md` points here), wor
 
 | Part | Folders | Read before working | What it is for |
 |---|---|---|---|
-| **Planning** | `0 Morning Briefing`, `1 Planning Instructions`, `2 Strategic Plans`, `3 Archive` | `1 Planning Instructions/AGENTS.md`, then its `NORMS.md` | Tasks for every repo, day and week plans, strategic plans, the printable tracker, and the master Google Sheet kept in step with the repo |
+| **Planning** | `0A Daily and Weekly Task Lists`, `1 Planning Instructions`, `2 Strategic Plans`, `3 Archive` | `1 Planning Instructions/AGENTS.md`, then its `NORMS.md` | Tasks for every repo, day and week plans, strategic plans, the printable tracker, and the master Google Sheet kept in step with the repo |
 | **Writing** | `E Writing Instructions` (with `Writing Standards`, `Templates and Info`, `Claude + Scripts`), `B Working Papers`, `C PhD Application`, `D Climate Econ Course` | `E Writing Instructions/AGENTS.md`, then its `NORMS.md` | Papers, briefs and decks, the website, PhD proposals, the course |
 
 `README.md` (this folder) maps the layout. Each part's `README.md` gives the detail.
@@ -26,7 +26,7 @@ Stephen is easily overwhelmed by volume, so planning output must stay short and 
 
 ## Connecting the two parts
 
-- **When you finish work in any part**, update the task in `0 Morning Briefing/5-TaskContextAndProjectPlans.md` (planning's rule). For writing work, also update `E Writing Instructions/TODO.md` and, for papers, `E Writing Instructions/PAPERS.md`.
+- **When you finish work in any part**, update the task in `0A Daily and Weekly Task Lists/5-TaskContextAndProjectPlans.md` (planning's rule). For writing work, also update `E Writing Instructions/TODO.md` and, for papers, `E Writing Instructions/PAPERS.md`.
 - **Before pushing a change to planning files**, follow the consistency procedure in `1 Planning Instructions/AGENTS.md` ("Before every push to main"), which keeps the repo and the master Google Sheet in step. A push that touches only writing files does not need it.
 - **Priorities.** `E Writing Instructions/STRATEGY.md` and the FY27 work plan in `2 Strategic Plans/` should agree. If they conflict, ask Stephen.
 
