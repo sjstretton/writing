@@ -140,7 +140,7 @@ def points_of(text, pts, none="no points"):
 
 def split_deadline(text):
     """'By 7pm: book the hotel' -> ('7pm', 'Book the hotel'); 'Any time, ...: x' -> ('Any time', 'X')."""
-    m = re.match(r"^(?:By ([^:]{1,15})|(Any time)[^:]*):\s*(.*)$", text)
+    m = re.match(r"^(?:By ((?:[^:]|:(?=\d)){1,15})|(Any time)[^:]*):\s*(.*)$", text)
     if not m:
         return "", text
     rest = m.group(3)
