@@ -1,9 +1,9 @@
 """Make the web version of each paper from its master .qmd, so the site shows the paper itself, not only a download.
 
 For each paper in WEB_PAPERS this writes, in E Website:
-    research/<section-slug>/<PaperName>/index.qmd   a copy of the master with web settings
-    research/<section-slug>/<PaperName>/<PaperName>.bib
-    research/<section-slug>/<PaperName>/<figure paths>   every figure the paper uses, at the same relative path
+    <part>/<section-slug>/<PaperName>/index.qmd   a copy of the master with web settings
+    <part>/<section-slug>/<PaperName>/<PaperName>.bib
+    <part>/<section-slug>/<PaperName>/<figure paths>   every figure the paper uses, at the same relative path
 
 The master stays where it is (C Policy and FInance or D Modelling/<section>/<paper folder>/<PaperName>.qmd) and is the only file to edit.
 The web copy is NOT a master: it is deleted and rewritten on every compile, and its first line says so.
@@ -14,37 +14,20 @@ What changes in the copy:
     - an "In brief" box (the policy brief's abstract, if there is a brief) and download links are added at the top.
 
 Compile-Website.bat runs this after publish_series.py and before build_research_pages.py.
-To put another paper on the web, add its folder to WEB_PAPERS.
+To put another paper on the web, add its folder to WEB_PAPERS in site_config.py.
 """
 import re
 import shutil
 from pathlib import Path
-
-REPO = Path(__file__).resolve().parents[3]
-ROOTS = [REPO / "C Policy and FInance", REPO / "D Modelling"]   # sections 1-4, then 5-7
-SITE = REPO / "E Website"
-PAPERS = SITE / "papers"
-
-# paper folder (as under C Policy and FInance or D Modelling/<section>/), website section slug
-WEB_PAPERS = [
-    ("1.1.OpenEconomyCarbonPricing", "1-carbon-pricing"),
-]
-
-SECTION_SLUGS = {"1": "1-carbon-pricing", "2": "2-other-tax", "3": "3-finance-and-risk",
-                 "4": "4-sovereign-incentives", "5": "5-modelling", "6": "6-modular-upgrades", "7": "7-analytics"}
+from site_config import REPO, PARTS, SITE, ARCHIVE, WEB_PAPERS, part_of_section, paper_name, master_qmd
 
 
 def find(folder_name):
-    hits = [p for r in ROOTS for p in r.rglob(folder_name) if p.is_dir() and "8.PreviousVersions" not in p.parts]
-    return hits[0] if hits else None
-
-
-def paper_name(folder):
-    return folder.name.split(".", 2)[-1]
-
-
-def master_qmd(folder):
-    return folder / f"{paper_name(folder)}.qmd"
+    for part in PARTS:
+        hits = [p for p in part["root"].rglob(folder_name) if p.is_dir() and "8.PreviousVersions" not in p.parts]
+        if hits:
+            return hits[0]
+    return None
 
 
 def split_front_matter(text):
@@ -76,17 +59,19 @@ def yaml_value(yaml, key):
     return m.group(1) if m else None
 
 
-def build(folder_name, slug):
+def build(folder_name):
     folder = find(folder_name)
     if not folder:
         print(f"missing   {folder_name}")
         return
+    part, sec = part_of_section(folder_name.split(".")[0])
+    slug = sec[1]
     name = paper_name(folder)
     master = master_qmd(folder)
     text = master.read_text(encoding="utf-8-sig").replace("\r\n", "\n")
     yaml, body = split_front_matter(text)
 
-    dest = SITE / "research" / slug / name
+    dest = SITE / part["dir"] / slug / name
     if dest.exists():
         shutil.rmtree(dest)
     dest.mkdir(parents=True)
@@ -123,7 +108,7 @@ def build(folder_name, slug):
     downloads = [(label, f) for label, f in (("Working paper (Word)", f"{name}.docx"),
                                               ("Policy brief (Word)", f"Brief-{name}.docx"),
                                               ("Slides (PowerPoint)", f"Slides-{name}.pptx"))
-                 if (PAPERS / f).exists()]
+                 if (ARCHIVE / f).exists()]
     if downloads:
         top.append("**Download:** " + " · ".join(f"[{l}](../../../papers/{f})" for l, f in downloads) + "\n")
 
@@ -134,15 +119,16 @@ def build(folder_name, slug):
 
 def main():
     # clear web copies of papers no longer listed, so retired pages do not linger
-    listed = {(slug, paper_name(Path(f))) for f, slug in WEB_PAPERS}
-    for slug in SECTION_SLUGS.values():
-        sd = SITE / "research" / slug
-        if sd.is_dir():
-            for d in sd.iterdir():
-                if d.is_dir() and (slug, d.name) not in listed:
-                    shutil.rmtree(d)
-    for folder_name, slug in WEB_PAPERS:
-        build(folder_name, slug)
+    listed = {paper_name(Path(f)) for f in WEB_PAPERS}
+    for part in PARTS:
+        for sec in part["sections"]:
+            sd = SITE / part["dir"] / sec[1]
+            if sd.is_dir():
+                for d in sd.iterdir():
+                    if d.is_dir() and d.name not in listed:
+                        shutil.rmtree(d)
+    for folder_name in WEB_PAPERS:
+        build(folder_name)
 
 
 if __name__ == "__main__":

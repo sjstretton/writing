@@ -1,0 +1,25 @@
+---
+title: "7. Analytics Tools"
+aliases:
+  - ../research/7-analytics.html
+---
+
+Analysis changes policy only when the people who hold the budget can reproduce it. The two tools described in this section each take data a finance ministry already holds or can download, put it on a common scale and return something sequenced enough to act on. The Excise-Fiscal Diagnostic reads a whole excise schedule against the damage taxed goods do. The Global Fiscal Indicators dashboard gives a one-page fiscal and energy profile for 217 economies from public data, rebuilt by a script anyone can rerun. A third tool built to the same standard, the Macro-Fiscal-Energy Scenario Tool, links a climate investment program and carbon pricing to growth, revenue and debt; because it extends the Climate Policy Assessment Tool, it is described with the other modular upgrades in section 6 (paper 6.5). Each is built to one standard: every intermediate step visible, defaults defended line by line, and AI drafting checked against the source.
+
+[Section overview →](../papers/OverviewAnalytics.docx) · [Series slides →](../papers/Slides-Analytics.pptx)
+
+## 7.1 The Excise-Fiscal Diagnostic {#paper-7-1}
+
+*Reading an Excise System Against Its Externalities*
+
+Excise schedules grow line by line for decades until nobody can read them whole, and few ministries can say whether their fuel, tobacco or alcohol taxes are high or low against the damage those goods do. The Excise-Fiscal Diagnostic is a light, repeatable report that fixes this. It maps every line of a schedule onto 30 standard lines and scales each rate three ways: US dollars per standard unit, share of the consumer price and implied revenue as a share of GDP. It sets fuel rates against a corrective benchmark built from one fixed set of values for carbon, air pollution, accidents, congestion and road damage, and health excises against published benchmarks. An AI model drafts each stage under a written specification, and every line is checked against the legal text. Applied to the 2026 excise law of Sierra Leone and Liberia, it finds excise revenue of 1.3 and 0.4 percent of GDP against an African average of 2.4, petrol taxed at USD 0.23 and 0.095 per liter, and health excises whose collection is weak or cannot be traced in the accounts.
+
+[Slides →](../papers/Slides-ExciseFiscalDiagnostic.pptx) · [Full paper →](../papers/ExciseFiscalDiagnostic.docx)
+
+## 7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis {#paper-7-2}
+
+*Eighty Public Indicators, One Country Profile, and a Build Anyone Can Rerun*
+
+Before advising a government on carbon pricing, energy subsidy reform or a climate investment program, an analyst needs a quick, comparable view of the country's fiscal space, its capacity to spend, its cost of capital, and how much fossil fuel money runs through its budget. That view usually takes days to assemble from a dozen databases, each with its own country names, units and vintages. The Global Fiscal Indicators dashboard assembles it for 217 economies from about twenty public datasets, including the IMF's World Economic Outlook, World Revenue Longitudinal Data and fossil fuel subsidy estimates, World Bank debt, budget and energy data, PEFA assessments and Ember's electricity data. It scores 80 indicators in twelve blocks on one 1-to-10 scale and shows a one-page country profile. A scripted pipeline rebuilds everything from the raw files, never imputes, records the year and source file of every value, and stops if its configuration and its outputs disagree. A comparison of four middle-income economies shows how the profile separates a revenue problem from a debt-service problem and points each to a different fiscal-energy lever.
+
+[Slides →](../papers/Slides-FiscalIndicatorsDashboard.pptx) · [Full paper →](../papers/FiscalIndicatorsDashboard.docx)

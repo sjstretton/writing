@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephen J. Stretton">
+<meta name="keywords" content="carbon pricing, feebates, output-based rebating, border carbon adjustment, destination-based taxation, policy crediting, carbon leakage">
+
+<title>Price Production and Consumption Separately – Climate, Fiscal &amp; Finance</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-9525c020c12e5b59ad0e0beafa2e80d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-547d2af0935c0e87255f3ae176eb76cf.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Climate, Fiscal &amp; Finance</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../index.html" aria-current="page"> 
+<span class="menu-text">Policy and Finance</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../modelling/index.html"> 
+<span class="menu-text">Modelling and Analytics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../policy/1-carbon-pricing.html">1. Carbon Pricing</a></li><li class="breadcrumb-item"><a href="../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html">1.1 Price Production and Consumption Separately</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Policy and Finance</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Carbon Pricing</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">1.1 Price Production and Consumption Separately</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/2-other-tax.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Other Tax and Fiscal Policy</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/3-finance-and-risk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Finance and Risk</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/4-sovereign-incentives.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Sovereign Incentives</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/more.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Books and Other Papers</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#sec-literature" id="toc-sec-literature" class="nav-link" data-scroll-target="#sec-literature"><span class="header-section-number">2</span> Related literature</a></li>
+  <li><a href="#sec-model" id="toc-sec-model" class="nav-link" data-scroll-target="#sec-model"><span class="header-section-number">3</span> Model</a></li>
+  <li><a href="#sec-equivalence" id="toc-sec-equivalence" class="nav-link" data-scroll-target="#sec-equivalence"><span class="header-section-number">4</span> The equivalence result</a></li>
+  <li><a href="#sec-cost" id="toc-sec-cost" class="nav-link" data-scroll-target="#sec-cost"><span class="header-section-number">5</span> What the production track costs</a></li>
+  <li><a href="#sec-calibration" id="toc-sec-calibration" class="nav-link" data-scroll-target="#sec-calibration"><span class="header-section-number">6</span> A calibrated illustration: steel</a></li>
+  <li><a href="#sec-crediting" id="toc-sec-crediting" class="nav-link" data-scroll-target="#sec-crediting"><span class="header-section-number">7</span> International payments and policy crediting</a></li>
+  <li><a href="#sec-race" id="toc-sec-race" class="nav-link" data-scroll-target="#sec-race"><span class="header-section-number">8</span> From leakage to a race to the top</a></li>
+  <li><a href="#sec-implementation" id="toc-sec-implementation" class="nav-link" data-scroll-target="#sec-implementation"><span class="header-section-number">9</span> Implementation</a></li>
+  <li><a href="#sec-objections" id="toc-sec-objections" class="nav-link" data-scroll-target="#sec-objections"><span class="header-section-number">10</span> Objections and limits</a></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">11</span> Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  
+  
+  
+  
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../policy/1-carbon-pricing.html">1. Carbon Pricing</a></li><li class="breadcrumb-item"><a href="../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html">1.1 Price Production and Consumption Separately</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Price Production and Consumption Separately</h1>
+<p class="subtitle lead">A Two-Track Architecture for Carbon Pricing in Open Economies</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stephen J. Stretton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>A carbon tax on domestic production does two jobs at once: it rewards firms for cutting emissions per unit of output, and it charges for the carbon in what the economy consumes. In an open economy the second job undermines the first, because the charge falls on exports and spares imports. This paper separates the jobs. A revenue-neutral feebate prices production intensity; a destination-based charge, levied through the value-added tax and through forward-announced obligations on energy suppliers, prices consumption. I show that the two tracks together reproduce the Pigouvian allocation for domestic consumption without leakage, that the feebate’s residual cost is second order, that international payments above half the feebate rate make adoption a net gain, and that destination charges make each exporter’s most competitive feebate rate equal to the charge in its markets. A calibration to the EU’s default emission values for steel illustrates the magnitudes.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>carbon pricing, feebates, output-based rebating, border carbon adjustment, destination-based taxation, policy crediting, carbon leakage</p>
+  </div>
+</div>
+
+</header>
+
+
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In brief
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Carbon prices stay low in open economies because one instrument does two jobs: it pushes producers to cut emissions per unit of output, and it makes consumers pay for the carbon they use. This brief separates the jobs. A revenue-neutral feebate prices production intensity at no cost to the treasury and with a small price effect. A carbon component of VAT and forward-announced obligations on energy suppliers price consumption, imports included. A carbon-price-equivalent metric measures both. International payments above half the feebate rate make adoption a net gain, and destination-based charges turn leakage into a race to the top.</p>
+</div>
+</div>
+<p><strong>Download:</strong> <a href="../../../papers/OpenEconomyCarbonPricing.docx">Working paper (Word)</a> · <a href="../../../papers/Brief-OpenEconomyCarbonPricing.docx">Policy brief (Word)</a> · <a href="../../../papers/Slides-OpenEconomyCarbonPricing.pptx">Slides (PowerPoint)</a></p>
+<p><em>Working paper, version 0.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No.&nbsp;1.1.</em></p>
+<section id="sec-intro" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>Explicit carbon prices cover about 28 percent of global emissions, at an emissions-weighted average of about $5 per tonne, far below the range the High-Level Commission on Carbon Prices judged consistent with the Paris temperature goals, $50–100 per tonne by 2030 <span class="citation" data-cites="WorldBank2025 HLCCP2017">(<a href="#ref-WorldBank2025" role="doc-biblioref">World Bank 2025</a>; <a href="#ref-HLCCP2017" role="doc-biblioref">High-Level Commission on Carbon Prices 2017</a>)</span>. The usual explanation is political will. This paper argues that the gap is also built into the instrument.</p>
+<p>A conventional carbon price, a tax or an emissions trading system covering domestic emitters, is levied on the origin basis: it falls on what a country produces. It therefore does two jobs with one rate. It gives each firm an incentive to cut emissions per unit of output, the <em>intensity margin</em>. And it raises the price of carbon-intensive goods, so that buyers use less of them, the <em>quantity margin</em>. In a closed economy both jobs are welcome and one rate does both efficiently. In an open economy the second job is done badly. The price rise falls on exports, which compete against unpriced foreign supply, and spares imports, which displace domestic production. Part of the quantity response is leakage rather than abatement, and the competitive loss is concentrated in the energy-intensive, trade-exposed sectors that hold most industrial emissions. Governments respond by exempting those sectors, allocating permits free or keeping the rate low <span class="citation" data-cites="KeenParryRoaf2022">(<a href="#ref-KeenParryRoaf2022" role="doc-biblioref">Keen et al. 2022</a>)</span>. A border adjustment on imports, such as the EU’s Carbon Border Adjustment Mechanism <span class="citation" data-cites="EU2023">(<a href="#ref-EU2023" role="doc-biblioref">European Parliament and Council 2023</a>)</span>, protects the home market but leaves exports exposed and recognizes only explicit carbon prices paid abroad.</p>
+<p>This paper proposes giving each job its own instrument. The <em>production track</em> prices intensity with a revenue-neutral feebate: each producer pays <span class="math inline">\(t(e_i - \bar e)\)</span> per unit of output, a charge above a sector benchmark <span class="math inline">\(\bar e\)</span> and a rebate below it. “Production” here means production in the economic and trade sense, what a country makes for home use or for export, and the metric is emissions per unit of physical output, or per dollar of output where products differ. The <em>consumption track</em> prices what is consumed at home, whatever its origin, with a destination-based charge on embodied carbon. It has two parts: a carbon component of the value-added tax (VAT) on goods, with imports charged and exports zero-rated, and a forward-announced legal obligation on the few large firms that supply energy for domestic use: fuel for heating and transport. Electricity sold to final users bears the consumption-track price on its generation carbon, net of any carbon price paid upstream: through the VAT carbon component where one exists, through the supplier obligation where it does not. A <em>measurement framework</em>, a carbon-price-equivalent metric of the kind <span class="citation" data-cites="black2022framework">Black et al. (<a href="#ref-black2022framework" role="doc-biblioref">2022</a>)</span> compute with a full model, puts every instrument, price-based or not, on one scale. Electricity generation is on the production track, priced on the same intensity metric; the separate case for doing so turns on capital turnover and household prices rather than trade, and is made in the companion paper on feebates <span class="citation" data-cites="CFPB12">(<a href="#ref-CFPB12" role="doc-biblioref">Stretton 2026c</a>)</span>.</p>
+<p>The paper makes four contributions.</p>
+<ol type="1">
+<li><strong>An equivalence result</strong> (<a href="#sec-equivalence" class="quarto-xref">Section&nbsp;4</a>). With a common rate, the two tracks reproduce the Pigouvian allocation for domestic consumption and production intensity, with no leakage through the goods channel. This is a clean, implementable statement of a known allocation result <span class="citation" data-cites="Holland2012 Markusen1975">(<a href="#ref-Holland2012" role="doc-biblioref">Stephen P. Holland 2012</a>; <a href="#ref-Markusen1975" role="doc-biblioref">Markusen 1975</a>)</span>; what is new is its corollary on revenue, which tells finance ministries which countries gain and which lose: the difference from a Pigouvian origin tax equals the charge on carbon in net exports.</li>
+<li><strong>The cost of the production track</strong> (<a href="#sec-cost" class="quarto-xref">Section&nbsp;5</a>). A revenue-neutral feebate costs the treasury nothing and raises the producer price only by the resource cost of abatement, <span class="math inline">\(\tfrac12 t\,\Delta e\)</span>, roughly a third of the price effect of a tax in the calibrated steel example (<a href="#sec-calibration" class="quarto-xref">Section&nbsp;6</a>). Its weakness, the absence of an output signal, has a precise size, and the consumption track removes it.</li>
+<li><strong>A self-interested case for policy crediting</strong> (<a href="#sec-crediting" class="quarto-xref">Section&nbsp;7</a>). If an outside buyer pays <span class="math inline">\(\pi\)</span> per tonne abated and the host keeps the reduction toward its own target, a feebate is a net gain to the adopting country whenever <span class="math inline">\(\pi &gt; t/2\)</span>, the threshold <span class="citation" data-cites="StrandRBP2020">Strand (<a href="#ref-StrandRBP2020" role="doc-biblioref">2020</a>)</span> derives for a donor-supported carbon tax, and the country’s best response is <span class="math inline">\(t = \pi\)</span>.</li>
+<li><strong>From leakage to a race to the top</strong> (<a href="#sec-race" class="quarto-xref">Section&nbsp;8</a>). Once importers charge for embodied carbon, each exporter’s most competitive feebate rate equals the charge in its markets. In a calibrated simulation the average embodied intensity of steel imports falls by more than half when exporters respond.</li>
+</ol>
+<p>The paper anchors a series. The consumption track is developed in <span class="citation" data-cites="CFPB13">Stretton (<a href="#ref-CFPB13" role="doc-biblioref">2026a</a>)</span>, the feebate design in <span class="citation" data-cites="CFPB12">Stretton (<a href="#ref-CFPB12" role="doc-biblioref">2026c</a>)</span>, the measurement framework in <span class="citation" data-cites="CFPB61">Stretton (<a href="#ref-CFPB61" role="doc-biblioref">2026d</a>)</span>, and the reform of the EU’s border mechanism in <span class="citation" data-cites="CFPB14">Stretton (<a href="#ref-CFPB14" role="doc-biblioref">2026b</a>)</span>.</p>
+</section>
+<section id="sec-literature" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Related literature</h1>
+<p>The paper connects five literatures. Appendix A reviews them in detail.</p>
+<p><em>Leakage and competitiveness.</em> Unilateral carbon pricing shifts emissions-intensive production abroad. Model-based estimates of leakage rates for energy-intensive, trade-exposed sectors range from 5 to 25 percent, with a mean of 14 <span class="citation" data-cites="BrangerQuirion2014">(<a href="#ref-BrangerQuirion2014" role="doc-biblioref">Branger and Quirion 2014</a>)</span>. Ex-post studies find little or no leakage at the EU’s past carbon prices, partly because free allocation shielded industry <span class="citation" data-cites="NaegeleZaklan2019 Dechezlepretre2022 Colmer2024">(<a href="#ref-NaegeleZaklan2019" role="doc-biblioref">Naegele and Zaklan 2019</a>; <a href="#ref-Dechezlepretre2022" role="doc-biblioref">Dechezleprêtre et al. 2022</a>; <a href="#ref-Colmer2024" role="doc-biblioref">Colmer et al. 2025</a>)</span>, so the problem is prospective: it bites at the $80–100 rates this paper is about. Pass-through of carbon costs ranges from under half in EU trade-exposed sectors <span class="citation" data-cites="NeuhoffRitz2019">(<a href="#ref-NeuhoffRitz2019" role="doc-biblioref">Neuhoff and Ritz 2019</a>)</span> to about 70 percent in US domestic-market manufacturing <span class="citation" data-cites="GanapatiShapiroWalker2020">(<a href="#ref-GanapatiShapiroWalker2020" role="doc-biblioref">Ganapati et al. 2020</a>)</span>, a difference that itself reflects trade exposure. The theoretical case for border adjustment when carbon prices differ across countries is established: <span class="citation" data-cites="Markusen1975">Markusen (<a href="#ref-Markusen1975" role="doc-biblioref">1975</a>)</span> shows that with international externalities optimal policy combines production and consumption taxes, and <span class="citation" data-cites="KeenKotsogiannis2014">Keen and Kotsogiannis (<a href="#ref-KeenKotsogiannis2014" role="doc-biblioref">2014</a>)</span> show that border tax adjustments are needed for Pareto efficiency when carbon prices are not equalized.</p>
+<p><em>Border carbon adjustment.</em> The design literature <span class="citation" data-cites="IsmerNeuhoff2007 Mehling2019 Cosbey2019 KeenParryRoaf2022">(<a href="#ref-IsmerNeuhoff2007" role="doc-biblioref">Ismer and Neuhoff 2007</a>; <a href="#ref-Mehling2019" role="doc-biblioref">Mehling et al. 2019</a>; <a href="#ref-Cosbey2019" role="doc-biblioref">Cosbey et al. 2019</a>; <a href="#ref-KeenParryRoaf2022" role="doc-biblioref">Keen et al. 2022</a>)</span> establishes the main choices: sectoral coverage, measurement of embodied carbon (domestic benchmark, country default or firm-specific data), treatment of exports and recognition of foreign policy. Keen, Parry and Roaf note the tension this paper builds on: a border adjustment in the VAT sense puts tax on a destination basis, while the Paris Agreement assigns responsibility on an origin basis.</p>
+<p><em>Output-based rebating and intensity standards.</em> Output-based allocation, tradable performance standards and feebates price intensity but subsidize output relative to a tax <span class="citation" data-cites="Fischer2001 FischerFox2007 FischerFox2012">(<a href="#ref-Fischer2001" role="doc-biblioref">Carolyn Fischer 2001</a>; <a href="#ref-FischerFox2007" role="doc-biblioref">C. Fischer and Fox 2007</a>; <a href="#ref-FischerFox2012" role="doc-biblioref">Carolyn Fischer and Fox 2012</a>)</span>. <span class="citation" data-cites="HollandHughesKnittel2009">Stephen P. Holland et al. (<a href="#ref-HollandHughesKnittel2009" role="doc-biblioref">2009</a>)</span> show that an intensity standard can even raise emissions when the implicit output subsidy is large, and <span class="citation" data-cites="FowlieReguantRyan2016">Fowlie et al. (<a href="#ref-FowlieReguantRyan2016" role="doc-biblioref">2016</a>)</span> show, for cement, that output-based allocation can outperform auctioning once leakage and market power are counted. <span class="citation" data-cites="KeenParryRoaf2022">Keen et al. (<a href="#ref-KeenParryRoaf2022" role="doc-biblioref">2022</a>)</span> classify feebates and output-based rebates as cutting intensity but not output. This paper takes that weakness as given and assigns the output margin to a separate instrument.</p>
+<p><em>Destination-based taxation.</em> VAT spread across most of the world within half a century <span class="citation" data-cites="KeenLockwood2010">(<a href="#ref-KeenLockwood2010" role="doc-biblioref">Keen and Lockwood 2010</a>)</span>. For a uniform tax, the destination and origin bases are trade-neutral <span class="citation" data-cites="LockwoodWhalley2010">(<a href="#ref-LockwoodWhalley2010" role="doc-biblioref">Lockwood and Whalley 2010</a>)</span>; the trade effects in this paper come from charges that vary with carbon intensity, not from the destination basis as such. The same logic underlies proposals for destination-based corporate taxation <span class="citation" data-cites="Devereux2021">(<a href="#ref-Devereux2021" role="doc-biblioref">Devereux et al. 2021</a>)</span>. Consumption-based emissions accounting shows that high-income countries’ consumption footprints exceed their territorial emissions <span class="citation" data-cites="PetersHertwich2008 Grubb2022">(<a href="#ref-PetersHertwich2008" role="doc-biblioref">Peters and Hertwich 2008</a>; <a href="#ref-Grubb2022" role="doc-biblioref">Grubb et al. 2022</a>)</span>.</p>
+<p><em>International incentives.</em> Climate clubs use border measures to induce participation <span class="citation" data-cites="Nordhaus2015">(<a href="#ref-Nordhaus2015" role="doc-biblioref">Nordhaus 2015</a>)</span>; <span class="citation" data-cites="HelmHepburnRuta2012">Helm et al. (<a href="#ref-HelmHepburnRuta2012" role="doc-biblioref">2012</a>)</span> analyze the strategic use of border adjustments; <span class="citation" data-cites="ParryRoafBlack2021">Parry et al. (<a href="#ref-ParryRoafBlack2021" role="doc-biblioref">2021</a>)</span> propose an international carbon price floor among large emitters, with non-price measures counted through their carbon-price equivalents <span class="citation" data-cites="black2022framework">(<a href="#ref-black2022framework" role="doc-biblioref">Black et al. 2022</a>)</span>. Results-based climate finance pays for verified reductions. Project crediting has a poor record on additionality: <span class="citation" data-cites="Probst2024">Probst et al. (<a href="#ref-Probst2024" role="doc-biblioref">2024</a>)</span> find that under 16 percent of credits represent real reductions, and <span class="citation" data-cites="Calel2025">Calel et al. (<a href="#ref-Calel2025" role="doc-biblioref">2025</a>)</span> that at least 52 percent of Indian wind credits under the Clean Development Mechanism were non-additional. <span class="citation" data-cites="StrandRBP2020">Strand (<a href="#ref-StrandRBP2020" role="doc-biblioref">2020</a>)</span> derives the payment that makes a donor-supported carbon tax worthwhile for the host.</p>
+<p><em>What is new.</em> The split is old in theory. <span class="citation" data-cites="Markusen1975">Markusen (<a href="#ref-Markusen1975" role="doc-biblioref">1975</a>)</span> showed that with an international externality optimal policy taxes both production and consumption; <span class="citation" data-cites="WeisbachKortumWangYao2023">Weisbach et al. (<a href="#ref-WeisbachKortumWangYao2023" role="doc-biblioref">2023</a>)</span> restate this with an extraction leg; and <span class="citation" data-cites="Holland2012">Stephen P. Holland (<a href="#ref-Holland2012" role="doc-biblioref">2012</a>)</span> proves that an intensity standard combined with a consumption tax can reach the first best under leakage. It also has close policy precedents: <span class="citation" data-cites="Grubb2022">Grubb et al. (<a href="#ref-Grubb2022" role="doc-biblioref">2022</a>)</span> list the separation of production incentives from a charge on the use of carbon-intensive materials as a trade-compatible option, <span class="citation" data-cites="PollittNeuhoffLin2020">Pollitt et al. (<a href="#ref-PollittNeuhoffLin2020" role="doc-biblioref">2020</a>)</span> estimate that a consumption charge on basic materials at about €80/tCO₂ adds roughly 10 percent to emission cuts without leakage, and <span class="citation" data-cites="Neuhoff2026">Neuhoff et al. (<a href="#ref-Neuhoff2026" role="doc-biblioref">2026</a>)</span> propose benchmark-based free allocation with a standardized liability per tonne of material. Against that work this paper claims five things: (i) a specific pairing of a revenue-neutral, updated-benchmark feebate, which needs no emissions trading system and can be adopted by a developing country alone, with a carbon component of VAT across all goods and forward-announced energy obligations; (ii) the closed-form residual cost of the feebate and its calibration to the EU’s default intensities for steel; (iii) the exporter best-response result under intensity-based destination charges; (iv) the extension of Strand’s crediting threshold to feebates, with the best response <span class="math inline">\(t = \pi\)</span>; and (v) the use of a carbon-price equivalent to make non-price production instruments creditable and recognizable at the border.</p>
+</section>
+<section id="sec-model" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Model</h1>
+<p><strong>Technology.</strong> A competitive sector produces a homogeneous good. A producer choosing emissions intensity <span class="math inline">\(e\)</span> (tonnes of CO₂ per unit of output) has unit cost <span id="eq-cost"><span class="math display">\[
+c(e) = c_0 + \frac{k}{2}\,(e_0 - e)^2, \qquad e \le e_0,
+\tag{1}\]</span></span> where <span class="math inline">\(e_0\)</span> is the intensity chosen with no carbon policy and <span class="math inline">\(k &gt; 0\)</span> is the slope of the marginal cost of reducing intensity. The marginal abatement cost per unit of intensity is <span class="math inline">\(k(e_0 - e)\)</span>. With competitive pricing and no policy, the price is <span class="math inline">\(p_0 = c_0\)</span>.</p>
+<p><strong>Demand.</strong> Home consumption <span class="math inline">\(D(p)\)</span> and foreign demand for home exports <span class="math inline">\(X(p)\)</span> have price elasticities <span class="math inline">\(\eta_D\)</span> and <span class="math inline">\(\eta_X\)</span>. In <a href="#sec-race" class="quarto-xref">Section&nbsp;8</a>, an importing market buys from several exporters under Armington demand <span class="citation" data-cites="Armington1969">(<a href="#ref-Armington1969" role="doc-biblioref">Armington 1969</a>)</span>, with elasticity of substitution <span class="math inline">\(\sigma\)</span> among sources.</p>
+<p><strong>Instruments.</strong> Three instruments, each at a rate per tonne of CO₂:</p>
+<ul>
+<li>an <strong>origin tax</strong> <span class="math inline">\(t\)</span>: a producer pays <span class="math inline">\(t\,e\)</span> per unit produced, whether sold at home or exported;</li>
+<li>a <strong>feebate</strong> <span class="math inline">\(t\)</span>: a producer pays <span class="math inline">\(t\,(e - \bar e)\)</span> per unit produced, with <span class="math inline">\(\bar e\)</span> the sector’s output-weighted average intensity, so that payments sum to zero;</li>
+<li>a <strong>destination charge</strong> <span class="math inline">\(\tau\)</span>: each unit consumed at home pays <span class="math inline">\(\tau\,m\)</span>, where <span class="math inline">\(m\)</span> is its embodied intensity, whether produced at home or imported; exports are zero-rated.</li>
+</ul>
+<p>The feebate benchmark is updated to the realized average, so an individual firm’s choice moves <span class="math inline">\(\bar e\)</span> only through its own output share. With many firms that effect is negligible, and the firm treats <span class="math inline">\(\bar e\)</span> as given.</p>
+</section>
+<section id="sec-equivalence" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> The equivalence result</h1>
+<p><strong>Proposition 1 (equivalence).</strong> <em>Let the home country apply a feebate at rate <span class="math inline">\(t\)</span> and a destination charge at rate <span class="math inline">\(\tau = t\)</span>, and let embodied intensity be measured accurately. Then (i) home producers choose the same intensity as under a Pigouvian origin tax at rate <span class="math inline">\(t\)</span>; (ii) home consumers face the same price as under that tax for home-produced goods, and the full carbon cost of imported goods; (iii) home exports bear no domestic carbon charge beyond the resource cost of abatement. Revenue is <span class="math inline">\(t\)</span> times the carbon embodied in home consumption, compared with <span class="math inline">\(t\)</span> times the carbon in home production under the origin tax; the difference is <span class="math inline">\(t\)</span> times the carbon in net exports.</em></p>
+<p>The proof is in Appendix B. The intuition is that a Pigouvian price does two things a feebate and a destination charge can each do separately. The marginal cost of emitting, <span class="math inline">\(t\)</span>, is the same under a feebate and a tax, so producers choose the same intensity. The average cost of emitting, <span class="math inline">\(t\,e\)</span>, is moved from the producer to the consumer: the feebate removes it from the producer price, and the destination charge adds it back to the consumer price for everything consumed at home. Because the charge applies to imports at their own embodied intensity, foreign producers cannot undercut home producers by being dirtier, and there is no leakage on the consumption base.</p>
+<p><a href="#fig-incidence" class="quarto-xref">Figure&nbsp;1</a> shows the incidence in a stylized steel market. Under an origin tax, home producers carry the carbon charge whether they sell at home or abroad, and imports carry none. A border adjustment on imports fixes the home market but not exports. The two tracks charge home sales and imports alike, and leave exports with only the resource cost of abatement.</p>
+<div id="fig-incidence" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-incidence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2.Source/figures/fig1_incidence_by_regime.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-incidence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Carbon-related cost added to a tonne of steel under three regimes, at $80/tCO₂. Stylized home producer with a default intensity of 2.4 tCO₂/t (close to the EU default value for Türkiye) and foreign supplier with 3.2 tCO₂/t (close to China’s), neither responding abroad. Under the two tracks, exports carry only the $46/t resource cost of cutting intensity from 2.4 to 1.25 tCO₂/t. Source: author’s calculation; script <code>2.Source/make_fig1_incidence.py</code>.
+</figcaption>
+</figure>
+</div>
+<p>Three qualifications matter. First, equivalence holds for the home country’s consumption; it says nothing about emissions embodied in home exports, which are priced, on the consumption track, by the importer. That is the subject of <a href="#sec-race" class="quarto-xref">Section&nbsp;8</a>. Second, the result requires the destination charge to be measured on actual embodied intensity, at least for large importers that choose to verify; default values deliberately set high, as in the EU’s regime <span class="citation" data-cites="EU2025DV">(<a href="#ref-EU2025DV" role="doc-biblioref">European Commission 2025</a>)</span>, preserve the incentive to verify but tax average importers above their true intensity. Third, the feebate and the destination charge need not share a rate. The production rate <span class="math inline">\(t\)</span> can be set higher than the consumption rate <span class="math inline">\(\tau\)</span>, because it does not raise average costs; the consumption rate is set by what households will accept and by the revenue the VAT reform needs (<a href="#sec-implementation" class="quarto-xref">Section&nbsp;9</a>). Fourth, the result removes leakage through the goods channel only. A coalition that cuts fossil-fuel demand lowers world fuel prices and raises use elsewhere; no border measure on goods addresses that channel, which in model studies is as large as the goods channel or larger <span class="citation" data-cites="BrangerQuirion2014 WeisbachKortumWangYao2023">(<a href="#ref-BrangerQuirion2014" role="doc-biblioref">Branger and Quirion 2014</a>; <a href="#ref-WeisbachKortumWangYao2023" role="doc-biblioref">Weisbach et al. 2023</a>)</span>. The production track in exporting countries, which is the subject of <a href="#sec-race" class="quarto-xref">Section&nbsp;8</a>, is the response to it <span class="citation" data-cites="JakobSteckelEdenhofer2014">(<a href="#ref-JakobSteckelEdenhofer2014" role="doc-biblioref">Jakob et al. 2014</a>)</span>.</p>
+<p><strong>Corollary (revenue).</strong> Revenue from the two tracks is <span class="math inline">\(\tau\,M_C\)</span>, where <span class="math inline">\(M_C\)</span> is carbon embodied in home consumption, against <span class="math inline">\(t\,E_P\)</span> under an origin tax, where <span class="math inline">\(E_P\)</span> is carbon emitted in home production. A net exporter of embodied carbon raises less; a net importer raises more. This is the fiscal counterpart of the distinction between production-based and consumption-based emissions accounts <span class="citation" data-cites="PetersHertwich2008">(<a href="#ref-PetersHertwich2008" role="doc-biblioref">Peters and Hertwich 2008</a>)</span>.</p>
+</section>
+<section id="sec-cost" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> What the production track costs</h1>
+<p><strong>Proposition 2 (intensity).</strong> <em>A feebate and an origin tax at the same rate induce the same intensity, <span class="math inline">\(e^* = e_0 - t/k\)</span>.</em></p>
+<p><strong>Proposition 3 (residual cost).</strong> <em>Under a revenue-neutral feebate the producer price rises by</em> <span id="eq-residual"><span class="math display">\[
+\Delta p_F = c(e^*) - c_0 = \frac{t^2}{2k} = \tfrac12\, t\, \Delta e ,
+\tag{2}\]</span></span> <em>the resource cost of abatement, while under an origin tax it rises by <span class="math inline">\(t e_0 - t^2/2k\)</span>. The ratio is <span class="math inline">\(\Delta e/(2e_0 - \Delta e)\)</span>. Output falls by <span class="math inline">\(\eta\, t^2 / (2 k p_0)\)</span> in proportion under the feebate, second order in <span class="math inline">\(t\)</span>, and by about <span class="math inline">\(\eta\, t e_0 / p_0\)</span> under the tax, first order.</em></p>
+<p>The feebate’s treasury cost is zero by construction. Its economic cost to producers is the cost of the abatement itself, which a tax also imposes; what it removes is the tax on the remaining emissions, the infra-marginal carbon bill. For a 30 percent cut in intensity, the feebate raises the price by 18 percent as much as a tax at the same rate; for a 48 percent cut, by about a third.</p>
+<p><strong>Proposition 4 (the output margin).</strong> <em>To cut the same tonnes as an origin tax at rate <span class="math inline">\(t_T\)</span>, a feebate alone needs the rate</em> <span id="eq-premium"><span class="math display">\[
+t_F = t_T\left(1 + \frac{\eta\, k\, e_0^2}{p_0}\right)
+\tag{3}\]</span></span> <em>to first order. The premium rises with the price elasticity of demand, with carbon intensity per dollar of output and with the steepness of abatement costs.</em></p>
+<p>This is the known weakness of intensity-based instruments <span class="citation" data-cites="HollandHughesKnittel2009 FischerFox2012">(<a href="#ref-HollandHughesKnittel2009" role="doc-biblioref">Stephen P. Holland et al. 2009</a>; <a href="#ref-FischerFox2012" role="doc-biblioref">Carolyn Fischer and Fox 2012</a>)</span>. In economy-wide simulations, feebate packages achieve roughly 50–70 percent of the emission cuts of a carbon tax at the same rate <span class="citation" data-cites="IMF2019">(<a href="#ref-IMF2019" role="doc-biblioref">International Monetary Fund 2019</a>)</span>. Two features of the open-economy setting limit it. In a trade-exposed sector, much of a tax’s output response is foreign supply replacing home supply: it reduces home emissions but not global emissions. The premium in <a href="#eq-premium" class="quarto-xref">equation&nbsp;3</a> is therefore an upper bound on the feebate’s disadvantage from a global view, reached only when <span class="math inline">\(\eta\)</span> reflects genuine demand reduction. And the consumption track restores genuine demand reduction on the consumption base. The architecture, not the feebate alone, delivers both margins.</p>
+<p><strong>Heterogeneous firms.</strong> Let firms differ in baseline intensity <span class="math inline">\(e_{0i}\)</span> and abatement slope <span class="math inline">\(k_i\)</span>, with output shares <span class="math inline">\(s_i\)</span>. Under a feebate the benchmark is <span class="math inline">\(\bar e = \sum_i s_i e_i^*\)</span> and firm <span class="math inline">\(i\)</span>’s unit cost becomes <span class="math inline">\(c_i(e_i^*) + t(e_i^* - \bar e)\)</span>. Two consequences follow.</p>
+<ol type="1">
+<li><em>Reallocation.</em> Costs rise for firms dirtier than the benchmark and fall for cleaner ones, so output moves toward clean producers within the sector. This within-sector reallocation is part of the feebate’s abatement, and it does not depend on a fall in total sector output.</li>
+<li><em>Price effects depend on the price-setting firm.</em> With a competitive fringe, the market price follows the marginal producer’s cost. If the marginal producer is dirtier than the benchmark, the price rises by more than <a href="#eq-residual" class="quarto-xref">equation&nbsp;2</a>; if cleaner, it can fall, and total output can rise.</li>
+</ol>
+<p><strong>Proposition 5 (sign condition).</strong> <em>Under a revenue-neutral feebate, sector output falls relative to no policy if and only if the price-setting producer’s net feebate payment plus its abatement cost is positive: <span class="math inline">\(t(e_m^* - \bar e) + \tfrac12 t\,\Delta e_m &gt; 0\)</span>, where <span class="math inline">\(m\)</span> indexes the marginal producer.</em> With identical firms the condition always holds, so total emissions fall. With a clean marginal producer and a benchmark well above its intensity it can fail, which is the case <span class="citation" data-cites="HollandHughesKnittel2009">Stephen P. Holland et al. (<a href="#ref-HollandHughesKnittel2009" role="doc-biblioref">2009</a>)</span> warn against. Updating the benchmark to the realized average and excluding new entrants’ output from the benchmark calculation for an initial period are the design responses <span class="citation" data-cites="CFPB12">(<a href="#ref-CFPB12" role="doc-biblioref">Stretton 2026c</a>)</span>.</p>
+<p><em>Windfalls.</em> Firms that are already clean receive rebates from the first year. Relative to a tax, the feebate transfers the infra-marginal carbon bill from dirty firms to clean ones rather than to the treasury. Relative to free allocation by historical output, as in most emissions trading systems, the transfer is targeted at performance rather than at incumbency.</p>
+</section>
+<section id="sec-calibration" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> A calibrated illustration: steel</h1>
+<p>The illustration uses the EU’s default values for embodied emissions in hot-rolled flat steel (CN 7208), adopted under Implementing Regulation (EU) 2025/2621 <span class="citation" data-cites="EU2025DV">(<a href="#ref-EU2025DV" role="doc-biblioref">European Commission 2025</a>)</span>. Direct emissions intensities range from 2.1 tCO₂ per tonne (Japan, South Korea) through 2.4 (Türkiye) and 3.2 (China) to 4.3 (India) and 8.2 (Indonesia), reflecting differences in production route (blast furnace versus electric arc furnace) and in the coal intensity of iron-making. The rest of the calibration is stylized and labelled so: a base price of $600 per tonne for every exporter, and an abatement slope <span class="math inline">\(k_i\)</span> set so that a rate of $50/tCO₂ cuts each exporter’s intensity by 30 percent. At $80/tCO₂ the cut is 48 percent.</p>
+<p><a href="#tbl-steel" class="quarto-xref">Table&nbsp;1</a> and <a href="#fig-steel-prices" class="quarto-xref">Figure&nbsp;2</a> compare the price effect of a tax and a feebate at $80/tCO₂. The tax raises the producer price by 21–43 percent for exporters other than Indonesia; the feebate by 7–14 percent. The ratio is constant across exporters, at about 0.32, because the proportional intensity cut is the same; it is the infra-marginal carbon bill that the feebate removes.</p>
+<div id="tbl-steel" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-steel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Producer price effect of a carbon tax and a revenue-neutral feebate at $80/tCO₂, hot-rolled flat steel. Intensities: EU default values, direct emissions <span class="citation" data-cites="EU2025DV">(<a href="#ref-EU2025DV" role="doc-biblioref">European Commission 2025</a>)</span>. Base price $600/t and abatement costs stylized. Source: author’s calculation, <code>2.Source/simulate_steel.py</code>.
+</figcaption>
+<div aria-describedby="tbl-steel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Exporter</th>
+<th style="text-align: right;">Default intensity (tCO₂/t)</th>
+<th style="text-align: right;">Intensity at $80 (tCO₂/t)</th>
+<th style="text-align: right;">Price rise, tax ($/t)</th>
+<th style="text-align: right;">Price rise, feebate ($/t)</th>
+<th style="text-align: right;">Tax (% of price)</th>
+<th style="text-align: right;">Feebate (% of price)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Japan</td>
+<td style="text-align: right;">2.10</td>
+<td style="text-align: right;">1.09</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">6.7</td>
+</tr>
+<tr class="even">
+<td>South Korea</td>
+<td style="text-align: right;">2.12</td>
+<td style="text-align: right;">1.10</td>
+<td style="text-align: right;">129</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">6.8</td>
+</tr>
+<tr class="odd">
+<td>Vietnam</td>
+<td style="text-align: right;">2.35</td>
+<td style="text-align: right;">1.22</td>
+<td style="text-align: right;">143</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">7.5</td>
+</tr>
+<tr class="even">
+<td>Türkiye</td>
+<td style="text-align: right;">2.43</td>
+<td style="text-align: right;">1.26</td>
+<td style="text-align: right;">148</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">7.8</td>
+</tr>
+<tr class="odd">
+<td>China</td>
+<td style="text-align: right;">3.19</td>
+<td style="text-align: right;">1.66</td>
+<td style="text-align: right;">194</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">10.2</td>
+</tr>
+<tr class="even">
+<td>South Africa</td>
+<td style="text-align: right;">4.14</td>
+<td style="text-align: right;">2.15</td>
+<td style="text-align: right;">252</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">13.2</td>
+</tr>
+<tr class="odd">
+<td>India</td>
+<td style="text-align: right;">4.28</td>
+<td style="text-align: right;">2.23</td>
+<td style="text-align: right;">260</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">13.7</td>
+</tr>
+<tr class="even">
+<td>Indonesia</td>
+<td style="text-align: right;">8.23</td>
+<td style="text-align: right;">4.28</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">158</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">26.3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-steel-prices" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-steel-prices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2.Source/figures/fig2_price_effects_by_exporter.png" class="img-fluid figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-steel-prices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Rise in the producer price of hot-rolled steel under a carbon tax and a revenue-neutral feebate at $80/tCO₂, by exporter (default intensity in tCO₂/t below each name). Source: as <a href="#tbl-steel" class="quarto-xref">Table&nbsp;1</a>.
+</figcaption>
+</figure>
+</div>
+<p>Two lessons follow for developing-country exporters. A production feebate at a rate comparable to the EU’s carbon price is affordable: it raises costs by a single-digit percentage for most exporters, against a quarter to two-fifths for a tax. And the most carbon-intensive producers have the most to gain from adopting one, because their tax liability, which the feebate avoids, is largest.</p>
+</section>
+<section id="sec-crediting" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> International payments and policy crediting</h1>
+<p>Suppose an outside buyer pays <span class="math inline">\(\pi\)</span> per tonne of emissions abated below the unpriced baseline <span class="math inline">\(e_0 Q\)</span>: a results-based climate finance facility, a cooperative approach under Article 6 of the Paris Agreement, or a bilateral arrangement. With <a href="#eq-cost" class="quarto-xref">equation&nbsp;1</a> and output <span class="math inline">\(Q\)</span>, a feebate at rate <span class="math inline">\(t\)</span> abates <span class="math inline">\(Q t / k\)</span> tonnes at resource cost <span class="math inline">\(Q t^2 / 2k\)</span>.</p>
+<p><strong>Proposition 6 (crediting).</strong> <em>The adopting country’s net cost of a feebate at rate <span class="math inline">\(t\)</span> is</em> <span id="eq-crediting"><span class="math display">\[
+N(t) = \frac{Q\,t\,(t - 2\pi)}{2k}.
+\tag{4}\]</span></span> <em>It is negative for <span class="math inline">\(0 &lt; t &lt; 2\pi\)</span>. The country’s best response is <span class="math inline">\(t = \pi\)</span>, which yields a surplus of <span class="math inline">\(Q\pi^2/2k\)</span>, half the buyer’s payment of <span class="math inline">\(Q\pi^2/k\)</span>.</em></p>
+<p>The intuition is that the payment is made at the marginal rate, while the country’s average abatement cost is half its marginal cost under a linear marginal cost curve and below it under any rising curve. A crediting price therefore induces a feebate at the same rate, without any treasury cost, and leaves the country better off (<a href="#fig-crediting" class="quarto-xref">Figure&nbsp;3</a>).</p>
+<div id="fig-crediting" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-crediting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="1.Presentation/figures/fig1_two_track_results.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-crediting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Net cost to the adopting country of a feebate at rate <span class="math inline">\(t\)</span> when an outside buyer pays $50 per tonne abated (per tonne of output, stylized steel-like sector). The country gains at any rate below $100 and gains most at $50. Source: author’s calculation, <code>1.Presentation/figures/make_figures.py</code>.
+</figcaption>
+</figure>
+</div>
+<p><em>The buyer’s side.</em> The buyer pays <span class="math inline">\(\pi\)</span> per tonne. Paying is worthwhile if <span class="math inline">\(\pi\)</span> is at or below the buyer’s marginal damage from emissions, or below its own marginal abatement cost if the payment counts toward its target. Because the feebate’s marginal incentive equals <span class="math inline">\(\pi\)</span>, the buyer pays exactly the marginal cost of the last tonne, as in an efficient permit market; it overpays the average cost, and the surplus is the price of getting the policy adopted.</p>
+<p><em>Baselines and additionality.</em> The result treats the baseline <span class="math inline">\(e_0\)</span> as known. In practice the adopting country knows it better than the buyer and has an incentive to overstate it. Three safeguards apply. The baseline can be set from verified historical intensity before the policy was announced; crediting can be on the <em>change</em> in measured intensity rather than its level, so that overstating the baseline has no payoff once the first year is verified; and the policy’s effect can be measured as a carbon-price equivalent, the uniform tax that would produce the same emission change <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Stretton 2026d</a>)</span>, which separates the policy’s contribution from changes in output and fuel prices. These are the same problems faced by every results-based instrument <span class="citation" data-cites="WorldBank2017Baselines WorldBank2017RBCF">(<a href="#ref-WorldBank2017Baselines" role="doc-biblioref">Partnership for Market Readiness 2017</a>; <a href="#ref-WorldBank2017RBCF" role="doc-biblioref">World Bank and Frankfurt School of Finance and Management 2017</a>)</span>; the feebate makes them easier because it acts directly on the measured variable, intensity.</p>
+<p><em>Who claims the reduction.</em> Proposition 6 assumes the adopting country keeps the reduction toward its own target. If the buyer instead counts it under Article 6 of the Paris Agreement, the seller must make a corresponding adjustment and loses the reduction from its own account. It then needs to be paid for the carbon as well as the cost, and the break-even price rises from about half the feebate rate to about one and a half times it <span class="citation" data-cites="StrandRBP2020 WorldBank2022Art6">(<a href="#ref-StrandRBP2020" role="doc-biblioref">Strand 2020</a>; <a href="#ref-WorldBank2022Art6" role="doc-biblioref">World Bank 2022</a>)</span>. Crediting of policy without transfer of attribution, as in results-based climate finance, is the cheaper route and the one the proposition describes.</p>
+<p><em>Why credit policies rather than projects.</em> Project-based crediting pays for individual installations whose additionality is contested and whose emissions may simply move elsewhere in the sector. A sector-wide feebate moves the whole sector’s intensity, and its rebate leg rewards the same clean installations a project mechanism would, without the counterfactual.</p>
+</section>
+<section id="sec-race" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> From leakage to a race to the top</h1>
+<p>Let an importing market apply a destination charge <span class="math inline">\(\tau\)</span> per tonne of embodied carbon, measured at actual intensity. Exporter <span class="math inline">\(i\)</span> runs a feebate at rate <span class="math inline">\(t_i\)</span>, chooses intensity <span class="math inline">\(e_i = e_{0i} - t_i/k_i\)</span>, and delivers at cost <span id="eq-delivered"><span class="math display">\[
+D_i = c_0 + \frac{t_i^2}{2k_i} + \tau\left(e_{0i} - \frac{t_i}{k_i}\right).
+\tag{5}\]</span></span></p>
+<p><strong>Proposition 7 (best response).</strong> <em><span class="math inline">\(D_i\)</span> is minimized at <span class="math inline">\(t_i = \tau\)</span>. Each exporter’s most competitive feebate rate equals the carbon charge in its export markets.</em></p>
+<p>The result is the production-side mirror of Proposition 1: the importer prices the average carbon in what it buys, and each exporter does best by matching the marginal incentive at home. As importers raise <span class="math inline">\(\tau\)</span>, exporters raise <span class="math inline">\(t_i\)</span>. Market share moves toward the producers with the lowest embodied carbon after the response. Under origin-based pricing without border adjustment the opposite happens: production moves toward the lowest carbon price.</p>
+<p>The direction of competition has a simple statement. Under origin taxes, a country that raises its carbon price loses market share; under the two tracks, a country that raises its feebate rate toward its export markets’ charges gains it. This is the property that let VAT spread without coordination <span class="citation" data-cites="KeenLockwood2010">(<a href="#ref-KeenLockwood2010" role="doc-biblioref">Keen and Lockwood 2010</a>)</span>, and it is a decentralized form of the club incentive in <span class="citation" data-cites="Nordhaus2015">Nordhaus (<a href="#ref-Nordhaus2015" role="doc-biblioref">2015</a>)</span>: no tariff on non-members is needed, because every exporter already faces the charge in its markets.</p>
+<p>To quantify the effect, <a href="#fig-race" class="quarto-xref">Figure&nbsp;4</a> simulates an importing market buying hot-rolled steel from the eight exporters in <a href="#tbl-steel" class="quarto-xref">Table&nbsp;1</a>, with Armington substitution (<span class="math inline">\(\sigma = 4\)</span>, stylized) and equal shares before any charge. Two cases are compared at each charge <span class="math inline">\(\tau\)</span>: exporters do nothing, so only the composition of imports changes; and exporters set <span class="math inline">\(t_i = \tau\)</span>. At <span class="math inline">\(\tau = \$100\)</span>, the average embodied intensity of imports falls from 3.6 to 2.8 tCO₂/t through composition alone, and to 1.2 tCO₂/t when exporters respond. The most carbon-intensive exporter loses share in both cases, but loses less when it adopts a feebate (2.9 against 2.0 percent of the market): it has the most to gain from adopting.</p>
+<div id="fig-race" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-race-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="2.Source/figures/fig4_race_to_top.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-race-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Simulated steel import market with a destination charge <span class="math inline">\(\tau\)</span> (eight exporters, EU default intensities, stylized prices and costs). A: average embodied intensity of imports when exporters do nothing and when each sets its feebate equal to <span class="math inline">\(\tau\)</span>. B: market shares of the cleanest and dirtiest exporters (dashed: exporters do nothing; solid: exporters set <span class="math inline">\(t_i = \tau\)</span>). Source: author’s calculation, <code>2.Source/simulate_steel.py</code>.
+</figcaption>
+</figure>
+</div>
+<p><em>The condition.</em> Proposition 7 requires that the importer’s charge rise with actual intensity, so that a lower intensity earns a lower charge. A destination charge on verified or rebuttable default intensities satisfies it. The EU’s mechanism satisfies it for intensity but not for policy: it deducts from the importer’s liability only a carbon price “effectively paid” in the country of origin <span class="citation" data-cites="EU2023">(<a href="#ref-EU2023" role="doc-biblioref">European Parliament and Council 2023</a>)</span>, and a revenue-neutral feebate, by design, has no net price paid. An exporter that adopts a feebate gains through lower intensity, but not through recognition of the policy itself. The legal opening is narrow. Article 9 of the regulation, as replaced in 2025, allows a default carbon price for a country only “where a carbon price was set by the rules applicable in the third country” <span class="citation" data-cites="EU2023">(<a href="#ref-EU2023" role="doc-biblioref">European Parliament and Council 2023</a>)</span>, so recognition of a feebate needs either a broad reading of that text or an amendment at the scheduled review. The companion paper on CBAM proposes recognizing implicit and non-price instruments through the default carbon-price methodology, measured as carbon-price equivalents <span class="citation" data-cites="CFPB14 CFPB61">(<a href="#ref-CFPB14" role="doc-biblioref">Stretton 2026b</a>, <a href="#ref-CFPB61" role="doc-biblioref">2026d</a>)</span>.</p>
+<p><em>Shuffling.</em> A charge on actual plant intensity has a weakness that Proposition 7 ignores: an exporter with clean and dirty plants can send clean output to the charging market and dirty output elsewhere, cutting its bill without cutting emissions <span class="citation" data-cites="BushnellChenZaragozaWatkins2014">(<a href="#ref-BushnellChenZaragozaWatkins2014" role="doc-biblioref">Bushnell et al. 2014</a>)</span>. Standardized values by country and sector avoid this but blunt the incentive for individual plants <span class="citation" data-cites="Neuhoff2026">(<a href="#ref-Neuhoff2026" role="doc-biblioref">Neuhoff et al. 2026</a>)</span>. A sector-wide feebate in the exporting country closes the gap from the other side: it lowers intensity across all output, whatever its destination, so there is less to shuffle. Charges set high on country averages also fall hardest on poorer exporters <span class="citation" data-cites="Mattoo2009">(<a href="#ref-Mattoo2009" role="doc-biblioref">Mattoo et al. 2009</a>)</span>, which is a further reason to recognize the policy rather than only the plant.</p>
+<p><em>Crediting and the race together.</em> An exporter facing both a destination charge <span class="math inline">\(\tau\)</span> in its markets and a crediting price <span class="math inline">\(\pi\)</span> chooses a feebate rate between the two that balances its export competitiveness against crediting revenue. Both forces push the rate up from zero, and both reward the most carbon-intensive exporters most for adopting.</p>
+</section>
+<section id="sec-implementation" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Implementation</h1>
+<p><strong>The production track.</strong> A feebate needs, for each covered sector, a measure of output, a measure of emissions at the installation, and a benchmark rule. The first two already exist wherever an emissions trading system or a CBAM reporting obligation applies; the EU’s monitoring rules and default values cover cement, iron and steel, aluminium, fertilizers, hydrogen and electricity <span class="citation" data-cites="EU2023">(<a href="#ref-EU2023" role="doc-biblioref">European Parliament and Council 2023</a>)</span>. The benchmark is the output-weighted average of the previous period, announced in advance. Canada’s output-based pricing system and the free-allocation benchmarks of the EU system are working precedents for the benchmark side <span class="citation" data-cites="CFPB12">(<a href="#ref-CFPB12" role="doc-biblioref">Stretton 2026c</a>)</span>.</p>
+<p><strong>The consumption track, goods.</strong> The carbon component of VAT is a charge per unit of embodied carbon added to the existing VAT on each good, with the value component reduced so that the total burden changes little at the start <span class="citation" data-cites="CFPB13">(<a href="#ref-CFPB13" role="doc-biblioref">Stretton 2026a</a>)</span>. Domestic goods carry a sector-average embodied intensity through the VAT chain; imports carry rebuttable default intensities set generously at the outset, so that the charge does not provoke a trade dispute, with importers free to prove a lower value; exports are zero-rated, as in VAT. Keen, Parry and Roaf recommend the same sequence of domestic benchmarks first and country-specific values later <span class="citation" data-cites="KeenParryRoaf2022">(<a href="#ref-KeenParryRoaf2022" role="doc-biblioref">Keen et al. 2022</a>)</span>.</p>
+<p><strong>The consumption track, energy.</strong> Fuel sold for domestic heating and transport is burned after the last sale, so its carbon is embodied in no good and the VAT component cannot reach it; and a few large firms dominate its supply: fuel importers, refiners, gas suppliers. For these the consumption track is a legal obligation, announced in advance and rising on a published path, to account for the carbon in what they sell. An obligation announced years ahead gives the firms that plan the capital stock the forward price that a tax set annually cannot credibly give <span class="citation" data-cites="KydlandPrescott1977 HelmHepburnMash2003">(<a href="#ref-KydlandPrescott1977" role="doc-biblioref">Kydland and Prescott 1977</a>; <a href="#ref-HelmHepburnMash2003" role="doc-biblioref">Helm 2003</a>)</span>. Electricity is different: it is sold on an invoice, so where a VAT carbon component exists it carries the generation carbon to the final user, net of the production-track price already paid <span class="citation" data-cites="CFPB13">(<a href="#ref-CFPB13" role="doc-biblioref">Stretton 2026a</a>)</span>. Where it does not, as in most developing countries at the start, the obligation can be extended to electricity retailers on the same net basis.</p>
+<p><strong>Measurement.</strong> Each track needs its effect expressed on a common scale for two purposes: recognition at foreign borders, and crediting. The carbon-price-equivalent metric of <span class="citation" data-cites="CFPB61">Stretton (<a href="#ref-CFPB61" role="doc-biblioref">2026d</a>)</span> expresses any instrument, price-based or not, as the uniform carbon tax that would produce the same emission change. A country that regulates rather than taxes can then claim the same recognition as one that prices. The IMF’s framework for comparing mitigation policies across countries takes the same approach for price and non-price instruments <span class="citation" data-cites="black2022framework">(<a href="#ref-black2022framework" role="doc-biblioref">Black et al. 2022</a>)</span>. Equal carbon-price equivalents mean equal emission effects, not equal costs to firms: a standard and a tax with the same equivalent impose different private costs, and a border rule built on the metric should say which it is matching.</p>
+<p><strong>Trade law.</strong> The consumption charge is an internal tax applied equally to domestic and imported goods and is adjustable at the border under GATT Articles II:2(a) and III:2; the open question is whether carbon intensity, a process characteristic, can differentiate otherwise like products <span class="citation" data-cites="Mehling2019 IsmerNeuhoff2007">(<a href="#ref-Mehling2019" role="doc-biblioref">Mehling et al. 2019</a>; <a href="#ref-IsmerNeuhoff2007" role="doc-biblioref">Ismer and Neuhoff 2007</a>)</span>. The feebate is a sector-wide charge-and-rebate scheme, not contingent on export performance; its rebate leg needs care under the Agreement on Subsidies and Countervailing Measures, which a sector-wide, formula-based scheme is designed to satisfy. A full legal analysis is outside the scope of this paper.</p>
+</section>
+<section id="sec-objections" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Objections and limits</h1>
+<p><em>Distribution.</em> A carbon component of VAT is regressive if carbon-intensive goods form a larger share of poorer households’ spending. Because the reform cuts the value component as the carbon component rises, the net effect depends on the difference in carbon intensity across budgets rather than on the level of carbon prices; it should be measured with household expenditure data before rates are set.</p>
+<p><em>Double charging in mixed regimes.</em> A good exported from a country with an origin carbon tax to one with a destination charge would pay twice unless the exporter zero-rates its exports, as the destination principle requires, or the importer deducts the origin price. In a transition, the importer’s deduction for carbon prices paid, as under CBAM, is the stopgap. The feebate does not create this problem: it has no net payment on average and so nothing to deduct, which is exactly why recognition must rest on the price signal rather than the payment (<a href="#sec-race" class="quarto-xref">Section&nbsp;8</a>).</p>
+<p><em>Accounting under the Paris Agreement.</em> National targets are set on territorial emissions. The production track reduces territorial emissions directly; the consumption track reduces them at home and abroad. A country adopting both gets credit for the first under its target and contributes to others’ targets through the second.</p>
+<p><em>Capacity.</em> Countries without a functioning VAT cannot run the goods part of the consumption track. They can run the production track, which needs only sector intensity data, and that is where their emissions are.</p>
+<p><em>General equilibrium.</em> The model is partial equilibrium. Factor-market interactions, the use of revenue and exchange-rate effects all matter for welfare. The results on intensity, residual cost, crediting and best response do not depend on them; the welfare ranking against a uniform carbon tax does.</p>
+</section>
+<section id="sec-conclusion" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Conclusion</h1>
+<p>A carbon price levied on production does two jobs with one rate, and in an open economy the second job undermines the first. Pricing production intensity with a revenue-neutral feebate and consumption with a destination-based charge gives each job its own instrument. Together they reproduce the Pigouvian allocation for domestic consumption without leakage; the production track costs a third or less of a tax in producer prices; crediting at a price above half the feebate rate makes adoption a gain; and destination charges make each exporter’s most competitive feebate rate equal to the charge in its markets. The open work is empirical calibration of abatement costs by sector, the legal text for the consumption charge, and the border rules that recognize instruments that price carbon without a price paid.</p>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Armington1969" class="csl-entry" role="listitem">
+Armington, Paul S. 1969. <span>“A Theory of Demand for Products Distinguished by Place of Production.”</span> <em>Staff Papers (International Monetary Fund)</em> 16 (1): 159–78. <a href="https://doi.org/10.2307/3866403">https://doi.org/10.2307/3866403</a>.
+</div>
+<div id="ref-Auerbach2017" class="csl-entry" role="listitem">
+Auerbach, Alan J., Michael P. Devereux, Michael Keen, and John Vella. 2017. <em>Destination-Based Cash Flow Taxation</em>. Working Paper 17/01. Oxford University Centre for Business Taxation.
+</div>
+<div id="ref-black2022framework" class="csl-entry" role="listitem">
+Black, Simon, Danielle Minnett, Ian Parry, James Roaf, and Karlygash Zhunussova. 2022. <em>A Framework for Comparing Climate Mitigation Policies Across Countries</em>. IMF Working Paper 22/254. International Monetary Fund. <a href="https://doi.org/10.5089/9798400228285.001">https://doi.org/10.5089/9798400228285.001</a>.
+</div>
+<div id="ref-BoehringerCarboneRutherford2016" class="csl-entry" role="listitem">
+Böhringer, Christoph, Jared C. Carbone, and Thomas F. Rutherford. 2016. <span>“The Strategic Value of Carbon Tariffs.”</span> <em>American Economic Journal: Economic Policy</em> 8 (1): 28–51. <a href="https://doi.org/10.1257/pol.20130327">https://doi.org/10.1257/pol.20130327</a>.
+</div>
+<div id="ref-BrangerQuirion2014" class="csl-entry" role="listitem">
+Branger, Frédéric, and Philippe Quirion. 2014. <span>“Would Border Carbon Adjustments Prevent Carbon Leakage and Heavy Industry Competitiveness Losses? Insights from a Meta-Analysis of Recent Economic Studies.”</span> <em>Ecological Economics</em> 99: 29–39. <a href="https://doi.org/10.1016/j.ecolecon.2013.12.010">https://doi.org/10.1016/j.ecolecon.2013.12.010</a>.
+</div>
+<div id="ref-Brunner2012" class="csl-entry" role="listitem">
+Brunner, Steffen, Christian Flachsland, and Robert Marschinski. 2012. <span>“Credible Commitment in Carbon Policy.”</span> <em>Climate Policy</em> 12 (2): 255–71. <a href="https://doi.org/10.1080/14693062.2011.582327">https://doi.org/10.1080/14693062.2011.582327</a>.
+</div>
+<div id="ref-BushnellChenZaragozaWatkins2014" class="csl-entry" role="listitem">
+Bushnell, James, Yihsu Chen, and Matthew Zaragoza-Watkins. 2014. <span>“Downstream Regulation of <span>CO<span class="math inline">\(_2\)</span></span> Emissions in <span>California</span>’s Electricity Sector.”</span> <em>Energy Policy</em> 64: 313–23. <a href="https://doi.org/10.1016/j.enpol.2013.08.065">https://doi.org/10.1016/j.enpol.2013.08.065</a>.
+</div>
+<div id="ref-Calel2025" class="csl-entry" role="listitem">
+Calel, Raphael, Jonathan Colmer, Antoine Dechezleprêtre, and Matthieu Glachant. 2025. <span>“Do Carbon Offsets Offset Carbon?”</span> <em>American Economic Journal: Applied Economics</em> 17 (1): 1–40. <a href="https://doi.org/10.1257/app.20230052">https://doi.org/10.1257/app.20230052</a>.
+</div>
+<div id="ref-Colmer2024" class="csl-entry" role="listitem">
+Colmer, Jonathan, Ralf Martin, Mirabelle Muûls, and Ulrich J. Wagner. 2025. <span>“Does Pricing Carbon Mitigate Climate Change? Firm-Level Evidence from the European Union Emissions Trading System.”</span> <em>Review of Economic Studies</em> 92 (3): 1625–60. <a href="https://doi.org/10.1093/restud/rdae055">https://doi.org/10.1093/restud/rdae055</a>.
+</div>
+<div id="ref-Cosbey2019" class="csl-entry" role="listitem">
+Cosbey, Aaron, Susanne Droege, Carolyn Fischer, and Clayton Munnings. 2019. <span>“Developing Guidance for Implementing Border Carbon Adjustments: Lessons, Cautions, and Research Needs from the Literature.”</span> <em>Review of Environmental Economics and Policy</em> 13 (1): 3–22. <a href="https://doi.org/10.1093/reep/rey020">https://doi.org/10.1093/reep/rey020</a>.
+</div>
+<div id="ref-DHaultfoeuille2014" class="csl-entry" role="listitem">
+D’Haultfœuille, Xavier, Pauline Givord, and Xavier Boutin. 2014. <span>“The Environmental Effect of Green Taxation: The Case of the French Bonus/Malus.”</span> <em>The Economic Journal</em> 124 (578): F444–80. <a href="https://doi.org/10.1111/ecoj.12089">https://doi.org/10.1111/ecoj.12089</a>.
+</div>
+<div id="ref-DavisCaldeira2010" class="csl-entry" role="listitem">
+Davis, Steven J., and Ken Caldeira. 2010. <span>“Consumption-Based Accounting of <span>CO<span class="math inline">\(_2\)</span></span> Emissions.”</span> <em>Proceedings of the National Academy of Sciences</em> 107 (12): 5687–92. <a href="https://doi.org/10.1073/pnas.0906974107">https://doi.org/10.1073/pnas.0906974107</a>.
+</div>
+<div id="ref-Dechezlepretre2022" class="csl-entry" role="listitem">
+Dechezleprêtre, Antoine, Caterina Gennaioli, Ralf Martin, Mirabelle Muûls, and Thomas Stoerk. 2022. <span>“Searching for Carbon Leaks in Multinational Companies.”</span> <em>Journal of Environmental Economics and Management</em> 112: 102601. <a href="https://doi.org/10.1016/j.jeem.2021.102601">https://doi.org/10.1016/j.jeem.2021.102601</a>.
+</div>
+<div id="ref-DechezlepretreSato2017" class="csl-entry" role="listitem">
+Dechezleprêtre, Antoine, and Misato Sato. 2017. <span>“The Impacts of Environmental Regulations on Competitiveness.”</span> <em>Review of Environmental Economics and Policy</em> 11 (2): 183–206. <a href="https://doi.org/10.1093/reep/rex013">https://doi.org/10.1093/reep/rex013</a>.
+</div>
+<div id="ref-Devereux2021" class="csl-entry" role="listitem">
+Devereux, Michael P., Alan J. Auerbach, Michael Keen, Paul Oosterhuis, Wolfgang Schön, and John Vella. 2021. <span>“Destination-Based Cash Flow Taxation.”</span> In <em>Taxing Profit in a Global Economy</em>. Oxford University Press. <a href="https://doi.org/10.1093/oso/9780198808060.003.0007">https://doi.org/10.1093/oso/9780198808060.003.0007</a>.
+</div>
+<div id="ref-EU2025DV" class="csl-entry" role="listitem">
+European Commission. 2025. <em>Commission Implementing Regulation (<span>EU</span>) 2025/2621 Laying down Rules for the Application of Regulation (<span>EU</span>) 2023/956 as Regards the Establishment of Default Values</em>.
+</div>
+<div id="ref-EU2023" class="csl-entry" role="listitem">
+European Parliament and Council. 2023. <em>Regulation (<span>EU</span>) 2023/956 of 10 May 2023 Establishing a Carbon Border Adjustment Mechanism</em>. Official Journal of the European Union, L 130, 16 May 2023.
+</div>
+<div id="ref-Fischer2001" class="csl-entry" role="listitem">
+Fischer, Carolyn. 2001. <em>Rebating Environmental Policy Revenues: Output-Based Allocations and Tradable Performance Standards</em>. Discussion Paper 01-22. Resources for the Future. <a href="https://media.rff.org/documents/RFF-DP-01-22.pdf">https://media.rff.org/documents/RFF-DP-01-22.pdf</a>.
+</div>
+<div id="ref-FischerFox2012" class="csl-entry" role="listitem">
+Fischer, Carolyn, and Alan K. Fox. 2012. <span>“Comparing Policies to Combat Emissions Leakage: Border Carbon Adjustments Versus Rebates.”</span> <em>Journal of Environmental Economics and Management</em> 64 (2): 199–216. <a href="https://doi.org/10.1016/j.jeem.2012.01.005">https://doi.org/10.1016/j.jeem.2012.01.005</a>.
+</div>
+<div id="ref-FischerFox2007" class="csl-entry" role="listitem">
+Fischer, C., and A. K. Fox. 2007. <span>“Output-Based Allocation of Emissions Permits for Mitigating Tax and Trade Interactions.”</span> <em>Land Economics</em> 83 (4): 575–99. <a href="https://doi.org/10.3368/le.83.4.575">https://doi.org/10.3368/le.83.4.575</a>.
+</div>
+<div id="ref-FowlieReguantRyan2016" class="csl-entry" role="listitem">
+Fowlie, Meredith, Mar Reguant, and Stephen P. Ryan. 2016. <span>“Market-Based Emissions Regulation and Industry Dynamics.”</span> <em>Journal of Political Economy</em> 124 (1): 249–302. <a href="https://doi.org/10.1086/684484">https://doi.org/10.1086/684484</a>.
+</div>
+<div id="ref-GanapatiShapiroWalker2020" class="csl-entry" role="listitem">
+Ganapati, Sharat, Joseph S. Shapiro, and Reed Walker. 2020. <span>“Energy Cost Pass-Through in US Manufacturing: Estimates and Implications for Carbon Taxes.”</span> <em>American Economic Journal: Applied Economics</em> 12 (2): 303–42. <a href="https://doi.org/10.1257/app.20180474">https://doi.org/10.1257/app.20180474</a>.
+</div>
+<div id="ref-Grubb2022" class="csl-entry" role="listitem">
+Grubb, Michael, Nino David Jordan, Edgar Hertwich, et al. 2022. <span>“Carbon Leakage, Consumption, and Trade.”</span> <em>Annual Review of Environment and Resources</em> 47 (1): 753–95. <a href="https://doi.org/10.1146/annurev-environ-120820-053625">https://doi.org/10.1146/annurev-environ-120820-053625</a>.
+</div>
+<div id="ref-HelmHepburnMash2003" class="csl-entry" role="listitem">
+Helm, D. 2003. <span>“Credible Carbon Policy.”</span> <em>Oxford Review of Economic Policy</em> 19 (3): 438–50. <a href="https://doi.org/10.1093/oxrep/19.3.438">https://doi.org/10.1093/oxrep/19.3.438</a>.
+</div>
+<div id="ref-HelmHepburnRuta2012" class="csl-entry" role="listitem">
+Helm, D., C. Hepburn, and G. Ruta. 2012. <span>“Trade, Climate Change, and the Political Game Theory of Border Carbon Adjustments.”</span> <em>Oxford Review of Economic Policy</em> 28 (2): 368–94. <a href="https://doi.org/10.1093/oxrep/grs013">https://doi.org/10.1093/oxrep/grs013</a>.
+</div>
+<div id="ref-HLCCP2017" class="csl-entry" role="listitem">
+High-Level Commission on Carbon Prices. 2017. <em>Report of the High-Level Commission on Carbon Prices</em>. World Bank.
+</div>
+<div id="ref-Hoel1996" class="csl-entry" role="listitem">
+Hoel, Michael. 1996. <span>“Should a Carbon Tax Be Differentiated Across Sectors?”</span> <em>Journal of Public Economics</em> 59 (1): 17–32. <a href="https://doi.org/10.1016/0047-2727(94)01490-6">https://doi.org/10.1016/0047-2727(94)01490-6</a>.
+</div>
+<div id="ref-Holland2012" class="csl-entry" role="listitem">
+Holland, Stephen P. 2012. <span>“Emissions Taxes Versus Intensity Standards: Second-Best Environmental Policies with Incomplete Regulation.”</span> <em>Journal of Environmental Economics and Management</em> 63 (3): 375–87. <a href="https://doi.org/10.1016/j.jeem.2011.12.002">https://doi.org/10.1016/j.jeem.2011.12.002</a>.
+</div>
+<div id="ref-HollandHughesKnittel2009" class="csl-entry" role="listitem">
+Holland, Stephen P., Jonathan E. Hughes, and Christopher R. Knittel. 2009. <span>“Greenhouse Gas Reductions Under Low Carbon Fuel Standards?”</span> <em>American Economic Journal: Economic Policy</em> 1 (1): 106–46. <a href="https://doi.org/10.1257/pol.1.1.106">https://doi.org/10.1257/pol.1.1.106</a>.
+</div>
+<div id="ref-IMF2019" class="csl-entry" role="listitem">
+International Monetary Fund. 2019. <em>Fiscal Monitor: How to Mitigate Climate Change</em>. International Monetary Fund.
+</div>
+<div id="ref-Ismer2016" class="csl-entry" role="listitem">
+Ismer, Roland, Manuel Haussner, Karsten Neuhoff, and William Acworth. 2016. <em>Inclusion of Consumption into Emissions Trading Systems: Legal Design and Practical Administration</em>. Discussion Paper 1579. DIW Berlin.
+</div>
+<div id="ref-IsmerNeuhoff2007" class="csl-entry" role="listitem">
+Ismer, Roland, and Karsten Neuhoff. 2007. <span>“Border Tax Adjustment: A Feasible Way to Support Stringent Emission Trading.”</span> <em>European Journal of Law and Economics</em> 24 (2): 137–64. <a href="https://doi.org/10.1007/s10657-007-9032-8">https://doi.org/10.1007/s10657-007-9032-8</a>.
+</div>
+<div id="ref-JakobSteckelEdenhofer2014" class="csl-entry" role="listitem">
+Jakob, Michael, Jan Christoph Steckel, and Ottmar Edenhofer. 2014. <span>“Consumption- Versus Production-Based Emission Policies.”</span> <em>Annual Review of Resource Economics</em> 6 (1): 297–318. <a href="https://doi.org/10.1146/annurev-resource-100913-012342">https://doi.org/10.1146/annurev-resource-100913-012342</a>.
+</div>
+<div id="ref-KeenKotsogiannis2014" class="csl-entry" role="listitem">
+Keen, Michael, and Christos Kotsogiannis. 2014. <span>“Coordinating Climate and Trade Policies: Pareto Efficiency and the Role of Border Tax Adjustments.”</span> <em>Journal of International Economics</em> 94 (1): 119–28. <a href="https://doi.org/10.1016/j.jinteco.2014.03.002">https://doi.org/10.1016/j.jinteco.2014.03.002</a>.
+</div>
+<div id="ref-KeenLockwood2010" class="csl-entry" role="listitem">
+Keen, Michael, and Ben Lockwood. 2010. <span>“The Value Added Tax: Its Causes and Consequences.”</span> <em>Journal of Development Economics</em> 92 (2): 138–51. <a href="https://doi.org/10.1016/j.jdeveco.2009.01.012">https://doi.org/10.1016/j.jdeveco.2009.01.012</a>.
+</div>
+<div id="ref-KeenParryRoaf2022" class="csl-entry" role="listitem">
+Keen, Michael, Ian Parry, and James Roaf. 2022. <span>“Border Carbon Adjustments: Rationale, Design and Impact.”</span> <em>Fiscal Studies</em> 43 (3): 209–34. <a href="https://doi.org/10.1111/1475-5890.12307">https://doi.org/10.1111/1475-5890.12307</a>.
+</div>
+<div id="ref-KydlandPrescott1977" class="csl-entry" role="listitem">
+Kydland, Finn E., and Edward C. Prescott. 1977. <span>“Rules Rather Than Discretion: The Inconsistency of Optimal Plans.”</span> <em>Journal of Political Economy</em> 85 (3): 473–91. <a href="https://doi.org/10.1086/260580">https://doi.org/10.1086/260580</a>.
+</div>
+<div id="ref-LockwoodDeMezaMyles1994" class="csl-entry" role="listitem">
+Lockwood, Ben, David De Meza, and Gareth D. Myles. 1994. <span>“When Are Origin and Destination Regimes Equivalent?”</span> <em>International Tax and Public Finance</em> 1 (1): 5–24. <a href="https://doi.org/10.1007/bf00874086">https://doi.org/10.1007/bf00874086</a>.
+</div>
+<div id="ref-LockwoodWhalley2010" class="csl-entry" role="listitem">
+Lockwood, Ben, and John Whalley. 2010. <span>“Carbon‐motivated Border Tax Adjustments: Old Wine in Green Bottles?”</span> <em>The World Economy</em> 33 (6): 810–19. <a href="https://doi.org/10.1111/j.1467-9701.2010.01285.x">https://doi.org/10.1111/j.1467-9701.2010.01285.x</a>.
+</div>
+<div id="ref-Markusen1975" class="csl-entry" role="listitem">
+Markusen, James R. 1975. <span>“International Externalities and Optimal Tax Structures.”</span> <em>Journal of International Economics</em> 5 (1): 15–29. <a href="https://doi.org/10.1016/0022-1996(75)90025-2">https://doi.org/10.1016/0022-1996(75)90025-2</a>.
+</div>
+<div id="ref-Mattoo2009" class="csl-entry" role="listitem">
+Mattoo, Aaditya, Arvind Subramanian, Dominique van der Mensbrugghe, and Jianwu He. 2009. <em>Reconciling Climate Change and Trade Policy</em>. Policy Research Working Paper 5123. World Bank. <a href="https://doi.org/10.1596/1813-9450-5123">https://doi.org/10.1596/1813-9450-5123</a>.
+</div>
+<div id="ref-Mehling2019" class="csl-entry" role="listitem">
+Mehling, Michael A., Harro van Asselt, Kasturi Das, Susanne Droege, and Cleo Verkuijl. 2019. <span>“Designing Border Carbon Adjustments for Enhanced Climate Action.”</span> <em>American Journal of International Law</em> 113 (3): 433–81. <a href="https://doi.org/10.1017/ajil.2019.22">https://doi.org/10.1017/ajil.2019.22</a>.
+</div>
+<div id="ref-NaegeleZaklan2019" class="csl-entry" role="listitem">
+Naegele, Helene, and Aleksandar Zaklan. 2019. <span>“Does the EU ETS Cause Carbon Leakage in European Manufacturing?”</span> <em>Journal of Environmental Economics and Management</em> 93: 125–47. <a href="https://doi.org/10.1016/j.jeem.2018.11.004">https://doi.org/10.1016/j.jeem.2018.11.004</a>.
+</div>
+<div id="ref-NeuhoffRitz2019" class="csl-entry" role="listitem">
+Neuhoff, Karsten, and Robert A. Ritz. 2019. <em>Carbon Cost Pass-Through in Industrial Sectors</em>. Working Paper 1935. Energy Policy Research Group, University of Cambridge.
+</div>
+<div id="ref-Neuhoff2026" class="csl-entry" role="listitem">
+Neuhoff, Karsten, Misato Sato, Fernanda Ballesteros, et al. 2026. <span>“Industrial Decarbonization in a Fragmented World: Carbon Pricing with Border Adjustments Using Standardized Values.”</span> <em>Energy Policy</em> 216: 115405. <a href="https://doi.org/10.1016/j.enpol.2026.115405">https://doi.org/10.1016/j.enpol.2026.115405</a>.
+</div>
+<div id="ref-Nordhaus2015" class="csl-entry" role="listitem">
+Nordhaus, William. 2015. <span>“Climate Clubs: Overcoming Free-Riding in International Climate Policy.”</span> <em>American Economic Review</em> 105 (4): 1339–70. <a href="https://doi.org/10.1257/aer.15000001">https://doi.org/10.1257/aer.15000001</a>.
+</div>
+<div id="ref-ParryRoafBlack2021" class="csl-entry" role="listitem">
+Parry, Ian, Simon Black, and James Roaf. 2021. <em>Proposal for an International Carbon Price Floor Among Large Emitters</em>. Staff Climate Note 2021/001. International Monetary Fund. <a href="https://doi.org/10.5089/9781513583204.066">https://doi.org/10.5089/9781513583204.066</a>.
+</div>
+<div id="ref-WorldBank2017Baselines" class="csl-entry" role="listitem">
+Partnership for Market Readiness. 2017. <em>Establishing Scaled-up Crediting Program Baselines Under the <span>Paris Agreement</span>: Issues and Options</em>. PMR Technical Note. World Bank. <a href="https://doi.org/10.1596/28785">https://doi.org/10.1596/28785</a>.
+</div>
+<div id="ref-PetersHertwich2008" class="csl-entry" role="listitem">
+Peters, Glen P., and Edgar G. Hertwich. 2008. <span>“<span>CO<span class="math inline">\(_2\)</span></span> Embodied in International Trade with Implications for Global Climate Policy.”</span> <em>Environmental Science &amp; Technology</em> 42 (5): 1401–7. <a href="https://doi.org/10.1021/es072023k">https://doi.org/10.1021/es072023k</a>.
+</div>
+<div id="ref-Peters2011" class="csl-entry" role="listitem">
+Peters, Glen P., Jan C. Minx, Christopher L. Weber, and Ottmar Edenhofer. 2011. <span>“Growth in Emission Transfers via International Trade from 1990 to 2008.”</span> <em>Proceedings of the National Academy of Sciences</em> 108 (21): 8903–8. <a href="https://doi.org/10.1073/pnas.1006388108">https://doi.org/10.1073/pnas.1006388108</a>.
+</div>
+<div id="ref-PollittNeuhoffLin2020" class="csl-entry" role="listitem">
+Pollitt, Hector, Karsten Neuhoff, and Xinru Lin. 2020. <span>“The Impact of Implementing a Consumption Charge on Carbon-Intensive Materials in Europe.”</span> <em>Climate Policy</em> 20 (sup1): S74–89. <a href="https://doi.org/10.1080/14693062.2019.1605969">https://doi.org/10.1080/14693062.2019.1605969</a>.
+</div>
+<div id="ref-Probst2024" class="csl-entry" role="listitem">
+Probst, Benedict S., Malte Toetzke, Andreas Kontoleon, et al. 2024. <span>“Systematic Assessment of the Achieved Emission Reductions of Carbon Crediting Projects.”</span> <em>Nature Communications</em> 15 (1): 9562. <a href="https://doi.org/10.1038/s41467-024-53645-z">https://doi.org/10.1038/s41467-024-53645-z</a>.
+</div>
+<div id="ref-SternerIsaksson2006" class="csl-entry" role="listitem">
+Sterner, Thomas, and Lena Höglund Isaksson. 2006. <span>“Refunded Emission Payments Theory, Distribution of Costs, and Swedish Experience of NOx Abatement.”</span> <em>Ecological Economics</em> 57 (1): 93–106. <a href="https://doi.org/10.1016/j.ecolecon.2005.03.008">https://doi.org/10.1016/j.ecolecon.2005.03.008</a>.
+</div>
+<div id="ref-StrandRBP2020" class="csl-entry" role="listitem">
+Strand, Jon. 2020. <em>Supporting Carbon Tax Implementation in Developing Countries Through Results-Based Payments for Emissions Reductions</em>. Policy Research Working Paper 9443. World Bank. <a href="https://doi.org/10.1596/1813-9450-9443">https://doi.org/10.1596/1813-9450-9443</a>.
+</div>
+<div id="ref-CFPB13" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026a. <em>Converting a <span>VAT</span> into a Destination Carbon Tax: A Carbon Component in <span>VAT</span> and a Forward Obligation on Energy Suppliers in the <span>European Union</span></em>. 1.3. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB14" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026b. <em>Credit the Price Signal, Not the Payment: Carbon Price Recognition and Scrap Shuffling Under the <span>EU</span>’s Carbon Border Adjustment Mechanism</em>. 1.4. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB12" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026c. <em>Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill</em>. 1.2. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB61" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026d. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-WeisbachKortumWangYao2023" class="csl-entry" role="listitem">
+Weisbach, David A., Samuel Kortum, Michael Wang, and Yujia Yao. 2023. <span>“Trade, Leakage, and the Design of a Carbon Tax.”</span> <em>Environmental and Energy Policy and the Economy</em> 4: 43–90. <a href="https://doi.org/10.1086/722673">https://doi.org/10.1086/722673</a>.
+</div>
+<div id="ref-WorldBank2022Art6" class="csl-entry" role="listitem">
+World Bank. 2022. <em>Developing an <span>Article 6</span> Strategy for Host Countries</em>. World Bank. <a href="https://doi.org/10.1596/38343">https://doi.org/10.1596/38343</a>.
+</div>
+<div id="ref-WorldBank2025" class="csl-entry" role="listitem">
+World Bank. 2025. <em>State and Trends of Carbon Pricing 2025</em>. World Bank. <a href="https://doi.org/10.1596/978-1-4648-2255-1">https://doi.org/10.1596/978-1-4648-2255-1</a>.
+</div>
+<div id="ref-WorldBank2017RBCF" class="csl-entry" role="listitem">
+World Bank, and Frankfurt School of Finance and Management. 2017. <em>Results-Based Climate Finance in Practice: Delivering Climate Finance for Low-Carbon Development</em>. World Bank. <a href="https://doi.org/10.1596/26644">https://doi.org/10.1596/26644</a>.
+</div>
+</div>
+</section>
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="appendix-a-literature-review" class="level1 appendix" data-number="12"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">12</span> Appendix A: Literature review</h2><div class="quarto-appendix-contents">
+
+<p>This appendix reviews the literature behind each proposition, organized by theme. The working notes behind it, with a summary of each paper and how it was read (full text, abstract or metadata), are in <code>5.Notes/LiteratureAppendix-draft.md</code>.</p>
+<section id="a.1-where-the-architecture-sits" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="a.1-where-the-architecture-sits"><span class="header-section-number">12.1</span> A.1 Where the architecture sits</h2>
+<p>The two-track architecture joins four bodies of work that have mostly developed apart: the theory of unilateral policy under leakage, border carbon adjustment, intensity-based instruments, and destination-based taxation.</p>
+<p><strong>The theory of the split is old.</strong> <span class="citation" data-cites="Markusen1975">Markusen (<a href="#ref-Markusen1975" role="doc-biblioref">1975</a>)</span> showed that with an international externality the best unilateral policy taxes both production and consumption. <span class="citation" data-cites="Hoel1996">Hoel (<a href="#ref-Hoel1996" role="doc-biblioref">1996</a>)</span> showed that without tariffs a carbon tax should be lower in trade-exposed sectors. <span class="citation" data-cites="WeisbachKortumWangYao2023">Weisbach et al. (<a href="#ref-WeisbachKortumWangYao2023" role="doc-biblioref">2023</a>)</span> restate the result in modern form and add an extraction leg. Most directly, <span class="citation" data-cites="Holland2012">Stephen P. Holland (<a href="#ref-Holland2012" role="doc-biblioref">2012</a>)</span> proves that an intensity standard combined with a consumption tax can reach the first best under leakage, while an emissions tax combined with a consumption tax sometimes cannot. Proposition 1 is therefore an implementable statement of a known allocation result, not a new theorem. Its revenue corollary, that the tracks differ by <span class="math inline">\(t\)</span> times carbon in net exports, is the carbon analogue of the neutrality of origin and destination bases for a uniform tax <span class="citation" data-cites="LockwoodWhalley2010 LockwoodDeMezaMyles1994">(<a href="#ref-LockwoodWhalley2010" role="doc-biblioref">Lockwood and Whalley 2010</a>; <a href="#ref-LockwoodDeMezaMyles1994" role="doc-biblioref">Lockwood et al. 1994</a>)</span>.</p>
+<p><strong>The design has close European precedents.</strong> <span class="citation" data-cites="Grubb2022">Grubb et al. (<a href="#ref-Grubb2022" role="doc-biblioref">2022</a>)</span> list the separation of incentives at the point of production from a charge on the use of carbon-intensive materials as one of three trade-compatible options. <span class="citation" data-cites="PollittNeuhoffLin2020">Pollitt et al. (<a href="#ref-PollittNeuhoffLin2020" role="doc-biblioref">2020</a>)</span> simulate a consumption charge on basic materials equivalent to about €80/tCO₂: it cuts EU emissions by roughly 10 percent with no leakage. <span class="citation" data-cites="Ismer2016">Ismer et al. (<a href="#ref-Ismer2016" role="doc-biblioref">2016</a>)</span> give the legal design of such a charge as an excise at default intensity, applied equally to imports. <span class="citation" data-cites="Neuhoff2026">Neuhoff et al. (<a href="#ref-Neuhoff2026" role="doc-biblioref">2026</a>)</span> propose benchmark-based free allocation plus a standardized liability per tonne of material with export relief. Each is a production-plus-consumption architecture.</p>
+<p><strong>What this paper adds</strong> is narrower: (i) a revenue-neutral feebate with an updated benchmark in place of free allocation, so the production track needs no emissions trading system and no auction revenue and can be adopted by a developing country alone; (ii) a consumption track that runs through VAT across all goods rather than an excise on a few materials; (iii) the closed-form residual cost <span class="math inline">\(\tfrac12 t\Delta e\)</span> and its calibration to EU default intensities for steel; (iv) the exporter best response under intensity-based destination charges; and (v) the extension of Strand’s crediting threshold to feebates, with the best response <span class="math inline">\(t = \pi\)</span>.</p>
+</section>
+<section id="a.2-leakage-and-competitiveness" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="a.2-leakage-and-competitiveness"><span class="header-section-number">12.2</span> A.2 Leakage and competitiveness</h2>
+<p>Model-based estimates of leakage from unilateral carbon pricing range from 5 to 25 percent, with a central value of about 14 percent <span class="citation" data-cites="BrangerQuirion2014">(<a href="#ref-BrangerQuirion2014" role="doc-biblioref">Branger and Quirion 2014</a>)</span>. Ex-post studies of the EU system find little or none at prices to date <span class="citation" data-cites="NaegeleZaklan2019 Dechezlepretre2022 Colmer2024">(<a href="#ref-NaegeleZaklan2019" role="doc-biblioref">Naegele and Zaklan 2019</a>; <a href="#ref-Dechezlepretre2022" role="doc-biblioref">Dechezleprêtre et al. 2022</a>; <a href="#ref-Colmer2024" role="doc-biblioref">Colmer et al. 2025</a>)</span>, partly because free allocation shields industry and partly because prices were low; the evidence on relocation of investment is similar <span class="citation" data-cites="DechezlepretreSato2017">(<a href="#ref-DechezlepretreSato2017" role="doc-biblioref">Dechezleprêtre and Sato 2017</a>)</span>. Pass-through of cost shocks is incomplete in EU trade-exposed sectors and about 70 percent in US manufacturing <span class="citation" data-cites="GanapatiShapiroWalker2020">(<a href="#ref-GanapatiShapiroWalker2020" role="doc-biblioref">Ganapati et al. 2020</a>)</span>. The case for the architecture is therefore prospective: it concerns the rates of $80–100 that the range of the High-Level Commission implies <span class="citation" data-cites="HLCCP2017">(<a href="#ref-HLCCP2017" role="doc-biblioref">High-Level Commission on Carbon Prices 2017</a>)</span>, not leakage already observed. A second leakage channel, through world fossil-fuel prices, survives any charge on goods <span class="citation" data-cites="BrangerQuirion2014 WeisbachKortumWangYao2023">(<a href="#ref-BrangerQuirion2014" role="doc-biblioref">Branger and Quirion 2014</a>; <a href="#ref-WeisbachKortumWangYao2023" role="doc-biblioref">Weisbach et al. 2023</a>)</span>; only supply-side measures or wider participation address it <span class="citation" data-cites="JakobSteckelEdenhofer2014">(<a href="#ref-JakobSteckelEdenhofer2014" role="doc-biblioref">Jakob et al. 2014</a>)</span>.</p>
+</section>
+<section id="a.3-border-carbon-adjustment" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="a.3-border-carbon-adjustment"><span class="header-section-number">12.3</span> A.3 Border carbon adjustment</h2>
+<p><span class="citation" data-cites="KeenParryRoaf2022">Keen et al. (<a href="#ref-KeenParryRoaf2022" role="doc-biblioref">2022</a>)</span> is the reference design paper: border adjustments are the most effective domestic response to leakage, design is critical, coverage should start with energy-intensive trade-exposed sectors, and charges should be benchmarked first on domestic intensities. <span class="citation" data-cites="Mehling2019">Mehling et al. (<a href="#ref-Mehling2019" role="doc-biblioref">2019</a>)</span> analyze border adjustments under GATT Articles I, II:2(a), III and XX and the subsidies agreement, and recommend default values with rebuttal and credit for foreign policies, which supports the recognition of non-price instruments argued here and in <span class="citation" data-cites="CFPB14">Stretton (<a href="#ref-CFPB14" role="doc-biblioref">2026b</a>)</span>. <span class="citation" data-cites="Cosbey2019">Cosbey et al. (<a href="#ref-Cosbey2019" role="doc-biblioref">2019</a>)</span> give design guidance in the same direction. On distribution, <span class="citation" data-cites="Mattoo2009">Mattoo et al. (<a href="#ref-Mattoo2009" role="doc-biblioref">2009</a>)</span> find that charges on the carbon content of imports, if exporters do not respond, cut manufacturing exports from low- and middle-income countries by about 8 percent and China’s by about a fifth. The EU’s mechanism <span class="citation" data-cites="EU2023">(<a href="#ref-EU2023" role="doc-biblioref">European Parliament and Council 2023</a>)</span> as amended, with default values that carry deliberate mark-ups <span class="citation" data-cites="EU2025DV">(<a href="#ref-EU2025DV" role="doc-biblioref">European Commission 2025</a>)</span>, deducts only carbon prices effectively paid, a choice examined in the companion paper <span class="citation" data-cites="CFPB14">(<a href="#ref-CFPB14" role="doc-biblioref">Stretton 2026b</a>)</span>.</p>
+</section>
+<section id="a.4-intensity-based-instruments-and-feebates" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="a.4-intensity-based-instruments-and-feebates"><span class="header-section-number">12.4</span> A.4 Intensity-based instruments and feebates</h2>
+<p><span class="citation" data-cites="Fischer2001">Carolyn Fischer (<a href="#ref-Fischer2001" role="doc-biblioref">2001</a>)</span> shows that tradable performance standards, taxes with output-based rebates and output-based permit allocation are all equivalent to an emissions tax plus an output subsidy: for a given target they lean too much on intensity and too little on output. That is Proposition 4. <span class="citation" data-cites="HollandHughesKnittel2009">Stephen P. Holland et al. (<a href="#ref-HollandHughesKnittel2009" role="doc-biblioref">2009</a>)</span> show that intensity standards can even raise emissions where the output subsidy dominates. <span class="citation" data-cites="FischerFox2007">C. Fischer and Fox (<a href="#ref-FischerFox2007" role="doc-biblioref">2007</a>)</span> and <span class="citation" data-cites="FischerFox2012">Carolyn Fischer and Fox (<a href="#ref-FischerFox2012" role="doc-biblioref">2012</a>)</span> compare output-based rebates with border adjustment: full adjustment is the most effective against leakage, but where it is limited a domestic rebate can do more. The evidence from feebates in use is mixed in the expected direction. The Swedish NOx charge, refunded on output, cut emission intensity substantially <span class="citation" data-cites="SternerIsaksson2006">(<a href="#ref-SternerIsaksson2006" role="doc-biblioref">Sterner and Höglund Isaksson 2006</a>)</span>. The French bonus-malus on cars shifted purchases toward low-emission models but raised total emissions in the short run through higher sales <span class="citation" data-cites="DHaultfoeuille2014">(<a href="#ref-DHaultfoeuille2014" role="doc-biblioref">D’Haultfœuille et al. 2014</a>)</span>. The IMF finds feebate packages achieve roughly 50–70 percent of the cuts of a carbon tax at the same rate <span class="citation" data-cites="IMF2019">(<a href="#ref-IMF2019" role="doc-biblioref">International Monetary Fund 2019</a>)</span>.</p>
+</section>
+<section id="a.5-destination-and-origin" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="a.5-destination-and-origin"><span class="header-section-number">12.5</span> A.5 Destination and origin</h2>
+<p>For a uniform, broad-based tax, a switch between origin and destination bases changes price levels, not relative prices, and so has no real trade effects <span class="citation" data-cites="LockwoodWhalley2010 LockwoodDeMezaMyles1994">(<a href="#ref-LockwoodWhalley2010" role="doc-biblioref">Lockwood and Whalley 2010</a>; <a href="#ref-LockwoodDeMezaMyles1994" role="doc-biblioref">Lockwood et al. 1994</a>)</span>. Proposition 7 therefore rests on the <em>non-uniformity</em> of carbon charges across exporters’ intensities, not on the destination basis as such. VAT shows that a destination-based tax can spread without coordination <span class="citation" data-cites="KeenLockwood2010">(<a href="#ref-KeenLockwood2010" role="doc-biblioref">Keen and Lockwood 2010</a>)</span>; proposals for destination-based corporate taxation rest on the same logic <span class="citation" data-cites="Auerbach2017 Devereux2021">(<a href="#ref-Auerbach2017" role="doc-biblioref">Auerbach et al. 2017</a>; <a href="#ref-Devereux2021" role="doc-biblioref">Devereux et al. 2021</a>)</span>. Consumption-based accounts show that the footprints of high-income countries exceed their territorial emissions <span class="citation" data-cites="PetersHertwich2008 Peters2011 DavisCaldeira2010">(<a href="#ref-PetersHertwich2008" role="doc-biblioref">Peters and Hertwich 2008</a>; <a href="#ref-Peters2011" role="doc-biblioref">Peters et al. 2011</a>; <a href="#ref-DavisCaldeira2010" role="doc-biblioref">Davis and Caldeira 2010</a>)</span>.</p>
+</section>
+<section id="a.6-clubs-and-the-race-to-the-top" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="a.6-clubs-and-the-race-to-the-top"><span class="header-section-number">12.6</span> A.6 Clubs and the race to the top</h2>
+<p><span class="citation" data-cites="Nordhaus2015">Nordhaus (<a href="#ref-Nordhaus2015" role="doc-biblioref">2015</a>)</span> shows that a club with a small uniform tariff on non-members can sustain a large coalition. The incentive in Proposition 7 differs: it comes from a charge that rises with each exporter’s intensity, not from a flat penalty. <span class="citation" data-cites="BoehringerCarboneRutherford2016">Böhringer et al. (<a href="#ref-BoehringerCarboneRutherford2016" role="doc-biblioref">2016</a>)</span> find the threat of carbon tariffs credible in a numerical game, and <span class="citation" data-cites="HelmHepburnRuta2012">Helm et al. (<a href="#ref-HelmHepburnRuta2012" role="doc-biblioref">2012</a>)</span> argue that border adjustments give exporters an incentive to price carbon themselves so as to keep the revenue.</p>
+</section>
+<section id="a.7-crediting-and-results-based-finance" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="a.7-crediting-and-results-based-finance"><span class="header-section-number">12.7</span> A.7 Crediting and results-based finance</h2>
+<p><span class="citation" data-cites="StrandRBP2020">Strand (<a href="#ref-StrandRBP2020" role="doc-biblioref">2020</a>)</span> derives, for a donor-supported carbon tax, a break-even payment of half the tax rate when the host keeps the reduction toward its own target, the same threshold as Proposition 6, rising to about one and a half times the rate when the credit is transferred with a corresponding adjustment under Article 6 <span class="citation" data-cites="WorldBank2022Art6">(<a href="#ref-WorldBank2022Art6" role="doc-biblioref">World Bank 2022</a>)</span>. The case for crediting policy rather than projects rests on the poor record of project offsets: fewer than 16 percent of credits examined by <span class="citation" data-cites="Probst2024">Probst et al. (<a href="#ref-Probst2024" role="doc-biblioref">2024</a>)</span> represent real reductions, and <span class="citation" data-cites="Calel2025">Calel et al. (<a href="#ref-Calel2025" role="doc-biblioref">2025</a>)</span> find at least half of Indian wind credits non-additional. Baselines remain the hard part <span class="citation" data-cites="WorldBank2017Baselines WorldBank2017RBCF">(<a href="#ref-WorldBank2017Baselines" role="doc-biblioref">Partnership for Market Readiness 2017</a>; <a href="#ref-WorldBank2017RBCF" role="doc-biblioref">World Bank and Frankfurt School of Finance and Management 2017</a>)</span>.</p>
+</section>
+<section id="a.8-credibility-and-forward-obligations" class="level2" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="a.8-credibility-and-forward-obligations"><span class="header-section-number">12.8</span> A.8 Credibility and forward obligations</h2>
+<p>A government that re-optimizes each period cannot commit, so a carbon price set annually will not be believed by investors in long-lived capital <span class="citation" data-cites="KydlandPrescott1977">(<a href="#ref-KydlandPrescott1977" role="doc-biblioref">Kydland and Prescott 1977</a>)</span>. Once firms have sunk low-carbon investment, governments are tempted to lower the price, and firms anticipate this <span class="citation" data-cites="HelmHepburnMash2003 Brunner2012">(<a href="#ref-HelmHepburnMash2003" role="doc-biblioref">Helm 2003</a>; <a href="#ref-Brunner2012" role="doc-biblioref">Brunner et al. 2012</a>)</span>. A forward-announced legal obligation on the few large suppliers of fuel and electricity is a commitment device of the kind this literature recommends.</p>
+</section>
+<section id="a.9-literature-that-challenges-a-proposition" class="level2" data-number="12.9">
+<h2 data-number="12.9" class="anchored" data-anchor-id="a.9-literature-that-challenges-a-proposition"><span class="header-section-number">12.9</span> A.9 Literature that challenges a proposition</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Proposition</th>
+<th>Challenge</th>
+<th>Source</th>
+<th>Response in the paper</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 (no leakage)</td>
+<td>Leakage through world fuel prices survives any charge on goods</td>
+<td><span class="citation" data-cites="BrangerQuirion2014">Branger and Quirion (<a href="#ref-BrangerQuirion2014" role="doc-biblioref">2014</a>)</span>; <span class="citation" data-cites="WeisbachKortumWangYao2023">Weisbach et al. (<a href="#ref-WeisbachKortumWangYao2023" role="doc-biblioref">2023</a>)</span></td>
+<td>Stated as the fourth qualification to Proposition 1</td>
+</tr>
+<tr class="even">
+<td>1 (novelty)</td>
+<td>Intensity standard plus consumption tax already shown first best</td>
+<td><span class="citation" data-cites="Holland2012">Stephen P. Holland (<a href="#ref-Holland2012" role="doc-biblioref">2012</a>)</span></td>
+<td>Proposition 1 presented as an implementable statement of a known result</td>
+</tr>
+<tr class="odd">
+<td>4–5 (output margin)</td>
+<td>Intensity instruments can raise output and emissions</td>
+<td><span class="citation" data-cites="HollandHughesKnittel2009">Stephen P. Holland et al. (<a href="#ref-HollandHughesKnittel2009" role="doc-biblioref">2009</a>)</span>; <span class="citation" data-cites="DHaultfoeuille2014">D’Haultfœuille et al. (<a href="#ref-DHaultfoeuille2014" role="doc-biblioref">2014</a>)</span></td>
+<td>Sign condition (Proposition 5); consumption track supplies the output margin</td>
+</tr>
+<tr class="even">
+<td>6 (crediting)</td>
+<td>Threshold rises to about <span class="math inline">\(1.5t\)</span> with a corresponding adjustment</td>
+<td><span class="citation" data-cites="StrandRBP2020">Strand (<a href="#ref-StrandRBP2020" role="doc-biblioref">2020</a>)</span>; <span class="citation" data-cites="WorldBank2022Art6">World Bank (<a href="#ref-WorldBank2022Art6" role="doc-biblioref">2022</a>)</span></td>
+<td>Proposition 6 restricted to crediting without transfer of attribution</td>
+</tr>
+<tr class="odd">
+<td>7 (race to the top)</td>
+<td>Charges on actual intensity invite shuffling; standardized values preferred</td>
+<td><span class="citation" data-cites="Neuhoff2026">Neuhoff et al. (<a href="#ref-Neuhoff2026" role="doc-biblioref">2026</a>)</span>; <span class="citation" data-cites="BushnellChenZaragozaWatkins2014">Bushnell et al. (<a href="#ref-BushnellChenZaragozaWatkins2014" role="doc-biblioref">2014</a>)</span></td>
+<td>A sector-wide feebate lowers intensity on all output, leaving less to shuffle</td>
+</tr>
+<tr class="even">
+<td>7 (development cost)</td>
+<td>Charges on the carbon content of imports cut developing-country exports if exporters do not respond</td>
+<td><span class="citation" data-cites="Mattoo2009">Mattoo et al. (<a href="#ref-Mattoo2009" role="doc-biblioref">2009</a>)</span></td>
+<td>The best response is to adopt the feebate, and recognition should rest on the price signal</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div></section><section id="appendix-b-proofs" class="level1 appendix" data-number="13"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">13</span> Appendix B: Proofs</h2><div class="quarto-appendix-contents">
+
+<p><em>Setup.</em> Unit cost <span class="math inline">\(c(e) = c_0 + \tfrac{k}{2}(e_0 - e)^2\)</span>; competitive pricing, <span class="math inline">\(p = c(e) + {}\)</span>policy payment per unit; baseline <span class="math inline">\(p_0 = c_0\)</span>.</p>
+<p><em>Proposition 2.</em> Under the origin tax the firm minimizes <span class="math inline">\(c(e) + te\)</span>; under the feebate, <span class="math inline">\(c(e) + t(e - \bar e)\)</span> with <span class="math inline">\(\bar e\)</span> taken as given. In both cases the first-order condition is <span class="math inline">\(k(e_0 - e) = t\)</span>, so <span class="math inline">\(e^* = e_0 - t/k\)</span> and <span class="math inline">\(\Delta e = t/k\)</span>; the second-order condition holds since <span class="math inline">\(c''(e) = k &gt; 0\)</span>.</p>
+<p><em>Proposition 3.</em> Under the feebate with <span class="math inline">\(\bar e = e^*\)</span>, net payments are zero and <span class="math inline">\(p_F = c(e^*) = c_0 + t^2/2k\)</span>; since <span class="math inline">\(\Delta e = t/k\)</span>, <span class="math inline">\(t^2/2k = \tfrac12 t \Delta e\)</span>. Under the tax, <span class="math inline">\(p_T = c(e^*) + t e^* = c_0 + t e_0 - t^2/2k\)</span>. The ratio is <span class="math inline">\((t^2/2k)/(te_0 - t^2/2k) = \Delta e/(2e_0 - \Delta e)\)</span>. Output changes follow from <span class="math inline">\(\Delta Q/Q \approx -\eta\, \Delta p / p_0\)</span>.</p>
+<p><em>Proposition 1.</em> (i) follows from Proposition 2. (ii) Under the two tracks a home-produced unit consumed at home costs <span class="math inline">\(c(e^*) + t(e^* - \bar e) + \tau e^*\)</span>; with <span class="math inline">\(\bar e = e^*\)</span> and <span class="math inline">\(\tau = t\)</span> this is <span class="math inline">\(c(e^*) + t e^*\)</span>, the Pigouvian price. An imported unit with embodied intensity <span class="math inline">\(m\)</span> costs its delivered price plus <span class="math inline">\(\tau m\)</span>. (iii) An exported unit costs <span class="math inline">\(c(e^*) + t(e^* - \bar e) = c(e^*)\)</span>. Revenue: the feebate raises zero in total; the destination charge raises <span class="math inline">\(\tau\)</span> times embodied carbon in home consumption. The origin tax raises <span class="math inline">\(t\)</span> times emissions from home production. With <span class="math inline">\(\tau = t\)</span>, the difference is <span class="math inline">\(t\)</span> times (carbon in home production minus carbon in home consumption), which is <span class="math inline">\(t\)</span> times carbon embodied in net exports.</p>
+<p><em>Proposition 4.</em> To first order, tonnes abated under the tax are <span class="math inline">\(Q\,\Delta e + e_0\,|\Delta Q| = Q t_T/k + e_0 Q \eta t_T e_0 / p_0\)</span>; under the feebate alone, <span class="math inline">\(Q t_F / k\)</span> (the output change is second order). Equating gives <span class="math inline">\(t_F = t_T (1 + \eta k e_0^2 / p_0)\)</span>.</p>
+<p><em>Proposition 5.</em> With a competitive fringe, the price equals the marginal producer’s unit cost, <span class="math inline">\(c_m(e_m^*) + t(e_m^* - \bar e) = c_{0m} + \tfrac12 t \Delta e_m + t(e_m^* - \bar e)\)</span>. Output falls relative to no policy if and only if this exceeds <span class="math inline">\(c_{0m}\)</span>.</p>
+<p><em>Proposition 6.</em> <span class="math inline">\(N(t) = Q t^2/2k - \pi Q t/k = Q t (t - 2\pi)/2k\)</span>. <span class="math inline">\(N(t) &lt; 0\)</span> for <span class="math inline">\(0 &lt; t &lt; 2\pi\)</span>; <span class="math inline">\(N'(t) = Q(t - \pi)/k = 0\)</span> at <span class="math inline">\(t = \pi\)</span>, where <span class="math inline">\(N = -Q\pi^2/2k\)</span>. The buyer pays <span class="math inline">\(\pi \cdot Q\pi/k = Q\pi^2/k\)</span>.</p>
+<p><em>Proposition 7.</em> <span class="math inline">\(\partial D_i / \partial t_i = (t_i - \tau)/k_i = 0\)</span> at <span class="math inline">\(t_i = \tau\)</span>, and <span class="math inline">\(\partial^2 D_i / \partial t_i^2 = 1/k_i &gt; 0\)</span>.</p>
+<p>All results were checked symbolically.</p>
+</div></section><section id="appendix-c-calibration-and-simulation" class="level1 appendix" data-number="14"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">14</span> Appendix C: Calibration and simulation</h2><div class="quarto-appendix-contents">
+
+<p><em>Data.</em> EU default values for embodied emissions, direct emissions in tCO₂ per tonne, as adopted under Implementing Regulation (EU) 2025/2621; extracted for cement (CN 2523 29), semi-finished steel (7207 11 11), hot-rolled flat steel (7208) and unwrought aluminium (7601) for 120 countries and the residual “other countries” category in <code>2.Source/CBAM-default-values-steel-aluminium-cement.csv</code>. The default values used in the EU’s regime from 2026 add a mark-up of 10 percent in 2026, 20 percent in 2027 and 30 percent from 2028 for steel; the calibration uses the values before mark-up, which are the better estimate of actual intensity.</p>
+<p><em>Stylized parameters.</em> Base price $600/t for all exporters [VERIFY against hot-rolled coil export prices]; abatement slope <span class="math inline">\(k_i = 50/(0.3\,e_{0i})\)</span>, so that $50/tCO₂ cuts intensity by 30 percent; an abatement floor at 30 percent of baseline intensity; Armington elasticity <span class="math inline">\(\sigma = 4\)</span> among exporters [VERIFY against estimates for steel]; equal preference weights.</p>
+<p><em>Code.</em> <code>2.Source/simulate_steel.py</code> writes <a href="#tbl-steel" class="quarto-xref">Table&nbsp;1</a>, <a href="#fig-steel-prices" class="quarto-xref">Figure&nbsp;2</a> and <a href="#fig-race" class="quarto-xref">Figure&nbsp;4</a>; <code>2.Source/make_fig1_incidence.py</code> writes <a href="#fig-incidence" class="quarto-xref">Figure&nbsp;1</a>.</p>
+</div></section><section id="appendix-d-political-feasibility" class="level1 appendix" data-number="15"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">15</span> Appendix D: Political feasibility</h2><div class="quarto-appendix-contents">
+
+<p>Let industry accept a policy if the rise in its average cost is at most <span class="math inline">\(\bar c_I\)</span>, and voters accept it if the rise in household prices net of rebates is at most <span class="math inline">\(\bar c_V\)</span>. Under an origin tax at rate <span class="math inline">\(t\)</span>, industry’s average cost rises by <span class="math inline">\(t e_0 - t^2/2k \approx t e_0\)</span>, and households’ prices by <span class="math inline">\(\alpha t\)</span>, where <span class="math inline">\(\alpha\)</span> is the carbon embodied per dollar of household spending. The feasible rate is <span class="math inline">\(t^{\max}_{\text{tax}} = \min(\bar c_I / e_0,\ \bar c_V / \alpha)\)</span>. Under the two tracks, industry’s average cost rises by <span class="math inline">\(t^2/2k\)</span>, so the industry constraint allows <span class="math inline">\(t \le \sqrt{2k\,\bar c_I}\)</span>, which exceeds <span class="math inline">\(\bar c_I/e_0\)</span> whenever <span class="math inline">\(\bar c_I &lt; 2 k e_0^2\)</span>, that is, whenever the industry constraint binds at any rate cutting intensity by less than its full baseline. The household constraint applies to the consumption rate <span class="math inline">\(\tau\)</span> net of the VAT cut. The production rate is no longer limited by what households will accept, and the consumption rate is no longer limited by what industry will accept. That separation is the political case for the architecture.</p>
+
+
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

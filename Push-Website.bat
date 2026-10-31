@@ -1,10 +1,10 @@
 @echo off
 rem Push the website: upload the already-built site (E Website\_site) to the web server (WinSCP if installed,
 rem otherwise Python's built-in FTP - nothing to install),
-rem then delete files that were retired from the site. It does not compile: run Compile-Website.bat first,
+rem then make the server's papers folder match the site's (files no longer linked are deleted). It does not compile: run Compile-Website.bat first,
 rem or Deploy-Website.bat to do both.
 rem The FTP login is read from FTP-Login.txt, next to this file (host, user, password, remote, protocol, url).
-rem After uploading it checks research.html on the server and, if FTP-Login.txt has url = ..., on the live website.
+rem After uploading it checks index.html on the server and, if FTP-Login.txt has url = ..., on the live website.
 setlocal
 cd /d "%~dp0"
 set "FTPCFG=%~dp0FTP-Login.txt"
@@ -21,14 +21,10 @@ echo   Uploading E Website\_site to %FTP_remote% with WinSCP ...
 "%WINSCP%" /command ^
     "open ftp://%FTP_user%:%FTP_password%@%FTP_host%/" ^
     "synchronize remote ""%~dp0E Website\_site"" %FTP_remote%" ^
-    "option batch continue" ^
-    "rm %FTP_remote%/papers/SustainabilityLinkedLending.pdf" ^
-    "rm %FTP_remote%/papers/MDBClimateEnvelope.docx" ^
-    "rm %FTP_remote%/papers/GeoprosperityIntro.docx" ^
-    "rm %FTP_remote%/papers/CombinedOverview.docx" ^
+    "synchronize remote -delete ""%~dp0E Website\_site\papers"" %FTP_remote%/papers" ^
     "exit"
 echo.
-echo   Done. Errors from the rm lines just mean those retired files are already gone.
+echo   Done. The server's papers folder now holds only the files the site links to.
 echo.
 echo   Checking that the server and the live website have the new pages ...
 python "%~dp0H Writing Instructions\Scripts\Website\deploy_ftp.py" "%FTPCFG%" "%~dp0E Website\_site" --check

@@ -1,95 +1,63 @@
-"""Copy the working-paper series (sections 1 to 7) and the section 8 overviews and books to the website's papers/ folder.
+"""Copy every paper, brief, deck, section overview and book into the website's PaperArchive/ folder.
 
-Stable permalinks, one per paper and form, overwritten on each publish:
-    papers/<PaperName>.docx         the academic working paper (current version)
-    papers/Brief-<PaperName>.docx   the Climate Fiscal Policy Brief (current version)
-    papers/Slides-<PaperName>.pptx  the four-slide deck, where it exists
-    papers/Overview<Section>.docx   each section's overview, and papers/Slides-<Section>.pptx its theme deck
+PaperArchive/ is the full set under stable names. It is NOT uploaded. build_research_pages.py then copies into
+papers/ only the files the site's pages actually link to, and papers/ is what goes online.
 
-Papers in sections 5 to 7, and Rent Tax (2.1), are working paper and slides only (no brief); missing files are reported and skipped.
-Folder and file names follow H Writing Instructions/NUMBERING.md; published names stay stable so links survive renumbering.
+Stable names, one per paper and form, overwritten on each run:
+    <PaperName>.docx           the working paper (current version), from the master's own .docx
+    Brief-<PaperName>.docx     the Climate Fiscal Policy Brief, where there is one
+    Slides-<PaperName>.pptx    the deck, where there is one
+    Overview<Section>.docx     each section's overview, and Slides-<Section>.pptx its theme deck
+    books (BOOKS below)
 
-Run from anywhere:  python "H Writing Instructions/Scripts/Website/publish_series.py" (Compile-Website.bat at the repo root does this)
-Then: quarto render, and deploy.bat (on Stephen's machine) to upload _site.
+The papers are every numbered paper folder in the sections listed in site_config.py, so a new paper folder is
+picked up without editing this file. Missing briefs and decks are reported and skipped.
+
+Run from anywhere:  python "H Writing Instructions/Scripts/Website/publish_series.py" (Compile-Website.bat does this)
 Log every publish in H Writing Instructions/Writing Standards/publishing-log.md.
 """
 import shutil
-from pathlib import Path
+from site_config import PARTS, ARCHIVE, paper_folders, paper_name, section_folder
 
-REPO = Path(__file__).resolve().parents[3]
-ROOTS = [REPO / "C Policy and FInance", REPO / "D Modelling"]   # the papers: sections 1-4, then 5-7
-SITE = REPO / "E Website"          # the Quarto site
+# book folder (anywhere under a part's root), file inside it, published name
+BOOKS = [
+    ("3.3.TimeAndChance", "TimeAndChance.docx", "TimeAndChance.docx"),
+    ("8.5.2.CarbonPricingRightPolicyWrongTime", "CarbonPricingRightPolicyWrongTime.docx", "CarbonPricingRightPolicyWrongTime.docx"),
+    ("8.5.3.Screwed", "Screwed.docx", "Screwed.docx"),
+]
 
 
-def find(name):
-    """Locate a paper folder or overview file by name anywhere under the paper folders (ROOTS)."""
-    hits = [p for r in ROOTS for p in r.rglob(name) if "8.PreviousVersions" not in p.parts and "A.Website" not in p.parts]
-    # prefer the copy with real content (skips stale local folders holding only __pycache__)
-    hits.sort(key=lambda p: -sum(1 for f in (p.rglob("*") if p.is_dir() else [p]) if "__pycache__" not in f.parts))
-    return hits[0] if hits else ROOTS[0] / name
-
-PAPERS = {
-    "1.1.OpenEconomyCarbonPricing": "OpenEconomyCarbonPricing",
-    "1.2.FeebatesAndOutputBasedRebating": "FeebatesAndOutputBasedRebating",
-    "1.4.IronSteelCBAM": "IronSteelCBAM",
-    "1.3.CarbonConsumptionTax": "CarbonConsumptionTax",
-    "2.1.RentTax": "RentTax",
-    "3.1.ClimateFinanceIntermediationForCleanPower": "ClimateFinanceIntermediationForCleanPower",
-    "3.2.CleanPowerAssetClasses": "CleanPowerAssetClasses",
-    "4.1.NotionalCapitalisedValueAndGuarantees": "NotionalCapitalisedValueAndGuarantees",
-    "4.2.ClimateInvestmentTrust": "ClimateInvestmentTrust",
-    "4.3.SustainabilityLinkedLending": "SustainabilityLinkedLending",
-    "5.1.CPATMitigationMethods": "CPATMitigationMethods",
-    "5.2.CPATAIImplementation": "CPATAIImplementation",
-    "5.3.CPATValidation": "CPATValidation",
-    "5.4.ElasticityValidation": "ElasticityValidation",
-    "6.1.PolicyEquivalentCarbonPriceAndCES": "PolicyEquivalentCarbonPriceAndCES",
-    "6.2.CBAMPolicyTool": "CBAMPolicyTool",
-    "6.3.PublicInvestment": "PublicInvestment",
-    "6.4.ActivityModelling": "ActivityModelling",
-    "6.5.MacroFiscalEnergyScenarioTool": "MacroFiscalEnergyScenarioTool",
-    "7.1.ExciseFiscalDiagnostic": "ExciseFiscalDiagnostic",
-    "7.2.FiscalIndicatorsDashboard": "FiscalIndicatorsDashboard",
-}
-OVERVIEWS = {
-    "1.0.OverviewClimateAndFiscalPolicy.docx": "OverviewClimateAndFiscalPolicy.docx",
-    "2.0.OverviewOtherTaxAndFiscalPolicy.docx": "OverviewOtherTaxAndFiscalPolicy.docx",
-    "3.0.OverviewMobilisingPrivateCapital.docx": "OverviewMobilisingPrivateCapital.docx",
-    "4.0.OverviewSovereignIncentives.docx": "OverviewSovereignIncentives.docx",
-    "5.0.OverviewModelling.docx": "OverviewModelling.docx",
-    "6.0.OverviewModularUpgrades.docx": "OverviewModularUpgrades.docx",
-    "7.0.OverviewAnalytics.docx": "OverviewAnalytics.docx",
-    "8.0.OverviewAdditionalPolicyPapers.docx": "OverviewAdditional.docx",
-    "8.5.0.OverviewBooks.docx": "OverviewBooks.docx",
-    "8.6.0.OverviewPhilosophy.docx": "OverviewPhilosophy.docx",
-    "8.7.0.OverviewPolitics.docx": "OverviewPolitics.docx",
-    # Section theme decks
-    "Slides-ClimateAndFiscalPolicy.pptx": "Slides-ClimateAndFiscalPolicy.pptx",
-    "Slides-FinanceAndRisk.pptx": "Slides-FinanceAndRisk.pptx",
-    "Slides-SovereignIncentives.pptx": "Slides-SovereignIncentives.pptx",
-    "Slides-Modelling.pptx": "Slides-Modelling.pptx",
-    "Slides-Analytics.pptx": "Slides-Analytics.pptx",
-    # Books
-    "Screwed.docx": "Screwed.docx",
-}
-out = SITE / "papers"
-out.mkdir(exist_ok=True)
-for folder, name in PAPERS.items():
-    d = find(folder)
-    for src, dst in [
-        (d / f"{name}.docx", out / f"{name}.docx"),
-        (d / "1.Presentation" / f"Brief-{name}.docx", out / f"Brief-{name}.docx"),
-        (d / "1.Presentation" / f"Slides-{name}.pptx", out / f"Slides-{name}.pptx"),
-    ]:
-        if src.exists():
-            shutil.copy2(src, dst)
-            print(f"published {dst}")
-        else:
-            print(f"missing   {src}")
-for src, dst in OVERVIEWS.items():
-    s = find(src)
-    if s.exists():
-        shutil.copy2(s, out / dst)
-        print(f"published {out / dst}")
+def copy(src, dst):
+    if src and src.exists():
+        shutil.copy2(src, dst)
+        print(f"archived  {dst.name}")
     else:
-        print(f"missing   {s}")
+        print(f"missing   {src}")
+
+
+def main():
+    ARCHIVE.mkdir(exist_ok=True)
+    for part in PARTS:
+        for sec in part["sections"]:
+            num = sec[0].split(".")[0]
+            ov_dir = section_folder(part, sec) / f"{num}.0.Overview"
+            ov = next(iter(sorted(ov_dir.glob(f"{num}.0.Overview*.docx"))), None) if ov_dir.is_dir() else None
+            copy(ov, ARCHIVE / sec[4])
+            if sec[5]:
+                copy(ov_dir / "1.Presentation" / sec[5], ARCHIVE / sec[5])
+            for folder in paper_folders(part, sec):
+                name = paper_name(folder)
+                copy(folder / f"{name}.docx", ARCHIVE / f"{name}.docx")
+                for f in (f"Brief-{name}.docx", f"Slides-{name}.pptx"):
+                    if (folder / "1.Presentation" / f).exists():
+                        copy(folder / "1.Presentation" / f, ARCHIVE / f)
+                    else:
+                        print(f"none      {f}")
+        for folder_name, fname, pub in BOOKS:
+            hits = [p for p in part["root"].rglob(folder_name) if p.is_dir()]
+            if hits:
+                copy(hits[0] / fname, ARCHIVE / pub)
+
+
+if __name__ == "__main__":
+    main()

@@ -3,47 +3,58 @@ project:
   output-dir: _site
   render:
     - "*.qmd"
-    - "research/*.qmd"
-    - "research/*/*/index.qmd"
+    - "policy/*.qmd"
+    - "policy/*/*/index.qmd"
+    - "modelling/*.qmd"
+    - "modelling/*/*/index.qmd"
   resources:
     - "papers/**"
 
+# Two research parts, each with its own tab and sidebar (H Writing Instructions/Scripts/Website/site_config.py).
+# The sidebar contents between the BEGIN/END markers are written by build_research_pages.py on every compile.
 website:
   title: "Climate, Fiscal & Finance"
   description: "Research and writing on carbon pricing, fiscal policy, and climate finance."
+  bread-crumbs: true
   navbar:
     right:
       - href: index.qmd
-        text: Home
-      - href: research.qmd
-        text: Research
+        text: Policy and Finance
+      - href: modelling/index.qmd
+        text: Modelling and Analytics
       - href: about.qmd
         text: About
-      - href: contact.qmd
-        text: Contact
-  bread-crumbs: true
   sidebar:
-    - id: research
-      title: "Research"
+    - id: policy
+      title: "Policy and Finance"
       style: docked
       collapse-level: 1
       contents:
-        # BEGIN sidebar contents - written by build_research_pages.py on every compile
-        - text: "Research home"
-          href: research.qmd
+        # BEGIN policy sidebar
+        - text: "Policy and Finance"
+          href: index.qmd
         - section: "1. Carbon Pricing"
-          href: research/1-carbon-pricing.qmd
+          href: policy/1-carbon-pricing.qmd
           contents:
             - text: "1.1 Price Production and Consumption Separately"
-              href: research/1-carbon-pricing/OpenEconomyCarbonPricing/index.qmd
-        - research/2-other-tax.qmd
-        - research/3-finance-and-risk.qmd
-        - research/4-sovereign-incentives.qmd
-        - research/5-modelling.qmd
-        - research/6-modular-upgrades.qmd
-        - research/7-analytics.qmd
-        - research/more.qmd
-        # END sidebar contents
+              href: policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.qmd
+        - policy/2-other-tax.qmd
+        - policy/3-finance-and-risk.qmd
+        - policy/4-sovereign-incentives.qmd
+        - policy/more.qmd
+        # END policy sidebar
+    - id: modelling
+      title: "Modelling and Analytics"
+      style: docked
+      collapse-level: 1
+      contents:
+        # BEGIN modelling sidebar
+        - text: "Modelling and Analytics"
+          href: modelling/index.qmd
+        - modelling/5-modelling.qmd
+        - modelling/6-modular-upgrades.qmd
+        - modelling/7-analytics.qmd
+        # END modelling sidebar
   page-footer:
     left: "© 2026"
     right: "Built with [Quarto](https://quarto.org)"
