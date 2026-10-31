@@ -1,4 +1,4 @@
-"""Figures and fiscal tables for working paper 1.6 (Carbon Consumption Tax).
+"""Figures and fiscal tables for working paper 1.3 (Converting a VAT into a Destination Carbon Tax).
 
 Reads the CSV outputs of calibrate_defaults.py and distribution.py (run those
 first), prints every number used in the paper's fiscal tables, and writes:
@@ -39,6 +39,9 @@ _w = _t.hh_spend_beur * _t.import_share
 print(f"Extra-EU imports {(_w * _t.ghg_extra_eu).sum() / _w.sum():.3f} kg/EUR; EU-made at the same mix "
       f"{(_w * _t.ghg_eu).sum() / _w.sum():.3f} kg/EUR; ratio "
       f"{(_w * _t.ghg_extra_eu).sum() / (_w * _t.ghg_eu).sum():.2f}")
+# What a default schedule at the EU-made average would charge on the whole taxable basket, against its embodied carbon.
+print(f"Taxable basket at EU-made defaults {(_t.hh_spend_beur * _t.ghg_eu).sum() / _t.hh_spend_beur.sum():.3f} kg/EUR; "
+      f"embodied (all origins) {(_t.hh_spend_beur * _t.ghg_all).sum() / _t.hh_spend_beur.sum():.3f} kg/EUR")
 basket = pd.read_csv(HERE / "basket_summary.csv")
 sources = pd.read_csv(HERE / "footprint_sources.csv")
 
@@ -104,13 +107,13 @@ def fig1():
         ax.spines[s].set_visible(False)
     ax.set_xlim(0, 3.1)
     ax.legend(loc="lower right", frameon=False, fontsize=8)
-    fig.suptitle("Imports embody about twice the carbon per euro of EU-made goods",
+    fig.suptitle("Imports from outside the EU embody 1.3 to 3 times the carbon per euro\nof the same manufactures made in the EU",
                  x=0.01, ha="left", fontsize=10.5, color=INK)
     fig.text(0.01, 0.005, "Bars at basic prices; tick marks spread trade margins over goods (purchasers' prices,"
              " excluding taxes).\nSource: author's MRIO calculation from Eurostat FIGARO tables "
              "(naio_10_fcp_ip4) and GHG footprints\n(env_ac_ghgfp), 2022; 2.Source/calibrate_defaults.py.",
              fontsize=7, color=MUTED)
-    fig.tight_layout(rect=(0, 0.06, 1, 0.97))
+    fig.tight_layout(rect=(0, 0.06, 1, 0.95))
     fig.savefig(FIG / "fig1-default-intensities.png")
     plt.close(fig)
 
