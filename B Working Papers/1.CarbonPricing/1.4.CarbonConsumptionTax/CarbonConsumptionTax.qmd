@@ -43,7 +43,7 @@ The paper makes four contributions.
 
 The closest prior work is the proposal for a consumption charge on carbon-intensive materials [@Ismer2016; @PollittNeuhoffLin2020; @Neuhoff2026]. That charge covers a handful of basic materials, such as steel and cement, and is levied as an excise outside VAT. The carbon component covers every taxable good and service and runs through the VAT invoice chain with credit for input carbon, so each firm pays only on the carbon it adds and exports are relieved without separate machinery. It shares the materials charge's choice of standardized values, the same for every origin, and adds the rebuttal that rewards clean exporters.
 
-The paper is the consumption track of the series' two-track architecture [@CFPB11]. Production is priced separately by a revenue-neutral feebate on emissions intensity [@CFPB12]; recognition of foreign carbon prices at the border is developed in @CFPB13 and the measurement framework in @CFPB17. @sec-distribution reports the distributional effects, @sec-obligation the forward obligation, and @sec-admin administration and fraud.
+The paper is the consumption track of the series' two-track architecture [@CFPB11]. Production is priced separately by a revenue-neutral feebate on emissions intensity [@CFPB12]; recognition of foreign carbon prices at the border is developed in @CFPB13 and the measurement framework in @CFPB61. @sec-distribution reports the distributional effects, @sec-obligation the forward obligation, and @sec-admin administration and fraud.
 
 # Related literature {#sec-literature}
 

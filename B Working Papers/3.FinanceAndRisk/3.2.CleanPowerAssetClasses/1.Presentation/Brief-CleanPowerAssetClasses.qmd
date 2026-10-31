@@ -16,7 +16,7 @@ format:
   docx: default
 ---
 
-*Climate Fiscal Policy Brief No. 2.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The two-stage finance and tiered guarantee material was developed with Jasper Zimmermann. The full argument, proofs and code are in the working paper [@StrettonWP22].*
+*Climate Fiscal Policy Brief No. 2.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The two-stage finance and tiered guarantee material was developed with Jasper Zimmermann. The full argument, proofs and code are in the working paper [@StrettonWP32].*
 
 # Executive summary {.unnumbered}
 
@@ -39,9 +39,9 @@ The cost of capital, not the cost of panels, now sets the price of clean power i
 | Cost of power (US cents/kWh) | 3.6 | 4.3 | 5.0 | 5.7 | 6.5 |
 | Financing share of the price | 30% | 41% | 49% | 56% | 61% |
 
-: Table 1. The cost of capital is most of the price of solar power (stylized). \$800/kW, capacity factor 20 percent, operation and maintenance \$12/kW/yr, 25-year life, capital spent at commissioning with no interest during construction, the same basis as Brief 2.1 [@CFPB21]. Table 3 adds construction interest. Source: author's calculation [@StrettonWP22].
+: Table 1. The cost of capital is most of the price of solar power (stylized). \$800/kW, capacity factor 20 percent, operation and maintenance \$12/kW/yr, 25-year life, capital spent at commissioning with no interest during construction, the same basis as Brief 2.1 [@CFPB31]. Table 3 adds construction interest. Source: author's calculation [@StrettonWP32].
 
-Removing the risk that the buyer will not pay is the first step, and the companion brief proposes a payment intermediary facility to do it [@CFPB21]. The intermediary buys power from generators under one standard power purchase agreement, pays them in full and on time whatever the distribution company does, and is protected by a guarantee waterfall contracted in advance: the distribution company, its subnational owner, the national government, a multilateral agency and a donor contingency account.
+Removing the risk that the buyer will not pay is the first step, and the companion brief proposes a payment intermediary facility to do it [@CFPB31]. The intermediary buys power from generators under one standard power purchase agreement, pays them in full and on time whatever the distribution company does, and is protected by a guarantee waterfall contracted in advance: the distribution company, its subnational owner, the national government, a multilateral agency and a donor contingency account.
 
 A guaranteed contract is not yet cheap money. Each project is still financed alone, by a lender who prices the host sovereign into every coupon and cannot sell the loan, because nobody will rate plants one at a time. Project-by-project blended finance has mobilized little: each dollar of development finance brought in \$0.75 of private money across developing countries and \$0.37 in low-income ones [@AttridgeEngen2019]. The money exists. What is missing is a standard, rated security that pension funds and insurers are allowed to buy.
 
@@ -51,7 +51,7 @@ A solar plant's life has two phases with very different risks. Construction last
 
 Two-stage finance gives each phase to the investor who prices it most cheaply. Banks and development finance institutions, which can supervise construction, lend for the build. Once the plant operates, it is refinanced by bond investors who want long, safe cash flows and cannot take construction risk. Single-stage finance charges the construction premium for the whole life of the plant.
 
-The rate on the long phase is what matters. Because operation lasts more than ten times as long as construction, a percentage point off the operating rate lowers the price of power about ten times as much as a point off the construction rate [@StrettonWP22]. And the gain depends on the gap between the two rates, not on their level, so higher world interest rates make it more valuable, not less.
+The rate on the long phase is what matters. Because operation lasts more than ten times as long as construction, a percentage point off the operating rate lowers the price of power about ten times as much as a point off the construction rate [@StrettonWP32]. And the gain depends on the gap between the two rates, not on their level, so higher world interest rates make it more valuable, not less.
 
 The contingent power purchase agreement ties the two stages together. Before construction, the payment intermediary commits to buy the plant's power on completion under its standard contract. The construction lender then lends against a plant with a creditworthy buyer waiting. The refinancing pool knows exactly what it will be offered: the same contract, the same documents, the same buyer. Developers can bid a tariff on the refinanced cost of capital only if the refinancing is assured; otherwise they add a premium for the risk that it will not come.
 
@@ -59,7 +59,7 @@ The contingent power purchase agreement ties the two stages together. Before con
 
 Operating plants are pooled and refinanced through three securities, each for a different investor. Payments under the standard contract flow from the intermediary into a ring-fenced vehicle, which pays operating costs, then the senior bond, then the mezzanine, then the first-loss tranche.
 
-- **First-loss tranche.** Equity that absorbs portfolio losses before any debt does. At scale its natural holder is a regional fund of the Climate Investment Trust [@CFPB32].
+- **First-loss tranche.** Equity that absorbs portfolio losses before any debt does. At scale its natural holder is a regional fund of the Climate Investment Trust [@CFPB42].
 - **Mezzanine.** A thin layer above the first loss, held by development finance institutions or insurers, or replaced by a guarantee from highly rated sovereigns.
 - **Senior synthetic sovereign bond.** A long-dated bond backed by guaranteed contracts on operating plants, the first-loss tranche and a co-guarantee from highly rated sovereigns, rated on that structure rather than on the host sovereign.
 
@@ -74,11 +74,11 @@ Table 2 shows the result. With a 5 percent chance that an operating plant defaul
 | 0.20 | 7.7% | 5.0% | 15.4% |
 | 0.30 | 10.5% | 6.6% | 20.9% |
 
-: Table 2. Subordination needed under the senior bond, percent of the pool (stylized). Ten-year default probability of operating plants 5 percent; recovery 80 percent unless stated. Rating labels are indicative. Source: author's calculation [@StrettonWP22], with default and recovery data from @Moodys2017PF.
+: Table 2. Subordination needed under the senior bond, percent of the pool (stylized). Ten-year default probability of operating plants 5 percent; recovery 80 percent unless stated. Rating labels are indicative. Source: author's calculation [@StrettonWP32], with default and recovery data from @Moodys2017PF.
 
 ![Figure 1. The cushion needed under a near-AAA senior bond rises with default correlation and with loss severity. Solid lines: recovery 80 percent; dashed: 60 percent. Source: author's calculation.](figures/fig1-first-loss-vs-correlation.png){width=100%}
 
-The host sovereign is the main source of correlation, and pooling across countries removes it. Plants in one country share a currency, a regulator, a distribution sector and a treasury; a sovereign crisis stresses them together. In the working paper's illustration, a near-AAA bond on a single-country pool needs 9.2 percent subordination; on a pool spread over ten countries it needs 5.3 percent [@StrettonWP22]. That gain is available only if the plants carry the same contract. Investors and rating agencies can treat a pool as diversified only if its assets are alike. Identical contracts make portfolios; portfolios make ratings.
+The host sovereign is the main source of correlation, and pooling across countries removes it. Plants in one country share a currency, a regulator, a distribution sector and a treasury; a sovereign crisis stresses them together. In the working paper's illustration, a near-AAA bond on a single-country pool needs 9.2 percent subordination; on a pool spread over ten countries it needs 5.3 percent [@StrettonWP32]. That gain is available only if the plants carry the same contract. Investors and rating agencies can treat a pool as diversified only if its assets are alike. Identical contracts make portfolios; portfolios make ratings.
 
 A co-guarantee from highly rated sovereigns can replace the funded mezzanine at low expected cost. In the base case at a correlation of 0.20, the structure is 3.1 percent first loss, 4.6 percent mezzanine and 92.3 percent senior bond. On a \$10 billion pool, a guarantee of the mezzanine layer covers \$460 million and has an expected cost of about \$6 million over ten years. But it can be fully drawn in a regional crisis, so the guarantor must reserve for the tail. A guarantee that is cheap in expectation is not free.
 
@@ -92,7 +92,7 @@ The first choice is to create a contract. Independent transmission concessions p
 
 For backbone lines and storage that cannot be contracted, a tiered bond guarantee does the job. A regional or national clean energy system authority issues bonds; up to three tiers stand behind them: the government that regulates the power system, then the national government, then a donor-backed vehicle funded by highly rated governments. Guarantees go only to governments that adopt agreed reforms: the standard power purchase agreement, a path to cost-reflective tariffs, a schedule for retiring coal plants and a workable grid connection process. Conditions lower the chance that the first tier fails, and that is what keeps the later tiers from being called.
 
-The tiers are correlated, so the donor tier carries more than it appears to. A state government and its national government tend to fail together. In a stylized example, raising the correlation between tiers from zero to 0.5 triples the probability that the donor tier is called, from 1.2 to 3.6 percent over ten years [@StrettonWP22]. Donors should size their commitment for that.
+The tiers are correlated, so the donor tier carries more than it appears to. A state government and its national government tend to fail together. In a stylized example, raising the correlation between tiers from zero to 0.5 triples the probability that the donor tier is called, from 1.2 to 3.6 percent over ten years [@StrettonWP32]. Donors should size their commitment for that.
 
 # 5. Local currency and domestic savers
 
@@ -110,7 +110,7 @@ Refinancing operating plants into a tranched pool cuts the cost of solar power b
 | Two-stage, project bond | 12% | 8% | 5.5 | −12% |
 | Two-stage, pooled and tranched | 12% | 5.65% | 4.6 | −27% |
 
-: Table 3. Refinancing into a tranched pool cuts the price of solar power by about a quarter (stylized). Includes interest during a two-year construction period, which is why single-stage finance at 10 percent costs 6.2 cents here against 5.7 cents in Table 1. Source: author's calculation [@StrettonWP22].
+: Table 3. Refinancing into a tranched pool cuts the price of solar power by about a quarter (stylized). Includes interest during a two-year construction period, which is why single-stage finance at 10 percent costs 6.2 cents here against 5.7 cents in Table 1. Source: author's calculation [@StrettonWP32].
 
 ![Figure 2. Cost of power from the stylized plant under single-stage and two-stage finance. Source: author's calculation.](figures/fig2-lcoe-two-stage.png){width=100%}
 
@@ -124,7 +124,7 @@ The host government's exposure shrinks but does not vanish. The national governm
 
 **Development banks** should sponsor regional pools of operating clean power plants under one standard contract, size first loss with a published model at the cautious end of plausible correlation and recovery, and keep each pool to one asset type with no re-securitization.
 
-**The Climate Investment Trust's regional funds** should hold the first-loss tranches, priced explicitly and published, with the right to sell seasoned positions so the capital recycles [@CFPB32].
+**The Climate Investment Trust's regional funds** should hold the first-loss tranches, priced explicitly and published, with the right to sell seasoned positions so the capital recycles [@CFPB42].
 
 **Highly rated sovereigns** should co-guarantee the mezzanine layer rather than fund it, and hold explicit reserves against the correlated tail.
 
@@ -135,10 +135,10 @@ The host government's exposure shrinks but does not vanish. The national governm
 # Related papers in this series {.unnumbered}
 
 - **2.0** *Make Clean Power an Asset Class: Standardized De-risking for Developing Countries*. The series overview.
-- **2.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* [@CFPB21]. Removes payment risk at source; this brief starts where it ends.
-- **3.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB32]. The natural provider of the first-loss tranche.
-- **3.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB31]. Guarantee capacity that can stand behind the donor tier of grid guarantees.
-- **3.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB33]. Sustainability-linked lending that can reward the reforms the tiered guarantees require.
+- **2.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* [@CFPB31]. Removes payment risk at source; this brief starts where it ends.
+- **3.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB42]. The natural provider of the first-loss tranche.
+- **3.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB41]. Guarantee capacity that can stand behind the donor tier of grid guarantees.
+- **3.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB43]. Sustainability-linked lending that can reward the reforms the tiered guarantees require.
 
 # References {.unnumbered}
 

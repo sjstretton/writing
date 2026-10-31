@@ -42,7 +42,7 @@ Solar power is a bond with panels attached: almost all of its cost is paid up fr
 | Relative to 4% | 1.00 | 1.09 | 1.18 | 1.38 | 1.58 | 1.80 | 2.15 |
 | Return on capital, share of cost | 30% | 36% | 41% | 49% | 56% | 61% | 68% |
 
-: Table 1. The same solar plant costs twice as much at 15 percent as at 4 percent (stylized). Capital cost \$800/kW, capacity factor 20 percent (1,752 kWh/kW a year), operation and maintenance \$12/kW a year, 25-year life. "Return on capital" is the capital charge above straight-line depreciation. Capital is spent at commissioning, with no interest during construction; Brief 2.2 adds two years of construction interest, which raises the cost at 10 percent from 5.72 to 6.2 cents [@CFPB22]. Code: `2.Source/model.py`.
+: Table 1. The same solar plant costs twice as much at 15 percent as at 4 percent (stylized). Capital cost \$800/kW, capacity factor 20 percent (1,752 kWh/kW a year), operation and maintenance \$12/kW a year, 25-year life. "Return on capital" is the capital charge above straight-line depreciation. Capital is spent at commissioning, with no interest during construction; Brief 2.2 adds two years of construction interest, which raises the cost at 10 percent from 5.72 to 6.2 cents [@CFPB32]. Code: `2.Source/model.py`.
 
 ![Figure 1. Levelized cost of a stylized solar plant by cost of capital. Hardware and operation cost the same in every column; only the return on capital changes.](figures/fig1-lcoe-by-wacc.png){width=95%}
 
@@ -88,7 +88,7 @@ The contract guarantee wins on three counts when defaults are temporary and reco
 | Saving per dollar of expected cost | – | 5.3 | 0.8 |
 | Largest exposure (\$ million) | – | 8.7 a year of arrears | 60 of debt |
 
-: Table 2. A contract guarantee buys more tariff reduction per dollar of risk (stylized). Base WACC 8 percent; offtaker default episodes of one year at 15 per 100 offtaker-years; 60 percent recovered by generators, 95 percent by the facility; debt is 75 percent of the \$80 million cost; 30 percent of the offtaker's losses fall on lenders; the debt guarantee also covers 1 percent a year of non-payment risks such as construction failure. The working paper states the conditions in full [@StrettonWP21].
+: Table 2. A contract guarantee buys more tariff reduction per dollar of risk (stylized). Base WACC 8 percent; offtaker default episodes of one year at 15 per 100 offtaker-years; 60 percent recovered by generators, 95 percent by the facility; debt is 75 percent of the \$80 million cost; 30 percent of the offtaker's losses fall on lenders; the debt guarantee also covers 1 percent a year of non-payment risks such as construction failure. The working paper states the conditions in full [@StrettonWP31].
 
 The reason is in the last line of Table 2. The facility's worst case is a year or two of unpaid bills, which it recovers in large part. The debt guarantor's worst case is the loan.
 
@@ -120,15 +120,15 @@ Nigeria shows what happens without the waterfall. Its bulk trader, set up under 
 
 # 7. What to do
 
-Finance ministries in countries where distribution companies are the main buyers of power should create, or join, a payment intermediary facility with one standard power purchase agreement and a guarantee waterfall signed before the first tender. They should route new utility-scale renewable procurement through it, in local currency, on declining tariffs. They should make distribution companies' entry conditional on letters of credit, an intercept agreement and a tariff path, and record the national guarantee at expected cost under a published cap. Development banks should guarantee the facility, not individual project loans, and stand behind regional facilities for small states. Donors should fund the contingency account at the bottom of the waterfall. Once contracts are standard and guaranteed, plants can be refinanced as a few homogeneous asset classes through two-stage finance and synthetic sovereign bonds [@CFPB22].
+Finance ministries in countries where distribution companies are the main buyers of power should create, or join, a payment intermediary facility with one standard power purchase agreement and a guarantee waterfall signed before the first tender. They should route new utility-scale renewable procurement through it, in local currency, on declining tariffs. They should make distribution companies' entry conditional on letters of credit, an intercept agreement and a tariff path, and record the national guarantee at expected cost under a published cap. Development banks should guarantee the facility, not individual project loans, and stand behind regional facilities for small states. Donors should fund the contingency account at the bottom of the waterfall. Once contracts are standard and guaranteed, plants can be refinanced as a few homogeneous asset classes through two-stage finance and synthetic sovereign bonds [@CFPB32].
 
 # Related papers in this series {.unnumbered}
 
 - **2.0** *Make Clean Power an Asset Class: Standardized De-risking for Developing Countries*. The series overview: the risk stack and who should hold each layer.
-- **2.2** *From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power* [@CFPB22]. Refinances the contracts this facility makes safe as a few standard securities.
-- **3.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB31]. Guarantee capacity earned by climate policy, which can stand behind this facility's waterfall.
-- **3.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB32]. A source of loss-absorbing capital for the donor layer.
-- **3.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB33]. A way to pay for the utility reforms that make the guarantee affordable.
+- **2.2** *From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power* [@CFPB32]. Refinances the contracts this facility makes safe as a few standard securities.
+- **3.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB41]. Guarantee capacity earned by climate policy, which can stand behind this facility's waterfall.
+- **3.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB42]. A source of loss-absorbing capital for the donor layer.
+- **3.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB43]. A way to pay for the utility reforms that make the guarantee affordable.
 
 # References {.unnumbered}
 

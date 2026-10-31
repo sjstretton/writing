@@ -28,7 +28,7 @@ format:
 
 *Why that is not enough.* A step-down of 100 basis points on a \$1 billion loan is worth about \$77 million over ten years. A stylized coal-to-clean reform costs about \$770 million. Even waiving all interest on \$1 billion falls short. Interest margins are an order of magnitude too small.
 
-*Part three: give it scale.* The reward for meeting the indicators should be guarantee capacity under a notional capitalized value [@CFPB31], or collateral held in the Climate Investment Trust [@CFPB32]. A guarantee is worth the full spread it saves the borrower but costs the guarantor only its expected loss and the cost of holding a buffer. In the stylized example, \$3.3 billion of guarantee capacity matches the reform's cost. On development banks' own sovereign loss record, the base case shared across this series, it costs the funder about \$10 million in expected losses; in a stress case where the guarantor lacks the banks' preferred-creditor status, about \$290 million, with a \$310 million buffer held rather than spent.
+*Part three: give it scale.* The reward for meeting the indicators should be guarantee capacity under a notional capitalized value [@CFPB41], or collateral held in the Climate Investment Trust [@CFPB42]. A guarantee is worth the full spread it saves the borrower but costs the guarantor only its expected loss and the cost of holding a buffer. In the stylized example, \$3.3 billion of guarantee capacity matches the reform's cost. On development banks' own sovereign loss record, the base case shared across this series, it costs the funder about \$10 million in expected losses; in a stress case where the guarantor lacks the banks' preferred-creditor status, about \$290 million, with a \$310 million buffer held rather than spent.
 
 *What to do.* Development banks should publish a standard indicator menu and pricing schedule, offer a fixed-coupon intermediated loan, and make guarantee capacity the main prize. Donors should fund the buffer, not the rebate.
 
@@ -67,15 +67,15 @@ A codified instrument is a contract written once and used many times. It has fou
 | Agriculture | Methane per unit of output | National inventory, IPCC methods | Uruguay loan, 2023 |
 | Forests | Native forest area; tree cover loss | National forest monitoring | Uruguay bond, 2022 |
 | Transport | Zero-emission share of new vehicle registrations | Vehicle registry | Thailand bond, 2024 |
-| Carbon pricing | Total Effective Carbon Price | Tax and price data [@CFPB17] | Proposed |
+| Carbon pricing | Total Effective Carbon Price | Tax and price data [@CFPB61] | Proposed |
 
-: Table 1. A starter menu of outturn indicators. Sources: deal documents cited in Section 1; @CFPB17.
+: Table 1. A starter menu of outturn indicators. Sources: deal documents cited in Section 1; @CFPB61.
 
 **Baselines set by rule.** Uruguay's loan shows the rule worth copying: the target is the country's own unconditional pledge under the Paris Agreement plus a margin of outperformance, so the government cannot negotiate a soft baseline [@MEF2023SSLL]. A standard menu would fix the margin by indicator.
 
 **Verification from published data.** The verifier should check the national inventory, not commission new surveys. Uruguay uses its Paris inventory, smoothed over five years and reviewed by the United Nations Development Programme under UN peer-review methods [@MEF2023SSLL].
 
-**A pricing schedule.** Development banks should publish the reward per unit of outperformance, rather than negotiate it deal by deal. The natural unit is a carbon-price equivalent: the reward per point of an indicator equals the tonnes that point implies times a notional carbon price. That puts sustainability-linked lending on the same scale as policy crediting, the payment per tonne for policy-induced cuts proposed in series 1 [@CFPB11; @CFPB17], and lets a funder compare a forest KPI in one country with a power KPI in another. A long-term commitment, such as a legislated floor on the carbon price, should earn more than a one-year measure, because it is harder to reverse [@StrettonTimeAndChance].
+**A pricing schedule.** Development banks should publish the reward per unit of outperformance, rather than negotiate it deal by deal. The natural unit is a carbon-price equivalent: the reward per point of an indicator equals the tonnes that point implies times a notional carbon price. That puts sustainability-linked lending on the same scale as policy crediting, the payment per tonne for policy-induced cuts proposed in series 1 [@CFPB11; @CFPB61], and lets a funder compare a forest KPI in one country with a power KPI in another. A long-term commitment, such as a legislated floor on the carbon price, should earn more than a one-year measure, because it is harder to reverse [@StrettonTimeAndChance].
 
 # 4. Separate the investor's return from the government's incentive
 
@@ -105,13 +105,13 @@ Real reform bills are larger still. South Africa's Just Energy Transition Invest
 
 # 6. Give it scale: make guarantee capacity the reward
 
-A guarantee delivers a large incentive at a small cost, because the borrower values it at the full spread saved while the guarantor pays only its expected loss. Spreads on risky debt are several times expected losses; the rest is a risk and liquidity premium a diversified guarantor need not charge [@HuangHuang2012; @CFPB31].
+A guarantee delivers a large incentive at a small cost, because the borrower values it at the full spread saved while the guarantor pays only its expected loss. Spreads on risky debt are several times expected losses; the rest is a risk and liquidity premium a diversified guarantor need not charge [@HuangHuang2012; @CFPB41].
 
-The proposal is to make meeting the indicators earn guarantee capacity, the maximum outstanding guarantee exposure that multilateral development banks will provide on the country's eligible green borrowing. Under the notional capitalized value of Brief 3.1, a country's balance sets that capacity [@CFPB31]; meeting KPIs adds to the balance. Under the Climate Investment Trust of Brief 3.2, meeting KPIs credits the country's beneficiary account, which it can pledge as collateral now [@CFPB32].
+The proposal is to make meeting the indicators earn guarantee capacity, the maximum outstanding guarantee exposure that multilateral development banks will provide on the country's eligible green borrowing. Under the notional capitalized value of Brief 3.1, a country's balance sets that capacity [@CFPB41]; meeting KPIs adds to the balance. Under the Climate Investment Trust of Brief 3.2, meeting KPIs credits the country's beneficiary account, which it can pledge as collateral now [@CFPB42].
 
 In the stylized example, \$3.3 billion of guarantee capacity on borrowing that saves 300 basis points is worth \$772 million to the government, enough to pay for the reform. This brief uses the base case shared with Briefs 3.1 and 3.2, the development banks' own sovereign loss record: 0.77 percent of their sovereign loans defaulted each year over 1984–2024, and 95 percent was recovered [@GEMs2025]. The expected cost to the funder is then about \$10 million, with a buffer of \$16 million held in safe assets. Each dollar of funder cost buys about 80 dollars of incentive, against one for one under a rebate. That record reflects the banks' status as preferred creditors, which a guarantor of market debt might not inherit. In a stress case, governments fail to honor 3 percent of guarantee obligations a year and the guarantor loses 37 cents of each dollar called, the average creditor loss in sovereign restructurings [@CrucesTrebesch2013]. The expected cost is then about \$286 million, a buffer of \$310 million is held, and each dollar still buys 2.7 dollars of incentive; with a 10 percent loss per call, 10.
 
-The structure is not free, and its costs fall in the tail. The government's exposure does not disappear: it becomes smaller, contingent and contracted, because a guarantee called is a debt the country owes back to the guarantor [@CFPB21]. The guarantor's losses in a correlated crisis can far exceed the average, which is why the buffer exists. And guarantee capacity is worth most to a government that will actually borrow for clean investment; a country with no pipeline gains little.
+The structure is not free, and its costs fall in the tail. The government's exposure does not disappear: it becomes smaller, contingent and contracted, because a guarantee called is a debt the country owes back to the guarantor [@CFPB31]. The guarantor's losses in a correlated crisis can far exceed the average, which is why the buffer exists. And guarantee capacity is worth most to a government that will actually borrow for clean investment; a country with no pipeline gains little.
 
 The two routes fit together. The sustainability-linked loan supplies what the guarantee route lacks: an agreed indicator, a baseline, verification and a price. The guarantee supplies what the loan lacks: size. A codified indicator menu can drive both the interest rebate on the loan and the guarantee capacity the country earns, so one verification serves two rewards.
 
@@ -126,11 +126,11 @@ Donors should make guarantee capacity, not the interest rebate, the main prize f
 # Related papers in this series {.unnumbered}
 
 - **3.0** *Reward Governments, Not Projects: International Incentives for National Climate Policy*. The series overview.
-- **3.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB31]. Sets guarantee capacity as the reward for carbon stocks and low emissions.
-- **3.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB32]. Holds the buffer and the national beneficiary accounts.
-- **2.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* [@CFPB21]. Conditional de-risking for clean power through a payment intermediary.
+- **3.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB41]. Sets guarantee capacity as the reward for carbon stocks and low emissions.
+- **3.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB42]. Holds the buffer and the national beneficiary accounts.
+- **2.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* [@CFPB31]. Conditional de-risking for clean power through a payment intermediary.
 - **1.1** *Price Production and Consumption Separately* [@CFPB11]. Carbon pricing and policy crediting.
-- **1.7** *Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price* [@CFPB17]. The unit for pricing indicators.
+- **1.7** *Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price* [@CFPB61]. The unit for pricing indicators.
 
 # References {.unnumbered}
 

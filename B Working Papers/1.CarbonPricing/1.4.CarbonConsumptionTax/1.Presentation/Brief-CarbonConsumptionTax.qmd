@@ -73,7 +73,7 @@ format:
 
 **A worked example shows the incentive (stylized, 2032).** Take three versions of a €100 good. At the default intensity of 0.25 kg per euro it embodies 25 kg CO₂ and pays €12.50 of value VAT plus €2.50 of carbon component: €15, as today. A version made with 0.40 kg per euro pays €12.50 plus €4.00, a total of €16.50. A supplier who verifies 0.10 kg per euro pays €12.50 plus €1.00, a total of €13.50. The €3 gap between the dirty and the clean version is the carbon price of €100 per tonne on the 30 kg that separates them.
 
-**One tonne should bear one price.** The carbon component should deduct any carbon price paid upstream on the same tonnes, measured as a carbon-price equivalent [@CFPB17], whether paid under the ETS, CBAM, the energy obligation below, or a recognized foreign scheme [@CFPB13]. Production feebates are revenue-neutral and need no deduction. The carbon component should apply on top of reduced VAT rates; whether it reaches zero-rated food is a choice for each member state.
+**One tonne should bear one price.** The carbon component should deduct any carbon price paid upstream on the same tonnes, measured as a carbon-price equivalent [@CFPB61], whether paid under the ETS, CBAM, the energy obligation below, or a recognized foreign scheme [@CFPB13]. Production feebates are revenue-neutral and need no deduction. The carbon component should apply on top of reduced VAT rates; whether it reaches zero-rated food is a choice for each member state.
 
 # 3. Imports: generous, rebuttable defaults
 
@@ -133,7 +133,7 @@ format:
 - Climate Fiscal Policy Brief No. 1.1: the two-track architecture [@CFPB11].
 - No. 1.2: feebates in power and industry, the production track [@CFPB12].
 - No. 1.3: carbon price recognition under CBAM [@CFPB13].
-- No. 1.7: the Total Effective Carbon Price, the measurement framework [@CFPB17].
+- No. 1.7: the Total Effective Carbon Price, the measurement framework [@CFPB61].
 
 # References {.unnumbered}
 

@@ -13,7 +13,7 @@ The plan for section 2 as one coherent series: its argument, its papers, their a
 5. Standardization is the multiplier: identical contracts make portfolios, portfolios make ratings, ratings make an asset class with a yield curve.
 6. None of this removes the host state's exposure entirely. It converts open-ended, project-by-project fiscal risk into a contingent liability that is contracted, layered and conditional on the government's own conduct. Say so; never claim the structures are free to the host.
 
-**Boundary with series 3.** Series 2 decides who bears a loss once a government has chosen to build. Series 3 changes what the government chooses. Conditional guarantees in series 2 are the point where the two meet; the large-scale incentive instruments (notional capitalized value, the Climate Investment Trust, sustainability-linked lending) belong to series 3. The Climate Investment Trust's regional funds are the natural provider of the first-loss equity tranche in 2.2; cite @CFPB32 for it.
+**Boundary with series 3.** Series 2 decides who bears a loss once a government has chosen to build. Series 3 changes what the government chooses. Conditional guarantees in series 2 are the point where the two meet; the large-scale incentive instruments (notional capitalized value, the Climate Investment Trust, sustainability-linked lending) belong to series 3. The Climate Investment Trust's regional funds are the natural provider of the first-loss equity tranche in 2.2; cite @CFPB42 for it.
 
 **Out of scope.** The Sollar (`6.Additional/2.FinanceAndRisk/2.3.TheSollar`) stays in Additional. The overview may mention it in one sentence as a non-credit alternative.
 
@@ -77,10 +77,10 @@ Rewritten last, after 2.1 and 2.2, so it states their results. Structure: the co
 ## Citation keys for the series
 
 ```bibtex
-@techreport{CFPB21, author={Stretton, Stephen J.}, title={Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power}, institution={Climate Fiscal Policy Briefs}, number={2.1}, year={2026}}
-@techreport{CFPB22, author={Stretton, Stephen J.}, title={From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power}, institution={Climate Fiscal Policy Briefs}, number={2.2}, year={2026}}
-@unpublished{StrettonWP21, author={Stretton, Stephen J.}, title={Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power}, note={Working paper 2.1}, year={2026}}
-@unpublished{StrettonWP22, author={Stretton, Stephen J.}, title={From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power}, note={Working paper 2.2}, year={2026}}
+@techreport{CFPB31, author={Stretton, Stephen J.}, title={Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power}, institution={Climate Fiscal Policy Briefs}, number={3.1}, year={2026}}
+@techreport{CFPB32, author={Stretton, Stephen J.}, title={From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power}, institution={Climate Fiscal Policy Briefs}, number={3.2}, year={2026}}
+@unpublished{StrettonWP31, author={Stretton, Stephen J.}, title={Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power}, note={Working paper 3.1}, year={2026}}
+@unpublished{StrettonWP32, author={Stretton, Stephen J.}, title={From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power}, note={Working paper 3.2}, year={2026}}
 ```
 
 Titles checked against each paper's YAML in the 29 Oct 2026 cross-review. The 2.2 working paper's YAML splits the title ("From Projects to Asset Classes") from the subtitle; the bib entries join them with a colon. Series 3 keys are in `3.SovereignIncentives/SeriesArchitecture.md`; series 1 keys in `briefing-series-spec.md`.

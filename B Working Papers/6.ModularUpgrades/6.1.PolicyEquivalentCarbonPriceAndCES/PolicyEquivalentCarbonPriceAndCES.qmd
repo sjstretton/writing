@@ -22,7 +22,7 @@ format:
   docx: default
 ---
 
-*Working paper, version 0.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No. 1.7 [@CFPB17]. Version 0.2 (May 2026) and earlier versions carried an error in the fuel-switching elasticity; @sec-tecp and Appendix B correct it.*
+*Working paper, version 0.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No. 1.7 [@CFPB61]. Version 0.2 (May 2026) and earlier versions carried an error in the fuel-switching elasticity; @sec-tecp and Appendix B correct it.*
 
 *Keywords:* carbon pricing; effective carbon price; carbon price equivalent; non-price instruments; energy demand; policy crediting. *JEL:* H23, Q41, Q48, Q54, Q58, C43.
 
@@ -247,7 +247,7 @@ Each firm under its own standard behaves as if it faced a feebate at its own sha
 
 # A worked example {#sec-example}
 
-**A stylized economy shows how far the TECP and the existing metrics diverge.** The economy has three sectors with 261 Mt of baseline CO₂ (Appendix D, @tbl-economy): power, with coal, gas and renewables (119 Mt); road transport, with gasoline, diesel and biofuel (80 Mt); and industry, with coal, oil and gas (62 Mt). Delivered prices include existing taxes. Elasticities are the central values of @tbl-calibration. All numbers are stylized, and the economy is the one in the brief [@CFPB17], so the two report the same results.
+**A stylized economy shows how far the TECP and the existing metrics diverge.** The economy has three sectors with 261 Mt of baseline CO₂ (Appendix D, @tbl-economy): power, with coal, gas and renewables (119 Mt); road transport, with gasoline, diesel and biofuel (80 Mt); and industry, with coal, oil and gas (62 Mt). Delivered prices include existing taxes. Elasticities are the central values of @tbl-calibration. All numbers are stylized, and the economy is the one in the brief [@CFPB61], so the two report the same results.
 
 **The policy mix has a tax, a subsidy and a standard.** A carbon tax of \$30 per tonne covers power and industry. A subsidy of \$10 per MWh goes to renewable generation. A tradable low-carbon fuel standard requires road fuels' carbon intensity per unit of energy to fall 2 percent below its baseline; in the full model it binds at a credit price of \$166 per tonne. A uniform tax of \$1 per tonne on every fuel cuts emissions by 1.59 Mt, 0.61 percent.
 

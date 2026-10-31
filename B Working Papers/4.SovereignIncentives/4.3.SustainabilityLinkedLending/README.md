@@ -1,6 +1,6 @@
 # 3.3 Sustainability-Linked Lending
 
-**Codify Sustainability-Linked Sovereign Lending, Then Give It Scale.** Climate Fiscal Policy Brief No. 3.3 and working paper `StrettonWP33`.
+**Codify Sustainability-Linked Sovereign Lending, Then Give It Scale.** Climate Fiscal Policy Brief No. 3.3 and working paper `StrettonWP43`.
 
 ## Status
 

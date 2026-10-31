@@ -71,7 +71,7 @@
 - **EU2025DV**: the Implementing Regulation 2025/2621 ELI page returned HTTP 202 (a bot check), so it is not confirmed.
 - **HLCCP2017**: the range quoted. See correction 3.
 - **StrettonCCT, StrettonFeebates, StrettonIndustrialFeebates, StrettonTECP, StrettonCBAM**: v0.3's text uses the CFPB keys instead. These five entries look unused and can be deleted once confirmed.
-- **CFPB12, CFPB13, CFPB16, CFPB17**: series entries, not checkable. Titles should follow the series spec.
+- **CFPB12, CFPB13, CFPB14, CFPB61**: series entries, not checkable. Titles should follow the series spec.
 
 ## Download-list cross-check
 

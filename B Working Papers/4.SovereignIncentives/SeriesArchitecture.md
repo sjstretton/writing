@@ -106,12 +106,12 @@ Rewritten last. Structure: why incentives must come from outside; the routes com
 ## Citation keys for the series
 
 ```bibtex
-@techreport{CFPB31, author={Stretton, Stephen J.}, title={Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives}, institution={Climate Fiscal Policy Briefs}, number={3.1}, year={2026}}
-@techreport{CFPB32, author={Stretton, Stephen J.}, title={The Climate Investment Trust: Hold Capital, Lend Its Strength}, institution={Climate Fiscal Policy Briefs}, number={3.2}, year={2026}}
-@techreport{CFPB33, author={Stretton, Stephen J.}, title={Codify Sustainability-Linked Sovereign Lending, Then Give It Scale}, institution={Climate Fiscal Policy Briefs}, number={3.3}, year={2026}}
-@unpublished{StrettonWP31, author={Stretton, Stephen J.}, title={Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives}, note={Working paper 3.1}, year={2026}}
-@unpublished{StrettonWP32, author={Stretton, Stephen J.}, title={The Climate Investment Trust: Hold Capital, Lend Its Strength}, note={Working paper 3.2}, year={2026}}
-@unpublished{StrettonWP33, author={Stretton, Stephen J.}, title={Codify Sustainability-Linked Sovereign Lending, Then Give It Scale}, note={Working paper 3.3}, year={2026}}
+@techreport{CFPB41, author={Stretton, Stephen J.}, title={Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives}, institution={Climate Fiscal Policy Briefs}, number={4.1}, year={2026}}
+@techreport{CFPB42, author={Stretton, Stephen J.}, title={The Climate Investment Trust: Hold Capital, Lend Its Strength}, institution={Climate Fiscal Policy Briefs}, number={4.2}, year={2026}}
+@techreport{CFPB43, author={Stretton, Stephen J.}, title={Codify Sustainability-Linked Sovereign Lending, Then Give It Scale}, institution={Climate Fiscal Policy Briefs}, number={4.3}, year={2026}}
+@unpublished{StrettonWP41, author={Stretton, Stephen J.}, title={Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives}, note={Working paper 4.1}, year={2026}}
+@unpublished{StrettonWP42, author={Stretton, Stephen J.}, title={The Climate Investment Trust: Hold Capital, Lend Its Strength}, note={Working paper 4.2}, year={2026}}
+@unpublished{StrettonWP43, author={Stretton, Stephen J.}, title={Codify Sustainability-Linked Sovereign Lending, Then Give It Scale}, note={Working paper 4.3}, year={2026}}
 ``` Series 2 keys are in `2.FinanceAndRisk/SeriesArchitecture.md`.
 
 ## Facts to settle (from the source audit, 29 Oct 2026)

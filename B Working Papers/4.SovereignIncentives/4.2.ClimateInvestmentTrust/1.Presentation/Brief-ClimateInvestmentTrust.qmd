@@ -16,7 +16,7 @@ format:
   docx: default
 ---
 
-*Climate Fiscal Policy Brief No. 3.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The regional fund design draws on joint work on two-stage clean energy finance with Jasper Zimmermann. A fuller treatment, with proofs and code, is in the working paper [@StrettonWP32].*
+*Climate Fiscal Policy Brief No. 3.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The regional fund design draws on joint work on two-stage clean energy finance with Jasper Zimmermann. A fuller treatment, with proofs and code, is in the working paper [@StrettonWP42].*
 
 # Executive summary {.unnumbered}
 
@@ -50,11 +50,11 @@ Private capital enters on limited terms. Pension and sovereign wealth funds may 
 
 # 3. One pool, three jobs
 
-**Second loss on policy guarantees.** A government that commits to a policy, such as an annual auction of guaranteed-price clean power contracts, gives a guarantee. Investors value it at the probability the state honors it. The Trust makes that probability matter less. The government takes first loss: it indemnifies the guarantor, as it does under existing multilateral guarantees. The Trust takes second loss if the government does not pay. A AAA-rated entity, a development bank or a highly rated sovereign, stands behind the Trust and is touched only if the buffer runs out. The investor gets the credit of the strongest party; the incentive to perform stays with the government. This is the buffer behind the guarantee capacity of Brief 3.1, in which a country's notional capitalized value caps the guarantees development banks will provide on its green borrowing [@CFPB31].
+**Second loss on policy guarantees.** A government that commits to a policy, such as an annual auction of guaranteed-price clean power contracts, gives a guarantee. Investors value it at the probability the state honors it. The Trust makes that probability matter less. The government takes first loss: it indemnifies the guarantor, as it does under existing multilateral guarantees. The Trust takes second loss if the government does not pay. A AAA-rated entity, a development bank or a highly rated sovereign, stands behind the Trust and is touched only if the buffer runs out. The investor gets the credit of the strongest party; the incentive to perform stays with the government. This is the buffer behind the guarantee capacity of Brief 3.1, in which a country's notional capitalized value caps the guarantees development banks will provide on its green borrowing [@CFPB41].
 
-**Investment.** The Trust, and the regional funds it seeds with regional development banks, co-invest in clean energy projects before financial close and sell after the plant is connected and selling. For portfolios of operating plants the vocabulary changes. A regional fund holds the first-loss tranche, the equity that absorbs portfolio losses before any debt does, beneath the senior bonds described in Brief 2.2 [@CFPB22].
+**Investment.** The Trust, and the regional funds it seeds with regional development banks, co-invest in clean energy projects before financial close and sell after the plant is connected and selling. For portfolios of operating plants the vocabulary changes. A regional fund holds the first-loss tranche, the equity that absorbs portfolio losses before any debt does, beneath the senior bonds described in Brief 2.2 [@CFPB32].
 
-**Beneficiary accounts.** The Trust credits its surplus to national accounts by participation and performance. A country's notional capitalized value above what its green borrowing needs can flow into its account too, and a country that borrows little can receive interest on its balance there instead of guarantee capacity [@CFPB31]. The same accounts can deliver the reward in sustainability-linked lending: a country that meets its indicators gains collateral or guarantee capacity rather than a few basis points [@CFPB33].
+**Beneficiary accounts.** The Trust credits its surplus to national accounts by participation and performance. A country's notional capitalized value above what its green borrowing needs can flow into its account too, and a country that borrows little can receive interest on its balance there instead of guarantee capacity [@CFPB41]. The same accounts can deliver the reward in sustainability-linked lending: a country that meets its indicators gains collateral or guarantee capacity rather than a few basis points [@CFPB43].
 
 The three jobs share one pool because capital and insurance are substitutes: a bank can hold capital against a loan or buy protection from someone who holds it, but someone has to hold the capital [@StrettonTC].
 
@@ -123,9 +123,9 @@ Donor governments and a multilateral development bank should launch the Climate 
 # Related papers in this series {.unnumbered}
 
 - **3.0** *Reward Governments, Not Projects: International Incentives for National Climate Policy*. The series overview.
-- **3.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB31]. Notional capitalized value and guarantee capacity, which the Trust's buffer stands behind.
-- **3.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB33]. Sustainability-linked lending, for which the Trust can be the reward channel.
-- **2.2** *From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power* [@CFPB22]. Two-stage finance and synthetic sovereign bonds, whose first-loss tranche the Trust's regional funds can hold.
+- **3.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB41]. Notional capitalized value and guarantee capacity, which the Trust's buffer stands behind.
+- **3.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB43]. Sustainability-linked lending, for which the Trust can be the reward channel.
+- **2.2** *From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power* [@CFPB32]. Two-stage finance and synthetic sovereign bonds, whose first-loss tranche the Trust's regional funds can hold.
 - **1.2** *Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill* [@CFPB12]. The instrument the Trust's accounts let countries apply to each other.
 
 # References {.unnumbered}

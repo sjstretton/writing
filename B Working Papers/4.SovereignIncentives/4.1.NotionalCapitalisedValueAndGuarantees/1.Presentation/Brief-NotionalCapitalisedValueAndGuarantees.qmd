@@ -56,7 +56,7 @@ Earlier versions of the idea took four forms: interest on a notional value paid 
 
 A guarantee is worth the full spread to the borrower and costs the guarantor only its expected loss. The market charges a lower-rated sovereign for the risk it poses to all creditors; a development bank that is a preferred creditor, with a counter-indemnity from the government, bears much less. Development bank loans to sovereigns defaulted at 0.77 percent a year over 1984–2024 and recovered 95.1 percent [@GEMs2025], an expected loss of 0.04 percent a year. Gabon's 2023 debt-for-nature bond, insured by the US Development Finance Corporation, priced at 6.097 percent and was rated Aa2, when the sovereign's other bonds yielded 9–10.5 percent [@Reuters2023Gabon].
 
-The ratio of incentive to cost is the spread saved divided by the expected loss. This series takes the banks' record as its base case: a 0.77 percent annual chance that a guarantee is called and a 4.9 percent loss when it is. At a 3-point spread, each dollar of expected cost then buys about $80 of interest savings, and a buffer of 0.5 percent of exposure keeps the annual chance of exhausting it at 1 percent across 20 programs with correlation 0.2 [@StrettonWP32]. The record reflects preferred-creditor status: governments keep paying development banks while they restructure other debt. A new climate facility might not inherit that status, so the series also reports a middle case (3 percent calls, 10 percent loss; ratio 10) and a stress case (3 percent calls and 37 percent loss, the average sovereign haircut [@CrucesTrebesch2013]; ratio 2.7, buffer 9.3 percent).
+The ratio of incentive to cost is the spread saved divided by the expected loss. This series takes the banks' record as its base case: a 0.77 percent annual chance that a guarantee is called and a 4.9 percent loss when it is. At a 3-point spread, each dollar of expected cost then buys about $80 of interest savings, and a buffer of 0.5 percent of exposure keeps the annual chance of exhausting it at 1 percent across 20 programs with correlation 0.2 [@StrettonWP42]. The record reflects preferred-creditor status: governments keep paying development banks while they restructure other debt. A new climate facility might not inherit that status, so the series also reports a middle case (3 percent calls, 10 percent loss; ratio 10) and a stress case (3 percent calls and 37 percent loss, the average sovereign haircut [@CrucesTrebesch2013]; ratio 2.7, buffer 9.3 percent).
 
 ![A guarantee is worth many times what it costs. Ratio of interest savings to the guarantor's expected loss, for three spread savings, with the base (development bank record), middle and stress cases marked; log scales. Source: author's calculations; Brief 3.2; GEMs (2025).](figures/fig2-incentive-cost-ratio.png)
 
@@ -86,7 +86,7 @@ A stylized forest country shows the mechanism. Give a country with Guyana's stoc
 
 ![A per-tonne debit drains the balance under business as usual. Stylized forest country with a $5 billion opening balance, a $50 per tonne debit and an allowance falling to zero in 2050. Source: author's calculations.](figures/fig1-balance-paths.png)
 
-The comparison with sustainability-linked lending shows why scale needs guarantees. Uruguay's $350 million sustainability-linked World Bank loan of 2023 can save it at most about $12.5 million over its life [@CFPB33]. A $1 billion a year incentive through guarantees costs donors about $13 million a year on the banks' record and $370 million in the stress case, plus a buffer they keep and which earns.
+The comparison with sustainability-linked lending shows why scale needs guarantees. Uruguay's $350 million sustainability-linked World Bank loan of 2023 can save it at most about $12.5 million over its life [@CFPB43]. A $1 billion a year incentive through guarantees costs donors about $13 million a year on the banks' record and $370 million in the stress case, plus a buffer they keep and which earns.
 
 Coal reserves need a narrower rule. Indonesia had 34.9 billion tonnes of proved coal reserves at the end of 2020 [@BP2021], about 78 billion tonnes of CO₂ at default carbon contents. Crediting all of it would reward ownership of coal and invite inflated reserve reports. Credit only reserves legally retired, at a low price that allows for leakage through world coal markets [@Harstad2012], and debit combustion emissions like any other. For an investment-grade sovereign saving only a point of spread, guarantees are a weak reward; the same balance is better delivered through trust collateral or sustainability-linked lending.
 
@@ -108,19 +108,19 @@ Coal reserves need a narrower rule. Indonesia had 34.9 billion tonnes of proved 
 
 Development bank shareholders should create rules-based guarantee capacity outside country lending envelopes, allocated by notional capitalized value: an opening balance from each country's verified stock at a low, uniform stock price; an allowance path to net zero; a uniform debit price of $30–70 per tonne; capacity sized to bind on eligible green borrowing and declining at about the rate clean technology costs fall; and any surplus flowing to a beneficiary account.
 
-Donors should fund the buffer, not the reward. A trust that holds and invests the buffer, sized to stressed losses, is the institution for this [@CFPB32].
+Donors should fund the buffer, not the reward. A trust that holds and invests the buffer, sized to stressed losses, is the institution for this [@CFPB42].
 
-Forest and coal countries should negotiate allowances rather than baselines, seek credit for legally retired reserves, and write the allowance path into sustainability-linked loans as the performance indicator [@CFPB33].
+Forest and coal countries should negotiate allowances rather than baselines, seek credit for legally retired reserves, and write the allowance path into sustainability-linked loans as the performance indicator [@CFPB43].
 
 The scheme fails if spreads saved are small, if capacity is so large that it never binds, if the buffer is sized to expected rather than stressed losses, or if verification is captured.
 
 # Related papers in this series {.unnumbered}
 
 - **3.0** *Reward Governments, Not Projects: International Incentives for National Climate Policy*. The series overview.
-- **3.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB32]. The buffer fund that stands behind the guarantees and holds beneficiary accounts.
-- **3.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB33]. The delivery channel for the allowance path.
-- **2.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* [@CFPB21]. A payment intermediary whose guarantees the capacity can back.
-- **1.7** *Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price* [@CFPB17]. The measure used for the carbon-price equivalent.
+- **3.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB42]. The buffer fund that stands behind the guarantees and holds beneficiary accounts.
+- **3.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB43]. The delivery channel for the allowance path.
+- **2.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* [@CFPB31]. A payment intermediary whose guarantees the capacity can back.
+- **1.7** *Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price* [@CFPB61]. The measure used for the carbon-price equivalent.
 
 # References {.unnumbered}
 
