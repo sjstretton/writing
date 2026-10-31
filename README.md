@@ -8,9 +8,9 @@ Since 29 October 2026 the repo combines the former planning repo (`sjstretton/Pl
 
 | If you want to… | Open |
 |---|---|
-| See this morning's briefing | `0 Morning Briefing/0-Me-MorningBriefing.md`: the morning's tasks (the one priority only), the week, what is waiting on me, and the Dashboard link |
-| See today's plan and next step | `0 Morning Briefing/1-Me-NextStep.txt`, or the **Dashboard** and **Today** tabs of the [master Google Sheet](https://docs.google.com/spreadsheets/d/1WEHemG3x0kJ3yk-u1RcSheqYsX0T2aAXmiba9veaQag/edit) |
-| See every task, in every repo | `0 Morning Briefing/3-TaskContextAndProjectPlans.md` |
+| See this morning's briefing | `0 Morning Briefing/3-OnePriority.txt`: the morning's tasks (the one priority only), the week, what is waiting on me, and the Dashboard link |
+| See today's plan and next step | `0 Morning Briefing/1-NextStep.txt`, or the **Dashboard** and **Today** tabs of the [master Google Sheet](https://docs.google.com/spreadsheets/d/1WEHemG3x0kJ3yk-u1RcSheqYsX0T2aAXmiba9veaQag/edit) |
+| See every task, in every repo | `0 Morning Briefing/5-TaskContextAndProjectPlans.md` |
 | See the strategic priorities | `A Writing Instructions/STRATEGY.md` (PhDs, papers, specialisms) and `2 Strategic Plans/` (work plan, master plan) |
 | See my specialisms and the order for nailing them down | `SPECIALISMS.md` |
 | See which papers come next | `A Writing Instructions/PAPERS.md` and `A Writing Instructions/TODO.md` |
@@ -40,6 +40,6 @@ Folders with their own `README.md` have local conventions; read it first.
 
 ## How the two parts connect
 
-- **Tasks live in planning.** Writing tasks appear in `0 Morning Briefing/3-TaskContextAndProjectPlans.md` and the Sheet's Context tab (for example T13 PhD application, T46 writing upgrade). `A Writing Instructions/TODO.md` is the detailed working list for the writing; when a writing task finishes, update both.
+- **Tasks live in planning.** Writing tasks appear in `0 Morning Briefing/5-TaskContextAndProjectPlans.md` and the Sheet's Context tab (for example T13 PhD application, T46 writing upgrade). `A Writing Instructions/TODO.md` is the detailed working list for the writing; when a writing task finishes, update both.
 - **Priorities are shared.** `A Writing Instructions/STRATEGY.md` and `2 Strategic Plans/Stephen_FY27_Work_Plan_v2.6_15thOct.docx` should agree; if they differ, ask Stephen.
 - **One master per item.** Planning's rule (one home for each thing, kept in step by `1 Planning Instructions/Scripts/update.py`) applies to planning files and the Sheet. Writing files are mastered in the repo, with the `.qmd` as the master for each paper.

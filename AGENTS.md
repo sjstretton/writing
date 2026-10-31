@@ -26,7 +26,7 @@ Stephen is easily overwhelmed by volume, so planning output must stay short and 
 
 ## Connecting the two parts
 
-- **When you finish work in any part**, update the task in `0 Morning Briefing/3-TaskContextAndProjectPlans.md` (planning's rule). For writing work, also update `A Writing Instructions/TODO.md` and, for papers, `A Writing Instructions/PAPERS.md`.
+- **When you finish work in any part**, update the task in `0 Morning Briefing/5-TaskContextAndProjectPlans.md` (planning's rule). For writing work, also update `A Writing Instructions/TODO.md` and, for papers, `A Writing Instructions/PAPERS.md`.
 - **Before pushing a change to planning files**, follow the consistency procedure in `1 Planning Instructions/AGENTS.md` ("Before every push to main"), which keeps the repo and the master Google Sheet in step. A push that touches only writing files does not need it.
 - **Priorities.** `A Writing Instructions/STRATEGY.md` and the FY27 work plan in `2 Strategic Plans/` should agree. If they conflict, ask Stephen.
 

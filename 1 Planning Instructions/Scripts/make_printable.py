@@ -3,8 +3,8 @@
 The root file never carries a version number, so links to it stay valid; a copy of each layout
 version goes to 3 Archive/Printable versions/. Normally run through Scripts/update.py build.
 
-Changing lists come from 3-TaskContextAndProjectPlans.md, 1-Me-NextStep.txt,
-2-Me-DayWeekPlan.txt and Context/3-Me-WeeklyLog.md; the fixed routines from Context/routines.md.
+Changing lists come from 5-TaskContextAndProjectPlans.md, 1-NextStep.txt,
+2-DayWeekPlan.txt and Context/3-Me-WeeklyLog.md; the fixed routines from Context/routines.md.
 Every task and milestone shows its points. Tick boxes are Word check-box controls (click to tick).
 Page 1: the morning briefing (the Dashboard tab on paper: quick rewards with deadlines, the focus
 project's two next steps, the priority burndown, list 2, decisions, the morning routine).
@@ -33,7 +33,7 @@ VERSION = "0.6"
 PLANS = REPO / "0 Morning Briefing"
 OUT = PLANS / "Me-Printable-Tracker.docx"
 ARCHIVE = REPO / "3 Archive" / "Printable versions"
-TASKS = "3-TaskContextAndProjectPlans.md"
+TASKS = "5-TaskContextAndProjectPlans.md"
 NAVY = RGBColor(0x1F, 0x4E, 0x79)
 GREY = RGBColor(0x59, 0x59, 0x59)
 RED = RGBColor(0xC0, 0x00, 0x00)
@@ -82,7 +82,8 @@ def sections(text):
         elif re.match(r"^[A-Z][A-Z &]+(\(.*\))?$", l) or l.startswith("# "):
             cur = out.setdefault(l.lstrip("# ").strip(), [])
         elif cur is not None:
-            m = re.match(r"- \[[ x]\] (.*?)(?:\. Value: (.*))?$", l) or re.match(r"^\d+\.\s*(.*)()$", l)
+            m = re.match(r"- \[[ x]\] (.*?)(?:\. Value: (.*))?$", l) or re.match(r"^\d+\.\s*(.*)()$", l) \
+                or re.match(r"- (?!\[)(.*?)(?:\. Value: (.*))?$", l)
             if m:
                 cur.append((m.group(1), m.group(2) or ""))
     return out
@@ -340,8 +341,8 @@ def summary(tasks, nxt, today):
 def build(today, pages=None):
     pages = pages or {}
     tasks = md_tables((PLANS / TASKS).read_text())
-    nxt = sections((PLANS / "1-Me-NextStep.txt").read_text())
-    plan = sections((PLANS / "2-Me-DayWeekPlan.txt").read_text())
+    nxt = sections((PLANS / "1-NextStep.txt").read_text())
+    plan = sections((PLANS / "2-DayWeekPlan.txt").read_text())
     lw_title, lw_rows = last_week((ROOT / "Context/3-Me-WeeklyLog.md").read_text())
     fixed = routines((ROOT / "Context/routines.md").read_text())
     active = tasks["Active tasks"]
@@ -354,7 +355,7 @@ def build(today, pages=None):
     to_plan = section(nxt, "TO PLAN")[1]
     today_items = section(plan, "TODAY")[1]
     week_items = section(plan, "THIS WEEK")[1]
-    week_title = (PLANS / "2-Me-DayWeekPlan.txt").read_text().split("# THIS WEEK", 1)[1].strip().splitlines()[0]
+    week_title = (PLANS / "2-DayWeekPlan.txt").read_text().split("# THIS WEEK", 1)[1].strip().splitlines()[0]
 
     sm = summary(tasks, nxt, today)
     earned, open_pts, states, behind, upcoming = sm["earned"], sm["open"], sm["states"], sm["behind"], sm["upcoming"]

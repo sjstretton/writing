@@ -1,6 +1,6 @@
 # REPO DIRECTORY
 
-Where every repo lives and what it is for. Tasks for these repos go in `3-TaskContextAndProjectPlans.md`, not here.
+Where every repo lives and what it is for. Tasks for these repos go in `5-TaskContextAndProjectPlans.md`, not here.
 Rules: "Repos" in `NORMS.md`. Purposes marked (?) are guesses from the repo name: confirm or correct them.
 
 Last updated: Sat 17 Oct 2026 (sjstretton repos; cpmodel dates from 15 Oct) (last-push dates from GitHub)

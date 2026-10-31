@@ -38,9 +38,9 @@ import make_printable as mp  # noqa: E402
 
 STATE = ROOT / "Context" / "sync-state.json"
 PLANS = REPO / "0 Morning Briefing"
-TASKS = PLANS / "3-TaskContextAndProjectPlans.md"
-NEXT = PLANS / "1-Me-NextStep.txt"
-DAYWEEK = PLANS / "2-Me-DayWeekPlan.txt"
+TASKS = PLANS / "5-TaskContextAndProjectPlans.md"
+NEXT = PLANS / "1-NextStep.txt"
+DAYWEEK = PLANS / "2-DayWeekPlan.txt"
 ROUTINES = ROOT / "Context" / "routines.md"
 PRINT_SOURCES = [TASKS, NEXT, DAYWEEK, ROUTINES, ROOT / "Context" / "3-Me-WeeklyLog.md", ROOT / "Scripts" / "make_printable.py"]
 SHEET_IDS = {"Dashboard": 120, "Plan": 106, "Context": 103, "Regular lists": 108, "Updateable lists": 111}
@@ -121,7 +121,9 @@ def parse_plan_file(path, prefix):
         item = parse_item(l) if l else None
         if l and item is None:
             name = l.lstrip("# ").strip()
+            # "TODAY (tail)" and "TODAY, Saturday" are both the TODAY section
             base = re.sub(r"\s*\(.*\)$", "", name)
+            base = re.sub(r"^([A-Z][A-Z &]*[A-Z]),\s.*$", r"\1", base)
             key = f"{prefix}/{base}"
             n = 2
             while key in secs:
