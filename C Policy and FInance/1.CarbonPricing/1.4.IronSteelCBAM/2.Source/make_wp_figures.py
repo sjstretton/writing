@@ -1,16 +1,16 @@
-"""Calibration tables and figures for the working paper IronSteelCBAM.qmd (v0.3).
+"""Calibration tables and figures for the working paper IronSteelCBAM.qmd (v0.4).
 
-Data: EU CBAM default values, direct emissions, from the Commission workbook
-"DVs as adopted_v20260204_.xlsx" (version 1, 4 February 2026), which reproduces
-Annex I of Commission Implementing Regulation (EU) 2025/2621. The legally valid
-values are those in the Regulation. The extract used here is the public CSV in
+Data: EU CBAM default values, direct emissions, Annex I of Commission
+Implementing Regulation (EU) 2025/2621 (checked against the Official Journal
+text on 31 Oct 2026; the Commission workbook of 4 February 2026 reproduces it). The extract used here is the public CSV in
 ../../1.1.OpenEconomyCarbonPricing/2.Source/CBAM-default-values-steel-aluminium-cement.csv,
 cross-checked against the workbook (route codes read from the workbook).
 
 Everything else is stylized and labelled so: certificate price EUR 80/tCO2;
 full phase-in (no free-allocation adjustment, as from 2034); 2028-onward
 mark-up of 30 percent; scrap-EAF steel at 0.4 tCO2/t and blast-furnace steel
-at 2.0 tCO2/t in the stylized exporter; abatement slope as in paper 1.1
+at 2.0 tCO2/t in the stylized exporter (IEA 2020, Box 1.3: 0.3 and 2.2 direct
+plus indirect; 0.04 and 1.2 direct); abatement slope as in paper 1.1
 (a EUR 50 rate cuts intensity by 30 percent, so k*e0 = EUR 166.7/tCO2).
 
 Run from this folder:  python make_wp_figures.py
@@ -31,7 +31,7 @@ os.makedirs(FIG, exist_ok=True)
 
 TAU = 80.0          # EUR per tCO2 (stylized certificate price)
 MARKUP = 0.30       # 2028 onward, iron and steel and aluminium (Reg. 2025/2621)
-E_SCRAP = 0.4       # tCO2/t, scrap-EAF steel (stylized, rounded from IEA 2020)
+E_SCRAP = 0.4       # tCO2/t, scrap-EAF steel (stylized; IEA 2020 gives 0.3 direct+indirect)
 E_SECONDARY_AL = 0.36  # tCO2/t, lowest country default for unwrought aluminium
 KE0 = 50 / 0.3      # EUR/tCO2: k*e0 from paper 1.1's calibration
 
@@ -56,6 +56,7 @@ def steel_row(c):
                 liability_default=lia_def, liability_country=lia_cs,
                 value_feebate40=lia_def - (TAU - 40) * d,   # rho = 1, t = 40
                 value_feebate80=lia_def,                    # rho = 1, t = 80
+                markup_part=lia_def - lia_cs, recognition40=40 * d,
                 shuffle_vs_average=TAU * (d - E_SCRAP),
                 shuffle_vs_default=TAU * (d * (1 + MARKUP) - E_SCRAP))
 
