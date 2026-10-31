@@ -32,7 +32,7 @@ Order of work. The reason column says why each paper is where it is.
 | No. | Paper | Status |
 |---|---|---|
 | 2.1 | Taxing Rent, Not Effort (land above an allowance; corporate rent) | sketch, April 2026 |
-| 2.2 | Let Land Pay for the City: Property Taxes, Public Land and Land Value Capture to Fund Green Urban Infrastructure in Developing Countries | working paper v0.1 (31 Oct), about 8,200 words; figures checked by three research passes; a few bibliography details still marked VERIFY in the `.bib` notes; no brief or deck yet |
+| 2.2 | Let Land Pay for the City: Property Taxes, Public Land and Land Value Capture to Fund Green Urban Infrastructure in Developing Countries | working paper v0.1 (31 Oct), about 8,200 words; figures checked by three research passes; a few bibliography details still marked VERIFY in the `.bib` notes; no brief or deck yet; on the website (ready to deploy) |
 
 ### The finance-and-risk series (section 3)
 

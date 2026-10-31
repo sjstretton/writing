@@ -85,6 +85,7 @@ WEB_PAPERS = [
     "1.3.CarbonConsumptionTax",
     "1.4.IronSteelCBAM",
     "2.1.RentTax",
+    "2.2.LandPaysForTheCity",
     "3.1.ClimateFinanceIntermediationForCleanPower",
     "3.2.CleanPowerAssetClasses",
     "4.1.NotionalCapitalisedValueAndGuarantees",

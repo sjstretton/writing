@@ -67,6 +67,8 @@ website:
               contents:
                 - text: "Working paper"
                   href: policy/2-other-tax/RentTax/working-paper.qmd
+            - text: "2.2 Let Land Pay for the City"
+              href: policy/2-other-tax/LandPaysForTheCity/index.qmd
         - section: "3. Finance and Risk"
           href: policy/3-finance-and-risk.qmd
           contents:

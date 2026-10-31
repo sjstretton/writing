@@ -1,0 +1,326 @@
+---
+# GENERATED - NOT THE MASTER. Made from C Policy and FInance/2.OtherTaxAndFiscalPolicy/2.2.LandPaysForTheCity/LandPaysForTheCity.qmd by build_web_papers.py
+# on every compile; edits here are lost. Edit the master instead.
+title: "Let Land Pay for the City"
+subtitle: "Property Taxes, Public Land and Land Value Capture to Fund Green Urban Infrastructure in Developing Countries"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+version: "0.1"
+abstract: |
+  Cities in Africa and Asia will add about 2.5 billion people by 2050, and most of the roads, transit, water and drainage they will need is not yet built. Building it can raise the value of urban land by more than it costs, yet developing countries collect recurrent property taxes worth only a few tenths of a percent of GDP, against about 1 percent in advanced economies. This paper argues that land should pay for the city. A recurrent tax on land value, together with capture of the one-off rise in land value that new infrastructure creates, can fund a large share of urban infrastructure. Hong Kong and Singapore show the model at scale: public ownership of land and rail-plus-property development let mass transit pay much of its own way. A property tax that falls mainly on land is also a green tax. It rewards compact building, penalizes idle land on the urban fringe and makes transit viable, and the compact, walkable city it supports brings large health gains from fewer road deaths, cleaner air and more physical activity. The paper sets out how a poor city can adapt the model, the planning it needs, and a best-practice outline for a property tax and land value capture code.
+keywords: [property tax, land value tax, land value capture, transit-oriented development, urban infrastructure, green fiscal policy]
+jel: [H21, H71, H54, R14, R42, Q56]
+bibliography: LandPaysForTheCity.bib
+csl: ../../../chicago-author-date.csl
+number-sections: true
+crossref:
+  tbl-prefix: Table
+  sec-prefix: Section
+toc: true
+date-format: "MMMM YYYY"
+citations-hover: true
+crossrefs-hover: true
+lightbox: auto
+---
+
+*Working paper, version 0.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. This is paper 2.2 in the section "Tax Rent, Not Effort"; its companion, paper 2.1, sets out a land value tax above a household allowance [@StrettonWP21].*
+
+# Introduction {#sec-intro}
+
+The cities of Africa and Asia are about to be built, and how they are paid for will decide what they look like. The United Nations projected in 2018 that the world's urban population would grow by 2.5 billion people by 2050, close to 90 percent of them in Asia and Africa [@UNDESA2018]. The World Bank estimates that low- and middle-income countries need to invest about 4.5 percent of GDP a year in new infrastructure through 2030 to meet the infrastructure-related development and climate goals [@RozenbergFay2019], and much of that is urban: roads and transit, water mains and sewers, drains and power lines. Most of these cities have no reliable way to pay. Their governments collect property taxes worth 0.1 to 0.4 percent of GDP, against about 1 percent from recurrent property taxes alone in the OECD and more than 2.5 percent in the United Kingdom, Canada and the United States (@tbl-revenue). Without money, infrastructure follows settlement instead of leading it, and the city sprawls into unserviced land.
+
+This paper asks how fast-growing cities in developing countries can pay for the infrastructure that urban growth needs, and whether the way they pay for it can also make them greener and healthier. Its answer is that land should pay. Public infrastructure raises the value of the land it serves, sometimes by more than it costs. A recurrent tax on land value, combined with instruments that capture the one-off rise in value when infrastructure is built, can fund a large share of a city's trunk infrastructure from the people who gain most from it. A property tax that falls mainly on land is also a green tax: it rewards compact building, penalizes idle land at the urban fringe and makes mass transit financially viable. And the compact, transit-based city it supports prevents deaths from road crashes, air pollution and physical inactivity, burdens that fall overwhelmingly on low- and middle-income countries.
+
+Two cities show the model working at scale. The governments of Hong Kong and Singapore own most of their land, plan its use in detail and have built two of the world's best mass transit systems, financed in large part by the value that transit creates in the land around it. Neither is a template for a poor country: both are rich, Singapore assembled land in ways most democracies would not accept, and Hong Kong's reliance on land revenue has contributed to some of the world's least affordable housing. But the principle they demonstrate, that a city which controls its land and captures the uplift can pay for transit, can be adapted to cities with far less money and capacity.
+
+The paper builds on three bodies of work. The public finance literature on property taxes in developing countries documents how little they collect and why [@Norregaard2013; @FranzsenMcCluskey2017; @KellyWhiteAnand2020; @GroteWen2024]. The literature on land value capture describes the instruments and their use around the world [@Suzuki2015; @OECDLincoln2022]. The urban health literature estimates the health gains of compact, transit-oriented cities [@GilesCorti2016; @Stevenson2016]. This paper connects the three. It argues that the recurrent property tax, usually treated as a minor local revenue source, is a green fiscal instrument and the financial foundation of transit-oriented development, and it sets out a fiscal code that would let developing-country cities use it that way.
+
+# Land value is created by the public, so it is the natural base for public infrastructure {#sec-theory}
+
+## Infrastructure raises land values, and the owner did nothing to earn the rise {.unnumbered}
+
+The value of a plot of urban land is the capitalized value of what can be reached from it. A hectare beside a new metro station is worth more than the same hectare a day before the line opened, because the people who will live or work on it can now reach more jobs, customers and services in less time. The owner did nothing to create the gain; the public authority that built the line and the residents and firms whose presence makes access valuable did. Economists call the part of a return that requires no effort or investment from its recipient *economic rent*, and land value is the textbook case: the supply of land at a location is fixed, so its price is set entirely by demand, and demand is set by what the city around it provides.
+
+The rise can be large compared with the cost of the infrastructure that causes it. A meta-analysis of 102 estimates from 23 studies finds that rail projects raise land and property values near stations, by amounts that vary widely with the type of rail, the market and the study design [@Mohammad2013]. Summed over every plot within walking distance of every station, the uplift can rival the cost of the line. That is why Hong Kong's rail operator can pay for much of its network from property development (@sec-hksg), and why a city that leaves the uplift with landowners pays for its infrastructure twice: once through the budget, and again through the higher rents that tenants pay landowners for the access the budget created.
+
+The rise in land value is also the main way the benefits of urban infrastructure reach their final owners. Better roads, drainage and transit lower commuting costs and raise wages, but in a city where people can move, competition for the newly better locations bids those gains into rents and land prices [@ArnottStiglitz1979]. This *capitalization* makes land a good tax base for infrastructure: a tax on land value reaches those who gain, roughly in proportion to their gain, without anyone having to measure each person's benefit.
+
+## The Henry George theorem gives the theoretical limit {.unnumbered}
+
+Under ideal conditions, the rents that a city's public goods create are exactly enough to pay for them. @ArnottStiglitz1979 showed that in a city of optimal size, aggregate differential land rents equal spending on pure local public goods. The result is called the Henry George theorem, after the nineteenth-century American who proposed that a single tax on land could replace all others. No real city meets its strict conditions, but its message is practical: the infrastructure that makes a city productive creates a land-value base large enough to fund much of it. A city that cannot finance its infrastructure while its land values soar has a tax design problem, not a resource problem.
+
+## Two families of instruments capture land value {.unnumbered}
+
+This paper uses *land value capture* to mean any public instrument that recovers for the public part of the land value that public action creates [@OECDLincoln2022]. The instruments fall into two families, which differ in timing.
+
+*Recurrent taxes* are levied every year on the value of land, or of land and buildings together. They capture the uplift gradually, as values are reassessed, and give a steady revenue that can service debt, but they depend on a working valuation roll and the political will to revalue.
+
+*One-off capture instruments* recover the uplift at the moment it is created. The OECD and Lincoln Institute compendium of land value capture in 60 countries groups them into five types [@OECDLincoln2022]. An *infrastructure levy*, often called a betterment levy, is a one-time charge on the owners of land that benefits from a defined project, such as Colombia's *contribución de valorización*. A *developer obligation* requires a developer to provide or pay for the roads, schools or open space that a project needs as a condition of permission. A *charge for development rights* sells the right to build more floor area than the base zoning allows, as São Paulo does with its auctioned building-rights certificates. *Land readjustment* pools privately held plots, returns to the owners smaller but serviced and better-shaped plots, and keeps some land for roads and for sale, as in Japan and in the town planning schemes of Gujarat, India. *Strategic land management*, which includes public land leasing or sale, lets a government that owns the land sell or lease it after the infrastructure has raised its value, which is the core of the Hong Kong and Singapore models.
+
+**Proposition 1 (land should pay).** *Where infrastructure raises land values, a combination of a recurrent land-value tax and one-off capture instruments can recover a large share of the infrastructure's cost from those who gain from it, at lower efficiency cost than taxes on labor, capital or consumption. The share recovered rises with the quality of the valuation roll and with the extent to which the public owns or controls the land before the infrastructure is announced.*
+
+The second condition matters most in practice. Land prices move on the announcement of a project, not on its completion, so instruments that act after the announcement capture less of the uplift than instruments that act before it. A government that owns the land, or pools it at pre-project value, captures most of the gain; one that relies on a recurrent tax with infrequent revaluation captures little of it for years.
+
+## Land taxes are the least harmful taxes a government can levy {.unnumbered}
+
+A tax on land value does not reduce the supply of land, so it does not shrink the economy the way taxes on work, saving or investment do. OECD research ranks recurrent taxes on immovable property as the least damaging to long-run growth, followed by consumption taxes, personal income taxes and, most damaging, corporate income taxes [@Johansson2008; @Arnold2011]. A tax on buildings is less benign, because it discourages building; a tax on land alone, or a lower rate on buildings than on land, keeps the growth advantage and adds the green advantages of @sec-green.
+
+# Developing countries barely tax land value {#sec-dev}
+
+## Recurrent property taxes raise a few tenths of a percent of GDP {.unnumbered}
+
+Developing countries collect far less from property than rich countries (@tbl-revenue). In 2023 the OECD average yield from recurrent taxes on immovable property was 0.95 percent of GDP, and all property taxes together, including taxes on transfers, raised 1.68 percent; the United Kingdom, Canada and the United States each collected more than 2.5 percent from the recurrent tax alone [@OECD2025Revenue]. In 2009 middle-income countries collected 0.40 percent of GDP [@Norregaard2013]. In Africa, the 32 countries with data collected an average of 0.38 percent of GDP from all property taxes, mostly over 2008–2013, and only South Africa's recurrent tax exceeded 1 percent [@FranzsenMcCluskey2017]. The IMF puts total property tax revenue in Sub-Saharan Africa and emerging Asia at about 0.1 percent of GDP in 2021 [@GroteWen2024]. India, with the world's largest urban population after China, collects municipal property tax of around 0.15 percent of GDP, a figure that has barely moved for decades [@Roy2026].
+
+| Country or group | Year | Revenue (% of GDP) | Measure |
+|---|---|---|---|
+| United Kingdom | 2023 | 2.78 | Recurrent taxes on immovable property |
+| Canada | 2023 | 2.69 | Recurrent taxes on immovable property |
+| United States | 2023 | 2.63 | Recurrent taxes on immovable property |
+| OECD average | 2023 | 0.95 | Recurrent taxes on immovable property |
+| High-income countries | 2009 | 1.06 | Recurrent taxes on immovable property |
+| Middle-income countries | 2009 | 0.40 | Recurrent taxes on immovable property |
+| Africa, 32 countries | 2008–13 | 0.38 | All property taxes |
+| India | recent years | about 0.15 | Municipal property tax |
+| Sub-Saharan Africa and emerging Asia | 2021 | about 0.1 | All property taxes |
+
+: Developing countries collect a fraction of what rich countries raise from property. Sources: @OECD2025Revenue (OECD and country rows); @Norregaard2013 (income groups); @FranzsenMcCluskey2017 (Africa); @Roy2026 (India); @GroteWen2024 (Sub-Saharan Africa and emerging Asia). Notes: measures differ across rows, as stated; the OECD rows use code 4100 of the OECD revenue classification. {#tbl-revenue}
+
+The shortfall is large. The IMF estimates that middle-income countries could raise about 0.9 percent of GDP from recurrent property taxes, more than double what they collect [@Norregaard2013], and its most recent guidance treats 1 to 2 percent of GDP as a reasonable medium-term target [@GroteWen2024]. The World Bank estimates that low- and middle-income countries need to invest about 4.5 percent of GDP a year in new infrastructure through 2030 to meet the infrastructure-related development and climate goals, plus another 2.7 percent a year to maintain it [@RozenbergFay2019]. Property taxes cannot close that gap alone, but they are the main source a city can raise for itself, and they are the natural source for the urban share of the bill.
+
+## The structure inherited from colonial rating rarely reaches land value {.unnumbered}
+
+Most developing-country property taxes were designed for a different purpose, and their structure still limits what they can collect. Four bases are common. Annual rental value bases, inherited from British rating, tax the rent a property would fetch in a year; they are used across South Asia and in much of Commonwealth Africa, and also in Singapore and Hong Kong. Capital value bases, which tax the market value of land and buildings, are standard in Latin America and South Africa. Area-based systems, which multiply floor area by a rate per square meter that varies by zone and building type, have spread in Indian cities and elsewhere because they need no market data. Site value bases tax land alone; Jamaica has taxed the unimproved value of land since 1957 [@Sjoquist2005].
+
+Each base has a weakness in a fast-growing city. A rental value base gives a vacant plot a low rent and so a low tax, however valuable its land, which rewards holding land idle. A capital value base taxes buildings and so discourages building. An area-based system captures none of the uplift from infrastructure unless its zonal rates are updated, which rarely happens. Only a site value base targets the land value that infrastructure creates, and it is the least used.
+
+## Coverage, valuation and collection each lose half the base {.unnumbered}
+
+The yield of a property tax is the product of four ratios: the share of properties on the roll, the ratio of assessed to market value, the share of the bill actually collected, and the statutory rate. In developing countries the first three are each typically between a fifth and four-fifths. A World Bank diagnostic finds that low- and middle-income countries typically have coverage of 40 to 60 percent and collection of 30 to 60 percent, against nearly 100 percent for both in OECD countries [@KellyWhiteAnand2020]. Valuation ratios of 20 to 80 percent are common [@GroteWen2024]. Multiply three ratios of about one-half and the tax collects about one-eighth of what its statutory rate implies. So raising the rate is the wrong first step: it burdens those who already pay and leaves untouched those who pay nothing. Exemptions for owner-occupied homes, agricultural land, religious bodies and new buildings, often permanent, narrow the base further.
+
+## Transfer taxes do the work that a recurrent tax should {.unnumbered}
+
+Many developing countries lean heavily on taxing property sales. In India, stamp duties and registration fees on property transactions provided between 7 and 14 percent of states' own tax revenue [@NIPFP2019], while the recurrent municipal tax raises around 0.15 percent of GDP. Transfer taxes are easy to collect, because a buyer needs a registered deed, but they have three costs. They discourage people from moving closer to work (@sec-green). They push transactions off the record, because buyers and sellers understate prices or never register, which leaves the valuation roll without market evidence. And they capture land value only when land changes hands, which may be once a generation.
+
+## Freetown shows that a poor city can reform quickly {.unnumbered}
+
+Freetown, the capital of Sierra Leone, shows that a city with low capacity can rebuild a property tax in about two years. Property tax already provided about 42 percent of the city council's own revenue [@FranzsenMcCluskey2017], but the roll was incomplete and valuations arbitrary. In 2018–2019 the council piloted, on more than 11,000 properties, a points-based valuation that estimates each property's value from a few observable features such as size, building quality and location [@Grieco2019]. The register then grew from about 57,000 to about 110,000 properties, and by April 2020 almost all properties in the city had been mapped and valued. The council's estimate of potential revenue rose more than fivefold [@PrichardKamaraMeriggi2020]. The central government asked the council to pause the reform in June 2020, and collection under the new system resumed in 2021. Freetown shows both halves of the problem: the technical work can be done fast, and politics can stop it.
+
+## China shows the opposite risk: dependence on land sales {.unnumbered}
+
+China built much of its urban infrastructure for two decades by selling long leases on land owned by local governments. Land sales provided about 30 percent of local government revenue in 2021, and land sales plus land-related taxes about 38 percent [@Huang2024]. Revenue from land sales reached 8.71 trillion yuan in 2021, then fell to 4.87 trillion in 2024 and 4.15 trillion in 2025 as the property market contracted [@MOFChina2026]. Local governments that had borrowed against future land sales through financing vehicles found the revenue gone and the debt still due. China has no general recurrent property tax on homes; a pilot in Shanghai and Chongqing since 2011 was never extended nationally. Land finance built a vast amount of infrastructure quickly; the lesson is that one-off land sales are a volatile base that should fund capital spending only, with a recurrent land tax as the stable complement.
+
+# Hong Kong and Singapore made land pay for mass transit {#sec-hksg}
+
+Hong Kong and Singapore are the clearest cases of cities financing mass transit from the land value it creates. In both the state owns most of the land, but they took different routes. Hong Kong lets its rail company capture the uplift directly by developing property above and around its stations. Singapore captures the uplift through the state as landowner and through taxes on land value, and funds transit from the budget. @tbl-hksg compares them.
+
+## Hong Kong: the rail company is also the developer {.unnumbered}
+
+All land in Hong Kong belongs to the state, which leases it to users for fixed terms; this gives the government a direct claim on the rise in land value [@Suzuki2015]. Land premiums, the payments developers make for new leases or for changes to existing ones, have been a major source of public revenue. In 2017–18 they raised HK\$164.8 billion, 26.6 percent of government revenue, and between 16 and 24 percent in each of the following three years [@IRD2021]. Revenue from land is also volatile: in the depressed market of 2024–25, the revised estimate was HK\$13.5 billion, under 3 percent of revenue [@HKBudget2025].
+
+The rail-plus-property model turns that claim into a way of financing transit. When a new line is planned, the government grants the rail operator, the MTR Corporation, the development rights for sites at and around the new stations, and charges a land premium equal to the land's full market value without the railway: the before-rail price [@Suzuki2015]. MTR then develops the sites with private developers at their after-rail value, and keeps a share of the profits and often the shopping centers and offices it builds. The difference between the before-rail and after-rail values pays for much of the line. Since 2007, the government has sized the development rights for each new line to close an independently assessed funding gap; for the South Island Line (East) and the Kwun Tong Line Extension those gaps were HK\$9.9 billion and HK\$3.3 billion [@LCQ62012].
+
+Property makes MTR's railway business profitable. Between 2000 and 2012, property development and related business provided 38 percent of MTR's recurring profits [@Suzuki2015]. In 2024, property development contributed HK\$10.3 billion of an underlying business profit of HK\$17.5 billion, about 59 percent, while Hong Kong transport operations made a small loss [@MTR2025]. Fares on their own also cover operating costs with room to spare: MTR's farebox recovery ratio was 185.5 percent in 2012 [@Suzuki2015], and on 2024 figures transport revenue was still about 150 percent of transport operating costs before depreciation (author's calculation from @MTR2025). The two sources reinforce each other: dense housing and shops above stations generate riders, and riders make that property more valuable. @CerveroMurakami2009 found that a rail-plus-property station with transit-oriented design added about 35,000 weekday passengers, and that nearby housing sold at a premium of roughly 5 to 30 percent.
+
+The result is one of the world's most transit-dependent cities. In 2016 public transport carried more than 12 million passenger trips a day in Hong Kong, over 90 percent of all trips [@THB2017]; in 2024 it carried about 11.7 million, of which MTR carried 5.2 million [@TD2025].
+
+Hong Kong's model also has a dark side that a developing country should study as closely as its success. A government that depends on land sales for its general budget has a fiscal interest in high land prices, and Hong Kong has released land for housing slowly; its housing is among the least affordable in the world. A recurrent land tax creates no such incentive, because it raises revenue from land already in use rather than from rationing new land.
+
+## Singapore: the state assembled the land and taxes its value {.unnumbered}
+
+Singapore took a more radical route: the state acquired most of the land, and then planned, built and taxed it. In 1960 the state owned 44 percent of Singapore's land; by 1985 it owned 76 percent and by 2005 about 90 percent [@PhangHelble2016]. The Land Acquisition Act of 1966 allowed the government to acquire land compulsorily for public purposes, and from 1973 compensation was fixed at land values on a historical statutory date, 30 November 1973, which was held for about 14 years and later moved forward several times. Only in 2007 was compensation pegged to full market value [@PhangHelble2016]. In effect, the state captured the land value that growth created by buying land at prices that excluded it.
+
+Public ownership let Singapore plan housing and transit together. At the end of March 2025, 76.0 percent of Singapore's resident population lived in flats built by the Housing and Development Board, the public housing agency [@HDB2025], and 91 percent of resident households owned their homes [@DOS2026]. Most of these flats are sold on 99-year leases, so the state remains the landowner. Because the Housing and Development Board and the Land Transport Authority plan new towns and rail lines together, the stations sit at the center of the towns, within walking distance of most homes.
+
+Singapore funds transit from the budget, and the budget is supported by land in three ways. The first is the sale of state land: proceeds go into the national reserves rather than the current budget, and up to half of the expected long-term real return on the reserves can be spent each year through the Net Investment Returns Contribution, which funds about a fifth of government spending [@MOF2025]. The second is a recurrent property tax on the annual value of property, with progressive rates: owner-occupied homes pay from 0 to 32 percent of annual value, and non-owner-occupied homes from 12 to 36 percent [@IRAS2025]. The third is a charge on the value created by planning permission. Since 1 August 2022 the Land Betterment Charge has taxed 70 percent of the rise in land value when the government permits a more valuable use or a higher density [@SLA2022; @Tong2021].
+
+Singapore pairs this financing with one of the world's most consistent policies of managing car use. It introduced the Area Licensing Scheme, a charge to enter the central business district, in 1975; replaced it with Electronic Road Pricing in 1998 [@NLB2009ERP]; and since May 1990 has capped the vehicle population by requiring a Certificate of Entitlement, bought at auction, for every new vehicle [@NLB2006COE]. Its rail network was about 258 kilometers long at the end of 2023 and is planned to reach about 360 kilometers in the early 2030s [@LTA2023]. The Land Transport Master Plan 2040 aims for "20-minute towns and a 45-minute city," with nine in ten peak-period journeys by walking, cycling and public transport completed within 45 minutes [@LTA2019].
+
+## What transfers to poorer countries, and what does not {.unnumbered}
+
+The two models share four features that a developing-country city can adapt. First, the public controls the land before the infrastructure is announced, either by owning it or by being able to tax or charge its uplift, so the gain is captured at the before-infrastructure price. Second, transit and land use are planned together, so stations sit where people live and work and the land around them is allowed to be dense. Third, the uplift is captured through more than one instrument: lease premiums, development rights, betterment charges and recurrent taxes. Fourth, car use is priced and limited, so transit does not compete with free roads.
+
+Other features do not transfer. Compulsory acquisition at historical prices, as Singapore practiced it, would be unjust and politically impossible in most developing countries today, and in weaker states it would be captured by the powerful. Hong Kong's model needs very high land values and a competent operator able to develop property at scale. But a city that cannot buy its land can still tax its value every year, charge for the uplift that planning and infrastructure create, pool land through readjustment, and sell building rights near transit.
+
+| | Hong Kong | Singapore |
+|---|---|---|
+| Land ownership | All land owned by the state and leased | About 90 percent state-owned (2005), up from 44 percent in 1960 |
+| Main capture instrument | Rail-plus-property: development rights granted to the rail operator at before-rail value | Public land sales and leases; Land Betterment Charge of 70 percent of planning uplift; recurrent property tax |
+| Who captures the uplift | The rail operator (MTR), then the government as majority shareholder | The state, through reserves and taxes |
+| How transit is funded | Largely self-financing: fares plus property profits | Government budget; rail assets owned by the Land Transport Authority |
+| Car policy | High first-registration tax on private cars; dense transit makes cars unnecessary for most trips | Vehicle quota (1990), congestion charge (1975), Electronic Road Pricing (1998) |
+| Transit use | About 90 percent of daily trips (2016) | Target: 9 in 10 peak journeys by walk-cycle-ride within 45 minutes (2040) |
+| Main weakness | Fiscal reliance on land sales; unaffordable housing | Land assembled at below-market prices; hard to replicate |
+
+: Hong Kong and Singapore reached transit-oriented cities by different routes. Sources: see text. {#tbl-hksg}
+
+# Property taxes on land are green taxes {#sec-green}
+
+A tax on land value is a green tax because it changes how land is used in the direction that lowers emissions and pollution. Green taxes are usually defined by their base, such as fuel or carbon. A land value tax has no environmental base, but it reshapes the city, and a city's shape fixes for decades how far and by what mode its residents travel. Four mechanisms make the tax green.
+
+## It pushes development inward and upward rather than outward {.unnumbered}
+
+A land value tax raises the cost of holding well-served land idle or underused. The owner of a plot near a transit line pays the same land tax whether it is empty or holds a ten-story apartment block, so the tax rewards the most intensive use the zoning allows. A tax on buildings does the opposite, because every extra story raises the bill. The best available evidence comes from Pennsylvania, where some cities tax land at a higher rate than buildings. @BanzhafLavery2010 found that the split-rate tax raised the ratio of capital to land, mainly by adding housing units rather than making units larger. In the first one to two decades after adoption, growth in housing-unit density was 2 to 10 percentage points per decade higher than it would otherwise have been. @OatesSchwab1997 found that Pittsburgh's sharp shift toward land in 1979–80 was followed by a rise in building activity in the 1980s that fifteen comparable cities in the region did not share, while cautioning that a downtown redevelopment drive also played a part.
+
+## It deters speculative land banking on the urban fringe {.unnumbered}
+
+A land value tax makes it costly to hold land at the edge of a growing city in the hope of selling it later, which slows the leapfrog sprawl that characterizes fast-growing cities in developing countries. Without a holding cost, an owner of a peri-urban plot can wait for prices to rise, and development jumps past the withheld land to cheaper land further out. The city spreads, and its infrastructure and its residents' trips both lengthen. A tax on land assessed at its value with planned infrastructure makes waiting expensive, which is why agricultural land inside a planned urban extension should be taxed at its urban-use value once infrastructure is committed. Many developing-country codes do the reverse and exempt agricultural land, which turns the urban fringe into a tax shelter for speculation.
+
+## It funds transit and lets transit pay its way {.unnumbered}
+
+Land value capture makes rail and bus rapid transit financially viable in places where fares alone cannot cover their costs, which tilts the choice between transit and roads toward transit. A road widening spreads its accessibility gains thinly along a corridor, while a station concentrates them within walking distance, where the uplift is easy to identify and charge. A city that captures land value therefore finds transit cheaper relative to roads than a city that relies on general revenue. Hong Kong's rail network is the leading example (@sec-hksg).
+
+## It replaces taxes that lock people in place {.unnumbered}
+
+Shifting revenue from property transfer taxes to recurrent land taxes lets households move closer to work, which cuts commuting. A transfer tax is a fine on moving. In the United Kingdom, @HilberLyytikainen2017 found that a 2 percentage point jump in the stamp duty rate cut household mobility by 35 to 42 percent, mostly by deterring short-distance, housing-related moves. Every extra kilometer a household commutes because moving is too costly adds to emissions and congestion.
+
+## The green effect needs planning to go with it {.unnumbered}
+
+A land value tax supplies the incentive to build compactly, but planning has to permit it. If zoning caps building heights at two stories, minimum plot sizes are large and parking requirements absorb a third of each site, the tax cannot raise density; it can only raise revenue. The plan sets where density is allowed and where infrastructure goes; the tax makes sure the allowed density is used and the uplift funds the next round of infrastructure.
+
+**Proposition 2 (property taxes on land are green taxes).** *A recurrent tax on land value, with buildings taxed at a lower rate or not at all, lowers the cost of compact development relative to dispersed development, raises the cost of holding serviced land idle, and gives transit a financing advantage over roads. Where planning permits higher density near transit, the tax lowers vehicle travel, energy use and emissions per resident. Where planning forbids density, the tax raises revenue but does not change urban form.*
+
+The direct evidence on density comes mostly from rich-country cities, and dense cities with poor transit still congest. The green case for the land tax is strongest as part of a package: a land tax, capture of transit uplift and planning for density near transit.
+
+# A green development model is within reach of poor cities {#sec-green-model}
+
+A poor city cannot copy Hong Kong's metro, but it can copy the logic: plan the city's structure before it is built, put transit and walkable streets at its core, and let the land value that the structure creates pay for it. The fast-growing cities of Africa and South Asia have one advantage over Hong Kong in 1975: most of the city they will have in 2050 has not been built yet.
+
+## Poor cities are spreading out and losing density {.unnumbered}
+
+The default path of urban growth in developing countries is sprawl, and it is expensive. Average built-up densities in a global sample of 120 cities fell by about 2 percent a year between 1990 and 2000, and cities' land areas grew much faster than their populations [@Angel2011]. In Africa the result is what the World Bank calls cities that are crowded, disconnected and costly. African cities are about 29 percent more expensive than cities in other countries at similar income levels [@Lall2017]. About 1.12 billion people lived in slums or informal settlements in 2022, a quarter of the world's urban population [@UN2024SDG]. On an unplanned fringe, roads, drains and water mains arrive late and cost more, because land must be bought back and buildings demolished.
+
+## The green model rests on five planning choices {.unnumbered}
+
+The planning a poor city needs is not elaborate, but it has to come first. Five choices do most of the work, and each one creates land value that the fiscal instruments of @sec-code can capture.
+
+The first is to lay out an arterial road grid ahead of growth. A grid of arterial roads about a kilometer apart, each about 30 meters wide, secured on the urban fringe before development arrives, gives the future city the rights-of-way it will need for buses, water mains, drains and power lines. Ethiopia's Urban Expansion Initiative applied this approach, starting in four secondary cities and extending to eighteen [@LamsonHall2019]. Securing a right-of-way on farmland costs a fraction of clearing one through a built-up district.
+
+The second is to use land readjustment to turn fringe farmland into serviced urban plots. In the town planning schemes of Gujarat, the planning authority pools the land in a scheme area, lays out roads and public spaces, keeps a share of the land for public uses and for sale, and returns serviced plots to the original owners. The law allows the authority to keep up to 50 percent of the land, for roads, open space, social infrastructure, housing for low-income groups and sale; in practice it keeps 25 to 40 percent [@UNHabitat2013]. The owners receive less land but more value, the authority funds the roads by selling the land it keeps, and no one is evicted.
+
+The third is to build bus rapid transit first and rail later. A bus rapid transit system, with dedicated lanes, level boarding and off-board fare collection, carries large volumes at a fraction of the cost of a metro. A review of 44 systems found that most cost less than \$10 million per kilometer [@HensherGolob2008], while fully tunneled metro lines rarely cost less than \$60 million per kilometer and often several times that [@TransitCosts2023]. Bogotá's TransMilenio carried about 1.8 million passengers a day on 114 kilometers of trunk lines in 2023 [@BRTData2023]. Dar es Salaam's DART system won the international Sustainable Transport Award in 2018, the first African city to do so [@ITDP2018]. A bus corridor laid on an arterial grid can later be upgraded to light rail or metro when densities justify it.
+
+The fourth is to allow density where transit is. Zoning should permit much higher floor-area ratios within walking distance of transit stops and stations than elsewhere, mix housing with shops and workplaces, and cap or remove minimum parking requirements near transit. This is where planning and fiscal policy meet: the extra floor area is the land value, and selling it, as São Paulo does, funds the transit that makes it valuable.
+
+The fifth is to protect the walking city. Most residents of poor cities walk, or ride a bus or minibus, because they cannot afford a car. Safe sidewalks, crossings and lighting cost little and protect the most common way people travel. The risk is that roads are widened for rising motor traffic at the expense of the people who walk.
+
+Public health research supports this list: the eight features of urban design that @GilesCorti2016 find encourage walking, cycling and transit, including density, land-use diversity, distance to transit and parking policy, are mostly put in place by these five choices.
+
+## The health gains are large, and they fall mostly on the poor {.unnumbered}
+
+A compact, transit-based city prevents deaths on three fronts: road crashes, air pollution and physical inactivity. On each front, the burden today falls overwhelmingly on low- and middle-income countries.
+
+Road crashes killed about 1.19 million people in 2021, and 92 percent of road deaths occur in low- and middle-income countries [@WHO2023Road]. More than half of those killed are pedestrians, cyclists and riders of motorcycles and other two- and three-wheelers, and road crashes are the leading cause of death for people aged 5 to 29. WHO's newest data, released in July 2026, put deaths at 1.16 million in 2025 [@WHO2026Road]. The economic cost is large: in five case-study countries, the World Bank estimated that halving road deaths and injuries over 24 years could raise GDP per capita by between 7 percent (the Philippines and Tanzania) and 22 percent (Thailand) [@WorldBank2017Road].
+
+Air pollution kills more. Ambient fine-particle pollution caused about 4.2 million premature deaths in 2019, 89 percent of them in low- and middle-income countries [@WHO2024Ambient], and household air pollution about 2.9 million more in 2021 [@WHO2025Household]. The World Bank put the health cost of fine-particle pollution at \$8.1 trillion in 2019, 6.1 percent of global GDP [@WorldBank2022PM25]. Transport is one of the main sources of urban air pollution, and it produced 23 percent of global energy-related CO₂ in 2019, 70 percent of that from road vehicles [@IPCC2022Transport].
+
+Physical inactivity is the least visible of the three. In 2022, 31 percent of the world's adults, about 1.8 billion people, did not get enough physical activity, up from 23 percent in 2000 [@Strain2024]. Inactivity was estimated to cause about 5.3 million of the 57 million deaths worldwide in 2008 [@Lee2012]. A meta-analysis found that walking or cycling about 11 MET-hours a week, roughly two and a half hours of brisk walking, reduced all-cause mortality by 11 percent for walking and 10 percent for cycling, with the largest gains for people who started from little activity [@Kelly2014].
+
+The combined effect of compact urban form is large. @Stevenson2016 modeled six cities, including Delhi and São Paulo, under a compact-city scenario: land-use density and diversity each 30 percent higher, distance to public transport 30 percent shorter, and a 10 percent shift from car travel to walking and cycling. Health gains ranged from 420 to 826 disability-adjusted life years (DALYs) per 100,000 people, mainly from fewer cases of diabetes, cardiovascular disease and respiratory disease. Delhi gained 620 DALYs per 100,000 and São Paulo 420. Scaled to a city of five million, Delhi's figure is about 31,000 years of healthy life gained. These are modeled estimates for one scenario, not observed results, but they indicate the order of magnitude.
+
+For a poor city the health gain comes less from changing behavior than from preventing a change. Its residents already walk and share transport. The green model stops the shift to motorcycles and cars, and the rise in road deaths and pollution and fall in daily activity that came with motorization in richer cities. A city that builds a bus rapid transit spine and safe streets before car ownership takes off locks in the healthy pattern; one that waits will spend decades trying to retrofit it.
+
+**Proposition 3 (the green model is within reach of poor cities).** *A city that secures arterial rights-of-way ahead of growth, assembles fringe land through land readjustment, builds bus rapid transit before rail, permits high density near transit and protects walking can finance a large share of its trunk infrastructure from the land value it creates, provided it has a working land tax and legal instruments to capture uplift. The health gains, from fewer road deaths, cleaner air and more daily activity, are large and accrue mostly to lower-income residents.*
+
+| Planning choice | What it does | How it is financed | Example |
+|---|---|---|---|
+| Arterial grid secured ahead of growth | Reserves rights-of-way for transit, water, drains and power at farmland prices | Land value uplift along the arterials; recurrent land tax | Ethiopia's Urban Expansion Initiative |
+| Land readjustment | Turns fringe farmland into serviced plots without eviction or purchase | Sale of land kept by the authority | Gujarat town planning schemes |
+| Bus rapid transit first | Carries high volumes at a fraction of metro cost | Fares; infrastructure levies; development rights near stations | Bogotá TransMilenio; Dar es Salaam DART |
+| Density near transit | Puts people and jobs within walking distance of stations | Sale of additional floor area | São Paulo building-rights certificates |
+| Protect walking | Keeps the most common and healthiest mode safe | Recurrent land tax; small share of road budgets | — |
+
+: Five planning choices for a green city, and how land pays for them. Sources: see text. {#tbl-planning}
+
+# Best practice for a property tax and land value capture code {#sec-code}
+
+A good fiscal code for land defines a base that reaches land value and spares buildings, requires a complete and current valuation roll, makes the tax hard to avoid and cheap to pay, and gives cities legal tools to capture the uplift from infrastructure when it is created. @tbl-code sets out the provisions; the paragraphs below explain the choices that matter most.
+
+## Tax land more heavily than buildings, and move toward a pure land base over time {.unnumbered}
+
+The code should define the base as the market value of land, or as the market value of land and buildings with a lower rate on the building component. A pure site-value base gives the strongest green and growth incentives, and in fast-growing cities, where many buildings are informal or unfinished, it is often simpler to value. A split-rate base is the practical route where the existing roll values land and buildings together: the code fixes a ratio, such as a building rate one-quarter of the land rate, and narrows it on a published schedule. Annual rental value bases should be converted to capital or site value, because they give a vacant plot near zero liability.
+
+## Value everything, often, by mass appraisal, and test the results in public {.unnumbered}
+
+Valuation is where most developing-country property taxes fail, so the code should make it a legal duty with measurable standards. It should require a general revaluation at least every five years, with annual indexation between revaluations, so values never drift for decades. It should authorize computer-assisted mass appraisal from sales, rental and land-use data, and simpler banded or points-based methods where market data are thin, as Freetown adopted. It should require the valuation authority to publish annual ratio studies against the international standard of the International Association of Assessing Officers: a median ratio of assessed to market value between 0.90 and 1.10, a coefficient of dispersion of no more than 15 percent for ordinary residential property, and a price-related differential between 0.98 and 1.03, which tests whether expensive properties are under-assessed relative to cheap ones [@IAAO2013]. Publishing these statistics shows taxpayers whether the roll is fair.
+
+## Put every parcel on the roll, whatever its legal status {.unnumbered}
+
+The fiscal cadastre should cover every occupied parcel, whether or not it has a formal title, and the code should say plainly that being on the tax roll neither confers nor removes property rights. The code should place the duty to register on the occupier where the owner is unknown, and allow self-declaration of basic attributes, checked by sample audits.
+
+## Keep exemptions few, explicit and costed {.unnumbered}
+
+Exemptions should be limited to a small household allowance and to land used directly by government and recognized public-benefit bodies, and every exemption should be listed and costed each year. A basic allowance, a slice of land value exempt for every owner-occupied home, protects poor households better than a list of exempt categories and keeps the base broad [@StrettonWP21]. Blanket exemptions for agricultural land inside urban boundaries, for religious or political bodies' commercial property, and for new buildings for many years should be removed.
+
+## Make collection easy and non-payment costly {.unnumbered}
+
+The code should make unpaid tax a first charge on the property, so that it must be cleared before any sale, mortgage or building permit, and should authorize, as a last resort, the sale of the property to recover long-standing arrears. Mobile payment, bills by text message, interest on arrears above the government's borrowing rate, and a clear tax account as a condition for permits and utility connections all raise compliance at low cost. Deferral for asset-rich, cash-poor households, such as elderly owners, can be offered with the tax accumulating as a charge settled on sale or inheritance.
+
+## Let cities set rates within a national band, and let them keep the money {.unnumbered}
+
+Rate-setting should sit with the city, within a minimum and maximum set in national law. A city that sets its own rate and keeps the revenue answers to its residents for both. National transfers should not fall when a city collects more, or cities will stop trying. A vacant-land surcharge, a higher rate on serviced land left undeveloped for more than a set period, belongs in the code as an option for cities with fringe speculation.
+
+## Give cities the legal tools to capture uplift before it is capitalized {.unnumbered}
+
+The code should authorize the five land value capture instruments and set the procedures for each. For infrastructure levies, it should define a benefit zone around each project, a method for apportioning the charge, and payment over several years. For development rights, it should allow cities to sell floor area above a base ratio, by auction where demand is strong. For land readjustment, it should allow a scheme area to be pooled after public consultation, with clear limits on the share of land the authority keeps, as Gujarat's town planning law does. For public land, it should allow leasing with periodic rent review, so that the public owner shares in future increases in value, and require that proceeds from sales go to a capital fund rather than to current spending.
+
+## Ring-fence the land revenues for capital, and publish what they buy {.unnumbered}
+
+The code should send one-off capture revenues, which are lumpy and cyclical, to an urban infrastructure fund, and allow recurrent property tax revenue to service infrastructure debt. China's experience shows the danger of using land sales to fund current spending: when the property market turned, revenue that local governments had come to rely on fell sharply (@sec-dev). A fund that publishes what land revenue built, and where, gives taxpayers a reason to pay.
+
+| Element | Best-practice provision | Common failure it avoids |
+|---|---|---|
+| Base | Market value of land; buildings at a lower rate or exempt; a path from rental to capital value | Annual-value bases that tax vacant land at near zero |
+| Coverage | Every occupied parcel on the fiscal cadastre, regardless of title; registration does not confer or remove rights | Informal areas left off the roll |
+| Valuation | General revaluation at least every five years; annual indexation; mass appraisal; published ratio studies against international standards | Rolls decades out of date; regressive assessment |
+| Rates | Set by the city within a national minimum and maximum; optional vacant-land surcharge | Race to the bottom; speculative land banking |
+| Exemptions | A basic household allowance; public land in public use; all exemptions listed and costed each year | Agricultural, religious and new-building exemptions that erode the base |
+| Collection | Tax is a first charge on the property; mobile payment; interest above the borrowing rate; links to permits and utilities; deferral for cash-poor owners | Collection rates below half |
+| Appeals | Independent, low-cost appeal with deadlines; tax payable pending appeal | Endless disputes that stall collection |
+| Value capture | Infrastructure levies, developer obligations, sale of development rights, land readjustment, public land leasing with rent review | Uplift left with landowners |
+| Use of revenue | Capture revenue to a capital fund; recurrent revenue may service infrastructure debt; annual public report | Land sales funding current spending |
+| Transfer taxes | Cut stamp duties and registration fees as recurrent revenue rises | Taxes that freeze mobility and push sales off the record |
+
+: Elements of a property tax and land value capture code. Source: author, drawing on @KellyWhiteAnand2020, @OECDLincoln2022 and @IAAO2013. {#tbl-code}
+
+# The strongest objections, and the answers {#sec-risks}
+
+## "The poor will lose their homes" {.unnumbered}
+
+The most serious objection is that a land tax can force poor households off valuable land they cannot afford to be taxed on. The answer lies in design. A basic household allowance exempts the land value of an ordinary home, so most poor households pay nothing [@StrettonWP21]. Deferral lets cash-poor owners accumulate the tax as a charge settled on sale or inheritance, so no one is forced to sell to pay it. And without a property tax, the same metro raises rents for tenants, often the poorest residents, while landlords keep the whole gain. A land tax with an allowance is more progressive than the status quo.
+
+## "Informal tenure makes it impossible" {.unnumbered}
+
+A second objection is that a property tax needs clear titles, and most land in many African and South Asian cities has none. The answer is that a tax roll needs an occupier and a value, not a title. Freetown doubled its register to about 110,000 properties by mapping and valuing buildings on the ground, not by searching title records [@Grieco2019]. Taxing occupied property can strengthen tenure security in practice, because a tax receipt is evidence of occupation. The code should say explicitly that registration for tax does not confer or remove rights, which protects both the occupier and the state.
+
+## "Land value capture fuels bubbles and debt" {.unnumbered}
+
+A third objection is that dependence on land sales ties public finances to the property cycle, as China has shown. The objection is right about land sales and wrong about recurrent taxes, which fall on the stock of land value rather than the flow of transactions and so are far more stable. The answer is to use one-off capture for capital spending only, build up the recurrent tax as the main revenue, and strictly limit borrowing against future land sales.
+
+## "Compulsory acquisition and land pooling invite abuse" {.unnumbered}
+
+A fourth objection is that the Singapore model rested on acquiring land at below-market prices, which in weaker states becomes a license to evict the poor and enrich the connected. The objection is fair, which is why this paper recommends land readjustment and land value taxes rather than compulsory acquisition for most countries. Land readjustment leaves owners on their land, with a smaller but more valuable plot. Where acquisition is used, the code should require market-value compensation, published valuations and independent appeal.
+
+## "Cities lack the capacity" {.unnumbered}
+
+A fifth objection is that the cities that most need this model have the least capacity to run it. The capacity required has fallen sharply. Satellite imagery, cheap smartphones for field surveys, mobile money and open-source mass appraisal software have cut the cost of building and running a fiscal cadastre; Freetown mapped and valued almost every property in the city in about two years. The binding constraint is political, not technical: a mayor has to be willing to send bills to the city's most powerful landowners.
+
+# Conclusion: what finance ministries and development banks should do {#sec-conclusion}
+
+The infrastructure of the next 2.5 billion urban residents can create land value worth more than it costs, and whether that value funds the city or enriches the owners of its land is a choice of fiscal design. Developing countries now make that choice by default. They tax property sales more than property value, exempt the land at the fringe where cities grow, and leave the uplift from public investment with landowners. The result is underfunded infrastructure and sprawl.
+
+Finance ministries should follow a short sequence. Build the fiscal cadastre, mapping and valuing every occupied parcel regardless of title, as Freetown did. Shift the base toward land and remove the agricultural exemption inside urban boundaries. Revalue regularly and publish the ratio studies. Cut stamp duties as recurrent revenue rises. Put land value capture into law and send its proceeds to a capital fund. And plan the green city ahead of growth: secure arterial rights-of-way, pool land at the fringe, build bus rapid transit first and allow density near it.
+
+Development banks can accelerate each step. They can finance the first valuation roll and the cadastre, an investment that the extra revenue can repay once collection follows. They can make urban transport loans conditional on a land value capture plan for the corridor, so that the uplift a bank-financed line creates helps repay the loan. And they can reward cities that raise their own revenue, rather than lending most to those that raise least.
+
+The main limitation of this paper is that the evidence linking land taxation to urban form comes mostly from rich-country cities, and the evidence on land value capture in developing countries is mainly case studies. Two pieces of work would strengthen it. The first is a quantitative estimate, for a sample of fast-growing cities, of the land value uplift that planned trunk infrastructure would create and the share a realistic package of instruments could capture. The second is evaluation of the cities now reforming their property taxes, so that the next reformer can learn what raised revenue, what was fair and what survived the politics. A city that taxes its land well will be able to pay for its transit, and a city that pays for its transit will be a healthier place to live.
+
+# Downloads {.unnumbered}
+
+[Working paper (docx)](../../../papers/LandPaysForTheCity.docx)
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
