@@ -17,6 +17,7 @@ Any slide may carry "notes" (speaker notes). Light slides carry the series line 
 This replaces make_deck.js (four slides, needed pptxgenjs); the theme is the same.
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -176,7 +177,8 @@ def make(spec_path, out):
                     r.font.bold = i == 0 or j == 0
                     r.font.name = BODY
                     r.font.color.rgb = WHITE if i == 0 else INK
-                    tf.paragraphs[0].alignment = PP_ALIGN.LEFT if j == 0 else PP_ALIGN.RIGHT
+                    numeric = j > 0 and re.fullmatch(r"[-+−~$€£]?[\d.,]+\s*[%×x]?|[-+−]?\$?[\d.,]+[–-][\d.,]+%?", str(val).strip()) is not None
+                    tf.paragraphs[0].alignment = PP_ALIGN.RIGHT if numeric else PP_ALIGN.LEFT
                     c.margin_top = c.margin_bottom = Inches(0.03)
             if d.get("note"):
                 text(s, 0.55, 1.45 + rh * nrow, 8.9, 0.9, d["note"], size=12)
