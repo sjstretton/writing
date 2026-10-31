@@ -15,9 +15,9 @@
     If FTP-Login.txt is not there it falls back to the website folder's own
     deploy.bat, if one exists.
 
-    It uses WinSCP, which deploy.bat already uses. WinSCP's "synchronize remote"
-    uploads what changed and deletes what is no longer there, so the server ends
-    up matching _site exactly.
+    It uses WinSCP. "synchronize remote" uploads what changed; a second pass
+    with -delete makes the server's papers/ match _site\papers, so files the
+    site no longer links to are removed - the same as Push-Website.bat.
 
     Nothing local is changed. -WhatIf asks WinSCP to list the transfers without
     making them.
@@ -114,11 +114,12 @@ function Esc([string]$s) {
 }
 
 $open = ('open {0}://{1}:{2}@{3}/' -f $proto, (Esc $cfg['user']), (Esc $cfg['password']), $cfg['host'])
-$sync = if ($WhatIf) {
-    ('synchronize remote -preview "{0}" "{1}"' -f $site, $remote)
-} else {
-    ('synchronize remote "{0}" "{1}"' -f $site, $remote)
-}
+# Two commands, as in Push-Website.bat: upload the whole site, then make the
+# server's papers/ match the built one, so files the site no longer links to are
+# deleted there. Nothing outside papers/ is ever deleted on the server.
+$pv = if ($WhatIf) { '-preview ' } else { '' }
+$sync      = ('synchronize remote {0}"{1}" "{2}"' -f $pv, $site, $remote)
+$syncPaper = ('synchronize remote {0}-delete "{1}" "{2}/papers"' -f $pv, (Join-Path $site 'papers'), $remote.TrimEnd('/'))
 
 if (-not $Apply) {
     Write-Host ''
@@ -134,6 +135,7 @@ $wsArgs = @(
     '"option batch abort"',
     '"option confirm off"',
     ('"' + $sync.Replace('"','""') + '"'),
+    ('"' + $syncPaper.Replace('"','""') + '"'),
     '"exit"'
 ) -join ' '
 

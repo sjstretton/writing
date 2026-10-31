@@ -20,6 +20,10 @@ F Other Writing/_Purged/
 H Writing Instructions/Scripts/Papers/Reference/_ftp.txt
 # Old location (before 31 Oct 2026): keep ignored so a leftover copy is never committed
 B Working Papers/B.Scripts/
+# Leftover from the 31 Oct 2026 restructure; held an FTP login. Ignored so a copy on the PC is never re-committed
+F Writing Instructions/
+# Reports from an older engine location; reports now go to Scripts/Papers/Reports/
+H Writing Instructions/Scripts/Reports/
 
 __pycache__/
 

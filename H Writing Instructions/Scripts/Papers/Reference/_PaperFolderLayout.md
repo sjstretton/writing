@@ -133,34 +133,37 @@ paragraphs, lists, tables, emphasis, footnotes and links survive. Images are
 extracted into a `media\` folder beside the `.qmd`; pass `-NoMedia` to drop
 them instead.
 
-Not converted: `9.Archive`, `4.ExternalPapers`, `2.Source`, `0.Website`, the
-scripts folder, anything starting with `_` or `.`, README files, and files
-loose at the top of a paper root.
+Not converted: `9.Archive`, `4.ExternalPapers`, `2.Source`, section overviews
+(`<n>.0.<Name>.docx`), anything starting with `_` or `.`, README files, and
+files loose at the top of a paper root. The website and the scripts are outside
+the paper roots, so they are never read.
 
 ## Running it
 
-The `.bat` files live in `9.Scripts`. Double-click, previews first:
+The menus are in `H Writing Instructions\Scripts\Papers\Run\` (see the
+`README.md` there). Each says what it will do and asks first; the `Preview-*`
+ones change nothing.
 
-- **`Preview-Rename.bat`** / **`Run-Rename.bat`** — puts every folder name into
-  the convention above and rewrites any path references that point at them.
-  After it has run once it reports nothing to do.
-- **`Preview-Reorganize.bat`** — changes nothing. Writes
-  `_Scripts\_ReorganizeReport-preview.txt` and refreshes `_PaperIndex.csv`.
-- **`Run-Reorganize.bat`** — does it.
-- **`Preview-Convert.bat`** / **`Run-Convert.bat`** — gives every document its
-  missing `.qmd` or `.docx`. Writes `_Reports\_ConvertIndex.csv`.
-- **`Preview-RenameFiles.bat`** / **`Run-RenameFiles.bat`** — puts filenames
-  into the convention below and rewrites what points at them.
-- **`Tidy-Scripts.bat`** — sweeps the scripts folder. Lists what it would move,
-  asks, then moves anything that is not part of the live tool set into
-  `_Archive\<date>\`, keeping the four newest reports. Nothing is deleted.
+- **`Master-All.bat`** — the daily maintenance run: folder names
+  (`Rename-Folders`), stale derivatives (`Sync-Masters`), a `.qmd` and a `.docx`
+  for every paper (`Convert-Documents`), the website build, and a tidy of the
+  scripts folder. `Preview-All.bat` is the same, reporting only.
+- **`Organise.bat`** — `Master-All` plus the three structural steps:
+  `Reorganize-Papers` (files into the slots above, rebuilds `_PaperIndex.csv`),
+  `Rename-Files` (the file naming below) and `Repair-Encoding`. After importing
+  a batch of new material, not otherwise.
+- **`Audit-Papers.bat`** / **`Purge-Strays.bat`** — find, then remove,
+  duplicates and files in the wrong slot.
+- **`Final-Check.bat`** — reads everything and says whether the next run will
+  break. Changes nothing.
 
-Nothing is ever deleted or overwritten, and no format is converted. Running it
-twice is a no-op, so it is safe to re-run after adding files to a folder.
+Reports go to `Scripts\Papers\Reports\` (git-ignored). Nothing in a paper
+folder is overwritten, and re-running a step on a settled tree is a no-op.
 
 ## `_PaperIndex.csv`
 
-One row per paper folder, in `9.Scripts`, regenerated on every run.
+One row per paper folder, in `Scripts\Papers\Reference\`, regenerated on every
+reorganise run.
 
 | Column | Meaning |
 |---|---|
@@ -180,7 +183,7 @@ a core does not erase the record of what it used to be or how it was chosen.
 ## Pinning a core file
 
 When the script guesses wrong, or finds nothing, add a line to
-`_CoreFiles.txt` beside the scripts:
+`_CoreFiles.txt` in `Scripts\Papers\`:
 
 ```
 1.ClimateAndFiscalPolicy\1.2.FeebatesAndOutputBasedRebating | WP6- PowerSectorFeebates.docx
@@ -230,12 +233,14 @@ old runs clean up after themselves wherever they landed.
 A copy of the script sitting in `_superseded` or `_Scripts` refuses to run and
 says so, rather than treating its own folder as a paper root.
 
-`Tidy-Scripts.bat` is the manual sweep of the scripts folder itself: anything
-that is not one of the eight live files, plus reports older than the newest
-four, goes into `_Archive\<date>\`. Run it after a rename or reorganise.
+`Run\Spring-Clean.bat` (`Engine\Tidy-Scripts.ps1`, also the last step of every
+`Master-All` run) is the sweep of the scripts folder itself: it keeps the five
+folders `Run`, `Engine`, `Steps`, `Reference` and `Reports`, the `.ps1`, `.bat`,
+`.md` and `.py` files in them and the newest reports, and sends everything else
+to the Recycle Bin.
 
-To reset entirely: delete `_Scripts\`, `_Archive\` and `_PaperIndex.csv`, then
-re-run. Nothing in the paper folders depends on any of them.
+To reset the index: delete `Reference\_PaperIndex.csv` and re-run
+`Organise.bat`. Nothing in the paper folders depends on it.
 
 ## Known exceptions
 
