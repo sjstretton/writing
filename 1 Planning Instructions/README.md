@@ -4,7 +4,7 @@ Personal context repo: plans, tasks for **all** repos, and planning documents.
 
 Built to feed Einstein, not a CEO: one priority (get the next paper out), less code, more writing, for an AAAA person (anxious-avoidant, easily overwhelmed, holistic and detail-oriented, ADHD). The rules are in `NORMS.md` ("Who this is for" and "Focus").
 
-**Start here each morning:** `0 Morning Briefing/3-OnePriority.txt` (three short lists and the Dashboard link), the **Dashboard** tab of the Sheet, or page 1 of the printable.
+**Start here each morning:** `0 Morning Briefing/3-OnePriority.txt` (the one priority and its next steps), the **Dashboard** tab of the Sheet, or page 1 of the printable.
 
 **One rule: each thing has one home, and every copy is kept in step by `Scripts/update.py`.** The repo files and the master Google Sheet hold the same plan, tasks and lists; whichever side Stephen changed is the master for that item (see "Keeping everything consistent" in `NORMS.md`).
 
@@ -14,9 +14,9 @@ Planning now lives in the combined repo `sjstretton/writing`, alongside the writ
 
 ```
 .
-├── 0 Morning Briefing/        3-OnePriority.txt (the morning briefing: list 1 this morning, list 2 this week,
-│                              list 3 waiting on me, the Dashboard link), 1-NextStep.txt (next steps), 2-DayWeekPlan.txt (today and this week),
-│                              4-HumanReadableProjectPlans.txt (Stephen's own, not script-managed),
+├── 0 Morning Briefing/        3-OnePriority.txt (the one priority and its next steps),
+│                              1-NextStep.txt (next steps), 2-DayWeekPlan.txt (today and this week),
+│                              4-HumanReadableProjectPlans.txt (the priority project's plan; other projects one line each),
 │                              5-TaskContextAndProjectPlans.md (all tasks with context and points; project plans; daily decisions; parked tasks),
 │                              Me-Printable-Tracker.docx (printable tracker, page 1 the morning briefing; built by Scripts/update.py; no version in the name,
 │                              so links stay; versions in 3 Archive/Printable versions/),

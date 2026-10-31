@@ -1,21 +1,32 @@
-MORNING BRIEFING
+PROJECT PLANS
+Sat 31 Oct 2026
 
-PhD application in by Sat 31 Oct (T13, P_m2)
+PRIORITY PROJECT: PhD application (PR5; milestone P_m2)
 
-The one priority: the PhD application (Oxford DPhil, Smith School), due Sat 31 Oct. 5,000 points if it goes in this week (P_m2).
-1. This morning (PhD only)
-[ ] By 9am (15 min): AI copies the PhD information sheet from Google Drive into the repo (T60); check it against the Oxford portal: deadline and document list (T13). Value: AI's search found 13 Nov and 26 Jan, not 31 Oct; know before Saturday
-[ ] By 9:30 (15 min): email Dr Shrimali: confirm supervision in writing; attach the proposal, now cleaned (T13). Value: the application can name him
-[ ] By 11am (30 min): pick 3 referees (at least 2 academic) and email each the proposal (T13). Value: the slowest part starts moving
-Then stop. AI can cut paper 2.1 to a 2,000-word writing sample in parallel.
-Script
-Email to Dr Shrimali. Subject: DPhil supervision: confirming. Dear Gireesh, I am applying for the DPhil in Geography and the Environment with a proposal on sovereign incentives and de-risking. Could you confirm in writing that you are happy to be named as primary supervisor, and say whether a co-supervisor is needed (perhaps Ben Caldecott or Cameron Hepburn)? The proposal is attached. Best, Stephen
+Goal: the Oxford DPhil application (Geography and the Environment, Smith School) submitted, with Dr Shrimali named as supervisor.
+Where everything is: C PhD Application/ (status file and checklist, Josh's information sheet, proposal v2, writing sample).
 
+Plan (each step needs the one before it only where it says so)
+1. Settle the deadline and the document list on the live Oxford page. Sat 31 Oct
+2. Shrimali confirms supervision in writing; ask whether a co-supervisor is needed. Email Sat 31 Oct
+3. Interim decision: full-time or part-time; Oxford only, or UCL (February intake) too. By Fri 6 Nov
+4. Three referees asked, at least two academic. By Fri 13 Nov (the slowest part)
+5. Transcripts found or ordered. By Fri 20 Nov
+6. Proposal: read v2, settle its five open notes, then send to Shrimali for comments. By Fri 27 Nov (after 2 and 3)
+7. Writing sample: read it, check one paraphrase, pick UK or US spelling. By Fri 4 Dec
+8. Statement of purpose, if step 1 shows one is needed. By Fri 11 Dec
+9. Online form (CV details go in the form, no CV upload), proofread, pay the £20 fee, submit. By Fri 8 Jan 2027 (two weeks before 26 Jan, for scholarships)
 
+Later in the same project
+- Second PhD proposal, systemic AI safety: answer the outline's open questions (C9_m1, T56)
+- Cambridge (POLIS closes 8 Dec): decide whether to apply
+- Journal paper: Open Economy Carbon Pricing for Climate Policy (P_m1, T61)
 
-3. Waiting on you (manual; something urgent depends on it)
-[ ] Fri 30 Oct by 12pm (15 min): book a bus or car to the next destination (T58). The next stop waits on it
-[ ] Fri 30 Oct (10 min, at the PC after git pull): run deploy.bat and Download-Literature.bat (T59). The carbon-pricing series goes live
-[ ] Shrimali's written OK and the referee requests: the PhD application waits on both (in list 1)
-[ ] Mon 2 Nov (5 min): submit the work programme, WPA, and the invoices (T27). The paper proposal (T26) follows it
-[ ] Week of 2 Nov: updates to Klaus and Phil; agree the CPAT-LTS scope with Dirk and Sebastian (T54). November's main goal and the methodology document (T53) wait on it
+OTHER PROJECTS (not now; one line each)
+- Coded work, CPAT and Excel-AI (PR1): Python delivered 29 Oct; CPAT-LTS is November's main goal, from Mon 2 Nov
+- Applications of the tools (PR2): agree the CPAT-LTS scope with Dirk and Sebastian, week of 2 Nov (T54)
+- Other tools (PR3): mostly done; read the Energy GP concept notes (T49)
+- Strategic positioning (PR4): sort my papers (T06)
+- Personal and home (PR6): bike, Metro Lost & Found, Mon 2 Nov (T01)
+- Wellbeing (PR7): Kriya, CPAP, gym, logged daily on the Tracker
+- Admin and contract (PR8): submit the WPA and the invoices, Mon 2 Nov (T27); change the Geoprosperity passwords; deploy the website and download the literature at the PC (T59)

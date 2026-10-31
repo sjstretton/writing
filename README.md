@@ -8,7 +8,8 @@ Since 29 October 2026 the repo combines the former planning repo (`sjstretton/Pl
 
 | If you want to… | Open |
 |---|---|
-| See this morning's briefing | `0 Morning Briefing/3-OnePriority.txt`: the morning's tasks (the one priority only), the week, what is waiting on me, and the Dashboard link |
+| See this morning's briefing | `0 Morning Briefing/3-OnePriority.txt`: the one priority (the PhD application) and its next steps only |
+| See the project plans | `0 Morning Briefing/4-HumanReadableProjectPlans.txt`: the priority project's plan, then the other projects, one line each |
 | See today's plan and next step | `0 Morning Briefing/1-NextStep.txt`, or the **Dashboard** and **Today** tabs of the [master Google Sheet](https://docs.google.com/spreadsheets/d/1WEHemG3x0kJ3yk-u1RcSheqYsX0T2aAXmiba9veaQag/edit) |
 | See every task, in every repo | `0 Morning Briefing/5-TaskContextAndProjectPlans.md` |
 | See the strategic priorities | `A Writing Instructions/STRATEGY.md` (PhDs, papers, specialisms) and `2 Strategic Plans/` (work plan, master plan) |
