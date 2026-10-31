@@ -41,7 +41,7 @@ Define a term once and then use exactly that term every time. Don't switch to sy
 
 ## 8. Structure follows the paper standard
 
-Working papers follow `H Writing Instructions/Writing Standards/paper-standard.md`, modeled on the World Bank Policy Research Working Paper. Other writing types follow `writing-types.md`. Decks run to about eight slides (6–10, title slide included). Existing four-slide decks move to this length when they are next revised.
+Working papers follow `H Writing Instructions/Writing Standards/paper-standard.md`, modeled on the World Bank Policy Research Working Paper. Other writing types follow `writing-types.md`. Decks run to about ten slides (8–12, title slide included), each slide's title a full-sentence message; quality matters more than count. Existing shorter decks move to this length when they are next revised.
 
 ## 9. Spelling and style
 

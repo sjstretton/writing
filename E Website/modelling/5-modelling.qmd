@@ -14,7 +14,7 @@ Finance ministries decide on carbon taxes, fuel subsidy reform and climate inves
 
 Finance ministries now weigh carbon taxes, fuel subsidy reform and emissions trading against their budgets, and the Climate Policy Assessment Tool built by the World Bank and the International Monetary Fund is one of the few models that answers their questions for more than 180 countries at once. Its published documentation runs to 57,000 words for the mitigation module alone, and parts of it disagree with the model. This paper states the module's method in one place, from the rebuilt and tested version. Retail prices are built up from supply cost, existing taxes, subsidies and the new carbon charge; fuel use responds through income, usage and efficiency elasticities; an engineering power model dispatches, retires and invests; emissions and revenue follow by accounting identities; revenue moves GDP a year later through fiscal multipliers. A worked example shows why a carbon price cuts industrial coal by a third and road fuel by about six percent. The paper gives the corrected equation wherever the documentation is wrong, lists the main limitations, and sets out a penalty-based investment rule as a proposed alternative to the logit share rule.
 
-[Slides →](../papers/Slides-CPATMitigationMethods.pptx) · [Full paper →](../papers/CPATMitigationMethods.docx)
+[Slides →](../papers/Slides-CPATMitigationMethods.pptx) · Word: [working paper →](../papers/CPATMitigationMethods.docx)
 
 ## 5.2 CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool {#paper-5-2}
 
@@ -22,7 +22,7 @@ Finance ministries now weigh carbon taxes, fuel subsidy reform and emissions tra
 
 The Climate Policy Assessment Tool is a spreadsheet model that finance ministries and international institutions use to estimate what carbon pricing does to energy use, emissions, revenue and households in more than 180 countries. Its legacy workbook is too large for anyone to audit cell by cell. This paper describes how it was rebuilt twice in October 2026, with AI coding agents doing most of the construction: once as a readable Excel workbook written by code, and once as a Python model that reproduces the workbook number for number. One rule governed both rebuilds: errors in the legacy model are fixed and never copied, while questionable but intended choices are copied and logged. The rebuild found 228 bugs in the legacy model, 24 of them serious enough to change standard results, as well as 135 issues (intended choices that are open to question) and 20 errors in the published documentation. Writing the model a second time found seven further bugs in the first rebuild. The lesson for ministries is that a policy model should be specified by shared variable codes, built at least twice and tested at every change.
 
-[Slides →](../papers/Slides-CPATAIImplementation.pptx) · [Full paper →](../papers/CPATAIImplementation.docx)
+[Slides →](../papers/Slides-CPATAIImplementation.pptx) · Word: [working paper →](../papers/CPATAIImplementation.docx)
 
 ## 5.3 Validating CPAT: Baselines, Back-Casts and Model Comparisons {#paper-5-3}
 
@@ -30,7 +30,7 @@ The Climate Policy Assessment Tool is a spreadsheet model that finance ministrie
 
 Finance ministries use the Climate Policy Assessment Tool to estimate what carbon pricing does to emissions and revenue, so they need to know how far its numbers can be trusted. This paper gathers the tool's published validation in one place. It separates four tests: fit to the base year, back-casts against history, comparison with other models, and replication of the model in independent code. The model reproduces base-year energy use and emissions by construction, follows the trend of emissions in back-casts from 2000 for Australia, the United States and South Africa, and gives baselines and carbon-price responses of the same order as the International Energy Agency, Enerdata and the World Bank's power planning model. It fits poorly where prices are hard to forecast, as for China, whose back-cast error is about as large as its emissions. Its rebuilt versions reproduce it to many decimal places. Results are most sensitive to price elasticities, and the published checks predate the correction of 228 bugs, so they should be rerun.
 
-[Slides →](../papers/Slides-CPATValidation.pptx) · [Full paper →](../papers/CPATValidation.docx)
+[Slides →](../papers/Slides-CPATValidation.pptx) · Word: [working paper →](../papers/CPATValidation.docx)
 
 ## 5.4 Are CPAT's Price Elasticities Right? {#paper-5-4}
 
@@ -38,4 +38,4 @@ Finance ministries use the Climate Policy Assessment Tool to estimate what carbo
 
 The Climate Policy Assessment Tool, used by the IMF and the World Bank to estimate what carbon prices and fuel subsidy reforms do in more than 180 countries, turns every price change into emission cuts through a table of elasticities. This paper checks the tool's default long-run own-price elasticities, fuel by fuel and sector by sector, against published meta-analyses and reviews. Seven of ten fuel-sector pairs lie within the published range. Three are too high: diesel in industry and gasoline in services, at about −1.05 against evidence of −0.4 to −0.8, and electricity in services. Gasoline in transport matches the uncorrected meta-analytic means but is double the estimate corrected for publication bias, and natural gas sits at the inelastic end of its range. Two structural choices matter more than any single value: the tool applies the full long-run response within one year, which overstates five-year responses by about half or more, and it applies own-price elasticities without cross-price terms. The paper sets out a validation protocol for future updates.
 
-[Slides →](../papers/Slides-ElasticityValidation.pptx) · [Full paper →](../papers/ElasticityValidation.docx)
+[Slides →](../papers/Slides-ElasticityValidation.pptx) · Word: [working paper →](../papers/ElasticityValidation.docx)

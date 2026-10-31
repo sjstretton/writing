@@ -1,12 +1,14 @@
-"""Calibrated steel illustration for paper 1.1 (working paper v0.3).
+"""Calibrated steel illustration for paper 1.1 (working paper v0.4).
 
 Intensities: EU CBAM default values for hot-rolled flat steel (CN 7208),
 direct emissions, tCO2/t, from CBAM-default-values-steel-aluminium-cement.csv
 (Implementing Regulation (EU) 2025/2621). Everything else is stylized and
 labelled so in the paper:
-  - base price c0 = $600/t for every exporter [stylized; VERIFY against HRC export prices]
+  - base price c0 = $600/t for every exporter [stylized: between the 2025 world export price of hot-rolled band,
+    about $440-485/t FOB, and the Western European ex-works price, about $630-750/t (SteelBenchmarker)]
   - abatement slope k_i set so that a $50/tCO2 rate cuts intensity by 30 percent
-  - Armington elasticity sigma = 4 among exporters [stylized; VERIFY]
+  - Armington elasticity sigma = 5.9 among import sources: the estimate for ferrous metals in Hertel, Hummels,
+    Ivanic and Keeney (2007, Table 1). The working paper reports sigma = 4 as a sensitivity check.
   - equal preference weights (equal shares before any carbon charge)
   - abatement floor: intensity cannot fall below 30 percent of the default value
     within the horizon considered [stylized]
@@ -24,7 +26,7 @@ with open("CBAM-default-values-steel-aluminium-cement.csv") as f:
         if len(row) > 4 and row[1].startswith("7208") and row[0] in EXPORTERS:
             e0[row[0]] = float(row[3])
 E = np.array([e0[c] for c in EXPORTERS])
-c0, sigma = 600.0, 4.0
+c0, sigma = 600.0, 5.9
 k = 50 / (0.3 * E)                     # k_i: $50/t cuts intensity by 30%
 
 FLOOR = 0.3 * E
@@ -46,7 +48,7 @@ e_star = intensity(rate)
 tax_rise = rate * e_star + k / 2 * (E - e_star) ** 2
 fee_rise = k / 2 * (E - e_star) ** 2
 with open("table1_price_effects.csv", "w", newline="") as f:
-    w = csv.writer(f)
+    w = csv.writer(f, lineterminator="\n")
     w.writerow(["exporter", "default_intensity_tCO2_per_t", "intensity_after_80", "price_rise_tax_usd", "price_rise_feebate_usd", "tax_pct", "feebate_pct"])
     for i, c in enumerate(EXPORTERS):
         w.writerow([c, f"{E[i]:.2f}", f"{e_star[i]:.2f}", f"{tax_rise[i]:.0f}", f"{fee_rise[i]:.0f}",

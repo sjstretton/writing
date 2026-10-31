@@ -5,8 +5,10 @@ project:
     - "*.qmd"
     - "policy/*.qmd"
     - "policy/*/*/index.qmd"
+    - "policy/*/*/working-paper.qmd"
     - "modelling/*.qmd"
     - "modelling/*/*/index.qmd"
+    - "modelling/*/*/working-paper.qmd"
   resources:
     - "papers/**"
 
@@ -36,8 +38,11 @@ website:
         - section: "1. Carbon Pricing"
           href: policy/1-carbon-pricing.qmd
           contents:
-            - text: "1.1 Price Production and Consumption Separately"
+            - section: "1.1 Price Production and Consumption Separately"
               href: policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/1-carbon-pricing/OpenEconomyCarbonPricing/working-paper.qmd
         - policy/2-other-tax.qmd
         - policy/3-finance-and-risk.qmd
         - policy/4-sovereign-incentives.qmd

@@ -1,51 +1,244 @@
 {
-  "series": "Climate Fiscal Policy Brief No. 1.1",
+  "series": "Climate Fiscal Policy Brief No. 1.1 · October 2026",
   "title": "Price Production and Consumption Separately",
-  "subtitle": "A two-track architecture for carbon pricing in open economies",
-  "message": "One carbon price does two jobs and, in an open economy, does neither well. Price production intensity with a revenue-neutral feebate, and consumption with a destination-based charge. Together they give the full carbon price signal without leakage.",
-  "problem": {
-    "title": "A production tax hits exports, spares imports",
-    "stats": [
-      {
-        "value": "~25%",
-        "label": "of global emissions under an explicit carbon price, most below $10/t"
+  "slides": [
+    {
+      "type": "title",
+      "title": "Price Production and Consumption Separately",
+      "subtitle": "A two-track architecture for carbon pricing in open economies",
+      "message": "One carbon price does two jobs, and in an open economy the second undermines the first. Price production with a revenue-neutral feebate and consumption at the destination: the full carbon price signal, without leakage and at no cost to the treasury.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Carbon prices are too low and too narrow to meet the Paris goals",
+      "stats": [
+        {
+          "value": "28%",
+          "label": "of global emissions covered by an explicit carbon price (2025)"
+        },
+        {
+          "value": "~$19",
+          "label": "per tonne of CO₂: the average price where a carbon price applies (about $5 averaged over all emissions)"
+        },
+        {
+          "value": "$50–100",
+          "label": "per tonne by 2030, at least: the range judged consistent with the Paris goals"
+        }
+      ],
+      "text": "The usual explanation is political will. Part of the gap is built into the instrument.",
+      "source": "World Bank, State and Trends of Carbon Pricing 2025; High-Level Commission on Carbon Prices (2017)."
+    },
+    {
+      "type": "points",
+      "title": "In an open economy, one price does two jobs and the second undermines the first",
+      "points": [
+        {
+          "lead": "Job 1: cut emissions per tonne of output.",
+          "text": "A carbon tax on producers does this well."
+        },
+        {
+          "lead": "Job 2: make buyers pay for carbon.",
+          "text": "The tax raises the price of everything the country makes, so buyers use less."
+        },
+        {
+          "lead": "Exports pay, imports do not.",
+          "text": "Part of the fall in home output is replaced by foreign supply: leakage, 5–25% of the emission cut in model studies, concentrated in steel, cement and other trade-exposed industries."
+        },
+        {
+          "lead": "So governments exempt industry or keep the rate low.",
+          "text": "A border charge on imports (the EU's CBAM) protects the home market but leaves exports carrying the bill."
+        }
+      ],
+      "source": "Branger and Quirion (2014); Keen, Parry and Roaf (2022)."
+    },
+    {
+      "type": "figure",
+      "title": "Two tracks: price production by intensity, consumption at the destination",
+      "image": "figures/fig1_incidence_by_regime.png",
+      "caption": "Carbon-related cost per tonne of steel at $80/tCO₂ (stylized: home mill at Türkiye's default intensity, foreign at China's).",
+      "points": [
+        {
+          "lead": "Production track:",
+          "text": "a feebate. Pay on emissions per tonne above the sector average, rebate below. Payments cancel; the full marginal incentive stays."
+        },
+        {
+          "lead": "Consumption track:",
+          "text": "a carbon component of VAT, imports charged, exports exempt; plus a forward obligation on fuel suppliers."
+        },
+        {
+          "lead": "Exports carry only",
+          "text": "the cost of the abatement itself."
+        }
+      ],
+      "source": "Author's calculation; working paper 1.1, Figure 1."
+    },
+    {
+      "type": "table",
+      "title": "A feebate raises exporters' costs about a third as much as a tax at the same rate",
+      "header": [
+        "Hot-rolled steel exporter (default tCO₂/t)",
+        "Carbon tax at $80",
+        "Feebate at $80"
+      ],
+      "widths": [
+        4.9,
+        2.0,
+        2.0
+      ],
+      "rows": [
+        [
+          "Japan (2.1)",
+          "+21%",
+          "+7%"
+        ],
+        [
+          "Türkiye (2.4)",
+          "+25%",
+          "+8%"
+        ],
+        [
+          "China (3.2)",
+          "+32%",
+          "+10%"
+        ],
+        [
+          "India (4.3)",
+          "+43%",
+          "+14%"
+        ]
+      ],
+      "note": "A tax charges for every tonne still emitted; a feebate only for the cost of cutting. The most carbon-intensive exporters gain most from choosing a feebate.",
+      "source": "EU default values (Implementing Regulation (EU) 2025/2621); base price $600/t and abatement costs stylized. Working paper 1.1, Table 1."
+    },
+    {
+      "type": "points",
+      "title": "The feebate gives no reason to consume less; the consumption track supplies it, without leakage",
+      "points": [
+        {
+          "lead": "The saving has a price.",
+          "text": "Alone, a feebate needs a higher rate than a tax to cut the same tonnes, because it barely raises the average price."
+        },
+        {
+          "lead": "A carbon component of VAT",
+          "text": "charges home-made and imported goods alike, so buying abroad gains nothing. The value part of VAT can fall as the carbon part rises."
+        },
+        {
+          "lead": "Fuel for homes and vehicles",
+          "text": "is covered by a legal obligation on the few large suppliers, announced years ahead so investors know the price."
+        },
+        {
+          "lead": "The two rates can differ.",
+          "text": "The production rate can be high because it barely raises costs; the consumption rate is set by what households accept."
+        }
+      ],
+      "source": "Working paper 1.1, Sections 4–5; Brief 1.3."
+    },
+    {
+      "type": "figure",
+      "title": "Climate finance above half the feebate rate makes adoption a gain for the country",
+      "image": "../2.Source/figures/fig3_crediting.png",
+      "points": [
+        {
+          "lead": "Average cost is half the marginal cost:",
+          "text": "the cheapest cuts come first."
+        },
+        {
+          "lead": "So a payment above half the rate pays,",
+          "text": "and the country's best feebate rate equals the payment."
+        },
+        {
+          "lead": "Pay for policies, not projects:",
+          "text": "a whole sector's measured intensity, not contested single installations. Under an Article 6 transfer the threshold rises to about 1.5 times the rate."
+        }
+      ],
+      "source": "Author's calculation, steel at Türkiye's default intensity, payment $50/tCO₂; Strand (2020)."
+    },
+    {
+      "type": "figure",
+      "title": "Border charges set by country and sector turn leakage into a race to the top",
+      "image": "../2.Source/figures/fig4_race_to_top.png",
+      "caption": "Simulated steel import market, eight exporters at EU default intensities (prices and costs stylized).",
+      "points": [
+        {
+          "lead": "No mill can move its country's charge;",
+          "text": "a national feebate can. The best feebate rate equals the charge."
+        },
+        {
+          "lead": "At a $100 charge,",
+          "text": "import carbon falls 28% through supplier mix alone, 70% when exporters respond."
+        },
+        {
+          "lead": "Today's CBAM credits only a price paid,",
+          "text": "so a feebate earns nothing. Credit carbon-price equivalents."
+        }
+      ],
+      "source": "Author's calculation; working paper 1.1, Figure 3."
+    },
+    {
+      "type": "points",
+      "title": "The design rides on systems that already exist",
+      "points": [
+        {
+          "lead": "Data:",
+          "text": "the feebate needs sector output, plant emissions and a benchmark rule. The CBAM already defines plant measurement in six sectors."
+        },
+        {
+          "lead": "VAT:",
+          "text": "the consumption charge needs a working VAT. Countries without one can run the feebate first, where most of their emissions are."
+        },
+        {
+          "lead": "Trade rules:",
+          "text": "a charge levied alike on imports and home goods, exports exempt, follows border adjustment of internal taxes; the feebate's rebate leg needs careful drafting."
+        },
+        {
+          "lead": "Households:",
+          "text": "measure the net effect of the VAT shift on poorer households before setting the rate."
+        }
+      ],
+      "source": "Working paper 1.1, Sections 8–9; Mehling et al. (2019)."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the analysis shows",
+        "items": [
+          {
+            "lead": "Equivalence:",
+            "text": "at one rate, the two tracks give the Pigouvian outcome for home consumption, with no leakage through goods."
+          },
+          {
+            "lead": "Cost:",
+            "text": "a feebate costs exporters about a third of a tax."
+          },
+          {
+            "lead": "Crediting:",
+            "text": "payments above half the rate make adoption a gain."
+          },
+          {
+            "lead": "Race to the top:",
+            "text": "exporters match their markets' charge at home."
+          }
+        ]
       },
-      {
-        "value": "$50–100",
-        "label": "per tonne by 2030: the range judged consistent with Paris goals"
-      },
-      {
-        "value": "5–25%",
-        "label": "modeled leakage rates for trade-exposed sectors under unilateral pricing"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {
+            "lead": "Exporting countries:",
+            "text": "start with a production feebate in the sectors that already report to the EU."
+          },
+          {
+            "lead": "The EU and other importers:",
+            "text": "charge by country and sector; credit feebates and non-price policies at their carbon-price equivalent; add a carbon component to VAT."
+          },
+          {
+            "lead": "Development banks:",
+            "text": "pay for verified cuts in sector intensity, above half the induced feebate rate."
+          }
+        ]
       }
-    ],
-    "text": "A carbon tax raises the average cost of everything a country makes. Exporters lose share to unpriced rivals, so governments exempt heavy industry or keep the rate low. A border charge on imports protects the home market but not exports."
-  },
-  "mechanism": {
-    "title": "Two tracks: who pays the carbon charge",
-    "image": "../2.Source/figures/fig1_incidence_by_regime.png",
-    "imageHeight": 2.3,
-    "caption": "Carbon cost per tonne of steel at $80/tCO₂ (stylized). Under the two tracks exports carry only the cost of abatement.",
-    "points": [
-      "Production track: a feebate charges intensity above a sector benchmark and rebates below it. Full marginal incentive, zero treasury cost.",
-      "Consumption track: a carbon component of VAT, imports included and exports zero-rated, plus forward-announced obligations on energy suppliers.",
-      "Measurement: a carbon-price-equivalent metric puts every instrument, price-based or not, on one scale."
-    ],
-    "layout": "wide",
-    "aspect": 2.9411764705882355
-  },
-  "action": {
-    "title": "From leakage to a race to the top",
-    "results": [
-      "With equal rates, the two tracks reproduce the Pigouvian outcome for home consumption, with no leakage.",
-      "A feebate raises steel prices about a third as much as a tax at the same rate.",
-      "International payments above half the feebate rate make adoption a net gain.",
-      "Each exporter's best feebate rate equals the carbon charge in its export markets."
-    ],
-    "todo": [
-      "Exporters: start with a production feebate.",
-      "Importers: recognize carbon-price equivalents at the border, and move part of VAT onto carbon.",
-      "Development banks: credit policies, not projects."
-    ]
-  }
+    }
+  ]
 }

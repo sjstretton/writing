@@ -3,9 +3,10 @@
 For each part in site_config.PARTS (Policy and Finance; Modelling and Analytics) this writes, in E Website:
     the part's home page (index.qmd, modelling/index.qmd)  a short intro and, per section, a line and its papers
     <part>/<n>-<slug>.qmd     one page per section: the overview abstract, then each paper's title, subtitle,
-                              current abstract and links (read online, slides, policy brief, full paper)
-    the part's sidebar in _quarto.yml (between its BEGIN/END markers): sections, and under each the papers
-                              that have a web version
+                              abstract (the policy brief's where there is one) and links: the brief and the
+                              working paper online, the slides, then the Word files
+    the part's sidebar in _quarto.yml (between its BEGIN/END markers): sections; under each, the papers that
+                              have a web version (the policy brief's page); under each paper, its working paper
 policy/more.qmd (Books and other papers) is hand-written and left alone.
 
 Then it fills papers/ with exactly the files the site's pages link to, copied from PaperArchive/ (filled by
@@ -74,22 +75,34 @@ def section_page(part, sec):
         meta = front_matter(q)
         pnum = ".".join(pf.name.split(".")[:2])
         stem = q.stem
+        brief = pf / "1.Presentation" / f"Brief-{stem}.qmd"
+        bmeta = front_matter(brief) if brief.exists() else {}
         title = meta.get("title", stem)
         anchor = f"paper-{pnum.replace('.', '-')}"
         web = web_page(part, sec, stem)
         has_web = (SITE / web).exists()
+        wp_web = web.replace("index.qmd", "working-paper.qmd")
+        has_wp_web = (SITE / wp_web).exists()
         out.append(f"## {pnum} {title} {{#{anchor}}}\n")
         if meta.get("subtitle"):
             out.append(f"*{meta['subtitle']}*\n")
-        if meta.get("abstract"):
-            out.append(meta["abstract"] + "\n")
-        online = f"[Read online →]({slug}/{stem}/index.qmd)" if has_web else None
-        ls = [l for l in (online, link("Slides", f"Slides-{stem}.pptx", page),
-                          link("Policy brief", f"Brief-{stem}.docx", page),
-                          link("Full paper", f"{stem}.docx", page)) if l]
+        abstract = bmeta.get("abstract") or meta.get("abstract")
+        if abstract:
+            out.append(abstract + "\n")
+        if has_wp_web:
+            online = [f"[Policy brief →]({slug}/{stem}/index.qmd)", f"[Working paper →]({slug}/{stem}/working-paper.qmd)"]
+        elif has_web:
+            online = [f"[Read online →]({slug}/{stem}/index.qmd)"]
+        else:
+            online = []
+        words = [l for l in (link("brief", f"Brief-{stem}.docx", page), link("working paper", f"{stem}.docx", page)) if l]
+        ls = online + [l for l in (link("Slides", f"Slides-{stem}.pptx", page),) if l]
+        if words:
+            ls.append("Word: " + ", ".join(words))
         if ls:
             out.append(" · ".join(ls) + "\n")
-        titles.append((pnum, title.split(":")[0].strip(), anchor, web if has_web else None))
+        titles.append((pnum, title.split(":")[0].strip(), anchor, web if has_web else None,
+                       wp_web if has_wp_web else None))
     (SITE / part["dir"]).mkdir(exist_ok=True)
     (SITE / page).write_text("\n".join(out), encoding="utf-8")
     return titles
@@ -106,7 +119,7 @@ def home_page(part, index):
         out.append(f"### [{num}. {sec[2]}]({sp})\n")
         out.append(sec[3] + "\n")
         if titles:
-            out.append("\n".join(f"- [{p} {t}]({pre + w if w else f'{sp}#{a}'})" for p, t, a, w in titles) + "\n")
+            out.append("\n".join(f"- [{p} {t}]({pre + w if w else f'{sp}#{a}'})" for p, t, a, w, _ in titles) + "\n")
     if part["more"]:
         out.append(f"### [Books and other papers]({pre}{part['more']})\n")
         out.append("Three books: *Time and Chance*, *The Right Policy at the Wrong Time* and the tax book *Screwed?!*; "
@@ -127,11 +140,16 @@ def write_sidebar(part, index):
     for sec, titles in index:
         num = sec[0].split(".")[0]
         sp = f"{part['dir']}/{sec[1]}.qmd"
-        web = [(p, t, w) for p, t, a, w in titles if w]
+        web = [(p, t, w, wpw) for p, t, a, w, wpw in titles if w]
         if web:
             lines += [f"{ind}- section: {yq(f'{num}. {sec[2]}')}", f"{ind}  href: {sp}", f"{ind}  contents:"]
-            for p, t, w in web:
-                lines += [f"{ind}    - text: {yq(f'{p} {t}')}", f"{ind}      href: {w}"]
+            for p, t, w, wpw in web:
+                if wpw:
+                    lines += [f"{ind}    - section: {yq(f'{p} {t}')}", f"{ind}      href: {w}",
+                              f"{ind}      contents:",
+                              f"{ind}        - text: \"Working paper\"", f"{ind}          href: {wpw}"]
+                else:
+                    lines += [f"{ind}    - text: {yq(f'{p} {t}')}", f"{ind}      href: {w}"]
         else:
             lines.append(f"{ind}- {sp}")
     if part["more"]:

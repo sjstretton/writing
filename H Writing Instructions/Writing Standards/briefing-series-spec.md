@@ -1,6 +1,8 @@
 # Climate Fiscal Policy Briefs: series specification
 
-The briefing-paper series for the carbon-pricing papers in `C Policy and FInance/1.CarbonPricing` (and the Total Effective Carbon Price, now paper 6.1 in `6.ModularUpgrades`). Numbers follow `H Writing Instructions/NUMBERING.md`. Each brief is a 2,000–3,000-word policy paper that a busy official can act on. Each has a fuller academic working paper behind it. This file fixes the format, the shared terms and the files, so that the briefs read as one series.
+The briefing-paper series for the carbon-pricing papers in `C Policy and FInance/1.CarbonPricing` (and the Total Effective Carbon Price, now paper 6.1 in `6.ModularUpgrades`). Numbers follow `H Writing Instructions/NUMBERING.md`. Each brief is a policy paper of about 2,000 words that a busy official can act on. Each has a fuller academic working paper behind it. The two are separate drafts with separate masters: the brief (`1.Presentation/Brief-<PaperName>.qmd`) is plain, concise and simple; the working paper (`<PaperName>.qmd`) is comprehensive. Neither is made from the other. On the website the brief is the paper's page and the working paper sits one level below it, and each links to the other. This file fixes the format, the shared terms and the files, so that the briefs read as one series.
+
+The pattern was set on 1.1 (31 Oct 2026, brief v1.1 and working paper v0.4): use it as the model.
 
 ## Format
 
@@ -11,19 +13,23 @@ The briefing-paper series for the carbon-pricing papers in `C Policy and FInance
 - **Abstract of about 100 words** (90–110). One paragraph: the problem, the proposal, the main result, the implication.
 - Disclaimer (as a footnote or small print on the title page): *The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated.*
 
-**Executive summary of about 400 words** (350–450), on its own page after the title page. Signposted short paragraphs, not bullets. A reader who stops here knows the problem, the proposal, why it works, what it costs and what to do next.
+**Key messages** (first section, about 150 words): four or five paragraphs of one or two sentences each, the first sentence in bold. A reader who stops here knows the problem, the proposal, why it works and what to do.
 
-**Body.** About 2,000–2,500 words, so the whole brief is 2,000–3,000 words excluding references and appendices. Numbered sections. Paragraphs open with their claim. At least one table, figure or worked numerical example; label stylized numbers as stylized.
+**Body.** About 2,000 words in all, excluding references. Short sections with headings that state a claim. **World Bank style: the first sentence of every paragraph states the paragraph's claim and is set in bold**, so that reading the bold sentences alone gives the whole argument. No equations, no propositions, no proofs: those belong in the working paper, and the brief links to the section that has them. At least one table or figure with real numbers, the same numbers as the working paper; label stylized numbers as stylized.
 
 **Close.** A short "What to do" section with concrete recommendations, then "Related papers in this series", then references.
+
+**The working paper's executive summary.** The working paper opens with its own non-technical executive summary as chapter 1 (about 600 words, bold lead sentences, no equations), written for the same reader as the brief. Keep the two short and different in purpose: the brief argues the policy; the executive summary summarizes the paper's results.
+
+**Cross-references.** Link the two forms and the other papers with short targets, which the website build turns into links and the Word filter turns into plain text: `[working paper, crediting](wp:sec-crediting)`, `[the brief](brief:)`, `[Brief 1.3](paper:1.3)`. Give every working-paper section an identifier (`{#sec-...}`) so the brief can link to it. Refer to sections by name, not number: the web and Word versions number them the same, but names survive renumbering.
 
 ## Style
 
 Follow `H Writing Instructions/NORMS.md`, `H Writing Instructions/Writing Standards/writing-principles.md` and `ai-tells.md`. In particular:
 - US spelling.
 - Dense and economical. No throat-clearing, no roadmap paragraphs, no summary ending that repeats the executive summary.
-- Every factual claim cited. Never invent a citation. Unverified entries carry `note = {VERIFY: ...}` in the `.bib`; claims you cannot source are cut or marked `[VERIFY: ...]` in the text.
-- Chicago author-date, from a `.bib` beside the brief.
+- Every factual claim cited. Never invent a citation. Check every cited source against the source itself (abstract at minimum, the passage for a specific number), record what was read in the entry's `note`, and keep a short record in `5.Notes/BibCheck-<date>.md`. Claims you cannot source are cut or marked `[VERIFY: ...]` in the text.
+- Chicago author-date. The brief's `.bib` is copied from the working paper's verified `.bib` (only the keys the brief cites), so the two cannot drift apart.
 
 ## Shared terms (use exactly these)
 
@@ -88,14 +94,21 @@ format:
 ---
 ```
 
-Render to Word (Quarto is preferred; pandoc works if Quarto is missing):
+Render to Word with Quarto where it is installed, adding the link filter:
 
 ```bash
-pandoc Brief-<PaperName>.qmd -f markdown --citeproc --bibliography=Brief-<PaperName>.bib \
-  --csl=/tmp/chicago.csl -o Brief-<PaperName>.docx
+quarto render Brief-<PaperName>.qmd --to docx -L "<repo>/H Writing Instructions/Scripts/Website/web-links.lua"
 ```
 
-(`/tmp/chicago.csl` is the Chicago author-date style downloaded from `https://www.zotero.org/styles/chicago-author-date`; delete the `csl:` line from a temporary copy if pandoc complains.)
+Where only pandoc is available, add the cross-reference filter too, before `--citeproc` (it numbers sections, figures, tables and equations as Quarto would):
+
+```bash
+F="<repo>/H Writing Instructions/Scripts/Website"
+pandoc Brief-<PaperName>.qmd -f markdown --lua-filter="$F/quarto-xref.lua" --lua-filter="$F/web-links.lua" \
+  --citeproc --bibliography=Brief-<PaperName>.bib --csl="<repo>/E Website/chicago-author-date.csl" -o Brief-<PaperName>.docx
+```
+
+The working paper renders the same way. The deck is made from `1.Presentation/slides.json` (about ten slides, each title a full-sentence message) with `python "H Writing Instructions/Writing Standards/templates/make_deck.py" slides.json Slides-<PaperName>.pptx`.
 
 ## Sections 3 and 4 (added 29 Oct 2026; renumbered 31 Oct 2026)
 

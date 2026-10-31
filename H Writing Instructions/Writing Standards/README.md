@@ -10,7 +10,7 @@ The standards every paper, proposal and essay in this repo is written to. `H Wri
 | `ai-tells.md` | You finish a draft. The habits of AI-written prose to search for and remove. |
 | `exemplars.md` | You want a model to imitate. Excellent policy, academic and popular writing, with what to learn from each. |
 | `publishing-log.md` | You publish anything to Stephen's website. Log it here. |
-| `templates/` | You start a new paper or concept note. |
+| `templates/` | You start a new paper or concept note, or make a deck: `make_deck.py` builds a deck of about ten slides from a paper's `1.Presentation/slides.json` (needs only python-pptx; replaces the older `make_deck.js`). |
 
 ## The order of work
 

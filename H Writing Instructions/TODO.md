@@ -28,7 +28,7 @@ Details for each item: `B PhD Application/PhD-Application-Status.md`.
 
 ### Housekeeping
 
-- [ ] **Website restructure (on main since 31 Oct):** check the 1.1 web page (`E Website/_site/policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html`) and the new tabs; resolve the two `[VERIFY]` markers in the 1.1 appendix; then run Compile-Website.bat and Push-Website.bat — S — 7 Nov
+- [ ] **Website restructure (on main since 31 Oct):** run Compile-Website.bat, then check the 1.1 pages: the policy brief is now the paper's page (`E Website/_site/policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html`) and the working paper is below it (`working-paper.html`); then Push-Website.bat. The two 1.1 `[VERIFY]` markers are resolved (31 Oct) — S — 7 Nov
 - [ ] Change the website FTP password: it was committed in the 31 Oct "Restructure" commit (now untracked, but still in git history) — S — soon
 - [ ] If the 1.1 web page works, add the other papers to `WEB_PAPERS` in `H Writing Instructions/Scripts/Website/site_config.py` (one line each) — A — after S approves
 - [ ] Decks to about eight slides (new norm, `NORMS.md` §8) as each is next revised — A — ongoing
@@ -78,6 +78,7 @@ Details for each item: `B PhD Application/PhD-Application-Status.md`.
 - [x] 29 Oct 2026 — `SPECIALISMS.md` written. Stephen decided: "three constraints" through-line yes; AI-risk angle is incentive and institutional design with systemic financial risk as the analogy; politics essays (8.1–8.3) and the *Finding Frodo* deck stay off the academic profile for now — A/S
 - [x] 29 Oct 2026 — 4.1 (TECP) moved into the series as 1.7; qmd is master (v0.2) — A
 - [x] 29 Oct 2026 — Section 1 reorganised: 1.6 created; `6.Additional/1.OtherFiscalPolicy` holds 1.4 and 1.5; every series folder has `8.PreviousVersions` with v0.1/v0.2 labels, `3.RelatedPiecesAndLinks` and `RelatedWork.md`; series map in `1.ClimateAndFiscalPolicy/RelatedWork.md` — A
+- [x] 31 Oct 2026 — 1.1 upgraded: peer review (`5.Notes/PeerReview-2026-10-31.md`), every cited source checked (`5.Notes/BibCheck-2026-10-31.md`), working paper v0.4 with an executive summary as chapter 1, brief v1.1 rewritten short and plain, 10-slide deck; web build makes a brief page and a working-paper page for each paper — A
 - [x] 29 Oct 2026 — Template paper for 1.1 read (Keen, Parry and Roaf 2021); notes in `1.1/5.Notes/Review-2026-10-29.md` §6 — A
 - [x] 29 Oct 2026 — Proposal 1 cleaned: drafting text and appendices B–E removed; original kept in `B PhD Application/PreviousVersions/` — A
 - [x] 29 Oct 2026 — "Today" tab added to the master plan sheet (short daily view) — A
