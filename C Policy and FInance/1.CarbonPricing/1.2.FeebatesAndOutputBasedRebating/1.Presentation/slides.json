@@ -1,51 +1,262 @@
 {
-  "series": "Climate Fiscal Policy Brief No. 1.2",
-  "title": "Feebates: The Full Carbon Price at the Margin",
-  "subtitle": "Without the carbon bill: decarbonizing coal-heavy power and trade-exposed industry",
-  "message": "A carbon tax charges producers for every tonne they still emit. A revenue-neutral feebate charges only emissions above the sector benchmark and rebates those below. Same incentive to switch; average costs almost unchanged.",
-  "problem": {
-    "title": "The carbon bill, not the incentive, kills the tax",
-    "stats": [
-      {
-        "value": "+87%",
-        "label": "average generation cost from a $50/t tax in a stylized grid that is 60% coal"
+  "series": "Climate Fiscal Policy Brief No. 1.2 · October 2026",
+  "title": "Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill",
+      "subtitle": "Decarbonizing coal-heavy power and trade-exposed industry",
+      "message": "A revenue-neutral feebate runs and builds power plants exactly as a carbon tax would, at no cost to the treasury. Under a single buyer it barely moves tariffs; in a wholesale market it raises prices by much less than a tax. The benchmark decides whether it works.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "A carbon tax stalls in coal-heavy power because it charges for every tonne still emitted",
+      "stats": [
+        {
+          "value": "+189%",
+          "label": "price of coal at $2.50/GJ once a $50/tCO₂ tax is added"
+        },
+        {
+          "value": "$70bn",
+          "label": "a year: what a $50 tax would collect from India's power sector (2024 output)"
+        },
+        {
+          "value": "$0",
+          "label": "net payment by the average producer under a revenue-neutral feebate"
+        }
+      ],
+      "text": "The tax's relative-price signal cuts emissions; its charge on remaining emissions is a transfer, and that is what governments exempt or hold down.",
+      "source": "IPCC (2006) emission factors; illustrative fuel price; Ember 2024 generation data. Working paper 1.2, Table 2."
+    },
+    {
+      "type": "points",
+      "title": "A feebate keeps the incentive and drops most of the bill",
+      "points": [
+        {
+          "lead": "Above the benchmark, pay; below it, receive.",
+          "text": "Each producer pays the carbon price on the gap between its emissions per unit of output and the sector average."
+        },
+        {
+          "lead": "Fees fund rebates.",
+          "text": "With the benchmark at the average, the treasury neither gains nor loses."
+        },
+        {
+          "lead": "Every tonne cut is worth the full rate,",
+          "text": "as under a tax. Output-based rebating of a tax is the same instrument."
+        },
+        {
+          "lead": "The cost is a weaker signal to use less.",
+          "text": "Feebate-and-regulation packages achieve 50–70% of a tax's emission cuts (IMF)."
+        }
+      ],
+      "source": "Fischer (2001); IMF Fiscal Monitor (October 2019)."
+    },
+    {
+      "type": "figure",
+      "title": "Power plants are run and built exactly as under a tax at the same rate",
+      "image": "../2.Source/figures/fig1_investment_logit.png",
+      "caption": "Clean share of new capacity against the carbon price; tax and feebate curves coincide (illustrative costs).",
+      "points": [
+        {
+          "lead": "Same merit order:",
+          "text": "the benchmark shifts every plant's cost equally, so coal switches to gas at the same price."
+        },
+        {
+          "lead": "Same investment choice:",
+          "text": "the benchmark cancels between clean and coal capacity."
+        },
+        {
+          "lead": "Finance matters more:",
+          "text": "a 6% to 12% cost of capital moves the clean–coal break-even from $8 to $29/tCO₂."
+        }
+      ],
+      "source": "Working paper 1.2, Propositions 1 and 4, Figure 1."
+    },
+    {
+      "type": "figure",
+      "title": "What consumers pay depends on how power is sold",
+      "image": "figures/fig3_price_effects.png",
+      "caption": "Change in electricity price at $50/tCO₂, 2024 generation mixes (costs illustrative).",
+      "points": [
+        {
+          "lead": "Single buyer, fees netted:",
+          "text": "tariffs rise $0–4/MWh, against $33–40 for a tax."
+        },
+        {
+          "lead": "Wholesale market, coal at the margin:",
+          "text": "$7.5–18/MWh, against $47. There a feebate is a tax refunded to consumers per MWh."
+        },
+        {
+          "lead": "Netting matters:",
+          "text": "if coal passes fees through while clean plants keep rebates, $6–13/MWh."
+        }
+      ],
+      "source": "Ember (2024 data); IPCC (2006). Working paper 1.2, Propositions 2 and 3, Figure 3."
+    },
+    {
+      "type": "table",
+      "title": "In three coal-heavy grids, a feebate keeps regulated tariffs almost flat",
+      "header": [
+        "At $50/tCO₂, 2024 mix",
+        "India",
+        "Indonesia",
+        "South Africa"
+      ],
+      "widths": [
+        4.3,
+        1.5,
+        1.5,
+        1.6
+      ],
+      "rows": [
+        [
+          "Coal share of generation",
+          "74.5%",
+          "61.5%",
+          "83.6%"
+        ],
+        [
+          "Single buyer: tax ($/MWh)",
+          "+35.6",
+          "+32.6",
+          "+39.8"
+        ],
+        [
+          "Single buyer: feebate ($/MWh)",
+          "+1.3",
+          "+3.7",
+          "0.0"
+        ],
+        [
+          "Market, coal marginal: tax ($/MWh)",
+          "+47.3",
+          "+47.3",
+          "+47.3"
+        ],
+        [
+          "Market, coal marginal: feebate ($/MWh)",
+          "+13.0",
+          "+18.4",
+          "+7.5"
+        ],
+        [
+          "Tax revenue forgone ($bn a year)",
+          "69.8",
+          "10.7",
+          "9.9"
+        ]
+      ],
+      "note": "Most power in all three is sold through state buyers at regulated tariffs today; South Africa legislated for a wholesale market in 2024.",
+      "source": "Ember yearly electricity data (2024); IPCC (2006); costs illustrative. Working paper 1.2, Table 2."
+    },
+    {
+      "type": "figure",
+      "title": "The benchmark must fall as the grid cleans and must not let a dominant utility pay itself",
+      "image": "../2.Source/figures/fig2_benchmark_dynamics.png",
+      "points": [
+        {
+          "lead": "A falling average tightens the feebate by itself:",
+          "text": "coal's net fee rises from $11 to $38/MWh over 25 years at $50."
+        },
+        {
+          "lead": "Eskom (86% of supply) faces about $7 of a $50 rate.",
+          "text": "Measure large firms against everyone else's average; dispatch on cost plus the full rate."
+        },
+        {
+          "lead": "One benchmark across fuels;",
+          "text": "three benchmarks raise China's cost per tonne by 18%. Keep new plants out of the benchmark for their first years."
+        }
+      ],
+      "source": "Working paper 1.2, Propositions 5–6, Figure 2; Goulder et al. (2022); Eskom; NTPC."
+    },
+    {
+      "type": "points",
+      "title": "In industry a feebate protects exporters, and working systems already use benchmarks",
+      "points": [
+        {
+          "lead": "Steel at $80/tCO₂:",
+          "text": "a tax raises producer prices 21–43%, a feebate 7–14% (Brief 1.1)."
+        },
+        {
+          "lead": "Canada's output-based pricing",
+          "text": "charges above a standard per unit of output and credits below it; its 2030 price was cut from C$170 to C$115 in May 2026."
+        },
+        {
+          "lead": "EU free allocation",
+          "text": "pays allowances at a best-10% benchmark times output; it is being phased out for CBAM sectors from 2026."
+        },
+        {
+          "lead": "CBAM credits only a price paid, net of rebates,",
+          "text": "so a feebate earns nothing at the border. Credit its carbon-price equivalent (Briefs 1.4, 6.1)."
+        }
+      ],
+      "source": "Working paper 1.1; Canada OBPS Regulations; ICAP (2026); European Commission; Regulation (EU) 2025/2083."
+    },
+    {
+      "type": "points",
+      "title": "Feebates in use confirm both the incentive and the benchmark warnings",
+      "points": [
+        {
+          "lead": "Sweden, NOx, 1992–:",
+          "text": "charge refunded per unit of energy; mean emission rates fell about 40% by 1998, at a rate a tax could not have reached politically."
+        },
+        {
+          "lead": "France, cars, 2008–:",
+          "text": "a fixed benchmark cost about €285m in 2008, and higher sales made the net emissions effect negative."
+        },
+        {
+          "lead": "UK, generators, 2013–17:",
+          "text": "a carbon price cut power emissions 20.5–26% a year; a feebate keeps that relative-price signal."
+        }
+      ],
+      "source": "Sterner and Höglund (2000); D'Haultfœuille et al. (2014); Leroutier (2022)."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the analysis shows",
+        "items": [
+          {
+            "lead": "Same dispatch and investment",
+            "text": "as a tax at the same rate."
+          },
+          {
+            "lead": "Single buyer:",
+            "text": "tariffs rise $0–4/MWh, not $33–40."
+          },
+          {
+            "lead": "Market:",
+            "text": "$7.5–18/MWh, not $47."
+          },
+          {
+            "lead": "Benchmark design",
+            "text": "decides whether dominant utilities feel the rate."
+          }
+        ]
       },
-      {
-        "value": "~3×",
-        "label": "the price of coal at $2.50/GJ once a $50/t carbon tax is added"
-      },
-      {
-        "value": "0",
-        "label": "net payment by the average producer under a revenue-neutral feebate"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {
+            "lead": "Coal-heavy countries:",
+            "text": "legislate a power feebate at the rate wanted for a tax; buyer nets fees and rebates; benchmark by formula each year."
+          },
+          {
+            "lead": "Large firms:",
+            "text": "leave-one-out benchmark; closure payments, not coal benchmarks."
+          },
+          {
+            "lead": "All adopters:",
+            "text": "keep the consumption charge on electricity low while the grid is coal-heavy (Briefs 1.1, 1.3)."
+          },
+          {
+            "lead": "Importers:",
+            "text": "credit feebates at their carbon-price equivalent."
+          }
+        ]
       }
-    ],
-    "text": "A carbon tax sends two signals. The relative-price signal makes coal dearer than gas and solar and does the abating. The average-cost signal charges every producer for every tonne it still emits and does the political damage, so governments exempt the biggest emitters or hold the rate down."
-  },
-  "mechanism": {
-    "title": "Same switch, a fraction of the cost",
-    "image": "figures/fig1-power-tax-vs-feebate.png",
-    "imageWidth": 5.6,
-    "imageHeight": 3.1,
-    "caption": "Change in generation cost per MWh at $50/tCO₂, stylized grid (60% coal, 20% gas, 20% solar).",
-    "points": [
-      "Each producer pays t(eᵢ − ē) per unit of output: a fee above the benchmark, a rebate below.",
-      "Every tonne avoided is worth t, as under a tax, so dispatch and switching are the same.",
-      "With the benchmark at the sector average, fees fund rebates exactly: zero treasury cost.",
-      "The benchmark falls as the sector cleans, so the feebate tightens on laggards by itself."
-    ]
-  },
-  "action": {
-    "title": "Use feebates where carbon taxes stall",
-    "results": [
-      "The treasury pays nothing; coal incumbents pay their clean competitors.",
-      "Power stays cheap under a single buyer; in a marginal-cost market, prices can rise if coal sets them.",
-      "Feebates buy fewer tonnes: about 50–70% of a tax's cuts. A consumption charge restores the demand margin.",
-      "Evidence: Swedish NOx charge cut emission rates 40% in six years; a fixed French car benchmark cost €285m."
-    ],
-    "todo": [
-      "Coal-heavy countries: legislate a feebate per MWh, benchmarked to the grid average and updated yearly.",
-      "Run the same instrument for steel, cement and aluminum.",
-      "Importers: credit feebates at the border."
-    ]
-  }
+    }
+  ]
 }
