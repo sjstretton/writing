@@ -105,8 +105,6 @@ Shown on the Dashboard tab. In the evening, write 1-3 questions for tomorrow wit
 
 | Day | Question | Status | Recommended | Answer |
 |---|---|---|---|---|
-| 30 Oct | Morning: swim or Kriya first? | To decide | Kriya first: it keeps the streak (10 x streak); swim after if there is energy |  |
-| 30 Oct | First focused block: PhD application or writing upgrade? | To decide | PhD application: it is the one priority and it is due soon |  |
 | 30 Oct | PhD deadline | Decided | Sat 31 Oct (confirmed 29 Oct): the PhD is tomorrow's one block | Sat 31 Oct, confirmed |
 | 29 Oct | Today's order | Decided | Rest, then swim or Kriya, then tasks | Long rest first, then a short swim or Kriya, then the tasks |
 | 29 Oct | Paper proposal (T26): now or after the trip? | Decided | After the trip | After the trip; re-plan its date on Sun 1 Nov |
