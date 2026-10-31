@@ -4,6 +4,7 @@ Stable permalinks, one per paper and form, overwritten on each publish:
     papers/<PaperName>.docx         the academic working paper (current version)
     papers/Brief-<PaperName>.docx   the Climate Fiscal Policy Brief (current version)
     papers/Slides-<PaperName>.pptx  the four-slide deck, where it exists
+    papers/Overview<Section>.docx   each section's overview, and papers/Slides-<Section>.pptx its theme deck
 
 Section 5 papers are working paper and slides only (no brief); missing briefs are reported and skipped.
 
@@ -37,13 +38,19 @@ PAPERS = {
     "5.Analytics/5.3.FiscalIndicatorsDashboard": "FiscalIndicatorsDashboard",
 }
 OVERVIEWS = {
+    "1.ClimateAndFiscalPolicy/1.0.OverviewClimateAndFiscalPolicy.docx": "OverviewClimateAndFiscalPolicy.docx",
     "2.FinanceAndRisk/2.0.OverviewMobilisingPrivateCapital.docx": "OverviewMobilisingPrivateCapital.docx",
     "3.SovereignIncentives/3.0.OverviewSovereignIncentives.docx": "OverviewSovereignIncentives.docx",
     "4.Modelling/4.0.OverviewModelling.docx": "OverviewModelling.docx",
     "5.Analytics/5.0.OverviewAnalytics.docx": "OverviewAnalytics.docx",
-    # Section theme decks (sections 4 and 5; the section 2 and 3 theme decks are copied by hand)
+    # Section theme decks
+    "1.ClimateAndFiscalPolicy/1.Presentation/Slides-ClimateAndFiscalPolicy.pptx": "Slides-ClimateAndFiscalPolicy.pptx",
+    "2.FinanceAndRisk/1.Presentation/Slides-FinanceAndRisk.pptx": "Slides-FinanceAndRisk.pptx",
+    "3.SovereignIncentives/1.Presentation/Slides-SovereignIncentives.pptx": "Slides-SovereignIncentives.pptx",
     "4.Modelling/1.Presentation/Slides-Modelling.pptx": "Slides-Modelling.pptx",
     "5.Analytics/1.Presentation/Slides-Analytics.pptx": "Slides-Analytics.pptx",
+    # Books
+    "6.Additional/6.Books/6.3.Screwed/Screwed.docx": "Screwed.docx",
 }
 out = Path("papers")
 out.mkdir(exist_ok=True)
