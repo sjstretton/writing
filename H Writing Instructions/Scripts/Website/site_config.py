@@ -84,6 +84,7 @@ WEB_PAPERS = [
     "1.2.FeebatesAndOutputBasedRebating",
     "1.3.CarbonConsumptionTax",
     "1.4.IronSteelCBAM",
+    "2.1.RentTax",
     "3.1.ClimateFinanceIntermediationForCleanPower",
     "3.2.CleanPowerAssetClasses",
 ]

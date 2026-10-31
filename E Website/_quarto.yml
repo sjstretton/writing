@@ -59,7 +59,14 @@ website:
               contents:
                 - text: "Working paper"
                   href: policy/1-carbon-pricing/IronSteelCBAM/working-paper.qmd
-        - policy/2-other-tax.qmd
+        - section: "2. Other Tax and Fiscal Policy"
+          href: policy/2-other-tax.qmd
+          contents:
+            - section: "2.1 Taxing Rent, Not Effort"
+              href: policy/2-other-tax/RentTax/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/2-other-tax/RentTax/working-paper.qmd
         - section: "3. Finance and Risk"
           href: policy/3-finance-and-risk.qmd
           contents:

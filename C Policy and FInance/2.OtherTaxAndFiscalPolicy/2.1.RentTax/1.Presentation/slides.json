@@ -1,0 +1,258 @@
+{
+  "series": "Climate Fiscal Policy Brief No. 2.1 · October 2026",
+  "title": "Taxing Rent, Not Effort",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Taxing Rent, Not Effort",
+      "subtitle": "Land and corporate taxation consistent with free movement of capital and people",
+      "message": "Free movement caps the rate on income that can move, not on rent that cannot. Tax land above a household allowance, and tax the rent of large firms where it cannot leave: at origin where it is tied to the place, at destination where it follows the customer.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Free movement has pushed governments to give up on high taxes on mobile income",
+      "stats": [
+        {
+          "value": "12 → 4",
+          "label": "OECD countries with a net wealth tax, 1990 → 2017"
+        },
+        {
+          "value": "36%",
+          "label": "of multinational profits shifted to tax havens"
+        },
+        {
+          "value": "7% → 22%",
+          "label": "share of US wealth held by the top 0.1 percent, 1978 → 2012"
+        }
+      ],
+      "text": "Before 1990, capital that could not leave could be taxed. Once it could leave, it did.",
+      "source": "OECD (2018); Tørsløv, Wier and Zucman (2023); Saez and Zucman (2016); Council Directive 88/361/EEC."
+    },
+    {
+      "type": "points",
+      "title": "Rent can be taxed at high rates if the tax reaches it where it cannot leave",
+      "points": [
+        {
+          "lead": "Rent is income above what keeps an asset or a firm in use.",
+          "text": "Taxing it changes nothing anyone does, so the rate can be high."
+        },
+        {
+          "lead": "Some rent is tied to a place:",
+          "text": "land, natural resources, a large local market. Tax it at source."
+        },
+        {
+          "lead": "Some rent can be booked anywhere:",
+          "text": "patents, brands, platforms. Tax it where the customer is."
+        },
+        {
+          "lead": "Proof of concept:",
+          "text": "Norway taxes petroleum profit at a marginal 78 percent, on a base that exempts the normal return."
+        }
+      ],
+      "source": "Mirrlees et al. (2011), ch. 18; Norwegian petroleum tax system (2025)."
+    },
+    {
+      "type": "points",
+      "title": "Tax land above a household allowance, so large holdings pay and ordinary homes do not",
+      "points": [
+        {
+          "lead": "About 2.5 percent a year on site value",
+          "text": "above an allowance close to the site value of an ordinary home. Business land taxed in full."
+        },
+        {
+          "lead": "Land cannot move,",
+          "text": "and its supply is fixed: the tax lowers land prices once and changes no use of land."
+        },
+        {
+          "lead": "Evidence:",
+          "text": "Pennsylvania cities that taxed land more than buildings saw more building and more housing units."
+        },
+        {
+          "lead": "Safeguards:",
+          "text": "regular revaluation, a phased rate, and deferral for owners rich in land but poor in cash."
+        }
+      ],
+      "source": "Mirrlees et al. (2011), ch. 16; Oates and Schwab (1997); Banzhaf and Lavery (2010); OECD (2022)."
+    },
+    {
+      "type": "points",
+      "title": "Presume that large firms earn rent, and tax only the profit above a normal return",
+      "points": [
+        {
+          "lead": "A firm that is large and stays large earns rent,",
+          "text": "unless its industry can support only a few firms (civil aircraft, leading-edge chips)."
+        },
+        {
+          "lead": "US markups rose from 21% to 61% above cost since 1980;",
+          "text": "the measurement is disputed, and efficient firms' surplus is rent too."
+        },
+        {
+          "lead": "Layer One:",
+          "text": "deduct a normal return on equity, tax the rest at 50 percent for groups above €750 million."
+        },
+        {
+          "lead": "The marginal investment pays nothing at any rate,",
+          "text": "so investment and innovation are not discouraged."
+        }
+      ],
+      "source": "De Loecker, Eeckhout and Unger (2020); Basu (2019); Boadway and Bruce (1984); Bond and Devereux (2003)."
+    },
+    {
+      "type": "points",
+      "title": "A high rate at origin alone drives profit abroad, so two layers follow the customer",
+      "points": [
+        {
+          "lead": "Reported profit rises 1.5% for each point a country's rate is below others'.",
+          "text": "Doubling the rate on rent could cut the declared base by over a third."
+        },
+        {
+          "lead": "Layer Two, a few sectors:",
+          "text": "22 percent of local sales less local costs; royalties to related firms abroad not deductible."
+        },
+        {
+          "lead": "Layer Three, all large groups:",
+          "text": "4 percent of local sales, less credits of 8 percent of local assets and 25 percent of local payroll."
+        },
+        {
+          "lead": "A cap:",
+          "text": "the destination layers stop at half the group's global rent margin times its local sales."
+        }
+      ],
+      "source": "Beer, de Mooij and Liu (2020); Devereux et al. (2021); OECD (2021)."
+    },
+    {
+      "type": "figure",
+      "title": "The design taxes rent at about half and leaves the normal return untaxed",
+      "image": "figures/fig1_effective_rates.png",
+      "caption": "Tax as a percent of the rent each stylized firm earns from local customers.",
+      "points": [
+        {
+          "lead": "Foreign platform:",
+          "text": "1% today, 50% under the design."
+        },
+        {
+          "lead": "Weak point:",
+          "text": "a foreign seller outside the designated sectors rises only from 4% to 13%."
+        },
+        {
+          "lead": "Domestic manufacturer:",
+          "text": "nothing on its normal return; the cap protects the low-margin distributor."
+        }
+      ],
+      "source": "Author's calculation; working paper 2.1, Table 1 and Figure 1."
+    },
+    {
+      "type": "table",
+      "title": "The revenue is real, but the destination layers are what make the high rate pay",
+      "header": [
+        "Percent of GDP",
+        "Low",
+        "High"
+      ],
+      "widths": [
+        6.1,
+        1.4,
+        1.4
+      ],
+      "rows": [
+        [
+          "Land value tax above the household allowance",
+          "1.0",
+          "2.7"
+        ],
+        [
+          "Layer One alone, after profit shifting",
+          "2.3",
+          "4.3"
+        ],
+        [
+          "Layers One to Three, if shifted rent is recaptured",
+          "4.5",
+          "6.3"
+        ],
+        [
+          "Today: corporate income tax, OECD average 2023",
+          "3.75",
+          "3.75"
+        ],
+        [
+          "Today: recurrent property taxes, OECD average 2023",
+          "0.95",
+          "0.95"
+        ]
+      ],
+      "note": "Order of magnitude. Land values fall about 38 percent when the tax is announced; the estimate allows for it.",
+      "source": "Eurostat land balance sheets 2023; OECD Revenue Statistics; working paper 2.1, Table 2 and Appendix D."
+    },
+    {
+      "type": "points",
+      "title": "European Union law allows most of the design; the payroll credit is the main legal risk",
+      "points": [
+        {
+          "lead": "Turnover taxes upheld:",
+          "text": "Hungary's steeply progressive turnover taxes are compatible with freedom of establishment (2020); Poland's retail tax is not state aid (2021)."
+        },
+        {
+          "lead": "Land:",
+          "text": "cannot move, and the tax applies alike to resident and foreign owners."
+        },
+        {
+          "lead": "Payroll credit:",
+          "text": "relief for local but not foreign labor is the main trade objection to destination taxes; a sales charge plus a separate payroll subsidy avoids it."
+        },
+        {
+          "lead": "Layer Two:",
+          "text": "no export rebate, a short list of sectors, and services where possible, to limit the trade-law risk of a border adjustment."
+        }
+      ],
+      "source": "CJEU C-75/18 and C-323/18 (2020); C-562/19 P (2021); Auerbach, Devereux, Keen and Vella (2017)."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the analysis shows",
+        "items": [
+          {
+            "lead": "Land:",
+            "text": "a tax above an allowance reaches large holdings and cannot be escaped."
+          },
+          {
+            "lead": "Neutrality:",
+            "text": "a tax on profit above a normal return spares investment at any rate."
+          },
+          {
+            "lead": "Mobility:",
+            "text": "a high origin rate is safe only for rent tied to the place."
+          },
+          {
+            "lead": "Destination and cap:",
+            "text": "rent follows the customer; the cap spares low-margin firms."
+          }
+        ]
+      },
+      "right": {
+        "title": "Actions",
+        "items": [
+          {
+            "lead": "Finance ministries:",
+            "text": "replace property taxes with a land value tax above a household allowance, on updated values."
+          },
+          {
+            "lead": "Corporate tax:",
+            "text": "an allowance for corporate equity for all firms; 50 percent on large groups' rent, phased in."
+          },
+          {
+            "lead": "Destination layers:",
+            "text": "a short list of sectors, the presence-credited sales charge, and the cap."
+          },
+          {
+            "lead": "EU members:",
+            "text": "act together to leave less room for shifting."
+          }
+        ]
+      }
+    }
+  ]
+}
