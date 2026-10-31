@@ -20,3 +20,5 @@ Title: retitled on 31 Oct 2026. The 2020 title was *Screwed?! Getting our future
 Not imported: the per-chapter PDFs, the `BookInPictures` image collection (34 MB) and the podcast audio (34 MB); they stay in the original repository.
 
 Status: 2020 draft, not yet revised to the writing standard. To edit, work on `Plucked.qmd` (the master) and re-render.
+
+On the website: the book is read online chapter by chapter (Books and Other Papers → *Plucked!*). `Compile-Website.bat` makes those pages from `Plucked.qmd` each time (`WEB_BOOKS` in `H Writing Instructions/Scripts/Website/site_config.py`), splitting at the `# CHAPTER N:` headings, so edit the master, never the web copies in `E Website/policy/books/Plucked/`.

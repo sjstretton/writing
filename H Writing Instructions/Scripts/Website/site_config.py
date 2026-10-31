@@ -12,6 +12,7 @@ Modelling and Analytics is due to move to its own repository. When it does, dele
 
 WEB_PAPERS lists the papers that also get a web version, read on the site with a contents sidebar
 (build_web_papers.py). Add a paper folder name to put another paper on the web.
+WEB_BOOKS does the same for books, one web page per chapter.
 """
 from pathlib import Path
 
@@ -82,6 +83,20 @@ WEB_PAPERS = [
     "1.1.OpenEconomyCarbonPricing",
 ]
 
+# Books that are also read on the site, one page per chapter, under <part dir>/books/<BookName>/
+# (build_web_papers.py writes them; build_research_pages.py lists them in the sidebar under Books and other papers).
+# Book folder -> the part it sits in and a one-paragraph description for the book's contents page.
+WEB_BOOKS = {
+    "8.5.3.Plucked": {
+        "part": "policy",
+        "blurb": ("A book-length case for reforming UK taxes and benefits, written with Gordon Styles in 2020. "
+                  "Its fourteen chapters run from the ideas behind taxation and the principles of a good tax system "
+                  "to welfare and work, inequality, corporations, land and property, money and debt, and the "
+                  "environment, and end with a set of proposals. The manuscript is kept as written in 2020; only the "
+                  "title has changed."),
+    },
+}
+
 
 def part_of_section(num):
     """The part and section tuple for a section number such as '1'."""
@@ -123,3 +138,17 @@ def master_qmd(folder):
 def web_page(part, sec, name):
     """Site-relative path of a paper's web version (whether or not it exists)."""
     return f"{part['dir']}/{sec[1]}/{name}/index.qmd"
+
+
+def part_by_key(key):
+    return next(p for p in PARTS if p["key"] == key)
+
+
+def book_name(folder_name):
+    """'8.5.3.Plucked' -> 'Plucked' (book folders can have three number parts)."""
+    return folder_name.rsplit(".", 1)[-1]
+
+
+def book_dir(part, name):
+    """Site-relative folder of a book's web version: its contents page is index.qmd, one .qmd per chapter."""
+    return f"{part['dir']}/books/{name}"
