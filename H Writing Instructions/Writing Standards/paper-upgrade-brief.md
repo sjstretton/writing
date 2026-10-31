@@ -8,6 +8,10 @@ You are upgrading ONE paper in Stephen Stretton's writing repo at /home/user/wri
 - The working paper opens with a **non-technical executive summary as chapter 1**.
 - **Improve the papers**: do a peer review first, then revise. Add detailed references and do a really good job. Avoid too much replication between the two forms, and cross-reference each to the other.
 - **Slide decks of about ten slides.** Quality matters more than quantity: look through them carefully.
+- **Peer review before editing.** Write the review first, from a full reading, and only then change the masters.
+- **Be systematic and methodical, drawing on the literature**: for each claim and each result, find what the literature says (the closest prior work, the best evidence, the strongest counter-evidence) and cite it, verified.
+- **The brief is brief and easy to read; the working paper is rigorous, and still easy to read.**
+- **Any link to a document, deck or PDF says its file type in brackets inside the link text**: `[Policy brief (docx)](...)`, `[Slides (pptx)](...)`, `[Report (pdf)](https://...)`. This applies in the masters, notes and slides.
 
 ## Read first (in this order)
 
