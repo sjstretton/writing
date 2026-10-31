@@ -5,43 +5,59 @@ author:
   - name: "Stephen J. Stretton"
     note: "Writing in a personal capacity."
 date: "October 2026"
-version: "0.2"
+version: "0.3"
 abstract: |
-  Analysis changes policy only when the people who hold the budget can reproduce it. The two tools described in this section each take data a finance ministry already holds or can download, put it on a common scale and return something sequenced enough to act on. The Excise-Fiscal Diagnostic reads a whole excise schedule against the damage taxed goods do. The Global Fiscal Indicators dashboard gives a one-page fiscal and energy profile for 217 economies from public data, rebuilt by a script anyone can rerun. A third tool built to the same standard, the Macro-Fiscal-Energy Scenario Tool, links a climate investment program and carbon pricing to growth, revenue and debt; because it extends the Climate Policy Assessment Tool, it is described with the other modular upgrades in section 6 (paper 6.5). Each is built to one standard: every intermediate step visible, defaults defended line by line, and AI drafting checked against the source.
+  Analysis changes policy only when the people who hold the budget can reproduce it. The two tools in this section each take data a finance ministry already holds or can download, put it on a common scale and return something sequenced enough to act on. The Excise-Fiscal Diagnostic reads a whole excise schedule against the damage taxed goods do; run on Sierra Leone and Liberia, it finds fuel taxed lightly, alcohol taxed inconsistently and health excises weakly collected. The Global Fiscal Indicators dashboard gives a one-page fiscal and energy profile for 217 economies, with the year and public source of every value; it separates a revenue problem from a debt-service problem. A third tool built to the same standard, the Macro-Fiscal-Energy Scenario Tool, extends the Climate Policy Assessment Tool and is described in section 6 (paper 6.5). The October 2026 reviews held both tools to their own standard and corrected a benchmark, a definition and a claim of reproducibility.
+bibliography: 7.0.OverviewAnalytics.bib
 csl: https://www.zotero.org/styles/chicago-author-date
 format:
   docx: default
 ---
 
-*Overview of section 7, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion to the Climate Fiscal AI Tools. Version 0.1 (September 2026) is in `7.0.Overview/8.PreviousVersions`.*
+*Overview of section 7, version 0.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion to the Climate Fiscal AI Tools. Country results quoted here are illustrative tool results, not official estimates. Each paper below comes as a short policy brief and a full working paper.*
 
 # The standard: a ministry must be able to check it {.unnumbered}
 
-A diagnostic a ministry cannot check is a recommendation it must take on trust, and recommendations taken on trust do not survive the first official who disagrees with them. The tools in this section are therefore built to a reproducibility standard rather than to analytical sophistication. Every intermediate step is visible. Defaults can be defended line by line. Where an AI model drafts a stage, it does so under a written specification and every line is checked against the source text or data.
+**A diagnostic a ministry cannot check is a recommendation it must take on trust.** Recommendations taken on trust do not survive the first official who disagrees with them. The tools in this section are therefore built to a reproducibility standard rather than to analytical sophistication: every intermediate step is visible, defaults can be defended line by line, and where an AI model drafts a stage it does so under a written specification, with every line checked against the source text or data.
 
-Each tool answers a question a ministry already asks, from data it already has. None needs a new survey or a model run by another institution. The worked examples in the papers use public data, the tools' own country results labelled as illustrative, or clearly labelled stylized numbers.
+**Each tool answers a question a ministry already asks, from data it already has.** None needs a new survey or a model run by another institution. The worked examples use public data, the tools' own country results labelled as illustrative, or clearly labelled stylized numbers.
 
-# Read the excise system against its externalities (paper 7.1) {.unnumbered}
+# Read the excise schedule whole, against the damage it should price (paper 7.1) {.unnumbered}
 
-Excise schedules grow line by line until nobody can read them whole. The Excise-Fiscal Diagnostic sorts every line into a small typology, maps it onto 30 standard lines and scales each rate three ways: US dollars per standard physical unit, share of the consumer price, and implied revenue as a share of GDP. It then sets fuel rates against a corrective benchmark built from one fixed set of values for carbon, air pollution, accidents, congestion and road damage, and health excises against published health benchmarks. Run on the 2026 excise law of Sierra Leone and Liberia, it finds excise revenue of 1.25–1.28 and 0.37 percent of GDP, against an African average of 2.4. Sierra Leone draws about nine-tenths of its excise from fuel, taxed at USD 0.23 per liter of petrol on a large base. Liberia taxes fuel only through levies of USD 0.095 per liter, below the cost of carbon alone at USD 50 a tonne, taxes spirits at less than half the beer rate per liter of alcohol, and books no excise on imported tobacco (illustrative results from the diagnostic, not official estimates). In the paper's stylized country, diesel is taxed at less than half its corrective rate, and its largest unpriced cost is air pollution rather than carbon.
+**Excise schedules grow by amendment until nobody can read them whole** ([paper 7.1](paper:7.1)). The Excise-Fiscal Diagnostic maps every line onto 30 standard lines and measures each rate three ways: US dollars per standard physical unit, share of the consumer price, and implied revenue as a share of GDP. It sets fuel rates against a corrective benchmark built from one fixed set of values for carbon, air pollution, accidents, congestion and road damage, and health excises against World Health Organization targets [@StrettonWP71].
 
-# Link energy investment to growth, revenue and debt (paper 6.5, section 6) {.unnumbered}
+**For diesel, the case for higher taxes is mainly about health and road safety, not climate.** In a stylized economy, diesel is taxed at USD 0.18 a liter against a corrective rate of USD 0.43; carbon accounts for 31 percent of the corrective rate, air pollution 35 percent and road use 35 percent. The carbon value of USD 50 a tonne is a proposed price floor, not a damage estimate; at USD 185, a recent estimate of the social cost of carbon [@Rennert2022], the diesel benchmark rises to USD 0.80.
 
-The Macro-Fiscal-Energy Scenario Tool chains a model of mitigation investment needs, a carbon-pricing feasibility screen, simplified versions of three IMF and World Bank macro-fiscal models and a debt sustainability test in one workbook for 186 countries. It takes the same reproducibility standard as the tools here, but it extends CPAT, so it is presented with the modular upgrades in section 6. Its Kenya run finds a net zero budget need of 0.5 percent of GDP in 2030, of which feasible power-sector carbon pricing covers about 5 percent (illustrative tool results, not forecasts).
+**Run on the 2026 excise law of Sierra Leone and Liberia, the diagnostic finds low fuel taxes, inconsistent alcohol taxes and weak collection.** Sierra Leone taxes petrol at USD 0.23 a liter; Liberia charges USD 0.095 in levies, less than the carbon cost alone. Liberia taxes spirits at under half the beer rate per liter of alcohol and booked no excise on imported tobacco in FY2024. Outside fuel, the binding constraint is collection, not legislation (illustrative results from the diagnostic, not official estimates).
+
+**On a consistent definition both countries raise about the African average, but one figure is not yet reconciled.** Excises raised 1.32 percent of GDP on average across 37 African countries in 2023 [@OECD2025RSA]. Liberia's excise law raised 0.37 percent in FY2024, but with the fuel levies that international statistics count as excise it raises about 1.25 percent. The diagnostic reports Sierra Leone's collections at 1.25–1.28 percent of GDP in 2024–25, about twice the 0.57 percent in the OECD series for 2023; the paper reports both and leaves the reconciliation open.
 
 # A one-page fiscal profile from public data (paper 7.2) {.unnumbered}
 
-Before advising on carbon pricing, subsidy reform or climate investment, an analyst needs a quick, comparable view of a country's fiscal space, spending capacity, cost of capital and fossil fuel exposure. The Global Fiscal Indicators dashboard assembles 80 indicators in twelve blocks for 217 economies from about twenty public datasets, scores them on one 1-to-10 scale and shows a one-page profile. A scripted pipeline rebuilds everything from the raw files, never imputes, records the year and source of every value, and stops if its configuration and outputs disagree. A comparison of four middle-income economies shows how the profile separates a revenue problem from a debt-service problem.
+**Climate-fiscal advice often fixes on the wrong constraint because the right numbers take days to gather** ([paper 7.2](paper:7.2)). The Global Fiscal Indicators dashboard arranges 80 public indicators in twelve blocks for 217 economies, each block answering one question, scores each indicator from 1 to 10 and shows a one-page profile. Its build never imputes, records the year and source of every value, and stops if its configuration asks for data it does not have [@StrettonWP72].
+
+**The profile separates problems that call for different levers.** Indonesia collects tax of about 10 percent of GDP and spends 3 percent on explicit fuel subsidies [@Black2025FFS]; South Africa collects 25 percent but pays 19 percent of its revenue in net interest (dashboard values for 2024, from IMF data). One country's next question is subsidy reform and the tax base; the other's is the cost of its debt.
+
+**A first view is only as good as its compilation, and the dashboard's own check found three faults.** Checked against the publishers' files, most values hold, but the interest indicator is net interest and its filter drops net creditors; excise as a share of revenue reverses a reading that excise as a share of GDP corrects; and the panel's modeled renewable share of power differs from observed generation by 5 to 19 points. Every input is public, but the build itself is private and two appendices are read through an unpublished compilation: the claim that anyone can rerun it holds only once the code is published.
+
+# Link energy investment to growth, revenue and debt (paper 6.5, section 6) {.unnumbered}
+
+**The Macro-Fiscal-Energy Scenario Tool is built to the same standard but extends CPAT, so it sits with the modular upgrades** ([paper 6.5](paper:6.5)). It chains investment needs, a carbon-pricing feasibility screen, simplified versions of three IMF and World Bank macro-fiscal models and a debt sustainability test in one workbook for 186 countries [@StrettonWP65]. Its Kenya run finds a budget need of 0.5 percent of GDP in 2030, of which feasible power-sector carbon pricing covers about 5 percent; the joint IMF–World Bank analysis already rated Kenya at high risk of debt distress [@IMF2024KenyaDSA].
 
 # How the tools connect {.unnumbered}
 
-The tools feed the rest of the program. The excise diagnostic can supply checked starting tax rates and externality values for CPAT (section 5) and for the carbon-pricing papers (section 1). The scenario tool's investment needs and debt test (paper 6.5) carry the cost-of-capital argument of section 3 into a country's budget. The dashboard tells an analyst which of these lenses matters most for a given country before any model is run.
+**The dashboard chooses the question; the diagnostics and models answer it.** The dashboard shows which lens matters most for a country before any model is run. The excise diagnostic supplies checked starting tax rates and externality values for CPAT (section 5) and for the carbon-pricing papers (section 1). The scenario tool carries the cost-of-capital argument of section 3 into a country's budget. The dashboard's next block is carbon pricing, including the Total Effective Carbon Price of paper 6.1.
 
 | No. | Paper | Status |
 |---|---|---|
-| 7.1 | The Excise-Fiscal Diagnostic: Reading an Excise System Against Its Externalities | v0.3 |
-| 7.2 | A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis | v0.1 |
+| [7.1](paper:7.1) | The Excise-Fiscal Diagnostic: Reading an Excise System Against Its Externalities | Working paper v0.4, brief and deck (31 October 2026) |
+| [7.2](paper:7.2) | A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis | Working paper v0.2, brief and deck (31 October 2026) |
 
-: Table 1. Section 7 papers. The Macro-Fiscal-Energy Scenario Tool is paper 6.5 in section 6.
+: Table 1. Section 7 papers; each has been peer-reviewed and every citation checked. The Macro-Fiscal-Energy Scenario Tool is paper 6.5 in section 6.
 
 Earlier analytics ideas (a climate-fiscal-financial dashboard, a green growth diagnostic, and the political economy of carbon pricing) are kept with the additional papers in section 8.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

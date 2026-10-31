@@ -1,0 +1,126 @@
+{
+  "series": "Climate Fiscal Policy Briefs · Section 7: Analytics Tools · October 2026",
+  "title": "Diagnostics on Data Ministries Already Hold",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Diagnostics on Data Ministries Already Hold",
+      "subtitle": "Climate-fiscal analytics tools: section 7 in ten slides",
+      "message": "Analysis changes policy only when the people who hold the budget can reproduce it. Two tools take data a ministry already holds, put it on one scale and return an answer it can check: an excise diagnostic and a one-page fiscal profile.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "points",
+      "title": "The standard: a ministry must be able to check every step",
+      "points": [
+        {"lead": "Every step visible:", "text": "intermediate results, not only answers."},
+        {"lead": "Defaults defended line by line,", "text": "and the choices that move results shown side by side."},
+        {"lead": "AI drafts under a written specification,", "text": "every line checked against the source."},
+        {"lead": "Data a ministry already holds,", "text": "or can download; country results labelled illustrative."}
+      ],
+      "source": "Section 7 overview."
+    },
+    {
+      "type": "points",
+      "title": "The excise diagnostic reads a schedule whole and puts every line on one scale",
+      "points": [
+        {"lead": "30 standard lines:", "text": "a liter of fuel, a pack of 20, a liter of pure alcohol."},
+        {"lead": "Three measures:", "text": "US dollars per unit, share of the consumer price, revenue as % of GDP."},
+        {"lead": "Fuel against one set of damage values;", "text": "health excises against WHO targets."},
+        {"lead": "Erosion tracked:", "text": "the real value of each specific rate since its last change."}
+      ],
+      "source": "Paper 7.1."
+    },
+    {
+      "type": "figure",
+      "title": "For diesel, two-thirds of the corrective tax is local damage, not carbon",
+      "image": "../../7.1.ExciseFiscalDiagnostic/1.Presentation/figures/fig_corrective.png",
+      "points": [
+        {"lead": "Diesel:", "text": "taxed at USD 0.18 a liter against a corrective 0.43."},
+        {"lead": "Shares:", "text": "carbon 31%, air pollution 35%, road use 35%."},
+        {"lead": "At USD 185/t", "text": "rather than a USD 50 floor, the benchmark rises to 0.80."}
+      ],
+      "source": "Paper 7.1 (stylized economy); Rennert et al. (2022)."
+    },
+    {
+      "type": "table",
+      "title": "Sierra Leone and Liberia tax fuel lightly and alcohol inconsistently",
+      "header": ["2026", "Sierra Leone", "Liberia"],
+      "widths": [4.0, 2.4, 2.4],
+      "rows": [
+        ["Petrol, USD per liter", "0.23", "0.095 (levies)"],
+        ["Spirits vs beer, per liter of alcohol", "Incoherent", "Under half beer"],
+        ["Excise law, % of GDP", "1.25–1.28", "0.37"],
+        ["With fuel levies, % of GDP", "Not reported", "1.25"],
+        ["OECD series, % of GDP (2023)", "0.57", "0.99"]
+      ],
+      "note": "African average 1.32% of GDP (37 countries, 2023). Sierra Leone's two figures are not yet reconciled. Illustrative results, not official estimates.",
+      "source": "Paper 7.1; OECD Revenue Statistics in Africa 2025."
+    },
+    {
+      "type": "stats",
+      "title": "A one-page profile for 217 economies, with the source of every number",
+      "stats": [
+        {"value": "217", "label": "economies on one country profile"},
+        {"value": "80", "label": "public indicators in twelve blocks, each answering one question"},
+        {"value": "0", "label": "imputed values: a missing value stays missing and is counted"}
+      ],
+      "text": "Scores from 1 to 10 between the 5th and 95th percentiles; deliberately no overall index.",
+      "source": "Paper 7.2."
+    },
+    {
+      "type": "figure",
+      "title": "The same tax take can carry very different interest and subsidy bills",
+      "image": "../../7.2.FiscalIndicatorsDashboard/1.Presentation/figures/fig_profiles.png",
+      "points": [
+        {"lead": "Indonesia:", "text": "tax 10% of GDP, explicit fuel subsidies 3%: a revenue problem."},
+        {"lead": "South Africa:", "text": "tax 25% of GDP, net interest 19% of revenue: a debt-service problem."},
+        {"lead": "Different levers,", "text": "so different next questions."}
+      ],
+      "source": "Paper 7.2 (2024 values as compiled); IMF fossil fuel subsidy data 2025 update."
+    },
+    {
+      "type": "figure",
+      "title": "A check against the publishers confirms most values and finds three faults",
+      "image": "../../7.2.FiscalIndicatorsDashboard/1.Presentation/figures/fig_renewables.png",
+      "points": [
+        {"lead": "Mislabeled:", "text": "the interest indicator is net interest; its filter drops net creditors."},
+        {"lead": "Denominator:", "text": "excise as a share of revenue reverses a reading."},
+        {"lead": "Modeled vs observed:", "text": "renewable shares 5–19 points off observed generation."}
+      ],
+      "source": "Paper 7.2; Ember (2026)."
+    },
+    {
+      "type": "points",
+      "title": "The tools feed the rest of the program",
+      "points": [
+        {"lead": "The dashboard chooses the question:", "text": "which lens matters before any model is run."},
+        {"lead": "The excise diagnostic", "text": "supplies checked tax rates and damage values to CPAT (section 5) and to carbon pricing (section 1)."},
+        {"lead": "The scenario tool (paper 6.5)", "text": "takes the cost of capital into a country's budget and debt."},
+        {"lead": "Next block:", "text": "carbon pricing, with the Total Effective Carbon Price (paper 6.1)."}
+      ],
+      "source": "Section 7 overview."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What section 7 shows",
+        "items": [
+          {"lead": "Diesel:", "text": "the case is mainly health and road safety."},
+          {"lead": "Outside fuel:", "text": "collection binds, not legislation."},
+          {"lead": "One page", "text": "separates revenue from debt-service problems."},
+          {"lead": "Checks work:", "text": "a benchmark, a definition and a label corrected."}
+        ]
+      },
+      "right": {
+        "title": "Actions",
+        "items": [
+          {"lead": "Finance ministries:", "text": "index specific excises; book each line separately; run the diagnostic every budget."},
+          {"lead": "Analysts:", "text": "find the binding constraint before choosing the lever."},
+          {"lead": "Tool owners:", "text": "publish the build; add a carbon-pricing block."}
+        ]
+      }
+    }
+  ]
+}
