@@ -1,50 +1,129 @@
 {
-  "series": "CPAT Companion Paper No. 5.3",
+  "series": "Climate Fiscal Policy Brief No. 5.3 · October 2026",
   "title": "Validating CPAT",
-  "subtitle": "Baselines, back-casts and model comparisons: where the tool fits and where it does not",
-  "message": "CPAT's published checks support it for ranges and policy comparisons, not point forecasts. It tracks emission trends in back-casts for Australia and the United States, misses China badly, and agrees with other models in order of magnitude. Every check predates the 228 bug fixes.",
-  "problem": {
-    "title": "Validation exists but is scattered",
-    "stats": [
-      {
-        "value": "11",
-        "label": "documented checks; only four report a summary statistic"
+  "slides": [
+    {
+      "type": "title",
+      "title": "Validating CPAT: Baselines, Back-Casts and Model Comparisons",
+      "subtitle": "How far a finance ministry can trust the Climate Policy Assessment Tool",
+      "message": "CPAT's published checks support it for ranges and for comparing policies, not for point forecasts. Its results turn on the price elasticities, and every check predates the 2026 bug fixes, so the checks should be rerun.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "A carbon-pricing decision rests on a forecast, and CPAT's forecast has a wide error band",
+      "stats": [
+        {"value": "29%", "label": "G20 CO₂ cut in 2030 from a carbon tax rising to $75: CPAT's default result"},
+        {"value": "7–39%", "label": "the same cut as the price elasticities move two standard deviations either way"},
+        {"value": "231", "label": "bugs the 2026 rebuild found in the original model, 24 serious; every published check predates the fixes"}
+      ],
+      "text": "If the response to the price is off by half, so are the revenue estimate and the gap to the pledge.",
+      "source": "CPAT methodology (2023), Parameter Sensitivity Analysis; CPAT-AI bug register, release 1.1.0 (2026)."
+    },
+    {
+      "type": "points",
+      "title": "Four tests answer four different questions, and passing one says little about the others",
+      "points": [
+        {"lead": "Base-year fit:", "text": "does the model match the data in its starting year? Built in by calibration, so weak evidence."},
+        {"lead": "Back-cast:", "text": "started in 2000, does it reproduce what happened by 2017? The closest to an out-of-sample test."},
+        {"lead": "Comparison:", "text": "do other energy models, and studies of real carbon prices, give similar answers?"},
+        {"lead": "Replication:", "text": "does independent code compute the same numbers? Verification, not validation, but a precondition."},
+        {"lead": "Most comparisons are charts:", "text": "the three with other energy models report no measure of fit."}
+      ],
+      "source": "Working paper 5.3, Table 1; Sargent (2013); Wilson et al. (2021)."
+    },
+    {
+      "type": "points",
+      "title": "Calibration makes the base year right by construction and can carry a data break into every year",
+      "points": [
+        {"lead": "Emissions are scaled to the inventory.", "text": "For Egypt, by 0.930: the 2021 inventory (211.05 Mt) over the model's 2022 estimate (226.97 Mt)."},
+        {"lead": "Then the inventory jumps 19.5% in 2022.", "text": "The calibrated baseline runs 16%, 32% and 29% below the inventory in 2022, 2023 and 2024."},
+        {"lead": "The CPAT-AI documentation says 16–29%:", "text": "it misses 2023, where a separate fuel-use shock adds to the gap."},
+        {"lead": "So compare the baseline with the inventory", "text": "before using it; policy-against-baseline comparisons hide the gap."}
+      ],
+      "source": "CPAT-AI model documentation, Emissions (2026); gaps recomputed in working paper 5.3, Section 4."
+    },
+    {
+      "type": "figure",
+      "title": "Run from 2000 with known world prices, CPAT's level error is 5% for Australia and 92% for China",
+      "image": "figures/fig1_backcast.png",
+      "caption": "Normalized RMSE of greenhouse gas emissions excluding land use, no-policy back-cast, 2000–2017.",
+      "points": [
+        {"lead": "Trend mostly right, level only where prices behave:", "text": "China's projected domestic prices ran below observed ones."},
+        {"lead": "A partial test:", "text": "observed world prices were fed in, the hardest part to forecast."},
+        {"lead": "Six large emitters,", "text": "none a typical CPAT user and none low-income."}
+      ],
+      "source": "CPAT methodology (2023), Hindcasting (CPAT 1.0pre_043); working paper 5.3, Table 2."
+    },
+    {
+      "type": "points",
+      "title": "Against other energy models CPAT is of the same order; only power investment timing differs much",
+      "points": [
+        {"lead": "IEA STEPS (WEO 2021):", "text": "world CO₂, primary energy and power mix of the same order; gaps on oil aggregation, Russia and nuclear."},
+        {"lead": "Enerdata:", "text": "the response of emissions to carbon prices of $0–120 has about the same slope."},
+        {"lead": "World Bank power planning model (EPM), 34 countries:", "text": "similar generation mix at about $40/tCO₂; EPM builds in lumps, CPAT spreads investment."},
+        {"lead": "No measure of fit:", "text": "\"same order of magnitude\" could mean 5% or 30%."}
+      ],
+      "source": "CPAT methodology (2023), Model comparisons and Appendix H; working paper 5.3, Sections 4 and 6."
+    },
+    {
+      "type": "table",
+      "title": "The evidence on real carbon prices is too wide to say CPAT over- or under-responds",
+      "header": ["Measure", "Estimate", "Source"],
+      "widths": [4.1, 2.2, 2.6],
+      "rows": [
+        ["CPAT, $10 price: average level gap, 2019–2023 / 2019–2035", "−2.4% / −6.2%", "CPAT methodology"],
+        ["CPAT, same, read as slower growth of emissions", "0.7–0.8% a year", "Author's calculation"],
+        ["Cross-country, 39 countries: per $10 of carbon price", "0.5% a year (imprecise)", "Rafaty et al. (2020)"],
+        ["Review of 37 studies: real schemes", "0–2% a year", "Green (2021)"],
+        ["Meta-analysis, 80 studies of 21 schemes", "5–21% in total", "Döbbeling-Hildebrandt et al. (2024)"]
+      ],
+      "note": "CPAT is of the same order as the most comparable estimate. Robust finding: power responds most and transport least, in CPAT and in the evidence.",
+      "source": "Working paper 5.3, Section 6.2 and Table 3. Conversion assumes the level gap builds linearly."
+    },
+    {
+      "type": "figure",
+      "title": "The price elasticities move the G20 cut from 29% to anywhere between 7% and 39%",
+      "image": "figures/fig2_sensitivity.png",
+      "points": [
+        {"lead": "Power model next:", "text": "22% (engineering) to 34% (elasticity)."},
+        {"lead": "Income elasticities, multipliers, GDP growth:", "text": "almost no effect on the cut."},
+        {"lead": "Gaps in the evidence:", "text": "household electricity (−0.1 estimated vs −0.4 in CPAT) and services; gasoline (−0.61) sits inside the literature's range."}
+      ],
+      "source": "CPAT methodology (2023), Parameter Sensitivity Analysis and Panel estimation; Brons et al. (2008); working paper 5.3, Table 4."
+    },
+    {
+      "type": "points",
+      "title": "Independent code reproduces CPAT exactly, and the rebuild found the bugs the checks were run on",
+      "points": [
+        {"lead": "Legacy blocks reproduced in Python:", "text": "road model to 3.8 × 10⁻¹⁴, power prices to 5.6 × 10⁻¹⁷, power model to 10⁻¹³."},
+        {"lead": "Coded CPAT = Excel-AI:", "text": "7,458 output codes per scenario within 10⁻⁹; one country in under a second."},
+        {"lead": "Against legacy, with bugs fixed:", "text": "all 15 CO₂ rows within 5% in 2022; median CO₂ gap 12% by 2030."},
+        {"lead": "Six data tables are proprietary:", "text": "outsiders can rerun the method, not every country."}
+      ],
+      "source": "CPAT-AI model and Coded CPAT documentation, release 1.1.0 (2026); working paper 5.3, Table 5."
+    },
+    {
+      "type": "closing",
+      "title": "Read CPAT as a range, compare policies with it, and make validation a routine test",
+      "left": {
+        "title": "How to read a CPAT number",
+        "items": [
+          {"lead": "A 29% cut", "text": "means about 20 to 35%: elasticities and power model."},
+          {"lead": "Comparisons", "text": "between policies beat levels; baseline errors cancel."},
+          {"lead": "Check the elasticities", "text": "where a result hinges on household electricity, services or road fuels."},
+          {"lead": "Check the baseline", "text": "against the national inventory."}
+        ]
       },
-      {
-        "value": "7–39%",
-        "label": "G20 CO₂ cut from a $75 tax as elasticities move ±2 s.d. (29% default)"
-      },
-      {
-        "value": "−2.4%",
-        "label": "short-run response to a $10 price, above the 0–2% ex-post band"
+      "right": {
+        "title": "What to do",
+        "items": [
+          {"lead": "Ministries:", "text": "ask for ranges and a measure of fit with every result."},
+          {"lead": "Country teams:", "text": "state the power model, elasticities and data vintage."},
+          {"lead": "CPAT maintainers:", "text": "rerun back-casts, comparisons and sensitivity on the corrected model, every country, every release."},
+          {"lead": "Researchers:", "text": "test CPAT against real carbon taxes, per dollar."}
+        ]
       }
-    ],
-    "text": "Most comparisons with the IEA, Enerdata and the World Bank's planning model are charts with no measure of fit, and none of the published checks tests the three descriptions of road transport against each other."
-  },
-  "mechanism": {
-    "title": "Back-casts track trends, not levels",
-    "image": "figures/fig_backcast.png",
-    "imageWidth": 5.6,
-    "imageHeight": 2.58,
-    "caption": "Back-cast from 2000 with no policy, 2000–2017 (CPAT documentation).",
-    "points": [
-      "China's error comes from projected prices below observed ones.",
-      "Calibration can carry a data break into every year: Egypt's inventory jumps 19% in 2022.",
-      "Independent code reproduces legacy blocks to 10⁻¹⁴ or better."
-    ]
-  },
-  "action": {
-    "title": "Make validation part of the test suite",
-    "results": [
-      "Read a 29% cut as about 20 to 35%.",
-      "Road-fuel and residential-electricity responses look high.",
-      "The evidence is about an earlier model with bugs."
-    ],
-    "todo": [
-      "Rerun back-casts, comparisons and sensitivity on Coded CPAT for every country.",
-      "Report a measure of fit for every comparison.",
-      "Back-cast against real carbon prices and subsidy reforms.",
-      "Settle the elasticities (paper 5.4)."
-    ]
-  }
+    }
+  ]
 }
