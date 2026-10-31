@@ -61,10 +61,10 @@ Plan: `D Modelling/5.Modelling/5.0.Overview/SeriesArchitecture.md`. One medium-l
 
 | No. | Paper |
 |---|---|
-| 5.1 | The CPAT Mitigation Module: Methods in Brief |
-| 5.2 | CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool |
-| 5.3 | Validating CPAT: Baselines, Back-Casts and Model Comparisons |
-| 5.4 | Are CPAT's Price Elasticities Right? A Check Against the Evidence |
+| 5.1 | The CPAT Mitigation Module: Methods in Brief (working paper v0.2, first brief and deck, 31 Oct; on the web) |
+| 5.2 | CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool (working paper v0.2, first brief and deck, 31 Oct; on the web) |
+| 5.3 | Validating CPAT: Baselines, Back-Casts and Model Comparisons (working paper v0.2, first brief and deck, 31 Oct; on the web) |
+| 5.4 | Are CPAT's Price Elasticities Right? A Check Against the Evidence (working paper v0.2, first brief and deck, 31 Oct; on the web) |
 | 6.2 | The CBAM Policy Tool |
 | 6.3 | Public Investment in CPAT: Investment Needs and the Efficiency of Public Spending |
 | 6.4 | Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT |

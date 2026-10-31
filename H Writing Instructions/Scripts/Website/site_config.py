@@ -91,6 +91,10 @@ WEB_PAPERS = [
     "4.1.NotionalCapitalisedValueAndGuarantees",
     "4.2.ClimateInvestmentTrust",
     "4.3.SustainabilityLinkedLending",
+    "5.1.CPATMitigationMethods",
+    "5.2.CPATAIImplementation",
+    "5.3.CPATValidation",
+    "5.4.ElasticityValidation",
 ]
 
 # Books that are also read on the site, one page per chapter, under <part dir>/books/<BookName>/

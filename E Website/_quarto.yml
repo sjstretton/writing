@@ -143,7 +143,29 @@ website:
         # BEGIN modelling sidebar
         - text: "Modelling and Analytics"
           href: modelling/index.qmd
-        - modelling/5-modelling.qmd
+        - section: "5. Modelling (CPAT)"
+          href: modelling/5-modelling.qmd
+          contents:
+            - section: "5.1 The CPAT Mitigation Module"
+              href: modelling/5-modelling/CPATMitigationMethods/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: modelling/5-modelling/CPATMitigationMethods/working-paper.qmd
+            - section: "5.2 CPAT-AI"
+              href: modelling/5-modelling/CPATAIImplementation/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: modelling/5-modelling/CPATAIImplementation/working-paper.qmd
+            - section: "5.3 Validating CPAT"
+              href: modelling/5-modelling/CPATValidation/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: modelling/5-modelling/CPATValidation/working-paper.qmd
+            - section: "5.4 Are CPAT's Price Elasticities Right?"
+              href: modelling/5-modelling/ElasticityValidation/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: modelling/5-modelling/ElasticityValidation/working-paper.qmd
         - modelling/6-modular-upgrades.qmd
         - modelling/7-analytics.qmd
         # END modelling sidebar

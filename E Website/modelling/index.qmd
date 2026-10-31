@@ -8,10 +8,10 @@ Models and diagnostics a finance ministry can audit, in three sections: the Clim
 
 Models a finance ministry can audit: the Climate Policy Assessment Tool stated, rebuilt and validated.
 
-- [5.1 The CPAT Mitigation Module](../modelling/5-modelling.qmd#paper-5-1)
-- [5.2 CPAT-AI](../modelling/5-modelling.qmd#paper-5-2)
-- [5.3 Validating CPAT](../modelling/5-modelling.qmd#paper-5-3)
-- [5.4 Are CPAT's Price Elasticities Right?](../modelling/5-modelling.qmd#paper-5-4)
+- [5.1 The CPAT Mitigation Module](../modelling/5-modelling/CPATMitigationMethods/index.qmd)
+- [5.2 CPAT-AI](../modelling/5-modelling/CPATAIImplementation/index.qmd)
+- [5.3 Validating CPAT](../modelling/5-modelling/CPATValidation/index.qmd)
+- [5.4 Are CPAT's Price Elasticities Right?](../modelling/5-modelling/ElasticityValidation/index.qmd)
 
 ### [6. Modular Upgrades](../modelling/6-modular-upgrades.qmd)
 

@@ -1,0 +1,318 @@
+% CPATAIImplementation.bib - working paper 5.2, v0.2 (31 Oct 2026). Every entry below that the paper cites was checked
+% against the source on 31 Oct 2026 (see 5.Notes/BibCheck-2026-10-31.md). The brief's .bib copies the entries it cites.
+
+@techreport{CFPB61, author={Stretton, Stephen J.}, title={Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price}, institution={Climate Fiscal Policy Briefs}, number={6.1}, year={2026}}
+
+@techreport{CFPB52, author={Stretton, Stephen J.}, title={{CPAT-AI}: Rebuilding a Policy Model as a Transparent, Testable Tool}, institution={Climate Fiscal Policy Briefs}, number={5.2}, year={2026}}
+
+% ---- The CPAT-AI repository (public: https://github.com/cpmodelai/cpat_ai). Its git history was restarted on
+% 30 Oct 2026; the release 1.0.2 register files are kept in excel_ai/bugs_and_legacy/register/releases/.
+
+@misc{CPATAIRepo,
+  author = {{CPAT-AI project}},
+  title = {{CPAT-AI}: Excel-AI and Coded {CPAT}, Release 1.0.2 (Excel-AI) and 1.0.2p1.1 (Coded {CPAT})},
+  year = {2026},
+  howpublished = {GitHub repository cpmodelai/cpat\_ai, releases of 29 October 2026; README.md, coded/README.md and coded/CHANGELOG.md},
+  url = {https://github.com/cpmodelai/cpat_ai},
+  note = {verified 31 Oct 2026: README.md, AGENTS.md, coded/README.md, coded/CHANGELOG.md (row 1.0.2p1.1: every output code within 1e-9, distribution 1,684 codes, 65 tests pass; 0.8 s for one country and two scenarios); public (raw files readable without authentication)}
+}
+
+@misc{CPATAIBugs,
+  author = {{CPAT-AI project}},
+  title = {Tracking Legacy Bugs, Version 1.0.2, and Legacy {CPAT} Bugs, Version 1.0.2: The Register of Bugs, Issues, Departures and Upgrades},
+  year = {2026},
+  howpublished = {CPAT-AI repository, excel\_ai/bugs\_and\_legacy/register/releases/Tracking\_Legacy\_Bugs\_v1.0.2.xlsx and Legacy\_CPAT\_Bugs\_v1.0.2.docx (29 October 2026); current lists in excel\_ai/core/BUGS.md and ISSUES.md},
+  url = {https://github.com/cpmodelai/cpat_ai/tree/main/excel_ai/bugs_and_legacy},
+  note = {verified 31 Oct 2026: tracker v1.0.2 tabs ReadMe, Bugs and Issues read in full and every count in Table 1 recomputed (L 228: 24 high, 62 medium, 142 low; legacy 465 52/9/2/165; M 22; DOC 20; I 135; LD 35; U 14); entries L1, L3, L13, L18-L20, L24, L53, L87, L188, L205-L213, M15-M22, DOC1-DOC20, I1, I90, I91, I96, I99, I100, I110 read; release 1.1.0 lists (excel\_ai/core/BUGS.md): 231 legacy bugs, 24 high}
+}
+
+@misc{CPATAINorms,
+  author = {{CPAT-AI project}},
+  title = {{CPAT-AI} Norms (Excel-AI) and the Python Norms of Coded {CPAT}},
+  year = {2026},
+  howpublished = {CPAT-AI repository, excel\_ai/NORMS.md (now excel\_ai/core/NORMS.md) and coded/NORMS.md},
+  url = {https://github.com/cpmodelai/cpat_ai/blob/main/excel_ai/core/NORMS.md},
+  note = {verified 31 Oct 2026: Excel-AI NORMS section 0 (the replication rule, its six numbered rules and the data rule), section 3 (100-character formulas, one formula per block, no hard-coded constants), 3g (lint before shipping), 6b (a mistake ends with a norm and a check), 7 (method and version notes separate); coded/NORMS.md sections on shared codes (no second name), one equation one function, equation-id test, no hard-coded numbers apart from 0 and 1, tolerance 1e-9, pytest before every commit and no loosening}
+}
+
+@misc{CPATAIDocs,
+  author = {{CPAT-AI project}},
+  title = {{CPAT-AI} Project Documentation and Coded {CPAT} Documentation (Testing, Architecture), with the Legacy Comparison},
+  year = {2026},
+  howpublished = {CPAT-AI repository, docs/CPAT\_ai\_documentation\_qmd, docs/CPAT\_coded\_documentation\_qmd and coded/cpat\_testing/compare/legacy\_comparison.md; website https://cpmodelai.github.io/cpat\_ai/},
+  url = {https://cpmodelai.github.io/cpat_ai/},
+  note = {verified 31 Oct 2026: project overview chapter (legacy as ground truth; versions 456, 459, 465 read-only; the five working steps); coded testing chapter (known differences; 123 key codes per stored scenario); test status (64 passed on 29 Oct); legacy comparison (Egypt baseline against cached legacy 456: 2022 CO2 15 of 15 rows within 5 percent, energy 91 percent of 129 rows within 5 percent, prices 48 percent of 128 rows within 5 percent)}
+}
+
+@misc{CPATAICaveats,
+  author = {{CPAT-AI project}},
+  title = {{CAVEATS}: Log of Completed Tasks},
+  year = {2026},
+  howpublished = {CPAT-AI repository, excel\_ai/core/CAVEATS.md (entries 2 to 31 October 2026)},
+  url = {https://github.com/cpmodelai/cpat_ai/blob/main/excel_ai/core/CAVEATS.md},
+  note = {verified 31 Oct 2026: 241 entries dated 2-29 Oct 2026; legacy bug counts 64 (after v0.4.12, 18 Oct), 159 (v0.6.3, 20 Oct), 228 (29 Oct); method checks (prices 80 rows to 5.6e-17; power 208 rows; road engineer about 1,091 series to 4e-14; distribution to 4e-4); release 1.0.0 regression 0 of 15,086 codes changed; legacy file over 21 MB; legacy rows past 18,000 (row 18880); equation list drafted by a subagent and spot-checked; full check stopped over one 114-character formula; 497,541 formulas in the 1.1.0 workbook}
+}
+
+% ---- CPAT itself
+
+@book{CPATDoc,
+  author = {{CPAT Team}},
+  title = {{CPAT} Documentation: {WB-IMF} Climate Policy Assessment Tool},
+  publisher = {World Bank and International Monetary Fund},
+  year = {2023},
+  note = {Published with the CPAT-AI documentation website (Methodology tab); verified 31 Oct 2026: foreword (``more than 180 countries''; ``spreadsheet-based with data and formulas readily accessible''; ``400-page documentation'')},
+  url = {https://cpmodelai.github.io/cpat_ai/}
+}
+
+@incollection{CPATDocMitigation,
+  author = {Campmas, Alexandra and Bastidas, Daniel and Lelouch, Olivier and Gawryluk, Faustyna and Agnolucci, Paolo and Stretton, Stephen},
+  title = {The Mitigation Module},
+  booktitle = {{CPAT} Documentation: {WB-IMF} Climate Policy Assessment Tool},
+  publisher = {World Bank and International Monetary Fund},
+  year = {2023},
+  url = {https://cpmodelai.github.io/cpat_ai/},
+  note = {verified 31 Oct 2026: chapter 3 of the CPAT Documentation (docs/CPAT\_full\_documentation\_qmd/03\_Mitigation.qmd, about 57,000 words); authorship from its first footnote}
+}
+
+@techreport{Black2023CPAT,
+  author = {Black, Simon and Parry, Ian and Mylonas, Victor and Vernon-Lin, Nate and Zhunussova, Karlygash},
+  title = {The {IMF-World Bank} Climate Policy Assessment Tool ({CPAT}): A Model to Help Countries Mitigate Climate Change},
+  institution = {International Monetary Fund},
+  type = {IMF Working Paper},
+  number = {2023/128},
+  year = {2023},
+  doi = {10.5089/9798400242342.001},
+  note = {verified 31 Oct 2026: Crossref; IMF landing page (summary: spreadsheet-based model ``covering over 200 countries''; effects on energy, emissions, revenue, GDP, welfare, households, air pollution)}
+}
+
+% ---- Spreadsheet risk, replication and verification
+
+@article{Panko1998,
+  author = {Panko, Raymond R.},
+  title = {What We Know About Spreadsheet Errors},
+  journal = {Journal of End User Computing},
+  volume = {10},
+  number = {2},
+  pages = {15--21},
+  year = {1998},
+  doi = {10.4018/joeuc.1998040102},
+  note = {verified 31 Oct 2026: Crossref (journal now Journal of Organizational and End User Computing); abstract (errors in a few percent of cells, so for large spreadsheets the question is how many errors, not whether; post-development testing matters most); field-audit detail via Powell, Baker and Lawson (2008)}
+}
+
+@article{Powell2008,
+  author = {Powell, Stephen G. and Baker, Kenneth R. and Lawson, Barry},
+  title = {A Critical Review of the Literature on Spreadsheet Errors},
+  journal = {Decision Support Systems},
+  volume = {46},
+  number = {1},
+  pages = {128--138},
+  year = {2008},
+  doi = {10.1016/j.dss.2008.06.001},
+  note = {verified 31 Oct 2026: Crossref; full text read (sections 4 and 6): Panko's field audits summarized as 94 percent of 88 spreadsheets with errors and a 5.2 percent cell error rate; no source finds operational spreadsheets error-free; the estimates rest on unstandardized and partly unpublished audits}
+}
+
+@article{Herndon2014,
+  author = {Herndon, Thomas and Ash, Michael and Pollin, Robert},
+  title = {Does High Public Debt Consistently Stifle Economic Growth? A Critique of {Reinhart} and {Rogoff}},
+  journal = {Cambridge Journal of Economics},
+  volume = {38},
+  number = {2},
+  pages = {257--279},
+  year = {2014},
+  doi = {10.1093/cje/bet075},
+  note = {verified 31 Oct 2026: Crossref; text of the CJE advance-access version read (abstract; the coding error excluding Australia, Austria, Belgium, Canada and Denmark; corrected mean growth above 90 percent debt 2.2 percent, not -0.1)}
+}
+
+@techreport{ChangLi2015,
+  author = {Chang, Andrew C. and Li, Phillip},
+  title = {Is Economics Research Replicable? Sixty Published Papers from Thirteen Journals Say ``Usually Not''},
+  institution = {Board of Governors of the Federal Reserve System},
+  type = {Finance and Economics Discussion Series},
+  number = {2015-083},
+  year = {2015},
+  doi = {10.17016/FEDS.2015.083},
+  note = {verified 31 Oct 2026: Crossref; abstract read (key result replicated for 22 of 67 papers without the authors, 29 of 59 with their help)}
+}
+
+@article{Wilson2014,
+  author = {Wilson, Greg and Aruliah, D. A. and Brown, C. Titus and Chue Hong, Neil P. and Davis, Matt and Guy, Richard T. and Haddock, Steven H. D. and Huff, Kathryn D. and Mitchell, Ian M. and Plumbley, Mark D. and Waugh, Ben and White, Ethan P. and Wilson, Paul},
+  title = {Best Practices for Scientific Computing},
+  journal = {PLoS Biology},
+  volume = {12},
+  number = {1},
+  pages = {e1001745},
+  year = {2014},
+  doi = {10.1371/journal.pbio.1001745},
+  note = {verified 31 Oct 2026: Crossref; abstract read (best practices for reliable scientific software: version control, testing, code written for people)}
+}
+
+@article{Sargent2013,
+  author = {Sargent, Robert G.},
+  title = {Verification and Validation of Simulation Models},
+  journal = {Journal of Simulation},
+  volume = {7},
+  number = {1},
+  pages = {12--24},
+  year = {2013},
+  doi = {10.1057/jos.2012.20},
+  note = {verified 31 Oct 2026: Crossref; abstract read (model verification, conceptual and operational validity, data validity as distinct steps)}
+}
+
+@techreport{Macpherson2013,
+  author = {{HM Treasury}},
+  title = {Review of Quality Assurance of Government Analytical Models: Final Report},
+  institution = {HM Treasury},
+  address = {London},
+  year = {2013},
+  type = {Report by Sir Nicholas Macpherson},
+  url = {https://www.gov.uk/government/publications/review-of-quality-assurance-of-government-models},
+  note = {verified 31 Oct 2026: full PDF read (foreword: West Coast franchise; Box 1.A, developer testing ``including parallel build''; recommendations 1-3: QA of inputs, method and outputs, specialist staff, a single senior responsible owner; just under 500 business-critical models)}
+}
+
+@article{Pfenninger2017,
+  author = {Pfenninger, Stefan and DeCarolis, Joseph and Hirth, Lion and Quoilin, Sylvain and Staffell, Iain},
+  title = {The Importance of Open Data and Software: Is Energy Research Lagging Behind?},
+  journal = {Energy Policy},
+  volume = {101},
+  pages = {211--215},
+  year = {2017},
+  doi = {10.1016/j.enpol.2016.11.046},
+  note = {verified 31 Oct 2026: Crossref; abstract read via OpenAlex (open models and data for quality, less duplication and a better science-policy boundary; valid reasons for closed data and code)}
+}
+
+% ---- Building twice: N-version programming
+
+@article{KnightLeveson1986,
+  author = {Knight, John C. and Leveson, Nancy G.},
+  title = {An Experimental Evaluation of the Assumption of Independence in Multiversion Programming},
+  journal = {IEEE Transactions on Software Engineering},
+  volume = {SE-12},
+  number = {1},
+  pages = {96--109},
+  year = {1986},
+  doi = {10.1109/TSE.1986.6312924},
+  note = {verified 31 Oct 2026: Crossref; abstract read via OpenAlex (27 versions from one specification, one million tests; individually reliable, but coincident failures substantially more than independence predicts)}
+}
+
+@misc{Ron2026,
+  author = {Ron, Javier and Baudry, Benoit and Monperrus, Martin},
+  title = {N-Version Programming with Coding Agents},
+  year = {2026},
+  howpublished = {arXiv:2606.20158 [cs.SE], 18 June 2026},
+  doi = {10.48550/arXiv.2606.20158},
+  note = {verified 31 Oct 2026: arXiv abstract (48 agent-written versions of the Knight-Leveson specification, one million random inputs; substantial common-mode failure, much of it where the specification is ambiguous; majority voting over triples cuts mean failures from 387.44 to 130.99)}
+}
+
+% ---- AI assistance
+
+@article{Korinek2023,
+  author = {Korinek, Anton},
+  title = {Generative {AI} for Economic Research: Use Cases and Implications for Economists},
+  journal = {Journal of Economic Literature},
+  volume = {61},
+  number = {4},
+  pages = {1281--1317},
+  year = {2023},
+  doi = {10.1257/jel.20231736},
+  note = {verified 31 Oct 2026: Crossref; AEA abstract (use cases in six domains including coding and data analysis; automating routine tasks may raise economists' productivity)}
+}
+
+@misc{Peng2023,
+  author = {Peng, Sida and Kalliamvakou, Eirini and Cihon, Peter and Demirer, Mert},
+  title = {The Impact of {AI} on Developer Productivity: Evidence from {GitHub Copilot}},
+  year = {2023},
+  howpublished = {arXiv:2302.06590 [cs.SE]},
+  doi = {10.48550/arXiv.2302.06590},
+  note = {verified 31 Oct 2026: arXiv abstract (controlled experiment, an HTTP server in JavaScript; the treated group finished 55.8 percent faster)}
+}
+
+@misc{Becker2025,
+  author = {Becker, Joel and Rush, Nate and Barnes, Elizabeth and Rein, David},
+  title = {Measuring the Impact of Early-2025 {AI} on Experienced Open-Source Developer Productivity},
+  year = {2025},
+  howpublished = {arXiv:2507.09089 [cs.AI]},
+  doi = {10.48550/arXiv.2507.09089},
+  note = {verified 31 Oct 2026: arXiv abstract (randomized trial, 16 experienced developers, 246 tasks in mature projects; AI tools increased completion time by 19 percent; developers expected a 24 percent saving and afterward believed in a 20 percent one)}
+}
+
+% ---- Data
+
+@misc{UNWPP2024,
+  author = {{United Nations, Department of Economic and Social Affairs, Population Division}},
+  title = {World Population Prospects 2024},
+  year = {2024},
+  howpublished = {Medium variant, total population by sex (WPP2024\_TotalPopulationBySex.csv)},
+  url = {https://population.un.org/wpp/},
+  note = {verified 31 Oct 2026: CSV downloaded; Egypt, medium variant, 2041: 147,018.557 thousand}
+}
+
+% Sibling papers in sections 5 and 6 (standard entries, 29 Oct 2026)
+@unpublished{StrettonWP51,
+  author = {Stretton, Stephen J.},
+  title = {The {CPAT} Mitigation Module: Methods in Brief},
+  note = {Working paper 5.1},
+  year = {2026}
+}
+
+@unpublished{StrettonWP52,
+  author = {Stretton, Stephen J.},
+  title = {{CPAT-AI}: Rebuilding a Policy Model as a Transparent, Testable Tool},
+  note = {Working paper 5.2},
+  year = {2026}
+}
+
+@unpublished{StrettonWP53,
+  author = {Stretton, Stephen J.},
+  title = {Validating {CPAT}: Baselines, Back-Casts and Model Comparisons},
+  note = {Working paper 5.3},
+  year = {2026}
+}
+
+@unpublished{StrettonWP54,
+  author = {Stretton, Stephen J.},
+  title = {Are {CPAT}'s Price Elasticities Right?},
+  note = {Working paper 5.4},
+  year = {2026}
+}
+
+@unpublished{StrettonWP62,
+  author = {Stretton, Stephen J.},
+  title = {The {CBAM} Policy Tool},
+  note = {Working paper 6.2},
+  year = {2026}
+}
+
+@unpublished{StrettonWP63,
+  author = {Stretton, Stephen J.},
+  title = {Public Investment in {CPAT}},
+  note = {Working paper 6.3},
+  year = {2026}
+}
+
+@unpublished{StrettonWP64,
+  author = {Stretton, Stephen J.},
+  title = {Activity Levels Across {CPAT}, {SISEPUEDE}, {CBAM} and {FTT}},
+  note = {Working paper 6.4},
+  year = {2026}
+}
+
+@unpublished{StrettonWP65,
+  author = {Stretton, Stephen J.},
+  title = {The Macro-Fiscal-Energy Scenario Tool},
+  note = {Working paper 6.5},
+  year = {2026}
+}
+
+@unpublished{StrettonWP71,
+  author = {Stretton, Stephen J.},
+  title = {The Excise-Fiscal Diagnostic},
+  note = {Working paper 7.1},
+  year = {2026}
+}
+
+@unpublished{StrettonWP72,
+  author = {Stretton, Stephen J.},
+  title = {A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis},
+  note = {Working paper 7.2},
+  year = {2026}
+}
