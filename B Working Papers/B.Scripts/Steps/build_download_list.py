@@ -1,6 +1,7 @@
 """Build the literature download list and Windows batch file for the carbon-pricing series.
 
-Reads every 5.Notes/Downloads-*.csv under B Working Papers/1.ClimateAndFiscalPolicy
+Reads every 5.Notes/Downloads-*.csv in the carbon-pricing paper folders (B Working Papers/1.CarbonPricing,
+and 6.ModularUpgrades/6.1 for the Total Effective Carbon Price)
 (columns: key,title,doi,url_tried,status,local_file) and writes, beside this script's
 Run folder:
   B.Scripts/Run/Download-Literature.bat   curl downloads into each paper's 4.ExternalPapers
@@ -19,9 +20,8 @@ import re
 from pathlib import Path
 
 ROOT = Path("B Working Papers")
-SERIES = ROOT / "1.ClimateAndFiscalPolicy"
 auto, manual, have, seen = [], [], [], set()
-for f in sorted(SERIES.glob("*/5.Notes/Downloads-*.csv")):
+for f in sorted(list(ROOT.glob("1.CarbonPricing/*/5.Notes/Downloads-*.csv")) + list(ROOT.glob("6.ModularUpgrades/6.1.*/5.Notes/Downloads-*.csv"))):
     paper_dir = f.parent.parent
     with open(f, newline="", encoding="utf-8") as fh:
         for r in csv.DictReader(fh):

@@ -67,7 +67,7 @@ function Note($m)    { Log ('   NOTE    {0}' -f $m); $script:notes++ }
 function Problem($m) { Log ('   PROBLEM {0}' -f $m); $script:problems++ }
 function Rel([string]$f) { return $f.Substring($base.Length).TrimStart('\','/') }
 
-$Slots    = @('1.Presentation','2.Source','3.BackgroundPapers','4.ExternalPapers',
+$Slots    = @('1.Presentation','2.Source','3.BackgroundPapers','3.RelatedPiecesAndLinks','4.ExternalPapers',
               '5.Notes','6.Reserved','7.Reserved','8.PreviousVersions','9.Archive')
 $SkipDirs = @('media','images','_site','.quarto','_freeze','papers','node_modules',
               'Run','Engine','Steps','Reference','Reports')

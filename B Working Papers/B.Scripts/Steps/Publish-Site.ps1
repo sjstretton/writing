@@ -131,7 +131,7 @@ if ($Apply -and -not (Test-Path -LiteralPath $pdfDir)) { New-Item -ItemType Dire
 # A folder is a paper folder when it holds a file named after itself. The slot
 # subfolders and the build output are never descended into.
 
-$SkipDirs = @('1.Presentation', '2.Source', '3.BackgroundPapers', '4.ExternalPapers',
+$SkipDirs = @('1.Presentation', '2.Source', '3.BackgroundPapers', '3.RelatedPiecesAndLinks', '4.ExternalPapers',
               '5.Notes', '6.Reserved', '7.Reserved', '8.PreviousVersions', '9.Archive',
               'media', '_site', '.quarto', '_freeze', 'papers', 'node_modules',
               'Run', 'Engine', 'Steps', 'Reference', 'Reports')

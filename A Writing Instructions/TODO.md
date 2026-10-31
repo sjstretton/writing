@@ -16,7 +16,7 @@ Details for each item: `C PhD Application/PhD-Application-Status.md`.
 - [ ] Find the transcripts (possibly in a box in the UK); order official copies if not — S — 20 Nov
 - [ ] Choose and ask 3 referees (at least 2 academic) — S — 13 Nov — highest risk item
 - [ ] Proposal v2: drafted 31 Oct (`C PhD Application/Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking-v2.docx`; changes and open placeholders in `Proposal-v2-ChangeLog.md`). Review it and resolve the [STEPHEN TO DECIDE] and [VERIFY] notes — S — 27 Nov
-- [ ] Writing sample: drafted 31 Oct, 1,983 words, cut from 2.1 v0.2 (`C PhD Application/Oxford-WritingSample-ClimateFinanceIntermediation.docx`). Review it; check the Azura paraphrase and decide US or UK spelling — S — 4 Dec
+- [ ] Writing sample: drafted 31 Oct, 1,983 words, cut from 3.1 v0.2 (`C PhD Application/Oxford-WritingSample-ClimateFinanceIntermediation.docx`). Review it; check the Azura paraphrase and decide US or UK spelling — S — 4 Dec
 - [ ] Statement of purpose — A drafts, S approves — 11 Dec
 - [ ] Submit — S — 8 Jan 2027
 
@@ -32,19 +32,19 @@ Details for each item: `C PhD Application/PhD-Application-Status.md`.
 
 ### Priority 3: paper upgrades
 
-- [ ] **Carbon-pricing series (1.1, 1.2, 1.3, 1.6, 1.7): read and approve.** Done 29 Oct by agents: five Climate Fiscal Policy Briefs, five working papers (1.1 v0.3, 1.2 v0.3, 1.3 v0.3, 1.6 v0.2, 1.7 v0.3) with models, proofs, calibrations and literature appendices, five 4-slide decks, all in `B Working Papers/A.Website/papers/` — S reads, starting with 1.1 for Dirk — 5 Nov
-- [ ] **Finance-and-risk and sovereign-incentives series (2.1, 2.2, 3.1, 3.2, 3.3): read and peer review.** Done 29 Oct by agents: five briefs (Climate Fiscal Policy Briefs 2.1–3.3) and five working papers with models and verified bibliographies; overviews 2.0 and 3.0 rewritten; CIT moved to 3.2, SLL to 3.3. No decks or peer-review notes yet. Start with 3.1 and 2.1 (proposal 1) — S reads, A peer-reviews and upgrades — 13 Nov
-- [ ] Decks for the five series 2–3 papers and two theme decks: done 29 Oct. Referee reports still to do — A — after Stephen's read
-- [ ] **Sections 4 (CPAT) and 5 (analytics tools): read.** Done 29 Oct by agents: ten medium-length papers (4.1–4.7, 5.1–5.3) and overviews 4.0, 5.0. Decide whether any country results from the private tools repository may be used; answer the README questions (AI tools used, Egypt figures in 4.3, air-pollution module credit) — S — 13 Nov
+- [ ] **Carbon-pricing papers (1.1, 1.2, 1.3, 1.4, and 6.1 the TECP): read and approve.** Done 29 Oct by agents: five Climate Fiscal Policy Briefs, five working papers (1.1 v0.3, 1.2 v0.3, 1.3 v0.3, 1.4 v0.2, 6.1 v0.3) with models, proofs, calibrations and literature appendices, five 4-slide decks, all in `B Working Papers/A.Website/papers/` — S reads, starting with 1.1 for Dirk — 5 Nov
+- [ ] **Finance-and-risk and sovereign-incentives series (3.1, 3.2, 4.1, 4.2, 4.3): read and peer review.** Done 29 Oct by agents: five briefs (Climate Fiscal Policy Briefs 3.1–4.3) and five working papers with models and verified bibliographies; overviews 3.0 and 4.0 rewritten; CIT now 4.2, SLL 4.3. No peer-review notes yet. Start with 4.1 and 3.1 (proposal 1) — S reads, A peer-reviews and upgrades — 13 Nov
+- [ ] Decks for the five section 3–4 papers and two theme decks: done 29 Oct. Referee reports still to do — A — after Stephen's read
+- [ ] **Sections 5 (CPAT), 6 (modular upgrades) and 7 (analytics tools): read.** Done 29 Oct by agents: ten medium-length papers (5.1–5.4, 6.2–6.5, 7.1–7.2) and overviews 5.0, 7.0 (6.0 added 31 Oct). Decide whether any country results from the private tools repository may be used; answer the README questions (AI tools used, Egypt figures in 5.3, air-pollution module credit) — S — 13 Nov
 - [x] 29 Oct 2026 — Sections 4 and 5: consistency pass, ten paper decks and two theme decks, website pages (ready to deploy); series 3 now leads with the MDB loss record (~80 per donor dollar; 2.7 stress case); TFFF cited to its Concept Note 3.0 — A
 - [x] 30 Oct 2026 — Rule on "Draft for discussion" / "Not for citation" sources: Stephen ruled the excise diagnostic's own results usable, PFR and not-for-citation/draft-for-discussion documents excluded. 5.1 v0.3 adds Sierra Leone and Liberia (Section 7); PFR mention and 3.3's draft-for-discussion source (Estevão–Zimmermann surcharge) removed; rule in `4.Modelling/SeriesArchitecture.md` — A
 - [x] 30 Oct 2026 — CBAM checks in 4.5 cleared from the Publications Office texts: benchmarks read in Regulation 2025/2620 (rebar is 1.364, not 1.370; example rerun), phase-out read in Directive 2023/959, 2026/1740 and COM(2026) 616 read and cited; 3.2's Vasicek page range confirmed; no markers left in sections 2–5 — A
-- [ ] Run render.bat then deploy.bat to put sections 2–5 live — S — after reading
+- [ ] Run render.bat then deploy.bat to put sections 1–7 live, then `remove-old-files.bat` — S — after reading
 - [ ] Run `deploy.bat` to put the series live (source pushed to main 29 Oct) — S — Fri 30 Oct (T59)
 - [ ] Clear remaining `VERIFY` entries in the five working-paper bibs (about 45 across the series; court judgments and EU texts need EUR-Lex, which the cloud cannot reach) — A, with S downloads — 12 Nov
-- [ ] Flag: the 1.7 TECP formula in all earlier versions and in the xlsx workbook carries an extra (1−w) factor; v0.3 corrects it and marks the workbook superseded. Rebuild the workbook or retire it — S decides
+- [ ] Flag: the 6.1 TECP formula in all earlier versions and in the xlsx workbook carries an extra (1−w) factor; v0.3 corrects it and marks the workbook superseded. Rebuild the workbook or retire it — S decides
 - [ ] Submit 1.1 to *Climate Policy* (research article) after Stephen's read — S — Nov
-- [ ] Confirm which file is master for 1.4 Rent Tax (qmd vs docx, H13) — S — before upgrading it. (1.1 and 1.7: the qmd is master, per Stephen 29 Oct)
+- [ ] Confirm which file is master for 2.1 Rent Tax (qmd vs docx, H13) — S — before upgrading it. (1.1 and 6.1: the qmd is master, per Stephen 29 Oct)
 
 ## Housekeeping (blocking or risky)
 
@@ -64,6 +64,8 @@ Details for each item: `C PhD Application/PhD-Application-Status.md`.
 - [ ] Is the fiscal unit's remit described correctly in `STRATEGY.md`?
 
 ## Done
+
+- [x] 31 Oct 2026 — Papers renumbered to the section folders (`NUMBERING.md`): paper folders, overview files, citation keys (CFPB/StrettonWP), series lines, related-paper lists, decks and the research page now use the new numbers; each section has one `<N>.0.Overview` folder; section 8 renumbered 8.1–8.7; new overviews 2.0 (Rent Tax), 6.0 (modular upgrades) and 8.0; 5.0 and 7.0 rescoped; docx and decks re-rendered; website ready to deploy — A
 
 - [x] 29 Oct 2026 — Abstracts of 1.3 (recommendation, relocation cost of full recognition) and 1.7 (IMF precedent, uses, headline $37) revised; 1.7 brief and deck aligned — A
 - [x] 29 Oct 2026 — Carbon-pricing series: briefs, working papers, decks, cross-review, website publish (ready to deploy) — A

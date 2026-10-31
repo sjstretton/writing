@@ -27,17 +27,17 @@ import urllib.request
 from pathlib import Path
 
 EMAIL = "sjstretton@gmail.com"
-SERIES = Path("B Working Papers/1.ClimateAndFiscalPolicy")
+SERIES = Path("B Working Papers")  # folders below are relative to this (see NUMBERING.md)
 BIBS = {
-    "1.1.OpenEconomyCarbonPricing": ["OpenEconomyCarbonPricing.bib", "1.Presentation/Brief-OpenEconomyCarbonPricing.bib"],
-    "1.2.FeebatesAndOutputBasedRebating": ["FeebatesAndOutputBasedRebating.bib", "1.Presentation/Brief-FeebatesAndOutputBasedRebating.bib"],
-    "1.3.IronSteelCBAM": ["IronSteelCBAM.bib", "1.Presentation/Brief-IronSteelCBAM.bib"],
-    "1.6.CarbonConsumptionTax": ["CarbonConsumptionTax.bib", "1.Presentation/Brief-CarbonConsumptionTax.bib"],
-    "1.7.PolicyEquivalentCarbonPriceAndCES": ["PolicyEquivalentCarbonPriceAndCES.bib", "1.Presentation/Brief-PolicyEquivalentCarbonPriceAndCES.bib"],
+    "1.CarbonPricing/1.1.OpenEconomyCarbonPricing": ["OpenEconomyCarbonPricing.bib", "1.Presentation/Brief-OpenEconomyCarbonPricing.bib"],
+    "1.CarbonPricing/1.2.FeebatesAndOutputBasedRebating": ["FeebatesAndOutputBasedRebating.bib", "1.Presentation/Brief-FeebatesAndOutputBasedRebating.bib"],
+    "1.CarbonPricing/1.3.IronSteelCBAM": ["IronSteelCBAM.bib", "1.Presentation/Brief-IronSteelCBAM.bib"],
+    "1.CarbonPricing/1.4.CarbonConsumptionTax": ["CarbonConsumptionTax.bib", "1.Presentation/Brief-CarbonConsumptionTax.bib"],
+    "6.ModularUpgrades/6.1.PolicyEquivalentCarbonPriceAndCES": ["PolicyEquivalentCarbonPriceAndCES.bib", "1.Presentation/Brief-PolicyEquivalentCarbonPriceAndCES.bib"],
 }
 # Key works the working papers still need (from the 1.1 review and the literature plan).
 SUPPLEMENT = {
-    "1.1.OpenEconomyCarbonPricing": [
+    "1.CarbonPricing/1.1.OpenEconomyCarbonPricing": [
         ("FowlieReguant2022", "Mitigating Emissions Leakage in Incomplete Carbon Markets", "Fowlie Reguant"),
         ("Grubb2022", "Carbon Leakage, Consumption, and Trade", "Grubb"),
         ("JakobSteckelEdenhofer2014", "Consumption- versus Production-Based Emission Policies", "Jakob Steckel Edenhofer"),
@@ -47,25 +47,25 @@ SUPPLEMENT = {
         ("Aldy2017", "Frameworks for evaluating policy approaches to address the competitiveness concerns of mitigating greenhouse gas emissions", "Aldy"),
         ("Markusen1975", "International externalities and optimal tax structures", "Markusen"),
     ],
-    "1.2.FeebatesAndOutputBasedRebating": [
+    "1.CarbonPricing/1.2.FeebatesAndOutputBasedRebating": [
         ("SternerHoglund2006", "Refunded emission payments theory, distribution of costs, and Swedish experience of NOx abatement", "Sterner Hoglund"),
         ("DHaultfoeuilleGivordBoutin2014", "The environmental effect of green taxation: the case of the French bonus/malus", "D'Haultfoeuille Givord Boutin"),
         ("Johnson2006", "Feebates: An effective regulatory instrument for cost-constrained environmental policy", "Johnson"),
         ("GoulderHafsteadWilliams2016", "General equilibrium impacts of a federal clean energy standard", "Goulder Hafstead Williams"),
         ("FowlieReguantRyan2016", "Market-Based Emissions Regulation and Industry Dynamics", "Fowlie Reguant Ryan"),
     ],
-    "1.3.IronSteelCBAM": [
+    "1.CarbonPricing/1.3.IronSteelCBAM": [
         ("BushnellChenZaragozaWatkins2014", "Downstream regulation of CO2 emissions in California's electricity sector", "Bushnell Chen Zaragoza-Watkins"),
         ("CaronRausch2013", "A global general equilibrium analysis of the effects of the border carbon adjustment", "Caron"),
         ("Cosbey2019", "Developing Guidance for Implementing Border Carbon Adjustments: Lessons, Cautions, and Research Needs from the Literature", "Cosbey Droege Fischer Munnings"),
         ("Mehling2019", "Designing Border Carbon Adjustments for Enhanced Climate Action", "Mehling van Asselt"),
     ],
-    "1.6.CarbonConsumptionTax": [
+    "1.CarbonPricing/1.4.CarbonConsumptionTax": [
         ("KeenLockwood2010", "The value added tax: Its causes and consequences", "Keen Lockwood"),
         ("Neuhoff2016Inclusion", "Inclusion of consumption of carbon intensive materials in emissions trading", "Neuhoff"),
         ("PetersHertwich2008", "CO2 Embodied in International Trade with Implications for Global Climate Policy", "Peters Hertwich"),
     ],
-    "1.7.PolicyEquivalentCarbonPriceAndCES": [
+    "6.ModularUpgrades/6.1.PolicyEquivalentCarbonPriceAndCES": [
         ("Labandeira2017", "A meta-analysis on the price elasticity of energy demand", "Labandeira Labeaga Lopez-Otero"),
         ("Stern2012", "Interfuel substitution: a meta-analysis", "Stern"),
         ("GillinghamStock2018", "The Cost of Reducing Greenhouse Gas Emissions", "Gillingham Stock"),
@@ -173,7 +173,7 @@ def main():
             time.sleep(0.3)
         out = SERIES / folder / "5.Notes"
         out.mkdir(exist_ok=True)
-        with open(out / f"Downloads-{folder.split('.', 2)[-1]}.csv", "w", newline="", encoding="utf-8") as f:
+        with open(out / f"Downloads-{Path(folder).name.split('.', 2)[-1]}.csv", "w", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=["key", "title", "doi", "url_tried", "status", "local_file"])
             w.writeheader()
             w.writerows(rows)

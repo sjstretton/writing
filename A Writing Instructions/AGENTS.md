@@ -16,9 +16,10 @@ Read the file that matches your task before you start. Files in this folder (`A 
 | `STRATEGY.md` | Stephen's strategic priorities and specialisms. Decides what matters. |
 | `TODO.md` | The live task list. Take work from the top. Update it when you finish. |
 | `PAPERS.md` | Prioritised papers, introductory papers, concept papers and position papers. |
+| `NUMBERING.md` | The canonical paper numbers (section folder plus place in the section), with the old-to-new map and citation-key rules. |
 | `A Writing Instructions/Writing Standards/` | Writing principles, writing types, the paper standard, AI tells to avoid, exemplars and templates. |
 | `C Research Proposal/` | The PhD research proposals. Its `README.md` tracks their status. |
-| `B Working Papers/` | The papers, numbered by section (1.x to 5.x; 6.Additional holds the rest). Also the website (`A.Website`) and scripts (`B.Scripts`). |
+| `B Working Papers/` | The papers, numbered by section (1.x to 7.x; `8.AdditionalPolicyPapers` holds the rest, `9.ResearchTracking` the digests). Each section has one `<N>.0.Overview` folder. Also the website (`A.Website`) and scripts (`B.Scripts`). |
 | `D Climate Econ Course/` | Course materials. |
 | `A Writing Instructions/Templates and Info/` | Older Word templates (briefing, one-page pitch). |
 | `A Writing Instructions/Claude + Scripts/Setup Claude/_admin/` | `about-me.md` and `voice.md`: who Stephen is and how he sounds. Read before drafting anything in his name. |

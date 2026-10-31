@@ -38,18 +38,18 @@
 | 1.3.IronSteelCBAM | Maliszewska2025 | Trade and Development Chart: CBAM's Impact on Exports to the EU |  | not found: search by title |
 | 1.3.IronSteelCBAM | WTOShrimp1998 | United States: Import Prohibition of Certain Shrimp and Shrimp Products |  | not found: search by title |
 | 1.3.IronSteelCBAM | WorldBankCBAMIndex | Relative CBAM Exposure Index |  | not found: search by title |
-| 1.6.CarbonConsumptionTax | CJEUBancaPopolare2006 | Judgment of 3 October 2006, Banca Popolare di Cremona, Case C-475/03 |  | not found: search by title |
-| 1.6.CarbonConsumptionTax | CJEUDanskDenkavit1992 | Judgment of 31 March 1992, Dansk Denkavit and Others, Case C-200/90 |  | not found: search by title |
-| 1.6.CarbonConsumptionTax | ETS2Dir | Directive (EU) 2023/959 of 10 May 2023 Amending Directive 2003/87/EC Establishing a System for Greenhouse Gas Emission Allowance Trading within the Union |  | not found: search by title |
-| 1.6.CarbonConsumptionTax | FQD2009 | Directive 2009/30/EC of 23 April 2009 Amending Directive 98/70/EC as Regards the Specification of Petrol, Diesel and Gas-Oil and Introducing a Mechanism to Monitor and Reduce Greenhouse Gas Emissions |  | not found: search by title |
-| 1.6.CarbonConsumptionTax | FTTDecision2013 | Council Decision 2013/52/EU of 22 January 2013 Authorising Enhanced Cooperation in the Area of Financial Transaction Tax |  | not found: search by title |
-| 1.6.CarbonConsumptionTax | Neuhoff2016Inclusion | Inclusion of consumption of carbon intensive materials in emissions trading |  | not found: search by title |
-| 1.6.CarbonConsumptionTax | SCFReg | Regulation (EU) 2023/955 of 10 May 2023 Establishing a Social Climate Fund and Amending Regulation (EU) 2021/1060 |  | not found: search by title |
-| 1.6.CarbonConsumptionTax | VATDirective | Council Directive 2006/112/EC of 28 November 2006 on the Common System of Value Added Tax |  | not found: search by title |
-| 1.6.CarbonConsumptionTax | VATDirective2022 | Council Directive (EU) 2022/542 of 5 April 2022 Amending Directives 2006/112/EC and (EU) 2020/285 as Regards Rates of Value Added Tax |  | not found: search by title |
-| 1.6.CarbonConsumptionTax | VATGap2025 | VAT Gap in the EU: Report 2025 |  | not found: search by title |
-| 1.6.CarbonConsumptionTax | VATRateMin2018 | Council Directive (EU) 2018/912 of 22 June 2018 Amending Directive 2006/112/EC on the Common System of Value Added Tax as Regards the Obligation to Respect a Minimum Standard Rate |  | not found: search by title |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | greenstone2019rps | Do Renewable Portfolio Standards Deliver Cost-Effective Carbon Abatement? |  | not found: search by title |
+| 1.4.CarbonConsumptionTax | CJEUBancaPopolare2006 | Judgment of 3 October 2006, Banca Popolare di Cremona, Case C-475/03 |  | not found: search by title |
+| 1.4.CarbonConsumptionTax | CJEUDanskDenkavit1992 | Judgment of 31 March 1992, Dansk Denkavit and Others, Case C-200/90 |  | not found: search by title |
+| 1.4.CarbonConsumptionTax | ETS2Dir | Directive (EU) 2023/959 of 10 May 2023 Amending Directive 2003/87/EC Establishing a System for Greenhouse Gas Emission Allowance Trading within the Union |  | not found: search by title |
+| 1.4.CarbonConsumptionTax | FQD2009 | Directive 2009/30/EC of 23 April 2009 Amending Directive 98/70/EC as Regards the Specification of Petrol, Diesel and Gas-Oil and Introducing a Mechanism to Monitor and Reduce Greenhouse Gas Emissions |  | not found: search by title |
+| 1.4.CarbonConsumptionTax | FTTDecision2013 | Council Decision 2013/52/EU of 22 January 2013 Authorising Enhanced Cooperation in the Area of Financial Transaction Tax |  | not found: search by title |
+| 1.4.CarbonConsumptionTax | Neuhoff2016Inclusion | Inclusion of consumption of carbon intensive materials in emissions trading |  | not found: search by title |
+| 1.4.CarbonConsumptionTax | SCFReg | Regulation (EU) 2023/955 of 10 May 2023 Establishing a Social Climate Fund and Amending Regulation (EU) 2021/1060 |  | not found: search by title |
+| 1.4.CarbonConsumptionTax | VATDirective | Council Directive 2006/112/EC of 28 November 2006 on the Common System of Value Added Tax |  | not found: search by title |
+| 1.4.CarbonConsumptionTax | VATDirective2022 | Council Directive (EU) 2022/542 of 5 April 2022 Amending Directives 2006/112/EC and (EU) 2020/285 as Regards Rates of Value Added Tax |  | not found: search by title |
+| 1.4.CarbonConsumptionTax | VATGap2025 | VAT Gap in the EU: Report 2025 |  | not found: search by title |
+| 1.4.CarbonConsumptionTax | VATRateMin2018 | Council Directive (EU) 2018/912 of 22 June 2018 Amending Directive 2006/112/EC on the Common System of Value Added Tax as Regards the Obligation to Respect a Minimum Standard Rate |  | not found: search by title |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | greenstone2019rps | Do Renewable Portfolio Standards Deliver Cost-Effective Carbon Abatement? |  | not found: search by title |
 | 1.1.OpenEconomyCarbonPricing | AldyPizer2015 | The Competitiveness Impacts of Climate Change Mitigation Policies | https://doi.org/10.1086/683305 | library login needed |
 | 1.1.OpenEconomyCarbonPricing | Armington1969 | A Theory of Demand for Products Distinguished by Place of Production | https://doi.org/10.2307/3866403 | library login needed |
 | 1.1.OpenEconomyCarbonPricing | BoehringerBalistreriRutherford2012 | The role of border carbon adjustment in unilateral climate policy: Overview of an Energy Modeling Forum study (EMF 29) | https://doi.org/10.1016/j.eneco.2012.10.003 | library login needed |
@@ -100,39 +100,39 @@
 | 1.3.IronSteelCBAM | Fowlie2009 | Incomplete Environmental Regulation, Imperfect Competition, and Emissions Leakage | https://doi.org/10.1257/pol.1.2.72 | library login needed |
 | 1.3.IronSteelCBAM | KortumWeisbach2017 | The Design of Border Adjustments for Carbon Prices | https://doi.org/10.17310/ntj.2017.2.07 | library login needed |
 | 1.3.IronSteelCBAM | OECD2023 | Effective Carbon Rates 2023: Pricing Greenhouse Gas Emissions through Taxes and Emissions Trading | https://doi.org/10.1787/b84d5b36-en | library login needed |
-| 1.6.CarbonConsumptionTax | Decoster2010 | How Regressive Are Indirect Taxes? A Microsimulation Analysis for Five European Countries | https://doi.org/10.1002/pam.20494 | library login needed |
-| 1.6.CarbonConsumptionTax | EurostatAEA | Air Emissions Accounts by NACE Rev. 2 Activity, env\_ac\_ainah\_r2 | https://doi.org/10.2908/ENV_AC_AINAH_R2 | library login needed |
-| 1.6.CarbonConsumptionTax | EurostatCOICOP | Final Consumption Expenditure of Households by Consumption Purpose (COICOP 3 Digit), nama\_10\_co3\_p3 | https://doi.org/10.2908/NAMA_10_CO3_P3 | library login needed |
-| 1.6.CarbonConsumptionTax | EurostatFIGARO | EU Inter-Country Input-Output Table at Basic Prices, Product by Product (2022 and Onwards) (FIGARO), naio\_10\_fcp\_ip4 | https://doi.org/10.2908/NAIO_10_FCP_IP4 | library login needed |
-| 1.6.CarbonConsumptionTax | EurostatGHGFP | Greenhouse Gas Emission Footprints (in CO$_2$ Equivalent, FIGARO Application), env\_ac\_ghgfp | https://doi.org/10.2908/ENV_AC_GHGFP | library login needed |
-| 1.6.CarbonConsumptionTax | EurostatHBS | Household Budget Survey: Structure of Consumption Expenditure by Income Quintile and COICOP Consumption Purpose (hbs\_str\_t223) and Mean Consumption Expenditure by Income Quintile (hbs\_exp\_t133), 2020 Wave | https://doi.org/10.2908/HBS_STR_T223 | library login needed |
-| 1.6.CarbonConsumptionTax | EurostatPop | Population Change: Demographic Balance and Crude Rates at National Level, demo\_gind | https://doi.org/10.2908/DEMO_GIND | library login needed |
-| 1.6.CarbonConsumptionTax | EurostatTax | Main National Accounts Tax Aggregates, gov\_10a\_taxag | https://doi.org/10.2908/GOV_10A_TAXAG | library login needed |
-| 1.6.CarbonConsumptionTax | Helm2012 | The Carbon Crunch: How We're Getting Climate Change Wrong, and How to Fix It | https://doi.org/10.12987/yale/9780300186598.001.0001 | library login needed |
-| 1.6.CarbonConsumptionTax | KeenSmith2006 | VAT Fraud and Evasion: What Do We Know and What Can Be Done? | https://doi.org/10.17310/ntj.2006.4.07 | library login needed |
-| 1.6.CarbonConsumptionTax | LevinsonOBrien2019 | Environmental Engel Curves: Indirect Emissions of Common Air Pollutants | https://doi.org/10.1162/rest_a_00736 | library login needed |
-| 1.6.CarbonConsumptionTax | McAusland2021 | Carbon taxes and footprint leakage: Spoilsport effects | https://doi.org/10.1016/j.jpubeco.2021.104531 | library login needed |
-| 1.6.CarbonConsumptionTax | Pizer2002 | Combining price and quantity controls to mitigate global climate change | https://doi.org/10.1016/S0047-2727(01)00118-9 | library login needed |
-| 1.6.CarbonConsumptionTax | Scuderi2022 | `Provisions Primarily of a Fiscal Nature': Time to Dispel Doubts | https://doi.org/10.54648/ecta2022026 | library login needed |
-| 1.6.CarbonConsumptionTax | Weitzman1974 | Prices vs. Quantities | https://doi.org/10.2307/2296698 | library login needed |
-| 1.6.CarbonConsumptionTax | Weitzman2014 | Can Negotiating a Uniform Carbon Price Help to Internalize the Global Warming Externality? | https://doi.org/10.1086/676039 | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | Labandeira2017 | A Meta-Analysis on the Price Elasticity of Energy Demand | https://doi.org/10.1016/j.enpol.2017.01.002 | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | Montgomery1972 | Markets in Licenses and Efficient Pollution Control Programs | https://doi.org/10.1016/0022-0531(72)90049-X | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | ParryBlackVernon2021 | Still Not Getting Energy Prices Right: A Global and Country Update of Fossil Fuel Subsidies | https://doi.org/10.5089/9781513595405.001.a001 | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | Sato1967 | A Two-Level Constant-Elasticity-of-Substitution Production Function | https://doi.org/10.2307/2296809 | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | andersson2019 | Carbon Taxes and CO2 Emissions: Sweden as a Case Study | https://doi.org/10.1257/pol.20170144 | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | brons2008 | A meta-analysis of the price elasticity of gasoline demand. A SUR approach | https://doi.org/10.1016/j.eneco.2007.08.004 | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | coady2017wd | How Large Are Global Fossil Fuel Subsidies? | https://doi.org/10.1016/j.worlddev.2016.10.004 | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | dahl2012 | Measuring global gasoline and diesel price and income elasticities | https://doi.org/10.1016/j.enpol.2010.11.055 | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | espey1998 | Gasoline demand revisited: an international meta-analysis of elasticities | https://doi.org/10.1016/S0140-9883(97)00013-3 | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | espey2004 | Turning on the Lights: A Meta-Analysis of Residential Electricity Demand Elasticities | https://doi.org/10.1017/S1074070800021866 | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | huntington2019 | Review of key international demand elasticities for major industrializing economies | https://doi.org/10.1016/j.enpol.2019.110878 | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | li2014 | Gasoline Taxes and Consumer Behavior | https://doi.org/10.1257/pol.6.4.302 | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | oecd2013ecp | Effective Carbon Prices | https://doi.org/10.1787/9789264196964-en | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | oecd2016ecr | Effective Carbon Rates: Pricing CO2 through Taxes and Emissions Trading Systems | https://doi.org/10.1787/9789264260115-en | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | oecd2021ecr | Effective Carbon Rates 2021: Pricing Carbon Emissions through Taxes and Emissions Trading | https://doi.org/10.1787/0e8e24f5-en | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | papageorgiou2017 | Substitution between Clean and Dirty Energy Inputs: A Macroeconomic Perspective | https://doi.org/10.1162/REST_a_00592 | library login needed |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | serletis2010ej | International Evidence on Sectoral Interfuel Substitution | https://doi.org/10.5547/ISSN0195-6574-EJ-Vol31-No4-1 | library login needed |
+| 1.4.CarbonConsumptionTax | Decoster2010 | How Regressive Are Indirect Taxes? A Microsimulation Analysis for Five European Countries | https://doi.org/10.1002/pam.20494 | library login needed |
+| 1.4.CarbonConsumptionTax | EurostatAEA | Air Emissions Accounts by NACE Rev. 2 Activity, env\_ac\_ainah\_r2 | https://doi.org/10.2908/ENV_AC_AINAH_R2 | library login needed |
+| 1.4.CarbonConsumptionTax | EurostatCOICOP | Final Consumption Expenditure of Households by Consumption Purpose (COICOP 3 Digit), nama\_10\_co3\_p3 | https://doi.org/10.2908/NAMA_10_CO3_P3 | library login needed |
+| 1.4.CarbonConsumptionTax | EurostatFIGARO | EU Inter-Country Input-Output Table at Basic Prices, Product by Product (2022 and Onwards) (FIGARO), naio\_10\_fcp\_ip4 | https://doi.org/10.2908/NAIO_10_FCP_IP4 | library login needed |
+| 1.4.CarbonConsumptionTax | EurostatGHGFP | Greenhouse Gas Emission Footprints (in CO$_2$ Equivalent, FIGARO Application), env\_ac\_ghgfp | https://doi.org/10.2908/ENV_AC_GHGFP | library login needed |
+| 1.4.CarbonConsumptionTax | EurostatHBS | Household Budget Survey: Structure of Consumption Expenditure by Income Quintile and COICOP Consumption Purpose (hbs\_str\_t223) and Mean Consumption Expenditure by Income Quintile (hbs\_exp\_t133), 2020 Wave | https://doi.org/10.2908/HBS_STR_T223 | library login needed |
+| 1.4.CarbonConsumptionTax | EurostatPop | Population Change: Demographic Balance and Crude Rates at National Level, demo\_gind | https://doi.org/10.2908/DEMO_GIND | library login needed |
+| 1.4.CarbonConsumptionTax | EurostatTax | Main National Accounts Tax Aggregates, gov\_10a\_taxag | https://doi.org/10.2908/GOV_10A_TAXAG | library login needed |
+| 1.4.CarbonConsumptionTax | Helm2012 | The Carbon Crunch: How We're Getting Climate Change Wrong, and How to Fix It | https://doi.org/10.12987/yale/9780300186598.001.0001 | library login needed |
+| 1.4.CarbonConsumptionTax | KeenSmith2006 | VAT Fraud and Evasion: What Do We Know and What Can Be Done? | https://doi.org/10.17310/ntj.2006.4.07 | library login needed |
+| 1.4.CarbonConsumptionTax | LevinsonOBrien2019 | Environmental Engel Curves: Indirect Emissions of Common Air Pollutants | https://doi.org/10.1162/rest_a_00736 | library login needed |
+| 1.4.CarbonConsumptionTax | McAusland2021 | Carbon taxes and footprint leakage: Spoilsport effects | https://doi.org/10.1016/j.jpubeco.2021.104531 | library login needed |
+| 1.4.CarbonConsumptionTax | Pizer2002 | Combining price and quantity controls to mitigate global climate change | https://doi.org/10.1016/S0047-2727(01)00118-9 | library login needed |
+| 1.4.CarbonConsumptionTax | Scuderi2022 | `Provisions Primarily of a Fiscal Nature': Time to Dispel Doubts | https://doi.org/10.54648/ecta2022026 | library login needed |
+| 1.4.CarbonConsumptionTax | Weitzman1974 | Prices vs. Quantities | https://doi.org/10.2307/2296698 | library login needed |
+| 1.4.CarbonConsumptionTax | Weitzman2014 | Can Negotiating a Uniform Carbon Price Help to Internalize the Global Warming Externality? | https://doi.org/10.1086/676039 | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | Labandeira2017 | A Meta-Analysis on the Price Elasticity of Energy Demand | https://doi.org/10.1016/j.enpol.2017.01.002 | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | Montgomery1972 | Markets in Licenses and Efficient Pollution Control Programs | https://doi.org/10.1016/0022-0531(72)90049-X | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | ParryBlackVernon2021 | Still Not Getting Energy Prices Right: A Global and Country Update of Fossil Fuel Subsidies | https://doi.org/10.5089/9781513595405.001.a001 | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | Sato1967 | A Two-Level Constant-Elasticity-of-Substitution Production Function | https://doi.org/10.2307/2296809 | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | andersson2019 | Carbon Taxes and CO2 Emissions: Sweden as a Case Study | https://doi.org/10.1257/pol.20170144 | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | brons2008 | A meta-analysis of the price elasticity of gasoline demand. A SUR approach | https://doi.org/10.1016/j.eneco.2007.08.004 | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | coady2017wd | How Large Are Global Fossil Fuel Subsidies? | https://doi.org/10.1016/j.worlddev.2016.10.004 | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | dahl2012 | Measuring global gasoline and diesel price and income elasticities | https://doi.org/10.1016/j.enpol.2010.11.055 | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | espey1998 | Gasoline demand revisited: an international meta-analysis of elasticities | https://doi.org/10.1016/S0140-9883(97)00013-3 | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | espey2004 | Turning on the Lights: A Meta-Analysis of Residential Electricity Demand Elasticities | https://doi.org/10.1017/S1074070800021866 | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | huntington2019 | Review of key international demand elasticities for major industrializing economies | https://doi.org/10.1016/j.enpol.2019.110878 | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | li2014 | Gasoline Taxes and Consumer Behavior | https://doi.org/10.1257/pol.6.4.302 | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | oecd2013ecp | Effective Carbon Prices | https://doi.org/10.1787/9789264196964-en | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | oecd2016ecr | Effective Carbon Rates: Pricing CO2 through Taxes and Emissions Trading Systems | https://doi.org/10.1787/9789264260115-en | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | oecd2021ecr | Effective Carbon Rates 2021: Pricing Carbon Emissions through Taxes and Emissions Trading | https://doi.org/10.1787/0e8e24f5-en | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | papageorgiou2017 | Substitution between Clean and Dirty Energy Inputs: A Macroeconomic Perspective | https://doi.org/10.1162/REST_a_00592 | library login needed |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | serletis2010ej | International Evidence on Sectoral Interfuel Substitution | https://doi.org/10.5547/ISSN0195-6574-EJ-Vol31-No4-1 | library login needed |
 
 ## Automatic downloads
 
@@ -212,32 +212,32 @@
 | 1.3.IronSteelCBAM | UNCTAD2021 | A European Union Carbon Border Adjustment Mechanism: Implications for Developing Countries | https://doi.org/10.60644/5579 |
 | 1.3.IronSteelCBAM | Sandbag2024 | A Scrap Game: Impacts of the EU Carbon Border Adjustment Mechanism | https://doi.org/10.2139/ssrn.5002753 |
 | 1.3.IronSteelCBAM | CaronRausch2013 | A global general equilibrium analysis of the effects of the border carbon adjustment | https://doi.org/10.2139/ssrn.4622236 |
-| 1.6.CarbonConsumptionTax | KeenLockwood2006 | Is the VAT a Money Machine? | https://doi.org/10.82444/warw.33588109 |
-| 1.6.CarbonConsumptionTax | Rennert2022 | Comprehensive evidence implies a higher social cost of CO$_2$ | https://www.nature.com/articles/s41586-022-05224-9.pdf |
-| 1.6.CarbonConsumptionTax | Sager2019 | Income inequality and carbon consumption: Evidence from Environmental Engel curves | http://eprints.lse.ac.uk/102561/1/Sager_InequalityCarbonConsumption_manuscript.pdf |
-| 1.6.CarbonConsumptionTax | Feindt2021 | Understanding regressivity: Challenges and opportunities of European carbon pricing | https://www.sciencedirect.com/science/article/pii/S0140988321004266/pdf |
-| 1.6.CarbonConsumptionTax | GoulderParry2008 | Instrument Choice in Environmental Policy | https://doi.org/10.2139/ssrn.1117566 |
-| 1.6.CarbonConsumptionTax | FischerNewell2008 | Environmental and technology policies for climate mitigation | http://hdl.handle.net/10161/6623 |
-| 1.6.CarbonConsumptionTax | ChiappinelliNeuhoff2020 | Time-Consistent Carbon Pricing: The Role of Carbon Contracts for Differences | https://doi.org/10.2139/ssrn.3576402 |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | Carhart2022 | Measuring Comprehensive Carbon Prices of National Climate Policies | https://doi.org/10.1080/14693062.2021.2014298 |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | AldyPizer2016 | Alternative Metrics for Comparing Domestic Climate Change Mitigation Efforts and the Emerging International Climate Policy Architecture | http://nrs.harvard.edu/urn-3:HUL.InstRepos:22808338 |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | MarcantoniniEllerman2015 | The Implicit Carbon Price of Renewable Energy Incentives in Germany | https://cadmus.eui.eu/bitstream/1814/30200/3/RSCAS_2014_28_REV.pdf |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | GoulderJacobsenvanBenthem2012 | Unintended Consequences from Nested State and Federal Regulations: The Case of the Pavley Greenhouse-Gas-per-Mile Limits | https://doi.org/10.3386/w15337 |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | KalkuhlEdenhoferLessmann2013 | Renewable Energy Subsidies: Second-Best Policy or Fatal Aberration for Mitigation? | https://doi.org/10.2139/ssrn.1873197 |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | GillinghamStock2018 | The Cost of Reducing Greenhouse Gas Emissions | https://doi.org/10.1257/jep.32.4.53 |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | Stern2012 | Interfuel Substitution: A Meta-Analysis | http://ageconsearch.umn.edu/record/94882 |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | darcangelo2022 | Estimating the CO2 emission and revenue effects of carbon pricing: New evidence from a large cross-country dataset | https://www.oecd-ilibrary.org/deliver/39aa16d4-en.pdf?itemId=%2Fcontent%2Fpaper%2F39aa16d4-en&mimeType=pdf |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | dolphin2022wcpd | World carbon pricing database: sources and methods | https://www.nature.com/articles/s41597-022-01659-x.pdf |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | coady2019subsidies | Global Fossil Fuel Subsidies Remain Large: An Update Based on Country-Level Estimates | https://www.elibrary.imf.org/doc/IMF001/25712-9781484393178/25712-9781484393178/Other_formats/Source_PDF/25712-9781498313025.pdf |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | abrell2019 | Carbon abatement with renewables: Evaluating wind and solar subsidies in Germany and Spain | https://doi.org/10.2139/ssrn.3313637 |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | black2023cpat | The IMF-World Bank Climate Policy Assessment Tool (CPAT): A Model to Help Countries Mitigate Climate Change | https://doi.org/10.5089/9798400242342.001 |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | cpat2022technotes | Climate Policy Assessment Tool: Technical Notes | http://documents.worldbank.org/curated/en/099062323105023013/pdf/P1703010ca4b8603e0886b06871f37b87b3.pdf |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | aldy2017 | Comparing emissions mitigation efforts across countries | https://doi.org/10.2139/ssrn.2630118 |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | serletis2009wp | On Interfuel Substitution: Some International Evidence | https://papers.ssrn.com/sol3/Delivery.cfm/5026.pdf?abstractid=1462025&mirid=1 |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | havranek2012 | Demand for gasoline is more price-inelastic than commonly thought | http://ageconsearch.umn.edu/record/120416 |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | davis2011 | Estimating the effect of a gasoline tax on carbon emissions | http://deepblue.lib.umich.edu/bitstream/2027.42/86812/1/jae1156.pdf |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | rivers2015 | Salience of carbon taxes in the gasoline market | https://doi.org/10.2139/ssrn.2131468 |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | burke2016 | Understanding the energy-GDP elasticity: A sectoral approach | https://doi.org/10.1016/j.eneco.2016.07.004 |
+| 1.4.CarbonConsumptionTax | KeenLockwood2006 | Is the VAT a Money Machine? | https://doi.org/10.82444/warw.33588109 |
+| 1.4.CarbonConsumptionTax | Rennert2022 | Comprehensive evidence implies a higher social cost of CO$_2$ | https://www.nature.com/articles/s41586-022-05224-9.pdf |
+| 1.4.CarbonConsumptionTax | Sager2019 | Income inequality and carbon consumption: Evidence from Environmental Engel curves | http://eprints.lse.ac.uk/102561/1/Sager_InequalityCarbonConsumption_manuscript.pdf |
+| 1.4.CarbonConsumptionTax | Feindt2021 | Understanding regressivity: Challenges and opportunities of European carbon pricing | https://www.sciencedirect.com/science/article/pii/S0140988321004266/pdf |
+| 1.4.CarbonConsumptionTax | GoulderParry2008 | Instrument Choice in Environmental Policy | https://doi.org/10.2139/ssrn.1117566 |
+| 1.4.CarbonConsumptionTax | FischerNewell2008 | Environmental and technology policies for climate mitigation | http://hdl.handle.net/10161/6623 |
+| 1.4.CarbonConsumptionTax | ChiappinelliNeuhoff2020 | Time-Consistent Carbon Pricing: The Role of Carbon Contracts for Differences | https://doi.org/10.2139/ssrn.3576402 |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | Carhart2022 | Measuring Comprehensive Carbon Prices of National Climate Policies | https://doi.org/10.1080/14693062.2021.2014298 |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | AldyPizer2016 | Alternative Metrics for Comparing Domestic Climate Change Mitigation Efforts and the Emerging International Climate Policy Architecture | http://nrs.harvard.edu/urn-3:HUL.InstRepos:22808338 |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | MarcantoniniEllerman2015 | The Implicit Carbon Price of Renewable Energy Incentives in Germany | https://cadmus.eui.eu/bitstream/1814/30200/3/RSCAS_2014_28_REV.pdf |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | GoulderJacobsenvanBenthem2012 | Unintended Consequences from Nested State and Federal Regulations: The Case of the Pavley Greenhouse-Gas-per-Mile Limits | https://doi.org/10.3386/w15337 |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | KalkuhlEdenhoferLessmann2013 | Renewable Energy Subsidies: Second-Best Policy or Fatal Aberration for Mitigation? | https://doi.org/10.2139/ssrn.1873197 |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | GillinghamStock2018 | The Cost of Reducing Greenhouse Gas Emissions | https://doi.org/10.1257/jep.32.4.53 |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | Stern2012 | Interfuel Substitution: A Meta-Analysis | http://ageconsearch.umn.edu/record/94882 |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | darcangelo2022 | Estimating the CO2 emission and revenue effects of carbon pricing: New evidence from a large cross-country dataset | https://www.oecd-ilibrary.org/deliver/39aa16d4-en.pdf?itemId=%2Fcontent%2Fpaper%2F39aa16d4-en&mimeType=pdf |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | dolphin2022wcpd | World carbon pricing database: sources and methods | https://www.nature.com/articles/s41597-022-01659-x.pdf |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | coady2019subsidies | Global Fossil Fuel Subsidies Remain Large: An Update Based on Country-Level Estimates | https://www.elibrary.imf.org/doc/IMF001/25712-9781484393178/25712-9781484393178/Other_formats/Source_PDF/25712-9781498313025.pdf |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | abrell2019 | Carbon abatement with renewables: Evaluating wind and solar subsidies in Germany and Spain | https://doi.org/10.2139/ssrn.3313637 |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | black2023cpat | The IMF-World Bank Climate Policy Assessment Tool (CPAT): A Model to Help Countries Mitigate Climate Change | https://doi.org/10.5089/9798400242342.001 |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | cpat2022technotes | Climate Policy Assessment Tool: Technical Notes | http://documents.worldbank.org/curated/en/099062323105023013/pdf/P1703010ca4b8603e0886b06871f37b87b3.pdf |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | aldy2017 | Comparing emissions mitigation efforts across countries | https://doi.org/10.2139/ssrn.2630118 |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | serletis2009wp | On Interfuel Substitution: Some International Evidence | https://papers.ssrn.com/sol3/Delivery.cfm/5026.pdf?abstractid=1462025&mirid=1 |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | havranek2012 | Demand for gasoline is more price-inelastic than commonly thought | http://ageconsearch.umn.edu/record/120416 |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | davis2011 | Estimating the effect of a gasoline tax on carbon emissions | http://deepblue.lib.umich.edu/bitstream/2027.42/86812/1/jae1156.pdf |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | rivers2015 | Salience of carbon taxes in the gasoline market | https://doi.org/10.2139/ssrn.2131468 |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | burke2016 | Understanding the energy-GDP elasticity: A sectoral approach | https://doi.org/10.1016/j.eneco.2016.07.004 |
 
 ## Already available to the agent
 
@@ -253,4 +253,4 @@
 | 1.1.OpenEconomyCarbonPricing | Edmonds2021 | How Much Could Article 6 Enhance Nationally Determined Contribution Ambition toward Paris Agreement Goals through Economic Efficiency? |
 | 1.2.FeebatesAndOutputBasedRebating | IEA2021 | Net Zero by 2050: A Roadmap for the Global Energy Sector |
 | 1.2.FeebatesAndOutputBasedRebating | SijmNeuhoffChen2006 | CO2 Cost Pass-Through and Windfall Profits in the Power Sector |
-| 1.7.PolicyEquivalentCarbonPriceAndCES | aldy2016ncc | Economic tools to promote transparency and comparability in the Paris Agreement |
+| 6.1.PolicyEquivalentCarbonPriceAndCES | aldy2016ncc | Economic tools to promote transparency and comparability in the Paris Agreement |

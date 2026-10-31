@@ -1,7 +1,8 @@
 """Set the Climate Fiscal Policy Brief (CFPB) bib entries to their final titles.
 
 Usage: python sync_cfpb_titles.py file1.bib [file2.bib ...]
-Replaces any one-line @techreport{CFPB1x, ...} entry with the canonical one.
+Replaces any one-line @techreport{CFPB<section><paper>, ...} entry for the carbon-pricing briefs
+(CFPB11-CFPB14 and CFPB61, numbered per A Writing Instructions/NUMBERING.md) with the canonical one.
 """
 import re
 import sys
@@ -10,8 +11,8 @@ TITLES = {
     "CFPB11": "Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies",
     "CFPB12": "Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill",
     "CFPB13": "Credit the Price Signal, Not the Payment: Carbon Price Recognition and Scrap Shuffling under the {EU}'s Carbon Border Adjustment Mechanism",
-    "CFPB16": "Carbon Consumption Tax: A Carbon Component in {VAT} and a Forward Obligation on Energy Suppliers",
-    "CFPB17": "Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price",
+    "CFPB14": "Carbon Consumption Tax: A Carbon Component in {VAT} and a Forward Obligation on Energy Suppliers",
+    "CFPB61": "Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price",
 }
 
 

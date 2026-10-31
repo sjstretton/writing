@@ -14,7 +14,7 @@ In order.
 
 Proposal 2 (McGilchrist) is parked until 1 and 3 are out.
 
-**What this means for agents.** When choosing between tasks, prefer the one that moves priority 1, then 2, then 3. A paper upgrade that also serves as a PhD writing sample (1.1, 2.1, 1.7) beats one that does not.
+**What this means for agents.** When choosing between tasks, prefer the one that moves priority 1, then 2, then 3. A paper upgrade that also serves as a PhD writing sample (1.1, 3.1, 6.1) beats one that does not.
 
 ## Strategic specialisms
 
@@ -35,10 +35,10 @@ What Stephen can credibly claim to be expert in, and the angle that makes him di
 
 | Specialism | Evidence in this repo |
 |---|---|
-| Climate fiscal tools: CPAT, the Total Effective Carbon Price (TECP), CBAM analysis | 1.7, 4.2, 1.3, 4.3 |
-| Country carbon-pricing and excise diagnostics | 5.1 (Sierra Leone); Egypt carbon policy diagnostic (`about-me.md`) |
-| Sustainability-linked sovereign lending and MDB instruments | 3.2 (internal), 3.3–3.5 |
-| De-risking structures for clean power | 2.1, 2.2 |
+| Climate fiscal tools: CPAT, the Total Effective Carbon Price (TECP), CBAM analysis | 6.1, 5.1–5.4, 1.3, 6.2 |
+| Country carbon-pricing and excise diagnostics | 7.1 (Sierra Leone); Egypt carbon policy diagnostic (`about-me.md`) |
+| Sustainability-linked sovereign lending and MDB instruments | 4.3 (and the internal World Bank SLL discussion paper), SLIDIs, 8.3.1–8.3.2 |
+| De-risking structures for clean power | 3.1, 3.2, 4.2 |
 | CCDR fiscal indicators and financing options | `about-me.md` |
 
 ### In the fiscal unit

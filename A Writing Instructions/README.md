@@ -19,17 +19,18 @@ The writing part of the combined repo: papers, the Quarto website and its script
 | Folder | Contents |
 |---|---|
 | `A Writing Instructions` | This folder: instructions, norms, strategy, paper list and task list for the writing; `Writing Standards/` (principles, writing types, the paper standard, exemplars, Quarto templates), `Templates and Info/` (Word templates) and `Claude + Scripts/` (shared Claude workspace and scripts; see its README). |
-| `B Working Papers` | Main body of research and the public-facing website, organized as: |
-| &nbsp;&nbsp;`1.ClimateAndFiscalPolicy` | The carbon-pricing series: 1.1 (overarching), 1.2 feebates, 1.3 CBAM, 1.6 carbon consumption tax, 1.7 total effective carbon price. See its `RelatedWork.md`. |
-| &nbsp;&nbsp;`6.Additional/1.OtherFiscalPolicy` | Fiscal-policy papers outside the series (rent tax, legacy coal PPAs). |
-| &nbsp;&nbsp;`2.FinanceAndRisk` | Series 2: the payment intermediary (2.1) and clean-power asset classes (2.2). |
-| &nbsp;&nbsp;`3.SovereignIncentives` | Series 3: notional capitalized value (3.1), the Climate Investment Trust (3.2), sustainability-linked lending (3.3). |
-| &nbsp;&nbsp;`4.Modelling` | Section 4: companion papers to CPAT-AI (methods, implementation, validation, elasticities, CBAM tool, public investment, activity). |
-| &nbsp;&nbsp;`5.Analytics` | Section 5: one paper per analytics tool (excise diagnostic, macro-fiscal-energy scenario tool, fiscal indicators dashboard). |
-| &nbsp;&nbsp;`6.Additional` | Papers outside the main series: other fiscal policy (Rent Tax, Stranded by Contract), parked finance and MDB papers, books, philosophy and politics. |
+| `B Working Papers` | Main body of research and the public-facing website. Each section folder holds numbered paper folders and one `<N>.0.Overview` folder; numbers follow `NUMBERING.md`. Organized as: |
+| &nbsp;&nbsp;`1.CarbonPricing` | Section 1, the carbon-pricing series: 1.1 (overarching), 1.2 feebates, 1.3 CBAM, 1.4 carbon consumption tax. See `1.0.Overview/RelatedWork.md`. |
+| &nbsp;&nbsp;`2.OtherTaxAndFiscalPolicy` | Section 2: Rent Tax (2.1). |
+| &nbsp;&nbsp;`3.FinanceAndRisk` | Section 3: the payment intermediary (3.1) and clean-power asset classes (3.2). |
+| &nbsp;&nbsp;`4.SovereignIncentives` | Section 4: notional capitalized value (4.1), the Climate Investment Trust (4.2), sustainability-linked lending (4.3). |
+| &nbsp;&nbsp;`5.Modelling` | Section 5: companion papers to CPAT-AI (5.1 methods, 5.2 implementation, 5.3 validation, 5.4 elasticities). |
+| &nbsp;&nbsp;`6.ModularUpgrades` | Section 6: modular upgrades to CPAT (6.1 total effective carbon price, 6.2 CBAM tool, 6.3 public investment, 6.4 activity layer, 6.5 macro-fiscal-energy scenario tool). |
+| &nbsp;&nbsp;`7.AdditionalAnalytics` | Section 7: analytics tools (7.1 excise diagnostic, 7.2 fiscal indicators dashboard). |
+| &nbsp;&nbsp;`8.AdditionalPolicyPapers` | Section 8: papers outside the main sections, in subsections 8.1–8.7 (other fiscal policy, finance, MDBs, analytics, books, philosophy, politics). |
+| &nbsp;&nbsp;`9.ResearchTracking` | Source digests and trackers. |
 | &nbsp;&nbsp;`A.Website` | Quarto site source (`*.qmd`, `_quarto.yml`) that publishes the research. |
 | &nbsp;&nbsp;`B.Scripts` | Automation engine (`Engine`, `Reference`, `Run`, `Steps`) used to generate reports. |
-| &nbsp;&nbsp;`C.Notes` | Working notes and source digests (series 2–3 digests and writer briefs). |
 | `C PhD Application` | PhD research proposals and application status (see its `README.md`). |
 | `D Climate Econ Course` | Materials for a climate-fiscal economics course, organized by topic (A–G). |
 
