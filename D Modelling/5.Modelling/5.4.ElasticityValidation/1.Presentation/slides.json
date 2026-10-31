@@ -1,50 +1,308 @@
 {
-  "series": "CPAT Companion Paper No. 5.4",
+  "series": "Climate Fiscal Policy Brief No. 5.4 · October 2026",
   "title": "Are CPAT's Price Elasticities Right?",
-  "subtitle": "A check of the defaults against meta-analyses and reviews",
-  "message": "Seven of ten fuel-sector defaults lie within the published range. Three are too high, and road gasoline is double the estimate corrected for publication bias. Two structural choices matter more: the full long-run response in one year, and no cross-price terms.",
-  "problem": {
-    "title": "One table sets the size of every cut",
-    "stats": [
-      {
-        "value": "7 of 10",
-        "label": "fuel-sector pairs within the published range"
+  "slides": [
+    {
+      "type": "title",
+      "title": "Are CPAT's Price Elasticities Right?",
+      "subtitle": "A check of the Climate Policy Assessment Tool's defaults against the evidence",
+      "message": "Most defaults are consistent with the evidence and many are cautious; two are too high. The bigger problem is timing: CPAT applies in the first year a response that takes a decade, so near-term cuts are overstated by about half.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Price elasticities decide the size of CPAT's answers",
+      "stats": [
+        {
+          "value": "29%",
+          "label": "cut in G20 CO₂ by 2030 from a carbon tax rising to $75/t, with CPAT's default elasticities"
+        },
+        {
+          "value": "7–39%",
+          "label": "the same cut with every elasticity moved two standard deviations down or up"
+        },
+        {
+          "value": "2×",
+          "label": "an elasticity twice the true value doubles the estimated cut and the speed the tax base erodes"
+        }
+      ],
+      "text": "No other parameter in CPAT's sensitivity tests moves the result as much. The defaults were calibrated to one meta-analysis and checked mainly against their own targets.",
+      "source": "CPAT documentation, Parameter Sensitivity Analysis (CPAT-AI repository); Brief 5.3."
+    },
+    {
+      "type": "points",
+      "title": "CPAT turns each price change into fuel use through two margins, all within one year",
+      "points": [
+        {
+          "lead": "Usage:",
+          "text": "how intensively cars, boilers and machines are used (−0.1 to −0.7 by fuel and sector)."
+        },
+        {
+          "lead": "Efficiency:",
+          "text": "how much more efficient the stock becomes (−0.2 to −1.2). Total elasticity = usage + efficiency + their product (rebound)."
+        },
+        {
+          "lead": "One year:",
+          "text": "\"all the effects take place over the course of one year\"; the elasticities are long-run."
+        },
+        {
+          "lead": "Almost no switching:",
+          "text": "three cross-price terms (biomass for LPG and kerosene; gasoline for diesel). A tax on coal does not move industry to gas."
+        },
+        {
+          "lead": "Calibrated to one meta-analysis,",
+          "text": "with sector adjustments added to a transport base."
+        }
+      ],
+      "source": "CPAT legacy 1.0pre defaults and documentation (CPAT-AI repository); CPAT Technical Notes (2022)."
+    },
+    {
+      "type": "figure",
+      "title": "Eight of ten main defaults lie within the published range; two are too high",
+      "image": "../2.Source/figures/fig1_cpat_vs_literature.png",
+      "caption": "Long-run own-price elasticities: published estimates (gray) against CPAT (blue).",
+      "points": [
+        {
+          "lead": "Six of ten are cautious:",
+          "text": "less responsive than the median estimate (industrial electricity −0.44 against −0.69)."
+        },
+        {
+          "lead": "Too high:",
+          "text": "diesel in industry (−1.06) and gasoline in services (−1.04), beyond every estimate for the fuel."
+        },
+        {
+          "lead": "At the edge:",
+          "text": "electricity in services (−0.70)."
+        }
+      ],
+      "source": "Author's calculation; working paper 5.4, Figure 1 and Appendix A."
+    },
+    {
+      "type": "table",
+      "title": "The two failures come from stretching thin sector evidence across fuels",
+      "header": [
+        "Fuel, sector",
+        "CPAT",
+        "Published range",
+        "Median",
+        "Verdict"
+      ],
+      "widths": [
+        2.5,
+        0.9,
+        2.3,
+        0.9,
+        2.3
+      ],
+      "rows": [
+        [
+          "Gasoline, transport",
+          "−0.64",
+          "−0.25 to −0.84",
+          "−0.69",
+          "In range; 2× bias-corrected"
+        ],
+        [
+          "Electricity, industry",
+          "−0.44",
+          "−0.32 to −1.01",
+          "−0.69",
+          "In range, cautious"
+        ],
+        [
+          "Coal, industry",
+          "−0.58",
+          "−0.30 to −0.70",
+          "−0.50",
+          "In range; one study"
+        ],
+        [
+          "Electricity, services",
+          "−0.70",
+          "−0.32 to −0.69",
+          "−0.53",
+          "At the edge"
+        ],
+        [
+          "Diesel, industry",
+          "−1.06",
+          "−0.39 to −0.67",
+          "−0.62",
+          "Too high"
+        ],
+        [
+          "Gasoline, services",
+          "−1.04",
+          "−0.25 to −0.84",
+          "−0.69",
+          "Too high"
+        ]
+      ],
+      "note": "Sector adjustments estimated over all fuels were applied to fuels with almost no sector studies; CPAT's own panel study flagged both.",
+      "source": "CPAT defaults for developing countries; working paper 5.4, Table 1. Medians exclude CPAT's calibration source."
+    },
+    {
+      "type": "stats",
+      "title": "For road fuels, the published averages themselves overstate the response",
+      "stats": [
+        {
+          "value": "−0.69 → −0.31",
+          "label": "long-run gasoline elasticity before and after correcting for publication bias"
+        },
+        {
+          "value": "−0.25",
+          "label": "long-run gasoline elasticity in 32 fuel-subsidizing economies"
+        },
+        {
+          "value": "−0.64",
+          "label": "CPAT's road gasoline value for developing countries: twice the corrected mean"
+        }
+      ],
+      "text": "Journals publish large, significant estimates more readily. Tax salience pulls the other way (in Sweden the carbon-tax elasticity was three times the price elasticity), so show a low-elasticity case beside the central result rather than cutting the defaults.",
+      "source": "Havranek, Irsova and Janda (2012); Arzaghi and Squalli (2015); Andersson (2019)."
+    },
+    {
+      "type": "figure",
+      "title": "CPAT applies in year one a response that takes a decade",
+      "image": "../2.Source/figures/fig2_timing.png",
+      "caption": "Own-price elasticity by years after a permanent price rise: CPAT (dashed) against gradual adjustment (solid; bands: other speeds).",
+      "points": [
+        {
+          "lead": "Use adjusts in a year or two;",
+          "text": "equipment only as it wears out: cars about 7% a year, buildings 1–2%."
+        },
+        {
+          "lead": "After one year",
+          "text": "about a fifth of CPAT's response has happened; after five, about 60%."
+        },
+        {
+          "lead": "CPAT's developers",
+          "text": "list the missing short-run response as a known issue."
+        }
+      ],
+      "source": "Author's calculation; Black et al. (2022), Annex C; CPAT Technical Notes (2022), section 3.1.8.6."
+    },
+    {
+      "type": "table",
+      "title": "Five years out, CPAT overstates the response by about half, and by up to double",
+      "header": [
+        "Fuel, sector",
+        "CPAT",
+        "After 5 years",
+        "Overstatement",
+        "Other speeds"
+      ],
+      "widths": [
+        2.6,
+        1.0,
+        1.8,
+        1.7,
+        1.8
+      ],
+      "rows": [
+        [
+          "Gasoline, transport",
+          "−0.64",
+          "−0.41 (64%)",
+          "56%",
+          "36%"
+        ],
+        [
+          "Diesel, transport",
+          "−0.51",
+          "−0.32 (62%)",
+          "62%",
+          "41%"
+        ],
+        [
+          "Electricity, households",
+          "−0.44",
+          "−0.29 (67%)",
+          "50%",
+          "29–67%"
+        ],
+        [
+          "Coal, industry",
+          "−0.58",
+          "−0.34 (58%)",
+          "72%",
+          "52–108%"
+        ],
+        [
+          "Diesel, industry",
+          "−1.06",
+          "−0.73 (69%)",
+          "45%",
+          "32–68%"
+        ]
+      ],
+      "note": "Early cuts are overstated and early carbon-tax revenue understated; for subsidy reform, the fall in consumption arrives too early. Phasing prices in reduces the error but does not remove it.",
+      "source": "Author's calculation, working paper 5.4, Table 3. Central speeds: use 30% a year, equipment 6.7% a year; alternatives: use within the year, equipment 2% a year."
+    },
+    {
+      "type": "points",
+      "title": "Comparisons across policies and countries hold up better than forecasts of tonnes",
+      "points": [
+        {
+          "lead": "Levels move:",
+          "text": "in paper 6.1's stylized economy, CPAT's demand elasticities raise the cut from a $30 tax from 13.4% to 17.5%."
+        },
+        {
+          "lead": "Ratios barely move:",
+          "text": "the Total Effective Carbon Price of a policy mix goes from $36.9 to $33.1 per tonne, about a tenth, because a common error cancels."
+        },
+        {
+          "lead": "Use CPAT for",
+          "text": "ranges and rankings; treat near-term tonnes and revenue with care."
+        },
+        {
+          "lead": "The power sector",
+          "text": "carries much of CPAT's cut and runs on a separate model, outside this check (Brief 5.3)."
+        }
+      ],
+      "source": "Author's calculation with paper 6.1's model; working paper 5.4, Table 4; Brief 6.1."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the check shows",
+        "items": [
+          {
+            "lead": "Levels:",
+            "text": "8 of 10 in range; 6 cautious; 2 too high."
+          },
+          {
+            "lead": "Bias:",
+            "text": "road gasoline twice the corrected mean."
+          },
+          {
+            "lead": "Timing:",
+            "text": "five-year response overstated by about half."
+          },
+          {
+            "lead": "Comparisons:",
+            "text": "Total Effective Carbon Price moves about a tenth."
+          }
+        ]
       },
-      {
-        "value": "−1.05",
-        "label": "industrial diesel and services gasoline, against −0.4 to −0.8"
-      },
-      {
-        "value": "2×",
-        "label": "road gasoline against the bias-corrected mean (−0.64 vs −0.31)"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {
+            "lead": "Users:",
+            "text": "read near-term cuts as upper bounds; show a case with road fuel elasticities halved."
+          },
+          {
+            "lead": "Maintainers:",
+            "text": "fix industrial diesel and services gasoline and electricity; add separate speeds for use and equipment."
+          },
+          {
+            "lead": "Every update:",
+            "text": "run the eight-step validation protocol and publish the evidence register."
+          }
+        ]
       }
-    ],
-    "text": "If an elasticity is twice the true value, CPAT reports twice the cut and overstates how fast the tax base erodes. Nobody had published a fuel-by-fuel check of the defaults."
-  },
-  "mechanism": {
-    "title": "Most defaults pass; timing does not",
-    "image": "../2.Source/figures/fig2_timing.png",
-    "imageWidth": 5.6,
-    "imageHeight": 2.89,
-    "caption": "Own-price elasticity by horizon: CPAT (dashed) against partial adjustment (solid).",
-    "points": [
-      "After one year about a fifth of CPAT's response has happened; after five, about 60%.",
-      "No cross-price terms: almost no fuel switching outside power.",
-      "The Total Effective Carbon Price moves by only about a tenth."
-    ]
-  },
-  "action": {
-    "title": "Fix three values and the timing",
-    "results": [
-      "Errors are identifiable and fixable.",
-      "Front-loading overstates near-term cuts and understates early revenue.",
-      "Common errors cancel in the TECP."
-    ],
-    "todo": [
-      "Bring industrial diesel, services gasoline and services electricity into range.",
-      "Add partial adjustment with separate usage and efficiency speeds.",
-      "Show a publication-bias case beside every central result.",
-      "Run the eight-step protocol at each update."
-    ]
-  }
+    }
+  ]
 }

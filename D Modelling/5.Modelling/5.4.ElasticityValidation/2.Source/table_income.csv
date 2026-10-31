@@ -1,0 +1,7 @@
+pair,cpat_base,lit_min,lit_max,sources
+"Gasoline, transport",0.7,0.23,0.94,"Huntington et al. developing, transport 0.94; Dahl and Roman via Huntington et al. 0.69; Burke and Csereklyei, transport energy, 132 countries 0.86; Havranek and Kokes, gasoline, uncorrected 0.66; Havranek and Kokes, gasoline, bias-corrected 0.23; Arzaghi and Squalli, fuel-subsidizing 0.81"
+"Diesel, transport",0.6,0.86,1.13,"Dahl and Roman via Huntington et al. 1.13; Burke and Csereklyei, transport energy, 132 countries 0.86"
+"Electricity, residential",0.8,0.53,0.78,"Huntington et al. developing, residential 0.53; Dahl and Roman, residential, via Huntington et al. 0.6; Burke and Csereklyei, residential electricity 0.78; Csereklyei, EU residential 0.61"
+"Electricity, industry",0.8,0.76,1.08,"Huntington et al. developing, industrial 0.76; Csereklyei, EU industrial (low end) 0.76; Csereklyei, EU industrial (high end) 1.08"
+"Natural gas, industry",1.0,0.88,1.39,"Dahl and Roman, industry, via Huntington et al. 1.39; Burke and Csereklyei, industry energy, 132 countries 0.88"
+"Natural gas, residential",0.3,0.11,0.85,"Huntington et al. developing, residential 0.85; Dahl and Roman, residential, via Huntington et al. 0.11"

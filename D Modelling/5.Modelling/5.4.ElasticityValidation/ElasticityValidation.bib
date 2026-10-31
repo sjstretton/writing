@@ -1,16 +1,25 @@
-% ElasticityValidation.bib -- paper 4.4, version 0.1 (October 2026)
-% Every entry checked against Crossref (DOI lookup) or the publisher's page on 29 Oct 2026.
-% "note" records what was read.
+% ElasticityValidation.bib -- paper 5.4, working paper v0.2 (October 2026)
+% Every entry re-checked on 31 Oct 2026 against the source itself (abstract at minimum; the table or
+% passage where a number is cited). "note" records what was read. See 5.Notes/BibCheck-2026-10-31.md.
 
 % ---- Sibling papers ----------------------------------------------------------
 @techreport{CFPB61, author={Stretton, Stephen J.}, title={Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price}, institution={Climate Fiscal Policy Briefs}, number={6.1}, year={2026}}
+
+@techreport{CFPB54, author={Stretton, Stephen J.}, title={Are {CPAT}'s Price Elasticities Right? A Check Against the Evidence}, institution={Climate Fiscal Policy Briefs}, number={5.4}, year={2026}}
 
 @misc{StrettonWP61,
   author = {Stretton, Stephen J.},
   title = {Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price},
   howpublished = {Working paper, version 0.3, October 2026},
   year = {2026},
-  note = {the author's working paper (repo paper 6.1); nested CES demand system, partial adjustment and calibration ranges used here}
+  note = {the author's working paper (repo paper 6.1); nested CES demand system, partial adjustment (demand speed 0.25--0.40, switching speed 0.04--0.10 a year) and the stylized three-sector economy used here; model code copied unchanged into 2.Source/tecp_core.py}
+}
+
+@unpublished{StrettonWP53,
+  author = {Stretton, Stephen J.},
+  title = {Validating {CPAT}: Baselines, Back-Casts and Model Comparisons},
+  note = {Working paper 5.3},
+  year = {2026}
 }
 
 % ---- CPAT -----------------------------------------------------------------------
@@ -20,8 +29,9 @@
   institution = {World Bank},
   address     = {Washington, DC},
   year        = {2022},
+  month       = {aug},
   url         = {http://documents.worldbank.org/curated/en/099062323105023013/pdf/P1703010ca4b8603e0886b06871f37b87b3.pdf},
-  note        = {confirmed in paper 1.7 session: World Bank Documents record and PDF; section 3.3 incl. Tables 3-1, 3-2 read}
+  note        = {verified 31 Oct 2026: PDF read ("Technical notes, August 26th, 2022", Public Disclosure Authorized). Section 3.1.8.6, known issues: "Short and long-term elasticity distinctions not included ... We now eliminated the distinction between the short and long run. However, we think this is important, particularly for residential power demand, which is inelastic in the short term"; Covid adjustment possibly "a response to the lack of the short-term/long-term distinction (i.e., too high price elasticities in the short term)". Price elasticity section: Labandeira et al. (2017) as source; "all elasticities are long-term elasticities"; effects "take place over the course of one year". Coverage stated as "more than 150 countries"}
 }
 
 @misc{CPATAI2026,
@@ -30,7 +40,7 @@
   howpublished = {GitHub repository},
   year = {2026},
   url = {https://github.com/cpmodelai/cpat_ai},
-  note = {read: docs/CPAT_full_documentation_qmd/03_Mitigation.qmd (fuel consumption dynamics; income and price elasticities; rebound; panel estimation of energy demand); data/mvp_legacy_extracts/elasticities.csv (legacy CPAT 1.0pre public release); other/tecp_and_validation/}
+  note = {verified 31 Oct 2026 from a clone (commit 108f976): docs/CPAT_full_documentation_qmd/03_Mitigation.qmd read (Fuel Consumption Dynamics; Income and Price Elasticities of Demand, incl. the image holding Tables A--C; Rebound effect; Cross-price elasticities; Panel estimation of energy demand; known issues table); data/Public01/tidy/ela_price_usage_global.csv, ela_price_efficiency_global.csv, ela_power_by_country.csv, ela_cross_price_global.csv; other/tecp_and_validation/ (CPATPriceElasticities.xlsx; All_data_TCP.xlsx, 2022 means recomputed)}
 }
 
 @techreport{black2022framework,
@@ -41,7 +51,7 @@
   number      = {22/254},
   year        = {2022},
   doi         = {10.5089/9798400228285.001},
-  note        = {confirmed: Crossref; read in paper 1.7 session (Annex C, vehicle turnover)}
+  note        = {verified 31 Oct 2026: IMF page (16 Dec 2022) and PDF read. Annex C: vehicle fleet turnover "6.7 percent a year based on an assumed 15-year life"; commercial and residential buildings "1.8 and 1.2 percent of these stocks replaced annually"; fuel and electricity price elasticities "over the longer term are generally between -0.5 and -0.8"; CPAT "parameterized to be approximately consistent with the mid-range of the empirical literature"}
 }
 
 @techreport{agnolucci2023tcp,
@@ -52,7 +62,17 @@
   number      = {10486},
   year        = {2023},
   doi         = {10.1596/1813-9450-10486},
-  note        = {confirmed: Crossref; read in paper 1.7 session}
+  note        = {verified: Crossref; read in the paper 6.1 session. Dataset as kept in the CPAT-AI repository (All_data_TCP.xlsx, metadata sheet read 31 Oct 2026: TCP = net energy taxes + carbon taxes + ETS - net subsidies - VAT concessions, USD per tonne CO2, 1995--2022)}
+}
+
+@techreport{IEA2018WEM,
+  author      = {{International Energy Agency}},
+  title       = {World Energy Model Documentation: 2018 Version},
+  institution = {OECD/IEA},
+  address     = {Paris},
+  year        = {2018},
+  url         = {https://www.iea.org/weo/},
+  note        = {verified 31 Oct 2026: PDF read. Road transport calibrated to "vehicle stocks, vehicle mileages and vehicle efficiencies"; transport activity linked to price "through elasticity of fuel cost per kilometre"; buildings intensity adjusted "to the change in average end-user fuel prices (using price elasticity)"; stock turnover modeled across sectors}
 }
 
 % ---- Price elasticities: meta-analyses and reviews --------------------------------
@@ -64,7 +84,19 @@
   pages   = {549--568},
   year    = {2017},
   doi     = {10.1016/j.enpol.2017.01.002},
-  note    = {confirmed: Crossref; abstract read (RePEc). Long-run means by sector and fuel as reproduced in the CPAT documentation (03_Mitigation.qmd, Table A) and technical notes}
+  note    = {verified 31 Oct 2026: Crossref and IDEAS record; abstract read (meta-analysis of short- and long-run elasticities for energy, electricity, natural gas, gasoline, diesel and heating oil). Full text paywalled; the EUI and Economics for Energy working-paper PDFs were unreachable. Numbers cited here are either CPAT's reproduction (its Table A, read) or the authors' own summary in labandeira2016papeles}
+}
+
+@article{labandeira2016papeles,
+  author  = {Labandeira, Xavier and Labeaga, Jos{\'e} M. and L{\'o}pez, Xiral},
+  title   = {Un metaan{\'a}lisis sobre la elasticidad precio de la demanda de energ{\'i}a en {Espa}{\~n}a y la {Uni}{\'o}n {Europea}},
+  journal = {Papeles de Energ{\'i}a},
+  number  = {2},
+  pages   = {65--93},
+  year    = {2016},
+  publisher = {Funcas},
+  url     = {https://www.funcas.es/wp-content/uploads/Migracion/Articulos/FUNCAS_PE/002art04.pdf},
+  note    = {verified 31 Oct 2026: full text read. Cuadro 2 reports the authors' global meta-analysis (Labandeira et al. 2015 working paper; 416 studies, 1,942 estimates, 1990--2014): long run energy -0.65, electricity -0.69, natural gas -0.85, gasoline -0.72, diesel -0.60, heating oil -0.76; short run -0.22, -0.21, -0.22, -0.23, -0.20, -0.26. Cuadro 4, EU meta-analysis (102 studies, 598 estimates): long run energy -0.754, electricity -0.600, natural gas -0.777, gasoline -0.789, diesel -0.639, heating oil -0.606; short run -0.262, -0.215, -0.255, -0.265, -0.212, -0.156}
 }
 
 @article{havranek2012,
@@ -76,7 +108,18 @@
   pages   = {201--207},
   year    = {2012},
   doi     = {10.1016/j.eneco.2011.09.003},
-  note    = {confirmed: Crossref; abstract read (corrected long-run -0.31, short-run -0.09; published averages exaggerated twofold); uncorrected means -0.69 and -0.23 from the working paper read in the paper 1.7 session}
+  note    = {verified 31 Oct 2026: abstract read (IDEAS): published averages "exaggerated twofold"; corrected long-run -0.31, short-run -0.09. Working-paper version read (AgEcon Search, CUDARE WP 1118): simple uncorrected means -0.23 (short run) and -0.69 (long run, 92 estimates); 41 studies, 202 estimates}
+}
+
+@article{havranek2015income,
+  author  = {Havranek, Tomas and Kokes, Ondrej},
+  title   = {Income Elasticity of Gasoline Demand: A Meta-Analysis},
+  journal = {Energy Economics},
+  volume  = {47},
+  pages   = {77--86},
+  year    = {2015},
+  doi     = {10.1016/j.eneco.2014.11.004},
+  note    = {verified 31 Oct 2026: abstract read (IDEAS): reported means 0.28 (short run) and 0.66 (long run); corrected for publication bias 0.1 and 0.23}
 }
 
 @article{brons2008,
@@ -88,7 +131,18 @@
   pages   = {2105--2122},
   year    = {2008},
   doi     = {10.1016/j.eneco.2007.08.004},
-  note    = {confirmed: Crossref; abstract read (RePEc): mean short-run -0.34, long-run -0.84}
+  note    = {verified 31 Oct 2026: abstract read (IDEAS): mean short-run -0.34, long-run -0.84; driven mainly by fuel efficiency and mileage per car, less by car ownership}
+}
+
+@article{arzaghi2015,
+  author  = {Arzaghi, Mohammad and Squalli, Jay},
+  title   = {How Price Inelastic Is Demand for Gasoline in Fuel-Subsidizing Economies?},
+  journal = {Energy Economics},
+  volume  = {50},
+  pages   = {117--124},
+  year    = {2015},
+  doi     = {10.1016/j.eneco.2015.04.009},
+  note    = {verified 31 Oct 2026: abstract read (IDEAS): 32 fuel-subsidizing countries, biennial panel 1998--2010; price elasticity -0.05 short run, -0.25 long run; income elasticity 0.16 and 0.81}
 }
 
 @article{dahl2012,
@@ -99,7 +153,7 @@
   pages   = {2--13},
   year    = {2012},
   doi     = {10.1016/j.enpol.2010.11.055},
-  note    = {confirmed: Crossref; abstract read (RePEc): proposes elasticities for over one hundred countries; numbers not read}
+  note    = {verified 31 Oct 2026: abstract read (IDEAS): elasticities are not constant across income and price levels; proposes gasoline and diesel elasticities for over one hundred countries. Cited only for that}
 }
 
 @article{huntington2019,
@@ -110,7 +164,7 @@
   pages   = {110878},
   year    = {2019},
   doi     = {10.1016/j.enpol.2019.110878},
-  note    = {confirmed: Crossref; read in the MPRA working-paper version (MPRA Paper 87532), Tables 8, 9 and 13; published figures may differ slightly}
+  note    = {verified 31 Oct 2026: published abstract read (Semantic Scholar); working-paper version read in full (MPRA 87532, EMF SR 12, Dec 2017): emphasis on Brazil, China, India, Mexico and Russia, others included; Table 6 gasoline long-run own-price -0.61 transport, income 0.94; Table 7 diesel -0.50 (China households -0.80, Nigeria +0.10); Table 8 natural gas -1.36 all, -1.59 residential, -0.25 power, income 0.85 residential; Table 9 electricity -0.46 all, -0.32 residential, -0.81 industrial (Mexico), income 0.53 residential, 0.76 industrial; Table 13 Dahl and Roman (2004) industrialized-economy values: gasoline -0.61 (income 0.69), diesel -0.67 (1.13), gas industry -1.35 (1.39), gas residential -0.56 (0.11), electricity -0.32, electricity residential -0.43 (0.60). Table 13 gives residential electricity -0.49 for developing economies, against -0.32 in Table 9; Table 9 used. Published figures may differ slightly}
 }
 
 @article{burke2016gas,
@@ -121,7 +175,7 @@
   pages   = {466--474},
   year    = {2016},
   doi     = {10.1016/j.eneco.2016.08.025},
-  note    = {confirmed: Crossref; abstract read (ANU repository): 44 countries, long-run price elasticity about -1.25}
+  note    = {verified 31 Oct 2026: abstract read (IDEAS): 44 countries; average long-run price elasticity "around -1.25"; income elasticity "+1 and higher"; instruments prices with proved reserves}
 }
 
 @article{burke2015coal,
@@ -132,7 +186,7 @@
   pages   = {309--322},
   year    = {2015},
   doi     = {10.1016/j.chieco.2015.10.004},
-  note    = {confirmed: Crossref; abstract read: provincial panel 1998-2012, elasticity -0.3 to -0.7 as of 2012 over two years}
+  note    = {verified 31 Oct 2026: abstract read (IDEAS): provincial panel 1998--2012; elasticity -0.3 to -0.7 as of 2012, over two-year responses}
 }
 
 @article{espey2004,
@@ -144,7 +198,18 @@
   pages   = {65--81},
   year    = {2004},
   doi     = {10.1017/S1074070800021866},
-  note    = {confirmed: Crossref and abstract (OpenAlex); means not read, cited only as a source to add}
+  note    = {verified 31 Oct 2026: full text read (AgEcon Search scan). Table 2: mean short-run price elasticity -0.35, long-run -0.85; long-run income 0.97; 92 percent of long-run estimates from US studies}
+}
+
+@article{csereklyei2020,
+  author  = {Csereklyei, Zsuzsanna},
+  title   = {Price and Income Elasticities of Residential and Industrial Electricity Demand in the {European Union}},
+  journal = {Energy Policy},
+  volume  = {137},
+  pages   = {111079},
+  year    = {2020},
+  doi     = {10.1016/j.enpol.2019.111079},
+  note    = {verified 31 Oct 2026: Crossref; abstract read (IDEAS): EU, 1996--2016; long-run price elasticity -0.53 to -0.56 residential, -0.75 to -1.01 industrial; long-run income about 0.61 residential, 0.76 to 1.08 industrial; demand highly inelastic in the short run}
 }
 
 @article{zhu2018,
@@ -155,7 +220,7 @@
   pages   = {169--177},
   year    = {2018},
   doi     = {10.1016/j.jclepro.2018.08.027},
-  note    = {confirmed: Crossref; abstract read: 103 articles; near-inelastic in the short run, some demand elastic in the long run; coefficients not read}
+  note    = {verified 31 Oct 2026: abstract read (Semantic Scholar): 103 articles; demand "almost price-inelastic" in the short term; "in the long-term, some residential electricity demand is price-elastic". No coefficients cited}
 }
 
 @article{Stern2012,
@@ -167,7 +232,7 @@
   pages   = {307--331},
   year    = {2012},
   doi     = {10.1111/j.1467-6419.2010.00646.x},
-  note    = {confirmed: Crossref; abstract read (47 studies; industrial sector, manufacturing, macroeconomy)}
+  note    = {verified 31 Oct 2026: abstract read (OpenAlex): 47 studies; at the industrial-sector level oil-coal, oil-gas, oil-electricity and gas-electricity shadow elasticities significantly greater than unity; substitution more constrained at the macro level}
 }
 
 @article{serletis2010ej,
@@ -179,7 +244,7 @@
   pages   = {1--30},
   year    = {2010},
   doi     = {10.5547/ISSN0195-6574-EJ-Vol31-No4-1},
-  note    = {confirmed in paper 1.7 session: Crossref, OpenAlex abstract, WB PRWP 5026 read}
+  note    = {verified: Crossref; World Bank PRWP 5026 abstract read (sectoral interfuel elasticities "consistently below unity"). The earlier claim that they are lowest in power and transport could not be confirmed and was removed}
 }
 
 @article{papageorgiou2017,
@@ -191,7 +256,7 @@
   pages   = {281--290},
   year    = {2017},
   doi     = {10.1162/REST_a_00592},
-  note    = {confirmed: Crossref; abstract read in paper 1.7 session}
+  note    = {verified 31 Oct 2026: abstract read (IDEAS): 26 countries; elasticity of substitution between clean and dirty energy inputs "significantly exceeds unity"}
 }
 
 @article{galindo2015,
@@ -202,7 +267,7 @@
   pages   = {7--24},
   year    = {2015},
   url     = {https://hdl.handle.net/11362/40057},
-  note    = {confirmed: CEPAL repository record; figures quoted only as reported in the CPAT documentation's panel-estimation section}
+  note    = {verified 31 Oct 2026: CEPAL catalogue record (issue 117, December 2015, pp. 7--24; finds publication bias). Full text unreachable (HTTP 403); the -0.10 and -0.30 figures are cited only as reported in CPAT's documentation, panel estimation section}
 }
 
 % ---- Income elasticities -----------------------------------------------------------
@@ -214,7 +279,19 @@
   pages   = {199--210},
   year    = {2016},
   doi     = {10.1016/j.eneco.2016.07.004},
-  note    = {confirmed: Crossref; read in paper 1.7 session (CAMA working paper)}
+  note    = {verified 31 Oct 2026: abstract read (IDEAS: 132 countries, 1960--2010); CAMA WP 45/2016 read: Table 1, 2010 cross-section: residences 0.33, transport 0.86, industry 0.88, services 1.08, total 0.74; Table 4: residential electricity 0.78, aggregate electricity 0.88; long-run growth-rate estimate of the energy-GDP elasticity about 0.7}
+}
+
+@article{csereklyei2016stylized,
+  author  = {Csereklyei, Zsuzsanna and Rubio-Varas, M. d. Mar and Stern, David I.},
+  title   = {Energy and Economic Growth: The Stylized Facts},
+  journal = {The Energy Journal},
+  volume  = {37},
+  number  = {2},
+  pages   = {223--256},
+  year    = {2016},
+  doi     = {10.5547/01956574.37.2.zcse},
+  note    = {verified 31 Oct 2026: Crossref; abstract read (OpenAlex): 99 countries, 1971--2010; stable cross-sectional relation between energy use and income per head, elasticity below unity. "About 0.7" as reported by Burke and Csereklyei (2016)}
 }
 
 @article{gertler2016,
@@ -226,7 +303,7 @@
   pages   = {1366--1401},
   year    = {2016},
   doi     = {10.1257/aer.20131455},
-  note    = {confirmed: Crossref; cited for its use in CPAT, not read}
+  note    = {verified 31 Oct 2026: abstract read (OpenAlex): asset acquisition nonlinear in income, depends on pace of income growth (Mexico, Oportunidades). Cited for its use in CPAT's income adjustment}
 }
 
 % ---- Rebound, tax salience -----------------------------------------------------------
@@ -238,7 +315,7 @@
   pages   = {163--179},
   year    = {2018},
   doi     = {10.1016/j.eneco.2018.07.021},
-  note    = {confirmed: Crossref; 26-29 percent rebound as reported in the CPAT documentation}
+  note    = {verified 31 Oct 2026: abstract read (IDEAS): 74 studies, 1,120 estimates; direct rebound about 10--12 percent short run, 26--29 percent long run}
 }
 
 @article{li2014,
@@ -250,7 +327,7 @@
   pages   = {302--342},
   year    = {2014},
   doi     = {10.1257/pol.6.4.302},
-  note    = {confirmed in paper 1.7 session: Crossref; NBER WP 17891 read}
+  note    = {verified 31 Oct 2026: AEA abstract and NBER WP 17891 summary read: consumers "respond more strongly to gasoline tax changes" than to tax-inclusive price changes. The ratio is not cited}
 }
 
 @article{andersson2019,
@@ -262,77 +339,5 @@
   pages   = {1--30},
   year    = {2019},
   doi     = {10.1257/pol.20170144},
-  note    = {confirmed in paper 1.7 session: Crossref + abstract}
+  note    = {verified 31 Oct 2026: abstract read (AEA): transport CO2 down almost 11 percent; "the carbon tax elasticity of demand for gasoline is three times larger than the price elasticity"}
 }
-
-% Sibling papers in sections 4 and 5 (standard entries, 29 Oct 2026)
-@unpublished{StrettonWP51,
-  author = {Stretton, Stephen J.},
-  title = {The {CPAT} Mitigation Module: Methods in Brief},
-  note = {Working paper 5.1},
-  year = {2026}
-}
-
-@unpublished{StrettonWP52,
-  author = {Stretton, Stephen J.},
-  title = {{CPAT-AI}: Rebuilding a Policy Model as a Transparent, Testable Tool},
-  note = {Working paper 5.2},
-  year = {2026}
-}
-
-@unpublished{StrettonWP53,
-  author = {Stretton, Stephen J.},
-  title = {Validating {CPAT}: Baselines, Back-Casts and Model Comparisons},
-  note = {Working paper 5.3},
-  year = {2026}
-}
-
-@unpublished{StrettonWP54,
-  author = {Stretton, Stephen J.},
-  title = {Are {CPAT}'s Price Elasticities Right?},
-  note = {Working paper 5.4},
-  year = {2026}
-}
-
-@unpublished{StrettonWP62,
-  author = {Stretton, Stephen J.},
-  title = {The {CBAM} Policy Tool},
-  note = {Working paper 6.2},
-  year = {2026}
-}
-
-@unpublished{StrettonWP63,
-  author = {Stretton, Stephen J.},
-  title = {Public Investment in {CPAT}},
-  note = {Working paper 6.3},
-  year = {2026}
-}
-
-@unpublished{StrettonWP64,
-  author = {Stretton, Stephen J.},
-  title = {Activity Levels Across {CPAT}, {SISEPUEDE}, {CBAM} and {FTT}},
-  note = {Working paper 6.4},
-  year = {2026}
-}
-
-@unpublished{StrettonWP71,
-  author = {Stretton, Stephen J.},
-  title = {The Excise-Fiscal Diagnostic},
-  note = {Working paper 7.1},
-  year = {2026}
-}
-
-@unpublished{StrettonWP65,
-  author = {Stretton, Stephen J.},
-  title = {The Macro-Fiscal-Energy Scenario Tool},
-  note = {Working paper 6.5},
-  year = {2026}
-}
-
-@unpublished{StrettonWP72,
-  author = {Stretton, Stephen J.},
-  title = {A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis},
-  note = {Working paper 7.2},
-  year = {2026}
-}
-

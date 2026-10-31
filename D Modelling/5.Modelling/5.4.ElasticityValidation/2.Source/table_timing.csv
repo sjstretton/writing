@@ -1,0 +1,76 @@
+case,pair,year,cpat,partial,share,cpat_overstatement
+central,"Gasoline, transport",1,-0.64,-0.144,0.224,3.457
+central,"Gasoline, transport",3,-0.64,-0.318,0.497,1.011
+central,"Gasoline, transport",5,-0.64,-0.411,0.642,0.557
+central,"Gasoline, transport",10,-0.64,-0.511,0.798,0.252
+central,"Gasoline, transport",20,-0.64,-0.58,0.906,0.104
+central,"Diesel, transport",1,-0.51,-0.108,0.212,3.71
+central,"Diesel, transport",3,-0.51,-0.242,0.475,1.104
+central,"Diesel, transport",5,-0.51,-0.316,0.619,0.616
+central,"Diesel, transport",10,-0.51,-0.398,0.78,0.282
+central,"Diesel, transport",20,-0.51,-0.457,0.897,0.115
+central,"Electricity, residential",1,-0.44,-0.102,0.232,3.306
+central,"Electricity, residential",3,-0.44,-0.227,0.517,0.936
+central,"Electricity, residential",5,-0.44,-0.294,0.667,0.499
+central,"Electricity, residential",10,-0.44,-0.362,0.824,0.214
+central,"Electricity, residential",20,-0.44,-0.405,0.92,0.087
+central,"Coal, industry",1,-0.58,-0.114,0.197,4.07
+central,"Coal, industry",3,-0.58,-0.257,0.444,1.253
+central,"Coal, industry",5,-0.58,-0.338,0.582,0.718
+central,"Coal, industry",10,-0.58,-0.433,0.747,0.339
+central,"Coal, industry",20,-0.58,-0.51,0.879,0.138
+central,"Diesel, industry",1,-1.06,-0.274,0.258,2.875
+central,"Diesel, industry",3,-1.06,-0.582,0.549,0.822
+central,"Diesel, industry",5,-1.06,-0.729,0.688,0.454
+central,"Diesel, industry",10,-1.06,-0.872,0.823,0.215
+central,"Diesel, industry",20,-1.06,-0.97,0.915,0.093
+usage instantaneous,"Gasoline, transport",1,-0.64,-0.416,0.65,0.538
+usage instantaneous,"Gasoline, transport",3,-0.64,-0.445,0.695,0.438
+usage instantaneous,"Gasoline, transport",5,-0.64,-0.47,0.735,0.361
+usage instantaneous,"Gasoline, transport",10,-0.64,-0.52,0.813,0.231
+usage instantaneous,"Gasoline, transport",20,-0.64,-0.58,0.906,0.103
+usage instantaneous,"Diesel, transport",1,-0.51,-0.314,0.616,0.624
+usage instantaneous,"Diesel, transport",3,-0.51,-0.339,0.666,0.502
+usage instantaneous,"Diesel, transport",5,-0.51,-0.362,0.709,0.411
+usage instantaneous,"Diesel, transport",10,-0.51,-0.405,0.794,0.259
+usage instantaneous,"Diesel, transport",20,-0.51,-0.458,0.897,0.115
+usage instantaneous,"Electricity, residential",1,-0.44,-0.309,0.703,0.422
+usage instantaneous,"Electricity, residential",3,-0.44,-0.326,0.742,0.348
+usage instantaneous,"Electricity, residential",5,-0.44,-0.341,0.775,0.29
+usage instantaneous,"Electricity, residential",10,-0.44,-0.37,0.841,0.189
+usage instantaneous,"Electricity, residential",20,-0.44,-0.405,0.921,0.086
+usage instantaneous,"Coal, industry",1,-0.58,-0.319,0.55,0.82
+usage instantaneous,"Coal, industry",3,-0.58,-0.353,0.608,0.645
+usage instantaneous,"Coal, industry",5,-0.58,-0.382,0.659,0.518
+usage instantaneous,"Coal, industry",10,-0.58,-0.44,0.759,0.318
+usage instantaneous,"Coal, industry",20,-0.58,-0.51,0.879,0.137
+usage instantaneous,"Diesel, industry",1,-1.06,-0.724,0.683,0.464
+usage instantaneous,"Diesel, industry",3,-1.06,-0.768,0.724,0.381
+usage instantaneous,"Diesel, industry",5,-1.06,-0.805,0.76,0.316
+usage instantaneous,"Diesel, industry",10,-1.06,-0.88,0.83,0.204
+usage instantaneous,"Diesel, industry",20,-1.06,-0.97,0.915,0.093
+slow capital (buildings),"Gasoline, transport",1,-0.64,-0.127,0.199,4.038
+slow capital (buildings),"Gasoline, transport",3,-0.64,-0.28,0.438,1.285
+slow capital (buildings),"Gasoline, transport",5,-0.64,-0.358,0.56,0.786
+slow capital (buildings),"Gasoline, transport",10,-0.64,-0.433,0.677,0.477
+slow capital (buildings),"Gasoline, transport",20,-0.64,-0.479,0.749,0.335
+slow capital (buildings),"Diesel, transport",1,-0.51,-0.095,0.187,4.343
+slow capital (buildings),"Diesel, transport",3,-0.51,-0.211,0.414,1.414
+slow capital (buildings),"Diesel, transport",5,-0.51,-0.271,0.532,0.88
+slow capital (buildings),"Diesel, transport",10,-0.51,-0.33,0.648,0.544
+slow capital (buildings),"Diesel, transport",20,-0.51,-0.37,0.725,0.38
+slow capital (buildings),"Electricity, residential",1,-0.44,-0.094,0.213,3.699
+slow capital (buildings),"Electricity, residential",3,-0.44,-0.207,0.469,1.13
+slow capital (buildings),"Electricity, residential",5,-0.44,-0.264,0.6,0.667
+slow capital (buildings),"Electricity, residential",10,-0.44,-0.317,0.721,0.386
+slow capital (buildings),"Electricity, residential",20,-0.44,-0.346,0.787,0.271
+slow capital (buildings),"Coal, industry",1,-0.58,-0.097,0.168,4.962
+slow capital (buildings),"Coal, industry",3,-0.58,-0.216,0.372,1.685
+slow capital (buildings),"Coal, industry",5,-0.58,-0.278,0.48,1.083
+slow capital (buildings),"Coal, industry",10,-0.58,-0.343,0.592,0.689
+slow capital (buildings),"Coal, industry",20,-0.58,-0.393,0.677,0.476
+slow capital (buildings),"Diesel, industry",1,-1.06,-0.229,0.216,3.63
+slow capital (buildings),"Diesel, industry",3,-1.06,-0.498,0.47,1.128
+slow capital (buildings),"Diesel, industry",5,-1.06,-0.631,0.595,0.681
+slow capital (buildings),"Diesel, industry",10,-1.06,-0.75,0.708,0.413
+slow capital (buildings),"Diesel, industry",20,-1.06,-0.819,0.773,0.294

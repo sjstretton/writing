@@ -1,0 +1,11 @@
+pair,fuel,sector,usage_dev,eff_dev,cpat_dev,cpat_hic,lit_least,lit_most,indep_least,indep_most,indep_median,cpat_over_median,bias_corrected,n,n_indep,sources,verdict,verdict_indep
+"Gasoline, transport",gso,tra,-0.4,-0.4,-0.64,-0.58,-0.25,-0.84,-0.25,-0.84,-0.69,0.93,-0.31,9,7,Labandeira2017; arzaghi2015; brons2008; havranek2012; huntington2019; labandeira2016papeles,In range,In range
+"Diesel, transport",die,tra,-0.3,-0.3,-0.51,-0.44,-0.39,-0.67,-0.5,-0.67,-0.62,0.82,,6,4,Labandeira2017; huntington2019; labandeira2016papeles,In range,In range
+"Electricity, residential",ecy,res,-0.3,-0.2,-0.44,-0.36,-0.32,-0.85,-0.32,-0.85,-0.53,0.83,,11,9,Labandeira2017; csereklyei2020; espey2004; huntington2019; labandeira2016papeles,In range,In range
+"Electricity, industry",ecy,ind,-0.3,-0.2,-0.44,-0.36,-0.32,-1.01,-0.32,-1.01,-0.69,0.64,,9,7,Labandeira2017; csereklyei2020; huntington2019; labandeira2016papeles,In range,In range
+"Electricity, services",ecy,srv,-0.5,-0.4,-0.7,-0.64,-0.32,-0.69,-0.32,-0.69,-0.53,1.32,,6,4,Labandeira2017; huntington2019; labandeira2016papeles,Elastic edge,Elastic edge
+"Natural gas, residential",nga,res,-0.4,-0.5,-0.7,-0.65,-0.56,-1.59,-0.56,-1.59,-0.85,0.82,,7,5,Labandeira2017; burke2016gas; huntington2019; labandeira2016papeles,In range,In range
+"Natural gas, industry",nga,ind,-0.5,-0.5,-0.75,-0.7,-0.57,-1.35,-0.78,-1.35,-1.05,0.71,,6,4,Labandeira2017; burke2016gas; huntington2019; labandeira2016papeles,In range,In range
+"Coal, industry",coa,ind,-0.3,-0.4,-0.58,-0.52,-0.3,-0.7,-0.3,-0.7,-0.5,1.16,,2,2,burke2015coal,In range,In range
+"Diesel, industry",die,ind,-0.7,-1.2,-1.06,-1.08,-0.39,-0.67,-0.5,-0.67,-0.62,1.71,,6,4,Labandeira2017; huntington2019; labandeira2016papeles,High,High
+"Gasoline, services",gso,srv,-0.6,-1.1,-1.04,-1.05,-0.25,-0.84,-0.25,-0.84,-0.69,1.51,-0.31,9,7,Labandeira2017; arzaghi2015; brons2008; havranek2012; huntington2019; labandeira2016papeles,High,High

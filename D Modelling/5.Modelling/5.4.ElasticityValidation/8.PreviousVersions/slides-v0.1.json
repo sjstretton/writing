@@ -1,0 +1,50 @@
+{
+  "series": "CPAT Companion Paper No. 5.4",
+  "title": "Are CPAT's Price Elasticities Right?",
+  "subtitle": "A check of the defaults against meta-analyses and reviews",
+  "message": "Seven of ten fuel-sector defaults lie within the published range. Three are too high, and road gasoline is double the estimate corrected for publication bias. Two structural choices matter more: the full long-run response in one year, and no cross-price terms.",
+  "problem": {
+    "title": "One table sets the size of every cut",
+    "stats": [
+      {
+        "value": "7 of 10",
+        "label": "fuel-sector pairs within the published range"
+      },
+      {
+        "value": "−1.05",
+        "label": "industrial diesel and services gasoline, against −0.4 to −0.8"
+      },
+      {
+        "value": "2×",
+        "label": "road gasoline against the bias-corrected mean (−0.64 vs −0.31)"
+      }
+    ],
+    "text": "If an elasticity is twice the true value, CPAT reports twice the cut and overstates how fast the tax base erodes. Nobody had published a fuel-by-fuel check of the defaults."
+  },
+  "mechanism": {
+    "title": "Most defaults pass; timing does not",
+    "image": "../2.Source/figures/fig2_timing.png",
+    "imageWidth": 5.6,
+    "imageHeight": 2.89,
+    "caption": "Own-price elasticity by horizon: CPAT (dashed) against partial adjustment (solid).",
+    "points": [
+      "After one year about a fifth of CPAT's response has happened; after five, about 60%.",
+      "No cross-price terms: almost no fuel switching outside power.",
+      "The Total Effective Carbon Price moves by only about a tenth."
+    ]
+  },
+  "action": {
+    "title": "Fix three values and the timing",
+    "results": [
+      "Errors are identifiable and fixable.",
+      "Front-loading overstates near-term cuts and understates early revenue.",
+      "Common errors cancel in the TECP."
+    ],
+    "todo": [
+      "Bring industrial diesel, services gasoline and services electricity into range.",
+      "Add partial adjustment with separate usage and efficiency speeds.",
+      "Show a publication-bias case beside every central result.",
+      "Run the eight-step protocol at each update."
+    ]
+  }
+}

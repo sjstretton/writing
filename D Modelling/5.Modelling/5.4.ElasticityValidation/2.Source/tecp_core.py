@@ -1,5 +1,5 @@
-"""Copied unchanged (below this note) from paper 6.1, 
-B Working Papers/6.ModularUpgrades/6.1.PolicyEquivalentCarbonPriceAndCES/2.Source/tecp_model.py,
+"""Copied unchanged (below this note) from paper 6.1 (v0.3),
+D Modelling/6.ModularUpgrades/6.1.PolicyEquivalentCarbonPriceAndCES/2.Source/tecp_model.py,
 so that paper 5.4 runs on its own. Paper 5.4 uses it to show how the elasticity
 calibration moves emission cuts and the Total Effective Carbon Price.
 """
