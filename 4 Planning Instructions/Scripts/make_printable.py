@@ -27,7 +27,7 @@ from docx.enum.text import WD_BREAK, WD_TAB_ALIGNMENT, WD_TAB_LEADER
 from docx.oxml import parse_xml
 from docx.shared import Pt, RGBColor, Inches
 
-ROOT = Path(__file__).resolve().parents[1]   # 1 Planning Instructions
+ROOT = Path(__file__).resolve().parents[1]   # 4 Planning Instructions
 REPO = ROOT.parent                           # combined repo root
 VERSION = "0.6"
 PLANS = REPO / "0A Daily and Weekly Task Lists"

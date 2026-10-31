@@ -31,7 +31,7 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]   # 1 Planning Instructions
+ROOT = Path(__file__).resolve().parents[1]   # 4 Planning Instructions
 REPO = ROOT.parent                           # combined repo root (planning 0-3, writing A-F)
 sys.path.insert(0, str(ROOT / "Scripts"))
 import make_printable as mp  # noqa: E402

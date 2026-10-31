@@ -21,7 +21,7 @@ Planning now lives in the combined repo `sjstretton/writing`, alongside the writ
 │                              Me-Printable-Tracker.docx (printable tracker, page 1 the morning briefing; built by Scripts/update.py; no version in the name,
 │                              so links stay; versions in 3 Archive/Printable versions/),
 │                              Me-Weekly.docx (page 1: update for the boss; page 2: my week)
-├── 1 Planning Instructions/   README.md (this file), NORMS.md (how to work: the rules), AGENTS.md, CLAUDE.md,
+├── 4 Planning Instructions/   README.md (this file), NORMS.md (how to work: the rules), AGENTS.md, CLAUDE.md,
 │                              CheckRepo.bat (runs the consistency check),
 │                              Scripts/ update.py (sync, build, check, render, eod), make_printable.py (the Word layout),
 │                              Context/ routines.md (regular lists), 3-Me-WeeklyLog.md, 6-RepoDirectory.md,
@@ -33,7 +33,7 @@ Planning now lives in the combined repo `sjstretton/writing`, alongside the writ
 └── 3 Archive/                 old versions and retired files; Printable versions/ holds each printable layout version
 ```
 
-Run the scripts from `1 Planning Instructions/` (for example `python3 Scripts/update.py check`, or `CheckRepo.bat`).
+Run the scripts from `4 Planning Instructions/` (for example `python3 Scripts/update.py check`, or `CheckRepo.bat`).
 
 **Master Google Sheet** ([open](https://docs.google.com/spreadsheets/d/1WEHemG3x0kJ3yk-u1RcSheqYsX0T2aAXmiba9veaQag/edit)), laid out for a desktop PC (wide columns, wrapped text, frozen headers):
 

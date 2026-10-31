@@ -28,19 +28,6 @@
 - [ ] PhD application, due Sat 31 Oct: email Shrimali; list 3 referees (T13). Value: the slowest part starts moving
 - [ ] Next paper (second, after the PhD), journal Climate Policy: ask AI to note its word limit and format and list what is left (T13). Value: AI works on it in parallel while the PhD comes first
 
-
-
-# Rename this file to _ftp.txt and fill it in. It is excluded by .gitignore,
-# so what you put here never reaches GitHub.
-#
-# A.Website\deploy.bat reads its FTP login from this file. Change the password
-# on the server: the old one is in the repository's history.
-
-host     = 5.183.10.153
-user     = u795004798
-password = Cambridge_Oxford123
-remote   = /public_html
-protocol = ftp
 DONE
 - Have breakfast (assume finishes at 9am)
 - Relax by the pool

@@ -10,17 +10,17 @@ Thumbs.db
 **/*.quarto_ipynb
 
 # Written by the scripts on every run - regenerated, never edited by hand
-E Writing Instructions/Scripts/Papers/Reports/
-E Writing Instructions/Scripts/Papers/_Deleted/
+H Writing Instructions/Scripts/Papers/Reports/
+H Writing Instructions/Scripts/Papers/_Deleted/
 B Working Papers/_Purged/
 
 # Old FTP-login location, retired: the login is now FTP-Login.txt at the top of the repository.
-E Writing Instructions/Scripts/Papers/Reference/_ftp.txt
+H Writing Instructions/Scripts/Papers/Reference/_ftp.txt
 # Old location (before 31 Oct 2026): keep ignored so a leftover copy is never committed
 B Working Papers/B.Scripts/
 
 __pycache__/
 
 # Written by Download-Literature.bat on each run
-E Writing Instructions/Scripts/Papers/Run/Literature-OpenInBrowser.html
+H Writing Instructions/Scripts/Papers/Run/Literature-OpenInBrowser.html
 FTP-Login.txt
