@@ -11,7 +11,8 @@ The paper numbers follow the section folders in `B Working Papers` (Stephen's re
 | | 1.2 | Feebates: The Full Carbon Price at the Margin | 1.2 |
 | | 1.3 | Credit the Price Signal, Not the Payment (CBAM recognition) | 1.3 |
 | | 1.4 | Carbon Consumption Tax | 1.6 |
-| `2.OtherTaxAndFiscalPolicy` | 2.1 | Rent Tax | 1.4 |
+| `2.OtherTaxAndFiscalPolicy` | 2.0 | Overview: Tax Rent, Not Effort (new) | – |
+| | 2.1 | Rent Tax | 1.4 |
 | `3.FinanceAndRisk` | 3.0 | Overview: Make Clean Power an Asset Class | 2.0 |
 | | 3.1 | Guarantee the Contract, Not the Debt (payment intermediary) | 2.1 |
 | | 3.2 | From Projects to Asset Classes | 2.2 |
@@ -33,10 +34,13 @@ The paper numbers follow the section folders in `B Working Papers` (Stephen's re
 | `7.AdditionalAnalytics` | 7.0 | Overview: Diagnostics on Data Ministries Already Hold | 5.0 |
 | | 7.1 | The Excise-Fiscal Diagnostic | 5.1 |
 | | 7.2 | A Global Fiscal Indicators Dashboard | 5.3 |
-| `8.AdditionalPolicyPapers` | – | Parked papers, books, philosophy, politics (keep their own internal numbers) | 6.x |
+| `8.AdditionalPolicyPapers` | 8.0 | Overview: Retained Papers, Books and Essays (replaces the combined and additional overviews) | 6.0, 9.0 |
+| | 8.1–8.7 | Subsections: 8.1 other fiscal policy, 8.2 finance and risk, 8.3 sovereign incentives and MDBs, 8.4 analytics, 8.5 books, 8.6 philosophy, 8.7 politics; papers 8.x.y in folder names (e.g. `8.5.3.Screwed`). Their internal text keeps its old numbers | 1.5, 2.3, 3.4–3.5, 5.2–5.4, 6.x, 7.x, 8.x |
 | `9.ResearchTracking` | – | Source digests, trackers | – |
 
 Admin folders: `A.Website`, `B.Scripts`.
+
+Each section folder (1–8) holds only its numbered paper folders and one overview folder, `<N>.0.Overview/`, which keeps the overview qmd/docx/bib under their numbered file names, the section theme deck (`1.Presentation/`), section-level `8.PreviousVersions/`, and notes such as `SeriesArchitecture.md`, `CrossReview-Notes.md` and `RelatedWork.md`. Paper folders use the standard slots (`B Working Papers/B.Scripts/Reference/_PaperFolderLayout.md`); `3.BackgroundPapers` folders were renamed `3.RelatedPiecesAndLinks` on 31 Oct 2026.
 
 ## Citation keys
 
