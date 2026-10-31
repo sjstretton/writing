@@ -1,0 +1,51 @@
+{
+  "series": "Climate Fiscal Policy Brief No. 1.2",
+  "title": "Feebates: The Full Carbon Price at the Margin",
+  "subtitle": "Without the carbon bill: decarbonizing coal-heavy power and trade-exposed industry",
+  "message": "A carbon tax charges producers for every tonne they still emit. A revenue-neutral feebate charges only emissions above the sector benchmark and rebates those below. Same incentive to switch; average costs almost unchanged.",
+  "problem": {
+    "title": "The carbon bill, not the incentive, kills the tax",
+    "stats": [
+      {
+        "value": "+87%",
+        "label": "average generation cost from a $50/t tax in a stylized grid that is 60% coal"
+      },
+      {
+        "value": "~3×",
+        "label": "the price of coal at $2.50/GJ once a $50/t carbon tax is added"
+      },
+      {
+        "value": "0",
+        "label": "net payment by the average producer under a revenue-neutral feebate"
+      }
+    ],
+    "text": "A carbon tax sends two signals. The relative-price signal makes coal dearer than gas and solar and does the abating. The average-cost signal charges every producer for every tonne it still emits and does the political damage, so governments exempt the biggest emitters or hold the rate down."
+  },
+  "mechanism": {
+    "title": "Same switch, a fraction of the cost",
+    "image": "figures/fig1-power-tax-vs-feebate.png",
+    "imageWidth": 5.6,
+    "imageHeight": 3.1,
+    "caption": "Change in generation cost per MWh at $50/tCO₂, stylized grid (60% coal, 20% gas, 20% solar).",
+    "points": [
+      "Each producer pays t(eᵢ − ē) per unit of output: a fee above the benchmark, a rebate below.",
+      "Every tonne avoided is worth t, as under a tax, so dispatch and switching are the same.",
+      "With the benchmark at the sector average, fees fund rebates exactly: zero treasury cost.",
+      "The benchmark falls as the sector cleans, so the feebate tightens on laggards by itself."
+    ]
+  },
+  "action": {
+    "title": "Use feebates where carbon taxes stall",
+    "results": [
+      "The treasury pays nothing; coal incumbents pay their clean competitors.",
+      "Power stays cheap under a single buyer; in a marginal-cost market, prices can rise if coal sets them.",
+      "Feebates buy fewer tonnes: about 50–70% of a tax's cuts. A consumption charge restores the demand margin.",
+      "Evidence: Swedish NOx charge cut emission rates 40% in six years; a fixed French car benchmark cost €285m."
+    ],
+    "todo": [
+      "Coal-heavy countries: legislate a feebate per MWh, benchmarked to the grid average and updated yearly.",
+      "Run the same instrument for steel, cement and aluminum.",
+      "Importers: credit feebates at the border."
+    ]
+  }
+}
