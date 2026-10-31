@@ -1,51 +1,143 @@
 {
-  "series": "CPAT Companion Paper No. 5.2",
+  "series": "Climate Fiscal Policy Brief No. 5.2 · October 2026",
   "title": "CPAT-AI: Rebuilding a Policy Model",
-  "subtitle": "Two AI-assisted rebuilds of the Climate Policy Assessment Tool, and what they found",
-  "message": "Rebuilt twice in October 2026, as code-written Excel and as Python, under one rule (fix bugs, copy and track issues), legacy CPAT turned out to hold 228 bugs, 24 of high priority. Writing it a second time found seven bugs in the first rebuild.",
-  "problem": {
-    "title": "A model nobody could audit",
-    "stats": [
-      {
-        "value": "21 MB",
-        "label": "legacy workbook; main sheet past row 18,000"
+  "slides": [
+    {
+      "type": "title",
+      "title": "CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool",
+      "subtitle": "What two AI-assisted rebuilds of the Climate Policy Assessment Tool found",
+      "message": "Rebuilt twice in October 2026 under one rule (fix bugs, copy and log deliberate choices), legacy CPAT turned out to hold 228 bugs, 24 of them serious. Building it a second time found seven bugs in the first rebuild.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "CPAT shapes reform advice, but no one could audit its legacy workbook",
+      "stats": [
+        {"value": "180+", "label": "countries covered: carbon taxes, fuel subsidy reform and related policies"},
+        {"value": "21 MB", "label": "legacy workbook; its main sheet runs past row 18,000"},
+        {"value": "~400", "label": "pages of methodology, which had drifted from the workbook"}
+      ],
+      "text": "Formulas differ from row to row, so checking one row says little about the next. Audits of large spreadsheets almost always find errors.",
+      "source": "CPAT Documentation (2023); CPAT-AI task log (2026); Panko (1998); Powell, Baker and Lawson (2008)."
+    },
+    {
+      "type": "points",
+      "title": "One rule kept the rebuild faithful: fix bugs, copy deliberate choices, decide departures in writing",
+      "points": [
+        {"lead": "A bug", "text": "is a formula that does not compute what it means to (a wrong row, a term applied twice). Fixed, never copied."},
+        {"lead": "An issue", "text": "is a deliberate choice open to question (an old data vintage). Copied exactly and logged for the modelers."},
+        {"lead": "Any other departure", "text": "needs a dated decision by the model's named owner."},
+        {"lead": "So every difference from the original", "text": "has a code and a reason a reviewer can look up."}
+      ],
+      "source": "CPAT-AI norms, section 0; working paper 5.2, The replication rule."
+    },
+    {
+      "type": "points",
+      "title": "Two rebuilds and shared codes turn every comparison into a table join",
+      "points": [
+        {"lead": "Excel-AI:", "text": "a readable workbook written by code; one short formula serves a whole block of cells."},
+        {"lead": "Coded CPAT:", "text": "a Python model written from Excel-AI's equation list, one function per equation."},
+        {"lead": "One code per input, variable and output,", "text": "the same in legacy, Excel and Python: e.g. egy.mit.co2.tot.tot.2 is Egypt's total CO2 in scenario 2."},
+        {"lead": "So the three models", "text": "can be compared after every change, not once at the end."}
+      ],
+      "source": "CPAT-AI repository, release 1.0.2 (29 October 2026); working paper 5.2, Shared codes."
+    },
+    {
+      "type": "figure",
+      "title": "The rebuild registered 454 entries; 228 are bugs in the legacy model, 24 of high priority",
+      "image": "figures/fig_register.png",
+      "caption": "CPAT-AI register, release 1.0.2 (29 October 2026).",
+      "points": [
+        {"lead": "High (24):", "text": "wrong results in standard runs."},
+        {"lead": "Low (142):", "text": "latent: they fire when a ministry switches on an option the default run does not use."},
+        {"lead": "Also 20 errors", "text": "in the published documentation."}
+      ],
+      "source": "CPAT-AI register (Tracking_Legacy_Bugs_v1.0.2); working paper 5.2, Table 1."
+    },
+    {
+      "type": "table",
+      "title": "The serious bugs sit where formulas were copied across sectors or years",
+      "header": ["Code", "Bug in legacy CPAT", "Effect"],
+      "widths": [0.9, 4.2, 3.8],
+      "rows": [
+        ["L1", "Services electricity follows industry's multiple after 2023", "Largest single error in power demand"],
+        ["L3", "Income factor on the GDP elasticity applied twice", "Elasticity drifts; error grows over time"],
+        ["L13", "Other oil products: pass-through 1, margin 0", "Priced at the floor; use up about tenfold by 2030"],
+        ["L18", "Non-energy methane never changes", "A methane fee on farming and waste does nothing"],
+        ["L24", "GDP effect added to growth every year", "A one-off gain compounds"],
+        ["L87", "Regulation lookup never matches", "Regulation scenarios have no effect"]
+      ],
+      "note": "Most of the 228 bugs are latent: they change nothing until an option is switched on.",
+      "source": "CPAT-AI register, release 1.0.2 (Egypt runs); working paper 5.2, What the rebuild found."
+    },
+    {
+      "type": "figure",
+      "title": "The count rose as each block was rebuilt, so 228 is a lower bound",
+      "image": "figures/fig_growth.png",
+      "points": [
+        {"lead": "Owners are fixing it:", "text": "the CPAT team marked 63 fixed in its next file."},
+        {"lead": "Checked cell by cell:", "text": "52 confirmed, 9 with caveats, 2 marked fixed that were not."},
+        {"lead": "Still to come:", "text": "air pollution and transport co-benefits are not yet rebuilt."}
+      ],
+      "source": "CPAT-AI task log and register (October 2026)."
+    },
+    {
+      "type": "table",
+      "title": "Every number is checked by something that did not produce it",
+      "header": ["Test", "Compared with", "Scale at release 1.0.2"],
+      "widths": [2.6, 3.0, 3.3],
+      "rows": [
+        ["1. Method equals legacy", "Legacy's cached results, bugs switched back on", "Prices: 80 rows to 5.6 × 10⁻¹⁷"],
+        ["2. Workbook equals Python", "Independent recomputation; paste test", "Every block, every test scenario"],
+        ["3. Coded CPAT equals Excel-AI", "Excel-AI's stored results", "7,458 codes per scenario, within 10⁻⁹"],
+        ["4. Release equals last release", "Previous release, code by code", "Release 1.0.0: 0 of 15,086 changed"]
+      ],
+      "note": "The tests verify; they do not validate. Validation against data is in papers 5.3 and 5.4.",
+      "source": "CPAT-AI task log, documentation and changelog; working paper 5.2, Table 2."
+    },
+    {
+      "type": "points",
+      "title": "Building twice found seven bugs, but versions built from one reading can share an error",
+      "points": [
+        {"lead": "Python found seven bugs in Excel-AI,", "text": "e.g. nominal GDP divided by a billion when already in billions; two gas price series swapped. All fixed in both."},
+        {"lead": "Common-mode error is real:", "text": "27 independently written programs failed together far more than chance predicts (Knight and Leveson 1986)."},
+        {"lead": "AI agents too:", "text": "48 agent-written versions showed the same, though voting across three cut failures by about two thirds (Ron et al. 2026)."},
+        {"lead": "The guard:", "text": "test 1 ties every block to legacy's own results, which no agent wrote; fixes go to the CPAT team."}
+      ],
+      "source": "CPAT-AI register (M15-M22); Knight and Leveson (1986); Ron, Baudry and Monperrus (2026)."
+    },
+    {
+      "type": "points",
+      "title": "AI agents built the models; a named owner made every judgment",
+      "points": [
+        {"lead": "241 finished tasks in four weeks,", "text": "through Claude Code and GitHub Copilot: builders, checks, the Python model, the register's documents."},
+        {"lead": "Every departure", "text": "carries a dated owner decision; the owner accepted each release."},
+        {"lead": "The evidence on AI productivity is mixed:", "text": "56% faster on a set task (Peng et al. 2023); 19% slower for experienced developers on mature projects (Becker et al. 2025)."},
+        {"lead": "So the safeguard is the test, not the tool.", "text": "Every output was checked by something its author did not write."}
+      ],
+      "source": "CPAT-AI task log, 2-29 October 2026; Peng et al. (2023); Becker et al. (2025)."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the rebuild shows",
+        "items": [
+          {"lead": "228 legacy bugs,", "text": "24 serious; most latent until an option is used."},
+          {"lead": "One rule", "text": "makes every difference traceable."},
+          {"lead": "Building twice", "text": "found 7 more; it does not remove shared errors."},
+          {"lead": "Agreement is not truth:", "text": "validation comes next (5.3, 5.4)."}
+        ]
       },
-      {
-        "value": "228",
-        "label": "legacy bugs registered; 24 high priority"
-      },
-      {
-        "value": "135",
-        "label": "issues: intended choices open to question"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {"lead": "Model commissioners:", "text": "require a codes map, one register, a second build with regression tests, and a named owner."},
+          {"lead": "CPAT team:", "text": "apply the fix plans; rerun validation on the corrected model."},
+          {"lead": "Bank teams running CPAT:", "text": "check each run against the register before it goes into advice."},
+          {"lead": "Builders using AI:", "text": "agents build, people decide, tests check."}
+        ]
       }
-    ],
-    "text": "Formulas differed from row to row, constants were typed into formulas and the documentation had drifted from the workbook. Egypt's population followed a misread path; a one-off GDP effect compounded every year; a methane fee on farming and waste did nothing."
-  },
-  "mechanism": {
-    "title": "One register, shared codes, tests on every output",
-    "image": "figures/fig_register.png",
-    "imageWidth": 5.6,
-    "imageHeight": 2.58,
-    "caption": "CPAT-AI register, release 1.0.2 (29 October 2026).",
-    "points": [
-      "Bugs are never replicated; issues are replicated and tracked.",
-      "One code per variable in legacy, Excel-AI and Coded CPAT: comparison is a table join.",
-      "Coded CPAT matches Excel-AI on 7,458 output codes within 10⁻⁹.",
-      "Built with Claude Code and GitHub Copilot; every judgment kept by the owner."
-    ]
-  },
-  "action": {
-    "title": "Build policy models twice",
-    "results": [
-      "The CPAT team confirmed 52 fixes; 2 marked fixed were not.",
-      "Verification is not validation: three agreeing models can share a wrong assumption.",
-      "Air pollution and transport co-benefits are not yet rebuilt."
-    ],
-    "todo": [
-      "Require a codes map as a model deliverable.",
-      "Keep one register of bugs, issues, departures and upgrades.",
-      "Build twice and regression-test every release.",
-      "Use AI agents as builders under written norms, not as authorities."
-    ]
-  }
+    }
+  ]
 }
