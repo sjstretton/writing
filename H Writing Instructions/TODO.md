@@ -38,6 +38,7 @@ Details for each item: `B PhD Application/PhD-Application-Status.md`.
 
 ### Priority 3: paper upgrades
 
+- [ ] **Paper 2.2 (Let Land Pay for the City): read v0.1.** Then: clear the VERIFY notes in `LandPaysForTheCity.bib` (DOIs, India property-tax figure from the RBI municipal finance report, Banzhaf–Lavery magnitudes, Oates–Schwab full text, Lall et al. page number); decide whether to add a brief and deck; not yet on the website — S reads, A clears notes — after the PhD application
 - [ ] **Carbon-pricing papers (1.1, 1.2, 1.3, 1.4, and 6.1 the TECP): read and approve.** Done 29 Oct by agents: five Climate Fiscal Policy Briefs, five working papers (1.1 v0.3, 1.2 v0.3, 1.3 v0.3, 1.4 v0.2, 6.1 v0.3) with models, proofs, calibrations and literature appendices, five 4-slide decks, all in `E Website/papers/` — S reads, starting with 1.1 for Dirk — 5 Nov
 - [ ] **Finance-and-risk and sovereign-incentives series (3.1, 3.2, 4.1, 4.2, 4.3): read and peer review.** Done 29 Oct by agents: five briefs (Climate Fiscal Policy Briefs 3.1–4.3) and five working papers with models and verified bibliographies; overviews 3.0 and 4.0 rewritten; CIT now 4.2, SLL 4.3. No peer-review notes yet. Start with 4.1 and 3.1 (proposal 1) — S reads, A peer-reviews and upgrades — 13 Nov
 - [ ] Decks for the five section 3–4 papers and two theme decks: done 29 Oct. Referee reports still to do — A — after Stephen's read
@@ -73,6 +74,7 @@ Details for each item: `B PhD Application/PhD-Application-Status.md`.
 
 ## Done
 
+- [x] 31 Oct 2026 — New working paper 2.2 *Let Land Pay for the City* (property taxes, public land and land value capture for green urban infrastructure in developing countries; Hong Kong and Singapore; green development model and health; best-practice fiscal code), v0.1, about 8,200 words, in `C Policy and FInance/2.OtherTaxAndFiscalPolicy/2.2.LandPaysForTheCity/` (qmd, bib, docx); overview 2.0, `NUMBERING.md`, `PAPERS.md` and the folder index updated — A
 - [x] 31 Oct 2026 — Tax book 8.5.3 retitled *Plucked! A guide to a fair, simple, efficient and politically feasible tax and benefits system* (was *Screwed?! Getting our future back with tax and benefit reform*): folder now `8.5.3.Plucked`, master `Plucked.qmd`/`.docx`/`.bib`; chapter files, overview 2.0, website pages and scripts, READMEs and `NUMBERING.md` updated; book text otherwise unchanged. Old `papers/Screwed.docx` must be deleted on the server by hand when deploying — A
 - [x] 31 Oct 2026 — *Plucked!* readable on the website chapter by chapter (`WEB_BOOKS` in `site_config.py`; pages generated from the master on every compile). Stephen to run `Compile-Website.bat` then `Push-Website.bat`; Push removes the old Screwed.docx itself — A
 - [x] 31 Oct 2026 — Papers renumbered to the section folders (`NUMBERING.md`): paper folders, overview files, citation keys (CFPB/StrettonWP), series lines, related-paper lists, decks and the research page now use the new numbers; each section has one `<N>.0.Overview` folder; section 8 renumbered 8.1–8.7; new overviews 2.0 (Rent Tax), 6.0 (modular upgrades) and 8.0; 5.0 and 7.0 rescoped; docx and decks re-rendered; website ready to deploy — A

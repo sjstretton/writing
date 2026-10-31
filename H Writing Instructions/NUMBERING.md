@@ -15,6 +15,7 @@ On 31 Oct 2026 (later the same day) papers 1.3 and 1.4 swapped places so that th
 | | 1.4 | Credit the Price Signal, Not the Payment (CBAM recognition) | 1.3 |
 | `2.OtherTaxAndFiscalPolicy` | 2.0 | Overview: Tax Rent, Not Effort (new) | – |
 | | 2.1 | Rent Tax | 1.4 |
+| | 2.2 | Let Land Pay for the City: property taxes, public land and land value capture for green urban infrastructure (new, 31 Oct 2026) | – |
 | `3.FinanceAndRisk` | 3.0 | Overview: Make Clean Power an Asset Class | 2.0 |
 | | 3.1 | Guarantee the Contract, Not the Debt (payment intermediary) | 2.1 |
 | | 3.2 | From Projects to Asset Classes | 2.2 |

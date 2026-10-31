@@ -7,7 +7,7 @@ author:
 date: "October 2026"
 version: "0.1"
 abstract: |
-  Governments that let capital and people move freely find it hard to tax mobile income at high rates, so they give up on high rates altogether. This section argues that the constraint binds only on the wrong base. Economic rent, the return above what an investor needs to stay, can be taxed heavily without driving anything away, because land cannot move and market power earned in a country's market is earned from its customers. The section's paper, Rent Tax, combines a land value tax above a household allowance with three corporate instruments that presume large firms hold market power: a high rate on profits above a normal return, a narrow destination-based tax on mobile rent-bearing sectors, and a sales tax with deductions for genuine local investment and employment. Longer and older treatments of tax and fiscal reform, including the book *Plucked!* and a note on India's legacy coal power contracts, are kept in section 8.
+  Governments that let capital and people move freely find it hard to tax mobile income at high rates, so they give up on high rates altogether. This section argues that the constraint binds only on the wrong base. Economic rent, the return above what an investor needs to stay, can be taxed heavily without driving anything away, because land cannot move and market power earned in a country's market is earned from its customers. The section's paper, Rent Tax, combines a land value tax above a household allowance with three corporate instruments that presume large firms hold market power: a high rate on profits above a normal return, a narrow destination-based tax on mobile rent-bearing sectors, and a sales tax with deductions for genuine local investment and employment. A second paper, Let Land Pay for the City, applies the land tax to fast-growing cities in developing countries: a recurrent land value tax and capture of the uplift from infrastructure can fund much of the transit and services those cities need, and because the tax rewards compact building it is also a green tax. Longer and older treatments of tax and fiscal reform, including the book *Plucked!* and a note on India's legacy coal power contracts, are kept in section 8.
 csl: https://www.zotero.org/styles/chicago-author-date
 format:
   docx: default
@@ -35,6 +35,10 @@ The design discriminates between rent and effort. In the paper's comparison, an 
 
 The paper is a sketch, written in April 2026, and has not yet been revised to the series standard. It has no brief and no deck.
 
+# Let land pay for the city (paper 2.2) {.unnumbered}
+
+The second paper applies the land half of the argument to the cities of developing countries. Urban infrastructure raises the value of the land it serves, yet developing countries collect property taxes worth 0.1 to 0.4 percent of GDP, against about 1 percent from recurrent property taxes alone in the OECD. The paper argues that a recurrent tax on land value, together with one-off capture of the uplift that infrastructure creates, can fund a large share of a growing city's trunk infrastructure. It explains how Hong Kong and Singapore used public land ownership to finance mass transit, argues that a property tax falling mainly on land is a green tax because it rewards compact building and makes transit viable, sets out a green development model for poor cities with its health benefits and planning needs, and gives best practice for a property tax and land value capture code. It is a first draft, written in October 2026.
+
 # Related work in section 8 {.unnumbered}
 
 Two pieces of related fiscal work are kept with the additional papers in section 8, because they are older, longer or not yet written up.
@@ -48,5 +52,6 @@ Two pieces of related fiscal work are kept with the additional papers in section
 | No. | Paper | Status |
 |---|---|---|
 | 2.1 | Taxing Rent, Not Effort: A Simple Design for Land and Corporate Taxation Consistent with Free Movement of Capital and People | Sketch, April 2026 |
+| 2.2 | Let Land Pay for the City: Property Taxes, Public Land and Land Value Capture to Fund Green Urban Infrastructure in Developing Countries | Working paper v0.1, October 2026 |
 
 : Table 1. Section 2 papers. Related work in section 8: *Plucked!* (8.5.3) and Stranded by Contract (8.1.1).

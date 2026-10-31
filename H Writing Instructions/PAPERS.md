@@ -27,6 +27,13 @@ Order of work. The reason column says why each paper is where it is.
 | 8 | 7.1 | The Excise-Fiscal Diagnostic: Reading an Excise System Against Its Externalities | paper v0.3 (30 Oct) | Companion paper to the analytics tools | Cut from the 24,800-word report (now v0.1); stylized example plus Sierra Leone and Liberia applications (diagnostic results, illustrative) |
 | 9 | 5.1–5.4, 6.2–6.4 | The CPAT papers (methods, CPAT-AI, validation, elasticities) and modular upgrades (CBAM tool, public investment, activity) | papers v0.1 (29 Oct) | Companion papers to the CPAT-AI repository | See the section 5 and 6 table below |
 
+### The tax-rent series (section 2)
+
+| No. | Paper | Status |
+|---|---|---|
+| 2.1 | Taxing Rent, Not Effort (land above an allowance; corporate rent) | sketch, April 2026 |
+| 2.2 | Let Land Pay for the City: Property Taxes, Public Land and Land Value Capture to Fund Green Urban Infrastructure in Developing Countries | working paper v0.1 (31 Oct), about 8,200 words; figures checked by three research passes; a few bibliography details still marked VERIFY in the `.bib` notes; no brief or deck yet |
+
 ### The finance-and-risk series (section 3)
 
 Plan: `C Policy and FInance/3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md`. 3.1 is the flagship.
@@ -86,7 +93,7 @@ Each area gets a short paper (3,000–5,000 words) that a newcomer can read firs
 |---|---|---|---|---|
 | 0.0 | *Climate Statecraft: The Main Results* | One page per area below; the through-line is making climate strategy work for finance ministries and development banks. | `8.0.Overview/8.PreviousVersions/6.0.CombinedOverview.docx`, `research.qmd` | idea |
 | 1.0 | Carbon Pricing in Open Economies | Source-based carbon pricing triggers a race to the bottom; separating a production feebate from a destination-based consumption charge allows a race to the top. | `1.0.OverviewClimateAndFiscalPolicy.docx`, 1.1–1.3 | draft (overview) |
-| 2.0 | Tax Rent, Not Effort | Tax the bases that cannot leave: land above a household allowance and the market power of large firms, so free movement of capital and people need not mean low rates. | `2.0.OverviewOtherTaxAndFiscalPolicy.qmd`, 2.1 | draft v0.1 (31 Oct) |
+| 2.0 | Tax Rent, Not Effort | Tax the bases that cannot leave: land above a household allowance and the market power of large firms, so free movement of capital and people need not mean low rates. Land value also pays for the city: a land tax plus capture of infrastructure uplift funds transit and is a green tax (2.2). | `2.0.OverviewOtherTaxAndFiscalPolicy.qmd`, 2.1, 2.2 | draft v0.1 (31 Oct) |
 | 3.0 | Make Clean Power an Asset Class | The cost of capital, not technology, prices clean power; remove payment risk at source with an intermediary, then turn projects into standard securities. | `3.0.OverviewMobilisingPrivateCapital.qmd`, 3.1–3.2 | draft v0.2 (29 Oct) |
 | 4.0 | Reward Governments, Not Projects | Reward governments with balances and guarantees they can borrow against, not cash transfers for unobservable counterfactuals. | `4.0.OverviewSovereignIncentives.qmd`, 4.1–4.3, proposal 1 | draft v0.2 (29 Oct) |
 | 5.0 | Models a Finance Ministry Can Audit | A model a ministry can use must be small enough to state on a few pages, built twice, tested against data and other models, and extended only where policy needs it. | `5.0.OverviewModelling.qmd`, 5.1–5.4 | draft v0.2 (29 Oct) |
