@@ -184,6 +184,11 @@ website:
               contents:
                 - text: "Working paper"
                   href: modelling/6-modular-upgrades/PublicInvestment/working-paper.qmd
+            - section: "6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT"
+              href: modelling/6-modular-upgrades/ActivityModelling/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: modelling/6-modular-upgrades/ActivityModelling/working-paper.qmd
             - section: "6.5 The Macro-Fiscal-Energy Scenario Tool"
               href: modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.qmd
               contents:

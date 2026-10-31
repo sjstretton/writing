@@ -34,11 +34,11 @@ Finance ministries use the Climate Policy Assessment Tool to see what a carbon p
 
 ## 6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT {#paper-6-4}
 
-*One Driver Layer So Four Climate Models Can Be Linked*
+*One Driver Layer So Four Climate Models Can Be Linked, With the Carbon-Price Response Counted Once*
 
-Every energy and emissions model starts from activity levels: how much electricity is used, how far people and goods travel, how many vehicles are on the road, how many tonnes of steel and cement are made. Four models used for climate-fiscal work build those levels in incompatible ways. The Climate Policy Assessment Tool grows fuel use with GDP and prices. SISEPUEDE grows physical activity with income and population but never with prices. A border-adjustment tool grows output of steel, aluminum, fertilizer and clinker with growth forecasts and a price response. The Future Technology Transformations models take demand as given. This paper maps each model's activity onto a common set of ten activities, sets out a single constant-elasticity rule driven by population, income per person and the cost of the energy service, and shows how the rule lets the four be linked without counting a price response twice. Under stylized growth of 1 percent in population and 2 percent in income per person, cars in use grow 64 percent in ten years while travel grows 41 percent.
+Finance ministries increasingly ask several climate models the same question, and the models disagree before any policy is applied, because each starts from different levels of activity: electricity used, distance traveled, vehicles on the road, tonnes of steel and cement made. This brief shows how four models used in climate-fiscal work (CPAT, SISEPUEDE, the CBAM Policy Tool and FTT) can share one set of drivers and one growth rule, so that their baselines agree. It sets out where a carbon price's effect on demand must be counted, and only once, and why every link needs a check that cars stay inside total travel.
 
-[Slides (pptx) →](../papers/Slides-ActivityModelling.pptx) · [Working paper (docx) →](../papers/ActivityModelling.docx)
+[Policy brief →](6-modular-upgrades/ActivityModelling/index.qmd) · [Working paper →](6-modular-upgrades/ActivityModelling/working-paper.qmd) · [Slides (pptx) →](../papers/Slides-ActivityModelling.pptx) · [Policy brief (docx) →](../papers/Brief-ActivityModelling.docx) · [Working paper (docx) →](../papers/ActivityModelling.docx)
 
 ## 6.5 The Macro-Fiscal-Energy Scenario Tool {#paper-6-5}
 

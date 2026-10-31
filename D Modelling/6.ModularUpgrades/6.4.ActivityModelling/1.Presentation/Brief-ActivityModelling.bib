@@ -1,0 +1,194 @@
+% Brief 6.4. Copied from the working paper's verified ../ActivityModelling.bib (31 Oct 2026) for exactly the keys the brief cites.
+
+@techreport{CFPB61, author={Stretton, Stephen J.}, title={Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price}, institution={Climate Fiscal Policy Briefs}, number={6.1}, year={2026}}
+
+@misc{CPATAIBugs,
+  author       = {{CPAT-AI Project}},
+  title        = {Legacy {CPAT} Bugs and Issues: {BUGS.md} and {ISSUES.md}, Register Version 1.1.0},
+  year         = {2026},
+  howpublished = {CPAT-AI repository, excel\_ai/core/BUGS.md and excel\_ai/core/ISSUES.md},
+  url          = {https://github.com/cpmodelai/cpat_ai/tree/main/excel_ai/core},
+  note         = {verified 31 Oct 2026 (commit 108f976): 231 legacy bugs (as in paper 5.1); issue I100 read (``Transport co-benefits use the engineer road model whatever TrModel'', Major, Replicated); issue I71 (population treated as income) as recorded in paper 5.1}
+}
+
+@article{DargayGately1999,
+  author  = {Dargay, Joyce and Gately, Dermot},
+  title   = {Income's Effect on Car and Vehicle Ownership, Worldwide: 1960--2015},
+  journal = {Transportation Research Part A: Policy and Practice},
+  volume  = {33},
+  number  = {2},
+  pages   = {101--138},
+  year    = {1999},
+  doi     = {10.1016/S0965-8564(98)00026-3},
+  note    = {verified 31 Oct 2026: Crossref record; abstract on IDEAS (26 countries, 1960--1992; income elasticities of car and vehicle ownership about 2.0 at low and middle incomes, falling toward zero near saturation)}
+}
+
+@misc{FTTStandAlone,
+  author       = {{Future Technology Transformations developers}},
+  title        = {{FTT\_StandAlone}: Future Technology Transformation Models in {Python}},
+  year         = {2026},
+  howpublished = {GitHub repository cpmodel/FTT\_StandAlone, commit 896a3ce (28 October 2026)},
+  url          = {https://github.com/cpmodel/FTT_StandAlone},
+  note         = {verified 31 Oct 2026 from a clone: README (modules Power, Heat, Industrial heat, Transport, Freight, Hydrogen under review; data years power 2022, heat 2020, transport 2022, freight 2023; E3ME ``informs some of the inputs''; steel only as a reference to Vercoulen et al. 2023); settings.ini (enabled FTT-P, FTT-H, FTT-Tr, FTT-Fr); Utilities/titles/classification\_titles.csv (71 regions); VariableListing.csv (MEWDX, RFLT, RVKM, RFLZ, RHUD); Inputs/S0 (MEWDX electricity equals summed MEWG in 2022 for BE, DE, US, IN, SA; RFLT zero in 2022 for 21 of 71 regions; no industrial heat inputs); ftt\_source/Freight/ftt\_fr\_main.py (tonne-km from vehicles, mileage and load); sector\_coupling/electricity\_demand.py (change against S0 baseline added to MEWDX); docs/source/mathematics.rst (heterogeneous agents, pairwise choice, logistic substitution)}
+}
+
+@article{Goodwin2004,
+  author  = {Goodwin, Phil and Dargay, Joyce and Hanly, Mark},
+  title   = {Elasticities of Road Traffic and Fuel Consumption with Respect to Price and Income: A Review},
+  journal = {Transport Reviews},
+  volume  = {24},
+  number  = {3},
+  pages   = {275--292},
+  year    = {2004},
+  doi     = {10.1080/0144164042000181725},
+  note    = {verified 31 Oct 2026: Crossref record; IDEAS abstract (review of the effects of price and income on fuel consumption, traffic, fuel efficiency and car ownership). Publisher page and full text blocked; the figures used (10 percent real fuel price rise: traffic -1 percent within a year, -3 percent in the longer run; vehicle ownership -1.0 and -2.5 percent; income: ownership rises more than traffic) read in Litman (2026), pp. on fuel prices and vehicle ownership}
+}
+
+@misc{IMFWEO,
+  author       = {{International Monetary Fund}},
+  title        = {World Economic Outlook Database},
+  year         = {2026},
+  howpublished = {Updated with each World Economic Outlook; latest edition at the time of writing: World Economic Outlook Update, July 2026},
+  url          = {https://www.imf.org/en/Publications/WEO},
+  note         = {verified 31 Oct 2026: WEO publications page read (latest listed: Update of 8 July 2026)}
+}
+
+@techreport{Kalra2023,
+  author      = {Kalra, Nidhi and Molina-P{\'e}rez, Edmundo and Syme, James and Esteves, Fernando and Cort{\'e}s, Hermilio and Rodr{\'\i}guez-Cervantes, Mateo Tonatiuh and Espinoza-Ju{\'a}rez, V{\'\i}ctor Manuel and Jaramillo, Marcela and Baron, Richard and Alatorre, Claudio and Butazzoni, Marco and Vogt-Schilb, Adrien},
+  title       = {The Benefits and Costs of Reaching Net Zero Emissions in {Latin America} and the {Caribbean}},
+  institution = {Inter-American Development Bank},
+  address     = {Washington, DC},
+  year        = {2023},
+  doi         = {10.18235/0005330},
+  note        = {verified 31 Oct 2026: Crossref record (7 Dec 2023); author list and abstract on IDEAS (RePEc:hal:journl:halshs-04458161): introduces ``SiSePuede'', an open-source toolkit estimating costs, benefits and emission cuts of decarbonization actions; net-zero before 2050 possible with about USD 2.7 trillion net benefits, median about USD 1 trillion across scenarios. The IDB publication page was blocked; the monograph number in v0.1 could not be confirmed and is dropped}
+}
+
+@article{Mercure2012,
+  author  = {Mercure, Jean-Fran{\c{c}}ois},
+  title   = {{FTT:Power}: A Global Model of the Power Sector with Induced Technological Change and Natural Resource Depletion},
+  journal = {Energy Policy},
+  volume  = {48},
+  pages   = {799--811},
+  year    = {2012},
+  doi     = {10.1016/j.enpol.2012.06.025},
+  note    = {verified 31 Oct 2026: Crossref record; abstract on IDEAS as recorded in paper 5.1 (``a dynamic coupled set of logistic differential equations''); the FTT README cites it for FTT:Power}
+}
+
+@misc{SISEPUEDECode,
+  author       = {Syme, James and others},
+  title        = {{SISEPUEDE}: Simulating Sectoral Pathways and Uncertainty Exploration for Decarbonization},
+  year         = {2026},
+  howpublished = {GitHub repository, commit 9bf976c (23 September 2026), with documentation in docs/source},
+  url          = {https://github.com/jcsyme/sisepuede},
+  note         = {verified 31 Oct 2026 from a clone: utilities/_toolbox.py project\_growth\_scalar\_from\_elasticity (``standard'': growth 1 + r e; ``log'': (1 + r)\^{}e); models/energy\_consumption.py (passenger-km per capita to GDP per capita, two categories; megatonne-km to GDP; household heat and appliance energy per household to GDP per capita; demand scalars for transport, industrial energy, household heat and appliances); models/ippu.py (production to GDP); no price elasticity anywhere in the code; docs/source/energy\_production.rst (NemoMod, Stockholm Environment Institute); mathdoc\_energy.rst (losses and exports in electricity demand); ref/examples/input\_data\_frame.csv (Costa Rica from 2015: pkm elasticities 1.12 and 2.64, freight 1.0, held to 2050; industrial and household elasticities move to 1.0 by period 35; 2025 values cement 0.62, metals 0.75, chemicals -0.25, household heat 0.08)}
+}
+
+@article{SchaferVictor2000,
+  author  = {Sch{\"a}fer, Andreas and Victor, David G.},
+  title   = {The Future Mobility of the World Population},
+  journal = {Transportation Research Part A: Policy and Practice},
+  volume  = {34},
+  number  = {3},
+  pages   = {171--205},
+  year    = {2000},
+  doi     = {10.1016/S0965-8564(98)00071-8},
+  note    = {verified 31 Oct 2026: Crossref record; abstract on IDEAS (fixed travel money and time budgets; ``mobility rises nearly in proportion with income''; travelers shift to faster modes)}
+}
+
+@article{Schmidt2006,
+  author  = {Schmidt, Cristiane Alkmin Junqueira and Lima, Marcos Andr{\'e} Mendes de},
+  title   = {A Perda do Peso Morto e a Elasticidade-Pre{\c{c}}o da Demanda do Setor Sider{\'u}rgico no {Brasil}},
+  journal = {Estudos Econ{\^o}micos},
+  volume  = {36},
+  number  = {1},
+  pages   = {127--147},
+  year    = {2006},
+  doi     = {10.1590/S0101-41612006000100006},
+  note    = {verified 31 Oct 2026: Crossref record and abstract (price elasticity of steel demand in Brazil of -0.14)}
+}
+
+@unpublished{StrettonWP51,
+  author = {Stretton, Stephen J.},
+  title = {The {CPAT} Mitigation Module: Methods in Brief},
+  note = {Working paper 5.1},
+  year = {2026}
+}
+
+@unpublished{StrettonWP54,
+  author = {Stretton, Stephen J.},
+  title = {Are {CPAT}'s Price Elasticities Right? {A} Check Against the Evidence},
+  note = {Working paper 5.4},
+  year = {2026}
+}
+
+@unpublished{StrettonWP62,
+  author = {Stretton, Stephen J.},
+  title = {The {CBAM} Policy Tool},
+  note = {Working paper 6.2},
+  year = {2026}
+}
+
+@unpublished{StrettonWP63,
+  author = {Stretton, Stephen J.},
+  title = {Public Investment in {CPAT}: Investment Needs and the Efficiency of Public Spending},
+  note = {Working paper 6.3},
+  year = {2026}
+}
+
+@techreport{UNWPP2024,
+  author      = {{United Nations, Department of Economic and Social Affairs, Population Division}},
+  title       = {World Population Prospects 2024: Summary of Results},
+  institution = {United Nations},
+  type        = {UN DESA/POP/2024/TR/NO.9},
+  address     = {New York},
+  year        = {2024},
+  url         = {https://population.un.org/wpp/},
+  note        = {verified 31 Oct 2026: UN Digital Library and UN DESA publication records (released 11 July 2024; twenty-eighth edition; 237 countries or areas)}
+}
+
+@article{Vercoulen2023,
+  author  = {Vercoulen, Pim and Lee, Soocheol and Han, Xu and Zhang, Wendan and Cho, Yongsung and Pang, Jun},
+  title   = {Carbon-Neutral Steel Production and Its Impact on the Economies of {China}, {Japan}, and {Korea}: A Simulation with {E3ME-FTT:Steel}},
+  journal = {Energies},
+  volume  = {16},
+  number  = {11},
+  pages   = {4498},
+  year    = {2023},
+  doi     = {10.3390/en16114498},
+  note    = {verified 31 Oct 2026: Crossref record (six authors, first names from Crossref; v0.1 had Wenwen Zhang, corrected to Wendan); title names E3ME-FTT:Steel; the FTT README lists it as a reference, with no steel module in the standalone package}
+}
+
+@techreport{black2023cpat,
+  author      = {Black, Simon and Parry, Ian and Mylonas, Victor and Vernon, Nate and Zhunussova, Karlygash},
+  title       = {The {IMF}-{World Bank} Climate Policy Assessment Tool ({CPAT}): A Model to Help Countries Mitigate Climate Change},
+  institution = {International Monetary Fund},
+  type        = {IMF Working Paper},
+  number      = {23/128},
+  address     = {Washington, DC},
+  year        = {2023},
+  doi         = {10.5089/9798400242342.001},
+  note        = {verified 31 Oct 2026: Crossref record (IMF Working Papers 2023/128, June 2023; Black, Parry, Mylonas, Vernon-Lin, Zhunussova). Entry and content check copied from paper 5.1's verified bib (text read on the IMF site: coverage and uses)}
+}
+
+@techreport{deJong2010,
+  author      = {de Jong, Gerard and Schroten, Arno and van Essen, Huib and Otten, Matthijs and Bucci, Pietro},
+  title       = {Price Sensitivity of {European} Road Freight Transport: Towards a Better Understanding of Existing Results},
+  institution = {Significance and CE Delft, for Transport \& Environment},
+  type        = {Report},
+  number      = {9012-1},
+  address     = {Delft},
+  year        = {2010},
+  url         = {https://cedelft.eu/publications/price-sensitivity-of-road-freight-transport-towards-a-better-understanding-of-existing-results/},
+  note        = {verified 31 Oct 2026: PDF read (June 2010, report 9012-1); summary and Table 9, ``consistent set of best-guess values'': fuel price elasticity -0.3 (fuel use), -0.2 (vehicle-km), -0.1 (tonne-km); long run, long-distance road freight}
+}
+
+@article{vanRuijven2016,
+  author  = {van Ruijven, Bas J. and van Vuuren, Detlef P. and Boskaljon, Willem and Neelis, Maarten L. and Saygin, Deger and Patel, Martin K.},
+  title   = {Long-Term Model-Based Projections of Energy Use and {CO2} Emissions from the Global Steel and Cement Industries},
+  journal = {Resources, Conservation and Recycling},
+  volume  = {112},
+  pages   = {15--36},
+  year    = {2016},
+  doi     = {10.1016/j.resconrec.2016.04.016},
+  note    = {verified 31 Oct 2026: Crossref record; abstract on IDEAS (under SSP2 without climate policy, steel and cement consumption rises rapidly over the next few decades and then stabilizes). A corrigendum exists (vol. 125, 2017)}
+}

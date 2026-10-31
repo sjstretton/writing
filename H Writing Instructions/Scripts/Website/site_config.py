@@ -98,6 +98,7 @@ WEB_PAPERS = [
     "6.1.PolicyEquivalentCarbonPriceAndCES",
     "6.2.CBAMPolicyTool",
     "6.3.PublicInvestment",
+    "6.4.ActivityModelling",
     "6.5.MacroFiscalEnergyScenarioTool",
 ]
 

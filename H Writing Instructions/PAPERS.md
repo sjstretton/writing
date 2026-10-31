@@ -68,7 +68,7 @@ Plan: `D Modelling/5.Modelling/5.0.Overview/SeriesArchitecture.md`. One medium-l
 | 5.4 | Are CPAT's Price Elasticities Right? A Check Against the Evidence (working paper v0.2, first brief and deck, 31 Oct; on the web) |
 | 6.2 | The CBAM Policy Tool (working paper v0.2, brief CFPB 6.2 v1.0 and 10-slide deck, 31 Oct; peer-reviewed: urea and ammonium nitrate factors corrected, Egypt on Eurostat volumes, now €793m at default values and €480m with verified data; on the web. The tool workbook still needs these corrections (v1.3)) |
 | 6.3 | Public Investment in CPAT: Investment Needs and the Efficiency of Public Spending (working paper v0.2, brief CFPB 6.3 v1.0 "Price the Capital, Then Test the Budget" and 10-slide deck, 31 Oct; peer-reviewed, every citation checked; on the web) |
-| 6.4 | Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT |
+| 6.4 | Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT (working paper v0.2, brief CFPB 6.4 v1.0 and 10-slide deck, 31 Oct; peer-reviewed against the public CPAT-AI, SISEPUEDE and FTT code; every citation checked; on the web) |
 | 6.5 | The Macro-Fiscal-Energy Scenario Tool (working paper v0.2, brief CFPB 6.5 v1.0 and 10-slide deck, 31 Oct; peer-reviewed, Kenya checked against the published debt analysis; on the web) |
 | 7.1 | The Excise-Fiscal Diagnostic |
 | 7.2 | A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis |

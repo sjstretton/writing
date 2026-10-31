@@ -1,50 +1,265 @@
 {
-  "series": "CPAT Companion Paper No. 6.4",
+  "series": "Climate Fiscal Policy Brief No. 6.4 · October 2026",
   "title": "Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT",
-  "subtitle": "One driver layer so four climate models can be linked",
-  "message": "Four models used for climate-fiscal work build activity in incompatible ways. One constant-elasticity rule over ten activities, driven by population, income and the cost of the energy service, puts them on one baseline and counts the price response once.",
-  "problem": {
-    "title": "Four models, four baselines",
-    "stats": [
-      {
-        "value": "4",
-        "label": "models with incompatible activity drivers"
+  "slides": [
+    {
+      "type": "title",
+      "title": "Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT",
+      "subtitle": "Put four climate models on one baseline, and count the carbon price once",
+      "message": "Linked climate models disagree before any policy is applied. One driver layer over ten activities puts them on one baseline, applies the carbon price's effect on demand exactly once, and checks that cars stay inside travel.",
+      "author": "Stephen J. Stretton · writing in a personal capacity",
+      "notes": "Companion to the public CPAT-AI repository. Every claim about the models was checked against their public code on 31 October 2026."
+    },
+    {
+      "type": "stats",
+      "title": "Four models, four baselines, and a carbon price counted once, twice or not at all",
+      "stats": [
+        {
+          "value": "4",
+          "label": "models a ministry might link, each growing activity from different drivers"
+        },
+        {
+          "value": "2 of 4",
+          "label": "models whose demand never responds to price (SISEPUEDE, FTT)"
+        },
+        {
+          "value": "3",
+          "label": "descriptions of road transport inside CPAT, which need not agree"
+        },
+        {
+          "value": "21 of 71",
+          "label": "FTT regions with no car fleet data"
+        }
+      ],
+      "text": "Two models can disagree about a carbon tax simply because they disagree about how much driving or steelmaking there would have been without it.",
+      "source": "Working paper 6.4, section 2; CPAT-AI, SISEPUEDE and FTT public code (31 Oct 2026)."
+    },
+    {
+      "type": "table",
+      "title": "Each model builds activity its own way, and only two let prices change demand",
+      "header": [
+        "Model",
+        "What drives activity",
+        "Demand responds to price?"
+      ],
+      "widths": [
+        1.8,
+        5.3,
+        1.8
+      ],
+      "rows": [
+        [
+          "CPAT",
+          "Fuel use with total GDP and prices; population not separated from income",
+          "Yes"
+        ],
+        [
+          "SISEPUEDE",
+          "Travel, freight, household energy, industrial output with income and population",
+          "No"
+        ],
+        [
+          "CBAM Policy Tool",
+          "Output of covered goods with growth forecasts; a domestic carbon price cuts it",
+          "Yes"
+        ],
+        [
+          "FTT",
+          "Demand is a fixed input; prices move technology shares only",
+          "No"
+        ]
+      ],
+      "note": "Mapped onto ten common activities: electricity, passenger travel, cars, km per car, road freight, vans and trucks, home heat, steel and aluminum, cement and clinker, fertilizers.",
+      "source": "Working paper 6.4, Table 1. CPAT: World Bank and IMF; SISEPUEDE: RAND and IDB (Kalra et al. 2023); CBAM Policy Tool: paper 6.2; FTT: Cambridge Econometrics and Exeter (FTT_StandAlone)."
+    },
+    {
+      "type": "points",
+      "title": "One rule grows every activity from one forecast and one base year",
+      "points": [
+        {
+          "lead": "Three drivers:",
+          "text": "population, income per person and the cost of the energy service, each with a fixed elasticity."
+        },
+        {
+          "lead": "Activities that follow people",
+          "text": "(travel, households, cars) grow one-for-one with population; those that follow the economy grow with total GDP."
+        },
+        {
+          "lead": "One forecast for every model:",
+          "text": "IMF World Economic Outlook for GDP, UN World Population Prospects for population."
+        },
+        {
+          "lead": "Each model keeps its own data",
+          "text": "and takes the layer's growth from its own last data year."
+        }
+      ],
+      "source": "Working paper 6.4, section 4."
+    },
+    {
+      "type": "points",
+      "title": "Where the models' own values fail against the evidence, the layer replaces them",
+      "points": [
+        {
+          "lead": "Travel:",
+          "text": "SISEPUEDE's example grows regional travel at 2.64 times income growth with no ceiling; the evidence says mobility rises roughly in proportion with income (Schafer and Victor 2000)."
+        },
+        {
+          "lead": "Materials:",
+          "text": "its example moves every industrial elasticity to 1 by 2050; steel and cement demand rise for decades, then level off (van Ruijven et al. 2016)."
+        },
+        {
+          "lead": "Cars:",
+          "text": "ownership grows about twice as fast as income at low and middle incomes, then saturates (Dargay and Gately 1999)."
+        },
+        {
+          "lead": "Electricity:",
+          "text": "CPAT's elasticity of 0.8 becomes 0.92 at $3,000 per person and 0.48 above $22,000."
+        }
+      ],
+      "source": "Working paper 6.4, Table 2; SISEPUEDE example data; CPAT-AI elasticity table and income factor."
+    },
+    {
+      "type": "table",
+      "title": "Count the carbon price's effect on demand exactly once",
+      "header": [
+        "Model",
+        "Has its own price response?",
+        "What the layer passes"
+      ],
+      "widths": [
+        2.2,
+        2.4,
+        4.3
+      ],
+      "rows": [
+        [
+          "CPAT",
+          "Yes",
+          "Baseline only; road vehicles too, or the response doubles"
+        ],
+        [
+          "CBAM Policy Tool",
+          "Yes",
+          "Nothing for prices; it sends product output back"
+        ],
+        [
+          "SISEPUEDE",
+          "No",
+          "Activity with the layer's price response"
+        ],
+        [
+          "FTT",
+          "No",
+          "Activity with the layer's price response"
+        ]
+      ],
+      "note": "A 20% rise in the energy cost of driving cuts car use about 5% (4.5% fewer cars, 0.9% less driving per car); a 20% rise for freight cuts tonne-km about 2%.",
+      "source": "Working paper 6.4, Proposition 2 and Table 3; Goodwin, Dargay and Hanly (2004); de Jong et al. (2010)."
+    },
+    {
+      "type": "figure",
+      "title": "Under stylized growth, cars in use rise 64% in ten years and travel 35%",
+      "image": "figures/fig_activity.png",
+      "caption": "Change over ten years; population +1% and income per person +2% a year (stylized).",
+      "points": [
+        {
+          "lead": "Cars outrun travel:",
+          "text": "the car share of travel rises by about a quarter in a decade."
+        },
+        {
+          "lead": "Population matters",
+          "text": "where income elasticity is not 1: up to 0.4 points a year (cement)."
+        },
+        {
+          "lead": "Heavy industry:",
+          "text": "output elasticities are judgment values."
+        }
+      ],
+      "source": "Working paper 6.4, Table 3 (2.Source/activity_layer.py)."
+    },
+    {
+      "type": "points",
+      "title": "Left unchecked, car travel overtakes all travel, even with a saturating ownership curve",
+      "points": [
+        {
+          "lead": "Constant elasticities:",
+          "text": "a 30% car share of passenger travel reaches 100% in about 56 years at 2% income growth."
+        },
+        {
+          "lead": "CPAT's Gompertz ownership curve",
+          "text": "does not prevent it: the crossing still comes in year 54, at 363 vehicles per 1,000."
+        },
+        {
+          "lead": "The fix:",
+          "text": "check every year that cars × km per car × occupancy stay below total travel, and let km per car adjust."
+        }
+      ],
+      "source": "Working paper 6.4, Proposition 3 and Appendix A."
+    },
+    {
+      "type": "points",
+      "title": "The data gaps bind as hard as the method",
+      "points": [
+        {
+          "lead": "FTT:",
+          "text": "no car fleet data for 21 of 71 regions (Nigeria, South Africa, Pakistan and Kenya among them); industrial heat ships without data; steel only inside E3ME-FTT."
+        },
+        {
+          "lead": "SISEPUEDE:",
+          "text": "one public example country; country calibrations are not public."
+        },
+        {
+          "lead": "CPAT:",
+          "text": "co-benefits always use the engineering road model's driving, whatever road model is selected (issue I100)."
+        },
+        {
+          "lead": "The strongest objection,",
+          "text": "that a rule-based link is second-best to solving models together: none of the four was built for that, and written rules are easier to audit."
+        }
+      ],
+      "source": "FTT_StandAlone inputs (commit 896a3ce); SISEPUEDE repository; CPAT-AI issue register v1.1.0."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the paper shows",
+        "items": [
+          {
+            "lead": "One layer:",
+            "text": "ten activities, one rule, one forecast, one base year."
+          },
+          {
+            "lead": "Price once:",
+            "text": "in SISEPUEDE and FTT through the layer; in CPAT and the CBAM tool, not."
+          },
+          {
+            "lead": "Cars inside travel:",
+            "text": "+64% against +35% in ten years; check every year."
+          },
+          {
+            "lead": "Gaps:",
+            "text": "FTT's missing car data; private calibrations; industrial elasticities."
+          }
+        ]
       },
-      {
-        "value": "3",
-        "label": "descriptions of road transport inside CPAT, not consistent"
-      },
-      {
-        "value": "21/71",
-        "label": "FTT regions without car data, including Kenya"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {
+            "lead": "Finance ministries:",
+            "text": "ask whether models share drivers and where the price response sits."
+          },
+          {
+            "lead": "Teams running the models:",
+            "text": "link through one layer; select CPAT's road model whenever co-benefits are reported."
+          },
+          {
+            "lead": "Developers and CPAT-AI:",
+            "text": "fill FTT's car data, publish calibrations, run one country through all four."
+          }
+        ]
       }
-    ],
-    "text": "Linked naively, the models give a ministry four GDP paths and a carbon price whose demand response is counted once, twice or not at all. SISEPUEDE and FTT have no price response; CPAT has one for every fuel."
-  },
-  "mechanism": {
-    "title": "Cars grow much faster than travel",
-    "image": "figures/fig_activity.png",
-    "imageWidth": 5.6,
-    "imageHeight": 2.69,
-    "caption": "Stylized: population +1% and income per person +2% a year for ten years.",
-    "points": [
-      "Ten activities, one rule, one base year, one set of forecasts.",
-      "Apply the price term only where the receiving model has none.",
-      "Cap the vehicle chain so car travel stays inside total travel."
-    ]
-  },
-  "action": {
-    "title": "Link the models with one layer",
-    "results": [
-      "A 20% rise in driving cost cuts car use about 5%.",
-      "Population exponent moves cement and electricity by a few percent.",
-      "Heavy-industry output elasticities are judgment values."
-    ],
-    "todo": [
-      "Give every model one GDP and population forecast.",
-      "Splice the layer onto each model's own data.",
-      "Unify CPAT's road transport.",
-      "Run one country through all four models."
-    ]
-  }
+    }
+  ]
 }

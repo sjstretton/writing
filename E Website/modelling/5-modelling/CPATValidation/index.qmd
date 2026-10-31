@@ -95,7 +95,7 @@ lightbox: auto
 
 **Trust comparisons more than levels.** When two policies run on the same baseline, errors in the baseline largely cancel. "Policy A cuts twice as much as policy B" is more reliable than "policy A cuts 29 percent".
 
-**Check the elasticities where the result depends on one sector.** Results driven by household electricity, services or road fuels deserve a check against national evidence. Road transport needs extra care: CPAT describes it in three ways that are not consistent with each other, and no published check compares them ([working paper, where CPAT fits](working-paper.qmd#sec-fit); [Brief 6.4](../../../modelling/6-modular-upgrades.qmd#paper-6-4)).
+**Check the elasticities where the result depends on one sector.** Results driven by household electricity, services or road fuels deserve a check against national evidence. Road transport needs extra care: CPAT describes it in three ways that are not consistent with each other, and no published check compares them ([working paper, where CPAT fits](working-paper.qmd#sec-fit); [Brief 6.4](../../../modelling/6-modular-upgrades/ActivityModelling/index.qmd)).
 
 **Compare the baseline with the national inventory before using it.** A break in the inventory, as in Egypt in 2022, can leave the whole baseline too low or too high.
 
@@ -115,7 +115,7 @@ lightbox: auto
 - [No. 5.2](../../../modelling/5-modelling/CPATAIImplementation/index.qmd): rebuilding CPAT as a transparent, testable tool.
 - [No. 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd): whether CPAT's price elasticities are right.
 - [No. 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, the yardstick for comparing policies [@CFPB61].
-- [No. 6.4](../../../modelling/6-modular-upgrades.qmd#paper-6-4): activity levels across CPAT and other models, including road transport.
+- [No. 6.4](../../../modelling/6-modular-upgrades/ActivityModelling/index.qmd): activity levels across CPAT and other models, including road transport.
 - The [working paper](working-paper.qmd) behind this brief: every table, source and recomputation.
 
 # Downloads {.unnumbered}
