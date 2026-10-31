@@ -9,9 +9,9 @@ format:
 
 This research portfolio focuses on climate policy, climate finance, applied modelling, taxation, and sovereign incentives. The common thread is practical climate statecraft: making climate strategy operational for finance ministries, multilateral development banks, and country teams through better models, diagnostics, policy instruments, and financing structures.
 
-# 1. Climate and Fiscal Policy: carbon pricing in open economies
+# 1. Carbon Pricing: carbon pricing in open economies
 
-Carbon prices stay low in open economies because one instrument does two jobs: it pushes producers to cut emissions per unit of output, and it charges for the carbon in what the economy consumes, so it falls on exports and spares imports. The series argues that production and consumption should be priced separately: production intensity with a revenue-neutral feebate, consumption with a destination-based charge through VAT and a forward obligation on fuel suppliers, and both measured on one carbon-price-equivalent scale. Paper 1.1 sets out the architecture; the others carry the detail. Each paper comes as a short policy brief in the *Climate Fiscal Policy Briefs* series and a longer working paper. [Section overview →](papers/OverviewClimateAndFiscalPolicy.docx) · [Series slides →](papers/Slides-ClimateAndFiscalPolicy.pptx)
+Carbon prices stay low in open economies because one instrument does two jobs: it pushes producers to cut emissions per unit of output, and it charges for the carbon in what the economy consumes, so it falls on exports and spares imports. The series argues that production and consumption should be priced separately: production intensity with a revenue-neutral feebate, consumption with a destination-based charge through VAT and a forward obligation on fuel suppliers, and both measured on one carbon-price-equivalent scale (paper 6.1, in section 6). Paper 1.1 sets out the architecture; the others carry the detail. Each paper comes as a short policy brief in the *Climate Fiscal Policy Briefs* series and a longer working paper. [Section overview →](papers/OverviewClimateAndFiscalPolicy.docx) · [Series slides →](papers/Slides-ClimateAndFiscalPolicy.pptx)
 
 ### 1.1 Price Production and Consumption Separately
 
@@ -37,75 +37,79 @@ The EU's Carbon Border Adjustment Mechanism cuts an importer's charge by the car
 
 [Policy brief (Climate Fiscal Policy Brief No. 1.3) →](papers/Brief-IronSteelCBAM.docx) · [Working paper →](papers/IronSteelCBAM.docx) · [Slides →](papers/Slides-IronSteelCBAM.pptx)
 
-### 1.6 Carbon Consumption Tax
+### 1.4 Carbon Consumption Tax
 
 *A carbon component in VAT and a forward obligation on energy suppliers*
 
 The EU prices the carbon its factories and power plants emit but barely prices the carbon in what Europeans buy, much of it emitted abroad. A carbon component of VAT charges every good consumed in the EU, imported or domestic, for its embodied carbon while the value component of VAT falls; exports are zero-rated and imports start on generous, rebuttable default intensities. A legal obligation announced a decade ahead makes the few large suppliers of road and heating fuel pay for the carbon they sell.
 
-[Policy brief (Climate Fiscal Policy Brief No. 1.6) →](papers/Brief-CarbonConsumptionTax.docx) · [Working paper →](papers/CarbonConsumptionTax.docx) · [Slides →](papers/Slides-CarbonConsumptionTax.pptx)
+[Policy brief (Climate Fiscal Policy Brief No. 1.4) →](papers/Brief-CarbonConsumptionTax.docx) · [Working paper →](papers/CarbonConsumptionTax.docx) · [Slides →](papers/Slides-CarbonConsumptionTax.pptx)
 
-### 1.7 Measure Carbon Pricing by the Emissions It Cuts
+# 2. Other Tax and Fiscal Policy: tax rent, not effort
 
-*The Total Effective Carbon Price: one carbon-tax equivalent for any mix of taxes, subsidies and standards*
+Free movement of capital and people makes high tax rates on mobile income hard to sustain, so governments give up on high rates. The constraint binds only on the wrong base. Economic rent, from land that cannot move and market power earned from a country's own customers, can be taxed heavily without driving anything away. Longer and older work on tax and fiscal reform, including the book *Screwed?!*, is under More papers and books. [Section overview →](papers/OverviewOtherTaxAndFiscalPolicy.docx)
 
-Countries cut emissions with taxes, subsidies, standards and mandates, yet standard metrics add up explicit prices per tonne, so a clean-fuel standard or a revenue-neutral feebate scores zero. The Total Effective Carbon Price is the single economy-wide carbon tax that would cut emissions by as much as the actual policy mix, with each instrument weighted by how strongly emissions respond. Crediting, border recognition and country diagnostics can all use it.
+### 2.1 Taxing Rent, Not Effort
 
-[Policy brief (Climate Fiscal Policy Brief No. 1.7) →](papers/Brief-PolicyEquivalentCarbonPriceAndCES.docx) · [Working paper →](papers/PolicyEquivalentCarbonPriceAndCES.docx) · [Slides →](papers/Slides-PolicyEquivalentCarbonPriceAndCES.pptx)
+*A simple design for land and corporate taxation consistent with free movement of capital and people*
 
-# 2. Finance and Risk: making clean power an asset class
+A tax design that reaches high effective rates on economic rent while keeping capital and people free to move: a reverse wealth tax on land, with an allowance below a threshold and a land value tax above it, and a corporate package that presumes large firms hold market power, taxing supernormal profits, mobile rent-bearing sectors and sales with deductions for genuine local presence.
+
+[Working paper →](papers/RentTax.docx)
+
+# 3. Finance and Risk: making clean power an asset class
 
 Clean power in developing countries is cheap to build and expensive to finance, because investors price risks the project cannot control. The series removes payment risk at its source with a payment intermediary, then turns projects into a few standard securities, each held by the investor who prices its risk most cheaply. Each paper comes as a short policy brief in the *Climate Fiscal Policy Briefs* series and a longer working paper. [Section overview →](papers/OverviewMobilisingPrivateCapital.docx) · [Series slides →](papers/Slides-FinanceAndRisk.pptx)
 
-### 2.1 Guarantee the Contract, Not the Debt
+### 3.1 Guarantee the Contract, Not the Debt
 
 *A payment intermediary for clean power*
 
 Solar and wind plants are cheap to build in most developing countries but expensive to finance, because lenders price the risk that a state-owned distribution company will not pay for the power. This paper proposes a payment intermediary facility that buys power under one standard contract, pays generators in full and on time whatever the distributor does, and recovers arrears itself, behind a guarantee waterfall agreed in advance. In a stylized calibration the offtaker premium adds about 11 percent to the solar tariff; guaranteeing the contract removes all of it and saves about five dollars per dollar of the guarantor's expected cost, while guaranteeing project debt saves less than it costs. India's Solar Energy Corporation shows that the design works, and its distributors' arrears show that it must come with utility reform. The state's exposure becomes smaller, contingent and contracted, but it does not vanish.
 
-[Policy brief (Climate Fiscal Policy Brief No. 2.1) →](papers/Brief-ClimateFinanceIntermediationForCleanPower.docx) · [Working paper →](papers/ClimateFinanceIntermediationForCleanPower.docx) · [Slides →](papers/Slides-ClimateFinanceIntermediationForCleanPower.pptx)
+[Policy brief (Climate Fiscal Policy Brief No. 3.1) →](papers/Brief-ClimateFinanceIntermediationForCleanPower.docx) · [Working paper →](papers/ClimateFinanceIntermediationForCleanPower.docx) · [Slides →](papers/Slides-ClimateFinanceIntermediationForCleanPower.pptx)
 
-### 2.2 From Projects to Asset Classes
+### 3.2 From Projects to Asset Classes
 
 *Two-stage finance and synthetic sovereign bonds for clean power*
 
 Clean power projects in developing countries are financed one at a time, on bespoke terms, by investors who price construction, payment, currency and sovereign risk together. This paper splits each project at commissioning: development banks finance construction against a contingent purchase contract, and completed plants are pooled and refinanced through first-loss equity, a thin mezzanine and a senior synthetic sovereign bond co-guaranteed by highly rated sovereigns. A one-factor portfolio model shows that 5 to 10 percent subordination makes the senior bond near-AAA at plausible default correlations, and that refinancing cuts the levelized cost of solar power by about a quarter. Where there is no contract to guarantee, as for transmission, a tiered and conditional bond guarantee plays the same role.
 
-[Policy brief (Climate Fiscal Policy Brief No. 2.2) →](papers/Brief-CleanPowerAssetClasses.docx) · [Working paper →](papers/CleanPowerAssetClasses.docx) · [Slides →](papers/Slides-CleanPowerAssetClasses.pptx)
+[Policy brief (Climate Fiscal Policy Brief No. 3.2) →](papers/Brief-CleanPowerAssetClasses.docx) · [Working paper →](papers/CleanPowerAssetClasses.docx) · [Slides →](papers/Slides-CleanPowerAssetClasses.pptx)
 
-# 3. Sovereign Incentives: reward governments, not projects
+# 4. Sovereign Incentives: reward governments, not projects
 
-Cutting emissions pays off globally while the costs fall on national governments, so incentives for national climate policy must come from outside, and cash transfers on the needed scale are politically impossible. The series rewards governments with cheaper borrowing instead: a guarantee is worth the full spread to the borrower but costs its provider only expected loss, so on the development banks' own sovereign loss record each dollar of donor cost delivers about 80 dollars of incentive. That record reflects the banks' preferred-creditor status, which a new facility might not inherit, so the papers also report a stress case, in which each dollar delivers 2.7. Papers 3.1 and 3.2 are the flagships. Each paper comes as a short policy brief in the *Climate Fiscal Policy Briefs* series and a longer working paper. [Section overview →](papers/OverviewSovereignIncentives.docx) · [Series slides →](papers/Slides-SovereignIncentives.pptx)
+Cutting emissions pays off globally while the costs fall on national governments, so incentives for national climate policy must come from outside, and cash transfers on the needed scale are politically impossible. The series rewards governments with cheaper borrowing instead: a guarantee is worth the full spread to the borrower but costs its provider only expected loss, so on the development banks' own sovereign loss record each dollar of donor cost delivers about 80 dollars of incentive. That record reflects the banks' preferred-creditor status, which a new facility might not inherit, so the papers also report a stress case, in which each dollar delivers 2.7. Papers 4.1 and 4.2 are the flagships. Each paper comes as a short policy brief in the *Climate Fiscal Policy Briefs* series and a longer working paper. [Section overview →](papers/OverviewSovereignIncentives.docx) · [Series slides →](papers/Slides-SovereignIncentives.pptx)
 
-### 3.1 Reward the Stock as Well as the Flow
+### 4.1 Reward the Stock as Well as the Flow
 
 *Notional capitalized value and guarantee-based climate incentives*
 
 Climate finance pays countries for marginal emission cuts measured against counterfactuals nobody can observe, and pays almost nothing for carbon stocks never released. This paper proposes a notional capitalized value: a balance opened by a country's carbon stock, debited for every tonne emitted above an agreed allowance, and used not as cash but as guarantee capacity on the country's green borrowing. Because a guarantee costs its provider only expected loss and the carry on a buffer, each dollar of donor cost delivers about 80 dollars of incentive on the development banks' sovereign loss record, and 2.7 in a stress case. For a stylized forest country with Guyana's carbon stock, a \$5 billion balance saves \$150 million a year and prices emissions at about \$30 per tonne. Capacity that declines as clean technology costs fall is the cheapest way to make acting now beat waiting.
 
-[Policy brief (Climate Fiscal Policy Brief No. 3.1) →](papers/Brief-NotionalCapitalisedValueAndGuarantees.docx) · [Working paper →](papers/NotionalCapitalisedValueAndGuarantees.docx) · [Slides →](papers/Slides-NotionalCapitalisedValueAndGuarantees.pptx)
+[Policy brief (Climate Fiscal Policy Brief No. 4.1) →](papers/Brief-NotionalCapitalisedValueAndGuarantees.docx) · [Working paper →](papers/NotionalCapitalisedValueAndGuarantees.docx) · [Slides →](papers/Slides-NotionalCapitalisedValueAndGuarantees.pptx)
 
-### 3.2 The Climate Investment Trust
+### 4.2 The Climate Investment Trust
 
 *Hold capital, lend its strength*
 
 Large international rewards for national climate policy fail because donors will not vote for cash transfers on the needed scale and governments cannot borrow against promised payments. This paper proposes a Climate Investment Trust that holds donor capital rather than spending it, and uses one pool three ways: as second-loss cover behind the guarantees that reward policy, as fee-earning co-investment in clean energy and regional first-loss funds, and as national beneficiary accounts that countries pledge as collateral now and draw only after 2050. On the development banks' loss record each donor dollar held delivers about 80 dollars of interest savings; in a stress case where the Trust lacks their preferred-creditor status, \$5 billion supports about \$54 billion of guarantees and delivers 2.7 dollars per dollar.
 
-[Policy brief (Climate Fiscal Policy Brief No. 3.2) →](papers/Brief-ClimateInvestmentTrust.docx) · [Working paper →](papers/ClimateInvestmentTrust.docx) · [Slides →](papers/Slides-ClimateInvestmentTrust.pptx)
+[Policy brief (Climate Fiscal Policy Brief No. 4.2) →](papers/Brief-ClimateInvestmentTrust.docx) · [Working paper →](papers/ClimateInvestmentTrust.docx) · [Slides →](papers/Slides-ClimateInvestmentTrust.pptx)
 
-### 3.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale
+### 4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale
 
 *Standard indicators, verification and pricing*
 
 Sustainability-linked loans and bonds tie a government's interest rate to climate indicators, but they remain rare, bespoke and small: Uruguay's 2023 World Bank loan, the leading example, can save the country at most \$12.5 million. This paper proposes standard indicators measured as outturns, baselines set by rule, verification from published data and a published pricing schedule, with a fixed coupon for investors and the performance reward paid by a trusted intermediary. Because an interest rebate is bounded by the interest bill, the main reward should be guarantee capacity or collateral, which delivers about 80 dollars of incentive per dollar of funder cost on the development banks' loss record, and 2.7 in a stress case.
 
-[Policy brief (Climate Fiscal Policy Brief No. 3.3) →](papers/Brief-SustainabilityLinkedLending.docx) · [Working paper →](papers/SustainabilityLinkedLending.docx) · [Slides →](papers/Slides-SustainabilityLinkedLending.pptx)
+[Policy brief (Climate Fiscal Policy Brief No. 4.3) →](papers/Brief-SustainabilityLinkedLending.docx) · [Working paper →](papers/SustainabilityLinkedLending.docx) · [Slides →](papers/Slides-SustainabilityLinkedLending.pptx)
 
-# 4. Modelling: models a finance ministry can audit
+# 5. Modelling: models a finance ministry can audit
 
-Ministries set carbon prices and sequence subsidy reforms with the help of the Climate Policy Assessment Tool (CPAT), built by the World Bank and the IMF for more than 180 countries, but until 2026 almost nobody could check its numbers. This series is the paper-length companion to the open CPAT-AI project. It states the model's method on a few pages, describes how it was rebuilt twice and what the rebuild found (228 bugs, 24 of them high priority), gathers its validation, checks its price elasticities against the evidence, and sets out three extensions ministries ask for. The rule throughout: a model a ministry can use must be small enough to state, built twice, tested against data and other models, and extended only where policy needs it. Country results are illustrative tool output, not official estimates. [Section overview →](papers/OverviewModelling.docx) · [Series slides →](papers/Slides-Modelling.pptx)
+Ministries set carbon prices and sequence subsidy reforms with the help of the Climate Policy Assessment Tool (CPAT), built by the World Bank and the IMF for more than 180 countries, but until 2026 almost nobody could check its numbers. This series is the paper-length companion to the open CPAT-AI project. It states the model's method on a few pages, describes how it was rebuilt twice and what the rebuild found (228 bugs, 24 of them high priority), gathers its validation, and checks its price elasticities against the evidence; the extensions ministries ask for are the modular upgrades of section 6. The rule throughout: a model a ministry can use must be small enough to state, built twice, tested against data and other models, and extended only where policy needs it. Country results are illustrative tool output, not official estimates. [Section overview →](papers/OverviewModelling.docx) · [Series slides →](papers/Slides-Modelling.pptx)
 
-### 4.1 The CPAT Mitigation Module: Methods in Brief
+### 5.1 The CPAT Mitigation Module: Methods in Brief
 
 *How a finance-ministry climate model turns prices into fuel use, power investment, emissions and revenue*
 
@@ -113,7 +117,7 @@ CPAT's mitigation documentation runs to 57,000 words and disagrees with the mode
 
 [Working paper →](papers/CPATMitigationMethods.docx) · [Slides →](papers/Slides-CPATMitigationMethods.pptx)
 
-### 4.2 CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool
+### 5.2 CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool
 
 *What two AI-assisted rebuilds of CPAT found, and how policy models should be maintained*
 
@@ -121,7 +125,7 @@ Legacy CPAT is a 21-megabyte workbook too large to audit cell by cell. In Octobe
 
 [Working paper →](papers/CPATAIImplementation.docx) · [Slides →](papers/Slides-CPATAIImplementation.pptx)
 
-### 4.3 Validating CPAT: Baselines, Back-Casts and Model Comparisons
+### 5.3 Validating CPAT: Baselines, Back-Casts and Model Comparisons
 
 *What the published checks show, where the tool fits and where it does not*
 
@@ -129,7 +133,7 @@ This paper gathers CPAT's scattered validation and separates four tests: fit to 
 
 [Working paper →](papers/CPATValidation.docx) · [Slides →](papers/Slides-CPATValidation.pptx)
 
-### 4.4 Are CPAT's Price Elasticities Right?
+### 5.4 Are CPAT's Price Elasticities Right?
 
 *A check against the evidence*
 
@@ -137,7 +141,19 @@ Price elasticities set the size of every emission cut CPAT reports. This paper c
 
 [Working paper →](papers/ElasticityValidation.docx) · [Slides →](papers/Slides-ElasticityValidation.pptx)
 
-### 4.5 The CBAM Policy Tool
+# 6. Modular Upgrades: extending the model where policy needs it
+
+A model a ministry can audit has to stay small, and the questions ministries ask keep growing. The papers in this section add capability to CPAT as separate modules, each of which reads the model's prices, fuel use and emissions, adds one piece of economics and states its method in a few equations: one carbon-price scale for any policy mix, exporters' exposure to the EU carbon border adjustment, the cost of the clean capital and whether the budget should pay for it, one activity layer for linked models, and the path from a climate program to growth, revenue and debt. Country results are illustrative tool output, not official estimates. [Section overview →](papers/OverviewModularUpgrades.docx)
+
+### 6.1 Measure Carbon Pricing by the Emissions It Cuts
+
+*The Total Effective Carbon Price: one carbon-tax equivalent for any mix of taxes, subsidies and standards*
+
+Countries cut emissions with taxes, subsidies, standards and mandates, yet standard metrics add up explicit prices per tonne, so a clean-fuel standard or a revenue-neutral feebate scores zero. The Total Effective Carbon Price is the single economy-wide carbon tax that would cut emissions by as much as the actual policy mix, with each instrument weighted by how strongly emissions respond. Crediting, border recognition and country diagnostics can all use it.
+
+[Policy brief (Climate Fiscal Policy Brief No. 6.1) →](papers/Brief-PolicyEquivalentCarbonPriceAndCES.docx) · [Working paper →](papers/PolicyEquivalentCarbonPriceAndCES.docx) · [Slides →](papers/Slides-PolicyEquivalentCarbonPriceAndCES.pptx)
+
+### 6.2 The CBAM Policy Tool
 
 *Measuring exporters' exposure to the EU carbon border adjustment and what domestic policy can do about it*
 
@@ -145,7 +161,7 @@ Since January 2026, EU importers of steel, aluminum, cement, fertilizers, hydrog
 
 [Working paper →](papers/CBAMPolicyTool.docx) · [Slides →](papers/Slides-CBAMPolicyTool.pptx)
 
-### 4.6 Public Investment in CPAT
+### 6.3 Public Investment in CPAT
 
 *Investment needs and the efficiency of public spending*
 
@@ -153,7 +169,7 @@ Carbon-pricing models say what a policy raises and cuts, but not what its clean 
 
 [Working paper →](papers/PublicInvestment.docx) · [Slides →](papers/Slides-PublicInvestment.pptx)
 
-### 4.7 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT
+### 6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT
 
 *One driver layer so four climate models can be linked*
 
@@ -161,19 +177,7 @@ Four models used for climate-fiscal work build activity levels in incompatible w
 
 [Working paper →](papers/ActivityModelling.docx) · [Slides →](papers/Slides-ActivityModelling.pptx)
 
-# 5. Analytics: diagnostics on data ministries already hold
-
-Analysis changes policy only when the ministry that holds the budget can reproduce it. Each tool in this series takes data a finance ministry already holds or can download, puts it on a common scale and returns something sequenced enough to act on, built to one standard: every intermediate step visible, defaults defended line by line, and AI drafting checked against the source. The tools feed the other series: checked tax rates and externality values for CPAT and the carbon-pricing papers, and the cost-of-capital and incentive arguments carried into a country's budget and debt. [Section overview →](papers/OverviewAnalytics.docx) · [Series slides →](papers/Slides-Analytics.pptx)
-
-### 5.1 The Excise-Fiscal Diagnostic
-
-*Reading an excise system against its externalities*
-
-Excise schedules grow line by line for decades until nobody can read them whole, and few ministries can say whether their fuel, tobacco or alcohol taxes are high or low against the damage those goods do. The Excise-Fiscal Diagnostic is a light, repeatable report that maps every line onto 30 standard lines, scales each rate three ways (US dollars per unit, share of price, revenue as a share of GDP), and sets fuel rates against a corrective benchmark built from one fixed set of values for carbon, air pollution, accidents, congestion and road damage. An AI model drafts each stage and every line is checked against the legal text. Run on the 2026 excise law of Sierra Leone and Liberia, it finds excise revenue of about 1.3 and 0.4 percent of GDP against an African average of 2.4: Sierra Leone taxes petrol at \$0.23 a liter on a large fuel base, while Liberia taxes fuel only through levies of \$0.095 a liter, below the cost of carbon alone, and books no excise on imported tobacco (illustrative results from the diagnostic, not official estimates).
-
-[Working paper →](papers/ExciseFiscalDiagnostic.docx) · [Slides →](papers/Slides-ExciseFiscalDiagnostic.pptx)
-
-### 5.2 The Macro-Fiscal-Energy Scenario Tool
+### 6.5 The Macro-Fiscal-Energy Scenario Tool
 
 *Linking energy investment and carbon pricing to growth, revenue and debt in one workbook*
 
@@ -181,7 +185,19 @@ A ministry weighing a climate investment program needs its budget cost, what car
 
 [Working paper →](papers/MacroFiscalEnergyScenarioTool.docx) · [Slides →](papers/Slides-MacroFiscalEnergyScenarioTool.pptx)
 
-### 5.3 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis
+# 7. Additional Analytics: diagnostics on data ministries already hold
+
+Analysis changes policy only when the ministry that holds the budget can reproduce it. Each tool in this section takes data a finance ministry already holds or can download, puts it on a common scale and returns something sequenced enough to act on, built to one standard: every intermediate step visible, defaults defended line by line, and AI drafting checked against the source. The tools feed the other series: checked tax rates and externality values for CPAT and the carbon-pricing papers, and the cost-of-capital and incentive arguments carried into a country's budget and debt. The Macro-Fiscal-Energy Scenario Tool, built to the same standard, extends CPAT and is paper 6.5 in section 6. [Section overview →](papers/OverviewAnalytics.docx) · [Series slides →](papers/Slides-Analytics.pptx)
+
+### 7.1 The Excise-Fiscal Diagnostic
+
+*Reading an excise system against its externalities*
+
+Excise schedules grow line by line for decades until nobody can read them whole, and few ministries can say whether their fuel, tobacco or alcohol taxes are high or low against the damage those goods do. The Excise-Fiscal Diagnostic is a light, repeatable report that maps every line onto 30 standard lines, scales each rate three ways (US dollars per unit, share of price, revenue as a share of GDP), and sets fuel rates against a corrective benchmark built from one fixed set of values for carbon, air pollution, accidents, congestion and road damage. An AI model drafts each stage and every line is checked against the legal text. Run on the 2026 excise law of Sierra Leone and Liberia, it finds excise revenue of about 1.3 and 0.4 percent of GDP against an African average of 2.4: Sierra Leone taxes petrol at \$0.23 a liter on a large fuel base, while Liberia taxes fuel only through levies of \$0.095 a liter, below the cost of carbon alone, and books no excise on imported tobacco (illustrative results from the diagnostic, not official estimates).
+
+[Working paper →](papers/ExciseFiscalDiagnostic.docx) · [Slides →](papers/Slides-ExciseFiscalDiagnostic.pptx)
+
+### 7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis
 
 *Eighty public indicators, one country profile, and a build anyone can rerun*
 
@@ -191,19 +207,11 @@ Before advising on carbon pricing, subsidy reform or climate investment, an anal
 
 # More papers and books
 
-Work outside the five series: an earlier fiscal paper, three books, papers on climate finance retained from earlier rounds, and essays written outside the professional portfolio. These are complete drafts, kept as they stand rather than revised to the series standard.
-
-### Rent Tax
-
-*Other fiscal policy*
-
-A tax design that reaches high effective rates on economic rent while keeping capital and people free to move: a reverse wealth tax on land, with an allowance below a threshold and a land value tax above it, and a corporate package that presumes large firms hold market power, taxing supernormal profits, mobile rent-bearing sectors and sales with deductions for genuine local presence.
-
-[Working paper →](papers/RentTax.docx)
+Work outside the seven sections: three books, papers on climate finance retained from earlier rounds, and essays written outside the professional portfolio. These are drafts kept as they stand rather than revised to the series standard. [Overview of these papers →](papers/OverviewAdditional.docx)
 
 ### Books
 
-*Time and Chance: The Elements of Scale in the Green Transition* asks why clean energy costs too much in the countries that need it most, and works from the price of money through contracts and instruments to the institutions that would carry them. *The Right Policy at the Wrong Time: Carbon Pricing and the Order of Things* argues that the case for a carbon price was won intellectually and lost operationally, and makes the case for feebates and for sequencing. Sections 1 to 3 hold the paper-length versions of several chapters; the overview places the two books against each other and against the papers. *Screwed?! Getting Our Future Back with Tax and Benefit Reform* (with Gordon Styles, 2020 manuscript) makes the case for reforming UK taxes and benefits, from tax principles, welfare and work to corporations, land, money and the environment.
+*Time and Chance: The Elements of Scale in the Green Transition* asks why clean energy costs too much in the countries that need it most, and works from the price of money through contracts and instruments to the institutions that would carry them. *The Right Policy at the Wrong Time: Carbon Pricing and the Order of Things* argues that the case for a carbon price was won intellectually and lost operationally, and makes the case for feebates and for sequencing. Sections 1, 3 and 4 hold the paper-length versions of several chapters; the overview places the two books against each other and against the papers. *Screwed?! Getting Our Future Back with Tax and Benefit Reform* (with Gordon Styles, 2020 manuscript) makes the case for reforming UK taxes and benefits, from tax principles, welfare and work to corporations, land, money and the environment.
 
 [Time and Chance →](papers/TimeAndChance.docx) · [The Right Policy at the Wrong Time →](papers/CarbonPricingRightPolicyWrongTime.docx) · [Overview of the two books →](papers/OverviewBooks.docx) · [Screwed?! →](papers/Screwed.docx)
 

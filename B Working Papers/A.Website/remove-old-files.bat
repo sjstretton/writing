@@ -11,5 +11,6 @@
     "rm %FTP_remote%/papers/SustainabilityLinkedLending.pdf" ^
     "rm %FTP_remote%/papers/MDBClimateEnvelope.docx" ^
     "rm %FTP_remote%/papers/GeoprosperityIntro.docx" ^
+    "rm %FTP_remote%/papers/CombinedOverview.docx" ^
     "exit"
 pause

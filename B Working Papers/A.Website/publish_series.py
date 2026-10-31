@@ -1,4 +1,4 @@
-"""Copy the working-paper series (sections 1 to 5) to the website's papers/ folder.
+"""Copy the working-paper series (sections 1 to 7) and the section 8 overviews and books to the website's papers/ folder.
 
 Stable permalinks, one per paper and form, overwritten on each publish:
     papers/<PaperName>.docx         the academic working paper (current version)
@@ -6,7 +6,8 @@ Stable permalinks, one per paper and form, overwritten on each publish:
     papers/Slides-<PaperName>.pptx  the four-slide deck, where it exists
     papers/Overview<Section>.docx   each section's overview, and papers/Slides-<Section>.pptx its theme deck
 
-Section 5 papers are working paper and slides only (no brief); missing briefs are reported and skipped.
+Papers in sections 5 to 7, and Rent Tax (2.1), are working paper and slides only (no brief); missing files are reported and skipped.
+Folder and file names follow A Writing Instructions/NUMBERING.md; published names stay stable so links survive renumbering.
 
 Run from B Working Papers/A.Website:  python publish_series.py
 Then: quarto render, and deploy.bat (on Stephen's machine) to upload _site.
@@ -29,30 +30,37 @@ PAPERS = {
     "1.1.OpenEconomyCarbonPricing": "OpenEconomyCarbonPricing",
     "1.2.FeebatesAndOutputBasedRebating": "FeebatesAndOutputBasedRebating",
     "1.3.IronSteelCBAM": "IronSteelCBAM",
-    "1.6.CarbonConsumptionTax": "CarbonConsumptionTax",
-    "4.5.PolicyEquivalentCarbonPriceAndCES": "PolicyEquivalentCarbonPriceAndCES",
-    "2.1.ClimateFinanceIntermediationForCleanPower": "ClimateFinanceIntermediationForCleanPower",
-    "2.2.CleanPowerAssetClasses": "CleanPowerAssetClasses",
-    "3.1.NotionalCapitalisedValueAndGuarantees": "NotionalCapitalisedValueAndGuarantees",
-    "3.2.ClimateInvestmentTrust": "ClimateInvestmentTrust",
-    "3.3.SustainabilityLinkedLending": "SustainabilityLinkedLending",
-    "4.1.CPATMitigationMethods": "CPATMitigationMethods",
-    "4.2.CPATAIImplementation": "CPATAIImplementation",
-    "4.3.CPATValidation": "CPATValidation",
-    "4.4.ElasticityValidation": "ElasticityValidation",
-    "4.5.CBAMPolicyTool": "CBAMPolicyTool",
-    "4.6.PublicInvestment": "PublicInvestment",
-    "4.7.ActivityModelling": "ActivityModelling",
-    "5.1.ExciseFiscalDiagnostic": "ExciseFiscalDiagnostic",
-    "5.2.MacroFiscalEnergyScenarioTool": "MacroFiscalEnergyScenarioTool",
-    "5.3.FiscalIndicatorsDashboard": "FiscalIndicatorsDashboard",
+    "1.4.CarbonConsumptionTax": "CarbonConsumptionTax",
+    "2.1.RentTax": "RentTax",
+    "3.1.ClimateFinanceIntermediationForCleanPower": "ClimateFinanceIntermediationForCleanPower",
+    "3.2.CleanPowerAssetClasses": "CleanPowerAssetClasses",
+    "4.1.NotionalCapitalisedValueAndGuarantees": "NotionalCapitalisedValueAndGuarantees",
+    "4.2.ClimateInvestmentTrust": "ClimateInvestmentTrust",
+    "4.3.SustainabilityLinkedLending": "SustainabilityLinkedLending",
+    "5.1.CPATMitigationMethods": "CPATMitigationMethods",
+    "5.2.CPATAIImplementation": "CPATAIImplementation",
+    "5.3.CPATValidation": "CPATValidation",
+    "5.4.ElasticityValidation": "ElasticityValidation",
+    "6.1.PolicyEquivalentCarbonPriceAndCES": "PolicyEquivalentCarbonPriceAndCES",
+    "6.2.CBAMPolicyTool": "CBAMPolicyTool",
+    "6.3.PublicInvestment": "PublicInvestment",
+    "6.4.ActivityModelling": "ActivityModelling",
+    "6.5.MacroFiscalEnergyScenarioTool": "MacroFiscalEnergyScenarioTool",
+    "7.1.ExciseFiscalDiagnostic": "ExciseFiscalDiagnostic",
+    "7.2.FiscalIndicatorsDashboard": "FiscalIndicatorsDashboard",
 }
 OVERVIEWS = {
     "1.0.OverviewClimateAndFiscalPolicy.docx": "OverviewClimateAndFiscalPolicy.docx",
-    "2.0.OverviewMobilisingPrivateCapital.docx": "OverviewMobilisingPrivateCapital.docx",
-    "3.0.OverviewSovereignIncentives.docx": "OverviewSovereignIncentives.docx",
-    "4.0.OverviewModelling.docx": "OverviewModelling.docx",
-    "5.0.OverviewAnalytics.docx": "OverviewAnalytics.docx",
+    "2.0.OverviewOtherTaxAndFiscalPolicy.docx": "OverviewOtherTaxAndFiscalPolicy.docx",
+    "3.0.OverviewMobilisingPrivateCapital.docx": "OverviewMobilisingPrivateCapital.docx",
+    "4.0.OverviewSovereignIncentives.docx": "OverviewSovereignIncentives.docx",
+    "5.0.OverviewModelling.docx": "OverviewModelling.docx",
+    "6.0.OverviewModularUpgrades.docx": "OverviewModularUpgrades.docx",
+    "7.0.OverviewAnalytics.docx": "OverviewAnalytics.docx",
+    "8.0.OverviewAdditionalPolicyPapers.docx": "OverviewAdditional.docx",
+    "8.5.0.OverviewBooks.docx": "OverviewBooks.docx",
+    "8.6.0.OverviewPhilosophy.docx": "OverviewPhilosophy.docx",
+    "8.7.0.OverviewPolitics.docx": "OverviewPolitics.docx",
     # Section theme decks
     "Slides-ClimateAndFiscalPolicy.pptx": "Slides-ClimateAndFiscalPolicy.pptx",
     "Slides-FinanceAndRisk.pptx": "Slides-FinanceAndRisk.pptx",
