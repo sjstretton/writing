@@ -7,20 +7,22 @@ Stable permalinks, one per paper and form, overwritten on each publish:
     papers/Overview<Section>.docx   each section's overview, and papers/Slides-<Section>.pptx its theme deck
 
 Papers in sections 5 to 7, and Rent Tax (2.1), are working paper and slides only (no brief); missing files are reported and skipped.
-Folder and file names follow E Writing Instructions/NUMBERING.md; published names stay stable so links survive renumbering.
+Folder and file names follow F Writing Instructions/NUMBERING.md; published names stay stable so links survive renumbering.
 
-Run from anywhere:  python "E Writing Instructions/Scripts/Website/publish_series.py" (Compile-Website.bat at the repo root does this)
+Run from anywhere:  python "F Writing Instructions/Scripts/Website/publish_series.py" (Compile-Website.bat at the repo root does this)
 Then: quarto render, and deploy.bat (on Stephen's machine) to upload _site.
-Log every publish in E Writing Instructions/Writing Standards/publishing-log.md.
+Log every publish in F Writing Instructions/Writing Standards/publishing-log.md.
 """
 import shutil
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3] / "B Working Papers"   # repo/B Working Papers
+REPO = Path(__file__).resolve().parents[3]
+ROOT = REPO / "C Writing"          # the papers
+SITE = REPO / "D Website"          # the Quarto site
 
 
 def find(name):
-    """Locate a paper folder or overview file by name anywhere under B Working Papers."""
+    """Locate a paper folder or overview file by name anywhere under C Writing."""
     hits = [p for p in ROOT.rglob(name) if "8.PreviousVersions" not in p.parts and "A.Website" not in p.parts]
     # prefer the copy with real content (skips stale local folders holding only __pycache__)
     hits.sort(key=lambda p: -sum(1 for f in (p.rglob("*") if p.is_dir() else [p]) if "__pycache__" not in f.parts))
@@ -70,7 +72,7 @@ OVERVIEWS = {
     # Books
     "Screwed.docx": "Screwed.docx",
 }
-out = ROOT / "A.Website" / "papers"
+out = SITE / "papers"
 out.mkdir(exist_ok=True)
 for folder, name in PAPERS.items():
     d = find(folder)

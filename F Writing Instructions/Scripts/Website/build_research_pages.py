@@ -1,6 +1,6 @@
 """Build the website's Research pages from the papers themselves, so the site is never out of date.
 
-Writes, in B Working Papers/A.Website:
+Writes, in D Website:
     research.qmd                 the Research home: a short intro and, for each section, a line and its paper titles
     research/<n>-<slug>.qmd      one page per section: the overview abstract, then each paper's title,
                                  subtitle, current abstract and links (slides, policy brief, full paper)
@@ -13,8 +13,9 @@ Compile-Website.bat runs this after publish_series.py and before quarto render.
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3] / "B Working Papers"
-SITE = ROOT / "A.Website"
+REPO = Path(__file__).resolve().parents[3]
+ROOT = REPO / "C Writing"
+SITE = REPO / "D Website"
 PAPERS = SITE / "papers"
 
 # section folder, page slug, sidebar/menu name, one-line description for the Research home,
@@ -110,13 +111,42 @@ def section_page(sec, papers_out):
             out.append(f"*{meta['subtitle']}*\n")
         if meta.get("abstract"):
             out.append(meta["abstract"] + "\n")
-        ls = [l for l in (link("Slides", f"Slides-{stem}.pptx"), link("Policy brief", f"Brief-{stem}.docx"),
+        web = SITE / "research" / slug / stem / "index.qmd"
+        online = f"[Read online →]({slug}/{stem}/index.qmd)" if web.exists() else None
+        ls = [l for l in (online, link("Slides", f"Slides-{stem}.pptx"), link("Policy brief", f"Brief-{stem}.docx"),
                           link("Full paper", f"{stem}.docx")) if l]
         if ls:
             out.append(" · ".join(ls) + "\n")
-        titles.append((pnum, title.split(":")[0].strip(), anchor))
+        titles.append((pnum, title.split(":")[0].strip(), anchor, f"research/{slug}/{stem}/index.qmd" if web.exists() else None))
     (SITE / "research" / f"{slug}.qmd").write_text("\n".join(out), encoding="utf-8")
     papers_out.append((sec, titles))
+
+
+def yq(s):
+    return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
+
+
+def write_sidebar(index):
+    """Rewrite the sidebar between the BEGIN/END markers in _quarto.yml: each section, and under it the papers
+    that have a web page (build_web_papers.py), so the sidebar works like a book's table of contents."""
+    ind = " " * 8
+    lines = [f"{ind}- text: \"Research home\"", f"{ind}  href: research.qmd"]
+    for (folder_name, slug, name, *_), titles in index:
+        num = folder_name.split(".")[0]
+        web = [(p, t, w) for p, t, a, w in titles if w]
+        if web:
+            lines += [f"{ind}- section: {yq(f'{num}. {name}')}", f"{ind}  href: research/{slug}.qmd", f"{ind}  contents:"]
+            for p, t, w in web:
+                lines += [f"{ind}    - text: {yq(f'{p} {t}')}", f"{ind}      href: {w}"]
+        else:
+            lines.append(f"{ind}- research/{slug}.qmd")
+    lines.append(f"{ind}- research/more.qmd")
+    cfg = SITE / "_quarto.yml"
+    text = cfg.read_text(encoding="utf-8")
+    b = text.index("# BEGIN sidebar contents")
+    b = text.index("\n", b) + 1
+    e = text.index(ind + "# END sidebar contents")
+    cfg.write_text(text[:b] + "\n".join(lines) + "\n" + text[e:], encoding="utf-8")
 
 
 def main():
@@ -133,11 +163,12 @@ def main():
         home.append(f"### [{num}. {name}](research/{slug}.qmd)\n")
         home.append(line + "\n")
         if titles:
-            home.append("\n".join(f"- [{p} {t}](research/{slug}.qmd#{a})" for p, t, a in titles) + "\n")
+            home.append("\n".join(f"- [{p} {t}]({w or f'research/{slug}.qmd#{a}'})" for p, t, a, w in titles) + "\n")
     home.append("### [More papers and books](research/more.qmd)\n")
     home.append("The tax book *Screwed?!*, *Time and Chance*, *The Right Policy at the Wrong Time*, earlier finance "
                 "papers, and essays on philosophy and politics.\n")
     (SITE / "research.qmd").write_text("\n".join(home), encoding="utf-8")
+    write_sidebar(index)
     print("wrote research.qmd and", len(SECTIONS), "section pages")
 
 
