@@ -1,6 +1,6 @@
 # NORMS.md
 
-The overarching norms for all writing in this repo. Every agent applies these to every piece of work. Detail lives in `E Writing Instructions/Writing Standards/`; this file is the short version that always applies.
+The overarching norms for all writing in this repo. Every agent applies these to every piece of work. Detail lives in `H Writing Instructions/Writing Standards/`; this file is the short version that always applies.
 
 ## 1. Write for a busy reader
 
@@ -22,7 +22,7 @@ Never write as if answering a question the reader cannot see. No "as requested",
 
 ## 4. Sound like a person, not a model
 
-Writing should be specific, opinionated where the evidence allows, and recognizably Stephen's. Avoid the tells of AI prose listed in `E Writing Instructions/Writing Standards/ai-tells.md`. The worst are: generic openings, empty triads, "it's not X, it's Y" constructions on repeat, hedges that say nothing, summary-paragraph endings that restate the piece, and bullet lists where an argument should be.
+Writing should be specific, opinionated where the evidence allows, and recognizably Stephen's. Avoid the tells of AI prose listed in `H Writing Instructions/Writing Standards/ai-tells.md`. The worst are: generic openings, empty triads, "it's not X, it's Y" constructions on repeat, hedges that say nothing, summary-paragraph endings that restate the piece, and bullet lists where an argument should be.
 
 ## 5. Concrete beats abstract
 
@@ -41,7 +41,7 @@ Define a term once and then use exactly that term every time. Don't switch to sy
 
 ## 8. Structure follows the paper standard
 
-Working papers follow `E Writing Instructions/Writing Standards/paper-standard.md`, modeled on the World Bank Policy Research Working Paper. Other writing types follow `writing-types.md`.
+Working papers follow `H Writing Instructions/Writing Standards/paper-standard.md`, modeled on the World Bank Policy Research Working Paper. Other writing types follow `writing-types.md`. Decks run to about eight slides (6–10, title slide included). Existing four-slide decks move to this length when they are next revised.
 
 ## 9. Spelling and style
 

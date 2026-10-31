@@ -1,381 +1,482 @@
 [
   {
-    "objectID": "research/more.html",
-    "href": "research/more.html",
-    "title": "8. More Papers and Books",
+    "objectID": "policy/more.html",
+    "href": "policy/more.html",
+    "title": "Books and Other Papers",
     "section": "",
-    "text": "Work outside the seven sections: three books, papers on climate finance retained from earlier rounds, and essays written outside the professional portfolio. These are drafts kept as they stand rather than revised to the series standard. Overview of these papers →\n\nBooks\nTime and Chance: The Elements of Scale in the Green Transition asks why clean energy costs too much in the countries that need it most, and works from the price of money through contracts and instruments to the institutions that would carry them. The Right Policy at the Wrong Time: Carbon Pricing and the Order of Things argues that the case for a carbon price was won intellectually and lost operationally, and makes the case for feebates and for sequencing. Sections 1, 3 and 4 hold the paper-length versions of several chapters; the overview places the two books against each other and against the papers. Screwed?! Getting Our Future Back with Tax and Benefit Reform (with Gordon Styles, 2020 manuscript) makes the case for reforming UK taxes and benefits, from tax principles, welfare and work to corporations, land, money and the environment.\nTime and Chance → · The Right Policy at the Wrong Time → · Overview of the two books → · Screwed?! →\n\n\nSustainability-Linked Intermediated Debt Instruments (SLIDIs)\nWith Marcello Estevão and Nils Zimmermann\nA proposal to lower developing countries’ cost of borrowing while rewarding their governments for agreed environmental, social and governance progress, through sustainability-linked debt issued via an intermediary.\nPaper →\n\n\nThe Sollar\nA claim on installed solar capacity\nOne Sollar is an undivided share in a global portfolio of utility-scale solar parks, with net electricity revenue reinvested in more panels. Developers can borrow Sollars during construction and repay by issuing them against the finished park, financing the asset with a claim on what it will produce rather than with debt. The paper sets out the design and what it does not solve.\nPaper →\n\n\nReforming MDBs\nThe role of the multilateral development banks in the green transition\nThe roles the multilateral development banks, and the World Bank Group in particular, could take in scaling climate action, as lenders and as policy influencers, and the two issues they must solve: scale and incentives for policy.\nPaper →\n\n\nPhilosophy essays\nThree essays on what happens when a governing metaphor stops being noticed as a metaphor. Order Without Ordinance is a dialogue on the picture of nature as law-governed, with an Indian case. The Politics of Life-Logic reads Nietzsche’s critique of Platonic governance alongside Chinese and Indian traditions and ends in proposals for reforming the World Bank. The Vocative Case asks what contemporary atheism is arguing with, and whether religious language was ever the kind of claim that can be refuted.\nOverview → · Order Without Ordinance → · The Politics of Life-Logic → · The Vocative Case →\n\n\nPolitical writing\nThree pieces written outside the professional portfolio, not offered as research. Manifesto for a New American Republic is a short political statement on defending and then reforming the American constitutional order. Progressive Collapse of a Uniform Column derives the physics of a falling upper block from first principles, applies it to the World Trade Center towers and reports the gap between the model and the observed accelerations, without going further. Statistical Anomalies, Voting Machines, and the 2024 US Presidential Election assesses the statistical claims made about the election and concludes that the anomalies justify better data and audits, not the inferences drawn from them.\nOverview → · Manifesto → · Progressive collapse → · Voting patterns →",
+    "text": "Three books and an earlier paper on climate finance. These are drafts kept as they stand rather than revised to the series standard.\n\nBooks\nTime and Chance: The Elements of Scale in the Green Transition asks why clean energy costs too much in the countries that need it most, and works from the price of money through contracts and instruments to the institutions that would carry them. The Right Policy at the Wrong Time: Carbon Pricing and the Order of Things argues that the case for a carbon price was won intellectually and lost operationally, and makes the case for feebates and for sequencing. Sections 1, 3 and 4 hold the paper-length versions of several chapters. Screwed?! Getting Our Future Back with Tax and Benefit Reform (with Gordon Styles, 2020 manuscript) makes the case for reforming UK taxes and benefits, from tax principles, welfare and work to corporations, land, money and the environment.\nTime and Chance → · The Right Policy at the Wrong Time → · Screwed?! →\n\n\nSustainability-Linked Intermediated Debt Instruments (SLIDIs)\nWith Marcello Estevão and Nils Zimmermann\nA proposal to lower developing countries’ cost of borrowing while rewarding their governments for agreed environmental, social and governance progress, through sustainability-linked debt issued via an intermediary.\nPaper →",
     "crumbs": [
-      "Research",
-      "8. More Papers and Books"
+      "Policy and Finance",
+      "Books and Other Papers"
     ]
   },
   {
-    "objectID": "research/6-modular-upgrades.html",
-    "href": "research/6-modular-upgrades.html",
+    "objectID": "policy/3-finance-and-risk.html",
+    "href": "policy/3-finance-and-risk.html",
+    "title": "3. Finance and Risk",
+    "section": "",
+    "text": "Clean power is cheap to build in most developing countries and expensive to finance, because investors price risks the project cannot control: a distribution company that may not pay, a plant that may not be finished, a currency that may fall and a state that may change the rules. Each risk has a different cheapest holder. This section of papers argues for removing payment risk at its source with a payment intermediary that guarantees the power contract rather than the debt, and then turning projects into a few standard securities: construction loans held by development banks, and pooled operating plants refinanced through first-loss equity and senior synthetic sovereign bonds. In stylized calibrations, the payment premium adds about 11 percent to a solar tariff, and refinancing pooled operating plants cuts the levelized cost of solar power by about a quarter. The host state’s exposure becomes smaller, contingent and contracted, but it does not disappear.\nSection overview → · Series slides →",
+    "crumbs": [
+      "Policy and Finance",
+      "3. Finance and Risk"
+    ]
+  },
+  {
+    "objectID": "policy/3-finance-and-risk.html#paper-3-1",
+    "href": "policy/3-finance-and-risk.html#paper-3-1",
+    "title": "3. Finance and Risk",
+    "section": "3.1 Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power",
+    "text": "3.1 Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power\nRemoving offtaker risk at source in developing-country power markets\nSolar and wind plants are cheap to build in most developing countries but expensive to finance, because lenders and investors price the risk that a state-owned distribution company will not pay for the power. This paper proposes a payment intermediary facility: a national or regional institution that buys power from generators under one standard contract, pays them in full and on time whatever the distributor does, and recovers arrears itself, behind a guarantee waterfall agreed in advance. I model offtaker default as recurring episodes of withheld payment with delayed, partial recovery. In a stylized calibration the offtaker premium adds 11 percent to the solar tariff, or 1.4 percentage points to the cost of capital. Guaranteeing the contract removes all of it and saves five dollars per dollar of the guarantor’s expected cost; guaranteeing project debt saves less than it costs. India’s Solar Energy Corporation shows that the design lowers tariffs, and its distributors’ arrears show that it must be paired with utility reform. The state’s exposure becomes smaller, contingent and contracted, but it does not vanish.\nSlides → · Policy brief → · Full paper →",
+    "crumbs": [
+      "Policy and Finance",
+      "3. Finance and Risk"
+    ]
+  },
+  {
+    "objectID": "policy/3-finance-and-risk.html#paper-3-2",
+    "href": "policy/3-finance-and-risk.html#paper-3-2",
+    "title": "3. Finance and Risk",
+    "section": "3.2 From Projects to Asset Classes",
+    "text": "3.2 From Projects to Asset Classes\nTwo-Stage Finance and Synthetic Sovereign Bonds for Clean Power\nSolar and wind plants in developing countries are financed one at a time, on bespoke terms, by investors who price construction, payment, currency and sovereign risk together. For a plant with no fuel bill, that cost of capital is most of the price of power. This paper proposes turning such projects into a few standard securities. Banks and development finance institutions finance construction against a contingent purchase contract; on completion, plants are pooled and refinanced through a first-loss equity tranche, a thin mezzanine and a senior synthetic sovereign bond, rated on the guaranteed contracts, the cushion beneath it and a co-guarantee from highly rated sovereigns. A one-factor portfolio model shows that 5 to 10 percent subordination makes the senior bond near-AAA at plausible default correlations, and that refinancing at the resulting blended cost cuts the levelized cost of solar power by about a quarter. Where no contract exists, as for transmission, a tiered and conditional bond guarantee plays the same role.\nSlides → · Policy brief → · Full paper →",
+    "crumbs": [
+      "Policy and Finance",
+      "3. Finance and Risk"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html",
+    "href": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html",
+    "title": "Price Production and Consumption Separately",
+    "section": "",
+    "text": "In brief\n\n\n\nCarbon prices stay low in open economies because one instrument does two jobs: it pushes producers to cut emissions per unit of output, and it makes consumers pay for the carbon they use. This brief separates the jobs. A revenue-neutral feebate prices production intensity at no cost to the treasury and with a small price effect. A carbon component of VAT and forward-announced obligations on energy suppliers price consumption, imports included. A carbon-price-equivalent metric measures both. International payments above half the feebate rate make adoption a net gain, and destination-based charges turn leakage into a race to the top.\nDownload: Working paper (Word) · Policy brief (Word) · Slides (PowerPoint)\nWorking paper, version 0.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No. 1.1.",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.1-where-the-architecture-sits",
+    "href": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.1-where-the-architecture-sits",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.1 A.1 Where the architecture sits",
+    "text": "12.1 A.1 Where the architecture sits\nThe two-track architecture joins four bodies of work that have mostly developed apart: the theory of unilateral policy under leakage, border carbon adjustment, intensity-based instruments, and destination-based taxation.\nThe theory of the split is old. Markusen (1975) showed that with an international externality the best unilateral policy taxes both production and consumption. Hoel (1996) showed that without tariffs a carbon tax should be lower in trade-exposed sectors. Weisbach et al. (2023) restate the result in modern form and add an extraction leg. Most directly, Stephen P. Holland (2012) proves that an intensity standard combined with a consumption tax can reach the first best under leakage, while an emissions tax combined with a consumption tax sometimes cannot. Proposition 1 is therefore an implementable statement of a known allocation result, not a new theorem. Its revenue corollary, that the tracks differ by \\(t\\) times carbon in net exports, is the carbon analogue of the neutrality of origin and destination bases for a uniform tax (Lockwood and Whalley 2010; Lockwood et al. 1994).\nThe design has close European precedents. Grubb et al. (2022) list the separation of incentives at the point of production from a charge on the use of carbon-intensive materials as one of three trade-compatible options. Pollitt et al. (2020) simulate a consumption charge on basic materials equivalent to about €80/tCO₂: it cuts EU emissions by roughly 10 percent with no leakage. Ismer et al. (2016) give the legal design of such a charge as an excise at default intensity, applied equally to imports. Neuhoff et al. (2026) propose benchmark-based free allocation plus a standardized liability per tonne of material with export relief. Each is a production-plus-consumption architecture.\nWhat this paper adds is narrower: (i) a revenue-neutral feebate with an updated benchmark in place of free allocation, so the production track needs no emissions trading system and no auction revenue and can be adopted by a developing country alone; (ii) a consumption track that runs through VAT across all goods rather than an excise on a few materials; (iii) the closed-form residual cost \\(\\tfrac12 t\\Delta e\\) and its calibration to EU default intensities for steel; (iv) the exporter best response under intensity-based destination charges; and (v) the extension of Strand’s crediting threshold to feebates, with the best response \\(t = \\pi\\).",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.2-leakage-and-competitiveness",
+    "href": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.2-leakage-and-competitiveness",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.2 A.2 Leakage and competitiveness",
+    "text": "12.2 A.2 Leakage and competitiveness\nModel-based estimates of leakage from unilateral carbon pricing range from 5 to 25 percent, with a central value of about 14 percent (Branger and Quirion 2014). Ex-post studies of the EU system find little or none at prices to date (Naegele and Zaklan 2019; Dechezleprêtre et al. 2022; Colmer et al. 2025), partly because free allocation shields industry and partly because prices were low; the evidence on relocation of investment is similar (Dechezleprêtre and Sato 2017). Pass-through of cost shocks is incomplete in EU trade-exposed sectors and about 70 percent in US manufacturing (Ganapati et al. 2020). The case for the architecture is therefore prospective: it concerns the rates of $80–100 that the range of the High-Level Commission implies (High-Level Commission on Carbon Prices 2017), not leakage already observed. A second leakage channel, through world fossil-fuel prices, survives any charge on goods (Branger and Quirion 2014; Weisbach et al. 2023); only supply-side measures or wider participation address it (Jakob et al. 2014).",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.3-border-carbon-adjustment",
+    "href": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.3-border-carbon-adjustment",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.3 A.3 Border carbon adjustment",
+    "text": "12.3 A.3 Border carbon adjustment\nKeen et al. (2022) is the reference design paper: border adjustments are the most effective domestic response to leakage, design is critical, coverage should start with energy-intensive trade-exposed sectors, and charges should be benchmarked first on domestic intensities. Mehling et al. (2019) analyze border adjustments under GATT Articles I, II:2(a), III and XX and the subsidies agreement, and recommend default values with rebuttal and credit for foreign policies, which supports the recognition of non-price instruments argued here and in Stretton (2026b). Cosbey et al. (2019) give design guidance in the same direction. On distribution, Mattoo et al. (2009) find that charges on the carbon content of imports, if exporters do not respond, cut manufacturing exports from low- and middle-income countries by about 8 percent and China’s by about a fifth. The EU’s mechanism (European Parliament and Council 2023) as amended, with default values that carry deliberate mark-ups (European Commission 2025), deducts only carbon prices effectively paid, a choice examined in the companion paper (Stretton 2026b).",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.4-intensity-based-instruments-and-feebates",
+    "href": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.4-intensity-based-instruments-and-feebates",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.4 A.4 Intensity-based instruments and feebates",
+    "text": "12.4 A.4 Intensity-based instruments and feebates\nCarolyn Fischer (2001) shows that tradable performance standards, taxes with output-based rebates and output-based permit allocation are all equivalent to an emissions tax plus an output subsidy: for a given target they lean too much on intensity and too little on output. That is Proposition 4. Stephen P. Holland et al. (2009) show that intensity standards can even raise emissions where the output subsidy dominates. C. Fischer and Fox (2007) and Carolyn Fischer and Fox (2012) compare output-based rebates with border adjustment: full adjustment is the most effective against leakage, but where it is limited a domestic rebate can do more. The evidence from feebates in use is mixed in the expected direction. The Swedish NOx charge, refunded on output, cut emission intensity substantially (Sterner and Höglund Isaksson 2006). The French bonus-malus on cars shifted purchases toward low-emission models but raised total emissions in the short run through higher sales (D’Haultfœuille et al. 2014). The IMF finds feebate packages achieve roughly 50–70 percent of the cuts of a carbon tax at the same rate (International Monetary Fund 2019).",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.5-destination-and-origin",
+    "href": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.5-destination-and-origin",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.5 A.5 Destination and origin",
+    "text": "12.5 A.5 Destination and origin\nFor a uniform, broad-based tax, a switch between origin and destination bases changes price levels, not relative prices, and so has no real trade effects (Lockwood and Whalley 2010; Lockwood et al. 1994). Proposition 7 therefore rests on the non-uniformity of carbon charges across exporters’ intensities, not on the destination basis as such. VAT shows that a destination-based tax can spread without coordination (Keen and Lockwood 2010); proposals for destination-based corporate taxation rest on the same logic (Auerbach et al. 2017; Devereux et al. 2021). Consumption-based accounts show that the footprints of high-income countries exceed their territorial emissions (Peters and Hertwich 2008; Peters et al. 2011; Davis and Caldeira 2010).",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.6-clubs-and-the-race-to-the-top",
+    "href": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.6-clubs-and-the-race-to-the-top",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.6 A.6 Clubs and the race to the top",
+    "text": "12.6 A.6 Clubs and the race to the top\nNordhaus (2015) shows that a club with a small uniform tariff on non-members can sustain a large coalition. The incentive in Proposition 7 differs: it comes from a charge that rises with each exporter’s intensity, not from a flat penalty. Böhringer et al. (2016) find the threat of carbon tariffs credible in a numerical game, and Helm et al. (2012) argue that border adjustments give exporters an incentive to price carbon themselves so as to keep the revenue.",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.7-crediting-and-results-based-finance",
+    "href": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.7-crediting-and-results-based-finance",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.7 A.7 Crediting and results-based finance",
+    "text": "12.7 A.7 Crediting and results-based finance\nStrand (2020) derives, for a donor-supported carbon tax, a break-even payment of half the tax rate when the host keeps the reduction toward its own target, the same threshold as Proposition 6, rising to about one and a half times the rate when the credit is transferred with a corresponding adjustment under Article 6 (World Bank 2022). The case for crediting policy rather than projects rests on the poor record of project offsets: fewer than 16 percent of credits examined by Probst et al. (2024) represent real reductions, and Calel et al. (2025) find at least half of Indian wind credits non-additional. Baselines remain the hard part (Partnership for Market Readiness 2017; World Bank and Frankfurt School of Finance and Management 2017).",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.8-credibility-and-forward-obligations",
+    "href": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.8-credibility-and-forward-obligations",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.8 A.8 Credibility and forward obligations",
+    "text": "12.8 A.8 Credibility and forward obligations\nA government that re-optimizes each period cannot commit, so a carbon price set annually will not be believed by investors in long-lived capital (Kydland and Prescott 1977). Once firms have sunk low-carbon investment, governments are tempted to lower the price, and firms anticipate this (Helm 2003; Brunner et al. 2012). A forward-announced legal obligation on the few large suppliers of fuel and electricity is a commitment device of the kind this literature recommends.",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.9-literature-that-challenges-a-proposition",
+    "href": "policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.9-literature-that-challenges-a-proposition",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.9 A.9 Literature that challenges a proposition",
+    "text": "12.9 A.9 Literature that challenges a proposition\n\n\n\n\n\n\n\n\n\nProposition\nChallenge\nSource\nResponse in the paper\n\n\n\n\n1 (no leakage)\nLeakage through world fuel prices survives any charge on goods\nBranger and Quirion (2014); Weisbach et al. (2023)\nStated as the fourth qualification to Proposition 1\n\n\n1 (novelty)\nIntensity standard plus consumption tax already shown first best\nStephen P. Holland (2012)\nProposition 1 presented as an implementable statement of a known result\n\n\n4–5 (output margin)\nIntensity instruments can raise output and emissions\nStephen P. Holland et al. (2009); D’Haultfœuille et al. (2014)\nSign condition (Proposition 5); consumption track supplies the output margin\n\n\n6 (crediting)\nThreshold rises to about \\(1.5t\\) with a corresponding adjustment\nStrand (2020); World Bank (2022)\nProposition 6 restricted to crediting without transfer of attribution\n\n\n7 (race to the top)\nCharges on actual intensity invite shuffling; standardized values preferred\nNeuhoff et al. (2026); Bushnell et al. (2014)\nA sector-wide feebate lowers intensity on all output, leaving less to shuffle\n\n\n7 (development cost)\nCharges on the carbon content of imports cut developing-country exports if exporters do not respond\nMattoo et al. (2009)\nThe best response is to adopt the feebate, and recognition should rest on the price signal",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "modelling/index.html",
+    "href": "modelling/index.html",
+    "title": "Modelling and Analytics",
+    "section": "",
+    "text": "Models and diagnostics a finance ministry can audit, in three sections: the Climate Policy Assessment Tool (CPAT) stated, rebuilt and validated; modular upgrades to CPAT where policy needs them; and analytics on data ministries already hold. Each section page gives the abstract of every paper with its slides and full paper. The policy papers are under Policy and Finance.\n\n5. Modelling (CPAT)\nModels a finance ministry can audit: the Climate Policy Assessment Tool stated, rebuilt and validated.\n\n5.1 The CPAT Mitigation Module\n5.2 CPAT-AI\n5.3 Validating CPAT\n5.4 Are CPAT’s Price Elasticities Right?\n\n\n\n6. Modular Upgrades\nExtensions to CPAT where policy needs them: carbon-price equivalents, CBAM, public investment, activity and macro-fiscal scenarios.\n\n6.1 Measure Carbon Pricing by the Emissions It Cuts\n6.2 The CBAM Policy Tool\n6.3 Public Investment in CPAT\n6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT\n6.5 The Macro-Fiscal-Energy Scenario Tool\n\n\n\n7. Analytics Tools\nDiagnostics on data ministries already hold: excise systems and fiscal indicators.\n\n7.1 The Excise-Fiscal Diagnostic\n7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis",
+    "crumbs": [
+      "Modelling and Analytics"
+    ]
+  },
+  {
+    "objectID": "modelling/6-modular-upgrades.html",
+    "href": "modelling/6-modular-upgrades.html",
     "title": "6. Modular Upgrades",
     "section": "",
     "text": "The Climate Policy Assessment Tool (CPAT) tells a finance ministry what a carbon price raises and what it cuts, but ministries keep asking questions its core cannot answer. What is a mix of standards, subsidies and feebates worth as a carbon price? What will the EU carbon border adjustment cost our exporters? What will the clean capital cost, and should the budget pay for it? How do we link CPAT to the other models we use? What does a climate program do to growth and debt? This section answers each with one upgrade that bolts onto the rebuilt model without changing its core: the Total Effective Carbon Price, the CBAM Policy Tool, a public investment extension, a common activity layer, and the Macro-Fiscal-Energy Scenario Tool. Each takes CPAT’s prices, fuel use and emissions as given, adds one piece of economics, and states its method in a few equations so that a ministry can check it.\nSection overview →",
     "crumbs": [
-      "Research",
+      "Modelling and Analytics",
       "6. Modular Upgrades"
     ]
   },
   {
-    "objectID": "research/6-modular-upgrades.html#paper-6-1",
-    "href": "research/6-modular-upgrades.html#paper-6-1",
+    "objectID": "modelling/6-modular-upgrades.html#paper-6-1",
+    "href": "modelling/6-modular-upgrades.html#paper-6-1",
     "title": "6. Modular Upgrades",
     "section": "6.1 Measure Carbon Pricing by the Emissions It Cuts",
     "text": "6.1 Measure Carbon Pricing by the Emissions It Cuts\nThe Total Effective Carbon Price\nCountries cut emissions with taxes, subsidies, standards and mandates, but the standard metrics add up explicit prices per tonne. They score a fuel standard or a revenue-neutral feebate at zero and count a dollar on coal the same as a dollar on gasoline. Building on the IMF’s carbon-price equivalent, this paper derives the Total Effective Carbon Price: the uniform economy-wide carbon tax that would cut emissions by as much as a given policy mix. From a nested constant-elasticity model of energy demand I obtain closed-form abatement weights that split any instrument’s effect into fuel switching and demand reduction. I give exact and second-order versions, extend the metric to tradable and non-tradable standards and mandates, and carry elasticity uncertainty through to a range. In a stylized three-sector economy, a mix that explicit-price metrics rate at $21 per tonne has an effective price of $37 in the long run ($32–38 across calibrations) and $28 after one year. The metric lets crediting schemes pay for policies rather than projects, lets border mechanisms recognize implicit and non-price carbon pricing, and shows governments where their policy mix is weak.\nSlides → · Policy brief → · Full paper →",
     "crumbs": [
-      "Research",
+      "Modelling and Analytics",
       "6. Modular Upgrades"
     ]
   },
   {
-    "objectID": "research/6-modular-upgrades.html#paper-6-2",
-    "href": "research/6-modular-upgrades.html#paper-6-2",
+    "objectID": "modelling/6-modular-upgrades.html#paper-6-2",
+    "href": "modelling/6-modular-upgrades.html#paper-6-2",
     "title": "6. Modular Upgrades",
     "section": "6.2 The CBAM Policy Tool",
     "text": "6.2 The CBAM Policy Tool\nMeasuring Exporters’ Exposure to the EU Carbon Border Adjustment and What Domestic Policy Can Do About It\nSince January 2026, importers of steel, aluminum, cement, fertilizers, hydrogen and electricity into the European Union have owed a carbon charge on the emissions embedded in what they buy. For many middle-income exporters the charge is large, it rises every year to 2034, and it depends on choices their own governments control: whether producers file verified emissions data and whether the country prices carbon at home. This paper describes a spreadsheet tool that computes the exposure product by product and year by year, and shows how emissions data, a domestic carbon price and rebates change it. It sets out the method in five equations and the data sources. A worked example for three Turkish exports shows that, at €80 per tonne of carbon dioxide, the charge on hot-rolled steel declared at the default value rises from about €107 per tonne in 2026 to €252 at full phase-in, close to half its export price. The tool’s application to Egypt shows why emissions data matter most: Egypt has no country default for steel, so its gas-based steel would be charged at more than five times the tool’s estimate of its emissions, and verified data would cut the full-phase-in charge on seven Egyptian exports from about €595 million to €177 million a year.\nSlides → · Full paper →",
     "crumbs": [
-      "Research",
+      "Modelling and Analytics",
       "6. Modular Upgrades"
     ]
   },
   {
-    "objectID": "research/6-modular-upgrades.html#paper-6-3",
-    "href": "research/6-modular-upgrades.html#paper-6-3",
+    "objectID": "modelling/6-modular-upgrades.html#paper-6-3",
+    "href": "modelling/6-modular-upgrades.html#paper-6-3",
     "title": "6. Modular Upgrades",
     "section": "6.3 Public Investment in CPAT",
     "text": "6.3 Public Investment in CPAT\nInvestment Needs and the Efficiency of Public Spending\nCarbon pricing models tell a finance ministry what a policy raises and what it cuts, but not what the clean capital it calls for will cost or whether the budget should pay for it. This paper extends the Climate Policy Assessment Tool in two directions. The first turns physical change into investment needs by country and sector, then prices that capital at three rates: the market cost of capital, a social rate, and a social rate with co-benefits counted. For a stylized asset whose fuel savings are 13.3 cents a year per dollar of capital, the financial case fails above a cost of capital of 12.6 percent, the rate the tool already assumes for lower-middle-income countries. The second extension asks what each dollar of net public money buys: a marginal-value-of-public-funds test against the cost of raising tax, with haircuts for delivery, a fiscal ledger, and capital, operating and contract routes on one footing. In a stylized island case, a solar plant worth $108 million fails the budget on a seven-year loan; a concessional loan or a guaranteed power purchase agreement rescues it. Country runs put 2030 investment needs in Kenya, Uganda and St Lucia at 4 to 5 percent of GDP, and a SISEPUEDE run for Uganda shows that under a fifth of its net-zero benefits reach the budget as cash.\nSlides → · Full paper →",
     "crumbs": [
-      "Research",
+      "Modelling and Analytics",
       "6. Modular Upgrades"
     ]
   },
   {
-    "objectID": "research/6-modular-upgrades.html#paper-6-4",
-    "href": "research/6-modular-upgrades.html#paper-6-4",
+    "objectID": "modelling/6-modular-upgrades.html#paper-6-4",
+    "href": "modelling/6-modular-upgrades.html#paper-6-4",
     "title": "6. Modular Upgrades",
     "section": "6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT",
     "text": "6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT\nOne Driver Layer So Four Climate Models Can Be Linked\nEvery energy and emissions model starts from activity levels: how much electricity is used, how far people and goods travel, how many vehicles are on the road, how many tonnes of steel and cement are made. Four models used for climate-fiscal work build those levels in incompatible ways. The Climate Policy Assessment Tool grows fuel use with GDP and prices. SISEPUEDE grows physical activity with income and population but never with prices. A border-adjustment tool grows output of steel, aluminum, fertilizer and clinker with growth forecasts and a price response. The Future Technology Transformations models take demand as given. This paper maps each model’s activity onto a common set of ten activities, sets out a single constant-elasticity rule driven by population, income per person and the cost of the energy service, and shows how the rule lets the four be linked without counting a price response twice. Under stylized growth of 1 percent in population and 2 percent in income per person, cars in use grow 64 percent in ten years while travel grows 41 percent.\nSlides → · Full paper →",
     "crumbs": [
-      "Research",
+      "Modelling and Analytics",
       "6. Modular Upgrades"
     ]
   },
   {
-    "objectID": "research/6-modular-upgrades.html#paper-6-5",
-    "href": "research/6-modular-upgrades.html#paper-6-5",
+    "objectID": "modelling/6-modular-upgrades.html#paper-6-5",
+    "href": "modelling/6-modular-upgrades.html#paper-6-5",
     "title": "6. Modular Upgrades",
     "section": "6.5 The Macro-Fiscal-Energy Scenario Tool",
     "text": "6.5 The Macro-Fiscal-Energy Scenario Tool\nLinking Energy Investment and Carbon Pricing to Growth, Revenue and Debt in One Workbook\nA finance ministry weighing a climate investment program needs to know three things at once: how much the program costs the budget, how much carbon pricing could pay for, and what the combination does to growth and debt. The answers usually come from separate teams using separate models. The Macro-Fiscal-Energy Scenario Tool puts them in one workbook for 186 countries. It chains a national model of mitigation investment needs, which splits each need by who pays; a screen that finds the most abatement a carbon tax, a feebate or a mix can deliver within limits on political cost; simplified, open-source versions of three IMF and World Bank macro-fiscal tools (the Global Integrated Monetary and Fiscal Model, the Debt-Investment-Growth and Natural Disasters model and its resource variant, and the low-income Debt Sustainability Framework); and a debt sustainability test. A stylized run shows that the financing choice and the efficiency of public investment move the result more than the size of the program. A run for Kenya shows a net zero program whose budget need, 0.5 percent of GDP in 2030, is mostly land-use and non-CO₂ spending rather than capital; feasible power-sector carbon pricing covers about 5 percent of it, and the program adds 7 points of GDP to public debt by 2050 for little growth. The lite models are not their parents and do not replace them.\nSlides → · Full paper →",
     "crumbs": [
-      "Research",
+      "Modelling and Analytics",
       "6. Modular Upgrades"
     ]
   },
   {
-    "objectID": "research/4-sovereign-incentives.html",
-    "href": "research/4-sovereign-incentives.html",
-    "title": "4. Sovereign Incentives",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Policy and Finance",
     "section": "",
-    "text": "The benefits of cutting emissions are global and the costs national, so incentives for national climate policy have to come from outside. Cash transfers on the scale needed are politically impossible. This section of papers argues that the international system should instead reward governments with what it can supply cheaply and they value highly: cheaper borrowing, delivered through guarantees and collateral. A guarantee saves the borrower the full credit spread but costs its provider only expected loss and the carry on a buffer, so on the development banks’ own sovereign loss record each dollar of donor cost delivers about 80 dollars of incentive, and 2.7 in a stress case where a new facility does not inherit their preferred-creditor status. Three instruments follow: a notional capitalized value that turns a country’s carbon stock into guarantee capacity, debited for every tonne emitted above an allowance; a Climate Investment Trust that holds the capital behind those guarantees instead of spending it; and codified sustainability-linked lending, which delivers the reward but is too small on its own. Capacity that declines as clean technology gets cheaper pays a premium for acting now.\nSection overview → · Series slides →",
+    "text": "Papers on climate and fiscal policy and on climate finance, written for finance ministries and development banks, in four sections. Each section page gives the abstract of every paper with its slides, policy brief and full paper; papers marked Read online can be read here in full. Books and earlier papers are under Books and other papers. The modelling and analytics work is under Modelling and Analytics.\n\n1. Carbon Pricing\nPrice production and consumption separately: a feebate on emissions intensity, a destination carbon tax through VAT, and recognition of both at the border.\n\n1.1 Price Production and Consumption Separately\n1.2 Feebates\n1.3 Converting a VAT into a Destination Carbon Tax\n1.4 Credit the Price Signal, Not the Payment\n\n\n\n2. Other Tax and Fiscal Policy\nTax rent, not effort: land and corporate taxes that hold up when capital and people can move.\n\n2.1 Taxing Rent, Not Effort\n\n\n\n3. Finance and Risk\nMake clean power an asset class: remove payment risk at source, then turn projects into standard securities.\n\n3.1 Guarantee the Contract, Not the Debt\n3.2 From Projects to Asset Classes\n\n\n\n4. Sovereign Incentives\nReward governments, not projects: guarantee capacity and held capital that pay for acting early.\n\n4.1 Reward the Stock as Well as the Flow\n4.2 The Climate Investment Trust\n4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale\n\n\n\nBooks and other papers\nThree books: Time and Chance, The Right Policy at the Wrong Time and the tax book Screwed?!; and an earlier paper on sustainability-linked intermediated debt.",
     "crumbs": [
-      "Research",
-      "4. Sovereign Incentives"
+      "Policy and Finance"
     ]
-  },
-  {
-    "objectID": "research/4-sovereign-incentives.html#paper-4-1",
-    "href": "research/4-sovereign-incentives.html#paper-4-1",
-    "title": "4. Sovereign Incentives",
-    "section": "4.1 Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives",
-    "text": "4.1 Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives\nTurning carbon stocks and low-emission paths into cheaper borrowing\nClimate finance pays countries for marginal emission cuts measured against counterfactuals nobody can observe, and pays almost nothing for carbon stocks never released. This paper proposes a notional capitalized value: a balance opened by a country’s carbon stock, debited for every tonne emitted above an agreed allowance, and used not as cash but as guarantee capacity on its green borrowing. A guarantee saves the borrower the full credit spread but costs its provider only expected loss and the carry on a buffer, so on the development banks’ own sovereign loss record each dollar of donor cost delivers about 80 dollars of incentive. That record reflects their preferred-creditor status, which a new facility might not inherit; in a stress case without it the figure is 2.7. The stock should set the size of the balance and a separate price the debit per tonne. For a stylized forest country with Guyana’s carbon stock, a $5 billion balance saves $150 million a year and prices emissions at about $30 per tonne, at a donor cost of about 40 cents per tonne ($11 in the stress case). Capacity that declines as fast as technology costs fall is the cheapest way to make acting now beat waiting.\nSlides → · Policy brief → · Full paper →",
-    "crumbs": [
-      "Research",
-      "4. Sovereign Incentives"
-    ]
-  },
-  {
-    "objectID": "research/4-sovereign-incentives.html#paper-4-2",
-    "href": "research/4-sovereign-incentives.html#paper-4-2",
-    "title": "4. Sovereign Incentives",
-    "section": "4.2 The Climate Investment Trust: Hold Capital, Lend Its Strength",
-    "text": "4.2 The Climate Investment Trust: Hold Capital, Lend Its Strength\nA buffer fund that insures policy guarantees, invests in clean energy and holds national climate accounts\nLarge international rewards for national climate policy fail because donors will not vote for cash transfers on the needed scale and governments cannot borrow against promised payments. I propose a Climate Investment Trust that holds donor capital rather than spending it, and uses one pool three ways: as second-loss cover behind the guarantees that reward policy, as fee-earning co-investment in clean energy and in regional first-loss funds, and as national beneficiary accounts that countries pledge as collateral now and draw only after 2050. I derive the buffer needed to keep the chance of exhaustion below a target, and show that a held buffer delivers interest savings equal to the spread divided by the expected loss rate per donor dollar, against one dollar for a fund that pays out. On the development banks’ own sovereign loss record, each donor dollar delivers about 80 dollars of interest savings. That record reflects their preferred-creditor status, which a new trust might not inherit, so I also report a stress case in which $5 billion supports $54 billion of guarantees and delivers 2.7 dollars per dollar. Growth requires guarantee fees or a fee on private returns, and an allocation rule built as a feebate between accounts rewards early action at no net cost.\nSlides → · Policy brief → · Full paper →",
-    "crumbs": [
-      "Research",
-      "4. Sovereign Incentives"
-    ]
-  },
-  {
-    "objectID": "research/4-sovereign-incentives.html#paper-4-3",
-    "href": "research/4-sovereign-incentives.html#paper-4-3",
-    "title": "4. Sovereign Incentives",
-    "section": "4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale",
-    "text": "4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale\nStandard indicators, verification and pricing, and why the reward must be bigger than an interest margin\nSustainability-linked loans and bonds tie a government’s interest rate to climate indicators, so they pay for national results rather than projects. They remain rare, bespoke and small: Uruguay’s 2023 World Bank loan, the leading example, can save the country at most $12.5 million. I propose codifying the instrument: standard indicators measured as outturns, baselines set by rule, verification from published data and a published pricing schedule. I show that a market bond whose coupon moves with results gives the government no expected transfer, and that a fixed coupon with a reward paid by a trusted intermediary delivers the same incentive more cheaply. An interest rebate is bounded by the interest bill, so such rewards are an order of magnitude smaller than the cost of major reforms. Making guarantee capacity the reward multiplies the incentive per dollar of funder cost by about 80 on development banks’ own sovereign loss record, the base case shared across this series. That record reflects their preferred-creditor status, which a new guarantor might not inherit; on stress assumptions the multiple is 2.7.\nSlides → · Policy brief → · Full paper →",
-    "crumbs": [
-      "Research",
-      "4. Sovereign Incentives"
-    ]
-  },
-  {
-    "objectID": "research/2-other-tax.html",
-    "href": "research/2-other-tax.html",
-    "title": "2. Other Tax and Fiscal Policy",
-    "section": "",
-    "text": "Governments that let capital and people move freely find it hard to tax mobile income at high rates, so they give up on high rates altogether. This section argues that the constraint binds only on the wrong base. Economic rent, the return above what an investor needs to stay, can be taxed heavily without driving anything away, because land cannot move and market power earned in a country’s market is earned from its customers. The section’s paper, Rent Tax, combines a land value tax above a household allowance with three corporate instruments that presume large firms hold market power: a high rate on profits above a normal return, a narrow destination-based tax on mobile rent-bearing sectors, and a sales tax with deductions for genuine local investment and employment. Longer and older treatments of tax and fiscal reform, including the book Screwed?! and a note on India’s legacy coal power contracts, are kept in section 8.\nSection overview →",
-    "crumbs": [
-      "Research",
-      "2. Other Tax and Fiscal Policy"
-    ]
-  },
-  {
-    "objectID": "research/2-other-tax.html#paper-2-1",
-    "href": "research/2-other-tax.html#paper-2-1",
-    "title": "2. Other Tax and Fiscal Policy",
-    "section": "2.1 Taxing Rent, Not Effort: A Simple Design for Land and Corporate Taxation Consistent with Free Movement of Capital and People",
-    "text": "2.1 Taxing Rent, Not Effort: A Simple Design for Land and Corporate Taxation Consistent with Free Movement of Capital and People\nFull paper →",
-    "crumbs": [
-      "Research",
-      "2. Other Tax and Fiscal Policy"
-    ]
-  },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
-    "section": "",
-    "text": "Papers on climate policy and climate finance for finance ministries and development banks, in seven series. Each series page gives the abstracts and the slides, policy brief and full paper for every paper. Older papers, books and essays are under More papers and books.\n\n1. Carbon Pricing\nPrice production and consumption separately: a feebate on emissions intensity and a destination-based charge on consumption.\n\n1.1 Price Production and Consumption Separately\n1.2 Feebates\n1.3 Credit the Price Signal, Not the Payment\n1.4 Carbon Consumption Tax\n\n\n\n2. Other Tax and Fiscal Policy\nTax rent, not effort: land and corporate taxes that hold up when capital and people can move.\n\n2.1 Taxing Rent, Not Effort\n\n\n\n3. Finance and Risk\nMake clean power an asset class: remove payment risk at source, then turn projects into standard securities.\n\n3.1 Guarantee the Contract, Not the Debt\n3.2 From Projects to Asset Classes\n\n\n\n4. Sovereign Incentives\nReward governments, not projects: guarantee capacity and held capital that pay for acting early.\n\n4.1 Reward the Stock as Well as the Flow\n4.2 The Climate Investment Trust\n4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale\n\n\n\n5. Modelling (CPAT)\nModels a finance ministry can audit: the Climate Policy Assessment Tool stated, rebuilt and validated.\n\n5.1 The CPAT Mitigation Module\n5.2 CPAT-AI\n5.3 Validating CPAT\n5.4 Are CPAT’s Price Elasticities Right?\n\n\n\n6. Modular Upgrades\nExtensions to CPAT where policy needs them: carbon-price equivalents, CBAM, public investment, activity and macro-fiscal scenarios.\n\n6.1 Measure Carbon Pricing by the Emissions It Cuts\n6.2 The CBAM Policy Tool\n6.3 Public Investment in CPAT\n6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT\n6.5 The Macro-Fiscal-Energy Scenario Tool\n\n\n\n7. Analytics Tools\nDiagnostics on data ministries already hold: excise systems and fiscal indicators.\n\n7.1 The Excise-Fiscal Diagnostic\n7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis\n\n\n\nMore papers and books\nThe tax book Screwed?!, Time and Chance, The Right Policy at the Wrong Time, earlier finance papers, and essays on philosophy and politics.",
-    "crumbs": [
-      "Research",
-      "Research home"
-    ]
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "For correspondence regarding research, writing, or potential collaboration:\nEmail: sjstretton@gmail.com\nWorking papers listed on the research page are available on request — please get in touch by email and I’ll be glad to share the relevant drafts.\nI am also reachable on LinkedIn."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "I am an economist working on climate, fiscal policy, and finance. My research focuses on the design of effective carbon pricing instruments, green growth diagnostics, and the fiscal and financial architecture of climate transitions."
+    "text": "I am an economist working on climate, fiscal policy and finance. I work at the World Bank on carbon pricing policy design, sustainability-linked sovereign lending, and country-level fiscal and climate policy engagements across Europe, Africa and Asia. I hold master’s degrees in philosophy, economics and physics."
   },
   {
-    "objectID": "about.html#background",
-    "href": "about.html#background",
+    "objectID": "about.html#research",
+    "href": "about.html#research",
     "title": "About",
-    "section": "Background",
-    "text": "Background\nI hold master’s degrees in philosophy, economics, and physics. My current work at the World Bank covers carbon pricing policy design, sustainability-linked sovereign lending, and country-level fiscal and climate policy engagements across Europe, Africa, and Asia."
-  },
-  {
-    "objectID": "about.html#research-interests",
-    "href": "about.html#research-interests",
-    "title": "About",
-    "section": "Research Interests",
-    "text": "Research Interests\nMy work sits at the intersection of climate, fiscal, and financial policy:\n\nEffective carbon pricing — measuring the total effective carbon price across direct and indirect policy instruments\nGreen growth diagnostics — frameworks for green structural transformation in developing economies\nSustainability-linked finance — the operational architecture of sustainability-linked sovereign lending\nFiscal policy for climate — carbon consumption taxes, border adjustments, and the political economy of climate fiscal reform\n\nAlongside the technical work, I write on institutional economics, cooperative system design, and the philosophy of policy — drawing on game theory, Indian and Western philosophy, and the broader question of how durable collective arrangements emerge and sustain themselves."
-  },
-  {
-    "objectID": "about.html#writing",
-    "href": "about.html#writing",
-    "title": "About",
-    "section": "Writing",
-    "text": "Writing\nIn addition to research papers, I write shorter pieces on policy, economics, and adjacent topics. Selected writing is collected in the research section."
+    "section": "Research",
+    "text": "Research\nThe research is in two parts.\nPolicy and Finance has four sections: carbon pricing in open economies; other tax and fiscal policy; finance and risk for clean power; and sovereign incentives for national climate policy. Most papers come with slides and a short policy brief.\nModelling and Analytics has three: modelling with the Climate Policy Assessment Tool (CPAT); modular upgrades to CPAT; and analytics tools for climate-fiscal work.\nMy work sits where climate, fiscal and financial policy meet:\n\nEffective carbon pricing: measuring the total effective carbon price across direct and indirect policy instruments\nCarbon pricing in open economies: feebates, destination carbon taxes through VAT, and border adjustments\nSustainability-linked finance: the operational architecture of sustainability-linked sovereign lending\nGreen growth diagnostics: frameworks for green structural transformation in developing economies"
   },
   {
     "objectID": "about.html#contact",
     "href": "about.html#contact",
     "title": "About",
     "section": "Contact",
-    "text": "Contact\nFor correspondence, see contact."
+    "text": "Contact\nFor correspondence about research, writing or collaboration, email sjstretton@gmail.com. I am also on LinkedIn."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Stephen Stretton",
-    "section": "",
-    "text": "Economist working on climate, fiscal policy, and finance. The research comes in seven sections: carbon pricing in open economies; other tax and fiscal policy; finance and risk for clean power; sovereign incentives for national climate policy; modelling with the Climate Policy Assessment Tool (CPAT); modular upgrades to CPAT; and analytics tools for climate-fiscal work. Most papers come with slides, and those on carbon pricing, finance and risk and sovereign incentives, and the Total Effective Carbon Price, also as a short policy brief.\nThree master’s degrees in philosophy, economics, and physics. Currently at the World Bank, working on climate policy instruments and country engagements.\nBrowse the research → | Get in touch →"
-  },
-  {
-    "objectID": "research/1-carbon-pricing.html",
-    "href": "research/1-carbon-pricing.html",
-    "title": "1. Carbon Pricing",
-    "section": "",
-    "text": "Carbon prices stay low in open economies because one instrument is asked to do two jobs: to make producers cut emissions per unit of output, and to make consumers pay for the carbon in what they buy. A tax on domestic production charges exporters and spares imports, so governments exempt industry and hold the rate down. This section of papers gives each job its own instrument. A revenue-neutral feebate prices production intensity at the full rate at the margin, at no cost to the treasury. A carbon component of VAT and a forward obligation on energy suppliers price consumption, imports included. The Total Effective Carbon Price puts any instrument, priced or not, on one scale, so that border mechanisms and international payments can recognize policies rather than payments. In a stylized steel sector a feebate raises the price by $15 per tonne where a tax at the same rate raises it by $85; an international payment above half the feebate rate makes adoption a net gain; and once importers charge for embodied carbon, each exporter’s most competitive feebate rate equals the charge in its markets.\nSection overview → · Series slides →",
-    "crumbs": [
-      "Research",
-      "1. Carbon Pricing"
-    ]
-  },
-  {
-    "objectID": "research/1-carbon-pricing.html#paper-1-1",
-    "href": "research/1-carbon-pricing.html#paper-1-1",
-    "title": "1. Carbon Pricing",
-    "section": "1.1 Price Production and Consumption Separately",
-    "text": "1.1 Price Production and Consumption Separately\nA Two-Track Architecture for Carbon Pricing in Open Economies\nA carbon tax on domestic production does two jobs at once: it rewards firms for cutting emissions per unit of output, and it charges for the carbon in what the economy consumes. In an open economy the second job undermines the first, because the charge falls on exports and spares imports. This paper separates the jobs. A revenue-neutral feebate prices production intensity; a destination-based charge, levied through the value-added tax and through forward-announced obligations on energy suppliers, prices consumption. I show that the two tracks together reproduce the Pigouvian allocation for domestic consumption without leakage, that the feebate’s residual cost is second order, that international payments above half the feebate rate make adoption a net gain, and that destination charges make each exporter’s most competitive feebate rate equal to the charge in its markets. A calibration to the EU’s default emission values for steel illustrates the magnitudes.\nSlides → · Policy brief → · Full paper →",
-    "crumbs": [
-      "Research",
-      "1. Carbon Pricing"
-    ]
-  },
-  {
-    "objectID": "research/1-carbon-pricing.html#paper-1-2",
-    "href": "research/1-carbon-pricing.html#paper-1-2",
-    "title": "1. Carbon Pricing",
-    "section": "1.2 Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill",
-    "text": "1.2 Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill\nDecarbonizing Coal-Heavy Power and Trade-Exposed Industry\nA carbon tax makes coal dearer than clean power, which cuts emissions, and charges producers for every tonne they still emit, which provokes the resistance that stalls it in coal-heavy countries. A revenue-neutral feebate, a fee per unit of output above a benchmark emissions intensity and a rebate below it, keeps the first effect and drops the second. I show that a feebate and a tax at the same rate produce the same merit order and the same choice between clean and coal capacity, but that what consumers pay depends on how power is priced. Where a single buyer passes average cost through, the tariff rises only by the cost of re-dispatch: about $1 per megawatt-hour in India at $50 per tonne, against $36 for a tax. In a uniform-price wholesale market the price rises by $13, because there the feebate is a tax plus a rebate to consumers. Dominant state utilities see only part of the rate unless the benchmark excludes their own output.\nSlides → · Policy brief → · Full paper →",
-    "crumbs": [
-      "Research",
-      "1. Carbon Pricing"
-    ]
-  },
-  {
-    "objectID": "research/1-carbon-pricing.html#paper-1-3",
-    "href": "research/1-carbon-pricing.html#paper-1-3",
-    "title": "1. Carbon Pricing",
-    "section": "1.3 Credit the Price Signal, Not the Payment",
-    "text": "1.3 Credit the Price Signal, Not the Payment\nCarbon Price Recognition and Scrap Shuffling under the EU’s Carbon Border Adjustment Mechanism\nThe EU’s Carbon Border Adjustment Mechanism measures embodied carbon plant by plant and credits only carbon prices effectively paid. Both rules undermine its second purpose, encouraging trading partners to decarbonize. A producer can send scrap-based steel to Europe and blast-furnace steel elsewhere, cutting its charge without cutting emissions. And a revenue-neutral feebate, which charges the full rate at the margin, earns nothing because its average payment is zero. I show that measuring embodied carbon and the price signal by country and sector removes the gain from shuffling and rewards the feebate, and I calibrate a liability formula to the EU’s default values. At €80 per tonne, shuffling saves €100–600 per tonne of steel across thirteen exporters; recognizing the signal halves the share of output an exporter must sell to the EU before a feebate pays for itself. Full recognition has a cost: an exporter with a feebate at the EU price would pay no charge while EU producers pay on all their emissions, which invites relocation. The Commission should therefore recognize the sector-wide signal alongside the price paid, phased in from 2027 to 2034 with relocation reviews, and use country-sector values where an exporter has such a signal and verified whole-output intensity where it does not.\nSlides → · Policy brief → · Full paper →",
-    "crumbs": [
-      "Research",
-      "1. Carbon Pricing"
-    ]
-  },
-  {
-    "objectID": "research/1-carbon-pricing.html#paper-1-4",
-    "href": "research/1-carbon-pricing.html#paper-1-4",
-    "title": "1. Carbon Pricing",
-    "section": "1.4 Carbon Consumption Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers",
-    "text": "1.4 Carbon Consumption Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers\nA Destination-Based Carbon Price for the European Union\nThe European Union prices the carbon its power plants and factories emit, but not most of the carbon in what Europeans buy, 40 percent of which is emitted abroad. This paper proposes a carbon consumption tax in two parts: a carbon component of VAT, charged on every good and service consumed in the Union at rebuttable default intensities while the value component falls, and a legal obligation, fixed a decade ahead, on the few suppliers of fuel for homes and vehicles. I show that, with full input crediting, each firm pays the carbon price on the carbon it adds and the consumer bears it on the whole supply chain; that exempt stages break the chain; and that deducting carbon prices paid upstream gives every tonne one price. Input–output calibration puts the taxable household basket at 0.41 kg CO₂e per euro in 2022, imports at twice EU-made goods. A rule that cuts the value component by last year’s carbon receipts keeps the swap revenue-neutral. The swap is mildly regressive: at €200 per tonne the poorest fifth pays 0.4 percent of spending more and the richest 0.2 percent less.\nSlides → · Policy brief → · Full paper →",
-    "crumbs": [
-      "Research",
-      "1. Carbon Pricing"
-    ]
-  },
-  {
-    "objectID": "research/3-finance-and-risk.html",
-    "href": "research/3-finance-and-risk.html",
-    "title": "3. Finance and Risk",
-    "section": "",
-    "text": "Clean power is cheap to build in most developing countries and expensive to finance, because investors price risks the project cannot control: a distribution company that may not pay, a plant that may not be finished, a currency that may fall and a state that may change the rules. Each risk has a different cheapest holder. This section of papers argues for removing payment risk at its source with a payment intermediary that guarantees the power contract rather than the debt, and then turning projects into a few standard securities: construction loans held by development banks, and pooled operating plants refinanced through first-loss equity and senior synthetic sovereign bonds. In stylized calibrations, the payment premium adds about 11 percent to a solar tariff, and refinancing pooled operating plants cuts the levelized cost of solar power by about a quarter. The host state’s exposure becomes smaller, contingent and contracted, but it does not disappear.\nSection overview → · Series slides →",
-    "crumbs": [
-      "Research",
-      "3. Finance and Risk"
-    ]
-  },
-  {
-    "objectID": "research/3-finance-and-risk.html#paper-3-1",
-    "href": "research/3-finance-and-risk.html#paper-3-1",
-    "title": "3. Finance and Risk",
-    "section": "3.1 Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power",
-    "text": "3.1 Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power\nRemoving offtaker risk at source in developing-country power markets\nSolar and wind plants are cheap to build in most developing countries but expensive to finance, because lenders and investors price the risk that a state-owned distribution company will not pay for the power. This paper proposes a payment intermediary facility: a national or regional institution that buys power from generators under one standard contract, pays them in full and on time whatever the distributor does, and recovers arrears itself, behind a guarantee waterfall agreed in advance. I model offtaker default as recurring episodes of withheld payment with delayed, partial recovery. In a stylized calibration the offtaker premium adds 11 percent to the solar tariff, or 1.4 percentage points to the cost of capital. Guaranteeing the contract removes all of it and saves five dollars per dollar of the guarantor’s expected cost; guaranteeing project debt saves less than it costs. India’s Solar Energy Corporation shows that the design lowers tariffs, and its distributors’ arrears show that it must be paired with utility reform. The state’s exposure becomes smaller, contingent and contracted, but it does not vanish.\nSlides → · Policy brief → · Full paper →",
-    "crumbs": [
-      "Research",
-      "3. Finance and Risk"
-    ]
-  },
-  {
-    "objectID": "research/3-finance-and-risk.html#paper-3-2",
-    "href": "research/3-finance-and-risk.html#paper-3-2",
-    "title": "3. Finance and Risk",
-    "section": "3.2 From Projects to Asset Classes",
-    "text": "3.2 From Projects to Asset Classes\nTwo-Stage Finance and Synthetic Sovereign Bonds for Clean Power\nSolar and wind plants in developing countries are financed one at a time, on bespoke terms, by investors who price construction, payment, currency and sovereign risk together. For a plant with no fuel bill, that cost of capital is most of the price of power. This paper proposes turning such projects into a few standard securities. Banks and development finance institutions finance construction against a contingent purchase contract; on completion, plants are pooled and refinanced through a first-loss equity tranche, a thin mezzanine and a senior synthetic sovereign bond, rated on the guaranteed contracts, the cushion beneath it and a co-guarantee from highly rated sovereigns. A one-factor portfolio model shows that 5 to 10 percent subordination makes the senior bond near-AAA at plausible default correlations, and that refinancing at the resulting blended cost cuts the levelized cost of solar power by about a quarter. Where no contract exists, as for transmission, a tiered and conditional bond guarantee plays the same role.\nSlides → · Policy brief → · Full paper →",
-    "crumbs": [
-      "Research",
-      "3. Finance and Risk"
-    ]
-  },
-  {
-    "objectID": "research/5-modelling.html",
-    "href": "research/5-modelling.html",
+    "objectID": "modelling/5-modelling.html",
+    "href": "modelling/5-modelling.html",
     "title": "5. Modelling (CPAT)",
     "section": "",
     "text": "Finance ministries decide on carbon taxes, fuel subsidy reform and climate investment with the help of models they cannot inspect. This section is the paper-length companion to the CPAT-AI project, which rebuilt the Climate Policy Assessment Tool so that every step can be read and tested. It states the mitigation module’s method in one place; describes the two AI-assisted rebuilds and the 228 legacy bugs they found; and gathers the published validation and adds a check of the price elasticities that drive every result. The through-line is that a model a ministry can use must be small enough to state on a few pages, built at least twice, and tested against data and other models. The extensions ministries ask for, from exposure to the EU carbon border adjustment to the investment and debt side of climate policy, are written as modular upgrades in section 6.\nSection overview → · Series slides →",
     "crumbs": [
-      "Research",
+      "Modelling and Analytics",
       "5. Modelling (CPAT)"
     ]
   },
   {
-    "objectID": "research/5-modelling.html#paper-5-1",
-    "href": "research/5-modelling.html#paper-5-1",
+    "objectID": "modelling/5-modelling.html#paper-5-1",
+    "href": "modelling/5-modelling.html#paper-5-1",
     "title": "5. Modelling (CPAT)",
     "section": "5.1 The CPAT Mitigation Module: Methods in Brief",
     "text": "5.1 The CPAT Mitigation Module: Methods in Brief\nHow a Finance-Ministry Climate Model Turns Prices into Fuel Use, Power Investment, Emissions and Revenue\nFinance ministries now weigh carbon taxes, fuel subsidy reform and emissions trading against their budgets, and the Climate Policy Assessment Tool built by the World Bank and the International Monetary Fund is one of the few models that answers their questions for more than 180 countries at once. Its published documentation runs to 57,000 words for the mitigation module alone, and parts of it disagree with the model. This paper states the module’s method in one place, from the rebuilt and tested version. Retail prices are built up from supply cost, existing taxes, subsidies and the new carbon charge; fuel use responds through income, usage and efficiency elasticities; an engineering power model dispatches, retires and invests; emissions and revenue follow by accounting identities; revenue moves GDP a year later through fiscal multipliers. A worked example shows why a carbon price cuts industrial coal by a third and road fuel by about six percent. The paper gives the corrected equation wherever the documentation is wrong, lists the main limitations, and sets out a penalty-based investment rule as a proposed alternative to the logit share rule.\nSlides → · Full paper →",
     "crumbs": [
-      "Research",
+      "Modelling and Analytics",
       "5. Modelling (CPAT)"
     ]
   },
   {
-    "objectID": "research/5-modelling.html#paper-5-2",
-    "href": "research/5-modelling.html#paper-5-2",
+    "objectID": "modelling/5-modelling.html#paper-5-2",
+    "href": "modelling/5-modelling.html#paper-5-2",
     "title": "5. Modelling (CPAT)",
     "section": "5.2 CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool",
     "text": "5.2 CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool\nWhat two AI-assisted rebuilds of the Climate Policy Assessment Tool found, and how policy models should be maintained\nThe Climate Policy Assessment Tool is a spreadsheet model that finance ministries and international institutions use to estimate what carbon pricing does to energy use, emissions, revenue and households in more than 180 countries. Its legacy workbook is too large for anyone to audit cell by cell. This paper describes how it was rebuilt twice in October 2026, with AI coding agents doing most of the construction: once as a readable Excel workbook written by code, and once as a Python model that reproduces the workbook number for number. One rule governed both rebuilds: errors in the legacy model are fixed and never copied, while questionable but intended choices are copied and logged. The rebuild found 228 bugs in the legacy model, 24 of them serious enough to change standard results, as well as 135 issues (intended choices that are open to question) and 20 errors in the published documentation. Writing the model a second time found seven further bugs in the first rebuild. The lesson for ministries is that a policy model should be specified by shared variable codes, built at least twice and tested at every change.\nSlides → · Full paper →",
     "crumbs": [
-      "Research",
+      "Modelling and Analytics",
       "5. Modelling (CPAT)"
     ]
   },
   {
-    "objectID": "research/5-modelling.html#paper-5-3",
-    "href": "research/5-modelling.html#paper-5-3",
+    "objectID": "modelling/5-modelling.html#paper-5-3",
+    "href": "modelling/5-modelling.html#paper-5-3",
     "title": "5. Modelling (CPAT)",
     "section": "5.3 Validating CPAT: Baselines, Back-Casts and Model Comparisons",
     "text": "5.3 Validating CPAT: Baselines, Back-Casts and Model Comparisons\nWhat the published checks of the Climate Policy Assessment Tool show, where it fits and where it does not\nFinance ministries use the Climate Policy Assessment Tool to estimate what carbon pricing does to emissions and revenue, so they need to know how far its numbers can be trusted. This paper gathers the tool’s published validation in one place. It separates four tests: fit to the base year, back-casts against history, comparison with other models, and replication of the model in independent code. The model reproduces base-year energy use and emissions by construction, follows the trend of emissions in back-casts from 2000 for Australia, the United States and South Africa, and gives baselines and carbon-price responses of the same order as the International Energy Agency, Enerdata and the World Bank’s power planning model. It fits poorly where prices are hard to forecast, as for China, whose back-cast error is about as large as its emissions. Its rebuilt versions reproduce it to many decimal places. Results are most sensitive to price elasticities, and the published checks predate the correction of 228 bugs, so they should be rerun.\nSlides → · Full paper →",
     "crumbs": [
-      "Research",
+      "Modelling and Analytics",
       "5. Modelling (CPAT)"
     ]
   },
   {
-    "objectID": "research/5-modelling.html#paper-5-4",
-    "href": "research/5-modelling.html#paper-5-4",
+    "objectID": "modelling/5-modelling.html#paper-5-4",
+    "href": "modelling/5-modelling.html#paper-5-4",
     "title": "5. Modelling (CPAT)",
     "section": "5.4 Are CPAT’s Price Elasticities Right?",
     "text": "5.4 Are CPAT’s Price Elasticities Right?\nA Check Against the Evidence\nThe Climate Policy Assessment Tool, used by the IMF and the World Bank to estimate what carbon prices and fuel subsidy reforms do in more than 180 countries, turns every price change into emission cuts through a table of elasticities. This paper checks the tool’s default long-run own-price elasticities, fuel by fuel and sector by sector, against published meta-analyses and reviews. Seven of ten fuel-sector pairs lie within the published range. Three are too high: diesel in industry and gasoline in services, at about −1.05 against evidence of −0.4 to −0.8, and electricity in services. Gasoline in transport matches the uncorrected meta-analytic means but is double the estimate corrected for publication bias, and natural gas sits at the inelastic end of its range. Two structural choices matter more than any single value: the tool applies the full long-run response within one year, which overstates five-year responses by about half or more, and it applies own-price elasticities without cross-price terms. The paper sets out a validation protocol for future updates.\nSlides → · Full paper →",
     "crumbs": [
-      "Research",
+      "Modelling and Analytics",
       "5. Modelling (CPAT)"
     ]
   },
   {
-    "objectID": "research/7-analytics.html",
-    "href": "research/7-analytics.html",
+    "objectID": "modelling/7-analytics.html",
+    "href": "modelling/7-analytics.html",
     "title": "7. Analytics Tools",
     "section": "",
     "text": "Analysis changes policy only when the people who hold the budget can reproduce it. The two tools described in this section each take data a finance ministry already holds or can download, put it on a common scale and return something sequenced enough to act on. The Excise-Fiscal Diagnostic reads a whole excise schedule against the damage taxed goods do. The Global Fiscal Indicators dashboard gives a one-page fiscal and energy profile for 217 economies from public data, rebuilt by a script anyone can rerun. A third tool built to the same standard, the Macro-Fiscal-Energy Scenario Tool, links a climate investment program and carbon pricing to growth, revenue and debt; because it extends the Climate Policy Assessment Tool, it is described with the other modular upgrades in section 6 (paper 6.5). Each is built to one standard: every intermediate step visible, defaults defended line by line, and AI drafting checked against the source.\nSection overview → · Series slides →",
     "crumbs": [
-      "Research",
+      "Modelling and Analytics",
       "7. Analytics Tools"
     ]
   },
   {
-    "objectID": "research/7-analytics.html#paper-7-1",
-    "href": "research/7-analytics.html#paper-7-1",
+    "objectID": "modelling/7-analytics.html#paper-7-1",
+    "href": "modelling/7-analytics.html#paper-7-1",
     "title": "7. Analytics Tools",
     "section": "7.1 The Excise-Fiscal Diagnostic",
     "text": "7.1 The Excise-Fiscal Diagnostic\nReading an Excise System Against Its Externalities\nExcise schedules grow line by line for decades until nobody can read them whole, and few ministries can say whether their fuel, tobacco or alcohol taxes are high or low against the damage those goods do. The Excise-Fiscal Diagnostic is a light, repeatable report that fixes this. It maps every line of a schedule onto 30 standard lines and scales each rate three ways: US dollars per standard unit, share of the consumer price and implied revenue as a share of GDP. It sets fuel rates against a corrective benchmark built from one fixed set of values for carbon, air pollution, accidents, congestion and road damage, and health excises against published benchmarks. An AI model drafts each stage under a written specification, and every line is checked against the legal text. Applied to the 2026 excise law of Sierra Leone and Liberia, it finds excise revenue of 1.3 and 0.4 percent of GDP against an African average of 2.4, petrol taxed at USD 0.23 and 0.095 per liter, and health excises whose collection is weak or cannot be traced in the accounts.\nSlides → · Full paper →",
     "crumbs": [
-      "Research",
+      "Modelling and Analytics",
       "7. Analytics Tools"
     ]
   },
   {
-    "objectID": "research/7-analytics.html#paper-7-2",
-    "href": "research/7-analytics.html#paper-7-2",
+    "objectID": "modelling/7-analytics.html#paper-7-2",
+    "href": "modelling/7-analytics.html#paper-7-2",
     "title": "7. Analytics Tools",
     "section": "7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis",
     "text": "7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis\nEighty Public Indicators, One Country Profile, and a Build Anyone Can Rerun\nBefore advising a government on carbon pricing, energy subsidy reform or a climate investment program, an analyst needs a quick, comparable view of the country’s fiscal space, its capacity to spend, its cost of capital, and how much fossil fuel money runs through its budget. That view usually takes days to assemble from a dozen databases, each with its own country names, units and vintages. The Global Fiscal Indicators dashboard assembles it for 217 economies from about twenty public datasets, including the IMF’s World Economic Outlook, World Revenue Longitudinal Data and fossil fuel subsidy estimates, World Bank debt, budget and energy data, PEFA assessments and Ember’s electricity data. It scores 80 indicators in twelve blocks on one 1-to-10 scale and shows a one-page country profile. A scripted pipeline rebuilds everything from the raw files, never imputes, records the year and source file of every value, and stops if its configuration and its outputs disagree. A comparison of four middle-income economies shows how the profile separates a revenue problem from a debt-service problem and points each to a different fiscal-energy lever.\nSlides → · Full paper →",
     "crumbs": [
-      "Research",
+      "Modelling and Analytics",
       "7. Analytics Tools"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing.html",
+    "href": "policy/1-carbon-pricing.html",
+    "title": "1. Carbon Pricing",
+    "section": "",
+    "text": "Carbon prices stay low in open economies because one instrument is asked to do two jobs: to make producers cut emissions per unit of output, and to make consumers pay for the carbon in what they buy. A tax on domestic production charges exporters and spares imports, so governments exempt industry and hold the rate down. This section of papers gives each job its own instrument. A revenue-neutral feebate prices production intensity at the full rate at the margin, at no cost to the treasury. A carbon component of VAT and a forward obligation on energy suppliers price consumption, imports included. The Total Effective Carbon Price puts any instrument, priced or not, on one scale, so that border mechanisms, such as the EU’s Carbon Border Adjustment Mechanism (CBAM), and international payments can recognize policies rather than payments. In a stylized steel sector a feebate raises the price by $15 per tonne where a tax at the same rate raises it by $85; an international payment above half the feebate rate makes adoption a net gain; and once importers charge for embodied carbon, each exporter’s most competitive feebate rate equals the charge in its markets.\nSection overview → · Series slides →",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing.html#paper-1-1",
+    "href": "policy/1-carbon-pricing.html#paper-1-1",
+    "title": "1. Carbon Pricing",
+    "section": "1.1 Price Production and Consumption Separately",
+    "text": "1.1 Price Production and Consumption Separately\nA Two-Track Architecture for Carbon Pricing in Open Economies\nA carbon tax on domestic production does two jobs at once: it rewards firms for cutting emissions per unit of output, and it charges for the carbon in what the economy consumes. In an open economy the second job undermines the first, because the charge falls on exports and spares imports. This paper separates the jobs. A revenue-neutral feebate prices production intensity; a destination-based charge, levied through the value-added tax and through forward-announced obligations on energy suppliers, prices consumption. I show that the two tracks together reproduce the Pigouvian allocation for domestic consumption without leakage, that the feebate’s residual cost is second order, that international payments above half the feebate rate make adoption a net gain, and that destination charges make each exporter’s most competitive feebate rate equal to the charge in its markets. A calibration to the EU’s default emission values for steel illustrates the magnitudes.\nRead online → · Slides → · Policy brief → · Full paper →",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing.html#paper-1-2",
+    "href": "policy/1-carbon-pricing.html#paper-1-2",
+    "title": "1. Carbon Pricing",
+    "section": "1.2 Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill",
+    "text": "1.2 Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill\nDecarbonizing Coal-Heavy Power and Trade-Exposed Industry\nA carbon tax makes coal dearer than clean power, which cuts emissions, and charges producers for every tonne they still emit, which provokes the resistance that stalls it in coal-heavy countries. A revenue-neutral feebate, a fee per unit of output above a benchmark emissions intensity and a rebate below it, keeps the first effect and drops the second. I show that a feebate and a tax at the same rate produce the same merit order and the same choice between clean and coal capacity, but that what consumers pay depends on how power is priced. Where a single buyer passes average cost through, the tariff rises only by the cost of re-dispatch: about $1 per megawatt-hour in India at $50 per tonne, against $36 for a tax. In a uniform-price wholesale market the price rises by $13, because there the feebate is a tax plus a rebate to consumers. Dominant state utilities see only part of the rate unless the benchmark excludes their own output.\nSlides → · Policy brief → · Full paper →",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing.html#paper-1-3",
+    "href": "policy/1-carbon-pricing.html#paper-1-3",
+    "title": "1. Carbon Pricing",
+    "section": "1.3 Converting a VAT into a Destination Carbon Tax",
+    "text": "1.3 Converting a VAT into a Destination Carbon Tax\nA Carbon Component in VAT and a Forward Obligation on Energy Suppliers in the European Union\nThe European Union prices the carbon its power plants and factories emit, but not most of the carbon in what Europeans buy, 40 percent of which is emitted abroad. This paper proposes a carbon consumption tax in two parts: a carbon component of VAT, charged on every good and service consumed in the Union at rebuttable default intensities while the value component falls, and a legal obligation, fixed a decade ahead, on the few suppliers of fuel for homes and vehicles. I show that, with full input crediting, each firm pays the carbon price on the carbon it adds and the consumer bears it on the whole supply chain; that exempt stages break the chain; and that deducting carbon prices paid upstream gives every tonne one price. Input–output calibration puts the taxable household basket at 0.41 kg CO₂e per euro in 2022, imports at twice EU-made goods. A rule that cuts the value component by last year’s carbon receipts keeps the swap revenue-neutral. The swap is mildly regressive: at €200 per tonne the poorest fifth pays 0.4 percent of spending more and the richest 0.2 percent less.\nSlides → · Policy brief → · Full paper →",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing"
+    ]
+  },
+  {
+    "objectID": "policy/1-carbon-pricing.html#paper-1-4",
+    "href": "policy/1-carbon-pricing.html#paper-1-4",
+    "title": "1. Carbon Pricing",
+    "section": "1.4 Credit the Price Signal, Not the Payment",
+    "text": "1.4 Credit the Price Signal, Not the Payment\nCarbon Price Recognition and Scrap Shuffling under the EU’s Carbon Border Adjustment Mechanism\nThe EU’s Carbon Border Adjustment Mechanism measures embodied carbon plant by plant and credits only carbon prices effectively paid. Both rules undermine its second purpose, encouraging trading partners to decarbonize. A producer can send scrap-based steel to Europe and blast-furnace steel elsewhere, cutting its charge without cutting emissions. And a revenue-neutral feebate, which charges the full rate at the margin, earns nothing because its average payment is zero. I show that measuring embodied carbon and the price signal by country and sector removes the gain from shuffling and rewards the feebate, and I calibrate a liability formula to the EU’s default values. At €80 per tonne, shuffling saves €100–600 per tonne of steel across thirteen exporters; recognizing the signal halves the share of output an exporter must sell to the EU before a feebate pays for itself. Full recognition has a cost: an exporter with a feebate at the EU price would pay no charge while EU producers pay on all their emissions, which invites relocation. The Commission should therefore recognize the sector-wide signal alongside the price paid, phased in from 2027 to 2034 with relocation reviews, and use country-sector values where an exporter has such a signal and verified whole-output intensity where it does not.\nSlides → · Policy brief → · Full paper →",
+    "crumbs": [
+      "Policy and Finance",
+      "1. Carbon Pricing"
+    ]
+  },
+  {
+    "objectID": "policy/2-other-tax.html",
+    "href": "policy/2-other-tax.html",
+    "title": "2. Other Tax and Fiscal Policy",
+    "section": "",
+    "text": "Governments that let capital and people move freely find it hard to tax mobile income at high rates, so they give up on high rates altogether. This section argues that the constraint binds only on the wrong base. Economic rent, the return above what an investor needs to stay, can be taxed heavily without driving anything away, because land cannot move and market power earned in a country’s market is earned from its customers. The section’s paper, Rent Tax, combines a land value tax above a household allowance with three corporate instruments that presume large firms hold market power: a high rate on profits above a normal return, a narrow destination-based tax on mobile rent-bearing sectors, and a sales tax with deductions for genuine local investment and employment. Longer and older treatments of tax and fiscal reform, including the book Screwed?! and a note on India’s legacy coal power contracts, are kept in section 8.\nSection overview →",
+    "crumbs": [
+      "Policy and Finance",
+      "2. Other Tax and Fiscal Policy"
+    ]
+  },
+  {
+    "objectID": "policy/2-other-tax.html#paper-2-1",
+    "href": "policy/2-other-tax.html#paper-2-1",
+    "title": "2. Other Tax and Fiscal Policy",
+    "section": "2.1 Taxing Rent, Not Effort: A Simple Design for Land and Corporate Taxation Consistent with Free Movement of Capital and People",
+    "text": "2.1 Taxing Rent, Not Effort: A Simple Design for Land and Corporate Taxation Consistent with Free Movement of Capital and People\nFull paper →",
+    "crumbs": [
+      "Policy and Finance",
+      "2. Other Tax and Fiscal Policy"
+    ]
+  },
+  {
+    "objectID": "policy/4-sovereign-incentives.html",
+    "href": "policy/4-sovereign-incentives.html",
+    "title": "4. Sovereign Incentives",
+    "section": "",
+    "text": "The benefits of cutting emissions are global and the costs national, so incentives for national climate policy have to come from outside. Cash transfers on the scale needed are politically impossible. This section of papers argues that the international system should instead reward governments with what it can supply cheaply and they value highly: cheaper borrowing, delivered through guarantees and collateral. A guarantee saves the borrower the full credit spread but costs its provider only expected loss and the carry on a buffer, so on the development banks’ own sovereign loss record each dollar of donor cost delivers about 80 dollars of incentive, and 2.7 in a stress case where a new facility does not inherit their preferred-creditor status. Three instruments follow: a notional capitalized value that turns a country’s carbon stock into guarantee capacity, debited for every tonne emitted above an allowance; a Climate Investment Trust that holds the capital behind those guarantees instead of spending it; and codified sustainability-linked lending, which delivers the reward but is too small on its own. Capacity that declines as clean technology gets cheaper pays a premium for acting now.\nSection overview → · Series slides →",
+    "crumbs": [
+      "Policy and Finance",
+      "4. Sovereign Incentives"
+    ]
+  },
+  {
+    "objectID": "policy/4-sovereign-incentives.html#paper-4-1",
+    "href": "policy/4-sovereign-incentives.html#paper-4-1",
+    "title": "4. Sovereign Incentives",
+    "section": "4.1 Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives",
+    "text": "4.1 Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives\nTurning carbon stocks and low-emission paths into cheaper borrowing\nClimate finance pays countries for marginal emission cuts measured against counterfactuals nobody can observe, and pays almost nothing for carbon stocks never released. This paper proposes a notional capitalized value: a balance opened by a country’s carbon stock, debited for every tonne emitted above an agreed allowance, and used not as cash but as guarantee capacity on its green borrowing. A guarantee saves the borrower the full credit spread but costs its provider only expected loss and the carry on a buffer, so on the development banks’ own sovereign loss record each dollar of donor cost delivers about 80 dollars of incentive. That record reflects their preferred-creditor status, which a new facility might not inherit; in a stress case without it the figure is 2.7. The stock should set the size of the balance and a separate price the debit per tonne. For a stylized forest country with Guyana’s carbon stock, a $5 billion balance saves $150 million a year and prices emissions at about $30 per tonne, at a donor cost of about 40 cents per tonne ($11 in the stress case). Capacity that declines as fast as technology costs fall is the cheapest way to make acting now beat waiting.\nSlides → · Policy brief → · Full paper →",
+    "crumbs": [
+      "Policy and Finance",
+      "4. Sovereign Incentives"
+    ]
+  },
+  {
+    "objectID": "policy/4-sovereign-incentives.html#paper-4-2",
+    "href": "policy/4-sovereign-incentives.html#paper-4-2",
+    "title": "4. Sovereign Incentives",
+    "section": "4.2 The Climate Investment Trust: Hold Capital, Lend Its Strength",
+    "text": "4.2 The Climate Investment Trust: Hold Capital, Lend Its Strength\nA buffer fund that insures policy guarantees, invests in clean energy and holds national climate accounts\nLarge international rewards for national climate policy fail because donors will not vote for cash transfers on the needed scale and governments cannot borrow against promised payments. I propose a Climate Investment Trust that holds donor capital rather than spending it, and uses one pool three ways: as second-loss cover behind the guarantees that reward policy, as fee-earning co-investment in clean energy and in regional first-loss funds, and as national beneficiary accounts that countries pledge as collateral now and draw only after 2050. I derive the buffer needed to keep the chance of exhaustion below a target, and show that a held buffer delivers interest savings equal to the spread divided by the expected loss rate per donor dollar, against one dollar for a fund that pays out. On the development banks’ own sovereign loss record, each donor dollar delivers about 80 dollars of interest savings. That record reflects their preferred-creditor status, which a new trust might not inherit, so I also report a stress case in which $5 billion supports $54 billion of guarantees and delivers 2.7 dollars per dollar. Growth requires guarantee fees or a fee on private returns, and an allocation rule built as a feebate between accounts rewards early action at no net cost.\nSlides → · Policy brief → · Full paper →",
+    "crumbs": [
+      "Policy and Finance",
+      "4. Sovereign Incentives"
+    ]
+  },
+  {
+    "objectID": "policy/4-sovereign-incentives.html#paper-4-3",
+    "href": "policy/4-sovereign-incentives.html#paper-4-3",
+    "title": "4. Sovereign Incentives",
+    "section": "4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale",
+    "text": "4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale\nStandard indicators, verification and pricing, and why the reward must be bigger than an interest margin\nSustainability-linked loans and bonds tie a government’s interest rate to climate indicators, so they pay for national results rather than projects. They remain rare, bespoke and small: Uruguay’s 2023 World Bank loan, the leading example, can save the country at most $12.5 million. I propose codifying the instrument: standard indicators measured as outturns, baselines set by rule, verification from published data and a published pricing schedule. I show that a market bond whose coupon moves with results gives the government no expected transfer, and that a fixed coupon with a reward paid by a trusted intermediary delivers the same incentive more cheaply. An interest rebate is bounded by the interest bill, so such rewards are an order of magnitude smaller than the cost of major reforms. Making guarantee capacity the reward multiplies the incentive per dollar of funder cost by about 80 on development banks’ own sovereign loss record, the base case shared across this series. That record reflects their preferred-creditor status, which a new guarantor might not inherit; on stress assumptions the multiple is 2.7.\nSlides → · Policy brief → · Full paper →",
+    "crumbs": [
+      "Policy and Finance",
+      "4. Sovereign Incentives"
     ]
   }
 ]

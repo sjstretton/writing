@@ -1,16 +1,18 @@
 # NUMBERING.md
 
-The paper numbers follow the section folders in `B Working Papers` (Stephen's restructure of 31 Oct 2026). A paper's number is its section number plus its place in the section. Folder names, file names, titles, brief series lines, citation keys, decks and the website all use these numbers.
+The paper numbers follow the section folders in `C Policy and FInance` (sections 1–4) and `D Modelling` (5–7) (Stephen's restructures of 31 Oct 2026). A paper's number is its section number plus its place in the section. Folder names, file names, titles, brief series lines, citation keys, decks and the website all use these numbers.
 
 ## Map (old number → new number)
+
+On 31 Oct 2026 (later the same day) papers 1.3 and 1.4 swapped places so that the CBAM paper comes last in section 1: the consumption tax, retitled *Converting a VAT into a Destination Carbon Tax*, is now 1.3 (`1.3.CarbonConsumptionTax`, `CFPB13`, `StrettonWP13`) and CBAM recognition is 1.4 (`1.4.IronSteelCBAM`, `CFPB14`, `StrettonWP14`). The table shows the result.
 
 | Section folder | New no. | Paper | Old no. |
 |---|---|---|---|
 | `1.CarbonPricing` | 1.0 | Overview: carbon pricing in open economies | 1.0 |
 | | 1.1 | Price Production and Consumption Separately (two-track architecture) | 1.1 |
 | | 1.2 | Feebates: The Full Carbon Price at the Margin | 1.2 |
-| | 1.3 | Credit the Price Signal, Not the Payment (CBAM recognition) | 1.3 |
-| | 1.4 | Carbon Consumption Tax | 1.6 |
+| | 1.3 | Converting a VAT into a Destination Carbon Tax (carbon consumption tax) | 1.6, then 1.4 |
+| | 1.4 | Credit the Price Signal, Not the Payment (CBAM recognition) | 1.3 |
 | `2.OtherTaxAndFiscalPolicy` | 2.0 | Overview: Tax Rent, Not Effort (new) | – |
 | | 2.1 | Rent Tax | 1.4 |
 | `3.FinanceAndRisk` | 3.0 | Overview: Make Clean Power an Asset Class | 2.0 |
@@ -38,9 +40,9 @@ The paper numbers follow the section folders in `B Working Papers` (Stephen's re
 | | 8.1–8.7 | Subsections: 8.1 other fiscal policy, 8.2 finance and risk, 8.3 sovereign incentives and MDBs, 8.4 analytics, 8.5 books, 8.6 philosophy, 8.7 politics; papers 8.x.y in folder names (e.g. `8.5.3.Screwed`). Their internal text keeps its old numbers | 1.5, 2.3, 3.4–3.5, 5.2–5.4, 6.x, 7.x, 8.x |
 | `9.ResearchTracking` | – | Source digests, trackers | – |
 
-Admin folders: `A.Website`, `B.Scripts`.
+The website is `E Website`; the scripts are in `H Writing Instructions/Scripts`. Writing outside the series is in `F Other Writing` (8.x).
 
-Each section folder (1–8) holds only its numbered paper folders and one overview folder, `<N>.0.Overview/`, which keeps the overview qmd/docx/bib under their numbered file names, the section theme deck (`1.Presentation/`), section-level `8.PreviousVersions/`, and notes such as `SeriesArchitecture.md`, `CrossReview-Notes.md` and `RelatedWork.md`. Paper folders use the standard slots (`E Writing Instructions/Scripts/Papers/Reference/_PaperFolderLayout.md`); `3.BackgroundPapers` folders were renamed `3.RelatedPiecesAndLinks` on 31 Oct 2026.
+Each section folder (1–8) holds only its numbered paper folders and one overview folder, `<N>.0.Overview/`, which keeps the overview qmd/docx/bib under their numbered file names, the section theme deck (`1.Presentation/`), section-level `8.PreviousVersions/`, and notes such as `SeriesArchitecture.md`, `CrossReview-Notes.md` and `RelatedWork.md`. Paper folders use the standard slots (`H Writing Instructions/Scripts/Papers/Reference/_PaperFolderLayout.md`); `3.BackgroundPapers` folders were renamed `3.RelatedPiecesAndLinks` on 31 Oct 2026.
 
 ## Citation keys
 

@@ -14,7 +14,7 @@ unwrought aluminium (CN 7601). Inputs:
     2025/2620, Annex point 5.3 (read 30 Oct 2026): CN 7208 route (C) 1.370,
     CN 7214 20 00 route (C) 1.364, CN 7601 route (K) 1.423 tCO2/t. They affect
     2026-2033 only, not the full phase-in results.
-Stylized: certificate price EUR 80/tCO2 (as in paper 1.3); domestic carbon
+Stylized: certificate price EUR 80/tCO2 (as in paper 1.4); domestic carbon
 price EUR 20/tCO2 effectively paid on all embedded emissions (actual-values
 route only, Article 9).
 

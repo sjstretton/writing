@@ -1,22 +1,28 @@
 @echo off
-rem Compile the website: copy every paper, brief, overview and deck into the site's papers folder,
+rem Compile the website: copy every paper, brief, overview and deck into E Website\PaperArchive, build the web pages,
+rem put only the files the pages link to into E Website\papers, write the index.html in each paper folder,
 rem then build the site with Quarto. Nothing is uploaded. Run Deploy-Website.bat to put it online.
 setlocal
 cd /d "%~dp0"
 echo.
-echo   1/2  Copying papers into B Working Papers\A.Website\papers ...
-python "%~dp0E Writing Instructions\Scripts\Website\publish_series.py"
+echo   1/2  Copying papers into E Website\PaperArchive ...
+python "%~dp0H Writing Instructions\Scripts\Website\publish_series.py"
 if errorlevel 1 (echo Copy step failed - is Python installed? & pause & exit /b 1)
+echo   Making the web version of each paper from its master .qmd ...
+python "%~dp0H Writing Instructions\Scripts\Website\build_web_papers.py"
+if errorlevel 1 (echo Web-paper step failed. & pause & exit /b 1)
 echo   Writing the Research pages from the papers' current titles and abstracts ...
-python "%~dp0E Writing Instructions\Scripts\Website\build_research_pages.py"
+python "%~dp0H Writing Instructions\Scripts\Website\build_research_pages.py"
+echo   Writing index.html in C Policy and FInance and D Modelling ...
+python "%~dp0H Writing Instructions\Scripts\Website\build_folder_index.py"
 call :findquarto
 if not defined QUARTO (echo Quarto not found - install Quarto or RStudio. & pause & exit /b 1)
 echo.
 echo   2/2  Building the site with Quarto ...
-cd /d "%~dp0B Working Papers\A.Website"
+cd /d "%~dp0E Website"
 "%QUARTO%" render
 echo.
-echo   Done. Open B Working Papers\A.Website\_site\index.html to check it, then run Deploy-Website.bat.
+echo   Done. Open E Website\_site\index.html to check it, then run Deploy-Website.bat.
 pause
 exit /b 0
 

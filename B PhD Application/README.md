@@ -1,6 +1,6 @@
 # Research Proposals
 
-Stephen's PhD research proposals. There are three, in different states. Priorities come from `E Writing Instructions/STRATEGY.md`.
+Stephen's PhD research proposals. There are three, in different states. Priorities come from `H Writing Instructions/STRATEGY.md`.
 
 | No. | Proposal | Target | Status | Priority | Files |
 |---|---|---|---|---|---|
@@ -11,6 +11,6 @@ Stephen's PhD research proposals. There are three, in different states. Prioriti
 ## Conventions
 
 - One proposal per file, named `<No>-<ShortName>-<type>.<ext>`. Keep earlier drafts with a date suffix.
-- Proposals follow `E Writing Instructions/Writing Standards/writing-types.md` ("Research proposal"): question first, named data and method, three-year feasibility.
-- Nothing in a submitted proposal may read as tool or planning text (see `E Writing Instructions/Writing Standards/ai-tells.md`, section 1).
+- Proposals follow `H Writing Instructions/Writing Standards/writing-types.md` ("Research proposal"): question first, named data and method, three-year feasibility.
+- Nothing in a submitted proposal may read as tool or planning text (see `H Writing Instructions/Writing Standards/ai-tells.md`, section 1).
 - Supervisor names, deadlines and program rules must be checked on the live source before use.

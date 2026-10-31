@@ -6,8 +6,8 @@ Instructions for AI agents, including Claude Code (`CLAUDE.md` points here), wor
 
 | Part | Folders | Read before working | What it is for |
 |---|---|---|---|
-| **Planning** | `0A Daily and Weekly Task Lists`, `4 Planning Instructions`, `2 Strategic Plans`, `3 Archive` | `4 Planning Instructions/AGENTS.md`, then its `NORMS.md` | Tasks for every repo, day and week plans, strategic plans, the printable tracker, and the master Google Sheet kept in step with the repo |
-| **Writing** | `H Writing Instructions` (with `Writing Standards`, `Templates and Info`, `Claude + Scripts`), `B Working Papers`, `B PhD Application`, `G Climate Econ Course` | `H Writing Instructions/AGENTS.md`, then its `NORMS.md` | Papers, briefs and decks, the website, PhD proposals, the course |
+| **Planning** | `0A Daily and Weekly Task Lists`, `0B Quick Wins and Next Milestone`, `4 Planning Instructions`, `2 Strategic Plans`, `3 Archive` | `4 Planning Instructions/AGENTS.md`, then its `NORMS.md` | Tasks for every repo, day and week plans, strategic plans, the printable tracker, and the master Google Sheet kept in step with the repo |
+| **Writing** | `A Specialisms, Theory and Research Profile`, `B PhD Application`, `C Policy and FInance` and `D Modelling` (the papers), `E Website`, `F Other Writing`, `G Climate Econ Course`, `H Writing Instructions` | `H Writing Instructions/AGENTS.md`, then its `NORMS.md` | Papers, briefs and decks, the website, PhD proposals, the course |
 
 `README.md` (this folder) maps the layout. Each part's `README.md` gives the detail.
 
@@ -20,7 +20,7 @@ Stephen is easily overwhelmed by volume, so planning output must stay short and 
 - Make the changes asked for. Don't reorganise, rename or delete files unless asked.
 - Read a file before editing it, and match its style.
 - Don't invent citations, figures, quotes or results. Mark anything uncertain.
-- Don't commit secrets or credentials. The website's FTP login stays on Stephen's PC (`H Writing Instructions/Scripts/Papers/Reference/_ftp.txt`, git-ignored).
+- Don't commit secrets or credentials. The website's FTP login stays on Stephen's PC in `FTP-Login.txt` at the repo root, which is git-ignored.
 - Treat World Bank internal or confidential material as non-public.
 - Paths in instructions are from the repo root unless the file says otherwise. Planning scripts run from `4 Planning Instructions/` (for example `python3 Scripts/update.py check`).
 

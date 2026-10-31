@@ -2,14 +2,15 @@
 
 Push-Website.bat runs this when WinSCP is not installed. It reads the login from
 FTP-Login.txt at the top of the repository (host, user, password, remote, protocol = ftp or ftps), uploads every file in
-B Working Papers/A.Website/_site whose size differs from the server copy (or is missing
-there), creating folders as needed, then deletes the files retired from the site.
+E Website/_site whose size differs from the server copy (or is missing
+there), creating folders as needed. Then it makes the server's papers/ folder an exact copy of
+the built one: any file there that the site no longer links to is deleted.
 Web pages (.html, .css, .js, .json, .xml) are always uploaded: an edited page can keep
 the same size, and a size check alone would skip it.
 
 Before uploading it checks that the remote folder already exists and already holds the
 site (index.html); otherwise it stops rather than creating a new folder the web server
-never serves. Afterwards it reads research.html back from the server and, if FTP-Login.txt
+never serves. Afterwards it reads index.html back from the server and, if FTP-Login.txt
 has a "url = https://..." line, from the live website, and says whether each matches
 the built copy.
 
@@ -24,14 +25,8 @@ import sys
 from pathlib import Path
 
 ALWAYS = {".html", ".css", ".js", ".json", ".xml"}
-PROBE = "research.html"
+PROBE = "index.html"
 
-RETIRED = [
-    "papers/SustainabilityLinkedLending.pdf",
-    "papers/MDBClimateEnvelope.docx",
-    "papers/GeoprosperityIntro.docx",
-    "papers/CombinedOverview.docx",
-]
 
 
 def read_cfg(path):
@@ -116,7 +111,7 @@ def live_bytes(url):
 
 
 def check(ftp, cfg, site, remote):
-    """Compare research.html as built, on the server and on the live website."""
+    """Compare index.html as built, on the server and on the live website."""
     local = (site / PROBE).read_bytes()
     on_server = server_bytes(ftp, f"{remote}/{PROBE}")
     if on_server is None:
@@ -185,12 +180,19 @@ def main():
         print(f"  uploaded {rel}")
     print(f"Uploaded {sent} files; {same} already up to date.")
 
-    for rel in RETIRED:
-        try:
-            ftp.delete(f"{remote}/{rel}")
-            print(f"  deleted retired file {rel}")
-        except ftplib.error_perm:
-            pass  # already gone
+    # papers/ on the server mirrors the built papers/: delete anything the site no longer links to
+    local = {f.name for f in (site / "papers").iterdir() if f.is_file()}
+    try:
+        names = [n.rsplit("/", 1)[-1] for n in ftp.nlst(f"{remote}/papers")]
+    except ftplib.error_perm:
+        names = []
+    for n in names:
+        if n not in (".", "..") and n not in local:
+            try:
+                ftp.delete(f"{remote}/papers/{n}")
+                print(f"  deleted papers/{n} (no longer linked)")
+            except ftplib.error_perm:
+                pass
     print("Checking the result:")
     check(ftp, cfg, site, remote)
     ftp.quit()

@@ -7,7 +7,7 @@ The writing program: which papers to upgrade, in what order, and which new paper
 3. **Concept papers**: one concept each, written to enter World Bank discourse.
 4. **Position papers**: the overarching papers that justify Stephen's positions.
 
-Status key: `idea` · `notes` · `draft` · `upgrading` · `standard` (passes `E Writing Instructions/Writing Standards/paper-standard.md`) · `submitted` · `published`.
+Status key: `idea` · `notes` · `draft` · `upgrading` · `standard` (passes `H Writing Instructions/Writing Standards/paper-standard.md`) · `submitted` · `published`.
 
 > Paper numbers follow `NUMBERING.md` (renumbered 31 Oct 2026). Rankings and "main result" wording are an agent draft (29 Oct 2026) based on the website abstracts and `Writing-Status-Report.md`. Stephen to confirm.
 
@@ -23,13 +23,13 @@ Order of work. The reason column says why each paper is where it is.
 | 4 | 4.1 | Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives | working paper v0.1 + brief (29 Oct) | WB working paper / journal | Series 4 flagship; the core idea behind proposal 1. First full draft. Next: Stephen's read |
 | 5 | 1.2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | working paper v0.3 + brief + deck (29 Oct) | WB working paper / journal | Market-design propositions; India, Indonesia, South Africa cases |
 | 6 | 4.2 | The Climate Investment Trust: Hold Capital, Lend Its Strength | working paper v0.2 + brief (29 Oct) | WB working paper | Series 4 flagship with 4.1 (moved from the finance series on 29 Oct). Buffer, growth and allocation propositions |
-| 7 | 1.3 | Credit the Price Signal, Not the Payment (CBAM recognition and scrap shuffling) | working paper v0.3 + brief + deck (29 Oct) | Policy journal / Commission consultation | Shuffling model, liability formula, calibration to EU default values |
+| 7 | 1.4 | Credit the Price Signal, Not the Payment (CBAM recognition and scrap shuffling) | working paper v0.3 + brief + deck (29 Oct) | Policy journal / Commission consultation | Shuffling model, liability formula, calibration to EU default values |
 | 8 | 7.1 | The Excise-Fiscal Diagnostic: Reading an Excise System Against Its Externalities | paper v0.3 (30 Oct) | Companion paper to the analytics tools | Cut from the 24,800-word report (now v0.1); stylized example plus Sierra Leone and Liberia applications (diagnostic results, illustrative) |
 | 9 | 5.1–5.4, 6.2–6.4 | The CPAT papers (methods, CPAT-AI, validation, elasticities) and modular upgrades (CBAM tool, public investment, activity) | papers v0.1 (29 Oct) | Companion papers to the CPAT-AI repository | See the section 5 and 6 table below |
 
 ### The finance-and-risk series (section 3)
 
-Plan: `B Working Papers/3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md`. 3.1 is the flagship.
+Plan: `C Policy and FInance/3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md`. 3.1 is the flagship.
 
 | No. | Paper | Status |
 |---|---|---|
@@ -39,7 +39,7 @@ Plan: `B Working Papers/3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md`. 3.
 
 ### The sovereign-incentives series (section 4)
 
-Plan: `B Working Papers/4.SovereignIncentives/4.0.Overview/SeriesArchitecture.md`. 4.1 and 4.2 are the flagships. Cross-review: `4.SovereignIncentives/4.0.Overview/CrossReview-Notes.md`.
+Plan: `C Policy and FInance/4.SovereignIncentives/4.0.Overview/SeriesArchitecture.md`. 4.1 and 4.2 are the flagships. Cross-review: `4.SovereignIncentives/4.0.Overview/CrossReview-Notes.md`.
 
 | No. | Paper | Status |
 |---|---|---|
@@ -50,7 +50,7 @@ Plan: `B Working Papers/4.SovereignIncentives/4.0.Overview/SeriesArchitecture.md
 
 ### The CPAT series (section 5), modular upgrades (section 6) and the analytics tools (section 7)
 
-Plan: `B Working Papers/5.Modelling/5.0.Overview/SeriesArchitecture.md`. One medium-length paper per item (about 4,000–6,000 words; 5.1 about 9,000), companions to the CPAT-AI repository and the Climate Fiscal AI Tools. All v0.1 drafts of 29 Oct except 7.1 (v0.3, 30 Oct). Country results from the private tools repository are used as illustrative results where cleared (see each README); PFR and not-for-citation or draft-for-discussion documents are excluded.
+Plan: `D Modelling/5.Modelling/5.0.Overview/SeriesArchitecture.md`. One medium-length paper per item (about 4,000–6,000 words; 5.1 about 9,000), companions to the CPAT-AI repository and the Climate Fiscal AI Tools. All v0.1 drafts of 29 Oct except 7.1 (v0.3, 30 Oct). Country results from the private tools repository are used as illustrative results where cleared (see each README); PFR and not-for-citation or draft-for-discussion documents are excluded.
 
 | No. | Paper |
 |---|---|
@@ -71,10 +71,10 @@ Plan: `B Working Papers/5.Modelling/5.0.Overview/SeriesArchitecture.md`. One med
 
 | | Companion | Where | Status |
 |---|---|---|---|
-| C1 | Carbon Consumption Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers | 1.4 | working paper v0.2 (29 Oct) |
+| C1 | Converting a VAT into a Destination Carbon Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers in the European Union | 1.3 | working paper v0.2 (29 Oct) |
 | C2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | 1.2 | working paper v0.3 (29 Oct) |
 | C3 | Measure Carbon Pricing by the Emissions It Cuts (TECP) | 6.1 | working paper v0.3 (29 Oct) |
-| C4 | Credit the Price Signal, Not the Payment (CBAM) | 1.3 | working paper v0.3 (29 Oct) |
+| C4 | Credit the Price Signal, Not the Payment (CBAM) | 1.4 | working paper v0.3 (29 Oct) |
 
 Not in the program: the confidential World Bank SLL discussion paper (now in `4.3…/9.Archive`) and the section 8 papers (`8.AdditionalPolicyPapers`), unless Stephen promotes one.
 

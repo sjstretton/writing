@@ -1,51 +1,27 @@
-"""Build the website's Research pages from the papers themselves, so the site is never out of date.
+"""Build the website's research pages from the papers themselves, so the site is never out of date.
 
-Writes, in B Working Papers/A.Website:
-    research.qmd                 the Research home: a short intro and, for each section, a line and its paper titles
-    research/<n>-<slug>.qmd      one page per section: the overview abstract, then each paper's title,
-                                 subtitle, current abstract and links (slides, policy brief, full paper)
-research/more.qmd (More papers and books) is hand-written and left alone.
+For each part in site_config.PARTS (Policy and Finance; Modelling and Analytics) this writes, in E Website:
+    the part's home page (index.qmd, modelling/index.qmd)  a short intro and, per section, a line and its papers
+    <part>/<n>-<slug>.qmd     one page per section: the overview abstract, then each paper's title, subtitle,
+                              current abstract and links (read online, slides, policy brief, full paper)
+    the part's sidebar in _quarto.yml (between its BEGIN/END markers): sections, and under each the papers
+                              that have a web version
+policy/more.qmd (Books and other papers) is hand-written and left alone.
 
-Titles, subtitles and abstracts are read from each paper's master .qmd; the links point at the files
-publish_series.py copies into papers/, and only files that exist are linked.
-Compile-Website.bat runs this after publish_series.py and before quarto render.
+Then it fills papers/ with exactly the files the site's pages link to, copied from PaperArchive/ (filled by
+publish_series.py). papers/ is uploaded; PaperArchive/ is not. A linked file missing from the archive is reported.
+
+Titles, subtitles and abstracts are read from each paper's master .qmd. Old addresses (research/...) are kept
+working with redirects (Quarto 'aliases').
+Compile-Website.bat runs this after publish_series.py and build_web_papers.py and before quarto render.
 """
 import re
-from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[3] / "B Working Papers"
-SITE = ROOT / "A.Website"
-PAPERS = SITE / "papers"
-
-# section folder, page slug, sidebar/menu name, one-line description for the Research home,
-# published overview file, published series deck (or None)
-SECTIONS = [
-    ("1.CarbonPricing", "1-carbon-pricing", "Carbon Pricing",
-     "Price production and consumption separately: a feebate on emissions intensity and a destination-based charge on consumption.",
-     "OverviewClimateAndFiscalPolicy.docx", "Slides-ClimateAndFiscalPolicy.pptx"),
-    ("2.OtherTaxAndFiscalPolicy", "2-other-tax", "Other Tax and Fiscal Policy",
-     "Tax rent, not effort: land and corporate taxes that hold up when capital and people can move.",
-     "OverviewOtherTaxAndFiscalPolicy.docx", None),
-    ("3.FinanceAndRisk", "3-finance-and-risk", "Finance and Risk",
-     "Make clean power an asset class: remove payment risk at source, then turn projects into standard securities.",
-     "OverviewMobilisingPrivateCapital.docx", "Slides-FinanceAndRisk.pptx"),
-    ("4.SovereignIncentives", "4-sovereign-incentives", "Sovereign Incentives",
-     "Reward governments, not projects: guarantee capacity and held capital that pay for acting early.",
-     "OverviewSovereignIncentives.docx", "Slides-SovereignIncentives.pptx"),
-    ("5.Modelling", "5-modelling", "Modelling (CPAT)",
-     "Models a finance ministry can audit: the Climate Policy Assessment Tool stated, rebuilt and validated.",
-     "OverviewModelling.docx", "Slides-Modelling.pptx"),
-    ("6.ModularUpgrades", "6-modular-upgrades", "Modular Upgrades",
-     "Extensions to CPAT where policy needs them: carbon-price equivalents, CBAM, public investment, activity and macro-fiscal scenarios.",
-     "OverviewModularUpgrades.docx", None),
-    ("7.AdditionalAnalytics", "7-analytics", "Analytics Tools",
-     "Diagnostics on data ministries already hold: excise systems and fiscal indicators.",
-     "OverviewAnalytics.docx", "Slides-Analytics.pptx"),
-]
+import shutil
+from site_config import PARTS, SITE, ARCHIVE, PAPERS, paper_folders, paper_name, master_qmd, section_folder, web_page
 
 
 def front_matter(qmd):
-    text = qmd.read_text(encoding="utf-8-sig")
+    text = qmd.read_text(encoding="utf-8-sig").replace("\r\n", "\n")
     m = re.match(r"---\n(.*?)\n---", text, re.S)
     if not m:
         return {}
@@ -68,36 +44,31 @@ def front_matter(qmd):
     return meta
 
 
-def master(folder):
-    """The paper's master qmd: the .qmd at the folder root named like the folder (without its number)."""
-    name = folder.name.split(".", 2)[-1]
-    q = folder / f"{name}.qmd"
-    if q.exists():
-        return q
-    qs = [p for p in folder.glob("*.qmd")]
-    return qs[0] if qs else None
+def up(page):
+    """Relative prefix from a site-relative page back to the site root."""
+    return "../" * page.count("/")
 
 
-def link(label, fname):
-    return f"[{label} →](../papers/{fname})" if (PAPERS / fname).exists() else None
+def link(label, fname, page):
+    return f"[{label} →]({up(page)}papers/{fname})" if (ARCHIVE / fname).exists() else None
 
 
-def section_page(sec, papers_out):
+def section_page(part, sec):
     folder_name, slug, name, line, overview, deck = sec
-    folder = ROOT / folder_name
+    folder = section_folder(part, sec)
     num = folder_name.split(".")[0]
-    ov = next((folder / f"{num}.0.Overview").glob("*.qmd"), None)
+    page = f"{part['dir']}/{slug}.qmd"
+    ov = next(iter(sorted((folder / f"{num}.0.Overview").glob("*.qmd"))), None) if folder.is_dir() else None
     ovm = front_matter(ov) if ov else {}
-    out = [f"---\ntitle: \"{num}. {name}\"\n---\n"]
+    out = [f"---\ntitle: \"{num}. {name}\"\naliases:\n  - ../research/{slug}.html\n---\n"]
     if ovm.get("abstract"):
         out.append(ovm["abstract"] + "\n")
-    links = [l for l in (link("Section overview", overview), link("Series slides", deck) if deck else None) if l]
+    links = [l for l in (link("Section overview", overview, page), link("Series slides", deck, page) if deck else None) if l]
     if links:
         out.append(" · ".join(links) + "\n")
     titles = []
-    for pf in sorted((p for p in folder.iterdir() if p.is_dir() and re.match(rf"^{num}\.[1-9]", p.name)),
-                     key=lambda p: [int(x) for x in p.name.split(".")[:2]]):
-        q = master(pf)
+    for pf in paper_folders(part, sec):
+        q = master_qmd(pf)
         if not q:
             continue
         meta = front_matter(q)
@@ -105,40 +76,101 @@ def section_page(sec, papers_out):
         stem = q.stem
         title = meta.get("title", stem)
         anchor = f"paper-{pnum.replace('.', '-')}"
+        web = web_page(part, sec, stem)
+        has_web = (SITE / web).exists()
         out.append(f"## {pnum} {title} {{#{anchor}}}\n")
         if meta.get("subtitle"):
             out.append(f"*{meta['subtitle']}*\n")
         if meta.get("abstract"):
             out.append(meta["abstract"] + "\n")
-        ls = [l for l in (link("Slides", f"Slides-{stem}.pptx"), link("Policy brief", f"Brief-{stem}.docx"),
-                          link("Full paper", f"{stem}.docx")) if l]
+        online = f"[Read online →]({slug}/{stem}/index.qmd)" if has_web else None
+        ls = [l for l in (online, link("Slides", f"Slides-{stem}.pptx", page),
+                          link("Policy brief", f"Brief-{stem}.docx", page),
+                          link("Full paper", f"{stem}.docx", page)) if l]
         if ls:
             out.append(" · ".join(ls) + "\n")
-        titles.append((pnum, title.split(":")[0].strip(), anchor))
-    (SITE / "research" / f"{slug}.qmd").write_text("\n".join(out), encoding="utf-8")
-    papers_out.append((sec, titles))
+        titles.append((pnum, title.split(":")[0].strip(), anchor, web if has_web else None))
+    (SITE / part["dir"]).mkdir(exist_ok=True)
+    (SITE / page).write_text("\n".join(out), encoding="utf-8")
+    return titles
+
+
+def home_page(part, index):
+    page = part["home"]
+    pre = up(page)
+    aliases = "aliases:\n  - research.html\n" if page == "index.qmd" else ""
+    out = [f"---\ntitle: \"{part['title']}\"\n{aliases}---\n", part["intro"] + "\n"]
+    for sec, titles in index:
+        num = sec[0].split(".")[0]
+        sp = f"{pre}{part['dir']}/{sec[1]}.qmd"
+        out.append(f"### [{num}. {sec[2]}]({sp})\n")
+        out.append(sec[3] + "\n")
+        if titles:
+            out.append("\n".join(f"- [{p} {t}]({pre + w if w else f'{sp}#{a}'})" for p, t, a, w in titles) + "\n")
+    if part["more"]:
+        out.append(f"### [Books and other papers]({pre}{part['more']})\n")
+        out.append("Three books: *Time and Chance*, *The Right Policy at the Wrong Time* and the tax book *Screwed?!*; "
+                   "and an earlier paper on sustainability-linked intermediated debt.\n")
+    (SITE / page).parent.mkdir(exist_ok=True)
+    (SITE / page).write_text("\n".join(out), encoding="utf-8")
+
+
+def yq(s):
+    return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
+
+
+def write_sidebar(part, index):
+    """Rewrite this part's sidebar between its BEGIN/END markers in _quarto.yml: each section, and under it
+    the papers that have a web version, so the sidebar works like a book's table of contents."""
+    ind = " " * 8
+    lines = [f"{ind}- text: {yq(part['title'])}", f"{ind}  href: {part['home']}"]
+    for sec, titles in index:
+        num = sec[0].split(".")[0]
+        sp = f"{part['dir']}/{sec[1]}.qmd"
+        web = [(p, t, w) for p, t, a, w in titles if w]
+        if web:
+            lines += [f"{ind}- section: {yq(f'{num}. {sec[2]}')}", f"{ind}  href: {sp}", f"{ind}  contents:"]
+            for p, t, w in web:
+                lines += [f"{ind}    - text: {yq(f'{p} {t}')}", f"{ind}      href: {w}"]
+        else:
+            lines.append(f"{ind}- {sp}")
+    if part["more"]:
+        lines.append(f"{ind}- {part['more']}")
+    cfg = SITE / "_quarto.yml"
+    text = cfg.read_text(encoding="utf-8")
+    b = text.index(f"# BEGIN {part['key']} sidebar")
+    b = text.index("\n", b) + 1
+    e = text.index(f"{ind}# END {part['key']} sidebar")
+    cfg.write_text(text[:b] + "\n".join(lines) + "\n" + text[e:], encoding="utf-8")
+
+
+def sync_papers():
+    """papers/ = exactly the files the pages link to, copied from PaperArchive/."""
+    wanted = set()
+    for q in SITE.rglob("*.qmd"):
+        if any(x in q.parts for x in ("_site", "PaperArchive", ".quarto")):
+            continue
+        wanted |= set(re.findall(r"papers/([^)\s#]+)\)", q.read_text(encoding="utf-8")))
+    PAPERS.mkdir(exist_ok=True)
+    for f in PAPERS.iterdir():
+        if f.is_file() and f.name not in wanted:
+            f.unlink()
+    for name in sorted(wanted):
+        src = ARCHIVE / name
+        if src.exists():
+            shutil.copy2(src, PAPERS / name)
+        else:
+            print(f"LINKED BUT MISSING from PaperArchive: {name}")
+    print(f"papers/ holds the {len(list(PAPERS.iterdir()))} linked files")
 
 
 def main():
-    (SITE / "research").mkdir(exist_ok=True)
-    index = []
-    for sec in SECTIONS:
-        section_page(sec, index)
-    home = ["---\ntitle: \"Research\"\n---\n",
-            "Papers on climate policy and climate finance for finance ministries and development banks, in seven "
-            "series. Each series page gives the abstracts and the slides, policy brief and full paper for every "
-            "paper. Older papers, books and essays are under [More papers and books](research/more.qmd).\n"]
-    for (folder_name, slug, name, line, *_), titles in index:
-        num = folder_name.split(".")[0]
-        home.append(f"### [{num}. {name}](research/{slug}.qmd)\n")
-        home.append(line + "\n")
-        if titles:
-            home.append("\n".join(f"- [{p} {t}](research/{slug}.qmd#{a})" for p, t, a in titles) + "\n")
-    home.append("### [More papers and books](research/more.qmd)\n")
-    home.append("The tax book *Screwed?!*, *Time and Chance*, *The Right Policy at the Wrong Time*, earlier finance "
-                "papers, and essays on philosophy and politics.\n")
-    (SITE / "research.qmd").write_text("\n".join(home), encoding="utf-8")
-    print("wrote research.qmd and", len(SECTIONS), "section pages")
+    for part in PARTS:
+        index = [(sec, section_page(part, sec)) for sec in part["sections"]]
+        home_page(part, index)
+        write_sidebar(part, index)
+    sync_papers()
+    print("wrote", sum(len(p["sections"]) for p in PARTS), "section pages, the home pages and the sidebars")
 
 
 if __name__ == "__main__":

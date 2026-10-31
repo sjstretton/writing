@@ -2,7 +2,7 @@
 
 Stephen Stretton · draft of 29 Oct 2026, built from the papers in this repo and the notes on Google Drive. **Internal working document.** Some sources are World Bank internal or "Official Use Only"; use them for orientation only, and don't quote them outward.
 
-This page maps what Stephen can credibly claim as expert ground, in five groups. Each specialism has a short abstract of the argument he already makes, a strength rating and where the material is. The executive summary sets out an order for nailing the specialisms down. `E Writing Instructions/STRATEGY.md` gives the shorter positioning; this page is the detail behind it.
+This page maps what Stephen can credibly claim as expert ground, in five groups. Each specialism has a short abstract of the argument he already makes, a strength rating and where the material is. The executive summary sets out an order for nailing the specialisms down. `H Writing Instructions/STRATEGY.md` gives the shorter positioning; this page is the detail behind it.
 
 **Strength key:** ●&nbsp;written up (a draft paper or book chapter states the argument) · ◐&nbsp;partial (notes, a section or a deck) · ○&nbsp;thin (a heading or a planned paper only).
 
@@ -39,7 +39,7 @@ These are the things the climate fiscal team can call on Stephen for. Stephen na
 
 **1.1 Quantitative modeling of policy: the Total Effective Carbon Price (TECP).** ●
 The TECP is the uniform, economy-wide carbon tax that would cut emissions as much as a country's actual policy mix does. Existing metrics, including CPAT's Total Carbon Price ("broadly revenue raised divided by carbon emitted"), measure the price signal, not what it achieves. The TECP weights each instrument by how strongly emissions respond to it, split into fuel switching and demand reduction, using a nested CES demand model calibrated once per country from the energy balance, prices and elasticities. It runs in a spreadsheet. In the stylized example (working paper v0.3) a mix that explicit-price metrics rate at $21/t has a long-run TECP of $37/t ($32–38 across calibrations) and $28/t after one year. A fuel standard with a $166/t credit price adds only about $1/t, because the price is high but its base is small and unresponsive. Uses include paying for policies under policy crediting, recognition of carbon prices under CBAM, and country diagnostics. An earlier Drive note frames the same idea as an "effectiveness-weighted total carbon price" for setting donor willingness to pay and baselines for results-based climate finance.
-*Sources:* 6.1 brief and working paper (`B Working Papers/6.ModularUpgrades/6.1.PolicyEquivalentCarbonPriceAndCES/`); Drive: `WTP and Baseline Project.docx`.
+*Sources:* 6.1 brief and working paper (`D Modelling/6.ModularUpgrades/6.1.PolicyEquivalentCarbonPriceAndCES/`); Drive: `WTP and Baseline Project.docx`.
 
 **1.2 Models a finance ministry can audit (CPAT architecture).** ◐
 Policy models should be small enough for a ministry to check, and AI-assisted recoding now makes that achievable. Paper 5.2 replaces CPAT's hard renewable-investment constraint with shadow prices, rebuilds CPAT's core in code, and links it to fiscal strategy (SiSePuede, CCDR, CPAT). On Drive, the CPAT strategy adds a common policy framework (a carbon tax plus feebates), technoeconomic power and transport modules, derisking inside CPAT and an extension to 2070.
@@ -51,7 +51,7 @@ A feebate keeps the full carbon price at the margin without the carbon bill. It 
 
 **1.4 CBAM analysis and reform.** ● *(added)*
 The EU border carbon adjustment should "credit the price signal, not the payment". As drafted, it fails to recognize feebates and other implicit carbon prices, and it can be gamed by "scrap shuffling" in steel. The material includes a near-final consultation note and an Egypt emission-factor CBAM dashboard.
-*Sources:* 1.3 (`1.3.IronSteelCBAM/`), 6.2 (`6.2.CBAMPolicyTool/`).
+*Sources:* 1.4 (`1.4.IronSteelCBAM/`), 6.2 (`6.2.CBAMPolicyTool/`).
 
 **1.5 Excise and externality diagnostics.** ● *(added)*
 A ministry should read its excise system as a whole, against a common "externality spine" that puts carbon, air pollution, accidents, congestion and road damage on one scale. Diagnostics should run on data ministries already hold. The Sierra Leone report is the worked case (draft, 24,800 words).
@@ -59,7 +59,7 @@ A ministry should read its excise system as a whole, against a common "externali
 
 **1.6 Climate fiscal risk and climate PFM.** ◐ *(added)*
 Climate-informed public finance reviews, fiscal buffers used as collateral, climate debt sustainability, and extending fiscal-risk analysis to extreme shocks. The work-plan decks and course module G hold the material; no paper yet.
-*Sources:* `D Climate Econ Course/G. Climate PFM…`; Drive: `WorkProgramMainPPT.pptx` (internal).
+*Sources:* `G Climate Econ Course/G. Climate PFM…`; Drive: `WorkProgramMainPPT.pptx` (internal).
 
 ---
 
@@ -112,7 +112,7 @@ The finance minister's main lever is expectations: setting long-term price floor
 
 **3.5 Collective action stylized facts.** ●
 Climate is three collective action problems, not one: between countries, within countries and over time. Economics has focused almost entirely on the first. The "double incentive problem" follows: countries need an incentive to impose incentives on themselves. Technology diffuses from leaders to followers (the toy model), and the "tragedy of the horizons" adds the time dimension to the prisoner's dilemma. "I will if you will" commitment auctions are one design response.
-*Sources:* `A.Website/papers/GeoprosperityIntro.docx` (appendix C.3); course module D; 5.4 toy model; Drive: `A3 Research Plan.docx`, `Geoprosperity_WorkingPaperSeries.docx` (Official Use Only).
+*Sources:* `GeoprosperityIntro.docx` (formerly on the website; internal) (appendix C.3); course module D; 5.4 toy model; Drive: `A3 Research Plan.docx`, `Geoprosperity_WorkingPaperSeries.docx` (Official Use Only).
 
 **3.6 Internal political economy stylized facts.** ◐
 Six drivers decide whether carbon pricing survives in a country: fiscal pressure, salience, vested interests, distributive design, institutional quality and energy structure. Concentrated losers block reform, and reversal risk discounts the effective price. The material proposes a metric built on these drivers.
@@ -164,7 +164,7 @@ A green safe asset steers cheap money into building rather than land. Supply-cha
 
 **4.8 Sovereign incentives and policy crediting.** ● *(added; this is the PhD topic)*
 Reward sovereigns, not projects. Pay governments with balances and guarantees they can borrow against, not cash transfers for counterfactuals no one can observe. Avoid perverse "wait to be paid" incentives. Notional capitalized value credits a country for its carbon stocks, and business-as-usual emissions use it up. Sustainability-linked instruments (SLIDIs, the original KPI-linked sovereign debt idea) tie the cost of debt to results. The PhD frames the trade-off as mitigation effect versus the incentive needed versus the cost to the MDB, with dynamic incentives to act now.
-*Sources:* 4.0, 4.1, SLIDIs (in `4.3.SustainabilityLinkedLending/3.RelatedPiecesAndLinks/`); `C Research Proposal/Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking.docx`. (The World Bank discussion paper *Sustainability-Linked Lending*, in `4.3…/9.Archive`, is World Bank confidential: don't cite it outward.)
+*Sources:* 4.0, 4.1, SLIDIs (in `4.3.SustainabilityLinkedLending/3.RelatedPiecesAndLinks/`); `B PhD Application/Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking.docx`. (The World Bank discussion paper *Sustainability-Linked Lending*, in `4.3…/9.Archive`, is World Bank confidential: don't cite it outward.)
 
 ---
 
@@ -178,7 +178,7 @@ Reward sovereigns, not projects. Pay governments with balances and guarantees th
 - **Hands-on practice.** The AI-assisted recoding of CPAT (5.2) is practical evidence of working with AI systems.
 
 **Proposed one-sentence position (agent draft):** AI risk is a systems problem as much as a model problem, and the tools that govern systemic financial risk (capital buffers, liability, insurance and incentive design) are the place to start. This matches position P7 in `PAPERS.md`.
-*Sources:* `C Research Proposal/3-SystemicAISafety-Outline.md`; `2 Strategic Plans/Overall Pitch.pptx` (slide 7, internal); Drive: `systemic-risk.tex`, `A0-Writing100 Ideas.txt`.
+*Sources:* `B PhD Application/3-SystemicAISafety-Outline.md`; `2 Strategic Plans/Overall Pitch.pptx` (slide 7, internal); Drive: `systemic-risk.tex`, `A0-Writing100 Ideas.txt`.
 
 ---
 
@@ -190,7 +190,7 @@ The method is to look for the metaphor doing the work. Western law is a sovereig
 
 **6.2 McGilchrist and the philosophy of religious language (7.3, proposal 2).** ◐
 Religious language is vocative, not propositional: it addresses rather than describes. This is drawn from McGilchrist's two modes of attention, Nietzsche, Advaita, Daoism and Vedic psychology. A Drive essay links McGilchrist to *wu wei*: self-command shuts down the fluid, creative right-hemisphere mode. Proposal 2's topic is still "to be defined" and is parked.
-*Sources:* 7.3 *The Vocative Case*; `C Research Proposal/README.md`; Drive: `WhyIsProcrastinationSoTiring.docx`.
+*Sources:* 7.3 *The Vocative Case*; `B PhD Application/README.md`; Drive: `WhyIsProcrastinationSoTiring.docx`.
 
 **6.3 Institutions and reform: *The Politics of Life Logic* (7.2).** ●
 Policy should work with existing forces. Reform succeeds by creating organized constituencies for the alternative, the Olsonian point in section 2.3 turned constructive, and the essay applies this to the World Bank itself.
