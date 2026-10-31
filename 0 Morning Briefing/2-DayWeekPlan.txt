@@ -10,6 +10,7 @@
  - Paulina
  - Faustyna
 
+- Find the GitHub IDs of the people
 
 
 - PhD Application
@@ -29,7 +30,17 @@
 
 
 
+# Rename this file to _ftp.txt and fill it in. It is excluded by .gitignore,
+# so what you put here never reaches GitHub.
+#
+# A.Website\deploy.bat reads its FTP login from this file. Change the password
+# on the server: the old one is in the repository's history.
 
+host     = 5.183.10.153
+user     = u795004798
+password = Cambridge_Oxford123
+remote   = /public_html
+protocol = ftp
 DONE
 - Have breakfast (assume finishes at 9am)
 - Relax by the pool
