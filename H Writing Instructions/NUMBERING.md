@@ -37,7 +37,7 @@ On 31 Oct 2026 (later the same day) papers 1.3 and 1.4 swapped places so that th
 | | 7.1 | The Excise-Fiscal Diagnostic | 5.1 |
 | | 7.2 | A Global Fiscal Indicators Dashboard | 5.3 |
 | `8.AdditionalPolicyPapers` | 8.0 | Overview: Retained Papers, Books and Essays (replaces the combined and additional overviews) | 6.0, 9.0 |
-| | 8.1–8.7 | Subsections: 8.1 other fiscal policy, 8.2 finance and risk, 8.3 sovereign incentives and MDBs, 8.4 analytics, 8.5 books, 8.6 philosophy, 8.7 politics; papers 8.x.y in folder names (e.g. `8.5.3.Screwed`). Their internal text keeps its old numbers | 1.5, 2.3, 3.4–3.5, 5.2–5.4, 6.x, 7.x, 8.x |
+| | 8.1–8.7 | Subsections: 8.1 other fiscal policy, 8.2 finance and risk, 8.3 sovereign incentives and MDBs, 8.4 analytics, 8.5 books, 8.6 philosophy, 8.7 politics; papers 8.x.y in folder names (e.g. `8.5.3.Plucked`). Their internal text keeps its old numbers | 1.5, 2.3, 3.4–3.5, 5.2–5.4, 6.x, 7.x, 8.x |
 | `9.ResearchTracking` | – | Source digests, trackers | – |
 
 The website is `E Website`; the scripts are in `H Writing Instructions/Scripts`. Writing outside the series is in `F Other Writing` (8.x).

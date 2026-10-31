@@ -26,14 +26,20 @@ What changes in the copies:
           [text](paper:1.2)      another paper's page (or its entry on the section page if it has none)
       In the Word versions these show as plain text (Scripts/Website/web-links.lua, used when rendering).
 
+Books in WEB_BOOKS are split into one page per chapter, in E Website:
+    <part>/books/<BookName>/index.qmd          the book's contents page (title, description, download, chapters)
+    <part>/books/<BookName>/NN-<chapter>.qmd   one page per "# CHAPTER N: TITLE" heading in the master
+    <part>/books/<BookName>/<BookName>.bib and the figures, as for papers
+Each chapter page ends with its own references and links to the previous and next chapters.
+
 Compile-Website.bat runs this after publish_series.py and before build_research_pages.py.
-To put another paper on the web, add its folder to WEB_PAPERS in site_config.py.
+To put another paper on the web, add its folder to WEB_PAPERS in site_config.py; for a book, add it to WEB_BOOKS.
 """
 import re
 import shutil
 from pathlib import Path
-from site_config import REPO, PARTS, SITE, ARCHIVE, WEB_PAPERS, part_of_section, paper_name, master_qmd, \
-    paper_folders
+from site_config import (REPO, PARTS, SITE, ARCHIVE, WEB_PAPERS, WEB_BOOKS, part_of_section, part_by_key,
+                         paper_name, master_qmd, paper_folders, book_dir, book_name)
 
 WEB_SETTINGS = ("toc: true\ndate-format: \"MMMM YYYY\"\ncitations-hover: true\ncrossrefs-hover: true\n"
                 "lightbox: auto\n")
@@ -161,6 +167,116 @@ def write_page(master, dest_file, near_top, downloads, has_brief):
     print(f"web page  {dest_file}")
 
 
+def copy_figures_and_bib(folder, dest, yaml, body):
+    """Copy every local image the body refers to (keeping its relative path) and the bibliography."""
+    for rel in sorted(set(re.findall(r"\]\(([^)\s]+?\.(?:png|jpe?g|svg|gif))\)", body, re.I))):
+        src = folder / rel
+        if src.exists():
+            (dest / rel).parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, dest / rel)
+        else:
+            print(f"missing figure {src}")
+    bib = yaml_value(yaml, "bibliography")
+    if bib and (folder / bib).exists():
+        shutil.copy2(folder / bib, dest / bib)
+
+
+def generated_header(master):
+    return (f"# GENERATED - NOT THE MASTER. Made from {master.relative_to(REPO).as_posix()} by build_web_papers.py\n"
+            f"# on every compile; edits here are lost. Edit the master instead.\n")
+
+
+SMALL = {"a", "an", "and", "as", "at", "but", "by", "for", "in", "of", "or", "the", "to", "with"}
+
+
+def title_case(s):
+    """'MONEY, DEBT, AND FINANCE' -> 'Money, Debt, and Finance' (small words lower case except first and after a colon)."""
+    words, out, start = s.lower().split(), [], True
+    for w in words:
+        out.append(w if (w in SMALL and not start) else w[:1].upper() + w[1:])
+        start = w.endswith(":")
+    return " ".join(out)
+
+
+def slugify(s):
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+
+
+def yq(s):
+    return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
+
+
+def build_book(folder_name, cfg):
+    """A book's web version: a contents page and one page per chapter, split at '# CHAPTER N: TITLE' headings."""
+    folder = find(folder_name)
+    if not folder:
+        print(f"missing   {folder_name}")
+        return
+    part = part_by_key(cfg["part"])
+    name = book_name(folder_name)
+    master = folder / f"{name}.qmd"
+    text = master.read_text(encoding="utf-8-sig").replace("\r\n", "\n")
+    yaml, body = split_front_matter(text)
+    body = re.sub(r"^\\newpage\s*$\n?", "", body, flags=re.M)        # LaTeX page breaks mean nothing on the web
+
+    dest = SITE / book_dir(part, name)
+    if dest.exists():
+        shutil.rmtree(dest)
+    dest.mkdir(parents=True)
+    copy_figures_and_bib(folder, dest, yaml, body)
+
+    heads = list(re.finditer(r"^# CHAPTER (\d+):\s*(.+?)\s*$", body, re.M))
+    if not heads:
+        raise SystemExit(f"{master}: no '# CHAPTER N: TITLE' headings to split at")
+    preface = body[:heads[0].start()].strip()
+    chapters = []
+    for i, h in enumerate(heads):
+        end = heads[i + 1].start() if i + 1 < len(heads) else len(body)
+        title = title_case(h.group(2))
+        chapters.append({"num": h.group(1), "title": title, "body": body[h.end():end].strip(),
+                         "file": f"{i + 1:02d}-{slugify(title)}.qmd"})
+
+    book_title = yaml_value(yaml, "title")
+    subtitle = yaml_value(yaml, "subtitle")
+    full_title = f"{book_title} {subtitle}" if subtitle else book_title
+    csl = "csl: ../../../chicago-author-date.csl"
+    bib = yaml_value(yaml, "bibliography")
+    header = generated_header(master)
+    names = re.findall(r"^\s*-?\s*name:\s*\"?(.*?)\"?\s*$", yaml, re.M)
+    authors = " and ".join([", ".join(names[:-1]), names[-1]]) if len(names) > 1 else (names[0] if names else "")
+
+    # contents page
+    contents_yaml = re.sub(r"^#.*\n?", "", yaml, flags=re.M)
+    contents_yaml = drop_key(drop_key(drop_key(contents_yaml, "format"), "bibliography"), "csl")
+    contents_yaml = drop_key(drop_key(contents_yaml, "toc"), "version")
+    top = [cfg.get("blurb", "") + "\n"]
+    if (ARCHIVE / f"{name}.docx").exists():
+        top.append(f"**Download:** [The whole book (Word)](../../../papers/{name}.docx)\n")
+    if preface:
+        top.append(preface + "\n")
+    top.append("# Contents {.unnumbered}\n")
+    top.append("\n".join(f"- [Chapter {c['num']}: {c['title']}]({c['file']})" for c in chapters) + "\n")
+    (dest / "index.qmd").write_text(f"---\n{header}{contents_yaml.rstrip()}\ntoc: false\n---\n\n" + "\n".join(top),
+                                    encoding="utf-8")
+
+    # chapter pages
+    for i, c in enumerate(chapters):
+        prev = chapters[i - 1] if i > 0 else None
+        nxt = chapters[i + 1] if i + 1 < len(chapters) else None
+        nav = " · ".join(x for x in (
+            f"[← Chapter {prev['num']}: {prev['title']}]({prev['file']})" if prev else None,
+            f"[Contents](index.qmd)",
+            f"[Chapter {nxt['num']}: {nxt['title']} →]({nxt['file']})" if nxt else None) if x)
+        chapter_title = f"Chapter {c['num']}: {c['title']}"
+        cy = (f"---\n{header}title: {yq(chapter_title)}\n"
+              f"subtitle: {yq(full_title)}\n"
+              f"bibliography: {bib}\n{csl}\ntoc: true\n---\n\n")
+        page = (cy + f"*From [{book_title}](index.qmd), by {authors}.*\n\n"
+                + c["body"] + "\n\n# References {.unnumbered}\n\n::: {#refs}\n:::\n\n---\n\n" + nav + "\n")
+        (dest / c["file"]).write_text(page, encoding="utf-8")
+    print(f"web book  {dest} ({len(chapters)} chapters)")
+
+
 def build(folder_name):
     folder = find(folder_name)
     if not folder:
@@ -206,8 +322,17 @@ def main():
                 for d in sd.iterdir():
                     if d.is_dir() and d.name not in listed:
                         shutil.rmtree(d)
+    books = {book_name(f) for f in WEB_BOOKS}
+    for part in PARTS:
+        bd = SITE / part["dir"] / "books"
+        if bd.is_dir():
+            for d in bd.iterdir():
+                if d.is_dir() and d.name not in books:
+                    shutil.rmtree(d)
     for folder_name in WEB_PAPERS:
         build(folder_name)
+    for folder_name, cfg in WEB_BOOKS.items():
+        build_book(folder_name, cfg)
 
 
 if __name__ == "__main__":

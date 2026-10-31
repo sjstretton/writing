@@ -6,7 +6,8 @@ For each part in site_config.PARTS (Policy and Finance; Modelling and Analytics)
                               abstract (the policy brief's where there is one) and links: the brief and the
                               working paper online, the slides, then the Word files
     the part's sidebar in _quarto.yml (between its BEGIN/END markers): sections; under each, the papers that
-                              have a web version (the policy brief's page); under each paper, its working paper
+                              have a web version (the policy brief's page); under each paper, its working paper;
+                              under Books and other papers, each web book and its chapters
 policy/more.qmd (Books and other papers) is hand-written and left alone.
 
 Then it fills papers/ with exactly the files the site's pages link to, copied from PaperArchive/ (filled by
@@ -18,7 +19,8 @@ Compile-Website.bat runs this after publish_series.py and build_web_papers.py an
 """
 import re
 import shutil
-from site_config import PARTS, SITE, ARCHIVE, PAPERS, paper_folders, paper_name, master_qmd, section_folder, web_page
+from site_config import (PARTS, SITE, ARCHIVE, PAPERS, WEB_BOOKS, paper_folders, paper_name, master_qmd, section_folder,
+                         web_page, book_dir, book_name)
 
 
 def front_matter(qmd):
@@ -122,7 +124,7 @@ def home_page(part, index):
             out.append("\n".join(f"- [{p} {t}]({pre + w if w else f'{sp}#{a}'})" for p, t, a, w, _ in titles) + "\n")
     if part["more"]:
         out.append(f"### [Books and other papers]({pre}{part['more']})\n")
-        out.append("Three books: *Time and Chance*, *The Right Policy at the Wrong Time* and the tax book *Screwed?!*; "
+        out.append("Three books: *Time and Chance*, *The Right Policy at the Wrong Time* and the tax book *Plucked!*; "
                    "and an earlier paper on sustainability-linked intermediated debt.\n")
     (SITE / page).parent.mkdir(exist_ok=True)
     (SITE / page).write_text("\n".join(out), encoding="utf-8")
@@ -130,6 +132,23 @@ def home_page(part, index):
 
 def yq(s):
     return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
+
+
+def web_books(part):
+    """(title, contents page, [(chapter label, page)]) for each web book of this part (build_web_papers.py made them)."""
+    out = []
+    for folder_name, cfg in WEB_BOOKS.items():
+        if cfg["part"] != part["key"]:
+            continue
+        d = book_dir(part, book_name(folder_name))
+        if not (SITE / d / "index.qmd").exists():
+            continue
+        chapters = []
+        for q in sorted((SITE / d).glob("[0-9][0-9]-*.qmd")):
+            m = re.match(r"Chapter (\d+): (.*)", front_matter(q).get("title", q.stem))
+            chapters.append((f"{m.group(1)}. {m.group(2)}" if m else q.stem, f"{d}/{q.name}"))
+        out.append((front_matter(SITE / d / "index.qmd").get("title", book_name(folder_name)), f"{d}/index.qmd", chapters))
+    return out
 
 
 def write_sidebar(part, index):
@@ -153,7 +172,16 @@ def write_sidebar(part, index):
         else:
             lines.append(f"{ind}- {sp}")
     if part["more"]:
-        lines.append(f"{ind}- {part['more']}")
+        books = web_books(part)
+        if books:
+            lines += [f"{ind}- section: {yq(front_matter(SITE / part['more']).get('title', 'Books'))}",
+                      f"{ind}  href: {part['more']}", f"{ind}  contents:"]
+            for title, home, chapters in books:
+                lines += [f"{ind}    - section: {yq(title)}", f"{ind}      href: {home}", f"{ind}      contents:"]
+                for ct, cp in chapters:
+                    lines += [f"{ind}        - text: {yq(ct)}", f"{ind}          href: {cp}"]
+        else:
+            lines.append(f"{ind}- {part['more']}")
     cfg = SITE / "_quarto.yml"
     text = cfg.read_text(encoding="utf-8")
     b = text.index(f"# BEGIN {part['key']} sidebar")

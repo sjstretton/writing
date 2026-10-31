@@ -6,6 +6,7 @@ project:
     - "policy/*.qmd"
     - "policy/*/*/index.qmd"
     - "policy/*/*/working-paper.qmd"
+    - "policy/books/*/*.qmd"
     - "modelling/*.qmd"
     - "modelling/*/*/index.qmd"
     - "modelling/*/*/working-paper.qmd"
@@ -46,7 +47,40 @@ website:
         - policy/2-other-tax.qmd
         - policy/3-finance-and-risk.qmd
         - policy/4-sovereign-incentives.qmd
-        - policy/more.qmd
+        - section: "Books and Other Papers"
+          href: policy/more.qmd
+          contents:
+            - section: "Plucked!"
+              href: policy/books/Plucked/index.qmd
+              contents:
+                - text: "1. Facing Global Risks Head On"
+                  href: policy/books/Plucked/01-facing-global-risks-head-on.qmd
+                - text: "2. Revolutions in the Minds of Men"
+                  href: policy/books/Plucked/02-revolutions-in-the-minds-of-men.qmd
+                - text: "3. Desert Island Economics"
+                  href: policy/books/Plucked/03-desert-island-economics.qmd
+                - text: "4. The Questions Posed by This Book"
+                  href: policy/books/Plucked/04-the-questions-posed-by-this-book.qmd
+                - text: "5. Tax in Principle"
+                  href: policy/books/Plucked/05-tax-in-principle.qmd
+                - text: "6. Tax in Practice"
+                  href: policy/books/Plucked/06-tax-in-practice.qmd
+                - text: "7. Welfare and Work"
+                  href: policy/books/Plucked/07-welfare-and-work.qmd
+                - text: "8. Income, Wealth and Inequality"
+                  href: policy/books/Plucked/08-income-wealth-and-inequality.qmd
+                - text: "9. Corporations"
+                  href: policy/books/Plucked/09-corporations.qmd
+                - text: "10. Land and Property"
+                  href: policy/books/Plucked/10-land-and-property.qmd
+                - text: "11. Money, Debt, and Finance"
+                  href: policy/books/Plucked/11-money-debt-and-finance.qmd
+                - text: "12. Environment, Health, and Resources"
+                  href: policy/books/Plucked/12-environment-health-and-resources.qmd
+                - text: "13. The Global Perspective: Climate, Fiscal Policy and Collective Action"
+                  href: policy/books/Plucked/13-the-global-perspective-climate-fiscal-policy-and-collective-action.qmd
+                - text: "13. Conclusions"
+                  href: policy/books/Plucked/14-conclusions.qmd
         # END policy sidebar
     - id: modelling
       title: "Modelling and Analytics"
