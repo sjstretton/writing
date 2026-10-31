@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephen J. Stretton">
+<meta name="keywords" content="investment needs, cost of capital, marginal cost of public funds, marginal value of public funds, public investment efficiency, power purchase agreements">
+
+<title>Public Investment in CPAT – Climate, Fiscal &amp; Finance</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Climate, Fiscal &amp; Finance</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Policy and Finance</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../modelling/index.html" aria-current="page"> 
+<span class="menu-text">Modelling and Analytics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades.html">6. Modular Upgrades</a></li><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html">6.3 Public Investment in CPAT</a></li><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades/PublicInvestment/working-paper.html">Working paper</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modelling and Analytics</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Modelling (CPAT)</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATMitigationMethods/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.1 The CPAT Mitigation Module</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATMitigationMethods/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATAIImplementation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.2 CPAT-AI</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.3 Validating CPAT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/ElasticityValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.4 Are CPAT's Price Elasticities Right?</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Modular Upgrades</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.1 Measure Carbon Pricing by the Emissions It Cuts</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.2 The CBAM Policy Tool</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3 Public Investment in CPAT</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PublicInvestment/working-paper.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/ActivityModelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/ActivityModelling/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.5 The Macro-Fiscal-Energy Scenario Tool</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Analytics Tools</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.1 The Excise-Fiscal Diagnostic</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link active" data-scroll-target="#sec-summary"><span class="header-section-number">1</span> Executive summary</a></li>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link" data-scroll-target="#sec-intro"><span class="header-section-number">2</span> Introduction</a></li>
+  <li><a href="#sec-cpat" id="toc-sec-cpat" class="nav-link" data-scroll-target="#sec-cpat"><span class="header-section-number">3</span> What CPAT computes and what it lacks</a></li>
+  <li><a href="#sec-needs" id="toc-sec-needs" class="nav-link" data-scroll-target="#sec-needs"><span class="header-section-number">4</span> Extension A: investment needs and the cost of capital</a>
+  <ul class="collapse">
+  <li><a href="#sec-capital" id="toc-sec-capital" class="nav-link" data-scroll-target="#sec-capital"><span class="header-section-number">4.1</span> Capital from physical change</a></li>
+  <li><a href="#sec-coc" id="toc-sec-coc" class="nav-link" data-scroll-target="#sec-coc"><span class="header-section-number">4.2</span> The cost of capital</a></li>
+  <li><a href="#sec-lenses" id="toc-sec-lenses" class="nav-link" data-scroll-target="#sec-lenses"><span class="header-section-number">4.3</span> What the lenses show</a></li>
+  </ul></li>
+  <li><a href="#sec-efficiency" id="toc-sec-efficiency" class="nav-link" data-scroll-target="#sec-efficiency"><span class="header-section-number">5</span> Extension B: the efficiency of public spending</a>
+  <ul class="collapse">
+  <li><a href="#sec-rule" id="toc-sec-rule" class="nav-link" data-scroll-target="#sec-rule"><span class="header-section-number">5.1</span> The rule</a></li>
+  <li><a href="#sec-corrections" id="toc-sec-corrections" class="nav-link" data-scroll-target="#sec-corrections"><span class="header-section-number">5.2</span> Five corrections between a project’s value and its claim on the budget</a></li>
+  <li><a href="#sec-portfolio" id="toc-sec-portfolio" class="nav-link" data-scroll-target="#sec-portfolio"><span class="header-section-number">5.3</span> From measures to a portfolio</a></li>
+  </ul></li>
+  <li><a href="#sec-example" id="toc-sec-example" class="nav-link" data-scroll-target="#sec-example"><span class="header-section-number">6</span> A worked example: a small island caught in the oil trap</a></li>
+  <li><a href="#sec-country" id="toc-sec-country" class="nav-link" data-scroll-target="#sec-country"><span class="header-section-number">7</span> Country runs: Kenya, Uganda and St Lucia</a></li>
+  <li><a href="#sec-limits" id="toc-sec-limits" class="nav-link" data-scroll-target="#sec-limits"><span class="header-section-number">8</span> Validation, limits and use</a></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">9</span> Conclusion</a></li>
+  <li><a href="#downloads" id="toc-downloads" class="nav-link" data-scroll-target="#downloads">Downloads</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  
+  
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades.html">6. Modular Upgrades</a></li><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html">6.3 Public Investment in CPAT</a></li><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades/PublicInvestment/working-paper.html">Working paper</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Public Investment in CPAT</h1>
+<p class="subtitle lead">Investment Needs and the Efficiency of Public Spending</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stephen J. Stretton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>Carbon pricing models tell a finance ministry what a policy raises and what it cuts, but not what the clean capital it calls for will cost or whether the budget should pay for it. This paper extends the Climate Policy Assessment Tool in two directions. The first turns physical change into investment needs by country and sector and prices that capital at three rates: the market cost of capital, a social rate, and a social rate with co-benefits counted. For a stylized asset whose fuel savings are 13.3 cents a year per dollar of capital, the financial case fails above a cost of capital of 12.6 percent, the rate the tool’s optional income-group setting gives lower-middle-income countries. The second extension asks what each dollar of net public money buys, against the cost of raising tax, with haircuts for delivery and with capital, operating and contract routes on one fiscal ledger. In a stylized island case a solar plant worth $108 million passes that test on every route, but a seven-year loan leaves the budget $14.6 million a year short; concessional finance closes the gap, and a guaranteed power purchase agreement narrows it by turning debt into a contract liability. Country runs put 2030 investment needs in Kenya, Uganda and St Lucia at 4 to 5 percent of GDP, and a run of the open SISEPUEDE model for Uganda shows that under a fifth of its net-zero benefits reach the budget as cash.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>investment needs, cost of capital, marginal cost of public funds, marginal value of public funds, public investment efficiency, power purchase agreements</p>
+  </div>
+</div>
+
+</header>
+
+
+<p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is <a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html">Climate Fiscal Policy Brief No.&nbsp;6.3</a>. Companion paper to the public CPAT-AI repository, <a href="https://github.com/cpmodelai/cpat_ai" class="uri">https://github.com/cpmodelai/cpat_ai</a>.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<section id="sec-summary" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
+<p><a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-PublicInvestment.pptx">Slides (pptx)</a></p>
+<p><strong>A finance ministry that prices carbon also needs to price the clean capital the policy calls for.</strong> The Climate Policy Assessment Tool (CPAT), built by the World Bank and the International Monetary Fund (IMF), tells a ministry what a carbon tax raises and what it cuts in more than 180 countries. It does not say what the wind farms, grids and electric buses the policy calls for will cost to finance, who should pay, or whether public money spent on them beats money left with taxpayers. Developing countries other than China need $2.3 to 2.5 trillion a year of climate investment by 2030.</p>
+<p><strong>This paper adds two extensions to CPAT.</strong> The first turns the physical change CPAT already computes into investment needs by country and sector and prices that capital three ways: at the market cost of capital each country faces, at the World Bank’s 6 percent social rate, and at 6 percent with co-benefits such as cleaner air counted. The second scores each use of public money by what people get per dollar the budget really pays, and funds it when that ratio beats the cost of raising a dollar of tax, about 1.2 in African evidence.</p>
+<p><strong>The cost of capital, not the size of the bill, decides whether clean capital pays its way.</strong> A stylized asset that saves 13.3 cents a year in fuel and running costs per dollar of capital, over 25 years, pays its way only if it is financed below 12.6 percent. That is the rate CPAT’s optional income-group setting assigns to lower-middle-income countries (12.5 percent). CPAT’s default setting instead adds a technology premium of about 3 points for wind and solar to each country’s own cost of capital, so a lower-middle-income country’s solar asset crosses the line once its country rate passes about 9.7 percent. Applied at the scale of the expert group’s 2030 estimates, the same capital that earns developing countries $131 billion a year at 6 percent earns them only $45 billion at a 10.5 percent market rate.</p>
+<p><strong>The gap between what investors see and what society gets is the case for public finance.</strong> Pricing carbon and air pollution, concessional lending, and guarantees or pooling that cut the risk premium all close it. Each point off the cost of capital is worth about $36 billion a year for each year’s clean energy investment of $4.8 trillion.</p>
+<p><strong>The budget’s problem is often cash and debt statistics, not value.</strong> In a stylized small island with 85 percent public debt, a $120 million solar plant that replaces diesel is worth $108 million at 6 percent and passes the public-money test on every financing route. But the only commercial loan, at 8 percent over seven years, leaves the budget $14.6 million a year short for seven years and adds 6 percent of GDP to headline debt. A concessional loan puts cash into the budget from the first year. A power purchase agreement keeps the debt off the books but commits the island to payments worth 7.6 to 8.9 percent of GDP, more than the debt it avoids. A constant cost of public funds cannot see this trap.</p>
+<p><strong>Country runs show the same pattern on real data.</strong> The investment-needs tool puts 2030 mitigation investment at 4.7 percent of GDP in Kenya, 4.0 percent in Uganda and 4.4 percent in St Lucia. In Kenya and Uganda the incremental investment is a net cost at market rates and at 6 percent and pays only when cleaner air is counted; in St Lucia, which burns imported diesel, it pays at any rate. A SISEPUEDE run for Uganda values its net-zero strategy at $161 billion at 6 percent, but only 18 percent of the benefits are cash a budget or utility would see.</p>
+<p><strong>What to do.</strong> Teams running CPAT should report investment needs at the country’s own cost of capital and at 6 percent side by side, and say which cost-of-capital setting they used. Ministries should test public measures against a cost of public funds that rises in cash-short years, and count a power purchase agreement’s committed payments as a liability. The CPAT team should publish a table of the cost of capital by country and technology. The <a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html">policy brief</a> sets out what this means for finance ministries.</p>
+</section>
+<section id="sec-intro" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
+<p>Developing countries other than China need about $2.3 to 2.5 trillion a year of climate investment by 2030, out of a world total of $6.3 to 6.7 trillion <span class="citation" data-cites="IHLEG2024">(<a href="#ref-IHLEG2024" role="doc-biblioref">Bhattacharya et al. 2024</a>)</span>. The headline hides two questions a finance minister must answer before any of it is built. The first is what the capital costs to carry. For a solar plant, money is most of the price: the International Energy Agency finds that the cost of capital for utility-scale solar in emerging and developing economies is well over twice that in advanced economies <span class="citation" data-cites="IEA2024">(<a href="#ref-IEA2024" role="doc-biblioref">International Energy Agency 2024</a>)</span>, and the same plant financed at 12 percent rather than 4 percent sells power for about 80 percent more <span class="citation" data-cites="CFPB32">(<a href="#ref-CFPB32" role="doc-biblioref">Stretton 2026c</a>)</span>. The second is whether the budget should pay at all, and if so how. A plant that pays back handsomely in economic terms can still break a budget that must service a seven-year loan, and a power purchase agreement that keeps the plant off the debt statistics can cost more than the debt it avoids.</p>
+<p>The Climate Policy Assessment Tool (CPAT) answers neither question. CPAT, built by the International Monetary Fund (IMF) and the World Bank, projects fuel use, emissions, revenue and welfare for more than 180 countries under carbon taxes, subsidy reform and related policies <span class="citation" data-cites="Black2023CPAT CPATTeam2024">(<a href="#ref-Black2023CPAT" role="doc-biblioref">Black et al. 2023</a>; <a href="#ref-CPATTeam2024" role="doc-biblioref">CPAT Team 2024</a>)</span>. Its power model chooses new capacity on levelized cost at a cost of capital set by country and technology, and reports investment spending by technology. But outside power it has no capital at all, it does not split investment between public and private payers, and it has no test of whether a dollar of public spending on clean capital beats a dollar left with taxpayers. Its revenue side is rich; its spending side is a list of uses of revenue.</p>
+<p>This paper asks how CPAT can be extended to estimate climate investment needs, price them at the cost of capital countries actually face, and test whether public money should pay for them. The answer has two parts. The first extension (investment needs) multiplies physical change by unit capital cost, turns capital into an annual charge with a capital recovery factor, and reports the result through three lenses: the market cost of capital, the World Bank’s 6 percent social rate, and the social rate with co-benefits and carbon counted. The gap between the first and third lens is the case for public finance and de-risking. The second extension (spending efficiency) scores each candidate use of public money by the ratio of what people get to what the budget really pays, after removing what the private sector would have done anyway, money that never becomes a working asset, and money that comes back. A measure is funded if that ratio exceeds the marginal cost of public funds, about 1.2 in African evidence <span class="citation" data-cites="AuriolWarlters2012">(<a href="#ref-AuriolWarlters2012" role="doc-biblioref">Auriol and Warlters 2012</a>)</span>. With a cost of public funds of 1 and no budget limit, the rule reduces to the World Bank’s usual net present value test.</p>
+<p>Four results follow. A stylized asset with fuel savings of 13.3 cents a year per dollar of capital and a 25-year life has a financial case only below a cost of capital of 12.6 percent (Proposition 1), which is where CPAT’s optional income-group rate for lower-middle-income countries sits. The spending test nests World Bank practice and prices revenue returns at the cost of public funds (Proposition 2). Stretching loan tenor eases liquidity but does not change solvency, so a single cost of public funds cannot see a cash trap (Proposition 3). A power purchase agreement priced at a cost of capital above the government’s borrowing rate is debt in disguise, and without mid-life replacements its committed payments are worth more than the plant (Proposition 4). A worked example for a stylized small island shows all four at once, and country runs for Kenya, Uganda and St Lucia apply the lenses to tool results.</p>
+<p>The paper adds to three strands of work, and its contribution is to join them inside a model ministries already use. Investment-needs studies differ mainly in what they count and at what rate <span class="citation" data-cites="RozenbergFay2019 IHLEG2024 Kalra2023">(<a href="#ref-RozenbergFay2019" role="doc-biblioref">Rozenberg and Fay 2019</a>; <a href="#ref-IHLEG2024" role="doc-biblioref">Bhattacharya et al. 2024</a>; <a href="#ref-Kalra2023" role="doc-biblioref">Kalra et al. 2023</a>)</span>; this paper puts the cost of capital by country and technology inside the estimate and reports the three lenses side by side. Integrated-model studies show the cost-of-capital premium and its effect on decarbonization <span class="citation" data-cites="Steffen2020 Ameli2021 Calcaterra2024">(<a href="#ref-Steffen2020" role="doc-biblioref">Steffen 2020</a>; <a href="#ref-Ameli2021" role="doc-biblioref">Ameli et al. 2021</a>; <a href="#ref-Calcaterra2024" role="doc-biblioref"><span class="nocase">Calcaterra et al.</span> 2024</a>)</span> but stop before the budget. The marginal value of public funds <span class="citation" data-cites="HendrenSprungKeyser2020 FinkelsteinHendren2020">(<a href="#ref-HendrenSprungKeyser2020" role="doc-biblioref">Hendren and Sprung-Keyser 2020</a>; <a href="#ref-FinkelsteinHendren2020" role="doc-biblioref">Finkelstein and Hendren 2020</a>)</span> has been applied mostly to United States social policy; this paper applies it to climate capital in low-capacity states, with delivery haircuts from the public investment efficiency literature <span class="citation" data-cites="Pritchett2000 IMF2015PIM">(<a href="#ref-Pritchett2000" role="doc-biblioref">Pritchett 2000</a>; <a href="#ref-IMF2015PIM" role="doc-biblioref">International Monetary Fund 2015</a>)</span> and with financing routes and contract liabilities on one ledger. The propositions are short, and two of them restate known facts in this setting; their use is that they put numbers on those facts inside a ministry’s model.</p>
+</section>
+<section id="sec-cpat" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> What CPAT computes and what it lacks</h1>
+<p><strong>CPAT already computes most of the physical change an investment estimate needs, but only in power does it attach capital to it.</strong> CPAT projects each fuel in each sector from last year’s use, output and prices; paper 5.1 states the method <span class="citation" data-cites="StrettonWP51">(<a href="#ref-StrettonWP51" role="doc-biblioref">Stretton 2026f</a>)</span>. Its power model retires plants, dispatches the rest and builds new capacity, sharing new investment among technologies with a logit function of levelized cost and capping how fast wind and solar can grow <span class="citation" data-cites="CPATTeam2024">(<a href="#ref-CPATTeam2024" role="doc-biblioref">CPAT Team 2024</a>)</span>. So CPAT knows how many megawatts a carbon price adds, at what rate they are financed and what they cost, and its power model reports investment spending by technology. Outside power it has no capital at all: an efficiency gain in industry or a shift to electric cars appears as lower fuel use, not as an investment someone must make.</p>
+<p><strong>CPAT’s default cost of capital is a country rate plus a technology premium; rates by income group are an option.</strong> The 2023 documentation describes the cost of capital as “by default income-dependent”: 7.5 percent in high-income, 10 percent in upper-middle-income, 12.5 percent in lower-middle-income and 15 percent in low-income countries, following <span class="citation" data-cites="Steffen2020 CPATTeam2024">Steffen (<a href="#ref-Steffen2020" role="doc-biblioref">2020</a>; <a href="#ref-CPATTeam2024" role="doc-biblioref">CPAT Team 2024</a>)</span>. The model’s own setting, which the rebuilt CPAT-AI workbook follows, is different. It takes each country’s real cost of capital for 2022 from a calculator built on a real risk-free rate, country risk premiums and default spreads (7.5 percent where a country is missing), and adds a technology premium that depends on income group: in lower-middle-income countries about 2.5 points for coal, gas and oil plants and 2.9 points for wind and solar <span class="citation" data-cites="CPATAI2026">(<a href="#ref-CPATAI2026" role="doc-biblioref">CPAT-AI Project 2026</a>)</span>. The income-group rates are used only when the user selects them. Paper 5.1 records the same difference <span class="citation" data-cites="StrettonWP51">(<a href="#ref-StrettonWP51" role="doc-biblioref">Stretton 2026f</a>)</span>. The default is closer to what this paper needs, because it varies by country and technology; but its country table is not published as data, and the premium is a judgment, not an estimate.</p>
+<p><strong>CPAT’s fiscal accounts stop at revenue.</strong> CPAT lets the user recycle revenue through tax cuts, transfers, public investment or current spending, and passes the result to output through fiscal multipliers <span class="citation" data-cites="CPATTeam2024">(<a href="#ref-CPATTeam2024" role="doc-biblioref">CPAT Team 2024</a>)</span>. Public investment there is a use of revenue with an assumed multiplier, not a project with a cost of capital, a delivery risk and a financing route.</p>
+<p><strong>Published investment estimates differ for four reasons that have nothing to do with models.</strong> They count total investment or only the increment over a baseline; capital alone or net of savings; at a stated rate, such as the 7 percent SISEPUEDE uses for Latin America <span class="citation" data-cites="Kalra2023">(<a href="#ref-Kalra2023" role="doc-biblioref">Kalra et al. 2023</a>)</span>, or an unstated one; and with or without co-benefits, which the Independent High-Level Expert Group on Climate Finance puts at 15 to 18 percent of world GDP in 2030 <span class="citation" data-cites="IHLEG2024">(<a href="#ref-IHLEG2024" role="doc-biblioref">Bhattacharya et al. 2024</a>)</span>. The extension makes all four choices explicit.</p>
+<p><strong>No open model yet does all of it.</strong> SISEPUEDE, an open-source model built by RAND and the Inter-American Development Bank, covers every emitting sector at country level, prices costs, savings and co-benefits against a baseline, and runs about a thousand futures <span class="citation" data-cites="Kalra2023">(<a href="#ref-Kalra2023" role="doc-biblioref">Kalra et al. 2023</a>)</span>. For Latin America and the Caribbean it finds that reaching net zero by 2050 brings net benefits of $2.7 trillion at a 7 percent discount rate: fuel savings of $900 billion, avoided pollution of $500 billion and other health, safety and productivity gains of $1 trillion, against $1.3 trillion of additional investment. But it discounts at one rate after the run, has no cost of capital by country, and never asks who pays. The extension borrows its accounting and adds the financing and public-spending layers that neither model has; paper 6.4 sets out the shared activity layer that lets the two models be linked <span class="citation" data-cites="StrettonWP64">(<a href="#ref-StrettonWP64" role="doc-biblioref">Stretton 2026a</a>)</span>.</p>
+</section>
+<section id="sec-needs" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Extension A: investment needs and the cost of capital</h1>
+<section id="sec-capital" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-capital"><span class="header-section-number">4.1</span> Capital from physical change</h2>
+<p><strong>Investment is new physical capacity times a unit capital cost, measured against a baseline.</strong> For country <span class="math inline">\(c\)</span>, sector <span class="math inline">\(s\)</span>, technology <span class="math inline">\(j\)</span>, year <span class="math inline">\(t\)</span> and scenario <span class="math inline">\(S\)</span>,</p>
+<p><span id="eq-needs"><span class="math display">\[
+I^{S}_{c,s,t} = \sum_{j \in s} \Delta Q^{S}_{c,j,t}\; k_{j,t}\; p_{c,s}, \qquad k_{j,t} = k_{j,0}\, g_j^{\,t-t_0},
+\tag{1}\]</span></span></p>
+<p>where <span class="math inline">\(\Delta Q\)</span> is new capacity including replacements (gigawatts of solar, kilometers of line, vehicles sold, buildings retrofitted), <span class="math inline">\(k_{j,t}\)</span> is the unit capital cost with a learning or trend factor <span class="math inline">\(g_j\)</span>, and <span class="math inline">\(p_{c,s}\)</span> is the country’s price level for investment goods relative to the source of <span class="math inline">\(k\)</span>, from the International Comparison Program’s purchasing power parities for gross fixed capital formation. Incremental investment is the difference from the baseline run, <span class="math inline">\(\Delta I_{c,s,t} = I^{S}_{c,s,t} - I^{B}_{c,s,t}\)</span>. Both are reported, because totals compare with the expert group and the International Energy Agency, and increments compare with country climate and development reports and SISEPUEDE.</p>
+<p><strong>In power, CPAT already supplies <span class="math inline">\(\Delta Q\)</span>; elsewhere a share-of-GDP rule fills the gap until a physical model exists.</strong> CPAT’s capacity additions by technology plug straight into <a href="#eq-needs" class="quarto-xref">equation&nbsp;1</a>. For buildings, industry, transport infrastructure, land use and adaptation, the fallback is</p>
+<p><span id="eq-share"><span class="math display">\[
+I_{c,s,t} = \theta_{s,\,\mathrm{inc}(c)}\; \mathrm{GDP}_{c,t},
+\tag{2}\]</span></span></p>
+<p>with <span class="math inline">\(\theta\)</span> calibrated by sector and income group on studies that do model capital: <span class="citation" data-cites="RozenbergFay2019">Rozenberg and Fay (<a href="#ref-RozenbergFay2019" role="doc-biblioref">2019</a>)</span> for infrastructure (4.5 percent of GDP a year in low- and middle-income countries in their preferred scenario, in a range of 2 to 8 percent) and the expert group’s totals by country group <span class="citation" data-cites="IHLEG2024">(<a href="#ref-IHLEG2024" role="doc-biblioref">Bhattacharya et al. 2024</a>)</span>. The fallback is only as good as its calibration. Where SISEPUEDE has been run, its physical changes replace it.</p>
+</section>
+<section id="sec-coc" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-coc"><span class="header-section-number">4.2</span> The cost of capital</h2>
+<p><strong>Capital becomes an annual charge through the capital recovery factor, and the rate in that factor decides the answer.</strong> Over asset life <span class="math inline">\(n_j\)</span> at rate <span class="math inline">\(r\)</span>,</p>
+<p><span id="eq-crf"><span class="math display">\[
+A_{c,j,t} = I_{c,j,t}\,\mathrm{CRF}(r_{c,j}, n_j), \qquad \mathrm{CRF}(r,n) = \frac{r}{1-(1+r)^{-n}}.
+\tag{3}\]</span></span></p>
+<p>This is the end-of-year convention of project finance: the first payment falls a year after the asset is built. CPAT’s levelized cost instead sums discounted output from year zero, which is equivalent to dividing the factor by <span class="math inline">\(1+r\)</span>; the choice moves results by a few points of the cost of capital, as shown below. For the financial case, <span class="math inline">\(r\)</span> is the weighted average cost of capital (WACC) for that country and technology,</p>
+<p><span id="eq-wacc"><span class="math display">\[
+\mathrm{WACC}_{c,j} = \frac{D}{V}\big(r_f + \pi_c + \pi_j\big)(1-\tau) + \frac{E}{V}\,k^{E}_{c,j},
+\tag{4}\]</span></span></p>
+<p>where <span class="math inline">\(r_f\)</span> is the risk-free rate, <span class="math inline">\(\pi_c\)</span> the country premium, <span class="math inline">\(\pi_j\)</span> the technology premium, <span class="math inline">\(D/V\)</span> and <span class="math inline">\(E/V\)</span> the debt and equity shares, <span class="math inline">\(\tau\)</span> the tax rate and <span class="math inline">\(k^E\)</span> the cost of equity. This has the same structure as CPAT’s default setting. Observed costs of capital for renewable projects exist for a few dozen countries <span class="citation" data-cites="Steffen2020">(46 in <a href="#ref-Steffen2020" role="doc-biblioref">Steffen 2020</a>)</span>; elsewhere <span class="math inline">\(\pi_c\)</span> comes from sovereign spreads and the formula is calibrated to the observed level. For the economic case, <span class="math inline">\(r\)</span> is the social rate, 6 percent in World Bank guidance, which puts the plausible range at 2 to 10 percent <span class="citation" data-cites="WorldBank2016Discount">(<a href="#ref-WorldBank2016Discount" role="doc-biblioref">World Bank 2016</a>)</span>.</p>
+<p><strong>The financial case nets the capital charge against fuel and operating savings; the economic case adds co-benefits and carbon.</strong></p>
+<p><span id="eq-fin"><span class="math display">\[
+N^{F}_{c,t} = \sum_j \big(\Delta F_{c,j,t} - \Delta OM_{c,j,t} - A_{c,j,t}(\mathrm{WACC})\big),
+\tag{5}\]</span></span></p>
+<p><span id="eq-econ"><span class="math display">\[
+N^{E}_{c,t} = \sum_j \big(\Delta F_{c,j,t} - \Delta OM_{c,j,t} - A_{c,j,t}(r_s)\big) + CB_{c,t} + P^{C}_t\,\Delta E_{c,t},
+\tag{6}\]</span></span></p>
+<p>where <span class="math inline">\(\Delta F\)</span> is fuel saved, <span class="math inline">\(\Delta OM\)</span> the change in operating cost, <span class="math inline">\(CB\)</span> local co-benefits (air pollution, road safety, congestion), <span class="math inline">\(\Delta E\)</span> avoided emissions and <span class="math inline">\(P^C_t\)</span> the shadow price of carbon: $50 to 100 a ton in 2030 on the range recommended by the High-Level Commission on Carbon Prices <span class="citation" data-cites="CPLC2017">(<a href="#ref-CPLC2017" role="doc-biblioref">High-Level Commission on Carbon Prices 2017</a>)</span>, which World Bank appraisal follows <span class="citation" data-cites="WorldBank2024SPC">(<a href="#ref-WorldBank2024SPC" role="doc-biblioref">World Bank 2024</a>)</span>. <a href="#eq-fin" class="quarto-xref">equation&nbsp;5</a> is what investors and households see; <a href="#eq-econ" class="quarto-xref">equation&nbsp;6</a> is what society gets. CPAT already computes <span class="math inline">\(\Delta F\)</span> at retail and at supply-cost prices, and its air pollution and road transport modules compute most of <span class="math inline">\(CB\)</span>, so the economic lens reuses outputs the tool has.</p>
+<p><strong>The three lenses separate two jobs the discount rate is often asked to do at once.</strong> Lens (a) prices capital at each country’s WACC: the cost of financing. Lens (b) prices it at 6 percent everywhere: the social value of time. Lens (c) uses 6 percent and adds co-benefits and carbon. The physical investment need is the same in all three. What changes is the cost of carrying it and the benefits set against it.</p>
+<p><strong>Proposition 1 (break-even cost of capital).</strong> <em>Let an asset cost one dollar, last <span class="math inline">\(n\)</span> years and save <span class="math inline">\(b\)</span> dollars a year in fuel and operating costs from the end of its first year. Its financial case <span class="math inline">\(N^F\)</span> is positive if and only if <span class="math inline">\(\mathrm{WACC} &lt; r^*\)</span>, where <span class="math inline">\(r^*\)</span> solves <span class="math inline">\(\mathrm{CRF}(r^*, n) = b\)</span>; <span class="math inline">\(r^*\)</span> exists and is unique when <span class="math inline">\(b &gt; 1/n\)</span>. For <span class="math inline">\(b = 0.133\)</span> and <span class="math inline">\(n = 25\)</span>, <span class="math inline">\(r^* = 12.6\)</span> percent.</em></p>
+<p><strong>The break-even rate falls exactly where CPAT’s income-group option puts lower-middle-income countries.</strong> The proof is in Appendix A. The value <span class="math inline">\(b = 0.133\)</span> is stylized: it gives a benefit-cost ratio of 1.70 at 6 percent over 25 years, the same order as SISEPUEDE’s financial results for Latin America, where fuel and other financial savings exceed $1.3 trillion of investment by $700 billion at 7 percent <span class="citation" data-cites="Kalra2023">(<a href="#ref-Kalra2023" role="doc-biblioref">Kalra et al. 2023</a>)</span>. Against the income-group rates, each $1,000 of such capital nets $43 a year at 7.5 percent, $23 at 10 percent, about $1 at 12.5 percent and loses $22 at 15 percent (<a href="#fig-breakeven" class="quarto-xref">Figure&nbsp;1</a>). Under CPAT’s default setting, a lower-middle-income country’s solar asset carries a premium of 2.9 points, so it crosses the break-even once the country’s own rate exceeds about 9.7 percent. Under CPAT’s year-zero convention the break-even rate is 14.8 percent rather than 12.6: the convention alone is worth two points, which is why the extension must use one convention with the core model.</p>
+<div id="fig-breakeven" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-breakeven-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="2.Source/figures/fig_breakeven.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Saving less capital charge for the stylized asset of Proposition 1, per $1,000 of capital, against the cost of capital (25-year life, end-of-year capital recovery factor). Dots mark CPAT’s optional income-group rates. Source: author’s calculation (2.Source/make_figures.py)."><img src="2.Source/figures/fig_breakeven.png" class="img-fluid figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-breakeven-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Saving less capital charge for the stylized asset of Proposition 1, per $1,000 of capital, against the cost of capital (25-year life, end-of-year capital recovery factor). Dots mark CPAT’s optional income-group rates. Source: author’s calculation (<code>2.Source/make_figures.py</code>).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-lenses" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-lenses"><span class="header-section-number">4.3</span> What the lenses show</h2>
+<p><strong>At market rates the world gains from its climate investment, but developing countries barely do.</strong> <a href="#tbl-lenses" class="quarto-xref">Table&nbsp;1</a> applies the lenses to one year’s investment at the 2030 levels reported by the expert group, with the same stylized savings rate for every group, so that the differences come from the cost of capital alone. It is an illustration of scale, not an estimate: with one savings rate, it is Proposition 1 applied to three numbers.</p>
+<div id="tbl-lenses" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lenses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: The cost of capital decides whether developing-country climate investment pays its way. US$ billion a year, for one year’s investment, each item an annual flow over a 25-year asset life. Investment is the midpoint of the 2030 ranges in <span class="citation" data-cites="IHLEG2024">Bhattacharya et al. (<a href="#ref-IHLEG2024" role="doc-biblioref">2024</a>)</span>. Savings are a stylized 13.3 cents a year per dollar of capital for every group. Market rates are illustrative values consistent with the gap reported by <span class="citation" data-cites="IEA2024">International Energy Agency (<a href="#ref-IEA2024" role="doc-biblioref">2024</a>)</span> and <span class="citation" data-cites="Steffen2020">Steffen (<a href="#ref-Steffen2020" role="doc-biblioref">2020</a>)</span>; the high case is a stress. “Net” is savings minus the capital charge, <a href="#eq-fin" class="quarto-xref">equation&nbsp;5</a>. Source: author’s calculation (<code>2.Source/investment_lenses.py</code>).
+</figcaption>
+<div aria-describedby="tbl-lenses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Group (market rate / high case)</th>
+<th style="text-align: right;">Investment, 2030</th>
+<th style="text-align: right;">Charge, market rate</th>
+<th style="text-align: right;">Net, market rate</th>
+<th style="text-align: right;">Net, high case</th>
+<th style="text-align: right;">Charge, 6%</th>
+<th style="text-align: right;">Net, 6%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Advanced economies (5.5% / 7%)</td>
+<td style="text-align: right;">2,750</td>
+<td style="text-align: right;">205</td>
+<td style="text-align: right;">161</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: right;">215</td>
+<td style="text-align: right;">151</td>
+</tr>
+<tr class="even">
+<td>China (6% / 8%)</td>
+<td style="text-align: right;">1,350</td>
+<td style="text-align: right;">106</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">106</td>
+<td style="text-align: right;">74</td>
+</tr>
+<tr class="odd">
+<td>Developing, excluding China (10.5% / 15%)</td>
+<td style="text-align: right;">2,400</td>
+<td style="text-align: right;">275</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">−52</td>
+<td style="text-align: right;">188</td>
+<td style="text-align: right;">131</td>
+</tr>
+<tr class="even">
+<td>World</td>
+<td style="text-align: right;">6,500</td>
+<td style="text-align: right;">585</td>
+<td style="text-align: right;">279</td>
+<td style="text-align: right;">131</td>
+<td style="text-align: right;">508</td>
+<td style="text-align: right;">356</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>In developing countries the margin is thin and turns negative in a stress.</strong> At 10.5 percent, $2.4 trillion of investment earns $45 billion a year more than it costs to finance; at 15 percent it loses $52 billion. Financing at 10.5 rather than 6 percent costs $87 billion a year more for each year’s investment, and the penalty accumulates as vintages build up. At 6 percent the same investment earns $131 billion. Co-benefits widen the gap further: in SISEPUEDE’s Latin American results, avoided pollution and other health, safety and productivity gains ($1.5 trillion) exceed the fuel savings ($0.9 trillion), and counting them raises the net benefit from $0.7 trillion to $2.7 trillion <span class="citation" data-cites="Kalra2023">(<a href="#ref-Kalra2023" role="doc-biblioref">Kalra et al. 2023</a>)</span>.</p>
+<p><strong>The gap between lens (a) and lens (c) is the case for public finance, and the series’ de-risking papers are tools for closing it.</strong> A private investor in a developing country sees a thin margin or a loss; society sees a large gain. Three instruments bridge the gap. Pricing carbon and air pollution turns co-benefits into revenue, which is CPAT’s home ground. Lending on concessional or multilateral terms substitutes a lower rate for the market rate. And cutting the risk premium in <a href="#eq-wacc" class="quarto-xref">equation&nbsp;4</a> lowers the WACC itself: guaranteeing the power purchase contract rather than the debt removes payment risk <span class="citation" data-cites="CFPB31">(<a href="#ref-CFPB31" role="doc-biblioref">Stretton 2026d</a>)</span>, and refinancing operating plants’ senior debt through pooled, tranched securities at a blended cost of about 5.65 percent, against single-stage finance at 10 percent, cuts the cost of solar power by about a fifth <span class="citation" data-cites="CFPB32">(<a href="#ref-CFPB32" role="doc-biblioref">Stretton 2026c</a>)</span>. In the terms of Proposition 1, these instruments move a country from above <span class="math inline">\(r^*\)</span> to below it. The extension tells a ministry how much each point is worth: about $36 billion a year, near 6 percent, for each year of the $4.8 trillion of clean energy investment the expert group projects for 2030 <span class="citation" data-cites="IHLEG2024">(<a href="#ref-IHLEG2024" role="doc-biblioref">Bhattacharya et al. 2024</a>)</span>. The IEA’s comparable figure for emerging and developing economies alone is about $150 billion a year of financing costs per point, on their whole clean energy capital stock rather than one year’s investment <span class="citation" data-cites="IEA2024">(<a href="#ref-IEA2024" role="doc-biblioref">International Energy Agency 2024</a>)</span>.</p>
+<p><strong>A high cost of capital also changes what gets built.</strong> Low-carbon technologies are more capital-intensive than fossil plants, so a high cost of capital favors fossil fuels and a country with dear capital needs a higher carbon price to reach the same decarbonization <span class="citation" data-cites="HirthSteckel2016 Ameli2021">(<a href="#ref-HirthSteckel2016" role="doc-biblioref">Hirth and Steckel 2016</a>; <a href="#ref-Ameli2021" role="doc-biblioref">Ameli et al. 2021</a>)</span>. Running CPAT’s logit investment choice with country rates from <a href="#eq-wacc" class="quarto-xref">equation&nbsp;4</a> makes the physical needs in <a href="#eq-needs" class="quarto-xref">equation&nbsp;1</a> respond to finance.</p>
+</section>
+</section>
+<section id="sec-efficiency" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Extension B: the efficiency of public spending</h1>
+<section id="sec-rule" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="sec-rule"><span class="header-section-number">5.1</span> The rule</h2>
+<p><strong>For each candidate use of public money, compare what people get with what the budget really pays.</strong> Let <span class="math inline">\(W_j\)</span> be the present value of benefits of measure <span class="math inline">\(j\)</span> to everyone other than the budget, net of their own costs, and <span class="math inline">\(F_j\)</span> the present value of its net cost to the budget, after revenue that comes back. Then</p>
+<p><span id="eq-rule"><span class="math display">\[
+\mathrm{ENPV}_j = W_j - F_j, \qquad \mathrm{MVPF}_j = \frac{W_j}{F_j}, \qquad NB_{\lambda,j} = W_j - \lambda F_j,
+\tag{7}\]</span></span></p>
+<p>where ENPV is the economic net present value, MVPF is the marginal value of public funds <span class="citation" data-cites="HendrenSprungKeyser2020">(<a href="#ref-HendrenSprungKeyser2020" role="doc-biblioref">Hendren and Sprung-Keyser 2020</a>)</span> and <span class="math inline">\(\lambda\)</span> is the marginal cost of public funds: the cost to the economy of raising one more dollar of tax. Fund measure <span class="math inline">\(j\)</span> if <span class="math inline">\(\mathrm{MVPF}_j &gt; \lambda\)</span>, equivalently <span class="math inline">\(NB_{\lambda,j} &gt; 0\)</span>. If <span class="math inline">\(F_j \le 0\)</span> the measure pays for itself and is funded whenever <span class="math inline">\(W_j \ge 0\)</span>; the binding problem is then financing, not value. When the budget binds, rank by MVPF.</p>
+<p><strong>The cost of public funds is about 1.2 in developing countries, and higher where taxes distort more.</strong> For 38 African countries, raising a marginal dollar through the existing mix of five taxes costs on average $1.20, and $1.10 through each country’s cheapest instrument, often the value added tax <span class="citation" data-cites="AuriolWarlters2012">(<a href="#ref-AuriolWarlters2012" role="doc-biblioref">Auriol and Warlters 2012</a>)</span>. For proportional tax changes in Scandinavian and northern continental European welfare states, where the participation margin matters, estimates center around 2 <span class="citation" data-cites="KlevenKreiner2006">(<a href="#ref-KlevenKreiner2006" role="doc-biblioref">Kleven and Kreiner 2006</a>)</span>. The extension defaults to 1.2, uses 1.1 where the marginal tax is value added tax, and applies 1.5 to 2.0 as a stress where the macro-fiscal and debt models say the country cannot borrow more.</p>
+<p><strong>Proposition 2 (the rule nests World Bank practice and prices revenue returns at <span class="math inline">\(\lambda\)</span>).</strong> <em>(a) With <span class="math inline">\(\lambda = 1\)</span> and no budget limit, <span class="math inline">\(NB_{\lambda,j} = \mathrm{ENPV}_j\)</span>, the usual economic net present value test. (b) Shifting a dollar of present value from beneficiaries to the budget, for example by keeping part of a fuel saving in the utility, leaves <span class="math inline">\(\mathrm{ENPV}_j\)</span> unchanged and raises <span class="math inline">\(NB_{\lambda,j}\)</span> by <span class="math inline">\(\lambda - 1\)</span>.</em></p>
+<p><strong>Revenue returns belong in the denominator, not the numerator.</strong> A user fee is a transfer in economic analysis; counting it as a benefit as well as a saving double-counts. But every dollar the budget recovers saves <span class="math inline">\(\lambda\)</span> dollars of taxation, not one. The same logic puts CPAT’s pricing policies on the spending ladder. A carbon tax or fuel subsidy reform raises money at a low welfare cost per dollar, so it is the natural first source of funds. A spending measure that a price could achieve more cheaply is flagged “price first”: with costly public funds, the best subsidy is smaller than the gap between social and private returns, and smaller still when most subsidized units would have happened anyway, whereas a tax raises money on those same units. Paper 6.1 shows how to measure what such prices cut, as a Total Effective Carbon Price <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Stretton 2026e</a>)</span>.</p>
+</section>
+<section id="sec-corrections" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="sec-corrections"><span class="header-section-number">5.2</span> Five corrections between a project’s value and its claim on the budget</h2>
+<p><strong>First, public money pays only the gap the private sector will not cover.</strong> The investor’s net present value is computed at the market WACC and private prices, including taxes. For a purely public asset the budget pays the full cost; for a viability-gap measure it pays <span class="math inline">\(\max(0, -NPV^{priv}_j)\)</span>; for utility and contracted routes it pays nothing up front and carries a contingent liability; for purely private investment it pays nothing. Benefits are scaled by an additionality share <span class="math inline">\(a_j\)</span>, the part that would not have happened without the measure.</p>
+<p><strong>Second, money spent is not capital created.</strong> <span class="citation" data-cites="Pritchett2000">Pritchett (<a href="#ref-Pritchett2000" role="doc-biblioref">2000</a>)</span> showed that cumulated public investment spending is a poor measure of public capital. The IMF estimates the average public investment efficiency gap, the shortfall of outcomes from what the same spending could buy, at about 30 percent across 134 countries: 40 percent in low-income developing countries, 27 percent in emerging markets and 13 percent in advanced economies. Stronger public investment management could close up to two-thirds of the gap <span class="citation" data-cites="IMF2015PIM">(<a href="#ref-IMF2015PIM" role="doc-biblioref">International Monetary Fund 2015</a>)</span>. The extension carries an efficiency <span class="math inline">\(s_j\)</span>, the share of public spending that becomes effective capital, and an execution rate <span class="math inline">\(e_j\)</span>, the share of the budget actually spent:</p>
+<p><span id="eq-haircut"><span class="math display">\[
+C^{\mathrm{eff}}_j = C_j\Big[(1-\pi_j) + \frac{\pi_j}{s_j}\Big], \qquad K^{\mathrm{eff}}_{j,t} = (1-\delta_j)K^{\mathrm{eff}}_{j,t-1} + s_j\, e_j\big(I^{\mathrm{plan}}_{j,t} + \mathrm{backlog}_{j,t-1}\big),
+\tag{8}\]</span></span></p>
+<p>where <span class="math inline">\(\pi_j\)</span> is the public share of the capital cost and <span class="math inline">\(\delta_j\)</span> the depreciation rate. Efficiency raises the cost of a unit of public asset; execution delays benefits but loses no money, because unspent appropriations stay in the budget. This is the efficiency-adjusted public capital of the growth and debt-investment-growth literature <span class="citation" data-cites="Gupta2014 Buffie2012">(<a href="#ref-Gupta2014" role="doc-biblioref">Gupta et al. 2014</a>; <a href="#ref-Buffie2012" role="doc-biblioref">Berg et al. 2012</a>)</span>. The haircut applies once: never also to unit costs taken from the country’s own outturns, which already contain its inefficiency.</p>
+<p><strong>Third, efficiency frontiers convert into parameters.</strong> Frontier studies measure how far each country’s health and education outcomes fall short of the best achieved for the same spending, across 140 countries <span class="citation" data-cites="HerreraPang2005">(<a href="#ref-HerreraPang2005" role="doc-biblioref">Herrera and Pang 2005</a>)</span> and across 38 African countries, which score lower on average than Asian and Latin American ones <span class="citation" data-cites="GuptaVerhoeven2001">(<a href="#ref-GuptaVerhoeven2001" role="doc-biblioref">Gupta and Verhoeven 2001</a>)</span>. Outcomes of measures costed from international norms are scaled by the country’s score; those costed from local outturns are not.</p>
+<p><strong>Fourth, capital and current spending go on one footing.</strong> Each capital outlay becomes an equivalent annual cost with its recurrent costs added:</p>
+<p><span id="eq-eac"><span class="math display">\[
+\mathrm{EAC}_j = K_j\,\mathrm{CRF}(r, n_j) + r^{rc}_j K_j,
+\tag{9}\]</span></span></p>
+<p>where <span class="math inline">\(r^{rc}_j\)</span> is the recurrent-cost coefficient: operations, maintenance and staffing per dollar of capital a year. Recurrent costs are large in aggregate: on top of investment of 4.5 percent of GDP, keeping infrastructure in low- and middle-income countries running adds 2.7 percent of GDP a year <span class="citation" data-cites="RozenbergFay2019">(<a href="#ref-RozenbergFay2019" role="doc-biblioref">Rozenberg and Fay 2019</a>)</span>. By sector the coefficients differ widely; as illustrative values, the extension uses about 1 to 2 percent for solar and single digits for roads, and 10 to 20 percent for clinics and schools because of staffing. The rate <span class="math inline">\(r\)</span> is the social rate for the economic view, the government’s borrowing rate for the fiscal view, and the market WACC for private and contracted routes. Underfunded maintenance is a measure in its own right, funded before new building of the same asset class, because unfunded recurrent costs are one of the main ways public capital in low-income countries loses value <span class="citation" data-cites="AdamBevan2014">(<a href="#ref-AdamBevan2014" role="doc-biblioref">Adam and Bevan 2014</a>)</span>.</p>
+<p><strong>Fifth, the financing route changes the fiscal ledger, the debt statistics and the liabilities, and the extension runs each measure under six of them.</strong> These are a commercial loan, a concessional loan, a utility balance sheet, an independent producer under a power purchase agreement (PPA) with or without a guarantee, a viability-gap contract and a grant. The yearly net fiscal flow is</p>
+<p><span id="eq-ledger"><span class="math display">\[
+F_t = \mathrm{capex}_t - \mathrm{loans}_t + DS_t + OM^{pub}_t + PPA_t + SUB_t - FEE_t - \theta\, SAV_t + XL_t - PIG_t + \mathbb{E}[\mathrm{CALL}_t],
+\tag{10}\]</span></span></p>
+<p>with debt service <span class="math inline">\(DS\)</span>, public operation and maintenance <span class="math inline">\(OM^{pub}\)</span>, contract payments <span class="math inline">\(PPA\)</span>, subsidies <span class="math inline">\(SUB\)</span>, fees <span class="math inline">\(FEE\)</span>, avoided fuel cost <span class="math inline">\(SAV\)</span> of which the budget or state utility keeps a share <span class="math inline">\(\theta\)</span>, fuel excise lost <span class="math inline">\(XL\)</span>, earmarked corrective revenue <span class="math inline">\(PIG\)</span>, and expected guarantee calls. For a PPA the tariff and the liability are</p>
+<p><span id="eq-ppa"><span class="math display">\[
+T = \frac{\big(K + PV_w(\mathrm{rep})\big)\,\mathrm{CRF}(w, n) + OM}{E}, \qquad L^{PPA} = \sum_{t=1}^{n} \frac{T E}{(1+i_g)^t},
+\tag{11}\]</span></span></p>
+<p>where <span class="math inline">\(w\)</span> is the producer’s WACC, <span class="math inline">\(\mathrm{rep}\)</span> mid-life replacements, <span class="math inline">\(E\)</span> annual energy and <span class="math inline">\(i_g\)</span> the government’s borrowing rate.</p>
+<p><strong>Proposition 3 (tenor is not price).</strong> <em>(a) If a loan’s rate equals the government’s borrowing rate <span class="math inline">\(i_g\)</span>, the present value of its debt service at <span class="math inline">\(i_g\)</span> equals the principal whatever its tenor, so the fiscal net present value at <span class="math inline">\(i_g\)</span> does not depend on tenor; tenor changes only the timing of cash. (b) If budget costs are discounted at a social rate below the loan rate, the present value of debt service rises with tenor, so a rule with one constant <span class="math inline">\(\lambda\)</span> ranks the shorter loan above the longer one. (c) Only a cost of public funds <span class="math inline">\(\lambda_t\)</span> that is higher in cash-short years can reverse that ranking.</em></p>
+<p><strong>Proposition 4 (a power purchase agreement is debt in disguise).</strong> <em>Let the producer’s WACC <span class="math inline">\(w\)</span> exceed <span class="math inline">\(i_g\)</span> and the PPA be take-or-pay over the asset life. (a) Without mid-life replacements, <span class="math inline">\(L^{PPA} &gt; K + PV_{i_g}(OM)\)</span>: the committed payments, valued at the government’s rate, exceed the cost of building and running the plant. (b) With replacements, <span class="math inline">\(L^{PPA} &gt; K + PV_{i_g}(OM) + PV_{i_g}(\mathrm{rep})\)</span> if and only if <span class="math inline">\(\big(K + PV_w(\mathrm{rep})\big)\,\mathrm{CRF}(w,n)/\mathrm{CRF}(i_g,n) &gt; K + PV_{i_g}(\mathrm{rep})\)</span>. The excess is the financing premium the country pays for keeping the asset off its headline debt.</em></p>
+<p><strong>Debt rules see only part of this.</strong> The proofs are in Appendix A. In the joint IMF and World Bank framework for low-income countries, once the stock of public-private partnership capital exceeds 3 percent of GDP, a stress test adds 35 percent of that stock to public debt <span class="citation" data-cites="IMFWB2017LICDSF">(<a href="#ref-IMFWB2017LICDSF" role="doc-biblioref">International Monetary Fund and World Bank 2017</a>)</span>. Public-private partnerships do not free public funds; any case for them rests on efficiency gains large enough to beat the financing premium <span class="citation" data-cites="EngelFischerGaletovic2013">(<a href="#ref-EngelFischerGaletovic2013" role="doc-biblioref">Engel et al. 2013</a>)</span>.</p>
+</section>
+<section id="sec-portfolio" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="sec-portfolio"><span class="header-section-number">5.3</span> From measures to a portfolio</h2>
+<p><strong>Ranking by MVPF within an affordable envelope gives an allocative frontier across sectors.</strong> Measures are ranked by MVPF and cumulative fiscal cost is plotted against cumulative value. Mutually exclusive variants of one measure keep only the efficient ones; indivisible projects need a knapsack:</p>
+<p><span id="eq-knapsack"><span class="math display">\[
+\max_{x} \sum_j x_j\, NB_{\lambda,j} \quad \text{s.t.} \quad \sum_j x_j F_{j,t} \le E^{*}_t \;\;\forall t, \qquad \sum_{j \in g} x_j \le 1 \;\;\forall g, \qquad \sum_j x_j I_{j,t} - I_{t-1} \le \Delta I^{\max},
+\tag{12}\]</span></span></p>
+<p>where <span class="math inline">\(x_j\)</span> is 1 if measure <span class="math inline">\(j\)</span> is funded (or a share if divisible), <span class="math inline">\(g\)</span> indexes families of exclusive variants, <span class="math inline">\(E^*_t\)</span> is the fiscal envelope that the macro-fiscal and debt models say is affordable, and <span class="math inline">\(\Delta I^{\max}\)</span> caps the speed of scale-up, which matters most where absorptive capacity is low. Climate measures sit on the same ladder as health, education, roads, water and cash transfers, each on a “sector card” with a unit cost, outcome per dollar and recurrent-cost coefficient, sharing one discount rate, value of a statistical life and shadow price of carbon. A cash transfer, with an MVPF near 1, is the benchmark to beat. The cut-off MVPF is itself a diagnostic: well above <span class="math inline">\(\lambda\)</span> means the envelope is too tight; below it means the envelope is too loose.</p>
+<p><strong>The chosen portfolio then goes back to the macro-fiscal models, which return the envelope and <span class="math inline">\(\lambda\)</span>.</strong> Public capital by sector, its efficiency, the financing shares and the contract liabilities pass to the debt-investment-growth and debt sustainability models of paper 6.5 <span class="citation" data-cites="StrettonWP65">(<a href="#ref-StrettonWP65" role="doc-biblioref">Stretton 2026g</a>)</span>, which return the debt path and the affordable envelope. Non-market benefits such as health enter <span class="math inline">\(W\)</span> but never GDP, so the macro model does not count them twice.</p>
+</section>
+</section>
+<section id="sec-example" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> A worked example: a small island caught in the oil trap</h1>
+<p><strong>The example is stylized: an island of $2 billion GDP and 85 percent public debt that makes almost all its 300 gigawatt-hours of power from imported diesel.</strong> It replaces 30 percent of its diesel generation with 60 megawatts of solar and a 120 megawatt-hour battery costing $120 million (6 percent of GDP). Unit costs are anchored to public data with an island premium: solar at $1,200 a kilowatt against a 2024 global average of $691 <span class="citation" data-cites="IRENA2025">(<a href="#ref-IRENA2025" role="doc-biblioref">International Renewable Energy Agency 2025</a>)</span>. Diesel generation avoided costs $0.228 a kilowatt-hour at a Brent price of $80 a barrel, so the plant saves $20.5 million a year (1 percent of GDP). The social rate is 6 percent, the government borrows at 8 percent, <span class="math inline">\(\lambda\)</span> is 1.2, and the budget or state utility keeps half the fuel saving (<span class="math inline">\(\theta = 0.5\)</span>), passing the rest to consumers. Appendix B lists every parameter.</p>
+<p><strong>Before financing, the plant is excellent.</strong> Its levelized cost at 6 percent is $0.134 a kilowatt-hour against the $0.228 it displaces, its economic net present value is $108 million, and it stays positive down to oil at about $22 a barrel. SISEPUEDE’s method, or a standard World Bank appraisal, would stop here.</p>
+<p><strong>The plant passes the public-money test on every route, but the only commercial loan breaks the budget’s cash flow.</strong> The island can borrow commercially at 8 percent for seven years. Debt service and upkeep come to $24.8 million a year against $20.5 million of fuel saved, of which the budget keeps half: the net cash flow to the budget is −$14.6 million a year for seven years, $102 million in all, and even if the budget kept every dollar saved it would still run $4.4 million short each year. Headline debt rises from 85 to 91 percent of GDP on day one. Yet the MVPF on this route is 4.18 and the net benefit at <span class="math inline">\(\lambda = 1.2\)</span> is $93 million. <a href="#tbl-routes" class="quarto-xref">Table&nbsp;2</a> sets the five financing routes side by side, and <a href="#fig-island" class="quarto-xref">Figure&nbsp;2</a> shows the cash and the liabilities.</p>
+<div id="tbl-routes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-routes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: A plant worth $108 million passes the value test on every route; the financing route decides the cash, the debt and the liabilities. Stylized island; US$ million, present values at 6 percent unless stated; Brent $80 a barrel; budget keeps half the fuel saving. R1b is shown for comparison and is not available in the base case. Island ENPV is the World Bank financing-neutral value ($108 million on every route) minus the present value of net payments to non-resident financiers. The liquidity premium sets <span class="math inline">\(\lambda_t = 2.0\)</span> in years 1 to 7 and 1.2 thereafter. R2 has five years’ grace. Source: author’s calculation (<code>2.Source/sids_worked_example.py</code>).
+</figcaption>
+<div aria-describedby="tbl-routes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">R1a: loan 8%, 7 yr</th>
+<th style="text-align: right;">R1b: loan 8%, 25 yr</th>
+<th style="text-align: right;">R2: concessional 1.5%, 30 yr</th>
+<th style="text-align: right;">R3: PPA, WACC 11%</th>
+<th style="text-align: right;">R4: PPA, WACC 8.5%, guaranteed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Year-1 payment for the plant ($m)</td>
+<td style="text-align: right;">24.8</td>
+<td style="text-align: right;">13.0</td>
+<td style="text-align: right;">3.6</td>
+<td style="text-align: right;">16.7</td>
+<td style="text-align: right;">14.2</td>
+</tr>
+<tr class="even">
+<td>Year-1 net cash to budget ($m)</td>
+<td style="text-align: right;">−14.6</td>
+<td style="text-align: right;">−2.8</td>
+<td style="text-align: right;">+6.6</td>
+<td style="text-align: right;">−6.4</td>
+<td style="text-align: right;">−4.0</td>
+</tr>
+<tr class="odd">
+<td>Island ENPV ($m)</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">165</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">80</td>
+</tr>
+<tr class="even">
+<td>MVPF</td>
+<td style="text-align: right;">4.18</td>
+<td style="text-align: right;">2.82</td>
+<td style="text-align: right;">pays for itself</td>
+<td style="text-align: right;">1.59</td>
+<td style="text-align: right;">2.55</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(NB_{1.2}\)</span> ($m)</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">172</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">69</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(NB\)</span> with liquidity premium ($m)</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">63</td>
+<td style="text-align: right;">197</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">51</td>
+</tr>
+<tr class="odd">
+<td>Fiscal NPV at 8% ($m)</td>
+<td style="text-align: right;">−38</td>
+<td style="text-align: right;">−38</td>
+<td style="text-align: right;">+33</td>
+<td style="text-align: right;">−69</td>
+<td style="text-align: right;">−43</td>
+</tr>
+<tr class="even">
+<td>Headline debt added (% of GDP)</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td>PV of PPA payments at 8% / capital cost</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">1.48</td>
+<td style="text-align: right;">1.27</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-island" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-island-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="2.Source/figures/fig_island.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Year-1 net cash to the budget, and the headline debt or PPA commitment each route creates, stylized island. PPA commitments are the present value at the government’s 8 percent rate of committed payments under take-or-pay. Source: Table&nbsp;2 (2.Source/make_figures.py)."><img src="2.Source/figures/fig_island.png" class="img-fluid figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-island-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Year-1 net cash to the budget, and the headline debt or PPA commitment each route creates, stylized island. PPA commitments are the present value at the government’s 8 percent rate of committed payments under take-or-pay. Source: <a href="#tbl-routes" class="quarto-xref">Table&nbsp;2</a> (<code>2.Source/make_figures.py</code>).
+</figcaption>
+</figure>
+</div>
+<p><strong>The trap is a liquidity and debt-statistics problem, not a solvency problem.</strong> The short tenor creates the cash gap, the 8 percent rate sets the fiscal cost, and the debt rule penalizes the gross liability rather than the self-financing asset behind it. Tenor eases the first but not the second: the seven-year and 25-year loans have the same fiscal net present value at 8 percent, −$38 million (Proposition 3). At a constant <span class="math inline">\(\lambda\)</span> of 1.2 the short loan even ranks higher ($93 million against $75 million), because the island pays the two-point spread over the social rate for fewer years. Only when <span class="math inline">\(\lambda\)</span> rises to 2 in the cash-short years does the ranking flip, to $63 million against $28 million. A tool with one constant cost of public funds cannot see the trap.</p>
+<p><strong>Concessional finance wins on every count, where it exists.</strong> A 30-year loan at 1.5 percent with five years’ grace has a grant element of 48 percent at 6 percent, puts $6.6 million a year into the budget from the first year, and pays for itself in MVPF terms. It still adds 6 percent of GDP to headline debt. The constraint is volume, not merit.</p>
+<p><strong>A PPA turns capital into an annual payment below the fuel bill, but it does not remove the liability.</strong> At an 11 percent WACC the tariff is $0.186 a kilowatt-hour, and at 8.5 percent with a World Bank or Multilateral Investment Guarantee Agency guarantee $0.159, both below the $0.228 avoided cost. Neither adds headline debt, and both narrow the budget’s year-one gap, to $6.4 and $4.0 million. But the present value of the committed payments at 8 percent is 1.48 times the capital cost without a guarantee and 1.27 times with one, 8.9 and 7.6 percent of GDP, more than the 6 percent of GDP of debt kept off the books. Against the full cost of building and running the plant valued at 8 percent, the excess is about $31 million without a guarantee and $5 million with one (Proposition 4); so the guaranteed PPA is a fair second-best to sovereign borrowing. The unguaranteed PPA halves the island’s net benefit and fails at <span class="math inline">\(\lambda = 2\)</span>, at oil of $60, or with capital costs 30 percent higher. The guarantee, cutting the producer’s cost of capital by 2.5 points, is worth about $31 million to the island, a quarter of the plant’s cost.</p>
+<p><strong>Who keeps the fuel saving decides the MVPF but not the economic value.</strong> Moving <span class="math inline">\(\theta\)</span> from 0 to 1 leaves each route’s economic net present value unchanged but raises the seven-year loan’s MVPF from 1.61 to “pays for itself” (Proposition 2, part b); above a <span class="math inline">\(\theta^*\)</span> of 0.37 for the concessional route and 0.62 to 0.81 for the others, the plant finances itself. Tariff design is a fiscal lever worth <span class="math inline">\(\lambda - 1\)</span> per dollar.</p>
+<p><strong>Carbon at the shadow price adds $47 to 93 million of present value to every route but does not reorder them</strong>, because all five displace the same diesel.</p>
+</section>
+<section id="sec-country" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Country runs: Kenya, Uganda and St Lucia</h1>
+<p><strong>Run for three countries, the investment-needs extension puts 2030 mitigation investment at 4 to 5 percent of GDP, and the lens decides whether the increment is a cost or a gain.</strong> <a href="#tbl-country" class="quarto-xref">Table&nbsp;3</a> reports the tool’s 2030 results for Kenya, Uganda and St Lucia <span class="citation" data-cites="InvNeedsTool2026">(<a href="#ref-InvNeedsTool2026" role="doc-biblioref">Mitigation Investment Needs Model 2026</a>)</span>. The tool shares the expert group’s totals among countries by physical drivers from CPAT and by GDP, so country values are allocations, not bottom-up estimates; they are illustrative results from the tool, not official estimates.</p>
+<div id="tbl-country" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-country-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Climate investment needs and their incremental cost in 2030 for three countries. Incremental cost is the annual capital charge on one year’s incremental investment less fuel and operating savings and, in lens (c), local air-pollution co-benefits (no carbon); positive is a net cost. Cost of capital is the observed renewable-energy rate for Kenya and Uganda; *St Lucia has no observation and takes the developing-country group rate. The haircut row applies each country’s public investment efficiency gap to the public share; figures in brackets are before the haircut. Illustrative results from the tool, not official estimates. Sources: <span class="citation" data-cites="InvNeedsTool2026">Mitigation Investment Needs Model (<a href="#ref-InvNeedsTool2026" role="doc-biblioref">2026</a>)</span>; author’s extraction, <code>2.Source/country_runs.py</code>.
+</figcaption>
+<div aria-describedby="tbl-country-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">Kenya</th>
+<th style="text-align: right;">Uganda</th>
+<th style="text-align: right;">St Lucia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GDP, 2030 (US$ billion)</td>
+<td style="text-align: right;">155.7</td>
+<td style="text-align: right;">87.5</td>
+<td style="text-align: right;">2.9</td>
+</tr>
+<tr class="even">
+<td>Total investment (% of GDP)</td>
+<td style="text-align: right;">4.7</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">4.4</td>
+</tr>
+<tr class="odd">
+<td>Incremental investment (% of GDP)</td>
+<td style="text-align: right;">1.1</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">1.1</td>
+</tr>
+<tr class="even">
+<td>Market cost of capital (%)</td>
+<td style="text-align: right;">9.7</td>
+<td style="text-align: right;">8.5</td>
+<td style="text-align: right;">10.5*</td>
+</tr>
+<tr class="odd">
+<td>Incremental cost, lens (a), market rate (US$ million a year)</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;">−1.2</td>
+</tr>
+<tr class="even">
+<td>Incremental cost, lens (b), 6%</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">−2.3</td>
+</tr>
+<tr class="odd">
+<td>Incremental cost, lens (c), 6% and local co-benefits</td>
+<td style="text-align: right;">−7</td>
+<td style="text-align: right;">−3.5</td>
+<td style="text-align: right;">−3.0</td>
+</tr>
+<tr class="even">
+<td>Total investment after the delivery haircut (US$ billion)</td>
+<td style="text-align: right;">8.3 (7.2)</td>
+<td style="text-align: right;">4.3 (3.5)</td>
+<td style="text-align: right;">0.145 (0.126)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>In Kenya and Uganda the increment is a net cost at market rates and at 6 percent, and pays only when cleaner air is counted; in St Lucia it pays at any rate.</strong> Kenya’s incremental investment costs $120 million a year more than it saves at its market rate, $68 million at 6 percent, and becomes a small gain with co-benefits. St Lucia, which burns imported diesel for almost all its power, saves more than the capital charge even at 10.5 percent, as the stylized island does. Uganda’s observed cost of capital, 8.5 percent, is far below the 15 percent that CPAT’s income-group option would assign a low-income country; the choice of setting alone can turn the stylized asset of Proposition 1 from a loss into a gain. The delivery haircut matters as much: it raises Uganda’s investment need by $0.8 billion, about a fifth, because its public investment efficiency gap is 36 percent.</p>
+<p><strong>A full SISEPUEDE run for Uganda shows what replaces the share-of-GDP fallback, and how little of its value a budget can see.</strong> In the October 2025 run, the net-zero strategy carries $259 billion of undiscounted technical cost over 2025–2050 against $675 billion of benefits, a net present value of $161 billion at 6 percent and $116 billion at 8.5 percent <span class="citation" data-cites="SISEPUEDEUganda2025">(<a href="#ref-SISEPUEDEUganda2025" role="doc-biblioref">SISEPUEDE 2025</a>)</span>. Two strategies under Uganda’s nationally determined contribution score $185 billion and $90 billion at 6 percent. Technical cost rises from 1.4 percent of the run’s GDP in 2030 to 3.8 percent in 2050. But only the fuel, system-cost and technical-savings lines are cash that a budget, a utility or the balance of payments would see: $119 billion, 18 percent of the net-zero benefits and under 3 percent in the two other strategies. The rest is health, indoor air, crops and water quality. And power is only 6 percent of the technical cost; wastewater, buildings, livestock, solid waste and sanitation dominate. A spending test on this run would therefore find large values of <span class="math inline">\(W\)</span> and small cash returns in <span class="math inline">\(F\)</span> (<a href="#sec-efficiency" class="quarto-xref">Section&nbsp;5</a>): strong cases for public money, financed mostly by tax rather than by the savings they generate.</p>
+</section>
+<section id="sec-limits" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Validation, limits and use</h1>
+<p><strong>The extensions are built to reproduce existing results when their new parameters are switched off.</strong> With <span class="math inline">\(\lambda = 1\)</span>, no haircuts and no budget limit, the spending layer must return the economic net present value of a standard appraisal (Proposition 2, part a), and with the investment lenses at a common rate it must return the capital charge of <a href="#eq-crf" class="quarto-xref">equation&nbsp;3</a>. With financiers resident, the island’s ENPV must equal the financing-neutral ENPV on every route; the worked-example code asserts this, along with the identity that a loan’s debt service discounted at its own rate equals the principal. These are the same regression tests that paper 5.2 applies to the core model <span class="citation" data-cites="StrettonWP52">(<a href="#ref-StrettonWP52" role="doc-biblioref">Stretton 2026b</a>)</span>.</p>
+<p><strong>The strongest objection is that the lenses only restate a discount-rate sensitivity.</strong> With one savings rate for every group, <a href="#tbl-lenses" class="quarto-xref">Table&nbsp;1</a> is indeed Proposition 1 applied to three numbers. The answer is that the lenses separate two jobs a single rate is asked to do. The market rate prices finance and can be changed by policy: guarantees, pooling, concessional terms. The social rate values time and cannot. Reporting both, with co-benefits beside them, tells a ministry how much of the gap between what investors see and what society gets is a financing problem it can buy down, and at what price per point.</p>
+<p><strong>The weakest parameters are the savings, co-benefit and abatement rates per dollar, and they matter most.</strong> The stylized 13.3 cents of savings per dollar is calibrated to one region’s results. The country runs rest on the investment-needs tool’s own savings and co-benefit rates per dollar, which are calibrated, not observed. Each should be replaced by a country run of SISEPUEDE, as for Uganda, or by CPAT’s own fuel savings, before any number goes into a budget document.</p>
+<p><strong>The country cost of capital is the most influential input and the least measured.</strong> Observed costs of capital for renewable projects exist for a few dozen economies (St Lucia is not one). CPAT’s default country table rests on a calculator of risk-free rates, country risk premiums and spreads plus a technology premium set by judgment; sovereign spreads overstate project risk where contracts are guaranteed and understate it where they are not. An open table of the cost of capital by country and technology, with its sources, is the first job.</p>
+<p><strong>Several simplifications bias the worked example in known directions.</strong> Nominal rates applied to constant-price flows overstate financing costs; take-or-pay is an upper bound on the PPA liability; the guarantee is unpriced; and no delivery haircut is applied to the public routes. The extension uses an end-of-year capital recovery factor and CPAT a year-zero one; Proposition 1’s break-even rate is 12.6 percent under the first and 14.8 percent under the second, so the two must be aligned before results are compared.</p>
+<p><strong>For a ministry, the extensions answer three questions in order.</strong> First, how much clean capital a policy package calls for, by sector, and how much of it the public sector must carry: run CPAT, take its capacity changes, and apply <a href="#eq-needs" class="quarto-xref">equation&nbsp;1</a> to <a href="#eq-econ" class="quarto-xref">equation&nbsp;6</a> at the country’s WACC and at 6 percent. Second, which of the public measures pass the budget test: tag each by payer and financing route, apply the five corrections and rank by MVPF against <span class="math inline">\(\lambda\)</span>. Third, how to finance the survivors: compare routes on the fiscal ledger, the debt statistics and the contract liabilities, with a time-varying <span class="math inline">\(\lambda\)</span> where cash is short. The method uses public data and the outputs CPAT and SISEPUEDE already produce.</p>
+</section>
+<section id="sec-conclusion" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Conclusion</h1>
+<p>A carbon price model that cannot price capital tells a finance ministry half of what it needs. Extending CPAT to investment needs shows that the cost of capital, not the size of the bill, decides whether developing-country climate investment pays its way: a typical clean asset that pays its way at 6 percent breaks even at 12.6 percent, the rate CPAT’s income-group option gives lower-middle-income countries, while the economic case is strong everywhere. Which of CPAT’s two cost-of-capital settings a team uses, and which capital-recovery convention, can each move that verdict. Extending CPAT to the efficiency of public spending shows that the budget’s problem is often not value but liquidity, debt statistics and hidden contract liabilities, and that a single cost of public funds cannot see a cash trap. The country runs show the same pattern on tool results: in Kenya and Uganda the increment pays only when co-benefits are counted, and in Uganda’s SISEPUEDE run under a fifth of the net-zero benefits reach the budget as cash. The main limitation is that the savings per dollar and the costs of capital that drive every number are calibrated on one region and a few dozen observations. The next step is an open country-by-technology table of the cost of capital and more SISEPUEDE runs outside Latin America, so that the lenses rest on country data rather than stylized ratios.</p>
+</section>
+<section id="downloads" class="level1 unnumbered">
+<h1 class="unnumbered">Downloads</h1>
+<p><a href="../../../papers/Brief-PublicInvestment.docx">Policy brief (docx)</a> · <a href="../../../papers/PublicInvestment.docx">Working paper (docx)</a></p>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-AdamBevan2014" class="csl-entry" role="listitem">
+Adam, Christopher S., and David L. Bevan. 2014. <em>Public Investment, Public Finance, and Growth: The Impact of Distortionary Taxation, Recurrent Costs, and Incomplete Appropriability</em>. IMF Working Paper 14/73. International Monetary Fund. <a href="https://doi.org/10.5089/9781484364819.001">https://doi.org/10.5089/9781484364819.001</a>.
+</div>
+<div id="ref-Ameli2021" class="csl-entry" role="listitem">
+Ameli, Nadia, Olivier Dessens, Matthew Winning, et al. 2021. <span>“Higher Cost of Finance Exacerbates a Climate Investment Trap in Developing Economies.”</span> <em>Nature Communications</em> 12: 4046. <a href="https://doi.org/10.1038/s41467-021-24305-3">https://doi.org/10.1038/s41467-021-24305-3</a>.
+</div>
+<div id="ref-AuriolWarlters2012" class="csl-entry" role="listitem">
+Auriol, Emmanuelle, and Michael Warlters. 2012. <span>“The Marginal Cost of Public Funds and Tax Reform in <span>Africa</span>.”</span> <em>Journal of Development Economics</em> 97 (1): 58–72. <a href="https://doi.org/10.1016/j.jdeveco.2011.01.003">https://doi.org/10.1016/j.jdeveco.2011.01.003</a>.
+</div>
+<div id="ref-Buffie2012" class="csl-entry" role="listitem">
+Berg, Andrew, Rafael Portillo, Edward F. Buffie, Catherine Pattillo, and Luis-Felipe Zanna. 2012. <em>Public Investment, Growth, and Debt Sustainability: Putting Together the Pieces</em>. IMF Working Paper 12/144. International Monetary Fund. <a href="https://doi.org/10.5089/9781475504071.001">https://doi.org/10.5089/9781475504071.001</a>.
+</div>
+<div id="ref-IHLEG2024" class="csl-entry" role="listitem">
+Bhattacharya, Amar, Vera Songwe, Eléonore Soubeyran, and Nicholas Stern. 2024. <em>Raising Ambition and Accelerating Delivery of Climate Finance: Third Report of the Independent High-Level Expert Group on Climate Finance</em>. Grantham Research Institute on Climate Change; the Environment, London School of Economics; Political Science. <a href="https://www.lse.ac.uk/granthaminstitute/wp-content/uploads/2024/11/Raising-ambition-and-accelerating-delivery-of-climate-finance_Third-IHLEG-report.pdf">https://www.lse.ac.uk/granthaminstitute/wp-content/uploads/2024/11/Raising-ambition-and-accelerating-delivery-of-climate-finance_Third-IHLEG-report.pdf</a>.
+</div>
+<div id="ref-Black2023CPAT" class="csl-entry" role="listitem">
+Black, Simon, Ian Parry, Victor Mylonas, Nate Vernon-Lin, and Karlygash Zhunussova. 2023. <em>The <span>IMF</span>-<span>World Bank</span> Climate Policy Assessment Tool (<span>CPAT</span>): A Model to Help Countries Mitigate Climate Change</em>. IMF Working Paper 23/128. International Monetary Fund. <a href="https://doi.org/10.5089/9798400242342.001">https://doi.org/10.5089/9798400242342.001</a>.
+</div>
+<div id="ref-Calcaterra2024" class="csl-entry" role="listitem">
+<span class="nocase">Calcaterra, Matteo, Lara Aleluia Reis, Panagiotis Fragkos, et al.</span> 2024. <span>“Reducing the Cost of Capital to Finance the Energy Transition in Developing Countries.”</span> <em>Nature Energy</em> 9 (10): 1241–51. <a href="https://doi.org/10.1038/s41560-024-01606-7">https://doi.org/10.1038/s41560-024-01606-7</a>.
+</div>
+<div id="ref-CPATTeam2024" class="csl-entry" role="listitem">
+CPAT Team. 2024. <em><span>CPAT</span> Documentation</em>. World Bank; International Monetary Fund. <a href="https://cpmodel.github.io/cpat_public/">https://cpmodel.github.io/cpat_public/</a>.
+</div>
+<div id="ref-CPATAI2026" class="csl-entry" role="listitem">
+CPAT-AI Project. 2026. <em><span>CPAT-AI</span>: Excel-<span>AI</span> and <span>CPAT</span> Python, with Documentation, Bug Register and Issue Register</em>. GitHub repository, Excel-AI release 1.2.1 (31 October 2026). <a href="https://github.com/cpmodelai/cpat_ai">https://github.com/cpmodelai/cpat_ai</a>.
+</div>
+<div id="ref-EngelFischerGaletovic2013" class="csl-entry" role="listitem">
+Engel, Eduardo, Ronald Fischer, and Alexander Galetovic. 2013. <span>“The Basic Public Finance of Public-Private Partnerships.”</span> <em>Journal of the European Economic Association</em> 11 (1): 83–111. <a href="https://doi.org/10.1111/j.1542-4774.2012.01105.x">https://doi.org/10.1111/j.1542-4774.2012.01105.x</a>.
+</div>
+<div id="ref-FinkelsteinHendren2020" class="csl-entry" role="listitem">
+Finkelstein, Amy, and Nathaniel Hendren. 2020. <span>“Welfare Analysis Meets Causal Inference.”</span> <em>Journal of Economic Perspectives</em> 34 (4): 146–67. <a href="https://doi.org/10.1257/jep.34.4.146">https://doi.org/10.1257/jep.34.4.146</a>.
+</div>
+<div id="ref-Gupta2014" class="csl-entry" role="listitem">
+Gupta, Sanjeev, Alvar Kangur, Chris Papageorgiou, and Abdoul Wane. 2014. <span>“Efficiency-Adjusted Public Capital and Growth.”</span> <em>World Development</em> 57: 164–78. <a href="https://doi.org/10.1016/j.worlddev.2013.11.012">https://doi.org/10.1016/j.worlddev.2013.11.012</a>.
+</div>
+<div id="ref-GuptaVerhoeven2001" class="csl-entry" role="listitem">
+Gupta, Sanjeev, and Marijn Verhoeven. 2001. <span>“The Efficiency of Government Expenditure: Experiences from <span>Africa</span>.”</span> <em>Journal of Policy Modeling</em> 23 (4): 433–67. <a href="https://doi.org/10.1016/S0161-8938(00)00036-3">https://doi.org/10.1016/S0161-8938(00)00036-3</a>.
+</div>
+<div id="ref-HendrenSprungKeyser2020" class="csl-entry" role="listitem">
+Hendren, Nathaniel, and Ben Sprung-Keyser. 2020. <span>“A Unified Welfare Analysis of Government Policies.”</span> <em>Quarterly Journal of Economics</em> 135 (3): 1209–318. <a href="https://doi.org/10.1093/qje/qjaa006">https://doi.org/10.1093/qje/qjaa006</a>.
+</div>
+<div id="ref-HerreraPang2005" class="csl-entry" role="listitem">
+Herrera, Santiago, and Gaobo Pang. 2005. <em>Efficiency of Public Spending in Developing Countries: An Efficiency Frontier Approach</em>. Policy Research Working Paper No. 3645. World Bank. <a href="https://doi.org/10.1596/1813-9450-3645">https://doi.org/10.1596/1813-9450-3645</a>.
+</div>
+<div id="ref-CPLC2017" class="csl-entry" role="listitem">
+High-Level Commission on Carbon Prices. 2017. <em>Report of the High-Level Commission on Carbon Prices</em>. Carbon Pricing Leadership Coalition; World Bank. <a href="https://www.carbonpricingleadership.org/report-of-the-highlevel-commission-on-carbon-prices">https://www.carbonpricingleadership.org/report-of-the-highlevel-commission-on-carbon-prices</a>.
+</div>
+<div id="ref-HirthSteckel2016" class="csl-entry" role="listitem">
+Hirth, Lion, and Jan Christoph Steckel. 2016. <span>“The Role of Capital Costs in Decarbonizing the Electricity Sector.”</span> <em>Environmental Research Letters</em> 11 (11): 114010. <a href="https://doi.org/10.1088/1748-9326/11/11/114010">https://doi.org/10.1088/1748-9326/11/11/114010</a>.
+</div>
+<div id="ref-IEA2024" class="csl-entry" role="listitem">
+International Energy Agency. 2024. <em>Reducing the Cost of Capital: Strategies to Unlock Clean Energy Investment in Emerging and Developing Economies</em>. IEA. <a href="https://www.iea.org/reports/reducing-the-cost-of-capital">https://www.iea.org/reports/reducing-the-cost-of-capital</a>.
+</div>
+<div id="ref-IMF2015PIM" class="csl-entry" role="listitem">
+International Monetary Fund. 2015. <em>Making Public Investment More Efficient</em>. IMF Policy Paper. International Monetary Fund. <a href="https://www.imf.org/external/pp/longres.aspx?id=4959">https://www.imf.org/external/pp/longres.aspx?id=4959</a>.
+</div>
+<div id="ref-IMFWB2017LICDSF" class="csl-entry" role="listitem">
+International Monetary Fund and World Bank. 2017. <em>Guidance Note on the Bank-Fund Debt Sustainability Framework for Low Income Countries</em>. International Monetary Fund; World Bank. <a href="https://www.imf.org/en/Publications/Policy-Papers/Issues/2018/02/14/pp122617guidance-note-on-lic-dsf">https://www.imf.org/en/Publications/Policy-Papers/Issues/2018/02/14/pp122617guidance-note-on-lic-dsf</a>.
+</div>
+<div id="ref-IRENA2025" class="csl-entry" role="listitem">
+International Renewable Energy Agency. 2025. <em>Renewable Power Generation Costs in 2024</em>. IRENA. <a href="https://www.irena.org/Publications/2025/Jul/Renewable-Power-Generation-Costs-in-2024">https://www.irena.org/Publications/2025/Jul/Renewable-Power-Generation-Costs-in-2024</a>.
+</div>
+<div id="ref-Kalra2023" class="csl-entry" role="listitem">
+Kalra, Nidhi, Edmundo Molina-Pérez, James Syme, et al. 2023. <em>The Benefits and Costs of Reaching Net Zero Emissions in <span>Latin America</span> and the <span>Caribbean</span></em>. IDB Monograph IDB-MG-01159. Inter-American Development Bank; RAND Corporation. <a href="https://doi.org/10.18235/0005330">https://doi.org/10.18235/0005330</a>.
+</div>
+<div id="ref-KlevenKreiner2006" class="csl-entry" role="listitem">
+Kleven, Henrik Jacobsen, and Claus Thustrup Kreiner. 2006. <span>“The Marginal Cost of Public Funds: Hours of Work Versus Labor Force Participation.”</span> <em>Journal of Public Economics</em> 90 (10–11): 1955–73. <a href="https://doi.org/10.1016/j.jpubeco.2006.03.006">https://doi.org/10.1016/j.jpubeco.2006.03.006</a>.
+</div>
+<div id="ref-InvNeedsTool2026" class="csl-entry" role="listitem">
+Mitigation Investment Needs Model. 2026. <em>Country Results: Investment Needs and Incremental Cost in 2030, Version 1.1</em>. Climate Fiscal AI Tools, Macro-Fiscal-Energy Scenario Tool, workbook Mitigation_Investment_Needs_v1.1.xlsx, sheet Results_Country (Kenya, Uganda, St. Lucia).
+</div>
+<div id="ref-Pritchett2000" class="csl-entry" role="listitem">
+Pritchett, Lant. 2000. <span>“The Tyranny of Concepts: <span>CUDIE</span> (Cumulated, Depreciated, Investment Effort) Is Not Capital.”</span> <em>Journal of Economic Growth</em> 5 (4): 361–84. <a href="https://doi.org/10.1023/A:1026551519329">https://doi.org/10.1023/A:1026551519329</a>.
+</div>
+<div id="ref-RozenbergFay2019" class="csl-entry" role="listitem">
+Rozenberg, Julie, and Marianne Fay, eds. 2019. <em>Beyond the Gap: How Countries Can Afford the Infrastructure They Need While Protecting the Planet</em>. World Bank. <a href="https://doi.org/10.1596/978-1-4648-1363-4">https://doi.org/10.1596/978-1-4648-1363-4</a>.
+</div>
+<div id="ref-SISEPUEDEUganda2025" class="csl-entry" role="listitem">
+SISEPUEDE. 2025. <em>Uganda Application: Cost-Benefit Results for Net-Zero and <span>NDC</span> 2.0 Strategies, Run of October 2025</em>. Model output file cba_results.csv; net present values and shares computed by the author.
+</div>
+<div id="ref-Steffen2020" class="csl-entry" role="listitem">
+Steffen, Bjarne. 2020. <span>“Estimating the Cost of Capital for Renewable Energy Projects.”</span> <em>Energy Economics</em> 88: 104783. <a href="https://doi.org/10.1016/j.eneco.2020.104783">https://doi.org/10.1016/j.eneco.2020.104783</a>.
+</div>
+<div id="ref-StrettonWP64" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026a. <span>“Activity Levels Across <span>CPAT</span>, <span>SISEPUEDE</span>, <span>CBAM</span> and <span>FTT</span>.”</span> Unpublished manuscript.
+</div>
+<div id="ref-StrettonWP52" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026b. <span>“<span>CPAT-AI</span>: Rebuilding a Policy Model as a Transparent, Testable Tool.”</span> Unpublished manuscript.
+</div>
+<div id="ref-CFPB32" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026c. <em>From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power</em>. 3.2. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB31" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026d. <em>Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power</em>. 3.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB61" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026e. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-StrettonWP51" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026f. <span>“The <span>CPAT</span> Mitigation Module: Methods in Brief.”</span> Unpublished manuscript.
+</div>
+<div id="ref-StrettonWP65" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026g. <span>“The Macro-Fiscal-Energy Scenario Tool.”</span> Unpublished manuscript.
+</div>
+<div id="ref-WorldBank2016Discount" class="csl-entry" role="listitem">
+World Bank. 2016. <em>Discounting Costs and Benefits in Economic Analysis of <span>World Bank</span> Projects</em>. Guidance note. World Bank. <a href="https://documents1.worldbank.org/curated/en/099610503022315638/pdf/IDU02e978a2a023f704c140bb1b082595e67e593.pdf">https://documents1.worldbank.org/curated/en/099610503022315638/pdf/IDU02e978a2a023f704c140bb1b082595e67e593.pdf</a>.
+</div>
+<div id="ref-WorldBank2024SPC" class="csl-entry" role="listitem">
+World Bank. 2024. <em>2024 Guidance Note on Shadow Price of Carbon in Economic Analysis</em>. World Bank. <a href="https://policycommons.net/artifacts/11755508/2024-guidance-note-on-shadow-price-of-carbon-in-economic-analysis-english/12646796/">https://policycommons.net/artifacts/11755508/2024-guidance-note-on-shadow-price-of-carbon-in-economic-analysis-english/12646796/</a>.
+</div>
+</div>
+</section>
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="sec-proofs" class="level1 appendix" data-number="10"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">10</span> Appendix A. Proofs</h2><div class="quarto-appendix-contents">
+
+<p><strong>Proposition 1.</strong> Per dollar of capital, <span class="math inline">\(N^F = b - \mathrm{CRF}(\mathrm{WACC}, n)\)</span>. <span class="math inline">\(\mathrm{CRF}(r,n)\)</span> is continuous and strictly increasing in <span class="math inline">\(r\)</span> for <span class="math inline">\(n &gt; 1\)</span>: it is the level payment that repays one dollar over <span class="math inline">\(n\)</span> years, and the present value of any fixed payment stream strictly falls as <span class="math inline">\(r\)</span> rises, so a larger payment is needed. As <span class="math inline">\(r \to 0\)</span>, <span class="math inline">\(\mathrm{CRF} \to 1/n\)</span>; as <span class="math inline">\(r \to \infty\)</span>, <span class="math inline">\(\mathrm{CRF} \to \infty\)</span>. So if <span class="math inline">\(b &gt; 1/n\)</span> there is a unique <span class="math inline">\(r^* &gt; 0\)</span> with <span class="math inline">\(\mathrm{CRF}(r^*, n) = b\)</span>, and <span class="math inline">\(N^F &gt; 0\)</span> if and only if <span class="math inline">\(\mathrm{WACC} &lt; r^*\)</span>. Numerically, <span class="math inline">\(\mathrm{CRF}(0.126, 25) = 0.133\)</span> (<code>investment_lenses.py</code>). With savings from year zero, as in CPAT’s levelized cost, the condition becomes <span class="math inline">\(\mathrm{CRF}(r^*, n)/(1+r^*) = b\)</span>, with <span class="math inline">\(r^* = 14.8\)</span> percent.</p>
+<p><strong>Proposition 2.</strong> (a) Substitute <span class="math inline">\(\lambda = 1\)</span> into <span class="math inline">\(NB_{\lambda,j} = W_j - \lambda F_j\)</span>. Without a budget limit the funding rule is <span class="math inline">\(NB &gt; 0\)</span> for each measure independently, which is the ENPV rule. (b) A transfer of <span class="math inline">\(\Delta\)</span> in present value from beneficiaries to the budget changes <span class="math inline">\(W_j\)</span> by <span class="math inline">\(-\Delta\)</span> and <span class="math inline">\(F_j\)</span> by <span class="math inline">\(-\Delta\)</span>. So <span class="math inline">\(\mathrm{ENPV}_j = W_j - F_j\)</span> is unchanged and <span class="math inline">\(NB_{\lambda,j}\)</span> changes by <span class="math inline">\(-\Delta + \lambda\Delta = (\lambda - 1)\Delta\)</span>.</p>
+<p><strong>Proposition 3.</strong> (a) A level annuity loan of principal <span class="math inline">\(K\)</span> at rate <span class="math inline">\(i\)</span> over <span class="math inline">\(n\)</span> years pays <span class="math inline">\(K\,\mathrm{CRF}(i,n)\)</span> a year, whose present value at <span class="math inline">\(i\)</span> is <span class="math inline">\(K\)</span> for any <span class="math inline">\(n\)</span>. With <span class="math inline">\(i = i_g\)</span>, the loan’s contribution to the fiscal net present value at <span class="math inline">\(i_g\)</span> is <span class="math inline">\(K - K = 0\)</span> for every tenor. (b) At a social rate <span class="math inline">\(r &lt; i\)</span>, the present value of the debt service is <span class="math inline">\(K\,\mathrm{CRF}(i,n)/\mathrm{CRF}(r,n)\)</span>. The ratio <span class="math inline">\(\mathrm{CRF}(i,n)/\mathrm{CRF}(r,n)\)</span> rises with <span class="math inline">\(n\)</span> when <span class="math inline">\(i &gt; r\)</span>, from <span class="math inline">\((1+i)/(1+r)\)</span> at <span class="math inline">\(n = 1\)</span> toward <span class="math inline">\(i/r\)</span> as <span class="math inline">\(n \to \infty\)</span>, because the longer the loan the longer the spread is paid. All other terms of <span class="math inline">\(F_j\)</span> are independent of tenor, so with constant <span class="math inline">\(\lambda\)</span>, <span class="math inline">\(F_j\)</span> is larger and <span class="math inline">\(NB_{\lambda,j}\)</span> smaller for the longer tenor. (c) With <span class="math inline">\(\lambda_t\)</span> higher in the early years, the short loan’s front-loaded payments are weighted more heavily, which can reverse the ranking; <a href="#tbl-routes" class="quarto-xref">Table&nbsp;2</a> gives an instance.</p>
+<p><strong>Proposition 4.</strong> Under take-or-pay the committed payment each year is <span class="math inline">\(TE = (K + PV_w(\mathrm{rep}))\,\mathrm{CRF}(w,n) + OM\)</span>. A level payment <span class="math inline">\(X\)</span> over <span class="math inline">\(n\)</span> years has present value <span class="math inline">\(X/\mathrm{CRF}(i_g,n)\)</span> at <span class="math inline">\(i_g\)</span>. So <span class="math inline">\(L^{PPA} = (K + PV_w(\mathrm{rep}))\,\mathrm{CRF}(w,n)/\mathrm{CRF}(i_g,n) + PV_{i_g}(OM)\)</span>. Subtracting <span class="math inline">\(K + PV_{i_g}(OM) + PV_{i_g}(\mathrm{rep})\)</span> gives part (b) directly. For part (a), set <span class="math inline">\(\mathrm{rep} = 0\)</span>: because CRF is strictly increasing in the rate, <span class="math inline">\(w &gt; i_g\)</span> implies <span class="math inline">\(\mathrm{CRF}(w,n)/\mathrm{CRF}(i_g,n) &gt; 1\)</span>, so <span class="math inline">\(L^{PPA} &gt; K + PV_{i_g}(OM)\)</span>. With replacements the inequality can fail, because a replacement is discounted at <span class="math inline">\(w\)</span> inside the tariff and at <span class="math inline">\(i_g\)</span> outside it; a large late replacement and a WACC barely above <span class="math inline">\(i_g\)</span> give a counterexample. In the worked example it holds: the excess is about $31 million at an 11 percent WACC and $5 million at 8.5 percent.</p>
+</div></section><section id="sec-code" class="level1 appendix" data-number="11"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">11</span> Appendix B. Code and parameters</h2><div class="quarto-appendix-contents">
+
+<p><code>2.Source/investment_lenses.py</code> prints <a href="#tbl-lenses" class="quarto-xref">Table&nbsp;1</a> and the break-even rate. <code>2.Source/sids_worked_example.py</code> (Python 3, NumPy, pandas) prints <a href="#tbl-routes" class="quarto-xref">Table&nbsp;2</a>, the switching values and the sensitivities, writes <code>sids_worked_example_results.csv</code> and <code>sids_worked_example_sensitivity.csv</code>, and asserts the accounting identities described in <a href="#sec-limits" class="quarto-xref">Section&nbsp;8</a>. <code>2.Source/make_figures.py</code> draws <a href="#fig-breakeven" class="quarto-xref">Figure&nbsp;1</a> and <a href="#fig-island" class="quarto-xref">Figure&nbsp;2</a>. <code>2.Source/country_runs.py</code> extracts <a href="#tbl-country" class="quarto-xref">Table&nbsp;3</a> and the Uganda figures from the two tools’ files.</p>
+<p>Worked-example parameters (all stylized unless a source is given): demand 300 GWh a year, all diesel; GDP $2.0 billion; public debt 85 percent of GDP; 60 MW solar at $1,200/kW (2024 global average $691/kW from <span class="citation" data-cites="IRENA2025">International Renewable Energy Agency (<a href="#ref-IRENA2025" role="doc-biblioref">2025</a>)</span>, times an island premium); 120 MWh battery at $350/kWh, replaced in year 15 at 60 percent of cost; integration 5 percent of capital; operation and maintenance 1.5 percent of capital a year; capacity factor 18 percent with 95 percent delivered; 25-year life; Brent $80 a barrel (sensitivities $60 and $110), diesel crack $25 a barrel, island delivery premium $0.15 a liter, 3.9 kWh per liter, non-fuel variable cost $0.02/kWh; fuel excise on power diesel zero; <span class="math inline">\(\theta = 0.5\)</span> (sensitivities 0 and 1); emission factor 2.68 kg CO₂ per liter; shadow price of carbon $40 a ton in 2020 rising 2.25 percent a year, the low end of the High-Level Commission’s range ($50 in 2030), with a high path double that <span class="citation" data-cites="CPLC2017">(<a href="#ref-CPLC2017" role="doc-biblioref">High-Level Commission on Carbon Prices 2017</a>)</span>; social rate 6 percent; government rate 8 percent; <span class="math inline">\(\lambda = 1.2\)</span> (stress 2.0; liquidity case 2.0 in years 1–7); concessional loan 1.5 percent, 30 years, 5 years’ grace; producer WACC 11 percent, or 8.5 percent with a guarantee; 25-year PPA treated as take-or-pay; all financiers non-resident; debt framework stress of 35 percent of the public-private partnership capital stock once that stock exceeds 3 percent of GDP <span class="citation" data-cites="IMFWB2017LICDSF">(<a href="#ref-IMFWB2017LICDSF" role="doc-biblioref">International Monetary Fund and World Bank 2017</a>)</span>.</p>
+
+
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The extensions began as the author’s design notes on global investment needs and on the efficiency of public spending, written to sit beside the Climate Policy Assessment Tool and the open SISEPUEDE model. CPAT’s settings are checked against the public documentation <span class="citation" data-cites="CPATTeam2024">(<a href="#ref-CPATTeam2024" role="doc-biblioref">CPAT Team 2024</a>)</span> and the public CPAT-AI repository <span class="citation" data-cites="CPATAI2026">(<a href="#ref-CPATAI2026" role="doc-biblioref">CPAT-AI Project 2026</a>)</span>. The island example is stylized. The country runs are illustrative results from the investment-needs tool and from a SISEPUEDE run for Uganda, not official estimates. Errors are the author’s own.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

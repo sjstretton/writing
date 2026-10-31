@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephen J. Stretton">
+<meta name="keywords" content="climate policy modeling, carbon pricing, model quality assurance, spreadsheet risk, artificial intelligence">
+
+<title>CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool – Climate, Fiscal &amp; Finance</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Climate, Fiscal &amp; Finance</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Policy and Finance</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../modelling/index.html" aria-current="page"> 
+<span class="menu-text">Modelling and Analytics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/5-modelling.html">5. Modelling (CPAT)</a></li><li class="breadcrumb-item"><a href="../../../modelling/5-modelling/CPATAIImplementation/index.html">5.2 CPAT-AI</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modelling and Analytics</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Modelling (CPAT)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATMitigationMethods/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.1 The CPAT Mitigation Module</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATMitigationMethods/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATAIImplementation/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">5.2 CPAT-AI</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.3 Validating CPAT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/ElasticityValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.4 Are CPAT's Price Elasticities Right?</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Modular Upgrades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.1 Measure Carbon Pricing by the Emissions It Cuts</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.2 The CBAM Policy Tool</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3 Public Investment in CPAT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PublicInvestment/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/ActivityModelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/ActivityModelling/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.5 The Macro-Fiscal-Energy Scenario Tool</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Analytics Tools</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.1 The Excise-Fiscal Diagnostic</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-key-messages" id="toc-sec-key-messages" class="nav-link active" data-scroll-target="#sec-key-messages">Key messages</a></li>
+  <li><a href="#sec-problem" id="toc-sec-problem" class="nav-link" data-scroll-target="#sec-problem">A model ministries rely on had never been fully checked</a></li>
+  <li><a href="#sec-approach" id="toc-sec-approach" class="nav-link" data-scroll-target="#sec-approach">One rule and shared codes made a full rebuild possible</a></li>
+  <li><a href="#sec-found" id="toc-sec-found" class="nav-link" data-scroll-target="#sec-found">The rebuild found 228 bugs, 24 of them serious</a></li>
+  <li><a href="#sec-twice" id="toc-sec-twice" class="nav-link" data-scroll-target="#sec-twice">Building twice catches what one build misses, but not everything</a></li>
+  <li><a href="#sec-ai" id="toc-sec-ai" class="nav-link" data-scroll-target="#sec-ai">AI agents built; a named owner decided</a></li>
+  <li><a href="#sec-decisions" id="toc-sec-decisions" class="nav-link" data-scroll-target="#sec-decisions">What it means for decisions made with CPAT</a></li>
+  <li><a href="#sec-what-to-do" id="toc-sec-what-to-do" class="nav-link" data-scroll-target="#sec-what-to-do">What to do</a></li>
+  <li><a href="#related-papers-in-this-series" id="toc-related-papers-in-this-series" class="nav-link" data-scroll-target="#related-papers-in-this-series">Related papers in this series</a></li>
+  <li><a href="#downloads" id="toc-downloads" class="nav-link" data-scroll-target="#downloads">Downloads</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/5-modelling.html">5. Modelling (CPAT)</a></li><li class="breadcrumb-item"><a href="../../../modelling/5-modelling/CPATAIImplementation/index.html">5.2 CPAT-AI</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool</h1>
+<p class="subtitle lead">What two AI-assisted rebuilds of the Climate Policy Assessment Tool found, and what ministries should ask of the models they use</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stephen J. Stretton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>Finance ministries use the Climate Policy Assessment Tool, a large spreadsheet built by the IMF and the World Bank, to judge carbon taxes and fuel subsidy reforms. Nobody had checked all of it. In October 2026 it was rebuilt twice, as a readable workbook and as a Python model, mostly by AI coding agents, under one rule: fix bugs, copy and log deliberate choices. The rebuild found 228 bugs, 24 serious enough to change standard results; the second rebuild found seven bugs in the first. Ministries should require shared variable codes, one register of known problems, a second implementation, and a named owner of every judgment.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>climate policy modeling, carbon pricing, model quality assurance, spreadsheet risk, artificial intelligence</p>
+  </div>
+</div>
+
+</header>
+
+
+<p><em>Climate Fiscal Policy Brief No.&nbsp;5.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. The full account, with the register, the tests and the sources, is in the <a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html">working paper</a>; the rebuilt models are public at https://github.com/cpmodelai/cpat_ai.</em></p>
+<section id="sec-key-messages" class="level1">
+<h1>Key messages</h1>
+<p><a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html"><strong>Read the full working paper →</strong></a> · <a href="../../../papers/Slides-CPATAIImplementation.pptx">Slides (pptx)</a></p>
+<p><strong>A model that guides tax reform had never been fully checked.</strong> The Climate Policy Assessment Tool (CPAT) is a spreadsheet of over 21 megabytes with about 400 pages of documentation. Its formulas differ from row to row, so no one could audit it cell by cell.</p>
+<p><strong>Rebuilt twice in October 2026, it turned out to hold 228 bugs, 24 of them serious.</strong> Some changed standard results: a one-off GDP gain compounded every year, and a methane fee on farming and waste did nothing.</p>
+<p><strong>One rule made the rebuild trustworthy: fix bugs, copy deliberate choices and log them.</strong> Every difference from the original has a code and a reason, and every departure was decided in writing by a named owner.</p>
+<p><strong>Building twice caught what one build missed.</strong> The Python version found seven bugs in the rebuilt workbook. But versions built from the same reading can share an error, and agreeing models can all be wrong about the world.</p>
+<p><strong>Ministries should ask four things of any model they rely on:</strong> shared variable codes, one register of known problems, a second implementation tested at every release, and a named owner for every judgment.</p>
+</section>
+<section id="sec-problem" class="level1">
+<h1>A model ministries rely on had never been fully checked</h1>
+<p><strong>CPAT shapes advice on carbon pricing and subsidy reform in many countries.</strong> Built by the IMF and the World Bank, it estimates what carbon taxes, emissions trading, fuel subsidy reform and related policies do to energy prices, fuel use, emissions, revenue, GDP and households, year by year, for more than 180 countries <span class="citation" data-cites="CPATDoc Black2023CPAT">(<a href="#ref-CPATDoc" role="doc-biblioref">CPAT Team 2023</a>; <a href="#ref-Black2023CPAT" role="doc-biblioref">Black et al. 2023</a>)</span>. Finance ministries and development-bank teams use it to size reforms and their effects on the poor.</p>
+<p><strong>It is a spreadsheet, which makes it open but not checkable.</strong> Anyone can open it and see every number, and its authors chose Excel for that reason <span class="citation" data-cites="CPATDoc">(<a href="#ref-CPATDoc" role="doc-biblioref">CPAT Team 2023</a>)</span>. But the legacy workbook is over 21 megabytes, its main sheet runs past row 18,000, and its formulas change from row to row, so checking one row says little about the next. Its documentation had also drifted from the workbook.</p>
+<p><strong>Large spreadsheets almost always contain errors.</strong> Studies of spreadsheet audits find errors in a few percent of cells, so a large workbook’s question is how many errors it holds, not whether <span class="citation" data-cites="Panko1998">(<a href="#ref-Panko1998" role="doc-biblioref">Panko 1998</a>)</span>; no audit has found an operational spreadsheet free of them <span class="citation" data-cites="Powell2008">(<a href="#ref-Powell2008" role="doc-biblioref">Powell et al. 2008</a>)</span>. Errors of this kind can move a policy debate: a spreadsheet slip, together with data choices, turned 2.2 percent average growth into a published −0.1 percent in a famous study of public debt <span class="citation" data-cites="Herndon2014">(<a href="#ref-Herndon2014" role="doc-biblioref">Herndon et al. 2014</a>)</span>.</p>
+<p><strong>The cure is known; the labor to apply it was missing.</strong> Writing the model as code, testing each block, keeping one list of problems and building it twice are standard advice, and the UK Treasury asks for them of every business-critical government model <span class="citation" data-cites="Macpherson2013">(<a href="#ref-Macpherson2013" role="doc-biblioref">HM Treasury 2013</a>)</span>. A policy model run by economists rarely has the software team to do them.</p>
+</section>
+<section id="sec-approach" class="level1">
+<h1>One rule and shared codes made a full rebuild possible</h1>
+<p><strong>CPAT was rebuilt twice in four weeks, mostly by AI coding agents.</strong> The first rebuild, Excel-AI, is a readable workbook written by code, in which one short formula serves a whole block of cells. The second, Coded CPAT, is a Python model written from the first one’s equation list. Both are public <span class="citation" data-cites="CPATAIRepo">(<a href="#ref-CPATAIRepo" role="doc-biblioref">CPAT-AI project 2026b</a>)</span>.</p>
+<p><strong>The rule separates mistakes from choices.</strong> A bug is a formula that does not compute what its authors meant, such as one that points to the wrong row; the rebuild fixes it and never copies it. An issue is a deliberate choice that is open to question, such as an old data vintage; the rebuild copies it exactly and logs it for the modelers to decide. Any other departure needs a dated decision by the model’s owner (<a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html#sec-rule">working paper, the replication rule</a>). So a reviewer who finds a difference between the rebuild and the original can look up why.</p>
+<p><strong>Shared codes make the three models comparable at every step.</strong> Every input, variable and output has one code, the same in the original workbook, Excel-AI and Python. Comparing any two is then a table join, which can be run after every change (<a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html#sec-codes">working paper, shared codes</a>).</p>
+<p><strong>Every number is checked by something that did not produce it.</strong> Each block is first shown to reproduce the original’s own results with its bugs switched back on, so the rebuild understood the method before changing it. The workbook is then checked against an independent recomputation, Python against the workbook (every one of 7,458 outputs per Egypt scenario, to one part in a billion), and each release against the last (<a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html#sec-testing">working paper, the testing regime</a>).</p>
+</section>
+<section id="sec-found" class="level1">
+<h1>The rebuild found 228 bugs, 24 of them serious</h1>
+<p><strong>Half of the 454 entries in the register are bugs in the original model.</strong> <a href="#tbl-register" class="quarto-xref">Table&nbsp;1</a> gives the counts at release 1.0.2. The 24 high-priority bugs change results in standard runs; the 142 low-priority ones sit in options the standard run does not use, or in a reported number only.</p>
+<div id="tbl-register" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-register-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: The rebuild of CPAT registered 454 entries; half are bugs in the original model. Source: CPAT-AI register, release 1.0.2, 29 October 2026; working paper, Table 1.
+</figcaption>
+<div aria-describedby="tbl-register-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">What was found</th>
+<th style="text-align: right;">Number</th>
+<th style="text-align: left;">What the rebuild does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Bugs in legacy CPAT</td>
+<td style="text-align: right;">228 (24 high, 62 medium, 142 low priority)</td>
+<td style="text-align: left;">Fixes each; writes a cell-level fix for the original</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">…of which the CPAT team has fixed, checked cell by cell</td>
+<td style="text-align: right;">52 (and 9 with caveats; 2 marked fixed were not)</td>
+<td style="text-align: left;">Checks every claimed fix</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Issues: deliberate choices open to question</td>
+<td style="text-align: right;">135</td>
+<td style="text-align: left;">Copies 93 exactly; 14 changed by the owner’s decision</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Departures decided by the owner</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: left;">Keeps each, with a reason</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bugs in the rebuilt workbook, found by the Python build</td>
+<td style="text-align: right;">7 (of 22 in all)</td>
+<td style="text-align: left;">Fixes them in both</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Errors in the published documentation</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">Models follow the workbook; documentation to be corrected</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Proposed upgrades</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">Proposed, not built</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>The serious bugs sit where formulas were copied across sectors or years.</strong> Services electricity demand grew with industry’s multiple after 2023, the largest single error in power demand. The GDP effect of recycled carbon revenue was added to the growth rate every year instead of to the level once, so a one-off gain compounded. A methane fee on farming and waste had no effect, because that methane never changed. Regulation scenarios did nothing, because a lookup never matched. “Other oil products” were priced at a floor, so their use rose about tenfold by 2030 <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026c</a>)</span>.</p>
+<p><strong>Most bugs are latent, and they fire exactly when a ministry asks a new question.</strong> A bug in an option the standard run does not use, such as the detailed road-fleet model, changes nothing until someone switches that option on. That is when a ministry is asking a question the default run does not answer.</p>
+<p><strong>The total is a lower bound.</strong> The register held 64 legacy bugs on 18 October 2026, 159 two days later and 228 at release 1.0.2 on 29 October (<a href="#fig-growth" class="quarto-xref">Figure&nbsp;1</a>); a day later it held 231 <span class="citation" data-cites="CPATAICaveats">(<a href="#ref-CPATAICaveats" role="doc-biblioref">CPAT-AI project 2026a</a>)</span>. The modules not yet rebuilt, air pollution and transport co-benefits, will add more.</p>
+<div id="fig-growth" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-growth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_growth.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Legacy bugs in the CPAT-AI register, October 2026. The count rose as each new block of the model was rebuilt. Source: CPAT-AI task log and register; working paper, What the rebuild found."><img src="figures/fig_growth.png" class="img-fluid figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-growth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Legacy bugs in the CPAT-AI register, October 2026. The count rose as each new block of the model was rebuilt. Source: CPAT-AI task log and register; working paper, What the rebuild found.
+</figcaption>
+</figure>
+</div>
+<p><strong>The owners are fixing what the rebuild found, and the checks keep everyone honest.</strong> Within weeks the CPAT team marked 63 bugs fixed in its next file. A cell-by-cell check confirmed 52, found 9 fixed with caveats, and found 2 marked fixed that were not <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026c</a>)</span>.</p>
+</section>
+<section id="sec-twice" class="level1">
+<h1>Building twice catches what one build misses, but not everything</h1>
+<p><strong>The Python build found seven bugs that the workbook’s own checks had missed.</strong> They included nominal GDP divided by a billion when the source was already in billions, and two gas price series read from each other’s rows. All seven were fixed in both models (<a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html#sec-testing">working paper, the testing regime</a>).</p>
+<p><strong>Versions built from the same reading can share the same error.</strong> Software engineers have known this for forty years: in a classic experiment, 27 programs written independently to one specification failed together far more often than chance predicts <span class="citation" data-cites="KnightLeveson1986">(<a href="#ref-KnightLeveson1986" role="doc-biblioref">Knight and Leveson 1986</a>)</span>. A 2026 repeat with programs written by AI agents found the same, though voting across three versions still cut failures by about two thirds <span class="citation" data-cites="Ron2026">(<a href="#ref-Ron2026" role="doc-biblioref">Ron et al. 2026</a>)</span>. CPAT-AI limits the risk by tying every block to the original’s own stored results, which no agent wrote, and by sending every fix to the CPAT team (<a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html#sec-ai">working paper, what AI did and did not do</a>).</p>
+<p><strong>Agreement between models is not proof that the model is right.</strong> The tests show that three implementations compute the same thing; they do not show that CPAT’s price elasticities are right or that its baseline fits history. That is validation, the subject of <a href="../../../modelling/5-modelling/CPATValidation/index.html">Brief 5.3</a> and <a href="../../../modelling/5-modelling/ElasticityValidation/index.html">Brief 5.4</a> <span class="citation" data-cites="StrettonWP53 StrettonWP54">(<a href="#ref-StrettonWP53" role="doc-biblioref">Stretton 2026d</a>, <a href="#ref-StrettonWP54" role="doc-biblioref">2026a</a>)</span>.</p>
+</section>
+<section id="sec-ai" class="level1">
+<h1>AI agents built; a named owner decided</h1>
+<p><strong>The agents did most of the construction.</strong> Working under written rules, through Claude Code and GitHub Copilot, they wrote the code that builds the workbook, the checks, the whole Python model and its tests, and the documents generated from the register. The project log records 241 finished tasks in four weeks <span class="citation" data-cites="CPATAICaveats">(<a href="#ref-CPATAICaveats" role="doc-biblioref">CPAT-AI project 2026a</a>)</span>.</p>
+<p><strong>The people kept every judgment.</strong> Whether a difference is a bug or an issue is settled by rule, whose default is “copy it and ask”. Every departure from the original carries a dated decision by the owner, and the owner accepted each release. The checks caught agents’ errors and people’s alike: one overlong formula written by an agent stopped a release, and a cell-by-cell check found two bugs that the original’s owners had marked fixed but had not.</p>
+<p><strong>The evidence on AI productivity is mixed, so the safeguard is the test, not the tool.</strong> In one experiment programmers with an AI assistant finished a task 56 percent faster <span class="citation" data-cites="Peng2023">(<a href="#ref-Peng2023" role="doc-biblioref">Peng et al. 2023</a>)</span>; in another, experienced developers on their own large projects were 19 percent slower with AI tools while believing they were faster <span class="citation" data-cites="Becker2025">(<a href="#ref-Becker2025" role="doc-biblioref">Becker et al. 2025</a>)</span>. CPAT-AI did not depend on settling that question, because every output was tested by something its author did not write.</p>
+</section>
+<section id="sec-decisions" class="level1">
+<h1>What it means for decisions made with CPAT</h1>
+<p><strong>Results from earlier versions of CPAT should be read with the register at hand.</strong> A result that rests on the GDP feedback, methane fees outside energy, regulation scenarios or the detailed road model may be affected by a bug now fixed in the rebuild and, in part, in the CPAT team’s latest file. The register lists each bug, where it sits and what it changes, so an analyst can check a past run against it <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026c</a>)</span>.</p>
+<p><strong>The rebuilt models are ready for one country, not yet for all.</strong> Excel-AI and Coded CPAT shipped with complete data for Egypt only, because several of CPAT’s data tables are licensed; other countries need the full database. Air pollution and transport co-benefits are not yet rebuilt (<a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html#sec-lessons">working paper, lessons</a>).</p>
+</section>
+<section id="sec-what-to-do" class="level1">
+<h1>What to do</h1>
+<p><strong>Ministries and agencies that commission a policy model: ask for four things.</strong> A codes map, so that any later audit or rebuild is a table join. One register of bugs, issues and departures, shared with the model’s owners. A second implementation, and a regression test on every output at every release. And a named owner who decides every departure in writing, as the UK Treasury asks of its own models <span class="citation" data-cites="Macpherson2013">(<a href="#ref-Macpherson2013" role="doc-biblioref">HM Treasury 2013</a>)</span>.</p>
+<p><strong>The CPAT team and its users: work through the register.</strong> Apply the cell-level fix plans to the legacy file, confirm each fix independently, and rerun the published validation and elasticity checks on the corrected model for every country (<a href="../../../modelling/5-modelling/CPATValidation/index.html">Brief 5.3</a>, <a href="../../../modelling/5-modelling/ElasticityValidation/index.html">Brief 5.4</a>).</p>
+<p><strong>Development-bank teams running CPAT for a client: check the run against the register.</strong> Before a result goes into advice, check whether the run used any feature with a known high-priority bug, and say so in the note.</p>
+<p><strong>Anyone building models with AI agents: let agents build and people decide.</strong> Write the rules down, route every agent to them, keep judgments with a named person, and test every output against something its author did not produce.</p>
+</section>
+<section id="related-papers-in-this-series" class="level1 unnumbered">
+<h1 class="unnumbered">Related papers in this series</h1>
+<ul>
+<li><a href="../../../modelling/5-modelling/CPATMitigationMethods/index.html">Brief 5.1</a>: the CPAT mitigation module, its methods in brief <span class="citation" data-cites="StrettonWP51">(<a href="#ref-StrettonWP51" role="doc-biblioref">Stretton 2026c</a>)</span>.</li>
+<li><a href="../../../modelling/5-modelling/CPATValidation/index.html">Brief 5.3</a>: validating CPAT against data and other models <span class="citation" data-cites="StrettonWP53">(<a href="#ref-StrettonWP53" role="doc-biblioref">Stretton 2026d</a>)</span>.</li>
+<li><a href="../../../modelling/5-modelling/ElasticityValidation/index.html">Brief 5.4</a>: are CPAT’s price elasticities right? <span class="citation" data-cites="StrettonWP54">(<a href="#ref-StrettonWP54" role="doc-biblioref">Stretton 2026a</a>)</span>.</li>
+<li><a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html">Brief 6.1</a>: the Total Effective Carbon Price, which uses the same demand system <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Stretton 2026b</a>)</span>.</li>
+<li>The <a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html">working paper</a> behind this brief: the register in full, the replication rule, the four test levels and the sources.</li>
+</ul>
+</section>
+<section id="downloads" class="level1 unnumbered">
+<h1 class="unnumbered">Downloads</h1>
+<p><a href="../../../papers/Brief-CPATAIImplementation.docx">Policy brief (docx)</a> · <a href="../../../papers/CPATAIImplementation.docx">Working paper (docx)</a></p>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Becker2025" class="csl-entry" role="listitem">
+Becker, Joel, Nate Rush, Elizabeth Barnes, and David Rein. 2025. <em>Measuring the Impact of Early-2025 <span>AI</span> on Experienced Open-Source Developer Productivity</em>. arXiv:2507.09089 [cs.AI]. <a href="https://doi.org/10.48550/arXiv.2507.09089">https://doi.org/10.48550/arXiv.2507.09089</a>.
+</div>
+<div id="ref-Black2023CPAT" class="csl-entry" role="listitem">
+Black, Simon, Ian Parry, Victor Mylonas, Nate Vernon-Lin, and Karlygash Zhunussova. 2023. <em>The <span>IMF-World Bank</span> Climate Policy Assessment Tool (<span>CPAT</span>): A Model to Help Countries Mitigate Climate Change</em>. IMF Working Paper 2023/128. International Monetary Fund. <a href="https://doi.org/10.5089/9798400242342.001">https://doi.org/10.5089/9798400242342.001</a>.
+</div>
+<div id="ref-CPATDoc" class="csl-entry" role="listitem">
+CPAT Team. 2023. <em><span>CPAT</span> Documentation: <span>WB-IMF</span> Climate Policy Assessment Tool</em>. World Bank; International Monetary Fund. <a href="https://cpmodelai.github.io/cpat_ai/">https://cpmodelai.github.io/cpat_ai/</a>.
+</div>
+<div id="ref-CPATAICaveats" class="csl-entry" role="listitem">
+CPAT-AI project. 2026a. <em><span>CAVEATS</span>: Log of Completed Tasks</em>. CPAT-AI repository, excel_ai/core/CAVEATS.md (entries 2 to 31 October 2026). <a href="https://github.com/cpmodelai/cpat_ai/blob/main/excel_ai/core/CAVEATS.md">https://github.com/cpmodelai/cpat_ai/blob/main/excel_ai/core/CAVEATS.md</a>.
+</div>
+<div id="ref-CPATAIRepo" class="csl-entry" role="listitem">
+CPAT-AI project. 2026b. <em><span>CPAT-AI</span>: Excel-AI and Coded <span>CPAT</span>, Release 1.0.2 (Excel-AI) and 1.0.2p1.1 (Coded <span>CPAT</span>)</em>. GitHub repository cpmodelai/cpat_ai, releases of 29 October 2026; README.md, coded/README.md and coded/CHANGELOG.md. <a href="https://github.com/cpmodelai/cpat_ai">https://github.com/cpmodelai/cpat_ai</a>.
+</div>
+<div id="ref-CPATAIBugs" class="csl-entry" role="listitem">
+CPAT-AI project. 2026c. <em>Tracking Legacy Bugs, Version 1.0.2, and Legacy <span>CPAT</span> Bugs, Version 1.0.2: The Register of Bugs, Issues, Departures and Upgrades</em>. CPAT-AI repository, excel_ai/bugs_and_legacy/register/releases/Tracking_Legacy_Bugs_v1.0.2.xlsx and Legacy_CPAT_Bugs_v1.0.2.docx (29 October 2026); current lists in excel_ai/core/BUGS.md and ISSUES.md. <a href="https://github.com/cpmodelai/cpat_ai/tree/main/excel_ai/bugs_and_legacy">https://github.com/cpmodelai/cpat_ai/tree/main/excel_ai/bugs_and_legacy</a>.
+</div>
+<div id="ref-Herndon2014" class="csl-entry" role="listitem">
+Herndon, Thomas, Michael Ash, and Robert Pollin. 2014. <span>“Does High Public Debt Consistently Stifle Economic Growth? A Critique of <span>Reinhart</span> and <span>Rogoff</span>.”</span> <em>Cambridge Journal of Economics</em> 38 (2): 257–79. <a href="https://doi.org/10.1093/cje/bet075">https://doi.org/10.1093/cje/bet075</a>.
+</div>
+<div id="ref-Macpherson2013" class="csl-entry" role="listitem">
+HM Treasury. 2013. <em>Review of Quality Assurance of Government Analytical Models: Final Report</em>. Report by Sir Nicholas Macpherson. HM Treasury. <a href="https://www.gov.uk/government/publications/review-of-quality-assurance-of-government-models">https://www.gov.uk/government/publications/review-of-quality-assurance-of-government-models</a>.
+</div>
+<div id="ref-KnightLeveson1986" class="csl-entry" role="listitem">
+Knight, John C., and Nancy G. Leveson. 1986. <span>“An Experimental Evaluation of the Assumption of Independence in Multiversion Programming.”</span> <em>IEEE Transactions on Software Engineering</em> SE-12 (1): 96–109. <a href="https://doi.org/10.1109/TSE.1986.6312924">https://doi.org/10.1109/TSE.1986.6312924</a>.
+</div>
+<div id="ref-Panko1998" class="csl-entry" role="listitem">
+Panko, Raymond R. 1998. <span>“What We Know about Spreadsheet Errors.”</span> <em>Journal of End User Computing</em> 10 (2): 15–21. <a href="https://doi.org/10.4018/joeuc.1998040102">https://doi.org/10.4018/joeuc.1998040102</a>.
+</div>
+<div id="ref-Peng2023" class="csl-entry" role="listitem">
+Peng, Sida, Eirini Kalliamvakou, Peter Cihon, and Mert Demirer. 2023. <em>The Impact of <span>AI</span> on Developer Productivity: Evidence from <span>GitHub Copilot</span></em>. arXiv:2302.06590 [cs.SE]. <a href="https://doi.org/10.48550/arXiv.2302.06590">https://doi.org/10.48550/arXiv.2302.06590</a>.
+</div>
+<div id="ref-Powell2008" class="csl-entry" role="listitem">
+Powell, Stephen G., Kenneth R. Baker, and Barry Lawson. 2008. <span>“A Critical Review of the Literature on Spreadsheet Errors.”</span> <em>Decision Support Systems</em> 46 (1): 128–38. <a href="https://doi.org/10.1016/j.dss.2008.06.001">https://doi.org/10.1016/j.dss.2008.06.001</a>.
+</div>
+<div id="ref-Ron2026" class="csl-entry" role="listitem">
+Ron, Javier, Benoit Baudry, and Martin Monperrus. 2026. <em>N-Version Programming with Coding Agents</em>. arXiv:2606.20158 [cs.SE], 18 June 2026. <a href="https://doi.org/10.48550/arXiv.2606.20158">https://doi.org/10.48550/arXiv.2606.20158</a>.
+</div>
+<div id="ref-StrettonWP54" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026a. <span>“Are <span>CPAT</span>’s Price Elasticities Right?”</span> Unpublished manuscript.
+</div>
+<div id="ref-CFPB61" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026b. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-StrettonWP51" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026c. <span>“The <span>CPAT</span> Mitigation Module: Methods in Brief.”</span> Unpublished manuscript.
+</div>
+<div id="ref-StrettonWP53" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026d. <span>“Validating <span>CPAT</span>: Baselines, Back-Casts and Model Comparisons.”</span> Unpublished manuscript.
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

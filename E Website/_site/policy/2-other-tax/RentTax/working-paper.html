@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephen J. Stretton">
+<meta name="keywords" content="economic rent, land value tax, allowance for corporate equity, destination-based cash-flow tax, market power, tax competition">
+
+<title>Taxing Rent, Not Effort – Climate, Fiscal &amp; Finance</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Climate, Fiscal &amp; Finance</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../index.html" aria-current="page"> 
+<span class="menu-text">Policy and Finance</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../modelling/index.html"> 
+<span class="menu-text">Modelling and Analytics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../policy/2-other-tax.html">2. Other Tax and Fiscal Policy</a></li><li class="breadcrumb-item"><a href="../../../policy/2-other-tax/RentTax/index.html">2.1 Taxing Rent, Not Effort</a></li><li class="breadcrumb-item"><a href="../../../policy/2-other-tax/RentTax/working-paper.html">Working paper</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Policy and Finance</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Carbon Pricing</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 Price Production and Consumption Separately</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 Feebates</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 Converting a VAT into a Destination Carbon Tax</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing/IronSteelCBAM/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 Credit the Price Signal, Not the Payment</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/1-carbon-pricing/IronSteelCBAM/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/2-other-tax.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Other Tax and Fiscal Policy</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/2-other-tax/RentTax/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 Taxing Rent, Not Effort</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/2-other-tax/RentTax/working-paper.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/2-other-tax/LandPaysForTheCity/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 Let Land Pay for the City</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/3-finance-and-risk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Finance and Risk</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.1 Guarantee the Contract, Not the Debt</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/3-finance-and-risk/CleanPowerAssetClasses/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.2 From Projects to Asset Classes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/3-finance-and-risk/CleanPowerAssetClasses/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Sovereign Incentives</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.1 Reward the Stock as Well as the Flow</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.2 The Climate Investment Trust</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives/SustainabilityLinkedLending/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/4-sovereign-incentives/SustainabilityLinkedLending/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/more.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Books and Other Papers</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/books/Plucked/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plucked!</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/01-facing-global-risks-head-on.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Facing Global Risks Head On</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/02-revolutions-in-the-minds-of-men.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Revolutions in the Minds of Men</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/03-desert-island-economics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Desert Island Economics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/04-the-questions-posed-by-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. The Questions Posed by This Book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/05-tax-in-principle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Tax in Principle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/06-tax-in-practice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Tax in Practice</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/07-welfare-and-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Welfare and Work</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/08-income-wealth-and-inequality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Income, Wealth and Inequality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/09-corporations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. Corporations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/10-land-and-property.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10. Land and Property</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/11-money-debt-and-finance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11. Money, Debt, and Finance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/12-environment-health-and-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12. Environment, Health, and Resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/13-the-global-perspective-climate-fiscal-policy-and-collective-action.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13. The Global Perspective: Climate, Fiscal Policy and Collective Action</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/14-conclusions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13. Conclusions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link active" data-scroll-target="#sec-summary"><span class="header-section-number">1</span> Executive summary</a></li>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link" data-scroll-target="#sec-intro"><span class="header-section-number">2</span> Introduction</a></li>
+  <li><a href="#sec-literature" id="toc-sec-literature" class="nav-link" data-scroll-target="#sec-literature"><span class="header-section-number">3</span> What is known about taxing rent</a>
+  <ul class="collapse">
+  <li><a href="#sec-lit-land" id="toc-sec-lit-land" class="nav-link" data-scroll-target="#sec-lit-land"><span class="header-section-number">3.1</span> Land: the oldest rent tax</a></li>
+  <li><a href="#sec-lit-corporate" id="toc-sec-lit-corporate" class="nav-link" data-scroll-target="#sec-lit-corporate"><span class="header-section-number">3.2</span> Corporate profit: taxing the return above normal</a></li>
+  <li><a href="#sec-lit-resources" id="toc-sec-lit-resources" class="nav-link" data-scroll-target="#sec-lit-resources"><span class="header-section-number">3.3</span> Natural resources: high rates on location-specific rent</a></li>
+  <li><a href="#sec-lit-destination" id="toc-sec-lit-destination" class="nav-link" data-scroll-target="#sec-lit-destination"><span class="header-section-number">3.4</span> Source, destination and mobile rent</a></li>
+  <li><a href="#sec-lit-market-power" id="toc-sec-lit-market-power" class="nav-link" data-scroll-target="#sec-lit-market-power"><span class="header-section-number">3.5</span> Market power</a></li>
+  <li><a href="#sec-lit-gap" id="toc-sec-lit-gap" class="nav-link" data-scroll-target="#sec-lit-gap"><span class="header-section-number">3.6</span> What is new</a></li>
+  </ul></li>
+  <li><a href="#sec-design" id="toc-sec-design" class="nav-link" data-scroll-target="#sec-design"><span class="header-section-number">4</span> The design</a>
+  <ul class="collapse">
+  <li><a href="#sec-land" id="toc-sec-land" class="nav-link" data-scroll-target="#sec-land"><span class="header-section-number">4.1</span> Land above a household allowance</a></li>
+  <li><a href="#sec-default" id="toc-sec-default" class="nav-link" data-scroll-target="#sec-default"><span class="header-section-number">4.2</span> Market power as the default</a></li>
+  <li><a href="#sec-layer-one" id="toc-sec-layer-one" class="nav-link" data-scroll-target="#sec-layer-one"><span class="header-section-number">4.3</span> Layer One: profit above a normal return</a></li>
+  <li><a href="#sec-layer-two" id="toc-sec-layer-two" class="nav-link" data-scroll-target="#sec-layer-two"><span class="header-section-number">4.4</span> Layer Two: a sectoral destination-based cash-flow tax</a></li>
+  <li><a href="#sec-layer-three" id="toc-sec-layer-three" class="nav-link" data-scroll-target="#sec-layer-three"><span class="header-section-number">4.5</span> Layer Three: a sales tax with presence credits</a></li>
+  <li><a href="#sec-combined" id="toc-sec-combined" class="nav-link" data-scroll-target="#sec-combined"><span class="header-section-number">4.6</span> The cap and the combined liability</a></li>
+  </ul></li>
+  <li><a href="#sec-algorithm" id="toc-sec-algorithm" class="nav-link" data-scroll-target="#sec-algorithm"><span class="header-section-number">5</span> A simple algorithm</a></li>
+  <li><a href="#sec-illustration" id="toc-sec-illustration" class="nav-link" data-scroll-target="#sec-illustration"><span class="header-section-number">6</span> Five firms</a></li>
+  <li><a href="#sec-revenue" id="toc-sec-revenue" class="nav-link" data-scroll-target="#sec-revenue"><span class="header-section-number">7</span> Revenue: an order of magnitude</a></li>
+  <li><a href="#sec-law" id="toc-sec-law" class="nav-link" data-scroll-target="#sec-law"><span class="header-section-number">8</span> Free movement and the law</a></li>
+  <li><a href="#sec-objections" id="toc-sec-objections" class="nav-link" data-scroll-target="#sec-objections"><span class="header-section-number">9</span> Objections and limits</a></li>
+  <li><a href="#sec-policy" id="toc-sec-policy" class="nav-link" data-scroll-target="#sec-policy"><span class="header-section-number">10</span> What a finance ministry should do</a></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">11</span> Conclusion</a></li>
+  <li><a href="#downloads" id="toc-downloads" class="nav-link" data-scroll-target="#downloads">Downloads</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  
+  
+  
+  
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../policy/2-other-tax.html">2. Other Tax and Fiscal Policy</a></li><li class="breadcrumb-item"><a href="../../../policy/2-other-tax/RentTax/index.html">2.1 Taxing Rent, Not Effort</a></li><li class="breadcrumb-item"><a href="../../../policy/2-other-tax/RentTax/working-paper.html">Working paper</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Taxing Rent, Not Effort</h1>
+<p class="subtitle lead">A Simple Design for Land and Corporate Taxation Consistent with Free Movement of Capital and People</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stephen J. Stretton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>Free movement of capital and people makes high tax rates on mobile income hard to sustain, and most rich countries have responded by giving up on them: twelve OECD countries taxed net wealth in 1990, four in 2017. This paper argues that the constraint binds on the wrong base. Economic rent, the return above what is needed to keep an asset in use, can be taxed heavily without driving anything away, provided the tax reaches it where it cannot move. I propose two instruments. The first is a land value tax above a household allowance. The second is a corporate package that presumes large firms earn rent: a 50 percent tax on profit above a normal return, a narrow destination-based cash-flow tax on sectors whose rent is easily shifted, and a small sales tax with credits for local assets and payroll, all capped so that no firm pays more than half the rent it earns from local customers. In worked examples an asset-light foreign platform’s tax rises from 1 to 50 percent of that rent, while a domestic manufacturer pays nothing on its normal return. The design is compatible with European Union law as the Court of Justice has applied it, but needs care under trade rules.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>economic rent, land value tax, allowance for corporate equity, destination-based cash-flow tax, market power, tax competition</p>
+  </div>
+</div>
+
+</header>
+
+
+<p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is <a href="../../../policy/2-other-tax/RentTax/index.html">Climate Fiscal Policy Brief No.&nbsp;2.1</a>. Version 0.1 (April 2026) was a sketch; this version adds the literature, states the results as propositions with their conditions, corrects the specification of the two destination layers, and computes the worked examples and revenue estimates.</em></p>
+<section id="sec-summary" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
+<p><a href="../../../policy/2-other-tax/RentTax/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-RentTax.pptx">Slides (pptx)</a></p>
+<p><strong>Governments that let capital and people move freely have stopped trying to tax mobile income at high rates.</strong> A country that taxes the profit booked within its borders at a high rate watches the profit move, and one that taxes personal wealth heavily without exit controls watches the wealthy move. The retreat is visible in the numbers: twelve OECD countries levied a net wealth tax in 1990 and four in 2017, and about 36 percent of multinational profits are shifted to tax havens.</p>
+<p><strong>The constraint binds on the wrong base.</strong> Economic rent is income above what is needed to keep an asset, a worker or a firm doing what it does. Taxing it changes nothing anyone does, so it can bear high rates, provided the tax reaches it where it cannot leave. Two sources of rent meet that test. Land cannot move. And a firm’s market power over a country’s customers is earned from those customers, wherever the firm books its profit.</p>
+<p><strong>The paper proposes two instruments.</strong> On land, a tax of about 2.5 percent a year on site value above a household allowance, set near the value of an ordinary home’s site, so that most households pay little and large holdings pay a lot. Business land is taxed without an allowance. On firms, a package that treats large firms as earning rent unless they show otherwise. Layer One taxes profit above a normal return on equity at 50 percent, so that the normal return is untaxed and investment is not discouraged. Layer Two, confined to sectors where rent is easily shifted abroad (digital platforms, pharmaceutical patents and similar), taxes local sales less local costs at 22 percent. Layer Three, for all large firms, charges 4 percent of local sales less credits of 8 percent of local tangible assets and 25 percent of local payroll, so that firms that invest and employ locally pay nothing. A cap keeps the total below half the rent a firm earns from local customers, measured with the group’s global margin.</p>
+<p><strong>The design discriminates between rent and effort.</strong> In five worked firms, an asset-light foreign platform that books little profit locally pays 1 percent of the rent it earns from local customers today and 50 percent under the design. A foreign seller outside the designated sectors goes from 4 to 13 percent: the design is weaker there, and the paper says so. A capital-intensive domestic manufacturer pays nothing on its normal return and half of its rent. A low-margin distributor is protected by the cap from paying a sales tax larger than its profit.</p>
+<p><strong>The revenue is real but smaller than the first draft claimed.</strong> Rough arithmetic for a European economy puts the land tax at 1.0 to 2.7 percent of GDP, after allowing for the fall in land prices that the tax itself causes. The corporate layers raise 2.3 to 6.3 percent of GDP, against 3.75 percent raised by corporate income tax across the OECD in 2023; the low end is Layer One alone after profit shifting, the high end assumes the destination layers recapture the rent now shifted abroad. A 50 percent rate on profit at origin does not by itself raise more than today’s tax: the destination layers are what make the high rate pay.</p>
+<p><strong>The law permits most of it.</strong> The Court of Justice of the European Union has upheld steeply progressive taxes on turnover that fall mainly on foreign-owned firms, and land cannot claim free movement. The main legal risks are the payroll credit, which favors local labor in a way the trade rules may treat as discrimination, and the sectoral border adjustment. Both can be designed around.</p>
+<p><strong>What to do.</strong> Replace recurrent property taxes with a land value tax above a household allowance, on regularly updated site values, with deferral for owners who are asset-rich and cash-poor. Give every firm an allowance for corporate equity, and raise the rate on profit above that allowance for large groups. Add the destination layers only with the cap, and only for designated sectors in the case of Layer Two. Start in the European Union, where the Court’s rulings give the most legal certainty.</p>
+</section>
+<section id="sec-intro" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
+<p>Free movement of capital and people is one of the achievements of the postwar order, and it has a fiscal cost. Within the European Union, a directive of 1988 removed restrictions on capital movements between member states from 1 July 1990, and the Maastricht Treaty extended the freedom to movements with third countries <span class="citation" data-cites="EEC1988">(<a href="#ref-EEC1988" role="doc-biblioref">Council of the European Communities 1988</a>)</span>. In the decades before, under the Bretton Woods system, most countries combined fixed exchange rates with capital accounts that were relatively closed <span class="citation" data-cites="ObstfeldTaylor2004">(<a href="#ref-ObstfeldTaylor2004" role="doc-biblioref">Obstfeld and Taylor 2004</a>)</span>; capital could not easily leave, so it could be taxed. Once it could leave, it did. Twelve OECD countries levied a net wealth tax in 1990 and four in 2017 <span class="citation" data-cites="OECD2018Wealth">(<a href="#ref-OECD2018Wealth" role="doc-biblioref">OECD 2018</a>)</span>. About 36 percent of multinational profits are booked in tax havens, and reallocating them would raise the profits declared in high-tax European Union countries by about 20 percent <span class="citation" data-cites="TorslovWierZucman2023">(<a href="#ref-TorslovWierZucman2023" role="doc-biblioref">Tørsløv et al. 2023</a>)</span>. Meanwhile wealth has concentrated: in the United States the share held by the top 0.1 percent rose from 7 percent in 1978 to 22 percent in 2012 <span class="citation" data-cites="SaezZucman2016">(<a href="#ref-SaezZucman2016" role="doc-biblioref">Saez and Zucman 2016</a>)</span>.</p>
+<p>The question this paper asks is whether a country that keeps free movement can still tax the income of the very rich at high rates. The usual answer is no: the rate on a mobile base is set by competition with other countries, not by what the country would choose.</p>
+<p>The answer here is yes, if the tax falls on rent and reaches it where it cannot move. Rent is income above what is needed to keep an asset, a worker or a firm in its current use. A tax on rent, by definition, changes no decision, so its rate can be high. But rent is not always immobile: a patent’s rent can be booked anywhere. The design therefore taxes two sources of rent at the point where they cannot leave. Land is taxed where it lies, above a household allowance that keeps the tax off ordinary homes. The rent of large firms is taxed through a package that presumes they hold market power: a high rate on profit above a normal return, collected where profit is declared, backed by two destination-based layers that follow the firm’s customers, with a cap that keeps the total within the rent the firm earns from those customers.</p>
+<p>The paper makes four contributions. First, it combines in one design the two classic rent taxes, on land <span class="citation" data-cites="George1879 Mirrlees2011">(<a href="#ref-George1879" role="doc-biblioref">George 1879</a>; <a href="#ref-Mirrlees2011" role="doc-biblioref">Mirrlees et al. 2011</a>)</span> and on profit above a normal return <span class="citation" data-cites="Brown1948 BoadwayBruce1984 IFS1991">(<a href="#ref-Brown1948" role="doc-biblioref">Brown 1948</a>; <a href="#ref-BoadwayBruce1984" role="doc-biblioref">Boadway and Bruce 1984</a>; <a href="#ref-IFS1991" role="doc-biblioref">IFS Capital Taxes Group 1991</a>)</span>, and argues that free movement is a reason to adopt them together, not a reason to give up on high rates. Second, it makes market power the default presumption for large firms, with a narrow carve-out for sectors where scale is a technical necessity; <a href="#sec-default" class="quarto-xref">Section&nbsp;4.2</a> argues that the presumption is supported by the evidence on rising markups <span class="citation" data-cites="DeLoeckerEeckhoutUnger2020">(<a href="#ref-DeLoeckerEeckhoutUnger2020" role="doc-biblioref">De Loecker et al. 2020</a>)</span> and survives the strongest counter-argument, that large firms are large because they are efficient <span class="citation" data-cites="Demsetz1973 Autor2020">(<a href="#ref-Demsetz1973" role="doc-biblioref">Demsetz 1973</a>; <a href="#ref-Autor2020" role="doc-biblioref">Autor et al. 2020</a>)</span>. Third, it states the condition under which a high origin rate is safe, that the rent be specific to the location <span class="citation" data-cites="Mirrlees2011">(<a href="#ref-Mirrlees2011" role="doc-biblioref">Mirrlees et al. 2011</a>, ch.&nbsp;18)</span>, and adds two destination layers for rent that is not: a sectoral destination-based cash-flow tax, a narrow application of the proposal of <span class="citation" data-cites="ADKV2017">A. Auerbach et al. (<a href="#ref-ADKV2017" role="doc-biblioref">2017</a>)</span> and <span class="citation" data-cites="Devereux2021">Devereux et al. (<a href="#ref-Devereux2021" role="doc-biblioref">2021</a>)</span>, and a sales tax with credits for local assets and payroll, close to the substance carve-out in the OECD’s global minimum tax <span class="citation" data-cites="OECD2021TwoPillar">(<a href="#ref-OECD2021TwoPillar" role="doc-biblioref">OECD/G20 Inclusive Framework on BEPS 2021</a>)</span> and to the “Dyson tax” of <span class="citation" data-cites="StrettonStyles2020">Stretton and Styles (<a href="#ref-StrettonStyles2020" role="doc-biblioref">2020</a>)</span>. Fourth, it adds a cap that allocates residual profit by sales, as the residual profit allocation of <span class="citation" data-cites="Devereux2021">Devereux et al. (<a href="#ref-Devereux2021" role="doc-biblioref">2021</a>)</span> and Amount A of the OECD’s Pillar One do <span class="citation" data-cites="OECD2021TwoPillar">(<a href="#ref-OECD2021TwoPillar" role="doc-biblioref">OECD/G20 Inclusive Framework on BEPS 2021</a>)</span>, used here not to share the tax base between countries but to protect low-margin firms from a tax on turnover.</p>
+<p><a href="#sec-literature" class="quarto-xref">Section&nbsp;3</a> reviews what is known. <a href="#sec-design" class="quarto-xref">Section&nbsp;4</a> sets out the design and states its properties as propositions. <a href="#sec-illustration" class="quarto-xref">Section&nbsp;6</a> works through five firms, <a href="#sec-revenue" class="quarto-xref">Section&nbsp;7</a> estimates revenue, <a href="#sec-law" class="quarto-xref">Section&nbsp;8</a> considers the law, <a href="#sec-objections" class="quarto-xref">Section&nbsp;9</a> the objections, and <a href="#sec-policy" class="quarto-xref">Section&nbsp;10</a> what a finance ministry should do.</p>
+</section>
+<section id="sec-literature" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> What is known about taxing rent</h1>
+<section id="sec-lit-land" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-lit-land"><span class="header-section-number">3.1</span> Land: the oldest rent tax</h2>
+<p>The case for taxing land rent is as old as political economy. <span class="citation" data-cites="Ricardo1817">Ricardo (<a href="#ref-Ricardo1817" role="doc-biblioref">1817</a>, ch.&nbsp;2)</span> treated the rent of land as a surplus, the payment for the use of the soil’s original powers, determined by the price of its produce rather than determining it. <span class="citation" data-cites="Mill1848">Mill (<a href="#ref-Mill1848" role="doc-biblioref">1848, bk. 5</a>, ch.&nbsp;3)</span> proposed taxing the future increase in rent “arising from the mere action of natural causes”, while sparing existing rents, a transition rule that <span class="citation" data-cites="StrettonStyles2020">Stretton and Styles (<a href="#ref-StrettonStyles2020" role="doc-biblioref">2020</a>)</span> revive. <span class="citation" data-cites="George1879">George (<a href="#ref-George1879" role="doc-biblioref">1879</a>)</span> made the land value tax a popular cause, on the argument that land value is created by the community, not the owner. <span class="citation" data-cites="Dwyer2014">Dwyer (<a href="#ref-Dwyer2014" role="doc-biblioref">2014</a>)</span> traces the longer history, back to the physiocrats and Adam Smith, of the view that rent is the natural base of public revenue. Modern theory gives the idea a precise form in the Henry George theorem: in a city of optimal size with optimal local public goods, aggregate land rent equals spending on those goods <span class="citation" data-cites="ArnottStiglitz1979">(<a href="#ref-ArnottStiglitz1979" role="doc-biblioref">Arnott and Stiglitz 1979</a>)</span>.</p>
+<p>The Mirrlees Review called the economic case for taxing land “very strong” <span class="citation" data-cites="Mirrlees2011">(<a href="#ref-Mirrlees2011" role="doc-biblioref">Mirrlees et al. 2011</a>, ch.&nbsp;16)</span>. Land is not produced and its supply is fixed, so a tax on its value is reflected one-for-one in a lower price: owners on the day the tax is announced suffer a windfall loss, and nothing else changes. The review recommended a land value tax for business and agricultural land, replacing business rates and stamp duty, and a tax on housing services in place of council tax. The capitalization result has one theoretical exception: when land and capital are alternative stores of wealth, a land tax pushes savings into capital, lowering the interest rate and raising wages, so part of the burden shifts from landowners to the owners of capital <span class="citation" data-cites="Feldstein1977">(<a href="#ref-Feldstein1977" role="doc-biblioref">Feldstein 1977</a>)</span>. The effect strengthens the case for the tax, which then raises investment, but it qualifies the claim that landowners bear all of it.</p>
+<p>The evidence is limited but consistent. Pittsburgh sharply raised its tax rate on land, but not on buildings, in 1979–80; building activity rose in the following decade while it fell in comparable cities, though other causes contributed <span class="citation" data-cites="OatesSchwab1997">(<a href="#ref-OatesSchwab1997" role="doc-biblioref">Oates and Schwab 1997</a>)</span>. Across Pennsylvania municipalities that adopted split-rate taxes, the ratio of capital to land rose and the main effect was more housing units rather than larger ones <span class="citation" data-cites="BanzhafLavery2010">(<a href="#ref-BanzhafLavery2010" role="doc-biblioref">Banzhaf and Lavery 2010</a>)</span>. Across OECD countries, recurrent taxes on immovable property are the taxes least harmful to growth <span class="citation" data-cites="Arnold2011">(<a href="#ref-Arnold2011" role="doc-biblioref">Arnold et al. 2011</a>)</span>, and they are widely seen as underused <span class="citation" data-cites="Norregaard2013">(<a href="#ref-Norregaard2013" role="doc-biblioref">Norregaard 2013</a>)</span>: in 2023 they raised 0.95 percent of GDP on average across the OECD <span class="citation" data-cites="OECDRevStats2025">(<a href="#ref-OECDRevStats2025" role="doc-biblioref">OECD 2025</a>)</span>. Many are levied on outdated values, which the OECD names as the first thing to fix <span class="citation" data-cites="OECD2022Housing">(<a href="#ref-OECD2022Housing" role="doc-biblioref">OECD 2022</a>)</span>.</p>
+</section>
+<section id="sec-lit-corporate" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-lit-corporate"><span class="header-section-number">3.2</span> Corporate profit: taxing the return above normal</h2>
+<p>The corporate counterpart of the land tax is a tax on profit above the normal return to capital. <span class="citation" data-cites="Brown1948">Brown (<a href="#ref-Brown1948" role="doc-biblioref">1948</a>)</span> showed that a tax on cash flow, with investment deducted immediately, takes a share of a project’s net present value and leaves the decision to invest unchanged. The Meade Committee <span class="citation" data-cites="Meade1978">(<a href="#ref-Meade1978" role="doc-biblioref">1978</a>)</span> set out the R-based and S-based cash-flow taxes. <span class="citation" data-cites="BoadwayBruce1984">Boadway and Bruce (<a href="#ref-BoadwayBruce1984" role="doc-biblioref">1984</a>)</span> showed that any depreciation schedule combined with a deduction for the cost of funds on the written-down value of assets gives the same neutrality, and the IFS Capital Taxes Group <span class="citation" data-cites="IFS1991">(<a href="#ref-IFS1991" role="doc-biblioref">1991</a>)</span> turned the result into the allowance for corporate equity (ACE): a deduction for a notional return on shareholders’ funds, which taxes only profit above that return. <span class="citation" data-cites="BondDevereux2003">Bond and Devereux (<a href="#ref-BondDevereux2003" role="doc-biblioref">2003</a>)</span> proved that the ACE is neutral under uncertainty, provided the tax rules for losses, default and wind-up are right. The Mirrlees Review recommended an ACE for the United Kingdom <span class="citation" data-cites="Mirrlees2011">(<a href="#ref-Mirrlees2011" role="doc-biblioref">Mirrlees et al. 2011</a>, ch.&nbsp;17)</span>.</p>
+<p>Practice has been mixed. Belgium introduced a notional interest deduction in 2006, narrowed it in 2018 and abolished it for periods ending on or after 31 December 2023 <span class="citation" data-cites="Belgium2022NID">(<a href="#ref-Belgium2022NID" role="doc-biblioref">Kingdom of Belgium 2022</a>)</span>; Italy introduced an ACE in 2011 and repealed it from 2024 <span class="citation" data-cites="Italy2023ACE">(<a href="#ref-Italy2023ACE" role="doc-biblioref">Republic of Italy 2023</a>)</span>; Austria, Croatia and Brazil ran variants <span class="citation" data-cites="Klemm2007">(<a href="#ref-Klemm2007" role="doc-biblioref">Klemm 2007</a>)</span>. The evidence is that an ACE reduces leverage <span class="citation" data-cites="Princen2012 HebousRuf2017">(<a href="#ref-Princen2012" role="doc-biblioref">Princen 2012</a>; <a href="#ref-HebousRuf2017" role="doc-biblioref">Hebous and Ruf 2017</a>)</span>, but that a unilateral ACE also invites multinationals to route intra-group lending into the country to claim the allowance <span class="citation" data-cites="HebousRuf2017">(<a href="#ref-HebousRuf2017" role="doc-biblioref">Hebous and Ruf 2017</a>)</span>, and that when rates are raised to pay for it, profit shifting and discrete location choices make it less attractive for a single country than for countries acting together <span class="citation" data-cites="deMooijDevereux2011">(<a href="#ref-deMooijDevereux2011" role="doc-biblioref">Mooij and Devereux 2011</a>)</span>. Both findings bear directly on this paper’s design.</p>
+</section>
+<section id="sec-lit-resources" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-lit-resources"><span class="header-section-number">3.3</span> Natural resources: high rates on location-specific rent</h2>
+<p>Resource rent taxes are the working proof that rent can be taxed at high rates under free movement of capital. <span class="citation" data-cites="GarnautCluniesRoss1975">Garnaut and Clunies Ross (<a href="#ref-GarnautCluniesRoss1975" role="doc-biblioref">1975</a>)</span> proposed a tax that carries a project’s net cash flows forward at a threshold rate of return and taxes only the surplus above it; it became the model for Australia’s petroleum resource rent tax. <span class="citation" data-cites="BoadwayKeen2010">Boadway and Keen (<a href="#ref-BoadwayKeen2010" role="doc-biblioref">2010</a>)</span> set out the theory. Norway taxes petroleum profit at a combined marginal rate of 78 percent, with the special tax computed on a cash-flow basis since 2022 <span class="citation" data-cites="Norway2025Petroleum">(<a href="#ref-Norway2025Petroleum" role="doc-biblioref">Norwegian Ministry of Energy and Norwegian Offshore Directorate 2025</a>)</span>. The resource is where it is, so the rent cannot move, and the cash-flow base leaves the normal return untaxed.</p>
+</section>
+<section id="sec-lit-destination" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sec-lit-destination"><span class="header-section-number">3.4</span> Source, destination and mobile rent</h2>
+<p>A small open economy has a strong reason not to tax the normal return on capital at source, because the cost of capital is set abroad; the Mirrlees Review draws the further distinction on which this paper rests, between rents that are specific to a location (natural resources, proximity to a large market, local skills) and rents that are mobile, such as the return to a patent or a brand <span class="citation" data-cites="Mirrlees2011">(<a href="#ref-Mirrlees2011" role="doc-biblioref">Mirrlees et al. 2011</a>, ch.&nbsp;18)</span>. Location-specific rent can be taxed at source at high rates; mobile rent cannot. The evidence on mobility is strong. Discrete location choices depend on the effective average tax rate, which rises toward the statutory rate as profitability rises <span class="citation" data-cites="DevereuxGriffith2003">(<a href="#ref-DevereuxGriffith2003" role="doc-biblioref">Devereux and Griffith 2003</a>)</span>. Reported profit is highly sensitive to rate differences: a meta-analysis finds that a 1 percentage point lower rate than in other countries raises reported before-tax income by 1.5 percent <span class="citation" data-cites="BeerdeMooijLiu2020">(<a href="#ref-BeerdeMooijLiu2020" role="doc-biblioref">Beer et al. 2020</a>)</span>.</p>
+<p>The proposed answer in the literature is to tax at destination. A destination-based cash-flow tax taxes sales to domestic customers less domestic costs; imports are taxed and exports exempt, as under value-added tax (VAT), so the base is where the customer is and cannot be moved by relocating production or booking profit elsewhere <span class="citation" data-cites="ADKV2017 Devereux2021">(<a href="#ref-ADKV2017" role="doc-biblioref">A. Auerbach et al. 2017</a>; <a href="#ref-Devereux2021" role="doc-biblioref">Devereux et al. 2021</a>)</span>. With a flexible exchange rate the currency appreciates to offset the border adjustment and trade is unaffected <span class="citation" data-cites="ADKV2017">(<a href="#ref-ADKV2017" role="doc-biblioref">A. Auerbach et al. 2017</a>)</span>. In a model with three sources of rent, a destination-based cash-flow tax does not distort behavior, while a source-based one does <span class="citation" data-cites="AuerbachDevereux2018">(<a href="#ref-AuerbachDevereux2018" role="doc-biblioref">A. J. Auerbach and Devereux 2018</a>)</span>. A second proposal, residual profit allocation by income, splits a group’s profit into a routine part, taxed at source, and a residual part, taxed where sales are made <span class="citation" data-cites="Devereux2021">(<a href="#ref-Devereux2021" role="doc-biblioref">Devereux et al. 2021</a>)</span>. The OECD’s Pillar One adopted the same idea in Amount A, which would allocate 25 percent of the residual profit of the largest groups, defined as profit above 10 percent of revenue, to market countries; its Pillar Two sets a 15 percent minimum tax on groups with revenue above €750 million, with a carve-out of 5 percent of payroll and of tangible assets <span class="citation" data-cites="OECD2021TwoPillar">(<a href="#ref-OECD2021TwoPillar" role="doc-biblioref">OECD/G20 Inclusive Framework on BEPS 2021</a>)</span>. Meanwhile several countries have taxed digital revenue directly, at low rates: France at 3 percent from 2019 and the United Kingdom at 2 percent from 2020 <span class="citation" data-cites="France2019DST UK2020DST">(<a href="#ref-France2019DST" role="doc-biblioref">French Republic 2019</a>; <a href="#ref-UK2020DST" role="doc-biblioref">United Kingdom 2020</a>)</span>.</p>
+</section>
+<section id="sec-lit-market-power" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="sec-lit-market-power"><span class="header-section-number">3.5</span> Market power</h2>
+<p>The evidence that rent in the corporate sector has grown is substantial but disputed. In United States firm-level data, aggregate markups rose from 21 percent above marginal cost in 1980 to 61 percent, driven by the upper tail of the distribution, and the average profit rate rose from 1 to 8 percent <span class="citation" data-cites="DeLoeckerEeckhoutUnger2020">(<a href="#ref-DeLoeckerEeckhoutUnger2020" role="doc-biblioref">De Loecker et al. 2020</a>)</span>. Measured directly from the cost of capital, a large rise in the share of pure profit offsets the decline in the labor and capital shares <span class="citation" data-cites="Barkai2020">(<a href="#ref-Barkai2020" role="doc-biblioref">Barkai 2020</a>)</span>. The measurement is contested: different methods give different trends, and existing methods cannot rule out stable or modestly rising markups <span class="citation" data-cites="Basu2019">(<a href="#ref-Basu2019" role="doc-biblioref">Basu 2019</a>)</span>. The interpretation is contested too: concentration and high profit may reflect the superior efficiency of leading firms <span class="citation" data-cites="Demsetz1973">(<a href="#ref-Demsetz1973" role="doc-biblioref">Demsetz 1973</a>)</span>, and the reallocation of sales toward the most productive “superstar” firms explains much of the fall in the labor share <span class="citation" data-cites="Autor2020">(<a href="#ref-Autor2020" role="doc-biblioref">Autor et al. 2020</a>)</span>.</p>
+</section>
+<section id="sec-lit-gap" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="sec-lit-gap"><span class="header-section-number">3.6</span> What is new</h2>
+<p>Each instrument in this paper has a literature; what is missing is a design that combines them for a country that will not restrict capital movements. The land tax literature rarely discusses corporate rent, and the corporate literature treats the land tax, if at all, as a separate reform. The ACE literature shows a unilateral ACE invites shifting; the destination literature proposes replacing the corporate tax, which few governments will do at once. This paper keeps a profit tax at source, adds destination layers only where shifting is easy, presumes rent for large firms, and caps the total by the rent earned from local customers. It also computes what the combination does for firms of different kinds.</p>
+</section>
+</section>
+<section id="sec-design" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> The design</h1>
+<p>The design has a personal-side instrument on land and a corporate package of three layers. The parameters below are illustrative central values: the land rate is 2.5 percent a year, Layer One’s rate is 50 percent with an allowance of 3 percent on equity, Layer Two’s rate is 22 percent, and Layer Three charges 4 percent of local sales less credits of 8 percent of local tangible assets and 25 percent of local payroll.</p>
+<section id="sec-land" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-land"><span class="header-section-number">4.1</span> Land above a household allowance</h2>
+<p>Every household receives an allowance of land value <span class="math inline">\(A\)</span>, exempt from tax. Above it, the household pays a land value tax at rate <span class="math inline">\(\tau_L\)</span> on the assessed site value, the value of the land without its buildings: <span id="eq-land"><span class="math display">\[
+T_{\text{land}} = \tau_L \cdot \max(0,\; V_{\text{land}} - A).
+\tag{1}\]</span></span> For illustration, <span class="math inline">\(A\)</span> is set at the site value of an ordinary home in a modest neighborhood, close to the median household’s holding, and <span class="math inline">\(\tau_L\)</span> at 2–3 percent a year. Most households then pay nothing or little, while those holding land worth several times the allowance pay a meaningful rate on the excess. Land held by firms is taxed without an allowance, and the tax a firm pays is deductible from its Layer One base, so that the same rent is not taxed twice.</p>
+<p>I have called this a “reverse wealth tax” in earlier drafts, because the allowance can be paired with a payment to households that own no land, making the schedule negative below the allowance <span class="citation" data-cites="StrettonStyles2020">(<a href="#ref-StrettonStyles2020" role="doc-biblioref">Stretton and Styles 2020</a>)</span>. Here the allowance is simply a threshold, and the term is not used again.</p>
+<p><strong>Proposition 1 (land).</strong> <em>If the supply of land is fixed and the tax depends only on assessed site value, not on how the land is used, the tax does not change any decision about the use of land. Its present value is capitalized into a lower land price on announcement, so its burden falls on those who own land at that date.</em> The conditions matter. If the assessment rises when the owner builds, it becomes a tax on buildings; and if land and capital are close substitutes as stores of wealth, part of the burden shifts to capital and labor <span class="citation" data-cites="Feldstein1977">(<a href="#ref-Feldstein1977" role="doc-biblioref">Feldstein 1977</a>)</span>. Capitalization is also the source of the transition problem: a household that bought its home last year bears the whole present value of the tax. Phasing the rate in, or applying it first to future increases in site value as <span class="citation" data-cites="Mill1848">Mill (<a href="#ref-Mill1848" role="doc-biblioref">1848</a>)</span> proposed, spreads that loss.</p>
+<p>The design has three further properties. It is progressive in land wealth without being progressive in earnings. Because land cannot move, there is no exit problem: the owner can leave, but the tax stays. And because cash income and land wealth differ, owners who are rich in land and poor in cash, often pensioners, need the option to defer the tax, with interest, until sale or death <span class="citation" data-cites="StrettonStyles2020">(<a href="#ref-StrettonStyles2020" role="doc-biblioref">Stretton and Styles 2020</a>)</span>.</p>
+</section>
+<section id="sec-default" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-default"><span class="header-section-number">4.2</span> Market power as the default</h2>
+<p>Standard tax analysis treats market power as an exception that must be identified before it can be taxed. This paper reverses the presumption. For firms above a size threshold, the default assumption is that they earn substantial rent, and the burden of showing otherwise sits with the firm.</p>
+<p>The reasoning starts from competition. In a competitive market, firms earn about the normal return on capital, because profit above it attracts entry. A firm that is large and stays large must therefore be earning rent of some kind, from network effects, brands, economies of scale, regulatory protection, patents or customer lock-in, or else operate in a sector whose minimum efficient scale is so large that only a few firms can exist. The second category is narrow: civil aircraft manufacturing and leading-edge semiconductor fabrication are examples. In most of the economy, large size reflects rent, not the technical necessity of scale.</p>
+<p>The strongest objection is that large firms may be large because they are more productive <span class="citation" data-cites="Demsetz1973 Autor2020">(<a href="#ref-Demsetz1973" role="doc-biblioref">Demsetz 1973</a>; <a href="#ref-Autor2020" role="doc-biblioref">Autor et al. 2020</a>)</span>. It does not undo the presumption, because rent from superior productivity is still rent: a firm whose costs are lower than its rivals’ earns an inframarginal surplus at the market price, as Ricardo’s better land does. What the objection does show is that some of the rent is a return to past investment in innovation, which a tax could discourage if it were expected. The answer is not that the rent was “generated in the past”, as the first draft of this paper argued: a permanent, anticipated tax lowers the expected return to the investment that creates rent. The answer is Proposition 2. A tax on profit above a normal return, with losses carried forward at interest and investment (including research and development) deducted in full or through the allowance, leaves the expected return to risky investment unchanged, whatever the rate. Neutrality, not the past, protects innovation.</p>
+<p>Three design choices follow from the presumption. First, the threshold does the work of a definition: firms above it are presumed to earn rent, firms below it are presumed competitive. Using the €750 million group revenue threshold of Pillar Two <span class="citation" data-cites="OECD2021TwoPillar">(<a href="#ref-OECD2021TwoPillar" role="doc-biblioref">OECD/G20 Inclusive Framework on BEPS 2021</a>)</span> means the groups in scope already report the data needed. Second, carve-outs are narrow, sectoral and set in advance; firms in designated scale-driven sectors pay the conventional rate on rent instead of the higher one, and every other firm is covered. Third, the instruments reward local productive activity and tax rent separately, so that no instrument has to decide whether a firm is “really” competitive: the bill is low when local activity is high relative to sales and high when rent is high.</p>
+<p>The threshold creates a cliff. Under the first draft, a firm below it paid 25 percent of all its profit, including the normal return, while one just above it paid nothing on the normal return and 50 percent of its rent. Giving the allowance to every firm, and phasing the higher rate in between €750 million and twice that figure, removes the cliff. Consolidation at group level, as under Pillar Two, prevents groups from splitting to stay below it.</p>
+</section>
+<section id="sec-layer-one" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-layer-one"><span class="header-section-number">4.3</span> Layer One: profit above a normal return</h2>
+<p>The first layer is an ACE. The firm deducts from its taxable profit a notional normal return on its equity, measured on the tax basis (the tax written-down value of its assets less its debt) rather than the book value, and only the residual is taxed: <span id="eq-ace"><span class="math display">\[
+B_1 = \pi - r_A E, \qquad T_1 = \tau_1 \max(0,\; B_1),
+\tag{2}\]</span></span> where <span class="math inline">\(\pi\)</span> is taxable profit (with interest deductible, as now), <span class="math inline">\(E\)</span> is equity on the tax basis and <span class="math inline">\(r_A\)</span> the allowance rate. Losses, negative <span class="math inline">\(B_1\)</span>, are carried forward with interest at <span class="math inline">\(r_A\)</span>. The rate on large groups is <span class="math inline">\(\tau_1 = 50\)</span> percent, within the first draft’s range of 45–55 percent.</p>
+<p><strong>Proposition 2 (neutrality of Layer One).</strong> <em>If equity is measured on the tax basis, the allowance rate equals the rate at which the firm discounts its tax allowances, and losses are refunded or carried forward with interest at that rate, then the present value of tax on a marginal investment is zero for any rate <span class="math inline">\(\tau_1 &lt; 1\)</span>, whatever the depreciation schedule.</em> Appendix A gives the proof, which follows <span class="citation" data-cites="BoadwayBruce1984">Boadway and Bruce (<a href="#ref-BoadwayBruce1984" role="doc-biblioref">1984</a>)</span>. Under uncertainty, the allowance rate that makes the tax neutral is the risk-free rate, provided the allowances themselves are certain, which full loss offset ensures <span class="citation" data-cites="BondDevereux2003">(<a href="#ref-BondDevereux2003" role="doc-biblioref">Bond and Devereux 2003</a>)</span>. In practice the long-term government bond rate is the workable choice.</p>
+<p>Two consequences follow. The rate can be high: a firm deciding whether to invest an extra euro faces the same decision at 30 or 55 percent, because the tax falls only on returns above what the euro had to earn to be worth investing. And the tax collected includes a share of the expected risk premium as well as rent; with full loss offset the government earns that share by bearing a matching share of the risk, so measured revenue overstates the pure rent captured.</p>
+<p><strong>Proposition 3 (where a high origin rate is safe).</strong> <em>Layer One’s base stays in the country only for rent that is specific to its location. Rent that can be booked elsewhere, through transfer prices, intra-group debt or the location of intangible assets, responds to the gap between the country’s rate and other countries’ rates, and a firm choosing between discrete locations compares effective average rates, which approach the statutory rate for highly profitable projects.</em> Proposition 2 concerns the scale of an investment that will be made in the country anyway; it does not protect the base from Proposition 3. A 25-point rise in the rate on declared rent, from today’s typical 25 percent to 50 percent, would on the semi-elasticity of <span class="citation" data-cites="BeerdeMooijLiu2020">Beer et al. (<a href="#ref-BeerdeMooijLiu2020" role="doc-biblioref">2020</a>)</span> reduce the reported base by roughly 37 percent, a linear extrapolation well beyond the range of the data but a fair warning of the order of magnitude. That is why the design does not stop at Layer One.</p>
+</section>
+<section id="sec-layer-two" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-layer-two"><span class="header-section-number">4.4</span> Layer Two: a sectoral destination-based cash-flow tax</h2>
+<p>The second layer addresses rent that is earned from local customers but booked abroad. Digital platforms, holders of pharmaceutical patents, some financial services and streaming services can route revenue through low-tax jurisdictions so that little profit is declared locally, however well designed the ACE. For designated sectors, a destination-based cash-flow tax is added: <span id="eq-dbcft"><span class="math display">\[
+T_2 = t_2 \max(0,\; S - C),
+\tag{3}\]</span></span> where <span class="math inline">\(S\)</span> is sales to customers in the country and <span class="math inline">\(C\)</span> is costs incurred in the country, including payroll and purchases from local suppliers; imports and payments to related parties abroad (royalties, management fees, intra-group purchases) are not deductible. Layer One is credited against Layer Two, so a firm pays the larger of the two, not both. The rate is <span class="math inline">\(t_2 = 22\)</span> percent, within the first draft’s range of 20–25 percent.</p>
+<p>The first draft described this layer as a tax of 20–25 percent “on in-country revenue”. Read literally, a 22 percent tax on gross revenue takes 63 percent of the profit of a platform with a 35 percent operating margin and more than all the profit of a firm with a 20 percent margin; that is why national taxes on digital revenue are set at 2 or 3 percent <span class="citation" data-cites="France2019DST UK2020DST">(<a href="#ref-France2019DST" role="doc-biblioref">French Republic 2019</a>; <a href="#ref-UK2020DST" role="doc-biblioref">United Kingdom 2020</a>)</span>. Deducting local costs makes Layer Two a tax on the cash flow a firm earns from local customers, which is where its rent is.</p>
+<p><strong>Proposition 4 (the destination layer and its rate).</strong> <em>Layer Two’s base depends on where the firm’s customers are and where its local costs are incurred, not on where its profit is booked, so transfer pricing and the location of intangible assets cannot reduce it. Because the tax is confined to a few sectors, the exchange rate does not adjust to offset it, unlike an economy-wide destination-based tax; it therefore acts within those sectors as a tax on imported inputs and related-party services at the tax-exclusive rate <span class="math inline">\(t_2/(1-t_2)\)</span> and favors local costs at the same rate.</em> At <span class="math inline">\(t_2 = 22\)</span> percent the implicit charge on imported inputs is 28 percent; at 50 percent it would be 100 percent (Appendix B). The first draft gave these as <span class="math inline">\(t_2/(1+t_2)\)</span>, 20 and 33 percent, which are the tax-inclusive equivalents and understate the effect. The distortion grows faster than the rate, which is the reason to keep the rate moderate and the scope narrow: only sectors where rent clearly accrues to mobile intangibles and origin taxation demonstrably fails.</p>
+</section>
+<section id="sec-layer-three" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="sec-layer-three"><span class="header-section-number">4.5</span> Layer Three: a sales tax with presence credits</h2>
+<p>The third layer applies to every group above the threshold. It charges a small rate on sales to local customers and gives credits for local presence: <span id="eq-presence"><span class="math display">\[
+T_3 = \max(0,\; \tau_s S - d_K K - d_W W),
+\tag{4}\]</span></span> where <span class="math inline">\(K\)</span> is the value of tangible assets in the country, excluding land, and <span class="math inline">\(W\)</span> is payroll in the country. With <span class="math inline">\(\tau_s = 4\)</span> percent, <span class="math inline">\(d_K = 8\)</span> percent and <span class="math inline">\(d_W = 25\)</span> percent, a firm with €1 billion of local sales, €50 million of local assets and €100 million of local payroll pays €11 million, 1.1 percent of its sales; a firm with the same sales but €500 million of assets and €400 million of payroll pays nothing.</p>
+<p>The credits are subtracted from the tax, not from the base, so their incentive is larger than it looks. For a firm with positive liability, each euro of local tangible assets cuts tax by 8 cents a year and each euro of local payroll by 25 cents; the first draft described the asset credit as worth “an extra 2–3 percent” because 8 percent exceeds a normal return of 5–6 percent, which compares a credit rate with a rate of return. Firms already at zero, which is most firms with substantial local operations, get no marginal incentive. Land is excluded from <span class="math inline">\(K\)</span>, so that buying land to shelter tax is not rewarded. The credits mirror the substance carve-out of Pillar Two, which excludes from the minimum tax a return of 5 percent of payroll and of tangible assets <span class="citation" data-cites="OECD2021TwoPillar">(<a href="#ref-OECD2021TwoPillar" role="doc-biblioref">OECD/G20 Inclusive Framework on BEPS 2021</a>)</span>, and the “Dyson tax” of <span class="citation" data-cites="StrettonStyles2020">Stretton and Styles (<a href="#ref-StrettonStyles2020" role="doc-biblioref">2020</a>)</span>, a destination-based tax on sales less local wages and supplier costs.</p>
+<p>Layer Three is a tax on sales that are not matched by local activity. Appendix C shows that a firm pays nothing when <span class="math inline">\(d_K K/S + d_W W/S \geq \tau_s\)</span>: payroll of 16 percent of sales is enough on its own. The firms that pay are those whose sales in the country are large relative to their local factor base.</p>
+</section>
+<section id="sec-combined" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="sec-combined"><span class="header-section-number">4.6</span> The cap and the combined liability</h2>
+<p>A tax on sales can exceed a firm’s profit. A fuel distributor with €10 billion of sales, payroll at 5 percent of sales and tangible assets at 10 percent pays 1.95 percent of sales under Layer Three, against a net margin of perhaps 2 percent. That would tax effort, not rent. The design therefore caps the destination layers. Let <span class="math inline">\(\rho\)</span> be the group’s global rent margin, its worldwide profit less the allowance on its worldwide equity, divided by its worldwide sales, taken from the consolidated accounts. The total liability is <span id="eq-total"><span class="math display">\[
+T = \max\Big(T_1,\; \min\big(T_1 + \max(0,\, T_2 - T_1) + T_3,\;\; \tau_1 \rho S\big)\Big).
+\tag{5}\]</span></span></p>
+<p><strong>Proposition 5 (the cap).</strong> <em>The destination layers never reduce a firm’s tax below its Layer One liability, and never raise its total above <span class="math inline">\(\tau_1 \rho S\)</span>, the Layer One rate applied to the rent the group would earn on its local sales if its global rent margin applied locally. A firm with no global rent pays only Layer One; a firm whose global rent margin is the same in every market pays at most <span class="math inline">\(\tau_1\)</span> of the rent it earns from local customers.</em></p>
+<p>The cap is a residual profit allocation by sales, of the kind proposed by <span class="citation" data-cites="Devereux2021">Devereux et al. (<a href="#ref-Devereux2021" role="doc-biblioref">2021</a>)</span> and adopted for Amount A <span class="citation" data-cites="OECD2021TwoPillar">(<a href="#ref-OECD2021TwoPillar" role="doc-biblioref">OECD/G20 Inclusive Framework on BEPS 2021</a>)</span>, used here as a ceiling rather than a division of the base. It needs only figures that groups above the threshold already publish: consolidated profit, equity and revenue.</p>
+</section>
+</section>
+<section id="sec-algorithm" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> A simple algorithm</h1>
+<p>The calculation for a corporate group proceeds in six steps.</p>
+<ol type="1">
+<li><strong>Check the size threshold.</strong> If the group’s global revenue is below €750 million, it is presumed competitive. It pays the conventional rate, 25 percent, on profit above the allowance on its equity, and stops here.</li>
+<li><strong>Compute Layer One.</strong> Measure equity on the tax basis, subtract the allowance <span class="math inline">\(r_A E\)</span> from taxable profit (after deducting any land value tax paid), and tax the residual at 50 percent. Firms in designated scale-driven sectors pay 25 percent on the residual.</li>
+<li><strong>For designated mobile-rent sectors, compute Layer Two.</strong> Take sales to local customers, from VAT records, less local costs; tax at 22 percent; credit Layer One against it.</li>
+<li><strong>Compute Layer Three for all groups above the threshold.</strong> Take 4 percent of local sales, less 8 percent of local tangible assets other than land and 25 percent of local payroll, with a floor of zero.</li>
+<li><strong>Compute the cap.</strong> Multiply local sales by the group’s global rent margin and by 50 percent.</li>
+<li><strong>Combine</strong> using <a href="#eq-total" class="quarto-xref">equation&nbsp;5</a>.</li>
+</ol>
+<p>The data exist. Profit, equity and payroll come from the local entity’s accounts; sales to local customers come from VAT records, which identify the supplies taxed in the country; global profit, equity and revenue come from the consolidated accounts; and groups above the threshold already report payroll and tangible assets by jurisdiction for Pillar Two <span class="citation" data-cites="OECD2021TwoPillar">(<a href="#ref-OECD2021TwoPillar" role="doc-biblioref">OECD/G20 Inclusive Framework on BEPS 2021</a>)</span>.</p>
+</section>
+<section id="sec-illustration" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Five firms</h1>
+<p>The design’s purpose is to tax rent and spare effort, and five stylized firms show how far it succeeds. All figures are in millions of euros of local activity; the allowance rate is 3 percent. The current tax is 25 percent of declared local profit. Rent earned from local customers is the group’s global rent margin times local sales.</p>
+<div id="tbl-firms" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-firms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Tax on five stylized firms, € million. Firm A: global operating margin 35 percent, local payroll 60 and other local costs 40, local tangible assets 50. Firm B: global margin 20 percent, local payroll 100, assets 50. Firm C: assets 800, payroll 250, equity 600. Firm D: global margin 2 percent, payroll 500, assets 1,000. Firm E: assets 900, payroll 300, equity 800, pays 25 percent on rent under the carve-out. Source: author’s calculation, <code>2.Source/rent_tax_calcs.py</code>.
+</figcaption>
+<div aria-describedby="tbl-firms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Firm</th>
+<th style="text-align: right;">Local sales</th>
+<th style="text-align: right;">Declared local profit</th>
+<th style="text-align: right;">Rent from local customers</th>
+<th style="text-align: right;">Current tax</th>
+<th style="text-align: right;">Tax under the design</th>
+<th style="text-align: right;">Current rate on rent</th>
+<th style="text-align: right;">Design rate on rent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A. Foreign platform, designated sector</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">335</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">1%</td>
+<td style="text-align: right;">50%</td>
+</tr>
+<tr class="even">
+<td>B. Foreign seller, not designated</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">185</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">4%</td>
+<td style="text-align: right;">13%</td>
+</tr>
+<tr class="odd">
+<td>C. Domestic manufacturer</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">31%</td>
+<td style="text-align: right;">50%</td>
+</tr>
+<tr class="even">
+<td>D. Low-margin distributor</td>
+<td style="text-align: right;">10,000</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">170</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">29%</td>
+<td style="text-align: right;">50%</td>
+</tr>
+<tr class="odd">
+<td>E. Scale-driven manufacturer (carve-out)</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">36%</td>
+<td style="text-align: right;">25%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-rates" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="2.Source/figures/fig1_effective_rates.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Tax as a percent of the rent each firm earns from local customers, current tax against the proposed design. Source: author’s calculation; see Table&nbsp;1."><img src="2.Source/figures/fig1_effective_rates.png" class="img-fluid figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Tax as a percent of the rent each firm earns from local customers, current tax against the proposed design. Source: author’s calculation; see <a href="#tbl-firms" class="quarto-xref">Table&nbsp;1</a>.
+</figcaption>
+</figure>
+</div>
+<p><strong>The foreign platform pays half its local rent instead of almost none.</strong> It declares 20 of profit locally because its intellectual property is held abroad, so today it pays 5 on rent of 335. Layer One adds little (8.5). Layer Two, at 22 percent of local sales less local costs, gives 198, and Layer Three 21; the cap of 50 percent of 335 binds, and the firm pays 168. The first draft’s 40–60 percent is right for this firm.</p>
+<p><strong>The foreign seller outside the designated sectors is the design’s weak point.</strong> It too books little profit locally, but only Layers One and Three apply, and Layer Three at 4 percent of sales less credits raises 11. Its rate on rent rises from 4 to 13 percent, far below the 40–60 percent the first draft claimed for all rent-extracting multinationals. Widening Layer Two to more sectors would close the gap at the cost of more border distortion (Proposition 4); raising Layer Three’s rate would close it at the cost of a heavier tax on sales. That trade-off is the main design choice the paper leaves open.</p>
+<p><strong>The domestic manufacturer pays nothing on its normal return.</strong> Its allowance removes the 18 that is the normal return on its equity, and its local assets and payroll eliminate Layer Three. It pays 50 percent of its rent of 72, which is more in total than today (36 against 23): the design taxes rent wherever it is, including in domestic firms. What it no longer taxes is the normal return, on which this firm paid 4.5 under the current system.</p>
+<p><strong>The cap protects the low-margin distributor.</strong> Without the cap it would pay 85 under Layer One plus 195 under Layer Three, more than its whole profit of 200. With the cap, the destination layers add nothing beyond Layer One, because its global rent margin is only 1.7 percent.</p>
+<p><strong>The scale-driven manufacturer pays less than today.</strong> The carve-out applies the conventional rate to its rent, and the allowance removes its normal return, so its tax falls from 20 to 14.</p>
+</section>
+<section id="sec-revenue" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Revenue: an order of magnitude</h1>
+<p>The first draft estimated revenue of 5.5–11.5 percent of GDP from unsourced inputs and applied the destination rate to gross revenue. A transparent calculation gives smaller numbers; the inputs are in Appendix D, and each is either sourced or labelled as an assumption.</p>
+<div id="tbl-revenue" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-revenue-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Revenue, percent of GDP, order of magnitude. Land: land value of 1.6 (Germany) to 3.1 (France) times GDP in 2023; tax at 2.5 percent; 30–50 percent of household land above the allowance (assumption); business land fully taxed; values after the fall in land prices the tax causes. Corporate: base inferred from OECD average revenue at a 25 percent rate; 50–70 percent of it is rent (assumption); profit shifting from <span class="citation" data-cites="BeerdeMooijLiu2020">Beer et al. (<a href="#ref-BeerdeMooijLiu2020" role="doc-biblioref">2020</a>)</span>; recapture from <span class="citation" data-cites="TorslovWierZucman2023">Tørsløv et al. (<a href="#ref-TorslovWierZucman2023" role="doc-biblioref">2023</a>)</span>. Sources: <span class="citation" data-cites="Eurostat2025Land">Eurostat (<a href="#ref-Eurostat2025Land" role="doc-biblioref">2025</a>)</span>; <span class="citation" data-cites="OECDRevStats2025">OECD (<a href="#ref-OECDRevStats2025" role="doc-biblioref">2025</a>)</span>; author’s calculation, <code>2.Source/rent_tax_calcs.py</code>.
+</figcaption>
+<div aria-describedby="tbl-revenue-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 36%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Instrument</th>
+<th style="text-align: right;">Low</th>
+<th style="text-align: right;">High</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Land value tax above the household allowance</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">2.7</td>
+</tr>
+<tr class="even">
+<td>Layer One alone, after profit shifting</td>
+<td style="text-align: right;">2.3</td>
+<td style="text-align: right;">4.3</td>
+</tr>
+<tr class="odd">
+<td>Layers One to Three, if the destination layers recapture shifted rent</td>
+<td style="text-align: right;">4.5</td>
+<td style="text-align: right;">6.3</td>
+</tr>
+<tr class="even">
+<td><em>Memo:</em> corporate income tax today, OECD average, 2023</td>
+<td style="text-align: right;">3.75</td>
+<td style="text-align: right;">3.75</td>
+</tr>
+<tr class="odd">
+<td><em>Memo:</em> recurrent property taxes today, OECD average, 2023</td>
+<td style="text-align: right;">0.95</td>
+<td style="text-align: right;">0.95</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>The land tax raises one to three times what recurrent property taxes raise today.</strong> The estimate allows for capitalization: a tax of 2.5 percent a year on land whose rent yields 4 percent lowers land values by 38 percent, so revenue computed on today’s values would overstate the yield by about 60 percent. If the land tax replaced existing recurrent property taxes, the net gain would be correspondingly smaller.</p>
+<p><strong>A high rate at origin does not pay for itself; the destination layers are what make it pay.</strong> Layer One alone, at 50 percent on rent, raises 2.3–4.3 percent of GDP after profit shifting, against 3.75 percent raised by corporate income tax today. Only if the destination layers recover the rent now shifted abroad, and the extra shifting the higher rate would cause, does corporate revenue rise to 4.5–6.3 percent of GDP. The two layers are not optional extras; without them the design is a rate rise on the declared base that the declared base would partly escape.</p>
+</section>
+<section id="sec-law" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Free movement and the law</h1>
+<p><strong>The land tax raises no free-movement issue.</strong> Land cannot move, the tax applies equally to resident and non-resident owners, and the allowance is per household.</p>
+<p><strong>Layer One is a corporate tax of a familiar kind.</strong> It applies to all firms by their profit and equity, without regard to residence; Belgium and Italy ran ACEs for over a decade. The high rate on large groups is a size-based distinction, which brings it within the Court of Justice’s case law on turnover.</p>
+<p><strong>The Court of Justice has upheld steeply progressive taxes on turnover that fall mainly on foreign-owned firms.</strong> In <em>Vodafone Magyarország</em> and <em>Tesco-Global Áruházak</em> (3 March 2020), the Grand Chamber held that Hungary’s special taxes on the turnover of telecommunications and retail firms were compatible with freedom of establishment, although the higher bands were paid predominantly by firms owned in other member states: turnover is a neutral criterion and a relevant indicator of ability to pay, and the incidence reflected the economic reality of the markets <span class="citation" data-cites="CJEU2020Vodafone">(<a href="#ref-CJEU2020Vodafone" role="doc-biblioref">Court of Justice of the European Union 2020</a>)</span>. The Court did not decide the state-aid question in those cases, finding it inadmissible; in <em>Commission v Poland</em> (16 March 2021) it held that a progressive retail tax was not state aid, because EU law does not preclude progressive taxation based on turnover <span class="citation" data-cites="CJEU2021Poland">(<a href="#ref-CJEU2021Poland" role="doc-biblioref">Court of Justice of the European Union 2021</a>)</span>. These rulings support the size threshold and the sales-based Layer Three.</p>
+<p><strong>The presence credits carry a legal risk the Hungarian cases did not settle.</strong> A remote seller earns no credit for its payroll abroad, so Layer Three treats a firm that serves the market from another member state less favorably than one that establishes locally. That could be argued to restrict the freedom to provide services. The defense is that the credits measure local activity, not nationality, and that the tax is a tax on sales not matched by local activity; but it is a defense, not a settled rule.</p>
+<p><strong>Exit taxes are permitted, with deferral.</strong> A member state may tax unrealized gains when a company moves its seat abroad, but may not insist on immediate payment <span class="citation" data-cites="CJEU2011NationalGrid">(<a href="#ref-CJEU2011NationalGrid" role="doc-biblioref">Court of Justice of the European Union 2011</a>)</span>. The design does not rely on exit taxes, but a country adopting it may want one as a backstop against companies moving their seat to escape Layer One.</p>
+<p><strong>Trade rules are the harder constraint.</strong> Many argue that a destination-based cash-flow tax is inconsistent with WTO rules, because it relieves the cost of domestic labor but not the labor embodied in imports; the economically equivalent combination of a VAT and a payroll subsidy raises no such objection <span class="citation" data-cites="ADKV2017">(<a href="#ref-ADKV2017" role="doc-biblioref">A. Auerbach et al. 2017</a>)</span>. Layer Three’s payroll credit has the same feature, and so does Layer Two’s deduction for local costs. Two design choices reduce the risk: giving no rebate on exports, and confining Layer Two to services, which fall outside the GATT’s rules on goods, although the services agreement has national-treatment rules of its own. A government that wants certainty can restate Layer Three as a sales charge plus a separate payroll subsidy. France’s digital services tax drew objections from the United States and a deferral of collection <span class="citation" data-cites="France2019DST">(<a href="#ref-France2019DST" role="doc-biblioref">French Republic 2019</a>)</span>; a design that taxes domestic and foreign firms alike by sales and presence is easier to defend than one aimed at a list of foreign companies. Tax treaties raise a further question: if Layer Two is treated as a tax on income, treaty partners need not credit it, and some treaty provisions may be breached <span class="citation" data-cites="ADKV2017">(<a href="#ref-ADKV2017" role="doc-biblioref">A. Auerbach et al. 2017</a>)</span>.</p>
+</section>
+<section id="sec-objections" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Objections and limits</h1>
+<p><strong>“Corporate taxes fall on workers.”</strong> In Germany, workers bear about half of the local business tax <span class="citation" data-cites="FuestPeichlSiegloch2018">(<a href="#ref-FuestPeichlSiegloch2018" role="doc-biblioref">Fuest et al. 2018</a>)</span>. That tax falls on the full return, including the normal return; a tax on rent, with the normal return exempt (Proposition 2), does not reduce the capital stock and so should not reduce wages through that channel. Where firms share rent with workers, some of a rent tax will still fall on wages.</p>
+<p><strong>“A sales tax falls on consumers.”</strong> Pass-through of standard-rate VAT changes into prices is about complete <span class="citation" data-cites="Benedek2020">(<a href="#ref-Benedek2020" role="doc-biblioref">Benedek et al. 2020</a>)</span>. The first draft argued that firms with market power pass through less, so the tax falls on rent; that is not a general result, because under imperfect competition pass-through depends on the curvature of demand and can exceed 100 percent <span class="citation" data-cites="WeylFabinger2013">(<a href="#ref-WeylFabinger2013" role="doc-biblioref">Weyl and Fabinger 2013</a>)</span>. The cap limits Layer Three to firms with global rent, and its rate is low, but some of it will reach consumers.</p>
+<p><strong>“Unilateral adoption invites tax planning.”</strong> A unilateral ACE draws intra-group lending into the country to claim the allowance <span class="citation" data-cites="HebousRuf2017">(<a href="#ref-HebousRuf2017" role="doc-biblioref">Hebous and Ruf 2017</a>)</span>, and higher rates make a unilateral ACE less attractive than a coordinated one <span class="citation" data-cites="deMooijDevereux2011">(<a href="#ref-deMooijDevereux2011" role="doc-biblioref">Mooij and Devereux 2011</a>)</span>. The allowance should therefore apply to equity net of holdings in related companies, and the case for coordination within the European Union is strong.</p>
+<p><strong>“Valuing land is hard.”</strong> Many recurrent property taxes rest on values decades out of date <span class="citation" data-cites="OECD2022Housing">(<a href="#ref-OECD2022Housing" role="doc-biblioref">OECD 2022</a>)</span>. A land tax needs regular revaluation of sites, which is easier than valuing buildings, because land values can be inferred from sales of vacant plots and from the residual after subtracting rebuilding cost; it is still the main administrative investment the reform requires.</p>
+<p><strong>“The carve-out will be captured.”</strong> Every sector will claim to be scale-driven. The list must be short, set in law in advance and reviewed against evidence on the number of viable firms worldwide.</p>
+<p><strong>“The estimates are illustrative.”</strong> They are. The worked firms are stylized; the revenue figures rest on two assumptions, the share of the declared base that is rent and the share of household land above the allowance, which Appendix D states. Country calibration with firm-level and cadastral data is the next step.</p>
+</section>
+<section id="sec-policy" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> What a finance ministry should do</h1>
+<p><strong>Replace recurrent property taxes with a land value tax above a household allowance.</strong> Value sites regularly, tax business land without an allowance, phase the rate in to spread the capitalization loss, and let asset-rich, cash-poor owners defer with interest.</p>
+<p><strong>Give every firm an allowance for corporate equity, and raise the rate on rent for large groups.</strong> Measure equity on the tax basis, carry losses forward with interest, net out equity invested in related companies, and phase the higher rate in above the threshold.</p>
+<p><strong>Add the destination layers with the cap.</strong> Confine Layer Two to designated sectors, credit Layer One against it, and give no export rebate. Apply Layer Three to all groups above the threshold. Cap both by the Layer One rate times sales-apportioned global rent.</p>
+<p><strong>Start where the law is clearest.</strong> In the European Union, the Court’s rulings on turnover taxes give the size threshold and the sales base a sound footing; the payroll credit and the sectoral border adjustment need careful drafting, or restatement as a sales charge with a separate payroll subsidy.</p>
+<p><strong>Coordinate where possible.</strong> Every layer works unilaterally, but each works better if neighbors adopt it: a common ACE reduces shifting, and common destination layers reduce the incentive to serve a market from next door.</p>
+</section>
+<section id="sec-conclusion" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Conclusion</h1>
+<p>Free movement of capital and people limits the rates a country can charge on income that can move, but not on rent that cannot. Land, and the market power of large firms over a country’s customers, are rent that the country can reach. A land value tax above a household allowance, a high rate on profit above a normal return, and destination layers that follow the customer, capped by the rent earned from that customer, together tax rent at about half and the normal return at zero. The design’s weak point is rent booked abroad by firms outside the designated sectors, which Layer Three reaches only lightly. The next step is calibration to one country’s firm-level and land data, and the legal drafting of the presence credits.</p>
+</section>
+<section id="downloads" class="level1 unnumbered">
+<h1 class="unnumbered">Downloads</h1>
+<p><a href="../../../papers/Brief-RentTax.docx">Policy brief (docx)</a> · <a href="../../../papers/RentTax.docx">Working paper (docx)</a></p>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Arnold2011" class="csl-entry" role="listitem">
+Arnold, Jens Matthias, Bert Brys, Christopher Heady, Åsa Johansson, Cyrille Schwellnus, and Laura Vartia. 2011. <span>“Tax Policy for Economic Recovery and Growth.”</span> <em>Economic Journal</em> 121 (550): F59–80. <a href="https://doi.org/10.1111/j.1468-0297.2010.02415.x">https://doi.org/10.1111/j.1468-0297.2010.02415.x</a>.
+</div>
+<div id="ref-ArnottStiglitz1979" class="csl-entry" role="listitem">
+Arnott, Richard J., and Joseph E. Stiglitz. 1979. <span>“Aggregate Land Rents, Expenditure on Public Goods, and Optimal City Size.”</span> <em>Quarterly Journal of Economics</em> 93 (4): 471–500. <a href="https://doi.org/10.2307/1884466">https://doi.org/10.2307/1884466</a>.
+</div>
+<div id="ref-AuerbachDevereux2018" class="csl-entry" role="listitem">
+Auerbach, Alan J., and Michael P. Devereux. 2018. <span>“Cash-Flow Taxes in an International Setting.”</span> <em>American Economic Journal: Economic Policy</em> 10 (3): 69–94. <a href="https://doi.org/10.1257/pol.20170108">https://doi.org/10.1257/pol.20170108</a>.
+</div>
+<div id="ref-ADKV2017" class="csl-entry" role="listitem">
+Auerbach, Alan, Michael P. Devereux, Michael Keen, and John Vella. 2017. <em>Destination-Based Cash Flow Taxation</em>. Working Paper 17/01. Oxford University Centre for Business Taxation.
+</div>
+<div id="ref-Autor2020" class="csl-entry" role="listitem">
+Autor, David, David Dorn, Lawrence F. Katz, Christina Patterson, and John Van Reenen. 2020. <span>“The Fall of the Labor Share and the Rise of Superstar Firms.”</span> <em>Quarterly Journal of Economics</em> 135 (2): 645–709. <a href="https://doi.org/10.1093/qje/qjaa004">https://doi.org/10.1093/qje/qjaa004</a>.
+</div>
+<div id="ref-BanzhafLavery2010" class="csl-entry" role="listitem">
+Banzhaf, H. Spencer, and Nathan Lavery. 2010. <span>“Can the Land Tax Help Curb Urban Sprawl? <span>Evidence</span> from Growth Patterns in <span>Pennsylvania</span>.”</span> <em>Journal of Urban Economics</em> 67 (2): 169–79. <a href="https://doi.org/10.1016/j.jue.2009.08.005">https://doi.org/10.1016/j.jue.2009.08.005</a>.
+</div>
+<div id="ref-Barkai2020" class="csl-entry" role="listitem">
+Barkai, Simcha. 2020. <span>“Declining Labor and Capital Shares.”</span> <em>Journal of Finance</em> 75 (5): 2421–63. <a href="https://doi.org/10.1111/jofi.12909">https://doi.org/10.1111/jofi.12909</a>.
+</div>
+<div id="ref-Basu2019" class="csl-entry" role="listitem">
+Basu, Susanto. 2019. <span>“Are Price-Cost Markups Rising in the <span>United States</span>? <span>A</span> Discussion of the Evidence.”</span> <em>Journal of Economic Perspectives</em> 33 (3): 3–22. <a href="https://doi.org/10.1257/jep.33.3.3">https://doi.org/10.1257/jep.33.3.3</a>.
+</div>
+<div id="ref-BeerdeMooijLiu2020" class="csl-entry" role="listitem">
+Beer, Sebastian, Ruud de Mooij, and Li Liu. 2020. <span>“International Corporate Tax Avoidance: A Review of the Channels, Magnitudes, and Blind Spots.”</span> <em>Journal of Economic Surveys</em> 34 (3): 660–88. <a href="https://doi.org/10.1111/joes.12305">https://doi.org/10.1111/joes.12305</a>.
+</div>
+<div id="ref-Benedek2020" class="csl-entry" role="listitem">
+Benedek, Dora, Ruud A. de Mooij, Michael Keen, and Philippe Wingender. 2020. <span>“Varieties of <span>VAT</span> Pass Through.”</span> <em>International Tax and Public Finance</em> 27 (4): 890–930. <a href="https://doi.org/10.1007/s10797-019-09566-5">https://doi.org/10.1007/s10797-019-09566-5</a>.
+</div>
+<div id="ref-BoadwayBruce1984" class="csl-entry" role="listitem">
+Boadway, Robin, and Neil Bruce. 1984. <span>“A General Proposition on the Design of a Neutral Business Tax.”</span> <em>Journal of Public Economics</em> 24 (2): 231–39. <a href="https://doi.org/10.1016/0047-2727(84)90026-4">https://doi.org/10.1016/0047-2727(84)90026-4</a>.
+</div>
+<div id="ref-BoadwayKeen2010" class="csl-entry" role="listitem">
+Boadway, Robin, and Michael Keen. 2010. <span>“Theoretical Perspectives on Resource Tax Design.”</span> In <em>The Taxation of Petroleum and Minerals: Principles, Problems and Practice</em>, edited by Philip Daniel, Michael Keen, and Charles McPherson. Routledge.
+</div>
+<div id="ref-BondDevereux2003" class="csl-entry" role="listitem">
+Bond, Stephen R., and Michael P. Devereux. 2003. <span>“Generalised <span>R</span>-Based and <span>S</span>-Based Taxes Under Uncertainty.”</span> <em>Journal of Public Economics</em> 87 (5–6): 1291–311. <a href="https://doi.org/10.1016/S0047-2727(01)00161-X">https://doi.org/10.1016/S0047-2727(01)00161-X</a>.
+</div>
+<div id="ref-Brown1948" class="csl-entry" role="listitem">
+Brown, E. Cary. 1948. <span>“Business-Income Taxation and Investment Incentives.”</span> In <em>Income, Employment and Public Policy: Essays in Honor of <span>Alvin H. Hansen</span></em>, <span class="nocase">edited by Lloyd A. Metzler et al.</span> W. W. Norton.
+</div>
+<div id="ref-EEC1988" class="csl-entry" role="listitem">
+Council of the European Communities. 1988. <em>Council Directive 88/361/<span>EEC</span> of 24 June 1988 for the Implementation of Article 67 of the Treaty</em>. Official Journal L 178, 8 July 1988.
+</div>
+<div id="ref-CJEU2011NationalGrid" class="csl-entry" role="listitem">
+Court of Justice of the European Union. 2011. <em>Judgment of 29 November 2011, <span>National Grid Indus</span> (<span>C</span>-371/10)</em>.
+</div>
+<div id="ref-CJEU2020Vodafone" class="csl-entry" role="listitem">
+Court of Justice of the European Union. 2020. <em>Judgments of 3 March 2020, Vodafone Magyarorsz<span>á</span>g (<span>C</span>-75/18) and Tesco-Global <span>Á</span>ruh<span>á</span>zak (<span>C</span>-323/18), Grand Chamber</em>. Press Release No 20/20.
+</div>
+<div id="ref-CJEU2021Poland" class="csl-entry" role="listitem">
+Court of Justice of the European Union. 2021. <em>Judgment of 16 March 2021, <span class="nocase">Commission v Poland</span> (<span>C</span>-562/19 <span>P</span>), Grand Chamber</em>.
+</div>
+<div id="ref-DeLoeckerEeckhoutUnger2020" class="csl-entry" role="listitem">
+De Loecker, Jan, Jan Eeckhout, and Gabriel Unger. 2020. <span>“The Rise of Market Power and the Macroeconomic Implications.”</span> <em>Quarterly Journal of Economics</em> 135 (2): 561–644. <a href="https://doi.org/10.1093/qje/qjz041">https://doi.org/10.1093/qje/qjz041</a>.
+</div>
+<div id="ref-Demsetz1973" class="csl-entry" role="listitem">
+Demsetz, Harold. 1973. <span>“Industry Structure, Market Rivalry, and Public Policy.”</span> <em>Journal of Law and Economics</em> 16 (1): 1–9. <a href="https://doi.org/10.1086/466752">https://doi.org/10.1086/466752</a>.
+</div>
+<div id="ref-Devereux2021" class="csl-entry" role="listitem">
+Devereux, Michael P., Alan J. Auerbach, Michael Keen, Paul Oosterhuis, Wolfgang Schön, and John Vella. 2021. <em>Taxing Profit in a Global Economy</em>. Oxford University Press.
+</div>
+<div id="ref-DevereuxGriffith2003" class="csl-entry" role="listitem">
+Devereux, Michael P., and Rachel Griffith. 2003. <span>“Evaluating Tax Policy for Location Decisions.”</span> <em>International Tax and Public Finance</em> 10 (2): 107–26. <a href="https://doi.org/10.1023/A:1023364421914">https://doi.org/10.1023/A:1023364421914</a>.
+</div>
+<div id="ref-Dwyer2014" class="csl-entry" role="listitem">
+Dwyer, Terence. 2014. <span>“Taxation: The Lost History.”</span> <em>American Journal of Economics and Sociology</em> 73 (4): 664–988. <a href="https://doi.org/10.1111/ajes.12082_3">https://doi.org/10.1111/ajes.12082_3</a>.
+</div>
+<div id="ref-Eurostat2025Land" class="csl-entry" role="listitem">
+Eurostat. 2025. <em>Balance Sheets for Non-Financial Assets (Nama_10_nfa_bs) and <span>GDP</span> (Nama_10_gdp)</em>. Eurostat database.
+</div>
+<div id="ref-Feldstein1977" class="csl-entry" role="listitem">
+Feldstein, Martin S. 1977. <span>“The Surprising Incidence of a Tax on Pure Rent: A New Answer to an Old Question.”</span> <em>Journal of Political Economy</em> 85 (2): 349–60. <a href="https://doi.org/10.1086/260566">https://doi.org/10.1086/260566</a>.
+</div>
+<div id="ref-France2019DST" class="csl-entry" role="listitem">
+French Republic. 2019. <em>Loi No 2019-759 Du 24 Juillet 2019 Portant Cr<span>é</span>ation d’une Taxe Sur Les Services Num<span>é</span>riques</em>.
+</div>
+<div id="ref-FuestPeichlSiegloch2018" class="csl-entry" role="listitem">
+Fuest, Clemens, Andreas Peichl, and Sebastian Siegloch. 2018. <span>“Do Higher Corporate Taxes Reduce Wages? <span>Micro</span> Evidence from <span>Germany</span>.”</span> <em>American Economic Review</em> 108 (2): 393–418. <a href="https://doi.org/10.1257/aer.20130570">https://doi.org/10.1257/aer.20130570</a>.
+</div>
+<div id="ref-GarnautCluniesRoss1975" class="csl-entry" role="listitem">
+Garnaut, Ross, and Anthony Clunies Ross. 1975. <span>“Uncertainty, Risk Aversion and the Taxing of Natural Resource Projects.”</span> <em>Economic Journal</em> 85 (338): 272–87. <a href="https://doi.org/10.2307/2230992">https://doi.org/10.2307/2230992</a>.
+</div>
+<div id="ref-George1879" class="csl-entry" role="listitem">
+George, Henry. 1879. <em>Progress and Poverty</em>. W. M. Hinton.
+</div>
+<div id="ref-HebousRuf2017" class="csl-entry" role="listitem">
+Hebous, Shafik, and Martin Ruf. 2017. <span>“Evaluating the Effects of <span>ACE</span> Systems on Multinational Debt Financing and Investment.”</span> <em>Journal of Public Economics</em> 156: 131–49. <a href="https://doi.org/10.1016/j.jpubeco.2017.02.011">https://doi.org/10.1016/j.jpubeco.2017.02.011</a>.
+</div>
+<div id="ref-IFS1991" class="csl-entry" role="listitem">
+IFS Capital Taxes Group. 1991. <em>Equity for Companies: A Corporation Tax for the 1990s</em>. IFS Commentary No. 26. Institute for Fiscal Studies.
+</div>
+<div id="ref-Belgium2022NID" class="csl-entry" role="listitem">
+Kingdom of Belgium. 2022. <em>Program Law of 26 December 2022 (Abolition of the Notional Interest Deduction)</em>. Belgian Official Gazette, 30 December 2022.
+</div>
+<div id="ref-Klemm2007" class="csl-entry" role="listitem">
+Klemm, Alexander. 2007. <span>“Allowances for Corporate Equity in Practice.”</span> <em>CESifo Economic Studies</em> 53 (2): 229–62. <a href="https://doi.org/10.1093/cesifo/ifm007">https://doi.org/10.1093/cesifo/ifm007</a>.
+</div>
+<div id="ref-Meade1978" class="csl-entry" role="listitem">
+Meade Committee. 1978. <em>The Structure and Reform of Direct Taxation: Report of a Committee Chaired by Professor <span>J. E. Meade</span> for the Institute for Fiscal Studies</em>. George Allen; Unwin.
+</div>
+<div id="ref-Mill1848" class="csl-entry" role="listitem">
+Mill, John Stuart. 1848. <em>Principles of Political Economy, with Some of Their Applications to Social Philosophy</em>. John W. Parker.
+</div>
+<div id="ref-Mirrlees2011" class="csl-entry" role="listitem">
+Mirrlees, James, Stuart Adam, Timothy Besley, et al. 2011. <em>Tax by Design: The <span>Mirrlees</span> Review</em>. Oxford University Press for the Institute for Fiscal Studies.
+</div>
+<div id="ref-deMooijDevereux2011" class="csl-entry" role="listitem">
+Mooij, Ruud A. de, and Michael P. Devereux. 2011. <span>“An Applied Analysis of <span>ACE</span> and <span>CBIT</span> Reforms in the <span>EU</span>.”</span> <em>International Tax and Public Finance</em> 18 (1): 93–120. <a href="https://doi.org/10.1007/s10797-010-9138-8">https://doi.org/10.1007/s10797-010-9138-8</a>.
+</div>
+<div id="ref-Norregaard2013" class="csl-entry" role="listitem">
+Norregaard, John. 2013. <em>Taxing Immovable Property: Revenue Potential and Implementation Challenges</em>. IMF Working Paper 13/129. International Monetary Fund.
+</div>
+<div id="ref-Norway2025Petroleum" class="csl-entry" role="listitem">
+Norwegian Ministry of Energy and Norwegian Offshore Directorate. 2025. <em>The Petroleum Tax System</em>. Norwegianpetroleum.no.
+</div>
+<div id="ref-OatesSchwab1997" class="csl-entry" role="listitem">
+Oates, Wallace E., and Robert M. Schwab. 1997. <span>“The Impact of Urban Land Taxation: The <span>Pittsburgh</span> Experience.”</span> <em>National Tax Journal</em> 50 (1): 1–21. <a href="https://doi.org/10.1086/NTJ41789240">https://doi.org/10.1086/NTJ41789240</a>.
+</div>
+<div id="ref-ObstfeldTaylor2004" class="csl-entry" role="listitem">
+Obstfeld, Maurice, and Alan M. Taylor. 2004. <em>Global Capital Markets: Integration, Crisis, and Growth</em>. Cambridge University Press.
+</div>
+<div id="ref-OECD2018Wealth" class="csl-entry" role="listitem">
+OECD. 2018. <em>The Role and Design of Net Wealth Taxes in the <span>OECD</span></em>. OECD Tax Policy Studies. OECD Publishing. <a href="https://doi.org/10.1787/9789264290303-en">https://doi.org/10.1787/9789264290303-en</a>.
+</div>
+<div id="ref-OECD2022Housing" class="csl-entry" role="listitem">
+OECD. 2022. <em>Housing Taxation in <span>OECD</span> Countries</em>. OECD Tax Policy Studies No. 29. OECD Publishing. <a href="https://doi.org/10.1787/03dfe007-en">https://doi.org/10.1787/03dfe007-en</a>.
+</div>
+<div id="ref-OECDRevStats2025" class="csl-entry" role="listitem">
+OECD. 2025. <em>Revenue Statistics: <span>OECD</span> Countries, Comparative Tables</em>. OECD Data Explorer, dataset DSD_REV_COMP_OECD@DF_RSOECD.
+</div>
+<div id="ref-OECD2021TwoPillar" class="csl-entry" role="listitem">
+OECD/G20 Inclusive Framework on BEPS. 2021. <em>Statement on a Two-Pillar Solution to Address the Tax Challenges Arising from the Digitalisation of the Economy</em>. OECD, Paris, 8 October 2021.
+</div>
+<div id="ref-Princen2012" class="csl-entry" role="listitem">
+Princen, Savina. 2012. <em>Taxes Do Affect Corporate Financing Decisions: The Case of <span>Belgian</span> <span>ACE</span></em>. CESifo Working Paper No. 3713. CESifo.
+</div>
+<div id="ref-Italy2023ACE" class="csl-entry" role="listitem">
+Republic of Italy. 2023. <em>Legislative Decree of 30 December 2023, No. 216, Article 5 (Repeal of the Allowance for Economic Growth, <span>ACE</span>)</em>.
+</div>
+<div id="ref-Ricardo1817" class="csl-entry" role="listitem">
+Ricardo, David. 1817. <em>On the Principles of Political Economy and Taxation</em>. John Murray.
+</div>
+<div id="ref-SaezZucman2016" class="csl-entry" role="listitem">
+Saez, Emmanuel, and Gabriel Zucman. 2016. <span>“Wealth Inequality in the <span>United States</span> Since 1913: Evidence from Capitalized Income Tax Data.”</span> <em>Quarterly Journal of Economics</em> 131 (2): 519–78. <a href="https://doi.org/10.1093/qje/qjw004">https://doi.org/10.1093/qje/qjw004</a>.
+</div>
+<div id="ref-StrettonStyles2020" class="csl-entry" role="listitem">
+Stretton, Stephen J., and Gordon Styles. 2020. <span>“Plucked! <span>A</span> Guide to a Fair, Simple, Efficient and Politically Feasible Tax and Benefits System.”</span> Unpublished manuscript.
+</div>
+<div id="ref-TorslovWierZucman2023" class="csl-entry" role="listitem">
+Tørsløv, Thomas, Ludvig Wier, and Gabriel Zucman. 2023. <span>“The Missing Profits of Nations.”</span> <em>Review of Economic Studies</em> 90 (3): 1499–534. <a href="https://doi.org/10.1093/restud/rdac049">https://doi.org/10.1093/restud/rdac049</a>.
+</div>
+<div id="ref-UK2020DST" class="csl-entry" role="listitem">
+United Kingdom. 2020. <em>Finance Act 2020, Part 2: Digital Services Tax</em>.
+</div>
+<div id="ref-WeylFabinger2013" class="csl-entry" role="listitem">
+Weyl, E. Glen, and Michal Fabinger. 2013. <span>“Pass-Through as an Economic Tool: Principles of Incidence Under Imperfect Competition.”</span> <em>Journal of Political Economy</em> 121 (3): 528–83. <a href="https://doi.org/10.1086/670401">https://doi.org/10.1086/670401</a>.
+</div>
+</div>
+</section>
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="sec-app-ace" class="level1 appendix" data-number="12"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">12</span> Appendix A: Layer One mechanics</h2><div class="quarto-appendix-contents">
+
+<p><strong>Proof of Proposition 2.</strong> Consider a marginal project financed by equity: an outlay <span class="math inline">\(I\)</span> at date 0 that yields a stream of returns whose present value, discounted at the firm’s required return <span class="math inline">\(r\)</span>, equals <span class="math inline">\(I\)</span>. Tax depreciation allowances <span class="math inline">\(D_t\)</span> sum to <span class="math inline">\(I\)</span>, and the tax written-down value at the start of period <span class="math inline">\(t\)</span> is <span class="math inline">\(V_t = I - \sum_{s&lt;t} D_s\)</span>. Under the ACE the firm deducts each period <span class="math inline">\(D_t + r_A V_t\)</span>. With <span class="math inline">\(r_A = r\)</span>, the present value of the deductions is <span id="eq-pv"><span class="math display">\[
+\sum_t \frac{D_t + r V_t}{(1+r)^{t+1}} = I,
+\tag{6}\]</span></span> because <span class="math inline">\(V_{t+1} = V_t - D_t\)</span> and the sum telescopes: each term equals <span class="math inline">\(V_t/(1+r)^{t} - V_{t+1}/(1+r)^{t+1}\)</span>, and <span class="math inline">\(V_0 = I\)</span>. The present value of the tax base is therefore the present value of the returns less <span class="math inline">\(I\)</span>, which is zero for the marginal project, so the tax on it is zero for any rate. The result needs the deductions to be worth their face value, which requires losses to be refunded or carried forward at interest; and it needs equity measured on the tax basis, not the book basis, so that the allowance tracks <span class="math inline">\(V_t\)</span> <span class="citation" data-cites="BoadwayBruce1984 IFS1991">(<a href="#ref-BoadwayBruce1984" role="doc-biblioref">Boadway and Bruce 1984</a>; <a href="#ref-IFS1991" role="doc-biblioref">IFS Capital Taxes Group 1991</a>)</span>. Under uncertainty, with certain allowances, the appropriate discount rate for them is the risk-free rate <span class="citation" data-cites="BondDevereux2003">(<a href="#ref-BondDevereux2003" role="doc-biblioref">Bond and Devereux 2003</a>)</span>.</p>
+<p><strong>Debt.</strong> Interest remains deductible, and the allowance gives equity the same treatment, removing the bias toward debt. The Belgian and German evidence confirms that leverage falls <span class="citation" data-cites="Princen2012 HebousRuf2017">(<a href="#ref-Princen2012" role="doc-biblioref">Princen 2012</a>; <a href="#ref-HebousRuf2017" role="doc-biblioref">Hebous and Ruf 2017</a>)</span>.</p>
+<p><strong>Practice.</strong> Italy set a statutory allowance rate and applied it only to increases in equity after 2010, which reduced the cost of the reform <span class="citation" data-cites="Italy2023ACE">(<a href="#ref-Italy2023ACE" role="doc-biblioref">Republic of Italy 2023</a>)</span>. An incremental base is a reasonable transition, because it gives the full incentive at the margin while limiting the revenue cost on existing equity.</p>
+</div></section><section id="sec-app-border" class="level1 appendix" data-number="13"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">13</span> Appendix B: Border arithmetic for Layer Two</h2><div class="quarto-appendix-contents">
+
+<p>Let <span class="math inline">\(t\)</span> be Layer Two’s rate on cash flow, which is tax-inclusive. A firm in a designated sector that buys an input locally for one euro deducts it and saves <span class="math inline">\(t\)</span>; if it imports the same input, or buys the service from a related party abroad, it saves nothing. The after-tax cost is <span class="math inline">\(1-t\)</span> for the local input and <span class="math inline">\(1\)</span> for the imported one, so the imported input bears an implicit tax of <span class="math inline">\(t/(1-t)\)</span> on its tax-exclusive cost. Likewise a euro of exports is untaxed while a euro of local sales keeps only <span class="math inline">\(1-t\)</span>, an implicit export subsidy of <span class="math inline">\(t/(1-t)\)</span> relative to local sales.</p>
+<div id="tbl-border" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-border-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Implicit border charge of a sectoral destination-based cash-flow tax. Source: author’s calculation.
+</figcaption>
+<div aria-describedby="tbl-border-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Rate <span class="math inline">\(t\)</span></th>
+<th style="text-align: right;">Implicit tax on imported inputs, <span class="math inline">\(t/(1-t)\)</span></th>
+<th style="text-align: right;">First draft’s figure, <span class="math inline">\(t/(1+t)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">22%</td>
+<td style="text-align: right;">28%</td>
+<td style="text-align: right;">18%</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">33%</td>
+<td style="text-align: right;">20%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">50%</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">33%</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">60%</td>
+<td style="text-align: right;">150%</td>
+<td style="text-align: right;">38%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>For an economy-wide tax, the exchange rate appreciates to offset these charges and leave trade unchanged <span class="citation" data-cites="ADKV2017">(<a href="#ref-ADKV2017" role="doc-biblioref">A. Auerbach et al. 2017</a>)</span>. A tax confined to a few sectors is too small to move the exchange rate, so within those sectors the charges are real. The design keeps them small by keeping the rate moderate and the scope narrow. The first draft’s alternative, residual profit allocation by income, would tax only residual profit at destination and avoid this distortion, but requires a definition of routine profit in every sector <span class="citation" data-cites="Devereux2021">(<a href="#ref-Devereux2021" role="doc-biblioref">Devereux et al. 2021</a>)</span>; the cap in <a href="#eq-total" class="quarto-xref">equation&nbsp;5</a> borrows its logic without its administrative burden.</p>
+</div></section><section id="sec-app-presence" class="level1 appendix" data-number="14"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">14</span> Appendix C: Layer Three calibration</h2><div class="quarto-appendix-contents">
+
+<p>Let <span class="math inline">\(k = K/S\)</span> be local tangible assets (excluding land) per euro of local sales and <span class="math inline">\(w = W/S\)</span> local payroll per euro of local sales. Layer Three is zero when <span id="eq-breakeven"><span class="math display">\[
+d_K k + d_W w \geq \tau_s.
+\tag{7}\]</span></span> With <span class="math inline">\(\tau_s = 4\)</span> percent, <span class="math inline">\(d_K = 8\)</span> percent and <span class="math inline">\(d_W = 25\)</span> percent, payroll of 16 percent of sales, or tangible assets of 50 percent of sales, is enough on its own. A firm with <span class="math inline">\(k = 0.5\)</span> and <span class="math inline">\(w = 0.3\)</span>, typical of manufacturing, has credits worth 11.5 percent of sales, almost three times the charge; the first draft called this an 11.5 percent “break-even sales rate”, which is the same arithmetic. The firms that pay are those with local sales large relative to local activity: a remote seller with <span class="math inline">\(k = 0.05\)</span> and <span class="math inline">\(w = 0.10\)</span> pays 1.1 percent of sales. For such firms, each euro of local assets reduces tax by 8 cents a year and each euro of local payroll by 25 cents, until the liability reaches zero. The cap (<a href="#eq-total" class="quarto-xref">equation&nbsp;5</a>) then protects firms whose global margins are thin.</p>
+</div></section><section id="sec-app-revenue" class="level1 appendix" data-number="15"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">15</span> Appendix D: Revenue arithmetic</h2><div class="quarto-appendix-contents">
+
+<p><em>Land.</em> Land values in 2023 were 1.63 times GDP in Germany and 3.06 times in France (2.13 in the Netherlands and Austria); households held 57–76 percent and non-financial corporations 20–28 percent <span class="citation" data-cites="Eurostat2025Land">(<a href="#ref-Eurostat2025Land" role="doc-biblioref">Eurostat 2025</a>)</span>. The calculation taxes business land in full and 30–50 percent of household land, the share assumed to lie above the allowance; government land is excluded. A tax at rate <span class="math inline">\(\tau_L\)</span> on land whose rent yields <span class="math inline">\(i\)</span> before tax reduces land values by the factor <span class="math inline">\(i/(i+\tau_L)\)</span>; with <span class="math inline">\(i = 4\)</span> percent (an assumption) and <span class="math inline">\(\tau_L = 2.5\)</span> percent the factor is 0.615. Revenue is <span class="math inline">\(\tau_L\)</span> times the taxable value after that fall: 1.0 percent of GDP for German parameters at the low allowance share and 2.7 percent for French parameters at the high one.</p>
+<p><em>Corporate.</em> Corporate income tax raised 3.75 percent of GDP on average across the OECD in 2023 <span class="citation" data-cites="OECDRevStats2025">(<a href="#ref-OECDRevStats2025" role="doc-biblioref">OECD 2025</a>)</span>. At a 25 percent rate that implies a declared base of 15 percent of GDP, of which 50–70 percent is assumed to be rent. Layer One taxes that rent at 50 percent. Profit shifting reduces the declared base by the semi-elasticity times the 25-point rate increase, using 1.5 percent per point <span class="citation" data-cites="BeerdeMooijLiu2020">(<a href="#ref-BeerdeMooijLiu2020" role="doc-biblioref">Beer et al. 2020</a>)</span> for the low case and half that for the high case: 2.3–4.3 percent of GDP. If the destination layers recover both this shifting and the profit already shifted out, about 20 percent of the declared base in high-tax European Union countries <span class="citation" data-cites="TorslovWierZucman2023">(<a href="#ref-TorslovWierZucman2023" role="doc-biblioref">Tørsløv et al. 2023</a>)</span>, corporate revenue is 4.5–6.3 percent of GDP. The calculation omits the change in investment, the revenue from Layer Three on firms with little global rent (excluded by the cap) and the interaction between the land tax and Layer One, which the deductibility rule in <a href="#sec-land" class="quarto-xref">Section&nbsp;4.1</a> resolves.</p>
+
+
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

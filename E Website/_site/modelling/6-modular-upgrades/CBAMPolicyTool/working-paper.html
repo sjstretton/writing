@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephen J. Stretton">
+<meta name="keywords" content="carbon border adjustment, CBAM, embedded emissions, default values, carbon pricing, trade exposure">
+
+<title>The CBAM Policy Tool – Climate, Fiscal &amp; Finance</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Climate, Fiscal &amp; Finance</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Policy and Finance</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../modelling/index.html" aria-current="page"> 
+<span class="menu-text">Modelling and Analytics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades.html">6. Modular Upgrades</a></li><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html">6.2 The CBAM Policy Tool</a></li><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html">Working paper</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modelling and Analytics</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Modelling (CPAT)</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATMitigationMethods/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.1 The CPAT Mitigation Module</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATMitigationMethods/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATAIImplementation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.2 CPAT-AI</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.3 Validating CPAT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/ElasticityValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.4 Are CPAT's Price Elasticities Right?</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Modular Upgrades</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.1 Measure Carbon Pricing by the Emissions It Cuts</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.2 The CBAM Policy Tool</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3 Public Investment in CPAT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PublicInvestment/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/ActivityModelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/ActivityModelling/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.5 The Macro-Fiscal-Energy Scenario Tool</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Analytics Tools</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.1 The Excise-Fiscal Diagnostic</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link active" data-scroll-target="#sec-summary"><span class="header-section-number">1</span> Executive summary</a></li>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link" data-scroll-target="#sec-intro"><span class="header-section-number">2</span> Introduction</a></li>
+  <li><a href="#sec-rules" id="toc-sec-rules" class="nav-link" data-scroll-target="#sec-rules"><span class="header-section-number">3</span> What CBAM charges</a></li>
+  <li><a href="#sec-tool" id="toc-sec-tool" class="nav-link" data-scroll-target="#sec-tool"><span class="header-section-number">4</span> What the tool does</a></li>
+  <li><a href="#sec-method" id="toc-sec-method" class="nav-link" data-scroll-target="#sec-method"><span class="header-section-number">5</span> Method</a>
+  <ul class="collapse">
+  <li><a href="#sec-see" id="toc-sec-see" class="nav-link" data-scroll-target="#sec-see"><span class="header-section-number">5.1</span> Embedded emissions from the bottom up</a></li>
+  <li><a href="#sec-charge" id="toc-sec-charge" class="nav-link" data-scroll-target="#sec-charge"><span class="header-section-number">5.2</span> The charge per tonne</a></li>
+  <li><a href="#sec-response" id="toc-sec-response" class="nav-link" data-scroll-target="#sec-response"><span class="header-section-number">5.3</span> A domestic carbon price: abatement and deduction</a></li>
+  </ul></li>
+  <li><a href="#sec-data" id="toc-sec-data" class="nav-link" data-scroll-target="#sec-data"><span class="header-section-number">6</span> Data</a></li>
+  <li><a href="#sec-example" id="toc-sec-example" class="nav-link" data-scroll-target="#sec-example"><span class="header-section-number">7</span> A worked example: three Turkish exports</a></li>
+  <li><a href="#sec-egypt" id="toc-sec-egypt" class="nav-link" data-scroll-target="#sec-egypt"><span class="header-section-number">8</span> A country application: Egypt</a></li>
+  <li><a href="#sec-uses" id="toc-sec-uses" class="nav-link" data-scroll-target="#sec-uses"><span class="header-section-number">9</span> Policy uses</a></li>
+  <li><a href="#sec-limits" id="toc-sec-limits" class="nav-link" data-scroll-target="#sec-limits"><span class="header-section-number">10</span> Objections and limits</a></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">11</span> Conclusion</a></li>
+  <li><a href="#downloads" id="toc-downloads" class="nav-link" data-scroll-target="#downloads">Downloads</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades.html">6. Modular Upgrades</a></li><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html">6.2 The CBAM Policy Tool</a></li><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html">Working paper</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">The CBAM Policy Tool</h1>
+<p class="subtitle lead">Measuring Exporters’ Exposure to the EU Carbon Border Adjustment and What Domestic Policy Can Do About It</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stephen J. Stretton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>Since January 2026, importers of steel, aluminum, cement, fertilizers, hydrogen and electricity into the European Union have owed a carbon charge on the emissions embedded in what they buy. For many middle-income exporters the charge is large, it rises to 2034, and it depends on choices their own governments control: whether producers file verified emissions data and whether the country prices carbon at home. This paper describes a spreadsheet tool that computes the exposure product by product and year by year, sets out its method in five equations, and applies it with public data. At €80 per tonne of carbon dioxide, Turkish hot-rolled steel declared at the default value owes about €107 per tonne in 2026 and €252 at full phase-in, close to half its import price. For seven Egyptian exports the full-phase-in charge is about €793 million a year at default values and €480 million with verified data at 2025 volumes. Verified data are the decisive lever for steel; for urea, the largest exposure, only abatement or a domestic carbon price moves the charge much.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>carbon border adjustment, CBAM, embedded emissions, default values, carbon pricing, trade exposure</p>
+  </div>
+</div>
+
+</header>
+
+
+<p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html">Climate Fiscal Policy Brief No.&nbsp;6.2</a>. Companion paper to the Climate Fiscal AI Tools.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<section id="sec-summary" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
+<p><a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-CBAMPolicyTool.pptx">Slides (pptx)</a></p>
+<p><strong>The EU now charges importers for the carbon in steel, aluminum, cement and fertilizers, and the bill depends on decisions exporting governments control.</strong> Since January 2026, importers of these goods, and of hydrogen and electricity, have owed certificates for the emissions embedded in what they buy, priced in line with the EU’s emissions trading system. The charge rises each year to 2034 as the EU’s own producers lose their free allowances. How much an exporter pays depends on three things its government can influence: whether its plants file verified emissions data instead of the EU’s default values, whether they cut emissions, and whether the country levies a carbon price at home that the EU deducts.</p>
+<p><strong>The CBAM Policy Tool turns these rules into a product-by-product, year-by-year bill that a ministry can check.</strong> For each covered product of one exporting country it builds embedded emissions from energy use and process chemistry, compares them with the EU’s default values, applies the phase-in and the certificate price year by year, and deducts a domestic carbon price where the rules allow. A second module lets a domestic carbon price change output and emissions, and splits the fall in the border charge into the part from cleaner production and the part from the deduction.</p>
+<p><strong>For goods far dirtier than the EU’s benchmark, most of the charge arrives in the first year.</strong> At €80 per tonne of CO₂, Turkish hot-rolled steel declared at the default value owes about €107 per tonne in 2026, €196 in 2030 and €252 at full phase-in, close to half its 2025 import price of €549 per tonne. The 2026 charge is already 42 percent of the final one, because the phase-in only covers emissions up to the benchmark. A Commission proposal of July 2026, not yet adopted, would end free allocation in 2038 instead of 2034, lowering the 2034 charge to €236.</p>
+<p><strong>Verified data and a domestic carbon price are each worth tens of euros a tonne.</strong> For the Turkish steel, filing verified data at the country average avoids the 30 percent mark-up on the default, worth €58 per tonne at full phase-in. A domestic carbon price of €20 per tonne of CO₂, effectively paid and deducted, cuts the charge by another €49 and collects the same sum at home. At 2025 volumes, a €20 price on the three Turkish goods in the example would move about €127 million a year from the EU budget to Türkiye’s.</p>
+<p><strong>Egypt shows that the right lever differs by product.</strong> Egypt has no EU default of its own for steel, so its gas-based and scrap-based steel is charged at a value set from the most carbon-intensive exporters, more than five times the tool’s estimate. Corrected to the CBAM accounting rules and using Eurostat’s 2025 trade, seven Egyptian exports would owe about €793 million a year at full phase-in at default values, and €480 million with verified data. Most of the saving is on steel (€178 million) and clinker (€84 million). Urea, the largest exposure at €369 million, gains only €48 million from data, because the EU’s default for Egyptian urea is close to what its plants emit; there, only abatement or a credited domestic carbon price moves the bill much.</p>
+<p><strong>The tool also shows what the current rules do not reward.</strong> A carbon price whose revenue is rebated to producers, such as a feebate, keeps the incentive to cut emissions per tonne but, under the Commission’s draft rules, earns no deduction at the border. And measuring plant by plant lets a firm route its clean output to the EU without cutting emissions, a gain that measuring by country and sector removes (<a href="../../../policy/1-carbon-pricing/IronSteelCBAM/index.html">Brief 1.4</a>).</p>
+<p><strong>What to do.</strong> Exporting ministries should run the calculation for their own products before choosing a policy: build verification capacity where the default is far above what plants emit, as for Egyptian steel; consider a domestic carbon price where it is not, as for Egyptian urea; and press the Commission, in the 2027 revision of default values and in its rules on deductions, to credit price signals rather than only payments. The tool computes exposure, not who bears it, and its estimates are technology averages; plant data must confirm them.</p>
+</section>
+<section id="sec-intro" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
+<p>The EU’s Carbon Border Adjustment Mechanism (CBAM) turns a trading partner’s domestic climate policy into a line in either the EU’s budget or its own. Since 1 January 2026, importers of iron and steel, aluminum, cement, fertilizers, hydrogen and electricity have owed certificates for the emissions embedded in their imports, priced in line with the EU Emissions Trading System, with certificate sales from February 2027 <span class="citation" data-cites="EU2023 EU2025Omnibus">(<a href="#ref-EU2023" role="doc-biblioref">European Parliament and Council of the European Union 2023b</a>, <a href="#ref-EU2025Omnibus" role="doc-biblioref">2025</a>)</span>. At €80 per tonne of carbon dioxide (CO₂) and full phase-in, a tonne of hot-rolled steel from Türkiye declared at the Commission’s default value carries a charge of €252, about 46 percent of its average 2025 import price (<a href="#sec-example" class="quarto-xref">Section&nbsp;7</a>). The charge falls if the exporter files verified emissions data below the default, if its plants cut emissions, or if its government levies a carbon price that the EU deducts. A finance or trade ministry needs to know how large the exposure is, how it rises to 2034, and which of these levers moves it most for each of its products.</p>
+<p>This paper describes a tool built to answer those questions and shows what it does with public data. The CBAM Policy Tool is a spreadsheet that, for each covered product of one exporting country, builds embedded emissions from energy use and process chemistry, compares them with the EU’s default values, applies the free-allocation adjustment, the mark-ups and the certificate price year by year, and deducts a domestic carbon price where the rules allow. A second module lets a domestic carbon price change output and emissions per tonne and splits the resulting fall in the border charge into the part from abatement and the part from the deduction.</p>
+<p>Four results stand out. First, emissions above the CBAM benchmark are charged in full from the first year, so for carbon-intensive goods most of the exposure arrives in 2026, not 2034: on Turkish hot-rolled steel declared at the default, the charge is €107 per tonne in 2026 and €196 in 2030 at €80 (<a href="#tbl-example" class="quarto-xref">Table&nbsp;3</a>). Second, the mark-up on default values is worth €58 per tonne at full phase-in for that product, the most a producer at the country average gains by filing verified data. Third, a domestic carbon price deducted under Article 9 lowers the charge one for one with the price paid and moves the money from the EU to the exporter’s treasury: a hypothetical €20 price on the three goods in the example would move about €127 million a year at 2025 volumes. Fourth, the best lever differs by product. For Egypt, which has no EU default of its own for steel, verified data would cut the charge on steel by about 90 percent; for urea, Egypt’s largest CBAM export to the EU, the default is close to the tool’s estimate, and only abatement or a domestic price moves the charge much (<a href="#sec-egypt" class="quarto-xref">Section&nbsp;8</a>).</p>
+<p>The closest prior work computes CBAM liabilities by exporting country from the Commission’s default values. <span class="citation" data-cites="Sandbag2024">Assous et al. (<a href="#ref-Sandbag2024" role="doc-biblioref">2024</a>)</span> do so for China and other exporters at full phase-in, including a scenario in which exporters route low-carbon output to the EU; paper 1.4 of this series calibrates the charge on steel across thirteen exporters and shows that measuring by country and sector removes the gain from such routing <span class="citation" data-cites="StrettonWP14 CFPB14">(<a href="#ref-StrettonWP14" role="doc-biblioref">Stretton 2026c</a>, <a href="#ref-CFPB14" role="doc-biblioref">2026d</a>)</span>. Trade-model studies estimate who bears the charge across countries <span class="citation" data-cites="Eicke2021 Beaufils2023 Magacho2024 PerdanaVielle2022">(<a href="#ref-Eicke2021" role="doc-biblioref">Eicke et al. 2021</a>; <a href="#ref-Beaufils2023" role="doc-biblioref">Beaufils et al. 2023</a>; <a href="#ref-Magacho2024" role="doc-biblioref">Magacho et al. 2024</a>; <a href="#ref-PerdanaVielle2022" role="doc-biblioref">Perdana and Vielle 2022</a>)</span>, and a design literature argues how a border adjustment should work <span class="citation" data-cites="Mehling2019 MehlingRitz2023 KeenParryRoaf2022">(<a href="#ref-Mehling2019" role="doc-biblioref">Mehling et al. 2019</a>; <a href="#ref-MehlingRitz2023" role="doc-biblioref">Mehling and Ritz 2023</a>; <a href="#ref-KeenParryRoaf2022" role="doc-biblioref">Keen et al. 2022</a>)</span>. The tool adds three things a ministry needs and these do not give: a bottom-up estimate of what verified data would show, set against the default product by product; the year-by-year path, with the free-allocation adjustment under current law and under the July 2026 proposal; and the split of a domestic price’s effect into abatement and deduction. It also implements the producer-side track of the two-track architecture in paper 1.1 <span class="citation" data-cites="StrettonWP11 CFPB11">(<a href="#ref-StrettonWP11" role="doc-biblioref">Stretton 2026g</a>, <a href="#ref-CFPB11" role="doc-biblioref">2026h</a>)</span>, so a ministry can see in its own numbers what those papers argue.</p>
+</section>
+<section id="sec-rules" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> What CBAM charges</h1>
+<p><strong>The importer surrenders certificates for embedded emissions above the free allocation that EU producers still receive, less a deduction for carbon prices paid abroad.</strong> Embedded emissions are declared either from actual values, verified at the installation, or from default values set by the Commission <span class="citation" data-cites="EU2023 EU2025Methods EU2025Verification">(<a href="#ref-EU2023" role="doc-biblioref">European Parliament and Council of the European Union 2023b</a>, Art. 7; <a href="#ref-EU2025Methods" role="doc-biblioref">European Commission 2025b</a>, <a href="#ref-EU2025Verification" role="doc-biblioref">2025a</a>)</span>. For iron, steel and aluminum only direct emissions count; for cement and fertilizers indirect emissions from electricity count too <span class="citation" data-cites="EU2023">(<a href="#ref-EU2023" role="doc-biblioref">European Parliament and Council of the European Union 2023b</a>, Annex II)</span>. Importers below a single threshold of 50 tonnes a year across these goods owe nothing <span class="citation" data-cites="EU2025Omnibus">(<a href="#ref-EU2025Omnibus" role="doc-biblioref">European Parliament and Council of the European Union 2025</a>, Annex VII)</span>. <a href="#tbl-rules" class="quarto-xref">Table&nbsp;1</a> lists the parameters the tool needs and where each comes from.</p>
+<div id="tbl-rules" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rules-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: The CBAM rules the tool implements, as in force on 31 October 2026. The CBAM factor is set in Article 10a(1a) of the EU ETS Directive as amended by Directive (EU) 2023/959. A Commission proposal of July 2026, not adopted, would slow the phase-out from 2028 (a CBAM factor of 91.5% in 2028, 59% in 2030 and 27% in 2033), keep 15% in 2034–2037 and end free allocation in 2038 <span class="citation" data-cites="EU2026ETSProposal">(<a href="#ref-EU2026ETSProposal" role="doc-biblioref">European Commission 2026d</a>)</span>.
+</figcaption>
+<div aria-describedby="tbl-rules-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Rule</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Coverage</td>
+<td>Iron and steel, aluminum, cement, fertilizers, hydrogen, electricity, by CN code; importers below 50 tonnes a year exempt</td>
+<td><span class="citation" data-cites="EU2023">European Parliament and Council of the European Union (<a href="#ref-EU2023" role="doc-biblioref">2023b</a>)</span>, Annex I; <span class="citation" data-cites="EU2025Omnibus">European Parliament and Council of the European Union (<a href="#ref-EU2025Omnibus" role="doc-biblioref">2025</a>)</span>, Annex VII</td>
+</tr>
+<tr class="even">
+<td>Embedded emissions</td>
+<td>Actual (verified) or default values; direct only for iron, steel and aluminum</td>
+<td><span class="citation" data-cites="EU2023">European Parliament and Council of the European Union (<a href="#ref-EU2023" role="doc-biblioref">2023b</a>)</span>, Annex II; <span class="citation" data-cites="EU2025Methods">European Commission (<a href="#ref-EU2025Methods" role="doc-biblioref">2025b</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Default values</td>
+<td>Country averages by CN code, with mark-ups of 10% (2026), 20% (2027) and 30% (2028 on); 1% for fertilizers</td>
+<td><span class="citation" data-cites="EU2025Omnibus">European Parliament and Council of the European Union (<a href="#ref-EU2025Omnibus" role="doc-biblioref">2025</a>)</span>, Annex IV; <span class="citation" data-cites="EU2025Defaults">European Commission (<a href="#ref-EU2025Defaults" role="doc-biblioref">2025e</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Free-allocation adjustment</td>
+<td>Benchmark by CN code and production route, times the CBAM factor (the share of free allocation EU producers keep: 97.5% in 2026, 51.5% in 2030, 14% in 2033, zero from 2034), times the cross-sectoral correction factor</td>
+<td><span class="citation" data-cites="EU2025FreeAllocation">European Commission (<a href="#ref-EU2025FreeAllocation" role="doc-biblioref">2025d</a>)</span>, Annex points 3–5; <span class="citation" data-cites="EU2023ETSDirective">European Parliament and Council of the European Union (<a href="#ref-EU2023ETSDirective" role="doc-biblioref">2023a</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Certificate price</td>
+<td>Set from EU allowance auction prices, by implementing act</td>
+<td><span class="citation" data-cites="EU2025CertPrice">European Commission (<a href="#ref-EU2025CertPrice" role="doc-biblioref">2025c</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Deduction for carbon price paid</td>
+<td>Price “effectively paid” at origin, net of any rebate or compensation, where actual emissions are declared; for default values, only a default carbon price the Commission may publish from 2027 for countries with carbon pricing rules</td>
+<td><span class="citation" data-cites="EU2025Omnibus">European Parliament and Council of the European Union (<a href="#ref-EU2025Omnibus" role="doc-biblioref">2025</a>)</span>, Art. 9</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Default values are country averages with a penalty on top, so data pay for cleaner plants.</strong> Since the 2025 amendment, a default value is the average emission intensity of the exporting country, raised by a mark-up; where reliable data are lacking, it is the average of the ten most intensive exporting countries <span class="citation" data-cites="EU2025Omnibus">(<a href="#ref-EU2025Omnibus" role="doc-biblioref">European Parliament and Council of the European Union 2025</a>, Annex IV point 4.1, recital 35)</span>. The Commission’s values for 2026 cover 119 countries and a residual “other countries” category, by CN code, with a production-route code that sets the benchmark for the free-allocation adjustment <span class="citation" data-cites="EU2025Defaults EUDVWorkbook2026">(<a href="#ref-EU2025Defaults" role="doc-biblioref">European Commission 2025e</a>, <a href="#ref-EUDVWorkbook2026" role="doc-biblioref">2026b</a>)</span>. Implementing Regulation (EU) 2026/1740 of 20 July 2026 corrected some values retroactively from 1 January 2026 <span class="citation" data-cites="EUDVCorrection2026">(<a href="#ref-EUDVCorrection2026" role="doc-biblioref">European Commission 2026a</a>)</span>; it leaves unchanged the Türkiye values used below. The defaults are to be revised in 2027 at the latest <span class="citation" data-cites="EU2025Defaults">(<a href="#ref-EU2025Defaults" role="doc-biblioref">European Commission 2025e</a>, Art. 2)</span>.</p>
+<p><strong>The deduction rules decide whether a domestic carbon price keeps money at home.</strong> Under Article 9 as replaced in 2025, a declarant using actual emissions may deduct a carbon price “effectively paid” in the country of origin, net of “any rebate or other form of compensation”; a declarant using default values may deduct only a default carbon price, which the Commission “may” publish from 2027 for countries with carbon pricing rules <span class="citation" data-cites="EU2025Omnibus">(<a href="#ref-EU2025Omnibus" role="doc-biblioref">European Parliament and Council of the European Union 2025</a>, Art. 9(1), 9(4))</span>. The Commission’s draft implementing rules count emissions “below an emission intensity baseline” as compensation to be netted off <span class="citation" data-cites="EU2026DraftCarbonPrice">(<a href="#ref-EU2026DraftCarbonPrice" role="doc-biblioref">European Commission 2026c</a>, Art. 8(1)(b)(ii))</span>, so a revenue-neutral feebate or a fully rebated carbon price earns no deduction. Paper 1.4 analyzes this rule and proposes to credit the price signal instead <span class="citation" data-cites="StrettonWP14 CFPB14 CFPB12">(<a href="#ref-StrettonWP14" role="doc-biblioref">Stretton 2026c</a>, <a href="#ref-CFPB14" role="doc-biblioref">2026d</a>, <a href="#ref-CFPB12" role="doc-biblioref">2026e</a>)</span>.</p>
+</section>
+<section id="sec-tool" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> What the tool does</h1>
+<p><strong>The tool answers three questions for one exporting country: how large is the CBAM charge on each product each year, how much would verified data save, and what would a domestic carbon price do to it.</strong> It is an Excel workbook built so that every input sits in a labeled cell with its source and every result can be traced to its inputs by formula. Two versions exist. The exposure version covers ten CBAM product groups (four steel routes, grey clinker, ammonia, urea, ammonium nitrate, other nitrogen fertilizers and primary aluminum) for a set of countries over 2024–2035, with switches for which emission scopes count, whether verified data are filed and whether a domestic price applies to exports only or to all production. The policy version takes one country’s CBAM goods and simulates a domestic carbon price, with switches for whether process emissions are priced, whether revenue is rebated per unit of output and whether it finances an abatement fund.</p>
+<p><strong>Each run returns a small set of results.</strong> For the chosen country and year the tool reports: embedded emissions per tonne by component and in total; the gap between those emissions and the EU default; the CBAM charge per tonne and in total at projected export volumes; the domestic carbon price at which the charge would be fully deducted; and the revenue a domestic price would raise on EU exports, other exports and domestic sales. The policy version adds the change in the charge per tonne, split into the part from cleaner production and the part from the deduction, and the change in emissions of the CBAM goods, split into output and intensity. Hydrogen, electricity and the downstream goods proposed in December 2025 <span class="citation" data-cites="EU2025Downstream">(<a href="#ref-EU2025Downstream" role="doc-biblioref">European Commission 2025f</a>)</span> are outside the current version.</p>
+<p><strong>The first application built a full emission-factor matrix for Egypt.</strong> For Egypt’s CBAM exports the tool was paired with an emission-factor workbook that shows the same products at two levels: headline products and, beneath them, about two dozen CN-code lines weighted by their share of the product’s EU exports, with a check that rebuilds each product from its lines. Each component of each factor carries a confidence flag (authoritative, estimated split, or proxy) and each product a quality-assurance line naming its largest uncertainty and the verification that would resolve it <span class="citation" data-cites="CBAMToolEgypt2026">(<a href="#ref-CBAMToolEgypt2026" role="doc-biblioref">CBAM Policy Tool 2026</a>)</span>. <a href="#sec-egypt" class="quarto-xref">Section&nbsp;8</a> reports what it shows, after two corrections to its fertilizer accounting described in Appendix A.</p>
+</section>
+<section id="sec-method" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Method</h1>
+<section id="sec-see" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="sec-see"><span class="header-section-number">5.1</span> Embedded emissions from the bottom up</h2>
+<p><strong>Embedded emissions per tonne are built from energy use, process chemistry and electricity, in the same components the EU uses.</strong> For product <span class="math inline">\(i\)</span> the tool computes direct emissions per tonne as <span id="eq-see"><span class="math display">\[
+e_i^{\mathrm{dir}} = \sum_k h^{c}_{ik}\,\phi_k + \sum_k h^{p}_{ik}\,\phi_k + e^{np}_i + e^{no}_i ,
+\tag{1}\]</span></span> where <span class="math inline">\(h^{c}_{ik}\)</span> is fuel <span class="math inline">\(k\)</span> burned for heat (GJ per tonne), <span class="math inline">\(h^{p}_{ik}\)</span> fuel <span class="math inline">\(k\)</span> used as a reductant or feedstock, such as natural gas in direct reduction of iron or in an ammonia reformer, <span class="math inline">\(\phi_k\)</span> the fuel’s CO₂ emission factor (for example 56.1 kg per GJ for natural gas and 74.1 for gas oil <span class="citation" data-cites="IPCC2006">(<a href="#ref-IPCC2006" role="doc-biblioref">IPCC 2006</a>)</span>), <span class="math inline">\(e^{np}_i\)</span> non-fuel process CO₂ (limestone calcination in clinker, anode consumption in aluminum) and <span class="math inline">\(e^{no}_i\)</span> non-CO₂ gases in CO₂ equivalents (nitrous oxide from nitric acid, perfluorocarbons from smelting). Indirect emissions are electricity use times the grid emission factor, <span class="math inline">\(e^{\mathrm{ind}}_i = u_i\,g\)</span>. The CBAM-relevant intensity is <span class="math inline">\(e_i = e^{\mathrm{dir}}_i\)</span> for steel and aluminum and <span class="math inline">\(e^{\mathrm{dir}}_i + e^{\mathrm{ind}}_i\)</span> for cement and fertilizers.</p>
+<p><strong>Precursors are integrated into the goods made from them, and CO₂ used in a product counts as emitted unless it stays bound.</strong> Urea and ammonium nitrate are made from ammonia, which the EU treats as a precursor whose emissions are embedded in the downstream good <span class="citation" data-cites="EU2025Methods">(<a href="#ref-EU2025Methods" role="doc-biblioref">European Commission 2025b</a>)</span>. A tonne of urea contains 0.567 tonnes of ammonia from its molecular formula; a tonne of ammonium nitrate embeds 0.425 tonnes, half directly and half through nitric acid, itself a precursor made from ammonia. Each is multiplied by ammonia’s own intensity, and only net merchant ammonia is counted as standalone ammonia. The CO₂ that urea synthesis takes up is not deducted: the EU’s monitoring rules let CO₂ used in a product count as not emitted only where it is “permanently chemically bound so that it does not enter the atmosphere under normal use” <span class="citation" data-cites="EU2025Methods">(<a href="#ref-EU2025Methods" role="doc-biblioref">European Commission 2025b</a>, Annex II point B.8.2)</span>, and urea releases it when applied to soil <span class="citation" data-cites="IPCC2006Urea">(<a href="#ref-IPCC2006Urea" role="doc-biblioref">De Klein et al. 2006, sec. 11.4</a>)</span>. The Commission’s default for Egyptian urea, 1.32 tCO₂ per tonne direct, is consistent with this accounting: 0.567 times Egypt’s ammonia default of 1.96, plus the urea plant’s own fuel <span class="citation" data-cites="EUDVWorkbook2026">(<a href="#ref-EUDVWorkbook2026" role="doc-biblioref">European Commission 2026b</a>)</span>.</p>
+<p><strong>The bottom-up intensity is the tool’s estimate of what verified data would show for a plant at the technology average.</strong> Comparing it with the default value tells a ministry where filing data pays. Where the estimate is below the marked-up default, producers gain from verification; where it is above, the default is a subsidy to the dirtiest plants and the producer keeps it. A verified declaration follows the installation’s own monitoring under the EU rules, so the estimate is a guide to where to look, not a substitute (<a href="#sec-limits" class="quarto-xref">Section&nbsp;10</a>).</p>
+</section>
+<section id="sec-charge" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="sec-charge"><span class="header-section-number">5.2</span> The charge per tonne</h2>
+<p><strong>The charge per tonne is the certificate price times embedded emissions above the free-allocation adjustment, less any deducted carbon price.</strong> Let <span class="math inline">\(e_i\)</span> be the declared embedded emissions, <span class="math inline">\(\bar e_{c,i}\)</span> the country default before mark-up and <span class="math inline">\(m_t\)</span> the mark-up, so that <span class="math inline">\(e_i = (1+m_t)\bar e_{c,i}\)</span> under default values. Let <span class="math inline">\(B_i\)</span> be the CBAM benchmark for the product’s route, <span class="math inline">\(f_t\)</span> the CBAM factor in year <span class="math inline">\(t\)</span> (0.975 in 2026, zero from 2034), <span class="math inline">\(P_t\)</span> the certificate price and <span class="math inline">\(\tau^d\)</span> the domestic carbon price effectively paid per tonne of CO₂. The charge per tonne of product is <span id="eq-charge"><span class="math display">\[
+C_{it} = \max\Big\{0,\; P_t\big[e_i - f_t B_i\big]^{+} - \tau^d e_i\Big\}.
+\tag{2}\]</span></span> The deduction <span class="math inline">\(\tau^d e_i\)</span> is the form the Commission’s draft implementing regulation gives: the reduction in certificates equals the effective carbon price per tonne of good divided by the certificate reference price, with no adjustment for free allocation <span class="citation" data-cites="EU2026DraftCarbonPrice">(<a href="#ref-EU2026DraftCarbonPrice" role="doc-biblioref">European Commission 2026c</a>, Art. 6)</span>. The draft was in the Commission’s adoption workflow, not adopted, on 31 October 2026; the floor at zero is this paper’s assumption. Two simplifications affect only 2026–2033: the free-allocation adjustment in Implementing Regulation 2025/2620 also multiplies by a cross-sectoral correction factor, set to 1 here; and a declarant using actual data builds the adjustment from process benchmarks and the free allocation embedded in its precursors, which the example approximates with the default benchmark <span class="citation" data-cites="EU2025FreeAllocation">(<a href="#ref-EU2025FreeAllocation" role="doc-biblioref">European Commission 2025d</a>, Annex points 3–4)</span>.</p>
+<p><strong>Emissions above the benchmark are charged in full from the first year.</strong> Because <span class="math inline">\(f_t B_i\)</span> is at most the benchmark, the term <span class="math inline">\(P_t(e_i - f_t B_i)\)</span> is at least <span class="math inline">\(P_t(e_i - B_i)\)</span> in every year. For a good whose embedded emissions are far above the benchmark, most of the charge applies in 2026 and the phase-in adds only the benchmark’s share. For a good close to the benchmark the charge starts near zero and rises with <span class="math inline">\(1-f_t\)</span>. The phase-in therefore protects efficient exporters, not inefficient ones.</p>
+<p><strong>The capture price is the domestic carbon price that would reduce the charge to zero.</strong> Setting <span class="math inline">\(C_{it} = 0\)</span> in <a href="#eq-charge" class="quarto-xref">equation&nbsp;2</a> gives <span id="eq-capture"><span class="math display">\[
+\tau^{d*}_{it} = P_t\,\frac{\big[e_i - f_t B_i\big]^{+}}{e_i}.
+\tag{3}\]</span></span> At full phase-in the capture price equals the certificate price. Before 2034 it is lower, because part of the embedded emissions is covered by the free-allocation adjustment. A domestic price at <span class="math inline">\(\tau^{d*}\)</span> moves the whole charge from the EU budget to the exporter’s treasury while leaving EU buyers’ costs unchanged; it also raises revenue on all other sales the price covers, which for an exporter selling most of its output at home or outside the EU is the larger sum <span class="citation" data-cites="StrettonWP11">(<a href="#ref-StrettonWP11" role="doc-biblioref">Stretton 2026g</a>)</span>.</p>
+</section>
+<section id="sec-response" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="sec-response"><span class="header-section-number">5.3</span> A domestic carbon price: abatement and deduction</h2>
+<p><strong>In the policy version, a domestic carbon price changes output, emissions per tonne and the deduction.</strong> For product <span class="math inline">\(i\)</span> with price <span class="math inline">\(p_i\)</span> and carbon cost share <span class="math inline">\(\delta_i = (1-\theta)\tau\,e_i/p_i\)</span>, where <span class="math inline">\(\theta\)</span> is the share of the carbon cost rebated per unit of output, output falls along a constant-elasticity curve, <span class="math inline">\(Q_i = Q^0_i(1+\delta_i)^{\varepsilon_i}\)</span>, with small elasticities <span class="math inline">\(\varepsilon_i\)</span> for traded goods. Fuel emissions per tonne fall with a semi-elasticity, <span class="math inline">\(e^{f}_i = e^{f0}_i\exp(-\beta^{f}\tau)\)</span>, and process emissions per tonne with product-specific semi-elasticities <span class="math inline">\(\beta^{p}_i\)</span>. The fuel response is calibrated to the industrial fuel response of the Climate Policy Assessment Tool, net of its output effect, which links the tool to the elasticities checked in paper 5.4 <span class="citation" data-cites="StrettonWP54 CFPB54">(<a href="#ref-StrettonWP54" role="doc-biblioref">Stretton 2026b</a>, <a href="#ref-CFPB54" role="doc-biblioref">2026a</a>)</span>; the process semi-elasticities are the tool’s assumptions. A partial-adjustment block scales the long-run responses for a price that has been in force only a few years.</p>
+<p><strong>The fall in the charge splits into abatement and deduction.</strong> At full phase-in, without rebates and with the domestic price covering all embedded emissions, <a href="#eq-charge" class="quarto-xref">equation&nbsp;2</a> gives <span class="math inline">\(C = (P - \tau^d)e\)</span>. If the domestic price cuts the export-weighted intensity by a fraction <span class="math inline">\(r\)</span>, the proportional change in the charge is <span id="eq-split"><span class="math display">\[
+\frac{\Delta C}{C^0} = -\,r \;-\; (1-r)\,\frac{\tau^d}{P}.
+\tag{4}\]</span></span> The first term is cleaner production; the second is the deduction. With <span class="math inline">\(\tau^d = €20\)</span>, <span class="math inline">\(P = €80\)</span> and an intensity cut of 10 percent, the charge falls by 32.5 percent, of which 22.5 points come from the deduction. For a modest domestic price, the deduction does more for the border charge than abatement does. With a full output-based rebate (<span class="math inline">\(\theta = 1\)</span>), the marginal incentive survives but, under the draft rules on compensation, the deduction disappears, so only the first term remains <span class="citation" data-cites="StrettonWP14">(<a href="#ref-StrettonWP14" role="doc-biblioref">Stretton 2026c</a>)</span>. An abatement fund financed by the price keeps the deduction if it meets the draft’s four conditions for revenue-financed subsidies <span class="citation" data-cites="EU2026DraftCarbonPrice">(<a href="#ref-EU2026DraftCarbonPrice" role="doc-biblioref">European Commission 2026c</a>, Art. 8(2))</span> and adds abatement.</p>
+</section>
+</section>
+<section id="sec-data" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Data</h1>
+<p><strong>Every input the method needs is public, and the tool records the source of each.</strong> <a href="#tbl-data" class="quarto-xref">Table&nbsp;2</a> lists the inputs and the public sources the tool uses or can use. Country-specific engineering data, such as natural gas use per tonne of direct reduced iron, are the least certain inputs; the tool flags them and reports a range where the evidence allows.</p>
+<div id="tbl-data" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Inputs to the CBAM Policy Tool and their public sources.
+</figcaption>
+<div aria-describedby="tbl-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Input</th>
+<th>Unit</th>
+<th>Public source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Default values, mark-ups, route codes</td>
+<td>tCO₂e per tonne</td>
+<td><span class="citation" data-cites="EU2025Defaults">European Commission (<a href="#ref-EU2025Defaults" role="doc-biblioref">2025e</a>)</span>; <span class="citation" data-cites="EUDVWorkbook2026">European Commission (<a href="#ref-EUDVWorkbook2026" role="doc-biblioref">2026b</a>)</span></td>
+</tr>
+<tr class="even">
+<td>CBAM benchmarks</td>
+<td>tCO₂e per tonne</td>
+<td><span class="citation" data-cites="EU2025FreeAllocation">European Commission (<a href="#ref-EU2025FreeAllocation" role="doc-biblioref">2025d</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>CBAM factor (free-allocation phase-out)</td>
+<td>share</td>
+<td><span class="citation" data-cites="EU2023ETSDirective">European Parliament and Council of the European Union (<a href="#ref-EU2023ETSDirective" role="doc-biblioref">2023a</a>)</span>; proposal <span class="citation" data-cites="EU2026ETSProposal">European Commission (<a href="#ref-EU2026ETSProposal" role="doc-biblioref">2026d</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Certificate price</td>
+<td>€ per tCO₂</td>
+<td>EU allowance auction prices <span class="citation" data-cites="EU2025CertPrice">(<a href="#ref-EU2025CertPrice" role="doc-biblioref">European Commission 2025c</a>)</span>; scenarios</td>
+</tr>
+<tr class="odd">
+<td>EU imports by CN code and partner</td>
+<td>tonnes, €</td>
+<td>Eurostat Comext <span class="citation" data-cites="EurostatComext">(<a href="#ref-EurostatComext" role="doc-biblioref">Eurostat 2026</a>)</span>; UN Comtrade for other destinations</td>
+</tr>
+<tr class="even">
+<td>Production by product</td>
+<td>tonnes</td>
+<td>Industry associations and national statistics (steel, cement, fertilizer, aluminum)</td>
+</tr>
+<tr class="odd">
+<td>Energy and process intensities</td>
+<td>GJ or tCO₂ per tonne</td>
+<td>Sector benchmarks, national energy balances</td>
+</tr>
+<tr class="even">
+<td>Fuel emission factors, process factors, global warming potentials</td>
+<td>kg CO₂ per GJ; tCO₂e per tonne</td>
+<td><span class="citation" data-cites="IPCC2006">IPCC (<a href="#ref-IPCC2006" role="doc-biblioref">2006</a>)</span> and IPCC assessment values</td>
+</tr>
+<tr class="odd">
+<td>Grid emission factors</td>
+<td>tCO₂ per MWh</td>
+<td>National and international energy statistics</td>
+</tr>
+<tr class="even">
+<td>Growth of output</td>
+<td>percent a year</td>
+<td>IMF growth projections, scaled by an output elasticity</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-example" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> A worked example: three Turkish exports</h1>
+<p><strong>The example uses only public data: the Commission’s default values for Türkiye and Eurostat’s record of EU imports from Türkiye in 2025.</strong> Türkiye is a large exporter of steel to the EU and has country-specific default values for its main steel products. The example takes three goods: hot-rolled flat steel (CN 7208), reinforcing bar (CN 7214 20 00) and unwrought aluminum (CN 7601). Their direct default values before mark-up are 2.43, 2.31 and 1.70 tCO₂ per tonne, on production routes (C), blast furnace carbon steel, and (K), primary aluminum <span class="citation" data-cites="EUDVWorkbook2026">(<a href="#ref-EUDVWorkbook2026" role="doc-biblioref">European Commission 2026b</a>)</span>. In 2025 the EU imported 2.10 million tonnes of the hot-rolled steel from Türkiye, worth €1,154 million; 0.50 million tonnes of rebar, worth €259 million; and 52,000 tonnes of unwrought aluminum, worth €142 million <span class="citation" data-cites="EurostatComext">(<a href="#ref-EurostatComext" role="doc-biblioref">Eurostat 2026</a>)</span>. The certificate price is a stylized €80, as in paper 1.4. The default CBAM benchmarks are 1.370 tCO₂ per tonne for hot-rolled flat steel and 1.364 for rebar on route (C), and 1.423 for unwrought aluminum on route (K) <span class="citation" data-cites="EU2025FreeAllocation">(<a href="#ref-EU2025FreeAllocation" role="doc-biblioref">European Commission 2025d</a>, Annex point 5.3)</span>; they affect 2026–2033 but not full phase-in.</p>
+<div id="tbl-example" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: CBAM charge per tonne on three Turkish exports to the EU at a certificate price of €80/tCO₂. Default values: direct emissions, Türkiye, before mark-up 2.43 (CN 7208), 2.31 (CN 7214 20 00) and 1.70 (CN 7601) tCO₂/t, with mark-ups of 10, 20 and 30 percent in 2026, 2027 and 2028 on <span class="citation" data-cites="EU2025Defaults EUDVWorkbook2026">(<a href="#ref-EU2025Defaults" role="doc-biblioref">European Commission 2025e</a>, <a href="#ref-EUDVWorkbook2026" role="doc-biblioref">2026b</a>)</span>. “Actual data at country average” assumes verified emissions equal to the default before mark-up. The deduction is a hypothetical €20/tCO₂ effectively paid on all embedded emissions (actual-values route only), following the draft conversion rule. CBAM factor from Directive (EU) 2023/959 <span class="citation" data-cites="EU2023ETSDirective">(<a href="#ref-EU2023ETSDirective" role="doc-biblioref">European Parliament and Council of the European Union 2023a</a>)</span>; the COM(2026) 616 column uses the proposed factor (not adopted), under which the 2034 charge applies to 2037 and the full charge from 2038 <span class="citation" data-cites="EU2026ETSProposal">(<a href="#ref-EU2026ETSProposal" role="doc-biblioref">European Commission 2026d</a>)</span>. Default CBAM benchmarks 1.370 (CN 7208), 1.364 (CN 7214 20 00) and 1.423 (CN 7601) tCO₂/t <span class="citation" data-cites="EU2025FreeAllocation">(<a href="#ref-EU2025FreeAllocation" role="doc-biblioref">European Commission 2025d</a>)</span>; cross-sectoral correction factor set to 1. Unit values are 2025 EU import values divided by tonnes <span class="citation" data-cites="EurostatComext">(<a href="#ref-EurostatComext" role="doc-biblioref">Eurostat 2026</a>)</span>. Source: author’s calculation, <code>2.Source/cbam_example.py</code>.
+</figcaption>
+<div aria-describedby="tbl-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Product</th>
+<th>Year</th>
+<th>Default with mark-up (tCO₂/t)</th>
+<th>Charge at default (€/t)</th>
+<th>Share of 2025 unit value</th>
+<th>Charge at default, COM(2026) 616 (€/t)</th>
+<th>Charge, actual data at country average (€/t)</th>
+<th>Charge, actual data with €20 deducted (€/t)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hot-rolled flat steel (€549/t)</td>
+<td>2026</td>
+<td>2.67</td>
+<td>107</td>
+<td>19%</td>
+<td>107</td>
+<td>87</td>
+<td>39</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>2030</td>
+<td>3.16</td>
+<td>196</td>
+<td>36%</td>
+<td>188</td>
+<td>138</td>
+<td>89</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>2034</td>
+<td>3.16</td>
+<td>252</td>
+<td>46%</td>
+<td>236</td>
+<td>194</td>
+<td>146</td>
+</tr>
+<tr class="even">
+<td>Rebar (€523/t)</td>
+<td>2026</td>
+<td>2.54</td>
+<td>97</td>
+<td>19%</td>
+<td>97</td>
+<td>78</td>
+<td>32</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>2030</td>
+<td>3.00</td>
+<td>184</td>
+<td>35%</td>
+<td>176</td>
+<td>129</td>
+<td>82</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>2034</td>
+<td>3.00</td>
+<td>240</td>
+<td>46%</td>
+<td>224</td>
+<td>185</td>
+<td>139</td>
+</tr>
+<tr class="odd">
+<td>Unwrought aluminum (€2,744/t)</td>
+<td>2026</td>
+<td>1.87</td>
+<td>39</td>
+<td>1%</td>
+<td>39</td>
+<td>25</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>2030</td>
+<td>2.21</td>
+<td>118</td>
+<td>4%</td>
+<td>110</td>
+<td>77</td>
+<td>43</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>2034</td>
+<td>2.21</td>
+<td>177</td>
+<td>6%</td>
+<td>160</td>
+<td>136</td>
+<td>102</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>On steel declared at the default, the charge is large from the first year and reaches almost half the import price.</strong> <a href="#tbl-example" class="quarto-xref">Table&nbsp;3</a> shows that hot-rolled steel declared at the marked-up default would owe €107 per tonne in 2026, €196 in 2030 and €252 at full phase-in, against an average 2025 import price of €549 per tonne. Rebar follows the same path. The 2026 charge is already 42 percent of the full-phase-in charge, because Türkiye’s default for these products is well above the route (C) benchmark, so most embedded emissions are above the free-allocation adjustment from the start (<a href="#sec-charge" class="quarto-xref">Section&nbsp;5.2</a>). For aluminum the charge is a small share of a much higher price. If the July 2026 proposal were adopted, the 2030 charge on hot-rolled steel would be €188 instead of €196, and the charge would stay at €236 from 2034 to 2037 before reaching €252 in 2038 (<a href="#fig-path" class="quarto-xref">Figure&nbsp;1</a>).</p>
+<div id="fig-path" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-path-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="2.Source/figures/fig1_charge_path.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: CBAM charge per tonne of Turkish hot-rolled flat steel (CN 7208), 2026–2038, at a certificate price of €80/tCO₂: declared at the default value with mark-up, under current law and under the phase-out proposed in COM(2026) 616 (not adopted); with verified data equal to the country average; and with verified data and a hypothetical €20/tCO₂ domestic carbon price deducted. Before full phase-in the curves depend on the route (C) benchmark of 1.370 tCO₂/t [@EU2025FreeAllocation]; the deduction follows the draft conversion rule [@EU2026DraftCarbonPrice]. Source: @EUDVWorkbook2026; @EU2023ETSDirective; @EU2026ETSProposal; author’s calculation, 2.Source/cbam_example.py."><img src="2.Source/figures/fig1_charge_path.png" class="img-fluid figure-img" style="width:95.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-path-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: CBAM charge per tonne of Turkish hot-rolled flat steel (CN 7208), 2026–2038, at a certificate price of €80/tCO₂: declared at the default value with mark-up, under current law and under the phase-out proposed in COM(2026) 616 (not adopted); with verified data equal to the country average; and with verified data and a hypothetical €20/tCO₂ domestic carbon price deducted. Before full phase-in the curves depend on the route (C) benchmark of 1.370 tCO₂/t <span class="citation" data-cites="EU2025FreeAllocation">(<a href="#ref-EU2025FreeAllocation" role="doc-biblioref">European Commission 2025d</a>)</span>; the deduction follows the draft conversion rule <span class="citation" data-cites="EU2026DraftCarbonPrice">(<a href="#ref-EU2026DraftCarbonPrice" role="doc-biblioref">European Commission 2026c</a>)</span>. Source: <span class="citation" data-cites="EUDVWorkbook2026">European Commission (<a href="#ref-EUDVWorkbook2026" role="doc-biblioref">2026b</a>)</span>; <span class="citation" data-cites="EU2023ETSDirective">European Parliament and Council of the European Union (<a href="#ref-EU2023ETSDirective" role="doc-biblioref">2023a</a>)</span>; <span class="citation" data-cites="EU2026ETSProposal">European Commission (<a href="#ref-EU2026ETSProposal" role="doc-biblioref">2026d</a>)</span>; author’s calculation, <code>2.Source/cbam_example.py</code>.
+</figcaption>
+</figure>
+</div>
+<p><strong>Filing verified data at the country average saves €58 per tonne of steel at full phase-in; a €20 domestic price saves another €49.</strong> The mark-up is what a producer at the country average avoids by filing data: 30 percent of 2.43 tCO₂ at €80, or €58 per tonne of hot-rolled steel. A producer cleaner than average gains more. A domestic carbon price of €20 effectively paid on all embedded emissions lowers the charge by €20 × 2.43 = €49 per tonne, and the same €49 is collected at home. Together the two levers cut the full-phase-in charge on hot-rolled steel from €252 to €146 per tonne, by 42 percent.</p>
+<p><strong>At 2025 volumes, the three goods would owe about €660 million a year at full phase-in under default values, and a €20 domestic price would move €127 million of the charge home.</strong> The default-value charge at full phase-in sums to €531 million on hot-rolled steel, €119 million on rebar and €9 million on aluminum, against imports worth €1,555 million. Filing data at the country average lowers the total to €507 million; adding the €20 deduction lowers it to €380 million, while the domestic price raises €127 million from the same exports. The capture price of <a href="#eq-capture" class="quarto-xref">equation&nbsp;3</a> is €80 at full phase-in; at that price the whole charge on these goods, about €507 million, would be collected in Türkiye instead of the EU, on top of what the price raised on domestic sales and other exports. Volumes are held at 2025 levels and the €80 price is stylized; the example shows the scale and the mechanics, not a forecast.</p>
+</section>
+<section id="sec-egypt" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> A country application: Egypt</h1>
+<p><strong>The tool’s Egypt application compares bottom-up emission factors for Egypt’s CBAM exports with the defaults the EU applies, and for steel and cement the gaps are large.</strong> The application builds each factor from the components of <a href="#eq-see" class="quarto-xref">equation&nbsp;1</a>, using IPCC constants, sector energy intensities and Egypt’s production routes <span class="citation" data-cites="CBAMToolEgypt2026">(<a href="#ref-CBAMToolEgypt2026" role="doc-biblioref">CBAM Policy Tool 2026</a>)</span>. Egypt makes its steel in electric arc furnaces, from gas-based direct reduced iron and from scrap; its old integrated plant at Helwan was put into liquidation in January 2021 <span class="citation" data-cites="AmwalAlGhad2021">(<a href="#ref-AmwalAlGhad2021" role="doc-biblioref">Amwal Al Ghad 2021</a>)</span>. It also exports clinker, ammonia, urea, ammonium nitrate and primary aluminum to the EU. <a href="#tbl-egypt" class="quarto-xref">Table&nbsp;4</a> sets the tool’s estimate for seven products, corrected to the CBAM accounting rules (Appendix A), against the Commission’s default values <span class="citation" data-cites="EUDVWorkbook2026">(<a href="#ref-EUDVWorkbook2026" role="doc-biblioref">European Commission 2026b</a>)</span>, at the volumes the EU recorded in 2025 <span class="citation" data-cites="EurostatComext">(<a href="#ref-EurostatComext" role="doc-biblioref">Eurostat 2026</a>)</span>. These are illustrative results from the tool, not official estimates.</p>
+<div id="tbl-egypt" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-egypt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: CBAM charge on seven Egyptian exports to the EU at full phase-in (2034) and a certificate price of €80/tCO₂, declared at the EU default value with mark-up (30 percent; 1 percent for fertilizers) or at the tool’s bottom-up estimate. Tool estimates are CBAM-relevant intensities: direct emissions for steel and aluminum, direct plus indirect for cement and fertilizers, with ammonia integrated into urea and ammonium nitrate and the CO₂ bound in urea counted as emitted; steel rows are weighted across the gas-based and scrap routes by the tool’s route mix. *Egypt has no country default for carbon steel, so the “other countries” value applies. †The tool’s aluminum estimate is above the default, so the producer keeps the default. Volumes are EU imports from Egypt in 2025, held constant; clinker includes white clinker, charged at the grey-clinker default; urea is charged at the CN 3102 10 19 default. Totals computed before rounding. At 2024 volumes the totals are €982 million and €445 million. Sources: <span class="citation" data-cites="CBAMToolEgypt2026">CBAM Policy Tool (<a href="#ref-CBAMToolEgypt2026" role="doc-biblioref">2026</a>)</span>; <span class="citation" data-cites="EUDVWorkbook2026">European Commission (<a href="#ref-EUDVWorkbook2026" role="doc-biblioref">2026b</a>)</span>; <span class="citation" data-cites="EurostatComext">Eurostat (<a href="#ref-EurostatComext" role="doc-biblioref">2026</a>)</span>; author’s calculation, <code>2.Source/egypt_example.py</code>.
+</figcaption>
+<div aria-describedby="tbl-egypt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Product (CN)</th>
+<th>EU imports, 2025 (kt)</th>
+<th>Tool estimate (tCO₂e/t)</th>
+<th>EU default before mark-up (tCO₂e/t)</th>
+<th>Charge at default (€/t)</th>
+<th>Charge at tool estimate (€/t)</th>
+<th>Charge at default (€ million)</th>
+<th>Charge with verified data (€ million)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hot-rolled flat steel (7208)</td>
+<td>169</td>
+<td>0.66</td>
+<td>4.05*</td>
+<td>421</td>
+<td>53</td>
+<td>71</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>Long steel (7213, 7214, 7216)</td>
+<td>294</td>
+<td>0.28</td>
+<td>4.00*</td>
+<td>416</td>
+<td>22</td>
+<td>122</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>Cement clinker (2523 10)</td>
+<td>1,350</td>
+<td>0.87</td>
+<td>1.27</td>
+<td>132</td>
+<td>70</td>
+<td>178</td>
+<td>94</td>
+</tr>
+<tr class="even">
+<td>Anhydrous ammonia (2814 10)</td>
+<td>147</td>
+<td>1.89</td>
+<td>2.05</td>
+<td>166</td>
+<td>151</td>
+<td>24</td>
+<td>22</td>
+</tr>
+<tr class="odd">
+<td>Urea (3102 10)</td>
+<td>3,286</td>
+<td>1.22</td>
+<td>1.39</td>
+<td>112</td>
+<td>98</td>
+<td>369</td>
+<td>321</td>
+</tr>
+<tr class="even">
+<td>Ammonium nitrate (3102 30)</td>
+<td>9</td>
+<td>1.93</td>
+<td>2.39</td>
+<td>193</td>
+<td>154</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>Unwrought aluminum (7601)</td>
+<td>135</td>
+<td>2.51</td>
+<td>1.87</td>
+<td>194</td>
+<td>200</td>
+<td>26</td>
+<td>26†</td>
+</tr>
+<tr class="even">
+<td>Total</td>
+<td>5,390</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>793</td>
+<td>480</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Egypt’s steel is the clearest case for verification: with no country default, the EU charges it as if it came from the most intensive exporters.</strong> The Commission’s workbook lists no Egyptian default for carbon steel, so hot-rolled flat steel and long products fall to the “other countries” values of 4.05 and 4.00 tCO₂ per tonne before mark-up, close to those of blast-furnace steel <span class="citation" data-cites="EUDVWorkbook2026">(<a href="#ref-EUDVWorkbook2026" role="doc-biblioref">European Commission 2026b</a>)</span>. The tool puts Egypt’s gas-based steel at 0.73 and its scrap-based steel at 0.16 tCO₂ per tonne. Declared at the default, Egyptian hot-rolled steel would owe €421 per tonne at full phase-in, more than the €252 charged on Turkish blast-furnace steel in <a href="#tbl-example" class="quarto-xref">Table&nbsp;3</a>; declared at the tool’s estimate it would owe €53. On the two steel rows, verified data would cut the charge from €193 million to €16 million a year at 2025 volumes. The year matters: EU imports of Egyptian hot-rolled steel fell from 696,000 tonnes in 2024 to 169,000 in 2025, and at 2024 volumes the steel charge would fall from €476 million to €47 million.</p>
+<p><strong>The steel estimate is also the least certain number in the application, and the conclusion survives the uncertainty.</strong> The gas-based factor fell from 1.63 to 0.73 tCO₂ per tonne between versions 1.1 and 1.2 of the workbook, when natural gas use per tonne was set to a figure reported for one plant <span class="citation" data-cites="CBAMToolEgypt2026">(<a href="#ref-CBAMToolEgypt2026" role="doc-biblioref">CBAM Policy Tool 2026</a>)</span>. The EU’s own numbers bracket it. Its default benchmark for hot-rolled steel made through direct reduction is 0.481 tCO₂ per tonne <span class="citation" data-cites="EU2025FreeAllocation">(<a href="#ref-EU2025FreeAllocation" role="doc-biblioref">European Commission 2025d</a>, Annex point 5.3)</span>, and its default value for Iran, a large producer of gas-based steel, is 1.94 <span class="citation" data-cites="EUDVWorkbook2026">(<a href="#ref-EUDVWorkbook2026" role="doc-biblioref">European Commission 2026b</a>)</span>. The tool’s factor is also per tonne of crude steel, while CBAM charges per tonne of the rolled product, which adds the reheating furnace and rolling losses. At 1.63 or 1.94 for the gas-based route, the charge on Egyptian steel with verified data would be €31–36 million a year at 2025 volumes instead of €16 million, still a sixth or less of the €193 million at the default (<a href="#tbl-egypt-steel" class="quarto-xref">Table&nbsp;6</a>). Verification pays for Egyptian steel whichever number is right; only plant data can settle by how much.</p>
+<p><strong>Routing can make verified steel look cleaner than Egypt’s steel is.</strong> Egyptian steelmakers run both routes, and under plant-level measurement a firm can send scrap-based steel, at 0.16 tCO₂ per tonne, to the EU and the gas-based steel elsewhere. The verified intensity of exports then falls below the country’s production average without any cut in emissions. Paper 1.4 shows that measuring embodied carbon by exporting country and sector removes the gain from such routing, and that a country-level price signal then gives every plant the incentive that plant-level measurement was meant to provide <span class="citation" data-cites="StrettonWP14 CFPB14">(<a href="#ref-StrettonWP14" role="doc-biblioref">Stretton 2026c</a>, <a href="#ref-CFPB14" role="doc-biblioref">2026d</a>)</span>. The export-weighted estimate in <a href="#tbl-egypt" class="quarto-xref">Table&nbsp;4</a> is the right measure of Egypt’s position; a firm’s verified figure may be lower for reasons that do nothing for the climate.</p>
+<p><strong>For cement the gap is large, for fertilizers small, and for aluminum the default is a subsidy.</strong> Clinker, at 0.87 tCO₂e per tonne against a default of 1.27, would save €62 per tonne, or €84 million a year on 1.35 million tonnes. Urea is Egypt’s largest CBAM export to the EU, 3.3 million tonnes in 2025. Counted as the EU rules require, with its ammonia integrated and the CO₂ it carries counted as emitted, it comes to 1.22 tCO₂e per tonne against a default of 1.39, a saving of only €15 per tonne; the uncorrected tool figure of 0.49 would have suggested €73. Ammonium nitrate, at 1.93 against 2.39, depends on whether the nitric acid plants abate nitrous oxide, which the application could not confirm; the tool reports a range of 0.21–1.91 tCO₂e per tonne for that component alone. Primary aluminum is the one product where the tool’s estimate, 2.51 tCO₂ per tonne, is above the default of 1.87, because of perfluorocarbons from older smelting lines; a producer near the estimate gains nothing from filing data even at the full 30 percent mark-up, and keeps the default.</p>
+<p><strong>The Egypt application points to different levers for different products.</strong> Across the seven products, declaring verified emissions where they pay would cut the full-phase-in charge from about €793 million to €480 million a year at 2025 volumes, a saving of €313 million: €178 million on steel, €84 million on clinker and €48 million on urea. The remaining €480 million is what a domestic carbon price could then capture at home under Article 9: at the capture price of <a href="#eq-capture" class="quarto-xref">equation&nbsp;3</a>, the whole of it, for producers declaring actual data. Two-thirds of that remainder, €321 million, is on urea. For steel and clinker the order is verification first: a domestic price levied before plants file data would be deducted only through a Commission default carbon price, if one is published, while the default values would keep the charge high. For urea, data change little, and the choice is between abatement and a domestic price that keeps the charge at home. A €20 price on urea alone would move about €80 million a year.</p>
+</section>
+<section id="sec-uses" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Policy uses</h1>
+<p><strong>The tool tells a ministry which lever to pull first, product by product.</strong> Where the bottom-up intensity is well below the marked-up default, as for Egyptian steel and clinker, the cheapest lever is verification capacity: accredited verifiers and monitoring at the plants that export to the EU. Where it is near the default, as for Egyptian urea and ammonia, data are worth little, and the choice is between abatement and a domestic price that captures the charge. Where it is above the default, as for Egyptian aluminum, data will not help at all.</p>
+<p><strong>It puts a number on the fiscal case for a domestic carbon price on CBAM goods.</strong> <a href="#eq-capture" class="quarto-xref">equation&nbsp;3</a> and <a href="#eq-split" class="quarto-xref">equation&nbsp;4</a> show how much revenue a domestic price would move from the EU budget to the exporter’s, and how much of the fall in the border charge comes from that deduction rather than from abatement. Because a broad price also raises revenue on domestic sales and non-EU exports, the CBAM deduction is often the trigger for a domestic price rather than its main revenue source. Paper 1.1 sets out the architecture in which such a producer price sits alongside a destination-based price on consumption <span class="citation" data-cites="StrettonWP11 CFPB11">(<a href="#ref-StrettonWP11" role="doc-biblioref">Stretton 2026g</a>, <a href="#ref-CFPB11" role="doc-biblioref">2026h</a>)</span>.</p>
+<p><strong>It shows the cost of designing a domestic price to return its revenue to producers.</strong> An output-based rebate or feebate keeps the incentive to cut emissions per tonne and protects output, but under the draft rules it forfeits the deduction, so the border charge falls only by the abatement term of <a href="#eq-split" class="quarto-xref">equation&nbsp;4</a>. The tool makes that trade-off explicit. Paper 1.4 argues that the EU should credit the price signal, not only the payment, and measure embodied carbon by country and sector <span class="citation" data-cites="StrettonWP14 CFPB14">(<a href="#ref-StrettonWP14" role="doc-biblioref">Stretton 2026c</a>, <a href="#ref-CFPB14" role="doc-biblioref">2026d</a>)</span>; paper 6.1’s Total Effective Carbon Price offers a way to measure that signal across instruments <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Stretton 2026f</a>)</span>.</p>
+<p><strong>It supports dialogue with the EU on default values and deductions.</strong> A country with no default of its own, like Egypt for steel, or whose bottom-up intensities are well below its defaults, has a documented case to put in the revision of default values due in 2027 at the latest <span class="citation" data-cites="EU2025Defaults">(<a href="#ref-EU2025Defaults" role="doc-biblioref">European Commission 2025e</a>, Art. 2)</span>. A country with a carbon price can show the Commission what a default carbon price for it should be <span class="citation" data-cites="EU2025Omnibus">(<a href="#ref-EU2025Omnibus" role="doc-biblioref">European Parliament and Council of the European Union 2025</a>, Art. 9(4))</span>, and can comment on the methodology the Commission is preparing <span class="citation" data-cites="Technopolis2026">(<a href="#ref-Technopolis2026" role="doc-biblioref">Technopolis Group 2026</a>)</span>.</p>
+</section>
+<section id="sec-limits" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Objections and limits</h1>
+<p><strong>The strongest objection is that a technology average is not verified plant data.</strong> A verified declaration follows the installation’s own monitoring plan, boundaries and precursors under the EU rules <span class="citation" data-cites="EU2025Methods EU2025Verification">(<a href="#ref-EU2025Methods" role="doc-biblioref">European Commission 2025b</a>, <a href="#ref-EU2025Verification" role="doc-biblioref">2025a</a>)</span>, and a bottom-up estimate built from engineering ratios can miss in either direction, as the revision of Egypt’s steel factor shows. The answer is to read the estimate as what a plant at the technology average would declare, with the default’s 30 percent mark-up as the margin for error before verification stops paying, and to report ranges. The conclusions that survive the ranges, such as verification for Egyptian steel, hold; the sizes do not, and the first use of the tool is to choose the plants at which to pilot verification.</p>
+<p><strong>The tool computes exposure, not incidence.</strong> Export volumes are fixed inputs or grow with GDP; there is no trade model, so the tool does not say who bears the charge, how EU buyers switch suppliers or how trade diverts to other markets. Trade-model studies answer those questions at lower product detail <span class="citation" data-cites="Beaufils2023 Magacho2024">(<a href="#ref-Beaufils2023" role="doc-biblioref">Beaufils et al. 2023</a>; <a href="#ref-Magacho2024" role="doc-biblioref">Magacho et al. 2024</a>)</span>.</p>
+<p><strong>The rules are still moving.</strong> The conversion of a carbon price paid into fewer certificates, the evidence required and the treatment of rebates are set by an implementing act that was in the Commission’s adoption workflow, not adopted, on 31 October 2026 <span class="citation" data-cites="EU2026DraftCarbonPrice">(<a href="#ref-EU2026DraftCarbonPrice" role="doc-biblioref">European Commission 2026c</a>)</span>. Default values were corrected in July 2026 and are due for revision in 2027 <span class="citation" data-cites="EUDVCorrection2026 EU2025Defaults">(<a href="#ref-EUDVCorrection2026" role="doc-biblioref">European Commission 2026a</a>, <a href="#ref-EU2025Defaults" role="doc-biblioref">2025e</a>)</span>, and the July 2026 proposal would slow the phase-out of free allocation and end it in 2038 <span class="citation" data-cites="EU2026ETSProposal">(<a href="#ref-EU2026ETSProposal" role="doc-biblioref">European Commission 2026d</a>)</span>; if adopted, it would lower every 2028–2037 charge in the example. The cross-sectoral correction factor is set to 1. The tool is not a compliance calculator and should not be used to compute a firm’s certificate obligation.</p>
+<p><strong>Coverage is partial.</strong> Hydrogen, electricity and the downstream goods proposed in December 2025 are not modeled, and indirect emissions are excluded for steel and aluminum by rule even where electricity is the largest source, as in aluminum smelting <span class="citation" data-cites="EU2023">(<a href="#ref-EU2023" role="doc-biblioref">European Parliament and Council of the European Union 2023b</a>, Annex II)</span>.</p>
+</section>
+<section id="sec-conclusion" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Conclusion</h1>
+<p>The CBAM Policy Tool turns the EU’s border rules into a product-by-product, year-by-year exposure for one exporter, and shows how much verified data, abatement and a domestic carbon price would change it. For steel well above the EU benchmark, most of the charge arrives in 2026, the mark-up alone is worth about €58 per tonne, and a modest domestic price deducted under Article 9 lowers the charge one for one and keeps the money at home. The Egypt application shows that the right lever differs by product: verified data for steel, where a missing country default inflates the charge more than tenfold, and abatement or a domestic price for urea, where the default is close to what plants emit. It also shows that the tool’s accounting must follow the EU’s rules exactly; two fertilizer corrections changed the largest line in the table. The next steps are to carry these corrections into the tool, add the conversion rule once the Commission adopts it, and run the tool with plant-level data for the exporters most exposed.</p>
+</section>
+<section id="downloads" class="level1 unnumbered">
+<h1 class="unnumbered">Downloads</h1>
+<p><a href="../../../papers/Brief-CBAMPolicyTool.docx">Policy brief (docx)</a> · <a href="../../../papers/CBAMPolicyTool.docx">Working paper (docx)</a></p>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-AmwalAlGhad2021" class="csl-entry" role="listitem">
+Amwal Al Ghad. 2021. <em>Egypt’s 67-Year Old Steel Plant in <span>Helwan</span> Will Be Liquidated After Incurring Rising Losses</em>. Amwal Al Ghad (English edition), 12 January 2021. <a href="https://en.amwalalghad.com/?p=116753">https://en.amwalalghad.com/?p=116753</a>.
+</div>
+<div id="ref-Sandbag2024" class="csl-entry" role="listitem">
+Assous, Adrien, Meili Vanegas Hernandez, Aymeric Amand, Fausto Zaccaro, and Emilie Cocco. 2024. <em>A Scrap Game: Impacts of the <span>EU</span> Carbon Border Adjustment Mechanism</em>. Sandbag. <a href="https://sandbag.be/2024/06/03/a-scrap-game/">https://sandbag.be/2024/06/03/a-scrap-game/</a>.
+</div>
+<div id="ref-Beaufils2023" class="csl-entry" role="listitem">
+Beaufils, Timothé, Hauke Ward, Michael Jakob, and Leonie Wenz. 2023. <span>“Assessing Different <span>European</span> Carbon Border Adjustment Mechanism Implementations and Their Impact on Trade Partners.”</span> <em>Communications Earth &amp; Environment</em> 4: 131. <a href="https://doi.org/10.1038/s43247-023-00788-4">https://doi.org/10.1038/s43247-023-00788-4</a>.
+</div>
+<div id="ref-CBAMToolEgypt2026" class="csl-entry" role="listitem">
+CBAM Policy Tool. 2026. <em>Egypt Application: <span>CBAM</span> Emission-Factor Matrix and <span>EU</span> Export Volumes, Version 1.2</em>. Climate Fiscal AI Tools, workbook Egypt_CBAM_EF_v1.2.xlsx, sheets EF, Quality_Assurance and EgyptVolumes.
+</div>
+<div id="ref-IPCC2006Urea" class="csl-entry" role="listitem">
+De Klein, Cecile, Rafael S. A. Novoa, Stephen Ogle, Keith A. Smith, Philippe Rochette, and Thomas C. Wirth. 2006. <span>“Chapter 11: <span>N2O</span> Emissions from Managed Soils, and <span>CO2</span> Emissions from Lime and Urea Application.”</span> In <em>2006 <span>IPCC</span> Guidelines for National Greenhouse Gas Inventories, Volume 4: Agriculture, Forestry and Other Land Use</em>, edited by H. S. Eggleston, L. Buendia, K. Miwa, T. Ngara, and K. Tanabe. Institute for Global Environmental Strategies. <a href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/vol4.html">https://www.ipcc-nggip.iges.or.jp/public/2006gl/vol4.html</a>.
+</div>
+<div id="ref-Eicke2021" class="csl-entry" role="listitem">
+Eicke, Laima, Silvia Weko, Maria Apergi, and Adela Marian. 2021. <span>“Pulling up the Carbon Ladder? Decarbonization, Dependence, and Third-Country Risks from the <span>European</span> Carbon Border Adjustment Mechanism.”</span> <em>Energy Research &amp; Social Science</em> 80: 102240. <a href="https://doi.org/10.1016/j.erss.2021.102240">https://doi.org/10.1016/j.erss.2021.102240</a>.
+</div>
+<div id="ref-EU2025Verification" class="csl-entry" role="listitem">
+European Commission. 2025a. <em>Commission Implementing Regulation (<span>EU</span>) 2025/2546 of 10 December 2025 on the Application of the Principles for Verification of Declared Embedded Emissions Pursuant to Regulation (<span>EU</span>) 2023/956</em>. Official Journal of the European Union, L series, 2025/2546, 22.12.2025.
+</div>
+<div id="ref-EU2025Methods" class="csl-entry" role="listitem">
+European Commission. 2025b. <em>Commission Implementing Regulation (<span>EU</span>) 2025/2547 of 10 December 2025 Laying down Rules for the Application of Regulation (<span>EU</span>) 2023/956 as Regards the Methods for the Calculation of Emissions Embedded in Goods</em>. Official Journal of the European Union, L series, 2025/2547, 22.12.2025. <a href="http://data.europa.eu/eli/reg_impl/2025/2547/oj">http://data.europa.eu/eli/reg_impl/2025/2547/oj</a>.
+</div>
+<div id="ref-EU2025CertPrice" class="csl-entry" role="listitem">
+European Commission. 2025c. <em>Commission Implementing Regulation (<span>EU</span>) 2025/2548 of 10 December 2025 as Regards the Calculation and Publication of the Price of <span>CBAM</span> Certificates</em>. Official Journal of the European Union, L series, 2025/2548, 22.12.2025.
+</div>
+<div id="ref-EU2025FreeAllocation" class="csl-entry" role="listitem">
+European Commission. 2025d. <em>Commission Implementing Regulation (<span>EU</span>) 2025/2620 of 16 December 2025 Laying down Rules for the Application of Regulation (<span>EU</span>) 2023/956 as Regards the Calculation of the Free Allocation Adjustment to the Number of <span>CBAM</span> Certificates to Be Surrendered</em>. Official Journal of the European Union, L series, 2025/2620, 22.12.2025. <a href="http://data.europa.eu/eli/reg_impl/2025/2620/oj">http://data.europa.eu/eli/reg_impl/2025/2620/oj</a>.
+</div>
+<div id="ref-EU2025Defaults" class="csl-entry" role="listitem">
+European Commission. 2025e. <em>Commission Implementing Regulation (<span>EU</span>) 2025/2621 of 16 December 2025 Laying down Rules for the Application of Regulation (<span>EU</span>) 2023/956 as Regards the Establishment of Default Values</em>. Official Journal of the European Union, L series, 2025/2621, 31.12.2025. <a href="http://data.europa.eu/eli/reg_impl/2025/2621/oj">http://data.europa.eu/eli/reg_impl/2025/2621/oj</a>.
+</div>
+<div id="ref-EU2025Downstream" class="csl-entry" role="listitem">
+European Commission. 2025f. <em>Proposal for a Regulation of the European Parliament and of the Council Amending Regulation (<span>EU</span>) 2023/956 as Regards the Extension of Its Scope to Downstream Goods and Anti-Circumvention Measures</em>. COM(2025) 989 final, 2025/0419(COD), 17.12.2025.
+</div>
+<div id="ref-EUDVCorrection2026" class="csl-entry" role="listitem">
+European Commission. 2026a. <em>Commission Implementing Regulation (<span>EU</span>) 2026/1740 of 20 July 2026 Correcting Implementing Regulation (<span>EU</span>) 2025/2621 as Regards Annexes <span>I</span> and <span>IV</span> Thereto</em>. Official Journal of the European Union, L series, 2026/1740, 31.7.2026. <a href="http://data.europa.eu/eli/reg_impl/2026/1740/oj">http://data.europa.eu/eli/reg_impl/2026/1740/oj</a>.
+</div>
+<div id="ref-EUDVWorkbook2026" class="csl-entry" role="listitem">
+European Commission. 2026b. <em>Default Values for the Definitive Period of <span>CBAM</span> ("<span>DVs</span> as Adopted"), Version of 4 February 2026</em>. Excel workbook published by DG TAXUD for information; the legally valid values are those in Implementing Regulation (EU) 2025/2621. <a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en">https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en</a>.
+</div>
+<div id="ref-EU2026DraftCarbonPrice" class="csl-entry" role="listitem">
+European Commission. 2026c. <em>Draft Commission Implementing Regulation Laying down Rules for the Application of Regulation (<span>EU</span>) 2023/956 as Regards the Conversion of the Carbon Price Paid in a Third Country into a Corresponding Reduction in the Number of <span>CBAM</span> Certificates to Be Surrendered, the Evidence of Payment of That Carbon Price, the Qualifications of the Independent Person and Conditions to Ascertain Its Independence and Qualifications</em>. Ref. Ares(2026)4841230, 13.5.2026; Have Your Say initiative 14830. <a href="https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14830">https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14830</a>.
+</div>
+<div id="ref-EU2026ETSProposal" class="csl-entry" role="listitem">
+European Commission. 2026d. <em>Proposal for a Directive of the <span>European Parliament</span> and of the <span>Council</span> Amending Directive 2003/87/<span>EC</span> and Decision (<span>EU</span>) 2015/1814 as Regards Driving Competitiveness and Cost-Effective Decarbonisation</em>. COM(2026) 616 final, 2026/0212(COD), Brussels, 17.7.2026.
+</div>
+<div id="ref-EU2023ETSDirective" class="csl-entry" role="listitem">
+European Parliament and Council of the European Union. 2023a. <em>Directive (<span>EU</span>) 2023/959 of 10 May 2023 Amending Directive 2003/87/<span>EC</span> Establishing a System for Greenhouse Gas Emission Allowance Trading Within the Union</em>. Official Journal of the European Union, L 130, 16.5.2023, p. 134. <a href="http://data.europa.eu/eli/dir/2023/959/oj">http://data.europa.eu/eli/dir/2023/959/oj</a>.
+</div>
+<div id="ref-EU2023" class="csl-entry" role="listitem">
+European Parliament and Council of the European Union. 2023b. <em>Regulation (<span>EU</span>) 2023/956 of 10 May 2023 Establishing a Carbon Border Adjustment Mechanism</em>. Official Journal of the European Union, L 130, 16.5.2023, p. 52. <a href="http://data.europa.eu/eli/reg/2023/956/oj">http://data.europa.eu/eli/reg/2023/956/oj</a>.
+</div>
+<div id="ref-EU2025Omnibus" class="csl-entry" role="listitem">
+European Parliament and Council of the European Union. 2025. <em>Regulation (<span>EU</span>) 2025/2083 of 8 October 2025 Amending Regulation (<span>EU</span>) 2023/956 as Regards Simplifying and Strengthening the Carbon Border Adjustment Mechanism</em>. Official Journal of the European Union, L series, 2025/2083, 17.10.2025. <a href="http://data.europa.eu/eli/reg/2025/2083/oj">http://data.europa.eu/eli/reg/2025/2083/oj</a>.
+</div>
+<div id="ref-EurostatComext" class="csl-entry" role="listitem">
+Eurostat. 2026. <em><span>EU</span> Trade Since 1988 by <span>HS2-4-6</span> and <span>CN8</span> (<span>DS-045409</span>)</em>. Comext database, dissemination API. <a href="https://ec.europa.eu/eurostat/comext/newxtweb/">https://ec.europa.eu/eurostat/comext/newxtweb/</a>.
+</div>
+<div id="ref-IPCC2006" class="csl-entry" role="listitem">
+IPCC. 2006. <span>“Chapter 1: Introduction.”</span> In <em>2006 <span>IPCC</span> Guidelines for National Greenhouse Gas Inventories, Volume 2: Energy</em>, edited by H. S. Eggleston, L. Buendia, K. Miwa, T. Ngara, and K. Tanabe. Institute for Global Environmental Strategies. <a href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/vol2.html">https://www.ipcc-nggip.iges.or.jp/public/2006gl/vol2.html</a>.
+</div>
+<div id="ref-KeenParryRoaf2022" class="csl-entry" role="listitem">
+Keen, Michael, Ian Parry, and James Roaf. 2022. <span>“Border Carbon Adjustments: Rationale, Design and Impact.”</span> <em>Fiscal Studies</em> 43 (3): 209–34. <a href="https://doi.org/10.1111/1475-5890.12307">https://doi.org/10.1111/1475-5890.12307</a>.
+</div>
+<div id="ref-Magacho2024" class="csl-entry" role="listitem">
+Magacho, Guilherme, Etienne Espagne, and Antoine Godin. 2024. <span>“Impacts of the <span>CBAM</span> on <span>EU</span> Trade Partners: Consequences for Developing Countries.”</span> <em>Climate Policy</em> 24 (2): 243–59. <a href="https://doi.org/10.1080/14693062.2023.2200758">https://doi.org/10.1080/14693062.2023.2200758</a>.
+</div>
+<div id="ref-Mehling2019" class="csl-entry" role="listitem">
+Mehling, Michael A., Harro van Asselt, Kasturi Das, Susanne Droege, and Cleo Verkuijl. 2019. <span>“Designing Border Carbon Adjustments for Enhanced Climate Action.”</span> <em>American Journal of International Law</em> 113 (3): 433–81. <a href="https://doi.org/10.1017/ajil.2019.22">https://doi.org/10.1017/ajil.2019.22</a>.
+</div>
+<div id="ref-MehlingRitz2023" class="csl-entry" role="listitem">
+Mehling, Michael A., and Robert A. Ritz. 2023. <span>“From Theory to Practice: Determining Emissions in Traded Goods Under a Border Carbon Adjustment.”</span> <em>Oxford Review of Economic Policy</em> 39 (1): 123–33. <a href="https://doi.org/10.1093/oxrep/grac043">https://doi.org/10.1093/oxrep/grac043</a>.
+</div>
+<div id="ref-PerdanaVielle2022" class="csl-entry" role="listitem">
+Perdana, Sigit, and Marc Vielle. 2022. <span>“Making the <span>EU</span> Carbon Border Adjustment Mechanism Acceptable and Climate Friendly for Least Developed Countries.”</span> <em>Energy Policy</em> 170: 113245. <a href="https://doi.org/10.1016/j.enpol.2022.113245">https://doi.org/10.1016/j.enpol.2022.113245</a>.
+</div>
+<div id="ref-CFPB54" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026a. <em>Are <span>CPAT</span>’s Price Elasticities Right?</em> 5.4. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-StrettonWP54" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026b. <em>Are <span>CPAT</span>’s Price Elasticities Right? <span>A</span> Check Against the Evidence</em>. Working paper, version 0.2, October 2026.
+</div>
+<div id="ref-StrettonWP14" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026c. <em>Credit the Price Signal, Not the Payment: Carbon Price Recognition and Scrap Shuffling Under the <span>EU</span>’s Carbon Border Adjustment Mechanism</em>. Working paper, version 0.4, October 2026.
+</div>
+<div id="ref-CFPB14" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026d. <em>Credit the Price Signal, Not the Payment: Carbon Price Recognition and Scrap Shuffling Under the <span>EU</span>’s Carbon Border Adjustment Mechanism</em>. 1.4. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB12" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026e. <em>Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill</em>. 1.2. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB61" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026f. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-StrettonWP11" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026g. <em>Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies</em>. Working paper, version 0.4, October 2026.
+</div>
+<div id="ref-CFPB11" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026h. <em>Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies</em>. 1.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-Technopolis2026" class="csl-entry" role="listitem">
+Technopolis Group. 2026. <em>Technopolis to Support the <span>European Commission</span> in Developing <span>CBAM</span> Default Carbon Price Methodology</em>. Project page, technopolis-group.com. <a href="https://technopolis-group.com/?p=67475">https://technopolis-group.com/?p=67475</a>.
+</div>
+</div>
+</section>
+
+
+
+<div id="quarto-appendix" class="default"><section id="sec-app-corrections" class="level1 appendix unnumbered"><h2 class="anchored quarto-appendix-heading">Appendix A: Corrections to the tool’s Egypt results</h2><div class="quarto-appendix-contents">
+
+<p><strong>Three changes separate <a href="#tbl-egypt" class="quarto-xref">Table&nbsp;4</a> from the tool’s Egypt workbook as published (version 1.2).</strong> <a href="#tbl-corrections" class="quarto-xref">Table&nbsp;5</a> lists them. The first two bring the tool’s fertilizer accounting into line with the EU rules; the third replaces the tool’s estimates of EU export volumes, built from production and export shares, with the trade Eurostat records. Together they raise the charge at default values from €595 million to €793 million and the charge with verified data from €177 million to €480 million, and they cut the saving on urea from €117 million to €48 million.</p>
+<div id="tbl-corrections" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-corrections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: Corrections to the tool’s Egypt results. Source: <span class="citation" data-cites="CBAMToolEgypt2026">CBAM Policy Tool (<a href="#ref-CBAMToolEgypt2026" role="doc-biblioref">2026</a>)</span>; <span class="citation" data-cites="EurostatComext">Eurostat (<a href="#ref-EurostatComext" role="doc-biblioref">2026</a>)</span>; author’s calculation, <code>2.Source/egypt_example.py</code>.
+</figcaption>
+<div aria-describedby="tbl-corrections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Tool workbook v1.2</th>
+<th>This paper</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Urea, CO₂ bound in the product</td>
+<td>Deducted (−0.733 tCO₂/t); estimate 0.49</td>
+<td>Counted as emitted; estimate 1.22</td>
+<td>CO₂ counts as not emitted only if “permanently chemically bound” <span class="citation" data-cites="EU2025Methods">(<a href="#ref-EU2025Methods" role="doc-biblioref">European Commission 2025b</a>, Annex II point B.8.2)</span>; urea releases it in soil <span class="citation" data-cites="IPCC2006Urea">(<a href="#ref-IPCC2006Urea" role="doc-biblioref">De Klein et al. 2006</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Ammonium nitrate, ammonia content</td>
+<td>0.213 t NH₃ per t (17/80); estimate 1.53</td>
+<td>0.425 t NH₃ per t (34/80); estimate 1.93</td>
+<td>Both nitrogen atoms come from ammonia, one through nitric acid, a CBAM precursor</td>
+</tr>
+<tr class="odd">
+<td>EU export volumes</td>
+<td>Tool estimates for 2024 (urea 1,600 kt; hot-rolled steel 364 kt; clinker 560 kt; ammonia 110 kt)</td>
+<td>Eurostat EU imports from Egypt, 2025 (3,286; 169; 1,350; 147 kt); 2024 as a check (2,557; 696; 1,041; 320 kt)</td>
+<td>Recorded trade, the same source as the Türkiye example</td>
+</tr>
+<tr class="even">
+<td>Aluminum total</td>
+<td>Charged at the tool estimate (above the default)</td>
+<td>Charged at the default</td>
+<td>A producer above the default keeps it</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>The steel result is shown at three values for the gas-based route.</strong> <a href="#tbl-egypt-steel" class="quarto-xref">Table&nbsp;6</a> gives the charge on Egyptian steel with verified data at the tool’s current factor, at its earlier factor and at Iran’s EU default, against the charge at the default value.</p>
+<div id="tbl-egypt-steel" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-egypt-steel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6: Charge on Egypt’s steel exports to the EU at full phase-in and €80/tCO₂, by assumed intensity of the gas-based route; scrap-based route at 0.155 tCO₂/t throughout. Sources: <span class="citation" data-cites="CBAMToolEgypt2026">CBAM Policy Tool (<a href="#ref-CBAMToolEgypt2026" role="doc-biblioref">2026</a>)</span>; <span class="citation" data-cites="EUDVWorkbook2026">European Commission (<a href="#ref-EUDVWorkbook2026" role="doc-biblioref">2026b</a>)</span>; <span class="citation" data-cites="EurostatComext">Eurostat (<a href="#ref-EurostatComext" role="doc-biblioref">2026</a>)</span>; author’s calculation, <code>2.Source/table_egypt_sensitivity.csv</code>.
+</figcaption>
+<div aria-describedby="tbl-egypt-steel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Gas-based route factor (tCO₂/t)</th>
+<th>Hot-rolled flat steel estimate</th>
+<th>Long steel estimate</th>
+<th>Steel charge with verified data, 2025 volumes (€ million)</th>
+<th>Same, 2024 volumes (€ million)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.73 (tool workbook v1.2)</td>
+<td>0.66</td>
+<td>0.28</td>
+<td>16</td>
+<td>47</td>
+</tr>
+<tr class="even">
+<td>1.63 (tool workbook v1.1)</td>
+<td>1.45</td>
+<td>0.47</td>
+<td>31</td>
+<td>97</td>
+</tr>
+<tr class="odd">
+<td>1.94 (EU default for Iran, CN 7208)</td>
+<td>1.72</td>
+<td>0.54</td>
+<td>36</td>
+<td>115</td>
+</tr>
+<tr class="even">
+<td>Charge at the EU default value</td>
+<td>5.26 (with mark-up)</td>
+<td>5.19 (with mark-up)</td>
+<td>193</td>
+<td>476</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Corrections for the tool itself.</strong> The tool’s merchant-DRI factor (1.38 tCO₂ per tonne of DRI) is inconsistent with its gas-based steel factor (0.73 per tonne of steel made mostly from DRI), and its steel factors are per tonne of crude steel rather than of rolled product. Both should be reconciled, and the two fertilizer corrections carried into the workbook, in its next version.</p>
+
+
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The CBAM Policy Tool is one of the Climate Fiscal AI Tools. The Türkiye example uses public EU and Eurostat data only. The Egypt application in <a href="#sec-egypt" class="quarto-xref">Section&nbsp;8</a> reports illustrative results from the tool, corrected as described in Appendix A, with public trade data; they are not official estimates of Egypt’s emissions or of any government’s or institution’s position. Errors are the author’s own.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephen J. Stretton">
+<meta name="keywords" content="carbon border adjustment, CBAM, default values, emissions verification, carbon pricing, Egypt, Türkiye">
+
+<title>The CBAM Policy Tool – Climate, Fiscal &amp; Finance</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Climate, Fiscal &amp; Finance</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Policy and Finance</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../modelling/index.html" aria-current="page"> 
+<span class="menu-text">Modelling and Analytics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades.html">6. Modular Upgrades</a></li><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html">6.2 The CBAM Policy Tool</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modelling and Analytics</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Modelling (CPAT)</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATMitigationMethods/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.1 The CPAT Mitigation Module</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATMitigationMethods/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATAIImplementation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.2 CPAT-AI</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.3 Validating CPAT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/ElasticityValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.4 Are CPAT's Price Elasticities Right?</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Modular Upgrades</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.1 Measure Carbon Pricing by the Emissions It Cuts</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">6.2 The CBAM Policy Tool</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3 Public Investment in CPAT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PublicInvestment/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/ActivityModelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/ActivityModelling/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.5 The Macro-Fiscal-Energy Scenario Tool</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Analytics Tools</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.1 The Excise-Fiscal Diagnostic</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-key-messages" id="toc-sec-key-messages" class="nav-link active" data-scroll-target="#sec-key-messages">Key messages</a></li>
+  <li><a href="#sec-charge" id="toc-sec-charge" class="nav-link" data-scroll-target="#sec-charge">The border charge is large and arrives early</a></li>
+  <li><a href="#sec-tool" id="toc-sec-tool" class="nav-link" data-scroll-target="#sec-tool">The CBAM Policy Tool turns the rules into a bill a ministry can check</a></li>
+  <li><a href="#sec-levers" id="toc-sec-levers" class="nav-link" data-scroll-target="#sec-levers">Data and a domestic price are each worth tens of euros a tonne</a></li>
+  <li><a href="#sec-egypt" id="toc-sec-egypt" class="nav-link" data-scroll-target="#sec-egypt">Egypt shows the right lever differs by product</a></li>
+  <li><a href="#sec-what-to-do" id="toc-sec-what-to-do" class="nav-link" data-scroll-target="#sec-what-to-do">What to do</a></li>
+  <li><a href="#related-papers-in-this-series" id="toc-related-papers-in-this-series" class="nav-link" data-scroll-target="#related-papers-in-this-series">Related papers in this series</a></li>
+  <li><a href="#downloads" id="toc-downloads" class="nav-link" data-scroll-target="#downloads">Downloads</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades.html">6. Modular Upgrades</a></li><li class="breadcrumb-item"><a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html">6.2 The CBAM Policy Tool</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">The CBAM Policy Tool</h1>
+<p class="subtitle lead">What the EU’s Carbon Border Charge Will Cost Exporters, and Which Lever Cuts It</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stephen J. Stretton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>Since January 2026 the EU has charged importers for the carbon in steel, aluminum, cement and fertilizers. Exporting governments can cut the bill in three ways: by getting plants to file verified emissions data, by cutting emissions, and by pricing carbon at home so the EU deducts it. The CBAM Policy Tool computes the bill product by product and year by year. Turkish hot-rolled steel owes €107 a tonne in 2026 and €252 at full phase-in. For Egypt, verified data would cut the charge on steel by about 90 percent, but barely move it on urea, the largest exposure. The right lever differs by product, so ministries should run the numbers before choosing.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>carbon border adjustment, CBAM, default values, emissions verification, carbon pricing, Egypt, Türkiye</p>
+  </div>
+</div>
+
+</header>
+
+
+<p><em>Climate Fiscal Policy Brief No.&nbsp;6.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. Legal texts as of 31 October 2026. All amounts are at a stylized certificate price of €80 per tonne of CO₂. The Egypt results are illustrative tool results, not official estimates. The method, the equations and the data are in the <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html">working paper</a>.</em></p>
+<section id="sec-key-messages" class="level1">
+<h1>Key messages</h1>
+<p><a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html"><strong>Read the full working paper →</strong></a> · <a href="../../../papers/Slides-CBAMPolicyTool.pptx">Slides (pptx)</a></p>
+<p><strong>The EU’s carbon border charge is large, and for dirty goods most of it arrives in the first year.</strong> Turkish hot-rolled steel declared at the EU’s default value owes €107 a tonne in 2026 and €252 at full phase-in, close to half its price.</p>
+<p><strong>Exporting governments have three levers: verified emissions data, cleaner production, and a carbon price at home that the EU deducts.</strong> For Turkish steel, data are worth €58 a tonne and a €20 domestic price another €49, which stays at home.</p>
+<p><strong>The right lever differs by product.</strong> For Egypt, verified data would cut the charge on steel from €193 million to €16 million a year, but on urea, the largest exposure, only from €369 million to €321 million.</p>
+<p><strong>A tool’s accounting must follow the EU’s rules exactly.</strong> Two fertilizer corrections changed the largest line in the Egypt results.</p>
+<p><strong>Run the numbers for each product before choosing a policy, and press the EU to credit price signals, not only payments.</strong></p>
+</section>
+<section id="sec-charge" class="level1">
+<h1>The border charge is large and arrives early</h1>
+<p><strong>Since January 2026, EU importers of steel, aluminum, cement, fertilizers, hydrogen and electricity have owed a charge on the carbon in what they buy.</strong> Under the Carbon Border Adjustment Mechanism (CBAM), importers buy certificates priced in line with the EU’s emissions trading system for the emissions embedded in their imports <span class="citation" data-cites="EU2023 EU2025Omnibus">(<a href="#ref-EU2023" role="doc-biblioref">European Parliament and Council of the European Union 2023b</a>, <a href="#ref-EU2025Omnibus" role="doc-biblioref">2025</a>)</span>. Certificates go on sale in February 2027. Importers bringing in less than 50 tonnes a year are exempt. The charge is phased in as the EU’s own steel, cement and fertilizer plants lose their free emission allowances, by 2034 under current law <span class="citation" data-cites="EU2023ETSDirective">(<a href="#ref-EU2023ETSDirective" role="doc-biblioref">European Parliament and Council of the European Union 2023a</a>)</span>.</p>
+<p><strong>The bill depends on three things exporting governments can influence.</strong> First, whether plants file verified emissions data: if they do not, the EU applies a default value for the country, raised by a mark-up of 30 percent from 2028 (1 percent for fertilizers) <span class="citation" data-cites="EU2025Defaults">(<a href="#ref-EU2025Defaults" role="doc-biblioref">European Commission 2025b</a>)</span>. Second, whether plants cut their emissions. Third, whether the country levies a carbon price that the EU deducts: a price “effectively paid”, net of any rebate, can be subtracted from the charge <span class="citation" data-cites="EU2025Omnibus">(<a href="#ref-EU2025Omnibus" role="doc-biblioref">European Parliament and Council of the European Union 2025</a>, Art. 9)</span>.</p>
+<p><strong>For goods far dirtier than the EU benchmark, most of the charge applies from 2026.</strong> The phase-in only shields emissions up to a benchmark set from the cleaner EU plants; everything above it is charged in full from the start. Turkish hot-rolled steel declared at the default owes €107 a tonne in 2026, €196 in 2030 and €252 at full phase-in, against an average 2025 import price of €549 (<a href="#fig-path" class="quarto-xref">Figure&nbsp;1</a>). The 2026 charge is already 42 percent of the final one (<a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html#sec-charge">working paper, the charge per tonne</a>).</p>
+<div id="fig-path" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-path-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig1_charge_path.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The charge on Turkish hot-rolled steel rises from €107 a tonne in 2026 to €252 at full phase-in; verified data and a domestic carbon price each cut it by about €50. Charge per tonne at €80/tCO₂, declared at the default value; with verified data at the country average; and with a €20 domestic carbon price deducted. The dotted line shows the slower phase-out proposed in July 2026 (not adopted). Source: Commission default values; Eurostat; working paper, Table 3 and Figure 1."><img src="figures/fig1_charge_path.png" class="img-fluid figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-path-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The charge on Turkish hot-rolled steel rises from €107 a tonne in 2026 to €252 at full phase-in; verified data and a domestic carbon price each cut it by about €50. Charge per tonne at €80/tCO₂, declared at the default value; with verified data at the country average; and with a €20 domestic carbon price deducted. The dotted line shows the slower phase-out proposed in July 2026 (not adopted). Source: Commission default values; Eurostat; working paper, Table 3 and Figure 1.
+</figcaption>
+</figure>
+</div>
+<p><strong>The EU may slow the phase-in, but not by much.</strong> A Commission proposal of July 2026, not yet adopted, would keep 15 percent of free allocation until 2037 and end it in 2038 <span class="citation" data-cites="EU2026ETSProposal">(<a href="#ref-EU2026ETSProposal" role="doc-biblioref">European Commission 2026c</a>)</span>. The charge on Turkish hot-rolled steel would then be €188 a tonne in 2030 instead of €196, and €236 in 2034–2037 instead of €252.</p>
+</section>
+<section id="sec-tool" class="level1">
+<h1>The CBAM Policy Tool turns the rules into a bill a ministry can check</h1>
+<p><strong>The tool computes the charge for each product of one exporting country, year by year, from public inputs.</strong> It builds each product’s emissions from its energy use and chemistry, compares them with the EU’s default value, applies the phase-in and the certificate price, and deducts a domestic carbon price where the rules allow. Every input sits in a labeled cell with its source (<a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html#sec-tool">working paper, what the tool does</a>).</p>
+<p><strong>It answers the three questions a ministry asks.</strong> How large is the charge on each product each year? How much would verified data save? And what would a domestic carbon price do: how much of the fall in the charge comes from cleaner production, and how much from the deduction? With a €20 price and a 10 percent cut in emissions per tonne, the charge falls by a third, two-thirds of it from the deduction (<a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html#sec-response">working paper, abatement and deduction</a>).</p>
+<p><strong>Its estimates of what plants emit are technology averages, not plant data.</strong> The EU will use each plant’s verified figures. The tool’s estimate shows where verification is likely to pay; plant data must confirm it. The tool computes exposure, not who bears the charge, and it is not a compliance calculator (<a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html#sec-limits">working paper, limits</a>).</p>
+</section>
+<section id="sec-levers" class="level1">
+<h1>Data and a domestic price are each worth tens of euros a tonne</h1>
+<p><strong>Filing verified data saves at least the mark-up.</strong> A Turkish steel plant at the country average that files verified data avoids the 30 percent mark-up on the default, worth €58 a tonne at full phase-in. A cleaner plant gains more.</p>
+<p><strong>A domestic carbon price lowers the border charge one for one and keeps the money at home.</strong> A €20 price effectively paid on all emissions cuts the charge on Turkish hot-rolled steel by €49 a tonne, and the treasury collects the same €49. Together with verified data, the charge falls from €252 to €146 a tonne. At 2025 volumes, a €20 price on the three Turkish goods in the example would move about €127 million a year from the EU budget to Türkiye’s (<a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html#sec-example">working paper, worked example</a>).</p>
+<p><strong>A rebated price or feebate earns no deduction under the draft rules.</strong> A feebate charges producers above their sector’s average emissions per tonne and rebates those below. It keeps the full incentive to cut emissions, but the Commission’s draft rules treat emissions below a baseline as compensation to be netted off, so the feebate earns nothing at the border <span class="citation" data-cites="EU2026DraftCarbonPrice">(<a href="#ref-EU2026DraftCarbonPrice" role="doc-biblioref">European Commission 2026b</a>, Art. 8)</span>. <a href="../../../policy/1-carbon-pricing/IronSteelCBAM/index.html">Brief 1.4</a> argues that the EU should credit the price signal, not only the payment <span class="citation" data-cites="CFPB14">(<a href="#ref-CFPB14" role="doc-biblioref">Stretton 2026a</a>)</span>.</p>
+</section>
+<section id="sec-egypt" class="level1">
+<h1>Egypt shows the right lever differs by product</h1>
+<p><strong>The tool’s Egypt application compares its estimates with the EU defaults for seven products, and the gaps range from enormous to nil.</strong> <a href="#tbl-egypt" class="quarto-xref">Table&nbsp;1</a> and <a href="#fig-egypt" class="quarto-xref">Figure&nbsp;2</a> show the charge at full phase-in on 2025 volumes, declared at the EU default and with verified data where it pays. Across the seven products the charge falls from about €793 million a year to €480 million (<a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html#sec-egypt">working paper, Egypt</a>).</p>
+<div id="tbl-egypt" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-egypt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Verified data would cut the charge on Egypt’s steel by about 90 percent and on urea by about 13 percent. Charge at full phase-in and €80/tCO₂. Defaults before mark-up. *No Egyptian default for steel; the “other countries” value applies. †The estimate is above the default, so the producer keeps the default. Illustrative tool results, not official estimates. Sources: <span class="citation" data-cites="CBAMToolEgypt2026">CBAM Policy Tool (<a href="#ref-CBAMToolEgypt2026" role="doc-biblioref">2026</a>)</span>; <span class="citation" data-cites="EUDVWorkbook2026">European Commission (<a href="#ref-EUDVWorkbook2026" role="doc-biblioref">2026a</a>)</span>; <span class="citation" data-cites="EurostatComext">Eurostat (<a href="#ref-EurostatComext" role="doc-biblioref">2026</a>)</span>; working paper, Table 4.
+</figcaption>
+<div aria-describedby="tbl-egypt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Product</th>
+<th style="text-align: right;">EU imports, 2025 (thousand tonnes)</th>
+<th style="text-align: right;">Tool estimate (tCO₂ per tonne)</th>
+<th style="text-align: right;">EU default (tCO₂ per tonne)</th>
+<th style="text-align: right;">Charge at default (€ million a year)</th>
+<th style="text-align: right;">Charge with verified data (€ million a year)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hot-rolled flat steel</td>
+<td style="text-align: right;">169</td>
+<td style="text-align: right;">0.66</td>
+<td style="text-align: right;">4.05*</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="even">
+<td>Long steel</td>
+<td style="text-align: right;">294</td>
+<td style="text-align: right;">0.28</td>
+<td style="text-align: right;">4.00*</td>
+<td style="text-align: right;">122</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="odd">
+<td>Cement clinker</td>
+<td style="text-align: right;">1,350</td>
+<td style="text-align: right;">0.87</td>
+<td style="text-align: right;">1.27</td>
+<td style="text-align: right;">178</td>
+<td style="text-align: right;">94</td>
+</tr>
+<tr class="even">
+<td>Anhydrous ammonia</td>
+<td style="text-align: right;">147</td>
+<td style="text-align: right;">1.89</td>
+<td style="text-align: right;">2.05</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr class="odd">
+<td>Urea</td>
+<td style="text-align: right;">3,286</td>
+<td style="text-align: right;">1.22</td>
+<td style="text-align: right;">1.39</td>
+<td style="text-align: right;">369</td>
+<td style="text-align: right;">321</td>
+</tr>
+<tr class="even">
+<td>Ammonium nitrate</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1.93</td>
+<td style="text-align: right;">2.39</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td>Unwrought aluminum</td>
+<td style="text-align: right;">135</td>
+<td style="text-align: right;">2.51</td>
+<td style="text-align: right;">1.87</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">26†</td>
+</tr>
+<tr class="even">
+<td>Total</td>
+<td style="text-align: right;">5,390</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">793</td>
+<td style="text-align: right;">480</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-egypt" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-egypt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig2_egypt_charges.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Data matter most for steel and clinker; for urea, the largest exposure, they change little. Charge on seven Egyptian exports at full phase-in, €80/tCO₂, 2025 volumes. Source: working paper, Table 4."><img src="figures/fig2_egypt_charges.png" class="img-fluid figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-egypt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Data matter most for steel and clinker; for urea, the largest exposure, they change little. Charge on seven Egyptian exports at full phase-in, €80/tCO₂, 2025 volumes. Source: working paper, Table 4.
+</figcaption>
+</figure>
+</div>
+<p><strong>Egypt’s steel is charged as if it came from the dirtiest exporters, so verified data are worth almost the whole charge.</strong> Egypt has no EU default of its own for steel, so the EU applies a value of about 4 tonnes of CO₂ per tonne, set from the most carbon-intensive exporters. Egypt makes steel from gas and scrap in electric furnaces; the tool puts it at 0.16–0.73. Verified data would cut the charge on Egyptian steel from €193 million to €16 million a year. The tool’s figure for gas-based steel is uncertain, but even at the EU’s own default for Iran, another gas-based producer, the charge would be €36 million (<a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html#sec-app-corrections">working paper, steel range</a>).</p>
+<p><strong>Some of what verification “saves” on steel may be routing, not cleaner steel.</strong> A firm with both gas-based and scrap-based plants can send only scrap-based steel to Europe. Its verified figure then falls below what the country’s steel actually emits. Measuring by country and sector, as <a href="../../../policy/1-carbon-pricing/IronSteelCBAM/index.html">Brief 1.4</a> proposes, removes that gain.</p>
+<p><strong>For urea, Egypt’s largest exposure, the default is close to what plants emit, so data barely help.</strong> Urea is made from ammonia, and the EU counts both the ammonia’s emissions and the carbon dioxide the urea carries, which it releases when spread on fields <span class="citation" data-cites="EU2025Methods IPCC2006Urea">(<a href="#ref-EU2025Methods" role="doc-biblioref">European Commission 2025a</a>; <a href="#ref-IPCC2006Urea" role="doc-biblioref">De Klein et al. 2006</a>)</span>. Counted this way, Egyptian urea emits 1.22 tonnes of CO₂ per tonne against a default of 1.39. Data save €48 million a year; €321 million remains. For urea the levers are cleaner production, such as cleaner ammonia production, and a domestic carbon price that keeps the charge at home: €20 a tonne of CO₂ on urea alone would move about €80 million a year.</p>
+<p><strong>Getting the accounting right changed the answer.</strong> The tool’s first Egypt results deducted the carbon dioxide in urea and counted only half the ammonia in ammonium nitrate, against the EU’s rules. They also used the tool’s own estimates of trade volumes rather than the trade Eurostat records. Corrected, the charge at default values rose from €595 million to €793 million and the remaining charge with verified data from €177 million to €480 million, and urea moved from the strongest case for data to the weakest (<a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html#sec-app-corrections">working paper, corrections</a>).</p>
+</section>
+<section id="sec-what-to-do" class="level1">
+<h1>What to do</h1>
+<p><strong>Exporting ministries: run the calculation product by product before choosing a policy.</strong> Where the default is far above what plants emit, as for Egyptian steel and clinker, build verification capacity first: accredited verifiers and monitoring at the plants that sell to the EU. Where it is close, as for Egyptian urea and ammonia, the choice is between abatement and a domestic carbon price that keeps the charge at home. Where plants emit more than the default, as for Egyptian aluminum, keep the default.</p>
+<p><strong>Design a domestic carbon price knowing what the EU will deduct.</strong> A price effectively paid is deducted one for one; a rebated price or feebate earns nothing under the draft rules. A ministry that wants the incentive of a feebate and the deduction of a tax should know the cost of each before choosing, and can finance abatement from the revenue in ways the draft rules do not net off.</p>
+<p><strong>Use the 2027 revision of default values.</strong> The EU must revise its default values in 2027 at the latest <span class="citation" data-cites="EU2025Defaults">(<a href="#ref-EU2025Defaults" role="doc-biblioref">European Commission 2025b</a>)</span>. A country with no default of its own, as Egypt for steel, or whose plants emit far less than its default, should bring documented estimates to that revision, and a country with a carbon price should engage on the default carbon price methodology the Commission is preparing <span class="citation" data-cites="Technopolis2026">(<a href="#ref-Technopolis2026" role="doc-biblioref">Technopolis Group 2026</a>)</span>.</p>
+<p><strong>The European Commission: credit price signals, and measure by country and sector.</strong> Crediting a feebate or other non-price policy at its carbon-price equivalent (<a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html">Brief 6.1</a>) would reward the instruments exporters can adopt, and country-sector values would stop routing (<a href="../../../policy/1-carbon-pricing/IronSteelCBAM/index.html">Brief 1.4</a>).</p>
+<p><strong>Tool builders: follow the EU’s accounting exactly, and publish the corrections.</strong> The Egypt fertilizer errors were in the method, not the data. The tool’s next version should carry the corrections, reconcile its steel factors, and report each product as a range.</p>
+</section>
+<section id="related-papers-in-this-series" class="level1 unnumbered">
+<h1 class="unnumbered">Related papers in this series</h1>
+<ul>
+<li><a href="../../../policy/1-carbon-pricing/IronSteelCBAM/index.html">Climate Fiscal Policy Brief No.&nbsp;1.4</a>: crediting the price signal under CBAM, and why country-sector measurement stops routing <span class="citation" data-cites="CFPB14">(<a href="#ref-CFPB14" role="doc-biblioref">Stretton 2026a</a>)</span>.</li>
+<li><a href="../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html">No.&nbsp;1.1</a>: the two-track architecture, in which a production feebate sits beside a destination charge on consumption <span class="citation" data-cites="CFPB11">(<a href="#ref-CFPB11" role="doc-biblioref">Stretton 2026d</a>)</span>.</li>
+<li><a href="../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.html">No.&nbsp;1.2</a>: feebates, the full carbon price at the margin without the carbon bill <span class="citation" data-cites="CFPB12">(<a href="#ref-CFPB12" role="doc-biblioref">Stretton 2026b</a>)</span>.</li>
+<li><a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html">No.&nbsp;6.1</a>: the Total Effective Carbon Price, a yardstick for crediting non-price policies <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Stretton 2026c</a>)</span>.</li>
+<li>The <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html">working paper</a> behind this brief: the method in five equations, the data, the Türkiye example and the Egypt application with its corrections.</li>
+</ul>
+</section>
+<section id="downloads" class="level1 unnumbered">
+<h1 class="unnumbered">Downloads</h1>
+<p><a href="../../../papers/Brief-CBAMPolicyTool.docx">Policy brief (docx)</a> · <a href="../../../papers/CBAMPolicyTool.docx">Working paper (docx)</a></p>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-CBAMToolEgypt2026" class="csl-entry" role="listitem">
+CBAM Policy Tool. 2026. <em>Egypt Application: <span>CBAM</span> Emission-Factor Matrix and <span>EU</span> Export Volumes, Version 1.2</em>. Climate Fiscal AI Tools, workbook Egypt_CBAM_EF_v1.2.xlsx, sheets EF, Quality_Assurance and EgyptVolumes.
+</div>
+<div id="ref-IPCC2006Urea" class="csl-entry" role="listitem">
+De Klein, Cecile, Rafael S. A. Novoa, Stephen Ogle, Keith A. Smith, Philippe Rochette, and Thomas C. Wirth. 2006. <span>“Chapter 11: <span>N2O</span> Emissions from Managed Soils, and <span>CO2</span> Emissions from Lime and Urea Application.”</span> In <em>2006 <span>IPCC</span> Guidelines for National Greenhouse Gas Inventories, Volume 4: Agriculture, Forestry and Other Land Use</em>, edited by H. S. Eggleston, L. Buendia, K. Miwa, T. Ngara, and K. Tanabe. Institute for Global Environmental Strategies. <a href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/vol4.html">https://www.ipcc-nggip.iges.or.jp/public/2006gl/vol4.html</a>.
+</div>
+<div id="ref-EU2025Methods" class="csl-entry" role="listitem">
+European Commission. 2025a. <em>Commission Implementing Regulation (<span>EU</span>) 2025/2547 of 10 December 2025 Laying down Rules for the Application of Regulation (<span>EU</span>) 2023/956 as Regards the Methods for the Calculation of Emissions Embedded in Goods</em>. Official Journal of the European Union, L series, 2025/2547, 22.12.2025. <a href="http://data.europa.eu/eli/reg_impl/2025/2547/oj">http://data.europa.eu/eli/reg_impl/2025/2547/oj</a>.
+</div>
+<div id="ref-EU2025Defaults" class="csl-entry" role="listitem">
+European Commission. 2025b. <em>Commission Implementing Regulation (<span>EU</span>) 2025/2621 of 16 December 2025 Laying down Rules for the Application of Regulation (<span>EU</span>) 2023/956 as Regards the Establishment of Default Values</em>. Official Journal of the European Union, L series, 2025/2621, 31.12.2025. <a href="http://data.europa.eu/eli/reg_impl/2025/2621/oj">http://data.europa.eu/eli/reg_impl/2025/2621/oj</a>.
+</div>
+<div id="ref-EUDVWorkbook2026" class="csl-entry" role="listitem">
+European Commission. 2026a. <em>Default Values for the Definitive Period of <span>CBAM</span> ("<span>DVs</span> as Adopted"), Version of 4 February 2026</em>. Excel workbook published by DG TAXUD for information; the legally valid values are those in Implementing Regulation (EU) 2025/2621. <a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en">https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en</a>.
+</div>
+<div id="ref-EU2026DraftCarbonPrice" class="csl-entry" role="listitem">
+European Commission. 2026b. <em>Draft Commission Implementing Regulation Laying down Rules for the Application of Regulation (<span>EU</span>) 2023/956 as Regards the Conversion of the Carbon Price Paid in a Third Country into a Corresponding Reduction in the Number of <span>CBAM</span> Certificates to Be Surrendered, the Evidence of Payment of That Carbon Price, the Qualifications of the Independent Person and Conditions to Ascertain Its Independence and Qualifications</em>. Ref. Ares(2026)4841230, 13.5.2026; Have Your Say initiative 14830. <a href="https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14830">https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14830</a>.
+</div>
+<div id="ref-EU2026ETSProposal" class="csl-entry" role="listitem">
+European Commission. 2026c. <em>Proposal for a Directive of the <span>European Parliament</span> and of the <span>Council</span> Amending Directive 2003/87/<span>EC</span> and Decision (<span>EU</span>) 2015/1814 as Regards Driving Competitiveness and Cost-Effective Decarbonisation</em>. COM(2026) 616 final, 2026/0212(COD), Brussels, 17.7.2026.
+</div>
+<div id="ref-EU2023ETSDirective" class="csl-entry" role="listitem">
+European Parliament and Council of the European Union. 2023a. <em>Directive (<span>EU</span>) 2023/959 of 10 May 2023 Amending Directive 2003/87/<span>EC</span> Establishing a System for Greenhouse Gas Emission Allowance Trading Within the Union</em>. Official Journal of the European Union, L 130, 16.5.2023, p. 134. <a href="http://data.europa.eu/eli/dir/2023/959/oj">http://data.europa.eu/eli/dir/2023/959/oj</a>.
+</div>
+<div id="ref-EU2023" class="csl-entry" role="listitem">
+European Parliament and Council of the European Union. 2023b. <em>Regulation (<span>EU</span>) 2023/956 of 10 May 2023 Establishing a Carbon Border Adjustment Mechanism</em>. Official Journal of the European Union, L 130, 16.5.2023, p. 52. <a href="http://data.europa.eu/eli/reg/2023/956/oj">http://data.europa.eu/eli/reg/2023/956/oj</a>.
+</div>
+<div id="ref-EU2025Omnibus" class="csl-entry" role="listitem">
+European Parliament and Council of the European Union. 2025. <em>Regulation (<span>EU</span>) 2025/2083 of 8 October 2025 Amending Regulation (<span>EU</span>) 2023/956 as Regards Simplifying and Strengthening the Carbon Border Adjustment Mechanism</em>. Official Journal of the European Union, L series, 2025/2083, 17.10.2025. <a href="http://data.europa.eu/eli/reg/2025/2083/oj">http://data.europa.eu/eli/reg/2025/2083/oj</a>.
+</div>
+<div id="ref-EurostatComext" class="csl-entry" role="listitem">
+Eurostat. 2026. <em><span>EU</span> Trade Since 1988 by <span>HS2-4-6</span> and <span>CN8</span> (<span>DS-045409</span>)</em>. Comext database, dissemination API. <a href="https://ec.europa.eu/eurostat/comext/newxtweb/">https://ec.europa.eu/eurostat/comext/newxtweb/</a>.
+</div>
+<div id="ref-CFPB14" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026a. <em>Credit the Price Signal, Not the Payment: Carbon Price Recognition and Scrap Shuffling Under the <span>EU</span>’s Carbon Border Adjustment Mechanism</em>. 1.4. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB12" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026b. <em>Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill</em>. 1.2. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB61" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026c. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB11" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026d. <em>Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies</em>. 1.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-Technopolis2026" class="csl-entry" role="listitem">
+Technopolis Group. 2026. <em>Technopolis to Support the <span>European Commission</span> in Developing <span>CBAM</span> Default Carbon Price Methodology</em>. Project page, technopolis-group.com. <a href="https://technopolis-group.com/?p=67475">https://technopolis-group.com/?p=67475</a>.
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

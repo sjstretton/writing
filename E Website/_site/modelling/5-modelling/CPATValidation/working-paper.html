@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephen J. Stretton">
+<meta name="keywords" content="climate policy modeling, model validation, hindcasting, model comparison, carbon pricing, energy demand">
+
+<title>Validating CPAT: Baselines, Back-Casts and Model Comparisons – Climate, Fiscal &amp; Finance</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Climate, Fiscal &amp; Finance</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Policy and Finance</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../modelling/index.html" aria-current="page"> 
+<span class="menu-text">Modelling and Analytics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/5-modelling.html">5. Modelling (CPAT)</a></li><li class="breadcrumb-item"><a href="../../../modelling/5-modelling/CPATValidation/index.html">5.3 Validating CPAT</a></li><li class="breadcrumb-item"><a href="../../../modelling/5-modelling/CPATValidation/working-paper.html">Working paper</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modelling and Analytics</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Modelling (CPAT)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATMitigationMethods/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.1 The CPAT Mitigation Module</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATMitigationMethods/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATAIImplementation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.2 CPAT-AI</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.3 Validating CPAT</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATValidation/working-paper.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/ElasticityValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.4 Are CPAT's Price Elasticities Right?</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Modular Upgrades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.1 Measure Carbon Pricing by the Emissions It Cuts</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.2 The CBAM Policy Tool</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3 Public Investment in CPAT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PublicInvestment/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/ActivityModelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/ActivityModelling/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.5 The Macro-Fiscal-Energy Scenario Tool</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Analytics Tools</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.1 The Excise-Fiscal Diagnostic</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link active" data-scroll-target="#sec-summary"><span class="header-section-number">1</span> Executive summary</a></li>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link" data-scroll-target="#sec-intro"><span class="header-section-number">2</span> Introduction</a></li>
+  <li><a href="#sec-meaning" id="toc-sec-meaning" class="nav-link" data-scroll-target="#sec-meaning"><span class="header-section-number">3</span> What validation means for a policy model</a></li>
+  <li><a href="#sec-baseline" id="toc-sec-baseline" class="nav-link" data-scroll-target="#sec-baseline"><span class="header-section-number">4</span> Baseline fit: right in the base year by construction, close to other baselines after it</a></li>
+  <li><a href="#sec-backcast" id="toc-sec-backcast" class="nav-link" data-scroll-target="#sec-backcast"><span class="header-section-number">5</span> Back-casts: the trend is roughly right, the level only where prices behave</a></li>
+  <li><a href="#sec-comparisons" id="toc-sec-comparisons" class="nav-link" data-scroll-target="#sec-comparisons"><span class="header-section-number">6</span> Comparisons with other models and with history</a>
+  <ul class="collapse">
+  <li><a href="#sec-price-response" id="toc-sec-price-response" class="nav-link" data-scroll-target="#sec-price-response"><span class="header-section-number">6.1</span> Price response: the same slope as Enerdata</a></li>
+  <li><a href="#sec-expost" id="toc-sec-expost" class="nav-link" data-scroll-target="#sec-expost"><span class="header-section-number">6.2</span> Ex-post evidence: inside a wide range</a></li>
+  <li><a href="#sec-power" id="toc-sec-power" class="nav-link" data-scroll-target="#sec-power"><span class="header-section-number">6.3</span> Power: the same mix as the World Bank’s planning model, smoother investment</a></li>
+  <li><a href="#sec-air" id="toc-sec-air" class="nav-link" data-scroll-target="#sec-air"><span class="header-section-number">6.4</span> Air pollution: conservative against global datasets</a></li>
+  </ul></li>
+  <li><a href="#sec-sensitivity" id="toc-sec-sensitivity" class="nav-link" data-scroll-target="#sec-sensitivity"><span class="header-section-number">7</span> Sensitivity: the price elasticities dominate</a></li>
+  <li><a href="#sec-replication" id="toc-sec-replication" class="nav-link" data-scroll-target="#sec-replication"><span class="header-section-number">8</span> Replication across implementations: independent code reproduces legacy CPAT</a></li>
+  <li><a href="#sec-fit" id="toc-sec-fit" class="nav-link" data-scroll-target="#sec-fit"><span class="header-section-number">9</span> Where CPAT fits well and where it does not</a></li>
+  <li><a href="#sec-remains" id="toc-sec-remains" class="nav-link" data-scroll-target="#sec-remains"><span class="header-section-number">10</span> What validation remains</a></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">11</span> Conclusion</a></li>
+  <li><a href="#downloads" id="toc-downloads" class="nav-link" data-scroll-target="#downloads">Downloads</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#sec-appendix-sources" id="toc-sec-appendix-sources" class="nav-link" data-scroll-target="#sec-appendix-sources">Appendix A. Which numbers are the documentation’s and which are new</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/5-modelling.html">5. Modelling (CPAT)</a></li><li class="breadcrumb-item"><a href="../../../modelling/5-modelling/CPATValidation/index.html">5.3 Validating CPAT</a></li><li class="breadcrumb-item"><a href="../../../modelling/5-modelling/CPATValidation/working-paper.html">Working paper</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Validating CPAT: Baselines, Back-Casts and Model Comparisons</h1>
+<p class="subtitle lead">What the published checks of the Climate Policy Assessment Tool show, where it fits and where it does not</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stephen J. Stretton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>Finance ministries use the Climate Policy Assessment Tool (CPAT) to estimate what carbon pricing does to emissions and revenue, so they need to know how far its numbers can be trusted. This paper assembles the tool’s published checks and judges them against the literature on evaluating energy models. It separates four tests: fit to the base year, back-casts against history, comparison with other models and with ex-post evidence, and replication in independent code. The model fits its base year by construction. Back-cast from 2000 with world prices known, its error in greenhouse gas emissions is 5 percent of mean emissions for Australia and 92 percent for China. Its baselines and price responses are of the same order as those of other energy models, and its response to a carbon price lies within the wide range of ex-post estimates. Results move most with the price elasticities: a $75 carbon tax cuts G20 emissions by 29 percent in 2030 by default and by 7 to 39 percent as the elasticities change. Independent code reproduces the model to many decimal places. CPAT is supported for ranges and policy comparisons, not point forecasts, and every published check should be rerun on the corrected model.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>climate policy modeling, model validation, hindcasting, model comparison, carbon pricing, energy demand</p>
+  </div>
+</div>
+
+</header>
+
+
+<p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is <a href="../../../modelling/5-modelling/CPATValidation/index.html">Climate Fiscal Policy Brief No.&nbsp;5.3</a>. Companion paper to the public CPAT-AI repository, https://github.com/cpmodelai/cpat_ai.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<section id="sec-summary" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
+<p><a href="../../../modelling/5-modelling/CPATValidation/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-CPATValidation.pptx">Slides (pptx)</a></p>
+<p><strong>A finance ministry that sets a carbon price on the strength of a model needs to know how wrong the model is likely to be.</strong> The Climate Policy Assessment Tool (CPAT), built by the World Bank and the International Monetary Fund, estimates the emissions, revenue, GDP and household effects of carbon pricing in more than 180 countries. A typical CPAT result is that a carbon tax rising to $75 per tonne of CO₂ cuts emissions in the G20 by 29 percent in 2030. If the baseline is off by a fifth, or the response to the price by half, the revenue estimate and the gap to a country’s pledge are off by as much. CPAT’s own checks exist, but they are scattered through a long methodology chapter, mostly as charts. This paper sets them side by side, recomputes what can be recomputed, adds the evidence from the 2026 rebuild of the model, and judges the whole against how energy models are evaluated elsewhere.</p>
+<p><strong>CPAT fits its base year because it is made to, so that fit proves little.</strong> Base-year emissions are scaled to each country’s inventory. The scaling can also carry a data break into every later year: Egypt’s inventory jumps 19.5 percent from 2021 to 2022, and the calibrated baseline ends up 16 to 32 percent below the inventory in 2022–2024.</p>
+<p><strong>Back-cast from 2000, CPAT gets the trend of emissions roughly right and the level right only where prices behave.</strong> With observed world energy prices fed in, the typical error in greenhouse gas emissions over 2000–2017 was 5 percent of mean emissions for Australia, 10 percent for the United States and 14 percent for South Africa, but 26 percent for Brazil, 33 percent for the United Kingdom and 92 percent for China. Most of the misses come from domestic prices that the model projected badly, as where governments regulate prices.</p>
+<p><strong>Against other models, CPAT is of the same order; against history, it sits inside a wide range.</strong> Its world baselines are close to those of the International Energy Agency and Enerdata, its response to a carbon price has about the same slope as Enerdata’s, and its power mix under a $40 carbon price resembles that of the World Bank’s planning model. A $10 carbon price in CPAT lowers emissions by 2.4 percent on average over its first five years. Read as a slower growth rate, that is about 0.8 percent a year, against 0.5 percent in the best cross-country estimate and a meta-analysis that finds total cuts of 5 to 21 percent from actual carbon prices. The ex-post evidence cannot yet test CPAT’s response per dollar.</p>
+<p><strong>The price elasticities matter more than anything else.</strong> Moving them by two standard deviations either way moves the G20 cut in 2030 from 29 percent to anywhere between 7 and 39 percent; the choice of power model moves it between 22 and 34 percent. Income elasticities, fiscal multipliers and GDP growth barely matter for the size of the cut.</p>
+<p><strong>Independent code reproduces CPAT exactly, which separates the method from the workbook.</strong> The 2026 rebuild reproduced legacy blocks to one part in ten trillion or better, and the Python model reproduces the rebuilt workbook to nine digits. The rebuild also registered 231 bugs in the legacy model, 24 of them serious, so every published check is evidence about an earlier, flawed version.</p>
+<p><strong>A ministry should read a CPAT result as a range and use it to compare policies.</strong> “29 percent” means “between about 20 and 35 percent, depending mainly on the elasticities and the power model”. Comparisons across policies run on the same baseline are more reliable than levels. The next step is to make validation part of the model’s test suite: rerun the back-casts, comparisons and sensitivity analysis on the corrected model for every country, and report a measure of fit for each.</p>
+</section>
+<section id="sec-intro" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
+<p>A ministry that sets a carbon price on the strength of a model’s forecast needs to know how wrong that forecast is likely to be. CPAT, built by the International Monetary Fund and the World Bank, is used to estimate the emissions, revenue, GDP and household effects of carbon pricing and related reforms in more than 180 countries <span class="citation" data-cites="Black2023CPAT CPATDocMitigation">(<a href="#ref-Black2023CPAT" role="doc-biblioref">Black et al. 2023</a>; <a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. Its headline results are numbers such as “a carbon tax rising to $75 per tonne of CO₂ cuts G20 emissions by 29 percent in 2030 against the baseline”, which its documentation reports <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. If the baseline is off by a fifth, or the response to the price by half, the revenue estimate and the emissions gap to a country’s pledge are off by as much.</p>
+<p>CPAT’s validation exists but is scattered and hard to read. The mitigation chapter of its methodology reports panel estimates of elasticities, comparisons with the International Energy Agency (IEA), Enerdata and the World Bank’s Electricity Planning Model (EPM), ex-post studies, back-casts for six countries and a sensitivity analysis <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. The air-pollution chapter compares health and emission results with global datasets <span class="citation" data-cites="CPATDocAirPollution">(<a href="#ref-CPATDocAirPollution" role="doc-biblioref">CPAT Team 2023</a>)</span>. The CPAT-AI rebuild of 2026 added a fourth kind of test, replication of the model in independent code <span class="citation" data-cites="CPATAIRepo StrettonWP52">(<a href="#ref-CPATAIRepo" role="doc-biblioref">CPAT-AI project 2026c</a>; <a href="#ref-StrettonWP52" role="doc-biblioref">Stretton 2026c</a>)</span>. Most of the published material is in charts without summary statistics, and none of it says in one place where the model can be trusted and where it cannot.</p>
+<p>This paper asks how well CPAT’s mitigation module fits base-year data, history, other models and ex-post evidence, and whether independent code reproduces it. The answer is that the evidence supports CPAT for what it was built to do (order-of-magnitude baselines, the direction and rough size of responses to a carbon price, and comparisons across policies) but not for point forecasts. It reproduces base-year emissions by construction. Back-cast from 2000 with no policy changes, its error in greenhouse gas emissions over 2000–2017 is 5 percent of mean emissions for Australia and 10 percent for the United States but 92 percent for China, where its projected domestic prices ran below observed prices. Its baselines and price responses are of the same order as those of the IEA, Enerdata and EPM, and its response to a carbon price lies within the wide range of ex-post estimates. Independent code reproduces legacy CPAT’s road and power-price blocks to better than one part in ten trillion. But its results move most with the price elasticities, and every published check was run on versions of the model before the rebuild registered 231 bugs in it <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026d</a>)</span>. The validation should be rerun on the corrected model.</p>
+<p>The paper adds to a small literature that asks energy models to show their record. The Energy Modeling Forum taught that model comparisons yield insights more reliably than numbers <span class="citation" data-cites="Huntington1982">(<a href="#ref-Huntington1982" role="doc-biblioref">Huntington et al. 1982</a>)</span>. Retrospective studies of long-run US energy forecasts found them often far off, and urged forecasters to look back routinely at how their past forecasts fared <span class="citation" data-cites="Craig2002 Koomey2003">(<a href="#ref-Craig2002" role="doc-biblioref">Craig et al. 2002</a>; <a href="#ref-Koomey2003" role="doc-biblioref">Koomey et al. 2003</a>)</span>; projections of US energy use that were within about 4 percent at ten years owed their accuracy to large errors in GDP and energy intensity that offset each other <span class="citation" data-cites="ONeillDesai2005">(<a href="#ref-ONeillDesai2005" role="doc-biblioref">O’Neill and Desai 2005</a>)</span>. The simulation literature separates verification (is the model built as intended?) from validation (is it the right model for its purpose?) <span class="citation" data-cites="Sargent2013">(<a href="#ref-Sargent2013" role="doc-biblioref">Sargent 2013</a>)</span>. The closest prior work is the synthesis of how integrated assessment models are evaluated by <span class="citation" data-cites="Wilson2021">Wilson et al. (<a href="#ref-Wilson2021" role="doc-biblioref">2021</a>)</span>, who set out six methods (historical simulations, near-term observations, stylized facts, model hierarchies, model intercomparisons and sensitivity analysis) and find that historical simulations are rare. Against that work, this paper does three things: it applies the framework to a single-country fiscal tool in daily use rather than to a global integrated assessment model; it adds replication in independent code, which that literature treats only as transparency; and it recomputes the published numbers, correcting several, and names the checks still missing. Price elasticities, the parameter that matters most, are treated fully in paper 5.4 <span class="citation" data-cites="StrettonWP54">(<a href="#ref-StrettonWP54" role="doc-biblioref">Stretton 2026b</a>)</span>.</p>
+<p>The paper separates three kinds of number. Most numbers in the tables are the CPAT documentation’s own, cited to the section where they appear. Some are recomputed from the documentation’s own tables, and a few are the author’s calculations, such as the conversion of CPAT’s response to a carbon price into a growth rate in <a href="#sec-expost" class="quarto-xref">Section&nbsp;6.2</a>. Appendix A lists which is which.</p>
+</section>
+<section id="sec-meaning" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> What validation means for a policy model</h1>
+<p><strong>A policy model is valid for a purpose, not in general.</strong> CPAT is a rapid, elasticity-based tool for one country at a time, built to quantify the effects of a reform quickly <span class="citation" data-cites="Black2023CPAT">(<a href="#ref-Black2023CPAT" role="doc-biblioref">Black et al. 2023</a>)</span>. It does not claim to forecast annual emissions to the percentage point. The question for validation is whether its errors are small relative to the decisions it informs: whether a carbon tax of $40 or $75 is needed for a pledge, whether revenue is 0.5 or 1.5 percent of GDP, whether the bottom decile gains or loses after recycling <span class="citation" data-cites="Sargent2013">(<a href="#ref-Sargent2013" role="doc-biblioref">Sargent 2013</a>)</span>.</p>
+<p><strong>Four tests answer different questions, and passing one says little about the others.</strong> Each maps onto the methods of <span class="citation" data-cites="Wilson2021">Wilson et al. (<a href="#ref-Wilson2021" role="doc-biblioref">2021</a>)</span>.</p>
+<ol type="1">
+<li><em>Baseline fit.</em> Does the model reproduce observed energy use, prices and emissions in its base years, and does its no-policy path resemble other credible baselines? Fit in the base year is partly built in by calibration, so it is weak evidence; the documentation stresses that “the validation exercise differs from the calibration” <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. This is Wilson and coauthors’ “near-term observations”.</li>
+<li><em>Back-casting.</em> Started at a historical year with the information then available, does the model reproduce what happened next? This is the closest a policy model comes to an out-of-sample test, and the method <span class="citation" data-cites="Wilson2021">Wilson et al. (<a href="#ref-Wilson2021" role="doc-biblioref">2021</a>)</span> call historical simulation. The CPAT documentation calls it hindcasting; this paper says back-cast.</li>
+<li><em>Comparison with other models and with ex-post evidence.</em> Given the same policy, do structurally different models give similar answers? Agreement does not prove truth, since models can share assumptions, but disagreement flags where to look <span class="citation" data-cites="Huntington1982">(<a href="#ref-Huntington1982" role="doc-biblioref">Huntington et al. 1982</a>)</span>. Ex-post studies of actual carbon prices are a special case: the comparison is with what happened.</li>
+<li><em>Replication across implementations.</em> Does a second, independent implementation compute the same numbers? This is verification rather than validation <span class="citation" data-cites="Sargent2013">(<a href="#ref-Sargent2013" role="doc-biblioref">Sargent 2013</a>)</span>, but a model that cannot be reproduced cannot be validated either.</li>
+</ol>
+<p><strong>Sensitivity analysis tells validation where to look.</strong> A parameter that barely moves the results needs little checking; one that moves them a lot needs the best evidence available. CPAT’s documentation includes such an analysis, and it points squarely at the price elasticities (<a href="#sec-sensitivity" class="quarto-xref">Section&nbsp;7</a>).</p>
+<p><a href="#tbl-tests" class="quarto-xref">Table&nbsp;1</a> lists the exercises that have been documented, with what each covers and where it is reported.</p>
+<div id="tbl-tests" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tests-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: CPAT has been checked in eleven documented ways, but its three comparisons with other energy models report no measure of fit.
+</figcaption>
+<div aria-describedby="tbl-tests-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Test</th>
+<th style="text-align: left;">What is compared</th>
+<th style="text-align: left;">Coverage</th>
+<th style="text-align: left;">Measure reported</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Base-year calibration</td>
+<td style="text-align: left;">Energy CO₂ and CH₄ against inventory; coal share of power against IEA data</td>
+<td style="text-align: left;">All countries, base years 2019–2021</td>
+<td style="text-align: left;">Scaling factor</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, executive summary</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Functional test runs</td>
+<td style="text-align: left;">826 output parameters under carbon taxes of $0 to a $200 target, two power models</td>
+<td style="text-align: left;">218 countries</td>
+<td style="text-align: left;">Countries flagged as producing spurious results</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, Validation, overview</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Baseline comparison</td>
+<td style="text-align: left;">CO₂, primary energy by fuel, electricity by fuel, against IEA WEO 2021 STEPS and Enerdata</td>
+<td style="text-align: left;">World and regions, 2019–2035</td>
+<td style="text-align: left;">Charts only</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, Model comparisons</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Price response</td>
+<td style="text-align: left;">Emissions at carbon prices of $0–120 in 2030 against Enerdata’s marginal abatement cost curves</td>
+<td style="text-align: left;">World and regions, 2025–2035</td>
+<td style="text-align: left;">Charts only</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, Model comparisons</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ex-post studies</td>
+<td style="text-align: left;">CO₂ semi-elasticities against about 35 ex-post studies</td>
+<td style="text-align: left;">171 countries, 2019–2035</td>
+<td style="text-align: left;">Semi-elasticities (<a href="#tbl-semielast" class="quarto-xref">Table&nbsp;3</a>)</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, Ex-post studies</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Power sector</td>
+<td style="text-align: left;">Electricity demand, generation mix and new investment against EPM, at about $40/tCO₂</td>
+<td style="text-align: left;">34 countries, 29 in Africa</td>
+<td style="text-align: left;">Charts only</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, Model comparisons and Appendix H</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Back-cast</td>
+<td style="text-align: left;">GHG and energy CO₂, 2000–2017, no policy</td>
+<td style="text-align: left;">6 countries</td>
+<td style="text-align: left;">RMSE and normalized RMSE (<a href="#tbl-backcast" class="quarto-xref">Table&nbsp;2</a>)</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, Hindcasting</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sensitivity</td>
+<td style="text-align: left;">2030 CO₂ cut under a $75 tax when one parameter changes</td>
+<td style="text-align: left;">G20</td>
+<td style="text-align: left;">Percentage-point change (<a href="#tbl-sensitivity" class="quarto-xref">Table&nbsp;4</a>)</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, Parameter sensitivity</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Elasticities</td>
+<td style="text-align: left;">Price and income elasticities against panel estimates, 2000–2018</td>
+<td style="text-align: left;">13 to more than 150 countries per fuel and sector</td>
+<td style="text-align: left;">Point estimates</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, Panel estimation; paper 5.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Air pollution</td>
+<td style="text-align: left;">Death rates, PM<sub>2.5</sub> emissions, fossil share of PM<sub>2.5</sub> against GBD 2019, EDGAR, IIASA, GEOS-Chem</td>
+<td style="text-align: left;">Global, by country</td>
+<td style="text-align: left;">Share of countries above or below</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocAirPollution">CPAT Team (<a href="#ref-CPATDocAirPollution" role="doc-biblioref">2023</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Replication</td>
+<td style="text-align: left;">Legacy blocks, Excel-AI and Coded CPAT, code by code</td>
+<td style="text-align: left;">Egypt, 2022–2041</td>
+<td style="text-align: left;">Relative difference (<a href="#tbl-replication" class="quarto-xref">Table&nbsp;5</a>)</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATAIModelDoc">CPAT-AI project (<a href="#ref-CPATAIModelDoc" role="doc-biblioref">2026b</a>)</span>; <span class="citation" data-cites="CPATCodedTesting">CPAT-AI project (<a href="#ref-CPATCodedTesting" role="doc-biblioref">2026a</a>)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><em>Source:</em> compiled from the documents cited in the last column. <em>Notes:</em> STEPS is the IEA’s Stated Policies Scenario; WEO its World Energy Outlook. RMSE is root mean square error. “Charts only” means the documentation reports the comparison as figures without a summary measure of fit. Excel-AI is the rebuilt Excel prototype and Coded CPAT the Python model; legacy CPAT is the original Excel model.</p>
+</section>
+<section id="sec-baseline" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Baseline fit: right in the base year by construction, close to other baselines after it</h1>
+<p><strong>CPAT fits its base years because it is calibrated to them.</strong> Energy-related CO₂ and CH₄ emissions are scaled so that base-year emissions equal the national inventory reported to the UNFCCC, and the coal share of power is matched to IEA data for 2019 and 2020, with an implicit coal price where needed <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. That is good practice, but it makes base-year fit a property of the method, not evidence for it.</p>
+<p><strong>Calibration can carry a data break into every projected year.</strong> The rebuilt model, which follows legacy CPAT’s calibration rule, shows how. For Egypt, every CO₂ emission factor is multiplied by the ratio of the 2021 inventory (211.05 Mt) to the model’s uncalibrated estimate for the 2022 base year (226.97 Mt), a factor of 0.930, identical in legacy CPAT and in the rebuild <span class="citation" data-cites="CPATAIModelDoc">(<a href="#ref-CPATAIModelDoc" role="doc-biblioref">CPAT-AI project 2026b</a>)</span>. Egypt’s inventory then jumps 19.5 percent, to 252.2 Mt in 2022, so the calibrated baseline runs 16 percent below the inventory in 2022, 32 percent below in 2023 and 29 percent below in 2024 (recomputed from the CPAT-AI documentation’s table; its own summary, “16–29 percent”, misses 2023, where a separate fuel-use shock in the data adds to the gap). The rebuild registers the rule as an issue and replicates it, because changing it is a modeling decision, not a bug fix <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026d, nos. I32, I91</a> and I92)</span>. A ministry comparing CPAT’s baseline with its own inventory would see the gap at once; one comparing only policy scenarios against CPAT’s baseline would not.</p>
+<p><strong>Functional test runs screen out countries where the data break the model.</strong> Before the comparative work, the CPAT team ran seven carbon-tax scenarios (from no tax to a $200 target) under each of the two power models for 218 countries, retaining 826 output parameters per run. Countries producing spurious results were classified as not working, and the country coverage table in the user guide comes from this screening <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. This check rarely appears in model documentation. Its weakness is that the criterion for “spurious” is not published.</p>
+<p><strong>Against the IEA’s Stated Policies Scenario, CPAT’s world baseline is of the same order.</strong> The comparison used the IEA World Energy Outlook 2021 STEPS (from Resources for the Future’s Global Energy Outlook 2022 database) for 2019, 2020 and 2030, on total CO₂, primary energy by fuel and electricity generation by fuel. The documentation concludes that results are “of same order of magnitude” for the observed years and that long-term projections are similar <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. It names three sources of difference: CPAT’s oil aggregate (diesel, gasoline, LPG, kerosene and other oil products) differs from the IEA’s; regional differences in Europe and Eurasia are driven by Russia; and the two models diverge strongly on nuclear generation.</p>
+<p><strong>Against Enerdata’s pre-Covid scenario, CPAT’s baseline is lower, plausibly because of its Covid adjustment.</strong> Enerdata’s outcomes are higher and line up with CPAT’s own pre-Covid results, which suggests the difference comes from the Covid adjustment built into CPAT. CPAT’s calibration to IEA data for 2019–2021 also makes it less conservative than Enerdata about the future coal share of power <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. The comparison is useful but dated: both reference scenarios were produced before the energy price shock of 2022.</p>
+<p><strong>The baseline comparisons report no measure of fit.</strong> Every baseline comparison in the documentation is a set of charts. A reader cannot tell whether “the same order of magnitude” means within 5 percent or within 30 percent, or whether the fit is better for the power sector than for transport. That is the first gap a renewed validation should close (<a href="#sec-remains" class="quarto-xref">Section&nbsp;10</a>).</p>
+</section>
+<section id="sec-backcast" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Back-casts: the trend is roughly right, the level only where prices behave</h1>
+<p><strong>The back-cast started CPAT in 2000 and asked it to project emissions to 2017 with no policy changes.</strong> The CPAT team built a version of the model (CPAT 1.0pre_043, run through the Multiscenario tool) whose first year of calculation could be set in the past, with energy consumption and domestic prices provided for that base year. It projected domestic prices, energy use and emissions for six countries: Australia, Brazil, China, South Africa, the United Kingdom and the United States <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. Observed international energy prices were fed in for the projection years, so the exercise is a partial back-cast: it tests how the model turns known world prices into domestic prices, fuel use and emissions, not whether it could have forecast world prices.</p>
+<p><strong>The level error ranges from 5 percent of mean emissions for Australia to 92 percent for China.</strong> <a href="#tbl-backcast" class="quarto-xref">Table&nbsp;2</a> reports the root mean square error and its normalized version (RMSE divided by the mean of the observed series) as published; <a href="#fig-backcast" class="quarto-xref">Figure&nbsp;1</a> shows the normalized errors. The normalized RMSE measures how far the projected level is from the observed level, year by year; it does not measure whether the trend is right, which the documentation judges from charts.</p>
+<div id="tbl-backcast" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-backcast-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Back-cast from 2000 with no policy: CPAT’s emissions level is close for Australia and the United States and far off for China (2000–2017).
+</figcaption>
+<div aria-describedby="tbl-backcast-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Country</th>
+<th style="text-align: right;">GHG excl. LULUCF: RMSE (Mt CO₂e)</th>
+<th style="text-align: right;">GHG: normalized RMSE</th>
+<th style="text-align: right;">Energy CO₂: RMSE (Mt)</th>
+<th style="text-align: right;">Energy CO₂: normalized RMSE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Australia</td>
+<td style="text-align: right;">26.0</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">35.8</td>
+<td style="text-align: right;">0.10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">United States</td>
+<td style="text-align: right;">672.3</td>
+<td style="text-align: right;">0.10</td>
+<td style="text-align: right;">637.1</td>
+<td style="text-align: right;">0.12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">South Africa</td>
+<td style="text-align: right;">73.7</td>
+<td style="text-align: right;">0.14</td>
+<td style="text-align: right;">86.0</td>
+<td style="text-align: right;">0.21</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Brazil</td>
+<td style="text-align: right;">278.5</td>
+<td style="text-align: right;">0.26</td>
+<td style="text-align: right;">127.3</td>
+<td style="text-align: right;">0.36</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">United Kingdom</td>
+<td style="text-align: right;">207.1</td>
+<td style="text-align: right;">0.33</td>
+<td style="text-align: right;">155.3</td>
+<td style="text-align: right;">0.32</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">China</td>
+<td style="text-align: right;">9,021.2</td>
+<td style="text-align: right;">0.92</td>
+<td style="text-align: right;">8,687.0</td>
+<td style="text-align: right;">1.34</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><em>Source:</em> <span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, section Hindcasting, tables “RMSE and Normalized RMSE, selected Countries” (rounded). <em>Notes:</em> CPAT 1.0pre_043, baseline with no policy interventions, observed international prices as inputs. GHG excl. LULUCF is greenhouse gas emissions excluding land use, land-use change and forestry. Normalized RMSE is RMSE divided by the mean of the observed series; dividing each RMSE by its normalized RMSE gives plausible mean observed emissions (for example about 9.9 Gt CO₂e for China and 7.0 Gt for the United States), a check on the published figures. Observed energy CO₂ series have gaps that the documentation fills by linear interpolation (for example 2007–2014), so the energy CO₂ statistics should be read with care. The documentation’s table for coal prices repeats the energy CO₂ figures digit for digit, a copying error; it is not used here.</p>
+<div id="fig-backcast" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-backcast-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="2.Source/figures/fig1_backcast.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Back-cast from 2000 with no policy: error in the level of greenhouse gas emissions, as a share of mean observed emissions, 2000–2017. Source: CPAT methodology, section Hindcasting [@CPATDocMitigation]; figure by the author, script 2.Source/make_figures.py."><img src="2.Source/figures/fig1_backcast.png" class="img-fluid figure-img" style="width:90.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-backcast-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Back-cast from 2000 with no policy: error in the level of greenhouse gas emissions, as a share of mean observed emissions, 2000–2017. Source: CPAT methodology, section Hindcasting <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>; figure by the author, script <code>2.Source/make_figures.py</code>.
+</figcaption>
+</figure>
+</div>
+<p><strong>Where CPAT misses, prices are usually the reason.</strong> CPAT computes emissions from fuel use and fuel use from prices, so a projected price that is too low gives too much fuel use and too many emissions. China is the clear case: projected domestic prices ran below observed prices, and the back-cast overstated emissions <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. On coal used for power across all countries, the documentation contradicts itself: its text says CPAT’s projected prices were “on average, above observed prices”, while the same sentence describes the ratio of projected to observed prices as concentrated “under the value of 1”, that is, below. The China case fits the second reading. Observed domestic prices were also often smoother than projected ones, consistent with price regulation that the back-cast did not model. The United Kingdom does not fit the price explanation: the model projected lower emissions despite lower modeled prices, and modeling the UK’s mid-2010s policies would widen the gap. The documentation leaves the UK result unexplained.</p>
+<p><strong>The back-cast shows what a no-policy elasticity model can and cannot do.</strong> It captures the trend of emissions in most of the six countries. It does not reproduce year-to-year volatility, and for some countries it is persistently above or below history. Two of the three explanations the documentation offers, policies not modeled and price forecasting, are limits of a baseline run rather than faults in the method. The third, a single set of elasticities with no distinction between short and long run, is a fault: the documentation suggests that separate short- and long-run elasticities would track history better <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. The record of long-run energy forecasting gives a reason to be careful with good fits too: US energy projections that were close in total were close because large errors in their components offset <span class="citation" data-cites="ONeillDesai2005">(<a href="#ref-ONeillDesai2005" role="doc-biblioref">O’Neill and Desai 2005</a>)</span>, and a back-cast with observed world prices removes the hardest component.</p>
+<p><strong>Six countries are too few, and none is a typical CPAT client.</strong> The six are large emitters with good data; most countries that use CPAT are low- and middle-income economies with thinner data and more regulated prices. The back-cast says little about how CPAT performs for them. Historical simulations are rare for integrated models generally, and cannot show that a model will be reliable outside the range of past experience <span class="citation" data-cites="Wilson2021">(<a href="#ref-Wilson2021" role="doc-biblioref">Wilson et al. 2021</a>)</span>, which is where a carbon price of $75 lies for most of these countries.</p>
+</section>
+<section id="sec-comparisons" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Comparisons with other models and with history</h1>
+<section id="sec-price-response" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="sec-price-response"><span class="header-section-number">6.1</span> Price response: the same slope as Enerdata</h2>
+<p><strong>CPAT’s response of emissions to a carbon price has about the same slope as Enerdata’s.</strong> The documentation runs carbon prices of $0 to $120 per tonne of CO₂ in 2030 through both CPAT power models and compares the resulting world emissions in 2030, indexed to each model’s own baseline, with Enerdata’s marginal abatement cost curves. For total CO₂, power-sector CO₂ and greenhouse gases excluding land use, it finds “good alignment” for both of CPAT’s power models <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. Indexing to each baseline removes baseline differences, so this is a clean test of the response. A second comparison, against Enerdata’s Enerbase scenarios for 2025, 2030 and 2035, finds “similar slopes” and, for power-sector CO₂, that CPAT’s simpler “average” power model comes closer to Enerdata than its engineering power model.</p>
+</section>
+<section id="sec-expost" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="sec-expost"><span class="header-section-number">6.2</span> Ex-post evidence: inside a wide range</h2>
+<p><strong>CPAT’s response to a $10 carbon price is of the same order as the best cross-country estimate.</strong> The documentation ran a $10/tCO₂ step for 171 countries over 2019–2035 and computed “semi-elasticities”: the average percentage gap between CO₂ in the policy run and in the baseline, over the first five years (short term) and over the whole period (long term). <a href="#tbl-semielast" class="quarto-xref">Table&nbsp;3</a> reports them.</p>
+<div id="tbl-semielast" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-semielast-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: CPAT’s emissions response to a $10/tCO₂ carbon price: percent gap in CO₂ against the baseline, averaged over the period.
+</figcaption>
+<div aria-describedby="tbl-semielast-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Sector</th>
+<th style="text-align: right;">Short term (2019–2023)</th>
+<th style="text-align: right;">Long term (2019–2035)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">All sectors</td>
+<td style="text-align: right;">−2.4</td>
+<td style="text-align: right;">−6.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Industry</td>
+<td style="text-align: right;">−2.7</td>
+<td style="text-align: right;">−6.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Power</td>
+<td style="text-align: right;">−2.3</td>
+<td style="text-align: right;">−8.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Residential</td>
+<td style="text-align: right;">−2.2</td>
+<td style="text-align: right;">−4.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Transport</td>
+<td style="text-align: right;">−0.9</td>
+<td style="text-align: right;">−2.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><em>Source:</em> <span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, section “How does CPAT compare to the literature?”, table “Short- and long-term semi-elasticities of CO2 emission in CPAT”. <em>Notes:</em> 171 countries; the short term is the average of the annual gaps over 2019–2023, the long term over 2019–2035.</p>
+<p><strong>The documentation’s comparison with the ex-post literature sets two different measures side by side.</strong> It finds CPAT “comparable” with a literature whose estimates are “minimal to modest”, 0 to 2 percent a year <span class="citation" data-cites="Green2021 CPATDocMitigation">(<a href="#ref-Green2021" role="doc-biblioref">Green 2021</a>; <a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. But CPAT’s figures are average <em>level</em> gaps, while the ex-post studies mostly estimate an annual effect, often on the growth rate of emissions, under whatever price and coverage each scheme had. On a common basis, if a $10 price slows the growth of emissions by <em>g</em> a year, the level gap after <em>k</em> years is about <em>gk</em>, and its average over the first <em>N</em> years is <em>g</em>(<em>N</em>+1)/2. CPAT’s −2.4 percent over five years then corresponds to <em>g</em> ≈ 0.8 percent a year, and its −6.2 percent over 17 years to <em>g</em> ≈ 0.7 percent a year (author’s calculation; the linear build-up is an assumption, and it overstates <em>g</em> for the part of CPAT’s response that is immediate). <span class="citation" data-cites="Rafaty2020">Rafaty et al. (<a href="#ref-Rafaty2020" role="doc-biblioref">2020</a>)</span>, the cross-country study most like CPAT’s exercise, estimate that each dollar of carbon price slows emissions growth by 0.05 percent a year, or about 0.5 percent a year at $10, an estimate they call imprecise. CPAT is therefore of the same order as the best per-dollar estimate, and somewhat larger.</p>
+<p><strong>The rest of the ex-post literature is too wide to say whether CPAT over- or under-responds.</strong> Green’s review of 37 studies finds aggregate reductions of 0 to 2 percent a year <span class="citation" data-cites="Green2021">(<a href="#ref-Green2021" role="doc-biblioref">Green 2021</a>)</span>. A later systematic review and meta-analysis of 80 causal evaluations of 21 schemes finds statistically significant total reductions of 5 to 21 percent (4 to 15 percent after correcting for publication bias), “despite the low level of prices in most instances” <span class="citation" data-cites="DobbelingHildebrandt2024">(<a href="#ref-DobbelingHildebrandt2024" role="doc-biblioref">Döbbeling-Hildebrandt et al. 2024</a>)</span>. Across 142 countries, emissions from fuel combustion grew about 2 percentage points a year more slowly where a carbon price existed <span class="citation" data-cites="Best2020">(<a href="#ref-Best2020" role="doc-biblioref">Best et al. 2020</a>)</span>. These figures are for real schemes with low coverage, generous free allocation or both, and they do not scale simply to a comprehensive $10 price; the meta-analysis names the price elasticity of emissions as an evidence gap. The ex-post evidence therefore bounds CPAT loosely rather than testing it.</p>
+<p><strong>The sector pattern agrees with the evidence.</strong> The power sector shows the largest long-run response in CPAT, as it does in <span class="citation" data-cites="Rafaty2020">Rafaty et al. (<a href="#ref-Rafaty2020" role="doc-biblioref">2020</a>)</span>, who find most abatement in electricity and heat, and transport the smallest. This is the firmest finding of the comparison, because it does not depend on matching metrics.</p>
+</section>
+<section id="sec-power" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="sec-power"><span class="header-section-number">6.3</span> Power: the same mix as the World Bank’s planning model, smoother investment</h2>
+<p><strong>CPAT’s engineering power model gives a generation mix close to EPM’s in most countries compared.</strong> EPM is the World Bank’s least-cost capacity expansion and dispatch model, with hourly renewable availability, ramping limits, reserves, storage and transmission constraints <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. The comparison set CPAT’s 2030 carbon price at about $40/tCO₂ by goal seek, to approximate EPM’s carbon budgets, which are mostly 40 percent below business as usual, and compared electricity demand, generation by fuel and new investment for 14 countries in the main text (Egypt, Iraq, Jordan, South Africa, Türkiye, Ukraine, Vietnam and seven in Africa) and 20 more, all in Africa, in Appendix H. The documentation finds similar fuel types and shares in the mix, with EPM showing more wind in some countries such as Vietnam.</p>
+<p><strong>The models differ most on the timing of investment, and the comparison is approximate by design.</strong> EPM, as an optimization model, builds in lumps; CPAT spreads new investment over time. For developing countries, where EPM often suggests discontinuous generation and investment, the documentation finds parallels hard to draw <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. The policies are matched only approximately (EPM’s budget looks to 2040, CPAT’s goal seek to 2030), fuel categories are mapped by hand, and storage is not compared. CPAT is therefore supported as a source of plausible mixes, not of investment schedules; a ministry needing an investment plan should use a planning model.</p>
+</section>
+<section id="sec-air" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="sec-air"><span class="header-section-number">6.4</span> Air pollution: conservative against global datasets</h2>
+<p><strong>CPAT’s air-pollution module tends to understate the share of fine particles that comes from fossil fuels.</strong> The documentation compares CPAT’s ambient PM<sub>2.5</sub> death rates with the Global Burden of Disease 2019 estimates <span class="citation" data-cites="GBD2020RiskFactors">(<a href="#ref-GBD2020RiskFactors" role="doc-biblioref">GBD 2019 Risk Factors Collaborators 2020</a>)</span>, its PM<sub>2.5</sub> emissions from transport and power with EDGAR and IIASA inventories, and its fossil-fuel share of ambient PM<sub>2.5</sub> with the GEOS-Chem estimates of <span class="citation" data-cites="Vohra2021 CPATDocAirPollution">Vohra et al. (<a href="#ref-Vohra2021" role="doc-biblioref">2021</a>; <a href="#ref-CPATDocAirPollution" role="doc-biblioref">CPAT Team 2023</a>)</span>. Depending on which of CPAT’s methods links emissions to concentrations, Vohra and coauthors’ fossil share is higher than CPAT’s in 61 percent of countries (averaged intake fraction and FASST local study), 55 percent (machine learning) or 44 percent (FASST local study alone). The chapter concludes that its default configuration gives a conservative fossil contribution, so CPAT is likely to understate the health benefits of a climate policy. It adds that good agreement on baselines does not guarantee agreement on policy impacts, which need checking country by country.</p>
+</section>
+</section>
+<section id="sec-sensitivity" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Sensitivity: the price elasticities dominate</h1>
+<p><strong>Of all the parameters tested, the price elasticities move CPAT’s results most.</strong> The documentation runs the G20 countries with a carbon tax rising from $10 to $75 in 2030 and changes one parameter at a time. With default settings, CO₂ falls 29 percent against the baseline in 2030. <a href="#tbl-sensitivity" class="quarto-xref">Table&nbsp;4</a> and <a href="#fig-sensitivity" class="quarto-xref">Figure&nbsp;2</a> show how that cut changes <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>.</p>
+<div id="tbl-sensitivity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sensitivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: A carbon tax rising to $75 cuts G20 CO₂ by 29 percent in 2030; the price elasticities can move that from 7 to 39 percent.
+</figcaption>
+<div aria-describedby="tbl-sensitivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter changed</th>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: right;">CO₂ cut in 2030</th>
+<th style="text-align: right;">Change (pp)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Default settings</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">−29%</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Price elasticities</td>
+<td style="text-align: left;">+2 standard deviations</td>
+<td style="text-align: right;">−39%</td>
+<td style="text-align: right;">+10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">+1 standard deviation</td>
+<td style="text-align: right;">−35%</td>
+<td style="text-align: right;">+6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">−1 standard deviation</td>
+<td style="text-align: right;">−20%</td>
+<td style="text-align: right;">−9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">−2 standard deviations</td>
+<td style="text-align: right;">−7%</td>
+<td style="text-align: right;">−22</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Power model</td>
+<td style="text-align: left;">Elasticity model</td>
+<td style="text-align: right;">−34%</td>
+<td style="text-align: right;">+5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Engineering model</td>
+<td style="text-align: right;">−22%</td>
+<td style="text-align: right;">−7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">International energy prices</td>
+<td style="text-align: left;">+50%</td>
+<td style="text-align: right;">−20%</td>
+<td style="text-align: right;">−9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">−50%</td>
+<td style="text-align: right;">−31%</td>
+<td style="text-align: right;">+2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">EIA forecast</td>
+<td style="text-align: right;">−32%</td>
+<td style="text-align: right;">+3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Renewables growth limit</td>
+<td style="text-align: left;">Very high</td>
+<td style="text-align: right;">−32%</td>
+<td style="text-align: right;">+3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Income elasticities</td>
+<td style="text-align: left;">±1 or ±2 standard deviations</td>
+<td style="text-align: right;">−29%</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Fiscal multipliers</td>
+<td style="text-align: left;">±1 standard deviation</td>
+<td style="text-align: right;">−29%</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GDP growth</td>
+<td style="text-align: left;">±50%</td>
+<td style="text-align: right;">−29% to −30%</td>
+<td style="text-align: right;">0 to +1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Logit parameter k (power)</td>
+<td style="text-align: left;">6 or 10</td>
+<td style="text-align: right;">−29%</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><em>Source:</em> <span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, section Parameter Sensitivity Analysis, table “CPAT’s parameters sensitivity results”. <em>Notes:</em> G20 countries; one parameter changed at a time. “Change” is the difference between the percentage cut and the default cut, in percentage points; positive means a larger cut. The default power model is the average of the elasticity and engineering models. Rows with negligible effects for other settings are omitted. The documentation does not say how the standard deviations of the elasticities are defined.</p>
+<div id="fig-sensitivity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sensitivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="2.Source/figures/fig2_sensitivity.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: A carbon tax rising to $75 cuts G20 CO₂ by 29 percent in 2030 by default (dashed line); each bar shows the cut when one parameter changes. Source: CPAT methodology, section Parameter Sensitivity Analysis [@CPATDocMitigation]; figure by the author, script 2.Source/make_figures.py."><img src="2.Source/figures/fig2_sensitivity.png" class="img-fluid figure-img" style="width:90.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sensitivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: A carbon tax rising to $75 cuts G20 CO₂ by 29 percent in 2030 by default (dashed line); each bar shows the cut when one parameter changes. Source: CPAT methodology, section Parameter Sensitivity Analysis <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>; figure by the author, script <code>2.Source/make_figures.py</code>.
+</figcaption>
+</figure>
+</div>
+<p><strong>Three lessons follow.</strong> First, the price elasticities deserve the most validation effort: a two-standard-deviation error shifts the 2030 cut by up to 22 percentage points, and the effect is asymmetric, larger for lower elasticities. Second, the choice of power model matters about as much as a one-standard-deviation error in the elasticities, so a ministry should be told which model a result uses. Third, the international price path matters asymmetrically: high world prices leave less for a carbon tax to do, because the tax is a smaller share of the final price. Income elasticities, fiscal multipliers and GDP growth barely affect the percentage cut, although they matter for the baseline level and for GDP results, which this analysis does not test. The design changes one parameter at a time, so it misses interactions, for example high elasticities combined with the engineering power model.</p>
+<p><strong>The panel evidence finds most of CPAT’s elasticities in the right range, with clear exceptions in residential electricity and services.</strong> The documentation’s panel estimates for 2000–2018 (between, pooled and common-correlated-effects estimators, the last following <span class="citation" data-cites="Pesaran2006">Pesaran (<a href="#ref-Pesaran2006" role="doc-biblioref">2006</a>)</span>) find CPAT’s elasticities “in the same ballpark” for most fuels and sectors <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. Residential electricity has an estimated price elasticity of −0.1 against CPAT’s −0.4, and an income elasticity of 0.16 against 0.65. Industrial natural gas has income elasticities of 0.33–0.56 against CPAT’s 0.81. Services fuels respond much like residential ones in the estimates, where CPAT assumes they respond more strongly than industry; the documentation flags this as the main gap to explore. The estimated time trends differ in sign from CPAT’s autonomous efficiency improvements for several fuels.</p>
+<p><strong>For gasoline, the panel estimate is lower than the wider literature, so CPAT’s value is uncertain rather than too high.</strong> The panel estimate of the price elasticity of gasoline in transport is −0.19 against CPAT’s −0.61, but it comes from the one estimator that passed the documentation’s tests, an estimator whose ability to capture long-run effects in a static model the documentation calls “not clear” <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. A meta-analysis of gasoline demand finds mean price elasticities of −0.34 in the short run and −0.84 in the long run <span class="citation" data-cites="Brons2008">(<a href="#ref-Brons2008" role="doc-biblioref">Brons et al. 2008</a>)</span>. CPAT’s −0.61 lies between them. Paper 5.4 takes up this evidence in full <span class="citation" data-cites="StrettonWP54">(<a href="#ref-StrettonWP54" role="doc-biblioref">Stretton 2026b</a>)</span>; together with <a href="#tbl-sensitivity" class="quarto-xref">Table&nbsp;4</a>, it suggests that the clearest risk of overstated response is in residential electricity and services, and that the transport elasticity needs a decision between short- and long-run values rather than a cut.</p>
+</section>
+<section id="sec-replication" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Replication across implementations: independent code reproduces legacy CPAT</h1>
+<p><strong>The CPAT-AI rebuild tested whether the method can be reproduced, block by block, by independent code.</strong> Each block of legacy CPAT was reimplemented in Python, fed legacy’s own cached inputs with legacy’s bugs switched back on, and required to reproduce legacy’s stored results. The rebuilt Excel workbook (Excel-AI) was then checked against the Python references with the bugs fixed, and the Python model (Coded CPAT) against Excel-AI <span class="citation" data-cites="CPATAIModelDoc CPATCodedTesting StrettonWP52">(<a href="#ref-CPATAIModelDoc" role="doc-biblioref">CPAT-AI project 2026b</a>, <a href="#ref-CPATCodedTesting" role="doc-biblioref">2026a</a>; <a href="#ref-StrettonWP52" role="doc-biblioref">Stretton 2026c</a>)</span>. <a href="#tbl-replication" class="quarto-xref">Table&nbsp;5</a> summarizes the published results.</p>
+<div id="tbl-replication" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-replication-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: Independent code reproduces legacy CPAT’s method to many decimal places.
+</figcaption>
+<div aria-describedby="tbl-replication-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Comparison</th>
+<th style="text-align: left;">What is reproduced</th>
+<th style="text-align: right;">Largest relative difference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Python reference = legacy: road engineer model</td>
+<td style="text-align: left;">1,091 series per run, 2022–2041, baseline and carbon tax</td>
+<td style="text-align: right;">3.8 × 10<sup>−14</sup></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Python reference = legacy: power prices and costs</td>
+<td style="text-align: left;">80 legacy rows</td>
+<td style="text-align: right;">5.6 × 10<sup>−17</sup></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Python reference = legacy: power engineer model</td>
+<td style="text-align: left;">208 legacy rows of the baseline and a carbon-tax run</td>
+<td style="text-align: right;">Within 10<sup>−13</sup></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Python reference = legacy: distribution</td>
+<td style="text-align: left;">Effects, recycling, net effect, compensation; Gini changes</td>
+<td style="text-align: right;">4 × 10<sup>−4</sup>; 7 × 10<sup>−6</sup></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Excel-AI = Python reference: power, transport</td>
+<td style="text-align: left;">Every power row in every test scenario; road model in scenarios 1–2 and five copied scenarios</td>
+<td style="text-align: right;">About 5 × 10<sup>−15</sup>; 5 × 10<sup>−14</sup></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Coded CPAT = Excel-AI: mitigation</td>
+<td style="text-align: left;">7,458 output codes per scenario, Egypt, scenarios 1–2, 2022–2041</td>
+<td style="text-align: right;">Within 10<sup>−9</sup> (test tolerance)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Coded CPAT = Excel-AI: distribution</td>
+<td style="text-align: left;">1,684 codes, basket and deciles</td>
+<td style="text-align: right;">Within 10<sup>−9</sup> (test tolerance)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><em>Source:</em> <span class="citation" data-cites="CPATAIModelDoc">CPAT-AI project (<a href="#ref-CPATAIModelDoc" role="doc-biblioref">2026b</a>)</span> (check sections of the power, road transport and distribution chapters); <span class="citation" data-cites="CPATCodedTesting">CPAT-AI project (<a href="#ref-CPATCodedTesting" role="doc-biblioref">2026a</a>)</span>. <em>Notes:</em> Each source defines its own relative difference: the road check divides by max(10<sup>−6</sup>, |legacy|); Coded CPAT’s tests use a relative tolerance of 10<sup>−9</sup> (absolute near zero). The distribution figures are limited by the precision of legacy’s cache. Legacy is CPAT 1.0pre_456.</p>
+<p><strong>Replication with the bugs fixed shows how far legacy’s results moved.</strong> Coded CPAT, which equals Excel-AI, was compared with legacy’s cached Egypt baseline on 272 rows. In the base year 2022, 81 percent of energy-use rows agree within 1 percent and 91 percent within 5 percent; all 15 CO₂ rows agree within 5 percent, with a median gap of 1.2 percent. After the base year, energy use still agrees within 1 percent for about 80 percent of rows, but the CO₂ and price gaps widen: in 2030 the median CO₂ gap is 12 percent and only 12 percent of after-tax price rows agree within 5 percent <span class="citation" data-cites="CPATCodedTesting">(<a href="#ref-CPATCodedTesting" role="doc-biblioref">CPAT-AI project 2026a</a>)</span>. The comparison report attributes the price gaps to a newer data vintage (prices through 2024 rather than 2022) and to fixed legacy price bugs, and the energy and CO₂ gaps to those prices and to fixed fuel-use and emission-factor bugs. The rebuild agrees with legacy where both use the same data and diverges where it corrects legacy, which is what a faithful rebuild should do.</p>
+<p><strong>Replication matters for validation because the published validation was run on legacy versions with bugs.</strong> The rebuild’s register lists 231 legacy bugs at release 1.1.0 (228 at release 1.0.2), 24 of them of high priority, including a population path for Egypt that departed from the United Nations projection of 147 million people in 2041 <span class="citation" data-cites="UNWPP2024">(<a href="#ref-UNWPP2024" role="doc-biblioref">United Nations, Department of Economic and Social Affairs, Population Division 2024</a>)</span>, an income factor on the GDP elasticity of power demand applied twice, and services electricity demand growing with industry <span class="citation" data-cites="CPATAIBugs StrettonWP52">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026d</a>; <a href="#ref-StrettonWP52" role="doc-biblioref">Stretton 2026c</a>)</span>. The register does not record which of these were present in the versions used for the back-cast (1.0pre_043) or the model comparisons, whose version the documentation does not state. But several affect exactly the baseline paths those exercises tested. The published validation is therefore evidence about an earlier model, not about the corrected one.</p>
+<p><strong>The public rebuild limits what outsiders can rerun.</strong> Six of CPAT’s data tables are proprietary (energy balances, energy consumption, domestic prices, input-output tables, the household survey and transport data). The public repository holds them only for Egypt, perturbed within 3 percent, so an outside reader can reproduce the method but not the country results <span class="citation" data-cites="CPATAIRepo">(<a href="#ref-CPATAIRepo" role="doc-biblioref">CPAT-AI project 2026c</a>)</span>.</p>
+</section>
+<section id="sec-fit" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Where CPAT fits well and where it does not</h1>
+<p><strong>CPAT fits well where its structure matches the question.</strong> Base-year energy use and emissions are right by calibration. Back-cast emission levels for large economies with market-based prices are within 5 to 14 percent of mean emissions (Australia, the United States, South Africa). The response of emissions to a carbon price has the same slope as a detailed global energy model, is of the same order as the best cross-country ex-post estimate, and ranks sectors as the ex-post evidence does (power most, transport least). The power mix under a moderate carbon price is close to that of a full planning model. And the method can be reproduced exactly by independent code, so its results are not artifacts of a particular workbook.</p>
+<p><strong>CPAT fits poorly where prices are regulated, data are thin or responses take time.</strong> Back-cast errors are large for China and sizable for Brazil and the United Kingdom, mostly because modeled domestic prices diverged from observed ones. Year-to-year volatility is not reproduced. Investment timing in power differs from an optimization model. The elasticities for residential electricity and services look high against panel estimates, and the transport elasticity mixes short- and long-run evidence. Calibration can carry a data break, such as Egypt’s inventory jump in 2022, into every projected year.</p>
+<p><strong>Road transport is described three times in CPAT, and no published check tests the three against each other.</strong> CPAT models road transport in a simple fuel equation, in an engineering fleet model and in a co-benefits module that values congestion, accidents and road damage. The three are not consistent: the co-benefits module always takes vehicle-kilometers from the fleet model, even when fuel use and emissions follow the fuel equation, so the change in driving it values need not match the modeled change in fuel use <span class="citation" data-cites="CPATAIBugs StrettonWP64">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026d, no. I100</a>; <a href="#ref-StrettonWP64" role="doc-biblioref">Stretton 2026a</a>)</span>.</p>
+<p><strong>For a ministry, the practical reading is to use CPAT for ranges and comparisons, not point forecasts.</strong> A CPAT estimate that a carbon tax cuts emissions by 29 percent should be read as “between about 20 and 35 percent, depending mainly on the elasticities and the power model”, the range that one standard deviation in the elasticities and the choice of power model give in <a href="#tbl-sensitivity" class="quarto-xref">Table&nbsp;4</a> (author’s reading; the documentation attaches no probability to it). Comparisons across policies run on the same baseline are more reliable than levels, because baseline errors largely cancel. Where a result hinges on residential electricity, services or road fuels, the elasticities should be checked against national evidence.</p>
+</section>
+<section id="sec-remains" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> What validation remains</h1>
+<p><strong>Rerun the published validation on the corrected model, for every country.</strong> Coded CPAT runs one country and two scenarios in under a second <span class="citation" data-cites="CPATCodedTesting">(<a href="#ref-CPATCodedTesting" role="doc-biblioref">CPAT-AI project 2026a</a>)</span>, so the back-casts, model comparisons and sensitivity runs can be repeated for every country with data, as automated tests rather than one-off studies. This requires the full CPAT database, whose six proprietary tables the public rebuild holds only for Egypt, perturbed.</p>
+<p><strong>Report a measure of fit for every comparison.</strong> The baseline, price-response and power comparisons are published as charts. A renewed validation should report, for each country and indicator, the error against each reference (mean absolute percentage error or normalized RMSE), so that users can see where the model is close and where it is not, and so that each new version can be checked against the last.</p>
+<p><strong>Make the back-cast a true forecast test.</strong> The published back-cast fed in observed world prices, which removes the hardest part of forecasting. A full back-cast would also use the international price forecasts available at the base year, and would include each country’s price regulations and major policies. It should cover low- and middle-income countries, not only large emitters, and report errors by component (activity, energy intensity, carbon intensity) as well as in total, since totals can be right for the wrong reasons <span class="citation" data-cites="ONeillDesai2005 Koomey2003">(<a href="#ref-ONeillDesai2005" role="doc-biblioref">O’Neill and Desai 2005</a>; <a href="#ref-Koomey2003" role="doc-biblioref">Koomey et al. 2003</a>)</span>.</p>
+<p><strong>Validate policy responses against natural experiments, on a common metric.</strong> The strongest test of a carbon-pricing model is whether it predicts the effect of carbon prices that were actually introduced, such as Sweden’s or British Columbia’s, given the data available before they started. The ex-post literature now offers enough cases to do this country by country <span class="citation" data-cites="Green2021 DobbelingHildebrandt2024">(<a href="#ref-Green2021" role="doc-biblioref">Green 2021</a>; <a href="#ref-DobbelingHildebrandt2024" role="doc-biblioref">Döbbeling-Hildebrandt et al. 2024</a>)</span>. CPAT should report its response in the same form as the studies it is compared with, as an effect on the growth rate per dollar of carbon price, rather than as an average level gap.</p>
+<p><strong>Settle the elasticities.</strong> <a href="#tbl-sensitivity" class="quarto-xref">Table&nbsp;4</a> shows that no other parameter matters as much. Paper 5.4 compares CPAT’s elasticities with the panel evidence and published meta-analyses <span class="citation" data-cites="StrettonWP54">(<a href="#ref-StrettonWP54" role="doc-biblioref">Stretton 2026b</a>)</span>; the demand system that links them to the Total Effective Carbon Price is in paper 6.1 <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Stretton 2026d</a>)</span>. Separate short- and long-run elasticities, which the documentation recommends, would also address the back-cast’s volatility problem.</p>
+<p><strong>Fix the documentation’s own errors.</strong> Three are found here: the coal-price table in the back-cast section repeats the energy CO₂ table; the same section states the direction of the coal-price error both ways; and the CPAT-AI documentation’s “16–29 percent” understates Egypt’s calibration gap in 2023. The rebuild has registered and corrected 20 other documentation errors <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026d</a>)</span>. A validation that readers cannot reproduce from its documentation is weaker than it needs to be.</p>
+</section>
+<section id="sec-conclusion" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Conclusion</h1>
+<p>CPAT’s published validation, read as a whole, supports its use for first estimates of the direction and size of carbon pricing’s effects and for comparisons across policies. It does not support reading its outputs as point forecasts, especially where prices are regulated or data are thin. Two conclusions change on a closer reading of the evidence: CPAT’s response to a carbon price is not shown to be too large, because the ex-post literature is too wide and uses a different metric; and its gasoline elasticity is uncertain rather than too high, while residential electricity and services are the clearer gaps. What is new here is the assembly, the recomputation and the corrections: the documented tests set side by side, their numbers in tables, three source errors found, and the replication evidence from the rebuild added. The main limitation is that every published check predates the correction of more than 200 legacy bugs, so the evidence is about an earlier model. The next step is to make validation part of the model’s test suite: rerun the back-casts, comparisons and sensitivity analysis on Coded CPAT for every country, report a measure of fit for each, and repeat them at every release.</p>
+</section>
+<section id="downloads" class="level1 unnumbered">
+<h1 class="unnumbered">Downloads</h1>
+<p><a href="../../../papers/Brief-CPATValidation.docx">Policy brief (docx)</a> · <a href="../../../papers/CPATValidation.docx">Working paper (docx)</a></p>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Best2020" class="csl-entry" role="listitem">
+Best, Rohan, Paul J. Burke, and Frank Jotzo. 2020. <span>“Carbon Pricing Efficacy: Cross-Country Evidence.”</span> <em>Environmental and Resource Economics</em> 77 (1): 69–94. <a href="https://doi.org/10.1007/s10640-020-00436-x">https://doi.org/10.1007/s10640-020-00436-x</a>.
+</div>
+<div id="ref-Black2023CPAT" class="csl-entry" role="listitem">
+Black, Simon, Ian Parry, Victor Mylonas, Nate Vernon-Lin, and Karlygash Zhunussova. 2023. <em>The <span>IMF-World Bank</span> Climate Policy Assessment Tool (<span>CPAT</span>): A Model to Help Countries Mitigate Climate Change</em>. IMF Working Paper WP/23/128. International Monetary Fund. <a href="https://doi.org/10.5089/9798400242342.001">https://doi.org/10.5089/9798400242342.001</a>.
+</div>
+<div id="ref-Brons2008" class="csl-entry" role="listitem">
+Brons, Martijn, Peter Nijkamp, Eric Pels, and Piet Rietveld. 2008. <span>“A Meta-Analysis of the Price Elasticity of Gasoline Demand. A <span>SUR</span> Approach.”</span> <em>Energy Economics</em> 30 (5): 2105–22. <a href="https://doi.org/10.1016/j.eneco.2007.08.004">https://doi.org/10.1016/j.eneco.2007.08.004</a>.
+</div>
+<div id="ref-CPATDocMitigation" class="csl-entry" role="listitem">
+Campmas, Alexandra, Daniel Bastidas, Olivier Lelouch, Faustyna Gawryluk, Paolo Agnolucci, and Stephen Stretton. 2023. <span>“The Mitigation Module.”</span> In <em><span>CPAT</span> Methodology: The <span>World Bank–IMF</span> Climate Policy Assessment Tool</em>, 2023 edition, corrected online 31 October 2026. World Bank; International Monetary Fund. <a href="https://cpmodelai.github.io/cpat_ai/CPAT_full_documentation_html/03_Mitigation.html">https://cpmodelai.github.io/cpat_ai/CPAT_full_documentation_html/03_Mitigation.html</a>.
+</div>
+<div id="ref-CPATDocAirPollution" class="csl-entry" role="listitem">
+CPAT Team. 2023. <span>“Air Pollution.”</span> In <em><span>CPAT</span> Methodology: The <span>World Bank–IMF</span> Climate Policy Assessment Tool</em>, 2023 edition, corrected online 31 October 2026. World Bank; International Monetary Fund. <a href="https://cpmodelai.github.io/cpat_ai/CPAT_full_documentation_html/06_Air_pollution.html">https://cpmodelai.github.io/cpat_ai/CPAT_full_documentation_html/06_Air_pollution.html</a>.
+</div>
+<div id="ref-CPATCodedTesting" class="csl-entry" role="listitem">
+CPAT-AI project. 2026a. <em>Coded <span>CPAT</span> Documentation (Using the Model: Tests; Project Plan) and Coded <span>CPAT</span> Against Legacy <span>CPAT</span> (<span>Egypt</span> Baseline)</em>. CPAT-AI repository, docs/CPAT_coded_documentation_qmd/01_Using_the_model.qmd and B_Project.qmd; coded/cpat_testing/compare/legacy_comparison.md. <a href="https://cpmodelai.github.io/cpat_ai/CPAT_coded_documentation_html/01_Using_the_model.html">https://cpmodelai.github.io/cpat_ai/CPAT_coded_documentation_html/01_Using_the_model.html</a>.
+</div>
+<div id="ref-CPATAIModelDoc" class="csl-entry" role="listitem">
+CPAT-AI project. 2026b. <em><span>CPAT-AI</span> Model Documentation: Power, Road Transport, Emissions and Distribution (Check Sections)</em>. CPAT-AI repository, docs/CPAT_model_documentation_qmd/04_Power.qmd, 05_Road_transport.qmd, 06_Emissions_and_ETS.qmd and 08_Distribution.qmd. <a href="https://cpmodelai.github.io/cpat_ai/CPAT_model_documentation_html/index.html">https://cpmodelai.github.io/cpat_ai/CPAT_model_documentation_html/index.html</a>.
+</div>
+<div id="ref-CPATAIRepo" class="csl-entry" role="listitem">
+CPAT-AI project. 2026c. <em><span>CPAT-AI</span>: Excel-AI and Coded <span>CPAT</span>, Release 1.1.0</em>. GitHub repository cpmodelai/cpat_ai, 31 October 2026. <a href="https://github.com/cpmodelai/cpat_ai">https://github.com/cpmodelai/cpat_ai</a>.
+</div>
+<div id="ref-CPATAIBugs" class="csl-entry" role="listitem">
+CPAT-AI project. 2026d. <em>Legacy <span>CPAT</span> Bugs and Issues: <span class="nocase">BUGS.md</span> and <span class="nocase">ISSUES.md</span>, Register Version 1.1.0</em>. CPAT-AI repository, excel_ai/core/BUGS.md and excel_ai/core/ISSUES.md. <a href="https://github.com/cpmodelai/cpat_ai/tree/main/excel_ai/core">https://github.com/cpmodelai/cpat_ai/tree/main/excel_ai/core</a>.
+</div>
+<div id="ref-Craig2002" class="csl-entry" role="listitem">
+Craig, Paul P., Ashok Gadgil, and Jonathan G. Koomey. 2002. <span>“What Can History Teach Us? A Retrospective Examination of Long-Term Energy Forecasts for the <span>United States</span>.”</span> <em>Annual Review of Energy and the Environment</em> 27: 83–118. <a href="https://doi.org/10.1146/annurev.energy.27.122001.083425">https://doi.org/10.1146/annurev.energy.27.122001.083425</a>.
+</div>
+<div id="ref-DobbelingHildebrandt2024" class="csl-entry" role="listitem">
+Döbbeling-Hildebrandt, Niklas, Klaas Miersch, Tarun M. Khanna, et al. 2024. <span>“Systematic Review and Meta-Analysis of Ex-Post Evaluations on the Effectiveness of Carbon Pricing.”</span> <em>Nature Communications</em> 15: 4147. <a href="https://doi.org/10.1038/s41467-024-48512-w">https://doi.org/10.1038/s41467-024-48512-w</a>.
+</div>
+<div id="ref-GBD2020RiskFactors" class="csl-entry" role="listitem">
+GBD 2019 Risk Factors Collaborators. 2020. <span>“Global Burden of 87 Risk Factors in 204 Countries and Territories, 1990–2019: A Systematic Analysis for the <span class="nocase">Global Burden of Disease Study</span> 2019.”</span> <em>The Lancet</em> 396 (10258): 1223–49. <a href="https://doi.org/10.1016/S0140-6736(20)30752-2">https://doi.org/10.1016/S0140-6736(20)30752-2</a>.
+</div>
+<div id="ref-Green2021" class="csl-entry" role="listitem">
+Green, Jessica F. 2021. <span>“Does Carbon Pricing Reduce Emissions? A Review of Ex-Post Analyses.”</span> <em>Environmental Research Letters</em> 16 (4): 043004. <a href="https://doi.org/10.1088/1748-9326/abdae9">https://doi.org/10.1088/1748-9326/abdae9</a>.
+</div>
+<div id="ref-Huntington1982" class="csl-entry" role="listitem">
+Huntington, Hillard G., John P. Weyant, and James L. Sweeney. 1982. <span>“Modeling for Insights, Not Numbers: The Experiences of the <span>Energy Modeling Forum</span>.”</span> <em>Omega</em> 10 (5): 449–62. <a href="https://doi.org/10.1016/0305-0483(82)90002-0">https://doi.org/10.1016/0305-0483(82)90002-0</a>.
+</div>
+<div id="ref-Koomey2003" class="csl-entry" role="listitem">
+Koomey, Jonathan, Paul Craig, Ashok Gadgil, and David Lorenzetti. 2003. <span>“Improving Long-Range Energy Modeling: A Plea for Historical Retrospectives.”</span> <em>The Energy Journal</em> 24 (4): 75–92. <a href="https://doi.org/10.5547/ISSN0195-6574-EJ-Vol24-No4-4">https://doi.org/10.5547/ISSN0195-6574-EJ-Vol24-No4-4</a>.
+</div>
+<div id="ref-ONeillDesai2005" class="csl-entry" role="listitem">
+O’Neill, Brian C., and Mausami Desai. 2005. <span>“Accuracy of Past Projections of <span>US</span> Energy Consumption.”</span> <em>Energy Policy</em> 33 (8): 979–93. <a href="https://doi.org/10.1016/j.enpol.2003.10.020">https://doi.org/10.1016/j.enpol.2003.10.020</a>.
+</div>
+<div id="ref-Pesaran2006" class="csl-entry" role="listitem">
+Pesaran, M. Hashem. 2006. <span>“Estimation and Inference in Large Heterogeneous Panels with a Multifactor Error Structure.”</span> <em>Econometrica</em> 74 (4): 967–1012. <a href="https://doi.org/10.1111/j.1468-0262.2006.00692.x">https://doi.org/10.1111/j.1468-0262.2006.00692.x</a>.
+</div>
+<div id="ref-Rafaty2020" class="csl-entry" role="listitem">
+Rafaty, Ryan, Geoffroy Dolphin, and Felix Pretis. 2020. <em>Carbon Pricing and the Elasticity of <span>CO2</span> Emissions</em>. INET Oxford Working Paper No. 140. Institute for New Economic Thinking. <a href="https://doi.org/10.36687/inetwp140">https://doi.org/10.36687/inetwp140</a>.
+</div>
+<div id="ref-Sargent2013" class="csl-entry" role="listitem">
+Sargent, Robert G. 2013. <span>“Verification and Validation of Simulation Models.”</span> <em>Journal of Simulation</em> 7 (1): 12–24. <a href="https://doi.org/10.1057/jos.2012.20">https://doi.org/10.1057/jos.2012.20</a>.
+</div>
+<div id="ref-StrettonWP64" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026a. <span>“Activity Levels Across <span>CPAT</span>, <span>SISEPUEDE</span>, <span>CBAM</span> and <span>FTT</span>.”</span> Unpublished manuscript.
+</div>
+<div id="ref-StrettonWP54" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026b. <span>“Are <span>CPAT</span>’s Price Elasticities Right?”</span> Unpublished manuscript.
+</div>
+<div id="ref-StrettonWP52" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026c. <span>“<span>CPAT-AI</span>: Rebuilding a Policy Model as a Transparent, Testable Tool.”</span> Unpublished manuscript.
+</div>
+<div id="ref-CFPB61" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026d. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-UNWPP2024" class="csl-entry" role="listitem">
+United Nations, Department of Economic and Social Affairs, Population Division. 2024. <em>World Population Prospects 2024</em>. Medium variant, total population by sex (WPP2024_TotalPopulationBySex.csv). <a href="https://population.un.org/wpp/">https://population.un.org/wpp/</a>.
+</div>
+<div id="ref-Vohra2021" class="csl-entry" role="listitem">
+Vohra, Karn, Alina Vodonos, Joel Schwartz, Eloise A. Marais, Melissa P. Sulprizio, and Loretta J. Mickley. 2021. <span>“Global Mortality from Outdoor Fine Particle Pollution Generated by Fossil Fuel Combustion: Results from <span>GEOS-Chem</span>.”</span> <em>Environmental Research</em> 195: 110754. <a href="https://doi.org/10.1016/j.envres.2021.110754">https://doi.org/10.1016/j.envres.2021.110754</a>.
+</div>
+<div id="ref-Wilson2021" class="csl-entry" role="listitem">
+Wilson, Charlie, Céline Guivarch, Elmar Kriegler, et al. 2021. <span>“Evaluating Process-Based Integrated Assessment Models of Climate Change Mitigation.”</span> <em>Climatic Change</em> 166 (1–2): 3. <a href="https://doi.org/10.1007/s10584-021-03099-9">https://doi.org/10.1007/s10584-021-03099-9</a>.
+</div>
+</div>
+</section>
+<section id="sec-appendix-sources" class="level1 unnumbered">
+<h1 class="unnumbered">Appendix A. Which numbers are the documentation’s and which are new</h1>
+<div id="tbl-sources" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sources-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6: Numbers reported from the documentation, recomputed, or new.
+</figcaption>
+<div aria-describedby="tbl-sources-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Number in this paper</th>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Source or calculation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Back-cast RMSE and normalized RMSE (<a href="#tbl-backcast" class="quarto-xref">Table&nbsp;2</a>, <a href="#fig-backcast" class="quarto-xref">Figure&nbsp;1</a>)</td>
+<td style="text-align: left;">Documentation’s, rounded</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, Hindcasting</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Implied mean observed emissions (about 9.9 Gt for China, 7.0 Gt for the United States)</td>
+<td style="text-align: left;">Recomputed</td>
+<td style="text-align: left;">RMSE divided by normalized RMSE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Semi-elasticities (<a href="#tbl-semielast" class="quarto-xref">Table&nbsp;3</a>)</td>
+<td style="text-align: left;">Documentation’s</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, Ex-post studies</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Growth-rate equivalents of CPAT’s response (0.8 and 0.7 percent a year)</td>
+<td style="text-align: left;">Author’s calculation</td>
+<td style="text-align: left;">Average level gap = <em>g</em>(<em>N</em>+1)/2 for <em>N</em> = 5 and 17, assuming a linear build-up</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rafaty et al.’s response at $10 (0.5 percent a year)</td>
+<td style="text-align: left;">Author’s calculation</td>
+<td style="text-align: left;">0.05 percent per $1 <span class="citation" data-cites="Rafaty2020">(<a href="#ref-Rafaty2020" role="doc-biblioref">Rafaty et al. 2020</a>)</span> times 10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sensitivity results (<a href="#tbl-sensitivity" class="quarto-xref">Table&nbsp;4</a>, <a href="#fig-sensitivity" class="quarto-xref">Figure&nbsp;2</a>)</td>
+<td style="text-align: left;">Documentation’s</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, Parameter sensitivity</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">“Between about 20 and 35 percent”</td>
+<td style="text-align: left;">Author’s reading</td>
+<td style="text-align: left;">±1 standard deviation in the elasticities; elasticity or engineering power model</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Panel elasticities</td>
+<td style="text-align: left;">Documentation’s</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, Panel estimation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EPM set-up and country counts (14 + 20; 29 of 34 in Africa)</td>
+<td style="text-align: left;">Documentation’s; counts by the author</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocMitigation">Campmas et al. (<a href="#ref-CPATDocMitigation" role="doc-biblioref">2023</a>)</span>, Model comparisons and Appendix H</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Air-pollution shares (61, 55, 44 percent)</td>
+<td style="text-align: left;">Documentation’s</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATDocAirPollution">CPAT Team (<a href="#ref-CPATDocAirPollution" role="doc-biblioref">2023</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Egypt calibration factor (0.930) and inventory values</td>
+<td style="text-align: left;">CPAT-AI documentation’s</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATAIModelDoc">CPAT-AI project (<a href="#ref-CPATAIModelDoc" role="doc-biblioref">2026b</a>)</span>, Emissions</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Egypt jump (19.5 percent) and gaps (16, 32, 29 percent)</td>
+<td style="text-align: left;">Recomputed</td>
+<td style="text-align: left;">From the CPAT-AI documentation’s table</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Replication tolerances (<a href="#tbl-replication" class="quarto-xref">Table&nbsp;5</a>) and legacy comparison shares</td>
+<td style="text-align: left;">CPAT-AI documentation’s</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATAIModelDoc">CPAT-AI project (<a href="#ref-CPATAIModelDoc" role="doc-biblioref">2026b</a>)</span>; <span class="citation" data-cites="CPATCodedTesting">CPAT-AI project (<a href="#ref-CPATCodedTesting" role="doc-biblioref">2026a</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bug counts (231 at release 1.1.0; 228 at 1.0.2; 24 high priority)</td>
+<td style="text-align: left;">CPAT-AI register’s</td>
+<td style="text-align: left;"><span class="citation" data-cites="CPATAIBugs">CPAT-AI project (<a href="#ref-CPATAIBugs" role="doc-biblioref">2026d</a>)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The validation exercises reported here were carried out by the CPAT team and published in the CPAT methodology (2023 edition, corrected online in October 2026). Its mitigation chapter, including the validation section, was prepared by Alexandra Campmas, Daniel Bastidas, Olivier Lelouch, Faustyna Gawryluk, Paolo Agnolucci and the author; the panel estimation of energy demand is Paolo Agnolucci’s <span class="citation" data-cites="CPATDocMitigation">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>)</span>. CPAT’s air-pollution module, whose validation <a href="#sec-air" class="quarto-xref">Section&nbsp;6.4</a> reports, is the work of Paulina Schulz-Antipa <span class="citation" data-cites="CPATDocAirPollution">(<a href="#ref-CPATDocAirPollution" role="doc-biblioref">CPAT Team 2023</a>)</span>. The replication results come from the CPAT-AI repository, release 1.1.0 <span class="citation" data-cites="CPATAIRepo">(<a href="#ref-CPATAIRepo" role="doc-biblioref">CPAT-AI project 2026c</a>)</span>. This paper selects, condenses, recomputes and interprets; Appendix A lists which numbers are the documentation’s and which are new. Errors of interpretation are the author’s own.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

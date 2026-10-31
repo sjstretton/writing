@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephen J. Stretton">
+<meta name="keywords" content="fiscal indicators, fiscal space, energy subsidies, public investment management, composite indicators, data provenance">
+
+<title>A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis – Climate, Fiscal &amp; Finance</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Climate, Fiscal &amp; Finance</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Policy and Finance</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../modelling/index.html" aria-current="page"> 
+<span class="menu-text">Modelling and Analytics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/7-analytics.html">7. Analytics Tools</a></li><li class="breadcrumb-item"><a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html">7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis</a></li><li class="breadcrumb-item"><a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/working-paper.html">Working paper</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modelling and Analytics</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Modelling (CPAT)</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATMitigationMethods/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.1 The CPAT Mitigation Module</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATMitigationMethods/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATAIImplementation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.2 CPAT-AI</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.3 Validating CPAT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/ElasticityValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.4 Are CPAT's Price Elasticities Right?</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Modular Upgrades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.1 Measure Carbon Pricing by the Emissions It Cuts</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.2 The CBAM Policy Tool</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3 Public Investment in CPAT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PublicInvestment/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/ActivityModelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/ActivityModelling/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.5 The Macro-Fiscal-Energy Scenario Tool</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Analytics Tools</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.1 The Excise-Fiscal Diagnostic</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/working-paper.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link active" data-scroll-target="#sec-summary"><span class="header-section-number">1</span> Executive summary</a></li>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link" data-scroll-target="#sec-intro"><span class="header-section-number">2</span> Introduction</a></li>
+  <li><a href="#sec-literature" id="toc-sec-literature" class="nav-link" data-scroll-target="#sec-literature"><span class="header-section-number">3</span> Related work</a></li>
+  <li><a href="#sec-what" id="toc-sec-what" class="nav-link" data-scroll-target="#sec-what"><span class="header-section-number">4</span> What the dashboard assembles</a></li>
+  <li><a href="#sec-build" id="toc-sec-build" class="nav-link" data-scroll-target="#sec-build"><span class="header-section-number">5</span> The build pipeline</a></li>
+  <li><a href="#sec-scoring" id="toc-sec-scoring" class="nav-link" data-scroll-target="#sec-scoring"><span class="header-section-number">6</span> Scoring and evaluation</a></li>
+  <li><a href="#sec-use" id="toc-sec-use" class="nav-link" data-scroll-target="#sec-use"><span class="header-section-number">7</span> How an analyst uses it</a></li>
+  <li><a href="#sec-example" id="toc-sec-example" class="nav-link" data-scroll-target="#sec-example"><span class="header-section-number">8</span> An illustrative comparison</a></li>
+  <li><a href="#sec-check" id="toc-sec-check" class="nav-link" data-scroll-target="#sec-check"><span class="header-section-number">9</span> Checking the panel against the publishers</a></li>
+  <li><a href="#sec-limits" id="toc-sec-limits" class="nav-link" data-scroll-target="#sec-limits"><span class="header-section-number">10</span> Limits</a></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">11</span> Conclusion</a></li>
+  <li><a href="#downloads" id="toc-downloads" class="nav-link" data-scroll-target="#downloads">Downloads</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/7-analytics.html">7. Analytics Tools</a></li><li class="breadcrumb-item"><a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html">7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis</a></li><li class="breadcrumb-item"><a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/working-paper.html">Working paper</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis</h1>
+<p class="subtitle lead">Eighty Public Indicators, One Country Profile, and a Build That Traces Every Number to Its Source</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stephen J. Stretton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>Before advising a government on carbon pricing, fuel subsidy reform or a climate investment program, an analyst needs a quick, comparable view of the country’s fiscal space, its capacity to spend, its cost of capital and how much fossil fuel money runs through its budget. Assembling that view from a dozen databases, each with its own country names, units and vintages, takes days. The Global Fiscal Indicators dashboard assembles it for 217 economies from about twenty public datasets: 80 indicators in twelve blocks, each block answering one question, scored on one 1-to-10 scale and shown as a one-page country profile. A scripted pipeline rebuilds the panel from the raw files, never imputes, records the year and source file of every value, and stops if its configuration and its outputs disagree. A comparison of Colombia, Indonesia, Morocco and South Africa shows the profile separating a revenue problem (Indonesia: tax of 10 percent of GDP, explicit fuel subsidies of 3 percent) from a debt-service problem (South Africa: net interest of 19 percent of revenue). A check against the publishers’ own releases confirms most values and finds three faults worth fixing: a mislabeled interest indicator, a revenue denominator that reverses a reading, and a modeled renewable share far from observed generation. The dashboard should be read for the next question to ask, not for a verdict.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>fiscal indicators, fiscal space, energy subsidies, public investment management, composite indicators, data provenance</p>
+  </div>
+</div>
+
+</header>
+
+
+<p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the Climate Fiscal AI Tools. A short version for policy makers is <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html">Climate Fiscal Policy Brief No.&nbsp;7.2</a>.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<section id="sec-summary" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
+<p><a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-FiscalIndicatorsDashboard.pptx">Slides (pptx)</a></p>
+<p><strong>Climate-fiscal advice often starts with the wrong constraint because the numbers take days to gather.</strong> Asked whether a country can afford a climate investment program, or should reform fuel subsidies first, an economist needs its debt and interest bill, its tax take, how well it spends capital budgets, what investors charge it for capital, what it spends on fossil fuel subsidies, and how it makes electricity. Each number sits in a different database, with different country names, units and years. Assembling them takes a day for one country and a week for a region, and the next analyst starts again.</p>
+<p><strong>The Global Fiscal Indicators dashboard puts those numbers on one page for 217 economies.</strong> It reads about twenty public datasets, among them the IMF’s World Economic Outlook, its revenue database and its fossil fuel subsidy estimates, World Bank debt, budget and energy data, PEFA assessments of public financial management, and Ember’s electricity data. It arranges 80 indicators in twelve blocks, each answering one question: can the country pay for it, can it build it, what does capital cost, who finances it, how much fossil and climate money runs through the budget, does it sell or buy fossil fuels, how is power generated. Each value carries its year and source, and a score from 1 to 10 against all other economies.</p>
+<p><strong>The build is designed so that errors cannot hide.</strong> A script turns the raw downloads into one long table, one row per value, with the source file and year. Nothing is imputed: a missing value stays missing and is counted. The build stops if its configuration names an indicator that the data do not supply, a rule added after an earlier version lost indicators without anyone noticing. A Python and an R version of the pipeline matched on the original 53 indicators. The build itself is not yet public, but every input is.</p>
+<p><strong>The dashboard offers no overall index, on purpose.</strong> There is no defensible way to weigh fiscal space against delivery capacity or the cost of capital, and a single score would hide the point of the exercise: a country short of money needs different help from one short of the capacity to spend it. Within blocks the dashboard shows a simple average, which is a reading aid only, because related indicators can count twice.</p>
+<p><strong>Four middle-income economies show how the profile separates different problems.</strong> Indonesia has a revenue problem, not a debt problem: gross debt is 40 percent of GDP, but tax revenue is only 10.1 percent, so net interest still takes 15 percent of revenue, and explicit fuel subsidies cost 3.0 percent of GDP, about 30 percent of tax revenue. South Africa has a debt-service problem: it collects the most tax of the four, 25.2 percent of GDP, but net interest takes 19 percent of revenue, and its unpriced environmental costs from fossil fuels, which the IMF calls implicit subsidies, are the largest of the four, 12.9 percent of GDP. Morocco pays the least interest relative to revenue, 7.9 percent. The profile tells the analyst which question to ask next and which tool to use for it.</p>
+<p><strong>A check against the publishers’ releases confirms most values and finds three faults.</strong> Tax revenue, the interest measure, the excise share and the subsidy values all reproduce from the IMF’s own files. But the indicator called “interest-to-revenue” is net interest, and the build drops countries that earn more interest than they pay. Colombia’s low excise share of revenue reflects its high revenue, not low excises: as a share of GDP its excises match Indonesia’s. And the renewable share the panel holds, a modeled series, differs from Ember’s observed shares by 5 to 19 percentage points.</p>
+<p><strong>Carbon pricing is the most important missing block.</strong> The dashboard does not yet read explicit carbon prices, effective carbon rates or a Total Effective Carbon Price. Adding them, fixing the three faults and publishing the build would turn a useful internal tool into a public good. Until then, the profile is a first view: it says where to look, and every number on it says where it came from.</p>
+</section>
+<section id="sec-intro" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
+<p>Climate-fiscal advice usually starts with a scramble for numbers. An economist asked whether a country can afford a climate investment program, or whether it should reform fuel subsidies first, needs its debt and interest burden, its tax take, how well it executes capital budgets, what private investors pay for capital, how much it spends on fossil fuel subsidies, whether it exports or imports fossil fuels, and how it generates power. Each number sits in a different database: the IMF’s World Economic Outlook for debt, the IMF’s revenue database for taxes, the IMF’s subsidy estimates for subsidies, World Bank budget data for capital execution, PEFA assessments for public investment management, academic datasets for the cost of capital. They use different country names, units and years. The usual result is advice framed around whichever constraint the first available number made visible.</p>
+<p>This paper asks how to give an analyst a comparable, sourced first view of any country’s climate-fiscal position in minutes, in a form that someone who did not build it can check and extend. The answer is the Global Fiscal Indicators dashboard, part of the Climate Fiscal AI Tools. It assembles 80 indicators for 217 economies from about twenty public datasets into twelve blocks, each answering one question, and fills a one-page profile with values, observation years, sources and a score from 1 to 10. Behind the workbook sits a scripted pipeline with rules that stop the commonest ways such compilations go quietly wrong. Applied to Colombia, Indonesia, Morocco and South Africa, the profile separates a revenue problem from a debt-service problem and points each to a different fiscal-energy lever (<a href="#sec-example" class="quarto-xref">Section&nbsp;8</a>).</p>
+<p>The dashboard adds to existing databases by joining them, not by replacing them. The IMF’s revenue database and the UNU-WIDER Government Revenue Dataset harmonize tax revenue <span class="citation" data-cites="IMFWoRLD UNUWIDERGRD2025">(<a href="#ref-IMFWoRLD" role="doc-biblioref">International Monetary Fund 2026c</a>; <a href="#ref-UNUWIDERGRD2025" role="doc-biblioref">UNU-WIDER 2025</a>)</span>; the IMF’s fossil fuel subsidy estimates cover explicit and implicit subsidies for 170 countries <span class="citation" data-cites="Black2025FFS">(<a href="#ref-Black2025FFS" role="doc-biblioref">Black et al. 2025</a>)</span>; the cross-country fiscal space database assembles 28 indicators of debt sustainability, balance sheets, external debt and market perception <span class="citation" data-cites="Kose2022FiscalSpace">(<a href="#ref-Kose2022FiscalSpace" role="doc-biblioref">Kose et al. 2022</a>)</span>; the IMF’s Climate Change Indicators Dashboard brings climate indicators onto one platform <span class="citation" data-cites="IMFCCID">(<a href="#ref-IMFCCID" role="doc-biblioref">International Monetary Fund 2021a</a>)</span>. None puts fiscal space, delivery capacity, the cost of capital and the energy-fiscal position on one page and one scale, with the year and file of every value, and none feeds the same panel to a model. This one does: it is the data layer of the Macro-Fiscal-Energy Scenario Tool <span class="citation" data-cites="StrettonWP65">(paper 6.5, <a href="#ref-StrettonWP65" role="doc-biblioref">Stretton 2026c</a>)</span>, so the numbers an analyst reads are the numbers the model starts from.</p>
+<p>The paper makes three further contributions beyond the description. First, it states the build rules that make a compiled panel traceable and stop silent error, and the reasons for each (<a href="#sec-build" class="quarto-xref">Section&nbsp;5</a>). Second, it defends a scoring design (percentile clipping, words not weights, no overall index) against the composite-indicator literature, and states the strongest objection to it (<a href="#sec-scoring" class="quarto-xref">Section&nbsp;6</a>). Third, it reports what happened when the four-country values were checked against the publishers’ own releases: most survive, and three faults appear that matter for any compilation of this kind (<a href="#sec-check" class="quarto-xref">Section&nbsp;9</a>).</p>
+</section>
+<section id="sec-literature" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Related work</h1>
+<p><strong>Cross-country revenue and fiscal databases each answer one part of the question.</strong> The IMF’s World Revenue Longitudinal Database (WoRLD) tracks the level and composition of government revenue for 195 countries from the early 1980s, compiled from IMF surveillance data on the Government Finance Statistics classification <span class="citation" data-cites="IMFWoRLD">(<a href="#ref-IMFWoRLD" role="doc-biblioref">International Monetary Fund 2026c</a>)</span>. The Government Revenue Dataset, begun at the International Centre for Tax and Development and now maintained by UNU-WIDER, combines several international sources and IMF Article IV reports, with a standard treatment of natural resource revenue <span class="citation" data-cites="Prichard2014GRD UNUWIDERGRD2025">(<a href="#ref-Prichard2014GRD" role="doc-biblioref">Prichard et al. 2014</a>; <a href="#ref-UNUWIDERGRD2025" role="doc-biblioref">UNU-WIDER 2025</a>)</span>. The fiscal space database of <span class="citation" data-cites="Kose2022FiscalSpace">Kose et al. (<a href="#ref-Kose2022FiscalSpace" role="doc-biblioref">2022</a>)</span> defines fiscal space as the budgetary resources a government has to meet its obligations and measures it with 28 indicators in four groups for up to 200 countries. Each is a building block of the dashboard’s fiscal block and its fiscal risk appendix.</p>
+<p><strong>The IMF’s subsidy estimates are the only global source on both fiscal and environmental underpricing.</strong> The December 2025 update estimates explicit subsidies (undercharging for supply costs) of 725 billion US dollars in 2024, 0.6 percent of world GDP, and implicit subsidies (undercharging for environmental costs) of 6.7 trillion dollars, 5.8 percent of GDP, for 170 countries; it uses the IMF–World Bank Climate Policy Assessment Tool (CPAT) to project fuel use beyond the latest energy balances and to estimate electricity supply costs <span class="citation" data-cites="Black2025FFS">(<a href="#ref-Black2025FFS" role="doc-biblioref">Black et al. 2025</a>)</span>. The IMF notes that readers who dislike the word “subsidy” for the environmental part may call it underpriced environmental costs. The dashboard uses the IMF’s terms and reads the two parts in different blocks.</p>
+<p><strong>Climate dashboards exist, but they are not built for fiscal triage.</strong> The IMF’s Climate Change Indicators Dashboard, launched in April 2021, brings together experimental climate indicators on economic activity, cross-border flows, climate risks and government policy, so that countries can be compared on one platform <span class="citation" data-cites="IMFCCID">(<a href="#ref-IMFCCID" role="doc-biblioref">International Monetary Fund 2021a</a>)</span>. It does not assess fiscal space, the capacity to spend capital budgets or the cost of capital. The World Bank’s Carbon Pricing Dashboard tracks explicit carbon taxes and emissions trading systems <span class="citation" data-cites="WBCarbonPricing">(<a href="#ref-WBCarbonPricing" role="doc-biblioref">World Bank 2026b</a>)</span>; the OECD’s effective carbon rates add fuel excises <span class="citation" data-cites="OECD2023ECR">(<a href="#ref-OECD2023ECR" role="doc-biblioref">OECD 2023</a>)</span>; the World Bank’s total carbon price adds fuel excises net of subsidies <span class="citation" data-cites="Agnolucci2024TCP">(<a href="#ref-Agnolucci2024TCP" role="doc-biblioref">Agnolucci et al. 2024</a>)</span>. These measure one lever each.</p>
+<p><strong>Each block answers a question with its own literature.</strong> Low tax revenue is a constraint, not only a choice: <span class="citation" data-cites="Gaspar2016TaxCapacity">Gaspar et al. (<a href="#ref-Gaspar2016TaxCapacity" role="doc-biblioref">2016</a>)</span> find a tipping point in tax revenue at about 12¾ percent of GDP: a country just above it has GDP per capita 7.5 percent higher ten years later. Public investment loses on average about 30 percent of its potential value through inefficient management <span class="citation" data-cites="IMF2015PIE">(<a href="#ref-IMF2015PIE" role="doc-biblioref">International Monetary Fund 2015</a>)</span>, which is why the dashboard reads capital budget execution and PEFA’s public investment scores beside fiscal space. The cost of capital differs widely across countries, and regionally specific costs of capital change cost-optimal decarbonization paths in developing economies <span class="citation" data-cites="Ameli2021">(<a href="#ref-Ameli2021" role="doc-biblioref">Ameli et al. 2021</a>)</span>; the global dataset of <span class="citation" data-cites="Steffen2025WACC"><span class="nocase">Steffen et al.</span> (<a href="#ref-Steffen2025WACC" role="doc-biblioref">2025</a>)</span> now covers 68 countries for solar, onshore wind and offshore wind from 2010 to 2022.</p>
+<p><strong>The composite-indicator literature supports the dashboard’s two main design choices.</strong> The OECD and European Commission handbook on composite indicators warns that a composite can send misleading policy messages, invite simplistic conclusions and “disguise serious failings in some dimensions”, and that min-max rescaling is distorted by extreme values <span class="citation" data-cites="OECDJRC2008">(<a href="#ref-OECDJRC2008" role="doc-biblioref">OECD and European Commission Joint Research Centre 2008</a>)</span>. The dashboard therefore rescales between the 5th and 95th percentiles rather than the minimum and maximum, and offers no overall index. For provenance, the FAIR principles ask that data be findable, accessible, interoperable and reusable, by machines as well as people <span class="citation" data-cites="Wilkinson2016FAIR">(<a href="#ref-Wilkinson2016FAIR" role="doc-biblioref"><span class="nocase">Wilkinson et al.</span> 2016</a>)</span>; the dashboard’s long table, with a source file and year for every value, applies the same idea to a compiled panel.</p>
+<p><strong>The gap this paper fills is the joined, traceable first view.</strong> Existing sources are deep on one dimension each. A country economist preparing climate-fiscal advice needs a few indicators from each, on one page, comparable across countries, with enough provenance to defend any number in a meeting.</p>
+</section>
+<section id="sec-what" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> What the dashboard assembles</h1>
+<p><strong>The dashboard is organized as twelve questions, not as a list of datasets.</strong> Four assessment blocks come first and carry the diagnosis: fiscal space, delivery, cost of capital, and financing and risk. Three context blocks explain it: how much fossil and climate money runs through the budget, whether the country sells or buys fossil fuels, and how it generates power. Five appendices hold reference material: retail energy prices, power market regulation, the inputs the macro-fiscal models start from, the output of the integrated scenario, and fiscal risk. <a href="#tbl-blocks" class="quarto-xref">Table&nbsp;1</a> lists each block, its question and its main sources.</p>
+<div id="tbl-blocks" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-blocks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Blocks, questions and sources of the dashboard, version 1.3. <sup>a</sup> In version 1.3, part of Appendix C (concessional share of external debt, CPIA, remittances, reserves, account ownership) and all of Appendix E are read through an unpublished compilation, not directly from the public sources named; see <a href="#sec-limits" class="quarto-xref">Section&nbsp;10</a>.
+</figcaption>
+<div aria-describedby="tbl-blocks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Block</th>
+<th>Question</th>
+<th>Indicators (examples)</th>
+<th>Main public sources</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fiscal</td>
+<td>Can they pay for it?</td>
+<td>Gross debt; net interest (% of revenue; % of GDP); tax revenue (% of GDP)</td>
+<td>IMF WEO; IMF WoRLD</td>
+</tr>
+<tr class="even">
+<td>PIMA (delivery)</td>
+<td>Can they build it?</td>
+<td>Capital budget execution; PEFA PI-11 public investment management; PI-12.2 nonfinancial asset monitoring</td>
+<td>World Bank BOOST; PEFA 2016 framework</td>
+</tr>
+<tr class="odd">
+<td>Finance 1</td>
+<td>What does capital cost them?</td>
+<td>Real after-tax WACC for solar; cross-checks; private creditor rate; official–private spread; average maturity</td>
+<td>IRENA; Steffen et al.; IEA observatory; World Bank IDS</td>
+</tr>
+<tr class="even">
+<td>Finance 2</td>
+<td>Who finances it, and what risk does the budget carry?</td>
+<td>Mitigation finance received; creditor mix; US dollar share of debt; PEFA PI-10.3 contingent liabilities; private participation in infrastructure</td>
+<td>OECD climate-related development finance; IDS; PEFA; World Bank PPI</td>
+</tr>
+<tr class="odd">
+<td>Context 1</td>
+<td>How much fossil and climate money runs through the budget?</td>
+<td>Excise share of revenue; fossil fuel subsidies, explicit and implicit (% of GDP); environment protection spending</td>
+<td>IMF WoRLD; IMF fossil fuel subsidies; BOOST</td>
+</tr>
+<tr class="even">
+<td>Context 2</td>
+<td>Does the country sell fossil fuels, or buy them?</td>
+<td>Net fuel trade; energy import dependency; oil, gas and coal rents</td>
+<td>World Development Indicators</td>
+</tr>
+<tr class="odd">
+<td>Context 3</td>
+<td>How is power generated, and which way is it moving?</td>
+<td>Oil-fired share; renewable share and its change; renewable capacity growth</td>
+<td>Ember; IMF fossil fuel subsidies</td>
+</tr>
+<tr class="even">
+<td>Appendix A</td>
+<td>What do users pay for energy?</td>
+<td>Retail prices of diesel, gasoline, electricity, gas and coal by sector</td>
+<td>IMF fossil fuel subsidies</td>
+</tr>
+<tr class="odd">
+<td>Appendix B</td>
+<td>How is the power sector organized?</td>
+<td>Market structure; independent regulator; unbundling; RISE scores</td>
+<td>Power Sector Reform Tracker; World Bank RISE</td>
+</tr>
+<tr class="even">
+<td>Appendix C</td>
+<td>What do the macro models start from?</td>
+<td>Revenue; primary balance; investment; growth; public investment; external debt; CPIA; remittances; reserves; account ownership</td>
+<td>IMF WEO; IMF ICSD; IDS; World Bank CPIA; WDI; Global Findex<sup>a</sup></td>
+</tr>
+<tr class="odd">
+<td>Appendix D</td>
+<td>What would a net zero program do to budget and debt?</td>
+<td>Budget need; feasible pricing revenue; GDP and debt in 2050; debt risk</td>
+<td>Model output (paper 6.5), not data</td>
+</tr>
+<tr class="even">
+<td>Appendix E</td>
+<td>What could land on the budget?</td>
+<td>Sovereign rating; debt maturing within a year; external debt; short-term debt to reserves</td>
+<td>Fiscal space database; WDI; IDS<sup>a</sup></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Each source was checked against what the build reads.</strong> The fiscal core comes from the IMF’s World Economic Outlook, with projections dropped so that only actual years enter, and from WoRLD’s 2026 release for taxes and excises <span class="citation" data-cites="IMFWEO IMFWoRLD">(<a href="#ref-IMFWEO" role="doc-biblioref">International Monetary Fund 2026b</a>, <a href="#ref-IMFWoRLD" role="doc-biblioref">2026c</a>)</span>. WoRLD’s “taxes” follow the Government Finance Statistics classification and exclude social contributions. Subsidies and retail energy prices come from the IMF’s fossil fuel subsidy data, whose 2024 values are in the 2025 update; the pipeline converts the dollar estimates to shares of GDP with WEO GDP <span class="citation" data-cites="Black2025FFS">(<a href="#ref-Black2025FFS" role="doc-biblioref">Black et al. 2025</a>)</span>. Resource rents, fuel trade and energy import dependency come from the World Development Indicators <span class="citation" data-cites="WDI">(<a href="#ref-WDI" role="doc-biblioref">World Bank 2026c</a>)</span>. Generation by source comes from Ember’s yearly electricity data <span class="citation" data-cites="Ember2025">(<a href="#ref-Ember2025" role="doc-biblioref">Ember 2025</a>)</span>. Budget execution and environmental spending come from the World Bank’s harmonized BOOST data <span class="citation" data-cites="BOOST">(<a href="#ref-BOOST" role="doc-biblioref">World Bank 2026a</a>)</span>; public investment management and contingent liability scores from PEFA assessments under the 2016 framework <span class="citation" data-cites="PEFA2016">(<a href="#ref-PEFA2016" role="doc-biblioref">PEFA Secretariat 2016</a>)</span>. The cost of capital draws on IRENA’s real after-tax WACC assumptions for 2021 <span class="citation" data-cites="IRENA2022">(<a href="#ref-IRENA2022" role="doc-biblioref">IRENA 2022</a>)</span>, the dataset of <span class="citation" data-cites="Steffen2025WACC"><span class="nocase">Steffen et al.</span> (<a href="#ref-Steffen2025WACC" role="doc-biblioref">2025</a>)</span> and the IEA’s Cost of Capital Observatory <span class="citation" data-cites="IEACoC">(<a href="#ref-IEACoC" role="doc-biblioref">International Energy Agency 2022</a>)</span>. Borrowing terms and creditor mix come from International Debt Statistics <span class="citation" data-cites="IDS">(<a href="#ref-IDS" role="doc-biblioref">World Bank 2025a</a>)</span>, climate finance received from the OECD’s recipient-perspective climate-related development finance data <span class="citation" data-cites="OECDCRDF">(<a href="#ref-OECDCRDF" role="doc-biblioref">OECD 2024</a>)</span>, private infrastructure investment from the PPI database <span class="citation" data-cites="PPI">(<a href="#ref-PPI" role="doc-biblioref">World Bank 2024</a>)</span>, regulatory scores from RISE <span class="citation" data-cites="RISE">(<a href="#ref-RISE" role="doc-biblioref">World Bank 2025b</a>)</span>, power market structure from the Power Sector Reform Tracker, which covers 142 developing countries from 1982 to 2013 <span class="citation" data-cites="UrpelainenYang2019">(<a href="#ref-UrpelainenYang2019" role="doc-biblioref">Urpelainen and Yang 2019</a>)</span>, public investment from the IMF’s Investment and Capital Stock Dataset <span class="citation" data-cites="IMFICSD">(<a href="#ref-IMFICSD" role="doc-biblioref">International Monetary Fund 2021b</a>)</span>, and sovereign ratings, rollover needs and external debt from the fiscal space database <span class="citation" data-cites="Kose2022FiscalSpace">(<a href="#ref-Kose2022FiscalSpace" role="doc-biblioref">Kose et al. 2022</a>)</span>. Account ownership comes from the Global Findex <span class="citation" data-cites="Findex2021">(<a href="#ref-Findex2021" role="doc-biblioref">Demirgüç-Kunt et al. 2022</a>)</span>.</p>
+<p><strong>Several obvious sources are left out, for stated reasons.</strong> The UNU-WIDER Government Revenue Dataset was downloaded and set aside because WoRLD’s excise and resource columns covered what was needed <span class="citation" data-cites="UNUWIDERGRD2025">(<a href="#ref-UNUWIDERGRD2025" role="doc-biblioref">UNU-WIDER 2025</a>)</span>. IMF Government Finance Statistics and OECD Revenue Statistics are not used; WoRLD is the revenue source. Carbon pricing is not yet a data block: the World Bank’s Carbon Pricing Dashboard <span class="citation" data-cites="WBCarbonPricing">(<a href="#ref-WBCarbonPricing" role="doc-biblioref">World Bank 2026b</a>)</span> and the OECD’s effective carbon rates <span class="citation" data-cites="OECD2023ECR">(<a href="#ref-OECD2023ECR" role="doc-biblioref">OECD 2023</a>)</span> are not read, and the only carbon pricing figures in the workbook are model output in Appendix D. IMF Public Investment Management Assessment (PIMA) scores are excluded because the IMF publishes a PIMA report only with the authorities’ permission <span class="citation" data-cites="IMFPIMA">(<a href="#ref-IMFPIMA" role="doc-biblioref">International Monetary Fund 2026a</a>)</span>; the author’s concern is that the published reports need not be representative, so a scored column could mislead, and PEFA PI-11 is the substitute. Electricity cost recovery was dropped because the modeled supply-cost basis was not reliable enough to score. Each exclusion is written into the workbook’s README sheet, so a reader knows that an absence is a decision and not an oversight.</p>
+</section>
+<section id="sec-build" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> The build pipeline</h1>
+<p><strong>Raw files go in, one long table comes out, and the workbook reads only that table.</strong> The pipeline has three stages. Stage 1 reads every raw file and writes every observation it finds, for every year, as a row of country code, indicator, year, value and source file: about 130,000 rows. Stage 2 keeps the latest observation for each country and indicator: about 12,400 rows, or 71 percent of the 17,360 cells that 80 indicators for 217 economies would fill. Stage 3 pivots them to one row per economy, with a value column and a year column for each indicator. The workbook builder reads only the Stage 2 output and the configuration file. It never touches raw data, so relabeling an indicator or moving it between blocks needs only a rebuild of the workbook.</p>
+<p><strong>One configuration file defines every indicator, and the build enforces it.</strong> Each row of the indicator file gives an indicator’s block, label, direction, evaluation scale, scoring flag, indentation and source label. Adding an indicator means writing its extraction and adding one row. If the configuration names an indicator the pipeline does not emit, the run stops with an error naming it. An earlier version warned and continued, and indicators went missing without anyone noticing; a hard stop is the fix. Source coverage, the number of economies with a value, is counted from the panel at build time rather than typed into the Sources sheet, so it cannot drift from the data.</p>
+<p><strong>Derived indicators are computed in the pipeline from published series, with the formula in the code.</strong> The interest burden <span class="math inline">\(\mathit{NIR}_c\)</span> is the general government primary balance <span class="math inline">\(PB_c\)</span> less the overall balance <span class="math inline">\(NB_c\)</span>, divided by revenue <span class="math inline">\(R_c\)</span>, all in percent of GDP from the WEO:</p>
+<p><span id="eq-netint"><span class="math display">\[
+\mathit{NIR}_{c} = 100 \times \frac{PB_c - NB_c}{R_c}
+\tag{1}\]</span></span></p>
+<p>The numerator is net interest: interest paid less interest received. Version 1.3 labels the indicator “interest-to-revenue”, which overstates it for countries with large financial assets, and keeps it only where revenue is positive and the result lies between 0 and 100 percent. That rule drops every country whose net interest is negative, which are those that receive more interest than they pay; coverage falls from 191 economies for gross debt to 184. The same numerator over GDP gives net interest as a share of GDP, which keeps the negative values. Subsidies as a share of GDP divide the IMF’s 2024 dollar estimates by the latest actual WEO GDP in dollars. Total fossil rents sum oil, gas and coal rents; net fuel trade is fuel exports’ share of merchandise exports less fuel imports’ share of merchandise imports. The spread between official and private borrowing rates is taken at the latest year each side has.</p>
+<p><strong>Four ground rules protect the panel from silent error.</strong> Nothing is imputed: a missing value stays missing, and the profile counts missing rows by block. Every value carries its observation year, because vintages span 2013 to 2025: the fiscal core is 2024, capital execution mostly 2022, rents and the solar cost of capital 2021, power market structure 2013. Every value names its source file in the long table. And three known traps are guarded in the code: a spreadsheet lookup on an empty cell returns zero rather than blank; Ember carries a country’s record forward where it has no new observations, which would show a spurious zero change in renewable share; and a count of zero sources of cost-of-capital evidence is an absence, not an observation.</p>
+<p><strong>The pipeline runs in two languages, and parity is checked where it has been run.</strong> A Python script and an R script implement the same pipeline and write separately named outputs that can be compared. In a clean-room run on the original 53 indicators they matched in row count, values, years and coverage. Parity for the 27 indicators added in October 2026 is written but not yet verified. A manifest records the size and MD5 hash of every raw file, so a rebuild after a source refresh shows exactly which inputs changed. A download script fetches the six sources that have direct links into a separate folder, never over the files in use, and prints a checklist for the fifteen that need a manual query, with the settings to choose. Publishers revise series without notice, and an unnoticed revision is how a rebuilt panel stops matching published numbers; the separate folder forces a comparison before anything is swapped in. <a href="#sec-check" class="quarto-xref">Section&nbsp;9</a> shows why this matters: between the August 2026 download and the October 2026 WEO, Morocco’s 2024 gross debt moved from 67.7 to 67.0 percent of GDP.</p>
+</section>
+<section id="sec-scoring" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Scoring and evaluation</h1>
+<p><strong>Every scored indicator is rescaled to 1–10 between the 5th and 95th percentiles of all economies, in the direction that counts as better.</strong> For indicator <span class="math inline">\(k\)</span> with value <span class="math inline">\(x_{ck}\)</span> for country <span class="math inline">\(c\)</span>, let <span class="math inline">\(P5_k\)</span> and <span class="math inline">\(P95_k\)</span> be its percentiles across the panel and <span class="math inline">\(\tilde x_{ck} = \min(\max(x_{ck}, P5_k), P95_k)\)</span> the clipped value. Then</p>
+<p><span id="eq-score"><span class="math display">\[
+s_{ck} = 1 + 9 \, \frac{\tilde x_{ck} - P5_k}{P95_k - P5_k}
+\tag{2}\]</span></span></p>
+<p>when a high value is better, and <span class="math inline">\(1 + 9\,(P95_k - \tilde x_{ck})/(P95_k - P5_k)\)</span> when a high value is worse. For tax revenue the bounds are 4.6 and 30.0 percent of GDP across 193 economies; for gross debt, 14.3 and 132.9 percent across 191; for net interest over revenue, 0.25 and 25.75 percent across 184. Clipping at the percentiles keeps a few extreme values (a debt ratio above 200 percent, a subsidy bill of a quarter of GDP) from compressing everyone else into the middle, the distortion the composite-indicator handbook warns of for min-max rescaling <span class="citation" data-cites="OECDJRC2008">(<a href="#ref-OECDJRC2008" role="doc-biblioref">OECD and European Commission Joint Research Centre 2008</a>)</span>. About one economy in twenty gets the bottom score and one in twenty the top. The rescale is computed by live formulas in the workbook, so adding countries or updating data moves the bounds automatically.</p>
+<p><strong>Scores become words at fixed thresholds, and the words differ by block type.</strong> A score of 7 or more reads Good, 4 to 7 Medium, below 4 Bad, in the assessment blocks, where the direction is clear: a higher interest burden is worse. In the context blocks the same thresholds read High, Medium and Low, because the number is a magnitude, not a verdict. A country with large fossil rents has revenue the transition puts at risk and, read the other way, a tax base it could broaden; the dashboard does not pick one. Appendices are reference material and carry no block verdict.</p>
+<p><strong>The dashboard deliberately offers no overall index.</strong> There are no defensible weights between fiscal space, delivery capacity, the cost of capital and the energy position, and a single score would erase the triage that is the point of the exercise: a country weak on fiscal space needs different instruments from one weak on delivery. This is the handbook’s warning in practice: an index “may disguise serious failings in some dimensions” <span class="citation" data-cites="OECDJRC2008">(<a href="#ref-OECDJRC2008" role="doc-biblioref">OECD and European Commission Joint Research Centre 2008</a>)</span>. Scores are also relative: they rank a country within the current sample, and they move if the sample or the data change.</p>
+<p><strong>The block averages are a reading aid, and they double-count.</strong> Each block shows the simple average of its scored indicators and how many have data. The same objection to weights applies inside a block: the fiscal block holds both net interest over revenue and net interest over GDP, which share a numerator, so where both are scored the debt-service dimension counts twice. A block with two values out of six has an average built on those two. The profile should therefore be read for the lowest indicator in each block and its count of missing values, not for the average.</p>
+<p><strong>The strongest objection is that a percentile score measures how unusual a country is, not whether it has a problem.</strong> The sample mixes small islands, oil exporters and advanced economies, at vintages from 2013 to 2025, so a “Bad” can mean “unlike most others”. The answer is in how the score is shown and used. It sits next to the value, the year and the source, so the analyst always sees the number behind it. The words are thresholds on a rank, not on a norm, and the profile says so. And the dashboard’s use is triage (which question to ask next), not judgment (what the country should do). A peer-group option, scoring within income group or region, would answer the heterogeneity part of the objection, and is the natural next step for the scoring.</p>
+</section>
+<section id="sec-use" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> How an analyst uses it</h1>
+<p><strong>The profile is read in three passes.</strong> First the four assessment blocks, to find the binding constraint: is the problem money, the capacity to spend it, the price of capital or the structure of financing? Then the context blocks, to see which climate-fiscal levers the country actually has: subsidies to reform, an excise base to build on, fossil revenue at risk, a power sector moving toward or away from renewables. Then the appendices, for the detail an adviser needs in a meeting: pump prices, who regulates the power sector, the starting point of the macro models. An analyst can do this for a new country in a few minutes, with the year and source of every number on the page.</p>
+<p><strong>The same panel is the data layer for the scenario tool.</strong> The Macro-Fiscal-Energy Scenario Tool reads the panel to calibrate its macro models (debt, revenue, public investment, efficiency, creditor mix) and its carbon pricing screen, and uses the dashboard’s own builder to lay out its indicator blocks <span class="citation" data-cites="StrettonWP65">(<a href="#ref-StrettonWP65" role="doc-biblioref">Stretton 2026c</a>)</span>. A fix in the dashboard therefore reaches the scenario tool on its next build, and the two cannot disagree about a country’s starting position. The flip side is that a fault in the panel, such as those in <a href="#sec-check" class="quarto-xref">Section&nbsp;9</a>, also reaches the scenario tool.</p>
+<p><strong>Adding a source is a five-step routine, designed to be done with an AI coding assistant.</strong> The analyst first asks the assistant for public datasets that cover the concept for as many of the 217 economies as possible, reporting coverage, years, download route and license before any code is written. The file then goes into the raw-data folder with a row in the sources file. The assistant adds an extraction block that copies an existing pattern rather than inventing a new one, using the shared country-name matcher so that unmatched names are reported. One row in the indicator file declares the new indicator. The two build steps then run, and the configuration check confirms that the indicator exists. The routine puts the assistant to work where it is fast (searching, reading file layouts, writing extraction code in a known pattern) and keeps the decisions that need judgment (which source, which direction, which block) with the analyst.</p>
+</section>
+<section id="sec-example" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> An illustrative comparison</h1>
+<p><strong>Four middle-income economies show how the profile separates different fiscal problems.</strong> <a href="#tbl-four" class="quarto-xref">Table&nbsp;2</a> gives selected fiscal and Context 1 indicators for Colombia, Indonesia, Morocco and South Africa, with the score each scored indicator receives on <a href="#eq-score" class="quarto-xref">equation&nbsp;2</a> across the full panel. All values are from the public datasets named, as compiled by the pipeline from the August 2026 downloads; the year is 2024 unless marked. The code that reproduces the table from the panel is <code>2.Source/illustrative_comparison.py</code>; the check against the publishers’ releases is <code>2.Source/check_public_sources.py</code>.</p>
+<div id="tbl-four" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-four-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Selected indicators for four economies, 2024: value (score 1–10 for scored assessment indicators). Subsidy shares are the IMF’s 2024 dollar estimates divided by WEO GDP; the IMF’s own published shares are lower for Indonesia (2.7 and 8.5), Morocco (1.8 and 4.8) and South Africa (0.0 and 11.9), and the IMF does not list Colombia. WoRLD’s coverage is central government for Colombia and Morocco and general government for Indonesia and South Africa. Sources: <span class="citation" data-cites="IMFWoRLD">International Monetary Fund (<a href="#ref-IMFWoRLD" role="doc-biblioref">2026c</a>)</span>; <span class="citation" data-cites="IMFWEO">International Monetary Fund (<a href="#ref-IMFWEO" role="doc-biblioref">2026b</a>)</span>; <span class="citation" data-cites="Black2025FFS">Black et al. (<a href="#ref-Black2025FFS" role="doc-biblioref">2025</a>)</span>; dashboard panel, version 1.3.
+</figcaption>
+<div aria-describedby="tbl-four-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Indicator (source)</th>
+<th style="text-align: right;">Colombia</th>
+<th style="text-align: right;">Indonesia</th>
+<th style="text-align: right;">Morocco</th>
+<th style="text-align: right;">South Africa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tax revenue, % of GDP (IMF WoRLD)</td>
+<td style="text-align: right;">23.0 (7.5)</td>
+<td style="text-align: right;">10.1 (2.9)</td>
+<td style="text-align: right;">20.8 (6.7)</td>
+<td style="text-align: right;">25.2 (8.3)</td>
+</tr>
+<tr class="even">
+<td>Gross debt, general government, % of GDP (IMF WEO)</td>
+<td style="text-align: right;">61.0 (6.5)</td>
+<td style="text-align: right;">40.2 (8.0)</td>
+<td style="text-align: right;">67.7 (5.9)</td>
+<td style="text-align: right;">76.0 (5.3)</td>
+</tr>
+<tr class="odd">
+<td>Net interest, % of revenue (IMF WEO, derived)</td>
+<td style="text-align: right;">13.5 (5.3)</td>
+<td style="text-align: right;">15.1 (4.7)</td>
+<td style="text-align: right;">7.9 (7.3)</td>
+<td style="text-align: right;">18.9 (3.4)</td>
+</tr>
+<tr class="even">
+<td>Excise revenue, % of total revenue (IMF WoRLD)</td>
+<td style="text-align: right;">3.0 (2023)</td>
+<td style="text-align: right;">8.6</td>
+<td style="text-align: right;">6.9</td>
+<td style="text-align: right;">7.8 (2023)</td>
+</tr>
+<tr class="odd">
+<td>Excise revenue, % of GDP (IMF WoRLD; check, not a dashboard indicator)</td>
+<td style="text-align: right;">1.06 (2023)</td>
+<td style="text-align: right;">1.11</td>
+<td style="text-align: right;">2.00</td>
+<td style="text-align: right;">2.17 (2023)</td>
+</tr>
+<tr class="even">
+<td>Explicit fossil fuel subsidies, % of GDP (IMF)</td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">1.9</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="odd">
+<td>Implicit fossil fuel subsidies, % of GDP (IMF)</td>
+<td style="text-align: right;">5.4</td>
+<td style="text-align: right;">9.2</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">12.9</td>
+</tr>
+<tr class="even">
+<td>Gasoline retail price, US dollars per liter (IMF)</td>
+<td style="text-align: right;">1.16</td>
+<td style="text-align: right;">0.57</td>
+<td style="text-align: right;">1.46</td>
+<td style="text-align: right;">1.13</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-profiles" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-profiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="1.Presentation/figures/fig_profiles.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Four economies, 2024: tax revenue, net interest over revenue, and explicit and implicit fossil fuel subsidies. The same tax take can carry very different interest bills, and the subsidy bill sits in different places. Source: Table&nbsp;2."><img src="1.Presentation/figures/fig_profiles.png" class="img-fluid figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-profiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Four economies, 2024: tax revenue, net interest over revenue, and explicit and implicit fossil fuel subsidies. The same tax take can carry very different interest bills, and the subsidy bill sits in different places. Source: <a href="#tbl-four" class="quarto-xref">Table&nbsp;2</a>.
+</figcaption>
+</figure>
+</div>
+<p><strong>Indonesia has a revenue problem, not a debt problem.</strong> Its gross debt of 40 percent of GDP scores 8.0, the best of the four. But it collects tax of only 10.1 percent of GDP, below the 12¾ percent tipping point that <span class="citation" data-cites="Gaspar2016TaxCapacity">Gaspar et al. (<a href="#ref-Gaspar2016TaxCapacity" role="doc-biblioref">2016</a>)</span> estimate, and its general government revenue is only 14.6 percent of GDP, so net interest still takes 15 percent of revenue: more than in Colombia, which has half again as much debt but nearly twice the revenue. The context block shows where the money goes: explicit fossil fuel subsidies of 3.0 percent of GDP, equal to about 30 percent of tax revenue, and the cheapest gasoline of the four, at 0.57 dollars a liter. The IMF’s 2025 update lists Indonesia among four countries whose gasoline price is below its supply cost, which is about 80–90 cents a liter almost everywhere <span class="citation" data-cites="Black2025FFS">(<a href="#ref-Black2025FFS" role="doc-biblioref">Black et al. 2025</a>)</span>. The next questions for an adviser are about subsidy reform and the tax base, not about debt limits.</p>
+<p><strong>South Africa has a debt-service problem and the largest unpriced environmental cost.</strong> It collects the most tax of the four, 25.2 percent of GDP, but has the highest debt (76.0 percent of GDP) and the highest net interest burden (18.9 percent of revenue), which scores 3.4, in the Bad range. It pays no explicit fossil fuel subsidies; its implicit subsidies, the IMF’s measure of unpriced environmental costs, are 12.9 percent of GDP on the dashboard’s denominator (11.9 on the IMF’s), the largest of the four <span class="citation" data-cites="Black2025FFS">(<a href="#ref-Black2025FFS" role="doc-biblioref">Black et al. 2025</a>)</span>. Its electricity is 84 percent fossil-generated <span class="citation" data-cites="Ember2025">(<a href="#ref-Ember2025" role="doc-biblioref">Ember 2025</a>)</span>. The lever is pricing the external cost of its energy system, and the constraint is that debt service limits how much public money can go into the transition at the same time.</p>
+<p><strong>Morocco and Colombia sit in between, for different reasons.</strong> Morocco pays the least interest relative to revenue (7.9 percent) yet still spends 1.9 percent of GDP on explicit fossil subsidies while charging the highest gasoline price of the four, 1.46 dollars a liter, which tells the analyst that its subsidies sit on fuels other than gasoline. Colombia has a moderate fiscal position and the lowest excise share of revenue, 3.0 percent in 2023. That row, however, reflects Colombia’s high revenue (34.7 percent of GDP in WoRLD for 2023, including 5.7 percent of social contributions) more than low excises: as a share of GDP, Colombia’s excises (1.06 percent) are the same size as Indonesia’s (1.11 percent) and about half of Morocco’s and South Africa’s. Paper 7.1 measures excise revenue as a share of GDP for this reason; an Excise-Fiscal Diagnostic of the kind it describes <span class="citation" data-cites="StrettonWP71">(<a href="#ref-StrettonWP71" role="doc-biblioref">Stretton 2026b</a>)</span> would test the excise schedule line by line, for Colombia and Indonesia alike.</p>
+<p><strong>The comparison is a first view, and the profile says so.</strong> Each value carries its year and source. The scores rank against the panel, not against a norm. None of the four readings is a recommendation; each tells the analyst which question to ask next and which tool to use for it.</p>
+</section>
+<section id="sec-check" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Checking the panel against the publishers</h1>
+<p><strong>Most values in <a href="#tbl-four" class="quarto-xref">Table&nbsp;2</a> reproduce exactly from the publishers’ own releases.</strong> On 31 October 2026 every value in the table was recomputed from public interfaces, without the panel: the WEO and Fiscal Monitor (October 2026) through the IMF’s DataMapper, WoRLD (release of 18 February 2026) through the IMF’s data API, the IMF’s 2025 subsidy update and Ember’s yearly data. Tax revenue matches to the decimal for all four countries. So does net interest over revenue: Colombia 13.5, Indonesia 15.1, Morocco 7.9 and South Africa 18.9 percent, from primary balances of −2.20, −0.08, −1.78 and −0.50 percent of GDP, overall balances of −6.04, −2.28, −3.88 and −5.67, and revenue of 28.3, 14.6, 26.6 and 27.3. The excise shares match. Gross debt matches for three countries; for Morocco the October 2026 WEO gives 67.0 percent against the panel’s 67.7, a revision after the August download that would move its score from 5.9 to 6.0. Every score recomputes from <a href="#eq-score" class="quarto-xref">equation&nbsp;2</a>. Gasoline prices could not be read from the IMF’s dataset in this check and are reported as compiled.</p>
+<p><strong>The subsidy values match the IMF’s dollars but not its shares of GDP.</strong> The panel’s shares equal the 2025 update’s 2024 dollar estimates divided by WEO GDP for 2024: for Indonesia, 42 and 128 billion dollars over 1,396 billion dollars of GDP give 3.0 and 9.2 percent; for South Africa, 52 billion over 401 billion give 13.0 percent. The IMF’s own table gives 2.7 and 8.5 percent for Indonesia and 11.9 percent for South Africa <span class="citation" data-cites="Black2025FFS">(<a href="#ref-Black2025FFS" role="doc-biblioref">Black et al. 2025</a>)</span>. The difference lies in the GDP denominator, which in the IMF’s table is larger than the WEO’s 2024 GDP; the dollars agree. A reader comparing the dashboard with the IMF’s publication will see different numbers, so the profile should say which denominator it uses.</p>
+<p><strong>Three faults turn up that matter for any compilation of this kind.</strong> First, a mislabeled indicator: the “interest-to-revenue” ratio is net interest, and its filter removes the strongest fiscal positions (<a href="#sec-build" class="quarto-xref">Section&nbsp;5</a>). Second, a denominator that changes the reading: Colombia’s excise share of revenue is the lowest of the four because its revenue is high, not because its excises are low. Third, a modeled series far from an observed one. The panel’s 2024 renewable share of electricity, which comes from the IMF’s CPAT-based dataset, differs from Ember’s observed shares by 5 to 19 percentage points (<a href="#fig-renewables" class="quarto-xref">Figure&nbsp;2</a>): Colombia 79.9 against 61.4 percent, Indonesia 28.0 against 18.1, Morocco 29.5 against 24.4, South Africa 7.0 against 12.5 <span class="citation" data-cites="Ember2025">(<a href="#ref-Ember2025" role="doc-biblioref">Ember 2025</a>)</span>. None of these is an error in a source. Each is an error of compilation that a panel can carry for years unless someone compares it with the publisher, which the build’s year and source columns make quick.</p>
+<div id="fig-renewables" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-renewables-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="1.Presentation/figures/fig_renewables.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Renewable share of electricity generation in 2024: the dashboard panel (modeled, from the IMF’s CPAT-based subsidy data) against Ember’s observed generation. Source: dashboard panel, version 1.3; @Ember2025; 2.Source/check_public_sources_output.txt."><img src="1.Presentation/figures/fig_renewables.png" class="img-fluid figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-renewables-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Renewable share of electricity generation in 2024: the dashboard panel (modeled, from the IMF’s CPAT-based subsidy data) against Ember’s observed generation. Source: dashboard panel, version 1.3; <span class="citation" data-cites="Ember2025">Ember (<a href="#ref-Ember2025" role="doc-biblioref">2025</a>)</span>; <code>2.Source/check_public_sources_output.txt</code>.
+</figcaption>
+</figure>
+</div>
+<p><strong>Each fault has a simple fix in the next version.</strong> Rename the indicator “net interest, % of revenue” and keep negative values, which clip to the top score. Carry excise revenue as a share of GDP, the measure paper 7.1 uses, beside the share of revenue. Read the renewable share from Ember, the observed series, and keep the CPAT-based series only where consistency with the subsidy estimates requires it, labeled as modeled. And state in the profile that subsidy shares use WEO GDP. The tool lies outside this paper’s scope; these are recommendations for its next release.</p>
+</section>
+<section id="sec-limits" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Limits</h1>
+<p><strong>The dashboard is only as current as its slowest source.</strong> Vintages range from 2013 to 2025. The power market structure flags come from a tracker that ends in 2013 and covers developing countries only, so they describe structure, not current state. Resource rents and the solar cost of capital are 2021. Public investment from the IMF’s capital stock dataset runs to 2019 <span class="citation" data-cites="IMFICSD">(<a href="#ref-IMFICSD" role="doc-biblioref">International Monetary Fund 2021b</a>)</span>. The year column makes this visible; it does not fix it.</p>
+<p><strong>Some series are modeled, not observed.</strong> The subsidy estimates, the retail prices and the renewable share in Context 3 come from the IMF’s CPAT-based dataset, which combines observed prices with modeled supply costs, projections of fuel use beyond the latest energy balances, and externality estimates <span class="citation" data-cites="Black2025FFS">(<a href="#ref-Black2025FFS" role="doc-biblioref">Black et al. 2025</a>)</span>. Implicit subsidies in particular depend on valuation choices for carbon and air pollution. <a href="#sec-check" class="quarto-xref">Section&nbsp;9</a> shows how far a modeled series can sit from an observed one. Appendix D is pure model output from the scenario tool and is labeled as such in the workbook and never scored.</p>
+<p><strong>Coverage is uneven, and scores hide it.</strong> The core fiscal indicators cover about 185 to 195 economies, but PEFA scores exist for 89, the solar cost of capital for 99, and the CPIA only for countries eligible for the World Bank’s concessional lending (IDA). A country with few values in a block gets a block average built on those few. The profile shows the count; an analyst must read it. The panel also holds subsidy values for 185 economies, more than the 170 countries the IMF’s 2025 update covers, which the build’s source file should explain.</p>
+<p><strong>Definitions differ across sources and across countries.</strong> Tax revenue from WoRLD and revenue from the WEO are compiled differently and can disagree. WoRLD’s coverage is central government for some countries and general government for others, as <a href="#tbl-four" class="quarto-xref">Table&nbsp;2</a> shows. The excise share divides WoRLD excises by WoRLD total revenue, which includes social contributions and grants. Some country series in the panel look implausible and should be checked against the national source before being quoted. The dashboard’s job is to make such checks quick, not to certify every value.</p>
+<p><strong>Two blocks rest partly on a non-public compilation, and the build itself is private.</strong> Part of Appendix C (the concessional share of external debt, CPIA, remittances, reserves and account ownership) and all of Appendix E are read from an unpublished compilation rather than directly from their public sources (WDI, IDS, CPIA, Global Findex and the fiscal space database). The underlying series are public; a public release should read them directly. The pipeline sits in a private repository. Every input is public and every value names its source, so any number can be rebuilt by hand, but the claim that anyone can rerun the build will be true only when the code is published.</p>
+<p><strong>Carbon pricing is the most important gap.</strong> For a climate-fiscal dashboard, the absence of carbon prices is the first thing to fix. Three measures exist and measure different things: explicit carbon prices from the World Bank’s Carbon Pricing Dashboard <span class="citation" data-cites="WBCarbonPricing">(<a href="#ref-WBCarbonPricing" role="doc-biblioref">World Bank 2026b</a>)</span>, the OECD’s effective carbon rates, which add fuel excises <span class="citation" data-cites="OECD2023ECR">(<a href="#ref-OECD2023ECR" role="doc-biblioref">OECD 2023</a>)</span>, and the World Bank’s total carbon price, which also nets out subsidies <span class="citation" data-cites="Agnolucci2024TCP">(<a href="#ref-Agnolucci2024TCP" role="doc-biblioref">Agnolucci et al. 2024</a>)</span>. The Total Effective Carbon Price (TECP) proposed in this series goes further: the uniform carbon tax that would cut emissions by as much as a country’s whole policy mix, including standards and feebates <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Stretton 2026a</a>)</span>. Adding the first three would complete Context 1 and is a routine use of the five-step process in <a href="#sec-use" class="quarto-xref">Section&nbsp;7</a>; adding the TECP needs the demand system that paper 6.1 sets out.</p>
+</section>
+<section id="sec-conclusion" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Conclusion</h1>
+<p><strong>A traceable first view changes which question an adviser asks first.</strong> The four-country comparison shows that the same tax take can carry very different interest bills, and that the energy-fiscal levers sit in different places: Indonesia’s in explicit subsidies and the tax base, South Africa’s in unpriced environmental costs under a tight debt-service constraint. The check against the publishers shows the other half of the case for traceability: a panel with a year and a source on every value can be audited in an afternoon, and the audit found three faults that would otherwise have shaped advice. The next steps are to fix those faults, add a carbon-pricing block, add peer-group scoring, verify the Python–R parity for the new indicators, and publish the build so that the subtitle’s promise of a traceable number extends to a build anyone can rerun.</p>
+</section>
+<section id="downloads" class="level1 unnumbered">
+<h1 class="unnumbered">Downloads</h1>
+<p><a href="../../../papers/Brief-FiscalIndicatorsDashboard.docx">Policy brief (docx)</a> · <a href="../../../papers/FiscalIndicatorsDashboard.docx">Working paper (docx)</a></p>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Agnolucci2024TCP" class="csl-entry" role="listitem">
+Agnolucci, Paolo, Carolyn Fischer, Dirk Heine, et al. 2024. <span>“Measuring Total Carbon Pricing.”</span> <em>The World Bank Research Observer</em> 39 (2): 227–58. <a href="https://doi.org/10.1093/wbro/lkad009">https://doi.org/10.1093/wbro/lkad009</a>.
+</div>
+<div id="ref-Ameli2021" class="csl-entry" role="listitem">
+Ameli, Nadia, Olivier Dessens, Matthew Winning, et al. 2021. <span>“Higher Cost of Finance Exacerbates a Climate Investment Trap in Developing Economies.”</span> <em>Nature Communications</em> 12: 4046. <a href="https://doi.org/10.1038/s41467-021-24305-3">https://doi.org/10.1038/s41467-021-24305-3</a>.
+</div>
+<div id="ref-Black2025FFS" class="csl-entry" role="listitem">
+Black, Simon, Weronika Celniak, Alberto Garcia Huitron, Ian Parry, Paulina Schulz Antipa, and Nate Vernon-Lin. 2025. <em>Underpriced and Overused: Fossil Fuel Subsidies Data 2025 Update</em>. IMF Working Paper 25/270. International Monetary Fund. <a href="https://doi.org/10.5089/9798229034715.001">https://doi.org/10.5089/9798229034715.001</a>.
+</div>
+<div id="ref-Findex2021" class="csl-entry" role="listitem">
+Demirgüç-Kunt, Asli, Leora Klapper, Dorothe Singer, and Saniya Ansar. 2022. <em>The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of <span>COVID-19</span></em>. World Bank. <a href="https://doi.org/10.1596/978-1-4648-1897-4">https://doi.org/10.1596/978-1-4648-1897-4</a>.
+</div>
+<div id="ref-Ember2025" class="csl-entry" role="listitem">
+Ember. 2025. <em>Yearly Electricity Data</em>. Ember data explorer and long-format download. <a href="https://ember-energy.org/data/yearly-electricity-data/">https://ember-energy.org/data/yearly-electricity-data/</a>.
+</div>
+<div id="ref-Gaspar2016TaxCapacity" class="csl-entry" role="listitem">
+Gaspar, Vitor, Laura Jaramillo, and Philippe Wingender. 2016. <em>Tax Capacity and Growth: Is There a Tipping Point?</em> IMF Working Paper 16/234. International Monetary Fund. <a href="https://doi.org/10.5089/9781475558173.001">https://doi.org/10.5089/9781475558173.001</a>.
+</div>
+<div id="ref-IEACoC" class="csl-entry" role="listitem">
+International Energy Agency. 2022. <em>Cost of Capital Observatory</em>. IEA, launched 2022 with partners; survey data for emerging and developing economies, updated periodically. <a href="https://www.iea.org/reports/cost-of-capital-observatory/dashboard">https://www.iea.org/reports/cost-of-capital-observatory/dashboard</a>.
+</div>
+<div id="ref-IMF2015PIE" class="csl-entry" role="listitem">
+International Monetary Fund. 2015. <em>Making Public Investment More Efficient</em>. IMF Policy Paper. International Monetary Fund. <a href="https://doi.org/10.5089/9781498344630.007">https://doi.org/10.5089/9781498344630.007</a>.
+</div>
+<div id="ref-IMFCCID" class="csl-entry" role="listitem">
+International Monetary Fund. 2021a. <em>Climate Change Indicators Dashboard</em>. Launched 7 April 2021 (IMF Press Release 21/102). <a href="https://climatedata.imf.org">https://climatedata.imf.org</a>.
+</div>
+<div id="ref-IMFICSD" class="csl-entry" role="listitem">
+International Monetary Fund. 2021b. <em>Investment and Capital Stock Dataset (<span>ICSD</span>)</em>. IMF, May 2021 release. <a href="https://data.imf.org/en/datasets/IMF.FAD:ICSD">https://data.imf.org/en/datasets/IMF.FAD:ICSD</a>.
+</div>
+<div id="ref-IMFPIMA" class="csl-entry" role="listitem">
+International Monetary Fund. 2026a. <em><span>PIMA</span> Process</em>. IMF Infrastructure Governance, Public Investment Management Assessment. <a href="https://infrastructuregovern.imf.org/content/PIMA/Home/PimaTool/PIMA-Process.html">https://infrastructuregovern.imf.org/content/PIMA/Home/PimaTool/PIMA-Process.html</a>.
+</div>
+<div id="ref-IMFWEO" class="csl-entry" role="listitem">
+International Monetary Fund. 2026b. <em>World Economic Outlook Database and Fiscal Monitor</em>. IMF DataMapper; the dashboard’s panel uses the download of August 2026 (actual years only). <a href="https://www.imf.org/external/datamapper/datasets/WEO">https://www.imf.org/external/datamapper/datasets/WEO</a>.
+</div>
+<div id="ref-IMFWoRLD" class="csl-entry" role="listitem">
+International Monetary Fund. 2026c. <em>World Revenue Longitudinal Database (<span>WoRLD</span>)</em>. IMF data portal, dataflow IMF.FAD:WORLD (release of 18 February 2026). <a href="https://data.imf.org/en/datasets/IMF.FAD:WoRLD">https://data.imf.org/en/datasets/IMF.FAD:WoRLD</a>.
+</div>
+<div id="ref-IRENA2022" class="csl-entry" role="listitem">
+IRENA. 2022. <em>Renewable Power Generation Costs in 2021</em>. International Renewable Energy Agency. <a href="https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2023/May/IRENA_Cost_of_financing_renewable_power_Appendix_2023.pdf">https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2023/May/IRENA_Cost_of_financing_renewable_power_Appendix_2023.pdf</a>.
+</div>
+<div id="ref-Kose2022FiscalSpace" class="csl-entry" role="listitem">
+Kose, M. Ayhan, Sergio Kurlat, Franziska Ohnsorge, and Naotaka Sugawara. 2022. <span>“A Cross-Country Database of Fiscal Space.”</span> <em>Journal of International Money and Finance</em> 128: 102682. <a href="https://doi.org/10.1016/j.jimonfin.2022.102682">https://doi.org/10.1016/j.jimonfin.2022.102682</a>.
+</div>
+<div id="ref-OECD2023ECR" class="csl-entry" role="listitem">
+OECD. 2023. <em>Effective Carbon Rates 2023: Pricing Greenhouse Gas Emissions Through Taxes and Emissions Trading</em>. OECD Series on Carbon Pricing and Energy Taxation. OECD Publishing. <a href="https://doi.org/10.1787/b84d5b36-en">https://doi.org/10.1787/b84d5b36-en</a>.
+</div>
+<div id="ref-OECDCRDF" class="csl-entry" role="listitem">
+OECD. 2024. <em>Climate-Related Development Finance Datasets (Recipient Perspective)</em>. OECD Development Assistance Committee. <a href="https://www.oecd.org/en/data/dashboards/development-finance-for-climate.html">https://www.oecd.org/en/data/dashboards/development-finance-for-climate.html</a>.
+</div>
+<div id="ref-OECDJRC2008" class="csl-entry" role="listitem">
+OECD, and European Commission Joint Research Centre. 2008. <em>Handbook on Constructing Composite Indicators: Methodology and User Guide</em>. OECD Publishing. <a href="https://doi.org/10.1787/9789264043466-en">https://doi.org/10.1787/9789264043466-en</a>.
+</div>
+<div id="ref-PEFA2016" class="csl-entry" role="listitem">
+PEFA Secretariat. 2016. <em>Framework for Assessing Public Financial Management (<span>PEFA</span> 2016)</em>. PEFA Secretariat. <a href="https://www.pefa.org/sites/pefa/files/resources/downloads/PEFA_2016_Framework_Final_WEB_0.pdf">https://www.pefa.org/sites/pefa/files/resources/downloads/PEFA_2016_Framework_Final_WEB_0.pdf</a>.
+</div>
+<div id="ref-Prichard2014GRD" class="csl-entry" role="listitem">
+Prichard, Wilson, Alex Cobham, and Andrew Goodall. 2014. <em>The <span>ICTD</span> Government Revenue Dataset</em>. ICTD Working Paper. International Centre for Tax; Development. <a href="https://doi.org/10.2139/ssrn.2496442">https://doi.org/10.2139/ssrn.2496442</a>.
+</div>
+<div id="ref-Steffen2025WACC" class="csl-entry" role="listitem">
+<span class="nocase">Steffen, Bjarne, Florian Egli, Anurag Gumber, Mak ukan, and Paul Waidelich</span>. 2025. <span>“A Global Dataset of the Cost of Capital for Renewable Energy Projects.”</span> <em>Scientific Data</em> 12: 1624. <a href="https://doi.org/10.1038/s41597-025-05912-x">https://doi.org/10.1038/s41597-025-05912-x</a>.
+</div>
+<div id="ref-CFPB61" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026a. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-StrettonWP71" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026b. <span>“The Excise-Fiscal Diagnostic.”</span> Unpublished manuscript.
+</div>
+<div id="ref-StrettonWP65" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026c. <span>“The Macro-Fiscal-Energy Scenario Tool.”</span> Unpublished manuscript.
+</div>
+<div id="ref-UNUWIDERGRD2025" class="csl-entry" role="listitem">
+UNU-WIDER. 2025. <em><span>UNU-WIDER</span> Government Revenue Dataset, Version 2025</em>. United Nations University World Institute for Development Economics Research. <a href="https://doi.org/10.35188/UNU-WIDER/GRD-2025">https://doi.org/10.35188/UNU-WIDER/GRD-2025</a>.
+</div>
+<div id="ref-UrpelainenYang2019" class="csl-entry" role="listitem">
+Urpelainen, Johannes, and Joonseok Yang. 2019. <span>“Global Patterns of Power Sector Reform, 1982–2013.”</span> <em>Energy Strategy Reviews</em> 23: 152–62. <a href="https://doi.org/10.1016/j.esr.2018.12.001">https://doi.org/10.1016/j.esr.2018.12.001</a>.
+</div>
+<div id="ref-Wilkinson2016FAIR" class="csl-entry" role="listitem">
+<span class="nocase">Wilkinson, Mark D., Michel Dumontier, IJsbrand Jan Aalbersberg, et al.</span> 2016. <span>“The <span>FAIR</span> Guiding Principles for Scientific Data Management and Stewardship.”</span> <em>Scientific Data</em> 3: 160018. <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>.
+</div>
+<div id="ref-PPI" class="csl-entry" role="listitem">
+World Bank. 2024. <em>Private Participation in Infrastructure (<span>PPI</span>) Database</em>. <a href="https://ppi.worldbank.org/en/ppidata">https://ppi.worldbank.org/en/ppidata</a>.
+</div>
+<div id="ref-IDS" class="csl-entry" role="listitem">
+World Bank. 2025a. <em>International Debt Statistics</em>. World Bank DataBank. <a href="https://databank.worldbank.org/source/international-debt-statistics">https://databank.worldbank.org/source/international-debt-statistics</a>.
+</div>
+<div id="ref-RISE" class="csl-entry" role="listitem">
+World Bank. 2025b. <em><span>RISE</span> 2024: The Time Is Now. Regulatory Indicators for Sustainable Energy</em>. World Bank; ESMAP. <a href="https://rise.esmap.org/data/files/reports/2024/rise_report_2024_050125_v7_final_web.pdf">https://rise.esmap.org/data/files/reports/2024/rise_report_2024_050125_v7_final_web.pdf</a>.
+</div>
+<div id="ref-BOOST" class="csl-entry" role="listitem">
+World Bank. 2026a. <em><span>BOOST</span> Open Budget Data (Harmonized)</em>. World Bank Data360. <a href="https://data360.worldbank.org/en/dataset/WB_BOOST">https://data360.worldbank.org/en/dataset/WB_BOOST</a>.
+</div>
+<div id="ref-WBCarbonPricing" class="csl-entry" role="listitem">
+World Bank. 2026b. <em>Carbon Pricing Dashboard</em>. <a href="https://carbonpricingdashboard.worldbank.org/">https://carbonpricingdashboard.worldbank.org/</a>.
+</div>
+<div id="ref-WDI" class="csl-entry" role="listitem">
+World Bank. 2026c. <em>World Development Indicators</em>. World Bank DataBank. <a href="https://databank.worldbank.org/source/world-development-indicators">https://databank.worldbank.org/source/world-development-indicators</a>.
+</div>
+</div>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The dashboard (version 1.3) and its build pipeline are part of the Climate Fiscal AI Tools, which sit in a private repository at the time of writing. Every value quoted here comes from public datasets as compiled by the pipeline, and the values in <a href="#tbl-four" class="quarto-xref">Table&nbsp;2</a> were checked against the publishers’ own releases on 31 October 2026 (<a href="#sec-check" class="quarto-xref">Section&nbsp;9</a>). The four-country comparison is illustrative: it is not an assessment of any country, and no country work by any institution is reproduced. Errors are the author’s own.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

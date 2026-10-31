@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephen J. Stretton">
+<meta name="keywords" content="price elasticity, energy demand, carbon pricing, fuel subsidy reform, model validation">
+
+<title>Are CPAT’s Price Elasticities Right? – Climate, Fiscal &amp; Finance</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Climate, Fiscal &amp; Finance</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Policy and Finance</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../modelling/index.html" aria-current="page"> 
+<span class="menu-text">Modelling and Analytics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/5-modelling.html">5. Modelling (CPAT)</a></li><li class="breadcrumb-item"><a href="../../../modelling/5-modelling/ElasticityValidation/index.html">5.4 Are CPAT’s Price Elasticities Right?</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modelling and Analytics</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Modelling (CPAT)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATMitigationMethods/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.1 The CPAT Mitigation Module</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATMitigationMethods/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATAIImplementation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.2 CPAT-AI</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.3 Validating CPAT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/ElasticityValidation/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">5.4 Are CPAT's Price Elasticities Right?</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Modular Upgrades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.1 Measure Carbon Pricing by the Emissions It Cuts</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.2 The CBAM Policy Tool</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3 Public Investment in CPAT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PublicInvestment/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/ActivityModelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/ActivityModelling/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.5 The Macro-Fiscal-Energy Scenario Tool</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Analytics Tools</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.1 The Excise-Fiscal Diagnostic</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-key-messages" id="toc-sec-key-messages" class="nav-link active" data-scroll-target="#sec-key-messages">Key messages</a></li>
+  <li><a href="#sec-why" id="toc-sec-why" class="nav-link" data-scroll-target="#sec-why">Elasticities decide the size of the answer</a></li>
+  <li><a href="#sec-results" id="toc-sec-results" class="nav-link" data-scroll-target="#sec-results">Most defaults pass, two fail</a></li>
+  <li><a href="#sec-bias" id="toc-sec-bias" class="nav-link" data-scroll-target="#sec-bias">The published evidence itself overstates the response</a></li>
+  <li><a href="#sec-timing" id="toc-sec-timing" class="nav-link" data-scroll-target="#sec-timing">The bigger problem is timing</a></li>
+  <li><a href="#sec-comparisons" id="toc-sec-comparisons" class="nav-link" data-scroll-target="#sec-comparisons">Comparisons hold up better than levels</a></li>
+  <li><a href="#sec-what-to-do" id="toc-sec-what-to-do" class="nav-link" data-scroll-target="#sec-what-to-do">What to do</a></li>
+  <li><a href="#related-papers-in-this-series" id="toc-related-papers-in-this-series" class="nav-link" data-scroll-target="#related-papers-in-this-series">Related papers in this series</a></li>
+  <li><a href="#downloads" id="toc-downloads" class="nav-link" data-scroll-target="#downloads">Downloads</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/5-modelling.html">5. Modelling (CPAT)</a></li><li class="breadcrumb-item"><a href="../../../modelling/5-modelling/ElasticityValidation/index.html">5.4 Are CPAT’s Price Elasticities Right?</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Are CPAT’s Price Elasticities Right?</h1>
+<p class="subtitle lead">A Check Against the Evidence, and What It Means for Carbon-Pricing Estimates</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stephen J. Stretton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>The Climate Policy Assessment Tool, which the IMF and the World Bank use to estimate what carbon taxes and fuel subsidy reforms do, turns price changes into emission cuts through price elasticities. This brief reports a check of its defaults against the published evidence. Most are consistent, and many are cautious. Two are too high, and road gasoline is twice the estimate corrected for publication bias. The bigger problem is timing: the tool applies the full long-run response in the first year, so it overstates five-year cuts by about half and understates early revenue. Users should read near-term results as upper bounds and show a low-elasticity case.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>price elasticity, energy demand, carbon pricing, fuel subsidy reform, model validation</p>
+  </div>
+</div>
+
+</header>
+
+
+<p><em>Climate Fiscal Policy Brief No.&nbsp;5.4, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with the evidence register, the calculations and the validation protocol, is in the <a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html">working paper</a>.</em></p>
+<section id="sec-key-messages" class="level1">
+<h1>Key messages</h1>
+<p><a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html"><strong>Read the full working paper →</strong></a> · <a href="../../../papers/Slides-ElasticityValidation.pptx">Slides (pptx)</a></p>
+<p><strong>A carbon-pricing model’s answer is set mostly by its price elasticities.</strong> In the Climate Policy Assessment Tool (CPAT), changing them within their uncertainty moves the estimated cut in G20 emissions from a $75 carbon tax from 29 percent to anywhere between 7 and 39 percent.</p>
+<p><strong>Most of CPAT’s default elasticities are consistent with the evidence, and many are cautious.</strong> Eight of ten main fuel-sector values lie within the published range; two, for diesel in industry and gasoline in services, are well above it.</p>
+<p><strong>For road fuels, the published evidence itself overstates the response.</strong> Corrected for publication bias, the long-run gasoline elasticity is −0.31, half CPAT’s −0.64.</p>
+<p><strong>The bigger problem is timing.</strong> CPAT applies the full long-run response in the first year. After five years only about 60 percent of it has happened, so CPAT overstates five-year cuts by about half and understates early revenue.</p>
+<p><strong>Read CPAT’s near-term results as upper bounds, and show a low-elasticity case beside them.</strong> Comparisons of policies and of countries, such as the Total Effective Carbon Price, are much less affected.</p>
+</section>
+<section id="sec-why" class="level1">
+<h1>Elasticities decide the size of the answer</h1>
+<p><strong>Finance ministries use CPAT to decide carbon-tax rates and subsidy reforms, and its elasticities set the size of every estimate.</strong> CPAT, built by the International Monetary Fund (IMF) and the World Bank, projects fuel use, emissions and revenue for more than 180 countries <span class="citation" data-cites="black2022framework">(<a href="#ref-black2022framework" role="doc-biblioref">Black et al. 2022</a>)</span>. For each fuel in each sector it applies a price elasticity: the percentage fall in use when the price rises by one percent. An elasticity of −0.6 means a 10 percent price rise cuts use by 6 percent. If the true value is −0.3, the tool reports twice the cut and a tax base that erodes twice as fast.</p>
+<p><strong>No other parameter moves CPAT’s results as much.</strong> CPAT’s own sensitivity tests run a carbon tax rising to $75 per tonne of CO₂ in the G20. With the default elasticities, emissions fall 29 percent by 2030. Raising or lowering every elasticity by two standard deviations moves the cut to anywhere between 7 and 39 percent <span class="citation" data-cites="CPATAI2026">(<a href="#ref-CPATAI2026" role="doc-biblioref">CPAT-AI project 2026</a>)</span>, as <a href="../../../modelling/5-modelling/CPATValidation/index.html">Brief 5.3</a> reports. A ministry that sets a rate to meet a pledge, or counts on revenue from a reform, is relying on these numbers.</p>
+<p><strong>The elasticities were set by the model’s builders and checked mainly against their own targets.</strong> CPAT’s documentation says its values were calibrated to one meta-analysis, a study that pools about 2,000 published estimates, and then checked against those targets and against panel estimates on the tool’s own data <span class="citation" data-cites="CPATAI2026">(<a href="#ref-CPATAI2026" role="doc-biblioref">CPAT-AI project 2026</a>)</span>. This brief reports an outside check: each default against every published estimate that could be verified, keeping the figures CPAT was calibrated to apart (<a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html#sec-evidence">working paper, the evidence</a>).</p>
+</section>
+<section id="sec-results" class="level1">
+<h1>Most defaults pass, two fail</h1>
+<p><strong>Eight of ten main fuel-sector values lie within the published range, and six are less responsive than the middle estimate.</strong> <a href="#tbl-compare" class="quarto-xref">Table&nbsp;1</a> shows CPAT’s long-run elasticity for developing countries beside the published range. For industrial electricity, CPAT uses −0.44 where the median estimate is −0.69; for industrial gas, −0.75 against −1.05. Read against the published averages, CPAT understates more responses than it overstates.</p>
+<div id="tbl-compare" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-compare-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: CPAT’s long-run price elasticities against the published evidence. The median excludes the figures CPAT was calibrated to. High-income values are 0.05–0.08 smaller in magnitude, except the two “too high” pairs. Source: CPAT legacy defaults <span class="citation" data-cites="CPATAI2026">(<a href="#ref-CPATAI2026" role="doc-biblioref">CPAT-AI project 2026</a>)</span>; evidence from the meta-analyses and studies listed in the working paper, Table 1 and Appendix A.
+</figcaption>
+<div aria-describedby="tbl-compare-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 23%">
+<col style="width: 17%">
+<col style="width: 23%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fuel and sector</th>
+<th style="text-align: right;">CPAT, developing countries</th>
+<th>Published long-run range</th>
+<th style="text-align: right;">Median estimate</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gasoline, transport</td>
+<td style="text-align: right;">−0.64</td>
+<td>−0.25 to −0.84</td>
+<td style="text-align: right;">−0.69</td>
+<td>In range; twice the bias-corrected −0.31</td>
+</tr>
+<tr class="even">
+<td>Diesel, transport</td>
+<td style="text-align: right;">−0.51</td>
+<td>−0.39 to −0.67</td>
+<td style="text-align: right;">−0.62</td>
+<td>In range</td>
+</tr>
+<tr class="odd">
+<td>Electricity, households</td>
+<td style="text-align: right;">−0.44</td>
+<td>−0.32 to −0.85</td>
+<td style="text-align: right;">−0.53</td>
+<td>In range</td>
+</tr>
+<tr class="even">
+<td>Electricity, industry</td>
+<td style="text-align: right;">−0.44</td>
+<td>−0.32 to −1.01</td>
+<td style="text-align: right;">−0.69</td>
+<td>In range, cautious</td>
+</tr>
+<tr class="odd">
+<td>Electricity, services</td>
+<td style="text-align: right;">−0.70</td>
+<td>−0.32 to −0.69</td>
+<td style="text-align: right;">−0.53</td>
+<td>At the edge</td>
+</tr>
+<tr class="even">
+<td>Natural gas, households</td>
+<td style="text-align: right;">−0.70</td>
+<td>−0.56 to −1.59</td>
+<td style="text-align: right;">−0.85</td>
+<td>In range, cautious</td>
+</tr>
+<tr class="odd">
+<td>Natural gas, industry</td>
+<td style="text-align: right;">−0.75</td>
+<td>−0.57 to −1.35</td>
+<td style="text-align: right;">−1.05</td>
+<td>In range, cautious</td>
+</tr>
+<tr class="even">
+<td>Coal, industry</td>
+<td style="text-align: right;">−0.58</td>
+<td>−0.30 to −0.70 (China only)</td>
+<td style="text-align: right;">−0.50</td>
+<td>In range; evidence thin</td>
+</tr>
+<tr class="odd">
+<td>Diesel, industry</td>
+<td style="text-align: right;">−1.06</td>
+<td>−0.39 to −0.67</td>
+<td style="text-align: right;">−0.62</td>
+<td>Too high</td>
+</tr>
+<tr class="even">
+<td>Gasoline, services</td>
+<td style="text-align: right;">−1.04</td>
+<td>−0.25 to −0.84</td>
+<td style="text-align: right;">−0.69</td>
+<td>Too high</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>The two failures come from stretching thin evidence across sectors.</strong> CPAT’s builders set targets for each sector by adding a sector adjustment, estimated over all fuels, to each fuel’s base value. Diesel in industry and gasoline in services have almost no studies of their own, and the services adjustment rests on 61 estimates. The result is −1.06 and −1.04, beyond every published estimate for either fuel. CPAT’s own panel estimation called the industrial diesel value “high” and found services no more responsive than households (<a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html#sec-compare">working paper, comparison</a>). Electricity in services, built the same way, sits at the edge of the range.</p>
+<p><strong>Gas looks more responsive in the evidence than in CPAT, but the gap is not a reason to change the default.</strong> Cross-country studies find gas use falls by more than 1.2 percent for each 1 percent price rise <span class="citation" data-cites="burke2016gas">(<a href="#ref-burke2016gas" role="doc-biblioref">Burke and Yang 2016</a>)</span>. But in many developing countries gas use follows pipeline building, often a government decision, and part of the measured response is switching between fuels that CPAT models elsewhere or not at all <span class="citation" data-cites="huntington2019">(<a href="#ref-huntington2019" role="doc-biblioref">Huntington et al. 2019</a>)</span>.</p>
+</section>
+<section id="sec-bias" class="level1">
+<h1>The published evidence itself overstates the response</h1>
+<p><strong>Journals publish large, significant estimates more readily than small or wrong-signed ones, and this inflates the averages.</strong> For gasoline, correcting for this publication bias halves the long-run elasticity, from −0.69 to −0.31 <span class="citation" data-cites="havranek2012">(<a href="#ref-havranek2012" role="doc-biblioref">Havranek et al. 2012</a>)</span>. In 32 countries that subsidize fuel, where CPAT is often used to study subsidy reform, the long-run elasticity is −0.25 <span class="citation" data-cites="arzaghi2015">(<a href="#ref-arzaghi2015" role="doc-biblioref">Arzaghi and Squalli 2015</a>)</span>. CPAT’s −0.64 for road gasoline matches the uncorrected averages and is twice the corrected one. The same bias may affect other fuels; it has been measured carefully only for gasoline.</p>
+<p><strong>Tax increases may move demand more than other price increases, which pulls the other way.</strong> In Sweden, gasoline demand responded three times as much to the carbon tax as to equal market price changes <span class="citation" data-cites="andersson2019">(<a href="#ref-andersson2019" role="doc-biblioref">Andersson 2019</a>)</span>. Publication bias and this tax effect point in opposite directions, and both are documented mainly for road fuels. So the right response is not to cut the defaults but to show a second case with road fuel elasticities halved beside every central result (<a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html#sec-objections">working paper, the strongest objection</a>).</p>
+</section>
+<section id="sec-timing" class="level1">
+<h1>The bigger problem is timing</h1>
+<p><strong>CPAT applies the full long-run response in the year the price changes; in reality it takes a decade.</strong> People drive or heat less within a year or two, but they replace cars, boilers and machines only as these wear out: about 7 percent of the car fleet a year, and 1–2 percent of buildings <span class="citation" data-cites="black2022framework">(<a href="#ref-black2022framework" role="doc-biblioref">Black et al. 2022</a>)</span>. CPAT’s documentation states that “all the effects take place over the course of one year”, and its developers list the missing short-run response as a known issue, noting that household electricity demand “is inelastic in the short term” <span class="citation" data-cites="cpat2022technotes">(<a href="#ref-cpat2022technotes" role="doc-biblioref">World Bank and International Monetary Fund 2022</a>)</span>.</p>
+<p><strong>After one year about a fifth of CPAT’s response has happened; after five, about 60 percent.</strong> <a href="#fig-timing" class="quarto-xref">Figure&nbsp;1</a> shows road gasoline and industrial coal. Five years after a permanent price rise, CPAT’s response is 45 to 72 percent larger than a gradual one across the main fuel-sector pairs, and between about 30 and 110 percent under other plausible adjustment speeds (<a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html#sec-timing">working paper, timing</a>).</p>
+<div id="fig-timing" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-timing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig2_timing.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The price response builds up over a decade, but CPAT applies it in year 1. Own-price elasticity at each horizon after a permanent price rise. CPAT (dashed) applies the whole response in year 1; the gradual response (solid) adjusts use at 30 percent a year and equipment at 6.7 percent a year; bands show alternative speeds. CPAT defaults for developing countries. Source: working paper, Figure 2."><img src="figures/fig2_timing.png" class="img-fluid figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-timing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The price response builds up over a decade, but CPAT applies it in year 1. Own-price elasticity at each horizon after a permanent price rise. CPAT (dashed) applies the whole response in year 1; the gradual response (solid) adjusts use at 30 percent a year and equipment at 6.7 percent a year; bands show alternative speeds. CPAT defaults for developing countries. Source: working paper, Figure 2.
+</figcaption>
+</figure>
+</div>
+<p><strong>Front-loading overstates early emission cuts and understates early revenue.</strong> A tax base that shrinks faster in the model than in the economy yields less modeled revenue in the first years, when budgets are set. For a fuel subsidy reform the error runs the other way on timing: the modeled fall in consumption, and the fiscal gain with it, arrive too early. Phasing a price in gradually, the use for which CPAT’s documentation says the tool is best suited, reduces the error but does not remove it.</p>
+<p><strong>CPAT also has almost no switching between fuels outside power.</strong> A carbon tax that makes coal dearer than gas cuts coal and gas each by their own elasticities; nothing moves industry from coal to gas or electricity. CPAT’s own panel study recommended adding substitution for specific fuels in specific sectors (<a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html#sec-structure">working paper, structure</a>).</p>
+</section>
+<section id="sec-comparisons" class="level1">
+<h1>Comparisons hold up better than levels</h1>
+<p><strong>Errors that affect every policy and country alike largely cancel when policies are compared.</strong> The Total Effective Carbon Price measures a policy mix as the uniform carbon tax that would cut emissions by as much (<a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html">Brief 6.1</a>). It is a ratio of two cuts computed with the same elasticities, so a common error cancels. In the stylized economy of paper 6.1, replacing the central demand elasticities with CPAT’s raises the cut from a $30 tax by about a third, from 13.4 to 17.5 percent, but moves the Total Effective Carbon Price of a policy mix by only about a tenth, from $36.9 to $33.1 per tonne (<a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html#sec-tecp">working paper, emission cuts and the Total Effective Carbon Price</a>).</p>
+<p><strong>So a CPAT ranking of policies or countries is more reliable than a CPAT forecast of tonnes or revenue.</strong> The same holds for the back-casts and model comparisons in <a href="../../../modelling/5-modelling/CPATValidation/index.html">Brief 5.3</a>: CPAT is best used for ranges and comparisons, and least reliable for near-term levels.</p>
+</section>
+<section id="sec-what-to-do" class="level1">
+<h1>What to do</h1>
+<p><strong>Finance ministries and development-bank teams using CPAT results: treat near-term cuts as upper bounds.</strong> Report cuts and revenue for the first five years with a note that the model front-loads the response, and show a case with road fuel elasticities halved beside the central result. For decisions that hinge on road transport or household electricity, check the elasticities against national evidence.</p>
+<p><strong>CPAT’s maintainers: fix the two outliers and the timing.</strong> Bring industrial diesel, services gasoline and services electricity into the range of the evidence for those fuels, for example by using their transport or household values. Add separate adjustment speeds for use and for equipment, and report results by year after the reform by default. Rerun the documentation’s own calibration check, which reports road gasoline at −0.77 where the defaults give −0.64.</p>
+<p><strong>Everyone updating a policy model: run a fixed validation protocol at every update.</strong> Keep a register of verified estimates for each fuel and sector, apart from the model’s own calibration source; classify each default; test what the differences do to a standard scenario; back-cast against past price shocks such as subsidy reforms; and publish every change with its evidence (<a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html#sec-protocol">working paper, protocol</a>).</p>
+</section>
+<section id="related-papers-in-this-series" class="level1 unnumbered">
+<h1 class="unnumbered">Related papers in this series</h1>
+<ul>
+<li><a href="../../../modelling/5-modelling/CPATMitigationMethods/index.html">Climate Fiscal Policy Brief No.&nbsp;5.1</a>: the CPAT mitigation module, its equations and its elasticities.</li>
+<li><a href="../../../modelling/5-modelling/CPATAIImplementation/index.html">No.&nbsp;5.2</a>: CPAT-AI, the transparent and testable rebuild of the tool.</li>
+<li><a href="../../../modelling/5-modelling/CPATValidation/index.html">No.&nbsp;5.3</a>: validating CPAT against data, history and other models.</li>
+<li><a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html">No.&nbsp;6.1</a>: the Total Effective Carbon Price, the yardstick for comparing policy mixes <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Stretton 2026</a>)</span>.</li>
+<li>The <a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html">working paper</a> behind this brief: the evidence register, the calculations and the validation protocol.</li>
+</ul>
+</section>
+<section id="downloads" class="level1 unnumbered">
+<h1 class="unnumbered">Downloads</h1>
+<p><a href="../../../papers/Brief-ElasticityValidation.docx">Policy brief (docx)</a> · <a href="../../../papers/ElasticityValidation.docx">Working paper (docx)</a></p>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-andersson2019" class="csl-entry" role="listitem">
+Andersson, Julius J. 2019. <span>“Carbon Taxes and <span>CO2</span> Emissions: <span>Sweden</span> as a Case Study.”</span> <em>American Economic Journal: Economic Policy</em> 11 (4): 1–30. <a href="https://doi.org/10.1257/pol.20170144">https://doi.org/10.1257/pol.20170144</a>.
+</div>
+<div id="ref-arzaghi2015" class="csl-entry" role="listitem">
+Arzaghi, Mohammad, and Jay Squalli. 2015. <span>“How Price Inelastic Is Demand for Gasoline in Fuel-Subsidizing Economies?”</span> <em>Energy Economics</em> 50: 117–24. <a href="https://doi.org/10.1016/j.eneco.2015.04.009">https://doi.org/10.1016/j.eneco.2015.04.009</a>.
+</div>
+<div id="ref-black2022framework" class="csl-entry" role="listitem">
+Black, Simon, Danielle Minnett, Ian Parry, James Roaf, and Karlygash Zhunussova. 2022. <em>A Framework for Comparing Climate Mitigation Policies Across Countries</em>. IMF Working Paper 22/254. International Monetary Fund. <a href="https://doi.org/10.5089/9798400228285.001">https://doi.org/10.5089/9798400228285.001</a>.
+</div>
+<div id="ref-burke2016gas" class="csl-entry" role="listitem">
+Burke, Paul J., and Hewen Yang. 2016. <span>“The Price and Income Elasticities of Natural Gas Demand: International Evidence.”</span> <em>Energy Economics</em> 59: 466–74. <a href="https://doi.org/10.1016/j.eneco.2016.08.025">https://doi.org/10.1016/j.eneco.2016.08.025</a>.
+</div>
+<div id="ref-CPATAI2026" class="csl-entry" role="listitem">
+CPAT-AI project. 2026. <em><span>CPAT-AI</span>: The Climate Policy Assessment Tool Rebuilt as a Transparent, Testable Model</em>. GitHub repository. <a href="https://github.com/cpmodelai/cpat_ai">https://github.com/cpmodelai/cpat_ai</a>.
+</div>
+<div id="ref-havranek2012" class="csl-entry" role="listitem">
+Havranek, Tomas, Zuzana Irsova, and Karel Janda. 2012. <span>“Demand for Gasoline Is More Price-Inelastic Than Commonly Thought.”</span> <em>Energy Economics</em> 34 (1): 201–7. <a href="https://doi.org/10.1016/j.eneco.2011.09.003">https://doi.org/10.1016/j.eneco.2011.09.003</a>.
+</div>
+<div id="ref-huntington2019" class="csl-entry" role="listitem">
+Huntington, Hillard G., James J. Barrios, and Vipin Arora. 2019. <span>“Review of Key International Demand Elasticities for Major Industrializing Economies.”</span> <em>Energy Policy</em> 133: 110878. <a href="https://doi.org/10.1016/j.enpol.2019.110878">https://doi.org/10.1016/j.enpol.2019.110878</a>.
+</div>
+<div id="ref-CFPB61" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-cpat2022technotes" class="csl-entry" role="listitem">
+World Bank, and International Monetary Fund. 2022. <em>Climate Policy Assessment Tool: Technical Notes</em>. World Bank. <a href="http://documents.worldbank.org/curated/en/099062323105023013/pdf/P1703010ca4b8603e0886b06871f37b87b3.pdf">http://documents.worldbank.org/curated/en/099062323105023013/pdf/P1703010ca4b8603e0886b06871f37b87b3.pdf</a>.
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephen J. Stretton">
+<meta name="keywords" content="climate policy modeling, carbon pricing, model verification, spreadsheet risk, N-version programming, artificial intelligence">
+
+<title>CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool – Climate, Fiscal &amp; Finance</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Climate, Fiscal &amp; Finance</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Policy and Finance</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../modelling/index.html" aria-current="page"> 
+<span class="menu-text">Modelling and Analytics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/5-modelling.html">5. Modelling (CPAT)</a></li><li class="breadcrumb-item"><a href="../../../modelling/5-modelling/CPATAIImplementation/index.html">5.2 CPAT-AI</a></li><li class="breadcrumb-item"><a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html">Working paper</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modelling and Analytics</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Modelling (CPAT)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATMitigationMethods/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.1 The CPAT Mitigation Module</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATMitigationMethods/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATAIImplementation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.2 CPAT-AI</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/CPATValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.3 Validating CPAT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/CPATValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/5-modelling/ElasticityValidation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.4 Are CPAT's Price Elasticities Right?</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/5-modelling/ElasticityValidation/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Modular Upgrades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.1 Measure Carbon Pricing by the Emissions It Cuts</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.2 The CBAM Policy Tool</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3 Public Investment in CPAT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/PublicInvestment/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/ActivityModelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/ActivityModelling/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.5 The Macro-Fiscal-Energy Scenario Tool</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Analytics Tools</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.1 The Excise-Fiscal Diagnostic</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link active" data-scroll-target="#sec-summary"><span class="header-section-number">1</span> Executive summary</a></li>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link" data-scroll-target="#sec-intro"><span class="header-section-number">2</span> Introduction</a></li>
+  <li><a href="#sec-context" id="toc-sec-context" class="nav-link" data-scroll-target="#sec-context"><span class="header-section-number">3</span> Why spreadsheet policy models escape audit</a></li>
+  <li><a href="#sec-design" id="toc-sec-design" class="nav-link" data-scroll-target="#sec-design"><span class="header-section-number">4</span> The design: two rebuilds and one rule</a>
+  <ul class="collapse">
+  <li><a href="#sec-legacy-spec" id="toc-sec-legacy-spec" class="nav-link" data-scroll-target="#sec-legacy-spec"><span class="header-section-number">4.1</span> Legacy CPAT is the specification</a></li>
+  <li><a href="#sec-rule" id="toc-sec-rule" class="nav-link" data-scroll-target="#sec-rule"><span class="header-section-number">4.2</span> The replication rule</a></li>
+  <li><a href="#sec-codes" id="toc-sec-codes" class="nav-link" data-scroll-target="#sec-codes"><span class="header-section-number">4.3</span> Shared codes make three models comparable</a></li>
+  <li><a href="#sec-build" id="toc-sec-build" class="nav-link" data-scroll-target="#sec-build"><span class="header-section-number">4.4</span> Excel written by code, Python written to be read</a></li>
+  </ul></li>
+  <li><a href="#sec-findings" id="toc-sec-findings" class="nav-link" data-scroll-target="#sec-findings"><span class="header-section-number">5</span> What the rebuild found</a></li>
+  <li><a href="#sec-testing" id="toc-sec-testing" class="nav-link" data-scroll-target="#sec-testing"><span class="header-section-number">6</span> The testing regime</a></li>
+  <li><a href="#sec-ai" id="toc-sec-ai" class="nav-link" data-scroll-target="#sec-ai"><span class="header-section-number">7</span> What AI assistance did and did not do</a></li>
+  <li><a href="#sec-lessons" id="toc-sec-lessons" class="nav-link" data-scroll-target="#sec-lessons"><span class="header-section-number">8</span> Lessons for building and maintaining policy models</a></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">9</span> Conclusion</a></li>
+  <li><a href="#downloads" id="toc-downloads" class="nav-link" data-scroll-target="#downloads">Downloads</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../modelling/5-modelling.html">5. Modelling (CPAT)</a></li><li class="breadcrumb-item"><a href="../../../modelling/5-modelling/CPATAIImplementation/index.html">5.2 CPAT-AI</a></li><li class="breadcrumb-item"><a href="../../../modelling/5-modelling/CPATAIImplementation/working-paper.html">Working paper</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool</h1>
+<p class="subtitle lead">What two AI-assisted rebuilds of the Climate Policy Assessment Tool found, and how policy models should be maintained</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stephen J. Stretton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>The Climate Policy Assessment Tool is a spreadsheet model that finance ministries and international institutions use to estimate what carbon pricing and related reforms do to energy use, emissions, revenue and households in more than 180 countries. Its legacy workbook is too large for anyone to audit cell by cell. This paper describes how it was rebuilt twice in October 2026, with AI coding agents doing most of the construction: once as a readable Excel workbook written by code, and once as a Python model that reproduces the workbook number for number. One rule governed both rebuilds: errors in the legacy model are fixed and never copied, while questionable but intended choices are copied and logged. The rebuild found 228 bugs in the legacy model, 24 of them serious enough to change standard results, as well as 135 issues (intended choices open to question) and 20 errors in the published documentation. Writing the model a second time found seven further bugs in the first rebuild. The lesson for ministries is that a policy model should be specified by shared variable codes, built at least twice, tested at every change, and owned by a named person who decides every departure from the original.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>climate policy modeling, carbon pricing, model verification, spreadsheet risk, N-version programming, artificial intelligence</p>
+  </div>
+</div>
+
+</header>
+
+
+<p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the public CPAT-AI repository, https://github.com/cpmodelai/cpat_ai. A short version for policy makers is <a href="../../../modelling/5-modelling/CPATAIImplementation/index.html">Climate Fiscal Policy Brief No.&nbsp;5.2</a>.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<section id="sec-summary" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
+<p><a href="../../../modelling/5-modelling/CPATAIImplementation/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-CPATAIImplementation.pptx">Slides (pptx)</a></p>
+<p><strong>A climate-fiscal model that nobody can audit is a risk for every ministry that relies on it.</strong> The Climate Policy Assessment Tool (CPAT), built by the IMF and the World Bank, estimates what carbon taxes, fuel subsidy reform and related policies do to prices, fuel use, emissions, revenue, GDP and households, year by year, for more than 180 countries. It is a spreadsheet: the legacy workbook is over 21 megabytes, its main calculation sheet runs past row 18,000, and its methodology fills about 400 pages. Nobody had checked all of it against what it was meant to compute.</p>
+<p><strong>In October 2026 the model was rebuilt twice, with AI coding agents doing most of the construction.</strong> The first rebuild, Excel-AI, is a readable workbook written and checked by code, in which one short formula serves a whole block of cells. The second, Coded CPAT, is a Python model written from Excel-AI’s equation list; it reproduces every one of Excel-AI’s 7,458 stored outputs for each Egypt scenario tested, to a relative difference of one in a billion. Every input, variable and output carries one code, the same in all three models, so any two can be compared after every change.</p>
+<p><strong>One rule kept the rebuild faithful: bugs are never copied; issues are copied and tracked.</strong> A bug is a formula that does not compute what it means to, such as one pointing to the wrong row; it is fixed. An issue is a deliberate choice open to question, such as an old data vintage; it is reproduced exactly and logged. Any other departure needs a dated decision by the model owner, so every difference from the original has a code and a reason.</p>
+<p><strong>The rebuild found 228 bugs in the legacy model, 24 of them serious enough to change standard results.</strong> Services electricity demand grew with the industrial multiple after 2023, the largest single error in power demand. The GDP effect of recycled carbon revenue was added to the growth rate every year instead of to the level once, so it compounded. A methane fee on farming and waste did nothing, because non-energy methane never changed. Regulation scenarios had no effect at all. Most other bugs are latent: they fire only when a ministry asks a question the default run does not answer. The public register also lists 135 issues and 20 errors in the published documentation.</p>
+<p><strong>Writing the model a second time found seven bugs that the first rebuild’s own checks had missed.</strong> They included nominal GDP divided by a billion when the source was already in billions, and two gas price series read from each other’s rows. Building twice is an old idea (N-version programming; the UK Treasury’s “parallel build”), and so is its limit: independently written versions share errors more often than chance predicts, and a 2026 experiment finds the same for versions written by AI agents.</p>
+<p><strong>The owners of the legacy model are fixing what the rebuild found, and the checks keep everyone honest.</strong> Within weeks the CPAT team marked 63 of the registered bugs fixed in its next file. A cell-by-cell check confirmed 52, found 9 fixed with caveats and found 2 marked fixed that were not.</p>
+<p><strong>AI agents changed what a small team could do, but did not make the judgments.</strong> The project log records 241 finished tasks in four weeks, and a register of 454 entries. Every decision that changes what the model means (bug or issue, which departures to make, which release to accept) stayed with a named owner. The evidence on AI productivity is mixed, and in this project every agent output was tested by something its author did not write.</p>
+<p><strong>Ministries and development banks should require four things of any policy model they rely on:</strong> a codes map, so that any audit or rebuild is a join; one register of bugs, issues and departures, shared with the model’s owners; a second implementation and a regression test at every release; and a named owner who decides, in writing, every departure from the original. None of this proves the model right. Three implementations can agree to nine digits and share a wrong elasticity; that is the job of validation, the subject of papers 5.3 and 5.4.</p>
+</section>
+<section id="sec-intro" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
+<p>A climate-fiscal model that no one can audit is a liability for the ministry that relies on it. The Climate Policy Assessment Tool (CPAT), built jointly by the International Monetary Fund and the World Bank, estimates what carbon taxes, emissions trading, fuel subsidy reform and related policies do to energy prices, fuel use, emissions, revenue, GDP and households, year by year, for more than 180 countries <span class="citation" data-cites="CPATDoc Black2023CPAT">(<a href="#ref-CPATDoc" role="doc-biblioref">CPAT Team 2023</a>; <a href="#ref-Black2023CPAT" role="doc-biblioref">Black et al. 2023</a>)</span>. Legacy CPAT, the Excel model, is a binary workbook of more than 21 megabytes whose main calculation sheet runs past row 18,000 <span class="citation" data-cites="CPATAICaveats">(<a href="#ref-CPATAICaveats" role="doc-biblioref">CPAT-AI project 2026a</a>)</span>, documented in about 400 pages <span class="citation" data-cites="CPATDoc">(<a href="#ref-CPATDoc" role="doc-biblioref">CPAT Team 2023</a>)</span>. Its formulas differ from row to row, so checking one row says little about the next. No one had checked all of it against what it was meant to compute.</p>
+<p>When its mitigation and distribution modules were rebuilt formula by formula in October 2026, and every difference from the original explained, the model turned out to be wrong in 228 places. Some of the errors were large. Egypt’s population followed a misread growth path instead of the United Nations projection, which puts it at 147 million in 2041 <span class="citation" data-cites="UNWPP2024">(<a href="#ref-UNWPP2024" role="doc-biblioref">United Nations, Department of Economic and Social Affairs, Population Division 2024</a>)</span>. The GDP effect of recycled carbon revenue was added to the growth rate every year instead of to the level once, so a one-off effect compounded. A methane fee on farming and waste had no effect at all, because non-energy methane never changed <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>)</span>. None of these was visible in the workbook’s headline results; each needed someone to trace a formula to its source.</p>
+<p>This paper asks whether a large spreadsheet policy model can be rebuilt so that every step can be read and tested, and what such a rebuild reveals. The answer is yes, at a cost that AI coding agents have brought within reach of a small team. CPAT-AI, the project and repository, rebuilt CPAT twice: Excel-AI, a readable workbook written and checked by code, and Coded CPAT, a Python model that reproduces Excel-AI to a relative difference of <span class="math inline">\(10^{-9}\)</span>. One rule governed both: <strong>bugs are never replicated; issues are replicated and tracked.</strong> Shared variable codes made the two rebuilds and the original comparable cell by cell. The rebuild registered 228 legacy bugs (24 of high priority), 135 issues, 35 deliberate departures and 20 errors in the published documentation; writing the model a second time in Python found seven bugs in the first rebuild.</p>
+<p>The ideas are not new; what is new is their combination, their application to a model in active policy use, and a count of what they find. Spreadsheet audits find errors in almost every large spreadsheet <span class="citation" data-cites="Panko1998 Powell2008">(<a href="#ref-Panko1998" role="doc-biblioref">Panko 1998</a>; <a href="#ref-Powell2008" role="doc-biblioref">Powell et al. 2008</a>)</span>. Writing a program twice and comparing the versions is N-version programming, whose classic experiment also showed its limit: independently written versions fail together more often than independence predicts <span class="citation" data-cites="KnightLeveson1986">(<a href="#ref-KnightLeveson1986" role="doc-biblioref">Knight and Leveson 1986</a>)</span>. The UK Treasury’s review of government models lists “parallel build” among developer tests and asks for a named owner of each business-critical model <span class="citation" data-cites="Macpherson2013">(<a href="#ref-Macpherson2013" role="doc-biblioref">HM Treasury 2013</a>)</span>. This paper adds four things. First, a replication rule that keeps a rebuild faithful where the original is right and correct where it is not, and makes every difference traceable (<a href="#sec-rule" class="quarto-xref">Section&nbsp;4.2</a>). Second, shared codes that make a second implementation cheap to compare (<a href="#sec-codes" class="quarto-xref">Section&nbsp;4.3</a>). Third, counts of what the method found in CPAT (<a href="#sec-findings" class="quarto-xref">Section&nbsp;5</a>, <a href="#sec-testing" class="quarto-xref">Section&nbsp;6</a>). Fourth, evidence on what AI coding agents did and did not change (<a href="#sec-ai" class="quarto-xref">Section&nbsp;7</a>), set against experimental evidence that points both ways <span class="citation" data-cites="Peng2023 Becker2025">(<a href="#ref-Peng2023" role="doc-biblioref">Peng et al. 2023</a>; <a href="#ref-Becker2025" role="doc-biblioref">Becker et al. 2025</a>)</span>. Validation against data and other models is the subject of the companion papers 5.3 and 5.4 <span class="citation" data-cites="StrettonWP53 StrettonWP54">(<a href="#ref-StrettonWP53" role="doc-biblioref">Stretton 2026e</a>, <a href="#ref-StrettonWP54" role="doc-biblioref">2026b</a>)</span>; the method itself is summarized in paper 5.1 <span class="citation" data-cites="StrettonWP51">(<a href="#ref-StrettonWP51" role="doc-biblioref">Stretton 2026d</a>)</span>.</p>
+</section>
+<section id="sec-context" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Why spreadsheet policy models escape audit</h1>
+<p><strong>Spreadsheets are the default platform for policy models because ministries can open them.</strong> A finance ministry economist can open CPAT, change a carbon price and see the result without installing anything. Every number is visible. That openness is real, and it is why CPAT was built in Excel: its documentation names being “spreadsheet-based with data and formulas readily accessible within the tool” as the first step taken to make CPAT transparent <span class="citation" data-cites="CPATDoc">(<a href="#ref-CPATDoc" role="doc-biblioref">CPAT Team 2023</a>)</span>.</p>
+<p><strong>But visible is not the same as checkable.</strong> A spreadsheet shows each formula in isolation. The structure of the calculation (which row feeds which, which constant is used where, which sector a copied formula points to) is implicit. Panko’s review concludes that errors occur in a few percent of all cells, so that for a large spreadsheet the question is how many errors it has, not whether it has any, and that testing after development matters more than development discipline <span class="citation" data-cites="Panko1998">(<a href="#ref-Panko1998" role="doc-biblioref">Panko 1998</a>)</span>. In Panko’s later summary of seven field audits, 94 percent of 88 operational spreadsheets had errors <span class="citation" data-cites="Powell2008">(<a href="#ref-Powell2008" role="doc-biblioref">Powell et al. 2008</a>)</span>. Powell, Baker and Lawson also show how weak those estimates are: three of the seven sources are unpublished, most do not define an error, and the largest counts “issues” raised on early drafts. The firmest conclusion is theirs: no study has found operational spreadsheets free of errors.</p>
+<p><strong>Errors in analytical spreadsheets can change policy debates.</strong> Reinhart and Rogoff’s spreadsheet left out five countries through a coding error; together with selective exclusion of data and the weighting they chose, it turned average growth of 2.2 percent in countries with public debt above 90 percent of GDP into a published −0.1 percent <span class="citation" data-cites="Herndon2014">(<a href="#ref-Herndon2014" role="doc-biblioref">Herndon et al. 2014</a>)</span>. Economics research more broadly is hard to reproduce: Chang and Li replicated the key result of 22 of 67 papers without the authors’ help and 29 of 59 with it <span class="citation" data-cites="ChangLi2015">(<a href="#ref-ChangLi2015" role="doc-biblioref">Chang and Li 2015</a>)</span>.</p>
+<p><strong>Governments have learned this the hard way, and the remedy they adopted is organizational.</strong> Citing the failed InterCity West Coast rail franchise competition, the UK Treasury reviewed the quality assurance of government analytical models. It found just under 500 business-critical models and recommended quality assurance of each model’s inputs, method and outputs, specialist staff, and a single senior owner responsible for the model through its life; among developer tests it lists “parallel build” <span class="citation" data-cites="Macpherson2013">(<a href="#ref-Macpherson2013" role="doc-biblioref">HM Treasury 2013</a>)</span>. Energy-policy modelers have argued for openness on the same grounds: open models and data raise quality and reduce duplicated effort, although licensing and workload are real reasons that data stay closed <span class="citation" data-cites="Pfenninger2017">(<a href="#ref-Pfenninger2017" role="doc-biblioref">Pfenninger et al. 2017</a>)</span>. CPAT shows both sides: its formulas are open to its users, but several of its key data tables, such as energy balances and household surveys, are licensed and cannot be published.</p>
+<p><strong>Legacy CPAT had the features that make errors likely and hard to find.</strong> Its formulas varied from row to row, often with long chains of lookups; constants were typed into formulas; the same quantity could appear under different names in different sheets; and the documentation and the workbook had drifted apart. Twenty errors in the published documentation were later registered, three of them serious: no equation for the GDP feedback that the workbook computes, a sign error in the electricity price markup, and a discount factor written wrongly <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>)</span>. A reviewer who checked the workbook against the documentation would have been checking against an imperfect standard.</p>
+<p><strong>The remedies are known; the labor to apply them was missing.</strong> Write the model as code, test each block, keep one register of known problems, build it twice: each is standard advice <span class="citation" data-cites="Wilson2014 Sargent2013 Macpherson2013">(<a href="#ref-Wilson2014" role="doc-biblioref">Wilson et al. 2014</a>; <a href="#ref-Sargent2013" role="doc-biblioref">Sargent 2013</a>; <a href="#ref-Macpherson2013" role="doc-biblioref">HM Treasury 2013</a>)</span>. Applying them to a model of hundreds of thousands of formulas without stopping the work it supports needs a software team that a policy model rarely has. This paper reports what happened when AI coding agents supplied most of that labor, under written rules that kept the human owner in charge of every judgment <span class="citation" data-cites="Korinek2023">(<a href="#ref-Korinek2023" role="doc-biblioref">Korinek 2023</a>)</span>.</p>
+</section>
+<section id="sec-design" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> The design: two rebuilds and one rule</h1>
+<section id="sec-legacy-spec" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-legacy-spec"><span class="header-section-number">4.1</span> Legacy CPAT is the specification</h2>
+<p><strong>Both rebuilds take legacy CPAT as ground truth, not the documentation and not anyone’s view of what CPAT should be.</strong> The legacy workbook was kept read-only, in the three versions current during the rebuild (CPAT 1.0pre_456, 459 and 465, with the proprietary data stripped), and work was done on copies <span class="citation" data-cites="CPATAIDocs">(<a href="#ref-CPATAIDocs" role="doc-biblioref">CPAT-AI project 2026c</a>)</span>. The project proceeds block by block in five steps: replicate a block of legacy formula by formula, with the same section numbers; check it against an independent Python recomputation and against legacy’s stored results; classify every difference; release a new version only after the checks pass; and port validated blocks to Python.</p>
+<p><strong>The chain being replicated is the CPAT mitigation chain set out in paper 5.1</strong> <span class="citation" data-cites="StrettonWP51">(<a href="#ref-StrettonWP51" role="doc-biblioref">Stretton 2026d</a>)</span>. Policies set price signals; retail prices build up from international prices, taxes and subsidies; fuel use in 16 end-use subsectors and power responds to income, prices and efficiency; a power model dispatches plants and invests; and the results feed revenue, emissions, GDP effects and household incidence. The core is a constant-elasticity demand equation, <span id="eq-demand"><span class="math display">\[
+Q_{ijt} = Q_{ij,t-1}\,(1-a_{ij})\,(1+g_t)^{\varepsilon^{Y}_{ij}}\left(\frac{P_{ijt}}{P_{ij,t-1}}\right)^{\varepsilon^{P}_{ij}},
+\tag{1}\]</span></span> for fuel <span class="math inline">\(i\)</span> in sector <span class="math inline">\(j\)</span>, where <span class="math inline">\(a_{ij}\)</span> is autonomous efficiency improvement, <span class="math inline">\(g_t\)</span> GDP growth and <span class="math inline">\(\varepsilon^{Y}\)</span>, <span class="math inline">\(\varepsilon^{P}\)</span> the income and price elasticities. The full form, with a separate efficiency response to prices, is in paper 5.1 and in the Total Effective Carbon Price paper <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Stretton 2026c</a>)</span>. Every block of the rebuild has to reproduce equations like <a href="#eq-demand" class="quarto-xref">equation&nbsp;1</a> exactly as legacy computes them, except where legacy does not compute what it means to. Bug L3 is an example: the income factor on the elasticity <span class="math inline">\(\varepsilon^{Y}\)</span> was applied twice and anchored to 2023, so the effective elasticity drifted as incomes rose <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>)</span>.</p>
+</section>
+<section id="sec-rule" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-rule"><span class="header-section-number">4.2</span> The replication rule</h2>
+<p><strong>The rule separates two kinds of difference between what legacy does and what it should do.</strong> A <em>bug</em> is a place where legacy does not compute what it means to: a reference to the wrong row, a term applied twice, a dead or blank reference, a sign error, a formula that contradicts its own label. An <em>issue</em> is a place where legacy does what it means to, but the choice is open to question: an old data vintage, a simplification, a missing feature, a result nobody can yet explain. Bugs are fixed and never copied. Issues are copied exactly and tracked <span class="citation" data-cites="CPATAINorms">(<a href="#ref-CPATAINorms" role="doc-biblioref">CPAT-AI project 2026b</a>)</span>.</p>
+<p><strong>Stated formally, the rule gives every difference from legacy a code.</strong> Let <span class="math inline">\(L(x)\)</span> be what legacy computes for input <span class="math inline">\(x\)</span>, <span class="math inline">\(I(x)\)</span> what its authors intended (read from labels, documentation and the CPAT team) and <span class="math inline">\(P(x)\)</span> what the prototype computes. The rule sets <span class="math inline">\(P(x) = I(x)\)</span>, except where the owner has decided a departure <span class="math inline">\(D\)</span>. Since <span class="math inline">\(I(x) = L(x)\)</span> wherever legacy has no bug, <span id="eq-closure"><span class="math display">\[
+P(x) \neq L(x) \;\Longrightarrow\; \text{a registered bug fix, or a registered departure decided by the model owner}.
+\tag{2}\]</span></span></p>
+<p><strong>Claim (closure).</strong> <em>Every difference between the prototype and legacy can be traced to a register entry, provided that three conditions hold: every difference found is registered the same day, codes are never reused, and every release is regression-tested against the previous one, so that no unregistered difference enters between releases.</em> The first two are rules of the project <span class="citation" data-cites="CPATAINorms">(<a href="#ref-CPATAINorms" role="doc-biblioref">CPAT-AI project 2026b</a>)</span>; the third is the fourth test level in <a href="#sec-testing" class="quarto-xref">Section&nbsp;6</a>. A reviewer who finds that Excel-AI and legacy disagree on a number can look up why.</p>
+<p><strong>Three further rules make the closure hold in practice.</strong> When in doubt whether something is a bug or an issue, treat it as an issue, replicate it and ask. Never improve legacy silently: a better method or newer data is an issue, proposed as an upgrade for the owner to decide. And any departure that is not a bug fix needs an explicit decision by the model owner, recorded with the issue <span class="citation" data-cites="CPATAINorms">(<a href="#ref-CPATAINorms" role="doc-biblioref">CPAT-AI project 2026b</a>)</span>. One example: legacy computes energy subsidies for the baseline scenario only; the prototype, by the owner’s decision, computes them in every scenario, with the baseline equal to legacy (issue I110) <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>)</span>.</p>
+<p><strong>Data problems are issues, ranked by whether legacy can fix them.</strong> Where legacy reads data wrongly (a blank VAT cell read as a rate of zero), the formula fix is a legacy bug with a cell-level plan, and the data problem is an issue of priority <em>Very high</em>. Where no formula fix is possible because the data themselves are missing or poor, the prototype does exactly what legacy does and the issue is <em>Extremely high</em>. Two issues held that rank in release 1.0.2: combustion emission factors available only as base and final values, and current account data typed in for Egypt only <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>)</span>.</p>
+<p><strong>The rule also runs between the two rebuilds.</strong> Coded CPAT treats Excel-AI as its specification exactly as Excel-AI treats legacy. A bug that Python finds in the Excel prototype is never copied into Python. It is registered as a prototype bug, fixed in Python where the fix is obvious, and listed as a “known difference” that the tests check really does differ. It is then fixed in the next Excel release, after which the known difference is deleted and the two must agree again <span class="citation" data-cites="CPATAINorms CPATAIDocs">(<a href="#ref-CPATAINorms" role="doc-biblioref">CPAT-AI project 2026b</a>, <a href="#ref-CPATAIDocs" role="doc-biblioref">2026c</a>)</span>.</p>
+</section>
+<section id="sec-codes" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-codes"><span class="header-section-number">4.3</span> Shared codes make three models comparable</h2>
+<p><strong>Every input, variable and output has one code, the same in legacy, Excel and Python.</strong> Inputs keep the names and rows of legacy’s input sheet (<code>NameOfParameter</code>), in legacy units, so a scenario defined for one model means the same thing in the others. Outputs carry codes that state country, module, variable, sector, fuel and scenario: <code>egy.mit.co2.tot.tot.2</code> is Egypt’s total CO<sub>2</sub> in scenario 2. A codes map lists every input with its legacy row, its name and its Python key, and Python may not invent a second name for anything that has a code <span class="citation" data-cites="CPATAINorms">(<a href="#ref-CPATAINorms" role="doc-biblioref">CPAT-AI project 2026b</a>)</span>.</p>
+<p><strong>Shared codes turn comparison into a join.</strong> Without them, comparing two implementations of a model with 15,086 output codes means matching rows by hand. With them, a comparison is a table merge on the code and the year, followed by a tolerance check, and it can be run after every change. In the author’s judgment this is the design decision that made the rest affordable: it is what let one person check three implementations against each other every day.</p>
+</section>
+<section id="sec-build" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-build"><span class="header-section-number">4.4</span> Excel written by code, Python written to be read</h2>
+<p><strong>Excel-AI is a workbook that no person typed.</strong> Python builders write it with openpyxl and recalculate it in LibreOffice, so it can be built and checked on any machine <span class="citation" data-cites="CPATAIDocs">(<a href="#ref-CPATAIDocs" role="doc-biblioref">CPAT-AI project 2026c</a>)</span>. The norms that govern it are mechanical and checkable: every formula was at most 100 characters as Excel shows it; one formula serves a whole block of cells, so that copying, dragging or pasting it anywhere in the block gives the same result; no constant is typed into a formula (only 0 and 1 are allowed); every money unit comes from one vocabulary; and every file passes a lint check before it ships, so Excel never shows a repair prompt <span class="citation" data-cites="CPATAINorms">(<a href="#ref-CPATAINorms" role="doc-biblioref">CPAT-AI project 2026b</a>)</span>. The workbook of release 1.1.0 holds about half a million formulas (497,541) <span class="citation" data-cites="CPATAICaveats">(<a href="#ref-CPATAICaveats" role="doc-biblioref">CPAT-AI project 2026a</a>)</span>.</p>
+<p><strong>Coded CPAT is written so that a person with the equation list open can check every equation.</strong> Each equation of the list is one small function, named after the code of the quantity it computes, whose docstring states the equation. Names are CPAT codes (<code>ener</code> for fuel use, <code>atp</code> for after-tax prices); no number other than 0 and 1 is typed into the code; unit conversions live in one place; and a test fails if any equation in the list has no function or any function cites an equation that is not in the list <span class="citation" data-cites="CPATAINorms">(<a href="#ref-CPATAINorms" role="doc-biblioref">CPAT-AI project 2026b</a>)</span>. Release 1.0.2p1.1 runs one country and two scenarios in 0.8 seconds once the baseline is cached <span class="citation" data-cites="CPATAIRepo">(<a href="#ref-CPATAIRepo" role="doc-biblioref">CPAT-AI project 2026d</a>)</span>.</p>
+</section>
+</section>
+<section id="sec-findings" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> What the rebuild found</h1>
+<p><strong>The rebuild registered 228 legacy bugs, 24 of them of high priority, and 135 issues.</strong> <a href="#tbl-register" class="quarto-xref">Table&nbsp;1</a> gives the classes and counts in release 1.0.2. All entries live in one register, from which every list, tracker and document is regenerated at each release; the tracker is shared with the CPAT team that maintains legacy.</p>
+<div id="tbl-register" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-register-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: The rebuild of CPAT registered 454 entries; half are bugs in the legacy model (register of release 1.0.2, 29 October 2026)
+</figcaption>
+<div aria-describedby="tbl-register-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Class</th>
+<th style="text-align: left;">Code</th>
+<th style="text-align: right;">Count</th>
+<th style="text-align: left;">Breakdown</th>
+<th style="text-align: left;">What the rebuild does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Legacy bugs</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: right;">228</td>
+<td style="text-align: left;">Core mitigation 149 (high 21, medium 42, low 86); power engineer model 29 (3, 10, 16); road engineer model 17 (0, 9, 8); distribution 31 (all low); inputs 1; data 1</td>
+<td style="text-align: left;">Fixes each, or leaves the feature out; never replicates; writes a cell-level fix plan for legacy</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">…status in legacy 465</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;">Fixed by the CPAT team and confirmed 52; fixed with caveats 9; marked fixed but not fixed 2; still open 165</td>
+<td style="text-align: left;">Each claimed fix checked cell by cell</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prototype bugs</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: left;">Fixed 21, withdrawn 1; 8 suspected (7 confirmed) by Coded CPAT</td>
+<td style="text-align: left;">Fixed in Excel; never copied into Python</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Documentation bugs</td>
+<td style="text-align: left;">DOC</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">High 3, medium 7, low 10</td>
+<td style="text-align: left;">Models follow the workbook; documentation to be corrected</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Issues</td>
+<td style="text-align: left;">I</td>
+<td style="text-align: right;">135</td>
+<td style="text-align: left;">Mitigation 109, data 13, distribution 9, inputs 4; major 35, minor 97, very or extremely high 3</td>
+<td style="text-align: left;">Replicated 93; prototype limitation 16; departs by owner decision 14; out of scope 10; other 2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Departures</td>
+<td style="text-align: left;">LD</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: left;">Rows of the workbook’s LegacyDiff sheet that are not “Same”</td>
+<td style="text-align: left;">Kept by owner decision, each with a reason</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Upgrades</td>
+<td style="text-align: left;">U</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">High 3, medium 4, low 7</td>
+<td style="text-align: left;">Proposed, not built</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><em>Source:</em> <span class="citation" data-cites="CPATAIBugs">CPAT-AI project (<a href="#ref-CPATAIBugs" role="doc-biblioref">2026e</a>)</span> (tracker <code>Tracking_Legacy_Bugs_v1.0.2.xlsx</code>, tabs Bugs and Issues; counts recomputed by the author). <em>Notes:</em> Priority of bugs by effect on results: high, wrong results in standard runs; medium, wrong results in some runs or countries, or a wrong reported number; low, latent or reporting only. Codes are never reused, so the L series runs to L230 with 228 live entries. By release 1.1.0 (30 October 2026) the register held 231 legacy bugs, still 24 of high priority, and still 135 issues.</p>
+<p><strong>The high-priority bugs cluster where formulas were copied across sectors or years.</strong> The biggest affect the drivers of demand. Services electricity demand grew with the industrial multiple after 2023, because a copied formula pointed six rows up; services are about a quarter of Egypt’s electricity demand, so this is the largest single error in power demand (L1). The income factor on the GDP elasticity was applied twice and anchored to 2023, so the elasticity drifted (L3). “Other oil products” carried a hardcoded pass-through and a zero margin, which priced them at the floor of 0.01 and made their use rise roughly tenfold by 2030 in the Egypt run (L13) <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>)</span>. A second group switches policies off without warning: regulation scenarios had no effect, because a lookup on scenario names never matched and the share it returned was zero (L87); and actual power capacity factors were never used, because the lookup searched the wrong years (L53). A third group sits in the macro-fiscal outputs: the compounding GDP effect (L24), subsidies as a share of GDP divided by the previous year’s GDP (L188), and a green-investment block in which eight separate formulas read blank rows, header text or the wrong constants (L205–L213) <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>)</span>.</p>
+<p><strong>Most bugs are latent rather than visible.</strong> Over 60 percent (142 of 228) are of low priority: they affect a path that the standard Egypt run does not take, or only a reported number. The standard Egypt run, for instance, uses the simpler elasticity road model, so the 17 bugs of the road engineer model were latent in it. A latent bug is still a bug. It fires when a ministry switches on the feature it lives in, which is exactly when the ministry is asking a question the default run does not answer.</p>
+<p><strong>The legacy owners have begun fixing what the rebuild found.</strong> Of the bugs registered against the earlier legacy file, the CPAT team marked 63 fixed in its next file, 1.0pre_465. A cell-by-cell check confirmed 52, found 9 fixed with caveats, and found 2 marked fixed that were not <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>)</span>. That last number is a small argument for the whole approach: even careful owners fixing a known list need an independent check.</p>
+<p><strong>The 135 issues are mostly questions for the modelers, not errors.</strong> They range from data limitations to design choices. Egypt’s greenhouse gas inventory breaks after 2021, so calibrating to 2024, as legacy does, may understate energy methane by about 19 Mt CO<sub>2</sub>e (I91); the distribution module always uses the mean elasticity, because the data hold no other statistic (I96) <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>)</span>. Ninety-three issues are replicated exactly as legacy has them. Fourteen depart from legacy by explicit owner decision, such as computing subsidies in every scenario (I110). The register keeps the questions visible without letting the rebuild answer them unilaterally.</p>
+<p><strong>The documentation needed correcting too.</strong> The 20 documentation bugs include equations written with the wrong sign, an undefined symbol, a derivative computed wrongly, and units that differ between notation tables. None affects the models, because the models follow the workbook, but each would mislead a reader who used the documentation to check the workbook <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>)</span>.</p>
+<p><strong>The count rose as the rebuild went deeper, so 228 is a lower bound.</strong> After version 0.4.12 of the prototype, on 18 October 2026, the register held 64 legacy bugs; at version 0.6.3, two days later, 159 (128 in mitigation and 31 in distribution); at release 1.0.2, on 29 October, 228; and at release 1.1.0, a day later, 231 <span class="citation" data-cites="CPATAICaveats CPATAIBugs">(<a href="#ref-CPATAICaveats" role="doc-biblioref">CPAT-AI project 2026a</a>, <a href="#ref-CPATAIBugs" role="doc-biblioref">2026e</a>)</span>. The jumps came as new blocks were rebuilt (distribution, revenue, welfare, green investment) and as the CPAT team’s own issue lists were mapped onto the register. The modules not yet rebuilt (air pollution, transport co-benefits) will add more.</p>
+</section>
+<section id="sec-testing" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> The testing regime</h1>
+<p><strong>Every number is checked by something that did not produce it.</strong> The regime has four levels (<a href="#tbl-tests" class="quarto-xref">Table&nbsp;2</a>). Each answers a different question, and none alone would be enough.</p>
+<div id="tbl-tests" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tests-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Four levels of testing: each checks a number against something that did not produce it
+</figcaption>
+<div aria-describedby="tbl-tests-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Level</th>
+<th style="text-align: left;">Question</th>
+<th style="text-align: left;">Compared with</th>
+<th style="text-align: left;">Tolerance</th>
+<th style="text-align: left;">Scale at release 1.0.2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Method equals legacy</td>
+<td style="text-align: left;">Did the rebuild understand legacy before fixing it?</td>
+<td style="text-align: left;">Legacy’s own cached results, with every bug switched back on</td>
+<td style="text-align: left;">Precision of the cache</td>
+<td style="text-align: left;">Prices 80 rows (largest gap 5.6 × 10⁻¹⁷); power 208 rows; road engineer model about 1,091 series (4 × 10⁻¹⁴); distribution (4 × 10⁻⁴)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Workbook equals Python reference</td>
+<td style="text-align: left;">Does the workbook compute what the corrected method says?</td>
+<td style="text-align: left;">Independent Python recomputation of each block; property tests; paste test</td>
+<td style="text-align: left;">Exact or near-exact</td>
+<td style="text-align: left;">Every block, every test scenario</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Coded CPAT equals Excel-AI</td>
+<td style="text-align: left;">Do two implementations agree?</td>
+<td style="text-align: left;">Excel-AI’s stored results</td>
+<td style="text-align: left;">Relative 10⁻⁹</td>
+<td style="text-align: left;">Egypt, scenarios 1 and 2, 2022–2041: 7,458 output codes; distribution 1,684 codes; stored scenarios 3–6: 123 key codes each</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Release equals last release</td>
+<td style="text-align: left;">Did anything change that should not have?</td>
+<td style="text-align: left;">The previous release, code by code</td>
+<td style="text-align: left;">Zero, or explained in the version table</td>
+<td style="text-align: left;">Release 1.0.0: 0 of 15,086 codes changed</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><em>Sources:</em> <span class="citation" data-cites="CPATAICaveats">CPAT-AI project (<a href="#ref-CPATAICaveats" role="doc-biblioref">2026a</a>)</span>; <span class="citation" data-cites="CPATAIDocs">CPAT-AI project (<a href="#ref-CPATAIDocs" role="doc-biblioref">2026c</a>)</span>; <span class="citation" data-cites="CPATAIRepo">CPAT-AI project (<a href="#ref-CPATAIRepo" role="doc-biblioref">2026d</a>)</span>.</p>
+<p><strong>First, method equals legacy.</strong> For each block, a Python reference implementation is fed legacy’s own cached inputs with every bug switched back on, and must reproduce legacy’s stored results. The price block reproduced 80 legacy rows with a largest relative difference of 5.6 × 10⁻¹⁷; the power block’s reference reproduces 208 legacy rows of the baseline and a carbon-tax run; the road engineer model reproduces legacy’s cached run (both scenarios, about 1,091 series, 2022–2041) to about 4 × 10⁻¹⁴; the distribution reference reproduces legacy’s effects and recycling to 4 × 10⁻⁴, the rounding of the cache <span class="citation" data-cites="CPATAICaveats">(<a href="#ref-CPATAICaveats" role="doc-biblioref">CPAT-AI project 2026a</a>)</span>. This step proves that the rebuild understood the method before fixing anything in it, and it is the one level that ties the work to numbers no agent wrote.</p>
+<p><strong>Second, workbook equals Python.</strong> With the bugs fixed and the prototype’s own inputs, every row of the workbook must equal the Python reference in every test scenario. Further tests check properties that must hold whatever the numbers: generation equals required generation, the capacity balance holds, a carbon price raises the share of variable renewables and lowers power CO<sub>2</sub>, and totals equal the sum of their parts. A paste test copies a scenario’s block of columns, as a user would, and checks that the copies number themselves and reproduce the stored results <span class="citation" data-cites="CPATAIDocs">(<a href="#ref-CPATAIDocs" role="doc-biblioref">CPAT-AI project 2026c</a>)</span>. Some power rows added in release 0.9.0 still have no independent recomputation; the full check lists them, and they are covered by level 3 <span class="citation" data-cites="CPATAICaveats">(<a href="#ref-CPATAICaveats" role="doc-biblioref">CPAT-AI project 2026a</a>)</span>.</p>
+<p><strong>Third, Coded CPAT equals Excel-AI.</strong> For Egypt, scenarios 1 and 2, every year 2022–2041, each of the 7,472 reference output codes of Excel-AI’s stored results (7,458 with values) must be matched by Coded CPAT, for every code <span class="math inline">\(k\)</span> and year <span class="math inline">\(t\)</span>, <span id="eq-tolerance"><span class="math display">\[
+\frac{\left|y^{\text{Python}}_{kt} - y^{\text{Excel}}_{kt}\right|}{\max\left(1, \left|y^{\text{Excel}}_{kt}\right|\right)} \le 10^{-9},
+\tag{3}\]</span></span> except for codes listed as known differences, which must differ. The distribution module is compared the same way on 1,684 codes, and stored scenarios 3–6 on their 123 key codes each. The Python suite of release 1.0.2p1.1 has 65 tests and runs in about a minute; it must pass before every commit, and a failing comparison may not be loosened to pass <span class="citation" data-cites="CPATAIRepo CPATAINorms">(<a href="#ref-CPATAIRepo" role="doc-biblioref">CPAT-AI project 2026d</a>, <a href="#ref-CPATAINorms" role="doc-biblioref">2026b</a>)</span>.</p>
+<p><strong>Fourth, every release is a regression test.</strong> Each new version’s outputs are compared, code by code, with the previous release, and every difference must be zero or explained in the version table. Release 1.0.0 changed 0 of 15,086 output codes against its predecessor <span class="citation" data-cites="CPATAICaveats">(<a href="#ref-CPATAICaveats" role="doc-biblioref">CPAT-AI project 2026a</a>)</span>. When a release does change results, the version table names the register codes responsible: release 0.9.2, for instance, changed only nominal GDP in the mitigation results, because it fixed a unit error (M19) that Python had found <span class="citation" data-cites="CPATAIRepo">(<a href="#ref-CPATAIRepo" role="doc-biblioref">CPAT-AI project 2026d</a>)</span>.</p>
+<p><strong>Writing the model twice is itself a test, and it found bugs that the other checks missed.</strong> When Coded CPAT was written from the equation list and Excel-AI, its comparisons flagged eight places where the prototype did not compute what it meant to: VAT on efficient prices at the 2022 rate in every year (M15); a freight electric-vehicle feebate valued at the combustion-engine truck’s distance (M16); a plug-in hybrid cost that mixed electric capital cost with combustion insurance and maintenance (M17); nominal GDP divided by a billion although the source is already in billions (M19); two international gas price series read from each other’s rows (M20); a division by zero in the methane fee where a curve exponent is zero (M21); and a distribution row that added a percentage to amounts in local currency (M22) <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>)</span>. The eighth (M18) was withdrawn on review. The other seven were fixed in Excel-AI 0.9.2 and in Python, with no known differences left. The checks inside the Excel build had not caught them.</p>
+<p><strong>What the tests prove, and what they do not.</strong> The regime verifies; it does not validate <span class="citation" data-cites="Sargent2013">(<a href="#ref-Sargent2013" role="doc-biblioref">Sargent 2013</a>)</span>. It shows that three implementations compute the same thing and that every difference from legacy is a registered decision. It does not show that the elasticities are right, that the baseline fits history, or that the power model agrees with a full capacity-expansion model. Those are questions about the model, not the code, and they are taken up in papers 5.3 and 5.4 <span class="citation" data-cites="StrettonWP53 StrettonWP54">(<a href="#ref-StrettonWP53" role="doc-biblioref">Stretton 2026e</a>, <a href="#ref-StrettonWP54" role="doc-biblioref">2026b</a>)</span>. The first systematic comparison of Coded CPAT with legacy’s cached Egypt baseline shows the split. In the base year 2022, all 15 CO<sub>2</sub> rows and 91 percent of 129 energy-use rows are within 5 percent of legacy, because both start from the same energy balance; only 48 percent of 128 price rows are, because the rebuild uses price data two years newer and fixes the legacy price bugs <span class="citation" data-cites="CPATAIDocs">(<a href="#ref-CPATAIDocs" role="doc-biblioref">CPAT-AI project 2026c</a>)</span>.</p>
+</section>
+<section id="sec-ai" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> What AI assistance did and did not do</h1>
+<p><strong>AI coding agents did most of the construction.</strong> The repository is organized so that any AI tool starts from one routing file (<code>AGENTS.md</code>), which sends it to the same norms, bug lists, to-do lists and task log that people use; to change how the AI behaves, the team changes the norms, not the AI’s own instructions <span class="citation" data-cites="CPATAIRepo CPATAINorms">(<a href="#ref-CPATAIRepo" role="doc-biblioref">CPAT-AI project 2026d</a>, <a href="#ref-CPATAINorms" role="doc-biblioref">2026b</a>)</span>. Working under those norms, through Claude Code and GitHub Copilot, agents wrote the Python builders that generate the Excel workbook, the independent Python recomputations that check it, the whole of Coded CPAT and its tests, and the generators that turn the one register into the bug document, the tracker, the short lists and the documentation website. They surveyed legacy formula dumps block by block and drafted the cell-level fix plans that the CPAT team can apply to legacy <span class="citation" data-cites="CPATAICaveats">(<a href="#ref-CPATAICaveats" role="doc-biblioref">CPAT-AI project 2026a</a>)</span>.</p>
+<p><strong>The pace changed what was feasible for one owner.</strong> The task log records 241 finished tasks between 2 and 29 October 2026, each with its inputs, outputs and caveats <span class="citation" data-cites="CPATAICaveats">(<a href="#ref-CPATAICaveats" role="doc-biblioref">CPAT-AI project 2026a</a>)</span>. In four weeks the project went from a kernel workbook to a released, replicated model with a register of 454 entries. The author’s judgment is that a rebuild by hand on this scale needs a software team for many months, which a policy model maintained by economists does not have; that is one reason legacy CPAT had never been fully audited. The experimental evidence on AI productivity does not settle the counterfactual. In a controlled task, developers with an AI pair programmer finished 55.8 percent faster <span class="citation" data-cites="Peng2023">(<a href="#ref-Peng2023" role="doc-biblioref">Peng et al. 2023</a>)</span>. In a randomized trial with experienced developers working on their own mature projects, early-2025 AI tools made them 19 percent slower, although they expected to be 24 percent faster and afterward believed they had been <span class="citation" data-cites="Becker2025">(<a href="#ref-Becker2025" role="doc-biblioref">Becker et al. 2025</a>)</span>. CPAT-AI is closer to the first setting at the start (new code written to a clear specification) and closer to the second later (a large codebase with many rules). The log shows output, not a controlled comparison.</p>
+<p><strong>The agents did not make the judgments.</strong> Whether a difference is a bug or an issue is decided by rule, and the rule’s default is “issue: replicate it and ask”. Every departure from legacy that is not a bug fix carries an explicit decision by the model owner, dated in the register; a typical entry reads “user decision 2026-10-29: legacy prices”. The choice of scope (which modules to build, which upgrades to defer), the treatment of data, and acceptance of each release were the owner’s. Review in Excel 365, the environment in which ministries use the workbook, was still the owner’s open task at release 1.0.2 (issue I1) <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>)</span>.</p>
+<p><strong>The agents’ work needed the same checks as anyone’s, and so did the people’s.</strong> The task log records where AI output was taken partly on trust and says so: an equation list drafted by a subagent was spot-checked rather than checked line by line <span class="citation" data-cites="CPATAICaveats">(<a href="#ref-CPATAICaveats" role="doc-biblioref">CPAT-AI project 2026a</a>)</span>. The checks caught agent errors as they were meant to; a full check, for instance, stopped a release over one formula of 114 characters. And the same checks found two legacy bugs that the human owners had marked fixed but had not fixed <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>)</span>. The testing regime in <a href="#sec-testing" class="quarto-xref">Section&nbsp;6</a> exists because neither the agents nor the people can be trusted to be right without an independent test. A further norm makes the regime learn: a mistake whose cause could recur ends with a new norm and a check that would have caught it, added in the same task <span class="citation" data-cites="CPATAINorms">(<a href="#ref-CPATAINorms" role="doc-biblioref">CPAT-AI project 2026b</a>)</span>.</p>
+<p><strong>The strongest objection is common-mode error, and the evidence says it is real.</strong> If the same kind of agent writes the Excel builder, the Python recomputation and Coded CPAT from the same reading of legacy, a misreading can be copied into all three, and the tolerance test in <a href="#eq-tolerance" class="quarto-xref">equation&nbsp;3</a> would pass. Software engineering has known this for forty years. In Knight and Leveson’s experiment, 27 versions of one program written independently from the same specification were each highly reliable, but failed together far more often than independence predicts <span class="citation" data-cites="KnightLeveson1986">(<a href="#ref-KnightLeveson1986" role="doc-biblioref">Knight and Leveson 1986</a>)</span>. A 2026 replication with 48 versions written by AI coding agents again finds substantial common-mode failure, much of it where the specification is ambiguous; voting across three versions still cut the mean number of failures from 387 to 131 <span class="citation" data-cites="Ron2026">(<a href="#ref-Ron2026" role="doc-biblioref">Ron et al. 2026</a>)</span>. Building twice therefore helps, and the seven prototype bugs show it, but the second build is not independent of the first: Coded CPAT was written from Excel-AI’s equation list and checked against its stored values, so it shares Excel-AI’s reading of legacy by construction.</p>
+<p><strong>Three features limit the common-mode risk without removing it.</strong> The first test level ties each block back to legacy’s own stored results, which no agent wrote, with legacy’s bugs switched back on; a shared misreading of a formula would fail there. External validation against data and other models, in papers 5.3 and 5.4, tests the whole chain against things outside it <span class="citation" data-cites="StrettonWP53 StrettonWP54">(<a href="#ref-StrettonWP53" role="doc-biblioref">Stretton 2026e</a>, <a href="#ref-StrettonWP54" role="doc-biblioref">2026b</a>)</span>. And the fix plans and the tracker go to the CPAT team, whose members wrote legacy. The residual risk is a shared misunderstanding of what legacy <em>intends</em>, where the specification itself is ambiguous; only review by the model’s owners and users can catch that.</p>
+</section>
+<section id="sec-lessons" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Lessons for building and maintaining policy models</h1>
+<p><strong>Specify the model by codes, not by cell addresses.</strong> A shared code for every input, variable and output is what made three implementations comparable after every change. Ministries commissioning a model should require a codes map as a deliverable, so that any later reimplementation, audit or comparison is a table join rather than an archaeology project. The cost is a naming protocol agreed at the start; the failure condition is a model whose owners let names drift between versions.</p>
+<p><strong>Keep one register of everything known to be wrong or open.</strong> Bugs, issues, departures and upgrades belong in one list with one set of fields, from which every document is generated. A register shared with the model’s owners turns an audit into a work plan: the CPAT team marked 63 legacy bugs fixed in its next file within weeks of receiving the register, and each legacy bug comes with a cell-level fix plan where one is possible. The cost is discipline at every task; the failure condition is a register that is not regenerated, so that documents and code disagree.</p>
+<p><strong>Copy issues, fix bugs, and decide departures in writing.</strong> The replication rule keeps a rebuild faithful where the original is right and correct where it is not, and makes every difference traceable (<a href="#eq-closure" class="quarto-xref">equation&nbsp;2</a>). Its value is that it stops a rebuild from becoming a new model by accident. It costs owner time: someone with authority has to decide each departure, which is the single senior owner the UK review asks for <span class="citation" data-cites="Macpherson2013">(<a href="#ref-Macpherson2013" role="doc-biblioref">HM Treasury 2013</a>)</span>. It fails if the boundary between bug and issue is drawn by whoever happens to be coding.</p>
+<p><strong>Build the model twice, and test every change against the last release.</strong> A second implementation in a different language finds errors that checks within one implementation miss. Regression tests on every output code make each release a controlled experiment. The cost, once AI agents do most of the writing, is modest: Coded CPAT replicated Excel-AI’s mitigation and distribution modules within the same month. The failure condition is common-mode error <span class="citation" data-cites="KnightLeveson1986 Ron2026">(<a href="#ref-KnightLeveson1986" role="doc-biblioref">Knight and Leveson 1986</a>; <a href="#ref-Ron2026" role="doc-biblioref">Ron et al. 2026</a>)</span>, which only a test against the original’s own results, external validation and human review address.</p>
+<p><strong>Write the methodology for a reader who never saw an earlier version, and keep change history elsewhere.</strong> CPAT-AI separates method notes, which describe the current method only, from version notes and the task log <span class="citation" data-cites="CPATAINorms">(<a href="#ref-CPATAINorms" role="doc-biblioref">CPAT-AI project 2026b</a>)</span>. Legacy CPAT’s documentation had drifted from the workbook partly because the two jobs were mixed.</p>
+<p><strong>Use AI agents as builders under written norms, not as authorities.</strong> The agents in this project wrote code, documents and plans at a pace no single owner could match, but every judgment that changes what the model means was kept with a named person, and every output was tested by something independent of its author. That division of labor is the transferable lesson. It applies to any ministry or institution that maintains a model it did not build and cannot fully read.</p>
+<p><strong>The approach has limits a ministry should know.</strong> Excel-AI and Coded CPAT shipped at release 1.0.2 with complete data for Egypt only, because CPAT’s licensed data tables (energy balances, household surveys and others) were held for Egypt only in the legacy file the project used; other countries need the full database (issue I90) <span class="citation" data-cites="CPATAIBugs">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>)</span>. Since release 1.1.0 the public repository carries those tables only in perturbed form <span class="citation" data-cites="CPATAIRepo">(<a href="#ref-CPATAIRepo" role="doc-biblioref">CPAT-AI project 2026d</a>)</span>. The air-pollution and transport co-benefit modules are not yet rebuilt. The rebuild also inherits a structural problem it does not fix: CPAT describes road transport three times, in a simple fuel equation, an engineering fleet model and a co-benefits module that values congestion, accidents and road damage, and the three are not consistent. The co-benefits module always takes vehicle-km from the fleet model, even when fuel use and emissions follow the fuel equation, so the change in driving it values need not match the modeled change in fuel use (issue I100) <span class="citation" data-cites="CPATAIBugs StrettonWP64">(<a href="#ref-CPATAIBugs" role="doc-biblioref">CPAT-AI project 2026e</a>; <a href="#ref-StrettonWP64" role="doc-biblioref">Stretton 2026a</a>)</span>. And the whole regime proves consistency, not truth: a faithfully replicated wrong elasticity is still wrong.</p>
+</section>
+<section id="sec-conclusion" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Conclusion</h1>
+<p>Legacy CPAT was a working model that nobody could fully audit. Rebuilt twice under a rule that fixes bugs and copies issues, with shared codes and tests on every output, it turned out to contain 228 bugs, 24 of which change standard results, alongside 135 issues and 20 errors in its documentation; the second rebuild found seven bugs in the first. What is now known is not only that the model had errors, which was likely, but where each one is, how large it is and how to fix it in the original, in a register the owners are already working through. The main limitation is that verification is not validation: three implementations that agree to nine digits can share an assumption that the world does not. The next step is to rerun CPAT’s published validation <span class="citation" data-cites="StrettonWP53">(<a href="#ref-StrettonWP53" role="doc-biblioref">Stretton 2026e</a>)</span> and its elasticity checks <span class="citation" data-cites="StrettonWP54">(<a href="#ref-StrettonWP54" role="doc-biblioref">Stretton 2026b</a>)</span> on the corrected model for every country, once the full data are in, so that the model a ministry uses is both the model its authors intended and one that fits the evidence.</p>
+</section>
+<section id="downloads" class="level1 unnumbered">
+<h1 class="unnumbered">Downloads</h1>
+<p><a href="../../../papers/Brief-CPATAIImplementation.docx">Policy brief (docx)</a> · <a href="../../../papers/CPATAIImplementation.docx">Working paper (docx)</a></p>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Becker2025" class="csl-entry" role="listitem">
+Becker, Joel, Nate Rush, Elizabeth Barnes, and David Rein. 2025. <em>Measuring the Impact of Early-2025 <span>AI</span> on Experienced Open-Source Developer Productivity</em>. arXiv:2507.09089 [cs.AI]. <a href="https://doi.org/10.48550/arXiv.2507.09089">https://doi.org/10.48550/arXiv.2507.09089</a>.
+</div>
+<div id="ref-Black2023CPAT" class="csl-entry" role="listitem">
+Black, Simon, Ian Parry, Victor Mylonas, Nate Vernon-Lin, and Karlygash Zhunussova. 2023. <em>The <span>IMF-World Bank</span> Climate Policy Assessment Tool (<span>CPAT</span>): A Model to Help Countries Mitigate Climate Change</em>. IMF Working Paper 2023/128. International Monetary Fund. <a href="https://doi.org/10.5089/9798400242342.001">https://doi.org/10.5089/9798400242342.001</a>.
+</div>
+<div id="ref-CPATDocMitigation" class="csl-entry" role="listitem">
+Campmas, Alexandra, Daniel Bastidas, Olivier Lelouch, Faustyna Gawryluk, Paolo Agnolucci, and Stephen Stretton. 2023. <span>“The Mitigation Module.”</span> In <em><span>CPAT</span> Documentation: <span>WB-IMF</span> Climate Policy Assessment Tool</em>. World Bank; International Monetary Fund. <a href="https://cpmodelai.github.io/cpat_ai/">https://cpmodelai.github.io/cpat_ai/</a>.
+</div>
+<div id="ref-ChangLi2015" class="csl-entry" role="listitem">
+Chang, Andrew C., and Phillip Li. 2015. <em>Is Economics Research Replicable? Sixty Published Papers from Thirteen Journals Say <span>“Usually Not”</span></em>. Finance and Economics Discussion Series Nos. 2015-083. Board of Governors of the Federal Reserve System. <a href="https://doi.org/10.17016/FEDS.2015.083">https://doi.org/10.17016/FEDS.2015.083</a>.
+</div>
+<div id="ref-CPATDoc" class="csl-entry" role="listitem">
+CPAT Team. 2023. <em><span>CPAT</span> Documentation: <span>WB-IMF</span> Climate Policy Assessment Tool</em>. World Bank; International Monetary Fund. <a href="https://cpmodelai.github.io/cpat_ai/">https://cpmodelai.github.io/cpat_ai/</a>.
+</div>
+<div id="ref-CPATAICaveats" class="csl-entry" role="listitem">
+CPAT-AI project. 2026a. <em><span>CAVEATS</span>: Log of Completed Tasks</em>. CPAT-AI repository, excel_ai/core/CAVEATS.md (entries 2 to 31 October 2026). <a href="https://github.com/cpmodelai/cpat_ai/blob/main/excel_ai/core/CAVEATS.md">https://github.com/cpmodelai/cpat_ai/blob/main/excel_ai/core/CAVEATS.md</a>.
+</div>
+<div id="ref-CPATAINorms" class="csl-entry" role="listitem">
+CPAT-AI project. 2026b. <em><span>CPAT-AI</span> Norms (Excel-AI) and the Python Norms of Coded <span>CPAT</span></em>. CPAT-AI repository, excel_ai/NORMS.md (now excel_ai/core/NORMS.md) and coded/NORMS.md. <a href="https://github.com/cpmodelai/cpat_ai/blob/main/excel_ai/core/NORMS.md">https://github.com/cpmodelai/cpat_ai/blob/main/excel_ai/core/NORMS.md</a>.
+</div>
+<div id="ref-CPATAIDocs" class="csl-entry" role="listitem">
+CPAT-AI project. 2026c. <em><span>CPAT-AI</span> Project Documentation and Coded <span>CPAT</span> Documentation (Testing, Architecture), with the Legacy Comparison</em>. CPAT-AI repository, docs/CPAT_ai_documentation_qmd, docs/CPAT_coded_documentation_qmd and coded/cpat_testing/compare/legacy_comparison.md; website https://cpmodelai.github.io/cpat_ai/. <a href="https://cpmodelai.github.io/cpat_ai/">https://cpmodelai.github.io/cpat_ai/</a>.
+</div>
+<div id="ref-CPATAIRepo" class="csl-entry" role="listitem">
+CPAT-AI project. 2026d. <em><span>CPAT-AI</span>: Excel-AI and Coded <span>CPAT</span>, Release 1.0.2 (Excel-AI) and 1.0.2p1.1 (Coded <span>CPAT</span>)</em>. GitHub repository cpmodelai/cpat_ai, releases of 29 October 2026; README.md, coded/README.md and coded/CHANGELOG.md. <a href="https://github.com/cpmodelai/cpat_ai">https://github.com/cpmodelai/cpat_ai</a>.
+</div>
+<div id="ref-CPATAIBugs" class="csl-entry" role="listitem">
+CPAT-AI project. 2026e. <em>Tracking Legacy Bugs, Version 1.0.2, and Legacy <span>CPAT</span> Bugs, Version 1.0.2: The Register of Bugs, Issues, Departures and Upgrades</em>. CPAT-AI repository, excel_ai/bugs_and_legacy/register/releases/Tracking_Legacy_Bugs_v1.0.2.xlsx and Legacy_CPAT_Bugs_v1.0.2.docx (29 October 2026); current lists in excel_ai/core/BUGS.md and ISSUES.md. <a href="https://github.com/cpmodelai/cpat_ai/tree/main/excel_ai/bugs_and_legacy">https://github.com/cpmodelai/cpat_ai/tree/main/excel_ai/bugs_and_legacy</a>.
+</div>
+<div id="ref-Herndon2014" class="csl-entry" role="listitem">
+Herndon, Thomas, Michael Ash, and Robert Pollin. 2014. <span>“Does High Public Debt Consistently Stifle Economic Growth? A Critique of <span>Reinhart</span> and <span>Rogoff</span>.”</span> <em>Cambridge Journal of Economics</em> 38 (2): 257–79. <a href="https://doi.org/10.1093/cje/bet075">https://doi.org/10.1093/cje/bet075</a>.
+</div>
+<div id="ref-Macpherson2013" class="csl-entry" role="listitem">
+HM Treasury. 2013. <em>Review of Quality Assurance of Government Analytical Models: Final Report</em>. Report by Sir Nicholas Macpherson. HM Treasury. <a href="https://www.gov.uk/government/publications/review-of-quality-assurance-of-government-models">https://www.gov.uk/government/publications/review-of-quality-assurance-of-government-models</a>.
+</div>
+<div id="ref-KnightLeveson1986" class="csl-entry" role="listitem">
+Knight, John C., and Nancy G. Leveson. 1986. <span>“An Experimental Evaluation of the Assumption of Independence in Multiversion Programming.”</span> <em>IEEE Transactions on Software Engineering</em> SE-12 (1): 96–109. <a href="https://doi.org/10.1109/TSE.1986.6312924">https://doi.org/10.1109/TSE.1986.6312924</a>.
+</div>
+<div id="ref-Korinek2023" class="csl-entry" role="listitem">
+Korinek, Anton. 2023. <span>“Generative <span>AI</span> for Economic Research: Use Cases and Implications for Economists.”</span> <em>Journal of Economic Literature</em> 61 (4): 1281–317. <a href="https://doi.org/10.1257/jel.20231736">https://doi.org/10.1257/jel.20231736</a>.
+</div>
+<div id="ref-Panko1998" class="csl-entry" role="listitem">
+Panko, Raymond R. 1998. <span>“What We Know about Spreadsheet Errors.”</span> <em>Journal of End User Computing</em> 10 (2): 15–21. <a href="https://doi.org/10.4018/joeuc.1998040102">https://doi.org/10.4018/joeuc.1998040102</a>.
+</div>
+<div id="ref-Peng2023" class="csl-entry" role="listitem">
+Peng, Sida, Eirini Kalliamvakou, Peter Cihon, and Mert Demirer. 2023. <em>The Impact of <span>AI</span> on Developer Productivity: Evidence from <span>GitHub Copilot</span></em>. arXiv:2302.06590 [cs.SE]. <a href="https://doi.org/10.48550/arXiv.2302.06590">https://doi.org/10.48550/arXiv.2302.06590</a>.
+</div>
+<div id="ref-Pfenninger2017" class="csl-entry" role="listitem">
+Pfenninger, Stefan, Joseph DeCarolis, Lion Hirth, Sylvain Quoilin, and Iain Staffell. 2017. <span>“The Importance of Open Data and Software: Is Energy Research Lagging Behind?”</span> <em>Energy Policy</em> 101: 211–15. <a href="https://doi.org/10.1016/j.enpol.2016.11.046">https://doi.org/10.1016/j.enpol.2016.11.046</a>.
+</div>
+<div id="ref-Powell2008" class="csl-entry" role="listitem">
+Powell, Stephen G., Kenneth R. Baker, and Barry Lawson. 2008. <span>“A Critical Review of the Literature on Spreadsheet Errors.”</span> <em>Decision Support Systems</em> 46 (1): 128–38. <a href="https://doi.org/10.1016/j.dss.2008.06.001">https://doi.org/10.1016/j.dss.2008.06.001</a>.
+</div>
+<div id="ref-Ron2026" class="csl-entry" role="listitem">
+Ron, Javier, Benoit Baudry, and Martin Monperrus. 2026. <em>N-Version Programming with Coding Agents</em>. arXiv:2606.20158 [cs.SE], 18 June 2026. <a href="https://doi.org/10.48550/arXiv.2606.20158">https://doi.org/10.48550/arXiv.2606.20158</a>.
+</div>
+<div id="ref-Sargent2013" class="csl-entry" role="listitem">
+Sargent, Robert G. 2013. <span>“Verification and Validation of Simulation Models.”</span> <em>Journal of Simulation</em> 7 (1): 12–24. <a href="https://doi.org/10.1057/jos.2012.20">https://doi.org/10.1057/jos.2012.20</a>.
+</div>
+<div id="ref-StrettonWP64" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026a. <span>“Activity Levels Across <span>CPAT</span>, <span>SISEPUEDE</span>, <span>CBAM</span> and <span>FTT</span>.”</span> Unpublished manuscript.
+</div>
+<div id="ref-StrettonWP54" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026b. <span>“Are <span>CPAT</span>’s Price Elasticities Right?”</span> Unpublished manuscript.
+</div>
+<div id="ref-CFPB61" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026c. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-StrettonWP51" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026d. <span>“The <span>CPAT</span> Mitigation Module: Methods in Brief.”</span> Unpublished manuscript.
+</div>
+<div id="ref-StrettonWP53" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026e. <span>“Validating <span>CPAT</span>: Baselines, Back-Casts and Model Comparisons.”</span> Unpublished manuscript.
+</div>
+<div id="ref-UNWPP2024" class="csl-entry" role="listitem">
+United Nations, Department of Economic and Social Affairs, Population Division. 2024. <em>World Population Prospects 2024</em>. Medium variant, total population by sex (WPP2024_TotalPopulationBySex.csv). <a href="https://population.un.org/wpp/">https://population.un.org/wpp/</a>.
+</div>
+<div id="ref-Wilson2014" class="csl-entry" role="listitem">
+Wilson, Greg, D. A. Aruliah, C. Titus Brown, et al. 2014. <span>“Best Practices for Scientific Computing.”</span> <em>PLoS Biology</em> 12 (1): e1001745. <a href="https://doi.org/10.1371/journal.pbio.1001745">https://doi.org/10.1371/journal.pbio.1001745</a>.
+</div>
+</div>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The legacy Climate Policy Assessment Tool is the joint work of the IMF and World Bank CPAT teams; its mitigation documentation was prepared by Alexandra Campmas, Daniel Bastidas, Olivier Lelouch, Faustyna Gawryluk, Paolo Agnolucci and the author, building on earlier work by Ian Parry, Simon Black, Karlygash Zhunussova, Nate Vernon-Lin and Victor Mylonas <span class="citation" data-cites="CPATDocMitigation Black2023CPAT">(<a href="#ref-CPATDocMitigation" role="doc-biblioref">Campmas et al. 2023</a>; <a href="#ref-Black2023CPAT" role="doc-biblioref">Black et al. 2023</a>)</span>. CPAT’s air-pollution module is the work of Paulina Schulz-Antipa, who leads it in CPAT-AI; the distribution and transport co-benefit modules are led by other colleagues on the CPAT team; the mitigation rebuild and this paper are the author’s. Every count in this paper is from release 1.0.2 of the repository (29 October 2026) unless stated otherwise <span class="citation" data-cites="CPATAIRepo CPATAIBugs">(<a href="#ref-CPATAIRepo" role="doc-biblioref">CPAT-AI project 2026d</a>, <a href="#ref-CPATAIBugs" role="doc-biblioref">2026e</a>)</span>. Errors are the author’s own.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

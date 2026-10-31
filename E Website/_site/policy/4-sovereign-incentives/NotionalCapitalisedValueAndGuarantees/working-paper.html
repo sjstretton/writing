@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephen J. Stretton">
+<meta name="keywords" content="sovereign incentives, guarantees, carbon stocks, forest conservation, results-based climate finance, multilateral development banks">
+
+<title>Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives – Climate, Fiscal &amp; Finance</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Climate, Fiscal &amp; Finance</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../index.html" aria-current="page"> 
+<span class="menu-text">Policy and Finance</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../modelling/index.html"> 
+<span class="menu-text">Modelling and Analytics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../policy/4-sovereign-incentives.html">4. Sovereign Incentives</a></li><li class="breadcrumb-item"><a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.html">4.1 Reward the Stock as Well as the Flow</a></li><li class="breadcrumb-item"><a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/working-paper.html">Working paper</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Policy and Finance</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Carbon Pricing</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 Price Production and Consumption Separately</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 Feebates</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 Converting a VAT into a Destination Carbon Tax</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing/IronSteelCBAM/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 Credit the Price Signal, Not the Payment</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/1-carbon-pricing/IronSteelCBAM/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/2-other-tax.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Other Tax and Fiscal Policy</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/2-other-tax/RentTax/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 Taxing Rent, Not Effort</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/2-other-tax/RentTax/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/2-other-tax/LandPaysForTheCity/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 Let Land Pay for the City</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/3-finance-and-risk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Finance and Risk</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.1 Guarantee the Contract, Not the Debt</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/3-finance-and-risk/CleanPowerAssetClasses/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.2 From Projects to Asset Classes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/3-finance-and-risk/CleanPowerAssetClasses/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Sovereign Incentives</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.1 Reward the Stock as Well as the Flow</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/working-paper.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.2 The Climate Investment Trust</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives/SustainabilityLinkedLending/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/4-sovereign-incentives/SustainabilityLinkedLending/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/more.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Books and Other Papers</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/books/Plucked/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plucked!</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/01-facing-global-risks-head-on.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Facing Global Risks Head On</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/02-revolutions-in-the-minds-of-men.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Revolutions in the Minds of Men</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/03-desert-island-economics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Desert Island Economics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/04-the-questions-posed-by-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. The Questions Posed by This Book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/05-tax-in-principle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Tax in Principle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/06-tax-in-practice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Tax in Practice</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/07-welfare-and-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Welfare and Work</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/08-income-wealth-and-inequality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Income, Wealth and Inequality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/09-corporations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. Corporations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/10-land-and-property.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10. Land and Property</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/11-money-debt-and-finance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11. Money, Debt, and Finance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/12-environment-health-and-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12. Environment, Health, and Resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/13-the-global-perspective-climate-fiscal-policy-and-collective-action.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13. The Global Perspective: Climate, Fiscal Policy and Collective Action</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/14-conclusions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13. Conclusions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link active" data-scroll-target="#sec-summary"><span class="header-section-number">1</span> Executive summary</a></li>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link" data-scroll-target="#sec-intro"><span class="header-section-number">2</span> Introduction</a></li>
+  <li><a href="#sec-literature" id="toc-sec-literature" class="nav-link" data-scroll-target="#sec-literature"><span class="header-section-number">3</span> Literature and precedents</a></li>
+  <li><a href="#sec-definition" id="toc-sec-definition" class="nav-link" data-scroll-target="#sec-definition"><span class="header-section-number">4</span> The notional capitalized value</a>
+  <ul class="collapse">
+  <li><a href="#sec-balance" id="toc-sec-balance" class="nav-link" data-scroll-target="#sec-balance"><span class="header-section-number">4.1</span> Definition: a balance that the stock opens and emissions draw down</a></li>
+  <li><a href="#sec-formulations" id="toc-sec-formulations" class="nav-link" data-scroll-target="#sec-formulations"><span class="header-section-number">4.2</span> Four formulations, reconciled</a></li>
+  <li><a href="#sec-two-prices" id="toc-sec-two-prices" class="nav-link" data-scroll-target="#sec-two-prices"><span class="header-section-number">4.3</span> Why the stock and the debit need different prices</a></li>
+  </ul></li>
+  <li><a href="#sec-model" id="toc-sec-model" class="nav-link" data-scroll-target="#sec-model"><span class="header-section-number">5</span> Model</a>
+  <ul class="collapse">
+  <li><a href="#sec-setup" id="toc-sec-setup" class="nav-link" data-scroll-target="#sec-setup"><span class="header-section-number">5.1</span> Setup</a></li>
+  <li><a href="#sec-p1" id="toc-sec-p1" class="nav-link" data-scroll-target="#sec-p1"><span class="header-section-number">5.2</span> Proposition 1: a guarantee is worth several times what it costs</a></li>
+  <li><a href="#sec-p2" id="toc-sec-p2" class="nav-link" data-scroll-target="#sec-p2"><span class="header-section-number">5.3</span> Proposition 2: the debit must be per tonne, and capacity must bind</a></li>
+  <li><a href="#sec-p3" id="toc-sec-p3" class="nav-link" data-scroll-target="#sec-p3"><span class="header-section-number">5.4</span> Proposition 3: paying for acting now</a></li>
+  <li><a href="#sec-quantities" id="toc-sec-quantities" class="nav-link" data-scroll-target="#sec-quantities"><span class="header-section-number">5.5</span> Three quantities, kept apart</a></li>
+  </ul></li>
+  <li><a href="#sec-calibration" id="toc-sec-calibration" class="nav-link" data-scroll-target="#sec-calibration"><span class="header-section-number">6</span> Calibration</a>
+  <ul class="collapse">
+  <li><a href="#sec-params" id="toc-sec-params" class="nav-link" data-scroll-target="#sec-params"><span class="header-section-number">6.1</span> Parameters</a></li>
+  <li><a href="#sec-ch21" id="toc-sec-ch21" class="nav-link" data-scroll-target="#sec-ch21"><span class="header-section-number">6.2</span> Correcting the original arithmetic</a></li>
+  <li><a href="#sec-forest" id="toc-sec-forest" class="nav-link" data-scroll-target="#sec-forest"><span class="header-section-number">6.3</span> A forest country</a></li>
+  <li><a href="#sec-scale" id="toc-sec-scale" class="nav-link" data-scroll-target="#sec-scale"><span class="header-section-number">6.4</span> How big must the scheme be?</a></li>
+  <li><a href="#sec-coal" id="toc-sec-coal" class="nav-link" data-scroll-target="#sec-coal"><span class="header-section-number">6.5</span> A coal-reserve country</a></li>
+  <li><a href="#sec-early" id="toc-sec-early" class="nav-link" data-scroll-target="#sec-early"><span class="header-section-number">6.6</span> Early action in numbers</a></li>
+  <li><a href="#sec-sensitivity" id="toc-sec-sensitivity" class="nav-link" data-scroll-target="#sec-sensitivity"><span class="header-section-number">6.7</span> Sensitivity</a></li>
+  </ul></li>
+  <li><a href="#sec-delivery" id="toc-sec-delivery" class="nav-link" data-scroll-target="#sec-delivery"><span class="header-section-number">7</span> Institutional delivery</a></li>
+  <li><a href="#sec-risks" id="toc-sec-risks" class="nav-link" data-scroll-target="#sec-risks"><span class="header-section-number">8</span> Risks and safeguards</a></li>
+  <li><a href="#sec-policy" id="toc-sec-policy" class="nav-link" data-scroll-target="#sec-policy"><span class="header-section-number">9</span> Policy implications</a></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">10</span> Conclusion</a></li>
+  <li><a href="#downloads" id="toc-downloads" class="nav-link" data-scroll-target="#downloads">Downloads</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  
+  
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../policy/4-sovereign-incentives.html">4. Sovereign Incentives</a></li><li class="breadcrumb-item"><a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.html">4.1 Reward the Stock as Well as the Flow</a></li><li class="breadcrumb-item"><a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/working-paper.html">Working paper</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives</h1>
+<p class="subtitle lead">Turning carbon stocks and low-emission paths into cheaper borrowing</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stephen J. Stretton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>Climate finance pays countries for marginal emission cuts measured against counterfactuals nobody can observe, and pays almost nothing for carbon stocks that were never released. This paper proposes a notional capitalized value: a balance opened by a country’s carbon stock, debited for every tonne emitted above an agreed allowance, and used not as cash but as guarantee capacity on its green borrowing. A guarantee saves the borrower the full credit spread but costs its provider only expected loss and the carry on a buffer, so on the development banks’ own sovereign loss record each dollar of expected loss buys about 80 dollars of interest saving. Net of the default option the borrower gives up, the figure is about 27; in a stress case without the banks’ preferred-creditor status it is 2.7, or 1.9 net. The stock should set the size of the balance and a separate price the debit per tonne. For a stylized forest country with Guyana’s carbon stock, a $5 billion balance saves $150 million a year and prices emissions at about $30 per tonne, at a donor cost of about 40 cents per tonne ($11 in the stress case). Capacity that declines as fast as technology costs fall is the cheapest way to make acting now beat waiting.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>sovereign incentives, guarantees, carbon stocks, forest conservation, results-based climate finance, multilateral development banks</p>
+  </div>
+</div>
+
+</header>
+
+
+<p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is <a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.html">Climate Fiscal Policy Brief No.&nbsp;4.1</a>.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<section id="sec-summary" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
+<p><a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-NotionalCapitalisedValueAndGuarantees.pptx">Slides (pptx)</a></p>
+<p><strong>Climate finance pays for the flow of emissions and almost nothing for the stock.</strong> Guyana’s forests hold about 19.5 billion tonnes of CO₂-equivalent. What Guyana sells is credits for emissions avoided against a reference level, about $50 million a year from Hess. Countries that never cleared have little to sell, generous baselines sell more, and the money arrives years after the political cost of reform. Donors will not vote cash on the scale stocks like Guyana’s would justify: Ecuador asked the world for $3.6 billion to leave an oil field unexploited and raised about $13.5 million.</p>
+<p><strong>The proposal is a notional capitalized value: a balance that the stock opens and emissions draw down.</strong> Each participating country gets an opening balance equal to its verified carbon stock times a low stock price. Each year the balance is debited at a higher, uniform debit price for every tonne the country emits above an agreed allowance, and credited for every tonne below. The balance is never paid out. It sets the country’s guarantee capacity: the maximum outstanding guarantee exposure that development banks, backed by a buffer fund, will provide on its eligible green borrowing.</p>
+<p><strong>A guarantee is worth much more to the borrower than it costs the guarantor.</strong> The country saves the spread between its own borrowing rate and the guaranteed rate; the guarantor bears only the expected loss. On the development banks’ record for sovereign lending (defaults of 0.77 percent a year, 95.1 percent recovered), a 3-point spread saving buys about $80 of interest saving per dollar of expected loss. Part of that saving is not a gain: a country that borrows under a guarantee backed by its own counter-indemnity gives up the option to default on that debt. Counting only the risk premium in the spread, about a third of it, the ratio is about 27. A new facility might not inherit the banks’ preferred-creditor status; in a stress case with 3 percent of guarantees called a year and 37 cents lost on the dollar, the ratios are 2.7 and 1.9.</p>
+<p><strong>The stock and the margin need different prices.</strong> Priced at $100 a tonne, Guyana’s stock would be a $1.95 trillion balance that no guarantor could back and that never binds, so an extra tonne would cost nothing. With the balance sized to a $5 billion borrowing need and a separate $50 debit per tonne, each tonne costs the country about $30 in lost interest savings: $32,500 per hectare cleared, against the $400–800 the Tropical Forest Forever Facility deducts. The country saves $150 million a year; donors hold a $25 million buffer and expect to lose about $2 million a year, 40 cents per tonne of incentive ($11 in the stress case). The $30 holds only while capacity binds and the scheme is open-ended, so surplus balance must flow to a beneficiary account.</p>
+<p><strong>The incentive scales with borrowing, not with the stock.</strong> Each $1 billion a year of incentive needs $33 billion of guarantee capacity, a buffer of $0.16 billion and about $13 million a year of expected losses on the banks’ record ($3.1 billion and $370 million in the stress case). The scheme is strong for large, lower-rated borrowers and weak for investment-grade or lightly indebted ones, for whom interest on the balance paid into a trust account is the better form.</p>
+<p><strong>Capacity that declines over time pays for acting now.</strong> Falling technology costs reward waiting. For a stylized $1 billion coal-to-renewables reform cutting 5 million tonnes a year, acting now needs an incentive of $20 a tonne ($32–37 allowing for uncertainty). Letting capacity decline as fast as technology costs fall halves the donor cost of that incentive, from $25 million to $13 million on the record. Paid in cash, it would cost $1 billion.</p>
+<p><strong>What to do.</strong> Development bank shareholders should create rules-based guarantee capacity outside country envelopes, allocated by notional capitalized value, with a uniform debit price and capacity sized to bind. Donors should fund the buffer, held in a trust, not the reward. Forest and coal countries should negotiate allowances, which change how much they get, rather than baselines, which change what they are paid for.</p>
+</section>
+<section id="sec-intro" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
+<p>Guyana’s forests store about 19.5 billion tonnes of CO₂-equivalent on some 18 million hectares <span class="citation" data-cites="Guyana2022LCDS">(<a href="#ref-Guyana2022LCDS" role="doc-biblioref">Government of Guyana 2022</a>)</span>. At the $20 per tonne that Hess will pay, at least, on average for Guyana’s forest credits, that stock would be worth $390 billion. What Guyana sells instead is the gap between its emissions and a reference level. The Architecture for REDD+ Transactions (ART) issued it 33.47 million credits for 2016–2020, and Hess agreed to buy 2.5 million credits a year of vintages 2016–2030, 37.5 million in all, for at least $750 million <span class="citation" data-cites="GuyanaDPI2023">(<a href="#ref-GuyanaDPI2023" role="doc-biblioref">Department of Public Information, Guyana 2023</a>)</span>, about $50 million a year. The stock enters only through a contested adjustment to the reference level that lets a high-forest, low-deforestation country credit against less than 0.05 percent of its stock a year <span class="citation" data-cites="ICVCM2026HFLD ARTGuyana2022">(<a href="#ref-ICVCM2026HFLD" role="doc-biblioref">Integrity Council for the Voluntary Carbon Market 2026</a>; <a href="#ref-ARTGuyana2022" role="doc-biblioref">Aster Global Environmental Solutions 2022</a>)</span>. Leaving coal or oil in the ground earns nothing at all.</p>
+<p>Two defects follow, and both are about the form of the reward rather than its size. First, paying for marginal tonnes against a counterfactual rewards whoever can claim the most generous baseline: an evaluation of voluntary forest-conservation projects found that most did not measurably reduce deforestation, and those that did reduced it far less than claimed <span class="citation" data-cites="West2023">(<a href="#ref-West2023" role="doc-biblioref">West et al. 2023</a>)</span>. Second, the payment arrives after the result, often years after a government pays the political cost of reform, so it guards against reversal more than it starts anything <span class="citation" data-cites="Angelsen2017 StrettonTC">(<a href="#ref-Angelsen2017" role="doc-biblioref">Angelsen 2017</a>; <a href="#ref-StrettonTC" role="doc-biblioref">Stretton 2026j</a>, ch.&nbsp;20)</span>. Paying more per tonne fixes neither defect, and donors will not vote cash on the scale that tropical forest stocks would justify. Ecuador’s Yasuní-ITT initiative asked for $3.6 billion over thirteen years to leave an oil field of about 920 million barrels unexploited, and had collected about $13.5 million when it was abandoned in 2013 <span class="citation" data-cites="HernandezRenteria2020">(<a href="#ref-HernandezRenteria2020" role="doc-biblioref">Hernández Rentería 2020</a>)</span>.</p>
+<p>This paper asks how the international system can give a government a large, early and credible incentive to protect carbon stocks and cut emissions without a cash transfer that donors will not vote for.</p>
+<p>The answer is to credit each participating country with a notional capitalized value (NCV): an opening balance set by its carbon stock, debited for every tonne it emits above an agreed allowance and credited for every tonne below it. The balance is never paid out. It sets the country’s guarantee capacity, the maximum outstanding guarantee exposure that multilateral development banks (MDBs), backed by a buffer fund, will provide on the country’s eligible green borrowing. The country gains the spread it saves on guaranteed debt; donors bear the expected loss on the exposure and the carry cost of the buffer. Because each tonne emitted shrinks the balance, the incentive acts from the first year. Because capacity can be scheduled to decline, the reward is largest for acting early.</p>
+<p>The paper makes four contributions.</p>
+<ol type="1">
+<li><strong>It derives what the incentive is worth and what it costs</strong> (<a href="#sec-p1" class="quarto-xref">Section&nbsp;5.2</a>). The ratio of interest saved to guarantor cost equals the spread saved divided by expected loss plus buffer carry: about 80 on the MDBs’ own sovereign loss record, 10 in a middle case and 2.7 in a stress case without preferred-creditor status. Because the country gives up its option to default on guaranteed debt, its economic gain is smaller than its budget saving: the risk premium in the spread plus the guarantor’s expected loss. With a premium of a third of the spread, the ratios are about 27, 4.3 and 1.9 (Proposition 1).</li>
+<li><strong>It separates the two prices</strong> (<a href="#sec-two-prices" class="quarto-xref">Section&nbsp;4.3</a>, <a href="#sec-p2" class="quarto-xref">Section&nbsp;5.3</a>). A single notional price cannot both size the balance and price the margin. The stock should set the size of the balance and a uniform debit price the reward per tonne. The debit must be per tonne emitted and capacity must bind, or the marginal incentive is zero; when both hold, the incentive is a carbon price equal to the debit price times the spread over the discount rate (Proposition 2). The stock is what makes the debit enforceable: a sovereign will not pay a charge for emitting, but it can lose part of a balance it has not drawn.</li>
+<li><strong>It prices acting now</strong> (<a href="#sec-p3" class="quarto-xref">Section&nbsp;5.4</a>). Acting now beats waiting if and only if the initial incentive per tonne covers the interest and technology-cost return to waiting, and the cheapest schedule that achieves this lets capacity decline at the rate technology costs fall (Proposition 3).</li>
+<li><strong>It calibrates the scheme</strong> (<a href="#sec-calibration" class="quarto-xref">Section&nbsp;6</a>) for a forest country with Guyana’s verified stock, for a coal country with Indonesia’s reserves, and for the scale needed to make an incentive large. It corrects the arithmetic of the original proposal, which understates its own incentive tenfold.</li>
+</ol>
+<p>The closest work is of three kinds. ART’s high-forest, low-deforestation (HFLD) crediting and the earlier proposal of “preventive credits” for such countries <span class="citation" data-cites="daFonseca2007">(<a href="#ref-daFonseca2007" role="doc-biblioref">Fonseca et al. 2007</a>)</span> reward stocks by raising the baseline against which avoided emissions are counted, which is why they are contested on additionality <span class="citation" data-cites="ICVCM2026HFLD">(<a href="#ref-ICVCM2026HFLD" role="doc-biblioref">Integrity Council for the Voluntary Carbon Market 2026</a>)</span>. The Tropical Forest Forever Facility (TFFF) pays forest countries per hectare of standing forest out of the spread on a leveraged bond portfolio <span class="citation" data-cites="TFFF2025CN">(<a href="#ref-TFFF2025CN" role="doc-biblioref">Government of Brazil 2025</a>)</span>. And the theory of conservation contracts shows that paying an owner to conserve can fail, because the owner gains from threatening to exploit <span class="citation" data-cites="Harstad2016">(<a href="#ref-Harstad2016" role="doc-biblioref">Harstad 2016</a>)</span>. This paper differs from all three in delivering the reward through guarantees, where the gap between the borrower’s value and the provider’s cost creates the leverage; in fixing the stock reward at entry and pricing every tonne released at a uniform rate, which removes both the baseline game and the gain from threats; and in deriving when the reward changes what a government does and when it does it.</p>
+</section>
+<section id="sec-literature" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Literature and precedents</h1>
+<p><em>Results-based forest finance pays for flows against reference levels.</em> The Paris Agreement encourages results-based payments for reducing emissions from deforestation and forest degradation (REDD+) <span class="citation" data-cites="UNFCCC2015">(<a href="#ref-UNFCCC2015" role="doc-biblioref">UNFCCC 2015</a>, Article 5.2)</span>. A review of Norway’s partly performance-based agreements with Brazil, Guyana, Indonesia and Tanzania identifies reference levels, performance criteria, risk sharing and the credibility of funding as the main design problems of results-based aid <span class="citation" data-cites="Angelsen2017">(<a href="#ref-Angelsen2017" role="doc-biblioref">Angelsen 2017</a>)</span>. Jurisdictional standards such as ART-TREES moved crediting from projects to national or subnational territories, which removes within-country leakage and makes the counterfactual a national rather than a project baseline. Guyana is the leading case: 33.47 million credits for 2016–2020, of which Hess buys 2.5 million a year at $15 per tonne for the first vintages, under a contract worth at least $750 million <span class="citation" data-cites="GuyanaDPI2023">(<a href="#ref-GuyanaDPI2023" role="doc-biblioref">Department of Public Information, Guyana 2023</a>)</span>. The price is modest, the stream is long, and the payment is for avoided flow.</p>
+<p><em>Baselines are the weak point, and the stock is rewarded by bending them.</em> An evaluation of 26 voluntary forest-conservation projects using synthetic controls found that most did not significantly reduce deforestation and that claimed reductions far exceeded measured ones <span class="citation" data-cites="West2023">(<a href="#ref-West2023" role="doc-biblioref">West et al. 2023</a>)</span>. Jurisdictional baselines are harder to game but face the same logic: a country whose deforestation was always low has little to sell, and a country that raised deforestation before the baseline period is rewarded for lowering it again <span class="citation" data-cites="StrettonTC">(<a href="#ref-StrettonTC" role="doc-biblioref">Stretton 2026j</a>, ch.&nbsp;20)</span>. To include low-deforestation countries, <span class="citation" data-cites="daFonseca2007">Fonseca et al. (<a href="#ref-daFonseca2007" role="doc-biblioref">2007</a>)</span> proposed “preventive credits” against a reference rate indexed to the global deforestation rate. ART’s HFLD approach does something similar: it adds to measured reductions a credit on less than 0.05 percent of the standing stock a year, as if that much were at risk <span class="citation" data-cites="ICVCM2026HFLD">(<a href="#ref-ICVCM2026HFLD" role="doc-biblioref">Integrity Council for the Voluntary Carbon Market 2026</a>)</span>. Guyana’s 2016–2020 credits used this approach, with a crediting level of 22.6 million tonnes a year <span class="citation" data-cites="ARTGuyana2022">(<a href="#ref-ARTGuyana2022" role="doc-biblioref">Aster Global Environmental Solutions 2022</a>)</span>. The integrity council for the voluntary market has made approval of these credits conditional on remedial action, because the adjustment is hard to show to be additional <span class="citation" data-cites="ICVCM2026HFLD">(<a href="#ref-ICVCM2026HFLD" role="doc-biblioref">Integrity Council for the Voluntary Carbon Market 2026</a>)</span>. This is a stock reward presented as an avoided-emissions credit, and it inherits the credibility problems of both.</p>
+<p><em>Stock-based payments exist but are small.</em> The TFFF, launched by Brazil on 6 November 2025 with the World Bank as trustee and interim host <span class="citation" data-cites="Barber2025">(<a href="#ref-Barber2025" role="doc-biblioref">Barber et al. 2025</a>)</span>, aims to raise $25 billion of sponsor capital and up to $100 billion of senior debt from market investors. Sponsor capital is repaid over 30 years after a 10-year grace period, at a cost assumed not to exceed US Treasury yields; the fund invests in a diversified portfolio of rated bonds and, after servicing its debt and paying sponsors, pays forest countries about $4 per hectare of eligible forest a year, with at least 20 percent going to Indigenous peoples and local communities, for countries whose deforestation stays at or below 0.5 percent a year <span class="citation" data-cites="TFFF2025CN">(<a href="#ref-TFFF2025CN" role="doc-biblioref">Government of Brazil 2025</a>)</span>. Each hectare deforested cuts the payment by the equivalent of 100 hectares where deforestation is at or below 0.3 percent a year, and of 200 hectares between 0.3 and 0.5 percent; each hectare degraded by fire cuts it by 35 <span class="citation" data-cites="TFFF2025CN">(<a href="#ref-TFFF2025CN" role="doc-biblioref">Government of Brazil 2025</a>)</span>. Sponsors had pledged $6.7 billion by late November 2025, and 74 developing countries are eligible <span class="citation" data-cites="Barber2025">(<a href="#ref-Barber2025" role="doc-biblioref">Barber et al. 2025</a>)</span>. The TFFF is the first large instrument that pays for the stock directly. It is also, in effect, interest on a notional value, one of the four NCV formulations reconciled in <a href="#sec-formulations" class="quarto-xref">Section&nbsp;4.2</a>, with the leverage on the investment side rather than the guarantee side.</p>
+<p><em>Paying owners to conserve can fail, and how it fails matters for design.</em> Payments for environmental services work when the payment exceeds the landholder’s opportunity cost and is conditional on the service <span class="citation" data-cites="Engel2008">(<a href="#ref-Engel2008" role="doc-biblioref">Engel et al. 2008</a>)</span>. But <span class="citation" data-cites="Harstad2016">Harstad (<a href="#ref-Harstad2016" role="doc-biblioref">2016</a>)</span> shows that when a buyer pays an owner to conserve, the owner’s ability to threaten exploitation undermines the market: conservation is less likely the more valuable it is, and with a patient owner who sets the price the forest is eventually lost. Any stock payment that rises with the threat to the stock invites this hold-up. On the fossil side, <span class="citation" data-cites="Harstad2012">Harstad (<a href="#ref-Harstad2012" role="doc-biblioref">2012</a>)</span> shows that buying and conserving deposits in non-participating countries addresses leakage through the fuel market; <span class="citation" data-cites="CollierVenables2014">Collier and Venables (<a href="#ref-CollierVenables2014" role="doc-biblioref">2014</a>)</span> argue for closing coal in sequence, starting with rich countries; and <span class="citation" data-cites="Asheim2019">Asheim et al. (<a href="#ref-Asheim2019" role="doc-biblioref">2019</a>)</span> argue that a treaty limiting fossil fuel supply would strengthen the Paris Agreement. Cash for stocks has been tried: Ecuador’s Yasuní-ITT initiative raised under 0.4 percent of what it asked <span class="citation" data-cites="HernandezRenteria2020">(<a href="#ref-HernandezRenteria2020" role="doc-biblioref">Hernández Rentería 2020</a>)</span>.</p>
+<p><em>Guarantees and the cost of capital.</em> Developing countries face substantially higher costs of capital for renewable power than industrialized ones <span class="citation" data-cites="Steffen2020">(<a href="#ref-Steffen2020" role="doc-biblioref">Steffen 2020</a>)</span>, and that gap alone can lock them into higher-carbon paths <span class="citation" data-cites="Ameli2021">(<a href="#ref-Ameli2021" role="doc-biblioref">Ameli et al. 2021</a>)</span>. A loan guarantee is a put option on the borrower’s assets <span class="citation" data-cites="Merton1977">(<a href="#ref-Merton1977" role="doc-biblioref">Merton 1977</a>)</span>; its value to the borrower is the market’s price of that option, while its cost to the guarantor is the guarantor’s own expected loss. The two diverge for two reasons. Sovereign spreads include a risk premium, about a third of the spread on average, on top of compensation for expected default losses <span class="citation" data-cites="Longstaff2011">(<a href="#ref-Longstaff2011" role="doc-biblioref">Longstaff et al. 2011</a>)</span>. And MDBs are senior creditors in practice <span class="citation" data-cites="Schlegl2019">(<a href="#ref-Schlegl2019" role="doc-biblioref">Schlegl et al. 2019</a>)</span>: their sovereign and sovereign-guaranteed loans defaulted at 0.77 percent a year over 1984–2024, with 95.1 percent recovered <span class="citation" data-cites="GEMs2025">(<a href="#ref-GEMs2025" role="doc-biblioref">European Investment Bank 2025</a>)</span>, an expected loss of about 0.04 percent a year, while the same sovereigns pay market spreads of several hundred basis points. Gabon’s 2023 debt-for-nature swap shows the gap: a $500 million bond carrying US political risk insurance paid a 6.097 percent coupon and was rated Aa2, fourteen notches above the sovereign’s Caa1 <span class="citation" data-cites="AfSDJN2023">(<a href="#ref-AfSDJN2023" role="doc-biblioref">African Sovereign Debt Justice Network 2023</a>)</span>, when Gabon’s 2031 bonds yielded about 10 percent <span class="citation" data-cites="Smith2023Gabon">(<a href="#ref-Smith2023Gabon" role="doc-biblioref">Smith 2023</a>)</span>. Seniority also has a cost to others: <span class="citation" data-cites="Chamon2022">Chamon et al. (<a href="#ref-Chamon2022" role="doc-biblioref">2022</a>)</span> show that debt-for-climate swaps are generally less efficient than conditional grants because part of the benefit leaks to creditors outside the deal, unless the climate commitment is made de facto senior.</p>
+<p><em>Clubs and timing.</em> A climate club works by offering members a benefit that non-members lose <span class="citation" data-cites="Nordhaus2015">(<a href="#ref-Nordhaus2015" role="doc-biblioref">Nordhaus 2015</a>)</span>. Cheaper borrowing is such a benefit, and unlike trade penalties it costs the club little to supply. On timing, the theory of irreversible investment under uncertainty shows that the option to wait raises the hurdle for acting now above the simple net-present-value rule <span class="citation" data-cites="DixitPindyck1994">(<a href="#ref-DixitPindyck1994" role="doc-biblioref">Dixit and Pindyck 1994</a>)</span>. Falling technology costs make waiting more attractive still, so an incentive that is constant over time is weakest exactly when action is most valuable.</p>
+<p><em>The gap.</em> No existing instrument rewards the stock without bending a baseline, prices each tonne released at a uniform rate, arrives before the policy cost is paid and costs donors much less than it is worth. Results-based payments price the margin but pay late and against baselines. HFLD crediting and the TFFF pay for the stock, the first through a contested baseline and the second at a few dollars per hectare. Guarantees are cheap to supply but are allocated by project and lending envelope, not by climate performance. This paper joins the three.</p>
+</section>
+<section id="sec-definition" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> The notional capitalized value</h1>
+<section id="sec-balance" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-balance"><span class="header-section-number">4.1</span> Definition: a balance that the stock opens and emissions draw down</h2>
+<p>A country’s notional capitalized value is a climate balance held for it by an international arrangement. It opens at the value of the country’s carbon stock and moves each year with its emissions:</p>
+<p><span id="eq-balance"><span class="math display">\[B_0 = p_s S_0, \qquad B_{t+1} = B_t + p_e\,(A_t - E_t), \qquad B_t \ge 0. \tag{1}\]</span></span></p>
+<p>Here <span class="math inline">\(S_0\)</span> is the verified carbon stock at entry in tonnes of CO₂ (forest carbon, and optionally fossil reserves legally retired), <span class="math inline">\(p_s\)</span> is the <em>stock price</em> in dollars of opening balance per tonne of stock, <span class="math inline">\(E_t\)</span> is the country’s emissions in year <span class="math inline">\(t\)</span> from all sources including land use, <span class="math inline">\(A_t\)</span> is its <em>allowance</em>, an agreed benchmark path, and <span class="math inline">\(p_e\)</span> is the <em>debit price</em> in dollars per tonne. Emitting above the allowance debits the balance; emitting below it credits the balance. Deforestation enters through <span class="math inline">\(E_t\)</span> as land-use emissions, so the forest stock is not revalued each year; every tonne emitted, from a chimney or a cleared hectare, costs the same <span class="math inline">\(p_e\)</span>.</p>
+<p>The balance is notional. Nobody claims that Guyana’s forests could be sold for <span class="math inline">\(p_s S_0\)</span>; the number is an agreed basis for an entitlement <span class="citation" data-cites="StrettonTC">(<a href="#ref-StrettonTC" role="doc-biblioref">Stretton 2026j</a>, ch.&nbsp;21)</span>. The idea has a mirror image in liability law: an emission inflicts damage on identifiable people in the future, so the prudent response is to provision for it, which makes it a capital requirement rather than an expense <span class="citation" data-cites="StrettonRPWT">(<a href="#ref-StrettonRPWT" role="doc-biblioref">Stretton 2026i</a>, ch.&nbsp;7)</span>. The NCV applies the same accounting to the country that holds a stock: an unreleased stock is notional capital, and each tonne released is a withdrawal from it.</p>
+<p>The balance sets <em>guarantee capacity</em>:</p>
+<p><span id="eq-capacity"><span class="math display">\[G_t = \lambda_t B_t, \qquad X_t = \min(G_t, D_t), \tag{2}\]</span></span></p>
+<p>where <span class="math inline">\(\lambda_t\)</span> is the <em>capacity ratio</em> (dollars of guarantee capacity per dollar of balance, possibly declining over time), <span class="math inline">\(D_t\)</span> is the country’s outstanding eligible green borrowing, and <span class="math inline">\(X_t\)</span> is the exposure actually guaranteed.</p>
+</section>
+<section id="sec-formulations" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-formulations"><span class="header-section-number">4.2</span> Four formulations, reconciled</h2>
+<p>Earlier drafts contain four versions of the idea. <a href="#tbl-formulations" class="quarto-xref">Table&nbsp;1</a> sets them side by side.</p>
+<div id="tbl-formulations" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-formulations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Four formulations of the notional capitalized value, and what this paper keeps from each. <em>Source: the author’s earlier drafts <span class="citation" data-cites="StrettonTC StrettonRPWT StrettonDPhil">(<a href="#ref-StrettonTC" role="doc-biblioref">Stretton 2026j</a>, <a href="#ref-StrettonRPWT" role="doc-biblioref">2026i</a>, <a href="#ref-StrettonDPhil" role="doc-biblioref">2026f</a>)</span>.</em>
+</figcaption>
+<div aria-describedby="tbl-formulations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Version and source</th>
+<th style="text-align: left;">What the country gets</th>
+<th style="text-align: left;">Stock base</th>
+<th style="text-align: left;">Annual adjustment</th>
+<th style="text-align: left;">Role here</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Interest on a notional value (Climate Investment Trust drafts; <em>Time and Chance</em> ch.&nbsp;20)</td>
+<td style="text-align: left;">Interest on, say, a $1tn Amazon valuation, paid into a trust account</td>
+<td style="text-align: left;">Forest; coal in one draft</td>
+<td style="text-align: left;">Not specified</td>
+<td style="text-align: left;">Variant for countries that do not borrow (<a href="#sec-delivery" class="quarto-xref">Section&nbsp;7</a>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Notional Capitalized Carbon Value (<em>Time and Chance</em> ch.&nbsp;21)</td>
+<td style="text-align: left;">Guarantee capacity released over ten years</td>
+<td style="text-align: left;">Forest, unburned fossil fuel</td>
+<td style="text-align: left;">Minus price × net emissions</td>
+<td style="text-align: left;">Main form, with arithmetic corrected (<a href="#sec-ch21" class="quarto-xref">Section&nbsp;6.2</a>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Climate balance on stocks and long-run emissions (research page)</td>
+<td style="text-align: left;">Guarantee support, used up by business-as-usual emissions</td>
+<td style="text-align: left;">Stocks and long-run path</td>
+<td style="text-align: left;">Debited by business-as-usual emissions</td>
+<td style="text-align: left;">Main form; the debit made per tonne</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Climate allowance of guarantee capacity (DPhil proposal)</td>
+<td style="text-align: left;">Rules-based guarantee capacity adjusted with performance</td>
+<td style="text-align: left;">Not specified</td>
+<td style="text-align: left;">Rises with early action, falls when targets are missed</td>
+<td style="text-align: left;">The release schedule of Proposition 3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>The four versions agree on the core and differ on three choices, which this paper settles.</p>
+<p><em>Reward form: guarantee capacity, not interest.</em> Interest paid into an account is cash, deferred; it costs donors a dollar per dollar of incentive. Guarantee capacity costs a fraction of its value (Proposition 1). It also arrives when a government needs it, as cheaper borrowing for the investments the policy requires, rather than years after the result. Interest into a trust account remains the right form for countries that do not borrow in volume, such as small island states without bond market access or a country whose oil revenue makes borrowing unnecessary.</p>
+<p><em>Capacity is a cap on outstanding exposure, not a flow of new guarantees.</em> The original arithmetic did not say which, and the difference is a factor of ten (<a href="#sec-ch21" class="quarto-xref">Section&nbsp;6.2</a>). A cap on outstanding exposure is the natural reading of a balance, matches how MDBs manage guarantee limits, and gives the debit a clean meaning: every dollar debited is a dollar less of exposure the country can have guaranteed from then on.</p>
+<p><em>The debit is per tonne emitted, against an allowance, at its own price.</em> “Used up by business-as-usual emissions” could mean a fixed draw-down set by a forecast. That would have no effect on behavior (Proposition 2). The debit must move with actual emissions. Setting the debit price separately from the stock price is the main change from all four drafts.</p>
+</section>
+<section id="sec-two-prices" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-two-prices"><span class="header-section-number">4.3</span> Why the stock and the debit need different prices</h2>
+<p>A single price cannot both size the balance and price the margin. Suppose <span class="math inline">\(p_s = p_e = p\)</span>. For the debit to bite, capacity must bind: the country must want more guarantee capacity than it has, so <span class="math inline">\(\lambda B_t &lt; D_t\)</span>. With Guyana’s stock of 19.5 billion tonnes and eligible borrowing of, say, $5 billion, a binding balance requires <span class="math inline">\(p &lt; \$0.26\)</span> per tonne, and the marginal tonne is then worth about $0.15 to the country (<a href="#sec-forest" class="quarto-xref">Section&nbsp;6.3</a>). At the $100 per tonne of the original proposal, the balance is $1.95 trillion, capacity never binds, and the marginal tonne is worth nothing.</p>
+<p>The two prices do different jobs. The stock price decides how much capacity each country starts with, which is a question of distribution and of what the country stands to lose. The debit price decides what each tonne costs, which is the question of incentives. Separating them lets the stock reward large forest countries without paying them for tonnes they were never going to emit, and lets the debit price be set high enough to change behavior without creating a balance no guarantor could stand behind.</p>
+<p>The stock still matters at the margin, for a reason the separation makes clear. An international feebate between countries founders on negative transfers, because no sovereign will write a check for exceeding its benchmark; a deduction from a balance held in trust is enforceable where a payment is not <span class="citation" data-cites="StrettonRPWT">(<a href="#ref-StrettonRPWT" role="doc-biblioref">Stretton 2026i</a>, ch.&nbsp;5)</span>. The opening balance is what the debit is deducted from. Without a stock there is nothing to debit; with one, a country that emits loses something it already counts as its own.</p>
+<p>Fixing the opening balance at entry also answers the hold-up problem of <span class="citation" data-cites="Harstad2016">Harstad (<a href="#ref-Harstad2016" role="doc-biblioref">2016</a>)</span>. In a market for conservation the owner is paid more the more credibly it threatens to exploit, so threats pay. Under the NCV the opening balance depends on the verified stock at entry, not on the threat to it, and the reward for not emitting is the uniform debit price, the same for every country and every tonne. A country cannot raise either by threatening to clear.</p>
+</section>
+</section>
+<section id="sec-model" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Model</h1>
+<section id="sec-setup" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="sec-setup"><span class="header-section-number">5.1</span> Setup</h2>
+<p>A country holds balance <span class="math inline">\(B_t\)</span> under <a href="#eq-balance" class="quarto-xref">equation&nbsp;1</a> and capacity <span class="math inline">\(G_t\)</span> under <a href="#eq-capacity" class="quarto-xref">equation&nbsp;2</a>. Guaranteed borrowing pays the guarantor’s rate rather than the market rate, saving <span class="math inline">\(\Delta s\)</span> per dollar of guaranteed exposure per year. The guarantor’s annual expected loss per dollar of exposure is <span class="math inline">\(\pi L\)</span>, the probability of a call times the loss per call. Behind the guarantees sits a buffer fund holding <span class="math inline">\(k\)</span> dollars of capital per dollar of exposure; holding it costs <span class="math inline">\(\varphi\)</span> a year per dollar, the donors’ opportunity cost of funds net of what the buffer earns. The guarantor may charge a fee <span class="math inline">\(f\)</span> per dollar of exposure. Time is discrete in Proposition 1 and continuous in Propositions 2 and 3, with discount rate <span class="math inline">\(r\)</span> and discount factor <span class="math inline">\(\delta = 1/(1+r)\)</span>.</p>
+<p>The <em>incentive value</em> to the country is the present value of spread saved, net of fees:</p>
+<p><span id="eq-value"><span class="math display">\[V = \sum_t \delta^t (\Delta s - f) X_t. \tag{3}\]</span></span></p>
+<p>The <em>cost to the guarantor and donors</em> is expected loss plus buffer carry, net of fees:</p>
+<p><span id="eq-cost"><span class="math display">\[C = \sum_t \delta^t (\pi L + k\varphi - f) X_t. \tag{4}\]</span></span></p>
+</section>
+<section id="sec-p1" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="sec-p1"><span class="header-section-number">5.2</span> Proposition 1: a guarantee is worth several times what it costs</h2>
+<p><strong>Proposition 1 (incentive-to-cost ratio).</strong> <em>Let <span class="math inline">\(\Delta s\)</span>, <span class="math inline">\(\pi L\)</span>, <span class="math inline">\(k\)</span>, <span class="math inline">\(\varphi\)</span> and <span class="math inline">\(f\)</span> be constant over the life of the exposure.</em></p>
+<p><em>(a) For any path of guaranteed exposure,</em></p>
+<p><span id="eq-ratio"><span class="math display">\[\frac{V}{C} = R \equiv \frac{\Delta s - f}{\pi L + k\varphi - f}. \tag{5}\]</span></span></p>
+<p><em>A guarantee delivers more incentive per dollar of donor cost than a grant (<span class="math inline">\(R &gt; 1\)</span>) if and only if <span class="math inline">\(\Delta s &gt; \pi L + k\varphi\)</span>. A fee <span class="math inline">\(f = \pi L + k\varphi\)</span> makes the scheme self-financing while the country keeps <span class="math inline">\(\Delta s - \pi L - k\varphi\)</span> a year per dollar of exposure.</em></p>
+<p><em>(b) Suppose the market spread is the market’s expected default loss plus a risk premium <span class="math inline">\(\rho\)</span>, and the country, which counter-indemnifies the guarantor, gives up its option to default on the guaranteed debt except to the extent the guarantor itself loses. Then the country’s economic gain per dollar of exposure a year is <span class="math inline">\(\rho + \pi L - f\)</span>, and</em></p>
+<p><span id="eq-econ"><span class="math display">\[\frac{V_e}{C} = R_e \equiv \frac{\rho + \pi L - f}{\pi L + k\varphi - f} \;\le\; R . \tag{6}\]</span></span></p>
+<p>The proofs are in Appendix A. Part (a) is the budget ratio: what a finance ministry sees each year as lower interest bills. It does not depend on the size or timing of the exposure, so it is the right statistic for comparing a guarantee with a grant, for which <span class="math inline">\(R = 1\)</span>. Part (b) is the economic ratio. Under market debt a country in distress imposes a haircut on its creditors; under a guarantee backed by its counter-indemnity it owes the guarantor instead, and on the MDB record repays almost all of it. The part of the spread that paid creditors for bearing default is therefore not a gain to the country, only the risk premium and whatever loss the guarantor still bears. Part (b) is a lower bound, because it ignores the output and access costs of a market default that the country also avoids <span class="citation" data-cites="CrucesTrebesch2013">(<a href="#ref-CrucesTrebesch2013" role="doc-biblioref">Cruces and Trebesch 2013</a>)</span>.</p>
+<p>Why should the spread saved exceed the guarantor’s cost? Because the market prices the sovereign’s risk to all creditors, plus a premium, while the guarantor bears only the sovereign’s risk to it. MDBs are senior creditors in practice <span class="citation" data-cites="Schlegl2019">(<a href="#ref-Schlegl2019" role="doc-biblioref">Schlegl et al. 2019</a>)</span> and, for guarantees with a sovereign counter-indemnity, hold a claim the government has strong reasons to honor. Their record bears this out: sovereign and sovereign-guaranteed loans defaulted at 0.77 percent a year over four decades and recovered 95.1 percent <span class="citation" data-cites="GEMs2025">(<a href="#ref-GEMs2025" role="doc-biblioref">European Investment Bank 2025</a>)</span>. The resource being spent is the gap between the risk the guarantor actually bears and the risk the market charges for <span class="citation" data-cites="StrettonTC">(<a href="#ref-StrettonTC" role="doc-biblioref">Stretton 2026j</a>, ch.&nbsp;21)</span>. It needs no appropriation, but it is not free: losses will occur, and a buffer must stand behind the exposure.</p>
+<p>This paper takes that record as its base case, shared with the companion papers on the Climate Investment Trust and sustainability-linked lending <span class="citation" data-cites="StrettonWP42 StrettonWP43">(<a href="#ref-StrettonWP42" role="doc-biblioref">Stretton 2026h</a>, <a href="#ref-StrettonWP43" role="doc-biblioref">2026b</a>)</span>: a 0.77 percent annual probability that a guarantee is called and a 4.9 percent loss when it is (one minus the 95.1 percent recovery), for an expected loss of 0.038 percent a year <span class="citation" data-cites="GEMs2025">(<a href="#ref-GEMs2025" role="doc-biblioref">European Investment Bank 2025</a>)</span>. A buffer of 0.5 percent of exposure then keeps the annual chance of exhausting it at 1 percent across 20 guaranteed programs with asset correlation 0.2; it covers two calls in the same year. The buffer is invested in safe assets and earns the rate used to discount, so its carry cost is zero (<span class="math inline">\(\varphi = 0\)</span>). With <span class="math inline">\(\Delta s\)</span> = 3 percent, <span class="math inline">\(R\)</span> = 3/0.038, about 80. With a risk premium of a third of the spread <span class="citation" data-cites="Longstaff2011">(<a href="#ref-Longstaff2011" role="doc-biblioref">Longstaff et al. 2011</a>)</span>, <span class="math inline">\(\rho\)</span> = 1 percent and <span class="math inline">\(R_e\)</span> = 1.038/0.038, about 27.</p>
+<p>The record is not a promise that a new facility can keep. It reflects the MDBs’ preferred-creditor status: governments in distress keep paying the development banks while they restructure other debt. A climate guarantee facility might not inherit that status, especially if its guarantees cover market debt rather than MDB loans. So the paper reports two less favorable cases with the same correlation, number of programs and exhaustion target. In a middle case, a call is about four times as likely (3 percent a year) and loses 10 percent; <span class="math inline">\(R\)</span> = 10 (<span class="math inline">\(R_e\)</span> = 4.3), and the buffer is 2.5 percent of exposure. In a stress case, calls occur at 3 percent a year and lose 37 percent, the average investor haircut in sovereign restructurings over 1970–2010 <span class="citation" data-cites="CrucesTrebesch2013">(<a href="#ref-CrucesTrebesch2013" role="doc-biblioref">Cruces and Trebesch 2013</a>)</span>, an expected loss of 1.11 percent a year, nearly 30 times the MDB record; the buffer is 9.3 percent of exposure and <span class="math inline">\(R\)</span> = 2.7 (<span class="math inline">\(R_e\)</span> = 1.9) <span class="citation" data-cites="StrettonWP42">(<a href="#ref-StrettonWP42" role="doc-biblioref">Stretton 2026h</a>)</span>. Charging the buffer a 2 percent carry cost lowers <span class="math inline">\(R\)</span> to 63 in the base case and 2.3 in the stress case. Because a buffer invested at the discount rate costs nothing net, a facility can price its guarantees on the record and still hold the stress-case buffer until it has a record of its own. That holds only at zero carry: if the buffer costs 2 percent a year to hold, pricing on the record while holding the stress-case buffer gives a ratio of about 13, not 80. The ratios also assume the exposure is held indefinitely, so the buffer is consumed only by losses <span class="citation" data-cites="StrettonWP42">(<a href="#ref-StrettonWP42" role="doc-biblioref">Stretton 2026h</a>)</span>.</p>
+</section>
+<section id="sec-p2" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="sec-p2"><span class="header-section-number">5.3</span> Proposition 2: the debit must be per tonne, and capacity must bind</h2>
+<p>The marginal incentive is what changes behavior. Let capacity bind on an interval of time, meaning <span class="math inline">\(0 &lt; \lambda_t B_t &lt; D_t\)</span>, so every extra dollar of capacity is used and every dollar lost reduces guaranteed exposure. Let the capacity ratio decline at rate <span class="math inline">\(\theta \ge 0\)</span>, <span class="math inline">\(\lambda_t = \lambda_0 e^{-\theta t}\)</span>.</p>
+<p><strong>Proposition 2 (incentive compatibility and the carbon-price equivalent).</strong></p>
+<p><em>(a) If capacity binds from time <span class="math inline">\(s\)</span> onward, a tonne emitted at <span class="math inline">\(s\)</span> costs the country, in present value at <span class="math inline">\(s\)</span>,</em></p>
+<p><span id="eq-cpe"><span class="math display">\[\tau(s) = \frac{\lambda_0\, p_e\, (\Delta s - f)}{r + \theta}\, e^{-\theta s}. \tag{7}\]</span></span></p>
+<p><em>This is the carbon-price equivalent of the scheme: the uniform carbon price that gives the same reward for cutting a tonne.</em></p>
+<p><em>(b) If the debit is fixed in advance from a forecast of business-as-usual emissions rather than charged per tonne emitted, the marginal incentive is zero.</em></p>
+<p><em>(c) The allowance path <span class="math inline">\(A_t\)</span> does not enter <span class="math inline">\(\tau(s)\)</span>. It changes the level of the balance, and so who gains, but not the reward per tonne.</em></p>
+<p><em>(d) If capacity does not bind, because <span class="math inline">\(\lambda_t B_t \ge D_t\)</span> (the country has more capacity than borrowing) or <span class="math inline">\(B_t = 0\)</span> (the balance is exhausted), the marginal incentive in those years is zero.</em></p>
+<p>The proof is in Appendix A. Part (a) gives the conversion rate from notional to effective price: with no decline in capacity and <span class="math inline">\(\lambda_0 = 1\)</span>, each dollar of debit price is worth <span class="math inline">\(\Delta s/r\)</span> dollars of carbon price, 60 cents at a 3 percent spread and a 5 percent discount rate. A government that cuts emissions until the marginal cost of a cut equals its marginal reward makes the same cut under the NCV as under a uniform carbon tax of <span class="math inline">\(\tau\)</span>, so <span class="math inline">\(\tau\)</span> is the carbon-price equivalent in the sense of the series’ Total Effective Carbon Price <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Stretton 2026e</a>)</span>, and the NCV can be compared directly with a tax, a feebate or policy crediting. The donors’ cost per dollar of carbon-price equivalent is <span class="math inline">\((\pi L + k\varphi)/\Delta s\)</span>: about 1.3 cents in the base case and 37 cents in the stress case.</p>
+<p>Part (a) also states its conditions, and both matter in practice. The formula assumes capacity binds from <span class="math inline">\(s\)</span> for ever. If the scheme ends at a fixed date, the price falls as the date approaches: at a $50 debit price, a tonne emitted in 2027 under a scheme that ends in 2050 costs $20 rather than $30, and one emitted in 2040 costs $12. The scheme must therefore be open-ended, or its balance must end in something the country still values, such as a beneficiary account.</p>
+<p>Part (b) is the reason the debit must be per tonne emitted. A schedule that draws the balance down by business-as-usual emissions whatever the country does is a declining transfer, and a transfer changes nothing at the margin. “Used up by business-as-usual emissions” must mean that business-as-usual emissions would use it up, not that they are assumed to.</p>
+<p>Part (c) turns the hardest dispute in results-based finance, the baseline, into a question of distribution. A generous allowance gives a country more balance, but each tonne still costs <span class="math inline">\(p_e\)</span>. Negotiators can trade allowance against participation without weakening the incentive. That is not true of crediting against a baseline, where an inflated baseline pays for tonnes that were never at risk, nor of HFLD crediting, where the stock reward is delivered by inflating the baseline.</p>
+<p>Part (d) gives two design rules. Capacity must be sized to the country’s borrowing, so that it binds; surplus balance above <span class="math inline">\(D_t/\lambda_t\)</span> should flow somewhere it still has value, such as a beneficiary account in the Climate Investment Trust <span class="citation" data-cites="CFPB42">(<a href="#ref-CFPB42" role="doc-biblioref">Stretton 2026g</a>)</span>. And the allowance must keep the balance positive along a path the country can reach, because a country that expects to exhaust its balance has no incentive in the years after exhaustion and a weaker one before.</p>
+</section>
+<section id="sec-p3" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="sec-p3"><span class="header-section-number">5.4</span> Proposition 3: paying for acting now</h2>
+<p>A government chooses when to adopt a policy, such as a coal-retirement program or a forest-enforcement regime. Adopting at time <span class="math inline">\(T\)</span> costs <span class="math inline">\(K_0 e^{-gT}\)</span> up front, a cost that falls at rate <span class="math inline">\(g\)</span> as technology improves, and cuts emissions by <span class="math inline">\(\Delta E\)</span> tonnes a year from then on. The country values each tonne abated at <span class="math inline">\(b\)</span> (domestic co-benefits, such as cleaner air) and bears an ongoing cost of <span class="math inline">\(\omega\)</span> per tonne (for example, agricultural rent forgone on protected forest). Under the NCV each tonne abated at time <span class="math inline">\(s\)</span> is worth <span class="math inline">\(m(s)\)</span> to the country, the carbon-price equivalent of <a href="#eq-cpe" class="quarto-xref">equation&nbsp;7</a>, written here in the general declining form <span class="math inline">\(m(s) = m_\infty + (m_0 - m_\infty)e^{-\theta s}\)</span> with a floor <span class="math inline">\(m_\infty \ge 0\)</span>. The net present value of adopting at <span class="math inline">\(T\)</span> is</p>
+<p><span id="eq-w"><span class="math display">\[W(T) = \int_T^\infty \Delta E\,[m(s) + b - \omega]\,e^{-rs}\,ds \;-\; K_0 e^{-(r+g)T}. \tag{8}\]</span></span></p>
+<p><strong>Proposition 3 (early action).</strong> <em>Suppose the persistence condition <span class="math inline">\(m_\infty + b \ge \omega\)</span> holds and the incentive declines no faster than technology costs, <span class="math inline">\(\theta \le g\)</span>. Then acting now (<span class="math inline">\(T = 0\)</span>) is optimal if and only if</em></p>
+<p><span id="eq-actnow"><span class="math display">\[\Delta E\,(m_0 + b - \omega) \;\ge\; (r + g)\,K_0. \tag{9}\]</span></span></p>
+<p><em>The minimum initial incentive is <span class="math inline">\(m_0^* = (r+g)K_0/\Delta E + \omega - b\)</span>. Holding <span class="math inline">\(m_0 = m_0^*\)</span>, the donor cost of the incentive falls as <span class="math inline">\(\theta\)</span> rises, so among schedules satisfying the conditions the cheapest declines at <span class="math inline">\(\theta = g\)</span> toward the floor <span class="math inline">\(m_\infty = \max(\omega - b, 0)\)</span>.</em></p>
+<p>The proof is in Appendix A. The condition has a plain reading. Waiting a year saves interest on the up-front cost (<span class="math inline">\(rK_0\)</span>) and lets the cost fall (<span class="math inline">\(gK_0\)</span>); acting a year sooner earns a year of net benefit from the abated tonnes. Falling technology costs raise the hurdle: the faster solar or storage costs fall, the more a government gains by waiting, and the bigger the early incentive must be. Without an incentive, a government whose co-benefits do not exceed its ongoing costs (<span class="math inline">\(b \le \omega\)</span>) never acts. One whose co-benefits do exceed them acts, but late: only once the cost has fallen to the point where <span class="math inline">\(\Delta E\,(b - \omega)e^{gT} = (r+g)K_0\)</span>, that is at <span class="math inline">\(T^* = \tfrac1g \ln\left[(r+g)K_0/(\Delta E(b - \omega))\right]\)</span>. The incentive’s job is to bring <span class="math inline">\(T^*\)</span> forward to zero.</p>
+<p>The persistence floor separates two cases. For an energy transition, the ongoing cost of keeping clean capacity is close to zero once it is cheaper than coal, so <span class="math inline">\(\omega \approx 0\)</span> and the incentive can phase out: the reward is needed to start, not to continue. For forests, the opportunity cost of standing forest persists as long as there is demand for land, so <span class="math inline">\(\omega &gt; 0\)</span> and the floor stays: a forest needs a permanent price, an energy transition a temporary early one. A single scheme can serve both because the floor and the decay are parameters, not constants.</p>
+<p>Uncertainty raises the hurdle further. If the up-front cost follows a driftless random walk, the standard result is that the trigger rises by a factor <span class="math inline">\(\beta/(\beta - 1) &gt; 1\)</span>, where <span class="math inline">\(\beta\)</span> depends on volatility and the discount rate <span class="citation" data-cites="DixitPindyck1994">(<a href="#ref-DixitPindyck1994" role="doc-biblioref">Dixit and Pindyck 1994</a>, ch.&nbsp;5)</span>. With a 5 percent discount rate and volatility of 15–20 percent a year, the factor is 1.6–1.9 (author’s calculation, Appendix B), so the initial incentive in <a href="#eq-actnow" class="quarto-xref">equation&nbsp;9</a> must be 60–90 percent larger. The decaying schedule is the instrument for this: a government that knows capacity per tonne falls each year it delays faces a cost of waiting that the market alone does not impose. This is the early-action premium of the series, built into the release schedule.</p>
+</section>
+<section id="sec-quantities" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="sec-quantities"><span class="header-section-number">5.5</span> Three quantities, kept apart</h2>
+<p>The framework keeps apart three quantities that discussions of climate finance often merge <span class="citation" data-cites="StrettonDPhil">(<a href="#ref-StrettonDPhil" role="doc-biblioref">Stretton 2026f</a>)</span>. <em>Mitigation effectiveness</em> is <span class="math inline">\(\Delta E\)</span>: the emissions cut that a policy produces. <em>The sovereign incentive required</em> is <span class="math inline">\(m_0^*\)</span> in <a href="#eq-actnow" class="quarto-xref">equation&nbsp;9</a>: the reward per tonne that makes acting now worth more than waiting. <em>The resource cost</em> to MDBs and donors is <span class="math inline">\(m_0^* (\pi L + k\varphi)/\Delta s\)</span> per tonne: what it costs to create that incentive through guarantees. A grant makes the third quantity equal to the second; a guarantee divides it by <span class="math inline">\(R\)</span>.</p>
+</section>
+</section>
+<section id="sec-calibration" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Calibration</h1>
+<section id="sec-params" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="sec-params"><span class="header-section-number">6.1</span> Parameters</h2>
+<p><a href="#tbl-params" class="quarto-xref">Table&nbsp;2</a> lists the values used. Anchored values come from published sources; stylized values are assumptions, labeled as such, and the code in Appendix B reproduces every number.</p>
+<div id="tbl-params" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Parameters for the calibration. <em>Note: pp = percentage points. Stylized values are illustrative, not estimates for any country.</em>
+</figcaption>
+<div aria-describedby="tbl-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Value</th>
+<th style="text-align: left;">Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Spread saved on guaranteed debt</td>
+<td style="text-align: center;"><span class="math inline">\(\Delta s\)</span></td>
+<td style="text-align: center;">3.0 pp (1.5–4.5)</td>
+<td style="text-align: left;">Stylized; Gabon 2023: insured bond at 6.097% against about 10% on its 2031 bonds, a saving of about 3.9 pp before the insurance premium <span class="citation" data-cites="AfSDJN2023 Smith2023Gabon">(<a href="#ref-AfSDJN2023" role="doc-biblioref">African Sovereign Debt Justice Network 2023</a>; <a href="#ref-Smith2023Gabon" role="doc-biblioref">Smith 2023</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Risk premium in the spread</td>
+<td style="text-align: center;"><span class="math inline">\(\rho\)</span></td>
+<td style="text-align: center;">1.0 pp (a third of <span class="math inline">\(\Delta s\)</span>)</td>
+<td style="text-align: left;">Average share of sovereign spreads <span class="citation" data-cites="Longstaff2011">(<a href="#ref-Longstaff2011" role="doc-biblioref">Longstaff et al. 2011</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Guarantor’s expected loss</td>
+<td style="text-align: center;"><span class="math inline">\(\pi L\)</span></td>
+<td style="text-align: center;">0.038% a year (0.30%; 1.11%)</td>
+<td style="text-align: left;">Base case: MDB record, 0.77% annual calls × 4.9% loss <span class="citation" data-cites="GEMs2025">(<a href="#ref-GEMs2025" role="doc-biblioref">European Investment Bank 2025</a>)</span>; in brackets, middle case (3% × 10%) and stress case (3% × 37%) <span class="citation" data-cites="StrettonWP42 CrucesTrebesch2013">(<a href="#ref-StrettonWP42" role="doc-biblioref">Stretton 2026h</a>; <a href="#ref-CrucesTrebesch2013" role="doc-biblioref">Cruces and Trebesch 2013</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Buffer per dollar of exposure</td>
+<td style="text-align: center;"><span class="math inline">\(k\)</span></td>
+<td style="text-align: center;">0.5% (2.5%; 9.3%)</td>
+<td style="text-align: left;">1% annual chance of exhaustion, 20 programs, correlation 0.2 <span class="citation" data-cites="StrettonWP42">(<a href="#ref-StrettonWP42" role="doc-biblioref">Stretton 2026h</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Net carry cost of buffer</td>
+<td style="text-align: center;"><span class="math inline">\(\varphi\)</span></td>
+<td style="text-align: center;">0 (2% in sensitivity)</td>
+<td style="text-align: left;">Buffer invested at the discount rate</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Discount rate</td>
+<td style="text-align: center;"><span class="math inline">\(r\)</span></td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: left;">Stylized</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Fee</td>
+<td style="text-align: center;"><span class="math inline">\(f\)</span></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">Baseline; cost-covering fee considered</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Debit price</td>
+<td style="text-align: center;"><span class="math inline">\(p_e\)</span></td>
+<td style="text-align: center;">$50 per tCO₂</td>
+<td style="text-align: left;">Stylized</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Forest carbon stock</td>
+<td style="text-align: center;"><span class="math inline">\(S_0\)</span></td>
+<td style="text-align: center;">19.5 GtCO₂e on 18 Mha</td>
+<td style="text-align: left;">Guyana <span class="citation" data-cites="Guyana2022LCDS">(<a href="#ref-Guyana2022LCDS" role="doc-biblioref">Government of Guyana 2022</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Eligible green borrowing (forest country)</td>
+<td style="text-align: center;"><span class="math inline">\(D\)</span></td>
+<td style="text-align: center;">$5 billion</td>
+<td style="text-align: left;">Stylized</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>The spread saved is the most important input and the most country-specific. Three percentage points is a little below the saving Gabon achieved with insurance on a single bond, and is the figure used in the original proposal <span class="citation" data-cites="StrettonTC">(<a href="#ref-StrettonTC" role="doc-biblioref">Stretton 2026j</a>, ch.&nbsp;21)</span>. It applies to a country rated well below investment grade. For an investment-grade sovereign the saving is smaller; this paper assumes 1 percentage point, and the case for guarantees is weaker (<a href="#sec-coal" class="quarto-xref">Section&nbsp;6.5</a>).</p>
+</section>
+<section id="sec-ch21" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="sec-ch21"><span class="header-section-number">6.2</span> Correcting the original arithmetic</h2>
+<p>The original proposal values a forest stock of 100 MtCO₂ at $100 per tonne, a balance of $10 billion, debited by $100 million for each million tonnes emitted. It releases the balance over ten years, “roughly $1 billion of NCCV capacity per year”, and, at a saving of 3 percent per dollar guaranteed, finds “$30 million in annual interest-cost reductions” and $300 million over ten years <span class="citation" data-cites="StrettonTC">(<a href="#ref-StrettonTC" role="doc-biblioref">Stretton 2026j</a>, ch.&nbsp;21)</span>. The text does not say whether the $1 billion is a cap on outstanding exposure or a flow of new guarantees each year. <a href="#tbl-ch21" class="quarto-xref">Table&nbsp;3</a> shows that the answer changes the incentive tenfold.</p>
+<div id="tbl-ch21" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ch21-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Three readings of the original NCCV arithmetic: a fixed $10 billion balance, 3 percent spread saved. <em>Note: B assumes bullet loans of 10 years. Price of a tonne emitted under C is $100 × 3% × the 9-year annuity factor at 5%. Source: <span class="citation" data-cites="StrettonTC">Stretton (<a href="#ref-StrettonTC" role="doc-biblioref">2026j</a>)</span>, ch.&nbsp;21; author’s calculations (Appendix B).</em>
+</figcaption>
+<div aria-describedby="tbl-ch21-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Reading</th>
+<th style="text-align: left;">Outstanding guaranteed exposure</th>
+<th style="text-align: center;">Annual saving</th>
+<th style="text-align: center;">Total saving</th>
+<th style="text-align: center;">Present value at 5%</th>
+<th style="text-align: center;">Price of a tonne emitted</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A. $1bn cap on outstanding exposure for 10 years</td>
+<td style="text-align: left;">$1bn</td>
+<td style="text-align: center;">$30m</td>
+<td style="text-align: center;">$0.3bn</td>
+<td style="text-align: center;">$0.23bn</td>
+<td style="text-align: center;">$0 (capacity slack)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B. $1bn of new 10-year guarantees each year for 10 years</td>
+<td style="text-align: left;">Rises to $10bn</td>
+<td style="text-align: center;">$30m rising to $300m</td>
+<td style="text-align: center;">$3.0bn over the loans’ lives</td>
+<td style="text-align: center;">$1.88bn</td>
+<td style="text-align: center;">Depends on which year’s issue is cut</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C. Whole $10bn balance as a cap from year 1</td>
+<td style="text-align: left;">$10bn</td>
+<td style="text-align: center;">$300m</td>
+<td style="text-align: center;">$3.0bn over 10 years</td>
+<td style="text-align: center;">$2.32bn</td>
+<td style="text-align: center;">About $21/t with 9 years left</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>The $30 million and $300 million figures are correct only under reading A, and reading A is the worst design. With $1 billion of capacity against a $10 billion balance, capacity does not bind until the country has emitted 90 MtCO₂, so for decades an extra tonne costs nothing (Proposition 2(d)). Under reading C, the natural reading of a balance, the incentive is $300 million a year and each tonne emitted costs about $21 in lost spread savings. The correction does not change the donor cost per dollar of incentive, which Proposition 1 sets; it changes how much incentive a given balance delivers, by a factor of ten.</p>
+</section>
+<section id="sec-forest" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="sec-forest"><span class="header-section-number">6.3</span> A forest country</h2>
+<p>Take a stylized forest country with Guyana’s verified stock: 19.5 billion tonnes of CO₂-equivalent on about 18 million hectares, an average of about 1,080 tonnes per hectare <span class="citation" data-cites="Guyana2022LCDS">(<a href="#ref-Guyana2022LCDS" role="doc-biblioref">Government of Guyana 2022</a>)</span>. Give it $5 billion of eligible green borrowing (stylized), a stock price that opens the balance at that level (<span class="math inline">\(p_s\)</span> = $0.26 per tonne), a debit price of $50 per tonne, and emissions of 15 MtCO₂ a year from all sources against an allowance that falls from 12 Mt in 2027 to zero in 2050 (stylized).</p>
+<p><em>Incentive and cost.</em> With capacity fully used, the country saves $150 million a year, $1.87 billion in present value over 20 years. On the MDB record, donors hold a buffer of $25 million and bear an expected annual cost of about $2 million; in the stress case the buffer is $0.47 billion and the cost $56 million. While capacity binds in an open-ended scheme, each tonne emitted costs the country $30 in lost spread savings ($50 × 3% ÷ 5%), and each hectare cleared about $32,500. Donors’ cost per tonne of that carbon-price equivalent is about 40 cents in the base case, $3 in the middle case and $11 in the stress case, against the $15–20 per tonne Hess pays in cash for credits against a reference level.</p>
+<p><em>Business as usual drains the balance; action keeps it.</em> Under business as usual the debit grows as the allowance falls, and the balance is exhausted in 2042 (<a href="#fig-balance" class="quarto-xref">Figure&nbsp;1</a>). A country that cuts emissions from 15 to 3 Mt by 2037 keeps its balance near its borrowing need throughout. The present value of spread savings over 2027–2050 is $2.11 billion if the country acts and $1.13 billion if it does not; acting is worth about $1 billion to it. From 2037 the acting country’s balance exceeds its $5 billion borrowing need, and by Proposition 2(d) a further tonne would then cost it nothing unless the surplus flows into a beneficiary account. That is why the surplus rule is part of the design, not an option.</p>
+<div id="fig-balance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-balance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="2.Source/figures/fig1-balance-paths.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: A per-tonne debit drains the balance under business as usual. Stylized forest country: opening balance $5 billion, debit $50 per tonne of CO₂ against an allowance falling from 12 Mt to zero in 2050. Capacity above the $5 billion borrowing line is unused, so in the action case the surplus should flow to a beneficiary account. Source: author’s calculations (Appendix B)."><img src="2.Source/figures/fig1-balance-paths.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-balance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A per-tonne debit drains the balance under business as usual. Stylized forest country: opening balance $5 billion, debit $50 per tonne of CO₂ against an allowance falling from 12 Mt to zero in 2050. Capacity above the $5 billion borrowing line is unused, so in the action case the surplus should flow to a beneficiary account. Source: author’s calculations (Appendix B).
+</figcaption>
+</figure>
+</div>
+<p><em>Comparison with existing instruments.</em> <a href="#tbl-forest" class="quarto-xref">Table&nbsp;4</a> puts the scheme beside the Guyana–Hess sale and the TFFF, converting each to a price per tonne at Guyana’s average carbon density. The TFFF’s $4 per hectare a year is about $0.004 per tonne of stock a year, equivalent to a stock price of $0.07 per tonne capitalized at 5 percent, under a third of the stock price used here. Its deforestation deduction of $400–800 per hectare is $0.37–0.74 per tonne released. The Hess price pays for avoided flow against a reference level and only for the credits sold. The NCV at a $50 debit price gives the stock a balance of the same order as the TFFF’s capitalized value and prices each tonne released at 40–80 times the TFFF’s deduction.</p>
+<div id="tbl-forest" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-forest-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Three ways of rewarding a forest country, at Guyana’s carbon density of about 1,080 tCO₂e per hectare. <em>Note: The TFFF row multiplies $4 by 18 million hectares and assumes full eligibility; payments depend on fund returns. Sources: <span class="citation" data-cites="GuyanaDPI2023">Department of Public Information, Guyana (<a href="#ref-GuyanaDPI2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="ARTGuyana2022">Aster Global Environmental Solutions (<a href="#ref-ARTGuyana2022" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="TFFF2025CN">Government of Brazil (<a href="#ref-TFFF2025CN" role="doc-biblioref">2025</a>)</span>, <span class="citation" data-cites="Guyana2022LCDS">Government of Guyana (<a href="#ref-Guyana2022LCDS" role="doc-biblioref">2022</a>)</span>; author’s calculations.</em>
+</figcaption>
+<div aria-describedby="tbl-forest-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Instrument</th>
+<th style="text-align: left;">What is rewarded</th>
+<th style="text-align: center;">Annual value to country</th>
+<th style="text-align: center;">Price of a tonne released</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Guyana–Hess ART-TREES sale (vintages 2016–2030)</td>
+<td style="text-align: left;">Avoided emissions below an HFLD crediting level</td>
+<td style="text-align: center;">About $50m (at least $750m for 37.5m credits)</td>
+<td style="text-align: center;">$15–20 for credits sold</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TFFF at $4/ha (Guyana-scale forest)</td>
+<td style="text-align: left;">Standing forest area</td>
+<td style="text-align: center;">About $72m</td>
+<td style="text-align: center;">$0.37–0.74 (deduction per hectare ÷ density)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NCV, $5bn capacity, $50 debit (stylized)</td>
+<td style="text-align: left;">Stock (opening balance) and every tonne emitted</td>
+<td style="text-align: center;">$150m in spread saved</td>
+<td style="text-align: center;">About $30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Two cautions apply. Guyana itself may be an awkward case for a guarantee-based reward: with large oil revenues, its need for guaranteed borrowing may be small relative to its stock, and for such a country the interest-on-balance variant is the better form (<a href="#sec-delivery" class="quarto-xref">Section&nbsp;7</a>). And average density hides wide variation: a hectare of peat swamp or old-growth forest holds far more than a degraded one, so the debit per hectare cleared should use measured, not average, density.</p>
+</section>
+<section id="sec-scale" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="sec-scale"><span class="header-section-number">6.4</span> How big must the scheme be?</h2>
+<p>The incentive scales with guaranteed borrowing, not with the stock. Proposition 1 makes the arithmetic linear: at a 3 percent saving, each $1 billion a year of incentive needs $33 billion of outstanding guarantee capacity. On the MDB record that capacity needs a buffer of $0.16 billion and costs donors about $13 million a year in expected losses; in the stress case the buffer is $3.1 billion and the cost $370 million (<a href="#tbl-scale" class="quarto-xref">Table&nbsp;5</a>).</p>
+<div id="tbl-scale" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-scale-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: What a big incentive needs, at a 3 percentage point spread saving. <em>Note: base case, MDB sovereign loss record (buffer 0.5 percent of exposure); stress case in brackets, 3 percent annual calls with 37 percent loss (buffer 9.3 percent). Incentive is the budget saving of Proposition 1(a). Source: author’s calculations (Appendix B), parameters of <a href="#tbl-params" class="quarto-xref">Table&nbsp;2</a>.</em>
+</figcaption>
+<div aria-describedby="tbl-scale-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Incentive to the country</th>
+<th style="text-align: center;">Guarantee capacity needed</th>
+<th style="text-align: center;">Buffer held: base (stress)</th>
+<th style="text-align: center;">Expected donor cost a year: base (stress)</th>
+<th style="text-align: center;">Present value of incentive over 20 years</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">$0.1bn a year</td>
+<td style="text-align: center;">$3bn</td>
+<td style="text-align: center;">$0.02bn ($0.3bn)</td>
+<td style="text-align: center;">$1.3m ($37m)</td>
+<td style="text-align: center;">$1.2bn</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">$0.5bn a year</td>
+<td style="text-align: center;">$17bn</td>
+<td style="text-align: center;">$0.08bn ($1.6bn)</td>
+<td style="text-align: center;">$6.3m ($185m)</td>
+<td style="text-align: center;">$6.2bn</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">$1bn a year</td>
+<td style="text-align: center;">$33bn</td>
+<td style="text-align: center;">$0.16bn ($3.1bn)</td>
+<td style="text-align: center;">$12.6m ($370m)</td>
+<td style="text-align: center;">$12.5bn</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">$5bn a year</td>
+<td style="text-align: center;">$167bn</td>
+<td style="text-align: center;">$0.8bn ($15.5bn)</td>
+<td style="text-align: center;">$63m ($1.85bn)</td>
+<td style="text-align: center;">$62bn</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>These numbers explain why the guarantee form matters. The largest sovereign sustainability-linked loan to date, Uruguay’s $350 million World Bank loan of 2023, can save the country at most about $12.5 million over its life <span class="citation" data-cites="CFPB43">(<a href="#ref-CFPB43" role="doc-biblioref">Stretton 2026a</a>)</span>. Multilateral REDD+ funds pledged about $6.4 billion from 2008, about $400 million a year <span class="citation" data-cites="TFFF2025CN">(<a href="#ref-TFFF2025CN" role="doc-biblioref">Government of Brazil 2025</a>)</span>, so a results-based payment of $1 billion a year would be more than twice their average. A guarantee scheme delivering $1 billion a year of spread savings needs donors to accept about $13 million a year of expected losses on the MDB record, and about $370 million in the stress case. The buffer, $0.16 billion on the record and $3.1 billion in the stress case, is capital donors keep and which earns. Holding it is the job of the Climate Investment Trust <span class="citation" data-cites="CFPB42 StrettonWP42">(<a href="#ref-CFPB42" role="doc-biblioref">Stretton 2026g</a>, <a href="#ref-StrettonWP42" role="doc-biblioref">2026h</a>)</span>.</p>
+<p>The binding constraint is borrowing, not donor money. A country can only save spread on debt it actually issues, so the scheme delivers big incentives to countries that borrow a lot at high spreads: large, lower-rated forest and coal countries. For small or lightly indebted countries, the ceiling on the guarantee form is low, and the interest-on-balance variant or a link to the trust’s accounts must carry the reward.</p>
+</section>
+<section id="sec-coal" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="sec-coal"><span class="header-section-number">6.5</span> A coal-reserve country</h2>
+<p>Fossil reserves raise the same question from the supply side: should a country be rewarded for coal it leaves in the ground? Indonesia had 34.9 billion tonnes of proved coal reserves at the end of 2020 <span class="citation" data-cites="BP2021">(<a href="#ref-BP2021" role="doc-biblioref">BP 2021</a>)</span>, about 78 billion tonnes of CO₂ at IPCC default carbon contents <span class="citation" data-cites="IPCC2006">(<a href="#ref-IPCC2006" role="doc-biblioref">IPCC 2006</a>)</span>. Valuing the whole reserve even at $1 per tonne would open a balance of $78 billion, and would reward the country for owning coal rather than for keeping it unburned.</p>
+<p>Crediting the whole reserve would be a mistake. It rewards the largest fossil holders most, invites countries to report larger reserves, and pays for coal that would never be mined at today’s prices. The right base is narrower: credit only reserves that are legally and verifiably retired, by canceling concessions or mining licenses, and debit combustion emissions at the debit price as for any other country. Retiring 2 billion tonnes of bituminous coal, about 4.9 billion tonnes of CO₂, at a stock price of $1 per tonne would open $4.9 billion of capacity.</p>
+<p>What that capacity is worth depends on the spread. For an investment-grade sovereign saving 1 percentage point, it is worth $49 million a year and each $1 of debit price converts to only 20 cents of carbon price; at a 3-point saving it would be worth $146 million a year. Guarantees are a strong incentive for countries that borrow at high spreads and a weak one for investment-grade emitters. For the latter, the same balance is better delivered as access to the trust’s collateral, or as a reward linked to sustainability-linked lending <span class="citation" data-cites="CFPB43">(<a href="#ref-CFPB43" role="doc-biblioref">Stretton 2026a</a>)</span>.</p>
+<p>Supply-side credits also leak. Retiring Indonesian reserves raises the world coal price and draws supply from elsewhere, so the emissions avoided are smaller than the carbon in the reserves retired <span class="citation" data-cites="Harstad2012">(<a href="#ref-Harstad2012" role="doc-biblioref">Harstad 2012</a>)</span>. The debit on combustion emissions does not leak in this way, because it prices what the country burns. A coal country’s reward should therefore come mainly from the debit on its own emissions, with reserve retirement credited at a low stock price to reflect leakage.</p>
+</section>
+<section id="sec-early" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="sec-early"><span class="header-section-number">6.6</span> Early action in numbers</h2>
+<p>Take a stylized energy reform: retiring coal capacity and replacing it with renewables at a net up-front cost of $1 billion, falling 5 percent a year as technology improves, cutting emissions by 5 MtCO₂ a year, with no domestic co-benefit counted and no ongoing cost. The minimum initial incentive from <a href="#eq-actnow" class="quarto-xref">equation&nbsp;9</a> is <span class="math inline">\((0.05 + 0.05) \times \$1\text{bn} / 5\text{ Mt} = \$20\)</span> per tonne; with the option-value factor of 1.6–1.9 it is $32–37 per tonne. Below that level the government gains by waiting, and without any incentive it never acts (<a href="#fig-timing" class="quarto-xref">Figure&nbsp;2</a>). Counting a co-benefit of $5 per tonne, it would act without an incentive, but only after about 28 years.</p>
+<div id="fig-timing" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-timing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="2.Source/figures/fig3-early-action.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Below the minimum incentive, delay beats acting now. Net present value of adopting a stylized reform in each year, for incentives at 120 percent, 60 percent and zero of the minimum in equation&nbsp;9. Reform costs $1 billion up front, falling 5 percent a year, and cuts 5 MtCO₂ a year; the incentive decays at 5 percent a year; discount rate 5 percent. Source: author’s calculations (Appendix B)."><img src="2.Source/figures/fig3-early-action.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-timing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Below the minimum incentive, delay beats acting now. Net present value of adopting a stylized reform in each year, for incentives at 120 percent, 60 percent and zero of the minimum in <a href="#eq-actnow" class="quarto-xref">equation&nbsp;9</a>. Reform costs $1 billion up front, falling 5 percent a year, and cuts 5 MtCO₂ a year; the incentive decays at 5 percent a year; discount rate 5 percent. Source: author’s calculations (Appendix B).
+</figcaption>
+</figure>
+</div>
+<p>The decaying schedule halves the donor cost. To give $20 per tonne at the start with capacity that does not decline needs a debit price of $33 per tonne and costs donors $25 million in present value on the MDB record ($740 million in the stress case). With capacity declining at 5 percent a year, matching the fall in technology costs, the debit price must be $67 per tonne to deliver the same $20 at the start, but donors’ present-value cost falls to $13 million ($370 million in the stress case), because the incentive is concentrated where it changes the decision. Delivered as cash on results, the same incentive would cost $1 billion.</p>
+</section>
+<section id="sec-sensitivity" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="sec-sensitivity"><span class="header-section-number">6.7</span> Sensitivity</h2>
+<div id="fig-ratio" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ratio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="2.Source/figures/fig2-incentive-cost-ratio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: A guarantee is worth many times what it costs. Ratio of incentive value to guarantor cost (Proposition 1) against the guarantor’s expected loss, for three spread savings, on log scales. Solid lines: budget ratio R. Dashed line: economic ratio R_e at a 3-point spread with a risk premium of 1 point. The buffer earns the discount rate, so cost equals expected loss. Dotted lines mark the base case (the MDB sovereign record: 0.77 percent annual calls, 4.9 percent loss), the middle case (3 percent, 10 percent) and the stress case (3 percent, 37 percent). Source: author’s calculations; @GEMs2025; @Longstaff2011; @StrettonWP42; @CrucesTrebesch2013."><img src="2.Source/figures/fig2-incentive-cost-ratio.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ratio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: A guarantee is worth many times what it costs. Ratio of incentive value to guarantor cost (Proposition 1) against the guarantor’s expected loss, for three spread savings, on log scales. Solid lines: budget ratio <span class="math inline">\(R\)</span>. Dashed line: economic ratio <span class="math inline">\(R_e\)</span> at a 3-point spread with a risk premium of 1 point. The buffer earns the discount rate, so cost equals expected loss. Dotted lines mark the base case (the MDB sovereign record: 0.77 percent annual calls, 4.9 percent loss), the middle case (3 percent, 10 percent) and the stress case (3 percent, 37 percent). Source: author’s calculations; <span class="citation" data-cites="GEMs2025">European Investment Bank (<a href="#ref-GEMs2025" role="doc-biblioref">2025</a>)</span>; <span class="citation" data-cites="Longstaff2011">Longstaff et al. (<a href="#ref-Longstaff2011" role="doc-biblioref">2011</a>)</span>; <span class="citation" data-cites="StrettonWP42">Stretton (<a href="#ref-StrettonWP42" role="doc-biblioref">2026h</a>)</span>; <span class="citation" data-cites="CrucesTrebesch2013">Cruces and Trebesch (<a href="#ref-CrucesTrebesch2013" role="doc-biblioref">2013</a>)</span>.
+</figcaption>
+</figure>
+</div>
+<p>The ratio of value to cost is most sensitive to the spread saved, to whether the guarantor keeps preferred-creditor treatment, and to whether MDB capital is charged (<a href="#fig-ratio" class="quarto-xref">Figure&nbsp;3</a>). Halving the spread to 1.5 points halves the budget ratio, to 40 in the base case and 1.4 in the stress case. Losing preferred-creditor treatment moves it from 80 toward 10 or 2.7; that is the main risk to the scheme’s cost, and the reason the stress case is reported throughout. Counting only the economic gain lowers it to about 27, and to 1.9 in the stress case, where a guarantee is barely better than a grant. If the guarantees were instead carried on an MDB balance sheet that holds capital at IBRD’s minimum equity-to-loans ratio of 18 percent <span class="citation" data-cites="WorldBank2024ELR">(<a href="#ref-WorldBank2024ELR" role="doc-biblioref">World Bank 2024</a>)</span>, at a 2 percent carry, the base-case budget ratio would be about 7.5: still well above one, but a tenth of the headline. That is the case for holding a dedicated buffer in a trust rather than consuming MDB capital. The carbon-price equivalent is proportional to the debit price and the spread and inversely proportional to the discount rate plus decay, so a country with a 4.5-point spread gets half as much again per tonne as one with 3 points. On the budget measure, the guarantee form delivers more incentive per donor dollar than a grant unless expected losses exceed the spread saved, 3 percent a year, nearly 80 times the MDB record and almost three times the stress case.</p>
+</section>
+</section>
+<section id="sec-delivery" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Institutional delivery</h1>
+<p><em>MDBs issue the guarantees; a buffer fund stands behind them.</em> The guarantees are ordinary MDB instruments: policy-based or project guarantees on the country’s eligible green borrowing, with a sovereign counter-indemnity. The NCV adds a rule for how much capacity each country gets, outside its normal lending envelope. The buffer that absorbs losses before they reach MDB capital is held by a fund that keeps capital rather than spending it; the Climate Investment Trust proposed in the companion paper is that fund <span class="citation" data-cites="CFPB42 StrettonWP42">(<a href="#ref-CFPB42" role="doc-biblioref">Stretton 2026g</a>, <a href="#ref-StrettonWP42" role="doc-biblioref">2026h</a>)</span>. Holding capital rather than disbursing it is where the leverage comes from: even sized to the stress case, a buffer supports exposure about ten times its size. A call needs cash before recoveries arrive, so the fund also needs a liquidity line from its highly rated backer; if each call had to be paid from the buffer at a year’s debt service, $5 billion on the record would support about $390 billion of guarantees rather than about $1 trillion <span class="citation" data-cites="StrettonWP42">(<a href="#ref-StrettonWP42" role="doc-biblioref">Stretton 2026h</a>)</span>.</p>
+<p><em>Eligible borrowing must be defined narrowly.</em> Capacity should cover borrowing for investments that cut emissions or protect stocks: clean power, grids, forest enforcement and monitoring, and the payment guarantees that make power purchase agreements bankable. Guarantee capacity earned under the NCV can stand behind the guarantee waterfall of the payment intermediary in <span class="citation" data-cites="CFPB31">Stretton (<a href="#ref-CFPB31" role="doc-biblioref">2026d</a>)</span> or the senior bonds of the asset-class structure in <span class="citation" data-cites="CFPB32">Stretton (<a href="#ref-CFPB32" role="doc-biblioref">2026c</a>)</span>. Those papers report their own ratios, for example a contract guarantee that saves about $2 of tariff per dollar of expected cost in 3.1; that is a different quantity from Proposition 1, a guarantee on a utility’s payments to generators rather than on a sovereign’s debt, and the two should not be compared directly.</p>
+<p><em>Interest on the balance, into a trust account, is the variant for non-borrowers.</em> For a country that does not borrow enough for capacity to bind, the arrangement pays interest at rate <span class="math inline">\(i\)</span> on the balance into a beneficiary account in the Climate Investment Trust, pledgeable as collateral now and withdrawable after 2050. The marginal incentive per tonne becomes <span class="math inline">\(p_e\, i/(r+\theta)\)</span> in place of <span class="math inline">\(p_e \Delta s/(r+\theta)\)</span>, and the donor cost is the full interest, deferred, rather than a fraction of it. Surplus balance above a borrower’s capacity need flows into the same account, so the debit never goes slack.</p>
+<p><em>Sustainability-linked lending is the delivery channel for the performance link.</em> The debit and the allowance can be written as key performance indicators in a sustainability-linked loan or bond, so that meeting the allowance path both preserves the balance and triggers a step-down in the loan’s margin. Codified indicators and verification make that link routine <span class="citation" data-cites="CFPB43">(<a href="#ref-CFPB43" role="doc-biblioref">Stretton 2026a</a>)</span>.</p>
+<p><em>Verification uses existing systems.</em> Forest stocks and land-use emissions can be measured under jurisdictional standards such as ART-TREES, which already verify national forest areas and emissions <span class="citation" data-cites="ARTGuyana2022">(<a href="#ref-ARTGuyana2022" role="doc-biblioref">Aster Global Environmental Solutions 2022</a>)</span>; fossil emissions come from national inventories under the Paris transparency framework. The NCV needs these measurements annually, not a new market.</p>
+</section>
+<section id="sec-risks" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Risks and safeguards</h1>
+<p><em>Moral hazard: the guarantee makes the country borrow more.</em> Cheaper borrowing invites more borrowing, and a guaranteed creditor has less reason to discipline the sovereign. Three features limit this. Capacity is capped by the balance, so the exposure is bounded. Only eligible green borrowing is covered. And the sovereign counter-indemnifies the guarantor, so a call on the guarantee becomes a debt to an MDB that the country has strong reasons to repay. The safeguard fails if eligibility is defined loosely or if the counter-indemnity is waived for the weakest borrowers, which is where the spread saved is largest.</p>
+<p><em>Hidden fiscal exposure and subordination of other creditors.</em> The scheme does not remove the host government’s liabilities. It converts part of its market debt into debt guaranteed by an MDB and backed by the government’s own counter-indemnity: the exposure becomes smaller in expected cost, contingent and contracted, but it is still the government’s. Because the guaranteed debt is in effect senior, the government’s other creditors stand further back in a default and may charge more, as <span class="citation" data-cites="Chamon2022">Chamon et al. (<a href="#ref-Chamon2022" role="doc-biblioref">2022</a>)</span> find for debt-for-climate swaps; part of the budget saving on guaranteed debt is then paid back on the rest. Proposition 1(b) gives the floor on the net gain. On the donor side, guarantee exposure is a contingent liability that capital-adequacy rules must count. A buffer sized to expected loss alone is used but not used up in normal years and is exhausted in a correlated crisis <span class="citation" data-cites="StrettonTC">(<a href="#ref-StrettonTC" role="doc-biblioref">Stretton 2026j</a>, ch.&nbsp;14)</span>; the buffer must be sized to stressed losses and its size published.</p>
+<p><em>Valuation disputes.</em> Countries will contest stock measurements, densities, allowances and the price. Separating the two prices narrows the stakes. Disputes over the stock and the allowance affect only the level of the balance, which is a matter of distribution and can be settled by negotiation (Proposition 2(c)). The debit price, which governs incentives, should be uniform across countries and set by rule. Prioritizing forests near ecological thresholds, where losing more forest could trigger dieback of much of the remainder <span class="citation" data-cites="LovejoyNobre2018">(<a href="#ref-LovejoyNobre2018" role="doc-biblioref">Lovejoy and Nobre 2018</a>)</span>, is better done through a higher debit per hectare in designated zones than through a higher stock value, because the purpose is to price the next hectare cleared, not the hectares already standing.</p>
+<p><em>Permanence and leakage.</em> A forest can burn or be cleared after a contract ends. The NCV handles reversal by construction: a tonne released is debited whenever it is released, so a country cannot bank a reward and then reverse, provided the scheme is open-ended (<a href="#sec-p2" class="quarto-xref">Section&nbsp;5.3</a>). Natural disturbance needs a rule, such as a pooled insurance reserve, so that a fire beyond the government’s control does not wipe out a balance; the TFFF’s lower deduction for fire-degraded forest is a precedent <span class="citation" data-cites="TFFF2025CN">(<a href="#ref-TFFF2025CN" role="doc-biblioref">Government of Brazil 2025</a>)</span>. Leakage within a country is avoided by national accounting; leakage across borders, as deforestation or coal supply moves to non-participants, is limited only by broad participation, which is an argument for opening the scheme to all forest and coal countries at once, as the TFFF does for 74 forest countries <span class="citation" data-cites="Barber2025">(<a href="#ref-Barber2025" role="doc-biblioref">Barber et al. 2025</a>)</span>.</p>
+<p><em>Fairness to low-stock countries.</em> A stock-based balance gives most to countries with large forests and nothing to the Sahel or small island states. This is partly the point, since stocks are what a flow-based scheme fails to reward, but it cannot be the whole design. The allowance is the corrective: a low-emitting country with little stock earns balance every year it emits below its allowance, at the same debit price. A per-capita floor on the opening balance would add a further corrective. Because the incentive scales with borrowing, low-stock, low-borrowing countries are better served by the interest-on-balance variant than by guarantees.</p>
+<p><em>The strongest objection: this pays for stocks that were never at risk, and invites hold-up.</em> Much of Guyana’s or the Congo Basin’s forest is remote and would stand without any payment, so the opening balance is in large part a transfer for nothing; and paying for stocks, <span class="citation" data-cites="Harstad2016">Harstad (<a href="#ref-Harstad2016" role="doc-biblioref">2016</a>)</span> warns, rewards whoever threatens them most credibly. The answer has four parts. First, the transfer is infra-marginal by design, and it is cheap: what the country receives is capacity, costed to donors at expected loss plus buffer carry, not cash. Second, the opening balance is what makes the per-tonne debit enforceable; without a balance to lose, a sovereign cannot be charged for emitting. Third, by Proposition 2 the incentive at the margin is set by the debit price, not by the opening balance, so a generous stock credit does not dilute the incentive. Fourth, the balance is fixed at entry from a verified stock and the debit price is uniform, so a threat to clear raises neither; the alternative already in use, an HFLD adjustment to a crediting baseline, rewards the stock through exactly the counterfactual a threat can inflate. The objection is right that the stock price should be low. It is wrong that the stock should not be rewarded at all.</p>
+</section>
+<section id="sec-policy" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Policy implications</h1>
+<p>MDB shareholders should create a rules-based guarantee capacity outside country lending envelopes, allocated by notional capitalized value. Each participating country would receive an opening balance from its verified carbon stock at a low, uniform stock price, an allowance path to net zero, and a uniform debit price of $30–70 per tonne for emissions above the allowance, a carbon-price equivalent of about $18–42 at a 3-point spread. Capacity should be sized so that it binds on each country’s eligible green borrowing, decline at roughly the rate that clean technology costs fall, have no fixed end date, and pass any surplus to a beneficiary account.</p>
+<p>Donors should fund the buffer rather than the reward. The first-loss buffer behind the guarantees should be held in a trust that invests it, sized to stressed losses on the exposure and published. On the calibration here, a scheme delivering $1 billion a year of incentive costs about $13 million a year in expected losses on the MDB record, and about $370 million in the stress case in which the facility does not inherit preferred-creditor status. Because the buffer is held rather than spent, donors should hold the stress-case buffer, about $3.1 billion, until the facility has a loss record of its own, with a liquidity line to pay calls before recoveries arrive. If holding it costs 2 percent a year, that adds about $62 million a year to the expected loss. Donors should present the budget saving and the economic gain together, so that host governments and parliaments see both.</p>
+<p>Forest and coal countries should negotiate allowances, not baselines. Under the NCV the allowance affects how much a country gets, not how strongly it is rewarded per tonne, so it is a safer object of negotiation than a crediting baseline. Coal countries should seek credit for legally retired reserves at a low stock price, and should expect most of their reward to come from the debit on combustion emissions.</p>
+<p>The scheme fails under five conditions. It fails if spreads saved are small, as for investment-grade sovereigns, unless the reward is delivered through the trust’s accounts instead. It fails if capacity is set so large that it never binds, which is the trap in the original proposal’s release schedule, or if the scheme has a fixed end date, which drains the price per tonne as the date approaches. It fails if the buffer is sized to expected rather than stressed losses, so that a correlated crisis reaches MDB capital. And it fails if verification is captured, so that measured emissions stop tracking real ones.</p>
+</section>
+<section id="sec-conclusion" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Conclusion</h1>
+<p>A notional capitalized value lets the international system reward what countries have kept as well as what they cut, at a fraction of the cost of paying for either in cash. Two results do most of the work. A guarantee saves the borrower the full spread and costs the provider only its expected loss and the carry on a buffer, so each dollar of expected loss buys about 80 dollars of interest saving on the MDBs’ own sovereign loss record and about 27 dollars of economic gain once the default option the country gives up is netted out; in a stress case without preferred-creditor status the figures are 2.7 and 1.9. And the stock and the margin need different prices: the stock opens the balance from which each tonne is debited, and the debit price, converted at the spread over the discount rate, sets the carbon-price equivalent. The main limitation is that the incentive scales with what a country borrows and the spread it saves, so the guarantee form is strong for large, lower-rated emitters and forest countries and weak for investment-grade or lightly indebted ones. The next step is to estimate spreads saved, risk premiums and eligible borrowing country by country, and to test with the companion trust model how large a buffer stressed, correlated losses require.</p>
+</section>
+<section id="downloads" class="level1 unnumbered">
+<h1 class="unnumbered">Downloads</h1>
+<p><a href="../../../papers/Brief-NotionalCapitalisedValueAndGuarantees.docx">Policy brief (docx)</a> · <a href="../../../papers/NotionalCapitalisedValueAndGuarantees.docx">Working paper (docx)</a></p>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-AfSDJN2023" class="csl-entry" role="listitem">
+African Sovereign Debt Justice Network. 2023. <em>Ninety Sixth Sovereign Debt News Update: <span>G</span>abon’s Debt-for-Nature Swap: Some Critical Reflections</em>. Afronomicslaw, 4 September 2023. <a href="https://www.afronomicslaw.org/print/pdf/node/2687">https://www.afronomicslaw.org/print/pdf/node/2687</a>.
+</div>
+<div id="ref-Ameli2021" class="csl-entry" role="listitem">
+Ameli, Nadia, Olivier Dessens, Matthew Winning, et al. 2021. <span>“Higher Cost of Finance Exacerbates a Climate Investment Trap in Developing Economies.”</span> <em>Nature Communications</em> 12: 4046. <a href="https://doi.org/10.1038/s41467-021-24305-3">https://doi.org/10.1038/s41467-021-24305-3</a>.
+</div>
+<div id="ref-Angelsen2017" class="csl-entry" role="listitem">
+Angelsen, Arild. 2017. <span>“<span>REDD+</span> as Result-Based Aid: General Lessons and Bilateral Agreements of <span>N</span>orway.”</span> <em>Review of Development Economics</em> 21 (2): 237–64. <a href="https://doi.org/10.1111/rode.12271">https://doi.org/10.1111/rode.12271</a>.
+</div>
+<div id="ref-Asheim2019" class="csl-entry" role="listitem">
+Asheim, Geir B., Taran Fæhn, Karine Nyborg, et al. 2019. <span>“The Case for a Supply-Side Climate Treaty.”</span> <em>Science</em> 365 (6451): 325–27. <a href="https://doi.org/10.1126/science.aax5011">https://doi.org/10.1126/science.aax5011</a>.
+</div>
+<div id="ref-ARTGuyana2022" class="csl-entry" role="listitem">
+Aster Global Environmental Solutions. 2022. <em><span>ART</span> Program <span>TREES</span> Validation Report, Guyana (<span>ART102</span>), Crediting Period 2016–2020: Final V1</em>. Architecture for REDD+ Transactions. <a href="https://redd.unfccc.int/uploads/2_277_22005.00_arttrees_guyana_validation_report_2016-2020_final_v1__281_29.pdf">https://redd.unfccc.int/uploads/2_277_22005.00_arttrees_guyana_validation_report_2016-2020_final_v1__281_29.pdf</a>.
+</div>
+<div id="ref-Barber2025" class="csl-entry" role="listitem">
+Barber, Charles, Edward Davey, Viviana Zalles, and Mariana Oliveira. 2025. <em>The <span>T</span>ropical <span>F</span>orests <span>F</span>orever <span>F</span>acility Could Finally Finance Nature Conservation. Will Funders Back It?</em> World Resources Institute, Insights. <a href="https://www.wri.org/insights/financing-nature-conservation-tropical-forest-forever-facility">https://www.wri.org/insights/financing-nature-conservation-tropical-forest-forever-facility</a>.
+</div>
+<div id="ref-BP2021" class="csl-entry" role="listitem">
+BP. 2021. <em>Statistical Review of World Energy 2021</em>. 70th ed. <a href="https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2021-full-report.pdf">https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2021-full-report.pdf</a>.
+</div>
+<div id="ref-Chamon2022" class="csl-entry" role="listitem">
+Chamon, Marcos, Erik Klok, Vimal V. Thakoor, and Jeromin Zettelmeyer. 2022. <em>Debt-for-Climate Swaps: Analysis, Design, and Implementation</em>. IMF Working Paper 22/162. International Monetary Fund. <a href="https://doi.org/10.5089/9798400215872.001">https://doi.org/10.5089/9798400215872.001</a>.
+</div>
+<div id="ref-CollierVenables2014" class="csl-entry" role="listitem">
+Collier, Paul, and Anthony J. Venables. 2014. <span>“Closing Coal: Economic and Moral Incentives.”</span> <em>Oxford Review of Economic Policy</em> 30 (3): 492–512. <a href="https://doi.org/10.1093/oxrep/gru024">https://doi.org/10.1093/oxrep/gru024</a>.
+</div>
+<div id="ref-CrucesTrebesch2013" class="csl-entry" role="listitem">
+Cruces, Juan J., and Christoph Trebesch. 2013. <span>“Sovereign Defaults: The Price of Haircuts.”</span> <em>American Economic Journal: Macroeconomics</em> 5 (3): 85–117. <a href="https://doi.org/10.1257/mac.5.3.85">https://doi.org/10.1257/mac.5.3.85</a>.
+</div>
+<div id="ref-GuyanaDPI2023" class="csl-entry" role="listitem">
+Department of Public Information, Guyana. 2023. <em>First Payment from <span>H</span>ess <span>C</span>orporation for <span>G</span>uyana-Issued Carbon Credits</em>. <a href="https://dpi.gov.gy/first-payment-from-hess-corporation-for-guyana-issued-carbon-credits/">https://dpi.gov.gy/first-payment-from-hess-corporation-for-guyana-issued-carbon-credits/</a>.
+</div>
+<div id="ref-DixitPindyck1994" class="csl-entry" role="listitem">
+Dixit, Avinash K., and Robert S. Pindyck. 1994. <em>Investment Under Uncertainty</em>. Princeton University Press. <a href="https://doi.org/10.1515/9781400830176">https://doi.org/10.1515/9781400830176</a>.
+</div>
+<div id="ref-Engel2008" class="csl-entry" role="listitem">
+Engel, Stefanie, Stefano Pagiola, and Sven Wunder. 2008. <span>“Designing Payments for Environmental Services in Theory and Practice: An Overview of the Issues.”</span> <em>Ecological Economics</em> 65 (4): 663–74. <a href="https://doi.org/10.1016/j.ecolecon.2008.03.011">https://doi.org/10.1016/j.ecolecon.2008.03.011</a>.
+</div>
+<div id="ref-GEMs2025" class="csl-entry" role="listitem">
+European Investment Bank. 2025. <em>New Statistics from <span>GEMs</span> Consortium Show Risk of Investing in Emerging Markets Is Lower Than Commonly Perceived</em>. Press release 2025-366, 7 October 2025. <a href="https://www.eib.org/en/press/all/2025-366-new-statistics-from-gems-consortium-show-risk-of-investing-in-emerging-markets-is-lower-than-commonly-perceived">https://www.eib.org/en/press/all/2025-366-new-statistics-from-gems-consortium-show-risk-of-investing-in-emerging-markets-is-lower-than-commonly-perceived</a>.
+</div>
+<div id="ref-daFonseca2007" class="csl-entry" role="listitem">
+Fonseca, Gustavo A. B. da, Carlos Manuel Rodriguez, Guy Midgley, Jonah Busch, Lee Hannah, and Russell A. Mittermeier. 2007. <span>“No Forest Left Behind.”</span> <em>PLoS Biology</em> 5 (8): e216. <a href="https://doi.org/10.1371/journal.pbio.0050216">https://doi.org/10.1371/journal.pbio.0050216</a>.
+</div>
+<div id="ref-TFFF2025CN" class="csl-entry" role="listitem">
+Government of Brazil. 2025. <em>Tropical Forest Forever Facility (<span>TFFF</span>): Concept Note 3.0</em>. Government of Brazil. <a href="https://tfff.earth/wp-content/uploads/2025/08/TFFF-Concept-Note-3.0-202508-FINAL.pdf">https://tfff.earth/wp-content/uploads/2025/08/TFFF-Concept-Note-3.0-202508-FINAL.pdf</a>.
+</div>
+<div id="ref-Guyana2022LCDS" class="csl-entry" role="listitem">
+Government of Guyana. 2022. <em>Guyana’s Low Carbon Development Strategy 2030</em>. Office of the President, Georgetown, July 2022. <a href="https://lcds.gov.gy/wp-content/uploads/2022/08/Guyanas-Low-Carbon-Development-Strategy-2030.pdf">https://lcds.gov.gy/wp-content/uploads/2022/08/Guyanas-Low-Carbon-Development-Strategy-2030.pdf</a>.
+</div>
+<div id="ref-Harstad2012" class="csl-entry" role="listitem">
+Harstad, Bård. 2012. <span>“Buy Coal! A Case for Supply-Side Environmental Policy.”</span> <em>Journal of Political Economy</em> 120 (1): 77–115. <a href="https://doi.org/10.1086/665405">https://doi.org/10.1086/665405</a>.
+</div>
+<div id="ref-Harstad2016" class="csl-entry" role="listitem">
+Harstad, Bård. 2016. <span>“The Market for Conservation and Other Hostages.”</span> <em>Journal of Economic Theory</em> 166: 124–51. <a href="https://doi.org/10.1016/j.jet.2016.07.003">https://doi.org/10.1016/j.jet.2016.07.003</a>.
+</div>
+<div id="ref-HernandezRenteria2020" class="csl-entry" role="listitem">
+Hernández Rentería, Patricio Eduardo. 2020. <span>“<span>La Iniciativa Yasuní-ITT: una oscura lección sobre ética y desarrollo</span>.”</span> <em><span class="nocase">Revista de la Facultad de Jurisprudencia</span></em> 7 (7): 183–219. <a href="https://doi.org/10.26807/rfj.v7i7.270">https://doi.org/10.26807/rfj.v7i7.270</a>.
+</div>
+<div id="ref-ICVCM2026HFLD" class="csl-entry" role="listitem">
+Integrity Council for the Voluntary Carbon Market. 2026. <em>Observations in Relation to Category Assessment: Jurisdictional <span>REDD+</span>, High Forest Cover/Low Deforestation (<span>HFLD</span>) Crediting</em>. ICVCM. <a href="https://icvcm.org/wp-content/uploads/2026/05/Board-Observations_REDD_HFLD.pdf">https://icvcm.org/wp-content/uploads/2026/05/Board-Observations_REDD_HFLD.pdf</a>.
+</div>
+<div id="ref-IPCC2006" class="csl-entry" role="listitem">
+IPCC. 2006. <span>“Introduction.”</span> Chap. 1 in <em>2006 <span>IPCC</span> Guidelines for National Greenhouse Gas Inventories, Volume 2: Energy</em>, edited by H. S. Eggleston, L. Buendia, K. Miwa, T. Ngara, and K. Tanabe. IGES. <a href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/2_Volume2/V2_1_Ch1_Introduction.pdf">https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/2_Volume2/V2_1_Ch1_Introduction.pdf</a>.
+</div>
+<div id="ref-Longstaff2011" class="csl-entry" role="listitem">
+Longstaff, Francis A., Jun Pan, Lasse H. Pedersen, and Kenneth J. Singleton. 2011. <span>“How Sovereign Is Sovereign Credit Risk?”</span> <em>American Economic Journal: Macroeconomics</em> 3 (2): 75–103. <a href="https://doi.org/10.1257/mac.3.2.75">https://doi.org/10.1257/mac.3.2.75</a>.
+</div>
+<div id="ref-LovejoyNobre2018" class="csl-entry" role="listitem">
+Lovejoy, Thomas E., and Carlos Nobre. 2018. <span>“Amazon Tipping Point.”</span> <em>Science Advances</em> 4 (2): eaat2340. <a href="https://doi.org/10.1126/sciadv.aat2340">https://doi.org/10.1126/sciadv.aat2340</a>.
+</div>
+<div id="ref-Merton1977" class="csl-entry" role="listitem">
+Merton, Robert C. 1977. <span>“An Analytic Derivation of the Cost of Deposit Insurance and Loan Guarantees: An Application of Modern Option Pricing Theory.”</span> <em>Journal of Banking and Finance</em> 1 (1): 3–11. <a href="https://doi.org/10.1016/0378-4266(77)90015-2">https://doi.org/10.1016/0378-4266(77)90015-2</a>.
+</div>
+<div id="ref-Nordhaus2015" class="csl-entry" role="listitem">
+Nordhaus, William. 2015. <span>“Climate Clubs: Overcoming Free-Riding in International Climate Policy.”</span> <em>American Economic Review</em> 105 (4): 1339–70. <a href="https://doi.org/10.1257/aer.15000001">https://doi.org/10.1257/aer.15000001</a>.
+</div>
+<div id="ref-Schlegl2019" class="csl-entry" role="listitem">
+Schlegl, Matthias, Christoph Trebesch, and Mark L. J. Wright. 2019. <em>The Seniority Structure of Sovereign Debt</em>. NBER Working Paper No. 25793. National Bureau of Economic Research. <a href="https://doi.org/10.3386/w25793">https://doi.org/10.3386/w25793</a>.
+</div>
+<div id="ref-Smith2023Gabon" class="csl-entry" role="listitem">
+Smith, Gregory. 2023. <em><span>G</span>abon’s Debt-for-Nature Blue Bond: A Great Try but Did They Get the Conversion?</em> M&amp;G Bond Vigilantes, 14 August 2023. <a href="https://bondvigilantes.com/?p=24809">https://bondvigilantes.com/?p=24809</a>.
+</div>
+<div id="ref-Steffen2020" class="csl-entry" role="listitem">
+Steffen, Bjarne. 2020. <span>“Estimating the Cost of Capital for Renewable Energy Projects.”</span> <em>Energy Economics</em> 88: 104783. <a href="https://doi.org/10.1016/j.eneco.2020.104783">https://doi.org/10.1016/j.eneco.2020.104783</a>.
+</div>
+<div id="ref-CFPB43" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026a. <em>Codify Sustainability-Linked Sovereign Lending, Then Give It Scale</em>. 4.3. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-StrettonWP43" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026b. <span>“Codify Sustainability-Linked Sovereign Lending, Then Give It Scale.”</span> Unpublished manuscript.
+</div>
+<div id="ref-CFPB32" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026c. <em>From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power</em>. 3.2. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB31" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026d. <em>Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power</em>. 3.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB61" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026e. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-StrettonDPhil" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026f. <span>“Sovereign Incentives and de-Risking for Low-Carbon Investment.”</span> Unpublished manuscript.
+</div>
+<div id="ref-CFPB42" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026g. <em>The Climate Investment Trust: Hold Capital, Lend Its Strength</em>. 4.2. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-StrettonWP42" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026h. <span>“The Climate Investment Trust: Hold Capital, Lend Its Strength.”</span> Unpublished manuscript.
+</div>
+<div id="ref-StrettonRPWT" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026i. <span>“The Right Policy at the Wrong Time: Carbon Pricing and the Order of Things.”</span> Unpublished manuscript.
+</div>
+<div id="ref-StrettonTC" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026j. <span>“Time and Chance: The Elements of Scale in the Green Transition.”</span> Unpublished manuscript.
+</div>
+<div id="ref-UNFCCC2015" class="csl-entry" role="listitem">
+UNFCCC. 2015. <em>Paris Agreement</em>. <a href="https://unfccc.int/sites/default/files/english_paris_agreement.pdf">https://unfccc.int/sites/default/files/english_paris_agreement.pdf</a>.
+</div>
+<div id="ref-West2023" class="csl-entry" role="listitem">
+West, Thales A. P., Sven Wunder, Erin O. Sills, et al. 2023. <span>“Action Needed to Make Carbon Offsets from Forest Conservation Work for Climate Change Mitigation.”</span> <em>Science</em> 381 (6660): 873–77. <a href="https://doi.org/10.1126/science.ade3535">https://doi.org/10.1126/science.ade3535</a>.
+</div>
+<div id="ref-WorldBank2024ELR" class="csl-entry" role="listitem">
+World Bank. 2024. <em>World Bank Group Announces New Financing, Adjusts Pricing Terms</em>. Press release, 15 October 2024. <a href="https://www.worldbank.org/en/news/press-release/2024/10/15/world-bank-group-announces-new-financing-adjusts-pricing-terms">https://www.worldbank.org/en/news/press-release/2024/10/15/world-bank-group-announces-new-financing-adjusts-pricing-terms</a>.
+</div>
+</div>
+</section>
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="sec-appA" class="level1 appendix unnumbered"><h2 class="anchored quarto-appendix-heading">Appendix A: Proofs</h2><div class="quarto-appendix-contents">
+
+<p><strong>Proof of Proposition 1.</strong> (a) With constant parameters, <a href="#eq-value" class="quarto-xref">equation&nbsp;3</a> and <a href="#eq-cost" class="quarto-xref">equation&nbsp;4</a> give <span class="math inline">\(V = (\Delta s - f)\sum_t \delta^t X_t\)</span> and <span class="math inline">\(C = (\pi L + k\varphi - f)\sum_t \delta^t X_t\)</span>. The common factor <span class="math inline">\(\sum_t \delta^t X_t &gt; 0\)</span> cancels, giving <a href="#eq-ratio" class="quarto-xref">equation&nbsp;5</a>. <span class="math inline">\(R &gt; 1\)</span> if and only if <span class="math inline">\(\Delta s - f &gt; \pi L + k\varphi - f\)</span>, that is <span class="math inline">\(\Delta s &gt; \pi L + k\varphi\)</span>, provided <span class="math inline">\(\pi L + k\varphi - f &gt; 0\)</span>. With <span class="math inline">\(f = \pi L + k\varphi\)</span>, <span class="math inline">\(C = 0\)</span> and <span class="math inline">\(V = (\Delta s - \pi L - k\varphi)\sum_t \delta^t X_t\)</span>.</p>
+<ol start="2" type="a">
+<li>Per dollar of exposure a year, write the market spread as <span class="math inline">\(\Delta s = \ell_m + \rho\)</span>, where <span class="math inline">\(\ell_m\)</span> is the market’s expected default loss and <span class="math inline">\(\rho\)</span> the risk premium. Under market debt the country’s expected payment above the guaranteed rate is <span class="math inline">\(\Delta s - \ell_m\)</span>, because in default it does not repay what creditors lose. Under the guarantee it pays the guaranteed rate plus the fee; in default the guarantor pays creditors the expected shortfall <span class="math inline">\(\ell_m\)</span>, and the country repays the guarantor all of it except the guarantor’s own loss, <span class="math inline">\(\ell_m - \pi L\)</span>. Its expected payment above the guaranteed rate is therefore <span class="math inline">\(f - \ell_m + (\ell_m - \pi L) = f - \pi L\)</span>. The difference is <span class="math inline">\((\Delta s - \ell_m) - (f - \pi L) = \rho + \pi L - f\)</span>. Dividing by the guarantor’s cost <span class="math inline">\(\pi L + k\varphi - f\)</span> and cancelling <span class="math inline">\(\sum_t \delta^t X_t\)</span> as in (a) gives <a href="#eq-econ" class="quarto-xref">equation&nbsp;6</a>. Since <span class="math inline">\(\ell_m \ge \pi L\)</span> when the guarantor is senior to market creditors, <span class="math inline">\(\rho + \pi L \le \Delta s\)</span> and <span class="math inline">\(R_e \le R\)</span>. <span class="math inline">\(\square\)</span></li>
+</ol>
+<p><strong>Proof of Proposition 2.</strong> (a) In continuous time, <span class="math inline">\(\dot B_t = p_e(A_t - E_t)\)</span>, so emitting one extra tonne at <span class="math inline">\(s\)</span> lowers <span class="math inline">\(B_t\)</span> by <span class="math inline">\(p_e\)</span> for all <span class="math inline">\(t &gt; s\)</span> (until the balance hits zero). Where capacity binds, <span class="math inline">\(X_t = \lambda_t B_t\)</span>, so guaranteed exposure falls by <span class="math inline">\(\lambda_t p_e\)</span> and the country loses <span class="math inline">\((\Delta s - f)\lambda_t p_e\)</span> a year. The present value at <span class="math inline">\(s\)</span> is <span class="math display">\[\int_s^\infty (\Delta s - f)\, p_e\, \lambda_0 e^{-\theta t} e^{-r(t-s)}\,dt = \frac{\lambda_0 p_e (\Delta s - f)}{r+\theta} e^{-\theta s}.\]</span> If the scheme ends at <span class="math inline">\(\bar T\)</span>, the upper limit is <span class="math inline">\(\bar T\)</span> and the value is multiplied by <span class="math inline">\(1 - e^{-(r+\theta)(\bar T - s)}\)</span>, which goes to zero as <span class="math inline">\(s \to \bar T\)</span>. (b) If the debit is <span class="math inline">\(p_e(A_t - \hat E_t)\)</span> with <span class="math inline">\(\hat E_t\)</span> a forecast fixed in advance, <span class="math inline">\(B_t\)</span> does not depend on actual <span class="math inline">\(E_t\)</span>, so <span class="math inline">\(\partial V/\partial E_s = 0\)</span>. (c) <span class="math inline">\(A_t\)</span> enters <span class="math inline">\(B_t\)</span> additively and does not depend on <span class="math inline">\(E_s\)</span>, so <span class="math inline">\(\partial^2 B_t/\partial A\,\partial E_s = 0\)</span> and <span class="math inline">\(\tau(s)\)</span> is unchanged. (d) If <span class="math inline">\(\lambda_t B_t \ge D_t\)</span>, then <span class="math inline">\(X_t = D_t\)</span> is locally unaffected by a small change in <span class="math inline">\(B_t\)</span>; if <span class="math inline">\(B_t = 0\)</span>, the floor in <a href="#eq-balance" class="quarto-xref">equation&nbsp;1</a> makes <span class="math inline">\(B_t\)</span> locally insensitive to further emissions. In either case the integrand is zero for those <span class="math inline">\(t\)</span>. <span class="math inline">\(\square\)</span></p>
+<p><strong>Proof of Proposition 3.</strong> Differentiate <a href="#eq-w" class="quarto-xref">equation&nbsp;8</a>: <span class="math inline">\(W'(T) = -\Delta E\,[m(T) + b - \omega]e^{-rT} + (r+g)K_0 e^{-(r+g)T}\)</span>. Multiply by <span class="math inline">\(e^{(r+g)T} &gt; 0\)</span>: the sign of <span class="math inline">\(W'(T)\)</span> is the sign of <span class="math inline">\(h(T) \equiv (r+g)K_0 - \Delta E\,n(T)e^{gT}\)</span>, where <span class="math inline">\(n(T) = m(T) + b - \omega = (m_\infty + b - \omega) + (m_0 - m_\infty)e^{-\theta T}\)</span>. Then <span class="math inline">\(n(T)e^{gT} = (m_\infty + b - \omega)e^{gT} + (m_0 - m_\infty)e^{(g-\theta)T}\)</span>. The first term is non-decreasing because <span class="math inline">\(m_\infty + b - \omega \ge 0\)</span> (persistence), and the second is non-decreasing because <span class="math inline">\(\theta \le g\)</span> and <span class="math inline">\(m_0 \ge m_\infty\)</span>. So <span class="math inline">\(h(T)\)</span> is non-increasing. If <a href="#eq-actnow" class="quarto-xref">equation&nbsp;9</a> holds, <span class="math inline">\(h(0) \le 0\)</span>, so <span class="math inline">\(h(T) \le 0\)</span> and <span class="math inline">\(W'(T) \le 0\)</span> for all <span class="math inline">\(T \ge 0\)</span>: <span class="math inline">\(W\)</span> is non-increasing and <span class="math inline">\(T = 0\)</span> is optimal. Since <span class="math inline">\(W(T) \to 0\)</span> as <span class="math inline">\(T \to \infty\)</span>, also <span class="math inline">\(W(0) \ge 0\)</span>, so acting now beats never acting. Conversely, if <a href="#eq-actnow" class="quarto-xref">equation&nbsp;9</a> fails, <span class="math inline">\(h(0) &gt; 0\)</span>, so <span class="math inline">\(W'(0) &gt; 0\)</span> and adopting slightly later beats adopting now.</p>
+<p>For the cost result, the donors’ present-value cost of incentives for abatement <span class="math inline">\(\Delta E\)</span> from <span class="math inline">\(T = 0\)</span> is <span class="math inline">\(\frac{\pi L + k\varphi}{\Delta s}\int_0^\infty \Delta E\,m(s)e^{-rs}\,ds = \frac{\pi L + k\varphi}{\Delta s}\Delta E\left[\frac{m_\infty}{r} + \frac{m_0 - m_\infty}{r+\theta}\right]\)</span>, which is decreasing in <span class="math inline">\(\theta\)</span> for <span class="math inline">\(m_0 &gt; m_\infty\)</span>. Under the sufficient condition <span class="math inline">\(\theta \le g\)</span>, the cost is minimized at <span class="math inline">\(\theta = g\)</span>, with <span class="math inline">\(m_0 = m_0^*\)</span> and <span class="math inline">\(m_\infty\)</span> at its lowest permitted value <span class="math inline">\(\max(\omega - b, 0)\)</span>. <span class="math inline">\(\square\)</span></p>
+<p><em>Remark 1 (no incentive).</em> With <span class="math inline">\(m \equiv 0\)</span>, <span class="math inline">\(h(T) = (r+g)K_0 - \Delta E(b-\omega)e^{gT}\)</span>. If <span class="math inline">\(b \le \omega\)</span>, <span class="math inline">\(h &gt; 0\)</span> for all <span class="math inline">\(T\)</span> and the government never acts. If <span class="math inline">\(b &gt; \omega\)</span>, <span class="math inline">\(h\)</span> falls and crosses zero at <span class="math inline">\(T^* = \tfrac1g \ln[(r+g)K_0/(\Delta E(b-\omega))]\)</span>, the optimal adoption date.</p>
+<p><em>Remark 2.</em> For <span class="math inline">\(\theta &gt; g\)</span>, <a href="#eq-actnow" class="quarto-xref">equation&nbsp;9</a> remains necessary but is no longer sufficient: <span class="math inline">\(h(T)\)</span> may rise and then fall, and a later adoption date can dominate. The code in Appendix B checks <span class="math inline">\(W(T)\)</span> numerically for any schedule.</p>
+</div></section><section id="sec-appB" class="level1 appendix unnumbered"><h2 class="anchored quarto-appendix-heading">Appendix B: Data and code</h2><div class="quarto-appendix-contents">
+
+<p>All calculations are in <code>2.Source/model.py</code>, which prints every number used in the paper and the brief; <code>2.Source/make_wp_figures.py</code> draws the three figures. Both run with Python 3, NumPy and Matplotlib.</p>
+<p><em>Anchored data.</em> Guyana’s forest carbon stock (19.5 GtCO₂e) and forest area (about 18 million hectares) are from <span class="citation" data-cites="Guyana2022LCDS">Government of Guyana (<a href="#ref-Guyana2022LCDS" role="doc-biblioref">2022</a>)</span>. The Hess sale terms and the ART issuance are from <span class="citation" data-cites="GuyanaDPI2023">Department of Public Information, Guyana (<a href="#ref-GuyanaDPI2023" role="doc-biblioref">2023</a>)</span>, and Guyana’s HFLD crediting level from <span class="citation" data-cites="ARTGuyana2022">Aster Global Environmental Solutions (<a href="#ref-ARTGuyana2022" role="doc-biblioref">2022</a>)</span>. TFFF design figures are from the facility’s official Concept Note 3.0 <span class="citation" data-cites="TFFF2025CN">(<a href="#ref-TFFF2025CN" role="doc-biblioref">Government of Brazil 2025</a>)</span>, and its launch, pledges and eligible countries from <span class="citation" data-cites="Barber2025">Barber et al. (<a href="#ref-Barber2025" role="doc-biblioref">2025</a>)</span>. The base-case call probability and loss per call are the MDB default and recovery rates of <span class="citation" data-cites="GEMs2025">European Investment Bank (<a href="#ref-GEMs2025" role="doc-biblioref">2025</a>)</span>; the middle and stress cases and the buffer sizes are those of <span class="citation" data-cites="StrettonWP42">Stretton (<a href="#ref-StrettonWP42" role="doc-biblioref">2026h</a>)</span>, with the stress-case loss per call from <span class="citation" data-cites="CrucesTrebesch2013">Cruces and Trebesch (<a href="#ref-CrucesTrebesch2013" role="doc-biblioref">2013</a>)</span>. The risk premium share is from <span class="citation" data-cites="Longstaff2011">Longstaff et al. (<a href="#ref-Longstaff2011" role="doc-biblioref">2011</a>)</span>. IBRD’s equity-to-loans minimum is from <span class="citation" data-cites="WorldBank2024ELR">World Bank (<a href="#ref-WorldBank2024ELR" role="doc-biblioref">2024</a>)</span>, and the Gabon bond terms from <span class="citation" data-cites="AfSDJN2023">African Sovereign Debt Justice Network (<a href="#ref-AfSDJN2023" role="doc-biblioref">2023</a>)</span> and <span class="citation" data-cites="Smith2023Gabon">Smith (<a href="#ref-Smith2023Gabon" role="doc-biblioref">2023</a>)</span>. Indonesia’s coal reserves are from <span class="citation" data-cites="BP2021">BP (<a href="#ref-BP2021" role="doc-biblioref">2021</a>)</span>; carbon contents use IPCC default net calorific values and emission factors for other bituminous coal (25.8 GJ/t, 94.6 kgCO₂/GJ, so 2.44 tCO₂/t) and sub-bituminous coal (18.9 GJ/t, 96.1 kgCO₂/GJ, so 1.82 tCO₂/t), the latter applied to lignite as well, which overstates its carbon <span class="citation" data-cites="IPCC2006">(<a href="#ref-IPCC2006" role="doc-biblioref">IPCC 2006</a>)</span>.</p>
+<p><em>Option-value factor.</em> For a cost following a driftless geometric random walk with volatility <span class="math inline">\(\sigma\)</span> and a deterministic benefit, <span class="math inline">\(\beta\)</span> is the positive root of <span class="math inline">\(\tfrac12\sigma^2\beta(\beta-1) - r = 0\)</span>. At <span class="math inline">\(r\)</span> = 5 percent, <span class="math inline">\(\sigma\)</span> = 15 percent gives <span class="math inline">\(\beta\)</span> = 2.67 and a factor of 1.60; <span class="math inline">\(\sigma\)</span> = 20 percent gives <span class="math inline">\(\beta\)</span> = 2.16 and 1.86.</p>
+<p><em>Stylized inputs.</em> Eligible green borrowing ($5 billion), the emissions and allowance paths, the debit price ($50 per tonne), the asset correlation (0.2) and number of programs (20) behind the buffer sizes, the middle and stress cases for guarantee losses (from the companion paper), the investment-grade spread (1 percentage point), the discount rate (5 percent) and the early-action reform (cost $1 billion falling 5 percent a year, 5 MtCO₂ a year cut) are assumptions for illustration.</p>
+
+
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The mechanism first appears as the Notional Capitalized Carbon Value in chapter 21 of the author’s book manuscript <em>Time and Chance</em> <span class="citation" data-cites="StrettonTC">(<a href="#ref-StrettonTC" role="doc-biblioref">Stretton 2026j</a>)</span>, as a fallback in the Climate Investment Trust proposal (chapter 20 of the same book) and on the author’s research page. The forest-valuation argument draws on chapters 5–7 of <em>Carbon Pricing: The Right Policy at the Wrong Time</em> <span class="citation" data-cites="StrettonRPWT">(<a href="#ref-StrettonRPWT" role="doc-biblioref">Stretton 2026i</a>)</span>. The three quantities of <a href="#sec-quantities" class="quarto-xref">Section&nbsp;5.5</a> come from the author’s DPhil research proposal <span class="citation" data-cites="StrettonDPhil">(<a href="#ref-StrettonDPhil" role="doc-biblioref">Stretton 2026f</a>)</span>. All errors are the author’s.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

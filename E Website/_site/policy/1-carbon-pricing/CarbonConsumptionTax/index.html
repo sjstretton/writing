@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephen J. Stretton">
+<meta name="keywords" content="carbon pricing, consumption-based emissions, value-added tax, destination basis, border carbon adjustment, EU law">
+
+<title>Converting a VAT into a Destination Carbon Tax – Climate, Fiscal &amp; Finance</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Climate, Fiscal &amp; Finance</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../index.html" aria-current="page"> 
+<span class="menu-text">Policy and Finance</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../modelling/index.html"> 
+<span class="menu-text">Modelling and Analytics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../policy/1-carbon-pricing.html">1. Carbon Pricing</a></li><li class="breadcrumb-item"><a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/index.html">1.3 Converting a VAT into a Destination Carbon Tax</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Policy and Finance</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Carbon Pricing</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 Price Production and Consumption Separately</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 Feebates</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">1.3 Converting a VAT into a Destination Carbon Tax</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/1-carbon-pricing/IronSteelCBAM/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 Credit the Price Signal, Not the Payment</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/1-carbon-pricing/IronSteelCBAM/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/2-other-tax.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Other Tax and Fiscal Policy</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/2-other-tax/RentTax/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 Taxing Rent, Not Effort</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/2-other-tax/RentTax/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/2-other-tax/LandPaysForTheCity/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 Let Land Pay for the City</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/3-finance-and-risk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Finance and Risk</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.1 Guarantee the Contract, Not the Debt</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/3-finance-and-risk/CleanPowerAssetClasses/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.2 From Projects to Asset Classes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/3-finance-and-risk/CleanPowerAssetClasses/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Sovereign Incentives</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.1 Reward the Stock as Well as the Flow</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.2 The Climate Investment Trust</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives/SustainabilityLinkedLending/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/4-sovereign-incentives/SustainabilityLinkedLending/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/more.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Books and Other Papers</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/books/Plucked/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plucked!</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/01-facing-global-risks-head-on.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Facing Global Risks Head On</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/02-revolutions-in-the-minds-of-men.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Revolutions in the Minds of Men</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/03-desert-island-economics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Desert Island Economics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/04-the-questions-posed-by-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. The Questions Posed by This Book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/05-tax-in-principle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Tax in Principle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/06-tax-in-practice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Tax in Practice</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/07-welfare-and-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Welfare and Work</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/08-income-wealth-and-inequality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Income, Wealth and Inequality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/09-corporations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. Corporations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/10-land-and-property.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10. Land and Property</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/11-money-debt-and-finance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11. Money, Debt, and Finance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/12-environment-health-and-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12. Environment, Health, and Resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/13-the-global-perspective-climate-fiscal-policy-and-collective-action.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13. The Global Perspective: Climate, Fiscal Policy and Collective Action</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/books/Plucked/14-conclusions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13. Conclusions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-key-messages" id="toc-sec-key-messages" class="nav-link active" data-scroll-target="#sec-key-messages">Key messages</a></li>
+  <li><a href="#sec-problem" id="toc-sec-problem" class="nav-link" data-scroll-target="#sec-problem">Europe prices what it makes, not what it buys</a></li>
+  <li><a href="#sec-proposal" id="toc-sec-proposal" class="nav-link" data-scroll-target="#sec-proposal">A carbon component inside VAT prices consumption wherever the carbon was emitted</a></li>
+  <li><a href="#sec-defaults" id="toc-sec-defaults" class="nav-link" data-scroll-target="#sec-defaults">Defaults the same for every origin, open to rebuttal</a></li>
+  <li><a href="#sec-fiscal" id="toc-sec-fiscal" class="nav-link" data-scroll-target="#sec-fiscal">A rule, not a schedule, keeps the swap neutral</a></li>
+  <li><a href="#sec-distribution" id="toc-sec-distribution" class="nav-link" data-scroll-target="#sec-distribution">The swap is mildly regressive; returning the fuel obligation per household fixes it</a></li>
+  <li><a href="#sec-obligation" id="toc-sec-obligation" class="nav-link" data-scroll-target="#sec-obligation">Fuel for homes and vehicles needs a forward obligation</a></li>
+  <li><a href="#sec-legal" id="toc-sec-legal" class="nav-link" data-scroll-target="#sec-legal">The obligation can pass now; the VAT component needs unanimity</a></li>
+  <li><a href="#sec-what-to-do" id="toc-sec-what-to-do" class="nav-link" data-scroll-target="#sec-what-to-do">What to do</a></li>
+  <li><a href="#related-papers-in-this-series" id="toc-related-papers-in-this-series" class="nav-link" data-scroll-target="#related-papers-in-this-series">Related papers in this series</a></li>
+  <li><a href="#downloads" id="toc-downloads" class="nav-link" data-scroll-target="#downloads">Downloads</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../policy/1-carbon-pricing.html">1. Carbon Pricing</a></li><li class="breadcrumb-item"><a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/index.html">1.3 Converting a VAT into a Destination Carbon Tax</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Converting a VAT into a Destination Carbon Tax</h1>
+<p class="subtitle lead">A Carbon Component in VAT and a Forward Obligation on Energy Suppliers in the European Union</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stephen J. Stretton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>The EU prices the carbon its factories and power plants emit but not the carbon in most of what Europeans buy, 40 percent of which is emitted abroad. This brief proposes pricing consumption instead, through institutions the EU already has. A carbon component inside VAT charges every good for its embodied carbon, imports included and exports exempt, while the value part of VAT falls by a rule that keeps revenue unchanged. A legal obligation fixed a decade ahead makes the few suppliers of fuel for homes and vehicles pay for the carbon they sell. The obligation can pass by qualified majority now; the VAT component needs unanimity.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>carbon pricing, consumption-based emissions, value-added tax, destination basis, border carbon adjustment, EU law</p>
+  </div>
+</div>
+
+</header>
+
+
+<p><em>Climate Fiscal Policy Brief No.&nbsp;1.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with the proofs, the input–output calibration and the legal detail, is in the <a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/working-paper.html">working paper</a>.</em></p>
+<section id="sec-key-messages" class="level1">
+<h1>Key messages</h1>
+<p><a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/working-paper.html"><strong>Read the full working paper →</strong></a> · <a href="../../../papers/Slides-CarbonConsumptionTax.pptx">Slides (pptx)</a></p>
+<p><strong>Europe prices the carbon it emits, not the carbon it consumes.</strong> Forty percent of the carbon in what EU households buy subject to VAT is emitted outside the Union, where neither the Emissions Trading System nor the border mechanism reaches most of it.</p>
+<p><strong>Put a carbon component inside VAT.</strong> Every business charges a price per tonne of the carbon embodied in what it sells and deducts what it paid on its inputs, as it does for VAT. Imports pay at the border; exports leave free.</p>
+<p><strong>Use one published default per product category, the same for every origin, and let sellers prove a lower figure.</strong> That treats like products alike and rewards clean exporters.</p>
+<p><strong>Cut the value part of VAT each year by last year’s carbon receipts.</strong> The swap then raises no extra revenue, whatever the pace of decarbonization.</p>
+<p><strong>Oblige fuel suppliers now; negotiate the VAT component next.</strong> A forward obligation on the few suppliers of heating and road fuel can pass by qualified majority; the VAT component needs unanimity.</p>
+</section>
+<section id="sec-problem" class="level1">
+<h1>Europe prices what it makes, not what it buys</h1>
+<p><strong>EU carbon pricing stops at the factory gate and at the border of six sectors.</strong> The Emissions Trading System (ETS) prices power and heavy industry where they emit. The Carbon Border Adjustment Mechanism (CBAM) charges imports of cement, iron and steel, aluminum, fertilizers, electricity and hydrogen for their embodied carbon <span class="citation" data-cites="EU2023">(<a href="#ref-EU2023" role="doc-biblioref">European Parliament and Council of the European Union 2023b</a>)</span>. Nothing prices the carbon in an imported shirt, phone or sofa.</p>
+<p><strong>Much of the carbon in European consumption is emitted abroad, and imports carry more of it per euro.</strong> On the working paper’s input–output calculation from Eurostat data for 2022, households’ VAT-taxable purchases embodied 0.41 kg CO₂e per euro, and 40 percent of that carbon was emitted outside the EU. Goods imported from outside the EU carried about 1.7 times as much carbon per euro as the same mix of goods made in the EU: 0.76 against 0.45 kg (<a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/working-paper.html#sec-defaults">working paper, defaults</a>).</p>
+<p><strong>A price on production misses that carbon and handicaps European producers.</strong> It makes goods dearer to make in Europe than to make elsewhere for sale in Europe. A price on consumption falls equally on domestic and imported goods and spares exports, so moving production abroad does not avoid it.</p>
+<p><strong>This brief is the consumption track of the series’ two-track architecture</strong> <span class="citation" data-cites="CFPB11">(<a href="#ref-CFPB11" role="doc-biblioref">Stretton 2026d</a>)</span>. Production is priced separately, by a revenue-neutral feebate on emissions intensity (<a href="../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.html">Brief 1.2</a>).</p>
+</section>
+<section id="sec-proposal" class="level1">
+<h1>A carbon component inside VAT prices consumption wherever the carbon was emitted</h1>
+<p><strong>VAT already reaches every good sold in Europe, on the destination basis.</strong> Imports pay it and exports are relieved of it <span class="citation" data-cites="OECD2017VAT">(<a href="#ref-OECD2017VAT" role="doc-biblioref">OECD 2017</a>)</span>. But it charges value, not carbon, so it gives no reason to choose the cleaner good.</p>
+<p><strong>The carbon component makes part of VAT follow carbon.</strong> Each registered business charges, on its sales, a carbon price per tonne of the good’s embodied carbon, and deducts the carbon component on its purchases. Its net payment is the carbon price on the carbon added at its own stage, and the final buyer pays it on the whole supply chain. The invoice and the return gain a column, not a new administration.</p>
+<p><strong>An example shows the chain at work (stylized, 2032, carbon price €100 per tonne).</strong> A steel mill emits 400 kg making steel and pays €32 under the ETS; an appliance maker adds 100 kg and a retailer 20 kg. The carbon component raises €20 along the chain: €8 from the mill (€40 less the €32 already paid), €10 from the maker, €2 from the retailer. With the ETS payment, the 520 kg bear exactly €100 per tonne (<a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/working-paper.html#sec-chain">working paper, the VAT chain</a>).</p>
+<p><strong>Every tonne bears one price.</strong> The carbon component deducts any carbon price already paid upstream, under the ETS, CBAM, the fuel obligation below or a recognized foreign scheme <span class="citation" data-cites="CFPB14">(<a href="#ref-CFPB14" role="doc-biblioref">Stretton 2026a</a>)</span>. A revenue-neutral feebate earns no deduction, because on average it charges nothing net; it supplies the incentive at production, and the carbon component supplies the price at consumption.</p>
+<p><strong>Electricity carries its generation carbon to the final user through the same chain.</strong> Power is sold on a VAT invoice. The generator’s invoice states its carbon and the carbon price it has already paid, so the household pays the full consumption price on electricity’s carbon, net of what was paid upstream.</p>
+<p><strong>The weak points are VAT’s own.</strong> Banking, insurance, rents, health and education, 31 percent of household spending, are exempt from VAT, and exemption breaks the carbon chain too. They are low-carbon, so little carbon escapes.</p>
+</section>
+<section id="sec-defaults" class="level1">
+<h1>Defaults the same for every origin, open to rebuttal</h1>
+<p><strong>Most firms would apply a published default, as they now apply a VAT rate.</strong> The Commission would publish, each year, a default intensity for each product category: the average for EU production of that category. Domestic goods carry it through the chain; imports carry the same default, whatever their origin. Only firms that want to pay less need to measure anything, which answers the oldest objection to a carbon-added tax, that every firm would need a carbon footprint for every product <span class="citation" data-cites="McLure2010 McAuslandNajjar2015">(<a href="#ref-McLure2010" role="doc-biblioref">McLure 2010</a>; <a href="#ref-McAuslandNajjar2015" role="doc-biblioref">McAusland and Najjar 2015</a>)</span>.</p>
+<p><strong>One default for every origin treats like products alike and avoids a trade fight.</strong> It is the strongest position under the trade rules for internal taxes <span class="citation" data-cites="Mehling2019">(<a href="#ref-Mehling2019" role="doc-biblioref">Mehling et al. 2019</a>)</span>. Charging imports at each exporter’s own intensity would cut China’s manufacturing exports by about a fifth <span class="citation" data-cites="Mattoo2009">(<a href="#ref-Mattoo2009" role="doc-biblioref">Mattoo et al. 2009</a>)</span> and invite exporters to send only their cleanest output to Europe <span class="citation" data-cites="Neuhoff2026">(<a href="#ref-Neuhoff2026" role="doc-biblioref">Neuhoff et al. 2026</a>)</span>. The cost is generosity to imports at first: like for like, the EU default charges imports about 60 percent of their embodied carbon.</p>
+<p><strong>Rebuttal turns the defaults into an incentive.</strong> A seller that verifies a lower intensity pays on its own figure, and each buyer down the chain carries that figure forward, so the saving reaches the shop price. A €100 imported phone in 2032 pays €2.80 at the electronics default of 0.28 kg per euro; an exporter that verifies 0.15 kg pays €1.50 and gains €1.30 a phone over its rivals. Verification should cover a whole plant, not single consignments (<a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/working-paper.html#sec-defaults">working paper, rebuttal</a>).</p>
+</section>
+<section id="sec-fiscal" class="level1">
+<h1>A rule, not a schedule, keeps the swap neutral</h1>
+<p><strong>A fixed schedule of VAT cuts would gamble with over €100 billion a year.</strong> Suppose the value part of VAT fell from 15 to 10 percent by 2037 while the carbon price rose €20 a year to €200 per tonne. If the basket’s carbon fell to 0.15 kg per euro the swap would lose €120 billion a year in 2037; if it stayed at 0.41 it would gain €119 billion (<a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/working-paper.html#sec-fiscal">working paper, fiscal design</a>).</p>
+<p><strong>Each member state should cut its value component each year by the previous year’s carbon receipts.</strong> The rule needs no forecast and moves no money between member states. Starting from 15 percent, the value component ends between 10.8 and 12.7 percent in 2037, depending on whether the basket’s carbon per euro falls 3 or 7 percent a year (<a href="#fig-rule" class="quarto-xref">Figure&nbsp;1</a>). The carbon component then replaces about a fifth of the value component in the central case.</p>
+<div id="tbl-rates" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Total VAT rate (percent) under the neutrality rule, central case: carbon price rising €20 per tonne a year from 2027 to €200 in 2037; basket carbon per euro falling 5 percent a year from 2022. Rates are before deduction of carbon prices paid upstream. Source: working paper, Figure 2; <code>2.Source/make_wp_figures.py</code>.
+</figcaption>
+<div aria-describedby="tbl-rates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Embodied carbon (kg CO₂e per euro)</th>
+<th style="text-align: right;">2027</th>
+<th style="text-align: right;">2032</th>
+<th style="text-align: right;">2037</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.10 (cleanest goods)</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">14.5</td>
+<td style="text-align: right;">13.8</td>
+</tr>
+<tr class="even">
+<td>0.25</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">16.0</td>
+<td style="text-align: right;">16.8</td>
+</tr>
+<tr class="odd">
+<td>0.41 (the 2022 taxable basket)</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">17.6</td>
+<td style="text-align: right;">20.0</td>
+</tr>
+<tr class="even">
+<td>0.80 (most carbon-intensive goods)</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">21.5</td>
+<td style="text-align: right;">27.8</td>
+</tr>
+<tr class="odd">
+<td><em>Value component alone</em></td>
+<td style="text-align: right;"><em>15.0</em></td>
+<td style="text-align: right;"><em>13.5</em></td>
+<td style="text-align: right;"><em>11.8</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Clean goods get cheaper and carbon-intensive goods dearer, while the average tax barely moves.</strong> In the central case a good at 0.10 kg per euro pays 13.8 percent in 2037 and one at 0.80 kg per euro 27.8 percent, against 15 percent for both today (<a href="#tbl-rates" class="quarto-xref">Table&nbsp;1</a>). Clean goods then breach the EU’s 15 percent floor on the standard rate, so the floor must be restated or the path must start from each member state’s own standard rate, all of which are 17 percent or more <span class="citation" data-cites="TaxFoundation2026">(<a href="#ref-TaxFoundation2026" role="doc-biblioref">Mengden 2026</a>)</span>.</p>
+<div id="fig-rule" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rule-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig2-neutrality-rule.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The neutrality rule. Left: value component of VAT when it falls each year by the previous year’s carbon receipts, for three rates of decline in the basket’s carbon per euro, against a fixed path. Right: total rate on goods of given carbon intensity in the central case. Source: working paper, Figure 2."><img src="figures/fig2-neutrality-rule.png" class="img-fluid figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rule-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The neutrality rule. Left: value component of VAT when it falls each year by the previous year’s carbon receipts, for three rates of decline in the basket’s carbon per euro, against a fixed path. Right: total rate on goods of given carbon intensity in the central case. Source: working paper, Figure 2.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-distribution" class="level1">
+<h1>The swap is mildly regressive; returning the fuel obligation per household fixes it</h1>
+<p><strong>The carbon component itself takes almost the same share of every household’s budget.</strong> At €200 per tonne it takes 5.5 percent of spending for the poorest fifth and 5.3 percent for the richest, on 2022 intensities in 22 member states (<a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/working-paper.html#sec-distribution">working paper, distribution</a>).</p>
+<p><strong>Poorer households gain less from the VAT cut, because more of their budget goes on exempt rent.</strong> Net of the national value cut, the poorest fifth pays 0.4 percent of spending more and the richest 0.2 percent less. Because each member state recycles its own receipts, no money moves between them; one EU-wide cut would instead cost Bulgaria, Poland and Slovakia 0.7–0.8 percent of household spending, the pattern other studies find <span class="citation" data-cites="Feindt2021">(<a href="#ref-Feindt2021" role="doc-biblioref">Feindt et al. 2021</a>)</span>.</p>
+<p><strong>Returning the fuel obligation’s receipts as an equal sum per household more than offsets the regressivity.</strong> The poorest fifth then gains 1.2 percent of spending and the richest loses 0.3 percent.</p>
+</section>
+<section id="sec-obligation" class="level1">
+<h1>Fuel for homes and vehicles needs a forward obligation</h1>
+<p><strong>VAT cannot reach the carbon in heating and road fuel.</strong> That carbon is released when the fuel is burned, after the last sale: 691 Mt CO₂e from EU households’ heating and transport in 2022. At €200 per tonne it is worth €138 billion a year, or €310 per resident.</p>
+<p><strong>A few large firms supply that fuel, and they decide the assets that lock in emissions for decades.</strong> Refiners, fuel importers and gas suppliers plan refineries, pipelines and networks. A tax reset every budget does not move that investment, because a government cannot bind its successors and firms discount its promises <span class="citation" data-cites="KydlandPrescott1977 HelmHepburnMash2003">(<a href="#ref-KydlandPrescott1977" role="doc-biblioref">Kydland and Prescott 1977</a>; <a href="#ref-HelmHepburnMash2003" role="doc-biblioref">Helm et al. 2003</a>)</span>.</p>
+<p><strong>The obligation should be ETS2 with a price floor rising for a decade.</strong> Each supplier surrenders one unit for each tonne of CO₂ in the fuel it sells, with a floor rising €20 a year to €200 per tonne in 2037, in step with the VAT component. That adds about €40 per MWh to gas and €0.54 per liter to diesel by 2037. ETS2, the EU’s new trading system for buildings and road fuel, already puts the obligation on fuel suppliers <span class="citation" data-cites="EU2023ETSDirective">(<a href="#ref-EU2023ETSDirective" role="doc-biblioref">European Parliament and Council of the European Union 2023a</a>)</span>, but its start has been put back to 2028 <span class="citation" data-cites="EU2026ClimateLaw">(<a href="#ref-EU2026ClimateLaw" role="doc-biblioref">European Parliament and Council of the European Union 2026</a>)</span>, and it releases extra allowances when the price passes €45 per tonne (in 2020 prices) while setting no floor. A published floor, which the law may raise but not lower before 2037, gives suppliers a price they can bank on.</p>
+</section>
+<section id="sec-legal" class="level1">
+<h1>The obligation can pass now; the VAT component needs unanimity</h1>
+<p><strong>A carbon component of VAT changes the harmonized VAT system, which needs a unanimous Council.</strong> Article 113 of the Treaty requires unanimity for turnover taxes, and the environmental legal basis reserves “provisions primarily of a fiscal nature” to unanimity too <span class="citation" data-cites="TFEU">(<a href="#ref-TFEU" role="doc-biblioref">European Union 2016</a>)</span>. CBAM passed by qualified majority as a certificate scheme, not a tax, and Poland has asked the Court of Justice to annul even that, on the ground that it is primarily fiscal <span class="citation" data-cites="CJEUC51223">(<a href="#ref-CJEUC51223" role="doc-biblioref">Court of Justice of the European Union 2023</a>)</span> (<a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/working-paper.html#sec-legal">working paper, legal basis</a>).</p>
+<p><strong>A coalition of member states could start nationally, if it designs the charge per tonne.</strong> EU law lets a member state levy taxes that are not turnover taxes <span class="citation" data-cites="VATDirective">(<a href="#ref-VATDirective" role="doc-biblioref">Council of the European Union 2006</a>)</span>. A charge per tonne of embodied carbon, rather than a percentage of price, has a defensible claim to that status; a second percentage on the VAT invoice probably does not.</p>
+<p><strong>The fuel obligation can be adopted by qualified majority now.</strong> It is a compliance scheme like ETS2, of which it would be an amendment.</p>
+</section>
+<section id="sec-what-to-do" class="level1">
+<h1>What to do</h1>
+<p><strong>The Commission should propose the forward obligation now,</strong> as an amendment to ETS2 that publishes a price floor rising to €200 per tonne in 2037, with receipts returned per household.</p>
+<p><strong>The Commission should obtain a formal legal opinion on the carbon component</strong> covering Articles 113 and 192(2)(a) of the Treaty and Articles 97 and 401 of the VAT Directive, and begin building a default schedule at the level of customs product codes, with a procedure for verified rebuttal.</p>
+<p><strong>Finance ministries should adopt the neutrality rule</strong> for any swap: cut the value component each year by the previous year’s carbon receipts, member state by member state.</p>
+<p><strong>A willing coalition should not wait for unanimity.</strong> It can legislate a national charge per tonne, coordinated on defaults and verification, and test it before others join.</p>
+</section>
+<section id="related-papers-in-this-series" class="level1 unnumbered">
+<h1 class="unnumbered">Related papers in this series</h1>
+<ul>
+<li><a href="../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html">Climate Fiscal Policy Brief No.&nbsp;1.1</a>: the two-track architecture of which this is the consumption track <span class="citation" data-cites="CFPB11">(<a href="#ref-CFPB11" role="doc-biblioref">Stretton 2026d</a>)</span>.</li>
+<li><a href="../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.html">No.&nbsp;1.2</a>: feebates in power and industry, the production track <span class="citation" data-cites="CFPB12">(<a href="#ref-CFPB12" role="doc-biblioref">Stretton 2026b</a>)</span>.</li>
+<li><a href="../../../policy/1-carbon-pricing/IronSteelCBAM/index.html">No.&nbsp;1.4</a>: carbon price recognition under the CBAM, and scrap shuffling <span class="citation" data-cites="CFPB14">(<a href="#ref-CFPB14" role="doc-biblioref">Stretton 2026a</a>)</span>.</li>
+<li><a href="../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html">No.&nbsp;6.1</a>: the Total Effective Carbon Price, the yardstick for comparing policies <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Stretton 2026c</a>)</span>.</li>
+<li>The <a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/working-paper.html">working paper</a> behind this brief: the proofs, the calibration of defaults, the distribution analysis and the legal detail.</li>
+</ul>
+</section>
+<section id="downloads" class="level1 unnumbered">
+<h1 class="unnumbered">Downloads</h1>
+<p><a href="../../../papers/Brief-CarbonConsumptionTax.docx">Policy brief (docx)</a> · <a href="../../../papers/CarbonConsumptionTax.docx">Working paper (docx)</a></p>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-VATDirective" class="csl-entry" role="listitem">
+Council of the European Union. 2006. <em>Council Directive 2006/112/<span>EC</span> of 28 November 2006 on the Common System of Value Added Tax</em>. Official Journal of the European Union, L 347, 11 December 2006, 1–118.
+</div>
+<div id="ref-CJEUC51223" class="csl-entry" role="listitem">
+Court of Justice of the European Union. 2023. <em>Action Brought on 8 August 2023, <span class="nocase">Republic of Poland</span> v <span>European Parliament</span> and <span class="nocase">Council of the European Union</span>, Case <span>C-512/23</span></em>. Official Journal of the European Union, C 338, 25.9.2023, p. 14.
+</div>
+<div id="ref-EU2023ETSDirective" class="csl-entry" role="listitem">
+European Parliament and Council of the European Union. 2023a. <em>Directive (<span>EU</span>) 2023/959 of 10 May 2023 Amending Directive 2003/87/<span>EC</span> Establishing a System for Greenhouse Gas Emission Allowance Trading Within the Union</em>. Official Journal of the European Union, L 130, 16.5.2023, p. 134. <a href="http://data.europa.eu/eli/dir/2023/959/oj">http://data.europa.eu/eli/dir/2023/959/oj</a>.
+</div>
+<div id="ref-EU2023" class="csl-entry" role="listitem">
+European Parliament and Council of the European Union. 2023b. <em>Regulation (<span>EU</span>) 2023/956 of 10 May 2023 Establishing a Carbon Border Adjustment Mechanism</em>. Official Journal of the European Union, L 130, 16.5.2023, p. 52. <a href="http://data.europa.eu/eli/reg/2023/956/oj">http://data.europa.eu/eli/reg/2023/956/oj</a>.
+</div>
+<div id="ref-EU2026ClimateLaw" class="csl-entry" role="listitem">
+European Parliament and Council of the European Union. 2026. <em>Regulation (<span>EU</span>) 2026/667 of 11 March 2026 Amending Regulation (<span>EU</span>) 2021/1119 as Regards the Setting of a Union Intermediate Climate Target for 2040</em>. Official Journal of the European Union, L series, 2026/667, 18.3.2026. <a href="http://data.europa.eu/eli/reg/2026/667/oj">http://data.europa.eu/eli/reg/2026/667/oj</a>.
+</div>
+<div id="ref-TFEU" class="csl-entry" role="listitem">
+European Union. 2016. <em>Consolidated Version of the Treaty on the Functioning of the <span>European Union</span></em>. Official Journal of the European Union, C 202, 7 June 2016, 47–199.
+</div>
+<div id="ref-Feindt2021" class="csl-entry" role="listitem">
+Feindt, Simon, Ulrike Kornek, José M. Labeaga, Thomas Sterner, and Hauke Ward. 2021. <span>“Understanding Regressivity: Challenges and Opportunities of European Carbon Pricing.”</span> <em>Energy Economics</em> 103: 105550. <a href="https://doi.org/10.1016/j.eneco.2021.105550">https://doi.org/10.1016/j.eneco.2021.105550</a>.
+</div>
+<div id="ref-HelmHepburnMash2003" class="csl-entry" role="listitem">
+Helm, Dieter, Cameron Hepburn, and Richard Mash. 2003. <span>“Credible Carbon Policy.”</span> <em>Oxford Review of Economic Policy</em> 19 (3): 438–50. <a href="https://doi.org/10.1093/oxrep/19.3.438">https://doi.org/10.1093/oxrep/19.3.438</a>.
+</div>
+<div id="ref-KydlandPrescott1977" class="csl-entry" role="listitem">
+Kydland, Finn E., and Edward C. Prescott. 1977. <span>“Rules Rather Than Discretion: The Inconsistency of Optimal Plans.”</span> <em>Journal of Political Economy</em> 85 (3): 473–91. <a href="https://doi.org/10.1086/260580">https://doi.org/10.1086/260580</a>.
+</div>
+<div id="ref-Mattoo2009" class="csl-entry" role="listitem">
+Mattoo, Aaditya, Arvind Subramanian, Dominique van der Mensbrugghe, and Jianwu He. 2009. <em>Reconciling Climate Change and Trade Policy</em>. Policy Research Working Paper No. 5123. World Bank. <a href="https://doi.org/10.1596/1813-9450-5123">https://doi.org/10.1596/1813-9450-5123</a>.
+</div>
+<div id="ref-McAuslandNajjar2015" class="csl-entry" role="listitem">
+McAusland, Carol, and Nouri Najjar. 2015. <span>“Carbon Footprint Taxes.”</span> <em>Environmental and Resource Economics</em> 61 (1): 37–70. <a href="https://doi.org/10.1007/s10640-013-9749-5">https://doi.org/10.1007/s10640-013-9749-5</a>.
+</div>
+<div id="ref-McLure2010" class="csl-entry" role="listitem">
+McLure, Charles E., Jr. 2010. <span>“The Carbon-Added Tax: An Idea Whose Time Should Never Come.”</span> <em>Carbon &amp; Climate Law Review</em> 4 (3): 250–59. <a href="https://doi.org/10.21552/CCLR/2010/3/143">https://doi.org/10.21552/CCLR/2010/3/143</a>.
+</div>
+<div id="ref-Mehling2019" class="csl-entry" role="listitem">
+Mehling, Michael A., Harro van Asselt, Kasturi Das, Susanne Droege, and Cleo Verkuijl. 2019. <span>“Designing Border Carbon Adjustments for Enhanced Climate Action.”</span> <em>American Journal of International Law</em> 113 (3): 433–81. <a href="https://doi.org/10.1017/ajil.2019.22">https://doi.org/10.1017/ajil.2019.22</a>.
+</div>
+<div id="ref-TaxFoundation2026" class="csl-entry" role="listitem">
+Mengden, Alex. 2026. <em><span>VAT</span> Rates in <span>Europe</span>, 2026</em>. Tax Foundation, Washington, DC. <a href="https://taxfoundation.org/data/all/eu/value-added-tax-vat-rates-europe/">https://taxfoundation.org/data/all/eu/value-added-tax-vat-rates-europe/</a>.
+</div>
+<div id="ref-Neuhoff2026" class="csl-entry" role="listitem">
+Neuhoff, Karsten, Misato Sato, Fernanda Ballesteros, et al. 2026. <span>“Industrial Decarbonization in a Fragmented World: Carbon Pricing with Border Adjustments Using Standardized Values.”</span> <em>Energy Policy</em> 216: 115405. <a href="https://doi.org/10.1016/j.enpol.2026.115405">https://doi.org/10.1016/j.enpol.2026.115405</a>.
+</div>
+<div id="ref-OECD2017VAT" class="csl-entry" role="listitem">
+OECD. 2017. <em>International <span>VAT/GST</span> Guidelines</em>. OECD Publishing. <a href="https://doi.org/10.1787/9789264271401-en">https://doi.org/10.1787/9789264271401-en</a>.
+</div>
+<div id="ref-CFPB14" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026a. <em>Credit the Price Signal, Not the Payment: Carbon Price Recognition and Scrap Shuffling Under the <span>EU</span>’s Carbon Border Adjustment Mechanism</em>. 1.4. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB12" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026b. <em>Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill</em>. 1.2. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB61" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026c. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB11" class="csl-entry" role="listitem">
+Stretton, Stephen J. 2026d. <em>Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies</em>. 1.1. Climate Fiscal Policy Briefs.
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
