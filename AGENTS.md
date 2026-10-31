@@ -7,7 +7,7 @@ Instructions for AI agents, including Claude Code (`CLAUDE.md` points here), wor
 | Part | Folders | Read before working | What it is for |
 |---|---|---|---|
 | **Planning** | `0 Morning Briefing`, `1 Planning Instructions`, `2 Strategic Plans`, `3 Archive` | `1 Planning Instructions/AGENTS.md`, then its `NORMS.md` | Tasks for every repo, day and week plans, strategic plans, the printable tracker, and the master Google Sheet kept in step with the repo |
-| **Writing** | `E Writing Instructions` (with `Writing Standards`, `Templates and Info`, `Claude + Scripts`), `B Working Papers`, `C Research Proposal`, `D Climate Econ Course` | `E Writing Instructions/AGENTS.md`, then its `NORMS.md` | Papers, briefs and decks, the website, PhD proposals, the course |
+| **Writing** | `E Writing Instructions` (with `Writing Standards`, `Templates and Info`, `Claude + Scripts`), `B Working Papers`, `C PhD Application`, `D Climate Econ Course` | `E Writing Instructions/AGENTS.md`, then its `NORMS.md` | Papers, briefs and decks, the website, PhD proposals, the course |
 
 `README.md` (this folder) maps the layout. Each part's `README.md` gives the detail.
 
