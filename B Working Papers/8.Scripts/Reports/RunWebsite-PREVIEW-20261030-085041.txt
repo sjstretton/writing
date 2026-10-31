@@ -1,0 +1,171 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261030085041
+Username: STEPHENGRAM\sjstr
+RunAs User: STEPHENGRAM\sjstr
+Configuration Name: 
+Machine: STEPHENGRAM (Microsoft Windows NT 10.0.26300.0)
+Host Application: powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\Users\sjstr\Repos\planning_writing\B Working Papers\8.Scripts\Run\..\Engine\Run-Website.ps1
+Process ID: 5932
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+======================================================================
+  Run-Website  [PREVIEW]   2026-10-30 08:50
+======================================================================
+
+-- prerequisites
+   Word     : not probed - Build-Pdfs reports per document
+   found  : quarto
+   found  : pandoc
+
+-- step 1  PDFs not built. The site publishes the master .docx.
+   Pass -Pdf to build PDFs with Word instead.
+
+======================================================================
+  step 2 of 2   Publish-Site.ps1   -   copy, render, check
+======================================================================
+=== Publish site  [PREVIEW]   2026-10-30 08:50 ===
+Website : C:\Users\sjstr\Repos\planning_writing\B Working Papers\7.Website
+
+--- publish
+    -> papers\RentTax.docx
+1 file(s) copied, 42 paper(s) published in total.
+
+--- papers folder
+    STALE  : Brief-CarbonConsumptionTax.docx   (no paper publishes this any more)
+    STALE  : Brief-CleanPowerAssetClasses.docx   (no paper publishes this any more)
+    STALE  : Brief-ClimateFinanceIntermediationForCleanPower.docx   (no paper publishes this any more)
+    STALE  : Brief-ClimateInvestmentTrust.docx   (no paper publishes this any more)
+    STALE  : Brief-FeebatesAndOutputBasedRebating.docx   (no paper publishes this any more)
+    STALE  : Brief-IronSteelCBAM.docx   (no paper publishes this any more)
+    STALE  : Brief-NotionalCapitalisedValueAndGuarantees.docx   (no paper publishes this any more)
+    STALE  : Brief-OpenEconomyCarbonPricing.docx   (no paper publishes this any more)
+    STALE  : Brief-PolicyEquivalentCarbonPriceAndCES.docx   (no paper publishes this any more)
+    STALE  : Brief-SustainabilityLinkedLending.docx   (no paper publishes this any more)
+    STALE  : GeoprosperityIntro.docx   (no paper publishes this any more)
+    STALE  : Slides-ActivityModelling.pptx   (no paper publishes this any more)
+    STALE  : Slides-Analytics.pptx   (no paper publishes this any more)
+    STALE  : Slides-CarbonConsumptionTax.pptx   (no paper publishes this any more)
+    STALE  : Slides-CBAMPolicyTool.pptx   (no paper publishes this any more)
+    STALE  : Slides-CleanPowerAssetClasses.pptx   (no paper publishes this any more)
+    STALE  : Slides-ClimateFinanceIntermediationForCleanPower.pptx   (no paper publishes this any more)
+    STALE  : Slides-ClimateInvestmentTrust.pptx   (no paper publishes this any more)
+    STALE  : Slides-CPATAIImplementation.pptx   (no paper publishes this any more)
+    STALE  : Slides-CPATMitigationMethods.pptx   (no paper publishes this any more)
+    STALE  : Slides-CPATValidation.pptx   (no paper publishes this any more)
+    STALE  : Slides-ElasticityValidation.pptx   (no paper publishes this any more)
+    STALE  : Slides-ExciseFiscalDiagnostic.pptx   (no paper publishes this any more)
+    STALE  : Slides-FeebatesAndOutputBasedRebating.pptx   (no paper publishes this any more)
+    STALE  : Slides-FinanceAndRisk.pptx   (no paper publishes this any more)
+    STALE  : Slides-FiscalIndicatorsDashboard.pptx   (no paper publishes this any more)
+    STALE  : Slides-IronSteelCBAM.pptx   (no paper publishes this any more)
+    STALE  : Slides-MacroFiscalEnergyScenarioTool.pptx   (no paper publishes this any more)
+    STALE  : Slides-Modelling.pptx   (no paper publishes this any more)
+    STALE  : Slides-NotionalCapitalisedValueAndGuarantees.pptx   (no paper publishes this any more)
+    STALE  : Slides-OpenEconomyCarbonPricing.pptx   (no paper publishes this any more)
+    STALE  : Slides-PolicyEquivalentCarbonPriceAndCES.pptx   (no paper publishes this any more)
+    STALE  : Slides-PublicInvestment.pptx   (no paper publishes this any more)
+    STALE  : Slides-SovereignIncentives.pptx   (no paper publishes this any more)
+    STALE  : Slides-SustainabilityLinkedLending.pptx   (no paper publishes this any more)
+    STALE  : SLIDIs.docx   (no paper publishes this any more)
+    36 stale file(s) would be removed
+
+--- link targets
+    already correct
+
+--- research index
+    ResearchOverview.docx at the root of A Writing written, links pointing at https://climatefiscalfinance.org
+
+--- render
+    would run: quarto render
+
+--- link check
+    ok           : papers/Brief-OpenEconomyCarbonPricing.docx
+    ok           : papers/OpenEconomyCarbonPricing.docx
+    ok           : papers/Brief-FeebatesAndOutputBasedRebating.docx
+    ok           : papers/FeebatesAndOutputBasedRebating.docx
+    ok           : papers/Brief-IronSteelCBAM.docx
+    ok           : papers/IronSteelCBAM.docx
+    ok           : papers/Brief-CarbonConsumptionTax.docx
+    ok           : papers/CarbonConsumptionTax.docx
+    ok           : papers/Brief-PolicyEquivalentCarbonPriceAndCES.docx
+    ok           : papers/PolicyEquivalentCarbonPriceAndCES.docx
+    ok           : papers/OverviewMobilisingPrivateCapital.docx
+    ok           : papers/Brief-ClimateFinanceIntermediationForCleanPower.docx
+    ok           : papers/ClimateFinanceIntermediationForCleanPower.docx
+    ok           : papers/Brief-CleanPowerAssetClasses.docx
+    ok           : papers/CleanPowerAssetClasses.docx
+    ok           : papers/OverviewSovereignIncentives.docx
+    ok           : papers/Brief-NotionalCapitalisedValueAndGuarantees.docx
+    ok           : papers/NotionalCapitalisedValueAndGuarantees.docx
+    ok           : papers/Brief-ClimateInvestmentTrust.docx
+    ok           : papers/ClimateInvestmentTrust.docx
+    ok           : papers/Brief-SustainabilityLinkedLending.docx
+    ok           : papers/SustainabilityLinkedLending.docx
+    ok           : papers/OverviewModelling.docx
+    ok           : papers/CPATMitigationMethods.docx
+    ok           : papers/CPATAIImplementation.docx
+    ok           : papers/CPATValidation.docx
+    ok           : papers/ElasticityValidation.docx
+    ok           : papers/CBAMPolicyTool.docx
+    ok           : papers/PublicInvestment.docx
+    ok           : papers/ActivityModelling.docx
+    ok           : papers/OverviewAnalytics.docx
+    ok           : papers/ExciseFiscalDiagnostic.docx
+    ok           : papers/MacroFiscalEnergyScenarioTool.docx
+    ok           : papers/FiscalIndicatorsDashboard.docx
+34 link(s) checked, 0 broken.
+
+Published for a URL but not linked from the research page - expected:
+the convention is that every paper gets a file in papers\, whether or
+not the research page lists it.
+    CarbonPricingRightPolicyWrongTime.docx
+    CombinedOverview.docx
+    Manifesto.docx
+    MDBClimateEnvelope.docx
+    NineEleven.docx
+    OrderWithoutOrdinance.docx
+    OverviewAdditional.docx
+    OverviewBooks.docx
+    OverviewClimateAndFiscalPolicy.docx
+    OverviewPhilosophy.docx
+    OverviewPolitics.docx
+    ReformingMDBs.docx
+    RentTax.docx
+    ThePoliticsOfLifeLogic.docx
+    TheSollar.docx
+    TheVocativeCase.docx
+    TimeAndChance.docx
+    VotingPatterns.docx
+
+================================================================
+Published 42, links broken 0, papers with nothing to publish 0
+=== Done ===
+
+Report : C:\Users\sjstr\Repos\planning_writing\B Working Papers\8.Scripts\Reports\_SiteReport-preview.txt
+
+PREVIEW only. Run Run\Master-Website.bat to apply.
+
+======================================================================
+  Summary  [PREVIEW]
+======================================================================
+  #  Step             Result       Secs  Note
+---  ---------------- ----------  -----  --------------------
+  1  Build-Pdfs       not wanted      0  site uses .docx
+  2  Publish-Site     ok              1
+
+Both steps completed. Read _PdfReport.txt and _SiteReport.txt for the detail.
+
+PREVIEW only - nothing was changed. Run Run\Master-Website.bat to apply.
+**********************
+Windows PowerShell transcript end
+End time: 20261030085043
+**********************
