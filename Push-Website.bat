@@ -3,15 +3,12 @@ rem Push the website: upload the already-built site (B Working Papers\A.Website\
 rem otherwise Python's built-in FTP - nothing to install),
 rem then delete files that were retired from the site. It does not compile: run Compile-Website.bat first,
 rem or Deploy-Website.bat to do both.
-rem The FTP login is read from _ftp.txt (git-ignored; format in _ftp.txt.example):
-rem   E Writing Instructions\Scripts\Papers\Reference\_ftp.txt   (new place)
-rem   B Working Papers\B.Scripts\Reference\_ftp.txt               (old place, still read if present)
-rem After uploading it checks research.html on the server and, if _ftp.txt has url = ..., on the live website.
+rem The FTP login is read from FTP-Login.txt, next to this file (host, user, password, remote, protocol, url).
+rem After uploading it checks research.html on the server and, if FTP-Login.txt has url = ..., on the live website.
 setlocal
 cd /d "%~dp0"
-set "FTPCFG=%~dp0E Writing Instructions\Scripts\Papers\Reference\_ftp.txt"
-if not exist "%FTPCFG%" set "FTPCFG=%~dp0B Working Papers\B.Scripts\Reference\_ftp.txt"
-if not exist "%FTPCFG%" (echo FTP login not found. Copy E Writing Instructions\Scripts\Papers\Reference\_ftp.txt.example to _ftp.txt there and fill it in. & pause & exit /b 1)
+set "FTPCFG=%~dp0FTP-Login.txt"
+if not exist "%FTPCFG%" (echo FTP login not found. Copy FTP-Login.example.txt to FTP-Login.txt next to this file and type the password in. & pause & exit /b 1)
 for /f "usebackq eol=# tokens=1,* delims== " %%A in ("%FTPCFG%") do set "FTP_%%A=%%B"
 if not defined FTP_remote set "FTP_remote=/public_html"
 set "WINSCP=C:\Program Files (x86)\WinSCP\WinSCP.com"

@@ -250,16 +250,16 @@ foreach ($c in @('C:\Program Files (x86)\WinSCP\WinSCP.com','C:\Program Files\Wi
 }
 if ($winscp) { OK ('WinSCP  : {0}' -f $winscp) } else { Problem 'WinSCP  : not found - the site cannot be uploaded' }
 
-$cred = Join-Path (Join-Path $scripts 'Reference') '_ftp.txt'
+$cred = [IO.Path]::GetFullPath((Join-Path $scripts '..\..\..\FTP-Login.txt'))   # repository root
 if (Test-Path -LiteralPath $cred) {
     $keys = @(Get-Content -LiteralPath $cred -EA SilentlyContinue |
               Where-Object { $_ -match '^\s*([A-Za-z]+)\s*=\s*\S' } |
               ForEach-Object { ($_ -split '=')[0].Trim().ToLower() })
     $missing = @('host','user','password') | Where-Object { $keys -notcontains $_ }
-    if ($missing.Count -eq 0) { OK 'FTP     : Reference\_ftp.txt, complete' }
-    else { Problem ('FTP     : Reference\_ftp.txt is missing {0}' -f ($missing -join ', ')) }
+    if ($missing.Count -eq 0) { OK 'FTP     : FTP-Login.txt, complete' }
+    else { Problem ('FTP     : FTP-Login.txt is missing {0}' -f ($missing -join ', ')) }
 } elseif ($web.Count -gt 0 -and (Test-Path -LiteralPath (Join-Path $web[0].FullName 'deploy.bat'))) {
-    Note ('FTP     : no _ftp.txt - falling back to {0}\deploy.bat, which holds the password inline' -f $web[0].Name)
+    Note ('FTP     : no FTP-Login.txt - falling back to {0}\deploy.bat, which holds the password inline' -f $web[0].Name)
 } else {
     Problem 'FTP     : no credentials anywhere - the upload will stop'
 }

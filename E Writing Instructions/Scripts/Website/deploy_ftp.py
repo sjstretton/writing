@@ -1,7 +1,7 @@
 """Upload the built website to the web server by FTP, using only Python's standard library.
 
-Deploy-Website.bat runs this when WinSCP is not installed. It reads the login from
-_ftp.txt (host, user, password, remote, protocol = ftp or ftps), uploads every file in
+Push-Website.bat runs this when WinSCP is not installed. It reads the login from
+FTP-Login.txt at the top of the repository (host, user, password, remote, protocol = ftp or ftps), uploads every file in
 B Working Papers/A.Website/_site whose size differs from the server copy (or is missing
 there), creating folders as needed, then deletes the files retired from the site.
 Web pages (.html, .css, .js, .json, .xml) are always uploaded: an edited page can keep
@@ -9,11 +9,11 @@ the same size, and a size check alone would skip it.
 
 Before uploading it checks that the remote folder already exists and already holds the
 site (index.html); otherwise it stops rather than creating a new folder the web server
-never serves. Afterwards it reads research.html back from the server and, if _ftp.txt
+never serves. Afterwards it reads research.html back from the server and, if FTP-Login.txt
 has a "url = https://..." line, from the live website, and says whether each matches
 the built copy.
 
-Usage:  python deploy_ftp.py <_ftp.txt> <_site folder> [--all] [--check]
+Usage:  python deploy_ftp.py <FTP-Login.txt> <_site folder> [--all] [--check]
         --all     upload every file, even if the server copy has the same size
         --check   upload nothing: just show where the site is and whether it matches
 """
@@ -44,7 +44,7 @@ def read_cfg(path):
         cfg[k.strip().lower()] = v.strip()
     for k in ("host", "user", "password"):
         if not cfg.get(k):
-            sys.exit(f"_ftp.txt has no {k} = ... line")
+            sys.exit(f"FTP-Login.txt has no {k} = ... line")
     return cfg
 
 
@@ -127,7 +127,7 @@ def check(ftp, cfg, site, remote):
         print(f"  {remote}/{PROBE} on the server DIFFERS from the built copy.")
     url = cfg.get("url")
     if not url:
-        print('  Add a line "url = https://your-site" to _ftp.txt to check the live website too.')
+        print('  Add a line "url = https://your-site" to FTP-Login.txt to check the live website too.')
         return
     live = live_bytes(url.rstrip("/") + f"/{PROBE}?nocache=1")
     if live is None:
@@ -160,12 +160,12 @@ def main():
         ftp.quit()
         sys.exit(f"The folder {remote} does not exist on the server, so nothing was uploaded.\n"
                  f"Folders at the top of this FTP login: {top}\n"
-                 f"Set remote = in _ftp.txt to the folder that holds the website (often / for an FTP login"
+                 f"Set remote = in FTP-Login.txt to the folder that holds the website (often / for an FTP login"
                  f" that opens inside public_html).")
     if remote_size(ftp, f"{remote}/index.html") is None:
         ftp.quit()
         sys.exit(f"{remote} has no index.html, so it is probably not the folder the website is served from.\n"
-                 f"Nothing was uploaded. Check remote = in _ftp.txt.")
+                 f"Nothing was uploaded. Check remote = in FTP-Login.txt.")
     if check_only:
         check(ftp, cfg, site, remote)
         ftp.quit()

@@ -14,7 +14,7 @@ E Writing Instructions/Scripts/Papers/Reports/
 E Writing Instructions/Scripts/Papers/_Deleted/
 B Working Papers/_Purged/
 
-# Credentials. Never commit these. deploy.bat reads the FTP login from _ftp.txt.
+# Old FTP-login location, retired: the login is now FTP-Login.txt at the top of the repository.
 E Writing Instructions/Scripts/Papers/Reference/_ftp.txt
 # Old location (before 31 Oct 2026): keep ignored so a leftover copy is never committed
 B Working Papers/B.Scripts/
@@ -23,3 +23,4 @@ __pycache__/
 
 # Written by Download-Literature.bat on each run
 E Writing Instructions/Scripts/Papers/Run/Literature-OpenInBrowser.html
+FTP-Login.txt

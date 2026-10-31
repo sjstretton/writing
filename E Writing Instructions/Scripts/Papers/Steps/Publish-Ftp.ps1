@@ -4,7 +4,7 @@
     Uploads the rendered site - the website folder's _site\ - to the web server.
 
     CREDENTIALS
-    It looks for Reference\_ftp.txt first. One setting per line:
+    It reads FTP-Login.txt at the top of the repository. One setting per line:
 
         host     = ftp.example.com
         user     = someone
@@ -12,13 +12,8 @@
         remote   = /public_html
         protocol = ftp            (ftp, ftps or sftp - ftp if left out)
 
-    That file is never committed: the repository's .gitignore excludes it.
-
-    If _ftp.txt is not there it falls back to the website folder's own
-    deploy.bat, which holds the same details inline. That works, but the
-    password then lives in a file inside the repository, so moving it into
-    _ftp.txt - and changing it on the server, because the old one is in the
-    history - is worth ten minutes.
+    If FTP-Login.txt is not there it falls back to the website folder's own
+    deploy.bat, if one exists.
 
     It uses WinSCP, which deploy.bat already uses. WinSCP's "synchronize remote"
     uploads what changed and deletes what is no longer there, so the server ends
@@ -90,7 +85,7 @@ Write-Host ('   winscp : {0}' -f $winscp)
 
 # --- credentials --------------------------------------------------------------
 
-$cred = Join-Path (Join-Path $scripts 'Reference') '_ftp.txt'
+$cred = [IO.Path]::GetFullPath((Join-Path $scripts '..\..\..\FTP-Login.txt'))   # repository root
 $cfg  = @{}
 if (Test-Path -LiteralPath $cred) {
     foreach ($line in (Get-Content -LiteralPath $cred -EA SilentlyContinue)) {
@@ -110,9 +105,7 @@ if (-not $haveCfg) {
         exit 1
     }
     Write-Host ''
-    Write-Host ('   Reference\_ftp.txt not found - falling back to {0}\deploy.bat' -f $web.Name)
-    Write-Host '   (that file holds the password inline and is inside the repository;'
-    Write-Host '    moving it to Reference\_ftp.txt is worth doing)'
+    Write-Host ('   FTP-Login.txt not found - falling back to {0}\deploy.bat' -f $web.Name)
     if (-not $Apply) { Write-Host '   PREVIEW - deploy.bat not run.'; exit 0 }
     Push-Location -LiteralPath $web.FullName
     try {

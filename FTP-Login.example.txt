@@ -1,0 +1,9 @@
+# Copy this file to FTP-Login.txt (same folder) and type the password in. FTP-Login.txt is git-ignored.
+# One setting per line. remote is the folder the website is served from.
+# Add  url = https://your-site  to have Push-Website.bat check the live site after uploading.
+
+host     = 5.183.10.153
+user     = u795004798
+password = 
+remote   = /public_html
+protocol = ftp
