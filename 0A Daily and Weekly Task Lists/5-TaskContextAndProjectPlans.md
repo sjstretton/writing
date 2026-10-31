@@ -30,8 +30,6 @@ Last reviewed: Sat 31 Oct 2026, morning (Philippines). Open task points: 5,500.
 | T41 | Decide the plan for the beach | 100 | M | Q1 | Open | 0% | PR6 | Where: phone. Sun 25 Oct: pick where, the dates (holiday 26 Oct - 1 Nov), transport and a place to stay; book Mon 26 |
 | T42 | Writing in good order: act on the writing status report | 200 | M | Q2 | Open | 0% | P_m1 | Where: at a desk. Read writing/Writing-Status-Report.md (AI, 29 Oct): paper inventory, housekeeping fixes, the paper closest to a journal and candidate journals; pick the journal paper; then fix the repo README folder names |
 | T43 | Move the CPAT .qmd documentation into cpat_ai | 100 | L | Q2 | Open | 0% | PR1 | Where: at a desk (Stephen; the source is not reachable from the cloud). Copy the .qmd docs into cpmodelai/cpat_ai, coded/cpat_documentation/ (user/ and developer/) |
-| T45 | Book the next hotel | 100 | L | Q1 | Open | 0% | PR6 | Where: phone. Today by 8pm: pick the next stop and the dates; book; screenshot the confirmation |
-| T46 | Writing upgrade: PhD to-do, writing samples, priority paper sequence | 200 | M | Q1 | Open | 0% | P_m2 | Done in the repo 29 Oct, ready to tick: PhD to-do in writing/TODO.md; writing samples and priority paper order in writing/PAPERS.md, with 1.1 Open Economy Carbon Pricing first (Dirk asked for it); writing rules in writing/AGENTS.md, NORMS.md and A Writing Instructions/Writing Standards/ |
 | T48 | Coded work: brief AI for one long all-day task | 100 | L | Q2 | Open | 0% | PR1 | Where: at a desk, work hours. Write one clear brief (goal, files, done-when); let AI run all day with limited interaction; review at the end. Keeps coded work moving while the paper comes first |
 | T49 | Energy GP: read and respond to the concept notes (catch up with Phil next week) | 200 | M | Q2 | Open | 0% | 3c_m1 | Where: at a desk. Not a pitch: read the concept notes and write a short response to each. Catch up with Phil the week of 2 Nov. Related: T24 (read the Energy GP papers) |
 | T51 | Policy crediting: read and respond to the concept notes | 200 | M | Q2 | Open | 0% | 2a_m1 | Where: at a desk. Same as Energy GP: read the concept notes and write a short response to each. A charge code is coming |
@@ -48,9 +46,6 @@ Last reviewed: Sat 31 Oct 2026, morning (Philippines). Open task points: 5,500.
 | T61 | Read the 1.1 working paper (two-track carbon pricing) for Dirk | 200 | M | Q2 | Open | 0% | P_m1 | Where: at a desk. After the PhD application: read `B Working Papers/1.ClimateAndFiscalPolicy/1.1.OpenEconomyCarbonPricing/OpenEconomyCarbonPricing.docx` (v0.3) and its brief; mark changes; then send to Dirk and pick the journal (Climate Policy) |
 | T62 | Carbon-pricing papers: follow-ups (batch) | 100 | L | Q3 | Open | 0% | P_m1 | Where: at a desk, one sitting. (1) TECP workbook: rebuild or retire (it has the old (1−w) error); (2) AI clears the remaining VERIFY citations (about 45; EU texts need EUR-Lex from your PC); (3) manual downloads, 125 papers, list in `B Working Papers/8.Scripts/Reference/Literature-Downloads.md`; (4) trim the 1.3 and 1.7 abstracts if the journal needs under 200 words |
 | P12 | Year reviews: update Samuel; Hari; feedback to Dave | 100 | L | Q3 | Open | 0% | PR8 | Where: phone or email. Unparked 29 Oct. First (5 min): send Samuel a short update (Task scripts > Samuel update). Then a quick review of the year to Hari; feedback to Dave |
-| T68 | Meeting: Zoe and Unnada | 100 | L | Q3 | Open | 0% | PR8 | Where: phone or email. When Zoe says she can: ask her for two or three times, then set it up with Unnada (Task scripts > Zoe and Unnada meeting) |
-| T69 | Meeting: Alexandra, Thursday | 100 | L | Q3 | Open | 0% | PR8 | Where: phone or email. Thu 5 Nov (?): ask for a time that suits her; send the invite (Task scripts > Alexandra meeting) |
-| T70 | Meeting: Paulina, when convenient | 100 | L | Q3 | Open | 0% | PR8 | Where: phone or email. No date: ask for a couple of times in the next two weeks (Task scripts > Paulina meeting) |
 
 ## Strategic priorities
 
@@ -105,9 +100,6 @@ Shown on the Dashboard tab. In the evening, write 1-3 questions for tomorrow wit
 
 | Day | Question | Status | Recommended | Answer |
 |---|---|---|---|---|
-| 30 Oct | PhD deadline | Decided | Sat 31 Oct (confirmed 29 Oct): the PhD is tomorrow's one block | Sat 31 Oct, confirmed |
-| 29 Oct | Today's order | Decided | Rest, then swim or Kriya, then tasks | Long rest first, then a short swim or Kriya, then the tasks |
-| 29 Oct | Paper proposal (T26): now or after the trip? | Decided | After the trip | After the trip; re-plan its date on Sun 1 Nov |
 
 ## Dashboard selections
 
@@ -187,9 +179,6 @@ What to do, word for word. Same as the Task scripts section of the Updateable li
 | eTravel form | etravel.gov.ph, within 72 h before landing. |
 | Out-of-office | Tue: away 21 Oct to about 1 Nov; contact Kacper for CPAT. |
 | Samuel update | Hi Samuel, a quick update. The Python work is finished, six weeks early. Five carbon-pricing working papers are updated and going live on my website. Next is CPAT-LTS, my main goal for November: I'm agreeing a limited scope with Dirk and Sebastian next week to close it by end November. Happy to talk it through if useful. |
-| Zoe and Unnada meeting | Hi Zoe, could we find a time for you, Unnada and me to meet? Send me two or three times that work for you and I'll set it up. |
-| Alexandra meeting | Hi Alexandra, are you free on Thursday 5 Nov? Let me know a time that suits you and I'll send an invite. |
-| Paulina meeting | Hi Paulina, could we find a time to meet in the next couple of weeks? Send me a couple of times that suit you. |
 | Rest | Nothing else today. Rest counts as a done day. |
 
 ## Avoided projects (next step only)
@@ -294,3 +283,8 @@ The ones that keep slipping. Each next step takes 15 minutes or less.
 | T39 | Contact Dirk | 100 | L | Q1 | Done 29 Oct | 100% | PR3 | Where: phone or email. Sun 25 Oct: one message; ask what he needs (follow-up on the Excise and Dashboard handovers?). Done (Stephen, 29 Oct) |
 | T28 | Excel-AI: delegate and discuss | 200 | M | Q1 | Done 29 Oct | 100% | PR1 | List the Excel-AI pieces to hand over and who takes each (e.g. Kacper); book one short call to discuss before flying Wed 21. Python detail: my own plan. Done (Stephen, reported 29 Oct) |
 | T29 | Fix the new laptop; give back the old one | 100 | M | Q1 | Done 29 Oct | 100% | PR8 | Carried from Mon 19 (Edmundo day). Today: set up the new laptop (sign-ins, repos, files); then hand the old one back to IT. Done (Stephen, reported 29 Oct) |
+| T45 | Book the next hotel | 100 | L | Q1 | Done 31 Oct | 100% | PR6 | Where: phone. Today by 8pm: pick the next stop and the dates; book; screenshot the confirmation. Done (Stephen, Done list 31 Oct) |
+| T46 | Writing upgrade: PhD to-do, writing samples, priority paper sequence | 200 | M | Q1 | Done 31 Oct | 100% | P_m2 | Done in the repo 29 Oct, ready to tick: PhD to-do in writing/TODO.md; writing samples and priority paper order in writing/PAPERS.md, with 1.1 Open Economy Carbon Pricing first (Dirk asked for it); writing rules in writing/AGENTS.md, NORMS.md and A Writing Instructions/Writing Standards/. Done (Stephen, Done list 31 Oct) |
+| T68 | Meeting: Zoe and Unnada | 100 | L | Q3 | Done 31 Oct | 100% | PR8 | Where: phone or email. When Zoe says she can: ask her for two or three times, then set it up with Unnada (Task scripts > Zoe and Unnada meeting). Done: in the diary (Stephen, 31 Oct) |
+| T69 | Meeting: Alexandra, Thursday | 100 | L | Q3 | Done 31 Oct | 100% | PR8 | Where: phone or email. Thu 5 Nov (?): ask for a time that suits her; send the invite (Task scripts > Alexandra meeting). Done: in the diary (Stephen, 31 Oct) |
+| T70 | Meeting: Paulina, when convenient | 100 | L | Q3 | Done 31 Oct | 100% | PR8 | Where: phone or email. No date: ask for a couple of times in the next two weeks (Task scripts > Paulina meeting). Done: in the diary (Stephen, 31 Oct) |
