@@ -3,10 +3,10 @@
 You are writing one paper in Stephen J. Stretton's research repo at `/home/user/writing`: a **policy brief** and a **working paper**. Stephen is asleep; write the best finished draft you can. He will peer review later. Credits are tight: work efficiently, do not over-research, and do not make slide decks or peer-review notes.
 
 ## Read first (in this order)
-1. `/home/user/writing/AGENTS.md`, then `A Writing Instructions/AGENTS.md` and `A Writing Instructions/NORMS.md`.
-2. `A Writing Instructions/Writing Standards/briefing-series-spec.md` (brief format: series line, ~100-word abstract, ~400-word executive summary, 2,000–3,000 words total, "What to do", "Related papers in this series", YAML header). Use the series line `Climate Fiscal Policy Brief No. X.Y`.
-3. `A Writing Instructions/Writing Standards/paper-standard.md` (working paper form and checklist), `writing-principles.md`, `ai-tells.md`.
-4. `A Writing Instructions/Claude + Scripts/Setup Claude/_admin/voice.md` and `about-me.md`.
+1. `/home/user/writing/AGENTS.md`, then `E Writing Instructions/AGENTS.md` and `E Writing Instructions/NORMS.md`.
+2. `E Writing Instructions/Writing Standards/briefing-series-spec.md` (brief format: series line, ~100-word abstract, ~400-word executive summary, 2,000–3,000 words total, "What to do", "Related papers in this series", YAML header). Use the series line `Climate Fiscal Policy Brief No. X.Y`.
+3. `E Writing Instructions/Writing Standards/paper-standard.md` (working paper form and checklist), `writing-principles.md`, `ai-tells.md`.
+4. `E Writing Instructions/Claude + Scripts/Setup Claude/_admin/voice.md` and `about-me.md`.
 5. **Your series architecture doc** (`B Working Papers/2.FinanceAndRisk/SeriesArchitecture.md` or `B Working Papers/3.SovereignIncentives/SeriesArchitecture.md`). It fixes your paper's title, question, answer, draft abstract, outlines, shared terms and citation keys. Follow it; you may improve the title, abstract and outline if the argument demands it, but keep the question, answer and shared terms, and say what you changed in your final report.
 6. Models of the finished form, from series 1: `B Working Papers/1.ClimateAndFiscalPolicy/1.2.FeebatesAndOutputBasedRebating/1.Presentation/Brief-FeebatesAndOutputBasedRebating.qmd` (brief) and `.../FeebatesAndOutputBasedRebating.qmd` (working paper: YAML with version, keywords, jel, crossref; numbered sections; propositions with proofs in an appendix; calibration with code in `2.Source/`). Skim them for form; do not copy content.
 7. Source digests (read the sections relevant to your paper; they cite paths to the originals, which you should open for the passages you use):

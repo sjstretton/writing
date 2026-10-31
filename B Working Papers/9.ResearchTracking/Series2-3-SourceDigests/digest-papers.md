@@ -452,7 +452,7 @@ Relevant to 1.5, and to the coal side of NCV.
 - The proposal: a notional climate balance tied to carbon stocks *and* long-run emissions performance, turned into guarantee support rather than cash, and used up by BAU emissions.
 - **The balance is borrowable and avoids the fiscal-transfer problem** in donor capitals. It **decays if nothing is done**, so the incentive exists from year 1.
 - The README notes it replaces the working title "Guarantee-Based International Incentives for the Delivery of Strong NDCs".
-- `A Writing Instructions/PAPERS.md` calls 3.1 "the core idea behind proposal 1" (the DPhil).
+- `E Writing Instructions/PAPERS.md` calls 3.1 "the core idea behind proposal 1" (the DPhil).
 
 **(e) DPhil pre-cleanup appendices (`C Research Proposal/PreviousVersions/…before-cleanup.docx`).**
 - Appendix B4: "long-term climate allowance or notional carbon-stock value linked to MDB guarantee capacity", to be kept "as one experimental dynamic-incentive design rather than assumed to be the thesis's final solution".
@@ -612,7 +612,7 @@ Relevant to 1.5, and to the coal side of NCV.
 | `…/2.1…/4.ExternalPapers/Ratha-Innovative-financing-for-development.pdf` | Ratha on future-flow securitisation (the ABS precedent). |
 | `B Working Papers/6.Additional/5.Analytics/5.2.ClimateFiscalFinancial/3.BackgroundPapers/TrillionsToBillions/` | "Policies → projects → AAA products"; **"investible policy guarantees … an operationalization of 'conditional NDCs'"**; superseniority; scaling dynamic. Notes and decks in `5.Notes/`. |
 | `SPECIALISMS.md` §3.7, §4.3–4.8 | Positions: "reward sovereigns not projects"; NCV as a "climate balance a country can borrow against"; RST analogy unanalysed; the "10–20×" claim flagged unsourced. |
-| `A Writing Instructions/PAPERS.md`, `STRATEGY.md`, `TODO.md`, `Writing-Status-Report.md` | 3.1 status (idea; core of DPhil proposal 1); confidentiality task H2. |
+| `E Writing Instructions/PAPERS.md`, `STRATEGY.md`, `TODO.md`, `Writing-Status-Report.md` | 3.1 status (idea; core of DPhil proposal 1); confidentiality task H2. |
 | `D Climate Econ Course/F. Global Mechanisms and Finance/F - Global Mechanisms and Finance.pptx` | A slide on KPI-linked fixed-return bonds (SLIDI summary). `WB_2023_WBClimateFrameworkGovernance.docx`. |
 | `D Climate Econ Course/C. Net Zero Investment Roadmap/Derisking and Stimulating Investment/` | External de-risking readings: UNDP DREI 2013/2014/2017/2018/2019; Tilotia 2023 (currency de-risking); IHLEG 2022; Stanford 2017; IEA 2021; GDPC 2021 debt relief. |
 | `3 Archive/` | Only planning, task and charge-code files. **No relevant content found.** |

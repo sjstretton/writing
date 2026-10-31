@@ -1,0 +1,67 @@
+---
+title: "Title That States the Finding or Proposal"
+subtitle: "Optional: Method or Setting"
+author:
+  - name: "Stephen J. Stretton"
+    affiliation: "World Bank Group"
+date: today
+abstract: |
+  [About 150–200 words, one paragraph. The problem, in one or two sentences, with a number. What the paper does. The main finding or proposal, stated plainly. The policy implication. No citations, no acronyms, no "this paper discusses".]
+keywords: [keyword one, keyword two, keyword three, keyword four]
+jel: [H23, Q54, Q58]
+bibliography: references.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+format:
+  docx: default
+  pdf:
+    number-sections: true
+    linestretch: 1.3
+---
+
+*The findings, interpretations, and conclusions expressed in this paper are entirely those of the author. They do not necessarily represent the views of the World Bank and its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.*
+
+<!--
+Before drafting, write the paper's question and answer in one sentence each:
+  Question:
+  Answer:
+Every paragraph opens with its claim. See E Writing Instructions/Writing Standards/paper-standard.md.
+-->
+
+# Introduction
+
+[Motivation: the problem in the world, who has it, what it costs. One concrete fact with a number and a source.]
+
+[Question, in one sentence. Answer, stated plainly.]
+
+[Contribution against the two or three closest pieces of work, named.]
+
+# Context
+
+[Only what the reader needs to see the gap. Organize by idea, not by author. End with the gap.]
+
+# Framework
+
+[Define each term once. State results as numbered propositions with their conditions.]
+
+**Proposition 1.** [Statement, with the conditions under which it holds.]
+
+[Intuition in the text; derivation in Appendix A.]
+
+# Application
+
+[Data, calibration, a country case or a worked example with real numbers. Every number sourced.]
+
+# Policy Implications
+
+[What a finance ministry or development bank should do differently. Costs, risks and when the recommendation fails.]
+
+# Conclusion
+
+[What is now known, the main limitation and the next step. Do not restate the abstract.]
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+# Appendix A: Derivations {.appendix}

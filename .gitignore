@@ -10,14 +10,16 @@ Thumbs.db
 **/*.quarto_ipynb
 
 # Written by the scripts on every run - regenerated, never edited by hand
-B Working Papers/B.Scripts/Reports/
-B Working Papers/B.Scripts/_Deleted/
+E Writing Instructions/Scripts/Papers/Reports/
+E Writing Instructions/Scripts/Papers/_Deleted/
 B Working Papers/_Purged/
 
 # Credentials. Never commit these. deploy.bat reads the FTP login from _ftp.txt.
-B Working Papers/B.Scripts/Reference/_ftp.txt
+E Writing Instructions/Scripts/Papers/Reference/_ftp.txt
+# Old location (before 31 Oct 2026): keep ignored so a leftover copy is never committed
+B Working Papers/B.Scripts/
 
 __pycache__/
 
 # Written by Download-Literature.bat on each run
-B Working Papers/B.Scripts/Run/Literature-OpenInBrowser.html
+E Writing Instructions/Scripts/Papers/Run/Literature-OpenInBrowser.html

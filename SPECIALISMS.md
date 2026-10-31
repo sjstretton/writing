@@ -2,7 +2,7 @@
 
 Stephen Stretton · draft of 29 Oct 2026, built from the papers in this repo and the notes on Google Drive. **Internal working document.** Some sources are World Bank internal or "Official Use Only"; use them for orientation only, and don't quote them outward.
 
-This page maps what Stephen can credibly claim as expert ground, in five groups. Each specialism has a short abstract of the argument he already makes, a strength rating and where the material is. The executive summary sets out an order for nailing the specialisms down. `A Writing Instructions/STRATEGY.md` gives the shorter positioning; this page is the detail behind it.
+This page maps what Stephen can credibly claim as expert ground, in five groups. Each specialism has a short abstract of the argument he already makes, a strength rating and where the material is. The executive summary sets out an order for nailing the specialisms down. `E Writing Instructions/STRATEGY.md` gives the shorter positioning; this page is the detail behind it.
 
 **Strength key:** ●&nbsp;written up (a draft paper or book chapter states the argument) · ◐&nbsp;partial (notes, a section or a deck) · ○&nbsp;thin (a heading or a planned paper only).
 

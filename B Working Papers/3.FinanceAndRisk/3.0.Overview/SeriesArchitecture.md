@@ -1,6 +1,6 @@
 # Series 3 architecture: Finance and Risk
 
-The plan for section 3 as one coherent series: its argument, its papers, their abstracts and outlines, and the terms they share. Agreed with Stephen on 29 Oct 2026. Every brief and working paper in the series follows it. The format rules for briefs are in `A Writing Instructions/Writing Standards/briefing-series-spec.md`; working papers follow `paper-standard.md`.
+The plan for section 3 as one coherent series: its argument, its papers, their abstracts and outlines, and the terms they share. Agreed with Stephen on 29 Oct 2026. Every brief and working paper in the series follows it. The format rules for briefs are in `E Writing Instructions/Writing Standards/briefing-series-spec.md`; working papers follow `paper-standard.md`.
 
 ## The series argument
 

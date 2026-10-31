@@ -1,6 +1,6 @@
 # Proposal 3: Systemic AI Safety (Outline)
 
-Status: outline, 29 Oct 2026. This is a scaffold for the second PhD application, which `A Writing Instructions/STRATEGY.md` makes the next writing priority. It sets out the structure and the decisions Stephen needs to make. It contains no claims yet; everything substantive is a question.
+Status: outline, 29 Oct 2026. This is a scaffold for the second PhD application, which `E Writing Instructions/STRATEGY.md` makes the next writing priority. It sets out the structure and the decisions Stephen needs to make. It contains no claims yet; everything substantive is a question.
 
 ## Decisions for Stephen first
 
@@ -14,7 +14,7 @@ The draft cannot start until these are answered.
 
 ## Planned structure (~2,500 words)
 
-Follows the "Research proposal" type in `A Writing Instructions/Writing Standards/writing-types.md`.
+Follows the "Research proposal" type in `E Writing Instructions/Writing Standards/writing-types.md`.
 
 1. **Title.** States the question.
 2. **The problem.** What "systemic" AI risk is, in plain words, with a concrete scenario. Why model-level safety work does not address it.
@@ -27,10 +27,10 @@ Follows the "Research proposal" type in `A Writing Instructions/Writing Standard
 
 ## Material to draw on
 
-- Position paper P7 in `A Writing Instructions/PAPERS.md` (to be written alongside).
+- Position paper P7 in `E Writing Instructions/PAPERS.md` (to be written alongside).
 - P6 and paper 4.2 (AI-assisted recoding of policy models), as evidence of hands-on work with AI systems.
-- Exemplar: Amodei et al., "Concrete Problems in AI Safety" (2016), for how to turn a diffuse worry into named, tractable problems (`A Writing Instructions/Writing Standards/exemplars.md`).
+- Exemplar: Amodei et al., "Concrete Problems in AI Safety" (2016), for how to turn a diffuse worry into named, tractable problems (`E Writing Instructions/Writing Standards/exemplars.md`).
 
 ## Next steps
 
-See `A Writing Instructions/TODO.md`, "Priority 2".
+See `E Writing Instructions/TODO.md`, "Priority 2".

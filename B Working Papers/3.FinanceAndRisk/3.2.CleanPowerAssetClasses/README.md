@@ -17,7 +17,7 @@
 | `2.Source/make_wp_figures.py`, `2.Source/figures/` | Working-paper figures |
 | `3.RelatedPiecesAndLinks/` | Source material (synthetic sovereign bonds note; "A Solar Economy Financing System" with Jasper Zimmermann) |
 
-Regenerate: `python3 2.Source/model.py`, `python3 2.Source/make_wp_figures.py`, `python3 1.Presentation/figures/make_figures.py`, then pandoc (see `A Writing Instructions/Writing Standards/briefing-series-spec.md`).
+Regenerate: `python3 2.Source/model.py`, `python3 2.Source/make_wp_figures.py`, `python3 1.Presentation/figures/make_figures.py`, then pandoc (see `E Writing Instructions/Writing Standards/briefing-series-spec.md`).
 
 ## Lineage and co-authors
 

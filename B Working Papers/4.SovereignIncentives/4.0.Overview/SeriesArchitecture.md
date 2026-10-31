@@ -1,6 +1,6 @@
 # Series 4 architecture: Sovereign Incentives
 
-The plan for section 4 as one coherent series: its argument, its papers, their abstracts and outlines, and the terms they share. Agreed with Stephen on 29 Oct 2026. Briefs follow `A Writing Instructions/Writing Standards/briefing-series-spec.md`; working papers follow `paper-standard.md`.
+The plan for section 4 as one coherent series: its argument, its papers, their abstracts and outlines, and the terms they share. Agreed with Stephen on 29 Oct 2026. Briefs follow `E Writing Instructions/Writing Standards/briefing-series-spec.md`; working papers follow `paper-standard.md`.
 
 ## The series argument
 
