@@ -15,47 +15,57 @@ Log every publish in A Writing Instructions/Writing Standards/publishing-log.md.
 import shutil
 from pathlib import Path
 
+ROOT = Path("..")
+
+
+def find(name):
+    """Locate a paper folder or overview file by name anywhere under B Working Papers."""
+    hits = [p for p in ROOT.rglob(name) if "8.PreviousVersions" not in p.parts and "A.Website" not in p.parts]
+    # prefer the copy with real content (skips stale local folders holding only __pycache__)
+    hits.sort(key=lambda p: -sum(1 for f in (p.rglob("*") if p.is_dir() else [p]) if "__pycache__" not in f.parts))
+    return hits[0] if hits else ROOT / name
+
 PAPERS = {
-    "1.ClimateAndFiscalPolicy/1.1.OpenEconomyCarbonPricing": "OpenEconomyCarbonPricing",
-    "1.ClimateAndFiscalPolicy/1.2.FeebatesAndOutputBasedRebating": "FeebatesAndOutputBasedRebating",
-    "1.ClimateAndFiscalPolicy/1.3.IronSteelCBAM": "IronSteelCBAM",
-    "1.ClimateAndFiscalPolicy/1.6.CarbonConsumptionTax": "CarbonConsumptionTax",
-    "1.ClimateAndFiscalPolicy/1.7.PolicyEquivalentCarbonPriceAndCES": "PolicyEquivalentCarbonPriceAndCES",
-    "2.FinanceAndRisk/2.1.ClimateFinanceIntermediationForCleanPower": "ClimateFinanceIntermediationForCleanPower",
-    "2.FinanceAndRisk/2.2.CleanPowerAssetClasses": "CleanPowerAssetClasses",
-    "3.SovereignIncentives/3.1.NotionalCapitalisedValueAndGuarantees": "NotionalCapitalisedValueAndGuarantees",
-    "3.SovereignIncentives/3.2.ClimateInvestmentTrust": "ClimateInvestmentTrust",
-    "3.SovereignIncentives/3.3.SustainabilityLinkedLending": "SustainabilityLinkedLending",
-    "4.Modelling/4.1.CPATMitigationMethods": "CPATMitigationMethods",
-    "4.Modelling/4.2.CPATAIImplementation": "CPATAIImplementation",
-    "4.Modelling/4.3.CPATValidation": "CPATValidation",
-    "4.Modelling/4.4.ElasticityValidation": "ElasticityValidation",
-    "4.Modelling/4.5.CBAMPolicyTool": "CBAMPolicyTool",
-    "4.Modelling/4.6.PublicInvestment": "PublicInvestment",
-    "4.Modelling/4.7.ActivityModelling": "ActivityModelling",
-    "5.Analytics/5.1.ExciseFiscalDiagnostic": "ExciseFiscalDiagnostic",
-    "5.Analytics/5.2.MacroFiscalEnergyScenarioTool": "MacroFiscalEnergyScenarioTool",
-    "5.Analytics/5.3.FiscalIndicatorsDashboard": "FiscalIndicatorsDashboard",
+    "1.1.OpenEconomyCarbonPricing": "OpenEconomyCarbonPricing",
+    "1.2.FeebatesAndOutputBasedRebating": "FeebatesAndOutputBasedRebating",
+    "1.3.IronSteelCBAM": "IronSteelCBAM",
+    "1.6.CarbonConsumptionTax": "CarbonConsumptionTax",
+    "4.5.PolicyEquivalentCarbonPriceAndCES": "PolicyEquivalentCarbonPriceAndCES",
+    "2.1.ClimateFinanceIntermediationForCleanPower": "ClimateFinanceIntermediationForCleanPower",
+    "2.2.CleanPowerAssetClasses": "CleanPowerAssetClasses",
+    "3.1.NotionalCapitalisedValueAndGuarantees": "NotionalCapitalisedValueAndGuarantees",
+    "3.2.ClimateInvestmentTrust": "ClimateInvestmentTrust",
+    "3.3.SustainabilityLinkedLending": "SustainabilityLinkedLending",
+    "4.1.CPATMitigationMethods": "CPATMitigationMethods",
+    "4.2.CPATAIImplementation": "CPATAIImplementation",
+    "4.3.CPATValidation": "CPATValidation",
+    "4.4.ElasticityValidation": "ElasticityValidation",
+    "4.5.CBAMPolicyTool": "CBAMPolicyTool",
+    "4.6.PublicInvestment": "PublicInvestment",
+    "4.7.ActivityModelling": "ActivityModelling",
+    "5.1.ExciseFiscalDiagnostic": "ExciseFiscalDiagnostic",
+    "5.2.MacroFiscalEnergyScenarioTool": "MacroFiscalEnergyScenarioTool",
+    "5.3.FiscalIndicatorsDashboard": "FiscalIndicatorsDashboard",
 }
 OVERVIEWS = {
-    "1.ClimateAndFiscalPolicy/1.0.OverviewClimateAndFiscalPolicy.docx": "OverviewClimateAndFiscalPolicy.docx",
-    "2.FinanceAndRisk/2.0.OverviewMobilisingPrivateCapital.docx": "OverviewMobilisingPrivateCapital.docx",
-    "3.SovereignIncentives/3.0.OverviewSovereignIncentives.docx": "OverviewSovereignIncentives.docx",
-    "4.Modelling/4.0.OverviewModelling.docx": "OverviewModelling.docx",
-    "5.Analytics/5.0.OverviewAnalytics.docx": "OverviewAnalytics.docx",
+    "1.0.OverviewClimateAndFiscalPolicy.docx": "OverviewClimateAndFiscalPolicy.docx",
+    "2.0.OverviewMobilisingPrivateCapital.docx": "OverviewMobilisingPrivateCapital.docx",
+    "3.0.OverviewSovereignIncentives.docx": "OverviewSovereignIncentives.docx",
+    "4.0.OverviewModelling.docx": "OverviewModelling.docx",
+    "5.0.OverviewAnalytics.docx": "OverviewAnalytics.docx",
     # Section theme decks
-    "1.ClimateAndFiscalPolicy/1.Presentation/Slides-ClimateAndFiscalPolicy.pptx": "Slides-ClimateAndFiscalPolicy.pptx",
-    "2.FinanceAndRisk/1.Presentation/Slides-FinanceAndRisk.pptx": "Slides-FinanceAndRisk.pptx",
-    "3.SovereignIncentives/1.Presentation/Slides-SovereignIncentives.pptx": "Slides-SovereignIncentives.pptx",
-    "4.Modelling/1.Presentation/Slides-Modelling.pptx": "Slides-Modelling.pptx",
-    "5.Analytics/1.Presentation/Slides-Analytics.pptx": "Slides-Analytics.pptx",
+    "Slides-ClimateAndFiscalPolicy.pptx": "Slides-ClimateAndFiscalPolicy.pptx",
+    "Slides-FinanceAndRisk.pptx": "Slides-FinanceAndRisk.pptx",
+    "Slides-SovereignIncentives.pptx": "Slides-SovereignIncentives.pptx",
+    "Slides-Modelling.pptx": "Slides-Modelling.pptx",
+    "Slides-Analytics.pptx": "Slides-Analytics.pptx",
     # Books
-    "6.Additional/6.Books/6.3.Screwed/Screwed.docx": "Screwed.docx",
+    "Screwed.docx": "Screwed.docx",
 }
 out = Path("papers")
 out.mkdir(exist_ok=True)
 for folder, name in PAPERS.items():
-    d = Path("..") / folder
+    d = find(folder)
     for src, dst in [
         (d / f"{name}.docx", out / f"{name}.docx"),
         (d / "1.Presentation" / f"Brief-{name}.docx", out / f"Brief-{name}.docx"),
@@ -67,7 +77,7 @@ for folder, name in PAPERS.items():
         else:
             print(f"missing   {src}")
 for src, dst in OVERVIEWS.items():
-    s = Path("..") / src
+    s = find(src)
     if s.exists():
         shutil.copy2(s, out / dst)
         print(f"published {out / dst}")
