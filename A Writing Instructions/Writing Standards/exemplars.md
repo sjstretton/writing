@@ -40,5 +40,5 @@ The goal here is accessibility without loss of rigor.
 
 *(Stephen to add 2–3 pieces he considers representative. See `A Writing Instructions/TODO.md`.)*
 
-- "The Vocative Case" (`B Working Papers/6.Additional/7.Philosophy/7.3.TheVocativeCase`): the reference piece for popular philosophy, per `voice.md`.
+- "The Vocative Case" (`B Working Papers/8.AdditionalPolicyPapers/8.6.Philosophy/8.6.3.TheVocativeCase`): the reference piece for popular philosophy, per `voice.md`.
 - *TODO: a World Bank or policy piece.*

@@ -1,9 +1,9 @@
-"""Copied unchanged (below this note) from paper 1.7, 
-B Working Papers/1.ClimateAndFiscalPolicy/1.7.PolicyEquivalentCarbonPriceAndCES/2.Source/tecp_model.py,
-so that paper 4.4 runs on its own. Paper 4.4 uses it to show how the elasticity
+"""Copied unchanged (below this note) from paper 6.1, 
+B Working Papers/6.ModularUpgrades/6.1.PolicyEquivalentCarbonPriceAndCES/2.Source/tecp_model.py,
+so that paper 5.4 runs on its own. Paper 5.4 uses it to show how the elasticity
 calibration moves emission cuts and the Total Effective Carbon Price.
 """
-"""Core model for working paper 1.7 (v0.3), "Measure Carbon Pricing by the
+"""Core model for working paper 6.1 (v0.3), "Measure Carbon Pricing by the
 Emissions It Cuts: The Total Effective Carbon Price".
 
 Nested CES energy demand in each sector; the first-order, second-order and
@@ -11,7 +11,7 @@ exact (iterative) Total Effective Carbon Price (TECP); instruments as price
 changes; non-price instruments; partial adjustment.
 
 The stylized three-sector economy and the three instruments are identical to
-those of Climate Fiscal Policy Brief No. 1.7 (1.Presentation/figures/
+those of Climate Fiscal Policy Brief No. 6.1 (1.Presentation/figures/
 make_figures.py), so the paper and the brief report the same numbers.
 `check_against_brief()` asserts this.
 

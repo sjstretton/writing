@@ -1,4 +1,4 @@
-"""Worked example and figure for Climate Fiscal Policy Brief No. 1.7,
+"""Worked example and figure for Climate Fiscal Policy Brief No. 6.1,
 "The Total Effective Carbon Price".
 
 A stylized three-sector economy (power, road transport, industry) with a

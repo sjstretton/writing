@@ -1,4 +1,4 @@
-"""Figure for Climate Fiscal Policy Brief No. 2.1. Run: python3 make_figures.py
+"""Figure for Climate Fiscal Policy Brief No. 3.1. Run: python3 make_figures.py
 Uses the model in ../../2.Source/model.py."""
 import sys
 from pathlib import Path

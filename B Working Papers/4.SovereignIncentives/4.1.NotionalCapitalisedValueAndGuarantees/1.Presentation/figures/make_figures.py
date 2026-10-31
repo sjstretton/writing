@@ -1,4 +1,4 @@
-"""Figure for Climate Fiscal Policy Brief No. 3.1. Run: python3 make_figures.py
+"""Figure for Climate Fiscal Policy Brief No. 4.1. Run: python3 make_figures.py
 Reuses the stylized model in ../../2.Source/model.py and writes the PNG beside this script.
 """
 import sys

@@ -1,6 +1,6 @@
 """Calibration for 'Codify Sustainability-Linked Sovereign Lending, Then Give It Scale'.
 
-Climate Fiscal Policy Brief No. 3.3 and working paper StrettonWP33.
+Climate Fiscal Policy Brief No. 4.3 and working paper StrettonWP43.
 Run: python3 model.py   (prints every number used in the brief and working paper)
 
 Public inputs (sources in the paper's .bib):

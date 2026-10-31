@@ -1,4 +1,4 @@
-"""Brief figure for Climate Fiscal Policy Brief No. 3.2. Uses the working-paper model in ../../2.Source.
+"""Brief figure for Climate Fiscal Policy Brief No. 4.2. Uses the working-paper model in ../../2.Source.
 python3 make_figures.py -> writes fig1-buffer-vs-payout.png beside this file."""
 import os, sys
 import matplotlib
