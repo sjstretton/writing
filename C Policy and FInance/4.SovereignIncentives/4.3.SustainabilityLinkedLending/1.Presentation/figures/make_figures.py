@@ -1,4 +1,4 @@
-"""Figure for Brief 3.3. Reuses the working paper's model. Run: python3 make_figures.py"""
+"""Figure for Brief 4.3. Reuses the working paper's model. Run: python3 make_figures.py"""
 import os
 import sys
 

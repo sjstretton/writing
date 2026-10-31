@@ -53,7 +53,7 @@ Plan: `C Policy and FInance/4.SovereignIncentives/4.0.Overview/SeriesArchitectur
 | 4.0 | Overview: Reward Governments, Not Projects | v0.2 (29 Oct) |
 | 4.1 | Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives | working paper v0.2 + brief CFPB 4.1 v1.0 + 10-slide deck (31 Oct) |
 | 4.2 | The Climate Investment Trust: Hold Capital, Lend Its Strength | working paper v0.3 + brief CFPB 4.2 v1.0 + 10-slide deck (31 Oct) |
-| 4.3 | Codify Sustainability-Linked Sovereign Lending, Then Give It Scale | working paper v0.1 + brief CFPB 4.3 (29 Oct); public sources and SLIDIs only |
+| 4.3 | Codify Sustainability-Linked Sovereign Lending, Then Give It Scale | working paper v0.2 + brief CFPB 4.3 v1.0 + 10-slide deck (31 Oct); peer-reviewed, every citation checked, public sources only; both on the web |
 
 ### The CPAT series (section 5), modular upgrades (section 6) and the analytics tools (section 7)
 

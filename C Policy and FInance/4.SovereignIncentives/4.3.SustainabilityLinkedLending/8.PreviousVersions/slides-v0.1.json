@@ -1,0 +1,49 @@
+{
+  "series": "Climate Fiscal Policy Brief No. 4.3",
+  "title": "Codify Sustainability-Linked Sovereign Lending, Then Give It Scale",
+  "subtitle": "Standard indicators, verification and pricing, and a reward bigger than an interest margin",
+  "message": "Sustainability-linked debt pays governments for climate results, but each deal is bespoke and small. Codify indicators, verification and pricing; give investors a fixed coupon; and make guarantee capacity, not a few basis points, the prize.",
+  "problem": {
+    "title": "It works, and it is far too small",
+    "stats": [
+      {
+        "value": "$12.5m",
+        "label": "the most Uruguay's $350m World Bank loan (2023) can save: about $8m in present value"
+      },
+      {
+        "value": "$77m",
+        "label": "value of a 100 bp step-down on a $1bn loan over ten years"
+      },
+      {
+        "value": "$770m",
+        "label": "cost of a stylized reform retiring 2 GW of coal ten years early"
+      }
+    ],
+    "text": "Even waiving all interest on $1 billion at 6 percent is worth only $463 million. A rebate cannot exceed the interest bill, so interest margins are an order of magnitude too small for major reforms."
+  },
+  "mechanism": {
+    "title": "Make guarantee capacity the reward",
+    "image": "figures/fig1-size-problem.png",
+    "imageWidth": 5.6,
+    "imageHeight": 2.94,
+    "caption": "Present value at 5% over ten years, US$ million, log scale. Hatched: cost to the funder on the MDB loss record.",
+    "points": [
+      "Codify: outturn indicators, baselines set by rule, published data, a price per tonne.",
+      "Investors hold a fixed coupon; an intermediary refunds interest when targets are met.",
+      "$3.3bn of capacity is worth $772m, the reform's cost; the funder expects to lose about $10m on the MDB record, $286m in the stress case."
+    ]
+  },
+  "action": {
+    "title": "The rebate is the signal; the guarantee pays",
+    "results": [
+      "About 80 dollars of incentive per dollar of funder cost on the MDB loss record; 2.7 in a stress case without preferred-creditor status, with a $310m buffer held, not spent.",
+      "The government's exposure becomes smaller, contingent and contracted, not zero.",
+      "One verification can drive both the rebate and the guarantee capacity."
+    ],
+    "todo": [
+      "MDBs: publish an indicator menu, baselines and a pricing schedule.",
+      "Back a fixed-coupon intermediary; a missed target costs the refund, not a premium to bondholders.",
+      "Donors: make guarantee capacity the main prize and fund its buffer."
+    ]
+  }
+}

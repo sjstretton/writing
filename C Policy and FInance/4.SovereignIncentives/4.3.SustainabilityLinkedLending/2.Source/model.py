@@ -8,13 +8,17 @@ Public inputs (sources in the paper's .bib):
   4-year grace, semi-annual principal USD 15.2m from April 2028 to April 2039,
   step-down 50 bp a year in performance years 2028-32 (max USD 6.7m) and 100 bp a year
   in 2033-37 (max USD 5.8m); total cap USD 12.5m.
+  Uruguay 5.750% sustainability-linked bonds due 2034 (SEC prospectus supplement, Nov 2023):
+  USD 2.2bn outstanding after the 2023 reopening; coupon +15 bp per KPI if the lower
+  target is missed, -15 bp per KPI if the higher target is met, from 28 Oct 2027;
+  principal repaid in three equal instalments on 28 Oct 2032, 2033 and 2034.
 Everything else is STYLIZED and labelled as such.
 """
 import numpy as np
 
 R = 0.05  # discount rate for present values (stylized)
 
-# Guarantee loss parameters shared with 3.1 and 3.2 (StrettonWP31, StrettonWP32),
+# Guarantee loss parameters shared with 4.1 and 4.2 (StrettonWP41, StrettonWP42),
 # settled 29 Oct 2026. BASE: the MDB sovereign loss record (GEMs 2025: default rate
 # 0.77% a year, recovery 95.1%, 1984-2024), buffer 0.49% of exposure. The record
 # reflects preferred-creditor status a new facility might not inherit, so two less
@@ -65,6 +69,22 @@ def uruguay_summary(r=R, base_year=2023):
     pv = sum(v[2] / (1 + r) ** (y - base_year) for y, v in rows.items())
     return dict(first=first, second=second, total=first + second, pv=pv,
                 share_of_principal=(first + second) / 350.0)
+
+
+def uruguay_bond_swing(r=R, base_year=2023):
+    """Maximum annual coupon swing on Uruguay's 2034 SLB (both KPIs, 30 bp either way).
+
+    Applies from 28 Oct 2027; balance USD 2,200m until the three equal instalments
+    (Oct 2032, 2033, 2034). Returns nominal and PV (to 2023) of the maximum step-down.
+    """
+    total, pv = 0.0, 0.0
+    for k in range(7):                      # coupon years Oct 2027-Oct 2034
+        start = 2027 + k
+        bal = 2200.0 * (1 if start < 2032 else (2 / 3 if start == 2032 else 1 / 3))
+        v = bal * 0.0030
+        total += v
+        pv += v / (1 + r) ** (start + 1 - base_year)
+    return dict(nominal=total, pv=pv, per_year_full=2200.0 * 0.0030)
 
 
 # ------------------------------------------------- Proposition 1: minimum reward
@@ -125,6 +145,10 @@ def main():
     print(f"  total {u['total']:.1f} (cap 12.5) = {100*u['share_of_principal']:.1f}% of principal")
     print(f"  PV at {R:.0%} to 2023: {u['pv']:.1f}")
 
+    b = uruguay_bond_swing()
+    print(f"\nURUGUAY 2034 SLB: max swing {b['per_year_full']:.1f} a year on USD 2.2bn; "
+          f"max step-down total {b['nominal']:.0f} nominal, PV {b['pv']:.0f} (priced in at issue)")
+
     c = coal_reform()
     print("\nSTYLIZED COAL REFORM")
     print(f"  emissions avoided {c['mt']:.1f} MtCO2/yr; policy cost PV {c['pv_cost']:.0f}; "
@@ -149,11 +173,18 @@ def main():
         print(f"   {name}: incentive {g['incentive']:.0f}; donor cost {g['cost']:.1f}; ratio {g['ratio']:.1f}; "
               f"buffer held {buf_*gstar:.1f}; with 2% carry cost {gc['cost']:.1f} ratio {gc['ratio']:.1f}; "
               f"breakeven carry b*r_b < {(0.03 - pd_*lgd_)*1e4:.0f} bp")
+    hyb = guarantee(G=gstar, s_bp=300, pd=PD, lgd=LGD, buffer=BUFFER_STRESS, r_buffer=R_BUFFER_SENS, years=10)
+    print(f"  base losses but stress-case buffer held at a 2% carry: cost {hyb['cost']:.0f}; ratio {hyb['ratio']:.1f}")
+    g200 = c['pv_cost'] / (0.02 * annuity(R, 10))
+    print(f"  at a 200 bp spread saved, capacity needed {g200:.0f}:")
+    for name, (pd_, lgd_, buf_) in CASES.items():
+        g = guarantee(G=g200, s_bp=200, pd=pd_, lgd=lgd_, buffer=buf_, r_buffer=R_BUFFER, years=10)
+        print(f"   {name}: donor cost {g['cost']:.0f}; ratio {g['ratio']:.1f}; buffer {buf_*g200:.0f}")
     pc = 10 * c['mt'] * annuity(R, 10)
     print(f"  policy crediting at USD 10/t on the coal reform: {pc:.0f}")
     print("\nLEVERAGE SENSITIVITY (ratio incentive/donor cost; zero carry)")
     for lgd_ in (LGD, LGD_STRESS):
-        for s in (150, 300, 450):
+        for s in (150, 200, 300, 450):
             for pd in (0.0077, 0.01, 0.03, 0.05):
                 print(f"  L={lgd_:.3f} s={s}bp pd={pd:.4f}: {guarantee(1, s, pd, lgd_, 0, R_BUFFER, 10)['ratio']:.1f}")
 

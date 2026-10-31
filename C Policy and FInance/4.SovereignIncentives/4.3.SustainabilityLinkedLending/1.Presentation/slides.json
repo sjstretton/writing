@@ -1,49 +1,131 @@
 {
-  "series": "Climate Fiscal Policy Brief No. 4.3",
+  "series": "Climate Fiscal Policy Brief No. 4.3 · October 2026",
   "title": "Codify Sustainability-Linked Sovereign Lending, Then Give It Scale",
-  "subtitle": "Standard indicators, verification and pricing, and a reward bigger than an interest margin",
-  "message": "Sustainability-linked debt pays governments for climate results, but each deal is bespoke and small. Codify indicators, verification and pricing; give investors a fixed coupon; and make guarantee capacity, not a few basis points, the prize.",
-  "problem": {
-    "title": "It works, and it is far too small",
-    "stats": [
-      {
-        "value": "$12.5m",
-        "label": "the most Uruguay's $350m World Bank loan (2023) can save: about $8m in present value"
+  "slides": [
+    {
+      "type": "title",
+      "title": "Codify Sustainability-Linked Sovereign Lending, Then Give It Scale",
+      "subtitle": "Standard indicators, verification and pricing, and a reward bigger than an interest margin",
+      "message": "Sustainability-linked debt pays governments for national climate results, but each deal is handmade and small. Codify it, pay the reward from outside, and make guarantee capacity the prize.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "table",
+      "title": "A handful of governments have tied their borrowing costs to climate results since 2022",
+      "header": ["Instrument", "Size", "Indicators", "Step"],
+      "widths": [2.2, 1.7, 3.4, 1.8],
+      "rows": [
+        ["Chile bond, 2022", "$2bn, 20 years", "Emissions 95 MtCO₂e by 2030; 60% renewables by 2032", "+12.5 bp per miss"],
+        ["Uruguay bond, 2022", "$2.2bn by 2023", "Emissions intensity; native forest area", "±15 bp per indicator"],
+        ["Uruguay World Bank loan, 2023", "$350m", "Methane per kg of beef vs 1990", "−50 to −100 bp a year"],
+        ["Thailand bond, 2024", "Bt30bn ($874m)", "Emissions; zero-emission vehicles", "±2.5 bp"],
+        ["Slovenia bond, 2025", "€1bn", "Emissions vs 2005", "±50 bp"]
+      ],
+      "note": "Only Uruguay's loan pays the reward from outside: a World Bank fund for global public goods. In the bonds, bondholders pay.",
+      "source": "Issuer documents and releases (Uruguay MEF 2023; SEC prospectus 2023; Slovenia 2025; IFR 2024; Cleary Gottlieb 2022). Working paper 4.3, Table 1."
+    },
+    {
+      "type": "stats",
+      "title": "The rewards are tiny next to what climate policy costs",
+      "stats": [
+        {"value": "$12.5m", "label": "the most Uruguay's $350m loan can save, 3.6% of principal; about $8m in present value"},
+        {"value": "$77m", "label": "a 100 bp step-down on a $1bn loan for ten years"},
+        {"value": "$772m", "label": "cost of a stylized reform retiring 2 GW of coal ten years early"}
+      ],
+      "text": "Even waiving all interest on $1bn at 6% is worth only $463m. A rebate cannot exceed the interest bill.",
+      "source": "Uruguay MEF (2023); author's calculations, 5% discount rate. Working paper 4.3, Section 6."
+    },
+    {
+      "type": "points",
+      "title": "Four things keep sustainability-linked debt small",
+      "points": [
+        {"lead": "Every deal is bespoke.", "text": "Each issuer invents its own indicators, baselines and step; the market standards say how to disclose them, not what they should be."},
+        {"lead": "Targets are easy.", "text": "Corporate issuers miss them only 14–39% of the time. A reward paid whatever happens buys nothing."},
+        {"lead": "Rewards arrive late.", "text": "Uruguay's 2025 methane result is verified in 2028; the last reward is applied in 2037."},
+        {"lead": "Steps are arbitrary.", "text": "The market norm is 25 bp per target, with no link to what the policy costs."}
+      ],
+      "source": "Feldhütter, Halskov and Krebbers (2024); Stewart and Ul Haq (2023); Climate Bonds Initiative (2024); Uruguay MEF (2023)."
+    },
+    {
+      "type": "points",
+      "title": "A bond whose coupon moves with results gives the government commitment, not money",
+      "points": [
+        {"lead": "Investors price the expected step at issue.", "text": "Bond prices track the size of the penalty, with no mispricing."},
+        {"lead": "So the government pays for its own reward,", "text": "plus a premium for the uncertainty. It still gains from meeting the target once the bond is sold: a commitment device."},
+        {"lead": "That cannot pay for mitigation,", "text": "whose benefits mostly go abroad. Uruguay's bond can cut its coupon by up to about $40m, but bondholders priced that in."},
+        {"lead": "Pay the reward from outside.", "text": "An intermediary lends on a fixed coupon and refunds interest for verified results; it bears the risk across many countries."}
+      ],
+      "source": "Lefournier (2023); Feldhütter et al. (2024); Estevão, Stretton and Zimmermann (2024). Working paper 4.3, Proposition 2."
+    },
+    {
+      "type": "points",
+      "title": "Codify the loan: write it once, use it many times",
+      "points": [
+        {"lead": "Indicators:", "text": "outturns national statistics already report: emissions, methane per kg of beef, forest area, clean power share, carbon price."},
+        {"lead": "Baselines:", "text": "the country's own Paris pledge plus a published margin, with a peer-based floor."},
+        {"lead": "Verification:", "text": "a named verifier checks the national inventory, as UNDP does for Uruguay."},
+        {"lead": "Price:", "text": "a published reward per unit of outperformance, stated per tonne of CO₂, so a funder can compare indicators and countries."}
+      ],
+      "source": "Working paper 4.3, Section 4 and Appendix A; World Bank Group Evolution Roadmap (2022) calls for standardized buy-downs."
+    },
+    {
+      "type": "figure",
+      "title": "Interest-rate rewards are an order of magnitude too small; guarantee capacity is not",
+      "image": "figures/fig1-size-problem.png",
+      "caption": "Present value at 5% over ten years, US$ million, log scale. Hatched: cost to the funder.",
+      "points": [
+        {"lead": "A 100 bp step on $1bn:", "text": "$77m, under $1 per tonne avoided. Matching the reform needs a $10bn loan."},
+        {"lead": "$3.3bn of guarantee capacity,", "text": "saving 300 bp, is worth $772m: the reform's cost."},
+        {"lead": "Its cost to the funder", "text": "is the expected loss, not the face value."}
+      ],
+      "source": "Author's calculations; working paper 4.3, Figure 1."
+    },
+    {
+      "type": "table",
+      "title": "Each dollar of guarantor cost buys 80 dollars of incentive on the banks' record, 2.7 on market-like losses",
+      "header": ["Case for $3.3bn of capacity", "Funder's expected cost", "Buffer held", "Incentive per $"],
+      "widths": [3.9, 1.8, 1.6, 1.8],
+      "rows": [
+        ["Development banks' record (0.77% called a year, 4.9% lost)", "$10m", "$16m", "80"],
+        ["Middle (3% called, 10% lost)", "$77m", "$83m", "10"],
+        ["Market-like stress (3% called, 37% lost)", "$286m", "$310m", "2.7"],
+        ["Rebate or cash", "$772m", "—", "1"]
+      ],
+      "note": "The record reflects preferred-creditor status a new guarantor may not inherit. Hold the stress buffer at launch: at a 2% carry the multiple on the record falls to about 13. At a 200 bp saving: 53 and 1.8.",
+      "source": "GEMs (2025); Cruces and Trebesch (2013); author's calculations. Working paper 4.3, Table 3; cases shared with papers 4.1 and 4.2."
+    },
+    {
+      "type": "points",
+      "title": "The leverage is real only where the guarantee is honored and used",
+      "points": [
+        {"lead": "Preferred-creditor treatment:", "text": "the base case needs the guarantor's claims honored like development bank loans, through a counter-indemnity."},
+        {"lead": "Debt distress:", "text": "at high call rates the multiple falls toward one; give account credits instead."},
+        {"lead": "Pipeline:", "text": "capacity is worth nothing to a country with no green borrowing to guarantee."},
+        {"lead": "Exposure:", "text": "the government's liability becomes smaller, contingent and contracted, not zero."},
+        {"lead": "Additionality:", "text": "a reward offset by less concessional finance elsewhere pays nothing."}
+      ],
+      "source": "Working paper 4.3, Section 8; Brief 3.1."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the analysis shows",
+        "items": [
+          {"lead": "Codified:", "text": "the instrument can be repeated cheaply."},
+          {"lead": "Market steps:", "text": "buy commitment, not money."},
+          {"lead": "Interest bound:", "text": "a rebate cannot pay for a major reform."},
+          {"lead": "Guarantees:", "text": "80 times the incentive per dollar on the record, 2.7 under stress."}
+        ]
       },
-      {
-        "value": "$77m",
-        "label": "value of a 100 bp step-down on a $1bn loan over ten years"
-      },
-      {
-        "value": "$770m",
-        "label": "cost of a stylized reform retiring 2 GW of coal ten years early"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {"lead": "Development banks:", "text": "publish an indicator menu, baselines, verification rules and a price per tonne."},
+          {"lead": "Advanced economies:", "text": "back a fixed-coupon intermediary that refunds interest for verified results."},
+          {"lead": "Donors:", "text": "make guarantee capacity the prize and fund its buffer (Briefs 4.1, 4.2)."}
+        ]
       }
-    ],
-    "text": "Even waiving all interest on $1 billion at 6 percent is worth only $463 million. A rebate cannot exceed the interest bill, so interest margins are an order of magnitude too small for major reforms."
-  },
-  "mechanism": {
-    "title": "Make guarantee capacity the reward",
-    "image": "figures/fig1-size-problem.png",
-    "imageWidth": 5.6,
-    "imageHeight": 2.94,
-    "caption": "Present value at 5% over ten years, US$ million, log scale. Hatched: cost to the funder on the MDB loss record.",
-    "points": [
-      "Codify: outturn indicators, baselines set by rule, published data, a price per tonne.",
-      "Investors hold a fixed coupon; an intermediary refunds interest when targets are met.",
-      "$3.3bn of capacity is worth $772m, the reform's cost; the funder expects to lose about $10m on the MDB record, $286m in the stress case."
-    ]
-  },
-  "action": {
-    "title": "The rebate is the signal; the guarantee pays",
-    "results": [
-      "About 80 dollars of incentive per dollar of funder cost on the MDB loss record; 2.7 in a stress case without preferred-creditor status, with a $310m buffer held, not spent.",
-      "The government's exposure becomes smaller, contingent and contracted, not zero.",
-      "One verification can drive both the rebate and the guarantee capacity."
-    ],
-    "todo": [
-      "MDBs: publish an indicator menu, baselines and a pricing schedule.",
-      "Back a fixed-coupon intermediary; a missed target costs the refund, not a premium to bondholders.",
-      "Donors: make guarantee capacity the main prize and fund its buffer."
-    ]
-  }
+    }
+  ]
 }

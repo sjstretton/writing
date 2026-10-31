@@ -94,7 +94,7 @@ lightbox: auto
 
 : What a big incentive needs, at a 3-point spread saving. Base case: development banks' sovereign loss record, an expected loss of 0.038 percent a year and a 0.5 percent buffer. Stress case in brackets: 1.11 percent a year and a 9.3 percent buffer. Source: working paper, Table 5. {#tbl-scale}
 
-**Guarantees deliver what cash cannot.** Multilateral forest funds pledged about \$400 million a year from 2008 [@TFFF2025CN]; Uruguay's \$350 million sustainability-linked loan can save it at most about \$12.5 million ([Brief 4.3](../../../policy/4-sovereign-incentives.qmd#paper-4-3)). A guarantee scheme delivering \$1 billion a year costs donors about \$13 million a year on the banks' record.
+**Guarantees deliver what cash cannot.** Multilateral forest funds pledged about \$400 million a year from 2008 [@TFFF2025CN]; Uruguay's \$350 million sustainability-linked loan can save it at most about \$12.5 million ([Brief 4.3](../../../policy/4-sovereign-incentives/SustainabilityLinkedLending/index.qmd)). A guarantee scheme delivering \$1 billion a year costs donors about \$13 million a year on the banks' record.
 
 **Coal reserves need a narrower rule.** Crediting all of Indonesia's reserves, about 78 billion tonnes of CO₂ [@BP2021], would reward owning coal. Credit only reserves legally retired, at a low price that allows for leakage [@Harstad2012], and debit combustion emissions like any others ([working paper, coal](working-paper.qmd#sec-coal)).
 
@@ -122,13 +122,13 @@ lightbox: auto
 
 **Donors: fund the buffer, not the reward.** Hold it in a trust that invests it ([Brief 4.2](../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.qmd)), sized to the stress case until the facility has its own loss record, and report the budget saving and the net gain together.
 
-**Forest and coal countries: negotiate allowances, not baselines.** Seek credit for legally retired reserves at a low price, and write the allowance path into sustainability-linked loans as the performance indicator ([Brief 4.3](../../../policy/4-sovereign-incentives.qmd#paper-4-3)).
+**Forest and coal countries: negotiate allowances, not baselines.** Seek credit for legally retired reserves at a low price, and write the allowance path into sustainability-linked loans as the performance indicator ([Brief 4.3](../../../policy/4-sovereign-incentives/SustainabilityLinkedLending/index.qmd)).
 
 # Related papers in this series {.unnumbered}
 
 - No. 4.0, *Reward Governments, Not Projects: International Incentives for National Climate Policy*: the series overview.
 - [No. 4.2](../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.qmd), *The Climate Investment Trust: Hold Capital, Lend Its Strength*: the buffer fund behind the guarantees, and the trust accounts [@CFPB42].
-- [No. 4.3](../../../policy/4-sovereign-incentives.qmd#paper-4-3), *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale*: the delivery channel for the allowance path [@CFPB43].
+- [No. 4.3](../../../policy/4-sovereign-incentives/SustainabilityLinkedLending/index.qmd), *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale*: the delivery channel for the allowance path [@CFPB43].
 - [No. 3.1](../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.qmd), *Guarantee the Contract, Not the Debt*: a payment intermediary whose guarantee waterfall the capacity can back [@CFPB31].
 - [No. 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1), *Measure Carbon Pricing by the Emissions It Cuts*: the carbon-price equivalent used here [@CFPB61].
 - The [working paper](working-paper.qmd) behind this brief: the model, proofs, calibration and literature.

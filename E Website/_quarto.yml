@@ -95,6 +95,11 @@ website:
               contents:
                 - text: "Working paper"
                   href: policy/4-sovereign-incentives/ClimateInvestmentTrust/working-paper.qmd
+            - section: "4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale"
+              href: policy/4-sovereign-incentives/SustainabilityLinkedLending/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/4-sovereign-incentives/SustainabilityLinkedLending/working-paper.qmd
         - section: "Books and Other Papers"
           href: policy/more.qmd
           contents:
