@@ -1,50 +1,224 @@
 {
-  "series": "Climate Fiscal Policy Brief No. 1.4",
+  "series": "Climate Fiscal Policy Brief No. 1.4 · October 2026",
   "title": "Credit the Price Signal, Not the Payment",
-  "subtitle": "Carbon price recognition and scrap shuffling under the EU's CBAM",
-  "message": "CBAM deducts only carbon prices effectively paid, plant by plant. Feebates and implicit pricing earn nothing, and exporters can ship scrap-based steel to Europe and dirty steel elsewhere. Measure the price signal by country and sector instead.",
-  "problem": {
-    "title": "Two flaws in plant-by-plant recognition",
-    "stats": [
-      {
-        "value": "0",
-        "label": "credit for a revenue-neutral feebate, though it prices every tonne above the benchmark"
+  "slides": [
+    {
+      "type": "title",
+      "title": "Credit the Price Signal, Not the Payment",
+      "subtitle": "Carbon price recognition and scrap shuffling under the EU's CBAM",
+      "message": "The EU's border charge measures carbon plant by plant and credits only carbon prices paid. Exporters can route clean steel to Europe, and a feebate earns nothing. Measure by country and sector, and credit the exporting country's price signal.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "The EU now charges steel imports hundreds of euros a tonne for their carbon",
+      "stats": [
+        {
+          "value": "€445",
+          "label": "per tonne of hot-rolled steel from India (default 4.28 tCO₂/t plus 30% mark-up)"
+        },
+        {
+          "value": "€331",
+          "label": "per tonne from China (default 3.19 tCO₂/t)"
+        },
+        {
+          "value": "€252",
+          "label": "per tonne from Türkiye (default 2.43 tCO₂/t)"
+        }
+      ],
+      "text": "At €80 per tonne of CO₂ and full phase-in. The charge falls only by a carbon price \"effectively paid\" abroad, net of \"any rebate or other form of compensation\" (Art. 9(1)).",
+      "source": "Implementing Regulation (EU) 2025/2621 (default values); Regulation (EU) 2025/2083; working paper 1.4, Table 3."
+    },
+    {
+      "type": "figure",
+      "title": "Measuring plant by plant pays exporters to route clean steel to Europe",
+      "image": "figures/fig1_shuffling_model.png",
+      "caption": "Stylized exporter: 10 Mt a year, 2 Mt from scrap, 1 Mt sold to the EU at €80/tCO₂. Shipping only scrap-based steel to the EU cuts the carbon the border sees by 76% and the bill by €102m a year; emissions stay at 16.8 MtCO₂. Scrap is limited, so the cut is mostly relabeling.",
+      "source": "Author's calculation; working paper 1.4, Figure 1; IEA (2020)."
+    },
+    {
+      "type": "table",
+      "title": "Routing is worth almost as much as the charge itself",
+      "header": [
+        "Hot-rolled steel, € per tonne at €80/tCO₂",
+        "Charge, default with mark-up",
+        "Gain from routing scrap-based steel"
+      ],
+      "widths": [
+        4.3,
+        2.3,
+        2.3
+      ],
+      "rows": [
+        [
+          "India (4.28 tCO₂/t)",
+          "445",
+          "310"
+        ],
+        [
+          "China (3.19)",
+          "331",
+          "223"
+        ],
+        [
+          "Türkiye (2.43)",
+          "252",
+          "162"
+        ],
+        [
+          "Japan (2.10)",
+          "218",
+          "136"
+        ],
+        [
+          "Brazil (1.62)",
+          "168",
+          "98"
+        ]
+      ],
+      "note": "Across thirteen exporters the gain is €98–626 a tonne. None of it is a fall in emissions. The law asks for reports on \"resource shuffling\" but gives no tool to stop it.",
+      "source": "EU default values (Reg. 2025/2621); scrap-based steel at 0.4 tCO₂/t (stylized). Working paper 1.4, Table 3; Reg. 2023/956, Art. 30."
+    },
+    {
+      "type": "points",
+      "title": "A feebate gives the full carbon price at the margin, yet earns no credit",
+      "points": [
+        {
+          "lead": "Price paid versus price signal.",
+          "text": "A feebate charges above the sector average and rebates below it: every producer faces the full price on each tonne it cuts; the average producer pays nothing."
+        },
+        {
+          "lead": "The draft rules net out the rebate.",
+          "text": "Emissions \"below an emission intensity baseline\" count as compensation, so recognition is zero. A tax at the same rate would earn it all."
+        },
+        {
+          "lead": "The default carbon price covers explicit prices only.",
+          "text": "From 2027, only \"where a carbon price was set by the rules\"; the method being prepared starts from carbon taxes and trading systems."
+        }
+      ],
+      "source": "Draft implementing regulation Ares(2026)4841230, Art. 8(1)(b)(ii); Reg. 2025/2083, Art. 9(4); Technopolis (2026)."
+    },
+    {
+      "type": "points",
+      "title": "One value per country and sector ends shuffling, but leaves each plant almost no incentive",
+      "points": [
+        {
+          "lead": "No plant can choose what the border sees,",
+          "text": "so routing and picking defaults earn nothing."
+        },
+        {
+          "lead": "But a clean plant lowers the average for everyone.",
+          "text": "If a tenth of output goes to the EU, the country gains €8 per tonne of CO₂ cut; a mill with a tenth of the country's output keeps €0.80."
+        },
+        {
+          "lead": "A value fixed for years gives no incentive at all.",
+          "text": "It must be the verified sector average, updated yearly."
+        },
+        {
+          "lead": "Standardized values have the same gap:",
+          "text": "Neuhoff et al. (2026) note they create no direct incentive abroad."
+        }
+      ],
+      "source": "Working paper 1.4, Proposition 3; Neuhoff et al. (2026)."
+    },
+    {
+      "type": "points",
+      "title": "Crediting the country's price signal restores the incentive on every tonne",
+      "points": [
+        {
+          "lead": "The rule:",
+          "text": "importers pay the EU price less a recognized foreign price, on the country-sector average carbon content. The recognized price is the price paid plus a weight on the unpaid part of the signal."
+        },
+        {
+          "lead": "No plant can game it,",
+          "text": "and a feebate at the EU price stays the exporter's lowest-cost choice."
+        },
+        {
+          "lead": "A feebate at €80 gives every plant €80 a tonne",
+          "text": "on all its output, not only the tenth sold in Europe."
+        },
+        {
+          "lead": "Any instrument can be scored",
+          "text": "as a carbon-price equivalent (Brief 6.1): tax, feebate, subsidy reform, standard."
+        }
+      ],
+      "source": "Working paper 1.4, Proposition 5; Mehling and Ritz (2023) for explicit prices only."
+    },
+    {
+      "type": "figure",
+      "title": "With recognition, a feebate at the EU price pays off at a quarter of output sold to the EU, not half",
+      "image": "../2.Source/figures/fig3_best_response.png",
+      "source": "Author's calculation, stylized abatement costs; working paper 1.4, Figure 3.",
+      "caption": "Selling a tenth of output to the EU, a country's own best feebate rises from €8 to €21 with full recognition (A). A feebate at €80 breaks even at 50% of output sold to the EU today, 24% with recognition (B). Stylized abatement costs."
+    },
+    {
+      "type": "points",
+      "title": "Phase recognition in with the end of free allocation, and keep verification where there is no signal",
+      "points": [
+        {
+          "lead": "The cost:",
+          "text": "a feebate country's steel could enter without a carbon charge while EU steel pays on all its emissions."
+        },
+        {
+          "lead": "So tie recognition to free allocation:",
+          "text": "weight = 1 − CBAM factor: 2.5% in 2026, about half in 2030, full from 2034 (or 2038 if extended). Review relocation at each step."
+        },
+        {
+          "lead": "No signal, no country route:",
+          "text": "firms verify the whole output of all their plants."
+        },
+        {
+          "lead": "Law:",
+          "text": "mark-up and support test by implementing act; crediting the signal needs Article 9 amended."
+        }
+      ],
+      "source": "Directive (EU) 2023/959, Art. 10a(1a); COM(2026) 616; working paper 1.4, Sections on design and legal pathway."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the analysis shows",
+        "items": [
+          {
+            "lead": "Shuffling:",
+            "text": "€98–626 a tonne of steel, no emissions cut."
+          },
+          {
+            "lead": "Recognition:",
+            "text": "a feebate earns nothing under the draft rules."
+          },
+          {
+            "lead": "Country-sector values:",
+            "text": "end shuffling, but need a domestic price."
+          },
+          {
+            "lead": "Signal recognition:",
+            "text": "break-even falls from half to a quarter of output."
+          }
+        ]
       },
-      {
-        "value": "−76%",
-        "label": "embodied carbon reported on EU-bound steel after shuffling, stylized exporter"
-      },
-      {
-        "value": "€102m",
-        "label": "a year off the CBAM bill in that case, with no fall in emissions"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {
+            "lead": "Commission:",
+            "text": "consult on the default carbon price; cover feebates and non-price policies."
+          },
+          {
+            "lead": "2027 default values:",
+            "text": "country-sector route without mark-up for signal countries; whole-output verification elsewhere."
+          },
+          {
+            "lead": "Article 9:",
+            "text": "credit the signal, phased in with free allocation; measure shuffling."
+          },
+          {
+            "lead": "Exporters:",
+            "text": "a sector-wide feebate."
+          }
+        ]
       }
-    ],
-    "text": "The rule is right for its first purpose, stopping the same tonne being priced twice. It fails the second, encouraging trading partners to decarbonize. Most developing countries price carbon through fuel taxes, subsidy reform or rebated schemes that leave no certified payment on a consignment."
-  },
-  "mechanism": {
-    "title": "Shuffling changes the report, not the emissions",
-    "image": "figures/fig1_scrap_shuffling.png",
-    "layout": "wide",
-    "imageHeight": 2.3,
-    "aspect": 2.941,
-    "caption": "Stylized exporter: routing scrap-based steel to the EU cuts reported embodied carbon (A) while total emissions stay the same (B).",
-    "points": [
-      "Recognize the sector-wide price signal alongside the price paid, measured as a Total Effective Carbon Price.",
-      "A country-sector measure does not depend on which plant shipped the goods, so shuffling earns nothing.",
-      "A domestic feebate prices all output, not just the tenth that reaches Europe."
-    ]
-  },
-  "action": {
-    "title": "Build it into the 2027 revision",
-    "results": [
-      "Keep the price paid as the basis of the deduction; it prevents double charging.",
-      "Recognition by emission effect credits feebates, rebated taxes and non-price rules on one scale.",
-      "Article 9(4) admits a default price only where a country has set one: a broad reading or an amendment is needed."
-    ],
-    "todo": [
-      "Publish the default carbon price methodology for consultation.",
-      "Phase in recognition of implicit and rebated pricing from 2027 to 2034.",
-      "Develop default prices and default values together for the December 2027 revision."
-    ]
-  }
+    }
+  ]
 }

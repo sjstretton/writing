@@ -1,51 +1,294 @@
 {
-  "series": "Climate Fiscal Policy Brief No. 1.3",
+  "series": "Climate Fiscal Policy Brief No. 1.3 · October 2026",
   "title": "Converting a VAT into a Destination Carbon Tax",
-  "subtitle": "A carbon component in VAT and a forward obligation on energy suppliers",
-  "message": "The EU prices the carbon its plants emit but barely prices the carbon in what Europeans buy. Add a carbon component to VAT, imports included and exports zero-rated, while the value component falls; and oblige fuel suppliers, a decade ahead, to pay for the carbon they sell.",
-  "problem": {
-    "title": "Europe prices what it makes, not what it buys",
-    "stats": [
-      {
-        "value": "6",
-        "label": "import categories covered by CBAM: steel, aluminum, cement, fertilizers, hydrogen, electricity"
+  "slides": [
+    {
+      "type": "title",
+      "title": "Converting a VAT into a Destination Carbon Tax",
+      "subtitle": "A carbon component in VAT and a forward obligation on energy suppliers in the European Union",
+      "message": "Price the carbon Europeans consume, wherever it is emitted: a carbon component inside VAT, imports included and exports exempt, while the value part of VAT falls by rule; and an obligation, fixed a decade ahead, on the few suppliers of fuel for homes and vehicles.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Europe prices the carbon it emits, not the carbon it consumes",
+      "stats": [
+        {
+          "value": "40%",
+          "label": "of the carbon in EU households' VAT-taxable purchases was emitted outside the EU (2022)"
+        },
+        {
+          "value": "1.7×",
+          "label": "carbon per euro in goods imported from outside the EU, against the same goods made in the EU (0.76 vs 0.45 kg CO₂e)"
+        },
+        {
+          "value": "6",
+          "label": "import sectors covered by CBAM: cement, steel, aluminum, fertilizers, electricity, hydrogen"
+        }
+      ],
+      "text": "A price on production misses this carbon and makes goods dearer to make in Europe than to make elsewhere for sale in Europe.",
+      "source": "Author's input–output calculation from Eurostat FIGARO tables and GHG footprints, 2022 (working paper 1.3, Table 2); Regulation (EU) 2023/956."
+    },
+    {
+      "type": "figure",
+      "title": "In the VAT chain, each firm pays the carbon price on the carbon it adds, net of prices already paid",
+      "image": "figures/fig4-vat-chain.png",
+      "points": [
+        {
+          "lead": "Charge on sales, credit on purchases:",
+          "text": "exactly as VAT taxes value added."
+        },
+        {
+          "lead": "The final buyer pays",
+          "text": "the carbon price on the whole supply chain: here 520 kg at €100/t."
+        },
+        {
+          "lead": "Carbon prices paid upstream are deducted,",
+          "text": "so every tonne bears one price. A revenue-neutral feebate earns no deduction."
+        }
+      ],
+      "source": "Stylized example, 2032: carbon price €100/t, ETS price €80/t at the mill. Working paper 1.3, Proposition 3 and Table 1."
+    },
+    {
+      "type": "table",
+      "title": "One published default per product category, the EU production average, applies to every origin",
+      "header": [
+        "Product category (2022)",
+        "EU-made (kg CO₂e/€)",
+        "Imported from outside EU",
+        "Ratio"
+      ],
+      "widths": [
+        3.9,
+        1.8,
+        1.9,
+        1.3
+      ],
+      "rows": [
+        [
+          "Furniture and other manufactured goods",
+          "0.26",
+          "0.77",
+          "3.0"
+        ],
+        [
+          "Machinery and equipment",
+          "0.28",
+          "0.71",
+          "2.5"
+        ],
+        [
+          "Electronics and electrical equipment",
+          "0.28",
+          "0.63",
+          "2.3"
+        ],
+        [
+          "Textiles, clothing, footwear",
+          "0.30",
+          "0.62",
+          "2.1"
+        ],
+        [
+          "Chemicals and pharmaceuticals",
+          "0.47",
+          "0.62",
+          "1.3"
+        ],
+        [
+          "All imported goods, like-for-like mix",
+          "0.45",
+          "0.76",
+          "1.7"
+        ]
+      ],
+      "note": "Most firms apply the default as they apply a VAT rate. It is generous to imports at first (about 60% of their embodied carbon), which avoids a trade fight; sellers may prove a lower figure.",
+      "source": "Author's calculation from Eurostat FIGARO (naio_10_fcp_ip4) and env_ac_ghgfp, basic prices, 2022; working paper 1.3, Table 2 and Figure 1."
+    },
+    {
+      "type": "points",
+      "title": "Rebuttal rewards clean producers, and electricity carries its generation carbon to the final user",
+      "points": [
+        {
+          "lead": "Rebuttal:",
+          "text": "a seller that verifies a lower intensity pays on its own figure. A €100 imported phone pays €2.80 at the default (0.28 kg/€) or €1.50 if verified at 0.15 kg/€ (2032, €100/t)."
+        },
+        {
+          "lead": "Carry-forward:",
+          "text": "each buyer adds its own carbon to the bases on its invoices, so a verified figure reaches the shop price."
+        },
+        {
+          "lead": "Electricity:",
+          "text": "a taxable supply, so the carbon component carries generation carbon to households, net of the ETS or feebate price paid."
+        },
+        {
+          "lead": "Weak points are VAT's own:",
+          "text": "exempt sectors (31% of household spending, low-carbon) break the chain; misclassification pays more. Audit verified claims."
+        }
+      ],
+      "source": "Working paper 1.3, Sections 4 and 5; Mehling et al. (2019); Neuhoff et al. (2026)."
+    },
+    {
+      "type": "figure",
+      "title": "Cutting the value part of VAT by last year's carbon receipts keeps the swap revenue-neutral",
+      "image": "figures/fig2-neutrality-rule.png",
+      "points": [
+        {
+          "lead": "A fixed schedule gambles:",
+          "text": "15% to 10% by 2037 could lose €120 bn or gain €119 bn a year."
+        },
+        {
+          "lead": "The rule needs no forecast:",
+          "text": "the value component ends at 10.8–12.7% in 2037."
+        },
+        {
+          "lead": "Central case, 2037:",
+          "text": "13.8% on goods at 0.10 kg/€, 27.8% at 0.80 kg/€."
+        }
+      ],
+      "source": "Carbon price rising €20/t a year to €200/t in 2037. Author's calculation; working paper 1.3, Figure 2 and Table 3."
+    },
+    {
+      "type": "table",
+      "title": "The swap is mildly regressive; returning the fuel obligation per household more than fixes it",
+      "header": [
+        "Income quintile",
+        "Carbon component (% of spending)",
+        "Swap, net of national VAT cut",
+        "Swap + obligation, returned per household"
+      ],
+      "widths": [
+        2.3,
+        2.2,
+        2.2,
+        2.2
+      ],
+      "rows": [
+        [
+          "Poorest fifth",
+          "5.53",
+          "+0.41",
+          "−1.16"
+        ],
+        [
+          "Second",
+          "5.47",
+          "+0.24",
+          "−0.32"
+        ],
+        [
+          "Third",
+          "5.42",
+          "+0.09",
+          "+0.05"
+        ],
+        [
+          "Fourth",
+          "5.38",
+          "−0.04",
+          "+0.23"
+        ],
+        [
+          "Richest fifth",
+          "5.25",
+          "−0.24",
+          "+0.29"
+        ]
+      ],
+      "note": "Net change in taxes, % of household spending; positive is a loss. Poorer households gain less from the VAT cut because more of their budget is exempt rent. Each member state recycles its own receipts, so no money moves between them.",
+      "source": "€200/tCO₂e, 2022 intensities, 22 member states; Eurostat household budget survey and air emissions accounts. Working paper 1.3, Table 4."
+    },
+    {
+      "type": "points",
+      "title": "Fuel for homes and vehicles needs a forward obligation on its few suppliers",
+      "points": [
+        {
+          "lead": "VAT cannot reach it:",
+          "text": "the carbon is released after the last sale. 691 Mt CO₂e from household heating and transport in 2022."
+        },
+        {
+          "lead": "Price floor rising €20/t a year to €200/t in 2037:",
+          "text": "about €40/MWh on gas and €0.54/l on diesel; €138 bn a year, €310 per resident."
+        },
+        {
+          "lead": "Fixed a decade ahead,",
+          "text": "because refiners and gas suppliers plan assets that last decades and discount tax promises."
+        },
+        {
+          "lead": "ETS2 plus a floor:",
+          "text": "ETS2 already obliges fuel suppliers but starts in 2028, releases allowances above €45/t (2020 prices) and sets no floor."
+        }
+      ],
+      "source": "Eurostat env_ac_ainah_r2; IPCC (2006); Directive (EU) 2023/959; Regulation (EU) 2026/667. Working paper 1.3, Section 8."
+    },
+    {
+      "type": "points",
+      "title": "The obligation can pass by qualified majority now; the VAT component needs unanimity",
+      "points": [
+        {
+          "lead": "Union route:",
+          "text": "a carbon component changes the harmonized VAT system (Art. 113 TFEU); Art. 192(2)(a) reserves fiscal measures to unanimity too."
+        },
+        {
+          "lead": "CBAM is no shortcut:",
+          "text": "it passed as a certificate scheme, and Poland has asked the Court to annul it as primarily fiscal (Case C-512/23)."
+        },
+        {
+          "lead": "Coalition route:",
+          "text": "a national charge per tonne, not a percentage of price, has a defensible claim to fall outside the ban on other turnover taxes (Art. 401, VAT Directive)."
+        },
+        {
+          "lead": "Obligation first:",
+          "text": "an amendment to the ETS Directive, by qualified majority, as ETS2 was."
+        }
+      ],
+      "source": "TFEU; Directive 2006/112/EC; Case C-475/03 Banca Popolare di Cremona. Working paper 1.3, Section 9."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the analysis shows",
+        "items": [
+          {
+            "lead": "Chain:",
+            "text": "each firm pays on the carbon it adds; one price per tonne."
+          },
+          {
+            "lead": "Defaults:",
+            "text": "0.41 kg CO₂e/€ basket; imports 1.7× like for like."
+          },
+          {
+            "lead": "Neutrality:",
+            "text": "value component ends at 10.8–12.7%."
+          },
+          {
+            "lead": "Distribution:",
+            "text": "mildly regressive; fixed by per-household return."
+          }
+        ]
       },
-      {
-        "value": "€0",
-        "label": "carbon price on the embodied carbon in most other goods, from machinery to clothing"
-      },
-      {
-        "value": "15%",
-        "label": "minimum EU standard VAT rate, charged on value whatever a good's carbon"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {
+            "lead": "Commission:",
+            "text": "propose the forward obligation now, with a floor to €200/t in 2037."
+          },
+          {
+            "lead": "Commission:",
+            "text": "get a legal opinion; build defaults by customs code, with rebuttal."
+          },
+          {
+            "lead": "Finance ministries:",
+            "text": "adopt the neutrality rule, member state by member state."
+          },
+          {
+            "lead": "A willing coalition:",
+            "text": "start with a national charge per tonne."
+          }
+        ]
       }
-    ],
-    "text": "The Emissions Trading System prices power and heavy industry, and CBAM extends that price to six import categories. Everything else Europeans buy carries its carbon unpriced, and much of it is emitted outside the EU. VAT already reaches every good, but it charges value, not carbon."
-  },
-  "mechanism": {
-    "title": "Shift VAT's base from value to carbon",
-    "image": "figures/fig1-effective-rates.png",
-    "imageWidth": 5.5,
-    "imageHeight": 3.3,
-    "caption": "Total VAT rate by embodied-carbon intensity on the illustrative path, 2027–2037.",
-    "points": [
-      "Carbon component rises €20/t a year to €200 in 2037; the value component falls by rule, ending near 11–13%.",
-      "A good at 0.25 kg CO₂ per euro pays 15% throughout; cleaner goods pay less, dirtier more.",
-      "Imports pay on generous, rebuttable defaults, the same for every origin.",
-      "Fuel suppliers face a legal obligation fixed ten years ahead."
-    ]
-  },
-  "action": {
-    "title": "Obligation now; legal basis for VAT next",
-    "results": [
-      "Imports and domestic goods pay alike: no leakage, no separate border adjustment.",
-      "Rebuttable defaults reward exporters who cut emissions.",
-      "The basket averages about 0.41 kg CO₂e per euro and will fall: set the value cut by rule, not by schedule.",
-      "The VAT part probably needs unanimity; the obligation does not."
-    ],
-    "todo": [
-      "Commission: obtain a legal opinion on the basis for the carbon component.",
-      "Propose the forward obligation now, as an ETS2 amendment with a price path to 2037.",
-      "Member states: build product-level default intensities and an automatic neutrality rule."
-    ]
-  }
+    }
+  ]
 }
