@@ -79,8 +79,8 @@ Rewritten last, after 3.1 and 3.2, so it states their results. Structure: the co
 ```bibtex
 @techreport{CFPB31, author={Stretton, Stephen J.}, title={Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power}, institution={Climate Fiscal Policy Briefs}, number={3.1}, year={2026}}
 @techreport{CFPB32, author={Stretton, Stephen J.}, title={From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power}, institution={Climate Fiscal Policy Briefs}, number={3.2}, year={2026}}
-@unpublished{StrettonWP31, author={Stretton, Stephen J.}, title={Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power}, note={Working paper 4.1}, year={2026}}
-@unpublished{StrettonWP32, author={Stretton, Stephen J.}, title={From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power}, note={Working paper 4.2}, year={2026}}
+@unpublished{StrettonWP31, author={Stretton, Stephen J.}, title={Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power}, note={Working paper 3.1}, year={2026}}
+@unpublished{StrettonWP32, author={Stretton, Stephen J.}, title={From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power}, note={Working paper 3.2}, year={2026}}
 ```
 
 Titles checked against each paper's YAML in the 29 Oct 2026 cross-review. The 3.2 working paper's YAML splits the title ("From Projects to Asset Classes") from the subtitle; the bib entries join them with a colon. Series 4 keys are in `4.SovereignIncentives/4.0.Overview/SeriesArchitecture.md`; series 1 keys in `briefing-series-spec.md`.

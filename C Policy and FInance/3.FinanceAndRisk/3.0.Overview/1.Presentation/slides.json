@@ -1,0 +1,127 @@
+{
+  "series": "Climate Fiscal Policy Briefs · Section 3: Finance and Risk · October 2026",
+  "title": "Make Clean Power an Asset Class",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Make Clean Power an Asset Class",
+      "subtitle": "Standardized de-risking for developing countries: section 3 in ten slides",
+      "message": "Clean power is cheap to build and dear to finance. Remove payment risk at its source with a payment intermediary, then turn projects into a few standard securities. The state's exposure becomes smaller, contingent and contracted.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "figure",
+      "title": "A solar plant has no fuel bill, so the price of its power is the price of money",
+      "image": "../../3.1.ClimateFinanceIntermediationForCleanPower/2.Source/figures/fig1_lcoe_wacc.png",
+      "points": [
+        {"lead": "+80%:", "text": "the same plant's power costs 6.5 rather than 3.6 US cents/kWh at a 12% rather than 4% cost of capital."},
+        {"lead": "Well over twice:", "text": "the cost of capital for utility-scale solar in emerging and developing economies, against advanced economies."},
+        {"lead": "Not engineering:", "text": "panels and inverters are bought at world prices; the risk around the plant differs."}
+      ],
+      "source": "Paper 3.1 (stylized plant: $800/kW, 20% capacity factor, 25 years); IEA (2024)."
+    },
+    {
+      "type": "table",
+      "title": "The cost of capital is a stack of separate risks, each with a cheapest holder",
+      "header": ["Risk", "Cheapest holder and instrument", "Paper"],
+      "widths": [2.3, 5.6, 1.0],
+      "rows": [
+        ["Payment (offtaker)", "A payment intermediary with a guarantee waterfall", "3.1"],
+        ["Construction", "Banks and development lenders, against a contingent contract", "3.2"],
+        ["Operating", "Bond investors, through pooled synthetic sovereign bonds", "3.2"],
+        ["Residual portfolio loss", "A first-loss layer held by a regional fund", "3.2, 4.2"],
+        ["Currency", "Domestic savers, through a local-currency senior tranche", "3.1, 3.2"],
+        ["Sovereign and policy", "Nobody: priced and conditioned on reform, not transferred", "3.1, 4"]
+      ],
+      "source": "Section 3 overview, Table 1."
+    },
+    {
+      "type": "points",
+      "title": "Put a creditworthy payment intermediary between generators and distribution companies",
+      "points": [
+        {"lead": "The premium:", "text": "a weak state buyer adds about 11% to the solar tariff, 1.4 points to the cost of capital (stylized)."},
+        {"lead": "One standard contract:", "text": "the facility buys from every generator and pays in full and on time, whatever the buyer does."},
+        {"lead": "A waterfall agreed in advance:", "text": "buyer, its state owner, the national government, a multilateral agency, a donor account."},
+        {"lead": "India's Solar Energy Corporation", "text": "shows the design works; its buyers' arrears show it moves risk, it does not remove it."}
+      ],
+      "source": "Paper 3.1; ICRA (2025)."
+    },
+    {
+      "type": "figure",
+      "title": "Guarantee the contract, not the debt",
+      "image": "../../3.1.ClimateFinanceIntermediationForCleanPower/2.Source/figures/fig3_contract_vs_debt.png",
+      "points": [
+        {"lead": "Contract guarantee:", "text": "saves $0.94m a year for $0.48m of expected public cost, about $2 per dollar."},
+        {"lead": "Debt guarantee:", "text": "removes under a third of the premium; the guarantor risks the whole loan."},
+        {"lead": "A real gain only", "text": "if the facility collects better or makes default rarer; otherwise risk moves to the state."}
+      ],
+      "source": "Paper 3.1, Table 2 and Figure 3 (stylized 100 MW plant)."
+    },
+    {
+      "type": "points",
+      "title": "Split each project at commissioning, and give each phase to the investor who prices it cheapest",
+      "points": [
+        {"lead": "Construction (about two years):", "text": "banks and development lenders, against a contingent contract from the intermediary."},
+        {"lead": "Operation (25 years):", "text": "the plant's senior debt, 80% of its cost, is refinanced into a pool on one standard contract."},
+        {"lead": "The long phase decides the tariff:", "text": "a point off the operating cost of capital is worth nine to eleven times a point off construction."}
+      ],
+      "source": "Paper 3.2, Proposition 1."
+    },
+    {
+      "type": "figure",
+      "title": "Pooling across countries makes the senior bond near-AAA on a thin cushion",
+      "image": "../../3.2.CleanPowerAssetClasses/2.Source/figures/fig3-host-countries.png",
+      "points": [
+        {"lead": "Large pool:", "text": "5–8% of first loss makes the senior bond near-AAA."},
+        {"lead": "One country: 9.1%; ten: 5.3%,", "text": "about 40% less, because pooling removes the single-country factor."},
+        {"lead": "Real deals start thicker:", "text": "about 30% below the top class (Bayfront 2018)."}
+      ],
+      "source": "Paper 3.2, Proposition 2 and Section 6."
+    },
+    {
+      "type": "table",
+      "title": "Refinancing the senior debt cuts the price of solar power by about a fifth",
+      "header": ["How the plant is financed", "Cost of capital", "US c/kWh", "Change"],
+      "widths": [4.4, 1.7, 1.4, 1.4],
+      "rows": [
+        ["Single-stage at 10%", "10.0%", "6.2", "–"],
+        ["Two-stage, debt into a project bond at 8%", "8.8%", "5.8", "−7%"],
+        ["Two-stage, debt into the pool at 5.65%", "6.9%", "5.0", "−19%"],
+        ["Pool with a 30% cushion, as in real deals", "7.7%", "5.3", "−14%"]
+      ],
+      "note": "Two-year build at 12%; in two-stage cases 80% of the plant's cost is senior debt and 20% equity at 12%.",
+      "source": "Paper 3.2, Tables 4 and 6 (stylized)."
+    },
+    {
+      "type": "points",
+      "title": "The pieces compose, and section 4 rewards the governments that adopt them",
+      "points": [
+        {"lead": "In order:", "text": "the intermediary makes contracts bankable; construction is financed at a market rate; operating plants are pooled and refinanced; guarantee conditions improve the utilities."},
+        {"lead": "Each piece is weaker alone:", "text": "a payment guarantee without a cushion leaves the bond rated on the host."},
+        {"lead": "Grids have no contract:", "text": "tiered bond guarantees, conditional on reform."},
+        {"lead": "Section 4:", "text": "guarantee capacity earned there can stand in 3.1's waterfall or behind 3.2's bonds."}
+      ],
+      "source": "Section 3 overview; papers 3.1, 3.2, 4.1, 4.2."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What section 3 shows",
+        "items": [
+          {"lead": "Payment risk:", "text": "about 11% of the tariff; a contract guarantee removes it at about $2 saved per dollar of expected cost."},
+          {"lead": "Two stages and pools:", "text": "about a fifth off the price of solar power."},
+          {"lead": "The state's exposure:", "text": "smaller, contingent and contracted, not gone."}
+        ]
+      },
+      "right": {
+        "title": "Actions",
+        "items": [
+          {"lead": "Finance ministries:", "text": "build or join a payment intermediary with a waterfall signed before the next tender; record the guarantee."},
+          {"lead": "Regulators:", "text": "a path to cost-recovery tariffs and better collection."},
+          {"lead": "Development banks:", "text": "regional pools under one contract; construction loans against contingent contracts; guarantee the facility, not the loans."}
+        ]
+      }
+    }
+  ]
+}
