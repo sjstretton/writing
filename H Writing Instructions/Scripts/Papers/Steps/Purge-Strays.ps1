@@ -90,21 +90,29 @@ $Rank = @{
 
 # ------------------------------------------------------------------ setup ----
 
+# The paper roots, from the repository root: sections 1-4, sections 5-7, and the writing outside the
+# series (8.x). The one place to change them in this script: D Modelling is due to move to its own repository.
+$PaperRootNames = @('C Policy and FInance', 'D Modelling', 'F Other Writing')
+
+# The paper roots that exist, as full paths under the repository root.
+function Get-PaperRoots([string]$repo) {
+    return @($PaperRootNames | ForEach-Object { Join-Path $repo $_ } | Where-Object { Test-Path -LiteralPath $_ })
+}
+
 function Find-WritingRoot([string]$s) {
-    # Walk up to the repository root (the folder holding .git), then use its B Working Papers folder.
+    # Walk up to the repository root (the folder holding .git). The papers are in the paper roots under it.
     $d = $s
     for ($i = 0; $i -lt 8; $i++) {
-        if (Test-Path -LiteralPath (Join-Path $d '.git')) {
-            $w = Join-Path $d 'B Working Papers'
-            if (Test-Path -LiteralPath $w) { return $w } else { return $null }
-        }
+        if (Test-Path -LiteralPath (Join-Path $d '.git')) { return $d }
         $p = Split-Path -Parent $d; if (-not $p -or $p -eq $d) { break }; $d = $p
     }
     return $null
 }
 
 $base = Find-WritingRoot $PSScriptRoot
-if (-not $base) { Write-Host 'Could not find "A Writing".'; return }
+if (-not $base) { Write-Host 'Could not find the repository root (the folder holding .git).'; return }
+$PaperRoots = @(Get-PaperRoots $base)
+if ($PaperRoots.Count -eq 0) { Write-Host ('None of the paper roots is in {0}: {1}' -f $base, ($PaperRootNames -join ', ')); return }
 
 function Get-ReportDir([string]$here) {
     $up = Split-Path -Parent $here
@@ -122,7 +130,13 @@ function Log($m) { $log.Add([string]$m) | Out-Null; Write-Host $m }
 $onWindows = if (Test-Path Variable:\IsWindows) { $IsWindows } else { $true }
 if ($onWindows) { Add-Type -AssemblyName Microsoft.VisualBasic -ErrorAction SilentlyContinue }
 $canRecycle = $onWindows -and ($null -ne ('Microsoft.VisualBasic.FileIO.FileSystem' -as [type]))
-$fallback   = Join-Path $base '_Purged'
+# Without a Recycle Bin, binned files go to _Purged\ at the top of their own paper root (git-ignored).
+function Fallback-For([string]$path) {
+    foreach ($r in $PaperRoots) {
+        if ($path.StartsWith($r + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) { return (Join-Path $r '_Purged') }
+    }
+    return (Join-Path $PaperRoots[0] '_Purged')
+}
 
 $gone   = New-Object 'System.Collections.Generic.HashSet[string]'
 $binned = 0; $moved = 0; $failed = 0
@@ -143,6 +157,7 @@ function Bin-It([string]$path, [string]$why, [string]$paper) {
                 [Microsoft.VisualBasic.FileIO.UIOption]::OnlyErrorDialogs,
                 [Microsoft.VisualBasic.FileIO.RecycleOption]::SendToRecycleBin)
         } else {
+            $fallback = Fallback-For $path
             if (-not (Test-Path -LiteralPath $fallback)) { New-Item -ItemType Directory -Path $fallback -Force | Out-Null }
             $dest = Join-Path $fallback ((Split-Path -Leaf $path) + '-' + [guid]::NewGuid().ToString('N').Substring(0,6))
             Move-Item -LiteralPath $path -Destination $dest
@@ -242,11 +257,12 @@ function Find-PaperFolders([string]$root) {
     return $found
 }
 
-$papers = @(Find-PaperFolders $base | Sort-Object FullName)
+$papers = @($PaperRoots | ForEach-Object { Find-PaperFolders $_ } | Sort-Object FullName)
 
 $mode = if ($Apply) { 'APPLY' } else { 'PREVIEW' }
 Log ('=== Purge strays  [{0}]   {1} ===' -f $mode, (Get-Date -Format 'yyyy-MM-dd HH:mm'))
 Log ('Base : {0}' -f $base)
+Log ('Papers : {0}' -f ($PaperRootNames -join ', '))
 Log ('{0} paper folder(s).  Across-paper duplicates: {1}' -f $papers.Count, $(if ($AcrossPapers) { 'also purged' } else { 'left alone' }))
 if (-not $canRecycle) { Log 'Recycle Bin unavailable - items move to _Purged\ instead.' }
 Log ''
@@ -506,7 +522,7 @@ if ($failed -gt 0) { Log 'A failure is usually a file open in Word. Close it and
 if ($Apply) {
     Log ''
     if ($canRecycle) { Log 'Everything binned is in the Recycle Bin until you empty it.' }
-    else { Log ('Everything binned is in {0}.' -f $fallback) }
+    else { Log 'Everything binned is in _Purged\ at the top of its paper root.' }
     Log 'Run Run\Master-Website.bat next to republish.'
 } else {
     Log ''

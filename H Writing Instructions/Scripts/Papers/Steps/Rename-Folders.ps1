@@ -1,8 +1,9 @@
 #requires -Version 5.1
 <#
     Rename-Folders.ps1
-    Renames every folder under "A Writing" to a space-free form, with a dot
-    between the number and the name.
+    Renames every folder under the paper roots (C Policy and FInance, D Modelling,
+    F Other Writing) to a space-free form, with a dot between the number and
+    the name. The paper roots themselves are never renamed.
 
         1. Climate and Fiscal Policy     ->  1.ClimateAndFiscalPolicy
         1.1 Open Economy Carbon Pricing  ->  1.1.OpenEconomyCarbonPricing
@@ -30,7 +31,7 @@
 
     REFERENCES
     Before renaming, every .qmd .rmd .md .tex .r .py .yml .yaml file under
-    "A Writing" is scanned for path-like uses of the old names and rewritten:
+    the paper roots is scanned for path-like uses of the old names and rewritten:
         2.%20Source/images/x.png   ->  2_Source/images/x.png
         3. Background Papers\y     ->  3_BackgroundPapers\y
     A name has to be followed or preceded by a slash to count, so prose
@@ -59,15 +60,21 @@ $TextExt   = @('.qmd','.rmd','.md','.tex','.r','.py','.yml','.yaml')
 $SkipDirs  = '^[_.]'                      # _to_delete, _Scripts, .git
 $NumPrefix = '^(\d+(?:\.\d+)*[A-Za-z]?)[.\s_-]+(.*)$'
 
-# --- locate "A Writing" ------------------------------------------------------
+# --- locate the repository and the paper roots --------------------------------
+# The paper roots, from the repository root: sections 1-4, sections 5-7, and the writing outside the
+# series (8.x). The one place to change them in this script: D Modelling is due to move to its own repository.
+$PaperRootNames = @('C Policy and FInance', 'D Modelling', 'F Other Writing')
+
+# The paper roots that exist, as full paths under the repository root.
+function Get-PaperRoots([string]$repo) {
+    return @($PaperRootNames | ForEach-Object { Join-Path $repo $_ } | Where-Object { Test-Path -LiteralPath $_ })
+}
+
 function Find-WritingRoot([string]$start) {
-    # Walk up to the repository root (the folder holding .git), then use its B Working Papers folder.
+    # Walk up to the repository root (the folder holding .git). The papers are in the paper roots under it.
     $d = $start
     for ($i = 0; $i -lt 8; $i++) {
-        if (Test-Path -LiteralPath (Join-Path $d '.git')) {
-            $w = Join-Path $d 'B Working Papers'
-            if (Test-Path -LiteralPath $w) { return $w } else { return $null }
-        }
+        if (Test-Path -LiteralPath (Join-Path $d '.git')) { return $d }
         $p = Split-Path -Parent $d; if (-not $p -or $p -eq $d) { break }; $d = $p
     }
     return $null
@@ -81,10 +88,12 @@ if ($PSScriptRoot -match '[\\/](_superseded|_Scripts)([\\/]|$)') {
 $base = Find-WritingRoot $PSScriptRoot
 if (-not $base) {
     Write-Host ''
-    Write-Host 'Could not find "A Writing" (a folder holding several numbered folders)'
+    Write-Host 'Could not find the repository root (the folder holding .git)'
     Write-Host "from: $PSScriptRoot"
     Write-Host ''; Write-Host 'Press Enter to close...'; [void](Read-Host); return
 }
+$PaperRoots = @(Get-PaperRoots $base)
+if ($PaperRoots.Count -eq 0) { Write-Host ('None of the paper roots is in {0}: {1}' -f $base, ($PaperRootNames -join ', ')); return }
 Set-Location -LiteralPath $base          # so this script's own folder is not locked
 
 $report = New-Object System.Collections.Generic.List[string]
@@ -128,10 +137,11 @@ function Convert-FolderName([string]$name) {
 # --- collect the renames, deepest first --------------------------------------
 Log ("=== Rename folders   separator '{0}'   {1} ===" -f $Separator, (Get-Date -Format 'yyyy-MM-dd HH:mm'))
 Log ("Base : {0}" -f $base)
+Log ("Papers : {0}" -f ($PaperRootNames -join ', '))
 Log ("Mode : {0}" -f $(if ($Apply) { 'APPLY - folders will be renamed' } else { 'PREVIEW - nothing will be changed' }))
 Blank
 
-$allDirs = @(Get-ChildItem -LiteralPath $base -Directory -Recurse -Force |
+$allDirs = @(Get-ChildItem -LiteralPath $PaperRoots -Directory -Recurse -Force |
              Where-Object { $_.FullName -notmatch '[\\/][_.][^\\/]*([\\/]|$)' } |
              Sort-Object { ($_.FullName -split '[\\/]').Count } -Descending)
 
@@ -180,7 +190,7 @@ foreach ($r in $renames) {
 $touched = 0
 if ($pairs.Count -gt 0) {
     Log '--- references'
-    $textFiles = @(Get-ChildItem -LiteralPath $base -File -Recurse -Force |
+    $textFiles = @(Get-ChildItem -LiteralPath $PaperRoots -File -Recurse -Force |
                    Where-Object { ($TextExt -contains $_.Extension.ToLower()) -or ($_.Name -eq '_CoreFiles.txt') })
     foreach ($f in $textFiles) {
         $txt = Get-Content -LiteralPath $f.FullName -Raw -Encoding UTF8

@@ -1,7 +1,8 @@
 #requires -Version 5.1
 <#
     Convert-Documents.ps1
-    Gives every document in "A Writing" both a .qmd and a .docx.
+    Gives every document in the paper roots (C Policy and FInance, D Modelling,
+    F Other Writing) both a .qmd and a .docx.
 
     RULES
       - every .docx that has no sibling .qmd  ->  a .qmd is made from it
@@ -19,7 +20,7 @@
     NOT TOUCHED
       9.Archive, 4.ExternalPapers, 2.Source, the website and Overview folders,
       anything starting with _ or . , README files, and files sitting loose
-      at the root of A Writing.
+      at the top of a paper root.
 
     SAFETY
       Nothing is overwritten and nothing is deleted. A file that already has
@@ -46,15 +47,21 @@ $ExcludeTopPattern = '^\d+[A-Za-z]?[.\s_-]+(Website|Overview)$'   # plus the scr
 $ExcludeDirs = @('9.Archive','4.ExternalPapers','2.Source','media')
 $SkipNames   = '^(README|_.*)$'                     # README.md, _PaperIndex.csv...
 
-# --- locate "A Writing" ------------------------------------------------------
+# --- locate the repository and the paper roots --------------------------------
+# The paper roots, from the repository root: sections 1-4, sections 5-7, and the writing outside the
+# series (8.x). The one place to change them in this script: D Modelling is due to move to its own repository.
+$PaperRootNames = @('C Policy and FInance', 'D Modelling', 'F Other Writing')
+
+# The paper roots that exist, as full paths under the repository root.
+function Get-PaperRoots([string]$repo) {
+    return @($PaperRootNames | ForEach-Object { Join-Path $repo $_ } | Where-Object { Test-Path -LiteralPath $_ })
+}
+
 function Find-WritingRoot([string]$start) {
-    # Walk up to the repository root (the folder holding .git), then use its B Working Papers folder.
+    # Walk up to the repository root (the folder holding .git). The papers are in the paper roots under it.
     $d = $start
     for ($i = 0; $i -lt 8; $i++) {
-        if (Test-Path -LiteralPath (Join-Path $d '.git')) {
-            $w = Join-Path $d 'B Working Papers'
-            if (Test-Path -LiteralPath $w) { return $w } else { return $null }
-        }
+        if (Test-Path -LiteralPath (Join-Path $d '.git')) { return $d }
         $p = Split-Path -Parent $d; if (-not $p -or $p -eq $d) { break }; $d = $p
     }
     return $null
@@ -63,9 +70,16 @@ function Find-WritingRoot([string]$start) {
 $base = Find-WritingRoot $PSScriptRoot
 if (-not $base) {
     Write-Host ''
-    Write-Host 'Could not find "A Writing" from here.'
+    Write-Host 'Could not find the repository root (the folder holding .git) from here.'
     Write-Host "  $PSScriptRoot"
     Write-Host ''; Write-Host 'Press Enter to close...'; [void](Read-Host); return
+}
+$PaperRoots = @(Get-PaperRoots $base)
+if ($PaperRoots.Count -eq 0) { Write-Host ('None of the paper roots is in {0}: {1}' -f $base, ($PaperRootNames -join ', ')); return }
+# The paper root a file sits in. Relative paths for the scope rules are taken from it.
+function Root-Of([string]$full) {
+    foreach ($r in $PaperRoots) { if ($full.StartsWith($r + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) { return $r } }
+    return $base
 }
 $myFolder = if ($PSScriptRoot -eq $base) { '' } else { Split-Path -Leaf $PSScriptRoot }
 Set-Location -LiteralPath $base
@@ -117,6 +131,7 @@ function Blank() { Log '' }
 
 Log ("=== Convert documents   {0} ===" -f (Get-Date -Format 'yyyy-MM-dd HH:mm'))
 Log ("Base   : {0}" -f $base)
+Log ("Papers : {0}" -f ($PaperRootNames -join ', '))
 Log ("Pandoc : {0}" -f $pandoc)
 Log ("Mode   : {0}" -f $(if ($Apply) { 'APPLY - files will be written' } else { 'PREVIEW - nothing will be written' }))
 Log ("Media  : {0}" -f $(if ($NoMedia) { 'dropped' } else { 'extracted to media\ beside the .qmd' }))
@@ -124,7 +139,7 @@ Blank
 
 # --- collect candidates ------------------------------------------------------
 function In-Scope([System.IO.FileInfo]$f) {
-    $rel = $f.FullName.Substring($base.Length).TrimStart('\','/')
+    $rel = $f.FullName.Substring((Root-Of $f.FullName).Length).TrimStart('\','/')
     $parts = $rel -split '[\\/]'
     if ($parts.Count -lt 2) { return $false }                 # loose at the root
     if ($parts[0] -match $ExcludeTopPattern) { return $false }
@@ -137,7 +152,7 @@ function In-Scope([System.IO.FileInfo]$f) {
     return $true
 }
 
-$all = @(Get-ChildItem -LiteralPath $base -File -Recurse -ErrorAction SilentlyContinue |
+$all = @(Get-ChildItem -LiteralPath $PaperRoots -File -Recurse -ErrorAction SilentlyContinue |
          Where-Object { $_.Extension.ToLower() -in @('.docx','.md','.qmd','.tex') } |
          Where-Object { In-Scope $_ } |
          # A section overview is a Word document by design - <n>.0.<Name>.docx at
@@ -145,12 +160,13 @@ $all = @(Get-ChildItem -LiteralPath $base -File -Recurse -ErrorAction SilentlyCo
          # beside it, which is the thing flattening them was meant to end.
          Where-Object { $_.Name -notmatch '^\d+\.0[.\s_-]' })
 
-# paper folder = the folder two levels below base, used for the .tex rule
+# paper folder = the folder two levels below its paper root, used for the .tex rule
 function Paper-Folder([string]$full) {
-    $rel = $full.Substring($base.Length).TrimStart('\','/')
+    $root = Root-Of $full
+    $rel = $full.Substring($root.Length).TrimStart('\','/')
     $p = $rel -split '[\\/]'
-    if ($p.Count -ge 3) { return (Join-Path $base (Join-Path $p[0] $p[1])) }
-    return (Join-Path $base $p[0])
+    if ($p.Count -ge 3) { return (Join-Path $root (Join-Path $p[0] $p[1])) }
+    return (Join-Path $root $p[0])
 }
 
 $byFolderStem = @{}

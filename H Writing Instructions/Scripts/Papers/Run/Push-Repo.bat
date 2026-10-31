@@ -1,5 +1,5 @@
 @echo off
-cd /d "%~dp0..\..\..\..\B Working Papers"
+cd /d "%~dp0..\..\..\.."
 cls
 echo.
 echo   Commit, pull, push - the GitHub part on its own.

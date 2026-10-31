@@ -1,5 +1,5 @@
 @echo off
-cd /d "%~dp0..\..\..\..\B Working Papers"
+cd /d "%~dp0..\..\..\.."
 cls
 echo.
 echo   Audit of the paper folders. It reads and reports; it changes nothing.

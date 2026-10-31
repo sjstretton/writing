@@ -1,25 +1,22 @@
 @echo off
 setlocal
-cd /d "%~dp0..\..\..\..\B Working Papers"
+cd /d "%~dp0..\..\..\.."
 cls
 echo.
 echo   ============================================================
-echo     A Writing  -  PDFs and website
+echo     A Writing  -  website
 echo   ============================================================
 echo.
-echo     1  Build-Pdfs      a PDF for every paper with a master .docx
-echo     2  Publish-Site    copy into A.Website\papers, write
-echo                        0.Overview\ResearchOverview.docx, quarto render,
-echo                        then check every link
+echo     Build-Website   the same build as Compile-Website.bat at the top
+echo                     of the repository: every paper into
+echo                     E Website\PaperArchive, the web papers, the section
+echo                     pages, E Website\papers with only the linked files,
+echo                     then quarto render. Nothing is uploaded.
 echo.
-echo   Each document is converted in its own process with a 3 minute
-echo   limit. One that Word cannot open is killed, logged and skipped -
-echo   the run does not stop. Word already open is left alone.
+echo   PDFs are not built from here. Run-Website.ps1 -Pdf builds them
+echo   with Word, one document per process with a time limit.
 echo.
-echo   A PDF newer than its .docx is not rebuilt, so re-running is quick
-echo   and an interrupted run picks up where it left off.
-echo.
-echo   Reports: the scripts folder's Reports\_PdfReport.txt and _SiteReport.txt
+echo   Check the result in E Website\_site\index.html.
 echo.
 set /p go=Type Y then Enter to run, anything else to cancel: 
 if /i not "%go%"=="Y" goto cancel

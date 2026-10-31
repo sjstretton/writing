@@ -59,14 +59,20 @@ $TextExt     = @('.qmd','.rmd','.md','.tex')
 
 function Norm([string]$n) { return (($n -replace '[^A-Za-z0-9]','').ToLower()) }
 
+# The paper roots, from the repository root: sections 1-4, sections 5-7, and the writing outside the
+# series (8.x). The one place to change them in this script: D Modelling is due to move to its own repository.
+$PaperRootNames = @('C Policy and FInance', 'D Modelling', 'F Other Writing')
+
+# The paper roots that exist, as full paths under the repository root.
+function Get-PaperRoots([string]$repo) {
+    return @($PaperRootNames | ForEach-Object { Join-Path $repo $_ } | Where-Object { Test-Path -LiteralPath $_ })
+}
+
 function Find-WritingRoot([string]$start) {
-    # Walk up to the repository root (the folder holding .git), then use its B Working Papers folder.
+    # Walk up to the repository root (the folder holding .git). The papers are in the paper roots under it.
     $d = $start
     for ($i = 0; $i -lt 8; $i++) {
-        if (Test-Path -LiteralPath (Join-Path $d '.git')) {
-            $w = Join-Path $d 'B Working Papers'
-            if (Test-Path -LiteralPath $w) { return $w } else { return $null }
-        }
+        if (Test-Path -LiteralPath (Join-Path $d '.git')) { return $d }
         $p = Split-Path -Parent $d; if (-not $p -or $p -eq $d) { break }; $d = $p
     }
     return $null
@@ -74,9 +80,11 @@ function Find-WritingRoot([string]$start) {
 
 $base = Find-WritingRoot $PSScriptRoot
 if (-not $base) {
-    Write-Host ''; Write-Host 'Could not find "A Writing" from here.'
+    Write-Host ''; Write-Host 'Could not find the repository root (the folder holding .git) from here.'
     Write-Host ''; Write-Host 'Press Enter to close...'; [void](Read-Host); return
 }
+$PaperRoots = @(Get-PaperRoots $base)
+if ($PaperRoots.Count -eq 0) { Write-Host ('None of the paper roots is in {0}: {1}' -f $base, ($PaperRootNames -join ', ')); return }
 $myFolder = if ($PSScriptRoot -eq $base) { '' } else { Split-Path -Leaf $PSScriptRoot }
 Set-Location -LiteralPath $base
 
@@ -131,15 +139,24 @@ function Plan([string]$from, [string]$to, [string]$why) {
 }
 
 # --- walk the paper folders --------------------------------------------------
-$themes = @(Get-ChildItem -LiteralPath $base -Directory |
-            Where-Object { $_.Name -match '^\d+[A-Za-z]?[.\s_-]' -and
-                           $ExcludeTop -notcontains $_.Name -and
-                           $_.Name -ne $myFolder -and
-                           (Norm ($_.Name -replace '^\d+(\.\d+)*[A-Za-z]?[.\s_-]+','')) -notin
-                             @('scripts','website','overview','additional') })
+# The section folders under the paper roots that pass $keep. A root whose folders are papers
+# themselves (F Other Writing: 8.1..., 8.2...) is its own section, as 8.AdditionalPolicyPapers was.
+function Get-Themes([scriptblock]$keep) {
+    foreach ($r in $PaperRoots) {
+        $kids = @(Get-ChildItem -LiteralPath $r -Directory | Where-Object $keep)
+        if (@($kids | Where-Object { $_.Name -match '^\d+\.\d+[.\s_-]' }).Count -gt 0) { Get-Item -LiteralPath $r }
+        else { $kids }
+    }
+}
+$themes = @(Get-Themes { $_.Name -match '^\d+[A-Za-z]?[.\s_-]' -and
+                         $ExcludeTop -notcontains $_.Name -and
+                         $_.Name -ne $myFolder -and
+                         (Norm ($_.Name -replace '^\d+(\.\d+)*[A-Za-z]?[.\s_-]+','')) -notin
+                           @('scripts','website','overview','additional') })
 
 Log ("=== Rename files   {0} ===" -f (Get-Date -Format 'yyyy-MM-dd HH:mm'))
 Log ("Base : {0}" -f $base)
+Log ("Papers : {0}" -f ($PaperRootNames -join ', '))
 Log ("Mode : {0}" -f $(if ($Apply) { 'APPLY' } else { 'PREVIEW - nothing will be changed' }))
 Blank
 
@@ -275,7 +292,7 @@ foreach ($k in $renamed.Keys) {
 $pairs += [pscustomobject]@{ Pattern = '(?<![\w/])media/media/'; Replace = 'media/' }
 $pairs += [pscustomobject]@{ Pattern = '(?<![\w\\])media\\media\\'; Replace = 'media\' }
 
-foreach ($f in (Get-ChildItem -LiteralPath $base -File -Recurse -ErrorAction SilentlyContinue |
+foreach ($f in (Get-ChildItem -LiteralPath $PaperRoots -File -Recurse -ErrorAction SilentlyContinue |
                 Where-Object { $TextExt -contains $_.Extension.ToLower() })) {
     if ($myFolder -and $f.FullName.StartsWith((Join-Path $base $myFolder))) { continue }
     $txt = Get-Content -LiteralPath $f.FullName -Raw -Encoding UTF8
@@ -292,7 +309,7 @@ if ($touched -eq 0) { Log '    nothing needed rewriting' }
 
 # --- remove the now-empty media\media shells ---------------------------------
 if ($Apply) {
-    foreach ($d in (Get-ChildItem -LiteralPath $base -Directory -Recurse -Filter 'media' -ErrorAction SilentlyContinue)) {
+    foreach ($d in (Get-ChildItem -LiteralPath $PaperRoots -Directory -Recurse -Filter 'media' -ErrorAction SilentlyContinue)) {
         if ((Split-Path -Leaf (Split-Path -Parent $d.FullName)) -eq 'media' -and
             -not (Get-ChildItem -LiteralPath $d.FullName -Force)) {
             Remove-Item -LiteralPath $d.FullName -Force

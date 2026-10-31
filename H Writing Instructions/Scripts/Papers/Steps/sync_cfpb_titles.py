@@ -2,7 +2,7 @@
 
 Usage: python sync_cfpb_titles.py file1.bib [file2.bib ...]
 Replaces any one-line @techreport{CFPB<section><paper>, ...} entry for the carbon-pricing briefs
-(CFPB11-CFPB13 and CFPB61, numbered per E Writing Instructions/NUMBERING.md) with the canonical one.
+(CFPB11-CFPB13 and CFPB61, numbered per H Writing Instructions/NUMBERING.md) with the canonical one.
 """
 import re
 import sys

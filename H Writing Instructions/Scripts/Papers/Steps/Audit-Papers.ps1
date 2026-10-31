@@ -48,21 +48,29 @@ $SkipDirs   = @('media','images','_site','.quarto','_freeze','papers','node_modu
 $LenientIn  = @('9.Archive','4.ExternalPapers')
 $MasterExt  = @('.qmd','.docx','.pdf','.bib','.tex')
 
+# The paper roots, from the repository root: sections 1-4, sections 5-7, and the writing outside the
+# series (8.x). The one place to change them in this script: D Modelling is due to move to its own repository.
+$PaperRootNames = @('C Policy and FInance', 'D Modelling', 'F Other Writing')
+
+# The paper roots that exist, as full paths under the repository root.
+function Get-PaperRoots([string]$repo) {
+    return @($PaperRootNames | ForEach-Object { Join-Path $repo $_ } | Where-Object { Test-Path -LiteralPath $_ })
+}
+
 function Find-WritingRoot([string]$s) {
-    # Walk up to the repository root (the folder holding .git), then use its B Working Papers folder.
+    # Walk up to the repository root (the folder holding .git). The papers are in the paper roots under it.
     $d = $s
     for ($i = 0; $i -lt 8; $i++) {
-        if (Test-Path -LiteralPath (Join-Path $d '.git')) {
-            $w = Join-Path $d 'B Working Papers'
-            if (Test-Path -LiteralPath $w) { return $w } else { return $null }
-        }
+        if (Test-Path -LiteralPath (Join-Path $d '.git')) { return $d }
         $p = Split-Path -Parent $d; if (-not $p -or $p -eq $d) { break }; $d = $p
     }
     return $null
 }
 
 $base = Find-WritingRoot $PSScriptRoot
-if (-not $base) { Write-Host 'Could not find "A Writing".'; return }
+if (-not $base) { Write-Host 'Could not find the repository root (the folder holding .git).'; return }
+$PaperRoots = @(Get-PaperRoots $base)
+if ($PaperRoots.Count -eq 0) { Write-Host ('None of the paper roots is in {0}: {1}' -f $base, ($PaperRootNames -join ', ')); return }
 
 function Get-ReportDir([string]$here) {
     $up = Split-Path -Parent $here
@@ -82,6 +90,7 @@ function Row($kind, $paper, $detail, $path) {
 
 Log ('=== Audit papers   {0} ===' -f (Get-Date -Format 'yyyy-MM-dd HH:mm'))
 Log ('Base : {0}' -f $base)
+Log ('Papers : {0}' -f ($PaperRootNames -join ', '))
 Log 'Report only. Nothing is moved, renamed or removed.'
 Log ''
 
@@ -135,7 +144,7 @@ function Find-PaperFolders([string]$root) {
     return $found
 }
 
-$papers = @(Find-PaperFolders $base | Sort-Object FullName)
+$papers = @($PaperRoots | ForEach-Object { Find-PaperFolders $_ } | Sort-Object FullName)
 Log ('{0} paper folder(s) read.' -f $papers.Count)
 Log ''
 

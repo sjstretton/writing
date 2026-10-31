@@ -1,7 +1,7 @@
 #requires -Version 5.1
 <#
     Reorganize-Papers.ps1        v2
-    Applies the standard paper-folder layout across "A Writing".
+    Applies the standard paper-folder layout across the paper roots.
 
     LAYOUT (a slot is created only if something goes into it)
         <CoreName>.<ext>        the core paper, alone at root
@@ -33,22 +33,14 @@
         Re-running is a no-op.
 
     WHERE THINGS LIVE
-        A Writing\
-            research.qmd                  left alone
-            0.Overview\  1..5 themes\  6.Additional\  A.Website\
-            <n>.Scripts\                  everything to do with organising
-                Preview-Rename.bat / Run-Rename.bat / Rename-Folders.ps1
-                Preview-Reorganize.bat / Run-Reorganize.bat / Reorganize-Papers.ps1
-                Tidy-Scripts.bat / Tidy-Scripts.ps1
-                _CoreFiles.txt
-                _PaperFolderLayout.md
-                _PaperIndex.csv           the index - one row per paper folder
-                _to_delete\
-                _Scripts\                 reports, superseded copies
-
-        "A Writing" is located by looking for numbered folders, not by name,
-        and theme folders are discovered rather than listed, so folders can be
-        renamed or renumbered without editing anything here.
+        The papers are in the paper roots at the top of the repository:
+            C Policy and FInance\   sections 1-4
+            D Modelling\            sections 5-7
+            F Other Writing\        papers outside the series (8.x), no section level
+        The scripts are in H Writing Instructions\Scripts\Papers\; the paper
+        index is Reference\_PaperIndex.csv there. The roots are listed once, in
+        $PaperRootNames below. Section folders inside them are discovered rather
+        than listed, so they can be renamed or renumbered without editing this.
 
     USAGE
         Preview-Reorganize.bat    dry run, writes report and CSV only
@@ -67,7 +59,7 @@ $ErrorActionPreference = 'Stop'
 $MoveImagesIntoSource = $true
 
 # Theme folders are discovered, not listed, so renaming or renumbering them
-# changes nothing here. A numbered folder at the root of A Writing is a theme
+# changes nothing here. A numbered folder at the top of a paper root is a theme
 # unless its name is one of these - those hold loose files or the machinery.
 $ThemeExclude = @('overview','scripts','website','additional','organise','organize','todelete','maintenanceandreference')
 
@@ -83,7 +75,7 @@ function Is-ExcludedTheme([string]$name) {
 function Norm-Folder([string]$n) { return (($n -replace '[^A-Za-z0-9]','').ToLower()) }
 
 # A copy parked in _superseded or _Scripts must not run - it would treat its own
-# folder as "A Writing" and start building a structure inside the bin.
+# folder as a paper root and start building a structure inside the bin.
 if ($PSScriptRoot -match '[\\/](_superseded|_Scripts)([\\/]|$)') {
     Write-Host ''
     Write-Host 'This is an old copy of the script, kept only for reference.'
@@ -94,16 +86,21 @@ if ($PSScriptRoot -match '[\\/](_superseded|_Scripts)([\\/]|$)') {
     return
 }
 
-# Find "A Writing" by looking for the theme folders rather than by name, so the
-# scripts can be moved or their folder renamed without breaking anything.
+# Find the repository root, then the paper roots under it.
+# The paper roots, from the repository root: sections 1-4, sections 5-7, and the writing outside the
+# series (8.x). The one place to change them in this script: D Modelling is due to move to its own repository.
+$PaperRootNames = @('C Policy and FInance', 'D Modelling', 'F Other Writing')
+
+# The paper roots that exist, as full paths under the repository root.
+function Get-PaperRoots([string]$repo) {
+    return @($PaperRootNames | ForEach-Object { Join-Path $repo $_ } | Where-Object { Test-Path -LiteralPath $_ })
+}
+
 function Find-WritingRoot([string]$start) {
-    # Walk up to the repository root (the folder holding .git), then use its B Working Papers folder.
+    # Walk up to the repository root (the folder holding .git). The papers are in the paper roots under it.
     $d = $start
     for ($i = 0; $i -lt 8; $i++) {
-        if (Test-Path -LiteralPath (Join-Path $d '.git')) {
-            $w = Join-Path $d 'B Working Papers'
-            if (Test-Path -LiteralPath $w) { return $w } else { return $null }
-        }
+        if (Test-Path -LiteralPath (Join-Path $d '.git')) { return $d }
         $p = Split-Path -Parent $d; if (-not $p -or $p -eq $d) { break }; $d = $p
     }
     return $null
@@ -112,13 +109,20 @@ function Find-WritingRoot([string]$start) {
 $base = Find-WritingRoot $PSScriptRoot
 if (-not $base) {
     Write-Host ''
-    Write-Host 'Could not find the numbered theme folders from here.'
+    Write-Host 'Could not find the repository root (the folder holding .git) from here.'
     Write-Host "from: $PSScriptRoot"
-    Write-Host 'Put these scripts in "A Writing" or in a folder directly inside it.'
     Write-Host ''
     Write-Host 'Press Enter to close...'
     [void](Read-Host)
     return
+}
+$PaperRoots = @(Get-PaperRoots $base)
+if ($PaperRoots.Count -eq 0) { Write-Host ('None of the paper roots is in {0}: {1}' -f $base, ($PaperRootNames -join ', ')); return }
+
+# The paper root a path sits in.
+function Root-Of([string]$full) {
+    foreach ($r in $PaperRoots) { if ($full.StartsWith($r + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) { return $r } }
+    return $base
 }
 
 # A theme holds papers, so it holds folders. A numbered folder at the root with
@@ -130,23 +134,32 @@ function Is-LonePaper([string]$full) {
     return @(Get-ChildItem -LiteralPath $full -File -EA SilentlyContinue).Count -gt 0
 }
 
-$Themes = @(Get-ChildItem -LiteralPath $base -Directory |
-            Where-Object { $_.Name -match '^\d+[A-Za-z]?[.\s_-]' -and
-                           -not (Is-ExcludedTheme $_.Name) -and
-                           -not (Is-LonePaper $_.FullName) } |
-            Sort-Object Name | ForEach-Object { $_.Name })
+# The section folders under the paper roots that pass $keep. A root whose folders are papers
+# themselves (F Other Writing: 8.1..., 8.2...) is its own section, as 8.AdditionalPolicyPapers was.
+function Get-Themes([scriptblock]$keep) {
+    foreach ($r in $PaperRoots) {
+        $kids = @(Get-ChildItem -LiteralPath $r -Directory | Where-Object $keep)
+        if (@($kids | Where-Object { $_.Name -match '^\d+\.\d+[.\s_-]' }).Count -gt 0) { Get-Item -LiteralPath $r }
+        else { $kids }
+    }
+}
+$Themes = @(Get-Themes { $_.Name -match '^\d+[A-Za-z]?[.\s_-]' -and
+                         -not (Is-ExcludedTheme $_.Name) -and
+                         -not (Is-LonePaper $_.FullName) } |
+            Sort-Object Name)
 
 # Whatever the scripts' own folder is called, that is where housekeeping goes.
 # The script now lives in a subfolder of the scripts folder, so step up to it
-# rather than treating the subfolder name as a folder at the root of A Writing.
+# rather than treating the subfolder name as a folder at the top of a paper root.
 if ($PSScriptRoot -eq $base) {
     $found = @(Get-ChildItem -LiteralPath $base -Directory -EA SilentlyContinue |
                Where-Object { $_.Name -match '[.\s_-]*Scripts$' } | Select-Object -First 1)
     if ($found.Count -gt 0) { $organiseDir = $found[0].FullName }
     else { $organiseDir = $PSScriptRoot }
 } else {
+    # The scripts folder is the one above Steps\ that holds Engine\ (Scripts\Papers).
     $parent = Split-Path -Parent $PSScriptRoot
-    if ($parent -and (Split-Path -Leaf $parent) -match 'Scripts') { $organiseDir = $parent }
+    if ($parent -and (Test-Path -LiteralPath (Join-Path $parent 'Engine'))) { $organiseDir = $parent }
     else { $organiseDir = $PSScriptRoot }
 }
 $OrganiseFolder = Split-Path -Leaf $organiseDir
@@ -165,13 +178,13 @@ $DataExt      = @('.xlsx','.xls','.xlsm','.csv','.tsv','.dta','.parquet','.json'
 
 $scriptsDir = Join-Path $organiseDir 'Reports'
 
-# Housekeeping that belongs in the scripts folder, not at the root of A Writing.
+# Housekeeping that belongs in the scripts folder, not at the top of a paper root.
 $OrganiseFiles = '^(Reorganize-Papers\.ps1|Preview-Reorganize\.bat|Run-Reorganize\.bat|' +
                  '_CoreFiles\.txt|_PaperFolderLayout\.md|_ReorganizeReport.*\.txt|' +
                  '_ReorganizeLog\.txt|cleanup\.ps1|renumber\.ps1|_deletion-list\.md|' +
                  '_reorganisation-checklist\.md)$'
 $OrganiseDirs  = '^(_to_delete|_Scripts|_superseded|_archive)$'
-# Left at the root of A Writing on purpose.
+# Left at the top of a paper root on purpose.
 $KeepAtRoot    = '^(_PaperIndex\.csv|research\.qmd)$'
 
 $report    = New-Object System.Collections.Generic.List[string]
@@ -180,8 +193,8 @@ $flags     = New-Object System.Collections.Generic.List[string]
 $review    = New-Object System.Collections.Generic.List[string]
 $moveCount = 0
 
-# The index lives wherever it already is - beside the scripts, or at the root
-# of A Writing. Default to beside the scripts.
+# The index lives wherever it already is - beside the scripts, or at the
+# repository root. Default to beside the scripts.
 $refDir = Join-Path $organiseDir 'Reference'
 if (-not (Test-Path -LiteralPath $refDir)) { $refDir = $organiseDir }
 $csvPath = Join-Path $refDir '_PaperIndex.csv'
@@ -478,16 +491,16 @@ function Tidy-Debris([string]$pp) {
 }
 
 function Setup-OrganiseFolder {
-    # Sweeps the root of A Writing into the scripts folder: the scripts, their
-    # outputs, and holding folders like _to_delete. Theme folders, the paper
-    # index and research.qmd stay put.
+    # Sweeps the top of each paper root into the scripts folder: the scripts,
+    # their outputs, and holding folders like _to_delete. Section folders, the
+    # paper index and research.qmd stay put.
     Log ("--- {0}" -f $OrganiseFolder)
     if (-not (Test-Path -LiteralPath $organiseDir)) {
         if ($Apply) { New-Item -ItemType Directory -Path $organiseDir -Force | Out-Null }
         Log ("    CREATE DIR   : {0}\" -f $OrganiseFolder)
     }
 
-    foreach ($f in (Get-ChildItem -LiteralPath $base -File -Force)) {
+    foreach ($f in (Get-ChildItem -LiteralPath $PaperRoots -File -Force)) {
         if ($f.Name -match $KeepAtRoot) { Log ("    KEPT AT ROOT : {0}" -f $f.Name); continue }
         if ($f.Name -notmatch $OrganiseFiles) { Log ("    LEFT         : {0}" -f $f.Name); continue }
         $dest = Join-Path $organiseDir $f.Name
@@ -501,7 +514,7 @@ function Setup-OrganiseFolder {
         }
     }
 
-    foreach ($d in (Get-ChildItem -LiteralPath $base -Directory -Force)) {
+    foreach ($d in (Get-ChildItem -LiteralPath $PaperRoots -Directory -Force)) {
         if ($d.Name -eq $OrganiseFolder) { continue }
         if ($d.Name -notmatch $OrganiseDirs) { continue }
         $dest = Join-Path $organiseDir $d.Name
@@ -524,7 +537,7 @@ function Get-Override([string]$paperPath) {
     $ovPath = Join-Path $organiseDir '_CoreFiles.txt'
     if (-not (Test-Path -LiteralPath $ovPath)) { $ovPath = Join-Path $base '_CoreFiles.txt' }
     if (-not (Test-Path -LiteralPath $ovPath)) { return $null }
-    $rel = $paperPath.Substring($base.Length).TrimStart('\','/')
+    $rel = $paperPath.Substring((Root-Of $paperPath).Length).TrimStart('\','/')
     foreach ($line in (Get-Content -LiteralPath $ovPath)) {
         if ($line -match '^\s*#' -or $line.Trim() -eq '') { continue }
         $parts = $line -split '\|'
@@ -540,13 +553,15 @@ function Get-Override([string]$paperPath) {
 
 Log ("=== Reorganize Papers v2   {0} ===" -f (Get-Date -Format 'yyyy-MM-dd HH:mm'))
 Log ("Base : {0}" -f $base)
+Log ("Papers : {0}" -f ($PaperRootNames -join ', '))
 Log ("Mode : {0}" -f $(if ($Apply) { 'APPLY - files will be moved' } else { 'PREVIEW - nothing will be changed' }))
 Blank
 
 Setup-OrganiseFolder
 
-foreach ($theme in $Themes) {
-    $themePath = Join-Path $base $theme
+foreach ($themeDir in $Themes) {
+    $theme     = $themeDir.Name
+    $themePath = $themeDir.FullName
     if (-not (Test-Path -LiteralPath $themePath)) { Log ("THEME MISSING: {0}" -f $theme); continue }
     Log ("################ {0}" -f $theme)
 

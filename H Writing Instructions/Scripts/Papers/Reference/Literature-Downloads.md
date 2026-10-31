@@ -1,6 +1,6 @@
 # Literature downloads for the carbon-pricing series
 
-- **Automatic, 100 papers:** free PDFs the cloud session could not reach. Run `E Writing Instructions/Scripts/Papers/Run/Download-Literature.bat` on your PC; it saves each into the paper's `4.ExternalPapers/` and prints FAILED for any that refuse (most publishers block automated downloads) and NOT A PDF for any link that returns a web page. At the end it opens `E Writing Instructions/Scripts/Papers/Run/Literature-OpenInBrowser.html`, a clickable list of every paper that failed, to download by hand.
+- **Automatic, 100 papers:** free PDFs the cloud session could not reach. Run `H Writing Instructions/Scripts/Papers/Run/Download-Literature.bat` on your PC; it saves each into the paper's `4.ExternalPapers/` and prints FAILED for any that refuse (most publishers block automated downloads) and NOT A PDF for any link that returns a web page. At the end it opens `H Writing Instructions/Scripts/Papers/Run/Literature-OpenInBrowser.html`, a clickable list of every paper that failed, to download by hand.
 - **Manual, 125 papers:** free-but-via-a-web-page, library login, or not found. For later.
 - **Already available to the agent, 11 papers:** nothing to do.
 
@@ -23,32 +23,32 @@
 | 1.2.FeebatesAndOutputBasedRebating | NTPCAbout | About Us |  | not found: search by title |
 | 1.2.FeebatesAndOutputBasedRebating | OBPSRegs | Output-Based Pricing System Regulations (SOR/2019-266) |  | not found: search by title |
 | 1.2.FeebatesAndOutputBasedRebating | SternerHoglund2000 | Output-Based Refunding of Emission Payments: Theory, Distribution of Costs, and International Experience |  | not found: search by title |
-| 1.3.IronSteelCBAM | EC2025DefaultValues | Commission Implementing Regulation (EU) 2025/2621 as Regards the Establishment of Default Values for the Carbon Border Adjustment Mechanism, and Annex I Default Values by Country, Version 1 (4 February 2026) |  | not found: search by title |
-| 1.3.IronSteelCBAM | EC2025Downstream | Proposal for a Regulation Amending Regulation (EU) 2023/956 as Regards the Extension of Its Scope to Certain Downstream Goods and Anti-Circumvention Measures |  | not found: search by title |
-| 1.3.IronSteelCBAM | ELP2026 | EU CBAM: Draft Rules on Carbon Price Paid in a Third Country Released: Implications for Indian Exporters |  | not found: search by title |
-| 1.3.IronSteelCBAM | EU2023Transitional | Commission Implementing Regulation (EU) 2023/1773 of 17 August 2023 Laying Down the Rules for the Application of Regulation (EU) 2023/956 as Regards Reporting Obligations for the Purposes of the Carbon Border Adjustment Mechanism during the Transitional Period |  | not found: search by title |
-| 1.3.IronSteelCBAM | EU2025Accreditation | Commission Delegated Regulation (EU) 2025/2551 of 20 November 2025 Supplementing Regulation (EU) 2023/956 by Specifying the Conditions for Granting Accreditation to Verifiers |  | not found: search by title |
-| 1.3.IronSteelCBAM | EU2025CertPrice | Commission Implementing Regulation (EU) 2025/2548 of 10 December 2025 as Regards the Calculation and Publication of the Price of CBAM Certificates |  | not found: search by title |
-| 1.3.IronSteelCBAM | EU2025Downstream | Proposal for a Regulation of the European Parliament and of the Council Amending Regulation (EU) 2023/956 as Regards the Extension of Its Scope to Downstream Goods and Anti-Circumvention Measures |  | not found: search by title |
-| 1.3.IronSteelCBAM | EU2025FreeAllocation | Commission Implementing Regulation (EU) 2025/2620 of 16 December 2025 as Regards the Calculation of the Free Allocation Adjustment to the Number of CBAM Certificates to Be Surrendered |  | not found: search by title |
-| 1.3.IronSteelCBAM | EU2025Methods | Commission Implementing Regulation (EU) 2025/2547 of 10 December 2025 Laying Down Rules for the Application of Regulation (EU) 2023/956 as Regards the Methods for the Calculation of Emissions Embedded in Goods |  | not found: search by title |
-| 1.3.IronSteelCBAM | EU2025Review | Report from the Commission to the European Parliament and the Council on the Application of the Regulation on the Carbon Border Adjustment Mechanism |  | not found: search by title |
-| 1.3.IronSteelCBAM | EU2025Verification | Commission Implementing Regulation (EU) 2025/2546 of 10 December 2025 on the Application of the Principles for Verification of Declared Embedded Emissions Pursuant to Regulation (EU) 2023/956 |  | not found: search by title |
-| 1.3.IronSteelCBAM | IEA2020 | Iron and Steel Technology Roadmap: Towards More Sustainable Steelmaking |  | not found: search by title |
-| 1.3.IronSteelCBAM | Maliszewska2025 | Trade and Development Chart: CBAM's Impact on Exports to the EU |  | not found: search by title |
-| 1.3.IronSteelCBAM | WTOShrimp1998 | United States: Import Prohibition of Certain Shrimp and Shrimp Products |  | not found: search by title |
-| 1.3.IronSteelCBAM | WorldBankCBAMIndex | Relative CBAM Exposure Index |  | not found: search by title |
-| 1.4.CarbonConsumptionTax | CJEUBancaPopolare2006 | Judgment of 3 October 2006, Banca Popolare di Cremona, Case C-475/03 |  | not found: search by title |
-| 1.4.CarbonConsumptionTax | CJEUDanskDenkavit1992 | Judgment of 31 March 1992, Dansk Denkavit and Others, Case C-200/90 |  | not found: search by title |
-| 1.4.CarbonConsumptionTax | ETS2Dir | Directive (EU) 2023/959 of 10 May 2023 Amending Directive 2003/87/EC Establishing a System for Greenhouse Gas Emission Allowance Trading within the Union |  | not found: search by title |
-| 1.4.CarbonConsumptionTax | FQD2009 | Directive 2009/30/EC of 23 April 2009 Amending Directive 98/70/EC as Regards the Specification of Petrol, Diesel and Gas-Oil and Introducing a Mechanism to Monitor and Reduce Greenhouse Gas Emissions |  | not found: search by title |
-| 1.4.CarbonConsumptionTax | FTTDecision2013 | Council Decision 2013/52/EU of 22 January 2013 Authorising Enhanced Cooperation in the Area of Financial Transaction Tax |  | not found: search by title |
-| 1.4.CarbonConsumptionTax | Neuhoff2016Inclusion | Inclusion of consumption of carbon intensive materials in emissions trading |  | not found: search by title |
-| 1.4.CarbonConsumptionTax | SCFReg | Regulation (EU) 2023/955 of 10 May 2023 Establishing a Social Climate Fund and Amending Regulation (EU) 2021/1060 |  | not found: search by title |
-| 1.4.CarbonConsumptionTax | VATDirective | Council Directive 2006/112/EC of 28 November 2006 on the Common System of Value Added Tax |  | not found: search by title |
-| 1.4.CarbonConsumptionTax | VATDirective2022 | Council Directive (EU) 2022/542 of 5 April 2022 Amending Directives 2006/112/EC and (EU) 2020/285 as Regards Rates of Value Added Tax |  | not found: search by title |
-| 1.4.CarbonConsumptionTax | VATGap2025 | VAT Gap in the EU: Report 2025 |  | not found: search by title |
-| 1.4.CarbonConsumptionTax | VATRateMin2018 | Council Directive (EU) 2018/912 of 22 June 2018 Amending Directive 2006/112/EC on the Common System of Value Added Tax as Regards the Obligation to Respect a Minimum Standard Rate |  | not found: search by title |
+| 1.3.CarbonConsumptionTax | CJEUBancaPopolare2006 | Judgment of 3 October 2006, Banca Popolare di Cremona, Case C-475/03 |  | not found: search by title |
+| 1.3.CarbonConsumptionTax | CJEUDanskDenkavit1992 | Judgment of 31 March 1992, Dansk Denkavit and Others, Case C-200/90 |  | not found: search by title |
+| 1.3.CarbonConsumptionTax | ETS2Dir | Directive (EU) 2023/959 of 10 May 2023 Amending Directive 2003/87/EC Establishing a System for Greenhouse Gas Emission Allowance Trading within the Union |  | not found: search by title |
+| 1.3.CarbonConsumptionTax | FQD2009 | Directive 2009/30/EC of 23 April 2009 Amending Directive 98/70/EC as Regards the Specification of Petrol, Diesel and Gas-Oil and Introducing a Mechanism to Monitor and Reduce Greenhouse Gas Emissions |  | not found: search by title |
+| 1.3.CarbonConsumptionTax | FTTDecision2013 | Council Decision 2013/52/EU of 22 January 2013 Authorising Enhanced Cooperation in the Area of Financial Transaction Tax |  | not found: search by title |
+| 1.3.CarbonConsumptionTax | Neuhoff2016Inclusion | Inclusion of consumption of carbon intensive materials in emissions trading |  | not found: search by title |
+| 1.3.CarbonConsumptionTax | SCFReg | Regulation (EU) 2023/955 of 10 May 2023 Establishing a Social Climate Fund and Amending Regulation (EU) 2021/1060 |  | not found: search by title |
+| 1.3.CarbonConsumptionTax | VATDirective | Council Directive 2006/112/EC of 28 November 2006 on the Common System of Value Added Tax |  | not found: search by title |
+| 1.3.CarbonConsumptionTax | VATDirective2022 | Council Directive (EU) 2022/542 of 5 April 2022 Amending Directives 2006/112/EC and (EU) 2020/285 as Regards Rates of Value Added Tax |  | not found: search by title |
+| 1.3.CarbonConsumptionTax | VATGap2025 | VAT Gap in the EU: Report 2025 |  | not found: search by title |
+| 1.3.CarbonConsumptionTax | VATRateMin2018 | Council Directive (EU) 2018/912 of 22 June 2018 Amending Directive 2006/112/EC on the Common System of Value Added Tax as Regards the Obligation to Respect a Minimum Standard Rate |  | not found: search by title |
+| 1.4.IronSteelCBAM | EC2025DefaultValues | Commission Implementing Regulation (EU) 2025/2621 as Regards the Establishment of Default Values for the Carbon Border Adjustment Mechanism, and Annex I Default Values by Country, Version 1 (4 February 2026) |  | not found: search by title |
+| 1.4.IronSteelCBAM | EC2025Downstream | Proposal for a Regulation Amending Regulation (EU) 2023/956 as Regards the Extension of Its Scope to Certain Downstream Goods and Anti-Circumvention Measures |  | not found: search by title |
+| 1.4.IronSteelCBAM | ELP2026 | EU CBAM: Draft Rules on Carbon Price Paid in a Third Country Released: Implications for Indian Exporters |  | not found: search by title |
+| 1.4.IronSteelCBAM | EU2023Transitional | Commission Implementing Regulation (EU) 2023/1773 of 17 August 2023 Laying Down the Rules for the Application of Regulation (EU) 2023/956 as Regards Reporting Obligations for the Purposes of the Carbon Border Adjustment Mechanism during the Transitional Period |  | not found: search by title |
+| 1.4.IronSteelCBAM | EU2025Accreditation | Commission Delegated Regulation (EU) 2025/2551 of 20 November 2025 Supplementing Regulation (EU) 2023/956 by Specifying the Conditions for Granting Accreditation to Verifiers |  | not found: search by title |
+| 1.4.IronSteelCBAM | EU2025CertPrice | Commission Implementing Regulation (EU) 2025/2548 of 10 December 2025 as Regards the Calculation and Publication of the Price of CBAM Certificates |  | not found: search by title |
+| 1.4.IronSteelCBAM | EU2025Downstream | Proposal for a Regulation of the European Parliament and of the Council Amending Regulation (EU) 2023/956 as Regards the Extension of Its Scope to Downstream Goods and Anti-Circumvention Measures |  | not found: search by title |
+| 1.4.IronSteelCBAM | EU2025FreeAllocation | Commission Implementing Regulation (EU) 2025/2620 of 16 December 2025 as Regards the Calculation of the Free Allocation Adjustment to the Number of CBAM Certificates to Be Surrendered |  | not found: search by title |
+| 1.4.IronSteelCBAM | EU2025Methods | Commission Implementing Regulation (EU) 2025/2547 of 10 December 2025 Laying Down Rules for the Application of Regulation (EU) 2023/956 as Regards the Methods for the Calculation of Emissions Embedded in Goods |  | not found: search by title |
+| 1.4.IronSteelCBAM | EU2025Review | Report from the Commission to the European Parliament and the Council on the Application of the Regulation on the Carbon Border Adjustment Mechanism |  | not found: search by title |
+| 1.4.IronSteelCBAM | EU2025Verification | Commission Implementing Regulation (EU) 2025/2546 of 10 December 2025 on the Application of the Principles for Verification of Declared Embedded Emissions Pursuant to Regulation (EU) 2023/956 |  | not found: search by title |
+| 1.4.IronSteelCBAM | IEA2020 | Iron and Steel Technology Roadmap: Towards More Sustainable Steelmaking |  | not found: search by title |
+| 1.4.IronSteelCBAM | Maliszewska2025 | Trade and Development Chart: CBAM's Impact on Exports to the EU |  | not found: search by title |
+| 1.4.IronSteelCBAM | WTOShrimp1998 | United States: Import Prohibition of Certain Shrimp and Shrimp Products |  | not found: search by title |
+| 1.4.IronSteelCBAM | WorldBankCBAMIndex | Relative CBAM Exposure Index |  | not found: search by title |
 | 6.1.PolicyEquivalentCarbonPriceAndCES | greenstone2019rps | Do Renewable Portfolio Standards Deliver Cost-Effective Carbon Abatement? |  | not found: search by title |
 | 1.1.OpenEconomyCarbonPricing | AldyPizer2015 | The Competitiveness Impacts of Climate Change Mitigation Policies | https://doi.org/10.1086/683305 | library login needed |
 | 1.1.OpenEconomyCarbonPricing | Armington1969 | A Theory of Demand for Products Distinguished by Place of Production | https://doi.org/10.2307/3866403 | library login needed |
@@ -96,26 +96,26 @@
 | 1.2.FeebatesAndOutputBasedRebating | Goulder2022 | China's Unconventional Nationwide CO2 Emissions Trading System: Cost-Effectiveness and Distributional Impacts | https://doi.org/10.1016/j.jeem.2021.102561 | library login needed |
 | 1.2.FeebatesAndOutputBasedRebating | Olson1965 | The Logic of Collective Action: Public Goods and the Theory of Groups | https://doi.org/10.4159/9780674041660 | library login needed |
 | 1.2.FeebatesAndOutputBasedRebating | PizerZhang2018 | China's New National Carbon Market | https://doi.org/10.1257/pandp.20181029 | library login needed |
-| 1.3.IronSteelCBAM | CaronRauschWinchester2015 | Leakage from Sub-National Climate Policy: The Case of California's Cap-and-Trade Program | https://doi.org/10.5547/01956574.36.2.8 | library login needed |
-| 1.3.IronSteelCBAM | Fowlie2009 | Incomplete Environmental Regulation, Imperfect Competition, and Emissions Leakage | https://doi.org/10.1257/pol.1.2.72 | library login needed |
-| 1.3.IronSteelCBAM | KortumWeisbach2017 | The Design of Border Adjustments for Carbon Prices | https://doi.org/10.17310/ntj.2017.2.07 | library login needed |
-| 1.3.IronSteelCBAM | OECD2023 | Effective Carbon Rates 2023: Pricing Greenhouse Gas Emissions through Taxes and Emissions Trading | https://doi.org/10.1787/b84d5b36-en | library login needed |
-| 1.4.CarbonConsumptionTax | Decoster2010 | How Regressive Are Indirect Taxes? A Microsimulation Analysis for Five European Countries | https://doi.org/10.1002/pam.20494 | library login needed |
-| 1.4.CarbonConsumptionTax | EurostatAEA | Air Emissions Accounts by NACE Rev. 2 Activity, env\_ac\_ainah\_r2 | https://doi.org/10.2908/ENV_AC_AINAH_R2 | library login needed |
-| 1.4.CarbonConsumptionTax | EurostatCOICOP | Final Consumption Expenditure of Households by Consumption Purpose (COICOP 3 Digit), nama\_10\_co3\_p3 | https://doi.org/10.2908/NAMA_10_CO3_P3 | library login needed |
-| 1.4.CarbonConsumptionTax | EurostatFIGARO | EU Inter-Country Input-Output Table at Basic Prices, Product by Product (2022 and Onwards) (FIGARO), naio\_10\_fcp\_ip4 | https://doi.org/10.2908/NAIO_10_FCP_IP4 | library login needed |
-| 1.4.CarbonConsumptionTax | EurostatGHGFP | Greenhouse Gas Emission Footprints (in CO$_2$ Equivalent, FIGARO Application), env\_ac\_ghgfp | https://doi.org/10.2908/ENV_AC_GHGFP | library login needed |
-| 1.4.CarbonConsumptionTax | EurostatHBS | Household Budget Survey: Structure of Consumption Expenditure by Income Quintile and COICOP Consumption Purpose (hbs\_str\_t223) and Mean Consumption Expenditure by Income Quintile (hbs\_exp\_t133), 2020 Wave | https://doi.org/10.2908/HBS_STR_T223 | library login needed |
-| 1.4.CarbonConsumptionTax | EurostatPop | Population Change: Demographic Balance and Crude Rates at National Level, demo\_gind | https://doi.org/10.2908/DEMO_GIND | library login needed |
-| 1.4.CarbonConsumptionTax | EurostatTax | Main National Accounts Tax Aggregates, gov\_10a\_taxag | https://doi.org/10.2908/GOV_10A_TAXAG | library login needed |
-| 1.4.CarbonConsumptionTax | Helm2012 | The Carbon Crunch: How We're Getting Climate Change Wrong, and How to Fix It | https://doi.org/10.12987/yale/9780300186598.001.0001 | library login needed |
-| 1.4.CarbonConsumptionTax | KeenSmith2006 | VAT Fraud and Evasion: What Do We Know and What Can Be Done? | https://doi.org/10.17310/ntj.2006.4.07 | library login needed |
-| 1.4.CarbonConsumptionTax | LevinsonOBrien2019 | Environmental Engel Curves: Indirect Emissions of Common Air Pollutants | https://doi.org/10.1162/rest_a_00736 | library login needed |
-| 1.4.CarbonConsumptionTax | McAusland2021 | Carbon taxes and footprint leakage: Spoilsport effects | https://doi.org/10.1016/j.jpubeco.2021.104531 | library login needed |
-| 1.4.CarbonConsumptionTax | Pizer2002 | Combining price and quantity controls to mitigate global climate change | https://doi.org/10.1016/S0047-2727(01)00118-9 | library login needed |
-| 1.4.CarbonConsumptionTax | Scuderi2022 | `Provisions Primarily of a Fiscal Nature': Time to Dispel Doubts | https://doi.org/10.54648/ecta2022026 | library login needed |
-| 1.4.CarbonConsumptionTax | Weitzman1974 | Prices vs. Quantities | https://doi.org/10.2307/2296698 | library login needed |
-| 1.4.CarbonConsumptionTax | Weitzman2014 | Can Negotiating a Uniform Carbon Price Help to Internalize the Global Warming Externality? | https://doi.org/10.1086/676039 | library login needed |
+| 1.3.CarbonConsumptionTax | Decoster2010 | How Regressive Are Indirect Taxes? A Microsimulation Analysis for Five European Countries | https://doi.org/10.1002/pam.20494 | library login needed |
+| 1.3.CarbonConsumptionTax | EurostatAEA | Air Emissions Accounts by NACE Rev. 2 Activity, env\_ac\_ainah\_r2 | https://doi.org/10.2908/ENV_AC_AINAH_R2 | library login needed |
+| 1.3.CarbonConsumptionTax | EurostatCOICOP | Final Consumption Expenditure of Households by Consumption Purpose (COICOP 3 Digit), nama\_10\_co3\_p3 | https://doi.org/10.2908/NAMA_10_CO3_P3 | library login needed |
+| 1.3.CarbonConsumptionTax | EurostatFIGARO | EU Inter-Country Input-Output Table at Basic Prices, Product by Product (2022 and Onwards) (FIGARO), naio\_10\_fcp\_ip4 | https://doi.org/10.2908/NAIO_10_FCP_IP4 | library login needed |
+| 1.3.CarbonConsumptionTax | EurostatGHGFP | Greenhouse Gas Emission Footprints (in CO$_2$ Equivalent, FIGARO Application), env\_ac\_ghgfp | https://doi.org/10.2908/ENV_AC_GHGFP | library login needed |
+| 1.3.CarbonConsumptionTax | EurostatHBS | Household Budget Survey: Structure of Consumption Expenditure by Income Quintile and COICOP Consumption Purpose (hbs\_str\_t223) and Mean Consumption Expenditure by Income Quintile (hbs\_exp\_t133), 2020 Wave | https://doi.org/10.2908/HBS_STR_T223 | library login needed |
+| 1.3.CarbonConsumptionTax | EurostatPop | Population Change: Demographic Balance and Crude Rates at National Level, demo\_gind | https://doi.org/10.2908/DEMO_GIND | library login needed |
+| 1.3.CarbonConsumptionTax | EurostatTax | Main National Accounts Tax Aggregates, gov\_10a\_taxag | https://doi.org/10.2908/GOV_10A_TAXAG | library login needed |
+| 1.3.CarbonConsumptionTax | Helm2012 | The Carbon Crunch: How We're Getting Climate Change Wrong, and How to Fix It | https://doi.org/10.12987/yale/9780300186598.001.0001 | library login needed |
+| 1.3.CarbonConsumptionTax | KeenSmith2006 | VAT Fraud and Evasion: What Do We Know and What Can Be Done? | https://doi.org/10.17310/ntj.2006.4.07 | library login needed |
+| 1.3.CarbonConsumptionTax | LevinsonOBrien2019 | Environmental Engel Curves: Indirect Emissions of Common Air Pollutants | https://doi.org/10.1162/rest_a_00736 | library login needed |
+| 1.3.CarbonConsumptionTax | McAusland2021 | Carbon taxes and footprint leakage: Spoilsport effects | https://doi.org/10.1016/j.jpubeco.2021.104531 | library login needed |
+| 1.3.CarbonConsumptionTax | Pizer2002 | Combining price and quantity controls to mitigate global climate change | https://doi.org/10.1016/S0047-2727(01)00118-9 | library login needed |
+| 1.3.CarbonConsumptionTax | Scuderi2022 | `Provisions Primarily of a Fiscal Nature': Time to Dispel Doubts | https://doi.org/10.54648/ecta2022026 | library login needed |
+| 1.3.CarbonConsumptionTax | Weitzman1974 | Prices vs. Quantities | https://doi.org/10.2307/2296698 | library login needed |
+| 1.3.CarbonConsumptionTax | Weitzman2014 | Can Negotiating a Uniform Carbon Price Help to Internalize the Global Warming Externality? | https://doi.org/10.1086/676039 | library login needed |
+| 1.4.IronSteelCBAM | CaronRauschWinchester2015 | Leakage from Sub-National Climate Policy: The Case of California's Cap-and-Trade Program | https://doi.org/10.5547/01956574.36.2.8 | library login needed |
+| 1.4.IronSteelCBAM | Fowlie2009 | Incomplete Environmental Regulation, Imperfect Competition, and Emissions Leakage | https://doi.org/10.1257/pol.1.2.72 | library login needed |
+| 1.4.IronSteelCBAM | KortumWeisbach2017 | The Design of Border Adjustments for Carbon Prices | https://doi.org/10.17310/ntj.2017.2.07 | library login needed |
+| 1.4.IronSteelCBAM | OECD2023 | Effective Carbon Rates 2023: Pricing Greenhouse Gas Emissions through Taxes and Emissions Trading | https://doi.org/10.1787/b84d5b36-en | library login needed |
 | 6.1.PolicyEquivalentCarbonPriceAndCES | Labandeira2017 | A Meta-Analysis on the Price Elasticity of Energy Demand | https://doi.org/10.1016/j.enpol.2017.01.002 | library login needed |
 | 6.1.PolicyEquivalentCarbonPriceAndCES | Montgomery1972 | Markets in Licenses and Efficient Pollution Control Programs | https://doi.org/10.1016/0022-0531(72)90049-X | library login needed |
 | 6.1.PolicyEquivalentCarbonPriceAndCES | ParryBlackVernon2021 | Still Not Getting Energy Prices Right: A Global and Country Update of Fossil Fuel Subsidies | https://doi.org/10.5089/9781513595405.001.a001 | library login needed |
@@ -200,25 +200,25 @@
 | 1.2.FeebatesAndOutputBasedRebating | EU2025Omnibus | Regulation (EU) 2025/2083 of 8 October 2025 Amending Regulation (EU) 2023/956 as Regards Simplifying and Strengthening the Carbon Border Adjustment Mechanism | http://data.europa.eu/eli/reg/2025/2083/oj |
 | 1.2.FeebatesAndOutputBasedRebating | Steffen2020 | Estimating the Cost of Capital for Renewable Energy Projects | https://www.sciencedirect.com/science/article/pii/S0140988320301237/pdf |
 | 1.2.FeebatesAndOutputBasedRebating | GoulderHafsteadWilliams2016 | General equilibrium impacts of a federal clean energy standard | https://doi.org/10.3386/w19847 |
-| 1.3.IronSteelCBAM | EU2025Defaults | Commission Implementing Regulation (EU) 2025/2621 of 16 December 2025 Laying Down Rules for the Application of Regulation (EU) 2023/956 as Regards the Establishment of Default Values | http://data.europa.eu/eli/reg_impl/2025/2621/oj |
-| 1.3.IronSteelCBAM | EU2026DraftCarbonPrice | Draft Commission Implementing Regulation Laying Down Rules for the Application of Regulation (EU) 2023/956 as Regards the Conversion of the Carbon Price Paid in a Third Country into a Corresponding Reduction in the Number of CBAM Certificates to Be Surrendered, the Evidence of Payment of That Carbon Price, the Qualifications of the Independent Person and Conditions to Ascertain Its Independence and Qualifications | https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14830 |
-| 1.3.IronSteelCBAM | MehlingRitz2023 | From Theory to Practice: Determining Emissions in Traded Goods under a Border Carbon Adjustment | https://academic.oup.com/oxrep/article-pdf/39/1/123/49117387/grac043.pdf |
-| 1.3.IronSteelCBAM | Boehringer2022NCC | Potential Impacts and Challenges of Border Carbon Adjustments | https://www.nature.com/articles/s41558-021-01250-z.pdf |
-| 1.3.IronSteelCBAM | Beaufils2023 | Assessing Different European Carbon Border Adjustment Mechanism Implementations and Their Impact on Trade Partners | https://www.nature.com/articles/s43247-023-00788-4.pdf |
-| 1.3.IronSteelCBAM | Magacho2024 | Impacts of the CBAM on EU Trade Partners: Consequences for Developing Countries | https://figshare.com/articles/journal_contribution/Impacts_of_the_CBAM_on_EU_trade_partners_consequences_for_developing_countries/22623340 |
-| 1.3.IronSteelCBAM | Eicke2021 | Pulling up the Carbon Ladder? Decarbonization, Dependence, and Third-Country Risks from the European Carbon Border Adjustment Mechanism | https://www.sciencedirect.com/science/article/pii/S2214629621003339/pdf |
-| 1.3.IronSteelCBAM | PerdanaVielle2022 | Making the EU Carbon Border Adjustment Mechanism Acceptable and Climate Friendly for Least Developed Countries | https://doi.org/10.1016/j.enpol.2022.113245 |
-| 1.3.IronSteelCBAM | ZhongPei2022 | Beggar Thy Neighbor? On the Competitiveness and Welfare Impacts of the EU's Proposed Carbon Border Adjustment Mechanism | https://doi.org/10.2139/ssrn.3891356 |
-| 1.3.IronSteelCBAM | UNCTAD2021 | A European Union Carbon Border Adjustment Mechanism: Implications for Developing Countries | https://doi.org/10.60644/5579 |
-| 1.3.IronSteelCBAM | Sandbag2024 | A Scrap Game: Impacts of the EU Carbon Border Adjustment Mechanism | https://doi.org/10.2139/ssrn.5002753 |
-| 1.3.IronSteelCBAM | CaronRausch2013 | A global general equilibrium analysis of the effects of the border carbon adjustment | https://doi.org/10.2139/ssrn.4622236 |
-| 1.4.CarbonConsumptionTax | KeenLockwood2006 | Is the VAT a Money Machine? | https://doi.org/10.82444/warw.33588109 |
-| 1.4.CarbonConsumptionTax | Rennert2022 | Comprehensive evidence implies a higher social cost of CO$_2$ | https://www.nature.com/articles/s41586-022-05224-9.pdf |
-| 1.4.CarbonConsumptionTax | Sager2019 | Income inequality and carbon consumption: Evidence from Environmental Engel curves | http://eprints.lse.ac.uk/102561/1/Sager_InequalityCarbonConsumption_manuscript.pdf |
-| 1.4.CarbonConsumptionTax | Feindt2021 | Understanding regressivity: Challenges and opportunities of European carbon pricing | https://www.sciencedirect.com/science/article/pii/S0140988321004266/pdf |
-| 1.4.CarbonConsumptionTax | GoulderParry2008 | Instrument Choice in Environmental Policy | https://doi.org/10.2139/ssrn.1117566 |
-| 1.4.CarbonConsumptionTax | FischerNewell2008 | Environmental and technology policies for climate mitigation | http://hdl.handle.net/10161/6623 |
-| 1.4.CarbonConsumptionTax | ChiappinelliNeuhoff2020 | Time-Consistent Carbon Pricing: The Role of Carbon Contracts for Differences | https://doi.org/10.2139/ssrn.3576402 |
+| 1.3.CarbonConsumptionTax | KeenLockwood2006 | Is the VAT a Money Machine? | https://doi.org/10.82444/warw.33588109 |
+| 1.3.CarbonConsumptionTax | Rennert2022 | Comprehensive evidence implies a higher social cost of CO$_2$ | https://www.nature.com/articles/s41586-022-05224-9.pdf |
+| 1.3.CarbonConsumptionTax | Sager2019 | Income inequality and carbon consumption: Evidence from Environmental Engel curves | http://eprints.lse.ac.uk/102561/1/Sager_InequalityCarbonConsumption_manuscript.pdf |
+| 1.3.CarbonConsumptionTax | Feindt2021 | Understanding regressivity: Challenges and opportunities of European carbon pricing | https://www.sciencedirect.com/science/article/pii/S0140988321004266/pdf |
+| 1.3.CarbonConsumptionTax | GoulderParry2008 | Instrument Choice in Environmental Policy | https://doi.org/10.2139/ssrn.1117566 |
+| 1.3.CarbonConsumptionTax | FischerNewell2008 | Environmental and technology policies for climate mitigation | http://hdl.handle.net/10161/6623 |
+| 1.3.CarbonConsumptionTax | ChiappinelliNeuhoff2020 | Time-Consistent Carbon Pricing: The Role of Carbon Contracts for Differences | https://doi.org/10.2139/ssrn.3576402 |
+| 1.4.IronSteelCBAM | EU2025Defaults | Commission Implementing Regulation (EU) 2025/2621 of 16 December 2025 Laying Down Rules for the Application of Regulation (EU) 2023/956 as Regards the Establishment of Default Values | http://data.europa.eu/eli/reg_impl/2025/2621/oj |
+| 1.4.IronSteelCBAM | EU2026DraftCarbonPrice | Draft Commission Implementing Regulation Laying Down Rules for the Application of Regulation (EU) 2023/956 as Regards the Conversion of the Carbon Price Paid in a Third Country into a Corresponding Reduction in the Number of CBAM Certificates to Be Surrendered, the Evidence of Payment of That Carbon Price, the Qualifications of the Independent Person and Conditions to Ascertain Its Independence and Qualifications | https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14830 |
+| 1.4.IronSteelCBAM | MehlingRitz2023 | From Theory to Practice: Determining Emissions in Traded Goods under a Border Carbon Adjustment | https://academic.oup.com/oxrep/article-pdf/39/1/123/49117387/grac043.pdf |
+| 1.4.IronSteelCBAM | Boehringer2022NCC | Potential Impacts and Challenges of Border Carbon Adjustments | https://www.nature.com/articles/s41558-021-01250-z.pdf |
+| 1.4.IronSteelCBAM | Beaufils2023 | Assessing Different European Carbon Border Adjustment Mechanism Implementations and Their Impact on Trade Partners | https://www.nature.com/articles/s43247-023-00788-4.pdf |
+| 1.4.IronSteelCBAM | Magacho2024 | Impacts of the CBAM on EU Trade Partners: Consequences for Developing Countries | https://figshare.com/articles/journal_contribution/Impacts_of_the_CBAM_on_EU_trade_partners_consequences_for_developing_countries/22623340 |
+| 1.4.IronSteelCBAM | Eicke2021 | Pulling up the Carbon Ladder? Decarbonization, Dependence, and Third-Country Risks from the European Carbon Border Adjustment Mechanism | https://www.sciencedirect.com/science/article/pii/S2214629621003339/pdf |
+| 1.4.IronSteelCBAM | PerdanaVielle2022 | Making the EU Carbon Border Adjustment Mechanism Acceptable and Climate Friendly for Least Developed Countries | https://doi.org/10.1016/j.enpol.2022.113245 |
+| 1.4.IronSteelCBAM | ZhongPei2022 | Beggar Thy Neighbor? On the Competitiveness and Welfare Impacts of the EU's Proposed Carbon Border Adjustment Mechanism | https://doi.org/10.2139/ssrn.3891356 |
+| 1.4.IronSteelCBAM | UNCTAD2021 | A European Union Carbon Border Adjustment Mechanism: Implications for Developing Countries | https://doi.org/10.60644/5579 |
+| 1.4.IronSteelCBAM | Sandbag2024 | A Scrap Game: Impacts of the EU Carbon Border Adjustment Mechanism | https://doi.org/10.2139/ssrn.5002753 |
+| 1.4.IronSteelCBAM | CaronRausch2013 | A global general equilibrium analysis of the effects of the border carbon adjustment | https://doi.org/10.2139/ssrn.4622236 |
 | 6.1.PolicyEquivalentCarbonPriceAndCES | Carhart2022 | Measuring Comprehensive Carbon Prices of National Climate Policies | https://doi.org/10.1080/14693062.2021.2014298 |
 | 6.1.PolicyEquivalentCarbonPriceAndCES | AldyPizer2016 | Alternative Metrics for Comparing Domestic Climate Change Mitigation Efforts and the Emerging International Climate Policy Architecture | http://nrs.harvard.edu/urn-3:HUL.InstRepos:22808338 |
 | 6.1.PolicyEquivalentCarbonPriceAndCES | MarcantoniniEllerman2015 | The Implicit Carbon Price of Renewable Energy Incentives in Germany | https://cadmus.eui.eu/bitstream/1814/30200/3/RSCAS_2014_28_REV.pdf |

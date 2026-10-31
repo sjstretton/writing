@@ -48,7 +48,7 @@ $ErrorActionPreference = 'Continue'
 
 $me      = Split-Path -Parent $MyInvocation.MyCommand.Path
 $scripts = Split-Path -Parent $me
-$base    = Join-Path (Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $scripts))) 'B Working Papers'   # Scripts\Papers -> repo\B Working Papers
+$base    = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $scripts))   # Scripts\Papers -> the repository root
 
 $reportDir = Join-Path $scripts 'Reports'
 if (-not (Test-Path -LiteralPath $reportDir)) { New-Item -ItemType Directory -Path $reportDir -Force | Out-Null }

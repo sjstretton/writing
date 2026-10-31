@@ -15,7 +15,7 @@ where status is one of
 Then build_download_list.py turns the CSVs into the .bat file and the manual list.
 
 Run from the repo root:
-  python "E Writing Instructions/Scripts/Papers/Steps/check_literature_access.py" --pdf-dir <folder>
+  python "H Writing Instructions/Scripts/Papers/Steps/check_literature_access.py" --pdf-dir <folder>
 """
 import argparse
 import csv
@@ -27,7 +27,19 @@ import urllib.request
 from pathlib import Path
 
 EMAIL = "sjstretton@gmail.com"
-SERIES = Path("B Working Papers")  # folders below are relative to this (see NUMBERING.md)
+# The paper roots, from the repo root: sections 1-4 and 5-7 (see NUMBERING.md). Folders below are relative to whichever
+# root holds them. The one place to change when D Modelling moves to its own repository.
+PAPER_ROOTS = [Path("C Policy and FInance"), Path("D Modelling")]
+
+
+def paper_dir(folder):
+    """The paper folder for a section/paper path such as 1.CarbonPricing/1.1.OpenEconomyCarbonPricing."""
+    for root in PAPER_ROOTS:
+        if (root / folder).is_dir():
+            return root / folder
+    return PAPER_ROOTS[0] / folder
+
+
 BIBS = {
     "1.CarbonPricing/1.1.OpenEconomyCarbonPricing": ["OpenEconomyCarbonPricing.bib", "1.Presentation/Brief-OpenEconomyCarbonPricing.bib"],
     "1.CarbonPricing/1.2.FeebatesAndOutputBasedRebating": ["FeebatesAndOutputBasedRebating.bib", "1.Presentation/Brief-FeebatesAndOutputBasedRebating.bib"],
@@ -134,7 +146,7 @@ def main():
     for folder, bibs in BIBS.items():
         entries = []
         for b in bibs:
-            p = SERIES / folder / b
+            p = paper_dir(folder) / b
             if p.exists():
                 entries += parse_bib(p)
         entries += [{"key": k, "title": t, "author": au, "doi": "", "url": "", "kind": "supplement"} for k, t, au in SUPPLEMENT.get(folder, [])]
@@ -171,7 +183,7 @@ def main():
             rows.append(row)
             print(f"{status:18} {e['key']}")
             time.sleep(0.3)
-        out = SERIES / folder / "5.Notes"
+        out = paper_dir(folder) / "5.Notes"
         out.mkdir(exist_ok=True)
         with open(out / f"Downloads-{Path(folder).name.split('.', 2)[-1]}.csv", "w", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=["key", "title", "doi", "url_tried", "status", "local_file"])

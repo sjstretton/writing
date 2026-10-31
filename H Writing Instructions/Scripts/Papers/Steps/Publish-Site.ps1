@@ -1,6 +1,14 @@
 #requires -Version 5.1
 <#
     Publish-Site.ps1
+
+    RETIRED (31 Oct 2026). Nothing calls this any more and it will not run
+    without -Legacy. The website is built by the Python scripts in
+    Scripts\Website (Compile-Website.bat at the top of the repository, or
+    Engine\Run-Website.ps1), which put into E Website\papers only the files the
+    site's pages link to. This script copies every paper there and rewrites a
+    research.qmd the site no longer has, so running it would undo that.
+
     Everything between "the PDFs exist" and "the site is live and correct".
 
       1  PUBLISH   each <paper>\2.Source\<Name>.pdf is copied to
@@ -31,8 +39,15 @@ param(
     [switch]$Apply,
     [switch]$SkipRender,
     [ValidateSet('docx', 'pdf')][string]$Prefer = 'docx',
-    [switch]$NoFixLinks
+    [switch]$NoFixLinks,
+    [switch]$Legacy
 )
+
+if (-not $Legacy) {
+    Write-Host 'Publish-Site.ps1 is retired: the website is built by Compile-Website.bat (Scripts\Website).'
+    Write-Host 'Nothing was done. Pass -Legacy to run it anyway.'
+    return
+}
 
 $ErrorActionPreference = 'Stop'
 
@@ -61,14 +76,20 @@ function Is-ExcludedTheme([string]$name) {
 }
 
 
+# The paper roots, from the repository root: sections 1-4, sections 5-7, and the writing outside the
+# series (8.x). The one place to change them in this script: D Modelling is due to move to its own repository.
+$PaperRootNames = @('C Policy and FInance', 'D Modelling', 'F Other Writing')
+
+# The paper roots that exist, as full paths under the repository root.
+function Get-PaperRoots([string]$repo) {
+    return @($PaperRootNames | ForEach-Object { Join-Path $repo $_ } | Where-Object { Test-Path -LiteralPath $_ })
+}
+
 function Find-WritingRoot([string]$s) {
-    # Walk up to the repository root (the folder holding .git), then use its B Working Papers folder.
+    # Walk up to the repository root (the folder holding .git). The papers are in the paper roots under it.
     $d = $s
     for ($i = 0; $i -lt 8; $i++) {
-        if (Test-Path -LiteralPath (Join-Path $d '.git')) {
-            $w = Join-Path $d 'B Working Papers'
-            if (Test-Path -LiteralPath $w) { return $w } else { return $null }
-        }
+        if (Test-Path -LiteralPath (Join-Path $d '.git')) { return $d }
         $p = Split-Path -Parent $d; if (-not $p -or $p -eq $d) { break }; $d = $p
     }
     return $null
@@ -86,10 +107,12 @@ function Core-Name([string]$n) {
 }
 
 $base = Find-WritingRoot $PSScriptRoot
-if (-not $base) { Write-Host 'Could not find "A Writing".'; return }
+if (-not $base) { Write-Host 'Could not find the repository root (the folder holding .git).'; return }
+$PaperRoots = @(Get-PaperRoots $base)
+if ($PaperRoots.Count -eq 0) { Write-Host ('None of the paper roots is in {0}: {1}' -f $base, ($PaperRootNames -join ', ')); return }
 
-$web = Get-ChildItem -LiteralPath $base -Directory | Where-Object { $_.Name -match $WebFolderPattern } | Select-Object -First 1
-if (-not $web) { Write-Host 'No Website folder found at the root of A Writing.'; return }
+$web = Get-Item -LiteralPath (Join-Path $base 'E Website') -EA SilentlyContinue
+if (-not $web) { Write-Host 'No E Website folder at the repository root.'; return }
 $webDir = $web.FullName
 $pdfDir = Join-Path $webDir $PdfSubfolder
 
@@ -179,7 +202,7 @@ function Find-PaperFolders([string]$root) {
     return $found
 }
 
-$paperFolders = @(Find-PaperFolders $base | Sort-Object FullName)
+$paperFolders = @($PaperRoots | ForEach-Object { Find-PaperFolders $_ } | Sort-Object FullName)
 
 # A section overview is not a paper folder: it is a single Word file named
 # <n>.0.<Name>.docx sitting at the top of the section it describes. Those are
@@ -207,7 +230,7 @@ function Find-LooseOverviews([string]$root) {
     }
     return $found
 }
-$looseOverviews = @(Find-LooseOverviews $base | Sort-Object FullName)
+$looseOverviews = @($PaperRoots | ForEach-Object { Find-LooseOverviews $_ } | Sort-Object FullName)
 
 # What gets published, per paper, first match wins:
 #   <paper>\<Core>.docx          the master Word file - the normal case
@@ -373,7 +396,7 @@ $oldQmd = Join-Path $base 'research.qmd'
 if ((Test-Path -LiteralPath $oldQmd) -and (Test-Path -LiteralPath $srcQmd)) {
     $arch = Join-Path $reportDir 'research-qmd-superseded.txt'
     if ($Apply) { Move-Item -LiteralPath $oldQmd -Destination $arch -Force }
-    Log '    the old research.qmd at the root of A Writing was superseded - moved to _Reports\'
+    Log '    the old research.qmd at the repository root was superseded - moved to _Reports\'
 }
 if (-not (Test-Path -LiteralPath $srcQmd)) {
     Log ('    NOTE: {0}\research.qmd is missing - put it there first.' -f $web.Name)
@@ -410,7 +433,7 @@ if (-not (Test-Path -LiteralPath $srcQmd)) {
                 Remove-Item -LiteralPath $tmpQmd -Force -EA SilentlyContinue
             }
         }
-        $where = if ($ovw) { $ovw.Name + '\ResearchOverview.docx' } else { 'ResearchOverview.docx at the root of A Writing' }
+        $where = if ($ovw) { $ovw.Name + '\ResearchOverview.docx' } else { 'ResearchOverview.docx at the repository root' }
         Log ('    {0} written, links pointing at {1}' -f $where, $SiteUrl)
 
         # The Word index used to be called Research.docx and used to live at the

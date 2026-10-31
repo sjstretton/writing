@@ -82,5 +82,5 @@ Deployment needs the FTP credentials and WinSCP on Stephen's Windows machine (`P
 ## Website and scripts
 
 - The Quarto site source is in `E Website`, and the automation engine is in `H Writing Instructions/Scripts`. Check their READMEs before changing them.
-- The website scripts (`Scripts/Website/`) use the current folders. The paper automation engine (`Scripts/Papers/`) still hard-codes old paths (`B Working Papers`, `E Writing Instructions`); don't run it without checking.
+- The website scripts (`Scripts/Website/`) and the paper automation engine (`Scripts/Papers/`) both use the current folders. The engine walks `C Policy and FInance`, `D Modelling` and `F Other Writing` (listed once per script as `$PaperRootNames` in `Scripts/Papers/Steps/`). It was updated on 31 Oct 2026 without being run on Windows, so preview first (`Run/Preview-All.bat`, `Run/Final-Check.bat`) before any run that changes files.
 - The master for each paper is its `.qmd`; its first YAML line says `# MASTER`. Web copies under `E Website/policy/` and `E Website/modelling/` say `# GENERATED - NOT THE MASTER` and are rewritten on every compile: never edit them.

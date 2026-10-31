@@ -1,6 +1,7 @@
 # Paper folder layout
 
-The standard shape for every folder under `A Writing\<theme>\<paper>`.
+The standard shape for every paper folder: `<paper root>\<section>\<paper>`, or
+`F Other Writing\<paper>`.
 
 ```
 <PaperName>.<ext>          the core paper, alone at root
@@ -66,37 +67,27 @@ splitting.
 ## Where things live
 
 ```
-A Writing\
-    research.qmd             the portfolio index
-    0.Website\               the Quarto site - never touched by the scripts
-    1.ClimateAndFiscalPolicy\
-    2.FinanceAndRisk\
-    3.SovereignIncentivesAndMDBs\
-    4.Modelling\
-    5A.Analytics-ExciseDiagnostic\      5B.Analytics-PolicyChoice\
-    5C.Analytics-Dashboards\            5D.Analytics-GreenGrowth\
-    5E.AnalyticsMacroFiscal\
-    6.Books\   7.Philosophy\   8.Politics\   10.Overview\
-    9.Scripts\               the live tool set
-        Preview-Rename.bat     Run-Rename.bat     Rename-Folders.ps1
-        Preview-Reorganize.bat Run-Reorganize.bat Reorganize-Papers.ps1
-        Preview-Convert.bat    Run-Convert.bat    Convert-Documents.ps1
-        Preview-RenameFiles.bat Run-RenameFiles.bat Rename-Files.ps1
-        Tidy-Scripts.bat       Tidy-Scripts.ps1
-        _CoreFiles.txt  _PaperFolderLayout.md  _PaperIndex.csv
-        _Reports\             conversion and reorganise reports
-        MaintenanceAndReference\   earlier versions, kept
-        XArchiveDeleteable\        spent scripts and old reports
+<repo>\
+    C Policy and FInance\     sections 1-4: 1.CarbonPricing\ ... 4.SovereignIncentives\
+    D Modelling\              sections 5-7: 5.Modelling\ 6.ModularUpgrades\ 7.AdditionalAnalytics\
+    F Other Writing\          papers outside the series, 8.1... 8.7, with no section level
+    E Website\                the Quarto site - built by Compile-Website.bat, not by these scripts
+    H Writing Instructions\Scripts\
+        Website\              the website build (site_config.py lists the two paper roots it reads)
+        Papers\               this engine: Run\ Engine\ Steps\ Reference\ Reports\
 ```
 
-Themes are **discovered, not listed**: any folder at the root whose name starts
-with a number — a trailing letter is allowed, so `5A.` works — is a theme,
-unless it normalises to Overview, Books, Scripts, Website or Additional. So
-renumbering or splitting a theme needs no edit anywhere.
+The three paper roots are listed once at the top of each script in `Steps\`
+(`$PaperRootNames`), so moving one (D Modelling is due to go to its own
+repository) is a one-line edit per script. The roots themselves are never
+renamed or reorganised; everything below them is.
 
-`A Writing` itself is found by looking for numbered folders, and the scripts
-treat whatever folder they sit in as the housekeeping folder — so `9.Scripts`
-can be renamed or renumbered freely.
+Sections are **discovered, not listed**: any folder at the top of a paper root
+whose name starts with a number — a trailing letter is allowed, so `5A.` works —
+is a section, unless it normalises to Overview, Books, Scripts, Website or
+Additional. A root whose folders are papers themselves (F Other Writing) is
+treated as one section. So renumbering or splitting a section needs no edit
+anywhere.
 
 ## File naming
 
@@ -144,7 +135,7 @@ them instead.
 
 Not converted: `9.Archive`, `4.ExternalPapers`, `2.Source`, `0.Website`, the
 scripts folder, anything starting with `_` or `.`, README files, and files
-loose at the root of `A Writing`.
+loose at the top of a paper root.
 
 ## Running it
 
@@ -195,7 +186,7 @@ When the script guesses wrong, or finds nothing, add a line to
 1.ClimateAndFiscalPolicy\1.2.FeebatesAndOutputBasedRebating | WP6- PowerSectorFeebates.docx
 ```
 
-Folder path relative to `A Writing`, a pipe, the exact filename. Re-run.
+Folder path relative to its paper root, a pipe, the exact filename. Re-run.
 An override beats every rule, including the BP exclusion.
 
 ## Images
@@ -219,7 +210,7 @@ and v1.12 stays.
 
 ## Tidying up the scripts themselves
 
-The first thing a reorganise run does is sweep the root of `A Writing` into
+The first thing a reorganise run does is sweep the top of each paper root into
 the scripts folder:
 
 - the scripts, `_CoreFiles.txt`, this file, and any stray `_ReorganizeLog.txt`
@@ -237,7 +228,7 @@ Inside a paper folder, stray copies of `Reorganize-*.ps1`, `Reorganize-*.bat`,
 old runs clean up after themselves wherever they landed.
 
 A copy of the script sitting in `_superseded` or `_Scripts` refuses to run and
-says so, rather than treating its own folder as `A Writing`.
+says so, rather than treating its own folder as a paper root.
 
 `Tidy-Scripts.bat` is the manual sweep of the scripts folder itself: anything
 that is not one of the eight live files, plus reports older than the newest

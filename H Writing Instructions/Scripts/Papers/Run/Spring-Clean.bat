@@ -1,5 +1,5 @@
 @echo off
-cd /d "%~dp0..\..\..\..\B Working Papers"
+cd /d "%~dp0..\..\..\.."
 cls
 echo.
 echo Spring clean of the scripts folder. It lists what it would remove and asks

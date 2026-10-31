@@ -5,7 +5,7 @@
     so that nothing you do today is written on top of yesterday's work from
     another machine.
 
-        1  find the repository - the folder above "A Writing" that holds .git
+        1  find the repository - the folder above the scripts that holds .git
         2  report what is uncommitted here, if anything
         3  fetch, then pull with --rebase so local commits sit on top of the
            remote ones rather than making a merge bubble
@@ -30,7 +30,7 @@ $ErrorActionPreference = 'Continue'
 
 $me      = Split-Path -Parent $MyInvocation.MyCommand.Path
 $scripts = Split-Path -Parent $me
-$base    = Join-Path (Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $scripts))) 'B Working Papers'   # Scripts\Papers -> repo\B Working Papers
+$base    = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $scripts))   # Scripts\Papers -> the repository root
 
 function Banner([string]$t) {
     Write-Host ''

@@ -1,6 +1,6 @@
 @echo off
 setlocal
-cd /d "%~dp0..\..\..\..\B Working Papers"
+cd /d "%~dp0..\..\..\.."
 cls
 echo.
 echo   ============================================================
@@ -10,7 +10,7 @@ echo.
 echo     1  Rename-Folders      number.CamelCase folder names
 echo     2  Sync-Masters        retire stale derivatives
 echo     3  Convert-Documents   a .qmd and a .docx for every paper
-echo     4  Run-Website         publish, render, link check
+echo     4  Run-Website         build the website, as Compile-Website.bat does
 echo     5  Tidy-Scripts        spring clean of the scripts folder
 echo.
 echo   Reorganize-Papers, Rename-Files and Repair-Encoding are no

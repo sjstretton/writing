@@ -8,20 +8,32 @@ Order matters, because each assumes the one before it has settled:
 1. `Rename-Folders.ps1` — folder names to `<number>.CamelCase`
 2. `Sync-Masters.ps1` — retires a `.docx` or PDF older than its `.qmd` master
 3. `Convert-Documents.ps1` — gives every paper both a `.qmd` and a `.docx`
-4. `Publish-Site.ps1` — copy to the site, render, check every link
-5. `Publish-Ftp.ps1` — upload `_site` to the web server (called by `End-Day.ps1`)
+4. the website build — `Engine\Run-Website.ps1` runs the Python scripts in
+   `Scripts\Website` (the same build as `Compile-Website.bat`), then `quarto render`
+5. `Publish-Ftp.ps1` — upload `E Website\_site` to the web server (called by `End-Day.ps1`)
+
+Every step that walks the papers reads the three paper roots at the top of the
+repository — `C Policy and FInance` (sections 1–4), `D Modelling` (5–7) and
+`F Other Writing` (8.x) — listed once near the top of each script as
+`$PaperRootNames`. When `D Modelling` moves to its own repository, delete it
+from that list in each script (and from `PARTS` in `Scripts\Website\site_config.py`).
+Paths in the reports are relative to the repository root.
+
+`Publish-Site.ps1` is retired and refuses to run without `-Legacy`: it copied
+every paper into the site's `papers\` folder, while the current site holds only
+the files its pages link to.
 
 Three more are in the workflow only with `-Full`, from `Run\Organise.bat`:
 `Reorganize-Papers.ps1` (files into the standard slots, rebuilds
 `Reference\_PaperIndex.csv`), `Rename-Files.ps1` (filename convention, flattens
 `media\media\`) and `Repair-Encoding.ps1` (undoes double-encoded UTF-8).
 
-`Build-Pdfs.ps1` builds a PDF per paper, each in its own killable process. The
-site publishes Word files, so it runs only with `Run-Website.ps1 -Pdf`.
+`Build-Pdfs.ps1` builds a PDF per paper, each in its own killable process. It
+runs only with `Run-Website.ps1 -Pdf`.
 
-`Publish-Ftp.ps1` reads its credentials from `Reference\_ftp.txt`, which
-`.gitignore` excludes, and falls back to the website folder's own `deploy.bat`
-when that file is not there.
+`Publish-Ftp.ps1` reads its credentials from `FTP-Login.txt` at the repository
+root (the same file `Push-Website.bat` uses), which `.gitignore` excludes, and
+uploads with WinSCP.
 
 `ConvertOne-Pdf.ps1` converts exactly one document and exits. `Build-Pdfs.ps1`
 launches one copy per paper. That separation is what makes a per-document

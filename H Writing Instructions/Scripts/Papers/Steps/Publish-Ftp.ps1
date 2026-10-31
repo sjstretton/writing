@@ -37,26 +37,9 @@ $ErrorActionPreference = 'Continue'
 
 $me      = Split-Path -Parent $MyInvocation.MyCommand.Path      # ...\Steps
 $scripts = Split-Path -Parent $me                                # ...\<n>.Scripts
-$base    = Join-Path (Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $scripts))) 'B Working Papers'   # Scripts\Papers -> repo\B Working Papers                           # ...\A Writing
-
-function Find-WritingRoot([string]$s) {
-    # Walk up to the repository root (the folder holding .git), then use its B Working Papers folder.
-    $d = $s
-    for ($i = 0; $i -lt 8; $i++) {
-        if (Test-Path -LiteralPath (Join-Path $d '.git')) {
-            $w = Join-Path $d 'B Working Papers'
-            if (Test-Path -LiteralPath $w) { return $w } else { return $null }
-        }
-        $p = Split-Path -Parent $d; if (-not $p -or $p -eq $d) { break }; $d = $p
-    }
-    return $null
-}
-$found = Find-WritingRoot $me
-if ($found) { $base = $found }
-
-$web = Get-ChildItem -LiteralPath $base -Directory -EA SilentlyContinue |
-       Where-Object { $_.Name -match '^\d+[A-Za-z]?[.\s_-]+Website$' } | Select-Object -First 1
-if (-not $web) { Write-Host '   no Website folder at the root of A Writing'; exit 1 }
+$repo    = [IO.Path]::GetFullPath((Join-Path $scripts '..\..\..'))   # Scripts\Papers -> the repository root
+$web     = Get-Item -LiteralPath (Join-Path $repo 'E Website') -EA SilentlyContinue   # the website folder
+if (-not $web) { Write-Host ('   no E Website folder in {0}' -f $repo); exit 1 }
 
 $site = Join-Path $web.FullName '_site'
 if (-not (Test-Path -LiteralPath $site)) {
@@ -85,7 +68,7 @@ Write-Host ('   winscp : {0}' -f $winscp)
 
 # --- credentials --------------------------------------------------------------
 
-$cred = [IO.Path]::GetFullPath((Join-Path $scripts '..\..\..\FTP-Login.txt'))   # repository root
+$cred = Join-Path $repo 'FTP-Login.txt'   # at the repository root, git-ignored
 $cfg  = @{}
 if (Test-Path -LiteralPath $cred) {
     foreach ($line in (Get-Content -LiteralPath $cred -EA SilentlyContinue)) {

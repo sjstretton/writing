@@ -19,7 +19,7 @@
 
     ANYTHING ELSE GOES
         Any other folder in <number>.Scripts, any file sitting at the top of it, and
-        any file in Run\, Engine\ or Steps\ that is not a .ps1, .bat or .md,
+        any file in Run\, Engine\ or Steps\ that is not a .ps1, .bat, .md or .py,
         is sent to the Recycle Bin. Reports older than the newest few go too.
         Old scripts are not kept: the layout above is the tool set, and a
         superseded copy of a script is a thing to be confused by later.
@@ -45,7 +45,7 @@ $scripts = Split-Path -Parent $me                             # ...\<number>.Scr
 
 $LayoutDirs = @('Run', 'Engine', 'Steps', 'Reference', 'Reports')
 $CodeDirs   = @('Run', 'Engine', 'Steps')
-$CodeExt    = @('.ps1', '.bat', '.md')
+$CodeExt    = @('.ps1', '.bat', '.md', '.py')   # .py: the literature scripts in Steps\
 $ReportKeep = 20
 
 # Reference data that belongs in Reference\ if it turns up loose.
@@ -118,7 +118,7 @@ $refSweep = Join-Path $scripts 'Reference'
 if (Test-Path -LiteralPath $refSweep) {
     foreach ($f in (Get-ChildItem -LiteralPath $refSweep -File -Force -EA SilentlyContinue)) {
         if ($SupersededReference -contains $f.Name) {
-            Doom $f.FullName 'superseded - the master status sheet is at the root of A Writing'
+            Doom $f.FullName 'superseded - the master status sheet is not kept in Reference'
         } elseif ($f.Name -match '^_PaperIndex-\d+\.csv$') {
             Doom $f.FullName 'a stray timestamped copy of the paper index'
         }

@@ -1,5 +1,5 @@
 @echo off
-cd /d "%~dp0..\..\..\..\B Working Papers"
+cd /d "%~dp0..\..\..\.."
 cls
 echo.
 echo Full workflow, PREVIEW only. Nothing is changed.

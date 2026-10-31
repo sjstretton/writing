@@ -6,7 +6,7 @@
       1  Rename-Folders      folder names to <number>.CamelCase
       2  Sync-Masters        retire derivatives older than their master
       3  Convert-Documents   every paper gets a .qmd and a .docx
-      4  Run-Website         publish, render, link check
+      4  Run-Website         build the website, as Compile-Website.bat does
       5  Tidy-Scripts        put the scripts folder back to the layout
 
     That is the daily run. Three more steps exist and are not in it:
@@ -47,7 +47,7 @@ $ErrorActionPreference = 'Continue'
 
 $me      = Split-Path -Parent $MyInvocation.MyCommand.Path
 $scripts = Split-Path -Parent $me
-$base    = Join-Path (Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $scripts))) 'B Working Papers'   # Scripts\Papers -> repo\B Working Papers
+$base    = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $scripts))   # Scripts\Papers -> the repository root
 $mode    = if ($Apply) { 'APPLY' } else { 'PREVIEW' }
 
 $reportDir = Join-Path $scripts 'Reports'
@@ -145,7 +145,7 @@ if ($SkipWebsite) {
 } elseif (-not (Test-Path -LiteralPath $runWeb)) {
     $results.Add([pscustomobject]@{ Step=$WebN; Name='Run-Website'; Status='missing'; Seconds=0; Note='not in Engine\' }) | Out-Null
 } else {
-    Banner ("step {0} of {1}   Run-Website.ps1   -   publish, render, link check" -f $WebN, $Total)
+    Banner ("step {0} of {1}   Run-Website.ps1   -   build the website" -f $WebN, $Total)
     $sw = [System.Diagnostics.Stopwatch]::StartNew()
     $err = $null
     try {

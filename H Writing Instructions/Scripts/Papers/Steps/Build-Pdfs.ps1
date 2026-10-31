@@ -49,14 +49,20 @@ function Is-ExcludedTheme([string]$name) {
 }
 
 
+# The paper roots, from the repository root: sections 1-4, sections 5-7, and the writing outside the
+# series (8.x). The one place to change them in this script: D Modelling is due to move to its own repository.
+$PaperRootNames = @('C Policy and FInance', 'D Modelling', 'F Other Writing')
+
+# The paper roots that exist, as full paths under the repository root.
+function Get-PaperRoots([string]$repo) {
+    return @($PaperRootNames | ForEach-Object { Join-Path $repo $_ } | Where-Object { Test-Path -LiteralPath $_ })
+}
+
 function Find-WritingRoot([string]$s) {
-    # Walk up to the repository root (the folder holding .git), then use its B Working Papers folder.
+    # Walk up to the repository root (the folder holding .git). The papers are in the paper roots under it.
     $d = $s
     for ($i = 0; $i -lt 8; $i++) {
-        if (Test-Path -LiteralPath (Join-Path $d '.git')) {
-            $w = Join-Path $d 'B Working Papers'
-            if (Test-Path -LiteralPath $w) { return $w } else { return $null }
-        }
+        if (Test-Path -LiteralPath (Join-Path $d '.git')) { return $d }
         $p = Split-Path -Parent $d; if (-not $p -or $p -eq $d) { break }; $d = $p
     }
     return $null
@@ -78,7 +84,9 @@ function Core-Name([string]$n) {
 $onWindows = if (Test-Path Variable:\IsWindows) { $IsWindows } else { $true }
 
 $base = Find-WritingRoot $PSScriptRoot
-if (-not $base) { Write-Host 'Could not find "A Writing".'; return }
+if (-not $base) { Write-Host 'Could not find the repository root (the folder holding .git).'; return }
+$PaperRoots = @(Get-PaperRoots $base)
+if ($PaperRoots.Count -eq 0) { Write-Host ('None of the paper roots is in {0}: {1}' -f $base, ($PaperRootNames -join ', ')); return }
 
 # Reports go to <scripts root>\Reports. The scripts root is the folder above
 # this one when that folder holds Engine\ - which is what marks it.
@@ -97,6 +105,7 @@ function Log($m) { $log.Add([string]$m) | Out-Null; Write-Host $m }
 $mode = if ($Apply) { 'APPLY' } else { 'PREVIEW' }
 Log ('=== Build PDFs  [{0}]   {1} ===' -f $mode, (Get-Date -Format 'yyyy-MM-dd HH:mm'))
 Log ('Base    : {0}' -f $base)
+Log ('Papers  : {0}' -f ($PaperRootNames -join ', '))
 Log ('Timeout : {0}s per document' -f $TimeoutSeconds)
 Log ''
 
@@ -138,7 +147,7 @@ function Find-PaperFolders([string]$root) {
 }
 
 $todo = @(); $fresh = 0; $noMaster = @()
-foreach ($p in (Find-PaperFolders $base | Sort-Object FullName)) {
+foreach ($p in ($PaperRoots | ForEach-Object { Find-PaperFolders $_ } | Sort-Object FullName)) {
     if ($Only -and $p.Name -notmatch $Only) { continue }
     $rel  = $p.FullName.Substring($base.Length).TrimStart('\', '/')
     $core = Core-Name $p.Name
@@ -182,7 +191,7 @@ if ($todo.Count -eq 0) {
         $tempRoot = $env:TEMP
         if (-not $tempRoot) { $tempRoot = [System.IO.Path]::GetTempPath() }
         $outFile = Join-Path $tempRoot ('pdfout-' + [guid]::NewGuid().ToString('N') + '.txt')
-        # Every path here contains spaces - "A Research", "A Writing". Start-Process
+        # Every path here contains spaces - "H Writing Instructions", "C Policy and FInance". Start-Process
         # joins an argument array with plain spaces and quotes nothing, so the
         # child saw "...\Documents\A" and refused it as a file without a .ps1
         # extension. The arguments are quoted individually and passed as one string.

@@ -5,12 +5,12 @@ The only files you double-click.
 **Every day**
 
 - `Start-Day.bat` — first thing: fetch and pull from GitHub so this copy is current. Commits nothing.
-- `End-Day.bat` — last thing: the full workflow, then commit / pull / push, then upload `_site` to the web server. In that order, because the site has to be built before it is committed and committed before it goes live.
+- `End-Day.bat` — last thing: the full workflow, then commit / pull / push, then upload `E Website\_site` to the web server. In that order, because the site has to be built before it is committed and committed before it goes live.
 
 **When you need them**
 
 - `Master-All.bat` — the workflow on its own, without the git and FTP steps: folder names, stale derivatives, convert, website, tidy.
-- `Master-Website.bat` — PDFs and website only. This is the one to use after editing papers.
+- `Master-Website.bat` — the website build only (the same as `Compile-Website.bat` at the top of the repository). Nothing is uploaded.
 - `Preview-All.bat`, `Preview-Website.bat` — the same two, reporting without changing anything.
 - `Organise.bat` — `Master-All` with the three structural steps put back (Reorganize-Papers, Rename-Files, Repair-Encoding). After importing a batch of new material, not otherwise.
 - `Spring-Clean.bat` — puts the scripts folder back to its five folders and bins the rest. It asks first.

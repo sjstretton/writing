@@ -1,6 +1,6 @@
 @echo off
 setlocal
-cd /d "%~dp0..\..\..\..\B Working Papers"
+cd /d "%~dp0..\..\..\.."
 cls
 echo.
 echo   ============================================================
