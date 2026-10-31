@@ -18,7 +18,7 @@ Read the file that matches your task before you start. Files in this folder (`A 
 | `PAPERS.md` | Prioritised papers, introductory papers, concept papers and position papers. |
 | `A Writing Instructions/Writing Standards/` | Writing principles, writing types, the paper standard, AI tells to avoid, exemplars and templates. |
 | `C Research Proposal/` | The PhD research proposals. Its `README.md` tracks their status. |
-| `B Working Papers/` | The papers, numbered by section (1.x to 5.x; 6.Additional holds the rest). Also the website (`7.Website`) and scripts (`8.Scripts`). |
+| `B Working Papers/` | The papers, numbered by section (1.x to 5.x; 6.Additional holds the rest). Also the website (`A.Website`) and scripts (`B.Scripts`). |
 | `D Climate Econ Course/` | Course materials. |
 | `A Writing Instructions/Templates and Info/` | Older Word templates (briefing, one-page pitch). |
 | `A Writing Instructions/Claude + Scripts/Setup Claude/_admin/` | `about-me.md` and `voice.md`: who Stephen is and how he sounds. Read before drafting anything in his name. |
@@ -43,19 +43,19 @@ Follow these steps in order. A paper is not finished until it passes the checkli
 - Make the changes asked for. Don't reorganise, rename or delete files unless asked.
 - Read a file before editing it, and match the surrounding style and formatting.
 - Don't invent citations, figures, quotes or results. Mark anything uncertain.
-- Don't commit secrets, credentials or personal data. The FTP login lives in `B Working Papers/8.Scripts/Reference/_ftp.txt`, which is git-ignored.
+- Don't commit secrets, credentials or personal data. The FTP login lives in `B Working Papers/B.Scripts/Reference/_ftp.txt`, which is git-ignored.
 - Treat World Bank internal or confidential material as non-public. Never publish it (see below).
 
 ## Files
 
-- Keep the paper folder layout: `1.Presentation`, `2.Source`, `3.RelatedPiecesAndLinks` (older folders still say `3.BackgroundPapers`), `5.Notes`, `8.PreviousVersions`, `9.Archive`, plus `RelatedWork.md` for related pieces that live in other main folders. Convention: `B Working Papers/8.Scripts/Reference/_PaperFolderLayout.md`.
+- Keep the paper folder layout: `1.Presentation`, `2.Source`, `3.RelatedPiecesAndLinks` (older folders still say `3.BackgroundPapers`), `5.Notes`, `8.PreviousVersions`, `9.Archive`, plus `RelatedWork.md` for related pieces that live in other main folders. Convention: `B Working Papers/B.Scripts/Reference/_PaperFolderLayout.md`.
 - The `.qmd` file at the paper's root is the master unless its README says otherwise. Where qmd and docx disagree (status report H13), ask which is the master before editing.
 - Versions: the master carries `version:` in its YAML; older versions go in `8.PreviousVersions/` as `<Name>-v0.1.<ext>`, `<Name>-v0.2.<ext>`. Before a major rewrite, move the current master there under its version number and bump the master.
 - New papers start from `A Writing Instructions/Writing Standards/templates/`.
 
 ## Publishing (standing authorization)
 
-Stephen has given standing authorization (29 Oct 2026) for agents to publish to his own websites without asking each time. That currently means the Quarto site in `B Working Papers/7.Website`. Publishing means editing the site source, rendering it and deploying it.
+Stephen has given standing authorization (29 Oct 2026) for agents to publish to his own websites without asking each time. That currently means the Quarto site in `B Working Papers/A.Website`. Publishing means editing the site source, rendering it and deploying it.
 
 This authorization holds only when every item below is true. If any fails, stop and ask.
 
@@ -66,16 +66,16 @@ This authorization holds only when every item below is true. If any fails, stop 
 
 Social media, email and any channel other than Stephen's own websites still need his explicit approval each time.
 
-Deployment needs the FTP credentials and WinSCP on Stephen's Windows machine (`7.Website/deploy.bat`). A cloud agent without them should commit and push the site source, log the change as "ready to deploy", and say so.
+Deployment needs the FTP credentials and WinSCP on Stephen's Windows machine (`A.Website/deploy.bat`). A cloud agent without them should commit and push the site source, log the change as "ready to deploy", and say so.
 
 ## Git
 
 - Work on the branch you were assigned. Don't push to other branches.
 - Write clear, descriptive commit messages.
 - Don't open pull requests unless asked.
-- Don't commit generated output (`_site/`, `8.Scripts/Reports/`) unless the repo already tracks it.
+- Don't commit generated output (`_site/`, `B.Scripts/Reports/`) unless the repo already tracks it.
 
 ## Website and scripts
 
-- The Quarto site source is in `B Working Papers/7.Website`, and the automation engine is in `B Working Papers/8.Scripts`. Check their READMEs before changing them.
+- The Quarto site source is in `B Working Papers/A.Website`, and the automation engine is in `B Working Papers/B.Scripts`. Check their READMEs before changing them.
 - Many scripts still hard-code old paths (status report H5). Don't run them without checking.

@@ -10,8 +10,8 @@ You are writing one paper in Stephen J. Stretton's research repo at `/home/user/
 5. **Your series architecture doc** (`B Working Papers/2.FinanceAndRisk/SeriesArchitecture.md` or `B Working Papers/3.SovereignIncentives/SeriesArchitecture.md`). It fixes your paper's title, question, answer, draft abstract, outlines, shared terms and citation keys. Follow it; you may improve the title, abstract and outline if the argument demands it, but keep the question, answer and shared terms, and say what you changed in your final report.
 6. Models of the finished form, from series 1: `B Working Papers/1.ClimateAndFiscalPolicy/1.2.FeebatesAndOutputBasedRebating/1.Presentation/Brief-FeebatesAndOutputBasedRebating.qmd` (brief) and `.../FeebatesAndOutputBasedRebating.qmd` (working paper: YAML with version, keywords, jel, crossref; numbered sections; propositions with proofs in an appendix; calibration with code in `2.Source/`). Skim them for form; do not copy content.
 7. Source digests (read the sections relevant to your paper; they cite paths to the originals, which you should open for the passages you use):
-   - `B Working Papers/9.ResearchTracking/Series2-3-SourceDigests/digest-papers.md` (papers, archives, repo search)
-   - `B Working Papers/9.ResearchTracking/Series2-3-SourceDigests/digest-books.md` (the books *Time and Chance* and *The Right Policy at the Wrong Time*; §11 maps chapters to papers)
+   - `B Working Papers/C.Notes/Series2-3-SourceDigests/digest-papers.md` (papers, archives, repo search)
+   - `B Working Papers/C.Notes/Series2-3-SourceDigests/digest-books.md` (the books *Time and Chance* and *The Right Policy at the Wrong Time*; §11 maps chapters to papers)
    - The book itself: `B Working Papers/6.Additional/6.Books/6.1.TimeAndChance/TimeAndChance.qmd` (read the chapters the digest maps to your paper).
 
 ## What to produce (in your paper folder)

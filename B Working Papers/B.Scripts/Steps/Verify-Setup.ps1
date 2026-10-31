@@ -292,7 +292,7 @@ if (-not $git) {
             $tracked = @(& git ls-files 2>&1 | Where-Object { $_ -match 'deploy\.bat$' })
             if ($tracked.Count -gt 0) {
                 Note 'deploy.bat is still tracked and holds the FTP password:'
-                Log  '              git rm --cached "A Writing/7.Website/deploy.bat"'
+                Log  '              git rm --cached "A Writing/A.Website/deploy.bat"'
                 Log  '           and change the password on the server - the old one is in the history.'
             } else { OK 'deploy.bat is not tracked' }
         } finally { Pop-Location }

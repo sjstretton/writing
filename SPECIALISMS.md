@@ -69,7 +69,7 @@ Stephen's own FY26 work plan already names this ground: "Taxation theory, especi
 
 **2.1 Property, land and wealth tax.** ◐
 Tax what cannot move or does not respond: land, rent, monopoly and externalities. In Stephen's words, "taxation is a corrective to the system of property rights". The case for a land value tax works at rates near 100%, but such rates are unfair and disruptive in transition. Stephen's fix is two-parameter taxation, a marginal rate plus a "norm". First replace council tax and business rates like for like, then tax all of the *increase* in land rent (Mill's "unearned increment"). Paper 1.4 extends the idea into a "reverse wealth tax" on land, meaning an allowance with land value tax above it, and into corporate tax on supernormal profit above a normal-return allowance. All of it is compatible with free movement of capital and people. A Drive note adds an "unproductive-wealth tax", citing Kalecki's argument that a wealth tax need not reduce investment. The design is strong in draft; property tax as such (valuation, administration, developing-country practice) is thin.
-*Sources:* 1.4 *Taxing Rent, Not Effort* (`1B.OtherFiscalPolicy/1.4.RentTax/RentTax.qmd`; master file to confirm, H13); Drive: `A0-Writing100 Ideas.txt` (ideas 25, 31–47), `Operating_system_CW_Edits.docx`.
+*Sources:* 1.4 *Taxing Rent, Not Effort* (`6.Additional/1.OtherFiscalPolicy/1.4.RentTax/RentTax.qmd`; master file to confirm, H13); Drive: `A0-Writing100 Ideas.txt` (ideas 25, 31–47), `Operating_system_CW_Edits.docx`.
 
 **2.2 The basis of tax and the game theory of tax policy.** ●
 An origin-based tax on a mobile base invites a race to the bottom; a destination-based tax can turn it into a race to the top. VAT moved taxation to a destination basis, and carbon pricing should follow. Origin-based carbon pricing makes one rate do two jobs, the production incentive and the consumption signal. Separate them: a feebate on production and a destination charge on consumption, collected through VAT or a forward obligation on energy suppliers. Under destination charges "each exporter's most competitive feebate rate equals the charge in its markets", so raising the charge pulls exporters' rates up. The same logic applies to profit taxes: consumer locations are "pretty much fixed", as land is. This is the core of the 1.1 journal paper.
@@ -85,7 +85,7 @@ Climate investment-needs estimates are exogenous and linear. They ignore that po
 
 **2.5 Coal contracts and stranded assets.** ◐ *(added)*
 Retiring legacy coal power purchase agreements saves money before any climate benefit is counted. The leftover capital can be settled through securitized bonds. India is the case. Background notes only.
-*Sources:* 1.5 (`1B.OtherFiscalPolicy/1.5.StrandedByContractReformingLegacyCoalPPAs/`).
+*Sources:* 1.5 (`6.Additional/1.OtherFiscalPolicy/1.5.StrandedByContractReformingLegacyCoalPPAs/`).
 
 ---
 
@@ -112,7 +112,7 @@ The finance minister's main lever is expectations: setting long-term price floor
 
 **3.5 Collective action stylized facts.** ●
 Climate is three collective action problems, not one: between countries, within countries and over time. Economics has focused almost entirely on the first. The "double incentive problem" follows: countries need an incentive to impose incentives on themselves. Technology diffuses from leaders to followers (the toy model), and the "tragedy of the horizons" adds the time dimension to the prisoner's dilemma. "I will if you will" commitment auctions are one design response.
-*Sources:* `7.Website/papers/GeoprosperityIntro.docx` (appendix C.3); course module D; 5.4 toy model; Drive: `A3 Research Plan.docx`, `Geoprosperity_WorkingPaperSeries.docx` (Official Use Only).
+*Sources:* `A.Website/papers/GeoprosperityIntro.docx` (appendix C.3); course module D; 5.4 toy model; Drive: `A3 Research Plan.docx`, `Geoprosperity_WorkingPaperSeries.docx` (Official Use Only).
 
 **3.6 Internal political economy stylized facts.** ◐
 Six drivers decide whether carbon pricing survives in a country: fiscal pressure, salience, vested interests, distributive design, institutional quality and energy structure. Concentrated losers block reform, and reversal risk discounts the effective price. The material proposes a metric built on these drivers.

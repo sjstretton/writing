@@ -15,7 +15,7 @@ where status is one of
 Then build_download_list.py turns the CSVs into the .bat file and the manual list.
 
 Run from the repo root:
-  python "B Working Papers/8.Scripts/Steps/check_literature_access.py" --pdf-dir <folder>
+  python "B Working Papers/B.Scripts/Steps/check_literature_access.py" --pdf-dir <folder>
 """
 import argparse
 import csv

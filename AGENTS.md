@@ -20,7 +20,7 @@ Stephen is easily overwhelmed by volume, so planning output must stay short and 
 - Make the changes asked for. Don't reorganise, rename or delete files unless asked.
 - Read a file before editing it, and match its style.
 - Don't invent citations, figures, quotes or results. Mark anything uncertain.
-- Don't commit secrets or credentials. The website's FTP login stays on Stephen's PC (`B Working Papers/8.Scripts/Reference/_ftp.txt`, git-ignored).
+- Don't commit secrets or credentials. The website's FTP login stays on Stephen's PC (`B Working Papers/B.Scripts/Reference/_ftp.txt`, git-ignored).
 - Treat World Bank internal or confidential material as non-public.
 - Paths in instructions are from the repo root unless the file says otherwise. Planning scripts run from `1 Planning Instructions/` (for example `python3 Scripts/update.py check`).
 

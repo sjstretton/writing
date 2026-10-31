@@ -33,7 +33,7 @@ Since 29 October 2026 the repo combines the former planning repo (`sjstretton/Pl
 | Folder | Contents |
 |---|---|
 | `A Writing Instructions` | `README.md`, `AGENTS.md`, `CLAUDE.md`, `NORMS.md`, `STRATEGY.md`, `PAPERS.md`, `TODO.md` and the paper status report for the writing; `Writing Standards/` (writing principles, writing types, the paper standard, AI tells, exemplars, the briefing-series specification and templates); `Templates and Info/` (Word templates: briefing, one-page pitch); `Claude + Scripts/` (shared Claude workspace: `Setup Claude/_admin/about-me.md` and `voice.md`, and scripts) |
-| `B Working Papers` | The papers, by section. Section 1 is the carbon-pricing series (1.1 overarching, 1.2 feebates, 1.3 CBAM, 1.6 carbon consumption tax, 1.7 total effective carbon price); `1B` other fiscal policy; 2 finance and risk; 3 sovereign incentives; 4 modelling; 5 analytics; 6 additional; `7.Website` the Quarto site; `8.Scripts` the automation engine; `9.ResearchTracking` |
+| `B Working Papers` | The papers, by section. Section 1 is the carbon-pricing series (1.1 overarching, 1.2 feebates, 1.3 CBAM, 1.6 carbon consumption tax, 1.7 total effective carbon price); 2 finance and risk; 3 sovereign incentives; 4 modelling (CPAT); 5 analytics (tools); 6 additional (other fiscal policy, books, philosophy, politics). Admin folders carry letters: `A.Website` the Quarto site; `B.Scripts` the automation engine; `C.Notes` working notes and source digests |
 | `C Research Proposal` | PhD research proposals and the application status |
 | `D Climate Econ Course` | Climate-fiscal economics course materials, topics A–G |
 

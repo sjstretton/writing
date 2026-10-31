@@ -7,7 +7,7 @@ Stable permalinks, one per paper and form, overwritten on each publish:
 
 Section 5 papers are working paper and slides only (no brief); missing briefs are reported and skipped.
 
-Run from B Working Papers/7.Website:  python publish_series.py
+Run from B Working Papers/A.Website:  python publish_series.py
 Then: quarto render, and deploy.bat (on Stephen's machine) to upload _site.
 Log every publish in A Writing Instructions/Writing Standards/publishing-log.md.
 """

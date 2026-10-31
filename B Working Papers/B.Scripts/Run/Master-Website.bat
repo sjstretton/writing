@@ -8,7 +8,7 @@ echo     A Writing  -  PDFs and website
 echo   ============================================================
 echo.
 echo     1  Build-Pdfs      a PDF for every paper with a master .docx
-echo     2  Publish-Site    copy into 7.Website\papers, write
+echo     2  Publish-Site    copy into A.Website\papers, write
 echo                        0.Overview\ResearchOverview.docx, quarto render,
 echo                        then check every link
 echo.

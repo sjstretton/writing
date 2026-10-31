@@ -32,7 +32,7 @@ Details for each item: `C PhD Application/PhD-Application-Status.md`.
 
 ### Priority 3: paper upgrades
 
-- [ ] **Carbon-pricing series (1.1, 1.2, 1.3, 1.6, 1.7): read and approve.** Done 29 Oct by agents: five Climate Fiscal Policy Briefs, five working papers (1.1 v0.3, 1.2 v0.3, 1.3 v0.3, 1.6 v0.2, 1.7 v0.3) with models, proofs, calibrations and literature appendices, five 4-slide decks, all in `B Working Papers/7.Website/papers/` — S reads, starting with 1.1 for Dirk — 5 Nov
+- [ ] **Carbon-pricing series (1.1, 1.2, 1.3, 1.6, 1.7): read and approve.** Done 29 Oct by agents: five Climate Fiscal Policy Briefs, five working papers (1.1 v0.3, 1.2 v0.3, 1.3 v0.3, 1.6 v0.2, 1.7 v0.3) with models, proofs, calibrations and literature appendices, five 4-slide decks, all in `B Working Papers/A.Website/papers/` — S reads, starting with 1.1 for Dirk — 5 Nov
 - [ ] **Finance-and-risk and sovereign-incentives series (2.1, 2.2, 3.1, 3.2, 3.3): read and peer review.** Done 29 Oct by agents: five briefs (Climate Fiscal Policy Briefs 2.1–3.3) and five working papers with models and verified bibliographies; overviews 2.0 and 3.0 rewritten; CIT moved to 3.2, SLL to 3.3. No decks or peer-review notes yet. Start with 3.1 and 2.1 (proposal 1) — S reads, A peer-reviews and upgrades — 13 Nov
 - [ ] Decks for the five series 2–3 papers and two theme decks: done 29 Oct. Referee reports still to do — A — after Stephen's read
 - [ ] **Sections 4 (CPAT) and 5 (analytics tools): read.** Done 29 Oct by agents: ten medium-length papers (4.1–4.7, 5.1–5.3) and overviews 4.0, 5.0. Decide whether any country results from the private tools repository may be used; answer the README questions (AI tools used, Egypt figures in 4.3, air-pollution module credit) — S — 13 Nov
@@ -52,8 +52,8 @@ Details for each item: `C PhD Application/PhD-Application-Status.md`.
 - [ ] H1: rotate the FTP password on the server. The old one is still in git history — S — now
 - [ ] H6: fix stale folder paths in `PaperTracker.xlsx` — A
 
-- [ ] Run `B Working Papers/8.Scripts/Run/Download-Literature.bat` on your PC (100 open-access papers the cloud session could not fetch, across all five working papers) — S — Fri 30 Oct (T59)
-- [ ] Manual downloads, for later: `B Working Papers/8.Scripts/Reference/Literature-Downloads.md` (125: library login, browser-only or not found) — S — later
+- [ ] Run `B Working Papers/B.Scripts/Run/Download-Literature.bat` on your PC (100 open-access papers the cloud session could not fetch, across all five working papers) — S — Fri 30 Oct (T59)
+- [ ] Manual downloads, for later: `B Working Papers/B.Scripts/Reference/Literature-Downloads.md` (125: library login, browser-only or not found) — S — later
 
 ## Decisions needed from Stephen
 
@@ -70,7 +70,7 @@ Details for each item: `C PhD Application/PhD-Application-Status.md`.
 - [x] 29 Oct 2026 — Repo combined: planning (0–3) and writing (A–F) under one README/AGENTS — A
 - [x] 29 Oct 2026 — `SPECIALISMS.md` written. Stephen decided: "three constraints" through-line yes; AI-risk angle is incentive and institutional design with systemic financial risk as the analogy; politics essays (8.1–8.3) and the *Finding Frodo* deck stay off the academic profile for now — A/S
 - [x] 29 Oct 2026 — 4.1 (TECP) moved into the series as 1.7; qmd is master (v0.2) — A
-- [x] 29 Oct 2026 — Section 1 reorganised: 1.6 created; `1B.OtherFiscalPolicy` holds 1.4 and 1.5; every series folder has `8.PreviousVersions` with v0.1/v0.2 labels, `3.RelatedPiecesAndLinks` and `RelatedWork.md`; series map in `1.ClimateAndFiscalPolicy/RelatedWork.md` — A
+- [x] 29 Oct 2026 — Section 1 reorganised: 1.6 created; `6.Additional/1.OtherFiscalPolicy` holds 1.4 and 1.5; every series folder has `8.PreviousVersions` with v0.1/v0.2 labels, `3.RelatedPiecesAndLinks` and `RelatedWork.md`; series map in `1.ClimateAndFiscalPolicy/RelatedWork.md` — A
 - [x] 29 Oct 2026 — Template paper for 1.1 read (Keen, Parry and Roaf 2021); notes in `1.1/5.Notes/Review-2026-10-29.md` §6 — A
 - [x] 29 Oct 2026 — Proposal 1 cleaned: drafting text and appendices B–E removed; original kept in `C Research Proposal/PreviousVersions/` — A
 - [x] 29 Oct 2026 — "Today" tab added to the master plan sheet (short daily view) — A

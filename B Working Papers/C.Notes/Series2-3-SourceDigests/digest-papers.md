@@ -428,7 +428,7 @@ Relevant to 1.5, and to the coal side of NCV.
 
 **(a) Archived CIT (2024; also 2.2 master l.90 and *Time and Chance* ch. 20).** Applies "where incentives needed are greater than funds available for profit sharing". Define, say, the remaining Amazon as worth $1tn and pay the *interest* on it into the beneficiary account. Each country holds two accounts: the beneficiary account and the NCV account. Declared "beyond scope".
 
-**(b) GeoProsperity intro (`7.Website/papers/GeoprosperityIntro.docx`, appendix C).**
+**(b) GeoProsperity intro (`A.Website/papers/GeoprosperityIntro.docx`, appendix C).**
 - "Recognize notional climate assets, starting with forests and coal… rewarded by a small interest rate." Brazil's Amazon at $1tn, "as might China's and India's coal reserves".
 - Framed as recognising **long-term stock effects** in strategic country partnerships, alongside an all-in energy rate and a "global long-term borrowing facility, akin to a global treasury".
 - Appendix A of the same document holds the three-tier guarantee, in which the WB rating is "used but not used up".
@@ -447,7 +447,7 @@ Relevant to 1.5, and to the coal side of NCV.
 - **The resource being spent** is the gap between the risk the WB actually bears and the risk the market prices. It needs no appropriation.
 - **[CHECK]** Is the $1bn a year of capacity a *flow* of new guarantees or a *stock* cap on outstanding exposure? If guaranteed loans are long-dated, savings build up beyond $300m. The 3% saving per guaranteed dollar is asserted. The chapter cites the companion volume for the claim that the forest's value exceeds offset prices.
 
-**(d) Research page (`7.Website/research.qmd` l.76–78) and `3.1…/README.md`.**
+**(d) Research page (`A.Website/research.qmd` l.76–78) and `3.1…/README.md`.**
 - The problem: marginal reductions measured against an unobservable counterfactual neglect absolute emissions, long-run stock–flow performance and **stocks never cut**.
 - The proposal: a notional climate balance tied to carbon stocks *and* long-run emissions performance, turned into guarantee support rather than cash, and used up by BAU emissions.
 - **The balance is borrowable and avoids the fiscal-transfer problem** in donor capitals. It **decays if nothing is done**, so the incentive exists from year 1.
@@ -589,7 +589,7 @@ Relevant to 1.5, and to the coal side of NCV.
 | `…/6.1.TimeAndChance/3.BackgroundPapers/Background-ResponseToPeerReview.qmd`, `6.Books/Archive/Peer_Review_Time_and_Chance.qmd` | Peer-review critiques of the guarantee and incentive claims (not read in full). Check before reusing book claims. |
 | `…/6.Books/Archive/Combined_Manuscript_Archive.qmd`; `6.1…/9.Archive/TimeAndChance-MarkdownEdition.*` | Older book manuscripts with the same NCCV chapter (numbered 11 in the archive). |
 | `B Working Papers/6.Additional/6.Books/6.2.CarbonPricingRightPolicyWrongTime/CarbonPricingRightPolicyWrongTime.qmd` | Companion book. Grep hits on guarantees, SLL and CfDs. Claimed source of the "forest value exceeds offset price" and tipping-point marginal-hectare arguments. |
-| `B Working Papers/7.Website/papers/GeoprosperityIntro.docx` | NCV for forests *and coal* ($1tn each); appendix A three-tier guarantee ("used but not used up"); appendix B 100% clean-energy programme; series plan (Papers 5–8). |
+| `B Working Papers/A.Website/papers/GeoprosperityIntro.docx` | NCV for forests *and coal* ($1tn each); appendix A three-tier guarantee ("used but not used up"); appendix B 100% clean-energy programme; series plan (Papers 5–8). |
 | `B Working Papers/3.SovereignIncentives/3.1.NotionalCapitalisedValueAndGuarantees/README.md` | 3.1 status: no draft. Former title "Guarantee-Based International Incentives for the Delivery of Strong NDCs". |
 | `B Working Papers/3.SovereignIncentives/3.2.SustainabilityLinkedLending/SustainabilityLinkedLending.pdf` | **[INTERNAL]** PDF of 32sll. TODO H2: remove from the web server by hand. |
 | `C Research Proposal/PreviousVersions/Oxford_DPhil_…-before-cleanup.docx` | Appendices B–D: "climate allowance … linked to MDB guarantee capacity"; analytical layers; claims turned into hypotheses. |
@@ -606,7 +606,7 @@ Relevant to 1.5, and to the coal side of NCV.
 | `…/3.3.SLIDIs/4.ExternalPapers/` | Kölbel and Lambillon 2022; Löfqvist et al. 2023 (forest restoration finance); Rojas-Marchini and Carmona 2024 (biodiversity offsets); MIGA ED engagement 2023 and Brookings MIGA/Roadmap 2023 (likely internal); "Funding low-carbon investments in the absence of a carbon tax". |
 | `B Working Papers/2.FinanceAndRisk/2.2.ClimateInvestmentTrust/9.Archive/0. MobilisingPrivateFinance…docx` | **Trusted intermediary pricing rule; tier-2 = country CIT buffer account.** |
 | `…/2.2…/9.Archive/Structured Finance for Global Clean Energy Abundance.docx` | "Virtual capital"; four investment classes; three fund accounts incl. fiscal-resilience collateral. |
-| `…/2.2…/9.Archive/SubstitutingPPAs.docx`; `1B.OtherFiscalPolicy/1.5…/3.BackgroundPapers/Background-IndiaNote.qmd`, `Background-ShortIndiaNote.qmd` | Coal PPA substitution; India guarantees and securitisation. |
+| `…/2.2…/9.Archive/SubstitutingPPAs.docx`; `6.Additional/1.OtherFiscalPolicy/1.5…/3.BackgroundPapers/Background-IndiaNote.qmd`, `Background-ShortIndiaNote.qmd` | Coal PPA substitution; India guarantees and securitisation. |
 | `…/2.2…/1.Presentation/Briefing-CIT.qmd`, `Briefing-TechnicalSummaryCIT.qmd`; `…/3.BackgroundPapers/Background-ShortClimateCafe.qmd`, `Background-GlobalSolarEconomy.qmd` | Repo copies of 22bcit, 22tech, 22cafe and 22solar. |
 | `…/2.1…/1.Presentation/Briefing-REPaymentIntermediaryFacility.qmd`; `8.PreviousVersions/REPIF-PolicyBrief-merged.qmd`, `SPIFA-Brief-previous.qmd`, `ClimateFinanceIntermediationForCleanPower-2026-09-17.qmd` | REPIF and SPIFA copies; the pre-merge 2.1. |
 | `…/2.1…/4.ExternalPapers/Ratha-Innovative-financing-for-development.pdf` | Ratha on future-flow securitisation (the ABS precedent). |

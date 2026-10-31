@@ -1,6 +1,6 @@
 # Literature downloads for the carbon-pricing series
 
-- **Automatic, 100 papers:** free PDFs the cloud session could not reach. Run `B Working Papers/8.Scripts/Run/Download-Literature.bat` on your PC; it saves each into the paper's `4.ExternalPapers/` and prints FAILED for any that refuse (most publishers block automated downloads) and NOT A PDF for any link that returns a web page. At the end it opens `8.Scripts/Run/Literature-OpenInBrowser.html`, a clickable list of every paper that failed, to download by hand.
+- **Automatic, 100 papers:** free PDFs the cloud session could not reach. Run `B Working Papers/B.Scripts/Run/Download-Literature.bat` on your PC; it saves each into the paper's `4.ExternalPapers/` and prints FAILED for any that refuse (most publishers block automated downloads) and NOT A PDF for any link that returns a web page. At the end it opens `B.Scripts/Run/Literature-OpenInBrowser.html`, a clickable list of every paper that failed, to download by hand.
 - **Manual, 125 papers:** free-but-via-a-web-page, library login, or not found. For later.
 - **Already available to the agent, 11 papers:** nothing to do.
 

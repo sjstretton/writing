@@ -1,7 +1,7 @@
 # Rename this file to _ftp.txt and fill it in. It is excluded by .gitignore,
 # so what you put here never reaches GitHub.
 #
-# 7.Website\deploy.bat reads its FTP login from this file. Change the password
+# A.Website\deploy.bat reads its FTP login from this file. Change the password
 # on the server: the old one is in the repository's history.
 
 host     = ftp.example.com
