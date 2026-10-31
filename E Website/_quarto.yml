@@ -169,11 +169,26 @@ website:
         - section: "6. Modular Upgrades"
           href: modelling/6-modular-upgrades.qmd
           contents:
+            - section: "6.1 Measure Carbon Pricing by the Emissions It Cuts"
+              href: modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/working-paper.qmd
+            - section: "6.2 The CBAM Policy Tool"
+              href: modelling/6-modular-upgrades/CBAMPolicyTool/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.qmd
             - section: "6.3 Public Investment in CPAT"
               href: modelling/6-modular-upgrades/PublicInvestment/index.qmd
               contents:
                 - text: "Working paper"
                   href: modelling/6-modular-upgrades/PublicInvestment/working-paper.qmd
+            - section: "6.5 The Macro-Fiscal-Energy Scenario Tool"
+              href: modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/working-paper.qmd
         - modelling/7-analytics.qmd
         # END modelling sidebar
   page-footer:

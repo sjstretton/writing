@@ -1,50 +1,247 @@
 {
-  "series": "CPAT Companion Paper No. 6.2",
+  "series": "Climate Fiscal Policy Brief No. 6.2 · October 2026",
   "title": "The CBAM Policy Tool",
-  "subtitle": "Measuring exporters' exposure to the EU carbon border adjustment, and what domestic policy can do",
-  "message": "At €80 a tonne, Turkish hot-rolled steel declared at the default owes €107 a tonne in 2026 and €252 at full phase-in, close to half its price. Where a country has no default of its own, as Egypt has none for steel, verified emissions data are the biggest lever.",
-  "problem": {
-    "title": "The charge is large and arrives early",
-    "stats": [
-      {
-        "value": "€252",
-        "label": "per tonne of Turkish hot-rolled steel at full phase-in (46% of price)"
+  "slides": [
+    {
+      "type": "title",
+      "title": "The CBAM Policy Tool",
+      "subtitle": "What the EU's carbon border charge will cost exporters, and which lever cuts it",
+      "message": "For dirty goods most of the EU's border charge arrives in 2026. Verified data, cleaner production and a domestic carbon price can each cut it, but the right lever differs by product: for Egypt, data cut the charge on steel by about 90 percent and on urea by 13 percent.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "The EU's border charge is large, and for dirty goods most of it arrives in the first year",
+      "stats": [
+        {
+          "value": "€107",
+          "label": "per tonne of Turkish hot-rolled steel in 2026, declared at the EU default value"
+        },
+        {
+          "value": "€252",
+          "label": "per tonne at full phase-in (2034), 46% of its 2025 import price of €549"
+        },
+        {
+          "value": "42%",
+          "label": "of the final charge is already due in 2026: the phase-in only shields emissions up to the EU benchmark"
+        }
+      ],
+      "text": "Since January 2026 EU importers of steel, aluminum, cement, fertilizers, hydrogen and electricity owe certificates for embedded emissions; importers below 50 tonnes a year are exempt. A July 2026 proposal (not adopted) would end the phase-in in 2038, cutting the 2034 charge to €236.",
+      "source": "Reg. (EU) 2023/956 and 2025/2083; Impl. Reg. 2025/2620 and 2025/2621; Dir. 2023/959; COM(2026) 616. €80/tCO₂, stylized. Working paper 6.2, Table 3."
+    },
+    {
+      "type": "points",
+      "title": "Exporting governments control three levers on the bill",
+      "points": [
+        {
+          "lead": "Verified data.",
+          "text": "Without them the EU applies a country default plus a mark-up of 10% in 2026 rising to 30% from 2028 (1% for fertilizers)."
+        },
+        {
+          "lead": "Cleaner production.",
+          "text": "Every tonne of CO₂ cut per tonne of product saves the certificate price."
+        },
+        {
+          "lead": "A domestic carbon price.",
+          "text": "A price \"effectively paid\" is deducted one for one, and the money stays at home."
+        },
+        {
+          "lead": "But a rebated price earns nothing.",
+          "text": "The draft rules net off rebates and emissions below a baseline, so a feebate gets no deduction."
+        }
+      ],
+      "source": "Reg. (EU) 2025/2083, Art. 9; Impl. Reg. 2025/2621; draft implementing regulation Ares(2026)4841230, Arts 6 and 8."
+    },
+    {
+      "type": "points",
+      "title": "The tool turns the rules into a product-by-product, year-by-year bill a ministry can check",
+      "points": [
+        {
+          "lead": "Emissions from the bottom up:",
+          "text": "fuel for heat, fuel as reductant or feedstock, process CO₂, other gases and, for cement and fertilizers, electricity."
+        },
+        {
+          "lead": "Against the EU default:",
+          "text": "where the estimate is below the marked-up default, filing data pays."
+        },
+        {
+          "lead": "The charge each year:",
+          "text": "certificate price × emissions above the benchmark share still allocated free, less the deducted domestic price."
+        },
+        {
+          "lead": "A domestic price's effect, split:",
+          "text": "with €20 and a 10% cut in intensity the charge falls by a third, two-thirds of it from the deduction."
+        }
+      ],
+      "source": "Working paper 6.2, Method (five equations). Estimates are technology averages, not plant data."
+    },
+    {
+      "type": "figure",
+      "title": "Verified data and a €20 domestic price each cut the charge on Turkish steel by about €50 a tonne",
+      "image": "figures/fig1_charge_path.png",
+      "caption": "Turkish hot-rolled steel, €80/tCO₂, full phase-in: €252 at the default; €194 with data at the country average; €146 with data and a €20 domestic price. Dotted: the July 2026 proposal.",
+      "points": [
+        {
+          "lead": "€58 a tonne:",
+          "text": "what a plant at the country average saves by filing data."
+        },
+        {
+          "lead": "€127 million a year:",
+          "text": "moved home by a €20 price on three Turkish goods, 2025 volumes."
+        }
+      ],
+      "source": "Commission default values (Feb 2026 workbook); Eurostat Comext; working paper 6.2, Figure 1."
+    },
+    {
+      "type": "figure",
+      "title": "In Egypt, verified data would cut the charge on steel by about 90 percent, but on urea by only 13 percent",
+      "image": "figures/fig2_egypt_charges.png",
+      "caption": "Seven Egyptian exports, full phase-in, €80/tCO₂, 2025 volumes: €793 million a year at default values, €480 million with verified data where it pays. Illustrative tool results, not official estimates.",
+      "points": [
+        {
+          "lead": "Steel:",
+          "text": "€193m to €16m. No Egyptian default, so the \"other countries\" value of about 4 tCO₂/t applies."
+        },
+        {
+          "lead": "Clinker:",
+          "text": "€178m to €94m."
+        },
+        {
+          "lead": "Urea, the largest:",
+          "text": "€369m to €321m. The default is close to what plants emit."
+        }
+      ],
+      "source": "CBAM Policy Tool, Egypt application (corrected); Commission default values; Eurostat Comext. Working paper 6.2, Table 4."
+    },
+    {
+      "type": "table",
+      "title": "Egypt's steel estimate is uncertain, but verification pays at any plausible value",
+      "header": [
+        "Gas-based steel route (tCO₂/t)",
+        "Steel charge with verified data, 2025 (€m)",
+        "Same, 2024 volumes (€m)"
+      ],
+      "widths": [
+        4.3,
+        2.3,
+        2.3
+      ],
+      "rows": [
+        [
+          "0.73: tool, current version",
+          "16",
+          "47"
+        ],
+        [
+          "1.63: tool, earlier version",
+          "31",
+          "97"
+        ],
+        [
+          "1.94: EU default for Iran (CN 7208)",
+          "36",
+          "115"
+        ],
+        [
+          "EU default for Egypt (\"other countries\", with mark-up)",
+          "193",
+          "476"
+        ]
+      ],
+      "note": "Part of the saving may be routing: a firm with both routes can send only scrap-based steel (0.16 tCO₂/t) to the EU. Measuring by country and sector removes that gain (Brief 1.4).",
+      "source": "Working paper 6.2, Table 6; Commission default values; Eurostat Comext. EU imports of Egyptian hot-rolled steel fell from 696 kt (2024) to 169 kt (2025)."
+    },
+    {
+      "type": "points",
+      "title": "Getting the accounting right changed the largest line in the Egypt results",
+      "points": [
+        {
+          "lead": "Urea:",
+          "text": "the CO₂ it carries counts as emitted, because it is released when urea is spread on fields. Estimate 0.49 → 1.22 tCO₂/t."
+        },
+        {
+          "lead": "Ammonium nitrate:",
+          "text": "both nitrogen atoms come from ammonia. Estimate 1.53 → 1.93."
+        },
+        {
+          "lead": "Volumes:",
+          "text": "Eurostat's recorded trade replaces the tool's own estimates (urea 1,600 kt → 3,286 kt)."
+        },
+        {
+          "lead": "Result:",
+          "text": "charge at defaults €595m → €793m; with verified data €177m → €480m; urea goes from the best case for data to the worst."
+        }
+      ],
+      "source": "Impl. Reg. (EU) 2025/2547, Annex II point B.8.2; IPCC 2006, Vol. 4, ch. 11.4; working paper 6.2, Appendix A."
+    },
+    {
+      "type": "points",
+      "title": "The tool measures exposure, not incidence, and the rules are still moving",
+      "points": [
+        {
+          "lead": "Technology averages, not plant data:",
+          "text": "the estimate shows where to pilot verification; the 30% mark-up is the margin for error."
+        },
+        {
+          "lead": "No trade model:",
+          "text": "it does not say who bears the charge or where trade diverts."
+        },
+        {
+          "lead": "Rules in flux:",
+          "text": "the deduction rule is still a draft; default values are revised in 2027 at the latest; a July 2026 proposal would end free allocation in 2038."
+        },
+        {
+          "lead": "Not a compliance calculator:",
+          "text": "firms' obligations follow their own verified declarations."
+        }
+      ],
+      "source": "Working paper 6.2, Objections and limits; Impl. Reg. 2025/2621, Art. 2; COM(2026) 616."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the tool shows",
+        "items": [
+          {
+            "lead": "Early:",
+            "text": "for dirty goods most of the charge is due from 2026."
+          },
+          {
+            "lead": "Levers:",
+            "text": "data €58/t, a €20 price €49/t on Turkish steel."
+          },
+          {
+            "lead": "By product:",
+            "text": "Egypt steel −90% with data; urea −13%."
+          },
+          {
+            "lead": "Rules matter:",
+            "text": "a rebated price or feebate earns no deduction."
+          }
+        ]
       },
-      {
-        "value": "€595m",
-        "label": "a year on seven Egyptian exports at defaults (illustrative)"
-      },
-      {
-        "value": "€177m",
-        "label": "the same exports with verified data at the tool's estimates"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {
+            "lead": "Ministries:",
+            "text": "run the numbers per product; verify where defaults are far above emissions."
+          },
+          {
+            "lead": "Where they are not:",
+            "text": "abatement, or a domestic price that keeps the charge at home."
+          },
+          {
+            "lead": "2027 revision:",
+            "text": "bring documented estimates; engage on the default carbon price."
+          },
+          {
+            "lead": "Commission:",
+            "text": "credit price signals; measure by country and sector (Briefs 1.4, 6.1)."
+          }
+        ]
       }
-    ],
-    "text": "Since January 2026 EU importers of steel, aluminum, cement, fertilizers, hydrogen and electricity owe certificates for embedded emissions. Emissions above the benchmark are charged in full from the first year."
-  },
-  "mechanism": {
-    "title": "Data and a domestic price both cut the charge",
-    "image": "../2.Source/figures/fig1_charge_path.png",
-    "imageWidth": 5.6,
-    "imageHeight": 3.04,
-    "caption": "Turkish hot-rolled steel, €80/tCO₂: default, verified data, and data plus a €20 credited price.",
-    "points": [
-      "Filing data at the country average saves €58 a tonne (the mark-up).",
-      "A €20 domestic price saves €49 a tonne and keeps the money at home.",
-      "Egypt's gas-based steel would be charged at the 'other countries' default of 4.05 t/t."
-    ]
-  },
-  "action": {
-    "title": "Verify first, then price at home",
-    "results": [
-      "Most exposure arrives in 2026 for goods far above the benchmark.",
-      "A rebated domestic price forfeits the Article 9 credit.",
-      "Egypt: €418m a year saved by verification, €262m of it on steel."
-    ],
-    "todo": [
-      "Build verification capacity at the plants that export to the EU.",
-      "Then consider a domestic carbon price on CBAM goods.",
-      "Press for revised defaults in the 2027 review.",
-      "Use it for exposure, not for a firm's compliance filing."
-    ]
-  }
+    }
+  ]
 }

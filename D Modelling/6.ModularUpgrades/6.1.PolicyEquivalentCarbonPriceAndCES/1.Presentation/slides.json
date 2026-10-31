@@ -1,50 +1,130 @@
 {
-  "series": "Climate Fiscal Policy Brief No. 6.1",
+  "series": "Climate Fiscal Policy Brief No. 6.1 · October 2026",
   "title": "Measure Carbon Pricing by the Emissions It Cuts",
-  "subtitle": "The Total Effective Carbon Price: one carbon-tax equivalent for any policy mix",
-  "message": "Standard metrics add up explicit prices per tonne, so standards and feebates score zero and a dollar on coal counts the same as a dollar on gasoline. The Total Effective Carbon Price is the uniform tax that would cut emissions by as much as the actual mix.",
-  "problem": {
-    "title": "Headline prices miss most policy",
-    "stats": [
-      {
-        "value": "$21",
-        "label": "explicit-price metric for a stylized mix of tax, subsidy and fuel standard"
+  "slides": [
+    {
+      "type": "title",
+      "title": "Measure Carbon Pricing by the Emissions It Cuts",
+      "subtitle": "The Total Effective Carbon Price: one carbon-tax equivalent for any policy mix",
+      "message": "Headline carbon prices add up explicit prices, so standards, subsidies and feebates score zero. The Total Effective Carbon Price is the uniform carbon tax that would cut emissions as much as the actual mix: $37 per tonne for a mix that explicit prices rate at $21.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Explicit prices understate a stylized policy mix by almost half",
+      "stats": [
+        {"value": "$21", "label": "per tonne of CO₂: the explicit-price measure of a mix of tax, subsidy and fuel standard"},
+        {"value": "$37", "label": "per tonne: the same mix measured by the emissions it cuts, in the long run ($32–38 across the evidence)"},
+        {"value": "$28", "label": "per tonne after one year, before new capital has replaced old"}
+      ],
+      "text": "The mix: a $30/t carbon tax on power and industry, a $10/MWh renewable subsidy and a fuel standard cutting road-fuel carbon intensity by 2%. All numbers are stylized.",
+      "source": "Author's calculation, stylized three-sector economy; working paper 6.1, worked example."
+    },
+    {
+      "type": "points",
+      "title": "Adding up prices measures the signal, not the result",
+      "points": [
+        {"lead": "Effective carbon rate (OECD), total carbon price (World Bank):", "text": "explicit and fuel-tax prices per tonne, weighted by emissions."},
+        {"lead": "Weights by emissions, not response.", "text": "A $1 tax raises the cost of coal power 1.4% but the price of gasoline 0.2%."},
+        {"lead": "Scores non-price policy at zero:", "text": "renewable subsidies, fuel standards, procurement rules, and revenue-neutral feebates."},
+        {"lead": "Counting standards at their credit price does not fix it.", "text": "The comprehensive carbon price rates the mix at $72: a high price on an unresponsive base."}
+      ],
+      "source": "OECD (2023); Agnolucci et al. (2024); Carhart et al. (2022)."
+    },
+    {
+      "type": "points",
+      "title": "The TECP is the uniform carbon tax that would cut emissions as much as the mix",
+      "points": [
+        {"lead": "A $30 tax on every fuel is worth $30.", "text": "Any other instrument is worth the uniform tax that matches its effect, same baseline, same horizon."},
+        {"lead": "The concept is known;", "text": "Weil (2021) proposed it, and the IMF computes it with CPAT, one model run per policy."},
+        {"lead": "What is new: a closed form.", "text": "Weights from an energy balance, fuel prices and two elasticities per sector turn any package into one number."},
+        {"lead": "Two effects:", "text": "switching to cleaner fuels, and using less energy. A short correction is within 2% of the full model."}
+      ],
+      "source": "Weil (2021); Black et al. (2022); working paper 6.1, Propositions 1–3."
+    },
+    {
+      "type": "figure",
+      "title": "Carbon prices bite in power and industry, barely in road transport",
+      "image": "../2.Source/figures/fig1_weights.png",
+      "points": [
+        {"lead": "Power:", "text": "46% of emissions, 67% of the effect of a uniform tax."},
+        {"lead": "Road transport:", "text": "31% of emissions, 5.5% of the effect: fuel is dear per tonne of carbon."},
+        {"lead": "Switching", "text": "to cleaner fuels carries 74% of the effect, using less energy 26%."}
+      ],
+      "source": "Author's calculation, stylized economy; working paper 6.1, Figure 1."
+    },
+    {
+      "type": "table",
+      "title": "The tax is worth more than its headline; the fuel standard far less than its price",
+      "header": ["Instrument ($/tCO₂)", "Explicit", "Comprehensive", "TECP, long run", "TECP, year 1"],
+      "widths": [3.5, 1.2, 1.5, 1.5, 1.2],
+      "rows": [
+        ["Carbon tax, $30/t, power + industry", "20.8", "20.8", "27.2", "25.4"],
+        ["Renewable subsidy, $10/MWh", "0", "0", "4.3", "1.2"],
+        ["Fuel standard, −2% ($166/t credit)", "0", "51.1", "1.2", "0.8"],
+        ["Policy mix", "20.8", "71.8", "36.9", "28.3"]
+      ],
+      "note": "Instruments are scored alone, so they do not add to the mix. The subsidy costs $79 of budget per tonne avoided, yet adds $4: a cost-per-tonne measure would rank it the most ambitious instrument.",
+      "source": "Author's calculation, stylized economy; working paper 6.1, worked example; Carhart et al. (2022) for the comprehensive price."
+    },
+    {
+      "type": "figure",
+      "title": "Policies that work by switching fuels take a decade to deliver",
+      "image": "../2.Source/figures/fig4_horizon.png",
+      "points": [
+        {"lead": "Year 1: $28.", "text": "Year 5: $31. Year 10: $33. Long run: $37."},
+        {"lead": "Switching needs new capital;", "text": "demand responds in a year or two."},
+        {"lead": "A model that applies long-run responses at once,", "text": "as CPAT does, would report $37 for year one: 30% too high."}
+      ],
+      "source": "Author's calculation; working paper 6.1, Figure 4; paper 5.4 on CPAT's timing."
+    },
+    {
+      "type": "table",
+      "title": "Common elasticity errors cancel; errors in demand elasticities alone do not",
+      "header": ["Calibration", "Demand elasticities (power, road, industry)", "TECP, long run ($/t)"],
+      "widths": [3.6, 3.3, 2.0],
+      "rows": [
+        ["Central case", "0.20, 0.40, 0.30", "36.9"],
+        ["Every elasticity at mid-range", "0.35, 0.55, 0.50", "35.2"],
+        ["CPAT's demand elasticities (paper 5.4)", "0.53, 0.58, 0.66", "33.1"],
+        ["Demand elasticities halved", "0.10, 0.20, 0.15", "40.2"],
+        ["Monte Carlo, 90% range", "drawn from the evidence", "32.4–38.1"]
+      ],
+      "note": "The TECP is always above the $21 explicit price. Estimated emission cuts move far more: a third more under CPAT's demand elasticities.",
+      "source": "Author's calculation, 2,000 draws; working paper 6.1, calibration; paper 5.4."
+    },
+    {
+      "type": "points",
+      "title": "Standards and mandates fit on the same scale",
+      "points": [
+        {"lead": "Tradable standard:", "text": "a feebate at its credit price, weighted by how much it cuts."},
+        {"lead": "Non-tradable standard:", "text": "average marginal compliance cost, weighted by how strongly each firm responds; a simple average overstates it."},
+        {"lead": "Mandate or procurement rule:", "text": "the uniform tax that matches its measured effect, net of leakage. US state car rules lost 70–80% to leakage."},
+        {"lead": "Inside a binding cap:", "text": "worth zero; the cap carries the effect."}
+      ],
+      "source": "Working paper 6.1, Propositions 4–5; Goulder, Jacobsen and van Benthem (2012)."
+    },
+    {
+      "type": "closing",
+      "title": "Use the TECP to pay for policies, credit them at the border and find weak spots",
+      "left": {
+        "title": "What the analysis shows",
+        "items": [
+          {"lead": "One number:", "text": "any mix of taxes, subsidies and standards as a uniform carbon tax, in closed form."},
+          {"lead": "Large gap:", "text": "$37 against $21 explicit; $28 after one year."},
+          {"lead": "Holds across the evidence:", "text": "$32–38; $33 with CPAT's elasticities."},
+          {"lead": "Limits:", "text": "measures abatement, not cost; not yet computed for a real country."}
+        ]
       },
-      {
-        "value": "$37",
-        "label": "the same mix measured by the emissions it cuts (long run; $33 on the first-order formula)"
-      },
-      {
-        "value": "$166",
-        "label": "credit price of the fuel standard, which adds only $1 to the TECP"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {"lead": "Finance ministries:", "text": "publish the TECP and its weights beside explicit prices."},
+          {"lead": "World Bank, IMF, OECD:", "text": "add an effectiveness-weighted series with shared elasticities."},
+          {"lead": "Climate-finance facilities:", "text": "pay per tonne of change in the TECP, settled on observed emissions."},
+          {"lead": "European Commission:", "text": "credit the sector's switching-margin TECP under CBAM (Brief 1.4)."}
+        ]
       }
-    ],
-    "text": "No country prices carbon with one instrument. The OECD's effective carbon rate and the World Bank's total carbon price measure the price signal, not what it achieves. Crediting, border recognition and country comparisons all need one number per tonne that treats a tax, a subsidy and a standard alike."
-  },
-  "mechanism": {
-    "title": "Weight each price by how much emissions respond",
-    "image": "figures/tecp_example.png",
-    "imageWidth": 5.8,
-    "imageHeight": 2.98,
-    "caption": "Stylized three-sector economy: one policy mix, two measures ($ per tonne of CO₂).",
-    "points": [
-      "Translate each instrument into price changes by fuel and sector.",
-      "A CES energy-demand model splits the response into fuel switching and using less energy.",
-      "Abatement weights turn any package into one $/t figure; a uniform $X tax returns exactly $X.",
-      "Binding standards enter at their shadow price; others via their modeled emission cut."
-    ]
-  },
-  "action": {
-    "title": "Publish the TECP beside explicit prices",
-    "results": [
-      "The mix is worth more than its headline price: $37 against $21, because the tax falls on responsive sectors.",
-      "It measures abatement, not cost: report it beside instruments' shadow prices.",
-      "Data needed: an energy balance, fuel prices and published elasticities."
-    ],
-    "todo": [
-      "Use it to pay for policies, so a country that regulates earns as much per tonne as one that taxes.",
-      "Use the sector switching-margin price for CBAM recognition.",
-      "Use the decomposition to show governments where their package is weak."
-    ]
-  }
+    }
+  ]
 }

@@ -1,0 +1,49 @@
+{
+  "series": "Climate-Fiscal Analytics Paper No. 6.5",
+  "title": "The Macro-Fiscal-Energy Scenario Tool",
+  "subtitle": "Linking energy investment and carbon pricing to growth, revenue and debt in one workbook",
+  "message": "One workbook for 186 countries chains investment needs, a carbon-pricing feasibility screen, open lite versions of three IMF and World Bank macro models and a debt test. Financing and efficiency move the result more than the size of the program.",
+  "problem": {
+    "title": "Four teams, four numbers that do not add up",
+    "stats": [
+      {
+        "value": "186",
+        "label": "countries in one workbook"
+      },
+      {
+        "value": "0.5%",
+        "label": "of GDP: Kenya's net zero budget need in 2030"
+      },
+      {
+        "value": "+7 pts",
+        "label": "of GDP added to Kenya's public debt by 2050"
+      }
+    ],
+    "text": "The investment need, the carbon-tax revenue, the growth effect and the debt test are usually run by different teams on different calibrations. The tool runs them in one pass, with every assumption a visible cell."
+  },
+  "mechanism": {
+    "title": "Financing and efficiency matter most",
+    "image": "figures/fig_stylized_run.png",
+    "imageWidth": 5.6,
+    "imageHeight": 2.58,
+    "caption": "GIMF-lite, stylized program of 1% of GDP a year for ten years.",
+    "points": [
+      "Earmarked carbon revenue cuts the debt peak by 4 points.",
+      "Lower efficiency cuts the GDP gain by 30–40% at the same debt.",
+      "Kenya: pricing covers about 5% of the need; a clean grid leaves little to tax."
+    ]
+  },
+  "action": {
+    "title": "Compare packages, not countries",
+    "results": [
+      "Kenya is at high debt risk before the program and after it.",
+      "The two macro families differ most on energy savings and private investment.",
+      "Lite models do not replace their parents."
+    ],
+    "todo": [
+      "Replace defaults in order: efficiency, return on capital, financing mix.",
+      "Treat a large cross-check gap as a finding.",
+      "Finance land-use and non-CO₂ needs with grants and concessional loans."
+    ]
+  }
+}

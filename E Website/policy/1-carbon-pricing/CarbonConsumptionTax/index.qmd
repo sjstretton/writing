@@ -129,7 +129,7 @@ lightbox: auto
 - [Climate Fiscal Policy Brief No. 1.1](../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.qmd): the two-track architecture of which this is the consumption track [@CFPB11].
 - [No. 1.2](../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.qmd): feebates in power and industry, the production track [@CFPB12].
 - [No. 1.4](../../../policy/1-carbon-pricing/IronSteelCBAM/index.qmd): carbon price recognition under the CBAM, and scrap shuffling [@CFPB14].
-- [No. 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1): the Total Effective Carbon Price, the yardstick for comparing policies [@CFPB61].
+- [No. 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, the yardstick for comparing policies [@CFPB61].
 - The [working paper](working-paper.qmd) behind this brief: the proofs, the calibration of defaults, the distribution analysis and the legal detail.
 
 # Downloads {.unnumbered}

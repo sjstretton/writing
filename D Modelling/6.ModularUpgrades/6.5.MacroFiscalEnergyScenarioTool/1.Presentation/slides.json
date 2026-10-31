@@ -1,49 +1,302 @@
 {
-  "series": "Climate-Fiscal Analytics Paper No. 6.5",
+  "series": "Climate Fiscal Policy Brief No. 6.5 · October 2026",
   "title": "The Macro-Fiscal-Energy Scenario Tool",
-  "subtitle": "Linking energy investment and carbon pricing to growth, revenue and debt in one workbook",
-  "message": "One workbook for 186 countries chains investment needs, a carbon-pricing feasibility screen, open lite versions of three IMF and World Bank macro models and a debt test. Financing and efficiency move the result more than the size of the program.",
-  "problem": {
-    "title": "Four teams, four numbers that do not add up",
-    "stats": [
-      {
-        "value": "186",
-        "label": "countries in one workbook"
+  "slides": [
+    {
+      "type": "title",
+      "title": "The Macro-Fiscal-Energy Scenario Tool",
+      "subtitle": "Financing and efficiency, not the size of the program, decide what climate investment does to growth and debt",
+      "message": "One open workbook for 186 countries runs the investment need, feasible carbon pricing, growth and the debt test in one pass. Financing and efficiency matter more than the program's size; for Kenya, carbon pricing on a clean grid pays for about 5 percent of the need.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Ministries get four numbers on climate investment from four teams, and they rarely add up",
+      "stats": [
+        {
+          "value": "4",
+          "label": "separate estimates: budget need, carbon revenue, growth, debt risk"
+        },
+        {
+          "value": "45–50%",
+          "label": "of GDP: debt added by 2050 if net zero relies mostly on spending (IMF, representative large emitter)"
+        },
+        {
+          "value": "10–15%",
+          "label": "of GDP with a mix that includes carbon pricing (IMF, indicative advanced-economy case)"
+        }
+      ],
+      "text": "Each estimate needs the others: growth needs the financing, debt needs growth, carbon revenue depends on the emissions the investment avoids.",
+      "source": "IMF, Fiscal Monitor, October 2023 (Climate Crossroads)."
+    },
+    {
+      "type": "points",
+      "title": "One workbook chains four models on one set of public data for 186 countries",
+      "points": [
+        {
+          "lead": "Investment model:",
+          "text": "what a net zero path needs to 2050, split by who pays (budget, utility, contract, viability gap, private)."
+        },
+        {
+          "lead": "Pricing screen:",
+          "text": "most emission cuts from a power-sector tax, feebate or mix within three political limits."
+        },
+        {
+          "lead": "Lite macro models:",
+          "text": "open simplified versions of the IMF's GIMF and the DIG/DIGNAD/DIGNAR models turn the financed program into GDP and debt paths."
+        },
+        {
+          "lead": "Debt test:",
+          "text": "a simplified Bank-Fund LIC-DSF rates the risk of debt distress before and with the program."
+        },
+        {
+          "lead": "Every assumption is a visible cell;",
+          "text": "results are differences from a reference that holds the 2024 fiscal position fixed."
+        }
+      ],
+      "source": "Working paper 6.5, The tool; Kumhof et al. (2010); Marto, Papageorgiou and Klyuev (2018); IMF and World Bank (2018)."
+    },
+    {
+      "type": "figure",
+      "title": "Earmarked carbon revenue lowers the debt path; low efficiency lowers the growth path",
+      "image": "figures/fig_stylized_run.png",
+      "caption": "GIMF-lite, 1% of GDP a year of public investment for ten years; year 10.",
+      "points": [
+        {
+          "lead": "Earmarking 0.5% of GDP:",
+          "text": "debt peak 53% not 57%, same growth."
+        },
+        {
+          "lead": "Efficiency 0.5 not 0.7:",
+          "text": "GDP gain 30–40% lower, same debt."
+        },
+        {
+          "lead": "Tax financing:",
+          "text": "debt flat, GDP slightly higher."
+        }
+      ],
+      "source": "Working paper 6.5, Table 3 (default illustrative calibration)."
+    },
+    {
+      "type": "table",
+      "title": "For low-income borrowers, concessional finance changes the debt path, not the growth path",
+      "header": [
+        "DIGNAD-lite, stylized program",
+        "GDP yr 10",
+        "GDP yr 20",
+        "Debt yr 10",
+        "Debt peak (yr 20)"
+      ],
+      "widths": [
+        3.6,
+        1.3,
+        1.3,
+        1.3,
+        1.4
+      ],
+      "rows": [
+        [
+          "30% grants, 30% concessional, 40% commercial",
+          "1.02%",
+          "1.36%",
+          "55.3%",
+          "56.0%"
+        ],
+        [
+          "All commercial",
+          "1.04%",
+          "1.36%",
+          "57.6%",
+          "58.4%"
+        ],
+        [
+          "Difference",
+          "−0.02",
+          "0.00",
+          "−2.3",
+          "−2.4"
+        ]
+      ],
+      "note": "GDP: % above baseline; debt: % of GDP, from 50 at the start (30 concessional, 20 commercial). Half of households hand-to-mouth; efficiency 0.6. The growth case rests on efficiency and the return on public capital.",
+      "source": "Working paper 6.5, Table 3."
+    },
+    {
+      "type": "table",
+      "title": "When generators' losses bind, a tax and a feebate cut emissions equally, but only the tax raises revenue",
+      "header": [
+        "Instrument (default limits)",
+        "Tax (US$/t)",
+        "Feebate (US$/t)",
+        "Abatement",
+        "Binding limit"
+      ],
+      "widths": [
+        2.6,
+        1.4,
+        1.6,
+        1.5,
+        1.8
+      ],
+      "rows": [
+        [
+          "Tax only",
+          "35",
+          "0",
+          "25.3%",
+          "Generators' loss"
+        ],
+        [
+          "Feebate only",
+          "0",
+          "38",
+          "24.5%",
+          "Generators' loss"
+        ],
+        [
+          "Best mix",
+          "30",
+          "6",
+          "25.4%",
+          "Generators' loss"
+        ],
+        [
+          "Tax only, tariff rise capped at 2%",
+          "25",
+          "0",
+          "20.1%",
+          "Visible tariff"
+        ]
+      ],
+      "note": "Rebating to households would not raise the feasible price; compensating or retiring high-emitting plants would. If generators recover less of the carbon cost, the feasible tax falls to US$22.",
+      "source": "Working paper 6.5, Table 4; stylized power sector (2.Source/pricing_screen.py)."
+    },
+    {
+      "type": "figure",
+      "title": "Kenya's net zero program needs 0.5% of GDP a year, mostly land use and non-CO₂, and pricing pays for little",
+      "image": "figures/fig_kenya_need.png",
+      "caption": "Kenya, 2030, % of GDP; illustrative tool results, not official estimates.",
+      "points": [
+        {
+          "lead": "Grid over 90% renewable:",
+          "text": "oil power emitted 0.74 MtCO₂ in 2024 (Ember)."
+        },
+        {
+          "lead": "Tax of US$88/t",
+          "text": "raises 0.05% of GDP: about 5% of the need to 2050."
+        },
+        {
+          "lead": "Weak delivery",
+          "text": "adds a third to the bill (0.81 vs 0.60)."
+        }
+      ],
+      "source": "Macro-Fiscal-Energy Scenario Tool, Kenya run (2026); Ember (2026); working paper 6.5, Table 5."
+    },
+    {
+      "type": "table",
+      "title": "The program adds 7 points of GDP to Kenya's debt by 2050, and the published DSA confirms the high risk it starts from",
+      "header": [
+        "Kenya",
+        "Tool (illustrative)",
+        "Public figure"
+      ],
+      "widths": [
+        3.0,
+        3.1,
+        2.8
+      ],
+      "rows": [
+        [
+          "GDP effect, 2050",
+          "+0.26% (+4.6% cross-check)",
+          ""
+        ],
+        [
+          "Debt added by 2050",
+          "+7.2 pts vs debt held at 67.3% (2024)",
+          "IMF: 71–74% in 2025–30"
+        ],
+        [
+          "Debt-carrying capacity",
+          "Medium (2.73)",
+          "Medium (3.01)"
+        ],
+        [
+          "Risk of debt distress",
+          "High, before and with",
+          "High"
+        ]
+      ],
+      "note": "The tool lacks trade data (hence 2.73) and a real exchange rate: depreciation in 2023–24 drove the DSA's latest upward revision.",
+      "source": "Tool, Kenya run; IMF WEO database (2026); IMF Country Report 24/13 (joint DSA, Dec 2023)."
+    },
+    {
+      "type": "points",
+      "title": "The tool compares packages for one country; it does not forecast or replace a debt sustainability analysis",
+      "points": [
+        {
+          "lead": "Lite models are not their parents:",
+          "text": "one country, one good, fixed real exchange rate; checked against theory, not yet against GIMF or DIG."
+        },
+        {
+          "lead": "Defaults stand in for data:",
+          "text": "return on public capital, hand-to-mouth share, grants, trade."
+        },
+        {
+          "lead": "The model families disagree",
+          "text": "where it matters: energy savings and private investment. Treat the gap as a finding."
+        },
+        {
+          "lead": "The debt test has no judgment",
+          "text": "and no depreciation stress; start from the published DSA."
+        }
+      ],
+      "source": "Working paper 6.5, Limits and use."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the tool shows",
+        "items": [
+          {
+            "lead": "Financing and efficiency",
+            "text": "move debt and growth more than size."
+          },
+          {
+            "lead": "The binding limit",
+            "text": "decides whether pricing raises revenue."
+          },
+          {
+            "lead": "Kenya:",
+            "text": "small need, mostly not energy; pricing covers ~5%."
+          },
+          {
+            "lead": "Debt risk",
+            "text": "is set by the starting position."
+          }
+        ]
       },
-      {
-        "value": "0.5%",
-        "label": "of GDP: Kenya's net zero budget need in 2030"
-      },
-      {
-        "value": "+7 pts",
-        "label": "of GDP added to Kenya's public debt by 2050"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {
+            "lead": "Ministries:",
+            "text": "compare financing packages, not program sizes."
+          },
+          {
+            "lead": "Start from the DSA,",
+            "text": "add the depreciation stress."
+          },
+          {
+            "lead": "Fix efficiency",
+            "text": "before scaling up."
+          },
+          {
+            "lead": "Price around the binding limit;",
+            "text": "fund land use with grants and concessional loans."
+          }
+        ]
       }
-    ],
-    "text": "The investment need, the carbon-tax revenue, the growth effect and the debt test are usually run by different teams on different calibrations. The tool runs them in one pass, with every assumption a visible cell."
-  },
-  "mechanism": {
-    "title": "Financing and efficiency matter most",
-    "image": "figures/fig_stylized_run.png",
-    "imageWidth": 5.6,
-    "imageHeight": 2.58,
-    "caption": "GIMF-lite, stylized program of 1% of GDP a year for ten years.",
-    "points": [
-      "Earmarked carbon revenue cuts the debt peak by 4 points.",
-      "Lower efficiency cuts the GDP gain by 30–40% at the same debt.",
-      "Kenya: pricing covers about 5% of the need; a clean grid leaves little to tax."
-    ]
-  },
-  "action": {
-    "title": "Compare packages, not countries",
-    "results": [
-      "Kenya is at high debt risk before the program and after it.",
-      "The two macro families differ most on energy savings and private investment.",
-      "Lite models do not replace their parents."
-    ],
-    "todo": [
-      "Replace defaults in order: efficiency, return on capital, financing mix.",
-      "Treat a large cross-check gap as a finding.",
-      "Finance land-use and non-CO₂ needs with grants and concessional loans."
-    ]
-  }
+    }
+  ]
 }

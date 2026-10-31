@@ -1,14 +1,16 @@
 ---
+# MASTER (policy brief) - this is the file to edit for the brief. The .docx beside it and the brief's web page are made
+# from it. The working paper is a separate master: ../PolicyEquivalentCarbonPriceAndCES.qmd.
 title: "Measure Carbon Pricing by the Emissions It Cuts"
 subtitle: "The Total Effective Carbon Price: one carbon-tax equivalent for any mix of taxes, subsidies and standards"
 series: "Climate Fiscal Policy Brief No. 6.1"
-version: "1.0"
+version: "1.1"
 author:
   - name: "Stephen J. Stretton"
     note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
-  Countries cut emissions with taxes, subsidies, standards and mandates, yet standard metrics add up explicit prices per tonne. A clean-fuel standard or a revenue-neutral feebate scores zero, and a dollar on coal counts the same as a dollar on gasoline. This brief sets out the Total Effective Carbon Price: the single economy-wide carbon tax that would cut emissions by as much as the actual policy mix, with each instrument weighted by how strongly emissions respond. In a stylized economy it rates a mix at about \$37 per tonne in the long run where explicit prices show \$21. Crediting, border recognition and country diagnostics can all use it.
+  Countries cut emissions with taxes, subsidies, standards and mandates, yet the usual carbon-price measures add up explicit prices per tonne. A fuel standard or a revenue-neutral feebate scores zero, and a dollar on coal counts the same as a dollar on gasoline. The Total Effective Carbon Price is the single economy-wide carbon tax that would cut emissions as much as the actual policy mix. It can be computed from an energy balance, fuel prices and published elasticities. In a stylized economy it rates a mix at \$37 per tonne in the long run and \$28 after one year, where explicit prices show \$21. Crediting, border recognition and country reviews can all use it.
 keywords: [carbon pricing, effective carbon price, carbon-price equivalent, non-price instruments, policy crediting, CBAM]
 bibliography: Brief-PolicyEquivalentCarbonPriceAndCES.bib
 csl: https://www.zotero.org/styles/chicago-author-date
@@ -16,127 +18,105 @@ format:
   docx: default
 ---
 
-*Climate Fiscal Policy Brief No. 6.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated.*
+*Climate Fiscal Policy Brief No. 6.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with the model, proofs, calibration and literature, is in the [working paper](wp:).*
 
-```{=openxml}
-<w:p><w:r><w:br w:type="page"/></w:r></w:p>
-```
+# Key messages {#sec-key-messages}
 
-# Executive summary {.unnumbered}
+**Headline carbon prices miss most climate policy.** They add up explicit prices per tonne, so a fuel standard, a clean-power subsidy or a revenue-neutral feebate scores nothing, and a dollar on coal counts the same as a dollar on gasoline.
 
-**The problem.** No country prices carbon with one instrument. A typical mix has a carbon tax or emissions trading in power and industry, fuel excises, renewable subsidies, a clean-fuel standard and efficiency rules. The standard metrics, the OECD's effective carbon rate and the World Bank's total carbon price, add up the explicit and indirect prices per tonne, weighted by emissions. They measure the price signal, not what it achieves. A standard, a subsidy or a revenue-neutral feebate scores nothing, and a dollar on coal counts the same as a dollar on gasoline although it cuts far more.
+**Measure a policy mix by the carbon tax it is worth.** The Total Effective Carbon Price (TECP) is the uniform, economy-wide carbon tax that would cut emissions as much as the actual mix. A ministry can compute it from data it already holds.
 
-**The proposal.** The Total Effective Carbon Price (TECP) is the uniform, economy-wide carbon tax that would cut emissions by as much as the actual policy mix. It tells a finance minister what carbon tax a package is worth.
+**The difference is large.** In a stylized economy, a mix that explicit prices rate at \$21 per tonne is worth \$37 in the long run (\$32–38 across the evidence on elasticities) and \$28 after one year.
 
-**How it works.** Each instrument is translated into the price changes it causes on each fuel in each sector. A model of energy demand splits the response into two margins: switching to cleaner fuels and using less energy. Abatement weights, computed once per country from the energy balance, prices and elasticities, convert any package into one number in dollars per tonne. A tax at \$X per tonne on everything returns exactly \$X.
+**Standards and mandates fit on the same scale.** A tradable standard counts at its credit price, weighted by how much it cuts; a mandate counts through its measured effect.
 
-**Non-price instruments.** A tradable standard acts as a feebate at its credit price, so it enters the same formula. Where no market price exists, the modeled emission cut is converted directly into the equivalent tax.
+**Use it to pay for policies, to credit non-price policies at the border and to show governments where their mix is weak.** Report it beside each instrument's cost, never instead of it.
 
-**What it shows.** In a stylized three-sector economy, a \$30 carbon tax on power and industry, a \$10/MWh renewable subsidy and a low-carbon fuel standard together have a TECP of \$33 per tonne to first order and \$37 in the full model. The explicit-price metric says \$21. The fuel standard has a credit price of \$166 per tonne but adds only \$1 to the TECP: a high price on a small, unresponsive base.
+# Headline prices measure the signal, not the result {#sec-problem}
 
-**What it costs and where it stops.** The data are an energy balance, fuel prices and published elasticities, and the calculation runs in a spreadsheet. The TECP measures abatement, not cost or welfare, and should be reported beside the shadow prices of the instruments it covers.
+**No country prices carbon with one instrument.** A typical package combines a carbon tax or emissions trading in power and industry, fuel taxes, subsidies for renewable power, a clean-fuel standard and efficiency rules. Comparing countries' effort, paying a country for a policy or crediting its carbon pricing at a foreign border all need one number per tonne that treats a tax, a subsidy and a standard alike.
 
-**What to do.** Publish the TECP beside explicit-price metrics. Use it to pay for policies in policy crediting, so a country that regulates earns as much per tonne as one that taxes. Use its sector-level switching-margin price for recognition of implicit and non-price pricing under the EU Carbon Border Adjustment Mechanism (CBAM). Use its decomposition to show governments where their package is weak.
+**The standard measures add up prices.** The OECD's effective carbon rate adds carbon taxes, emissions trading prices and fuel taxes per tonne of CO₂ [@OECD2023ECR]. The World Bank's total carbon price adds direct carbon pricing to indirect pricing through fuel taxes net of fuel subsidies, so it can turn negative, and weights by emissions [@Agnolucci2024]. Its authors state the limit: the measure describes the incentive, not the emission cuts it produces, and a version weighted by effectiveness is left for future work [@Agnolucci2024].
 
-```{=openxml}
-<w:p><w:r><w:br w:type="page"/></w:r></w:p>
-```
+**Adding prices fails in three ways.** First, it weights each price by emissions, not by how much emissions respond. A \$1 tax raises the cost of coal power by 1.4 percent but the price of gasoline by 0.2 percent, so the coal tonne responds far more. Second, instruments without a per-tonne rate score zero: a renewable subsidy, a clean-fuel standard, a procurement rule, and a revenue-neutral feebate, whose average payment is nil ([Brief 1.2](paper:1.2)). Third, it cannot see how an instrument works: a feebate pushes producers to switch to cleaner fuels and leaves demand almost untouched, while a tax on energy does the reverse.
 
-# The question existing metrics do not answer
+**Counting standards at their credit price does not fix the problem.** The comprehensive carbon price of @Carhart2022 adds the credit prices of standards and feed-in tariffs to explicit prices, weighted by the emissions each covers. It shows the incentive emitters face. Its authors leave the question of what the incentives achieve for future work, and the answer can differ by a factor of two, as the example below shows.
 
-**Climate policy comes in packages, and packages need one number.** Comparing countries' ambition, paying for a policy or crediting carbon pricing at a border all need one figure per tonne that treats a tax, a subsidy and a standard alike, since governments choose among them for political and administrative reasons. The working paper behind this brief sets out the model in full [@StrettonTECP].
+# The Total Effective Carbon Price {#sec-tecp}
 
-**Existing metrics measure price signals, not outcomes.** The OECD's effective carbon rate adds carbon taxes, fuel excise taxes and emissions trading prices per tonne of CO₂, from statutory review [@OECD2023ECR; @Agnolucci2024]. The World Bank's total carbon price adds direct carbon pricing to indirect pricing through fuel excises net of fuel subsidies, so it can turn negative, and weights by emissions shares [@Agnolucci2024]. Its authors state the limit plainly: the measure describes the incentive, not the mitigation it triggers, and an effectiveness-weighted version is left as an extension [@Agnolucci2024, sec. 6.4]. The IMF benchmarks fuel prices against efficient levels and reports the gap as explicit and implicit subsidies [@ParryBlackVernon2021]. The IMF also recommends feebates where higher energy prices are politically hard [@IMF2019FM], and its proposed international carbon price floor would accept "emissions-equivalent alternatives to carbon pricing" [@ParryBlackRoaf2021]. Both need exactly the conversion this brief provides.
+**The TECP asks what uniform carbon tax would cut emissions as much as the actual mix.** A tax of \$30 per tonne on every fuel is worth exactly \$30. Any other instrument, priced or not, is worth the uniform tax that matches its effect on emissions, against the same baseline and over the same horizon. The concept was proposed for comparing countries and for border adjustments by @Weil2021, and the IMF computes it for the G20 with its Climate Policy Assessment Tool (CPAT), one model run per policy [@black2022framework].
 
-**Adding prices fails in three ways.** First, it weights by emissions, not responsiveness. At the prices in this brief's example, a \$1 tax raises the cost of coal power by 1.4 percent and the price of gasoline by 0.2 percent, and the coal tonne responds far more. Second, instruments without a per-tonne rate score zero: a renewable subsidy, a clean-fuel standard, a procurement mandate, and a revenue-neutral feebate whose average payment is nil [@CFPB12]. Third, it cannot see which margin an instrument works. A feebate drives fuel switching at full strength and leaves demand untouched; a uniform energy tax does the reverse.
+**The working paper makes it computable without a model run.** Each instrument is translated into the price changes it causes on each fuel in each sector. A standard model of energy demand then splits the response into two effects: switching to cleaner fuels, and using less energy. Weights computed once per country, from the energy balance, fuel prices and two published elasticities per sector, turn any package into one number by a weighted sum ([working paper, the Total Effective Carbon Price](wp:sec-tecp)). A short correction brings the result to within 2 percent of the full model, which gives the exact value ([working paper, beyond first order](wp:sec-exact)).
 
-**"Implicit carbon price" has meant three different things.** It has meant the shadow cost of a regulation, indirect pricing through fuel taxes, and the carbon price that would match the cut from a renewables policy [@Agnolucci2024, n. 1]. A fourth approach divides a policy's spending by tonnes avoided, which measures average cost and makes expensive policies look ambitious [@MarcantoniniEllerman2015]. @Carhart2022 widen the set of instruments to portfolio standards, feed-in tariffs and fuel standards. Comparisons of national mitigation effort face the same choice of metric [@AldyPizer2016]. The TECP is the third meaning made general and computable: a carbon-price equivalent for any instrument.
+**The weights show where carbon prices bite.** They are large where clean and dirty fuels compete, as in power, and where carbon is a large share of the energy bill, as with coal in industry; they are small in road transport, where fuel is expensive per tonne of carbon.
 
-# The Total Effective Carbon Price
+**The TECP has a horizon.** Switching fuels needs new boilers, vehicles and power plants and takes a decade or more; using less energy happens within a year or two. So a policy that works by switching, such as a feebate, a renewable subsidy or a fuel standard, is worth less in its first years than in the long run, relative to a tax ([working paper, horizon](wp:sec-tecp)).
 
-**The TECP is the uniform carbon tax that would cut emissions by as much as the actual policy mix.** For sectors $s$ and fuels $f$, with baseline emissions $E_{fs}$,
+# Standards and mandates fit on the same scale {#sec-nonprice}
 
-$$
-\tau^{*} \;=\; \frac{1}{\Lambda}\sum_{s}\sum_{f} E_{fs}\,\Big[\,\tilde{\varepsilon}^{\,\mathrm{int}}_{fs}\,\tau^{\mathrm{int}}_{fs} \;+\; \tilde{\varepsilon}^{\,\mathrm{ext}}_{s}\,\tau^{\mathrm{ext}}_{s}\,\Big],
-\qquad
-\Lambda \;=\; \sum_{s}\sum_{f} E_{fs}\,\Big[\,\tilde{\varepsilon}^{\,\mathrm{int}}_{fs} + \tilde{\varepsilon}^{\,\mathrm{ext}}_{s}\,\Big].
-$$
+**A tradable standard is a feebate at its credit price.** A low-carbon fuel standard taxes fuels above the standard and subsidizes fuels below it [@HollandHughesKnittel2009]; with credits traded, every supplier faces the credit price at the margin. It therefore enters the TECP like any price instrument. A renewable portfolio standard charges every fossil megawatt-hour the same, so it does not separate coal from gas, and the TECP shows the cost of that ([working paper, non-price instruments](wp:sec-nonprice)).
 
-The numerator is the emission cut from the policy mix; $\Lambda$ is the cut from a \$1 per tonne tax on every fuel. Their ratio is the mix's value in dollars of uniform carbon tax.
+**A standard that cannot be traded counts at the average marginal cost of compliance, weighted by how strongly each firm responds.** A simple average overstates the TECP when the firms with the highest costs are also the least able to respond, which is common.
 
-**Each instrument works on two margins.** The first term is fuel switching (the intensive margin): the intensive carbon price $\tau^{\mathrm{int}}_{fs}$ is how far the policy raises fuel $f$'s price relative to the other fuels in its sector, and the semi-elasticity $\tilde\varepsilon^{\,\mathrm{int}}_{fs}$, the proportional change in use per dollar of carbon price, is how strongly use of that fuel responds. The second term is demand reduction (the extensive margin): $\tau^{\mathrm{ext}}_{s}$ is how far the policy raises the sector's average energy cost, and $\tilde\varepsilon^{\,\mathrm{ext}}_{s}$ how strongly total energy use responds. A carbon tax at rate $\tau$ sets both prices equal to $\tau$ for every fuel, so the formula returns $\tau^* = \tau$ exactly. A revenue-neutral feebate sets $\tau^{\mathrm{ext}} \approx 0$ and works only through switching; a uniform tax per unit of energy sets $\tau^{\mathrm{int}} = 0$.
+**A mandate counts through its measured effect.** Rules that change technology directly, such as coal-plant retirement, low-carbon cement in public works or forward obligations on fuel suppliers ([Brief 1.3](paper:1.3)), are scored by the uniform tax that would cut as much. The effect must be measured against the same baseline and must be net of leakage. When some US states limited greenhouse gases per mile of new cars inside the federal fuel-economy standard, leakage to other states offset an estimated 70–80 percent of the reductions from new cars in the adopting states [@GoulderJacobsenvanBenthem2012].
 
-**The responsiveness comes from a nested CES model of energy demand.** Within each sector, fuels substitute with elasticity $\sigma_s$; the sector's total energy use responds to its average cost with elasticity $\eta_s$. To first order the semi-elasticities are
-$$
-\tilde\varepsilon^{\,\mathrm{int}}_{fs} = \sigma_s\Big(\frac{e_f}{p_{fs}} - \kappa_s\Big), \qquad
-\tilde\varepsilon^{\,\mathrm{ext}}_{s} = |\eta_s|\,\kappa_s, \qquad
-\kappa_s = \sum_f s_{fs}\frac{e_f}{p_{fs}},
-$$
-where $e_f$ is the emission factor, $p_{fs}$ the delivered price, $s_{fs}$ the fuel's share of sector energy spending, and $\kappa_s$ the sector's emissions per dollar of energy spending. Switching cuts emissions where dirty and clean options coexist and substitute easily; demand reduction cuts them where carbon is a large share of the energy bill. Both elasticities come from published estimates [@Labandeira2017; @Stern2012].
+# A stylized mix is worth \$37, not \$21 {#sec-example}
 
-**The weights belong to the economy, not the policy.** Writing $\Omega^{\mathrm{int}}_{fs} = E_{fs}\tilde\varepsilon^{\,\mathrm{int}}_{fs}/\Lambda$ and $\Omega^{\mathrm{ext}}_{s} = E_{s}\tilde\varepsilon^{\,\mathrm{ext}}_{s}/\Lambda$ turns the TECP into a weighted average of the policy's carbon prices, with weights summing to one. The weights are computed once per country. After that, any package is evaluated by one weighted sum, and the result splits additively by sector, by margin and by instrument.
+**The working paper scores one policy mix in a stylized three-sector economy.** The economy emits 261 million tonnes of CO₂ a year: 119 from power (coal, gas and renewables), 80 from road transport (gasoline, diesel and biofuel) and 62 from industry (coal, oil and gas). The mix has a \$30 per tonne carbon tax on power and industry, a \$10 per megawatt-hour subsidy for renewable power and a tradable standard that cuts the carbon intensity of road fuel by 2 percent. All numbers are stylized ([working paper, worked example](wp:sec-example)).
 
-**The TECP can be stated at any horizon.** Fuel switching needs new capital and takes a decade or more; demand responds within a year or two. The working paper's partial-adjustment model gives short-run and long-run TECPs [@StrettonTECP]; the long-run TECP shows what a maintained package delivers.
+| Instrument | Explicit-price measure | Comprehensive carbon price | TECP, long run | TECP, after one year |
+|---|--:|--:|--:|--:|
+| Carbon tax, \$30/t, power and industry | 20.8 | 20.8 | 27.2 | 25.4 |
+| Renewable subsidy, \$10/MWh | 0 | 0 | 4.3 | 1.2 |
+| Fuel standard, −2% (credit price \$166/t) | 0 | 51.1 | 1.2 | 0.8 |
+| **Policy mix** | **20.8** | **71.8** | **36.9 (32–38)** | **28.3** |
 
-# Non-price instruments: an extension
+: One policy mix under three measures, dollars per tonne of CO₂ (stylized economy). Explicit-price measure: emission-weighted explicit carbon price, as in the effective carbon rate and the total carbon price. Comprehensive carbon price: the same, plus the standard's credit price on the emissions it covers [@Carhart2022]. TECP: full model; instruments are scored alone, so they do not add to the mix. Range: 5th–95th percentile across the published ranges of elasticities. Source: working paper, worked example and calibration. {#tbl-example}
 
-**The working paper treats a clean-fuel standard as dual to a feebate; this section extends that idea to any binding rule.** A rule has no rate, but a binding rule has a shadow price: the marginal cost of meeting it, per tonne. The rule can be brought into the TECP by either of two routes.
+**The tax is worth more than its headline, because it falls where emissions respond.** The explicit-price measure spreads the \$30 tax over all emissions, including the 31 percent from road transport that it does not cover. But a uniform tax gets only about 6 percent of its effect from road transport, so leaving road fuel out costs little: the tax alone is worth \$27, not \$21. Extending it to road fuel would add only about \$1.6.
 
-**Route 1: the shadow price.** A tradable low-carbon fuel standard works as an implicit tax on fuels above the standard and an implicit subsidy to fuels below it [@HollandHughesKnittel2009], at the credit price $\lambda$ per tonne. Within the formula it is a feebate at rate $\lambda$ with the benchmark set at the standard, so each fuel's price changes by $\lambda(e_f - \bar e^{\,\mathrm{std}})$. A renewable portfolio standard requiring share $\theta$ charges every fossil megawatt-hour $\lambda\theta$ and pays renewables $\lambda(1-\theta)$. It does not separate coal from gas, and the formula shows the cost of that in a low switching price. Where no credit market exists, as for most efficiency standards and procurement rules, the shadow price is the marginal compliance cost from the regulator's impact assessment.
+**The fuel standard has a high price and a small effect.** Its credit price is \$166 per tonne, yet it adds only about \$1 to the TECP: a high price on a large, unresponsive base. Counting its credit price as a carbon price, as the comprehensive carbon price does, puts the mix at \$72.
 
-**Route 2: back out the price from the emission cut.** Take the instrument's modeled or evaluated emission cut against the same baseline and horizon, and find the uniform tax that delivers the same cut in the same model; to first order, $\tau^* = \Delta E / \Lambda$. This route needs no price at all. It covers efficiency standards that change energy use rather than fuel prices, procurement mandates, and the forward-announced legal obligations on energy suppliers in the consumption track of @CFPB11. The cut must be net: tighter vehicle rules in some US states raised emissions in other states and from used cars, roughly doubling the cost per tonne actually avoided [@GoulderJacobsenvanBenthem2012].
+**The renewable subsidy is worth \$4 in the long run and \$1 after one year.** It works by building new capacity, which takes time, while cheaper power raises demand at once. At \$79 of budget per tonne avoided, a cost-per-tonne measure would rank it the most ambitious instrument; the TECP ranks it a distant second.
 
-**A shadow price and a TECP answer different questions.** The shadow price is the marginal cost per tonne within the rule's reach; the TECP is the rule's contribution to the economy-wide equivalent tax. A rule with a high shadow price and a low TECP buys a small cut at a high marginal cost. Per tonne, standards and subsidies generally cost more than a price [@FischerNewell2008], static costs per tonne vary widely across instruments [@GillinghamStock2018], and subsidies without carbon pricing can raise mitigation costs several-fold [@KalkuhlEdenhoferLessmann2013]. The TECP measures what is achieved, so it should be reported beside each instrument's shadow price, never instead of it.
+![TECP of each instrument and of the mix, split into fuel switching and using less energy, against the explicit-price measure (stylized economy; first-order calculation). The full model rates the mix at \$36.9. Source: working paper; `figures/make_figures.py`.](figures/tecp_example.png){#fig-example width=100%}
 
-# A worked example
+**The result holds across the evidence on elasticities.** Drawn 2,000 times from the published ranges, the mix's long-run TECP lies between \$32 and \$38 in 90 percent of draws and above \$21 in every draw ([working paper, calibration](wp:sec-calibration)). Errors common to all elasticities cancel, because the TECP compares two cuts made with the same numbers. Errors in the demand elasticities alone do not: with the higher demand elasticities built into CPAT, the TECP is \$33, as [Brief 5.4](paper:5.4) found [@CFPB54]. A model that, like CPAT, applies long-run responses in the first year would also report \$37 for year one, about 30 percent above the \$28 that capital turnover allows.
 
-**A stylized economy shows how far the TECP and an explicit-price metric diverge.** The economy has three sectors with 261 MtCO₂ of baseline emissions: power (coal, gas and renewables; 119 Mt), road transport (gasoline, diesel and biofuel; 80 Mt) and industry (coal, oil and gas; 62 Mt). Elasticities lie in the working paper's ranges: $\sigma$ of 2.0, 1.5 and 0.8, and $|\eta|$ of 0.2, 0.4 and 0.3, for power, transport and industry. The mix has three instruments: a \$30 per tonne carbon tax on power and industry, a \$10/MWh subsidy to renewable power and a tradable standard cutting the carbon intensity of road fuel by 2 percent. All numbers are stylized; the script that produces them is saved with the brief.
+# Three uses {#sec-uses}
 
-**Two thirds of the abatement weight is in power, and transport carries almost none.** A \$1 uniform tax cuts 1.6 Mt, 0.6 percent of emissions. Power takes 67 percent of that weight, industry 27 percent and transport 6 percent, because \$1 per tonne barely moves the price of motor fuel. Fuel switching carries 74 percent of the weight and demand reduction 26 percent.
+**Climate finance can pay for policies rather than projects.** A payment per tonne above half a feebate's rate makes adopting the feebate a gain for the country ([Brief 1.1](paper:1.1)). The tonnes paid for are the policy's change in TECP times the country's emission cut per dollar of uniform tax ([working paper, uses](wp:sec-uses)). A country that adopts a fuel standard or a procurement rule then earns the same per tonne as one that adopts a tax. Because the TECP is a forecast, payments should be settled against observed emissions.
 
-| Instrument | Rate or shadow price | Explicit-price metric (\$/t) | Emission cut, full model (MtCO₂) | TECP: switching (\$/t) | TECP: demand (\$/t) | TECP (\$/t) |
-|---|---|--:|--:|--:|--:|--:|
-| Carbon tax on power and industry | \$30/t | 20.8 | 32.6 | 22.0 | 6.4 | 28.4 |
-| Renewable subsidy (power) | \$10/MWh | 0.0 | 6.6 | 4.1 | −0.4 | 3.7 |
-| Low-carbon fuel standard, −2% intensity (road) | \$166/t (credit price) | 0.0 | 1.8 | 1.0 | 0.2 | 1.2 |
-| **Policy mix** | | **20.8** | **40.7** | **27.1** | **6.1** | **33.2** |
+**Border mechanisms can credit the price signal of feebates and standards.** The EU's Carbon Border Adjustment Mechanism (CBAM) reduces an importer's charge only by the carbon price effectively paid abroad, net of any rebate [@EU2025Omnibus]. A feebate or an intensity standard pays almost nothing net, so it earns nothing, although its marginal signal is the full rate. The TECP's switching part, computed for one sector, measures that signal for price and non-price instruments alike: a feebate across steel routes scores its rate, a tradable standard its credit price ([Brief 1.4](paper:1.4)). Equal signals are not equal costs: non-price policies generally impose lower private costs on firms than a carbon price at the same shadow price [@keen2022bca], so recognition on this basis rewards effort, not competitive burden.
 
-: Stylized example: one policy mix, two measures (\$ per tonne of CO₂). The explicit-price metric is the emissions-weighted average explicit carbon price, as in effective-carbon-rate measures. TECP columns are first order and add up across instruments; emission cuts are from the full nonlinear model. {#tbl-example}
+**Governments can see where their mix is weak.** The TECP splits by sector, instrument and effect. In the example the weak point is road transport, which responds little to any carbon price at the margin; that argues for instruments aimed at vehicle choice rather than a higher fuel price.
 
-**To first order the TECP rates the mix at \$33 per tonne; the explicit-price metric says \$21.** The tax alone is worth \$28, not \$21. It leaves out transport, which holds 31 percent of emissions but only 6 percent of the abatement weight. The renewable subsidy adds \$3.7 through switching but loses \$0.4 through demand, because cheaper power raises consumption. The fuel standard's credit price, \$166 per tonne, is the price at which the standard just binds in the model. Both routes value it at \$1.2: a high price on a small, unresponsive base.
+# What the TECP does not measure {#sec-limits}
 
-![Explicit-price metric and TECP, by instrument (stylized economy). The TECP is split into the fuel-switching and demand margins; the subsidy's demand contribution is negative. Source: `figures/make_figures.py`.](figures/tecp_example.png){#fig-example width=100%}
+**It measures abatement, not cost.** Two mixes with the same TECP cut the same tonnes but need not cost the same. Per tonne, standards and subsidies generally cost more than a price [@FischerNewell2008; @KalkuhlEdenhoferLessmann2013]. Report the TECP beside each instrument's shadow price and cost.
 
-**The first-order formula is close enough for weights and diagnostics; headline numbers should come from the full model.** Solved exactly, the mix cuts 40.7 Mt, 15.6 percent of emissions, and the uniform tax that matches that cut is \$37, not \$33. The gap comes from the tax raising the price of coal by over a third, where a linear approximation is weakest. In the full model the instruments also stop adding up: each further tonne needs a higher uniform tax, so the mix is worth more than the sum of its parts.
+**It is only as good as its inputs.** Elasticities are known to ranges; taxes may move demand more than equal market price changes; and a government that reports its own standards' costs has reason to overstate them. The example is stylized: the TECP has not yet been computed for a real country ([working paper, limits](wp:sec-limits)).
 
-# Uses
+# What to do {#sec-what-to-do}
 
-**Policy crediting needs a common unit, and the TECP supplies it.** Brief 1.1 shows that a payment per tonne above half the feebate rate makes a feebate a net gain for the adopting country, which justifies paying for policies rather than projects [@CFPB11, sec. 5]. The tonnes paid for are $\Lambda\,\Delta\tau^*$: the policy's change in TECP times the country's abatement per dollar. A country that adopts a fuel standard or a procurement rule then earns the same payment per tonne as one that adopts a tax. Payments should be settled against observed emissions, since the TECP is a forecast.
+**Finance ministries and statistical offices: compute and publish the TECP beside explicit carbon prices.** The inputs are an energy balance, delivered fuel prices, emission factors and two elasticities per sector; publish the weights so that others can reproduce the number, with a range and a one-year and long-run value.
 
-**For CBAM, the sector's switching-margin price measures the price signal that border recognition should credit.** CBAM reduces an importer's charge only by the carbon price effectively paid in the country of origin [@EU2023, Art. 9]. A feebate, a rebated tax or an intensity standard pays almost nothing net, so it earns nothing. Brief 1.4 proposes recognizing the sector-wide price signal alongside the price paid [@CFPB14]. Computed for one sector, such as steel, the TECP's switching margin gives that signal in dollars per tonne: the $\Omega^{\mathrm{int}}$-weighted average of the intensive carbon prices. Where production routes make the same product, as steel routes do, a feebate at rate $t$ scores exactly $t$; fuel taxes net of subsidies, and standards through their shadow prices, score on the same scale. Border recognition should credit this price rather than the full TECP, because CBAM charges embodied carbon and leaves the demand margin to the importer's own price.
+**The World Bank, the IMF and the OECD: add an effectiveness-weighted series to the total carbon price and the effective carbon rate.** Use one shared set of elasticities across countries, so that common errors cancel, and compare the closed-form TECP with CPAT's model-based equivalents for the same policies.
 
-**For country diagnostics, the decomposition is the product.** It shows which sectors and margins a package reaches and which it misses. In the example, extending the \$30 tax to road fuel would add only about \$1.6 to the TECP, because transport carries 6 percent of the abatement weight. The package's weak point is the low responsiveness of road transport to any price per tonne, not the tax's coverage. Computed each year, the TECP gives one trajectory for a country's effective carbon price against which any announced package can be checked [@StrettonTECP].
+**Climate-finance facilities: pay per tonne of change in the TECP, settled against observed emissions,** so that standards, feebates and taxes earn on the same basis.
 
-**The metric has limits a user must state.** It measures abatement, not welfare, revenue, distribution or leakage. Its first-order form is accurate only for modest price changes. The elasticities are uncertain, so published TECPs should carry a range. The sector-by-sector form ignores links between sectors, such as the power demand created by electric vehicles.
+**The European Commission: accept the sector's switching-margin TECP as the measure of a foreign price signal,** phased in alongside the price paid, as [Brief 1.4](paper:1.4) proposes [@CFPB14].
 
-# What to do
-
-**Statistical agencies and finance ministries:** compute the abatement weights once from the national energy balance and publish the TECP, with its sector and margin decomposition, beside the explicit carbon price.
-
-**The World Bank, IMF and OECD:** add an effectiveness-weighted series to the total carbon price and the effective carbon rate, using a shared set of elasticities, as @Agnolucci2024 suggest.
-
-**Crediting facilities:** pay per tonne of $\Lambda\,\Delta\tau^*$, settled against observed emissions, so that standards, feebates and taxes earn on the same basis.
-
-**The European Commission:** in the default carbon price methodology, accept the sector-level switching-margin price as the measure of implicit and non-price pricing, phased in as Brief 1.4 proposes [@CFPB14].
-
-**Regulators:** publish the shadow price of every binding standard, so that it can enter the TECP and be compared with a carbon price.
+**Regulators: publish the marginal compliance cost of every binding standard,** so that it can enter the TECP and be compared with a carbon price.
 
 # Related papers in this series {.unnumbered}
 
-- Climate Fiscal Policy Brief No. 1.1: the two-track architecture for carbon pricing in open economies [@CFPB11].
-- No. 1.2: feebates in power and industry [@CFPB12].
-- No. 1.3: a carbon consumption tax through VAT [@CFPB13].
-- No. 1.4: carbon price recognition under CBAM, and scrap shuffling [@CFPB14].
+- [Climate Fiscal Policy Brief No. 1.1](paper:1.1): the two-track architecture for carbon pricing in open economies, and policy crediting [@CFPB11].
+- [No. 1.2](paper:1.2): feebates in power and industry [@CFPB12].
+- [No. 1.3](paper:1.3): a carbon component in VAT and a forward obligation on energy suppliers [@CFPB13].
+- [No. 1.4](paper:1.4): carbon price recognition under the CBAM, and scrap shuffling [@CFPB14].
+- [No. 5.4](paper:5.4): a check of CPAT's price elasticities against the evidence, and what it does to the TECP [@CFPB54].
+- The [working paper](wp:) behind this brief: the model, propositions, calibration, uncertainty and literature [@StrettonWP61].
 
 # References {.unnumbered}
 

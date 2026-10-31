@@ -18,7 +18,7 @@ Order of work. The reason column says why each paper is where it is.
 | Rank | No. | Paper | Status | Target | Why this rank |
 |---|---|---|---|---|---|
 | 1 | 1.1 | Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies | working paper v0.4 + brief v1.1 + 10-slide deck (31 Oct); peer-reviewed, every citation checked; both on the web | Journal (*Climate Policy*, research article) + PhD writing sample | **Dirk asked for this one first.** Overarching paper for the series. Next: Stephen's read |
-| 2 | 6.1 | Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price | working paper v0.3 + brief + deck (29 Oct) | Journal (*Energy Economics* / *Energy Policy*) | Corrected CES derivation; exact and second-order TECP; non-price instruments; Monte Carlo band. Needs a real-country application |
+| 2 | 6.1 | Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price | working paper v0.4 + brief v1.1 + 10-slide deck (31 Oct; peer-reviewed, every citation checked; on the web) | Journal (*Energy Economics* / *Energy Policy*) | Corrected CES derivation; exact and second-order TECP; non-price instruments; Monte Carlo band. v0.4: contribution stated against Weil (2021) and Carhart et al. (2022); elasticity-bias claim corrected. Needs a real-country application |
 | 3 | 3.1 | Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power | working paper v0.3 + brief v1.0 + 10-slide deck (31 Oct); peer-reviewed (headline corrected to about \$2 saved per dollar of expected public cost), every citation checked; both on the web | WB working paper; 2,000-word cut as Oxford writing sample | Series 3 flagship. Closest to proposal 1's topic. Next: Stephen's read |
 | 4 | 4.1 | Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives | working paper v0.2 + brief v1.0 + 10-slide deck (31 Oct); peer-reviewed (adds about 27 per dollar net of the default option beside the 80 budget ratio), every citation checked; both on the web | WB working paper / journal | Series 4 flagship; the core idea behind proposal 1. First full draft. Next: Stephen's read |
 | 5 | 1.2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | working paper v0.4 + brief v1.1 + 10-slide deck (31 Oct); peer-reviewed, every citation checked; both on the web | WB working paper / journal | Market-design propositions; India, Indonesia, South Africa cases |
@@ -66,10 +66,10 @@ Plan: `D Modelling/5.Modelling/5.0.Overview/SeriesArchitecture.md`. One medium-l
 | 5.2 | CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool (working paper v0.2, first brief and deck, 31 Oct; on the web) |
 | 5.3 | Validating CPAT: Baselines, Back-Casts and Model Comparisons (working paper v0.2, first brief and deck, 31 Oct; on the web) |
 | 5.4 | Are CPAT's Price Elasticities Right? A Check Against the Evidence (working paper v0.2, first brief and deck, 31 Oct; on the web) |
-| 6.2 | The CBAM Policy Tool |
+| 6.2 | The CBAM Policy Tool (working paper v0.2, brief CFPB 6.2 v1.0 and 10-slide deck, 31 Oct; peer-reviewed: urea and ammonium nitrate factors corrected, Egypt on Eurostat volumes, now €793m at default values and €480m with verified data; on the web. The tool workbook still needs these corrections (v1.3)) |
 | 6.3 | Public Investment in CPAT: Investment Needs and the Efficiency of Public Spending (working paper v0.2, brief CFPB 6.3 v1.0 "Price the Capital, Then Test the Budget" and 10-slide deck, 31 Oct; peer-reviewed, every citation checked; on the web) |
 | 6.4 | Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT |
-| 6.5 | The Macro-Fiscal-Energy Scenario Tool |
+| 6.5 | The Macro-Fiscal-Energy Scenario Tool (working paper v0.2, brief CFPB 6.5 v1.0 and 10-slide deck, 31 Oct; peer-reviewed, Kenya checked against the published debt analysis; on the web) |
 | 7.1 | The Excise-Fiscal Diagnostic |
 | 7.2 | A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis |
 
@@ -81,7 +81,7 @@ Plan: `D Modelling/5.Modelling/5.0.Overview/SeriesArchitecture.md`. One medium-l
 |---|---|---|---|
 | C1 | Converting a VAT into a Destination Carbon Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers in the European Union | 1.3 | working paper v0.3 + brief v1.1 + 10-slide deck (31 Oct); peer-reviewed, every citation checked; both on the web |
 | C2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | 1.2 | working paper v0.3 (29 Oct) |
-| C3 | Measure Carbon Pricing by the Emissions It Cuts (TECP) | 6.1 | working paper v0.3 (29 Oct) |
+| C3 | Measure Carbon Pricing by the Emissions It Cuts (TECP) | 6.1 | working paper v0.4 (31 Oct) |
 | C4 | Credit the Price Signal, Not the Payment (CBAM) | 1.4 | working paper v0.4 + brief v1.1 (31 Oct) |
 
 Not in the program: the confidential World Bank SLL discussion paper (now in `4.3…/9.Archive`) and the section 8 papers (`8.AdditionalPolicyPapers`), unless Stephen promotes one.

@@ -114,7 +114,7 @@ lightbox: auto
 - [Climate Fiscal Policy Brief No. 5.1](../../../modelling/5-modelling/CPATMitigationMethods/index.qmd): the CPAT mitigation module, its methods in brief.
 - [No. 5.2](../../../modelling/5-modelling/CPATAIImplementation/index.qmd): rebuilding CPAT as a transparent, testable tool.
 - [No. 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd): whether CPAT's price elasticities are right.
-- [No. 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1): the Total Effective Carbon Price, the yardstick for comparing policies [@CFPB61].
+- [No. 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, the yardstick for comparing policies [@CFPB61].
 - [No. 6.4](../../../modelling/6-modular-upgrades.qmd#paper-6-4): activity levels across CPAT and other models, including road transport.
 - The [working paper](working-paper.qmd) behind this brief: every table, source and recomputation.
 

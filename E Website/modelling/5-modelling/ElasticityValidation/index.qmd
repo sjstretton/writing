@@ -89,7 +89,7 @@ lightbox: auto
 
 # Comparisons hold up better than levels {#sec-comparisons}
 
-**Errors that affect every policy and country alike largely cancel when policies are compared.** The Total Effective Carbon Price measures a policy mix as the uniform carbon tax that would cut emissions by as much ([Brief 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1)). It is a ratio of two cuts computed with the same elasticities, so a common error cancels. In the stylized economy of paper 6.1, replacing the central demand elasticities with CPAT's raises the cut from a \$30 tax by about a third, from 13.4 to 17.5 percent, but moves the Total Effective Carbon Price of a policy mix by only about a tenth, from \$36.9 to \$33.1 per tonne ([working paper, emission cuts and the Total Effective Carbon Price](working-paper.qmd#sec-tecp)).
+**Errors that affect every policy and country alike largely cancel when policies are compared.** The Total Effective Carbon Price measures a policy mix as the uniform carbon tax that would cut emissions by as much ([Brief 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd)). It is a ratio of two cuts computed with the same elasticities, so a common error cancels. In the stylized economy of paper 6.1, replacing the central demand elasticities with CPAT's raises the cut from a \$30 tax by about a third, from 13.4 to 17.5 percent, but moves the Total Effective Carbon Price of a policy mix by only about a tenth, from \$36.9 to \$33.1 per tonne ([working paper, emission cuts and the Total Effective Carbon Price](working-paper.qmd#sec-tecp)).
 
 **So a CPAT ranking of policies or countries is more reliable than a CPAT forecast of tonnes or revenue.** The same holds for the back-casts and model comparisons in [Brief 5.3](../../../modelling/5-modelling/CPATValidation/index.qmd): CPAT is best used for ranges and comparisons, and least reliable for near-term levels.
 
@@ -106,7 +106,7 @@ lightbox: auto
 - [Climate Fiscal Policy Brief No. 5.1](../../../modelling/5-modelling/CPATMitigationMethods/index.qmd): the CPAT mitigation module, its equations and its elasticities.
 - [No. 5.2](../../../modelling/5-modelling/CPATAIImplementation/index.qmd): CPAT-AI, the transparent and testable rebuild of the tool.
 - [No. 5.3](../../../modelling/5-modelling/CPATValidation/index.qmd): validating CPAT against data, history and other models.
-- [No. 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1): the Total Effective Carbon Price, the yardstick for comparing policy mixes [@CFPB61].
+- [No. 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, the yardstick for comparing policy mixes [@CFPB61].
 - The [working paper](working-paper.qmd) behind this brief: the evidence register, the calculations and the validation protocol.
 
 # Downloads {.unnumbered}

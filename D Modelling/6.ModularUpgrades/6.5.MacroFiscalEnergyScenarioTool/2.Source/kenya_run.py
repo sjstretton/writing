@@ -1,4 +1,4 @@
-"""Paper 5.2, section 7: the tool's Kenya run (illustrative results from the tool, not official estimates).
+"""Paper 6.5, section "A country run: Kenya" (Table 5): the tool's Kenya run (illustrative results from the tool, not official estimates).
 
 Reads, without modifying, two output files of the Climate Fiscal AI Tools repository:
   * MacFiscEnergyScenarioProto/MacroFiscalModels/results/integrated_results.csv (row KEN):

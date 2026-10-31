@@ -74,7 +74,7 @@ lightbox: auto
 
 **Recognition changes what an exporting country would choose for itself.** A country selling a tenth of its steel to the EU would choose a feebate of €8 under today's rules and €21 with full recognition, because it bears the cost of abatement on all its output but gets relief only on EU sales. A feebate at the full EU price pays for itself once more than 24 percent of output goes to the EU, against half today ([working paper, calibration](working-paper.qmd#sec-calibration)).
 
-**The signal can be measured for any instrument, price-based or not.** The Total Effective Carbon Price expresses a tax, feebate, subsidy reform or standard as the uniform carbon tax that would cut emissions by as much ([Brief 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1)). It credits a policy's effect on emissions, not its cost to producers.
+**The signal can be measured for any instrument, price-based or not.** The Total Effective Carbon Price expresses a tax, feebate, subsidy reform or standard as the uniform carbon tax that would cut emissions by as much ([Brief 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd)). It credits a policy's effect on emissions, not its cost to producers.
 
 **Where an exporter has no price signal, firm-level verification should stay.** Firms there should be measured on the whole output of all their plants making the good, so that they cannot pick which plant ships, as @MehlingRitz2023 suggest ([working paper, design trade-off](working-paper.qmd#sec-tradeoff)).
 
@@ -119,7 +119,7 @@ lightbox: auto
 - [Climate Fiscal Policy Brief No. 1.1](../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.qmd): the two-track architecture, a production feebate and a destination charge on consumption [@CFPB11].
 - [No. 1.2](../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.qmd): feebates in power and industry [@CFPB12].
 - [No. 1.3](../../../policy/1-carbon-pricing/CarbonConsumptionTax/index.qmd): a carbon component in VAT and a forward obligation on energy suppliers [@CFPB13].
-- [No. 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1): the Total Effective Carbon Price, the measure of any policy's carbon-price equivalent [@CFPB61].
+- [No. 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, the measure of any policy's carbon-price equivalent [@CFPB61].
 - The [working paper](working-paper.qmd) behind this brief: the shuffling model, the liability formula, proofs, calibration and legal texts.
 
 # Downloads {.unnumbered}

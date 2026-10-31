@@ -56,7 +56,7 @@ lightbox: auto
 
 **Fuel for homes and vehicles needs its own instrument.** Its carbon is released after the last sale, so no charge on goods reaches it. A few large firms dominate its supply: fuel importers, refiners and gas suppliers. They take on a legal obligation for the carbon in what they sell, announced years ahead and rising on a published path, so that the firms that plan long-lived capital know the price they will face.
 
-**A common yardstick lets every policy be compared.** A feebate has no "price paid", and a standard or a procurement rule has no rate at all. The carbon-price equivalent expresses any of them as the uniform carbon tax that would cut emissions by as much ([Brief 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1)). It is what lets a country that regulates, or uses a feebate, earn the same credit at a foreign border and the same climate finance as a country that taxes.
+**A common yardstick lets every policy be compared.** A feebate has no "price paid", and a standard or a procurement rule has no rate at all. The carbon-price equivalent expresses any of them as the uniform carbon tax that would cut emissions by as much ([Brief 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd)). It is what lets a country that regulates, or uses a feebate, earn the same credit at a foreign border and the same climate finance as a country that taxes.
 
 **Together the two tracks give the full carbon price signal, without leakage.** The feebate gives producers the full incentive to cut emissions per tonne. The consumption charge makes buyers pay for carbon, and because imports pay alike there is nothing to gain from buying abroad. The two rates can differ: the production rate can be high because it does not raise average costs, and the consumption rate can be set by what households will accept ([working paper, the equivalence result](working-paper.qmd#sec-equivalence)).
 
@@ -118,7 +118,7 @@ lightbox: auto
 - [Climate Fiscal Policy Brief No. 1.2](../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.qmd): feebates in power and industry [@CFPB12].
 - [No. 1.3](../../../policy/1-carbon-pricing/CarbonConsumptionTax/index.qmd): a carbon component in VAT and a forward obligation on energy suppliers [@CFPB13].
 - [No. 1.4](../../../policy/1-carbon-pricing/IronSteelCBAM/index.qmd): carbon price recognition under the CBAM, and scrap shuffling [@CFPB14].
-- [No. 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1): the Total Effective Carbon Price, the yardstick for comparing policies [@CFPB61].
+- [No. 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, the yardstick for comparing policies [@CFPB61].
 - The [working paper](working-paper.qmd) behind this brief: the model, proofs, calibration and literature.
 
 # Downloads {.unnumbered}

@@ -1,0 +1,50 @@
+{
+  "series": "Climate Fiscal Policy Brief No. 6.1",
+  "title": "Measure Carbon Pricing by the Emissions It Cuts",
+  "subtitle": "The Total Effective Carbon Price: one carbon-tax equivalent for any policy mix",
+  "message": "Standard metrics add up explicit prices per tonne, so standards and feebates score zero and a dollar on coal counts the same as a dollar on gasoline. The Total Effective Carbon Price is the uniform tax that would cut emissions by as much as the actual mix.",
+  "problem": {
+    "title": "Headline prices miss most policy",
+    "stats": [
+      {
+        "value": "$21",
+        "label": "explicit-price metric for a stylized mix of tax, subsidy and fuel standard"
+      },
+      {
+        "value": "$37",
+        "label": "the same mix measured by the emissions it cuts (long run; $33 on the first-order formula)"
+      },
+      {
+        "value": "$166",
+        "label": "credit price of the fuel standard, which adds only $1 to the TECP"
+      }
+    ],
+    "text": "No country prices carbon with one instrument. The OECD's effective carbon rate and the World Bank's total carbon price measure the price signal, not what it achieves. Crediting, border recognition and country comparisons all need one number per tonne that treats a tax, a subsidy and a standard alike."
+  },
+  "mechanism": {
+    "title": "Weight each price by how much emissions respond",
+    "image": "figures/tecp_example.png",
+    "imageWidth": 5.8,
+    "imageHeight": 2.98,
+    "caption": "Stylized three-sector economy: one policy mix, two measures ($ per tonne of CO₂).",
+    "points": [
+      "Translate each instrument into price changes by fuel and sector.",
+      "A CES energy-demand model splits the response into fuel switching and using less energy.",
+      "Abatement weights turn any package into one $/t figure; a uniform $X tax returns exactly $X.",
+      "Binding standards enter at their shadow price; others via their modeled emission cut."
+    ]
+  },
+  "action": {
+    "title": "Publish the TECP beside explicit prices",
+    "results": [
+      "The mix is worth more than its headline price: $37 against $21, because the tax falls on responsive sectors.",
+      "It measures abatement, not cost: report it beside instruments' shadow prices.",
+      "Data needed: an energy balance, fuel prices and published elasticities."
+    ],
+    "todo": [
+      "Use it to pay for policies, so a country that regulates earns as much per tonne as one that taxes.",
+      "Use the sector switching-margin price for CBAM recognition.",
+      "Use the decomposition to show governments where their package is weak."
+    ]
+  }
+}

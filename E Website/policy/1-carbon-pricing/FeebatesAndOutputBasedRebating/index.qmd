@@ -101,7 +101,7 @@ lightbox: auto
 
 **Working systems already price industry against benchmarks.** Canada's output-based pricing system charges facilities above a standard per unit of output and credits those below it [@CanadaOBPS2019]. With standards set at 80–95 percent of the average, it raises net revenue. It survived the end of the consumer charge, but in May 2026 its price path was cut from C\$170 to C\$115 per tonne in 2030 [@ICAP2026Canada]. The EU's free allocation gives each installation allowances equal to a best-performer benchmark times its output level [@ECFreeAllocation], and it is being phased out for the sectors covered by the border mechanism between 2026 and 2034 [@EU2023ETSDirective].
 
-**Border rules do not yet credit feebates.** The EU's border mechanism deducts only a carbon price effectively paid abroad, net of rebates [@EU2025Omnibus], so the average exporter under a revenue-neutral feebate earns no deduction. Crediting the feebate at its carbon-price equivalent, the tax that would cut emissions as much, would fix this ([Brief 1.4](../../../policy/1-carbon-pricing/IronSteelCBAM/index.qmd), [Brief 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1)).
+**Border rules do not yet credit feebates.** The EU's border mechanism deducts only a carbon price effectively paid abroad, net of rebates [@EU2025Omnibus], so the average exporter under a revenue-neutral feebate earns no deduction. Crediting the feebate at its carbon-price equivalent, the tax that would cut emissions as much, would fix this ([Brief 1.4](../../../policy/1-carbon-pricing/IronSteelCBAM/index.qmd), [Brief 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd)).
 
 # The record supports the incentive and the benchmark warnings {#sec-evidence}
 
@@ -124,7 +124,7 @@ lightbox: auto
 - [Climate Fiscal Policy Brief No. 1.1](../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.qmd): the two-track architecture, pricing production and consumption separately [@CFPB11].
 - [No. 1.3](../../../policy/1-carbon-pricing/CarbonConsumptionTax/index.qmd): a carbon component in VAT and a forward obligation on energy suppliers [@CFPB13].
 - [No. 1.4](../../../policy/1-carbon-pricing/IronSteelCBAM/index.qmd): carbon price recognition under the EU's border mechanism, and scrap shuffling [@CFPB14].
-- [No. 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1): the Total Effective Carbon Price, which puts a feebate on the same scale as a tax [@CFPB61].
+- [No. 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, which puts a feebate on the same scale as a tax [@CFPB61].
 - The [working paper](working-paper.qmd) behind this brief: the model, proofs, country cases and literature.
 
 # Downloads {.unnumbered}

@@ -1,0 +1,12 @@
+Table 4, default limits: limits F1 <= 10%, F2 <= 0.5%, F3 <= 15%
+  best tax      abatement  25.3%  tax  35  feebate   0  F1  2.8  F2 0.25  F3 14.8
+  best feebate  abatement  24.5%  tax   0  feebate  38  F1  0.0  F2 0.00  F3 14.8
+  best mix      abatement  25.4%  tax  30  feebate   6  F1  2.4  F2 0.22  F3 15.0
+Table 4, tight visible price: limits F1 <= 2%, F2 <= 0.5%, F3 <= 15%
+  best tax      abatement  20.1%  tax  25  feebate   0  F1  2.0  F2 0.18  F3 10.6
+  best feebate  abatement  24.5%  tax   0  feebate  38  F1  0.0  F2 0.00  F3 14.8
+  best mix      abatement  25.1%  tax  18  feebate  19  F1  1.4  F2 0.13  F3 15.0
+Sensitivity (M7): generators recover only the grid-average pass-through: limits F1 <= 10%, F2 <= 0.5%, F3 <= 15%
+  best tax      abatement  18.2%  tax  22  feebate   0  F1  1.8  F2 0.16  F3 14.4
+  best feebate  abatement  24.5%  tax   0  feebate  38  F1  0.0  F2 0.00  F3 14.8
+  best mix      abatement  24.5%  tax   0  feebate  38  F1  0.0  F2 0.00  F3 14.8

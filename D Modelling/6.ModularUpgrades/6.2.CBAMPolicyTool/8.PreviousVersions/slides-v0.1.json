@@ -1,0 +1,50 @@
+{
+  "series": "CPAT Companion Paper No. 6.2",
+  "title": "The CBAM Policy Tool",
+  "subtitle": "Measuring exporters' exposure to the EU carbon border adjustment, and what domestic policy can do",
+  "message": "At €80 a tonne, Turkish hot-rolled steel declared at the default owes €107 a tonne in 2026 and €252 at full phase-in, close to half its price. Where a country has no default of its own, as Egypt has none for steel, verified emissions data are the biggest lever.",
+  "problem": {
+    "title": "The charge is large and arrives early",
+    "stats": [
+      {
+        "value": "€252",
+        "label": "per tonne of Turkish hot-rolled steel at full phase-in (46% of price)"
+      },
+      {
+        "value": "€595m",
+        "label": "a year on seven Egyptian exports at defaults (illustrative)"
+      },
+      {
+        "value": "€177m",
+        "label": "the same exports with verified data at the tool's estimates"
+      }
+    ],
+    "text": "Since January 2026 EU importers of steel, aluminum, cement, fertilizers, hydrogen and electricity owe certificates for embedded emissions. Emissions above the benchmark are charged in full from the first year."
+  },
+  "mechanism": {
+    "title": "Data and a domestic price both cut the charge",
+    "image": "../2.Source/figures/fig1_charge_path.png",
+    "imageWidth": 5.6,
+    "imageHeight": 3.04,
+    "caption": "Turkish hot-rolled steel, €80/tCO₂: default, verified data, and data plus a €20 credited price.",
+    "points": [
+      "Filing data at the country average saves €58 a tonne (the mark-up).",
+      "A €20 domestic price saves €49 a tonne and keeps the money at home.",
+      "Egypt's gas-based steel would be charged at the 'other countries' default of 4.05 t/t."
+    ]
+  },
+  "action": {
+    "title": "Verify first, then price at home",
+    "results": [
+      "Most exposure arrives in 2026 for goods far above the benchmark.",
+      "A rebated domestic price forfeits the Article 9 credit.",
+      "Egypt: €418m a year saved by verification, €262m of it on steel."
+    ],
+    "todo": [
+      "Build verification capacity at the plants that export to the EU.",
+      "Then consider a domestic carbon price on CBAM goods.",
+      "Press for revised defaults in the 2027 review.",
+      "Use it for exposure, not for a firm's compliance filing."
+    ]
+  }
+}

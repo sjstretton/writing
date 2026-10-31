@@ -48,7 +48,7 @@ lightbox: auto
 
 # The model is a short chain that every number can be traced through {#sec-chain}
 
-**Prices come first, and every part of them is explicit.** The retail price of each fuel in each sector is the cost of supply, plus existing taxes, less subsidies, plus the new carbon charge and the value-added tax (VAT) on it. Because each part is separate, CPAT can report the total price signal on carbon, which [Brief 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1) turns into the Total Effective Carbon Price [@CFPB61]. Where a country controls fuel prices, CPAT lets a floating tax or subsidy absorb world-price changes, but a positive tax never falls below its last observed level, so price rises in taxed fuels reach consumers ([working paper, prices](working-paper.qmd#sec-prices)).
+**Prices come first, and every part of them is explicit.** The retail price of each fuel in each sector is the cost of supply, plus existing taxes, less subsidies, plus the new carbon charge and the value-added tax (VAT) on it. Because each part is separate, CPAT can report the total price signal on carbon, which [Brief 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd) turns into the Total Effective Carbon Price [@CFPB61]. Where a country controls fuel prices, CPAT lets a floating tax or subsidy absorb world-price changes, but a positive tax never falls below its last observed level, so price rises in taxed fuels reach consumers ([working paper, prices](working-paper.qmd#sec-prices)).
 
 **Fuel use then responds to income, an efficiency trend and the price.** One equation covers every sector outside power. The price response has two parts: how much an existing car, boiler or furnace is used, and how efficient the stock becomes. Non-price policies such as efficiency standards and feebates act only on the second part, so they cut fuel use without raising the price paid per unit ([working paper, demand](working-paper.qmd#sec-demand)).
 
@@ -71,7 +71,7 @@ lightbox: auto
 
 **So most of the percentage cut comes from coal.** Industrial coal use falls by about a third and road fuel by about 6 percent, for similar responsiveness. The tonnes depend on each country's fuel mix, but a country that burns coal will find most of its cut there.
 
-**Each fuel responds to its own price alone.** Outside power, cooking and road vehicles, CPAT has no fuel switching: a carbon price that raises coal more than gas cuts coal more than gas, but does not move a factory from coal to gas. The model therefore understates switching in industry and overstates the fall in total energy use. Paper 6.1 shows how a richer demand system with switching changes the result ([Brief 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1)).
+**Each fuel responds to its own price alone.** Outside power, cooking and road vehicles, CPAT has no fuel switching: a carbon price that raises coal more than gas cuts coal more than gas, but does not move a factory from coal to gas. The model therefore understates switching in industry and overstates the fall in total energy use. Paper 6.1 shows how a richer demand system with switching changes the result ([Brief 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd)).
 
 **The responses are long-run, but the model applies them within a year.** CPAT's elasticities were set from a meta-analysis of price responses [@Labandeira2017] and adjusted for developing countries, and they are long-run values. The model applies them to each year's price change, so a sudden price jump produces its full long-run response at once [@black2023cpat]. For a carbon price phased in over several years, which is the usual design, the error is small; for a sudden shock it is not. Paper 5.4 checks the elasticities against the wider evidence ([Brief 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd)).
 
@@ -112,7 +112,7 @@ lightbox: auto
 - [Climate Fiscal Policy Brief No. 5.2](../../../modelling/5-modelling/CPATAIImplementation/index.qmd): how CPAT was rebuilt as a transparent, testable tool [@StrettonWP52].
 - [No. 5.3](../../../modelling/5-modelling/CPATValidation/index.qmd): validating CPAT against data and other models [@StrettonWP53].
 - [No. 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd): whether CPAT's price elasticities are right [@StrettonWP54].
-- [No. 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1): the Total Effective Carbon Price, and a demand system with fuel switching [@CFPB61].
+- [No. 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, and a demand system with fuel switching [@CFPB61].
 - The [working paper](working-paper.qmd) behind this brief: every equation, the corrections and the derivations.
 
 # Downloads {.unnumbered}

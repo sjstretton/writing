@@ -1,4 +1,7 @@
-"""Paper 4.5, "The CBAM Policy Tool": worked example with public data only.
+"""Paper 6.2, "The CBAM Policy Tool": worked example with public data only.
+
+v0.2 (31 Oct 2026): adds the free-allocation phase-out proposed in COM(2026) 616
+(not adopted) as an alternative path, to 2038, in the table of charges and the figure.
 
 Run from this folder:  python3 cbam_example.py   (add --refetch to re-query Eurostat)
 
@@ -14,6 +17,11 @@ unwrought aluminium (CN 7601). Inputs:
     2025/2620, Annex point 5.3 (read 30 Oct 2026): CN 7208 route (C) 1.370,
     CN 7214 20 00 route (C) 1.364, CN 7601 route (K) 1.423 tCO2/t. They affect
     2026-2033 only, not the full phase-in results.
+  * the cross-sectoral correction factor in the free-allocation adjustment
+    (Implementing Regulation 2025/2620, Annex points 3-4) is set to 1;
+  * the "actual data" rows use the Column B benchmark as an approximation; a
+    declarant using actual data builds the adjustment from Column A process
+    benchmarks and its precursors.
 Stylized: certificate price EUR 80/tCO2 (as in paper 1.4); domestic carbon
 price EUR 20/tCO2 effectively paid on all embedded emissions (actual-values
 route only, Article 9).
@@ -41,6 +49,10 @@ P_DOM = 20.0         # EUR per tCO2, stylized domestic carbon price
 YEAR_TRADE = 2025
 PHASE_IN = {2026: 0.025, 2027: 0.05, 2028: 0.10, 2029: 0.225, 2030: 0.485,
             2031: 0.61, 2032: 0.735, 2033: 0.86, 2034: 1.0}
+# COM(2026) 616 (proposal, 17.7.2026): CBAM factor 97.5, 95, 91.5, 81, 59, 48, 37.5, 27 (2026-2033),
+# 15 (2034-2037), 0 from 2038. Phase-in share = 1 - CBAM factor.
+PHASE_IN_PROPOSAL = {2026: 0.025, 2027: 0.05, 2028: 0.085, 2029: 0.19, 2030: 0.41, 2031: 0.52, 2032: 0.625,
+                     2033: 0.73, 2034: 0.85, 2035: 0.85, 2036: 0.85, 2037: 0.85, 2038: 1.0}
 MARKUP = {2026: 0.10, 2027: 0.20}           # 0.30 from 2028
 BENCHMARK = {"7208": 1.370, "72142000": 1.364, "7601": 1.423}  # IR 2025/2620, Annex 5.3, Column B
 SHORT = {"7208": "Hot-rolled flat steel", "72142000": "Rebar", "7601": "Unwrought aluminum"}
@@ -72,10 +84,12 @@ def refetch():
             print(cn, y, "tonnes", q / 10 if q else None, "EUR", v)
 
 
-def charge_per_tonne(see, cn, year, credit_price=0.0):
+def charge_per_tonne(see, cn, year, credit_price=0.0, phase=None):
     """EUR per tonne: certificate price x certificates net of the free-allocation
     adjustment, less a carbon price effectively paid at origin (per tonne)."""
-    covered = max(0.0, see - (1 - PHASE_IN[year]) * BENCHMARK[cn])
+    phase = phase or PHASE_IN
+    share = phase.get(year, 1.0)
+    covered = max(0.0, see - (1 - share) * BENCHMARK[cn])
     gross = P_EU * covered
     return max(0.0, gross - credit_price * see), gross
 
@@ -98,7 +112,8 @@ def example():
                              see_default_marked_up=round(see_def, 3), see_country_average=round(see0, 3),
                              charge_default=round(c_def, 1), charge_actual_at_average=round(c_avg, 1),
                              charge_actual_with_domestic_20=round(c_avg_cr, 1),
-                             charge_default_pct_value=round(100 * c_def / unit, 1)))
+                             charge_default_pct_value=round(100 * c_def / unit, 1),
+                             charge_default_proposal=round(charge_per_tonne(see_def, cn, year, phase=PHASE_IN_PROPOSAL)[0], 1)))
             agg.append(dict(cn=cn, year=year, tonnes=round(q), value_eur_m=round(v / 1e6, 1),
                             charge_default_eur_m=round(c_def * q / 1e6, 1),
                             charge_average_eur_m=round(c_avg * q / 1e6, 1),
@@ -115,27 +130,31 @@ def example():
 def figure():
     dv, _ = load()
     see0 = float(dv["7208"]["see_direct_tco2_per_t"])
-    years = sorted(PHASE_IN)
+    years = list(range(2026, 2039))
     series = [
         ("Default value with mark-up", [charge_per_tonne(see0 * (1 + markup(y)), "7208", y)[0] for y in years], "#2a78d6", "-"),
         ("Actual data at the country average", [charge_per_tonne(see0, "7208", y)[0] for y in years], "#eb6834", "-"),
         ("Actual data, with a EUR 20 domestic carbon price credited",
          [charge_per_tonne(see0, "7208", y, P_DOM)[0] for y in years], "#1baf7a", "--"),
+        ("Default value, free allocation ended in 2038 as proposed (COM(2026) 616)",
+         [charge_per_tonne(see0 * (1 + markup(y)), "7208", y, phase=PHASE_IN_PROPOSAL)[0] for y in years], "#2a78d6", ":"),
     ]
     fig, ax = plt.subplots(figsize=(7.0, 3.8), dpi=200)
     for lab, ys, col, ls in series:
-        ax.plot(years, ys, color=col, lw=2, ls=ls, marker="o", ms=4, label=lab)
+        ax.plot(years, ys, color=col, lw=2, ls=ls, marker="o" if ls != ":" else None, ms=4, label=lab)
+        if ls == ":":
+            continue
         ax.annotate(f"{ys[-1]:.0f}", (years[-1], ys[-1]), xytext=(6, 0), textcoords="offset points",
                     va="center", fontsize=8, color="#0b0b0b")
     ax.set_ylabel("EUR per tonne of steel", fontsize=9)
-    ax.set_xlim(2025.6, 2034.8)
+    ax.set_xlim(2025.6, 2038.9)
     ax.set_ylim(0, 280)
     ax.grid(color="#e4e3df", lw=0.8)
     ax.set_axisbelow(True)
     for sp in ("top", "right"):
         ax.spines[sp].set_visible(False)
     ax.tick_params(colors="#52514e", labelsize=8)
-    ax.legend(fontsize=7.5, frameon=False, loc="upper left")
+    ax.legend(fontsize=7.5, frameon=True, framealpha=0.95, edgecolor="none", loc="lower right")
     fig.tight_layout()
     fig.savefig(FIG / "fig1_charge_path.png")
     plt.close(fig)

@@ -121,7 +121,7 @@ lightbox: auto
 - [Brief 5.1](../../../modelling/5-modelling/CPATMitigationMethods/index.qmd): the CPAT mitigation module, its methods in brief [@StrettonWP51].
 - [Brief 5.3](../../../modelling/5-modelling/CPATValidation/index.qmd): validating CPAT against data and other models [@StrettonWP53].
 - [Brief 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd): are CPAT's price elasticities right? [@StrettonWP54].
-- [Brief 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1): the Total Effective Carbon Price, which uses the same demand system [@CFPB61].
+- [Brief 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, which uses the same demand system [@CFPB61].
 - The [working paper](working-paper.qmd) behind this brief: the register in full, the replication rule, the four test levels and the sources.
 
 # Downloads {.unnumbered}

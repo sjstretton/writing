@@ -71,7 +71,7 @@ lightbox: auto
 
 **Money spent is not capital built.** The IMF estimates that low-income developing countries get 40 percent less from public investment than the same spending could buy, emerging markets 27 percent and advanced economies 13 percent; better investment management could close up to two-thirds of the gap [@IMF2015PIM]. The extension charges each public measure for that loss once, and puts capital and recurrent costs on one footing, because unfunded maintenance is a main way public capital loses value ([working paper, five corrections](working-paper.qmd#sec-corrections)).
 
-**Revenue that comes back is worth more than its face value.** Each dollar the budget recovers saves more than a dollar of tax, so who keeps a fuel saving changes the budget case but not the economic one. And pricing comes first: a carbon tax raises money cheaply, so a subsidy that a price could replace should be flagged ([Brief 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1), @CFPB61).
+**Revenue that comes back is worth more than its face value.** Each dollar the budget recovers saves more than a dollar of tax, so who keeps a fuel saving changes the budget case but not the economic one. And pricing comes first: a carbon tax raises money cheaply, so a subsidy that a price could replace should be flagged ([Brief 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd), @CFPB61).
 
 # A good project can still break the budget {#sec-island}
 
@@ -110,8 +110,8 @@ lightbox: auto
 - [Climate Fiscal Policy Brief No. 3.1](../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.qmd): guarantee the power contract, not the debt [@CFPB31].
 - [No. 3.2](../../../policy/3-finance-and-risk/CleanPowerAssetClasses/index.qmd): refinance clean power as an asset class [@CFPB32].
 - [No. 5.1](../../../modelling/5-modelling/CPATMitigationMethods/index.qmd): the CPAT mitigation module, including its cost-of-capital settings [@StrettonWP51].
-- [No. 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1): the Total Effective Carbon Price [@CFPB61].
-- [No. 6.5](../../../modelling/6-modular-upgrades.qmd#paper-6-5): the macro-fiscal model that returns the affordable envelope [@StrettonWP65].
+- [No. 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price [@CFPB61].
+- [No. 6.5](../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.qmd): the macro-fiscal model that returns the affordable envelope [@StrettonWP65].
 - The [working paper](working-paper.qmd) behind this brief: the equations, the four propositions, the worked example and the country runs.
 
 # Downloads {.unnumbered}

@@ -1,21 +1,26 @@
 # 6.2 The CBAM Policy Tool
 
-**Status:** working paper, version 0.1 (29 October 2026), first full draft for Stephen's review. About 5,450 words of body. Egypt application added 29 Oct 2026, after Stephen cleared tool country results for use as illustrative results. Moved here from `6.Additional` (old number 4.3).
+**Status (31 Oct 2026):** working paper v0.2 (about 5,200 words of body, 700-word executive summary) + Climate Fiscal Policy Brief No. 6.2 v1.0 (`1.Presentation/Brief-CBAMPolicyTool.qmd`, key CFPB62) + ten-slide deck. Peer-reviewed (`5.Notes/PeerReview-2026-10-31.md`) and every citation checked (`5.Notes/BibCheck-2026-10-31.md`). v0.1 files are in `8.PreviousVersions/`. Egypt application added 29 Oct 2026, after Stephen cleared tool country results for use as illustrative results; corrected 31 Oct 2026 (see below). Moved here from `6.Additional` (old number 4.3).
 
-**What the paper does.** Describes the CBAM Policy Tool (part of the Climate Fiscal AI Tools): what it computes (embedded emissions by component, the gap to EU default values, the CBAM charge per tonne and in total year by year, the capture price, the effect of a domestic carbon price split into abatement and credit), its method in five equations, its public data sources, a worked example with public data only: three Turkish exports to the EU (CN 7208, 7214 20 00, 7601), Commission default values and Eurostat 2025 trade; and a country application (section 7): the tool's Egypt emission factors for seven products against the Commission's default values, with the full-phase-in charge at €80 (about €595 million a year at default values, €177 million at the tool's estimates, 2024 volumes). Links to papers 1.1 (two-track architecture), 1.3 (carbon price recognition), 6.1 (TECP) and 5.4 (elasticities).
+**Egypt corrections (31 Oct 2026).** The review found that the tool's Egypt workbook (v1.2) deducts the CO₂ bound in urea, which the CBAM rules count as emitted (Impl. Reg. 2025/2547, Annex II B.8.2), counts only half the ammonia in ammonium nitrate, and uses its own EU export volumes, which differ widely from Eurostat. `2.Source/egypt_example.py` applies the corrections and uses Eurostat volumes; the headline moves from €595m/€177m (default/verified) to €793m/€480m a year at 2025 volumes (€982m/€445m at 2024 volumes). The corrections should be carried into the tool itself (Egypt_CBAM_EF v1.3), with its steel factors reconciled (merchant DRI 1.38 t/t vs DRI-EAF steel 0.73 t/t; per tonne of crude steel, not of product).
+
+**What the paper does.** (v0.1 description; numbers updated in v0.2.) Describes the CBAM Policy Tool (part of the Climate Fiscal AI Tools): what it computes (embedded emissions by component, the gap to EU default values, the CBAM charge per tonne and in total year by year, the capture price, the effect of a domestic carbon price split into abatement and credit), its method in five equations, its public data sources, a worked example with public data only: three Turkish exports to the EU (CN 7208, 7214 20 00, 7601), Commission default values and Eurostat 2025 trade; and a country application (section 7): the tool's Egypt emission factors for seven products against the Commission's default values, with the full-phase-in charge at €80 (about €595 million a year at default values, €177 million at the tool's estimates, 2024 volumes). Links to papers 1.1 (two-track architecture), 1.4 (carbon price recognition and routing), 6.1 (TECP) and 5.4 (elasticities).
 
 ## Files
 
 | File | What it is |
 |---|---|
-| `CBAMPolicyTool.qmd` | Master (v0.1) |
-| `CBAMPolicyTool.bib` | References (EU law entries copied from paper 1.4's verified bib) |
-| `CBAMPolicyTool.docx` | Rendered with pandoc after resolving cross-references (as in 5.4) |
+| `CBAMPolicyTool.qmd` | Working paper master (v0.2) |
+| `CBAMPolicyTool.bib` | References, verified 31 Oct 2026 (EU law entries kept identical to paper 1.4's) |
+| `CBAMPolicyTool.docx` | Rendered with pandoc and the site's `quarto-xref.lua` and `web-links.lua` filters |
+| `1.Presentation/Brief-CBAMPolicyTool.qmd/.bib/.docx` | Policy brief master (v1.0); its bib is copied from the working paper's |
+| `1.Presentation/slides.json`, `Slides-CBAMPolicyTool.pptx` | Ten-slide deck (make_deck.py) |
+| `1.Presentation/figures/make_figures.py` | Reruns both scripts, copies Figure 1, draws the Egypt chart |
 | `2.Source/cbam_example.py` | Worked example: charge per tonne 2026–2034, aggregates, figure. `--refetch` re-queries Eurostat |
 | `2.Source/data/default_values_turkiye.csv` | Default values used (from the Commission's "DVs as adopted" workbook, 4 Feb 2026) |
 | `2.Source/data/eurostat_eu_imports_from_tr.csv` | EU imports from Türkiye, 2024–2025, Eurostat Comext DS-045409 (retrieved 29 Oct 2026) |
 | `2.Source/table_example.csv`, `table_aggregate.csv`, `figures/fig1_charge_path.png` | Outputs |
-| `2.Source/egypt_example.py`, `2.Source/table_egypt.csv` | Egypt application (Table 4): reads `Egypt_CBAM_EF_v1.2.xlsx` and the Commission workbook directly |
+| `2.Source/egypt_example.py`, `table_egypt.csv`, `table_egypt_sensitivity.csv`, `data/eurostat_eu_imports_from_eg.csv` | Egypt application (Tables 4–6): tool factors from `Egypt_CBAM_EF_v1.2.xlsx` with the two CBAM-rule corrections, Commission defaults, Eurostat volumes (`--refetch` re-queries) |
 | `CBAM_policy_dashboard_v1.0_guide.qmd/.docx`, `Egypt_CBAM_EF_v1.1_guide.qmd/.docx` | Source guides (method used; the guides themselves are not published) |
 | `CBAM_dash_v1.6.xlsx`, `cbam_data.xlsx`, `cbam_global_data.xlsx`, `Egypt_CBAM_EF_v1.2.xlsx`, `Egypt_CBAM_EmissionsFactors_v1.1.xlsx` | Source workbooks (Egypt EF v1.2 used; see below) |
 | `DVs as adopted_v20260204_.xlsx` | The Commission's public default-value workbook |
@@ -30,7 +35,7 @@ Run: `cd 2.Source && python3 cbam_example.py && python3 egypt_example.py`. Rende
 
 ## Now used (cleared by Stephen, 29 Oct 2026, as illustrative tool results)
 
-- **Egypt emission factors and EU export volumes** (section 7, Table 4): `Egypt_CBAM_EF_v1.2.xlsx`, sheet EF Section C (CBAM-equivalent intensity and 2024 EU exports by CN line), sheet Quality_Assurance (v1.1 to v1.2 corrections, ammonium nitrate N₂O range, aluminum PFCs). Cited as @CBAMToolEgypt2026 ("CBAM Policy Tool 2026"). Defaults compared are the Commission's (`DVs as adopted_v20260204_.xlsx`, Egypt sheet; "other countries" sheet for carbon steel, where Egypt has no value), not the tool's own reference defaults, which differ (e.g. the tool uses 1.82 for gas-based steel and 1.58 for clinker).
+- **Egypt emission factors** (section 8, Table 4): `Egypt_CBAM_EF_v1.2.xlsx`, sheet EF Section C (CBAM-equivalent intensity by CN line; the tool's line volumes are used only as route-mix weights; EU volumes now from Eurostat), sheet Quality_Assurance (v1.1 to v1.2 corrections, ammonium nitrate N₂O range, aluminum PFCs). Cited as @CBAMToolEgypt2026 ("CBAM Policy Tool 2026"). Defaults compared are the Commission's (`DVs as adopted_v20260204_.xlsx`, Egypt sheet; "other countries" sheet for carbon steel, where Egypt has no value), not the tool's own reference defaults, which differ (e.g. the tool uses 1.82 for gas-based steel and 1.58 for clinker).
 
 ## Still held back
 
@@ -49,11 +54,11 @@ Run: `cd 2.Source && python3 cbam_example.py && python3 egypt_example.py`. Rende
 
 ## Rendering
 
-Plain pandoc cannot resolve Quarto cross-references. Render with:
+From the folder each master is in (as for every series paper):
 
 ```bash
-python3 2.Source/xref.py <Name>.qmd /tmp/x.qmd   # numbers sections, tables, figures, equations
-pandoc /tmp/x.qmd -f markdown --citeproc --bibliography=<Name>.bib --csl=chicago-author-date.csl --resource-path=. -o <Name>.docx
+F="/home/user/writing/H Writing Instructions/Scripts/Website"; CSL="/home/user/writing/E Website/chicago-author-date.csl"
+pandoc CBAMPolicyTool.qmd -f markdown --lua-filter="$F/quarto-xref.lua" --lua-filter="$F/web-links.lua" --citeproc --bibliography=CBAMPolicyTool.bib --csl="$CSL" -o CBAMPolicyTool.docx
 ```
 
-Check the script header for its exact usage.
+Same for `1.Presentation/Brief-CBAMPolicyTool.qmd`. Deck: `python3 "H Writing Instructions/Writing Standards/templates/make_deck.py" slides.json Slides-CBAMPolicyTool.pptx`. (`2.Source/xref.py` was the v0.1 route and is no longer needed.)

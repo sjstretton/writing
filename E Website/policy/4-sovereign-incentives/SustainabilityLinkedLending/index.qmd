@@ -68,7 +68,7 @@ lightbox: auto
 
 **Verification should check the national inventory, not commission new surveys.** Uruguay's verifier reviews the same inventory the country reports under the Paris Agreement, smoothed over five years to remove weather noise [@MEF2023SSLL]. One verifier and one method per indicator class turns verification into a routine service.
 
-**The reward per unit of outperformance should be published and stated per tonne.** The reward for one point of an indicator equals the tonnes that point implies times a notional carbon price. That lets a funder compare a forest indicator in one country with a power indicator in another, and puts sustainability-linked lending on the same scale as policy crediting, the payment per tonne cut by a policy ([Brief 1.1](../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.qmd); [Brief 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1)).
+**The reward per unit of outperformance should be published and stated per tonne.** The reward for one point of an indicator equals the tonnes that point implies times a notional carbon price. That lets a funder compare a forest indicator in one country with a power indicator in another, and puts sustainability-linked lending on the same scale as policy crediting, the payment per tonne cut by a policy ([Brief 1.1](../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.qmd); [Brief 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd)).
 
 # Pay the reward from outside {#sec-separate}
 
@@ -126,7 +126,7 @@ lightbox: auto
 - [No. 4.2](../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.qmd): the Climate Investment Trust, which holds the buffer and the national beneficiary accounts [@CFPB42].
 - [No. 3.1](../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.qmd): a payment intermediary for clean power, the conditional de-risking route [@CFPB31].
 - [No. 1.1](../../../policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.qmd): carbon pricing in open economies and policy crediting [@CFPB11].
-- [No. 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1): the Total Effective Carbon Price, the unit for pricing indicators [@CFPB61].
+- [No. 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, the unit for pricing indicators [@CFPB61].
 - The [working paper](working-paper.qmd) behind this brief: the model, proofs, calibration and literature.
 
 # Downloads {.unnumbered}

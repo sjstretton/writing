@@ -1,4 +1,4 @@
-"""Stylized run for the Macro-Fiscal-Energy Scenario Tool paper (5.2).
+"""Stylized run for the Macro-Fiscal-Energy Scenario Tool paper (6.5), Tables 3 and 4.
 
 Runs the tool's GIMF-lite and DIGNAD-lite at their DEFAULT, ILLUSTRATIVE calibrations (no country
 data) on a stylized programme: extra public green investment of 1% of GDP a year for ten years.
