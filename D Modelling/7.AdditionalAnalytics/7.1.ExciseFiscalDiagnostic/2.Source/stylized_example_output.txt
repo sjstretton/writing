@@ -1,15 +1,36 @@
-Table: three comparable measures, Country A (stylized)
+Table 3: three comparable measures, Country A (stylized)
 code line                USD/std unit        unit % of price  % of GDP
 E1   Petrol                      0.30       liter         27      0.75
 E2   Diesel, road                0.18       liter         17      0.90
 T1   Cigarettes                  0.30  pack of 20         20      0.11
 A1   Beer (5% ABV)               8.00         LPA         20      0.30
 A5   Spirits (40% ABV)           4.50         LPA         15      0.07
+Spirits pay 44% less per liter of pure alcohol than beer
 
-Erosion: specific rates unchanged since 2020 keep 71% of their real value (a 29% real cut)
+Erosion: specific rates unchanged since 2020 keep 71% of their real value (a 29% real cut); petrol's 2020 rate is worth LCU 42 (USD 0.42) in 2025 prices
+Five years at 7% inflation: a specific rate keeps 71% of its real value
 
-Table: corrective benchmark for road fuels, USD per liter (stylized)
-Petrol: carbon 0.12  air 0.04  congestion 0.10  accidents 0.20  road 0.00  naive sum 0.46  corrective t* 0.31  (range 0.13-0.68)  current 0.30  gap +0.01
-   closing the gap: static +0.01% of GDP; with elasticity -0.3, volume -0.2%, revenue +0.01% of GDP
-Diesel: carbon 0.13  air 0.15  congestion 0.05  accidents 0.20  road 0.05  naive sum 0.58  corrective t* 0.43  (range 0.20-0.91)  current 0.18  gap +0.25
-   closing the gap: static +1.27% of GDP; with elasticity -0.3, volume -7.3%, revenue +1.11% of GDP
+CO2 per liter (IPCC 2006 defaults, assumed density): Petrol 2.29 kg, Diesel 2.68 kg
+
+Table 4: corrective benchmark for road fuels, USD per liter (stylized)
+Petrol: carbon 0.114  air 0.04  congestion 0.10  accidents 0.20  road 0.00  naive sum 0.454  corrective t* 0.304  (range 0.126-0.673)  current 0.30  gap +0.004  (low -0.174, high +0.373)
+   shares of t*: carbon 38%, air 13%, distance-related (beta-weighted) 49% (of which accidents 33%)
+   beta 0.35: t* 0.259
+   beta 0.65: t* 0.349
+   social-cost case (USD 185/t): carbon 0.423, t* 0.613
+   closing the gap: static USD 4 million, +0.01% of GDP
+   with elasticity -0.1: volume -0.0%, revenue +0.01% of GDP
+   with elasticity -0.3: volume -0.1%, revenue +0.01% of GDP
+Diesel: carbon 0.134  air 0.15  congestion 0.05  accidents 0.20  road 0.05  naive sum 0.584  corrective t* 0.434  (range 0.196-0.912)  current 0.18  gap +0.254  (low +0.016, high +0.732)
+   shares of t*: carbon 31%, air 35%, distance-related (beta-weighted) 35% (of which accidents 23%)
+   beta 0.35: t* 0.389
+   beta 0.65: t* 0.479
+   social-cost case (USD 185/t): carbon 0.495, t* 0.795
+   closing the gap: static USD 508 million, +1.27% of GDP
+   with elasticity -0.1: volume -2.4%, revenue +1.22% of GDP
+   with elasticity -0.3: volume -7.3%, revenue +1.11% of GDP
+
+Carbon component at USD 50/t: Petrol 0.114, Diesel 0.134; at USD 185/t: Petrol 0.423, Diesel 0.495
+Sierra Leone petrol 0.23 / carbon component = 2.0x
+
+VSL at income USD 800: OECD-based option USD 80,000 (100x income); US-based, elasticity 1.5 USD 16,000 (20x income); ratio 5.0

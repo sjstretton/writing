@@ -1,0 +1,135 @@
+---
+title: "A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis"
+subtitle: "Eighty Public Indicators, One Country Profile, and a Build Anyone Can Rerun"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+version: "0.1"
+abstract: |
+  Before advising a government on carbon pricing, energy subsidy reform or a climate investment program, an analyst needs a quick, comparable view of the country's fiscal space, its capacity to spend, its cost of capital, and how much fossil fuel money runs through its budget. That view usually takes days to assemble from a dozen databases, each with its own country names, units and vintages. The Global Fiscal Indicators dashboard assembles it for 217 economies from about twenty public datasets, including the IMF's World Economic Outlook, World Revenue Longitudinal Data and fossil fuel subsidy estimates, World Bank debt, budget and energy data, PEFA assessments and Ember's electricity data. It scores 80 indicators in twelve blocks on one 1-to-10 scale and shows a one-page country profile. A scripted pipeline rebuilds everything from the raw files, never imputes, records the year and source file of every value, and stops if its configuration and its outputs disagree. A comparison of four middle-income economies shows how the profile separates a revenue problem from a debt-service problem and points each to a different fiscal-energy lever.
+keywords: [fiscal indicators, fiscal space, energy subsidies, public investment management, data pipelines, climate finance]
+jel: [H60, H20, Q48, C80, O23]
+bibliography: FiscalIndicatorsDashboard.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+number-sections: true
+format:
+  docx: default
+---
+
+*Working paper, version 0.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the Climate Fiscal AI Tools.*[^credit]
+
+[^credit]: The dashboard (version 1.3) and its build pipeline are part of the Climate Fiscal AI Tools. All values quoted in this paper come from the public datasets the pipeline reads; no country assessment from the tools or from any institution's country work is reproduced. Errors are the author's own.
+
+# Introduction {#sec-intro}
+
+Climate-fiscal advice usually starts with a scramble for numbers. An economist asked whether a country can afford a climate investment program, or whether it should reform fuel subsidies first, needs its debt and interest burden, its tax take, how well it executes capital budgets, what its private investors pay for capital, how much it spends on fossil fuel subsidies, whether it exports or imports fossil fuels, and how it generates power. Each number sits in a different database: the IMF's World Economic Outlook for debt, the IMF's revenue database for taxes, the IMF's subsidy estimates for subsidies, World Bank budget data for capital execution, PEFA assessments for public investment management, academic datasets for the cost of capital. They use different country names, different units and different years. Assembling them for one country takes a day; doing it consistently for a region takes a week; and the next analyst starts again.
+
+This paper asks how to give an analyst a comparable, sourced first view of any country's climate-fiscal position in minutes, in a form that can be rebuilt and extended by someone who did not build it. The answer is the Global Fiscal Indicators dashboard, part of the Climate Fiscal AI Tools. It assembles 80 indicators for 217 economies from about twenty public datasets into twelve blocks, each answering one question: can the country pay for it, can it build it, what does capital cost it, who finances it, how much fossil money runs through the budget, does it sell or buy fossil fuels, how is power generated. A country picker fills a one-page profile with values, observation years, sources and a score from 1 to 10. Behind the workbook sits a scripted pipeline that turns the raw downloads into the panel, with rules that stop the commonest ways such compilations go quietly wrong.
+
+The dashboard adds to existing cross-country databases by joining them, not by replacing them. The IMF's World Revenue Longitudinal Data (WoRLD) and the UNU-WIDER Government Revenue Dataset harmonize tax revenue [@IMFWoRLD; @UNUWIDERGRD2025]. The IMF's fossil fuel subsidy estimates cover explicit and implicit subsidies for nearly every country [@Black2023FFS]. The World Bank's cross-country fiscal space database assembles debt and fiscal sustainability measures [@Kose2022FiscalSpace]. Each answers one part of the question. The dashboard puts fiscal space, delivery capacity, financing costs and the energy-fiscal position on one page and one scale, keeps every value traceable to its source file and year, and feeds the same panel to the scenario tool described in the companion paper [paper 6.5, @StrettonWP65], so the numbers an analyst reads are the numbers the models start from.
+
+Section 2 describes what the dashboard assembles and from where. Section 3 describes the build pipeline and its checks. Section 4 sets out the scoring. Section 5 describes how an analyst uses it. Section 6 compares four economies, and Section 7 sets out limits.
+
+# What the dashboard assembles {#sec-what}
+
+**The dashboard is organized as twelve questions, not as a list of datasets.** Four assessment blocks come first and carry the diagnosis: fiscal space, delivery, cost of capital, and financing and risk. Three context blocks explain it: how much fossil and climate money runs through the budget, whether the country sells or buys fossil fuels, and how it generates power. Five appendices hold reference material: retail energy prices, power market regulation, the inputs the macro-fiscal models start from, the output of the integrated scenario, and fiscal risk. Table 1 lists each block, its question and its main sources.
+
+| Block | Question | Indicators (examples) | Main public sources |
+|---|---|---|---|
+| Fiscal | Can they pay for it? | Gross debt; interest-to-revenue; net interest (% GDP); tax revenue (% GDP) | IMF WEO; IMF WoRLD |
+| PIMA (delivery) | Can they build it? | Capital budget execution; PEFA PI-11 public investment management; PI-12.2 asset monitoring; climate public finance diagnostic on record | World Bank BOOST; PEFA 2016 framework; UNDP review |
+| Finance 1 | What does capital cost them? | Real after-tax WACC for solar; cross-checks; private creditor rate; official–private spread; average maturity | IRENA; Steffen et al.; IEA observatory; World Bank IDS |
+| Finance 2 | Who finances it, and what risk does the budget carry? | Mitigation finance received; creditor mix; US dollar share of debt; PEFA PI-10.3 contingent liabilities; private participation in infrastructure | OECD climate-related development finance; IDS; PEFA; World Bank PPI |
+| Context 1 | How much fossil and climate money runs through the budget? | Excise share of revenue; fossil fuel subsidies, explicit and implicit (% GDP); environment protection spending | IMF WoRLD; IMF fossil fuel subsidies; BOOST |
+| Context 2 | Does the country sell fossil fuels, or buy them? | Net fuel trade; energy import dependency; oil, gas and coal rents | World Development Indicators |
+| Context 3 | How is power generated, and which way is it moving? | Oil-fired share; renewable share and its change; renewable capacity growth | Ember; IMF fossil fuel subsidies |
+| Appendix A | What do users pay for energy? | Retail prices of diesel, gasoline, electricity, gas and coal by sector | IMF fossil fuel subsidies |
+| Appendix B | How is the power sector organized? | Market structure; independent regulator; unbundling; RISE scores | Power Sector Reform Tracker; World Bank RISE |
+| Appendix C | What do the macro models start from? | Revenue; primary balance; investment; growth; public investment; external debt; CPIA; remittances; reserves; account ownership | IMF WEO; IMF ICSD; IDS; World Bank CPIA; WDI; Global Findex |
+| Appendix D | What would a net zero program do to budget and debt? | Budget need; feasible pricing revenue; GDP and debt in 2050; debt risk | Model output (paper 6.5), not data |
+| Appendix E | What could land on the budget? | Sovereign rating; debt maturing within a year; external debt; short-term debt to reserves; climate in budgeting | Fiscal space database; WDI; IDS |
+
+: Table 1. Blocks, questions and sources
+
+**Each source was checked against what the build actually reads.** The fiscal core comes from the IMF's World Economic Outlook, with projections dropped so that only actual years enter, and from WoRLD's 2026 release for tax revenue and excises [@IMFWEO; @IMFWoRLD]. Subsidies and retail energy prices come from the IMF's fossil fuel subsidy dataset, which is built with the Climate Policy Assessment Tool (CPAT) and reports 2024 values in US dollars; the pipeline converts them to shares of GDP with WEO GDP [@Black2023FFS]. Resource rents, fuel trade and energy import dependency come from the World Development Indicators [@WDI]. Generation by source comes from Ember's yearly electricity data [@Ember2025]. Budget execution and environmental spending come from the World Bank's harmonized BOOST data [@BOOST]; public investment management and contingent liability scores from PEFA assessments under the 2016 framework [@PEFA2016]. The cost of capital draws on IRENA's 2021 financing appendix [@IRENA2022], the global renewable cost-of-capital dataset of @Steffen2025WACC and the IEA's Cost of Capital Observatory [@IEACoC]. Borrowing terms and creditor mix come from International Debt Statistics [@IDS], climate finance received from the OECD's recipient-perspective climate-related development finance data [@OECDCRDF], private infrastructure investment from the PPI database [@PPI], regulatory scores from RISE [@RISE], power market structure from the Power Sector Reform Tracker [@UrpelainenYang2019], public investment from the IMF's Investment and Capital Stock Dataset [@IMFICSD], and sovereign ratings, rollover needs and external debt from the cross-country fiscal space database [@Kose2022FiscalSpace]. Account ownership comes from the Global Findex [@Findex2021].
+
+**Several obvious sources are not in the build, for stated reasons.** The UNU-WIDER Government Revenue Dataset was downloaded and set aside because WoRLD's excise and resource columns covered what was needed [@UNUWIDERGRD2025]. IMF Government Finance Statistics and OECD Revenue Statistics are not used; WoRLD is the revenue source. Carbon pricing is not yet a data block: the World Bank's Carbon Pricing Dashboard [@WBCarbonPricing] and OECD effective carbon rates are not read, and the only carbon pricing figures in the workbook are model output in Appendix D. IMF Public Investment Management Assessment scores are excluded because their publication is consent-based and the published subsample leans toward better performers, so a scored column would understate weakness; PEFA PI-11 is the substitute. Electricity cost recovery was dropped because the modeled supply-cost basis was not reliable enough to score. Each exclusion is written into the workbook's README sheet, so a reader knows that an absence is a decision and not an oversight.
+
+# The build pipeline {#sec-build}
+
+**Raw files go in, one long table comes out, and the workbook reads only that table.** The pipeline has three stages. Stage 1 reads every raw file and writes every observation it finds, for every year, as a row of country code, indicator, year, value and source file: about 130,000 rows. Stage 2 keeps the latest observation for each country and indicator: about 12,400 rows. Stage 3 pivots them to one row per economy, with a value column and a year column for each indicator. The workbook builder reads only the Stage 2 output and the configuration file. It never touches raw data, so relabeling an indicator or moving it between blocks needs only a rebuild of the workbook.
+
+**One configuration file defines every indicator, and the build enforces it.** Each row of the indicator file gives an indicator's block, label, direction, evaluation scale, scoring flag, indentation and source label. Adding an indicator means writing its extraction and adding one row. If the configuration names an indicator the pipeline does not emit, the run stops with a pipeline–configuration mismatch error naming it. An earlier version warned and continued, and indicators went missing without anyone noticing; a hard stop is the fix. Source coverage, the number of economies with a value, is counted from the panel at build time, not typed into the Sources sheet, so it cannot drift from the data.
+
+**Derived indicators are computed in the pipeline from published series, with the formula in the code.** Interest-to-revenue is the general government primary balance less the overall balance, divided by revenue, all from WEO:
+
+$$
+\text{interest-to-revenue}_{c} = 100 \times \frac{PB_c - NB_c}{R_c}, \qquad (1)
+$$
+
+kept only where revenue is positive and the result lies between 0 and 100 percent. The same numerator over GDP gives net interest as a share of GDP, which is negative for countries that receive more interest than they pay. Subsidies as a share of GDP divide the IMF's 2024 dollar estimates by the latest actual WEO GDP in dollars. Total fossil rents sum oil, gas and coal rents; net fuel trade is fuel exports' share of merchandise exports less fuel imports' share of merchandise imports. The spread between official and private borrowing rates is taken at the latest year each side has.
+
+**Four ground rules protect the panel from silent error.** Nothing is imputed: a missing value stays missing, and the profile counts missing rows by block. Every value carries its observation year, because vintages span 2013 to 2025: the fiscal core is 2024, capital execution mostly 2022, rents and the solar cost of capital 2021, power market structure 2013. Every value names its source file in the long table. And three known traps are guarded in the code: a spreadsheet lookup on an empty cell returns zero rather than blank; Ember carries a country's record forward where it has no new observations, which would show a spurious zero change in renewable share; and a count of zero sources of cost-of-capital evidence is an absence, not an observation.
+
+**The pipeline runs in two languages and has been checked for parity.** A Python script and an R script implement the same pipeline and write separately named outputs that can be compared. In a clean-room run on the original 53 indicators they matched in row count, values, years and coverage. Parity for the 27 indicators added in October 2026 is written but not yet verified. A manifest records the size and MD5 hash of every raw file, so a rebuild after a source refresh shows exactly which inputs changed. A download script refetches the six sources that have direct links into a separate folder, never over the files in use, and prints a checklist for the fifteen that need a manual query, with the settings to choose. Publishers revise series without notice, and an unnoticed revision is how a rebuilt panel stops matching published numbers; the separate folder forces a comparison before anything is swapped in.
+
+# Scoring and evaluation {#sec-scoring}
+
+**Every scored indicator is rescaled to 1–10 between the 5th and 95th percentiles of all economies, in the direction that counts as better.** For indicator $k$ with value $x_{ck}$ for country $c$, and $P5_k$ and $P95_k$ the percentiles across the panel,
+
+$$
+s_{ck} = 1 + 9 \, \frac{\min(\max(x_{ck}, P5_k), P95_k) - P5_k}{P95_k - P5_k} \qquad (2)
+$$
+
+when a high value is better, and the mirror image $1 + 9\,(P95_k - \tilde{x}_{ck})/(P95_k - P5_k)$, with $\tilde{x}_{ck}$ the clipped value, when a high value is worse. Clipping at the percentiles keeps a few extreme values (a debt ratio above 200 percent, a subsidy bill of a quarter of GDP) from compressing everyone else into the middle. The rescale is computed by live formulas in the workbook, so adding countries or updating data moves the bounds automatically.
+
+**Scores become words at fixed thresholds, and the words differ by block type.** A score of 7 or more reads Good, 4 to 7 Medium, below 4 Bad, in the assessment blocks, where a direction is clear: a higher interest burden is worse. In the context blocks the same thresholds read High, Medium and Low, because the number is a magnitude, not a verdict. A country with large fossil rents has revenue the transition puts at risk and, read the other way, a tax base it could expand; the dashboard does not pick one. Appendices are reference material and carry no block verdict. Each block also shows the average score of its indicators and how many have data.
+
+**The dashboard deliberately offers no overall index.** There are no defensible weights between fiscal space, delivery capacity, cost of capital and energy position, and a single score would erase the triage that is the point of the exercise. A country weak on fiscal space needs different instruments from one weak on delivery. Scores are also relative: they rank a country within the current sample, and they move if the sample or the data change.
+
+# How an analyst uses it {#sec-use}
+
+**The profile is read in three passes.** First the four assessment blocks, to find the binding constraint: is the problem money, the capacity to spend it, the price of capital or the structure of financing? Then the context blocks, to see which climate-fiscal levers the country actually has: subsidies to reform, an excise base to build on, fossil revenue at risk, a power sector moving toward or away from renewables. Then the appendices, for the detail an adviser needs in a meeting: pump prices, who regulates the power sector, the starting point of the macro models. An analyst can do this for a new country in a few minutes, with the year and source of every number on the page.
+
+**The same panel is the data layer for the scenario tool.** The Macro-Fiscal-Energy Scenario Tool reads the panel to calibrate its macro models (debt, revenue, public investment, efficiency, creditor mix) and its carbon pricing screen, and uses the dashboard's own builder to lay out its indicator blocks (paper 6.5). A fix in the dashboard therefore reaches the scenario tool on its next build, and the two cannot disagree about a country's starting position.
+
+**Adding a source is a five-step routine, designed to be done with an AI coding assistant.** The analyst first asks the assistant for public datasets that cover the concept for as many of the 217 economies as possible, reporting coverage, years, download route and license before any code is written. The file then goes into the raw-data folder with a row in the sources file. The assistant is asked to add an extraction block that copies an existing pattern rather than inventing a new one, using the shared country-name matcher so that unmatched names are reported. One row in the indicator file declares the new indicator. The two build steps then run, and the configuration check confirms that the indicator exists. The routine puts the assistant to work where it is fast (searching, reading file layouts, writing extraction code in a known pattern) and keeps the decisions that need judgment (which source, which direction, which block) with the analyst.
+
+# An illustrative comparison {#sec-example}
+
+**Four middle-income economies show how the profile separates different fiscal problems.** Table 2 gives selected Fiscal and Context 1 indicators for Colombia, Indonesia, Morocco and South Africa, with the score each receives on equation (2) across the full panel. All values are from the public datasets named, as compiled by the pipeline; the year of each is 2024 unless marked. The code that reproduces the table is in `2.Source/illustrative_comparison.py`.
+
+| Indicator (source) | Colombia | Indonesia | Morocco | South Africa |
+|---|---|---|---|---|
+| Tax revenue, % of GDP (IMF WoRLD) | 23.0 (7.5) | 10.1 (2.9) | 20.8 (6.7) | 25.2 (8.3) |
+| Gross debt, general government, % of GDP (IMF WEO) | 61.0 (6.5) | 40.2 (8.0) | 67.7 (5.9) | 76.0 (5.3) |
+| Interest-to-revenue, % (IMF WEO, derived) | 13.5 (5.3) | 15.1 (4.7) | 7.9 (7.3) | 18.9 (3.4) |
+| Excise revenue, % of total revenue (IMF WoRLD) | 3.0 (2023) | 8.6 | 6.9 | 7.8 (2023) |
+| Explicit fossil fuel subsidies, % of GDP (IMF) | 0.4 | 3.0 | 1.9 | 0.0 |
+| Implicit fossil fuel subsidies, % of GDP (IMF) | 5.4 | 9.2 | 5.0 | 12.9 |
+| Gasoline retail price, USD per liter (IMF) | 1.16 | 0.57 | 1.46 | 1.13 |
+
+: Table 2. Selected indicators for four economies, value (score 1–10 for scored assessment indicators)
+
+**Indonesia has a revenue problem, not a debt problem.** Its gross debt of 40 percent of GDP scores 8.0, one of the better results among the four. But it collects tax of only 10 percent of GDP, so interest still takes 15 percent of revenue, more than in Colombia with half again as much debt. The context block shows where the money goes: explicit fossil fuel subsidies of 3.0 percent of GDP, equal to about 30 percent of tax revenue, and the cheapest gasoline of the four at USD 0.57 a liter. For an adviser the profile points straight at subsidy reform and excise design as the fiscal-energy levers, and away from arguments about debt limits.
+
+**South Africa has a debt-service problem and a large unpriced cost.** It collects the most tax of the four, 25 percent of GDP, but debt of 76 percent of GDP and interest taking 19 percent of revenue put its fiscal block among the weakest here. It pays no explicit fossil fuel subsidies; its implicit subsidies, the IMF's measure of unpriced environmental costs and forgone consumption taxes, are 12.9 percent of GDP, the largest of the four [@Black2023FFS]. The lever is pricing the external cost of its energy system, for example through carbon pricing, and the constraint is that debt service limits how much public money can go into the transition at the same time.
+
+**Morocco and Colombia sit in between, for different reasons.** Morocco pays the least interest relative to revenue (7.9 percent) but still spends 1.9 percent of GDP on explicit fossil subsidies while charging the highest gasoline price of the four, which tells the analyst that its subsidies sit on fuels other than gasoline. Colombia has a moderate fiscal position and the lowest excise share of revenue, 3.0 percent in 2023, which suggests room in excise policy that an excise diagnostic of the kind described in paper 7.1 [@StrettonWP71] could test line by line.
+
+**The comparison is a first view, and the profile says so.** Each value carries its year and source. The scores rank against 217 economies, not against a norm. None of the four readings is a recommendation; each tells the analyst which question to ask next and which tool to use for it.
+
+# Limits {#sec-limits}
+
+**The dashboard is only as current as its slowest source.** Vintages range from 2013 to 2025. The power market structure flags come from a tracker that ends in 2013 and covers only non-OECD countries, so they describe structure, not current state. Resource rents and the solar cost of capital are 2021. Public investment from the IMF's capital stock dataset runs to 2019. The year column makes this visible; it does not fix it.
+
+**Some series are modeled, not observed.** The subsidy estimates, the retail prices and the renewable share in Context 3 come from the IMF's CPAT-based dataset, which combines observed prices with modeled supply costs and externality estimates [@Black2023FFS]. Implicit subsidies in particular depend on valuation choices for carbon and air pollution. Appendix D is pure model output from the scenario tool and is labeled as such in the workbook and never scored.
+
+**Coverage is uneven, and scores hide it.** The core fiscal indicators cover about 185 to 195 economies, but PEFA scores exist for 89, the solar cost of capital for 99, and the CPIA only for IDA countries. A country with few values in a block gets a block average built on those few. The profile shows the count; an analyst must read it.
+
+**Cross-source definitions do not match exactly.** Tax revenue from WoRLD and revenue from WEO are compiled differently and can disagree. The excise share divides WoRLD excise revenue by WoRLD total revenue. Some country series in the panel look implausible and should be checked against the national source before being quoted. The dashboard's job is to make such checks quick, not to certify every value.
+
+**Two blocks rest partly on a non-public compilation.** Part of Appendix C (the concessional share of external debt, CPIA, remittances, reserves and account ownership) and Appendix E are read from a World Bank climate fiscal risk compilation rather than directly from their public sources (WDI, IDS, CPIA, Global Findex and the fiscal space database). The underlying series are public; a public release of the dashboard should read them from those sources directly.
+
+**Carbon pricing is the most important gap.** For a climate-fiscal dashboard, the absence of explicit carbon prices and effective carbon rates is the first thing to fix. The World Bank's Carbon Pricing Dashboard [@WBCarbonPricing] and a total effective carbon price of the kind proposed in this series [@CFPB61] would complete Context 1, and adding either is a routine use of the five-step process in Section 5.

@@ -1,15 +1,20 @@
 # 7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis
 
-**Status:** working paper, version 0.1, 29 October 2026 (first draft, for Stephen's peer review). Medium form, about 4,000 words of body. Companion paper to the Climate Fiscal AI Tools (private repository), dashboard version 1.3 (`TaxMacroFiscalDashboard/Global_fiscal_indicators_v1.3.xlsx`).
+**Status (31 Oct 2026):** working paper v0.2 (about 6,100 words of body plus a 680-word executive summary) and policy brief v1.0 (Climate Fiscal Policy Brief No. 7.2, about 1,900 words), both written after the peer review in `5.Notes/PeerReview-2026-10-31.md`; every reference checked (`5.Notes/BibCheck-2026-10-31.md`); 10-slide deck on the new builder. Subtitle changed in v0.2 (title unchanged). v0.1 (29 Oct 2026) and the old deck are in `8.PreviousVersions/`. Companion paper to the Climate Fiscal AI Tools (private repository), dashboard version 1.3 (`TaxMacroFiscalDashboard/Global_fiscal_indicators_v1.3.xlsx`).
 
 ## Files
 
 | File | What it is |
 |---|---|
-| `FiscalIndicatorsDashboard.qmd` | Master, v0.1 |
-| `FiscalIndicatorsDashboard.bib` | References and dataset citations (URLs from the build's `config/sources.csv`; DOIs checked against Crossref) |
-| `FiscalIndicatorsDashboard.docx` | Rendered with pandoc and the Chicago author-date CSL |
-| `2.Source/illustrative_comparison.py` | Reproduces Table 2 (Colombia, Indonesia, Morocco, South Africa) and the 1–10 scores from the built panel (`PANEL` path into the private repository; the panel holds only public data). Output in `illustrative_comparison_output.txt` |
+| `FiscalIndicatorsDashboard.qmd` | Working paper master, v0.2 |
+| `FiscalIndicatorsDashboard.bib` | References and dataset citations, each with a `note` recording what was checked on 31 Oct 2026 |
+| `FiscalIndicatorsDashboard.docx` | Rendered with pandoc (quarto-xref and web-links filters, Chicago author-date CSL) |
+| `1.Presentation/Brief-FiscalIndicatorsDashboard.qmd`, `.bib`, `.docx` | Policy brief master, v1.0 (key CFPB72), its bib (copied from the working paper's) and Word render |
+| `1.Presentation/slides.json`, `Slides-FiscalIndicatorsDashboard.pptx` | 10-slide deck, built with `H Writing Instructions/Writing Standards/templates/make_deck.py` |
+| `1.Presentation/figures/make_figures.py` | Makes `fig_profiles.png` (Figure 1 of both forms) and `fig_renewables.png` (working paper Figure 2) from the papers' numbers |
+| `2.Source/illustrative_comparison.py` | Reproduces Table 2 and the 1–10 scores from the built panel (`PANEL` path into the private repository; the panel holds only public data). Output in `illustrative_comparison_output.txt` (v0.1 run; prints one decimal, so the table's gasoline prices are not visible in it; the script now prints two) |
+| `2.Source/check_public_sources.py` | Rechecks Table 2 against the publishers' public releases (IMF DataMapper, IMF WoRLD API, Ember). Output in `check_public_sources_output.txt` |
+| `5.Notes/` | Peer review and reference check, 31 Oct 2026 |
 
 ## Sources used (all in `climate-fiscal-ai-tools/TaxMacroFiscalDashboard/`)
 
@@ -35,4 +40,4 @@ Stephen cleared tool country results for use as illustrative results on 29 Oct 2
 
 ## Note for the editor
 
-The illustrative values are public data as compiled by the pipeline; they were not re-checked against each publisher's current release. Before publication, spot-check Table 2 against the WEO, WoRLD and IMF subsidy releases (and consider dropping the excise-share row, whose WoRLD definition should be confirmed).
+Table 2 was spot-checked against the WEO/Fiscal Monitor, WoRLD, the IMF's 2025 subsidy update and Ember on 31 Oct 2026 (`2.Source/check_public_sources.py`). Tax, net interest over revenue and the excise share reproduce exactly; the excise share is excises over WoRLD total revenue, so v0.2 adds excise revenue as a share of GDP. Findings for the tool's next version (not changed here): rename "interest-to-revenue" to net interest and keep net creditors; add excise revenue as a share of GDP; read the renewable share from Ember (the panel's CPAT-based shares are 5–19 points off); state that subsidy shares use WEO GDP; check why the panel holds subsidy values for 185 economies when the IMF's 2025 update covers 170.

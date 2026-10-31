@@ -118,7 +118,7 @@ lightbox: auto
 - [Brief 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, which puts a feebate and a tax on one scale [@CFPB61].
 - [Brief 1.2](../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.qmd): feebates, the full carbon price at the margin without the carbon bill [@CFPB12].
 - [Paper 6.3](../../../modelling/6-modular-upgrades/PublicInvestment/index.qmd): investment needs and the efficiency of public spending [@StrettonWP63].
-- [Paper 7.2](../../../modelling/7-analytics.qmd#paper-7-2): the global fiscal indicators dashboard that supplies the tool's data [@StrettonWP72].
+- [Paper 7.2](../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.qmd): the global fiscal indicators dashboard that supplies the tool's data [@StrettonWP72].
 - [Paper 5.1](../../../modelling/5-modelling/CPATMitigationMethods/index.qmd): the CPAT mitigation module, whose data and conventions the investment model follows [@StrettonWP51].
 - The [working paper](working-paper.qmd) behind this brief: the equations, the checks against theory, the full Kenya table and the sources.
 

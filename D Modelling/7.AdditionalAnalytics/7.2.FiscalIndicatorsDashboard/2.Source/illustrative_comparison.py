@@ -1,7 +1,7 @@
-"""Illustrative comparison for the Fiscal Indicators Dashboard paper (5.3).
+"""Illustrative comparison for the Fiscal Indicators Dashboard paper (7.2; the v0.1 docstring said 5.3).
 
 Reads the dashboard's built panel (global_data_wide.csv, compiled from public datasets: IMF WEO,
-IMF WoRLD 2026, IMF Fossil Fuel Subsidies 2024 data, Ember) and reproduces the dashboard's scoring:
+IMF WoRLD 2026, IMF fossil fuel subsidy data for 2024 from the 2025 update, Ember) and reproduces the dashboard's scoring:
 a direction-aware 5th-95th percentile rescale to 1-10 across all economies in the panel.
 
     PANEL=/home/user/climate-fiscal-ai-tools/TaxMacroFiscalDashboard/build/output/global_data_wide.csv \
@@ -35,7 +35,7 @@ for code, d in IND:
     for iso in ISO:
         rec = w.loc[w.iso3 == iso].iloc[0]
         v, y = rec[code], rec.get(code + "__year")
-        r[iso] = f"{v:.1f} ({score(v, lo, hi, d):.1f}) [{int(y) if pd.notna(y) else ''}]"
+        r[iso] = f"{v:.2f} ({score(v, lo, hi, d):.1f}) [{int(y) if pd.notna(y) else ''}]"  # 2 decimals: gasoline prices
     rows.append(r)
 pd.set_option("display.width", 250)
 print("value (score 1-10) [year]; magnitudes scored high = more")

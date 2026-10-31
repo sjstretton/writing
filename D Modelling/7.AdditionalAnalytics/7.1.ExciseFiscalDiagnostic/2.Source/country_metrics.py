@@ -1,4 +1,4 @@
-"""Paper 5.1, Section 7: Sierra Leone and Liberia applications of the diagnostic.
+"""Paper 7.1 (working paper v0.4), Section 8: Sierra Leone and Liberia applications of the diagnostic.
 
 Reads the diagnostic's cross-country workbook (Climate Fiscal AI Tools, private
 repository) and writes the Level 1 metrics and standard-schedule lines used in
@@ -26,7 +26,7 @@ METRICS = ["X1", "X2", "X6", "R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9
            "Q1", "Q4", "Q5", "Q6"]
 LINES = ["E1", "E2", "E3", "T1", "A1", "A4", "A5", "S1"]
 
-# Carbon component of the spine (equation 4, Table 1): kg CO2 per liter x USD 50/t
+# Carbon component of the spine (v0.3 factors; v0.4 uses 2.29 kg/l for petrol, see stylized_example.py)
 CO2_KG_PER_L = {"petrol": 2.31, "diesel": 2.68}
 CARBON_PRICE = 50.0
 

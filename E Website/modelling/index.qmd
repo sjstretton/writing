@@ -27,5 +27,5 @@ Extensions to CPAT where policy needs them: carbon-price equivalents, CBAM, publ
 
 Diagnostics on data ministries already hold: excise systems and fiscal indicators.
 
-- [7.1 The Excise-Fiscal Diagnostic](../modelling/7-analytics.qmd#paper-7-1)
-- [7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis](../modelling/7-analytics.qmd#paper-7-2)
+- [7.1 The Excise-Fiscal Diagnostic](../modelling/7-analytics/ExciseFiscalDiagnostic/index.qmd)
+- [7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis](../modelling/7-analytics/FiscalIndicatorsDashboard/index.qmd)

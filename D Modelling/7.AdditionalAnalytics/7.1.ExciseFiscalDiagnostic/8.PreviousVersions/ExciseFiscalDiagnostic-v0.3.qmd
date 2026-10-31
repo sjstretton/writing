@@ -1,0 +1,277 @@
+---
+title: "The Excise-Fiscal Diagnostic"
+subtitle: "Reading an Excise System Against Its Externalities"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+version: "0.3"
+abstract: |
+  Excise schedules grow line by line for decades until nobody can read them whole, and few ministries can say whether their fuel, tobacco or alcohol taxes are high or low against the damage those goods do. The Excise-Fiscal Diagnostic is a light, repeatable report that fixes this. It maps every line of a schedule onto 30 standard lines and scales each rate three ways: US dollars per standard unit, share of the consumer price and implied revenue as a share of GDP. It sets fuel rates against a corrective benchmark built from one fixed set of values for carbon, air pollution, accidents, congestion and road damage, and health excises against published benchmarks. An AI model drafts each stage under a written specification, and every line is checked against the legal text. Applied to the 2026 excise law of Sierra Leone and Liberia, it finds excise revenue of 1.3 and 0.4 percent of GDP against an African average of 2.4, petrol taxed at USD 0.23 and 0.095 per liter, and health excises whose collection is weak or cannot be traced in the accounts.
+keywords: [excise taxation, corrective taxes, fuel taxes, health taxes, tax diagnostics, artificial intelligence]
+jel: [H21, H23, H71, Q48, I18]
+bibliography: ExciseFiscalDiagnostic.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+number-sections: true
+format:
+  docx: default
+---
+
+*Working paper, version 0.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the Climate Fiscal AI Tools.*[^credit]
+
+[^credit]: This version condenses and replaces a 24,800-word draft (version 0.1, kept in the paper's folder) and the later stand-alone working paper on the diagnostic. The method was developed and piloted with country economists on three sub-Saharan African excise schedules; Section 7 reports the two pilots that were peer reviewed, Sierra Leone and Liberia, as illustrative results, not official estimates. The externality questions draw on joint discussion with colleagues working on climate and health taxes. Errors are the author's own.
+
+# Introduction {#sec-intro}
+
+Most finance ministries cannot say, on one page, what their excise system taxes, how hard, and against what. A typical schedule in a lower-income country began with a few goods that were easy to tax at the port or the factory gate, then grew by amendment almost every year: a tobacco increase pushed by the health ministry, a new levy on mobile money, a cut for locally brewed beer, a rate quoted in a redenominated currency. The result is a document of several hundred lines in mixed units, some specific and some ad valorem, some indexed and most not. Excises matter for revenue: Sierra Leone collected excise worth about 1.3 percent of GDP in 2024–25, against an African average of 2.4 percent [@ExciseDiagnostic2026]. They matter more as policy, because they are the main price instruments a government has for carbon, local air pollution, road deaths, tobacco and alcohol.
+
+This paper asks how a finance ministry can read its excise schedule whole, compare it with peers, and judge it against the external costs of the goods it taxes, using data it already holds and a process it can repeat every year. The answer is the Excise-Fiscal Diagnostic: a fixed-format report that standardizes every excise line, scales it on three comparable measures, and sets the energy and health lines against corrective benchmarks built from one fixed set of valuation parameters. Its bottom line is fiscal. For each priority line it shows what the line raises now, how hard it is taxed relative to peers and benchmarks, and where erosion, gaps and incoherence are leaking revenue.
+
+The diagnostic adds to three bodies of work. The IMF's *Getting Energy Prices Right* framework computes corrective fuel taxes for every country from carbon, air pollution, congestion, accident and road damage costs [@Parry2014GEPR], and the IMF's fossil fuel subsidy database updates them [@Black2023FFS]. It is a global comparison, not a reading of any one schedule, and it leaves out tobacco, alcohol and sugar. The World Health Organization publishes benchmarks and manuals for tobacco and other health taxes [@WHO2021Tobacco; @WHO2016Fiscal], but not for fuels. Country excise reviews read schedules line by line, but each in its own format, so they cannot be compared or rerun. The diagnostic joins the three: one standard schedule for any country, one externality spine for energy, health benchmarks for tobacco, alcohol and sugar-sweetened beverages, and a production process that an AI model drafts and a country economist checks.
+
+Section 2 sets out what the diagnostic is for and what it is not. Section 3 describes how it reads a schedule. Section 4 sets out the externality spine and the corrective benchmarks. Section 5 describes the AI-assisted process. Section 6 works through a stylized example, Section 7 reports applications to Sierra Leone and Liberia, and Section 8 sets out validation, limits and use.
+
+# What the diagnostic is for {#sec-purpose}
+
+**The diagnostic is a structured snapshot of an excise system, not a model.** It is diagnostic in the medical sense: a first examination that finds what is there, what is missing and what is moving. It does not forecast revenue, estimate behavioral responses or recommend rates. It puts the evidence for those decisions on one page and in one format, so that a minister, a tax policy unit and a development partner argue about the same numbers.
+
+**It answers seven questions, four of them from the schedule alone.** Coverage asks what the schedule taxes and which priority categories (fuels, tobacco, alcohol, sugar-sweetened beverages, plastics, gambling) are missing. Structure asks whether each line is specific, ad valorem or a hybrid, and how it is differentiated by origin, content, user or alcohol band. Intensity asks how heavily each line is taxed on the three measures. Erosion asks which specific rates are losing real value. These four make up the minimum version and need only the schedule, its amendment history and a handful of parameters: an exchange rate, GDP, reference prices, volumes and a price index. Three further questions need outside data. Benchmarking compares intensities with peers and international references. Coherence asks where differentiation devices stack into rate inversions or arbitrage. Price tracking asks how the tax-inclusive price of each taxed good has moved against inflation and incomes.
+
+**The externality spine adds an eighth question: is each line set against the damage it should price?** The spine is a common scale that puts carbon, air pollution, accidents, congestion and road damage side by side, in US dollars per liter of fuel, using one fixed set of valuation parameters. For the health lines, published benchmarks play the same role. Together they turn "is this line high or low?" into "is this line high or low against what it is for?". That is the question a finance minister needs answered before raising a rate.
+
+**The diagnostic deliberately does not adjudicate.** It reports a gap between a statutory rate and a corrective benchmark, with a range. Whether to close it, how fast and with what compensation is a political decision that depends on revenue needs, incidence and the state of the economy. Keeping measurement apart from recommendation is what lets a ministry accept the first while it argues about the second.
+
+# Reading the schedule {#sec-reading}
+
+## Typology and the standard schedule
+
+**Every line is assigned to one of seven categories by its policy rationale, not by its tariff code.** The categories are energy and environment (including transport and plastics), health (tobacco, alcohol, sugar-sweetened beverages, gambling), luxury, telecommunications and digital services, financial transactions, industrial inputs and legacy residuals (cement, edible oils, soap), and resources. A line that fits two categories goes to its dominant rationale: an annual vehicle levy is energy and transport, not luxury. Sorting by rationale forces an answer to the question most schedules never answer for themselves: what is this excise for? A cement excise with no stated purpose is a revenue line that has outlived its reason, and the typology puts it on the page as such.
+
+**Each national line is then mapped onto a fixed standard schedule of 30 lines.** The standard schedule (version 1.0) has six fuel lines (petrol, road diesel, kerosene, aviation fuel, heavy fuel oil, lubricants), two vehicle lines (annual circulation; first registration or import), three tobacco lines (cigarettes per pack of 20, other tobacco, e-cigarettes), five alcohol lines (mainstream beer, local-content beer, traditional beer, wine and spirits, all per liter of pure alcohol), four beverage lines (soft drinks, juice, energy drinks, bottled water), and lines for plastics, gambling, voice, data, mobile money, cement, edible oils, sugar, other inputs and luxury goods. Each standard line has a fixed physical unit. A national line that has no counterpart is recorded; a standard line with no national counterpart is recorded as not covered. The rows never change within a version, so the tenth country mapped can be compared with the first without rework.
+
+**Each line is recorded on five fields.** These are its category; the item as printed in the schedule; the current rate in local currency at a stated legal cut-off date; its structure and differentiation (specific, ad valorem or hybrid, and any differentiation by origin, content, user or alcohol band); and its history since 2020, with every amendment and any pending bill. A pending bill is flagged but never applied. Customs duties are excluded even where they behave like excises, and noted.
+
+## Three comparable measures
+
+**A rate on its own is a local-currency number against a locally defined product; the diagnostic scales it three ways.** Read together, the measures triangulate a line's policy intensity. A rate that is low per unit but high as a share of price says the product is cheap; one that is high per unit but low as a share of price says it is expensive; one that is high on both but raises little revenue says the base is small or the tax is not collected.
+
+**The first measure is excise per standard physical unit, in US dollars.** For line $j$ with statutory rate $r_j$ in local currency per legal unit,
+
+$$
+m^{U}_j = \frac{r_j \, c_j}{X \, a_j}, \qquad (1)
+$$
+
+where $X$ is the exchange rate in local currency per US dollar at the cut-off date, $c_j$ converts the legal unit to the standard unit (0.02 to turn a rate per 1,000 cigarettes into a rate per pack of 20), and $a_j$ is the representative alcohol content for alcohol lines (5 percent for beer, 4 percent for traditional beer, 12 percent for wine, 40 percent for spirits) and 1 otherwise. For ad valorem lines, $r_j c_j$ is replaced by the rate times a representative taxable value. This measure is the one for international comparison: it cuts through differences in schedule architecture. Its weakness is that it hides whether a rate is specific or ad valorem, which decides how it behaves under inflation.
+
+**The second measure is excise as a share of the consumer price.** With $\tau_j$ the excise per retail unit and $p_j$ the typical tax-inclusive retail price,
+
+$$
+m^{P}_j = \frac{\tau_j}{p_j}, \qquad \tau_j = \max\left(\tau^{s}_j,\; \theta_j \, v_j\right) \qquad (2)
+$$
+
+for a "higher-of" hybrid with specific component $\tau^{s}_j$, ad valorem rate $\theta_j$ and taxable value $v_j$. The binding component is reported. Where the legal base (ex-factory or import value) is not observed, the ad valorem rate is applied to the retail price and the result is labelled an upper bound. This measure is the one for domestic debate and for health benchmarks, which are set as shares of retail price. Its weakness is that it moves with the chosen reference price, so the diagnostic reports a range where prices vary by brand or region.
+
+**The third measure is implied revenue as a share of GDP.** With $Q_j$ the annual taxed volume and $Y$ nominal GDP in US dollars,
+
+$$
+m^{R}_j = \frac{\tau_j \, Q_j}{X \, Y}. \qquad (3)
+$$
+
+This puts each line in macro-fiscal terms and makes tax-effort comparisons possible. It is also the most error-prone measure, because line-level volumes are rarely published. Where the revenue authority publishes collections by line, collections replace the implied figure; where they do not, the implied figure is reported next to whatever aggregate collections exist. Volumes inferred from prevalence surveys (adult smokers times cigarettes a day) include untaxed and illicit supply and are labelled upper bounds.
+
+**Erosion is measured as the real value of each specific rate since its last change.** With $P_t$ a consumer price index, a specific rate unchanged since year $s$ keeps $P_s/P_t$ of its real value in year $t$. Laying out the year-by-year trajectory since 2020 makes the erosion-and-catch-up cycle visible: long periods of decline ended by a large nominal increase that is politically expensive because it looks large. A schedule where most specific rates have not moved for five years at 7 percent inflation has handed back about 30 percent of their real value without any decision to do so.
+
+## The four-level report
+
+**The report is a pyramid, read from the top and built from the bottom.** Level 1 is the page a minister reads: key metrics on the three measures, headline findings, inconsistencies, peer comparison and issues for policy dialogue. Level 2 is the standard schedule, with every national line mapped to it and each standard line scored in US dollars per unit and as a share of price. Level 3 is the country's own schedule on the five fields, with its rate trajectory. Level 4 is the raw data: the parameter sheet (exchange rate, GDP, prices, volumes, conversion factors), each with a source and a status, the line-level computations and the legislative history. Each level can be checked against the one below it, and nothing appears at Level 1 that Level 4 does not compute.
+
+**Every report ships with a workbook in a fixed layout.** Its sheets are a summary, country metrics, the standard schedule in human-readable form, the same schedule in long format with one row per rate component (a higher-of hybrid has two rows), parameters, a data-quality scale and sources. US dollar values and data-quality scores are formulas, not typed numbers. Because every country's workbook has the same columns, a regional comparison is a matter of stacking files.
+
+# The externality spine and corrective benchmarks {#sec-spine}
+
+## Why one spine
+
+**A corrective tax is only defensible if the damages behind it are valued consistently.** An analyst who values a statistical life at one figure for air pollution and another for road accidents, or applies a 2020 carbon price to diesel and a 2030 price to coal, produces a set of benchmarks that cannot be added and will not survive a skeptical ministry. The externality spine fixes the valuation parameters once for every country report and applies them across all components. Country data enter through quantities (fuel volumes, exposure, road deaths, vehicle stocks); the values applied to those quantities come from one table. The idea follows national practice where one appraisal guide governs every department's values, and it is what makes the components of a corrective fuel tax comparable with each other and across countries.
+
+## The corrective fuel tax
+
+**The benchmark for road fuels is the corrective tax of the optimal-tax literature.** In a second-best world where fuel is taxed but driving is not, a tax per liter of fuel $f$ corrects externalities in proportion to how much of the fuel-demand response comes from driving less rather than from more efficient vehicles [@Sandmo1975; @ParrySmall2005]. The IMF framework puts this in operational form [@Parry2014GEPR]:
+
+$$
+t^{*}_f = e^{C}_f + e^{P}_f + \beta \left( e^{G}_f + e^{A}_f + e^{R}_f \right), \qquad (4)
+$$
+
+where all terms are in US dollars per liter. $e^{C}_f = \phi_f \, s^{C}$ is the carbon cost, the fuel's carbon dioxide content $\phi_f$ (about 2.31 kg per liter of petrol and 2.68 kg per liter of diesel on IPCC default factors [@IPCC2006]) times the carbon price $s^{C}$. $e^{P}_f$ is the local air pollution cost, mostly premature deaths from fine particulates valued at the value of a statistical life. $e^{G}_f$, $e^{A}_f$ and $e^{R}_f$ are the congestion, accident and road damage costs per liter, which arise from distance driven rather than fuel burned. $\beta$ is the share of the fuel-demand response that comes from reduced driving. If half the response to a fuel tax is fewer kilometers and half is better fuel economy, only half of the distance-related damage is corrected through the fuel tax, and the rest is better addressed by distance charges, congestion pricing or vehicle standards. The simple sum of the five components (the "naive Pigouvian" rate) is reported alongside $t^{*}_f$ as an upper bound. Parry and Small treat local pollution from petrol cars as distance-related, because emission standards are set per kilometer [@ParrySmall2005]; the diagnostic keeps the simpler fuel-based form and says so.
+
+**The gap is the corrective rate less the current effective rate.** The current effective rate is the excise plus any fuel levies that work as excises in substance (road fund, regulator and price-stabilization levies), less any explicit subsidy per liter. Value added tax is excluded because it applies to all consumption. The gap $g_f = t^{*}_f - \tau_f$ is reported with a range from the low and high cases of the spine, and decomposed by component so the report can name the largest unpriced externality. That ranking matters more than the total: a diesel gap driven by air pollution and accidents makes a health and road-safety case for reform, not a climate case, and the case a government makes decides whether a reform survives.
+
+## Valuation defaults
+
+**The spine's defaults are set once, published with their sources and varied in a stated range.** Table 1 lists them. They are defaults for the product, not recommendations: a country team may depart from one with a written justification, and the report shows the result at the default as well.
+
+| Parameter | Default | Sensitivity | Basis |
+|---|---|---|---|
+| Carbon price, $s^{C}$ | USD 50/tCO₂ | 25–100 | Tiered price floor proposal of USD 25, 50 and 75 by income group for 2030 [@ParryBlackRoaf2021] |
+| Value of a statistical life (VSL) | OECD base value transferred by income | ±30 percent | OECD meta-analysis [@OECD2012VSL]; transfer rule below |
+| VSL income elasticity, $\eta$ | 1.0 | 1.0–1.5 | Global benefit-cost guidance [@Robinson2019VSL] |
+| Mileage share of fuel response, $\beta$ | 0.5 | 0.35–0.65 | Tool default; see @ParrySmall2005 for the concept |
+| Fuel price elasticity | −0.3 short run, −0.6 long run | −0.2 to −0.8 | Order of meta-analytic averages [@Labandeira2017] |
+| Air pollution mortality | Country estimates where they exist; global burden estimates otherwise | Range from exposure–response uncertainty | Reported, not assumed |
+| Accident costs | Road deaths corrected for under-reporting × VSL × morbidity factor | Range from death counts | WHO road safety estimates; European handbook [@EC2019Handbook] |
+
+: Table 1. The externality spine: default valuation parameters
+
+**The value of a statistical life is transferred from a high-income base by income.** For country $c$ with income per head $y_c$,
+
+$$
+\text{VSL}_c = \text{VSL}_{b} \left( \frac{y_c}{y_b} \right)^{\eta}, \qquad (5)
+$$
+
+where $b$ is the base country group. With $\eta = 1$ the value is proportional to income; with $\eta = 1.5$, the upper end of the range recommended for transfers to low- and middle-income countries [@Robinson2019VSL], it falls faster than income. The choice moves air pollution and accident costs, often the two largest components in lower-income countries, more than any other parameter, so the report shows both.
+
+## Health benchmarks
+
+**For tobacco, alcohol and sugar-sweetened beverages, the diagnostic uses published benchmarks instead of computing externalities.** The external and internal costs of these goods (health care borne by others, harm to others, and harm to consumers who misjudge addiction) are harder to value per unit than fuel damages and are contested. The health literature has instead settled on rules of thumb that ministries recognize. WHO recommends that excise make up at least 70 percent of the retail price of tobacco products, with specific or mixed structures and automatic adjustment for inflation [@WHO2021Tobacco]. WHO evidence on sugar-sweetened beverages finds that taxes that raise retail prices by 20 percent or more cut consumption roughly in proportion [@WHO2016Fiscal]. For alcohol the diagnostic checks consistency rather than level: expressing every alcohol line per liter of pure alcohol shows whether a country taxes the same harmful content at very different rates across beer, wine and spirits, just as expressing fuel taxes per tonne of carbon shows inconsistent carbon pricing across fuels [@CFPB61].
+
+**The health and energy lines are read on one page because they share a design question.** Both health and climate practitioners advise specific rather than ad valorem rates for corrective excises, since the damage depends on quantity, not price, and both advise automatic indexation so that real rates do not erode between finance acts. A diagnostic that finds unindexed specific rates on fuel, tobacco and alcohol can recommend one indexation rule that covers all three, which is cheaper politically than three separate fights.
+
+## Depth by data
+
+**The same spine runs at two depths.** With good data the report uses country-specific elasticities, air pollution attributed by source and separate urban and rural profiles. With weak data it uses pooled elasticities, global burden-of-disease estimates and congestion only for the primary city, and reports direction and magnitude with a range. A finding that diesel is undertaxed in every plausible case is more useful to a ministry than a falsely precise point estimate.
+
+# The AI-assisted process {#sec-process}
+
+## Stages
+
+**The diagnostic is produced by an AI model working to a written specification, with a country economist directing and checking each stage.** The pilots used Claude (Anthropic) in a shared project. The process follows the report from the bottom up, in five stages, with an AI review pass at the end of each and a human review before anything moves up a level (Table 2). The master specification is written to be given to the model directly as context, so the method travels with the instructions rather than with the person who ran it last.
+
+| Stage | Task | Output |
+|---|---|---|
+| A1 | Read the schedule: find the 2020 starting point and every amendment since, through the latest finance act; flag pending bills | Legislative history and raw rate data (Level 4) |
+| A2 | Determine the current legal position; record every line on the five fields | Country schedule (Level 3) |
+| A3 | Map national lines onto the standard schedule; convert units; compute the three measures from the parameter sheet; populate the workbook | Standard schedule (Level 2) and workbook |
+| A4 | Aggregate into key metrics; compare with a pre-run comparator and benchmarks; identify inconsistencies | Top level (Level 1) |
+| A5 | Peer review: give every line a source reference, check it against the source text, correct the report | Reference register |
+
+: Table 2. Production stages
+
+**A schedule can be run whole or in five parts.** A whole run covers all 30 standard lines and suits a first diagnostic or a small schedule. A sectoral run splits the work into fuel, vehicles, health (with sugar), other lines (plastics, gambling, telecoms, financial transactions, cement and other inputs, luxury), and an overarching part that runs last. Every standard code belongs to exactly one part. The first part to run writes a common header (country, cut-off date, currency notation, exchange rate, GDP, price index, list of legal instruments) that every later part reuses unchanged. The overarching part holds what belongs to no single sector (aggregate revenue, the legal framework, the indexation rule and a reconciliation of collections across the revenue authority and the finance ministry) and stacks the four part workbooks into one. Sectoral runs suit long schedules and teams where different specialists own different taxes; the fuel and vehicle parts line up with a stand-alone fuel and vehicle tax review.
+
+## Quality rules
+
+**The quality rules exist because the pilots broke each of them once.** Every number is computed from the parameter sheet; none is typed into the narrative. An early pilot draft carried revenue figures that did not follow from its own inputs, and the Level 4 computations caught them. Every legal line carries at least one reference to a source document, section and page; no reference, no line. An early draft misread a currency notation after a redenomination, and a later draft missed a whole finance act; the line-by-line peer review caught both. Rates are quoted as printed, with their currency notation. If a table cannot be read, the report says "not legible" and shows the last legible rate. The model may not rely on memory for any rate or data point.
+
+**Each figure carries a data-quality score, and a derived figure takes the lowest score of its inputs.** The scale runs from 5 (matches the gazetted text or official data, quote on file) through 4 (corrected in review and now matching), 3 (confirmed only in an official secondary source), 2 (not yet verified, or estimated from published inputs) to 1 (assumption, last legible rate or data gap). The rule that a derived figure inherits its weakest input means an implied revenue figure built on a guessed volume cannot present itself as better than a guess. The workbook computes the score by formula.
+
+**A comparator comes only from another finished diagnostic.** The model may not fill comparator columns from memory or web search, or analyze a second country inside the same run. To compare country A with country B, B is run and peer reviewed first, and its report and workbook are supplied to A's run. Both must use the same standard-schedule version and conversion rules. Without a comparator, Level 1 benchmarks only against international references.
+
+**When the model cannot fetch a source, it stops and asks.** Government websites block automated access and scanned tables cannot be read as text. Rather than fill the gap, the model lists the documents it needs with a short download script; the user runs it and uploads the files, and the model checks each one before resuming.
+
+**AI drafting speeds up the work; it does not replace the check against the gazetted text.** The time saved is in reading, converting and laying out. The time that remains is in checking, and the process is built so that checking cannot be skipped.
+
+# A stylized example {#sec-example}
+
+## Country A
+
+**Country A is fictitious; every input below is a labelled stylized number.** It is a lower-middle-income economy with GDP of USD 40 billion in 2025, an exchange rate of 100 local currency units (LCU) per US dollar, and consumer prices 40 percent higher than in 2020. Its schedule has five priority lines: petrol at LCU 30 per liter, road diesel at LCU 18 per liter, cigarettes at LCU 1,500 per 1,000 sticks, beer at LCU 40 per liter, and spirits at 30 percent of an ex-factory value of LCU 600 per liter. All the specific rates were last changed in 2020. It has no excise on sugar-sweetened beverages. Retail prices, volumes and externality costs are set out in the code that produces every number in this section (`2.Source/stylized_example.py`).
+
+## What the three measures show
+
+**On the three measures, Country A's schedule looks unremarkable until the lines are read against each other.** Table 3 gives the Level 2 view. Petrol and diesel raise 1.65 percent of GDP between them and dominate revenue. The cigarette excise is USD 0.30 a pack and 20 percent of the retail price. Beer is taxed at USD 8.00 per liter of pure alcohol and spirits at USD 4.50.
+
+| Line | Rate as printed | USD per standard unit | Share of retail price | Implied revenue, % of GDP |
+|---|---|---|---|---|
+| Petrol | LCU 30 per liter | 0.30 per liter | 27% | 0.75 |
+| Road diesel | LCU 18 per liter | 0.18 per liter | 17% | 0.90 |
+| Cigarettes | LCU 1,500 per 1,000 sticks | 0.30 per pack of 20 | 20% | 0.11 |
+| Beer (5% ABV) | LCU 40 per liter | 8.00 per liter of pure alcohol | 20% | 0.30 |
+| Spirits (40% ABV) | 30% of ex-factory value | 4.50 per liter of pure alcohol | 15% | 0.07 |
+| Sugar-sweetened beverages | Not covered | — | — | — |
+
+: Table 3. Country A, Level 2 view (stylized)
+
+**Four findings come out of the table before any externality is valued.** First, coverage: there is no excise on sugar-sweetened beverages, a gap the report records as a choice rather than an oversight. Second, coherence: spirits pay 44 percent less per liter of pure alcohol than beer, because the spirits rate is ad valorem on a low declared factory value while beer is specific. The same harmful content is taxed at two rates, and the cheaper rate falls on the stronger product. Third, intensity against a health benchmark: the cigarette excise is 20 percent of the retail price, against a WHO benchmark of at least 70 percent [@WHO2021Tobacco]. Fourth, erosion: with every specific rate unchanged since 2020 and prices up 40 percent, each has lost 29 percent of its real value. The petrol excise was worth USD 0.42 per liter in today's prices when it was set.
+
+## What the externality spine adds
+
+**Against the spine, petrol is taxed about right and diesel at less than half its corrective rate.** Table 4 applies equation (4) with the defaults of Table 1 and stylized per-liter costs for air pollution, congestion, accidents and road damage. The petrol corrective rate is USD 0.31 per liter against a current rate of USD 0.30. The diesel corrective rate is USD 0.43 against a current USD 0.18, a gap of USD 0.25 per liter.
+
+| USD per liter | Petrol | Diesel |
+|---|---|---|
+| Carbon, $e^{C}$ (USD 50/tCO₂) | 0.12 | 0.13 |
+| Local air pollution, $e^{P}$ | 0.04 | 0.15 |
+| Congestion, $e^{G}$ | 0.10 | 0.05 |
+| Accidents, $e^{A}$ | 0.20 | 0.20 |
+| Road damage, $e^{R}$ | 0.00 | 0.05 |
+| Naive sum | 0.46 | 0.58 |
+| Corrective rate, $t^{*}$ ($\beta$ = 0.5) | 0.31 | 0.43 |
+| Range (low to high case) | 0.13–0.68 | 0.20–0.91 |
+| Current excise | 0.30 | 0.18 |
+| Gap at central values | +0.01 | +0.25 |
+
+: Table 4. Country A, corrective benchmark for road fuels (stylized)
+
+**The largest unpriced externality is local air pollution from diesel, not carbon.** At the central values, carbon accounts for about a third of the diesel corrective rate; air pollution and accidents together account for more than half. A reform case for diesel built on carbon would rest on the smaller part of the argument. The report says this in its Level 1 findings and hands it to the reform pathway, where it shapes how a reform is framed: as a health and road-safety measure first.
+
+**Closing the diesel gap would raise about 1.1 percent of GDP in the stylized economy.** The static gain is USD 500 million, 1.27 percent of GDP; with a short-run price elasticity of −0.3 and full pass-through to a pump price of USD 1.05, diesel use falls about 7 percent and the gain is about 1.1 percent. The range is wide, from a gap of USD 0.02 per liter in the low case to USD 0.73 in the high case, and showing it is what stops one challenged parameter from discrediting the whole report.
+
+**The petrol result is a warning against reading the spine alone.** Petrol sits at its central corrective rate only because its 2020 rate, worth USD 0.42 in today's prices, has eroded since, and unindexed it falls further below the benchmark every year. The finding for petrol is about indexation, as it is for tobacco and beer, and one indexation rule covering every specific excise is the cheapest reform the report identifies.
+
+# Two applications: Sierra Leone and Liberia {#sec-countries}
+
+**The diagnostic has been run on the 2026 excise law of Sierra Leone and Liberia, and both runs were checked line by line against the legal texts.** The Sierra Leone run reads the Excise Act 1982 as amended through the Finance Act 2026, at a legal cut-off of 27 April 2026. The Liberia run reads Part IV, Chapter 11 of the Revenue Code as amended through the Tax Amendment Act of December 2025, at a cut-off of 29 September 2026. Each run's peer review checked 49 entries: in Sierra Leone it verified 18, confirmed 11 in part, corrected 16 and could not verify 4; in Liberia the counts were 22, 11, 14 and 2 [@ExciseDiagnostic2026]. Table 5 gives the Level 1 figures from the two runs' shared workbook. They are illustrative results from the diagnostic, not official estimates. Sierra Leone's US dollar values use a working exchange rate of NLe 22 per dollar and may be about 4 percent high; Liberia prints its excise rates in US dollars.
+
+| Measure | Sierra Leone | Liberia | Reference in the diagnostic |
+|---|---|---|---|
+| Excise collected, % of GDP | 1.25–1.28 (2024–25) | 0.37 (FY2024) | Africa 2.4; low income 2.2 (2021) |
+| of which fuel, % of GDP | 1.12–1.15 | none (fuel carries levies only) | — |
+| Excise plus excise-like levies, % of GDP | not reported | 1.25 (FY2024) | — |
+| Petrol, USD per liter (share of pump price) | 0.23 (16%) | 0.095, levies (7.3%) | OECD 0.55 (30–50%) |
+| Cigarettes, USD per pack of 20 (share of retail price) | 0.14 (about 14%) | 0.50 (27%, 2022 price) | WHO: excise at least 70% |
+| Beer, USD per liter of pure alcohol | 2.3–9.1, by regime | 20.00 | OECD 15–40 |
+| Spirits, USD per liter of pure alcohol | 7.5 (2023 rate; current not legible) | 7.50 | OECD 25–50 |
+| Soft drinks, USD per liter | 0.10–0.50 by sugar (2023 rates; current not legible) | 0.45, flat | UK 0.23–0.30, by sugar |
+| Standard lines covered, of 30 | 25 | 21 | — |
+| Specific rates indexed to inflation | none | from 1 January 2027 | — |
+
+: Table 5. Sierra Leone and Liberia: Level 1 metrics from the diagnostic, 2026. Values as reported by each run. References are those in the diagnostic's specification; the tobacco reference is WHO's [@WHO2021Tobacco]. Illustrative results from the diagnostic, not official estimates. Source: @ExciseDiagnostic2026; extracted by `2.Source/country_metrics.py`.
+
+**Sierra Leone raises most of its excise from fuel, on a large base rather than a high rate.** Excise collected was 1.25–1.28 percent of GDP in 2024–25, about half the African average the diagnostic uses as its reference, and about nine-tenths of it came from fuel. Petrol pays USD 0.23 per liter, 16 percent of the pump price, well below the OECD reference. The Finance Act 2026 raised fuel rates by 79 to 147 percent, and at the new rates fuel would raise about 1.6 percent of GDP. Every non-fuel line together collected only 0.10–0.16 percent of GDP, although cigarettes, beer and sugar-sweetened beverages are all on the schedule.
+
+**The Sierra Leone run finds erosion by redenomination and incoherence across alcohol lines.** When rates moved from US dollars to leones in 2024, beer rates fell about 70 percent and wine rates 70–90 percent in dollar terms; the 2026 act caught up on fuel and raised cigarettes by half, to USD 0.14 a pack, still about a fifth of the WHO benchmark as a share of price. Beer is taxed under two regimes, a specific rate and ad valorem bands for local content, whose rates differ by a factor of 1.3 to 4 depending on classification; wine pays less than beer per liter of pure alcohol; kerosene pays 40 percent of the diesel rate. The current spirits and soft-drink rates could not be read in the published law, so the report shows the last legible 2023 rates at the lowest data-quality score, as the quality rules of Section 5 require.
+
+**Liberia's excise raises little because its largest bases sit outside the excise law.** Excise collected was 0.37 percent of GDP in FY2024, about 15 percent of the African reference, and none of it came from fuel. Fuel carries only earmarked Road Fund and refinery-company levies worth USD 0.095 per liter, 7.3 percent of the June 2026 petrol price ceiling; counting those and the motor vehicle levy, excise and excise-like levies raised 1.25 percent of GDP. Plastics, mobile money, cement and edible oils are outside the excise law, and aviation fuel is exempt. Cigarettes pay USD 0.50 a pack, 27 percent of the last known retail price, yet the revenue authority booked no excise on imported tobacco in FY2024 or the first quarter of FY2025.
+
+**Liberia's rates do not erode with the local currency, but its alcohol rates are inverted and unstable.** Rates printed in US dollars keep their dollar value, and indexation is legislated from 1 January 2027. Spirits pay USD 7.50 per liter of pure alcohol against USD 20.00 for beer, the same inversion as in Country A. The local spirits rate moved from USD 2.00 to 0.50 to 3.00 per liter in 16 months. The soft-drink rate of USD 0.45 per liter is above the top UK band but flat, with no link to sugar. These rates read the latest amending act's "Proposed" column as in force, an interpretation the run leaves open.
+
+**Against the spine's carbon component alone, Liberia's fuel levies are too low, and Sierra Leone's petrol rate is about twice that component.** The two runs report the three measures and the benchmarks but do not yet include the externality spine. Its first component needs only a fuel's carbon content and the carbon price: at USD 50 per tonne it is USD 0.12 per liter of petrol and 0.13 per liter of diesel (Table 4). Liberia's USD 0.095 is below that before any air pollution, accident or congestion cost is counted. Sierra Leone's USD 0.23 is about twice the carbon component; whether it also covers air pollution and accidents is the question a full spine run would answer. This comparison is the author's calculation from the diagnostic's measures.
+
+**Both runs point to collection, not legislation, as the binding constraint outside fuel.** Sierra Leone's non-fuel lines together collect only 0.10–0.16 percent of GDP, and its run lists configuring excise on imports in the customs system among the open items; Liberia's tobacco excise cannot be traced in the accounts. In both countries the most useful next step the reports identify is administrative: publish legible schedules, book each excise line separately, and confirm which rates are in force. That is a finding no reading of the schedule alone could have produced, and it is why the diagnostic reconciles implied revenue with collections.
+
+# Validation, limits and use {#sec-limits}
+
+## How the diagnostic is checked
+
+**Validation runs at three levels: legal text, arithmetic and collections.** Every legal line is checked against the gazetted source and given a status. Every computed number can be traced through the workbook to the parameter sheet, so a reviewer can recompute any Level 1 figure. Implied revenue is reconciled with published collections where they exist: if the implied figure for fuel is 1.65 percent of GDP and collections are 1.2 percent, the gap is itself a finding, pointing to exemptions, arrears, smuggling or wrong volumes, and the report says which it cannot tell apart. In Sierra Leone the line-by-line review corrected 16 of the 49 entries it checked and could confirm 11 more only in part; in Liberia it corrected 14 (Section 7). That is the strongest argument for the review stage: an unreviewed diagnostic is wrong often enough to matter.
+
+## What it cannot do
+
+**The diagnostic is static.** It does not model pass-through, demand response, cross-border fuel smuggling or tobacco illicit trade. The elasticity adjustment in Section 6 is a first-order correction, not a forecast. A ministry that wants revenue projections should take the diagnostic's rates and gaps into a model that has those responses, such as the Climate Policy Assessment Tool (CPAT) for fuels [@StrettonWP51].
+
+**Implied revenue is approximate, within a factor of perhaps 1.5.** Line-level volumes are the weakest input. Prevalence-based volumes include untaxed supply and overstate the base. Shares of consumer price move with the reference price.
+
+**Informal and home-produced goods sit outside the formal base.** Opaque beer, home-distilled spirits and informally traded fuel are large in many lower-income countries. The diagnostic describes the formal base accurately and understates total consumption.
+
+**The externality spine is only as good as its weakest component.** Air pollution exposure data at the spatial detail needed to attribute deaths to transport are missing in most low-income countries. Police accident records undercount pedestrian deaths, which are the deaths most relevant to the external cost of driving. Credible local fuel-price elasticities are rare, and the mileage share $\beta$ is rarely estimated at all. In the stylized example, moving $\beta$ alone from 0.35 to 0.65 moves the diesel corrective rate from USD 0.39 to 0.48 per liter. The report surfaces these uncertainties as ranges and data-quality scores instead of burying them.
+
+**Health benchmarks are rules of thumb, not corrective rates.** The WHO tobacco benchmark is a share of price, not a valuation of damage. Using it keeps the diagnostic in a language health ministries already accept, at the cost of comparability with the fuel spine.
+
+**AI drafting introduces its own failure modes.** A model can misread a scanned table, carry forward a superseded rate or produce a fluent paragraph that its own workbook does not support. The quality rules target exactly these failures. They work only if the human review is done, and the process cannot force a tired reviewer to read every line.
+
+## How a ministry uses it
+
+**The diagnostic is built to be run every year and read in a meeting.** A tax policy unit can run it at each budget cycle, with the same standard schedule and the same spine, so that the change from last year is visible on one page. It supplies what any budget or tax policy review needs on excise: the tax structure, the effective rates and their erosion, benchmarks against peers and the issues for policy dialogue.
+
+**The findings feed a reform pathway, which is a separate exercise.** The pathway turns the diagnostic's gaps into a sequence: what can be done by administrative indexation this year, what needs legislation, and what needs a compensation package first. Sequencing depends on political economy as much as on the size of each gap. A companion screen scores instruments and country contexts on six drivers (fiscal pressure, salience, vested interests, distributive design, institutional quality and energy structure) to help order reforms; where a fuel tax is too salient to raise, a feebate on vehicles can price the same externality at the margin without the visible pump price [@CFPB12]. The diagnostic's contribution to that discussion is narrower and harder to argue with: it says where the system stands, against what, and how sure anyone can be.
+
+**The next step is a common regional table.** Because every report maps onto the same 30 rows and uses the same spine, a set of country diagnostics stacks into a regional comparison with no further work. Each new country makes the others more useful, and that, more than any single report, is the reason to standardize.

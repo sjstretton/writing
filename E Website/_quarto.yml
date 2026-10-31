@@ -194,7 +194,19 @@ website:
               contents:
                 - text: "Working paper"
                   href: modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/working-paper.qmd
-        - modelling/7-analytics.qmd
+        - section: "7. Analytics Tools"
+          href: modelling/7-analytics.qmd
+          contents:
+            - section: "7.1 The Excise-Fiscal Diagnostic"
+              href: modelling/7-analytics/ExciseFiscalDiagnostic/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: modelling/7-analytics/ExciseFiscalDiagnostic/working-paper.qmd
+            - section: "7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis"
+              href: modelling/7-analytics/FiscalIndicatorsDashboard/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: modelling/7-analytics/FiscalIndicatorsDashboard/working-paper.qmd
         # END modelling sidebar
   page-footer:
     left: "© 2026"

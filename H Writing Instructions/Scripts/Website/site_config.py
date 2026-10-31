@@ -100,6 +100,8 @@ WEB_PAPERS = [
     "6.3.PublicInvestment",
     "6.4.ActivityModelling",
     "6.5.MacroFiscalEnergyScenarioTool",
+    "7.1.ExciseFiscalDiagnostic",
+    "7.2.FiscalIndicatorsDashboard",
 ]
 
 # Books that are also read on the site, one page per chapter, under <part dir>/books/<BookName>/

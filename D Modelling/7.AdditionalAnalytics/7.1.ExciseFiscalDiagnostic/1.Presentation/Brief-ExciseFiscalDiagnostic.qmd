@@ -1,0 +1,116 @@
+---
+# MASTER (policy brief) - this is the file to edit for the brief. The .docx beside it and the brief's web page are made
+# from it. The working paper is a separate master: ../ExciseFiscalDiagnostic.qmd.
+# v1.0 (31 Oct 2026): first brief, written after the peer review of working paper v0.3 (../5.Notes/PeerReview-2026-10-31.md).
+# Supersedes the earlier summary Briefing-ExciseExternalitiesPathwaysSummaryV06 (moved to ../8.PreviousVersions/; not used).
+title: "Read the Excise Schedule Whole, Against the Damage It Should Price"
+subtitle: "The Excise-Fiscal Diagnostic, and What It Finds in Sierra Leone and Liberia"
+series: "Climate Fiscal Policy Brief No. 7.1"
+version: "1.0"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "October 2026"
+abstract: |
+  Excise schedules grow by amendment until no one can read them whole, so few finance ministries know whether their fuel, tobacco or alcohol taxes are high or low against the damage those goods do. The Excise-Fiscal Diagnostic is a short, repeatable report that maps every excise line onto a standard schedule, measures each rate three comparable ways and sets fuel taxes against one fixed set of damage values. Run on Sierra Leone and Liberia in 2026, it finds fuel taxed below or near the carbon cost alone, alcohol taxed inconsistently and health excises weakly collected. Ministries should index specific excises, book each line separately and rerun the diagnostic every budget.
+keywords: [excise taxation, fuel taxes, health taxes, tax diagnostics, Sierra Leone, Liberia]
+bibliography: Brief-ExciseFiscalDiagnostic.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+format:
+  docx: default
+---
+
+*Climate Fiscal Policy Brief No. 7.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full method, the stylized calculations and the country results are in the [working paper](wp:). Country results are illustrative results from the diagnostic, not official estimates.*
+
+# Key messages {#sec-key-messages}
+
+**Most finance ministries cannot say whether their excise taxes are high or low against the damage the taxed goods do.** Schedules grow by amendment for decades, in mixed units and currencies, and fixed-amount rates lose value with every year of inflation.
+
+**The Excise-Fiscal Diagnostic reads a schedule whole and puts every line on one scale.** It maps each line onto 30 standard lines, measures it three comparable ways, and sets fuel taxes against one fixed set of damage values and health taxes against World Health Organization targets.
+
+**For diesel, the case for higher taxes is mainly about health and road safety, not climate.** In a stylized economy, two-thirds of the damage a liter of diesel does is local air pollution and road use.
+
+**Sierra Leone and Liberia tax fuel lightly, alcohol inconsistently, and collect little from health excises.** Liberia's fuel levies are below the carbon cost alone, and it booked no excise on imported tobacco in FY2024.
+
+**Index every specific excise, book each line separately, and run the diagnostic every budget.** The binding constraint outside fuel is collection, not legislation.
+
+# Excise schedules are rarely read whole {#sec-problem}
+
+**Excises matter more for policy than their revenue suggests.** Across 37 African countries, excises raised 1.3 percent of GDP on average in 2023 [@OECD2025RSA]. But they are the main price instruments a government has for carbon emissions, air pollution, road deaths, tobacco and alcohol, and finance acts change them almost every year.
+
+**A typical schedule is a record of decades of separate decisions, not a policy.** It began with a few goods easy to tax at the port, then grew line by line: a tobacco increase pushed by the health ministry, a levy on mobile money, a cut for local beer, a rate left in a redenominated currency. Each change made sense when it was made. Together they rarely add up to anything a minister chose, and no one reads the whole document.
+
+**Fixed-amount rates lose value silently.** A specific excise, set in currency per liter or per pack, loses about 29 percent of its real value over five years of 7 percent inflation without any decision to cut it. When a government finally catches up, the nominal increase looks large and is politically expensive, so the cycle repeats.
+
+**Ministries lack a standard way to compare their rates with what the rates are for.** International work compares fuel prices with efficient prices for 170 countries [@Black2023FFS], and the World Health Organization (WHO) sets targets for tobacco and alcohol taxes [@WHO2021Tobacco; @WHO2023Alcohol]. Neither reads a country's own tax law line by line, and neither covers all excises on one page.
+
+# The diagnostic puts every excise line on one scale {#sec-method}
+
+**Each line is classified by what it is for and mapped onto a standard schedule of 30 lines.** The lines cover fuels, vehicles, tobacco, alcohol, soft drinks, plastics, gambling, telecommunications, mobile money and a few legacy items such as cement and edible oils, each in a fixed unit: a liter of fuel, a pack of 20 cigarettes, a liter of pure alcohol. Because the rows never change, the tenth country can be compared with the first without rework ([working paper, typology](wp:sec-typology)).
+
+**Each rate is measured three ways, because each answers a different question.** Dollars per standard unit compares countries. Share of the consumer price serves domestic debate and health targets, which are set as shares of price. Revenue as a share of GDP shows what the line is worth to the budget. A line that is high on the first two but raises little is a line that is not collected ([working paper, three measures](wp:sec-measures)).
+
+**Fuel taxes are compared with a benchmark built from one fixed set of damage values.** The benchmark adds up, per liter, the cost of carbon, local air pollution, congestion, accidents and road damage, using the method the International Monetary Fund uses for efficient fuel prices [@Parry2014GEPR]. The same values apply to every country, so the parts can be compared with each other and across countries. Tobacco, alcohol and sugary drinks are compared with WHO's published targets instead.
+
+**The diagnostic measures and does not decide.** It reports each gap with a range. Whether to close it, how fast and with what compensation is a decision for government, and keeping the two apart lets a ministry accept the numbers while it argues about the policy.
+
+**An AI model drafts the report, and a country economist checks every line against the law.** The model works through five stages, from reading the legal texts to the one-page summary. Every number is computed from a parameter sheet and carries a score for how well it is verified, and a figure built from a weak input inherits the weak score. The check is essential: in the two country runs, the line-by-line review corrected 16 and 14 of 49 entries ([working paper, the strongest objections](wp:sec-objections)).
+
+# For diesel, the damage is mostly local {#sec-fuel}
+
+**In a stylized economy, diesel is taxed at less than half its corrective rate.** @fig-corrective shows a fictitious lower-middle-income country. Diesel carries a tax of USD 0.18 per liter against a corrective rate of USD 0.43, with a range of 0.20 to 0.91. Closing the gap would raise about 1.1 to 1.2 percent of GDP in that economy ([working paper, stylized example](wp:sec-example)).
+
+![In the stylized economy, two-thirds of diesel's corrective tax is local damage, not carbon. US dollars per liter; whiskers show the low-to-high range; dashed lines show the current tax. Stylized numbers, not a real country. Source: working paper 7.1, Table 4 and Figure 1.](figures/fig_corrective.png){#fig-corrective width=100%}
+
+**Carbon is only a third of the diesel benchmark.** At a carbon value of USD 50 a tonne, carbon accounts for 31 percent of the corrective diesel tax; local air pollution accounts for 35 percent, and congestion, accidents and road damage for the rest. A reform argued on climate grounds alone would rest on the smaller part of the case. Framed as a health and road-safety measure, it rests on the larger.
+
+**Petrol in the example is taxed exactly at its benchmark, but only because inflation has eroded it.** Its rate was 40 percent above the benchmark in real terms when it was set in 2020 and has not changed since. Without indexation it will fall below the benchmark from now on. The lesson is about indexation, not about petrol.
+
+**Two choices move every fuel result, and the diagnostic shows both.** Valuing carbon at USD 185 a tonne, the leading recent estimate of climate damage [@Rennert2022], rather than USD 50 nearly quadruples the carbon part and raises the diesel benchmark to USD 0.80. The method used to value lives in low-income countries can change the air pollution and accident parts by a factor of up to five [@Robinson2019VSL]. A finding that diesel is undertaxed under every plausible choice is worth more to a ministry than a precise number under one ([working paper, valuation defaults](wp:sec-defaults)).
+
+**The benchmark is a floor, not a target.** Where fuel is one of the few things a government can tax well, the right fuel tax is above the damage it causes, because fuel also pays for the state. A rate below the benchmark is too low on any view; a rate above it may still be right.
+
+# Sierra Leone and Liberia: light fuel taxes, inconsistent alcohol taxes, weak collection {#sec-countries}
+
+**The diagnostic has been run on the 2026 excise law of both countries and checked line by line.** @tbl-countries gives the main results. They are illustrative results from the diagnostic, not official estimates.
+
+| | Sierra Leone | Liberia |
+|---|---|---|
+| Excise revenue, % of GDP (African mean 1.3, 2023) | 1.25–1.28 reported (2024–25); 0.57 in OECD data (2023) | 0.37 excise law only; 1.25 with fuel and road levies (FY2024) |
+| Petrol tax, USD per liter (carbon cost alone: 0.11 at USD 50/t) | 0.23 | 0.095, in levies |
+| Cigarettes: excise as share of retail price (WHO target: at least 70%) | about 14% | 27% |
+| Spirits against beer, USD per liter of pure alcohol | 7.5 against 2.3–9.1 | 7.50 against 20.00 |
+| Specific rates indexed to inflation | none | from January 2027 |
+
+: Sierra Leone and Liberia, 2026: fuel taxed lightly, alcohol inconsistently. Illustrative results from the Excise-Fiscal Diagnostic, not official estimates. Sources: @ExciseDiagnostic2026; African mean and OECD figures from @OECD2025RSA; carbon cost is the author's calculation; WHO target from @WHO2021Tobacco. {#tbl-countries}
+
+**What counts as an excise decides how a country compares.** Liberia's excise law raised only 0.37 percent of GDP in FY2024, because fuel is taxed through earmarked road and refinery levies outside it. International statistics count such levies as excises, and on that basis Liberia raised 1.25 percent, close to the African mean. Sierra Leone's reported 1.25–1.28 percent for 2024–25 is about twice the figure in the OECD's data for 2023; the diagnostic's own reconciliation of collections has still to explain the difference ([working paper, revenue](wp:sec-revenue)).
+
+**Fuel is lightly taxed in both countries.** Liberia's levies of USD 0.095 per liter are below the carbon cost alone at USD 50 a tonne, before any air pollution or accident cost is counted. Sierra Leone's USD 0.23, 16 percent of the pump price, is about twice that carbon cost and about half the carbon cost at USD 185.
+
+**Both countries tax alcohol inconsistently, and Liberia taxes the strongest drink least.** Liberia taxes spirits at USD 7.50 per liter of pure alcohol against USD 20.00 for beer, and its local spirits rate moved three times in 16 months. Sierra Leone taxes wine below beer per liter of alcohol and runs two beer regimes whose rates differ by up to four times. WHO regards taxes based on alcohol content as the best design for reducing harm [@WHO2023Alcohol].
+
+**Health excises are on the books but collect little.** Sierra Leone's non-fuel excises together collected 0.10–0.16 percent of GDP, although cigarettes, beer and sugary drinks are all taxed; its cigarette excise is about a fifth of WHO's target. Liberia's revenue authority booked no excise on imported tobacco in FY2024 or early FY2025. Some current rates could not even be read in the published law.
+
+# What to do {#sec-what-to-do}
+
+**Finance ministries: index every specific excise under one rule.** One automatic inflation adjustment covering fuel, tobacco and alcohol is cheaper politically than three separate fights, and it ends the cycle of silent erosion and expensive catch-up. Liberia has legislated it from 2027; Sierra Leone has not.
+
+**Revenue authorities: book each excise line separately and publish legible schedules.** A tax that cannot be traced in the accounts cannot be managed, and a rate that cannot be read in the law cannot be enforced. Reconcile collections across the revenue authority, the finance ministry and international statistics every year.
+
+**Tax policy units: run the diagnostic every budget cycle, and argue diesel on health.** With the same standard schedule and the same damage values, the change from last year shows on one page. Where diesel is undertaxed, lead with air pollution and road deaths; where a pump-price rise is too visible, a feebate on new vehicles prices part of the same damage without it ([Brief 1.2](paper:1.2)).
+
+**Development partners and analysts using AI: never publish an unreviewed excise review.** The model saves time in reading and arithmetic, but a third of its entries needed correction. Require a source reference for every line and a review against the gazetted law.
+
+# Related papers in this series {.unnumbered}
+
+- The [working paper](wp:) behind this brief: the method, the stylized calculations, the country results and the strongest objections.
+- [Climate Fiscal Policy Brief No. 6.1](paper:6.1): the Total Effective Carbon Price, which measures carbon pricing by the emissions it cuts [@CFPB61].
+- [No. 1.2](paper:1.2): feebates, the full carbon price at the margin without the carbon bill [@CFPB12].
+- [No. 5.4](paper:5.4): why published price elasticities overstate how fast fuel use responds [@CFPB54].
+- [Paper 7.2](paper:7.2): a one-page fiscal profile for 217 economies, to place a diagnostic in context.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

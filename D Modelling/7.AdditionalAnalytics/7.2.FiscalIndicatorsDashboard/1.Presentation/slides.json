@@ -1,49 +1,294 @@
 {
-  "series": "Climate-Fiscal Analytics Paper No. 7.2",
+  "series": "Climate Fiscal Policy Brief No. 7.2 · October 2026",
   "title": "A Global Fiscal Indicators Dashboard",
-  "subtitle": "Eighty public indicators, one country profile, and a build anyone can rerun",
-  "message": "A one-page fiscal and energy profile for 217 economies from about twenty public datasets, rebuilt by a script that never imputes, records the year and source of every value and stops if configuration and output disagree.",
-  "problem": {
-    "title": "Every analysis starts with a scramble",
-    "stats": [
-      {
-        "value": "217",
-        "label": "economies"
+  "slides": [
+    {
+      "type": "title",
+      "title": "A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis",
+      "subtitle": "Find the binding constraint before choosing the climate-fiscal lever",
+      "message": "Eighty public indicators for 217 economies on one page, each with its year and source. Four economies show the profile separating a revenue problem from a debt-service problem; a check against the IMF's own files confirms most values and finds three compilation faults.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Climate-fiscal advice starts with a scramble across a dozen databases",
+      "stats": [
+        {
+          "value": "217",
+          "label": "economies on one country profile"
+        },
+        {
+          "value": "80",
+          "label": "indicators in twelve blocks, each block answering one question"
+        },
+        {
+          "value": "~20",
+          "label": "public datasets, each with its own country names, units and vintages"
+        }
+      ],
+      "text": "Debt, tax, capital spending, the cost of capital, fuel subsidies and the power mix sit in different places. Gathering them takes a day per country and a week per region, so advice tends to fix on the first number found.",
+      "source": "Global Fiscal Indicators dashboard, version 1.3; working paper 7.2, What the dashboard assembles."
+    },
+    {
+      "type": "table",
+      "title": "The dashboard is organized around the questions an adviser asks, not around datasets",
+      "header": [
+        "Block",
+        "Question",
+        "Main public sources"
+      ],
+      "widths": [
+        1.9,
+        3.6,
+        3.4
+      ],
+      "rows": [
+        [
+          "Fiscal",
+          "Can they pay for it?",
+          "IMF WEO; IMF WoRLD"
+        ],
+        [
+          "Delivery",
+          "Can they build it?",
+          "World Bank BOOST; PEFA 2016"
+        ],
+        [
+          "Finance 1",
+          "What does capital cost them?",
+          "IRENA; Steffen et al.; IEA; IDS"
+        ],
+        [
+          "Finance 2",
+          "Who finances it, and with what risk?",
+          "OECD; IDS; PEFA; World Bank PPI"
+        ],
+        [
+          "Context 1",
+          "How much fossil money runs through the budget?",
+          "IMF WoRLD; IMF subsidy data; BOOST"
+        ],
+        [
+          "Context 2",
+          "Does it sell fossil fuels, or buy them?",
+          "World Development Indicators"
+        ],
+        [
+          "Context 3",
+          "How is power generated?",
+          "Ember; IMF subsidy data"
+        ]
+      ],
+      "note": "Four assessment blocks carry the diagnosis; three context blocks explain it; five appendices hold reference data.",
+      "source": "Working paper 7.2, Table 1."
+    },
+    {
+      "type": "points",
+      "title": "The build is designed so that errors cannot hide",
+      "points": [
+        {
+          "lead": "One long table:",
+          "text": "every value as a row with its country, year and source file (about 130,000 rows; 12,400 latest values)."
+        },
+        {
+          "lead": "Nothing imputed:",
+          "text": "a missing value stays missing, and the profile counts the gaps by block."
+        },
+        {
+          "lead": "A hard stop:",
+          "text": "the build halts if its configuration asks for an indicator the data do not supply."
+        },
+        {
+          "lead": "Two languages:",
+          "text": "Python and R matched on the original 53 indicators; the 27 added in October 2026 are not yet checked."
+        },
+        {
+          "lead": "Every input is public;",
+          "text": "the build itself is not yet."
+        }
+      ],
+      "source": "Working paper 7.2, The build pipeline."
+    },
+    {
+      "type": "points",
+      "title": "Scores rank countries from 1 to 10, and there is deliberately no overall index",
+      "points": [
+        {
+          "lead": "Rescaled between the 5th and 95th percentiles,",
+          "text": "so a few extreme values do not squeeze everyone else into the middle."
+        },
+        {
+          "lead": "Words at fixed thresholds:",
+          "text": "7 and above Good, below 4 Bad; context blocks read High, Medium, Low."
+        },
+        {
+          "lead": "No index:",
+          "text": "a composite \"may disguise serious failings in some dimensions\" (OECD and JRC 2008)."
+        },
+        {
+          "lead": "Block averages double-count,",
+          "text": "so read the weakest indicator and the count of missing values."
+        }
+      ],
+      "source": "Working paper 7.2, Scoring and evaluation; OECD and JRC (2008)."
+    },
+    {
+      "type": "figure",
+      "title": "The same tax take can carry very different interest bills and subsidy bills",
+      "image": "figures/fig_profiles.png",
+      "caption": "Four economies, 2024, as compiled by the dashboard.",
+      "points": [],
+      "source": "IMF WoRLD; IMF WEO; IMF fossil fuel subsidy data, 2025 update; working paper 7.2, Figure 1."
+    },
+    {
+      "type": "table",
+      "title": "Indonesia has a revenue problem; South Africa has a debt-service problem",
+      "header": [
+        "2024 (score 1–10)",
+        "Colombia",
+        "Indonesia",
+        "Morocco",
+        "South Africa"
+      ],
+      "widths": [
+        3.3,
+        1.4,
+        1.4,
+        1.4,
+        1.4
+      ],
+      "rows": [
+        [
+          "Tax revenue, % of GDP",
+          "23.0 (7.5)",
+          "10.1 (2.9)",
+          "20.8 (6.7)",
+          "25.2 (8.3)"
+        ],
+        [
+          "Gross debt, % of GDP",
+          "61.0 (6.5)",
+          "40.2 (8.0)",
+          "67.7 (5.9)",
+          "76.0 (5.3)"
+        ],
+        [
+          "Net interest, % of revenue",
+          "13.5 (5.3)",
+          "15.1 (4.7)",
+          "7.9 (7.3)",
+          "18.9 (3.4)"
+        ],
+        [
+          "Fuel subsidies, % of GDP: explicit + implicit",
+          "0.4 + 5.4",
+          "3.0 + 9.2",
+          "1.9 + 5.0",
+          "0.0 + 12.9"
+        ],
+        [
+          "Gasoline, per liter",
+          "US$1.16",
+          "US$0.57",
+          "US$1.46",
+          "US$1.13"
+        ]
+      ],
+      "note": "Indonesia: next questions are subsidy reform and the tax base. South Africa: pricing pollution, under a debt-service constraint.",
+      "source": "IMF WoRLD; IMF WEO; IMF fossil fuel subsidy data (dollars over WEO GDP); working paper 7.2, Table 2."
+    },
+    {
+      "type": "figure",
+      "title": "A check against the publishers confirms most values and finds three faults",
+      "image": "figures/fig_renewables.png",
+      "points": [
+        {
+          "lead": "Mislabeled:",
+          "text": "\"interest-to-revenue\" is net interest, and its filter drops net creditors."
+        },
+        {
+          "lead": "Denominator:",
+          "text": "Colombia's excises look lowest as a share of revenue, but equal Indonesia's as a share of GDP (1.06 and 1.11%)."
+        },
+        {
+          "lead": "Modeled vs observed:",
+          "text": "the panel's renewable share is 5 to 19 points off Ember's (chart)."
+        }
+      ],
+      "source": "IMF DataMapper and WoRLD API, Ember, 31 Oct 2026; working paper 7.2, Checking the panel."
+    },
+    {
+      "type": "points",
+      "title": "Carbon pricing is the gap to fill first",
+      "points": [
+        {
+          "lead": "Explicit carbon prices:",
+          "text": "taxes and trading systems (World Bank Carbon Pricing Dashboard)."
+        },
+        {
+          "lead": "Effective carbon rates:",
+          "text": "add fuel excises (OECD 2023)."
+        },
+        {
+          "lead": "Total carbon price:",
+          "text": "also nets out fuel subsidies (Agnolucci et al. 2024)."
+        },
+        {
+          "lead": "Total Effective Carbon Price:",
+          "text": "the uniform tax that cuts emissions as much as the whole policy mix (Brief 6.1)."
+        },
+        {
+          "lead": "Why it matters:",
+          "text": "beside the fiscal blocks, it would show how hard current policy already pushes, not only what the country can afford."
+        }
+      ],
+      "source": "Working paper 7.2, Limits; Brief 6.1."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the dashboard shows",
+        "items": [
+          {
+            "lead": "One page, 217 economies,",
+            "text": "every value with its year and source."
+          },
+          {
+            "lead": "Triage, not a verdict:",
+            "text": "it separates revenue, debt-service and delivery problems."
+          },
+          {
+            "lead": "Traceability pays:",
+            "text": "an afternoon's check found three faults."
+          },
+          {
+            "lead": "Modeled series",
+            "text": "and denominators need labels: the panel's renewable share is 5–19 points off observed."
+          }
+        ]
       },
-      {
-        "value": "80",
-        "label": "indicators in twelve blocks, scored 1 to 10"
-      },
-      {
-        "value": "~20",
-        "label": "public datasets, each with its own names and vintages"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {
+            "lead": "Ministries and bank teams:",
+            "text": "find the binding constraint before choosing the lever."
+          },
+          {
+            "lead": "Indicator compilers:",
+            "text": "record source and year, never impute, check against publishers."
+          },
+          {
+            "lead": "The dashboard's owners:",
+            "text": "fix the three faults, add carbon pricing, publish the build."
+          },
+          {
+            "lead": "Analysts:",
+            "text": "read the weakest indicator and its year, not the block average."
+          }
+        ]
       }
-    ],
-    "text": "Debt, tax take, capital execution, cost of capital, subsidies and the power mix sit in different databases. Assembling them takes a day per country and a week per region, and the next analyst starts again."
-  },
-  "mechanism": {
-    "title": "The profile separates different problems",
-    "image": "figures/fig_profiles.png",
-    "imageWidth": 5.6,
-    "imageHeight": 2.58,
-    "caption": "2024 values from IMF WoRLD and WEO, as compiled by the pipeline.",
-    "points": [
-      "Indonesia: a revenue problem; subsidies of 3% of GDP.",
-      "South Africa: a debt-service problem and the largest implicit subsidies.",
-      "No overall index: the triage is the point."
-    ]
-  },
-  "action": {
-    "title": "Use it to choose the next question",
-    "results": [
-      "Every value carries its year and source file.",
-      "Vintages run from 2013 to 2025; coverage is uneven.",
-      "The same panel feeds the scenario tool (6.5)."
-    ],
-    "todo": [
-      "Add carbon prices and effective carbon rates first.",
-      "Read Appendix C and E series from public sources before release.",
-      "Verify Python–R parity for the new indicators."
-    ]
-  }
+    }
+  ]
 }

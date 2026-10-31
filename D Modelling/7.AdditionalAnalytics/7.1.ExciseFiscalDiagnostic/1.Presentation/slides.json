@@ -1,49 +1,293 @@
 {
-  "series": "Climate-Fiscal Analytics Paper No. 7.1",
-  "title": "The Excise-Fiscal Diagnostic",
-  "subtitle": "Reading an excise system against its externalities",
-  "message": "A light, repeatable report maps any excise schedule onto 30 standard lines, scales each rate three ways and sets fuel rates against one fixed set of damage values. Run on Sierra Leone and Liberia in 2026, it finds excise at 1.3 and 0.4 percent of GDP against an African average of 2.4.",
-  "problem": {
-    "title": "Nobody can read the schedule whole",
-    "stats": [
-      {
-        "value": "30",
-        "label": "standard lines every schedule is mapped onto"
+  "series": "Climate Fiscal Policy Brief No. 7.1 · October 2026",
+  "title": "Read the Excise Schedule Whole, Against the Damage It Should Price",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Read the Excise Schedule Whole, Against the Damage It Should Price",
+      "subtitle": "The Excise-Fiscal Diagnostic, and what it finds in Sierra Leone and Liberia",
+      "message": "A repeatable report puts every excise line on one scale and sets fuel taxes against one fixed set of damage values. Run on two 2026 schedules, it finds light fuel taxes, inconsistent alcohol taxes and weak collection of health excises.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Excises are a government's main price tools for damage, yet few ministries read the schedule whole",
+      "stats": [
+        {
+          "value": "1.3%",
+          "label": "of GDP: average excise revenue across 37 African countries, 2023"
+        },
+        {
+          "value": "29%",
+          "label": "of real value lost by a specific rate left unchanged for five years at 7% inflation"
+        },
+        {
+          "value": "0.37 of 1.25",
+          "label": "% of GDP: Liberia's excise law covers under a third of its excise system; fuel sits outside it"
+        }
+      ],
+      "text": "Schedules grow by amendment for decades. Each change made sense; together they rarely add up to a policy anyone chose, and fixed-amount rates erode until a large, unpopular catch-up.",
+      "source": "OECD/AUC/ATAF, Revenue Statistics in Africa 2025 (excises, category 5121; author's calculation, unweighted mean); Excise-Fiscal Diagnostic (2026); working paper 7.1."
+    },
+    {
+      "type": "points",
+      "title": "The diagnostic maps every line onto 30 standard lines and measures each rate three ways",
+      "points": [
+        {
+          "lead": "Classify by purpose:",
+          "text": "energy, health and gambling, luxury, telecoms, financial, inputs, resources. A line with no purpose shows up as one."
+        },
+        {
+          "lead": "Map to 30 standard lines",
+          "text": "with fixed units: a liter of fuel, a pack of 20, a liter of pure alcohol. The tenth country compares with the first."
+        },
+        {
+          "lead": "Dollars per unit",
+          "text": "compares countries; share of the consumer price serves health targets; revenue as % of GDP shows budget weight."
+        },
+        {
+          "lead": "Erosion:",
+          "text": "the real value of each specific rate since its last change, year by year from 2020."
+        },
+        {
+          "lead": "Measure, don't decide:",
+          "text": "each gap comes with a range; how far and how fast to close it is for government."
+        }
+      ],
+      "source": "Working paper 7.1, Reading the schedule."
+    },
+    {
+      "type": "points",
+      "title": "Fuel taxes are set against one fixed set of damage values; health taxes against WHO targets",
+      "points": [
+        {
+          "lead": "Corrective fuel tax per liter =",
+          "text": "carbon + local air pollution + share of fuel response from driving less × (congestion + accidents + road damage)."
+        },
+        {
+          "lead": "Same values for every country:",
+          "text": "carbon USD 50/t (social-cost case USD 185/t), one value of a statistical life rule, mileage share 0.5."
+        },
+        {
+          "lead": "Tobacco:",
+          "text": "excise at least 70% of retail price (WHO). Alcohol: consistency per liter of pure alcohol. Sugary drinks: price rise of 20% or more."
+        },
+        {
+          "lead": "A floor, not a target:",
+          "text": "where fuel also pays for the state, the right tax is above the damage it causes."
+        }
+      ],
+      "source": "Parry et al. (2014); Parry and Small (2005); Rennert et al. (2022); WHO (2016, 2021, 2023)."
+    },
+    {
+      "type": "figure",
+      "title": "In a stylized economy, two-thirds of diesel's corrective tax is local damage, not carbon",
+      "image": "figures/fig_corrective.png",
+      "caption": "US dollars per liter; whiskers: low-to-high range; dashed: current tax. Stylized, not a real country.",
+      "points": [
+        {
+          "lead": "Diesel:",
+          "text": "taxed 0.18 against a corrective 0.43; carbon 31%, air pollution 35%, road use 35%."
+        },
+        {
+          "lead": "Petrol:",
+          "text": "at its benchmark only because inflation eroded a rate 40% higher in 2020."
+        },
+        {
+          "lead": "Argue diesel on health",
+          "text": "and road safety, the larger part of the case."
+        }
+      ],
+      "source": "Author's calculation; working paper 7.1, Table 4 and Figure 1."
+    },
+    {
+      "type": "table",
+      "title": "The carbon value and the value of a life move the fuel results most, so the diagnostic shows both",
+      "header": [
+        "Choice",
+        "Default",
+        "Alternative",
+        "Effect on the diesel benchmark"
+      ],
+      "widths": [
+        1.9,
+        2.1,
+        2.3,
+        2.6
+      ],
+      "rows": [
+        [
+          "Carbon value",
+          "USD 50/t (price-floor proposal)",
+          "USD 185/t (damage estimate)",
+          "0.43 → 0.80 per liter"
+        ],
+        [
+          "Value of a statistical life",
+          "100 × income, elasticity 1.0",
+          "US base, elasticity 1.5",
+          "Air and accident parts up to 5× lower"
+        ],
+        [
+          "Mileage share",
+          "0.5 (central)",
+          "0.35 to 0.65",
+          "0.39 to 0.48 per liter"
+        ],
+        [
+          "Short-run price elasticity",
+          "−0.3 (meta-analytic)",
+          "−0.1 (bias-corrected order)",
+          "Revenue from closing the gap 1.11 → 1.22% of GDP"
+        ]
+      ],
+      "note": "A finding that holds under every plausible choice (diesel undertaxed) is worth more to a ministry than a precise number under one.",
+      "source": "Parry, Black and Roaf (2021); Rennert et al. (2022); Robinson, Hammitt and O'Keeffe (2019); working paper 7.1, Valuation defaults."
+    },
+    {
+      "type": "table",
+      "title": "Sierra Leone and Liberia tax fuel lightly and alcohol inconsistently",
+      "header": [
+        "2026",
+        "Sierra Leone",
+        "Liberia",
+        "Reference"
+      ],
+      "widths": [
+        2.7,
+        2.1,
+        2.1,
+        2.0
+      ],
+      "rows": [
+        [
+          "Petrol, USD per liter",
+          "0.23 (16% of price)",
+          "0.095 (levies, 7%)",
+          "Carbon alone 0.11"
+        ],
+        [
+          "Cigarettes, excise % of price",
+          "about 14%",
+          "27% (2022 price)",
+          "WHO: 70%+"
+        ],
+        [
+          "Spirits vs beer, USD per liter of alcohol",
+          "7.5 vs 2.3–9.1",
+          "7.50 vs 20.00",
+          "Consistency"
+        ],
+        [
+          "Excise law, % of GDP",
+          "1.25–1.28 (2024–25)",
+          "0.37 (FY2024)",
+          "African mean 1.3"
+        ],
+        [
+          "With fuel and road levies, % of GDP",
+          "not reported",
+          "1.25 (FY2024)",
+          "As above"
+        ],
+        [
+          "Specific rates indexed",
+          "none",
+          "from 2027",
+          "WHO: yes"
+        ]
+      ],
+      "note": "Sierra Leone's reported revenue is about twice the OECD's 0.57% for 2023; the reconciliation is open. Illustrative results from the diagnostic, not official estimates.",
+      "source": "Excise-Fiscal Diagnostic (2026); OECD/AUC/ATAF (2025); WHO (2021); author's calculation."
+    },
+    {
+      "type": "points",
+      "title": "Outside fuel, the binding constraint is collection, not legislation",
+      "points": [
+        {
+          "lead": "Sierra Leone:",
+          "text": "all non-fuel excises together collect 0.10–0.16% of GDP, though cigarettes, beer and sugary drinks are taxed."
+        },
+        {
+          "lead": "Liberia:",
+          "text": "no excise booked on imported tobacco in FY2024 or early FY2025."
+        },
+        {
+          "lead": "Unreadable law:",
+          "text": "Sierra Leone's current spirits and soft-drink rates could not be read in the published text."
+        },
+        {
+          "lead": "Unstable rates:",
+          "text": "Liberia's local spirits rate moved 2.00 → 0.50 → 3.00 dollars per liter in 16 months."
+        }
+      ],
+      "source": "Excise-Fiscal Diagnostic (2026); working paper 7.1, What the two runs find."
+    },
+    {
+      "type": "stats",
+      "title": "An AI model drafts the report, but a third of its entries needed correction",
+      "stats": [
+        {
+          "value": "16 of 49",
+          "label": "entries corrected by the line-by-line review in Sierra Leone (4 could not be verified)"
+        },
+        {
+          "value": "14 of 49",
+          "label": "corrected in Liberia (2 could not be verified)"
+        },
+        {
+          "value": "5 stages",
+          "label": "from legal texts to the one-page summary; no reference, no line"
+        }
+      ],
+      "text": "Language models often state legal facts wrongly and cannot tell when they do. The review is the method, not an add-on: the time saved is in reading, converting and laying out; checking cannot be skipped.",
+      "source": "Excise-Fiscal Diagnostic (2026); Dahl et al. (2024); working paper 7.1, The strongest objections."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the diagnostic shows",
+        "items": [
+          {
+            "lead": "Diesel:",
+            "text": "the case is mainly health and road safety."
+          },
+          {
+            "lead": "Fuel:",
+            "text": "Liberia's levies below the carbon cost alone."
+          },
+          {
+            "lead": "Alcohol:",
+            "text": "taxed inconsistently per liter of alcohol."
+          },
+          {
+            "lead": "Health excises:",
+            "text": "legislated, weakly collected."
+          }
+        ]
       },
-      {
-        "value": "0.37%",
-        "label": "of GDP: Liberia's excise, FY2024; none from fuel"
-      },
-      {
-        "value": "16 of 49",
-        "label": "entries corrected by the Sierra Leone line-by-line review"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {
+            "lead": "Ministries:",
+            "text": "index every specific excise under one rule."
+          },
+          {
+            "lead": "Revenue authorities:",
+            "text": "book each line separately; publish legible schedules; reconcile collections."
+          },
+          {
+            "lead": "Policy units:",
+            "text": "rerun the diagnostic every budget."
+          },
+          {
+            "lead": "AI users:",
+            "text": "never publish an unreviewed excise review."
+          }
+        ]
       }
-    ],
-    "text": "Schedules grow by amendment for decades, in mixed units and currencies, and specific rates erode with inflation. Few ministries can say whether a fuel, tobacco or alcohol tax is high or low against the damage the good does."
-  },
-  "mechanism": {
-    "title": "Two countries, two different gaps",
-    "image": "figures/fig_countries.png",
-    "imageWidth": 5.6,
-    "imageHeight": 2.58,
-    "caption": "Excise-Fiscal Diagnostic, 2026 runs; illustrative results, not official estimates.",
-    "points": [
-      "Sierra Leone: about 90% of excise from fuel, on a large base at $0.23 per liter.",
-      "Liberia: fuel pays $0.095 in levies, below the carbon cost alone.",
-      "Both: health excises legislated, weakly collected; Liberia books no tobacco excise on imports."
-    ]
-  },
-  "action": {
-    "title": "Run it every budget cycle",
-    "results": [
-      "Spirits pay less per liter of alcohol than beer in Liberia, as in the stylized case.",
-      "Sierra Leone's 2024 switch to leone rates cut beer and wine rates by about 70% or more in dollars.",
-      "Stylized case: diesel at less than half its corrective rate; air pollution, not carbon, is the gap."
-    ],
-    "todo": [
-      "Index every specific excise to inflation.",
-      "Book each excise line separately and publish legible schedules.",
-      "Run the externality spine on both countries; stack into a regional table."
-    ]
-  }
+    }
+  ]
 }
