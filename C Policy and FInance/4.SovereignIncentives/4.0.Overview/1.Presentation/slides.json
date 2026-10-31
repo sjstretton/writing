@@ -1,0 +1,122 @@
+{
+  "series": "Climate Fiscal Policy Briefs · Section 4: Sovereign Incentives · October 2026",
+  "title": "Reward Governments, Not Projects",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Reward Governments, Not Projects",
+      "subtitle": "International incentives for national climate policy: section 4 in ten slides",
+      "message": "Cash on the scale needed will not be voted. Pay instead in what the international system holds cheaply and governments value highly: balance-sheet strength, as guarantees on green borrowing, held by a trust and earned by policy.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Cash rewards for national climate policy are too large to be voted",
+      "stats": [
+        {"value": "~$380bn", "label": "a year to pay $100 per tonne for a 10% cut in fossil CO₂ (37.8 Gt in 2024)"},
+        {"value": "~$12.5m", "label": "the most Uruguay's flagship sustainability-linked loan can save its government"},
+        {"value": "$1", "label": "of reward per donor dollar from a fund that pays out, and then it is gone"}
+      ],
+      "text": "A guarantee saves the borrower the whole credit spread but costs the guarantor only its expected loss and the carry on its buffer.",
+      "source": "Global Carbon Budget 2025; World Bank (2023); papers 4.2 and 4.3."
+    },
+    {
+      "type": "table",
+      "title": "Four routes to an incentive differ in what they cost the giver",
+      "header": ["Route", "What the government gets", "Cost to the giver", "Paper"],
+      "widths": [2.3, 3.4, 2.2, 1.0],
+      "rows": [
+        ["Policy crediting", "Payment per tonne a policy cuts", "Cash, per tonne", "1.1, 6.1"],
+        ["Conditional de-risking", "Guarantees for its clean power pipeline", "Expected loss", "3.1, 3.2"],
+        ["Sustainability-linked lending", "A lower rate if targets are met", "Forgone interest", "4.3"],
+        ["Notional capitalized value + Trust", "Guarantee capacity earned by policy", "Expected loss and buffer carry", "4.1, 4.2"]
+      ],
+      "source": "Section 4 overview, Table 1."
+    },
+    {
+      "type": "points",
+      "title": "A climate balance that the carbon stock opens and emissions draw down",
+      "points": [
+        {"lead": "Opening balance:", "text": "verified carbon stock times a low stock price."},
+        {"lead": "Each year:", "text": "debited at a uniform price for every tonne above an allowance."},
+        {"lead": "Never paid out:", "text": "the balance caps the guarantees development banks provide on the country's green borrowing."},
+        {"lead": "A forest country like Guyana:", "text": "a $5bn balance saves $150m a year; about $30 per tonne at the margin if capacity binds."}
+      ],
+      "source": "Paper 4.1."
+    },
+    {
+      "type": "figure",
+      "title": "A guarantee is worth many times what it costs the guarantor",
+      "image": "../../4.1.NotionalCapitalisedValueAndGuarantees/2.Source/figures/fig2-incentive-cost-ratio.png",
+      "points": [
+        {"lead": "Development banks' record:", "text": "0.77% default a year, 95% recovered: about $80 saved per $1 of expected loss."},
+        {"lead": "Net of the default option:", "text": "about $27 per $1."},
+        {"lead": "Stress case,", "text": "without preferred-creditor status: 2.7 (1.9 net)."}
+      ],
+      "source": "GEMs (2025); paper 4.1, Proposition 1."
+    },
+    {
+      "type": "points",
+      "title": "A trust holds the capital behind the guarantees, and three conditions decide what it delivers",
+      "points": [
+        {"lead": "One pool, three jobs:", "text": "second loss behind policy guarantees; co-investment in clean energy and first-loss funds; national accounts drawn after 2050."},
+        {"lead": "Preferred creditor:", "text": "the base case needs the Trust's claims honored first; the practice is informal."},
+        {"lead": "Carry:", "text": "at 2%, pricing on the record while holding the stress buffer gives about 13 per dollar, not 80."},
+        {"lead": "Liquidity:", "text": "calls need cash; $5bn supports about $390bn, not $1tn, without a liquidity line."}
+      ],
+      "source": "Paper 4.2, Proposition 1."
+    },
+    {
+      "type": "figure",
+      "title": "Holding the cautious buffer, the Trust grows on its own yield if losses follow the banks' record",
+      "image": "../../4.2.ClimateInvestmentTrust/2.Source/figures/fig3_capital_paths.png",
+      "points": [
+        {"lead": "Record losses:", "text": "grows about 3% a year with no fee."},
+        {"lead": "Stress losses:", "text": "shrinks about 8.5% a year without fees."},
+        {"lead": "With $95bn co-investment", "text": "(an upper case): about $34bn after 10 years."}
+      ],
+      "source": "Paper 4.2, Figure 3."
+    },
+    {
+      "type": "figure",
+      "title": "Interest rebates are an order of magnitude too small; guarantee capacity is not",
+      "image": "../../4.3.SustainabilityLinkedLending/2.Source/figures/fig1-size-problem.png",
+      "points": [
+        {"lead": "A 100 bp step on $1bn", "text": "is worth $77m, against a $772m coal reform."},
+        {"lead": "A market bond buys commitment, not money:", "text": "the government pays for its own incentive."},
+        {"lead": "Codify the loan, pay from outside,", "text": "and make guarantee capacity the prize."}
+      ],
+      "source": "Paper 4.3, Figure 1."
+    },
+    {
+      "type": "points",
+      "title": "Pay a premium for acting now, and let the incentives build the capacity section 3 uses",
+      "points": [
+        {"lead": "The option to wait is valuable", "text": "when clean technology is getting cheaper; an incentive must beat it."},
+        {"lead": "Capacity that declines", "text": "as technology costs fall halves the donor cost of inducing early action."},
+        {"lead": "The sections compose:", "text": "capacity earned under 4.1 can stand in 3.1's waterfall or behind 3.2's bonds; the Trust's regional funds hold 3.2's first loss."}
+      ],
+      "source": "Dixit and Pindyck (1994); paper 4.1, Proposition 3; section 3."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What section 4 shows",
+        "items": [
+          {"lead": "Leverage:", "text": "about $80 of interest saving per $1 of expected loss on the banks' record; 27 net; 2.7 in stress."},
+          {"lead": "Conditions:", "text": "preferred-creditor treatment, counted carry, a liquidity line."},
+          {"lead": "Size:", "text": "rebates are too small; guarantee capacity is the prize."}
+        ]
+      },
+      "right": {
+        "title": "Actions",
+        "items": [
+          {"lead": "Development bank shareholders:", "text": "rules-based guarantee capacity, allocated by notional capitalized value."},
+          {"lead": "Donors and a development bank:", "text": "launch the Trust as insurance first, holding the stress buffer, with a liquidity line."},
+          {"lead": "Lenders:", "text": "codify sustainability-linked loans and pay rewards from outside."}
+        ]
+      }
+    }
+  ]
+}

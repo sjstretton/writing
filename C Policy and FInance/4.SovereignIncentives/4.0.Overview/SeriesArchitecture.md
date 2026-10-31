@@ -109,9 +109,9 @@ Rewritten last. Structure: why incentives must come from outside; the routes com
 @techreport{CFPB41, author={Stretton, Stephen J.}, title={Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives}, institution={Climate Fiscal Policy Briefs}, number={4.1}, year={2026}}
 @techreport{CFPB42, author={Stretton, Stephen J.}, title={The Climate Investment Trust: Hold Capital, Lend Its Strength}, institution={Climate Fiscal Policy Briefs}, number={4.2}, year={2026}}
 @techreport{CFPB43, author={Stretton, Stephen J.}, title={Codify Sustainability-Linked Sovereign Lending, Then Give It Scale}, institution={Climate Fiscal Policy Briefs}, number={4.3}, year={2026}}
-@unpublished{StrettonWP41, author={Stretton, Stephen J.}, title={Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives}, note={Working paper 5.1}, year={2026}}
-@unpublished{StrettonWP42, author={Stretton, Stephen J.}, title={The Climate Investment Trust: Hold Capital, Lend Its Strength}, note={Working paper 5.2}, year={2026}}
-@unpublished{StrettonWP43, author={Stretton, Stephen J.}, title={Codify Sustainability-Linked Sovereign Lending, Then Give It Scale}, note={Working paper 5.3}, year={2026}}
+@unpublished{StrettonWP41, author={Stretton, Stephen J.}, title={Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives}, note={Working paper 4.1}, year={2026}}
+@unpublished{StrettonWP42, author={Stretton, Stephen J.}, title={The Climate Investment Trust: Hold Capital, Lend Its Strength}, note={Working paper 4.2}, year={2026}}
+@unpublished{StrettonWP43, author={Stretton, Stephen J.}, title={Codify Sustainability-Linked Sovereign Lending, Then Give It Scale}, note={Working paper 4.3}, year={2026}}
 ``` Series 3 keys are in `3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md`.
 
 ## Facts to settle (from the source audit, 29 Oct 2026)
@@ -125,4 +125,4 @@ Rewritten last. Structure: why incentives must come from outside; the routes com
   - **Middle case:** 3 percent calls, 10 percent loss. Buffer 2.5 percent; $5bn supports $200bn. Ratio 10.
   - **Stress case:** 3 percent calls, 37 percent loss [@CrucesTrebesch2013]. Buffer 9.3 percent; $5bn supports $54bn. Ratio 2.7 (2.3 with a 2 percent carry).
   - Every paper says the MDB record reflects preferred-creditor status, which a climate guarantee facility might not inherit, which is why the stress case is reported throughout; and that because a held buffer costs nothing net, a facility can hold the stress-case buffer until it has its own record.
-  - Headline numbers: 4.1 forest country donor cost about 40 cents per tonne ($11 stress); each $1bn a year of incentive needs $33bn of capacity, a $0.16bn buffer and about $13m a year of expected loss ($3.1bn and $370m stress); 4.2 Trust long-run capital about $57bn with no guarantee fee ($28bn stress); 4.3 coal reform funder cost about $10m ($286m stress).
+  - Headline numbers: 4.1 forest country donor cost about 40 cents per tonne ($11 stress); each $1bn a year of incentive needs $33bn of capacity, a $0.16bn buffer and about $13m a year of expected loss ($3.1bn and $370m stress); 4.2 Trust capital about $34bn after 10 years on the record with $95bn of co-investment, holding the stress buffer, levelling off near $28bn in the stress case (the earlier $57bn, computed at the base-case buffer, is retired, 31 Oct 2026); 4.3 coal reform funder cost about $10m ($286m stress).
