@@ -1,13 +1,14 @@
 # Scripts
 
-You only need two scripts, and they sit at the top of the repo:
+You only need these scripts, and they sit at the top of the repo:
 
 | Script | What it does | When |
 |---|---|---|
 | `Compile-Website.bat` | Copies every paper, brief, overview and deck into the website folder, rewrites the Research pages from the papers' current abstracts, then builds the site with Quarto. Nothing goes online. | After papers change, to check the site locally (`B Working Papers/A.Website/_site/index.html`). |
-| `Deploy-Website.bat` | Runs Compile, uploads the built site to the web server, and deletes files retired from the site. | When you want the site live. |
+| `Push-Website.bat` | Uploads the already-built site to the web server and deletes files retired from the site. No compiling. | After Compile, when you have checked the site and want it live. |
+| `Deploy-Website.bat` | Compile then Push, in one go. | When you want the site live and haven't just compiled. |
 
-Both need Python and Quarto (or RStudio, which includes Quarto). Deploy also needs the FTP login file `Papers/Reference/_ftp.txt` (copy `_ftp.txt.example` and fill it in; it is never committed). It uses WinSCP if installed, otherwise Python, so nothing else needs installing. If your login file is still in the old place, `B Working Papers/B.Scripts/Reference/_ftp.txt`, Deploy finds it there too; move it here when convenient.
+All need Python; Compile also needs Quarto (or RStudio, which includes Quarto). Push and Deploy also need the FTP login file `Papers/Reference/_ftp.txt` (copy `_ftp.txt.example` and fill it in; it is never committed). It uses WinSCP if installed, otherwise Python, so nothing else needs installing. If your login file is still in the old place, `B Working Papers/B.Scripts/Reference/_ftp.txt`, Deploy finds it there too; move it here when convenient.
 
 Everything below is optional. You can ignore this folder.
 
