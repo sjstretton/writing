@@ -1,0 +1,4 @@
+country,generation_TWh,coal_pct,gas_pct,oil_pct,clean_pct,ebar_direct,ebar_after_redispatch,ember_lifecycle_g_per_kWh,tax_single_buyer,tax_market,feebate_single_buyer,feebate_single_buyer_fees_only,feebate_market_coal_marginal,tax_revenue_bn,coal_fees_bn,clean_rebates_bn,gas_rebates_bn,redispatch_cut_Mt
+India,2037,74.5,2.8,0.2,22.5,0.717,0.686,707,35.6,47.3,1.3,10.3,13.0,69.8,18.3,15.7,2.6,63
+Indonesia,372,61.5,18.5,1.9,18.1,0.663,0.577,681,32.6,47.3,3.7,12.5,18.4,10.7,3.2,1.9,1.3,32
+South Africa,248,83.6,0.0,0.8,15.7,0.796,0.796,718,39.8,47.3,0.0,6.3,7.5,9.9,1.5,1.5,0.0,0

@@ -1,0 +1,231 @@
+"# Source: EU CBAM default values, as adopted (file ""DVs as adopted_v20260204_.xlsx"", version 4 Feb 2026); legally valid values are in Commission Implementing Regulation (EU) 2025/2621. Units tCO2e per tonne of product."
+country,cn_code,description,direct,total,dv_2026_markup,dv_2027_markup,dv_2028on_markup
+Albania,25232900,Grey Portland cement,0.9,0.93,1.0230000000000001,1.116,1.209
+Algeria,25232900,Grey Portland cement,1.23,1.3,1.4300000000000002,1.56,1.6900000000000002
+Algeria,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Algeria,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",3,3,3.3000000000000003,3.5999999999999996,3.9000000000000004
+Algeria,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",3,3,3.3000000000000003,3.5999999999999996,3.9000000000000004
+Angola,25232900,Grey Portland cement,1.24,1.27,1.3970000000000002,1.5367000000000004,1.6903700000000006
+Argentina,25232900,Grey Portland cement,0.87,0.92,1.0120000000000002,1.1132000000000004,1.2245200000000005
+Argentina,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Argentina,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.47,2.47,2.7170000000000005,2.964,3.2110000000000003
+Argentina,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.59,2.59,2.849,3.1079999999999997,3.367
+Armenia,25232900,Grey Portland cement,1.32,1.35,1.4850000000000003,1.62,1.7550000000000001
+Australia,25232900,Grey Portland cement,1.1,1.17,1.287,1.404,1.521
+Australia,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Australia,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.92,2.92,3.212,3.504,3.796
+Australia,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.97,2.97,3.2670000000000003,3.564,3.861
+Azerbaijan,25232900,Grey Portland cement,0.89,0.94,1.034,1.128,1.222
+Azerbaijan,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Azerbaijan,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",0.14,0.14,0.15400000000000003,0.168,0.18200000000000002
+Azerbaijan,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",0.14,0.14,0.15400000000000003,0.168,0.18200000000000002
+Bangladesh,25232900,Grey Portland cement,1.21,1.27,1.3970000000000002,1.524,1.651
+Bangladesh,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Bahrain,7601,Unwrought aluminium,1.87,1.87,2.0570000000000004,2.244,2.431
+Belarus,25232900,Grey Portland cement,1.34,1.39,1.529,1.668,1.807
+Benin,25232900,Grey Portland cement,0.92,0.99,1.089,1.188,1.287
+Bolivia,25232900,Grey Portland cement,0.87,0.93,1.0230000000000001,1.116,1.209
+Bolivia,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Bosnia and Herzegovina,25232900,Grey Portland cement,0.88,0.98,1.078,1.176,1.274
+Bosnia and Herzegovina,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Bosnia and Herzegovina,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.34,2.34,2.574,2.808,3.042
+Bosnia and Herzegovina,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.29,2.29,2.519,2.7479999999999998,2.9770000000000003
+Brazil,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Brazil,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",1.61,1.61,1.7710000000000004,1.932,2.0930000000000004
+Brazil,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",1.62,1.62,1.7820000000000003,1.944,2.1060000000000003
+Brunei,25232900,Grey Portland cement,1.04,1.11,1.2210000000000003,1.332,1.4430000000000003
+Cambodia,25232900,Grey Portland cement,0.87,0.92,1.0120000000000002,1.104,1.1960000000000002
+Cameroon,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Canada,7601,Unwrought aluminium,1.96,1.96,2.156,2.352,2.548
+Canada,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",1.33,1.33,1.4630000000000003,1.596,1.729
+Canada,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",1.43,1.43,1.573,1.716,1.859
+Chile,25232900,Grey Portland cement,0.94,1.01,1.1110000000000002,1.212,1.3130000000000002
+Chile,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Chile,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.05,2.05,2.255,2.4599999999999995,2.665
+Chile,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.05,2.05,2.255,2.4599999999999995,2.665
+China,25232900,Grey Portland cement,1.35,1.42,1.562,1.704,1.8459999999999999
+China,7601,Unwrought aluminium,3,3,3.3000000000000003,3.5999999999999996,3.9000000000000004
+China,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",3.168785311,3.168785311,3.4856638421000006,3.8025423732,4.1194209043
+China,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",3.186892655,3.186892655,3.5055819205,3.824271186,4.1429604515
+Colombia,25232900,Grey Portland cement,1.09,1.12,1.2320000000000002,1.344,1.4560000000000002
+Colombia,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Colombia,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.11,2.11,2.321,2.5319999999999996,2.743
+Colombia,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.56,2.56,2.8160000000000003,3.072,3.3280000000000003
+Congo,25232900,Grey Portland cement,0.85,0.93,1.0230000000000001,1.116,1.209
+Costa Rica,25232900,Grey Portland cement,0.85,0.86,0.9460000000000001,1.032,1.118
+Costa Rica,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Côte d'Ivoire,25232900,Grey Portland cement,1.13,1.18,1.298,1.416,1.534
+Cuba,25232900,Grey Portland cement,1.09,1.18,1.298,1.416,1.534
+Democratic Republic of the Cong,25232900,Grey Portland cement,1.24,1.25,1.375,1.5,1.625
+Dominican Republic,25232900,Grey Portland cement,1.04,1.12,1.2320000000000002,1.344,1.4560000000000002
+Ecuador,25232900,Grey Portland cement,1.09,1.11,1.2210000000000003,1.332,1.4430000000000003
+Ecuador,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Egypt,25232900,Grey Portland cement,1.24,1.29,1.4190000000000003,1.548,1.677
+Egypt,7601,Unwrought aluminium,1.87,1.87,2.0570000000000004,2.244,2.431
+El Salvador,25232900,Grey Portland cement,0.87,0.94,1.034,1.128,1.222
+El Salvador,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Eritrea,25232900,Grey Portland cement,0.85,0.96,1.056,1.152,1.248
+Eswatini,25232900,Grey Portland cement,1.17,1.25,1.375,1.5,1.625
+Ethiopia,25232900,Grey Portland cement,0.85,0.85,0.935,1.02,1.105
+Gabon,25232900,Grey Portland cement,1.13,1.19,1.309,1.428,1.547
+Georgia,25232900,Grey Portland cement,1.19,1.2,1.32,1.44,1.56
+Ghana,25232900,Grey Portland cement,1.05,1.1,1.2100000000000002,1.32,1.4300000000000002
+Ghana,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Guatemala,25232900,Grey Portland cement,0.87,0.98,1.078,1.176,1.274
+Guatemala,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Haiti,25232900,Grey Portland cement,1.11,1.2,1.32,1.44,1.56
+Honduras,25232900,Grey Portland cement,0.88,0.94,1.034,1.128,1.222
+Hong Kong,25232900,Grey Portland cement,0.9,0.98,1.078,1.176,1.274
+India,25232900,Grey Portland cement,1.39,1.48,1.6280000000000001,1.776,1.924
+India,7601,Unwrought aluminium,1.87,1.87,2.0570000000000004,2.244,2.431
+India,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",4.27,4.27,4.697,5.124,5.550999999999999
+India,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",4.28,4.28,4.708000000000001,5.136,5.564000000000001
+Indonesia,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Indonesia,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",8.23,8.23,9.053,9.876,10.699000000000002
+Indonesia,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",8.23,8.23,9.053,9.876,10.699000000000002
+Iran,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Iran,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",1.94,1.94,2.134,2.328,2.522
+Iran,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",1.94,1.94,2.134,2.328,2.522
+Iraq,25232900,Grey Portland cement,1.26,1.35,1.4850000000000003,1.62,1.7550000000000001
+Israel,25232900,Grey Portland cement,1.26,1.32,1.4520000000000002,1.584,1.7160000000000002
+Israel,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Jamaica,25232900,Grey Portland cement,1.09,1.17,1.287,1.404,1.521
+Japan,25232900,Grey Portland cement,0.83,0.89,0.9790000000000001,1.068,1.157
+Japan,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Japan,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.1,2.1,2.3100000000000005,2.52,2.7300000000000004
+Japan,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.1,2.1,2.3100000000000005,2.52,2.7300000000000004
+Jordan,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Kazakhstan,25232900,Grey Portland cement,1.35,1.42,1.562,1.704,1.8459999999999999
+Kazakhstan,7601,Unwrought aluminium,1.87,1.87,2.0570000000000004,2.244,2.431
+Kazakhstan,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",5.18,5.18,5.698,6.215999999999999,6.734
+Kazakhstan,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",5.29,5.29,5.819000000000001,6.348,6.877000000000001
+Kenya,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Kuwait,25232900,Grey Portland cement,0.95,1.03,1.1330000000000002,1.236,1.3390000000000002
+Kuwait,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Kyrgyzstan,25232900,Grey Portland cement,1.36,1.36,1.4960000000000002,1.6320000000000001,1.7680000000000002
+Lebanon,25232900,Grey Portland cement,0.83,0.93,1.0230000000000001,1.116,1.209
+Libya,25232900,Grey Portland cement,0.83,0.91,1.0010000000000001,1.092,1.183
+Madagascar,25232900,Grey Portland cement,1.24,1.33,1.4630000000000003,1.596,1.729
+Malaysia,25232900,Grey Portland cement,0.87,0.95,1.045,1.14,1.2349999999999999
+Malaysia,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Mali,25232900,Grey Portland cement,0.91,0.98,1.078,1.176,1.274
+Mauritania,25232900,Grey Portland cement,1.1,1.19,1.309,1.428,1.547
+Mexico,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Mexico,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.74,2.74,3.0140000000000007,3.2880000000000003,3.5620000000000003
+Mexico,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.75,2.75,3.0250000000000004,3.3,3.575
+Moldova,25232900,Grey Portland cement,1.34,1.41,1.551,1.692,1.833
+Mongolia,25232900,Grey Portland cement,1.36,1.49,1.639,1.788,1.937
+Montenegro,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Morocco,25232900,Grey Portland cement,0.86,0.95,1.045,1.14,1.2349999999999999
+Morocco,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Mozambique,7601,Unwrought aluminium,3.198,3.198,3.5178000000000003,3.8375999999999997,4.1574
+Myanmar_Burma,25232900,Grey Portland cement,1.35,1.4,1.54,1.68,1.8199999999999998
+Myanmar_Burma,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",0.47,0.47,0.517,0.564,0.611
+Myanmar_Burma,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",0.47,0.47,0.517,0.564,0.611
+Namibia,25232900,Grey Portland cement,0.88,0.89,0.9790000000000001,1.068,1.157
+New Zealand,25232900,Grey Portland cement,0.89,0.92,1.0120000000000002,1.104,1.1960000000000002
+New Zealand,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+New Zealand,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.41,2.41,2.6510000000000002,2.892,3.1330000000000005
+New Zealand,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.42,2.42,2.662,2.904,3.146
+Nicaragua,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Niger,25232900,Grey Portland cement,1.22,1.35,1.4850000000000003,1.62,1.7550000000000001
+Nigeria,25232900,Grey Portland cement,1.24,1.3,1.4300000000000002,1.56,1.6900000000000002
+Nigeria,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+North Korea,25232900,Grey Portland cement,1.36,1.42,1.562,1.704,1.8459999999999999
+North Macedonia,25232900,Grey Portland cement,0.87,0.96,1.056,1.152,1.248
+North Macedonia,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",1.53,1.53,1.6830000000000003,1.8359999999999999,1.989
+North Macedonia,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",1.53,1.53,1.6830000000000003,1.8359999999999999,1.989
+Oman,25232900,Grey Portland cement,0.86,0.92,1.0120000000000002,1.104,1.1960000000000002
+Oman,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Pakistan,25232900,Grey Portland cement,1.28,1.32,1.4520000000000002,1.584,1.7160000000000002
+Pakistan,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Panama,25232900,Grey Portland cement,0.89,0.94,1.034,1.128,1.222
+Paraguay,25232900,Grey Portland cement,0.91,0.91,1.0010000000000001,1.092,1.183
+Peru,25232900,Grey Portland cement,1.07,1.11,1.2210000000000003,1.332,1.4430000000000003
+Peru,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Philippines,25232900,Grey Portland cement,1.27,1.36,1.4960000000000002,1.6320000000000001,1.7680000000000002
+Philippines,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Philippines,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",0.74,0.74,0.8140000000000001,0.888,0.962
+Philippines,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",0.74,0.74,0.8140000000000001,0.888,0.962
+Qatar,25232900,Grey Portland cement,0.85,0.91,1.0010000000000001,1.092,1.183
+Qatar,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Russia,25232900,Grey Portland cement,1.33,1.38,1.518,1.656,1.7939999999999998
+Russia,7601,Unwrought aluminium,2.16,2.16,2.3760000000000003,2.592,2.8080000000000003
+Russia,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",3.21,3.21,3.531,3.852,4.173
+Russia,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",3.43,3.43,3.7730000000000006,4.116,4.4590000000000005
+Rwanda,25232900,Grey Portland cement,0.87,0.91,1.0010000000000001,1.092,1.183
+Saudi Arabia,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Senegal,25232900,Grey Portland cement,1.23,1.32,1.4520000000000002,1.584,1.7160000000000002
+Serbia,25232900,Grey Portland cement,1.31,1.41,1.551,1.692,1.833
+Serbia,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Serbia,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.41,2.41,2.6510000000000002,2.892,3.1330000000000005
+Serbia,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.41,2.41,2.6510000000000002,2.892,3.1330000000000005
+Singapore,25232900,Grey Portland cement,1.03,1.09,1.1990000000000003,1.308,1.4170000000000003
+Singapore,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+South Africa,7601,Unwrought aluminium,2.3584371,2.3584371,2.5942808100000003,2.83012452,3.06596823
+South Africa,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",4.03,4.03,4.433000000000001,4.836,5.239000000000001
+South Africa,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",4.14,4.14,4.554,4.967999999999999,5.382
+South Korea,25232900,Grey Portland cement,0.89,0.94,1.034,1.128,1.222
+South Korea,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+South Korea,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.11847619,2.11847619,2.3303238090000002,2.542171428,2.754019047
+South Korea,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.11847619,2.11847619,2.3303238090000002,2.542171428,2.754019047
+Sri Lanka,25232900,Grey Portland cement,1,1.06,1.1660000000000001,1.272,1.3780000000000001
+Sri Lanka,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Sudan,25232900,Grey Portland cement,0.86,0.9,0.9900000000000001,1.08,1.1700000000000002
+Suriname,25232900,Grey Portland cement,1.18,1.24,1.364,1.488,1.612
+Syria,25232900,Grey Portland cement,1.28,1.38,1.518,1.656,1.7939999999999998
+Syria,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Taiwan,25232900,Grey Portland cement,0.83,0.89,0.9790000000000001,1.068,1.157
+Taiwan,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Taiwan,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.297829146,2.297829146,2.5276120606000005,2.7573949752,2.9871778898000003
+Taiwan,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.309552764,2.309552764,2.5405080404000002,2.7714633168000002,3.0024185932000003
+Tajikistan,25232900,Grey Portland cement,1.36,1.36,1.4960000000000002,1.6320000000000001,1.7680000000000002
+Tajikistan,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Tanzania,25232900,Grey Portland cement,0.85,0.9,0.9900000000000001,1.08,1.1700000000000002
+Tanzania,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Thailand,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Thailand,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",1.9195,1.9195,2.11145,2.3034,2.49535
+Thailand,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",1.9195,1.9195,2.11145,2.3034,2.49535
+Togo,25232900,Grey Portland cement,0.95,1,1.1,1.2,1.3
+Trinidad and Tobago,25232900,Grey Portland cement,0.87,0.95,1.045,1.14,1.2349999999999999
+Tunisia,25232900,Grey Portland cement,0.86,0.91,1.0010000000000001,1.092,1.183
+Tunisia,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Türkiye,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Türkiye,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.309671362,2.309671362,2.5406384982000003,2.7716056343999997,3.0025727706
+Türkiye,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.427511737,2.427511737,2.6702629107000004,2.9130140844,3.1557652581
+Turkmenistan,25232900,Grey Portland cement,1.36,1.44,1.584,1.728,1.8719999999999999
+Uganda,25232900,Grey Portland cement,0.99,1.01,1.1110000000000002,1.212,1.3130000000000002
+Uganda,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Ukraine,25232900,Grey Portland cement,1.34,1.38,1.518,1.656,1.7939999999999998
+Ukraine,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Ukraine,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.3974854,2.3974854,2.63723394,2.8769824799999997,3.11673102
+Ukraine,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.482675237,2.482675237,2.7309427607,2.9792102844,3.2274778081
+United Arab Emirates,25232900,Grey Portland cement,0.84,0.9,0.9900000000000001,1.08,1.1700000000000002
+United Arab Emirates,7601,Unwrought aluminium,1.87,1.87,2.0570000000000004,2.244,2.431
+United Kingdom,25232900,Grey Portland cement,0.94,0.98,1.078,1.176,1.274
+United Kingdom,7601,Unwrought aluminium,1.87,1.87,2.0570000000000004,2.244,2.431
+United Kingdom,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.31,2.31,2.5410000000000004,2.772,3.003
+United Kingdom,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.42,2.42,2.662,2.904,3.146
+United States,25232900,Grey Portland cement,1.16,1.21,1.331,1.452,1.573
+United States,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+United States,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",1.39,1.39,1.529,1.668,1.807
+United States,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",1.4,1.4,1.54,1.68,1.8199999999999998
+Uruguay,25232900,Grey Portland cement,1.09,1.11,1.2210000000000003,1.332,1.4430000000000003
+Uruguay,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Uzbekistan,25232900,Grey Portland cement,1.36,1.41,1.551,1.692,1.833
+Uzbekistan,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Uzbekistan,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",3.21,3.21,3.531,3.852,4.173
+Uzbekistan,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",3.21,3.21,3.531,3.852,4.173
+Venezuela,25232900,Grey Portland cement,1.08,1.11,1.2210000000000003,1.332,1.4430000000000003
+Venezuela,7601,Unwrought aluminium,1.7,1.7,1.87,2.04,2.21
+Vietnam,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Vietnam,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",2.35,2.35,2.5850000000000004,2.82,3.055
+Vietnam,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",2.35,2.35,2.5850000000000004,2.82,3.055
+Yemen,25232900,Grey Portland cement,1.24,1.33,1.4630000000000003,1.596,1.729
+Zambia,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Zimbabwe,25232900,Grey Portland cement,1.24,1.31,1.4410000000000003,1.572,1.703
+Zimbabwe,7601,Unwrought aluminium,0.36,0.36,0.396,0.432,0.46799999999999997
+Other countries,25232900,Grey Portland cement,1.36,1.44,1.584,1.728,1.8719999999999999
+Other countries,7601,Unwrought aluminium,2.20264371,2.20264371,2.422908081,2.6431724519999995,2.863436823
+Other countries,72071111,"Semi-finished products, of non-alloy free-cutting steel, con",3.995878531,3.995878531,4.3954663841,4.7950542372,5.1946420903
+Other countries,7208,"Flat-rolled products of iron or non-alloy steel, of a width ",4.048689266,4.048689266,4.453558192600001,4.8584271192,5.263296045800001
