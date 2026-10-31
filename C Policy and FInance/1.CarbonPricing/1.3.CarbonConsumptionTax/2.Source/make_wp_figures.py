@@ -33,6 +33,12 @@ plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 9,
                      "xtick.color": MUTED, "ytick.color": MUTED})
 
 cats = pd.read_csv(HERE / "defaults_by_category.csv")
+# Like-for-like import comparison: EU-made intensity at the mix of products imported from outside the EU.
+_t = cats[cats.vat == "taxable"]
+_w = _t.hh_spend_beur * _t.import_share
+print(f"Extra-EU imports {(_w * _t.ghg_extra_eu).sum() / _w.sum():.3f} kg/EUR; EU-made at the same mix "
+      f"{(_w * _t.ghg_eu).sum() / _w.sum():.3f} kg/EUR; ratio "
+      f"{(_w * _t.ghg_extra_eu).sum() / (_w * _t.ghg_eu).sum():.2f}")
 basket = pd.read_csv(HERE / "basket_summary.csv")
 sources = pd.read_csv(HERE / "footprint_sources.csv")
 
