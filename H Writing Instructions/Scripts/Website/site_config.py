@@ -81,6 +81,7 @@ BOOK_FOLDERS = {"3.3.TimeAndChance"}
 
 WEB_PAPERS = [
     "1.1.OpenEconomyCarbonPricing",
+    "1.2.FeebatesAndOutputBasedRebating",
 ]
 
 # Books that are also read on the site, one page per chapter, under <part dir>/books/<BookName>/

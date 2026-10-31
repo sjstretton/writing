@@ -44,6 +44,11 @@ website:
               contents:
                 - text: "Working paper"
                   href: policy/1-carbon-pricing/OpenEconomyCarbonPricing/working-paper.qmd
+            - section: "1.2 Feebates"
+              href: policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/working-paper.qmd
         - policy/2-other-tax.qmd
         - policy/3-finance-and-risk.qmd
         - policy/4-sovereign-incentives.qmd
