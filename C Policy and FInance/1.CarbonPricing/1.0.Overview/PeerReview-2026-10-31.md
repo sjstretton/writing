@@ -25,4 +25,4 @@ The current deck (`1.Presentation/Slides-ClimateAndFiscalPolicy.pptx`, from `sli
 
 ## Disposition
 
-To be completed after papers 1.2–1.4 are revised.
+All points addressed in overview v0.3 (31 Oct 2026), after papers 1.1–1.4 were revised: numbers taken from the revised papers; race-to-the-top condition restated for country-and-sector charges and tied to 1.4; facts updated (coverage and prices, CBAM Article 9 as replaced in 2025, the free-allocation phase-out); bold lead sentences and links to each paper; 8.1 placed in Other Writing. Theme deck rebuilt at 10 slides on the new builder (`1.Presentation/slides.json`); the old deck and spec are in `8.PreviousVersions`.

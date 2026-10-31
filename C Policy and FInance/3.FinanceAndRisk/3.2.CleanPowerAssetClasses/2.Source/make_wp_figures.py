@@ -26,31 +26,37 @@ def fig_subordination(path, title=True):
     ax.set_xlabel("Default correlation between plants, ρ")
     ax.set_ylabel("Subordination needed, % of pool")
     ax.set_xlim(0, 0.40); ax.set_ylim(0, 25)
+    ax.plot([], [], color="grey", ls="--", lw=1, label="dashed: same target, recovery 60% instead of 80%")
     ax.legend(fontsize=8, frameon=False, loc="upper left")
-    ax.text(0.22, 21.5, "dashed: recovery 60% instead of 80%", fontsize=8)
     ax.spines[["top", "right"]].set_visible(False)
     fig.tight_layout(); fig.savefig(path, dpi=200); plt.close(fig)
 
 
 def fig_lcoe(path):
+    """Four financing cases of Table 4 (v0.2: two-stage cases refinance the senior debt;
+    project equity stays at M.R_PROJ_EQ)."""
     w = M.structure_wacc(*M.capital_structure()[:2], M.R_E, M.R_M, M.R_S)
     cases = [("Single-stage\n12%", M.lcoe_staged(0.12, 0.12)),
              ("Single-stage\n10%", M.lcoe_staged(0.10, 0.10)),
-             ("Two-stage,\nproject bond 8%", M.lcoe_staged(0.12, 0.08)),
-             (f"Two-stage,\npooled {100*w:.1f}%", M.lcoe_staged(0.12, w))]
+             ("Two-stage,\nproject bond 8%", M.lcoe_staged(0.12, M.operating_wacc(0.08))),
+             (f"Two-stage,\npooled {100*w:.2f}%", M.lcoe_staged(0.12, M.operating_wacc(w)))]
     fig, ax = plt.subplots(figsize=(7, 3.8))
     bars = ax.bar([c[0] for c in cases], [c[1] for c in cases], color=[C[3], C[3], C[1], C[0]])
     for b, (_, v) in zip(bars, cases):
         ax.text(b.get_x() + b.get_width() / 2, v + 0.08, f"{v:.2f}", ha="center", fontsize=9)
     ax.set_ylabel("LCOE, US cents per kWh")
     ax.set_ylim(0, 8)
+    ax.text(3.45, 7.6, "Two-stage: build at 12%; senior debt (80%) refinanced\nat the rate shown; project equity at 12%",
+            fontsize=7.5, ha="right", va="top")
     ax.spines[["top", "right"]].set_visible(False)
     fig.tight_layout(); fig.savefig(path, dpi=200); plt.close(fig)
 
 
 def fig_countries(path):
     ns = [1, 2, 3, 5, 10, 20]
-    ks = [100 * M.mc_subordination(0.05, 0.10, 0.15, 0.20, 0.001, n, sims=300_000) for n in ns]
+    # N = 1 is exact (one factor, rho = 0.25); N > 1 by Monte Carlo, as in Table 5
+    ks = [100 * (M.subordination(0.05, 0.25, 0.20, 0.001) if n == 1 else
+                 M.mc_subordination(0.05, 0.10, 0.15, 0.20, 0.001, n)) for n in ns]
     fig, ax = plt.subplots(figsize=(7, 3.8))
     ax.plot(ns, ks, marker="o", color=C[0], label="pool spread over N host countries")
     lim = 100 * M.subordination(0.05, 0.10, 0.20, 0.001)

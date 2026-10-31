@@ -1,14 +1,16 @@
 ---
+# MASTER (policy brief) - this is the file to edit for the brief. The .docx beside it and the brief's web page are made
+# from it. The working paper is a separate master: ../CarbonConsumptionTax.qmd.
 title: "Converting a VAT into a Destination Carbon Tax"
 subtitle: "A Carbon Component in VAT and a Forward Obligation on Energy Suppliers in the European Union"
 series: "Climate Fiscal Policy Brief No. 1.3"
-version: "1.0"
+version: "1.1"
 author:
   - name: "Stephen J. Stretton"
     note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
-  The EU prices the carbon its factories and power plants emit but barely prices the carbon in what Europeans buy, much of it emitted abroad. This brief proposes a carbon consumption tax in two parts. A carbon component of VAT charges every good consumed in the EU, imported or domestic, for its embodied carbon while the value component of VAT falls; exports are zero-rated and imports start on generous, rebuttable default intensities. A legal obligation announced a decade ahead makes the few large suppliers of road and heating fuel pay for the carbon they sell. The VAT part probably needs unanimity; the obligation does not.
+  The EU prices the carbon its factories and power plants emit but not the carbon in most of what Europeans buy, 40 percent of which is emitted abroad. This brief proposes pricing consumption instead, through institutions the EU already has. A carbon component inside VAT charges every good for its embodied carbon, imports included and exports exempt, while the value part of VAT falls by a rule that keeps revenue unchanged. A legal obligation fixed a decade ahead makes the few suppliers of fuel for homes and vehicles pay for the carbon they sell. The obligation can pass by qualified majority now; the VAT component needs unanimity.
 keywords: [carbon pricing, consumption-based emissions, value-added tax, destination basis, border carbon adjustment, EU law]
 bibliography: Brief-CarbonConsumptionTax.bib
 csl: https://www.zotero.org/styles/chicago-author-date
@@ -16,124 +18,113 @@ format:
   docx: default
 ---
 
-*Climate Fiscal Policy Brief No. 1.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated.*
+*Climate Fiscal Policy Brief No. 1.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with the proofs, the input–output calibration and the legal detail, is in the [working paper](wp:).*
 
-```{=openxml}
-<w:p><w:r><w:br w:type="page"/></w:r></w:p>
-```
+# Key messages {#sec-key-messages}
 
-# Executive summary {.unnumbered}
+**Europe prices the carbon it emits, not the carbon it consumes.** Forty percent of the carbon in what EU households buy subject to VAT is emitted outside the Union, where neither the Emissions Trading System nor the border mechanism reaches most of it.
 
-*The problem.* EU carbon pricing works on production. The Emissions Trading System prices power and heavy industry, and the Carbon Border Adjustment Mechanism (CBAM) extends that price to six import categories. The carbon embodied in everything else Europeans buy, from machinery to clothing, is unpriced, and much of it is emitted outside the EU.
+**Put a carbon component inside VAT.** Every business charges a price per tonne of the carbon embodied in what it sells and deducts what it paid on its inputs, as it does for VAT. Imports pay at the border; exports leave free.
 
-*The proposal.* A carbon consumption tax in two parts. First, a carbon component of VAT: each good consumed in the EU, imported or domestic, pays a charge per tonne of embodied carbon through the ordinary VAT invoice, while the value component of VAT falls. Exports are zero-rated. Imports start on default intensities that are deliberately generous, the same for every origin, and an exporter can rebut them with verified data. Second, for fuel burned in homes and vehicles, which does not pass through a goods chain, a legal obligation on the few large suppliers, written into law ten years ahead, to pay for each tonne of carbon they sell.
+**Use one published default per product category, the same for every origin, and let sellers prove a lower figure.** That treats like products alike and rewards clean exporters.
 
-*Why it works.* Imports and domestic goods pay alike, so the charge causes no leakage and needs no separate border adjustment. Rebuttable defaults reward exporters who cut emissions, which turns competition toward lower carbon. The forward obligation gives refiners and gas suppliers, who plan long-lived assets, a price path they can bank on, which a tax reset each year cannot give.
+**Cut the value part of VAT each year by last year's carbon receipts.** The swap then raises no extra revenue, whatever the pace of decarbonization.
 
-*What it costs.* On the illustrative path, the value component falls 0.5 percentage points a year from 15 to 10 percent while the carbon component rises €20 per tonne a year to €200 in 2037. A good with 0.25 kg CO₂ per euro then pays 15 percent throughout; cleaner goods pay less and dirtier goods more. The swap is revenue-neutral only if the taxed basket averages 0.25 kg per euro. On 2022 input–output data it averages about 0.41 kg CO₂e per euro (0.29 kg counting CO₂ alone), and it will fall as the economy decarbonizes, so a fixed path could gain or lose more than €100 billion a year by 2037. The value cut should instead follow a rule; on that rule the value component ends between 10.8 and 12.7 percent, not 10: the carbon charge partly replaces VAT, not wholly.
+**Oblige fuel suppliers now; negotiate the VAT component next.** A forward obligation on the few suppliers of heating and road fuel can pass by qualified majority; the VAT component needs unanimity.
 
-*The legal question.* Adopting the carbon component by qualified majority under Article 192 TFEU, as an environmental measure, is doubtful. VAT harmonization needs unanimity under Article 113, and Article 192(2)(a) itself reserves "provisions primarily of a fiscal nature" to unanimity. The energy obligation, a compliance scheme like ETS2, can go by qualified majority.
+# Europe prices what it makes, not what it buys {#sec-problem}
 
-*What to do.* The Commission should obtain a formal legal opinion on the basis for the carbon component and propose the forward obligation now, as an amendment to ETS2 with a published price path to 2037. Member states should build a product-level table of default intensities and adopt an automatic neutrality rule for the value component. A coalition can start before the Union does.
+**EU carbon pricing stops at the factory gate and at the border of six sectors.** The Emissions Trading System (ETS) prices power and heavy industry where they emit. The Carbon Border Adjustment Mechanism (CBAM) charges imports of cement, iron and steel, aluminum, fertilizers, electricity and hydrogen for their embodied carbon [@EU2023]. Nothing prices the carbon in an imported shirt, phone or sofa.
 
-```{=openxml}
-<w:p><w:r><w:br w:type="page"/></w:r></w:p>
-```
+**Much of the carbon in European consumption is emitted abroad, and imports carry more of it per euro.** On the working paper's input–output calculation from Eurostat data for 2022, households' VAT-taxable purchases embodied 0.41 kg CO₂e per euro, and 40 percent of that carbon was emitted outside the EU. Goods imported from outside the EU carried about 1.7 times as much carbon per euro as the same mix of goods made in the EU: 0.76 against 0.45 kg ([working paper, defaults](wp:sec-defaults)).
 
-# 1. The carbon in consumption is unpriced
+**A price on production misses that carbon and handicaps European producers.** It makes goods dearer to make in Europe than to make elsewhere for sale in Europe. A price on consumption falls equally on domestic and imported goods and spares exports, so moving production abroad does not avoid it.
 
-**EU carbon pricing stops at the factory gate and the border of six sectors.** The Emissions Trading System prices emissions from power and heavy industry where they occur. CBAM charges imports of cement, iron and steel, aluminum, fertilizers, electricity and hydrogen for their embodied carbon [@CBAMReg]. Nothing prices the carbon embodied in other imported goods, and rich economies are large net importers of embodied carbon [@PetersHertwich2008]. A territorial price therefore misses a share of the emissions that European demand causes, and it raises the cost of producing in Europe relative to producing elsewhere for sale in Europe.
+**This brief is the consumption track of the series' two-track architecture** [@CFPB11]. Production is priced separately, by a revenue-neutral feebate on emissions intensity ([Brief 1.2](paper:1.2)).
 
-**Pricing consumption closes the gap without causing leakage.** A charge levied where goods are consumed falls equally on domestic and imported goods, so moving production abroad does not avoid it. Consumption-based approaches can be both fairer and more cost-effective than production-based ones for a region acting alone [@Steininger2014], and the case for accounting for carbon on a consumption basis is long-standing [@Helm2012]. The idea of a tax on carbon footprints has been formalized [@McAuslandNajjar2015], and a consumption charge on carbon-intensive materials has been designed and modeled for the EU [@Ismer2016; @PollittNeuhoffLin2020]. VAT shows the destination basis works at scale [@KeenLockwood2010; @Auerbach2017].
+# A carbon component inside VAT prices consumption wherever the carbon was emitted {#sec-proposal}
 
-**This brief is the detailed consumption track of the series' two-track architecture** [@CFPB11]. Production is priced separately, by a revenue-neutral feebate on emissions intensity [@CFPB12].
+**VAT already reaches every good sold in Europe, on the destination basis.** Imports pay it and exports are relieved of it [@OECD2017VAT]. But it charges value, not carbon, so it gives no reason to choose the cleaner good.
 
-# 2. Part one: a carbon component inside VAT
+**The carbon component makes part of VAT follow carbon.** Each registered business charges, on its sales, a carbon price per tonne of the good's embodied carbon, and deducts the carbon component on its purchases. Its net payment is the carbon price on the carbon added at its own stage, and the final buyer pays it on the whole supply chain. The invoice and the return gain a column, not a new administration.
 
-**The carbon component turns part of VAT from a tax on value into a tax on embodied carbon, without raising the average rate.** VAT already charges goods heavily per tonne of carbon, but blindly: a 15 percent rate on a good that embodies 0.30 kg CO₂ per euro is worth €500 per tonne, and on one that embodies 0.10 kg it is worth €1,500. The carbon component makes the charge follow carbon instead of value.
+**An example shows the chain at work (stylized, 2032, carbon price €100 per tonne).** A steel mill emits 400 kg making steel and pays €32 under the ETS; an appliance maker adds 100 kg and a retailer 20 kg. The carbon component raises €20 along the chain: €8 from the mill (€40 less the €32 already paid), €10 from the maker, €2 from the retailer. With the ETS payment, the 520 kg bear exactly €100 per tonne ([working paper, the VAT chain](wp:sec-chain)).
 
-**It runs on the existing VAT chain.** Each registered business charges the carbon component on its sales, equal to the carbon price times the good's embodied carbon (its default intensity times its value), and deducts the carbon component paid on its purchases. Its net payment is the price times the carbon added at its stage, just as VAT is a tax on value added. Importers pay at the border; exporters reclaim the component on their inputs, as they do VAT. The invoice and return gain one column. Embodied carbon is the product's default intensity, a figure per product category published by the Commission, unless the seller proves a lower one.
+**Every tonne bears one price.** The carbon component deducts any carbon price already paid upstream, under the ETS, CBAM, the fuel obligation below or a recognized foreign scheme [@CFPB14]. A revenue-neutral feebate earns no deduction, because on average it charges nothing net; it supplies the incentive at production, and the carbon component supplies the price at consumption.
 
-**Defaults should be set by product category, not by country.** One national average score for all goods from each country, the simplest design, would give every good from a country the same surcharge, so it sends no signal between a steel-framed chair and a wooden one, and it sets different rates on like products by origin, which invites a most-favored-nation challenge. Product-category intensities, estimated from input–output data of the kind used to model the EU materials charge [@PollittNeuhoffLin2020], price carbon across the basket.
+**Electricity carries its generation carbon to the final user through the same chain.** Power is sold on a VAT invoice. The generator's invoice states its carbon and the carbon price it has already paid, so the household pays the full consumption price on electricity's carbon, net of what was paid upstream.
 
-**On the illustrative path the effective rate fans out around 15 percent.** The value component falls 0.5 percentage points a year, 15 percent in 2027 to 10 percent in 2037; the carbon price rises €20 per tonne a year, zero to €200. A carbon price of $P$ euros per tonne on a good of intensity $e$ kg per euro adds $P \times e / 10$ percentage points. The two changes cancel at 0.25 kg per euro (Table 1 and Figure 1).
+**The weak points are VAT's own.** Banking, insurance, rents, health and education, 31 percent of household spending, are exempt from VAT, and exemption breaks the carbon chain too. They are low-carbon, so little carbon escapes.
 
-| Intensity (kg CO₂/€) | 2027 | 2032 | 2037 |
-|---|---|---|---|
-| Value component only | 15.0 | 12.5 | 10.0 |
-| 0.10 | 15.0 | 13.5 | 12.0 |
-| 0.15 | 15.0 | 14.0 | 13.0 |
-| 0.25 (break-even) | 15.0 | 15.0 | 15.0 |
-| 0.40 | 15.0 | 16.5 | 18.0 |
-| 1.00 | 15.0 | 22.5 | 30.0 |
+# Defaults the same for every origin, open to rebuttal {#sec-defaults}
 
-: Table 1. Total VAT rate (percent) by embodied-carbon intensity. Value component 15 − 0.5 per year; carbon price €20/tCO₂ per year from 2027. Stylized; computed in `figures/make_figures.py`.
+**Most firms would apply a published default, as they now apply a VAT rate.** The Commission would publish, each year, a default intensity for each product category: the average for EU production of that category. Domestic goods carry it through the chain; imports carry the same default, whatever their origin. Only firms that want to pay less need to measure anything, which answers the oldest objection to a carbon-added tax, that every firm would need a carbon footprint for every product [@McLure2010; @McAuslandNajjar2015].
 
-![Effective VAT rate by embodied-carbon intensity, 2027–2037. Stylized path: value component falls 0.5 percentage points a year; carbon component rises €20/tCO₂ a year.](figures/fig1-effective-rates.png){width=100%}
+**One default for every origin treats like products alike and avoids a trade fight.** It is the strongest position under the trade rules for internal taxes [@Mehling2019]. Charging imports at each exporter's own intensity would cut China's manufacturing exports by about a fifth [@Mattoo2009] and invite exporters to send only their cleanest output to Europe [@Neuhoff2026]. The cost is generosity to imports at first: like for like, the EU default charges imports about 60 percent of their embodied carbon.
 
-**A worked example shows the incentive (stylized, 2032).** Take three versions of a €100 good. At the default intensity of 0.25 kg per euro it embodies 25 kg CO₂ and pays €12.50 of value VAT plus €2.50 of carbon component: €15, as today. A version made with 0.40 kg per euro pays €12.50 plus €4.00, a total of €16.50. A supplier who verifies 0.10 kg per euro pays €12.50 plus €1.00, a total of €13.50. The €3 gap between the dirty and the clean version is the carbon price of €100 per tonne on the 30 kg that separates them.
+**Rebuttal turns the defaults into an incentive.** A seller that verifies a lower intensity pays on its own figure, and each buyer down the chain carries that figure forward, so the saving reaches the shop price. A €100 imported phone in 2032 pays €2.80 at the electronics default of 0.28 kg per euro; an exporter that verifies 0.15 kg pays €1.50 and gains €1.30 a phone over its rivals. Verification should cover a whole plant, not single consignments ([working paper, rebuttal](wp:sec-defaults)).
 
-**One tonne should bear one price.** The carbon component should deduct any carbon price paid upstream on the same tonnes, measured as a carbon-price equivalent [@CFPB61], whether paid under the ETS, CBAM, the energy obligation below, or a recognized foreign scheme [@CFPB14]. Production feebates are revenue-neutral and need no deduction. The carbon component should apply on top of reduced VAT rates; whether it reaches zero-rated food is a choice for each member state.
+# A rule, not a schedule, keeps the swap neutral {#sec-fiscal}
 
-# 3. Imports: generous, rebuttable defaults
+**A fixed schedule of VAT cuts would gamble with over €100 billion a year.** Suppose the value part of VAT fell from 15 to 10 percent by 2037 while the carbon price rose €20 a year to €200 per tonne. If the basket's carbon fell to 0.15 kg per euro the swap would lose €120 billion a year in 2037; if it stayed at 0.41 it would gain €119 billion ([working paper, fiscal design](wp:sec-fiscal)).
 
-**Imports should start on generous defaults: for each product category, the EU's own average production intensity, applied to every origin.** That treats like products alike whatever their source, the strongest position under the national-treatment rule for internal taxes in GATT Article III:2 [@IsmerNeuhoff2007; @KeenParryRoaf2022], and it gives trading partners no grievance to retaliate against. The cost is that high-carbon imports are undercharged at first. That is a price worth paying to avoid a trade war.
+**Each member state should cut its value component each year by the previous year's carbon receipts.** The rule needs no forecast and moves no money between member states. Starting from 15 percent, the value component ends between 10.8 and 12.7 percent in 2037, depending on whether the basket's carbon per euro falls 3 or 7 percent a year (@fig-rule). The carbon component then replaces about a fifth of the value component in the central case.
 
-**Rebuttal is what rewards clean exporters.** An exporter whose verified intensity is below the default pays on its own figure. Lower carbon then means a lower charge in the EU market, and once importers price embodied carbon, an exporter's most competitive policy at home is to price carbon too, which turns the race to the bottom into a race to the top [@CFPB11]. Defaults can tighten toward origin-specific values as measurement improves, with a deduction for carbon prices paid abroad, as CBAM already allows [@CBAMReg; @CFPB14].
+| Embodied carbon (kg CO₂e per euro) | 2027 | 2032 | 2037 |
+|---|---:|---:|---:|
+| 0.10 (cleanest goods) | 15.0 | 14.5 | 13.8 |
+| 0.25 | 15.0 | 16.0 | 16.8 |
+| 0.41 (the 2022 taxable basket) | 15.0 | 17.6 | 20.0 |
+| 0.80 (most carbon-intensive goods) | 15.0 | 21.5 | 27.8 |
+| *Value component alone* | *15.0* | *13.5* | *11.8* |
 
-**Country-level rates are illustrative only.** If EU goods fall from 0.20 to 0.15 kg per euro and Chinese exports from 0.40 to 0.25, the effective EU rate ends at 13.0 percent and the Chinese rate peaks at 15.75 percent in 2032, returning to 15.0. These intensities are assumptions, not estimates, and under product-category defaults no single country rate applies.
+: Total VAT rate (percent) under the neutrality rule, central case: carbon price rising €20 per tonne a year from 2027 to €200 in 2037; basket carbon per euro falling 5 percent a year from 2022. Rates are before deduction of carbon prices paid upstream. Source: working paper, Figure 2; `2.Source/make_wp_figures.py`. {#tbl-rates}
 
-**Fraud is the main administrative risk.** A carbon component raises the gain from misdeclaring a product category or intensity, on top of the familiar VAT frauds [@KeenSmith2006]. Defaults by customs category, audit of rebuttals, and the same invoice trail as VAT limit it.
+**Clean goods get cheaper and carbon-intensive goods dearer, while the average tax barely moves.** In the central case a good at 0.10 kg per euro pays 13.8 percent in 2037 and one at 0.80 kg per euro 27.8 percent, against 15 percent for both today (@tbl-rates). Clean goods then breach the EU's 15 percent floor on the standard rate, so the floor must be restated or the path must start from each member state's own standard rate, all of which are 17 percent or more [@TaxFoundation2026].
 
-# 4. Part two: a forward obligation on energy suppliers
+![The neutrality rule. Left: value component of VAT when it falls each year by the previous year's carbon receipts, for three rates of decline in the basket's carbon per euro, against a fixed path. Right: total rate on goods of given carbon intensity in the central case. Source: working paper, Figure 2.](figures/fig2-neutrality-rule.png){#fig-rule width=100%}
 
-**Fuel burned in homes and vehicles should be priced through a legal obligation on its few suppliers, announced well in advance, rather than through a tax on consumers.** Road fuel, heating oil and gas do not pass through a goods chain; they are burned at the end of it. A few large firms dominate their supply: refiners, fuel importers and gas suppliers. Those firms decide the long-lived assets, refineries, gas networks and fuel retail, that fix emissions for decades.
+# The swap is mildly regressive; returning the fuel obligation per household fixes it {#sec-distribution}
 
-**A forward-dated liability changes their investment now; a tax reset every budget does not.** A government cannot bind its successors to a future tax rate, so firms discount announced tax paths [@KydlandPrescott1977; @HelmHepburnMash2003]. The resulting time inconsistency depresses low-carbon investment [@ChiappinelliNeuhoff2020]. An obligation written into law today, naming quantities and dates ten years out, is harder to unwind and becomes a liability on the supplier's balance sheet now.
+**The carbon component itself takes almost the same share of every household's budget.** At €200 per tonne it takes 5.5 percent of spending for the poorest fifth and 5.3 percent for the richest, on 2022 intensities in 22 member states ([working paper, distribution](wp:sec-distribution)).
 
-**The obligation should be absolute, per tonne sold, with a published price path.** Each supplier surrenders one compliance unit for each tonne of CO₂ in the fuel it sells for final use, with a price floor rising in step with the VAT carbon component, €20 a year to €200 per tonne in 2037. An intensity standard would be weaker, because it implicitly subsidizes fuel use [@HollandHughesKnittel2009]. Natural gas emits about 0.20 tCO₂ per MWh [@IPCC2006], so the obligation adds about €20 per MWh in 2032 and €40 per MWh in 2037. Fuel covered by the obligation is outside the VAT carbon component on the same tonnes. Electricity suppliers can carry the same obligation for power sold to final users, net of the price generators already pay under the ETS or a power-sector feebate [@CFPB12].
+**Poorer households gain less from the VAT cut, because more of their budget goes on exempt rent.** Net of the national value cut, the poorest fifth pays 0.4 percent of spending more and the richest 0.2 percent less. Because each member state recycles its own receipts, no money moves between them; one EU-wide cut would instead cost Bulgaria, Poland and Slovakia 0.7–0.8 percent of household spending, the pattern other studies find [@Feindt2021].
 
-**The EU already has both precedents.** The Fuel Quality Directive obliged fuel suppliers to cut the life-cycle emissions of their fuel by at least 6 percent by 2020 [@FQD2009]. ETS2 places compliance obligations on suppliers of fuel for buildings and road transport [@ETS2Dir]; its start has been postponed and its future is contested in 2026 [VERIFY: current start date]. The proposal is ETS2 with a price path fixed a decade ahead. Energy charges can be regressive, so a visible use of the revenue, such as the VAT cut, matters for public consent [@Klenert2018].
+**Returning the fuel obligation's receipts as an equal sum per household more than offsets the regressivity.** The poorest fifth then gains 1.2 percent of spending and the richest loses 0.3 percent.
 
-# 5. What it costs: the carbon charge partly replaces VAT
+# Fuel for homes and vehicles needs a forward obligation {#sec-obligation}
 
-**The swap is revenue-neutral only if the taxed basket averages 0.25 kg CO₂ per euro.** Each year the value component falls 0.5 points and the carbon component adds $20 \times e / 10$ points. If the basket is cleaner, revenue falls; if dirtier, it rises (Table 2).
+**VAT cannot reach the carbon in heating and road fuel.** That carbon is released when the fuel is burned, after the last sale: 691 Mt CO₂e from EU households' heating and transport in 2022. At €200 per tonne it is worth €138 billion a year, or €310 per resident.
 
-| Average basket intensity (kg CO₂/€) | 0.10 | 0.15 | 0.20 | 0.25 | 0.30 |
-|---|---|---|---|---|---|
-| Revenue-neutral cut in value VAT by 2037 (points) | 2.0 | 3.0 | 4.0 | 5.0 | 6.0 |
-| Revenue change in 2037 if value VAT is cut 5 points (points of base) | −3.0 | −2.0 | −1.0 | 0.0 | +1.0 |
+**A few large firms supply that fuel, and they decide the assets that lock in emissions for decades.** Refiners, fuel importers and gas suppliers plan refineries, pipelines and networks. A tax reset every budget does not move that investment, because a government cannot bind its successors and firms discount its promises [@KydlandPrescott1977; @HelmHepburnMash2003].
 
-: Table 2. Fiscal effect of a €200/tCO₂ carbon component by the average intensity of the taxed base. Stylized; computed in `figures/make_figures.py`.
+**The obligation should be ETS2 with a price floor rising for a decade.** Each supplier surrenders one unit for each tonne of CO₂ in the fuel it sells, with a floor rising €20 a year to €200 per tonne in 2037, in step with the VAT component. That adds about €40 per MWh to gas and €0.54 per liter to diesel by 2037. ETS2, the EU's new trading system for buildings and road fuel, already puts the obligation on fuel suppliers [@EU2023ETSDirective], but its start has been put back to 2028 [@EU2026ClimateLaw], and it releases extra allowances when the price passes €45 per tonne (in 2020 prices) while setting no floor. A published floor, which the law may raise but not lower before 2037, gives suppliers a price they can bank on.
 
-**A fixed schedule would not be neutral.** Calibrated to Eurostat's 2022 input–output tables, the taxed household basket embodies about 0.41 kg CO₂e per euro: 0.38 kg for EU-made goods and services and 0.76 kg for imports from outside the EU. The fixed path would therefore raise revenue at first. As intensity falls, the outcome by 2037 ranges from a gain of about €119 billion a year to a loss of about €120 billion, depending on the pace of decarbonization. The VAT base is also narrower than final consumption, because many services are exempt [@VATDirective]: half a point of VAT is worth about €26 billion.
+# The obligation can pass now; the VAT component needs unanimity {#sec-legal}
 
-**The value cut should therefore be set by rule, not by schedule.** Each year's cut should equal the previous year's carbon-component receipts as a share of the base, so neutrality holds automatically instead of awaiting a 2032 review. The charge then partly replaces VAT, by whatever share the basket's carbon supports. Receipts from the energy obligation add room for further cuts.
+**A carbon component of VAT changes the harmonized VAT system, which needs a unanimous Council.** Article 113 of the Treaty requires unanimity for turnover taxes, and the environmental legal basis reserves "provisions primarily of a fiscal nature" to unanimity too [@TFEU]. CBAM passed by qualified majority as a certificate scheme, not a tax, and Poland has asked the Court of Justice to annul even that, on the ground that it is primarily fiscal [@CJEUC51223] ([working paper, legal basis](wp:sec-legal)).
 
-**One more constraint binds.** Article 97 of the VAT Directive sets a standard rate of not lower than 15 percent [@VATDirective]. Clean goods paying 12 or 13 percent breach that floor, so the floor must be amended or the path rebased on each member state's actual standard rate, all of which exceed 15 percent [VERIFY: current standard rates].
+**A coalition of member states could start nationally, if it designs the charge per tonne.** EU law lets a member state levy taxes that are not turnover taxes [@VATDirective]. A charge per tonne of embodied carbon, rather than a percentage of price, has a defensible claim to that status; a second percentage on the VAT invoice probably does not.
 
-# 6. The legal basis is an open question
+**The fuel obligation can be adopted by qualified majority now.** It is a compliance scheme like ETS2, of which it would be an amendment.
 
-**The tempting route, a Commission framework under Article 192 TFEU adopted by qualified majority, is doubtful for the VAT part.** Article 113 requires unanimity to harmonize turnover taxes, and a carbon component changes the rate structure the VAT Directive sets [@TFEU; @VATDirective]. Article 192 does not avoid this: its paragraph 2(a) reserves "provisions primarily of a fiscal nature" to the Council acting unanimously [@TFEU]. A component of VAT is hard to describe as anything else.
+# What to do {#sec-what-to-do}
 
-**The CBAM precedent does not transfer.** CBAM was adopted by qualified majority because it is built as a duty to surrender certificates mirroring the ETS, not as a tax [@CBAMReg]. The boundary of "primarily fiscal" is unsettled: @Scuderi2022 argues for reading it to admit environmental levies with mainly regulatory aims, but no ruling of the Court of Justice settles the question.
+**The Commission should propose the forward obligation now,** as an amendment to ETS2 that publishes a price floor rising to €200 per tonne in 2037, with receipts returned per household.
 
-**Three routes follow.** The Union can seek unanimity, offering fiscal neutrality and member-state control of the value component. A coalition can start nationally: a member state may lower its standard rate to the 15 percent floor and levy a separate charge on embodied carbon, since Article 401 of the VAT Directive allows national taxes that cannot be characterized as turnover taxes [VERIFY: whether a charge collected on VAT invoices would count as a turnover tax]. And the energy obligation, a compliance scheme like ETS2 and the Fuel Quality Directive, can be adopted now by qualified majority under Article 192(1).
+**The Commission should obtain a formal legal opinion on the carbon component** covering Articles 113 and 192(2)(a) of the Treaty and Articles 97 and 401 of the VAT Directive, and begin building a default schedule at the level of customs product codes, with a procedure for verified rebuttal.
 
-# 7. What to do
+**Finance ministries should adopt the neutrality rule** for any swap: cut the value component each year by the previous year's carbon receipts, member state by member state.
 
-**The Commission** should obtain a formal opinion from the Council and Commission legal services on the basis for a carbon component of VAT, covering Articles 113 and 192(2)(a) TFEU and Articles 97 and 401 of the VAT Directive. It should propose the forward obligation now, as an amendment to ETS2 that publishes a price floor rising to €200 per tonne in 2037.
-
-**Member states and the Commission** should build and publish a table of default intensities by product category, at the EU's own average, with a procedure for verified rebuttal and deduction of carbon prices paid upstream.
-
-**Finance ministries** should adopt the neutrality rule: cut the value component each year by the carbon receipts of the year before. A coalition willing to start should design its charge under Article 401 and test it against the Court's case law before others join.
+**A willing coalition should not wait for unanimity.** It can legislate a national charge per tonne, coordinated on defaults and verification, and test it before others join.
 
 # Related papers in this series {.unnumbered}
 
-- Climate Fiscal Policy Brief No. 1.1: the two-track architecture [@CFPB11].
-- No. 1.2: feebates in power and industry, the production track [@CFPB12].
-- No. 1.4: carbon price recognition under CBAM [@CFPB14].
-- No. 6.1: the Total Effective Carbon Price, the measurement framework [@CFPB61].
+- [Climate Fiscal Policy Brief No. 1.1](paper:1.1): the two-track architecture of which this is the consumption track [@CFPB11].
+- [No. 1.2](paper:1.2): feebates in power and industry, the production track [@CFPB12].
+- [No. 1.4](paper:1.4): carbon price recognition under the CBAM, and scrap shuffling [@CFPB14].
+- [No. 6.1](paper:6.1): the Total Effective Carbon Price, the yardstick for comparing policies [@CFPB61].
+- The [working paper](wp:) behind this brief: the proofs, the calibration of defaults, the distribution analysis and the legal detail.
 
 # References {.unnumbered}
 

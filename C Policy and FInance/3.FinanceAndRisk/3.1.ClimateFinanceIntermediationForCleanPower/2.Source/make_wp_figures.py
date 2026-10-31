@@ -56,7 +56,7 @@ def fig_guarantees():
     sd = M.annual_revenue_musd(t0) - M.annual_revenue_musd(td)
     gc = M.guarantor_cost_contract()
     go, gx, debt, _ = M.guarantor_cost_debt()
-    fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.2))
+    fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.2), sharey=True)
     labels = ["Contract\nguarantee", "Debt\nguarantee"]
     ax = axes[0]
     ax.bar([0, 1], [sc, sd], color=BLUE, width=0.55)
@@ -65,11 +65,14 @@ def fig_guarantees():
     ax.set_xticks([0, 1], labels)
     ax.set_title("Saving to offtaker ($m/yr)", fontsize=10, color=INK)
     ax = axes[1]
-    ax.bar([0, 1], [gc, go + gx], color=ORANGE, width=0.55)
+    ax.bar([0, 1], [gc, go], color=ORANGE, width=0.55, label="Offtaker risk")
+    ax.bar([1], [gx], bottom=[go], color=GREY, width=0.55, label="Other risks (debt only)")
     for i, v in enumerate([gc, go + gx]):
         ax.text(i, v + 0.01, f"${v:.2f}m", ha="center", fontsize=9, color=INK)
     ax.set_xticks([0, 1], labels)
-    ax.set_title("Guarantor's expected cost ($m/yr)", fontsize=10, color=INK)
+    ax.set_title("Expected cost to guarantors ($m/yr)", fontsize=10, color=INK)
+    ax.legend(frameon=False, fontsize=8, loc="upper right")
+    ax.set_ylim(0, sc * 1.15)
     for a in axes:
         a.grid(axis="x", visible=False)
     fig.tight_layout()
@@ -80,9 +83,9 @@ def fig_guarantees():
 def fig_waterfall():
     annual = M.REG_MW * 1000 * M.KWH_PER_KW * M.lcoe(M.R0) / 100 / 1e6
     qs = [q for _, q in M.LAYERS[1:]]
-    costs, _ = M.waterfall_expected_costs(M.LAM, annual, M.REC, M.DELAY, M.R0, qs)
+    costs, _ = M.waterfall_expected_costs(M.LAM, annual, M.REC_F, M.DELAY, M.R0, qs)
     arrears = M.phi(M.LAM, M.DELAY) * annual
-    recovered = arrears * M.rtilde(M.REC, M.DELAY, M.R0)
+    recovered = arrears * M.rtilde(M.REC_F, M.DELAY, M.R0)
     names = ["Offtaker repays (value)"] + [n for n, _ in M.LAYERS[1:]]
     vals = [recovered] + costs
     fig, ax = plt.subplots(figsize=(6.4, 3.2))

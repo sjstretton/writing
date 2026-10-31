@@ -1,4 +1,4 @@
-"""Symbolic and numeric checks of Propositions 1-6 in IronSteelCBAM.qmd (v0.3).
+"""Symbolic and numeric checks of Propositions 1-6 in IronSteelCBAM.qmd (v0.4).
 
 Run from this folder:  python check_propositions.py
 Prints "ok" after each check; raises AssertionError on failure.
@@ -42,6 +42,13 @@ print("Proposition 2 ok")
 # ---------- Proposition 3: country-sector measurement ----------
 bill_C = tau * (s * eS + (1 - s) * eB) * QEU
 assert sp.diff(bill_C, x) == 0
+# (iii) a firm's private incentive: own bill tau*ebar*Q_EU_f, ebar = sum q e / Q
+qf, ef, qo, eo, muf = sp.symbols("q_f e_f q_o e_o mu_f", positive=True)
+ebar_C = (qf * ef + qo * eo) / (qf + qo)
+own_bill = tau * ebar_C * muf * qf
+per_tonne = sp.simplify(sp.diff(own_bill, ef) / qf)
+assert sp.simplify(per_tonne - tau * muf * qf / (qf + qo)) == 0     # tau * mu_f * sigma_f
+assert abs(float(per_tonne.subs({tau: 80, muf: 0.1, qf: 1, qo: 9})) - 0.8) < 1e-12
 print("Proposition 3 ok")
 
 # ---------- Proposition 4: feebate under price-paid recognition ----------

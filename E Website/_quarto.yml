@@ -44,8 +44,42 @@ website:
               contents:
                 - text: "Working paper"
                   href: policy/1-carbon-pricing/OpenEconomyCarbonPricing/working-paper.qmd
-        - policy/2-other-tax.qmd
-        - policy/3-finance-and-risk.qmd
+            - section: "1.2 Feebates"
+              href: policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/working-paper.qmd
+            - section: "1.3 Converting a VAT into a Destination Carbon Tax"
+              href: policy/1-carbon-pricing/CarbonConsumptionTax/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/1-carbon-pricing/CarbonConsumptionTax/working-paper.qmd
+            - section: "1.4 Credit the Price Signal, Not the Payment"
+              href: policy/1-carbon-pricing/IronSteelCBAM/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/1-carbon-pricing/IronSteelCBAM/working-paper.qmd
+        - section: "2. Other Tax and Fiscal Policy"
+          href: policy/2-other-tax.qmd
+          contents:
+            - section: "2.1 Taxing Rent, Not Effort"
+              href: policy/2-other-tax/RentTax/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/2-other-tax/RentTax/working-paper.qmd
+        - section: "3. Finance and Risk"
+          href: policy/3-finance-and-risk.qmd
+          contents:
+            - section: "3.1 Guarantee the Contract, Not the Debt"
+              href: policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/working-paper.qmd
+            - section: "3.2 From Projects to Asset Classes"
+              href: policy/3-finance-and-risk/CleanPowerAssetClasses/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/3-finance-and-risk/CleanPowerAssetClasses/working-paper.qmd
         - policy/4-sovereign-incentives.qmd
         - section: "Books and Other Papers"
           href: policy/more.qmd

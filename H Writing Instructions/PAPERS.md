@@ -19,11 +19,11 @@ Order of work. The reason column says why each paper is where it is.
 |---|---|---|---|---|---|
 | 1 | 1.1 | Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies | working paper v0.4 + brief v1.1 + 10-slide deck (31 Oct); peer-reviewed, every citation checked; both on the web | Journal (*Climate Policy*, research article) + PhD writing sample | **Dirk asked for this one first.** Overarching paper for the series. Next: Stephen's read |
 | 2 | 6.1 | Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price | working paper v0.3 + brief + deck (29 Oct) | Journal (*Energy Economics* / *Energy Policy*) | Corrected CES derivation; exact and second-order TECP; non-price instruments; Monte Carlo band. Needs a real-country application |
-| 3 | 3.1 | Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power | working paper v0.2 + brief (29 Oct) | WB working paper; 2,000-word cut as Oxford writing sample | Series 3 flagship. Closest to proposal 1's topic. Next: Stephen's read |
+| 3 | 3.1 | Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power | working paper v0.3 + brief v1.0 + 10-slide deck (31 Oct); peer-reviewed (headline corrected to about \$2 saved per dollar of expected public cost), every citation checked; both on the web | WB working paper; 2,000-word cut as Oxford writing sample | Series 3 flagship. Closest to proposal 1's topic. Next: Stephen's read |
 | 4 | 4.1 | Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives | working paper v0.1 + brief (29 Oct) | WB working paper / journal | Series 4 flagship; the core idea behind proposal 1. First full draft. Next: Stephen's read |
-| 5 | 1.2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | working paper v0.3 + brief + deck (29 Oct) | WB working paper / journal | Market-design propositions; India, Indonesia, South Africa cases |
+| 5 | 1.2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | working paper v0.4 + brief v1.1 + 10-slide deck (31 Oct); peer-reviewed, every citation checked; both on the web | WB working paper / journal | Market-design propositions; India, Indonesia, South Africa cases |
 | 6 | 4.2 | The Climate Investment Trust: Hold Capital, Lend Its Strength | working paper v0.2 + brief (29 Oct) | WB working paper | Series 4 flagship with 4.1 (moved from the finance series on 29 Oct). Buffer, growth and allocation propositions |
-| 7 | 1.4 | Credit the Price Signal, Not the Payment (CBAM recognition and scrap shuffling) | working paper v0.3 + brief + deck (29 Oct) | Policy journal / Commission consultation | Shuffling model, liability formula, calibration to EU default values |
+| 7 | 1.4 | Credit the Price Signal, Not the Payment (CBAM recognition and scrap shuffling) | working paper v0.4 + brief v1.1 + 10-slide deck (31 Oct); peer-reviewed, every citation checked; both on the web | Policy journal / Commission consultation | Shuffling model, liability formula, calibration to EU default values |
 | 8 | 7.1 | The Excise-Fiscal Diagnostic: Reading an Excise System Against Its Externalities | paper v0.3 (30 Oct) | Companion paper to the analytics tools | Cut from the 24,800-word report (now v0.1); stylized example plus Sierra Leone and Liberia applications (diagnostic results, illustrative) |
 | 9 | 5.1–5.4, 6.2–6.4 | The CPAT papers (methods, CPAT-AI, validation, elasticities) and modular upgrades (CBAM tool, public investment, activity) | papers v0.1 (29 Oct) | Companion papers to the CPAT-AI repository | See the section 5 and 6 table below |
 
@@ -41,8 +41,8 @@ Plan: `C Policy and FInance/3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md`
 | No. | Paper | Status |
 |---|---|---|
 | 3.0 | Overview: Make Clean Power an Asset Class | v0.2 (29 Oct) |
-| 3.1 | Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power | working paper v0.2 + brief CFPB 3.1 (29 Oct) |
-| 3.2 | From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power | working paper v0.1 + brief CFPB 3.2 (29 Oct) |
+| 3.1 | Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power | working paper v0.3 + brief CFPB 3.1 v1.0 + 10-slide deck (31 Oct) |
+| 3.2 | From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power | working paper v0.2 + brief CFPB 3.2 v1.0 + 10-slide deck (31 Oct); peer-reviewed (saving corrected to about a fifth of the price of solar power, 14–19%), every citation checked; both on the web |
 
 ### The sovereign-incentives series (section 4)
 
@@ -78,10 +78,10 @@ Plan: `D Modelling/5.Modelling/5.0.Overview/SeriesArchitecture.md`. One medium-l
 
 | | Companion | Where | Status |
 |---|---|---|---|
-| C1 | Converting a VAT into a Destination Carbon Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers in the European Union | 1.3 | working paper v0.2 (29 Oct) |
+| C1 | Converting a VAT into a Destination Carbon Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers in the European Union | 1.3 | working paper v0.3 + brief v1.1 + 10-slide deck (31 Oct); peer-reviewed, every citation checked; both on the web |
 | C2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | 1.2 | working paper v0.3 (29 Oct) |
 | C3 | Measure Carbon Pricing by the Emissions It Cuts (TECP) | 6.1 | working paper v0.3 (29 Oct) |
-| C4 | Credit the Price Signal, Not the Payment (CBAM) | 1.4 | working paper v0.3 (29 Oct) |
+| C4 | Credit the Price Signal, Not the Payment (CBAM) | 1.4 | working paper v0.4 + brief v1.1 (31 Oct) |
 
 Not in the program: the confidential World Bank SLL discussion paper (now in `4.3…/9.Archive`) and the section 8 papers (`8.AdditionalPolicyPapers`), unless Stephen promotes one.
 

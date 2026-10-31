@@ -41,7 +41,7 @@ PARTS = [
              "OverviewClimateAndFiscalPolicy.docx", "Slides-ClimateAndFiscalPolicy.pptx"),
             ("2.OtherTaxAndFiscalPolicy", "2-other-tax", "Other Tax and Fiscal Policy",
              "Tax rent, not effort: land and corporate taxes that hold up when capital and people can move.",
-             "OverviewOtherTaxAndFiscalPolicy.docx", None),
+             "OverviewOtherTaxAndFiscalPolicy.docx", "Slides-OtherTaxAndFiscalPolicy.pptx"),
             ("3.FinanceAndRisk", "3-finance-and-risk", "Finance and Risk",
              "Make clean power an asset class: remove payment risk at source, then turn projects into standard securities.",
              "OverviewMobilisingPrivateCapital.docx", "Slides-FinanceAndRisk.pptx"),
@@ -81,6 +81,12 @@ BOOK_FOLDERS = {"3.3.TimeAndChance"}
 
 WEB_PAPERS = [
     "1.1.OpenEconomyCarbonPricing",
+    "1.2.FeebatesAndOutputBasedRebating",
+    "1.3.CarbonConsumptionTax",
+    "1.4.IronSteelCBAM",
+    "2.1.RentTax",
+    "3.1.ClimateFinanceIntermediationForCleanPower",
+    "3.2.CleanPowerAssetClasses",
 ]
 
 # Books that are also read on the site, one page per chapter, under <part dir>/books/<BookName>/
