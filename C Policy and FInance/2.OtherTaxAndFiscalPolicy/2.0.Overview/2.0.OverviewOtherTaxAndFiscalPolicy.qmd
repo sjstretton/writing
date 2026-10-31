@@ -5,48 +5,54 @@ author:
   - name: "Stephen J. Stretton"
     note: "Writing in a personal capacity."
 date: "October 2026"
-version: "0.1"
+version: "0.2"
 abstract: |
-  Governments that let capital and people move freely find it hard to tax mobile income at high rates, so they give up on high rates altogether. This section argues that the constraint binds only on the wrong base. Economic rent, the return above what an investor needs to stay, can be taxed heavily without driving anything away, because land cannot move and market power earned in a country's market is earned from its customers. The section's paper, Rent Tax, combines a land value tax above a household allowance with three corporate instruments that presume large firms hold market power: a high rate on profits above a normal return, a narrow destination-based tax on mobile rent-bearing sectors, and a sales tax with deductions for genuine local investment and employment. Longer and older treatments of tax and fiscal reform, including the book *Plucked!* and a note on India's legacy coal power contracts, are kept in section 8.
+  Governments that let capital and people move freely find it hard to tax mobile income at high rates, so they give up on high rates altogether. This section argues that the constraint binds only on the wrong base. Economic rent, income above what keeps an asset or a firm in use, can be taxed heavily without driving anything away if the tax reaches it where it cannot leave: at origin where the rent is tied to the place, and at destination where it follows the customer. The section's paper, Rent Tax, combines a land value tax above a household allowance with a tax at 50 percent on large firms' profit above a normal return, two destination layers that follow the customer, and a cap that stops any firm paying more than half the rent it earns from local customers. Its revenue estimates, built from sourced inputs, are 1.0–2.7 percent of GDP from land and 2.3–6.3 percent from the corporate layers. The book *Plucked!* gives the longer argument for UK tax and benefits.
+bibliography: 2.0.OverviewOtherTaxAndFiscalPolicy.bib
 csl: https://www.zotero.org/styles/chicago-author-date
 format:
   docx: default
 ---
 
-*Overview of section 2, version 0.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated.*
+*Overview of section 2, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The paper comes as a short policy brief and a full working paper.*
 
 # Free movement limits the rates a country can charge on mobile income {.unnumbered}
 
-Free movement of capital and people makes high tax rates on mobile bases hard to sustain. Across the OECD after 1970, and within the EU under the Maastricht Treaty, a country that tries to tax capital income at a high rate under an origin-based corporate tax watches the capital leave, and a country that taxes personal wealth heavily without exit controls watches the wealthy follow it. The usual response is to give up on high rates.
+**Free movement of capital and people has pushed governments to give up on high taxes on mobile income.** The number of OECD countries levying an individual net wealth tax fell from twelve in 1990 to four in 2017 [@OECD2018Wealth], and about 36 percent of multinational profits are shifted to tax havens [@TorslovWierZucman2023]. A country that taxes mobile capital income at a high rate at origin watches the declared base leave: the evidence implies that reported profits fall by about 1.5 percent for each percentage point by which a country's rate exceeds others' [@BeerdeMooijLiu2020].
 
-That response gives up more than it needs to. The rate a country can sustain depends on the base. Taxing a base that can leave invites it to leave. Taxing a base that cannot leave, or that earns its return from the country's own customers, does not. The papers in this section look for those bases and design instruments that reach them.
+**That response gives up more than it needs to.** The rate a country can sustain depends on the base. Taxing a base that can leave invites it to leave. Taxing rent, income that would be earned anyway, changes nothing anyone does, so the rate can be high, provided the tax reaches the rent where it cannot move [@Mirrlees2011]. Norway already taxes petroleum profit at a marginal 78 percent on a base that exempts the normal return [@Norway2025Petroleum].
 
-The section sits beside the carbon-pricing papers of section 1 rather than inside them. Carbon pricing taxes a harm; the instruments here tax rent. Both are cases of the same rule: put the tax where it changes behavior you want changed, or where it changes no behavior at all.
+**The section sits beside the carbon-pricing papers of section 1 rather than inside them.** Carbon pricing taxes a harm; the instruments here tax rent. Both follow one rule: put the tax where it changes behavior you want changed, or where it changes no behavior at all.
 
-# Tax land above an allowance and presume that large firms earn rent (paper 2.1) {.unnumbered}
+# Tax land above an allowance, and tax large firms' rent where it cannot leave (paper 2.1) {.unnumbered}
 
-The Rent Tax paper rests on two bases that meet the test. The first is land, whose supply is fixed and whose value reflects a location the owner did not create. The second is corporate market power, whose value reflects network effects, brand, scale, regulatory protection and incumbency.
+**Land cannot move, so tax it above a household allowance** ([paper 2.1](paper:2.1)). A tax of about 2.5 percent a year on site value above an allowance close to the site value of an ordinary home falls on large holdings, not on ordinary homeowners. Because land supply is fixed, the tax lowers land prices once and changes no use of land; Pennsylvania cities that taxed land more than buildings saw more building [@OatesSchwab1997].
 
-Land is taxed through a simplified reverse wealth tax. Every household receives an allowance of landholding value that is exempt; above it, the household pays a standard land value tax on the assessed site value. The allowance keeps the tax off ordinary homeowners and puts it on large holdings.
+**Presume that large firms earn rent, and tax only the profit above a normal return.** The first corporate layer deducts a normal return on equity and taxes the rest at 50 percent for large groups, so the marginal investment pays nothing at any rate and investment is not discouraged [@StrettonWP21].
 
-The corporate side reverses the usual presumption. Standard analysis treats market power as an exception that must be proven before it is taxed. The paper treats it as the default for firms above a size threshold, with the burden of proof on the firm, and a narrow carve-out for sectors where scale is a technical necessity, such as civil aircraft and leading-edge chip manufacturing. Three instruments follow. An allowance for corporate equity exempts the normal return and taxes the residual at a high rate. A narrow destination-based tax reaches mobile rent-bearing sectors such as digital platforms and pharmaceutical intellectual property, credited against the first layer. A simple sales tax applies to all large firms, with deductions for in-country assets and payroll, so a firm that invests and employs locally pays little while a firm that books sales without local presence pays more.
+**Follow the customer where profit can be booked anywhere.** For a short list of sectors whose rent is easily shifted, such as digital platforms, a second layer taxes local sales less local costs at 22 percent, with the first layer credited. For all large groups, a third layer charges 4 percent of local sales less credits of 8 percent of local assets and 25 percent of local payroll, so a firm that invests and employs locally pays little. A cap stops the destination layers at half the group's global rent margin times its local sales, which protects low-margin firms [@CFPB21].
 
-The design discriminates between rent and effort. In the paper's comparison, an asset-light multinational with large in-country sales faces a combined effective rate of 40 to 60 percent on the rent it earns from domestic customers, while a capital-intensive domestic firm pays close to nothing on its normal return. The paper sets the calculation out as a five-step algorithm that uses data large groups already report, and argues that each instrument is compatible with free-movement law; it cites the European Court of Justice's 2020 rulings upholding Hungary's turnover tax. Its rough revenue estimates for a medium-sized European economy, 5.5 to 11.5 percent of GDP, are orders of magnitude rather than forecasts.
+**The design taxes rent at about half and leaves the normal return untaxed.** In the paper's stylized firms, a foreign digital platform that pays about 1 percent of its local rent in tax today would pay 50 percent; a domestic manufacturer pays nothing on its normal return. Its weak point is a foreign seller outside the designated sectors, whose rate rises only from 4 to 13 percent, which the paper states as an open problem [@StrettonWP21].
 
-The paper is a sketch, written in April 2026, and has not yet been revised to the series standard. It has no brief and no deck.
+**The revenue is real, and the destination layers are what make the high rate pay.** Built from sourced inputs, the land tax raises 1.0–2.7 percent of GDP after allowing for the fall in land prices it causes, and the corporate layers 2.3–6.3 percent; these are orders of magnitude, not forecasts. The April 2026 draft's figure of 5.5–11.5 percent was unsourced and is superseded [@StrettonWP21].
 
-# Related work in section 8 {.unnumbered}
+**European Union law allows most of the design.** The Court of Justice upheld Hungary's steeply progressive turnover taxes against a freedom-of-establishment challenge [@CJEU2020Vodafone] and found that Poland's progressive retail tax was not state aid [@CJEU2021Poland]. Land taxes apply alike to resident and foreign owners. The main legal risk is a credit that rewards local but not foreign labor; the paper's drafting answers it.
 
-Two pieces of related fiscal work are kept with the additional papers in section 8, because they are older, longer or not yet written up.
+# The longer argument: *Plucked!* {.unnumbered}
 
-*Plucked! A Guide to a Fair, Simple, Efficient and Politically Feasible Tax and Benefits System* (with Gordon Styles, 2020) is a book-length case for reforming UK tax and benefits. Its fourteen chapters cover tax principles and practice, welfare and work, inequality, corporations, land and property, money and debt, and environment and resources. Its chapters on land and corporations are the long form of the argument that Rent Tax states in a few pages. The manuscript is kept as written in 2020 and has not been revised (section 8.5, paper 8.5.3).
+***Plucked!* makes the long-form case for reforming UK taxes and benefits** [@StrettonStyles2020]. Written with Gordon Styles in 2020, its fourteen chapters cover tax principles and practice, welfare and work, inequality, corporations, land and property, money and debt, and environment and resources; its chapters on land and corporations are the long form of the argument that Rent Tax states compactly. The book is kept in this section's folder and can be read online, chapter by chapter, under Books and Other Papers.
 
-*Stranded by Contract: Reforming Legacy Coal Power Purchase Agreements* starts from the observation that a coal plant can be stranded in economic terms while its contract keeps the money flowing. Where the variable cost of coal generation exceeds the all-in cost of new solar, retiring the plant and buying solar power instead saves money before any climate benefit is counted. The folder holds India country material but no paper yet (section 8.1, paper 8.1.1).
+**Stranded by Contract, on India's legacy coal power contracts, is in Other Writing (paper 8.1).** It starts from the observation that a coal plant can be stranded in economic terms while its contract keeps the money flowing; the folder holds country material but no paper yet.
 
 # The papers in this section {.unnumbered}
 
 | No. | Paper | Status |
 |---|---|---|
-| 2.1 | Taxing Rent, Not Effort: A Simple Design for Land and Corporate Taxation Consistent with Free Movement of Capital and People | Sketch, April 2026 |
+| [2.1](paper:2.1) | Taxing Rent, Not Effort: A Simple Design for Land and Corporate Taxation Consistent with Free Movement of Capital and People | Working paper v0.2, brief v1.0 and 10-slide deck (31 October 2026); peer-reviewed, every citation checked |
 
-: Table 1. Section 2 papers. Related work in section 8: *Plucked!* (8.5.3) and Stranded by Contract (8.1.1).
+: Table 1. Section 2 papers. Related: the book *Plucked!* (8.5.3), in this section's folder, and Stranded by Contract (8.1), in Other Writing.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

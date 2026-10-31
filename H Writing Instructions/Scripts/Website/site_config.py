@@ -41,7 +41,7 @@ PARTS = [
              "OverviewClimateAndFiscalPolicy.docx", "Slides-ClimateAndFiscalPolicy.pptx"),
             ("2.OtherTaxAndFiscalPolicy", "2-other-tax", "Other Tax and Fiscal Policy",
              "Tax rent, not effort: land and corporate taxes that hold up when capital and people can move.",
-             "OverviewOtherTaxAndFiscalPolicy.docx", None),
+             "OverviewOtherTaxAndFiscalPolicy.docx", "Slides-OtherTaxAndFiscalPolicy.pptx"),
             ("3.FinanceAndRisk", "3-finance-and-risk", "Finance and Risk",
              "Make clean power an asset class: remove payment risk at source, then turn projects into standard securities.",
              "OverviewMobilisingPrivateCapital.docx", "Slides-FinanceAndRisk.pptx"),

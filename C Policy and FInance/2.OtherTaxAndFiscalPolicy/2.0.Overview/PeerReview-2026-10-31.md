@@ -24,4 +24,4 @@ Section 2 has no theme deck (`site_config.py` lists none). Make one of about ten
 
 ## Disposition
 
-To be completed after paper 2.1 is revised.
+All points addressed in overview v0.2 (31 Oct 2026), after paper 2.1 was revised: 2.1's corrected design and sourced revenue (land 1.0–2.7 percent of GDP, corporate layers 2.3–6.3; the sketch's 5.5–11.5 superseded) and effective rates (50 percent on a foreign platform's local rent; the 13 percent gap for other foreign sellers stated); a bibliography copied from 2.1's verified `.bib`, including the Court of Justice judgments (Vodafone and Tesco, 2020; Commission v Poland, 2021); *Plucked!* placed in this section's folder and online; Stranded by Contract as 8.1; bold lead sentences and links. A first theme deck, 10 slides (`1.Presentation/slides.json`), added to `site_config.py`.
