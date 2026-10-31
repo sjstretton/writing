@@ -10,10 +10,10 @@ Title: retitled on 31 Oct 2026. The 2020 title was *Screwed?! Getting our future
 | `Plucked.docx` | Rendered from the master (pandoc, Chicago author-date) |
 | `Plucked.bib` | Union of the three Mendeley exports in the original repo (2,049 entries); every citation resolves |
 | `ChapterPictures/` | Figures used by the chapters |
-| `2.Source/build_qmd.py` | Rebuilds `Plucked.qmd` from the original chapters (converts knitr figure chunks; redraws the UK net-debt chart with matplotlib) |
-| `2.Source/Chapters-Rmd/` | The original R Markdown chapters and master (`Plucked.Rmd`) |
-| `2.Source/Model/` | The tax-calculator model and data (R Shiny app, modelling appendix) |
-| `2.Source/Book-README-2020.md` | The original repository README (outlines, summary, chapter notes) |
+| `build_qmd.py` | Rebuilds `Plucked.qmd` from the original chapters (converts knitr figure chunks; redraws the UK net-debt chart with matplotlib, if installed). Run `python3 build_qmd.py` from any folder |
+| `Chapters-Rmd/` | The original R Markdown chapters and master (`Plucked.Rmd`) |
+| `Model/` | The tax-calculator model and data (R Shiny app, modelling appendix) |
+| `Book-README-2020.md` | The original repository README (outlines, summary, chapter notes) |
 | `5.Notes/` | Errata and remaining-issues documents (2020, under the old title) |
 | `8.PreviousVersions/Screwed-2020.pdf` | The 2020 PDF render, under the 2020 title |
 
