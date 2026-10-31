@@ -23,12 +23,14 @@ a1.set_yscale("log"); a1.set_ylim(0.5, 200)
 a1.set_yticks([1, 3, 10, 30, 100]); a1.set_yticklabels(["1", "3", "10", "30", "100"])
 a1.set_ylabel("Spread savings per donor dollar (PV, log)")
 a1.set_title("A. Holding beats spending", loc="left", fontsize=9)
-for lab, E_p, f, col in (("$95bn private, fee = EL/2", 95, lam / 2, "#4a8c3f"),
-                         ("$95bn private, no fee", 95, 0.0, "#1f5f8b"),
-                         ("$10bn private, no fee", 10, 0.0, "#d1782a")):
-    a2.plot(range(26), capital_path(T=25, E_p=E_p, lam=lam, f=f, b=b0), lw=2, color=col, label=lab)
+b_st = buffer_ratio_mc(20, 0.03, 0.2, 0.37, 0.01)   # stress-case buffer held at launch
+for lab, E_p, l, col in (("Record losses, $95bn private", 95, lam, "#1f5f8b"),
+                         ("Record losses, insurance only", 0, lam, "#4a8c3f"),
+                         ("Stress losses, $95bn private", 95, 0.03 * 0.37, "#d1782a"),
+                         ("Stress losses, insurance only", 0, 0.03 * 0.37, "#8b2f5c")):
+    a2.plot(range(26), capital_path(T=25, E_p=E_p, lam=l, f=0.0, b=b_st), lw=2, color=col, label=lab)
 a2.set_xlabel("Years from launch"); a2.set_ylabel("Trust capital, $bn")
-a2.set_title("B. Growth needs fee income", loc="left", fontsize=9)
+a2.set_title("B. Growth, stress-case buffer held, no guarantee fee", loc="left", fontsize=9)
 a2.legend(frameon=False, fontsize=7)
 fig.tight_layout(); fig.savefig(os.path.join(HERE, "fig1-buffer-vs-payout.png"), dpi=200)
 print("written")
