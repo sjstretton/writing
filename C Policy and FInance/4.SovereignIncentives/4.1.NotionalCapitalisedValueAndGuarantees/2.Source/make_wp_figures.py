@@ -1,4 +1,4 @@
-"""Figures for working paper 3.1. Run: python3 make_wp_figures.py
+"""Figures for working paper 4.1. Run: python3 make_wp_figures.py
 Writes PNGs to ./figures/. All inputs come from model.py (stylized unless noted there).
 """
 from pathlib import Path
@@ -26,8 +26,8 @@ def fig_balance(path):
     ax.plot(yrs, Ba / 1e9, color=BLUE, lw=2, label="Acts now: emissions 15 → 3 Mt by 2037")
     ax.plot(yrs, Bb / 1e9, color=ORANGE, lw=2, label="Business as usual: 15 Mt a year")
     ax.axhline(M.D_FOREST / 1e9, color=GREY, ls="--", lw=1)
-    ax.text(2027.3, M.D_FOREST / 1e9 + 0.12, "Eligible green borrowing (\\$5bn): capacity above this is unused",
-            fontsize=8, color=GREY)
+    ax.text(2050.8, M.D_FOREST / 1e9 - 0.38, "Eligible green borrowing (\\$5bn):\ncapacity above this line is unused",
+            fontsize=8, color=GREY, ha="right", va="top")
     ax.set_ylabel("Balance = guarantee capacity, $bn")
     ax.set_ylim(0, 6)
     ax.set_title("A per-tonne debit drains the balance under business as usual", fontsize=10, loc="left")
@@ -45,6 +45,8 @@ def fig_ratio(path):
     for ds, c in ((0.015, GREY), (0.03, BLUE), (0.045, ORANGE)):
         ax.plot(el * 100, [M.ratio(ds=ds, el=x, k=0.0) for x in el], color=c, lw=2,
                 label=f"spread saved {ds*100:.1f} pp")
+    ax.plot(el * 100, [min(M.econ_ratio(ds=0.03, el=x), M.ratio(ds=0.03, el=x, k=0.0)) for x in el], color=BLUE, lw=1.5, ls="--",
+            label="3.0 pp, net of the default option")
     ax.axhline(1, color="black", lw=0.8)
     for x, lab in ((M.EL_GEMS, "Base: MDB record\n(0.77% × 4.9%)\nratio 80"),
                    (M.EL_MID, "Middle: 3% × 10%\nratio 10"),
@@ -62,8 +64,8 @@ def fig_ratio(path):
     ax.set_ylabel("Incentive value ÷ guarantor cost (log)")
     ax.set_title("A guarantee is worth many times what it costs", fontsize=10, loc="left")
     ax.legend(frameon=False, fontsize=8, loc="upper right")
-    fig.text(0.01, 0.01, "Buffer earns the discount rate, so cost = expected loss. Base: MDB sovereign record, "
-             "GEMs 1984–2024 (preferred creditors).", fontsize=7, color=GREY)
+    fig.text(0.01, 0.01, "Cost = expected loss (buffer earns the discount rate). Dashed: risk premium (a third of a 3 pp spread) "
+             "plus expected loss.", fontsize=7, color=GREY)
     fig.tight_layout(rect=(0, 0.04, 1, 1))
     fig.savefig(path, dpi=200)
     plt.close(fig)

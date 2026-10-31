@@ -1,5 +1,5 @@
-"""Model and calibration for working paper 3.1 (Notional capitalized value and
-guarantee-based climate incentives).
+"""Model and calibration for working paper 4.1 (Reward the Stock as Well as the Flow:
+notional capitalized value and guarantee-based climate incentives).
 
 Run:  python3 model.py        (prints every number used in the paper and brief)
 
@@ -36,11 +36,12 @@ PD_GEMS = 0.0077
 LGD_GEMS = 1 - 0.951
 EL_GEMS = PD_GEMS * LGD_GEMS            # 0.038% a year
 
-# IBRD policy minimum equity-to-loans ratio: 18% (IBRD MD&A, FY2026).
+# IBRD policy minimum equity-to-loans ratio: 18%, lowered from 19% (World Bank press
+# release, 15 Oct 2024). Used only for the capital-charge sensitivity.
 K_IBRD = 0.18
 
-# Series cases shared with working papers 3.2 (Climate Investment Trust) and
-# 3.3 (sustainability-linked lending). Settled 29 Oct 2026: the MDB record is the
+# Series cases shared with working papers 4.2 (Climate Investment Trust) and
+# 4.3 (sustainability-linked lending). Settled 29 Oct 2026: the MDB record is the
 # base case; the Cruces-Trebesch case is the stress test.
 #   BASE (MDB record): annual call probability 0.77% and loss per call 4.9%
 #     (GEMs 1984-2024 default and recovery rates on MDB sovereign and
@@ -50,7 +51,7 @@ K_IBRD = 0.18
 #     Cruces and Trebesch 2013).
 # In every case: 20 guaranteed programs, asset correlation 0.2, buffer sized so
 # the annual probability of exhaustion is 1%. Buffer ratios come from the Monte
-# Carlo in 3.2.ClimateInvestmentTrust/2.Source/model.py: 0.49% (two calls of
+# Carlo in 4.2.ClimateInvestmentTrust/2.Source/model.py: 0.49% (two calls of
 # 4.9% across 20 programs), 2.5% and 9.25% (rounded to 9.3% in the text).
 EL_SERIES = 0.03 * 0.37               # stress case, 1.11% a year
 K_SERIES = 0.093
@@ -60,10 +61,15 @@ CASES = {"MDB record (base)": (EL_GEMS, K_GEMS),
          "10% loss per call (middle)": (EL_MID, K_MID),
          "3% calls x 37% loss (stress)": (EL_SERIES, K_SERIES)}
 
-# Gabon blue bond, Aug 2023 (Reuters): 6.097% coupon with DFC political risk
-# insurance, against 9-10.5% yields on Gabon's other bonds.
+# Gabon blue bond, Aug 2023: 6.097% coupon (AfSDJN 2023), 200 bp over US Treasuries,
+# rated Aa2 with DFC political risk insurance against the sovereign's Caa1/B; Gabon's
+# 2031 eurobonds yielding about 10% (Smith 2023, M&G Bond Vigilantes).
 GABON_GUARANTEED = 6.097
-GABON_MARKET = (9.0, 10.5)
+GABON_MARKET = (10.0,)
+
+# Share of sovereign credit spreads that is a risk premium rather than expected
+# default loss: about a third (Longstaff, Pan, Pedersen and Singleton 2011).
+RP_SHARE = 1 / 3
 
 # Guyana LCDS 2030: forests store 19.5 GtCO2e on about 18 million hectares.
 GUY_STOCK = 19.5e9
@@ -111,6 +117,20 @@ def ratio(ds: float = DS, el: float = EL, k: float = K, phi: float = PHI,
           fee: float = 0.0) -> float:
     """Proposition 1: incentive value / guarantor cost."""
     return (ds - fee) / (el + k * phi - fee)
+
+
+def econ_ratio(ds: float = DS, el: float = EL, rp_share: float = RP_SHARE) -> float:
+    """Proposition 1(b): economic value / guarantor cost when the country gives up its
+    default option: value = risk premium + guarantor's expected loss."""
+    return (rp_share * ds + el) / el
+
+
+def dp_factor(sigma: float, r: float = R) -> float:
+    """Dixit-Pindyck trigger multiplier beta/(beta-1) for a cost following a driftless
+    random walk with a deterministic benefit (payout rate delta = r)."""
+    a = 0.5 * sigma ** 2
+    beta = (a + math.sqrt(a * a + 4 * a * r)) / (2 * a)
+    return beta / (beta - 1)
 
 
 def cpe(p_e: float, ds: float = DS, r: float = R, theta: float = 0.0, lam: float = 1.0) -> float:
@@ -161,12 +181,16 @@ def main():
         print(f"{name}: EL = {el*100:.4f}%, buffer {k*100:.2f}% -> R = {ratio(el=el, k=k):.1f}; "
               f"R with 2% carry = {ratio(el=el, k=k, phi=0.02):.1f}; $5bn supports ${5/k:,.0f}bn")
     print(f"MDB record with IBRD-style 18% capital at 2% carry: R = {ratio(el=EL_GEMS, k=K_IBRD, phi=0.02):.1f}")
+    print(f"priced on the record, stress-case buffer held at 2% carry: R = {ratio(el=EL_GEMS, k=K_SERIES, phi=0.02):.1f}; "
+          f"extra carry on $3.1bn stress buffer: ${3.1e9*0.02/1e6:.0f}m a year")
+    for name, (el, k) in CASES.items():
+        print(f"  economic value (risk premium {RP_SHARE*DS*100:.1f} pp + EL) / cost, {name}: {econ_ratio(el=el):.1f}")
     for ds in (0.015, 0.03, 0.045):
         print(f"  ds={ds*100:.1f}%: R base={ratio(ds=ds):.0f}, stress={ratio(ds=ds, el=EL_SERIES, k=K_SERIES):.1f}")
     print(f"donor cost per $ of carbon-price equivalent: base {cost_rate()/DS*100:.2f} cents; stress {EL_SERIES/DS*100:.0f} cents")
     print(f"break-even EL (R=1): {(DS - K*PHI)*100:.1f}%")
     print(f"leverage of buffer: {1/K:.1f}x; $5bn supports ${5/K:.0f}bn")
-    print(f"Gabon saving: {GABON_MARKET[0]-GABON_GUARANTEED:.1f} to {GABON_MARKET[1]-GABON_GUARANTEED:.1f} pp")
+    print(f"Gabon saving against its 2031 bonds: about {GABON_MARKET[0]-GABON_GUARANTEED:.1f} pp (gross of the insurance premium)")
     fee = cost_rate()
     print(f"cost-covering fee {fee*100:.2f}%: country keeps {(DS-fee)*100:.2f}% a year")
 
@@ -191,6 +215,8 @@ def main():
     print(f"balance at $100/t on whole stock: ${GUY_STOCK*100/1e12:.2f}tn")
     tau = cpe(P_E)
     print(f"CPE at p_e=${P_E:.0f}: ${tau:.0f}/t; per ha deforested ${tau*dens:,.0f}")
+    print(f"CPE if the scheme ends in 2050, tonne emitted in 2027 (23 years of lost capacity): ${P_E*DS*annuity(23):.0f}/t; "
+          f"in 2040: ${P_E*DS*annuity(10):.0f}/t")
     print(f"single-price NCV (p_e=p_s) CPE: ${cpe(p_s):.2f}/t")
     print(f"annual incentive at full capacity ${D_FOREST*DS/1e6:.0f}m; PV 20y ${D_FOREST*DS*annuity(20)/1e9:.2f}bn")
     print(f"buffer held ${K*D_FOREST/1e9:.2f}bn; annual donor cost ${cost_rate()*D_FOREST/1e6:.1f}m")
@@ -228,7 +254,9 @@ def main():
     print("\n=== Proposition 3: early action (energy reform) ===")
     K0, dE, g = 1e9, 5e6, 0.05
     m0 = (R + g) * K0 / dE
-    print(f"minimum m0 = (r+g)K0/dE = ${m0:.0f}/t; with option-value multiplier 1.5: ${1.5*m0:.0f}/t")
+    f15, f20 = dp_factor(0.15), dp_factor(0.20)
+    print(f"minimum m0 = (r+g)K0/dE = ${m0:.0f}/t; option-value multiplier {f15:.2f}-{f20:.2f} (volatility 15-20%): "
+          f"${f15*m0:.0f}-{f20*m0:.0f}/t")
     for th in (0.0, g):
         print(f"theta={th:.2f}: p_e needed ${p_e_needed(m0, theta=th):.0f}/t; donor PV cost base ${dE*m0/(R+th)*cost_rate()/DS/1e6:.1f}m, "
               f"stress ${dE*m0/(R+th)*EL_SERIES/DS/1e6:.0f}m; same incentive as cash ${dE*m0/(R+th)/1e6:.0f}m")
@@ -237,6 +265,8 @@ def main():
     taus, W = early_action(K0, dE, g, m0 * 0.6)
     print(f"with 60% of m0: argmax tau={taus[np.argmax(W)]:.1f}")
     print(f"no incentive, b=0: hurdle met? {0 >= m0}")
+    b = 5.0   # illustrative co-benefit, $/t, to show adoption is delayed rather than never
+    print(f"no incentive, co-benefit $5/t: adopts at T* = ln((r+g)K0/(dE b))/g = {math.log((R+g)*K0/(dE*b))/g:.0f} years")
 
 
 if __name__ == "__main__":
