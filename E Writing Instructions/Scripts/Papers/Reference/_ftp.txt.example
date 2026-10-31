@@ -9,3 +9,9 @@ user     = someone
 password = 
 remote   = /public_html
 protocol = ftp
+url      = https://www.example.com
+
+# remote is the folder the website is served from, as this FTP login sees it.
+# If the login already opens inside public_html, use  remote = /
+# If the site is an addon domain, it may be e.g.  remote = /public_html/example.com
+# url is the live website: after uploading, Push-Website.bat checks that it shows the new pages.
