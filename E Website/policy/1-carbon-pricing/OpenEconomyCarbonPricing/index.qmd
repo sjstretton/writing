@@ -52,7 +52,7 @@ lightbox: auto
 
 **The production track prices emissions per tonne, not the carbon bill.** Each covered sector, such as steel, cement, aluminum or power, has a benchmark: its average emissions per tonne of output. A firm above the benchmark pays the carbon price on the difference; a firm below it receives a rebate on the difference. Because the benchmark is the average, payments cancel out. The treasury neither gains nor loses, and the sector's average cost barely moves. But each firm still saves the full carbon price on every tonne of CO₂ it cuts, exactly as under a tax. Canada's output-based pricing system for industry works on the same principle [@CanadaOBPS2019], and the IMF has proposed the same formula for industry in Mexico [@BlackEtAl2021Mexico].
 
-**The consumption track charges what the country uses, wherever it was made.** Every good bought at home carries a charge for the carbon embodied in it, collected as a carbon component of VAT. Imports pay it at the border, home-made goods pay it along the VAT chain, and exports are exempt, exactly as VAT already works [@OECD2017VAT]. The value part of VAT can be cut as the carbon part rises, so the total rate barely moves at first while its base shifts from value to carbon ([Brief 1.3](../../../policy/1-carbon-pricing.qmd#paper-1-3)).
+**The consumption track charges what the country uses, wherever it was made.** Every good bought at home carries a charge for the carbon embodied in it, collected as a carbon component of VAT. Imports pay it at the border, home-made goods pay it along the VAT chain, and exports are exempt, exactly as VAT already works [@OECD2017VAT]. The value part of VAT can be cut as the carbon part rises, so the total rate barely moves at first while its base shifts from value to carbon ([Brief 1.3](../../../policy/1-carbon-pricing/CarbonConsumptionTax/index.qmd)).
 
 **Fuel for homes and vehicles needs its own instrument.** Its carbon is released after the last sale, so no charge on goods reaches it. A few large firms dominate its supply: fuel importers, refiners and gas suppliers. They take on a legal obligation for the carbon in what they sell, announced years ahead and rising on a published path, so that the firms that plan long-lived capital know the price they will face.
 
@@ -93,7 +93,7 @@ lightbox: auto
 
 **Competition then rewards the cleanest producers.** Under carbon taxes without border charges, a country that raises its price loses market share. Under the two tracks, a country that raises its feebate toward its markets' charges gains share. In the working paper's simulation of a steel import market with eight exporters, a charge of \$100 per tonne cuts the average carbon content of imports by about 28 percent if exporters do nothing, through the mix of suppliers alone, and by about 70 percent if each responds with a feebate.
 
-**Today's EU rules block half of this.** The CBAM deducts only a carbon price "effectively paid" abroad, net of any rebate [@EU2025Omnibus], so a revenue-neutral feebate, which rebates on average all it charges, earns no credit, and measuring each plant separately lets exporters send clean steel to Europe and dirty steel elsewhere. The companion brief proposes measuring the foreign price signal by country and sector and crediting non-price policies as carbon-price equivalents ([Brief 1.4](../../../policy/1-carbon-pricing.qmd#paper-1-4)).
+**Today's EU rules block half of this.** The CBAM deducts only a carbon price "effectively paid" abroad, net of any rebate [@EU2025Omnibus], so a revenue-neutral feebate, which rebates on average all it charges, earns no credit, and measuring each plant separately lets exporters send clean steel to Europe and dirty steel elsewhere. The companion brief proposes measuring the foreign price signal by country and sector and crediting non-price policies as carbon-price equivalents ([Brief 1.4](../../../policy/1-carbon-pricing/IronSteelCBAM/index.qmd)).
 
 # Making it work {#sec-design}
 
@@ -116,8 +116,8 @@ lightbox: auto
 # Related papers in this series {.unnumbered}
 
 - [Climate Fiscal Policy Brief No. 1.2](../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.qmd): feebates in power and industry [@CFPB12].
-- [No. 1.3](../../../policy/1-carbon-pricing.qmd#paper-1-3): a carbon component in VAT and a forward obligation on energy suppliers [@CFPB13].
-- [No. 1.4](../../../policy/1-carbon-pricing.qmd#paper-1-4): carbon price recognition under the CBAM, and scrap shuffling [@CFPB14].
+- [No. 1.3](../../../policy/1-carbon-pricing/CarbonConsumptionTax/index.qmd): a carbon component in VAT and a forward obligation on energy suppliers [@CFPB13].
+- [No. 1.4](../../../policy/1-carbon-pricing/IronSteelCBAM/index.qmd): carbon price recognition under the CBAM, and scrap shuffling [@CFPB14].
 - [No. 6.1](../../../modelling/6-modular-upgrades.qmd#paper-6-1): the Total Effective Carbon Price, the yardstick for comparing policies [@CFPB61].
 - The [working paper](working-paper.qmd) behind this brief: the model, proofs, calibration and literature.
 

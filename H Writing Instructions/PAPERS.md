@@ -23,7 +23,7 @@ Order of work. The reason column says why each paper is where it is.
 | 4 | 4.1 | Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives | working paper v0.1 + brief (29 Oct) | WB working paper / journal | Series 4 flagship; the core idea behind proposal 1. First full draft. Next: Stephen's read |
 | 5 | 1.2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | working paper v0.4 + brief v1.1 + 10-slide deck (31 Oct); peer-reviewed, every citation checked; both on the web | WB working paper / journal | Market-design propositions; India, Indonesia, South Africa cases |
 | 6 | 4.2 | The Climate Investment Trust: Hold Capital, Lend Its Strength | working paper v0.2 + brief (29 Oct) | WB working paper | Series 4 flagship with 4.1 (moved from the finance series on 29 Oct). Buffer, growth and allocation propositions |
-| 7 | 1.4 | Credit the Price Signal, Not the Payment (CBAM recognition and scrap shuffling) | working paper v0.3 + brief + deck (29 Oct) | Policy journal / Commission consultation | Shuffling model, liability formula, calibration to EU default values |
+| 7 | 1.4 | Credit the Price Signal, Not the Payment (CBAM recognition and scrap shuffling) | working paper v0.4 + brief v1.1 + 10-slide deck (31 Oct); peer-reviewed, every citation checked; both on the web | Policy journal / Commission consultation | Shuffling model, liability formula, calibration to EU default values |
 | 8 | 7.1 | The Excise-Fiscal Diagnostic: Reading an Excise System Against Its Externalities | paper v0.3 (30 Oct) | Companion paper to the analytics tools | Cut from the 24,800-word report (now v0.1); stylized example plus Sierra Leone and Liberia applications (diagnostic results, illustrative) |
 | 9 | 5.1–5.4, 6.2–6.4 | The CPAT papers (methods, CPAT-AI, validation, elasticities) and modular upgrades (CBAM tool, public investment, activity) | papers v0.1 (29 Oct) | Companion papers to the CPAT-AI repository | See the section 5 and 6 table below |
 
@@ -71,10 +71,10 @@ Plan: `D Modelling/5.Modelling/5.0.Overview/SeriesArchitecture.md`. One medium-l
 
 | | Companion | Where | Status |
 |---|---|---|---|
-| C1 | Converting a VAT into a Destination Carbon Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers in the European Union | 1.3 | working paper v0.2 (29 Oct) |
+| C1 | Converting a VAT into a Destination Carbon Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers in the European Union | 1.3 | working paper v0.3 + brief v1.1 + 10-slide deck (31 Oct); peer-reviewed, every citation checked; both on the web |
 | C2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | 1.2 | working paper v0.3 (29 Oct) |
 | C3 | Measure Carbon Pricing by the Emissions It Cuts (TECP) | 6.1 | working paper v0.3 (29 Oct) |
-| C4 | Credit the Price Signal, Not the Payment (CBAM) | 1.4 | working paper v0.3 (29 Oct) |
+| C4 | Credit the Price Signal, Not the Payment (CBAM) | 1.4 | working paper v0.4 + brief v1.1 (31 Oct) |
 
 Not in the program: the confidential World Bank SLL discussion paper (now in `4.3…/9.Archive`) and the section 8 papers (`8.AdditionalPolicyPapers`), unless Stephen promotes one.
 
