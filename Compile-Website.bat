@@ -7,6 +7,8 @@ echo.
 echo   1/2  Copying papers into B Working Papers\A.Website\papers ...
 python "%~dp0E Writing Instructions\Scripts\Website\publish_series.py"
 if errorlevel 1 (echo Copy step failed - is Python installed? & pause & exit /b 1)
+echo   Writing the Research pages from the papers' current titles and abstracts ...
+python "%~dp0E Writing Instructions\Scripts\Website\build_research_pages.py"
 call :findquarto
 if not defined QUARTO (echo Quarto not found - install Quarto or RStudio. & pause & exit /b 1)
 echo.

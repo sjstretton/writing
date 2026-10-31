@@ -1,0 +1,47 @@
+---
+title: "6. Modular Upgrades"
+---
+
+The Climate Policy Assessment Tool (CPAT) tells a finance ministry what a carbon price raises and what it cuts, but ministries keep asking questions its core cannot answer. What is a mix of standards, subsidies and feebates worth as a carbon price? What will the EU carbon border adjustment cost our exporters? What will the clean capital cost, and should the budget pay for it? How do we link CPAT to the other models we use? What does a climate program do to growth and debt? This section answers each with one upgrade that bolts onto the rebuilt model without changing its core: the Total Effective Carbon Price, the CBAM Policy Tool, a public investment extension, a common activity layer, and the Macro-Fiscal-Energy Scenario Tool. Each takes CPAT's prices, fuel use and emissions as given, adds one piece of economics, and states its method in a few equations so that a ministry can check it.
+
+[Section overview →](../papers/OverviewModularUpgrades.docx)
+
+## 6.1 Measure Carbon Pricing by the Emissions It Cuts {#paper-6-1}
+
+*The Total Effective Carbon Price*
+
+Countries cut emissions with taxes, subsidies, standards and mandates, but the standard metrics add up explicit prices per tonne. They score a fuel standard or a revenue-neutral feebate at zero and count a dollar on coal the same as a dollar on gasoline. Building on the IMF's carbon-price equivalent, this paper derives the Total Effective Carbon Price: the uniform economy-wide carbon tax that would cut emissions by as much as a given policy mix. From a nested constant-elasticity model of energy demand I obtain closed-form abatement weights that split any instrument's effect into fuel switching and demand reduction. I give exact and second-order versions, extend the metric to tradable and non-tradable standards and mandates, and carry elasticity uncertainty through to a range. In a stylized three-sector economy, a mix that explicit-price metrics rate at \$21 per tonne has an effective price of \$37 in the long run (\$32–38 across calibrations) and \$28 after one year. The metric lets crediting schemes pay for policies rather than projects, lets border mechanisms recognize implicit and non-price carbon pricing, and shows governments where their policy mix is weak.
+
+[Slides →](../papers/Slides-PolicyEquivalentCarbonPriceAndCES.pptx) · [Policy brief →](../papers/Brief-PolicyEquivalentCarbonPriceAndCES.docx) · [Full paper →](../papers/PolicyEquivalentCarbonPriceAndCES.docx)
+
+## 6.2 The CBAM Policy Tool {#paper-6-2}
+
+*Measuring Exporters' Exposure to the EU Carbon Border Adjustment and What Domestic Policy Can Do About It*
+
+Since January 2026, importers of steel, aluminum, cement, fertilizers, hydrogen and electricity into the European Union have owed a carbon charge on the emissions embedded in what they buy. For many middle-income exporters the charge is large, it rises every year to 2034, and it depends on choices their own governments control: whether producers file verified emissions data and whether the country prices carbon at home. This paper describes a spreadsheet tool that computes the exposure product by product and year by year, and shows how emissions data, a domestic carbon price and rebates change it. It sets out the method in five equations and the data sources. A worked example for three Turkish exports shows that, at €80 per tonne of carbon dioxide, the charge on hot-rolled steel declared at the default value rises from about €107 per tonne in 2026 to €252 at full phase-in, close to half its export price. The tool's application to Egypt shows why emissions data matter most: Egypt has no country default for steel, so its gas-based steel would be charged at more than five times the tool's estimate of its emissions, and verified data would cut the full-phase-in charge on seven Egyptian exports from about €595 million to €177 million a year.
+
+[Slides →](../papers/Slides-CBAMPolicyTool.pptx) · [Full paper →](../papers/CBAMPolicyTool.docx)
+
+## 6.3 Public Investment in CPAT {#paper-6-3}
+
+*Investment Needs and the Efficiency of Public Spending*
+
+Carbon pricing models tell a finance ministry what a policy raises and what it cuts, but not what the clean capital it calls for will cost or whether the budget should pay for it. This paper extends the Climate Policy Assessment Tool in two directions. The first turns physical change into investment needs by country and sector, then prices that capital at three rates: the market cost of capital, a social rate, and a social rate with co-benefits counted. For a stylized asset whose fuel savings are 13.3 cents a year per dollar of capital, the financial case fails above a cost of capital of 12.6 percent, the rate the tool already assumes for lower-middle-income countries. The second extension asks what each dollar of net public money buys: a marginal-value-of-public-funds test against the cost of raising tax, with haircuts for delivery, a fiscal ledger, and capital, operating and contract routes on one footing. In a stylized island case, a solar plant worth \$108 million fails the budget on a seven-year loan; a concessional loan or a guaranteed power purchase agreement rescues it. Country runs put 2030 investment needs in Kenya, Uganda and St Lucia at 4 to 5 percent of GDP, and a SISEPUEDE run for Uganda shows that under a fifth of its net-zero benefits reach the budget as cash.
+
+[Slides →](../papers/Slides-PublicInvestment.pptx) · [Full paper →](../papers/PublicInvestment.docx)
+
+## 6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT {#paper-6-4}
+
+*One Driver Layer So Four Climate Models Can Be Linked*
+
+Every energy and emissions model starts from activity levels: how much electricity is used, how far people and goods travel, how many vehicles are on the road, how many tonnes of steel and cement are made. Four models used for climate-fiscal work build those levels in incompatible ways. The Climate Policy Assessment Tool grows fuel use with GDP and prices. SISEPUEDE grows physical activity with income and population but never with prices. A border-adjustment tool grows output of steel, aluminum, fertilizer and clinker with growth forecasts and a price response. The Future Technology Transformations models take demand as given. This paper maps each model's activity onto a common set of ten activities, sets out a single constant-elasticity rule driven by population, income per person and the cost of the energy service, and shows how the rule lets the four be linked without counting a price response twice. Under stylized growth of 1 percent in population and 2 percent in income per person, cars in use grow 64 percent in ten years while travel grows 41 percent.
+
+[Slides →](../papers/Slides-ActivityModelling.pptx) · [Full paper →](../papers/ActivityModelling.docx)
+
+## 6.5 The Macro-Fiscal-Energy Scenario Tool {#paper-6-5}
+
+*Linking Energy Investment and Carbon Pricing to Growth, Revenue and Debt in One Workbook*
+
+A finance ministry weighing a climate investment program needs to know three things at once: how much the program costs the budget, how much carbon pricing could pay for, and what the combination does to growth and debt. The answers usually come from separate teams using separate models. The Macro-Fiscal-Energy Scenario Tool puts them in one workbook for 186 countries. It chains a national model of mitigation investment needs, which splits each need by who pays; a screen that finds the most abatement a carbon tax, a feebate or a mix can deliver within limits on political cost; simplified, open-source versions of three IMF and World Bank macro-fiscal tools (the Global Integrated Monetary and Fiscal Model, the Debt-Investment-Growth and Natural Disasters model and its resource variant, and the low-income Debt Sustainability Framework); and a debt sustainability test. A stylized run shows that the financing choice and the efficiency of public investment move the result more than the size of the program. A run for Kenya shows a net zero program whose budget need, 0.5 percent of GDP in 2030, is mostly land-use and non-CO₂ spending rather than capital; feasible power-sector carbon pricing covers about 5 percent of it, and the program adds 7 points of GDP to public debt by 2050 for little growth. The lite models are not their parents and do not replace them.
+
+[Slides →](../papers/Slides-MacroFiscalEnergyScenarioTool.pptx) · [Full paper →](../papers/MacroFiscalEnergyScenarioTool.docx)

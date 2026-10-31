@@ -4,7 +4,7 @@ You only need two scripts, and they sit at the top of the repo:
 
 | Script | What it does | When |
 |---|---|---|
-| `Compile-Website.bat` | Copies every paper, brief, overview and deck into the website folder, then builds the site with Quarto. Nothing goes online. | After papers change, to check the site locally (`B Working Papers/A.Website/_site/index.html`). |
+| `Compile-Website.bat` | Copies every paper, brief, overview and deck into the website folder, rewrites the Research pages from the papers' current abstracts, then builds the site with Quarto. Nothing goes online. | After papers change, to check the site locally (`B Working Papers/A.Website/_site/index.html`). |
 | `Deploy-Website.bat` | Runs Compile, uploads the built site to the web server, and deletes files retired from the site. | When you want the site live. |
 
 Both need Python and Quarto (or RStudio, which includes Quarto). Deploy also needs the FTP login file `Papers/Reference/_ftp.txt` (copy `_ftp.txt.example` and fill it in; it is never committed). It uses WinSCP if installed, otherwise Python, so nothing else needs installing. If your login file is still in the old place, `B Working Papers/B.Scripts/Reference/_ftp.txt`, Deploy finds it there too; move it here when convenient.
@@ -16,6 +16,7 @@ Everything below is optional. You can ignore this folder.
 | Folder | What it is |
 |---|---|
 | `Website/deploy_ftp.py` | The upload step Deploy uses when WinSCP is not installed: plain Python FTP, sends only changed files, then deletes retired ones. |
+| `Website/build_research_pages.py` | Writes the Research home and one page per series from each paper's current title, subtitle and abstract, with links to its slides, brief and full paper. Compile runs it, so the site never goes out of date. `research/more.qmd` (More papers and books) is written by hand. |
 | `Website/publish_series.py` | The copy step Compile runs: puts each paper's current docx, brief, overview and deck into the site's `papers/` folder under stable names. Add a new paper to its list. |
 | `Website/InstallPackages.R` | R packages for rendering the site from RStudio. |
 | `Website/Archive-batch/` | Old single-purpose website scripts (render, preview, push, deploy, remove old files), replaced by the two top-level scripts. |
