@@ -1,0 +1,186 @@
+% Bibliography for paper 6.3, Public Investment in CPAT (working paper v0.2, Oct 2026).
+% Every entry checked on 31 Oct 2026 against the source itself; each note says what was read. See 5.Notes/BibCheck-2026-10-31.md.
+
+% --- Series briefs and working papers ------------------------------------------------
+@techreport{CFPB61, author={Stretton, Stephen J.}, title={Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price}, institution={Climate Fiscal Policy Briefs}, number={6.1}, year={2026}}
+@techreport{CFPB31, author={Stretton, Stephen J.}, title={Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power}, institution={Climate Fiscal Policy Briefs}, number={3.1}, year={2026}}
+@techreport{CFPB32, author={Stretton, Stephen J.}, title={From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power}, institution={Climate Fiscal Policy Briefs}, number={3.2}, year={2026}}
+
+@unpublished{StrettonWP51,
+  author = {Stretton, Stephen J.},
+  title = {The {CPAT} Mitigation Module: Methods in Brief},
+  note = {Working paper 5.1},
+  year = {2026}
+}
+
+@unpublished{StrettonWP52,
+  author = {Stretton, Stephen J.},
+  title = {{CPAT-AI}: Rebuilding a Policy Model as a Transparent, Testable Tool},
+  note = {Working paper 5.2},
+  year = {2026}
+}
+
+@unpublished{StrettonWP64,
+  author = {Stretton, Stephen J.},
+  title = {Activity Levels Across {CPAT}, {SISEPUEDE}, {CBAM} and {FTT}},
+  note = {Working paper 6.4},
+  year = {2026}
+}
+
+@unpublished{StrettonWP65,
+  author = {Stretton, Stephen J.},
+  title = {The Macro-Fiscal-Energy Scenario Tool},
+  note = {Working paper 6.5},
+  year = {2026}
+}
+
+% --- CPAT ----------------------------------------------------------------------------
+@book{CPATTeam2024,
+  author    = {{CPAT Team}},
+  title     = {{CPAT} Documentation},
+  publisher = {World Bank and International Monetary Fund},
+  address   = {Washington, DC},
+  year      = {2024},
+  url       = {https://cpmodel.github.io/cpat_public/},
+  note      = {The CPAT team's 2023 text, published online 23 January 2024. verified 31 Oct 2026 in the copy kept in the public CPAT-AI repository (docs/CPAT_full_documentation_qmd, commit 108f976): chapter 3 (Mitigation), power section: WACC ``by default income-dependent'' at 0.075, 0.100, 0.125, 0.150 (HIC, UMIC, LMIC, LIC), citing Steffen (2020); investment allocated by a logit on levelized cost, capped by scale-up limits; chapter 4 (Multipliers) and chapter 1 (User Guide): revenue can be recycled through tax cuts, transfers, public investment and current spending}
+}
+
+@misc{CPATAI2026,
+  author       = {{CPAT-AI Project}},
+  title        = {{CPAT-AI}: Excel-{AI} and {CPAT} Python, with Documentation, Bug Register and Issue Register},
+  year         = {2026},
+  howpublished = {GitHub repository, Excel-AI release 1.2.1 (31 October 2026)},
+  url          = {https://github.com/cpmodelai/cpat_ai},
+  note         = {Public repository. verified 31 Oct 2026 from a clone (commit 108f976): excel_ai/mitigation/docs/methods/Power.md sections 1.4, 1.5, 2.5 and 6: WACC setting D\_WACCSource = ``Tech'' (country real WACC for 2022 from the CoC calculator, 7.5 percent where missing, plus a technology adjustment by income group; LMIC adjustments 2.465 points for gas, coal and oil, 2.935 for wind and solar, 4.425 for other renewables); income-group rates used only under the ``Income*'' option; discounted lifetime summed from year 0, (1-(1+wacc)^-N)/(1-(1+wacc)^-1)}
+}
+
+@techreport{Black2023CPAT,
+  author      = {Black, Simon and Parry, Ian and Mylonas, Victor and Vernon-Lin, Nate and Zhunussova, Karlygash},
+  title       = {The {IMF}-{World Bank} Climate Policy Assessment Tool ({CPAT}): A Model to Help Countries Mitigate Climate Change},
+  institution = {International Monetary Fund},
+  type        = {IMF Working Paper},
+  number      = {23/128},
+  address     = {Washington, DC},
+  year        = {2023},
+  doi         = {10.5089/9798400242342.001},
+  note        = {verified 31 Oct 2026: Crossref record (June 2023; Crossref lists ``Vernon-Lin'', the IMF page Nate Vernon); entry and reading as in paper 5.1: a model of fuel use, emissions, revenue and welfare for carbon pricing and related policies, used in IMF Article IV reports and technical assistance}
+}
+
+% --- Investment needs ----------------------------------------------------------------
+@techreport{IHLEG2024,
+  author      = {Bhattacharya, Amar and Songwe, Vera and Soubeyran, Eléonore and Stern, Nicholas},
+  title       = {Raising Ambition and Accelerating Delivery of Climate Finance: Third Report of the Independent High-Level Expert Group on Climate Finance},
+  institution = {Grantham Research Institute on Climate Change and the Environment, London School of Economics and Political Science},
+  address     = {London},
+  year        = {2024},
+  url         = {https://www.lse.ac.uk/granthaminstitute/wp-content/uploads/2024/11/Raising-ambition-and-accelerating-delivery-of-climate-finance_Third-IHLEG-report.pdf},
+  note        = {verified 31 Oct 2026: report PDF read: climate investment of ``around \$6.3--6.7 trillion per year by 2030, of which \$2.7--2.8 trillion is in advanced economies, \$1.3--\$1.4 trillion in China, and \$2.3--2.5 trillion in EMDCs other than China''; clean energy transition ``around \$4.8 trillion per year by 2030''; avoided costs and co-benefits ``about 15--18\% of global GDP in 2030''. The report gives no share of GDP for EMDCs other than China}
+}
+
+@book{RozenbergFay2019,
+  editor    = {Rozenberg, Julie and Fay, Marianne},
+  title     = {Beyond the Gap: How Countries Can Afford the Infrastructure They Need while Protecting the Planet},
+  publisher = {World Bank},
+  address   = {Washington, DC},
+  year      = {2019},
+  doi       = {10.1596/978-1-4648-1363-4},
+  note      = {verified 31 Oct 2026: Crossref record; World Bank press release of 19 Feb 2019 and the report's catalogue summary: needs of 2 to 8 percent of GDP a year to 2030 in low- and middle-income countries, 4.5 percent in the preferred scenario, plus 2.7 percent of GDP a year for operations and maintenance}
+}
+
+@techreport{Kalra2023,
+  author      = {Kalra, Nidhi and Molina-Pérez, Edmundo and Syme, James and Esteves, Fernando and Cortés, Hermilio and Rodríguez-Cervantes, Mateo Tonatiuh and Espinoza-Juárez, Víctor Manuel and Jaramillo, Marcela and Baron, Richard and Alatorre, Claudio and Buttazzoni, Marco and Vogt-Schilb, Adrien},
+  title       = {The Benefits and Costs of Reaching Net Zero Emissions in {Latin America} and the {Caribbean}},
+  institution = {Inter-American Development Bank and RAND Corporation},
+  type        = {IDB Monograph},
+  number      = {IDB-MG-01159},
+  address     = {Washington, DC},
+  year        = {2023},
+  doi         = {10.18235/0005330},
+  note        = {verified 31 Oct 2026: Crossref record (12 authors, 7 Dec 2023) and report PDF read: SiSePuede open-source toolkit; All Actions vs Traditional Development 2025--2050, 2019 US dollars, ``discounted using a 7\% discount rate''; net benefits \$2.7 trillion; fuel savings \$900 billion, avoided pollution \$500 billion, other health, safety and productivity gains \$1 trillion, additional investment \$1.3 trillion; financial costs and benefits only: net benefits \$700 billion; median across scenarios about \$1 trillion}
+}
+
+% --- Cost of capital -----------------------------------------------------------------
+@techreport{IEA2024, author={{International Energy Agency}}, title={Reducing the Cost of Capital: Strategies to Unlock Clean Energy Investment in Emerging and Developing Economies}, institution={IEA}, address={Paris}, year={2024}, url={https://www.iea.org/reports/reducing-the-cost-of-capital},
+  note={verified 31 Oct 2026 (entry as in papers 3.1 and 3.2; executive summary re-checked through the IEA page listing): cost of capital for utility-scale solar in EMDE ``well over twice'' that in advanced economies; financing ``around half or more'' of the LCOE; narrowing the gap by 1 percentage point would cut EMDE clean energy financing costs by about USD 150 billion a year}}
+
+@article{Steffen2020, author={Steffen, Bjarne}, title={Estimating the Cost of Capital for Renewable Energy Projects}, journal={Energy Economics}, volume={88}, pages={104783}, year={2020}, doi={10.1016/j.eneco.2020.104783},
+  note={verified 31 Oct 2026: Crossref record; abstract (as in papers 3.1 and 5.1): cost of capital for renewable projects from 46 countries, significantly higher on average in developing countries; the CPAT documentation cites it for about 7.5 percent in OECD and 10 percent in non-OECD countries}}
+
+@article{Ameli2021, author={Ameli, Nadia and Dessens, Olivier and Winning, Matthew and Cronin, Jennifer and Chenet, Hugues and Drummond, Paul and Calzadilla, Alvaro and Anandarajah, Gabrial and Grubb, Michael}, title={Higher Cost of Finance Exacerbates a Climate Investment Trap in Developing Economies}, journal={Nature Communications}, volume={12}, pages={4046}, year={2021}, doi={10.1038/s41467-021-24305-3},
+  note={verified 31 Oct 2026: Crossref record; abstract: higher financing costs in developing economies make low-carbon investment dearer relative to fossil investment and create a climate investment trap}}
+
+@article{Calcaterra2024, author={Calcaterra, Matteo and Aleluia Reis, Lara and Fragkos, Panagiotis and Briera, Thibault and de Boer, Harmen Sytze and Egli, Florian and others}, title={Reducing the Cost of Capital to Finance the Energy Transition in Developing Countries}, journal={Nature Energy}, volume={9}, number={10}, pages={1241--1251}, year={2024}, doi={10.1038/s41560-024-01606-7},
+  note={verified 31 Oct 2026: Crossref record (vol. 9, no. 10, pp. 1241--1251); abstract: in five integrated models, convergence of developing-country costs of capital toward developed-country levels brings more renewable and more affordable energy}}
+
+@article{HirthSteckel2016, author={Hirth, Lion and Steckel, Jan Christoph}, title={The Role of Capital Costs in Decarbonizing the Electricity Sector}, journal={Environmental Research Letters}, volume={11}, number={11}, pages={114010}, year={2016}, doi={10.1088/1748-9326/11/11/114010},
+  note={verified 31 Oct 2026: Crossref record; abstract (via TU Berlin and PIK repository records): low-carbon technologies are more capital-intensive than fossil plants, so high WACC tends to encourage fossil fuels and countries with expensive capital need a higher carbon price for the same decarbonization; at USD 50/t and a 3 percent WACC the cost-optimal mix is 40 percent renewable}}
+
+% --- Discounting and carbon ----------------------------------------------------------
+@techreport{WorldBank2016Discount, author={{World Bank}}, title={Discounting Costs and Benefits in Economic Analysis of {World Bank} Projects}, institution={World Bank}, type={Guidance note}, address={Washington, DC}, year={2016}, url={https://documents1.worldbank.org/curated/en/099610503022315638/pdf/IDU02e978a2a023f704c140bb1b082595e67e593.pdf},
+  note={verified 31 Oct 2026: PDF read (dated 9 May 2016): a 3 percent per capita growth rate translates into a 6 percent discount rate; using the 25--75 percentile range ``the discount rate lies between 2 and 10 percent''; recommends sensitivity analysis}}
+
+@techreport{CPLC2017, author={{High-Level Commission on Carbon Prices}}, title={Report of the High-Level Commission on Carbon Prices}, institution={Carbon Pricing Leadership Coalition and World Bank}, address={Washington, DC}, year={2017}, url={https://www.carbonpricingleadership.org/report-of-the-highlevel-commission-on-carbon-prices},
+  note={verified 31 Oct 2026: report summary: carbon prices of at least US\$40--80 per ton of CO2 by 2020 and US\$50--100 by 2030 consistent with the Paris temperature target}}
+
+@techreport{WorldBank2024SPC, author={{World Bank}}, title={2024 Guidance Note on Shadow Price of Carbon in Economic Analysis}, institution={World Bank}, address={Washington, DC}, year={2024}, url={https://policycommons.net/artifacts/11755508/2024-guidance-note-on-shadow-price-of-carbon-in-economic-analysis-english/12646796/},
+  note={verified 31 Oct 2026: catalogue record (14 March 2024) and summaries: shadow prices of carbon are a corporate commitment for IBRD and IDA investment project financing; the note follows the High-Level Commission's price range. The full text was not reachable (HTTP 403), so the paper cites it only for that}}
+
+% --- Public spending -----------------------------------------------------------------
+@article{HendrenSprungKeyser2020, author={Hendren, Nathaniel and Sprung-Keyser, Ben}, title={A Unified Welfare Analysis of Government Policies}, journal={Quarterly Journal of Economics}, volume={135}, number={3}, pages={1209--1318}, year={2020}, doi={10.1093/qje/qjaa006},
+  note={verified 31 Oct 2026: Crossref record; abstract: the marginal value of public funds, the ratio of beneficiaries' willingness to pay to the net cost to government, applied to 133 US policy changes}}
+
+@article{FinkelsteinHendren2020, author={Finkelstein, Amy and Hendren, Nathaniel}, title={Welfare Analysis Meets Causal Inference}, journal={Journal of Economic Perspectives}, volume={34}, number={4}, pages={146--167}, year={2020}, doi={10.1257/jep.34.4.146},
+  note={verified 31 Oct 2026: Crossref record; abstract: sets out the MVPF as a way to combine causal estimates with welfare analysis}}
+
+@article{AuriolWarlters2012, author={Auriol, Emmanuelle and Warlters, Michael}, title={The Marginal Cost of Public Funds and Tax Reform in {Africa}}, journal={Journal of Development Economics}, volume={97}, number={1}, pages={58--72}, year={2012}, doi={10.1016/j.jdeveco.2011.01.003},
+  note={verified 31 Oct 2026: Crossref record; abstract (IDEAS): 38 African countries; base-case average MCF across five tax instruments 1.2; 1.1 if each country uses its cheapest instrument, often but not always VAT; the model accounts for the informal sector}}
+
+@article{KlevenKreiner2006, author={Kleven, Henrik Jacobsen and Kreiner, Claus Thustrup}, title={The Marginal Cost of Public Funds: Hours of Work versus Labor Force Participation}, journal={Journal of Public Economics}, volume={90}, number={10--11}, pages={1955--1973}, year={2006}, doi={10.1016/j.jpubeco.2006.03.006},
+  note={verified 31 Oct 2026: Crossref record; abstract (IDEAS): 15 European countries; with the participation margin, estimated MCFs ``centre around 2'' for Scandinavian and Central/Northern Continental European countries for proportional tax changes}}
+
+@article{Pritchett2000, author={Pritchett, Lant}, title={The Tyranny of Concepts: {CUDIE} (Cumulated, Depreciated, Investment Effort) Is Not Capital}, journal={Journal of Economic Growth}, volume={5}, number={4}, pages={361--384}, year={2000}, doi={10.1023/A:1026551519329},
+  note={verified 31 Oct 2026: Crossref record; title and abstract: cumulated public investment spending is a poor measure of public capital where investment is inefficient}}
+
+@techreport{IMF2015PIM, author={{International Monetary Fund}}, title={Making Public Investment More Efficient}, institution={International Monetary Fund}, type={IMF Policy Paper}, address={Washington, DC}, year={2015}, url={https://www.imf.org/external/pp/longres.aspx?id=4959},
+  note={verified 31 Oct 2026: IMF Survey article and IMF presentation on the paper: 134 countries; average public investment efficiency gap about 30 percent; 40 percent in low-income developing countries, 27 percent in emerging markets, 13 percent in advanced economies; strengthening public investment management institutions could close up to two-thirds of the gap}}
+
+@techreport{Buffie2012, author={Berg, Andrew and Portillo, Rafael and Buffie, Edward F. and Pattillo, Catherine and Zanna, Luis-Felipe}, title={Public Investment, Growth, and Debt Sustainability: Putting Together the Pieces}, institution={International Monetary Fund}, type={IMF Working Paper}, number={12/144}, year={2012}, doi={10.5089/9781475504071.001},
+  note={verified 31 Oct 2026: Crossref record and IDEAS (author order as listed there); abstract: a model of public investment surges in low-income countries, financing through concessional, domestic and external commercial debt, fiscal adjustment, and the risks of poor execution and low returns to public capital}}
+
+@article{Gupta2014, author={Gupta, Sanjeev and Kangur, Alvar and Papageorgiou, Chris and Wane, Abdoul}, title={Efficiency-Adjusted Public Capital and Growth}, journal={World Development}, volume={57}, pages={164--178}, year={2014}, doi={10.1016/j.worlddev.2013.11.012},
+  note={verified 31 Oct 2026: Crossref record; title and abstract: public capital stocks adjusted for investment efficiency, and their effect on growth}}
+
+@techreport{HerreraPang2005, author={Herrera, Santiago and Pang, Gaobo}, title={Efficiency of Public Spending in Developing Countries: An Efficiency Frontier Approach}, institution={World Bank}, type={Policy Research Working Paper}, number={3645}, year={2005}, doi={10.1596/1813-9450-3645},
+  note={verified 31 Oct 2026: Crossref record; abstract (IDEAS): FDH and DEA frontiers for health and education outputs in 140 countries, 1996--2002; efficiency lower where spending, the wage share and aid dependence are higher. The abstract gives no efficiency scores; none is quoted}}
+
+@article{GuptaVerhoeven2001, author={Gupta, Sanjeev and Verhoeven, Marijn}, title={The Efficiency of Government Expenditure: Experiences from {Africa}}, journal={Journal of Policy Modeling}, volume={23}, number={4}, pages={433--467}, year={2001}, doi={10.1016/S0161-8938(00)00036-3},
+  note={verified 31 Oct 2026: Crossref record; abstract of the IMF working-paper version (WP/97/153): education and health spending in 38 African countries, 1984--95, less efficient on average than in Asia and the Western Hemisphere}}
+
+@techreport{AdamBevan2014, author={Adam, Christopher S. and Bevan, David L.}, title={Public Investment, Public Finance, and Growth: The Impact of Distortionary Taxation, Recurrent Costs, and Incomplete Appropriability}, institution={International Monetary Fund}, type={IMF Working Paper}, number={14/73}, year={2014}, doi={10.5089/9781484364819.001},
+  note={verified 31 Oct 2026: Crossref record; title: the growth effect of public investment net of distortionary taxation and recurrent costs}}
+
+@article{EngelFischerGaletovic2013, author={Engel, Eduardo and Fischer, Ronald and Galetovic, Alexander}, title={The Basic Public Finance of Public-Private Partnerships}, journal={Journal of the European Economic Association}, volume={11}, number={1}, pages={83--111}, year={2013}, doi={10.1111/j.1542-4774.2012.01105.x},
+  note={verified 31 Oct 2026: Crossref record; abstract (IDEAS): PPPs ``cannot be justified because they free public funds''; when justified on efficiency grounds, the optimal contract has a minimum revenue guarantee and a revenue cap}}
+
+@techreport{IMFWB2017LICDSF, author={{International Monetary Fund and World Bank}}, title={Guidance Note on the Bank-Fund Debt Sustainability Framework for Low Income Countries}, institution={International Monetary Fund and World Bank}, address={Washington, DC}, year={2017}, url={https://www.imf.org/en/Publications/Policy-Papers/Issues/2018/02/14/pp122617guidance-note-on-lic-dsf},
+  note={verified 31 Oct 2026: IMF summary of the reform and the World Bank's LIC DSF template documentation: PPP shock is a permanent increase in public debt equal to 35 percent of the PPP capital stock, applied when the stock exceeds 3 percent of GDP; guidance note dated 26 December 2017}}
+
+@techreport{IRENA2025, author={{International Renewable Energy Agency}}, title={Renewable Power Generation Costs in 2024}, institution={IRENA}, address={Abu Dhabi}, year={2025}, url={https://www.irena.org/Publications/2025/Jul/Renewable-Power-Generation-Costs-in-2024},
+  note={verified 31 Oct 2026: IRENA summary (July 2025) and coverage of it: global weighted average total installed cost of utility-scale solar PV USD 691/kW in 2024}}
+
+% --- Illustrative tool results (cleared by the author as illustrative, 29 Oct 2026) ----
+@misc{InvNeedsTool2026,
+  author = {{Mitigation Investment Needs Model}},
+  title = {Country Results: Investment Needs and Incremental Cost in 2030, Version 1.1},
+  howpublished = {Climate Fiscal AI Tools, Macro-Fiscal-Energy Scenario Tool, workbook Mitigation\_Investment\_Needs\_v1.1.xlsx, sheet Results\_Country (Kenya, Uganda, St. Lucia)},
+  year = {2026},
+  note = {Illustrative results from the tool, not official estimates}
+}
+
+@misc{SISEPUEDEUganda2025,
+  author = {{SISEPUEDE}},
+  title = {Uganda Application: Cost-Benefit Results for Net-Zero and {NDC} 2.0 Strategies, Run of October 2025},
+  howpublished = {Model output file cba\_results.csv; net present values and shares computed by the author},
+  year = {2025},
+  note = {Illustrative results from the model, not official estimates}
+}

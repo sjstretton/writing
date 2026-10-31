@@ -166,7 +166,14 @@ website:
               contents:
                 - text: "Working paper"
                   href: modelling/5-modelling/ElasticityValidation/working-paper.qmd
-        - modelling/6-modular-upgrades.qmd
+        - section: "6. Modular Upgrades"
+          href: modelling/6-modular-upgrades.qmd
+          contents:
+            - section: "6.3 Public Investment in CPAT"
+              href: modelling/6-modular-upgrades/PublicInvestment/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: modelling/6-modular-upgrades/PublicInvestment/working-paper.qmd
         - modelling/7-analytics.qmd
         # END modelling sidebar
   page-footer:

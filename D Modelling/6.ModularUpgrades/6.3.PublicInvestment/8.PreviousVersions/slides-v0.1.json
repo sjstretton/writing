@@ -1,0 +1,49 @@
+{
+  "series": "CPAT Companion Paper No. 6.3",
+  "title": "Public Investment in CPAT",
+  "subtitle": "Investment needs, the cost of capital and the efficiency of public spending",
+  "message": "The cost of capital, not the size of the bill, decides whether developing-country climate investment pays its way. A stylized clean asset fails above 12.6 percent, almost exactly CPAT's default for lower-middle-income countries; a spending test shows the budget's problem is often liquidity, not value.",
+  "problem": {
+    "title": "Models price policies but not the capital",
+    "stats": [
+      {
+        "value": "12.6%",
+        "label": "break-even cost of capital for the stylized asset"
+      },
+      {
+        "value": "4–5%",
+        "label": "of GDP: 2030 investment needs in Kenya, Uganda and St Lucia"
+      },
+      {
+        "value": "<1/5",
+        "label": "of Uganda's net-zero benefits reach the budget as cash"
+      }
+    ],
+    "text": "CPAT's power model reports investment at default costs of capital of 7.5 to 15 percent, but outside power it has no capital, no payer split and no test of whether public money should pay."
+  },
+  "mechanism": {
+    "title": "Three lenses on the same investment",
+    "image": "figures/fig_lenses.png",
+    "imageWidth": 5.6,
+    "imageHeight": 2.58,
+    "caption": "Net benefit of one year's 2030 investment, US$ bn a year (stylized savings).",
+    "points": [
+      "Developing countries barely gain at market rates; at 6% they gain $131bn.",
+      "Spend public money where its value per dollar beats the cost of raising it (about 1.2).",
+      "A PPA priced above the government's rate is debt in disguise."
+    ]
+  },
+  "action": {
+    "title": "Price capital, then test the budget",
+    "results": [
+      "Island case: a $108m plant fails on a 7-year loan; concessional finance or a guaranteed PPA rescues it.",
+      "Kenya and Uganda: the increment pays only when cleaner air counts.",
+      "Country results are illustrative tool output."
+    ],
+    "todo": [
+      "Build an open table of WACC by country and technology.",
+      "Run the budget test with a cost of public funds that rises in cash-short years.",
+      "Run SISEPUEDE beyond Latin America."
+    ]
+  }
+}

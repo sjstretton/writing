@@ -1,49 +1,262 @@
 {
-  "series": "CPAT Companion Paper No. 6.3",
-  "title": "Public Investment in CPAT",
-  "subtitle": "Investment needs, the cost of capital and the efficiency of public spending",
-  "message": "The cost of capital, not the size of the bill, decides whether developing-country climate investment pays its way. A stylized clean asset fails above 12.6 percent, almost exactly CPAT's default for lower-middle-income countries; a spending test shows the budget's problem is often liquidity, not value.",
-  "problem": {
-    "title": "Models price policies but not the capital",
-    "stats": [
-      {
-        "value": "12.6%",
-        "label": "break-even cost of capital for the stylized asset"
+  "series": "Climate Fiscal Policy Brief No. 6.3 · October 2026",
+  "title": "Price the Capital, Then Test the Budget",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Price the Capital, Then Test the Budget",
+      "subtitle": "Climate investment needs, the cost of capital and public spending in CPAT",
+      "message": "The cost of capital, not the size of the bill, decides whether clean capital pays its way. And a project worth building can still break the budget's cash flow.",
+      "author": "Stephen J. Stretton · writing in a personal capacity",
+      "notes": "Two extensions to the World Bank-IMF Climate Policy Assessment Tool: investment needs priced at three rates, and a public-money test with financing routes on one ledger."
+    },
+    {
+      "type": "stats",
+      "title": "Ministries' climate model prices policies, but not the capital they call for",
+      "stats": [
+        {
+          "value": "$2.3–2.5tn",
+          "label": "a year of climate investment needed by 2030 in developing countries other than China"
+        },
+        {
+          "value": ">2×",
+          "label": "cost of capital for utility-scale solar in emerging and developing economies vs advanced ones"
+        },
+        {
+          "value": "Power only",
+          "label": "the one sector where CPAT attaches capital to physical change; no split of who pays, no public-money test"
+        }
+      ],
+      "text": "CPAT tells a ministry what a carbon price raises and cuts in more than 180 countries. Its power model reports investment; elsewhere a cleaner boiler is only lower fuel use.",
+      "source": "IHLEG (2024); IEA (2024), Reducing the Cost of Capital; CPAT documentation (2024); working paper 6.3."
+    },
+    {
+      "type": "points",
+      "title": "Price the same investment three ways, to separate the price of finance from the value of time",
+      "points": [
+        {
+          "lead": "Lens (a), market rate:",
+          "text": "what investors and households pay, by country and technology."
+        },
+        {
+          "lead": "Lens (b), 6 percent:",
+          "text": "the World Bank's social rate, the value of time."
+        },
+        {
+          "lead": "Lens (c), 6 percent plus co-benefits and carbon:",
+          "text": "what society gets."
+        },
+        {
+          "lead": "The gap between (a) and (c)",
+          "text": "is the case for public finance, and what de-risking can buy down."
+        }
+      ],
+      "source": "Working paper 6.3, investment needs; World Bank (2016) discounting note; High-Level Commission on Carbon Prices (2017)."
+    },
+    {
+      "type": "figure",
+      "title": "A typical clean asset pays its way at 6 percent and breaks even at 12.6 percent",
+      "image": "figures/fig_breakeven.png",
+      "caption": "Saving less capital charge per $1,000 of capital; stylized asset saving $133 a year for 25 years.",
+      "points": [
+        {
+          "lead": "Per $1,000:",
+          "text": "+$43 a year at 7.5%, +$1 at 12.5%, −$22 at 15%."
+        },
+        {
+          "lead": "CPAT's default",
+          "text": "is a country rate plus a technology premium (2.9 points for LMIC solar); the income-group rates are an option."
+        },
+        {
+          "lead": "Convention matters:",
+          "text": "with savings from year zero, as in CPAT, break-even is 14.8%."
+        }
+      ],
+      "source": "Working paper 6.3, Proposition 1; CPAT documentation (2024); CPAT-AI repository, methods/Power.md (2026)."
+    },
+    {
+      "type": "figure",
+      "title": "Developing countries barely gain from clean capital at market rates; at 6 percent they gain $131bn a year",
+      "image": "figures/fig_lenses.png",
+      "caption": "Savings less capital charge on one year's 2030 investment, US$ billion a year (stylized savings rate).",
+      "points": [
+        {
+          "lead": "Developing, excluding China:",
+          "text": "$45bn at 10.5%, −$52bn at 15%, $131bn at 6%."
+        },
+        {
+          "lead": "Each point off the cost of capital",
+          "text": "is worth about $36bn a year per year of $4.8tn clean energy investment."
+        },
+        {
+          "lead": "Close the gap:",
+          "text": "price carbon and pollution, lend concessionally, guarantee contracts, pool and refinance (Briefs 3.1, 3.2)."
+        }
+      ],
+      "source": "Working paper 6.3, Table 1; IHLEG (2024) investment midpoints. An illustration of scale, not an estimate."
+    },
+    {
+      "type": "points",
+      "title": "Fund a measure when its value per budget dollar beats the cost of raising a dollar of tax",
+      "points": [
+        {
+          "lead": "The test:",
+          "text": "value to people over net cost to the budget (the MVPF) against the cost of public funds, about 1.2 in Africa."
+        },
+        {
+          "lead": "Count only the gap",
+          "text": "the private sector will not fill, and charge delivery losses once: efficiency gaps are 40% in low-income countries."
+        },
+        {
+          "lead": "Revenue that comes back",
+          "text": "saves more than a dollar of tax; who keeps a fuel saving changes the budget case, not the economic value."
+        },
+        {
+          "lead": "With a cost of funds of one,",
+          "text": "the rule is the World Bank's usual net present value test."
+        }
+      ],
+      "source": "Working paper 6.3, Propositions 2–3; Hendren and Sprung-Keyser (2020); Auriol and Warlters (2012); IMF (2015)."
+    },
+    {
+      "type": "figure",
+      "title": "A solar plant worth $108 million passes every test but cash on a seven-year loan",
+      "image": "figures/fig_island.png",
+      "caption": "Stylized island: $2bn GDP, 85% debt, diesel power; $120m solar plant saving $20.5m a year.",
+      "points": [
+        {
+          "lead": "Loan 8%, 7 years:",
+          "text": "value per budget dollar 4.2, but $14.6m a year short and debt up 6% of GDP."
+        },
+        {
+          "lead": "Concessional loan:",
+          "text": "+$6.6m a year from the start."
+        },
+        {
+          "lead": "PPA:",
+          "text": "off the debt figures, but commitments worth 7.6–8.9% of GDP."
+        }
+      ],
+      "source": "Working paper 6.3, worked example, Table 2 (sids_worked_example.py)."
+    },
+    {
+      "type": "points",
+      "title": "Tenor eases cash but not cost, and a power purchase agreement is debt in disguise",
+      "points": [
+        {
+          "lead": "Tenor is not price.",
+          "text": "At the government's own rate the 7- and 25-year loans cost the same (−$38m); a fixed cost of funds even prefers the short one."
+        },
+        {
+          "lead": "Only a cost of funds that rises in cash-short years",
+          "text": "flips the ranking ($63m against $28m)."
+        },
+        {
+          "lead": "A PPA priced above the government's rate",
+          "text": "commits more than the plant costs: an excess of $31m unguaranteed, $5m guaranteed."
+        },
+        {
+          "lead": "The guarantee",
+          "text": "cuts the producer's rate from 11% to 8.5% and is worth about $31m to the island."
+        }
+      ],
+      "source": "Working paper 6.3, Propositions 3–4 and Table 2; Engel, Fischer and Galetovic (2013)."
+    },
+    {
+      "type": "table",
+      "title": "Country runs: 2030 needs of 4–5% of GDP, and the increment pays only when cleaner air counts",
+      "header": [
+        "",
+        "Kenya",
+        "Uganda",
+        "St Lucia"
+      ],
+      "widths": [
+        4.4,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "rows": [
+        [
+          "Total investment (% of GDP)",
+          "4.7",
+          "4.0",
+          "4.4"
+        ],
+        [
+          "Market cost of capital (%)",
+          "9.7",
+          "8.5",
+          "10.5"
+        ],
+        [
+          "Incremental cost at market rate ($m/yr)",
+          "120",
+          "56",
+          "−1.2"
+        ],
+        [
+          "Incremental cost at 6% ($m/yr)",
+          "68",
+          "39",
+          "−2.3"
+        ],
+        [
+          "At 6% with local co-benefits ($m/yr)",
+          "−7",
+          "−3.5",
+          "−3.0"
+        ]
+      ],
+      "note": "Positive is a net cost. Uganda's SISEPUEDE run: net-zero worth $161bn at 6%, but only 18% of benefits are cash a budget would see. Illustrative tool results, not official estimates.",
+      "source": "Working paper 6.3, Table 3; Mitigation Investment Needs Model v1.1 (2026); SISEPUEDE Uganda run (Oct 2025)."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the extensions show",
+        "items": [
+          {
+            "lead": "Cost of capital decides:",
+            "text": "break-even at 12.6% for a typical clean asset."
+          },
+          {
+            "lead": "Each point is worth",
+            "text": "about $36bn a year per year of global clean energy investment."
+          },
+          {
+            "lead": "Cash, not value:",
+            "text": "the island plant is worth $108m but leaves the budget $14.6m a year short."
+          },
+          {
+            "lead": "Hidden liabilities:",
+            "text": "PPA commitments exceed the debt they avoid."
+          }
+        ]
       },
-      {
-        "value": "4–5%",
-        "label": "of GDP: 2030 investment needs in Kenya, Uganda and St Lucia"
-      },
-      {
-        "value": "<1/5",
-        "label": "of Uganda's net-zero benefits reach the budget as cash"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {
+            "lead": "Finance ministries:",
+            "text": "ask for needs at your own cost of capital and at 6%, side by side."
+          },
+          {
+            "lead": "Debt managers:",
+            "text": "use a cost of funds that rises when cash is short; count PPA commitments as liabilities."
+          },
+          {
+            "lead": "Teams running CPAT:",
+            "text": "say which cost-of-capital setting and convention you used."
+          },
+          {
+            "lead": "The CPAT team:",
+            "text": "publish the cost of capital by country and technology as open data."
+          }
+        ]
       }
-    ],
-    "text": "CPAT's power model reports investment at default costs of capital of 7.5 to 15 percent, but outside power it has no capital, no payer split and no test of whether public money should pay."
-  },
-  "mechanism": {
-    "title": "Three lenses on the same investment",
-    "image": "figures/fig_lenses.png",
-    "imageWidth": 5.6,
-    "imageHeight": 2.58,
-    "caption": "Net benefit of one year's 2030 investment, US$ bn a year (stylized savings).",
-    "points": [
-      "Developing countries barely gain at market rates; at 6% they gain $131bn.",
-      "Spend public money where its value per dollar beats the cost of raising it (about 1.2).",
-      "A PPA priced above the government's rate is debt in disguise."
-    ]
-  },
-  "action": {
-    "title": "Price capital, then test the budget",
-    "results": [
-      "Island case: a $108m plant fails on a 7-year loan; concessional finance or a guaranteed PPA rescues it.",
-      "Kenya and Uganda: the increment pays only when cleaner air counts.",
-      "Country results are illustrative tool output."
-    ],
-    "todo": [
-      "Build an open table of WACC by country and technology.",
-      "Run the budget test with a cost of public funds that rises in cash-short years.",
-      "Run SISEPUEDE beyond Latin America."
-    ]
-  }
+    }
+  ]
 }

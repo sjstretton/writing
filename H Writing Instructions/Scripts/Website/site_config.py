@@ -95,6 +95,7 @@ WEB_PAPERS = [
     "5.2.CPATAIImplementation",
     "5.3.CPATValidation",
     "5.4.ElasticityValidation",
+    "6.3.PublicInvestment",
 ]
 
 # Books that are also read on the site, one page per chapter, under <part dir>/books/<BookName>/

@@ -1,4 +1,4 @@
-"""Paper 4.6, section 6: country runs (illustrative results from the tools, not official estimates).
+"""Paper 6.3, section on country runs: country runs (illustrative results from the tools, not official estimates).
 
 Run:  python3 country_runs.py  [--tools PATH_TO_climate-fiscal-ai-tools] [--cdpm PATH_TO_CPAT-CDPM]
 
