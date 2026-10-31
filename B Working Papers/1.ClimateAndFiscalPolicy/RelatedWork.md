@@ -6,6 +6,7 @@ Section 1 holds the carbon-pricing series. Paper 1.1 is the overarching paper; t
 
 | Paper | Folder | Role | Version |
 |---|---|---|---|
+| Price Production and Consumption Separately: Carbon Pricing in Open Economies (section overview) | `1.0.OverviewClimateAndFiscalPolicy.qmd`; theme deck in `1.Presentation` | Overview | 0.2 (31 Oct 2026); 0.1 in `8.PreviousVersions` |
 | Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies | `1.1.OpenEconomyCarbonPricing` | Overarching | Working paper 0.3 (29 Oct 2026); brief CFPB 1.1; earlier versions in `8.PreviousVersions` |
 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | `1.2.FeebatesAndOutputBasedRebating` | Companion C2: feebates | Working paper 0.3 (29 Oct 2026); brief CFPB 1.2; 0.2 (May 2024) and 0.1 (Feb 2023) in `8.PreviousVersions` |
 | Industrial Feebates and Competitiveness | `1.2…/3.RelatedPiecesAndLinks/IndustrialFeebates` | Companion C2, industry side | – |
@@ -21,7 +22,7 @@ Section 1 holds the carbon-pricing series. Paper 1.1 is the overarching paper; t
 | The Right Policy at the Wrong Time: Carbon Pricing and the Order of Things (book) | `6.Additional/6.Books/6.2.CarbonPricingRightPolicyWrongTime` | Chapters 1, 5 and 11: feebates, pricing across borders, sequencing |
 | Toy Model of Global Mitigation Incentives; Mitigation Economics tables | `6.Additional/5.Analytics/5.4.CarbonPricingPoliticalEconomyAndOptimality` | Dynamic version of 1.1's crediting and race-to-the-top results |
 | An Instrument Diagnostic for Climate Policy: A Six-Driver Framework | `5.Analytics/5.1.ExciseFiscalDiagnostic/3.BackgroundPapers/Background-PoliticalEconomyMetric.qmd` | Evidence on political feasibility |
-| Other fiscal policy papers (Rent Tax; Stranded by Contract: legacy coal PPAs) | `6.Additional/1.OtherFiscalPolicy` | Not part of the series |
+| Other fiscal policy papers: 1.4 Rent Tax; 1.5 Stranded by Contract (India legacy coal PPAs), moved from this section on 30 Oct 2026 | `6.Additional/1.OtherFiscalPolicy` | Not part of the series |
 
 A fuller index with word counts and file formats: `1.1.OpenEconomyCarbonPricing/5.Notes/Series-Index.md`.
 

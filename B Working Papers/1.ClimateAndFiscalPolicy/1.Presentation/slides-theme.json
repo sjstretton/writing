@@ -1,0 +1,111 @@
+{
+  "series": "Climate Fiscal Policy Briefs, Section 1: Climate and Fiscal Policy",
+  "title": "Price Production and Consumption Separately",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Price Production and Consumption Separately",
+      "subtitle": "Carbon pricing in open economies: Briefs 1.1, 1.2, 1.3, 1.6 and 1.7",
+      "message": "Carbon prices stall because one instrument does two jobs. Price production with a revenue-neutral feebate, consumption through VAT and a forward obligation on fuel suppliers, and measure both on one scale."
+    },
+    {
+      "type": "statement",
+      "title": "Why carbon prices stall in open economies",
+      "text": "A tax on domestic production charges exports, which are consumed abroad, and spares imports, which are consumed at home. Exporters lose share, so governments exempt industry and hold the rate down.",
+      "points": [
+        "Job 1, production: reward firms for cutting emissions per unit of output.",
+        "Job 2, consumption: make buyers pay for the carbon in what they use, imports included.",
+        "CBAM protects the EU market from untaxed imports, but does nothing for exporters and credits only prices paid."
+      ]
+    },
+    {
+      "type": "figure",
+      "title": "The two-track architecture (1.1)",
+      "layout": "wide",
+      "image": "../1.1.OpenEconomyCarbonPricing/1.Presentation/figures/fig1_two_track_results.png",
+      "imageHeight": 2.2,
+      "aspect": 3.12,
+      "caption": "Stylized steel-like sector: e0 = 2 tCO2/t, p0 = $600/t, 30% intensity cut at $50/tCO2.",
+      "points": [
+        "Residual cost: a feebate raises the price $15/t (2.5%); a tax at the same rate, $85/t (14%).",
+        "Crediting: a payment above half the feebate rate makes adoption a net gain; best rate = payment.",
+        "Race to the top: each exporter's most competitive feebate rate equals the charge in its markets."
+      ]
+    },
+    {
+      "type": "figure",
+      "title": "Feebates: the full price at the margin (1.2)",
+      "image": "../1.2.FeebatesAndOutputBasedRebating/1.Presentation/figures/fig1-power-tax-vs-feebate.png",
+      "imageWidth": 5.2,
+      "imageHeight": 2.88,
+      "caption": "Change in generation cost per MWh at $50/tCO2, stylized grid of 60% coal: tax against feebate.",
+      "points": [
+        "Fee above a sector benchmark, rebate below; fees fund rebates.",
+        "Same merit order and same clean-versus-coal choice as a tax.",
+        "India at $50/t: tariff +$1/MWh under a feebate, +$36 under a tax.",
+        "Uniform-price wholesale market: +$13/MWh."
+      ]
+    },
+    {
+      "type": "figure",
+      "title": "A consumption tax through VAT (1.6)",
+      "image": "../1.6.CarbonConsumptionTax/1.Presentation/figures/fig1-effective-rates.png",
+      "imageWidth": 4.9,
+      "imageHeight": 2.93,
+      "caption": "Effective VAT rate by embodied-carbon intensity, 2027–2037, stylized path.",
+      "points": [
+        "A carbon component in VAT, imports and EU goods alike; exports zero-rated; rebuttable defaults.",
+        "A forward obligation, fixed a decade ahead, on suppliers of fuel for homes and vehicles.",
+        "Basket: 0.41 kg CO2e per euro (2022); imports twice EU-made goods.",
+        "At €200/t the poorest fifth pays 0.4% of spending more, the richest 0.2% less."
+      ]
+    },
+    {
+      "type": "figure",
+      "title": "CBAM: recognition and scrap shuffling (1.3)",
+      "layout": "wide",
+      "image": "../1.3.IronSteelCBAM/1.Presentation/figures/fig1_scrap_shuffling.png",
+      "imageHeight": 2.2,
+      "aspect": 2.94,
+      "caption": "Scrap shuffling in a stylized exporter: routing scrap-based steel to the EU cuts the embodied carbon the border sees.",
+      "points": [
+        "A revenue-neutral feebate charges the full rate at the margin but earns nothing: its average payment is zero.",
+        "At €80/t, shuffling saves €100–600 per tonne of steel across thirteen exporters, with no cut in emissions.",
+        "Measure by country and sector: shuffling earns nothing; phase in 2027–2034 with relocation reviews."
+      ]
+    },
+    {
+      "type": "figure",
+      "title": "The Total Effective Carbon Price (1.7)",
+      "image": "../1.7.PolicyEquivalentCarbonPriceAndCES/1.Presentation/figures/tecp_example.png",
+      "imageWidth": 5.2,
+      "imageHeight": 2.67,
+      "caption": "Explicit-price metric and TECP by instrument, stylized three-sector economy.",
+      "points": [
+        "The uniform carbon tax that cuts emissions as much as the policy mix.",
+        "Explicit prices: $21/t. TECP: $37/t long run ($32–38), $28 after one year.",
+        "A fuel standard at $166/t adds only $1.",
+        "Lets a country that regulates earn what one that taxes earns."
+      ]
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "todo": [
+        "Exporters: start with a production feebate, in power first, then steel, cement and aluminum.",
+        "EU: recognize the country-sector price signal at the border, feebates included.",
+        "EU: put a forward obligation on fuel suppliers now; move part of VAT onto carbon.",
+        "Crediting facilities: pay for policies, measured as TECP, above half the feebate rate."
+      ],
+      "papers": [
+        "1.0  Price Production and Consumption Separately (overview)",
+        "1.1  A Two-Track Architecture for Carbon Pricing in Open Economies",
+        "1.2  Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill",
+        "1.3  Credit the Price Signal, Not the Payment (CBAM)",
+        "1.6  Carbon Consumption Tax",
+        "1.7  The Total Effective Carbon Price",
+        "Each as a Climate Fiscal Policy Brief and a working paper."
+      ]
+    }
+  ]
+}
