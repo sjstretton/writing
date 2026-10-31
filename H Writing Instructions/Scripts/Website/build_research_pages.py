@@ -1,6 +1,6 @@
 """Build the website's Research pages from the papers themselves, so the site is never out of date.
 
-Writes, in D Website:
+Writes, in E Website:
     research.qmd                 the Research home: a short intro and, for each section, a line and its paper titles
     research/<n>-<slug>.qmd      one page per section: the overview abstract, then each paper's title,
                                  subtitle, current abstract and links (slides, policy brief, full paper)
@@ -14,8 +14,8 @@ import re
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[3]
-ROOT = REPO / "C Writing"
-SITE = REPO / "D Website"
+ROOTS = [REPO / "C Policy and FInance", REPO / "D Modelling"]   # sections 1-4, then 5-7
+SITE = REPO / "E Website"
 PAPERS = SITE / "papers"
 
 # section folder, page slug, sidebar/menu name, one-line description for the Research home,
@@ -85,7 +85,7 @@ def link(label, fname):
 
 def section_page(sec, papers_out):
     folder_name, slug, name, line, overview, deck = sec
-    folder = ROOT / folder_name
+    folder = next((r / folder_name for r in ROOTS if (r / folder_name).is_dir()), ROOTS[0] / folder_name)
     num = folder_name.split(".")[0]
     ov = next((folder / f"{num}.0.Overview").glob("*.qmd"), None)
     ovm = front_matter(ov) if ov else {}

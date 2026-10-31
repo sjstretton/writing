@@ -1,11 +1,11 @@
 """Make the web version of each paper from its master .qmd, so the site shows the paper itself, not only a download.
 
-For each paper in WEB_PAPERS this writes, in D Website:
+For each paper in WEB_PAPERS this writes, in E Website:
     research/<section-slug>/<PaperName>/index.qmd   a copy of the master with web settings
     research/<section-slug>/<PaperName>/<PaperName>.bib
     research/<section-slug>/<PaperName>/<figure paths>   every figure the paper uses, at the same relative path
 
-The master stays where it is (C Writing/<section>/<paper folder>/<PaperName>.qmd) and is the only file to edit.
+The master stays where it is (C Policy and FInance or D Modelling/<section>/<paper folder>/<PaperName>.qmd) and is the only file to edit.
 The web copy is NOT a master: it is deleted and rewritten on every compile, and its first line says so.
 
 What changes in the copy:
@@ -21,11 +21,11 @@ import shutil
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[3]
-ROOT = REPO / "C Writing"
-SITE = REPO / "D Website"
+ROOTS = [REPO / "C Policy and FInance", REPO / "D Modelling"]   # sections 1-4, then 5-7
+SITE = REPO / "E Website"
 PAPERS = SITE / "papers"
 
-# paper folder (as under C Writing/<section>/), website section slug
+# paper folder (as under C Policy and FInance or D Modelling/<section>/), website section slug
 WEB_PAPERS = [
     ("1.1.OpenEconomyCarbonPricing", "1-carbon-pricing"),
 ]
@@ -35,7 +35,7 @@ SECTION_SLUGS = {"1": "1-carbon-pricing", "2": "2-other-tax", "3": "3-finance-an
 
 
 def find(folder_name):
-    hits = [p for p in ROOT.rglob(folder_name) if p.is_dir() and "8.PreviousVersions" not in p.parts]
+    hits = [p for r in ROOTS for p in r.rglob(folder_name) if p.is_dir() and "8.PreviousVersions" not in p.parts]
     return hits[0] if hits else None
 
 

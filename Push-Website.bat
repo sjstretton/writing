@@ -1,5 +1,5 @@
 @echo off
-rem Push the website: upload the already-built site (D Website\_site) to the web server (WinSCP if installed,
+rem Push the website: upload the already-built site (E Website\_site) to the web server (WinSCP if installed,
 rem otherwise Python's built-in FTP - nothing to install),
 rem then delete files that were retired from the site. It does not compile: run Compile-Website.bat first,
 rem or Deploy-Website.bat to do both.
@@ -14,13 +14,13 @@ if not defined FTP_remote set "FTP_remote=/public_html"
 set "WINSCP=C:\Program Files (x86)\WinSCP\WinSCP.com"
 if not exist "%WINSCP%" set "WINSCP=C:\Program Files\WinSCP\WinSCP.com"
 
-if not exist "%~dp0D Website\_site\index.html" (echo No built site yet - run Compile-Website.bat first. & pause & exit /b 1)
+if not exist "%~dp0E Website\_site\index.html" (echo No built site yet - run Compile-Website.bat first. & pause & exit /b 1)
 echo.
 if not exist "%WINSCP%" goto python_upload
-echo   Uploading D Website\_site to %FTP_remote% with WinSCP ...
+echo   Uploading E Website\_site to %FTP_remote% with WinSCP ...
 "%WINSCP%" /command ^
     "open ftp://%FTP_user%:%FTP_password%@%FTP_host%/" ^
-    "synchronize remote ""%~dp0D Website\_site"" %FTP_remote%" ^
+    "synchronize remote ""%~dp0E Website\_site"" %FTP_remote%" ^
     "option batch continue" ^
     "rm %FTP_remote%/papers/SustainabilityLinkedLending.pdf" ^
     "rm %FTP_remote%/papers/MDBClimateEnvelope.docx" ^
@@ -31,14 +31,14 @@ echo.
 echo   Done. Errors from the rm lines just mean those retired files are already gone.
 echo.
 echo   Checking that the server and the live website have the new pages ...
-python "%~dp0F Writing Instructions\Scripts\Website\deploy_ftp.py" "%FTPCFG%" "%~dp0D Website\_site" --check
+python "%~dp0H Writing Instructions\Scripts\Website\deploy_ftp.py" "%FTPCFG%" "%~dp0E Website\_site" --check
 echo.
 pause
 exit /b 0
 
 :python_upload
 rem No WinSCP: upload with Python's built-in FTP (only changed files are sent).
-echo   Uploading D Website\_site to the server with Python ...
-python "%~dp0F Writing Instructions\Scripts\Website\deploy_ftp.py" "%FTPCFG%" "%~dp0D Website\_site"
+echo   Uploading E Website\_site to the server with Python ...
+python "%~dp0H Writing Instructions\Scripts\Website\deploy_ftp.py" "%FTPCFG%" "%~dp0E Website\_site"
 echo.
 pause

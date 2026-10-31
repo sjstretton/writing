@@ -4,22 +4,22 @@ rem then build the site with Quarto. Nothing is uploaded. Run Deploy-Website.bat
 setlocal
 cd /d "%~dp0"
 echo.
-echo   1/2  Copying papers into D Website\papers ...
-python "%~dp0F Writing Instructions\Scripts\Website\publish_series.py"
+echo   1/2  Copying papers into E Website\papers ...
+python "%~dp0H Writing Instructions\Scripts\Website\publish_series.py"
 if errorlevel 1 (echo Copy step failed - is Python installed? & pause & exit /b 1)
 echo   Making the web version of each paper from its master .qmd ...
-python "%~dp0F Writing Instructions\Scripts\Website\build_web_papers.py"
+python "%~dp0H Writing Instructions\Scripts\Website\build_web_papers.py"
 if errorlevel 1 (echo Web-paper step failed. & pause & exit /b 1)
 echo   Writing the Research pages from the papers' current titles and abstracts ...
-python "%~dp0F Writing Instructions\Scripts\Website\build_research_pages.py"
+python "%~dp0H Writing Instructions\Scripts\Website\build_research_pages.py"
 call :findquarto
 if not defined QUARTO (echo Quarto not found - install Quarto or RStudio. & pause & exit /b 1)
 echo.
 echo   2/2  Building the site with Quarto ...
-cd /d "%~dp0D Website"
+cd /d "%~dp0E Website"
 "%QUARTO%" render
 echo.
-echo   Done. Open D Website\_site\index.html to check it, then run Deploy-Website.bat.
+echo   Done. Open E Website\_site\index.html to check it, then run Deploy-Website.bat.
 pause
 exit /b 0
 

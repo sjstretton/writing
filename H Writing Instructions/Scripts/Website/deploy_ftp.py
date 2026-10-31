@@ -2,7 +2,7 @@
 
 Push-Website.bat runs this when WinSCP is not installed. It reads the login from
 FTP-Login.txt at the top of the repository (host, user, password, remote, protocol = ftp or ftps), uploads every file in
-D Website/_site whose size differs from the server copy (or is missing
+E Website/_site whose size differs from the server copy (or is missing
 there), creating folders as needed, then deletes the files retired from the site.
 Web pages (.html, .css, .js, .json, .xml) are always uploaded: an edited page can keep
 the same size, and a size check alone would skip it.
