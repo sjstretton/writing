@@ -19,7 +19,7 @@ Order of work. The reason column says why each paper is where it is.
 |---|---|---|---|---|---|
 | 1 | 1.1 | Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies | working paper v0.4 + brief v1.1 + 10-slide deck (31 Oct); peer-reviewed, every citation checked; both on the web | Journal (*Climate Policy*, research article) + PhD writing sample | **Dirk asked for this one first.** Overarching paper for the series. Next: Stephen's read |
 | 2 | 6.1 | Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price | working paper v0.3 + brief + deck (29 Oct) | Journal (*Energy Economics* / *Energy Policy*) | Corrected CES derivation; exact and second-order TECP; non-price instruments; Monte Carlo band. Needs a real-country application |
-| 3 | 3.1 | Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power | working paper v0.2 + brief (29 Oct) | WB working paper; 2,000-word cut as Oxford writing sample | Series 3 flagship. Closest to proposal 1's topic. Next: Stephen's read |
+| 3 | 3.1 | Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power | working paper v0.3 + brief v1.0 + 10-slide deck (31 Oct); peer-reviewed (headline corrected to about \$2 saved per dollar of expected public cost), every citation checked; both on the web | WB working paper; 2,000-word cut as Oxford writing sample | Series 3 flagship. Closest to proposal 1's topic. Next: Stephen's read |
 | 4 | 4.1 | Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives | working paper v0.1 + brief (29 Oct) | WB working paper / journal | Series 4 flagship; the core idea behind proposal 1. First full draft. Next: Stephen's read |
 | 5 | 1.2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | working paper v0.4 + brief v1.1 + 10-slide deck (31 Oct); peer-reviewed, every citation checked; both on the web | WB working paper / journal | Market-design propositions; India, Indonesia, South Africa cases |
 | 6 | 4.2 | The Climate Investment Trust: Hold Capital, Lend Its Strength | working paper v0.2 + brief (29 Oct) | WB working paper | Series 4 flagship with 4.1 (moved from the finance series on 29 Oct). Buffer, growth and allocation propositions |
@@ -34,7 +34,7 @@ Plan: `C Policy and FInance/3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md`
 | No. | Paper | Status |
 |---|---|---|
 | 3.0 | Overview: Make Clean Power an Asset Class | v0.2 (29 Oct) |
-| 3.1 | Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power | working paper v0.2 + brief CFPB 3.1 (29 Oct) |
+| 3.1 | Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power | working paper v0.3 + brief CFPB 3.1 v1.0 + 10-slide deck (31 Oct) |
 | 3.2 | From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power | working paper v0.1 + brief CFPB 3.2 (29 Oct) |
 
 ### The sovereign-incentives series (section 4)

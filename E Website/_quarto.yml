@@ -60,7 +60,14 @@ website:
                 - text: "Working paper"
                   href: policy/1-carbon-pricing/IronSteelCBAM/working-paper.qmd
         - policy/2-other-tax.qmd
-        - policy/3-finance-and-risk.qmd
+        - section: "3. Finance and Risk"
+          href: policy/3-finance-and-risk.qmd
+          contents:
+            - section: "3.1 Guarantee the Contract, Not the Debt"
+              href: policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/working-paper.qmd
         - policy/4-sovereign-incentives.qmd
         - section: "Books and Other Papers"
           href: policy/more.qmd

@@ -1,5 +1,5 @@
 """Model and calibration for Stretton, "Guarantee the Contract, Not the Debt:
-A Payment Intermediary for Clean Power" (working paper v0.2, October 2026).
+A Payment Intermediary for Clean Power" (working paper v0.3, October 2026).
 
 Run:  python3 model.py        (prints every number quoted in the paper and
                                 writes calibration_tables.csv)
@@ -102,8 +102,12 @@ MPR = 2.0          # risk-neutral / physical intensity ratio (market price of ri
 # ---------------------------------------------------------------------------
 GEARING = 0.75       # debt share of capex (STYLIZED)
 THETA = 0.30         # share of the offtaker haircut that falls on debt holders (STYLIZED)
-REC_G = 0.95         # facility recovers 95% using intercept and waterfall (STYLIZED)
-DELAY_G = 1.0        # ...one year after the episode ends (STYLIZED)
+REC_F = 0.60         # share of arrears the facility recovers from the offtaker itself, at the end of
+                     # the episode (STYLIZED). Central case: no better than generators (REC).
+                     # Payments by the subnational owner, national government, multilateral
+                     # agency and donor account are NOT recovery: they are calls on those
+                     # layers and count as the guarantee's cost (v0.2 counted them as recovery).
+REC_F_HIGH = 0.80    # sensitivity: a repeat creditor with letters of credit and a surcharge
 REC_D = 0.50         # debt guarantor's recovery by subrogation against the SPV (STYLIZED)
 DELAY_D = 3.0        # (STYLIZED)
 P_OTHER = 0.01       # annual intensity of non-offtaker events a debt guarantee also covers
@@ -128,10 +132,13 @@ def annual_revenue_musd(tariff_c, mw=MW):
     return mw * 1000 * KWH_PER_KW * tariff_c / 100 / 1e6
 
 
-def guarantor_cost_contract(mw=MW):
-    """Expected annual cost to the facility ($m): phi (physical) x (1 - Rtilde_G) x payments."""
+def guarantor_cost_contract(mw=MW, rec_f=None):
+    """Expected annual cost of the contract guarantee to all the layers behind the facility ($m):
+    phi (physical) x (1 - Rtilde_F) x payments, where Rtilde_F is what the facility recovers
+    from the offtaker itself."""
+    rec_f = REC_F if rec_f is None else rec_f
     A = annual_revenue_musd(tariff_contract_guarantee(), mw)
-    return phi(LAM, DELAY) * (1 - rtilde(REC_G, DELAY, R0, DELAY_G)) * A
+    return phi(LAM, DELAY) * (1 - rtilde(rec_f, DELAY, R0)) * A
 
 
 def guarantor_cost_debt():
@@ -236,7 +243,7 @@ def main():
               f"finance share {finance_share(r):.0%}")
         rows.append(["lcoe", r, round(lcoe(r), 3), round(finance_share(r), 3)])
     print(f"  dLCOE/dr at 8%: {dlcoe_dr(0.08)/100:.3f} c/kWh per percentage point")
-    print(f"  Plant output: {MW} MW x {KWH_PER_KW:.0f} kWh/kW = {MW*KWH_PER_KW/1e3:.0f} MWh/yr; capex ${CAPEX_PER_KW*MW/1e3:.0f}m")
+    print(f"  Plant output: {MW} MW x {KWH_PER_KW:.0f} kWh/kW = {MW*KWH_PER_KW*1e3/1e3:,.0f} MWh/yr; capex ${CAPEX_PER_KW*MW/1e3:.0f}m")
     for r in [0.05, 0.08, 0.12]:
         print(f"  100 MW at {r:.0%}: annual revenue requirement ${annual_revenue_musd(lcoe(r)):.2f}m")
 
@@ -269,14 +276,25 @@ def main():
     gc = guarantor_cost_contract()
     go, gx, debt0, ds = guarantor_cost_debt()
     print(f"  annual saving to offtaker: contract ${sc:.3f}m; debt ${sd:.3f}m")
-    print(f"  guarantor expected annual cost: contract ${gc:.3f}m; debt ${go+gx:.3f}m "
+    print(f"  expected cost to the public layers: contract ${gc:.3f}m (R_F={REC_F}); debt ${go+gx:.3f}m "
           f"(offtaker-driven ${go:.3f}m, other risks ${gx:.3f}m)")
-    print(f"  saving per $ of expected guarantor cost: contract {sc/gc:.1f}; debt {sd/(go+gx):.1f}")
+    print(f"  saving per $ of expected cost: contract {sc/gc:.2f}; debt, offtaker risk only {sd/go:.2f}; "
+          f"debt including other risks {sd/(go+gx):.2f}")
+    gch = guarantor_cost_contract(rec_f=REC_F_HIGH)
+    print(f"  sensitivity R_F={REC_F_HIGH}: contract cost ${gch:.3f}m, saving per $ {sc/gch:.2f}")
     A = annual_revenue_musd(tc)
     print(f"  maximum exposure: debt guarantee ${debt0:.0f}m face at close (debt service ${ds:.2f}m/yr); "
           f"contract guarantee arrears per one-year episode ${A*DELAY:.2f}m")
-    print(f"  ratio phi_Q(1-Rt)/[phi(1-Rt_G)] = "
-          f"{haircut(LAM, REC, DELAY, R0, MPR)/(phi(LAM, DELAY)*(1-rtilde(REC_G, DELAY, R0, DELAY_G))):.1f}")
+    f_risk = phi(MPR * LAM, DELAY) / phi(LAM, DELAY)
+    f_rec = (1 - rtilde(REC, DELAY, R0)) / (1 - rtilde(REC_F, DELAY, R0))
+    f_rec_h = (1 - rtilde(REC, DELAY, R0)) / (1 - rtilde(REC_F_HIGH, DELAY, R0))
+    print(f"  efficiency h/c_C = price-of-risk factor {f_risk:.2f} x recovery factor {f_rec:.2f} "
+          f"(= {f_risk*f_rec:.2f}); at R_F={REC_F_HIGH} recovery factor {f_rec_h:.2f}")
+    h1 = haircut(LAM, REC, DELAY, R0, 1.0)
+    s1 = A * h1 / (1 - h1)
+    print(f"  m=1 and R_F=R: saving ${s1:.3f}m against expected cost ${gc:.3f}m: ratio {s1/gc:.2f} (a transfer)")
+    rD = REC_D * exp(-R0 * DELAY_D)
+    print(f"  recovery values: Rtilde_F {rtilde(REC_F, DELAY, R0):.3f}; Rtilde_D {rD:.3f}")
     rows += [["guarantee", "none", round(t0, 3)], ["guarantee", "contract", round(tc, 3), round(sc, 3), round(gc, 4)],
              ["guarantee", "debt", round(td, 3), round(sd, 3), round(go + gx, 4)]]
 
@@ -285,7 +303,7 @@ def main():
     annual = REG_MW * 1000 * KWH_PER_KW * tariff / 100 / 1e6
     X = annual * DELAY  # arrears accumulated over an episode, if all offtakers default
     qs = [q for _, q in LAYERS[1:]]
-    costs, fac = waterfall_expected_costs(LAM, annual, REC, DELAY, R0, qs)
+    costs, fac = waterfall_expected_costs(LAM, annual, REC_F, DELAY, R0, qs)
     print(f"  annual contract payments ${annual:.0f}m; arrears if every offtaker is in a one-year episode ${X:.0f}m")
     print(f"  expected arrears funded per year ${phi(LAM, DELAY)*annual:.1f}m; unrecovered after offtaker "
           f"{1-rtilde(REC, DELAY, R0):.1%}")
@@ -294,7 +312,7 @@ def main():
         rows.append(["waterfall", name, q, round(c, 3), round(c / annual, 5)])
     for no_donor in [False, True]:
         qs2 = qs[:-1] if no_donor else qs
-        costs2, fac2 = waterfall_expected_costs(LAM, annual, REC, DELAY, R0, qs2)
+        costs2, fac2 = waterfall_expected_costs(LAM, annual, REC_F, DELAY, R0, qs2)
         tag = "without donor account" if no_donor else "with donor account"
         print(f"   facility expected loss {tag}: ${fac2:.3f}m/yr ({fac2/annual:.3%} of payments)")
     print(f"   total expected cost to all layers: ${sum(costs):.2f}m/yr ({sum(costs)/annual:.2%} of payments)")
@@ -329,8 +347,8 @@ def main():
     print("\n6. India: SECI trading margin vs the offtaker premium")
     # Rs 0.07/kWh trading margin and Rs 2.93/kWh weighted average PSA tariff (ICRA 2025)
     print(f"  SECI margin Rs 0.07 on Rs 2.93 = {0.07/2.93:.1%} of tariff")
-    print(f"  WACC cut that pays for it: {0.07/2.93/ (dlcoe_dr(0.10)/lcoe(0.10)) * 100:.2f} pp "
-          f"(elasticity at 10% WACC: {dlcoe_dr(0.10)/lcoe(0.10)/100:.3f} per pp)")
+    print(f"  WACC cut that pays for it: {0.07/2.93/ (dlcoe_dr(R0)/lcoe(R0)) * 100:.2f} pp "
+          f"(elasticity at the 8% central WACC: {dlcoe_dr(R0)/lcoe(R0)/100:.3f} per pp)")
 
     kwh = 60e6 * KWH_PER_KW  # ~60 GW under SECI sale agreements, solar capacity factor (STYLIZED)
     h = haircut(LAM, REC, DELAY, R0, MPR)

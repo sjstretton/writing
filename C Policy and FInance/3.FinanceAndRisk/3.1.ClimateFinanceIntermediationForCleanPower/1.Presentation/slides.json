@@ -1,41 +1,129 @@
 {
-  "series": "Climate Fiscal Policy Brief No. 3.1",
+  "series": "Climate Fiscal Policy Brief No. 3.1 · October 2026",
   "title": "Guarantee the Contract, Not the Debt",
-  "subtitle": "A payment intermediary for clean power in developing countries",
-  "message": "Investors price the risk that a state distribution company will not pay. A payment intermediary buys power under one standard contract, pays generators in full and on time, and recovers arrears behind a guarantee waterfall agreed in advance.",
-  "problem": {
-    "title": "The buyer, not the plant, sets the price",
-    "stats": [
-      { "value": "+80%", "label": "cost of the same solar plant at a 12% cost of capital (6.5 c/kWh) against 4% (3.6 c/kWh)" },
-      { "value": "~50%", "label": "of solar cost was financing in developing economies in 2021; 25–30% in advanced economies" },
-      { "value": "+11%", "label": "tariff premium for offtaker payment risk, worth 1.4 points on the WACC (stylized)" }
-    ],
-    "text": "The buyer is usually a loss-making state distribution company: only two of 39 Sub-Saharan African power sectors were financially viable. Investors price how long its arrears last and how much is recovered into every project that sells to it."
-  },
-  "mechanism": {
-    "title": "Guarantee the contract, not the debt",
-    "image": "../2.Source/figures/fig3_contract_vs_debt.png",
-    "layout": "wide",
-    "imageHeight": 2.1,
-    "aspect": 2.29,
-    "caption": "Stylized 100 MW solar plant: saving to the buyer and the guarantor's expected cost, $ million a year.",
-    "points": [
-      "Coverage: removes payment risk for equity as well as debt, and for every project selling to the same buyer.",
-      "Cost: the guarantor pays arrears and recovers them. $5.3 saved per dollar of expected cost; a debt guarantee saves $0.8.",
-      "Waterfall, agreed in advance: offtaker, its state owner, a national transfer intercept, a multilateral agency, a donor account."
-    ]
-  },
-  "action": {
-    "title": "Build the intermediary, then fix the buyers",
-    "results": [
-      "India's SECI (AAA) sells about 60 GW at Rs 2.93/kWh on a 7-paise margin.",
-      "But weak distributors needed a Rs 90,000 crore liquidity scheme (2020) and rescheduling of Rs 1.4 lakh crore of arrears (2022).",
-      "The state's exposure shrinks but stays: national calls about 2% of contract payments in a 2 GW regional facility."
-    ],
-    "todo": [
-      "Create or join a facility with one standard PPA and a waterfall signed before the first tender.",
-      "Contract in local currency on declining tariffs; make utility reform a condition of entry.",
-      "Record the national guarantee at expected cost under a published cap."
-    ]
-  }
+  "slides": [
+    {
+      "type": "title",
+      "title": "Guarantee the Contract, Not the Debt",
+      "subtitle": "A payment intermediary for clean power in developing countries",
+      "message": "Investors price the risk that a state distribution company will not pay. A payment intermediary buys power under one standard contract, pays generators in full and on time, and collects arrears behind a guarantee waterfall agreed in advance.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Clean power in developing countries is cheap to build and dear to finance",
+      "stats": [
+        {"value": "+80%", "label": "cost of the same solar plant at a 12% cost of capital (6.5 c/kWh) against 4% (3.6 c/kWh), stylized"},
+        {"value": ">2×", "label": "cost of capital for utility-scale solar in emerging and developing economies against advanced economies"},
+        {"value": "$150bn", "label": "a year saved on clean energy financing in these economies if the gap narrows by one point"}
+      ],
+      "text": "Solar has no fuel bill, so its price is mostly the cost of the money that built it.",
+      "source": "Working paper 3.1, Table 1 ($800/kW, 20% capacity factor, 25 years); IEA, Reducing the Cost of Capital (2024)."
+    },
+    {
+      "type": "table",
+      "title": "The buyer is the risk: long arrears and poor recovery add up to 4 points to the cost of capital",
+      "header": ["Default episodes per 100 buyer-years", "Recovery 30%", "Recovery 60%", "Recovery 90%"],
+      "widths": [3.6, 1.8, 1.8, 1.8],
+      "rows": [
+        ["5", "+0.9 pp", "+0.5 pp", "+0.2 pp"],
+        ["10", "+1.8 pp", "+1.0 pp", "+0.3 pp"],
+        ["15 (central case)", "+2.6 pp", "+1.4 pp (tariff +11%)", "+0.4 pp"],
+        ["25", "+4.0 pp", "+2.2 pp", "+0.6 pp"]
+      ],
+      "note": "Only two of 39 Sub-Saharan African power sectors were financially viable (World Bank, 2016). Investors charge for long arrears and poor recovery, not for occasional lateness.",
+      "source": "Working paper 3.1, Table 2: one-year episodes, base WACC 8%, price of risk 2 (stylized); Trimble et al. (2016)."
+    },
+    {
+      "type": "points",
+      "title": "A payment intermediary pays generators whatever the buyer does, behind a waterfall agreed in advance",
+      "points": [
+        {"lead": "One standard contract.", "text": "The facility buys from every generator on the same power purchase agreement and sells on to distribution companies."},
+        {"lead": "Paid in full and on time.", "text": "The buyer's arrears become a debt to the facility, a repeat creditor with more leverage than any developer."},
+        {"lead": "The waterfall:", "text": "distribution company, then its state owner, the national government (intercept of transfers), a multilateral agency, a donor account."},
+        {"lead": "Signed before the first tender,", "text": "so a crisis runs by contract, and the first calls fall on the governments that control the utility."}
+      ],
+      "source": "Working paper 3.1, Sections 4.4 and 6.1."
+    },
+    {
+      "type": "figure",
+      "title": "Guaranteeing the contract removes the whole premium; guaranteeing the debt removes under a third",
+      "image": "../2.Source/figures/fig3_contract_vs_debt.png",
+      "caption": "Stylized 100 MW solar plant, $ million a year.",
+      "points": [
+        {"lead": "Contract guarantee:", "text": "saves the buyer $0.94m at $0.48m expected cost, about $2 per dollar; worst case a year of bills, $8.7m."},
+        {"lead": "Debt guarantee:", "text": "saves $0.30m at $0.22m for the same risk ($1.4 per dollar); worst case the $60m loan."},
+        {"lead": "The difference is the claim:", "text": "the facility keeps its claim on the buyer and recovers 58 cents per dollar, against 39."}
+      ],
+      "source": "Working paper 3.1, Table 3 and Figure 3 (stylized)."
+    },
+    {
+      "type": "points",
+      "title": "The saving is real only if the facility collects better or makes default rarer",
+      "points": [
+        {"lead": "With no price of risk and no better collection,", "text": "the guarantee only moves the expected loss from investors to the state."},
+        {"lead": "Better collection is a real gain:", "text": "at 80% recovery the saving rises from $2.0 to $3.6 per dollar of expected cost."},
+        {"lead": "Fewer defaults are a real gain:", "text": "a buyer facing one creditor, letters of credit and reform conditions defaults less often."},
+        {"lead": "The state bears risk cheaply only sometimes:", "text": "not when the utility and the treasury are in trouble together."}
+      ],
+      "source": "Working paper 3.1, Proposition 2 and Section 5.3."
+    },
+    {
+      "type": "table",
+      "title": "Most of the expected cost falls on the buyers' owners, little on donors",
+      "header": ["Layer (stylized 2 GW regional facility)", "Pays when called", "Expected call, $m a year", "Share of payments"],
+      "widths": [3.9, 1.6, 1.9, 1.6],
+      "rows": [
+        ["State or provincial owner", "50%", "4.80", "2.8%"],
+        ["National government", "80%", "3.84", "2.2%"],
+        ["Multilateral agency", "90%", "0.86", "0.5%"],
+        ["Donor contingency account", "100%", "0.10", "0.06%"]
+      ],
+      "note": "Liquidity, not loss, can break the facility: in a 1-in-200 year, 65% of buyers are in arrears together, so it needs a buffer of about $57m, a third of a year's $174m payments.",
+      "source": "Working paper 3.1, Table 4 and Proposition 3; correlation 0.3, six-month bridge (stylized)."
+    },
+    {
+      "type": "stats",
+      "title": "India's Solar Energy Corporation shows the design works, and that the buyers must be fixed",
+      "stats": [
+        {"value": "~60 GW", "label": "sold at an average Rs 2.93/kWh on a Rs 0.07 margin; rated AAA (2025)"},
+        {"value": "Rs 90,000 cr", "label": "liquidity loans to distribution companies in 2020 so they could pay generators"},
+        {"value": "Rs 1.4 lakh cr", "label": "of arrears rescheduled over up to four years from June 2022; Rs 3,330 cr left by March 2026"}
+      ],
+      "text": "Letters of credit, a payment security fund and a central-bank debit of defaulting states protect the intermediary. The risk moved to the center; it was not removed.",
+      "source": "ICRA (July 2025); CRISIL (May 2020); Power Line (June 2022); PTI (April 2026)."
+    },
+    {
+      "type": "points",
+      "title": "Design the facility so that the risk stays small",
+      "points": [
+        {"lead": "Local currency.", "text": "A dollar tariff hands the state the devaluation risk of every contract, in the crisis when it can least bear it."},
+        {"lead": "Declining tariffs.", "text": "7.7 cents falling to 3.9 by year 7 has the present value of a flat 5 cents, with 23% less owed after year 7."},
+        {"lead": "National or regional.", "text": "Large markets build their own; small states share one, with a stronger multilateral layer."},
+        {"lead": "Reform as the price of entry,", "text": "and the guarantee recorded at expected cost under a published cap. Small versions already work: Zambia's IDA payment guarantee."}
+      ],
+      "source": "Working paper 3.1, Sections 7–8; World Bank Group, Zambia Scaling Solar (2018)."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the analysis shows",
+        "items": [
+          {"lead": "Premium:", "text": "a weak buyer adds about 11% to the solar tariff (stylized)."},
+          {"lead": "Contract beats debt:", "text": "the whole premium removed, $2 per dollar of expected cost, a fraction of the exposure."},
+          {"lead": "Condition:", "text": "real gains need better collection or fewer defaults."},
+          {"lead": "Waterfall:", "text": "cost falls on the buyers' owners; liquidity is the binding risk."}
+        ]
+      },
+      "right": {
+        "title": "Actions",
+        "items": [
+          {"lead": "Finance ministries:", "text": "build or join a facility with one contract and a waterfall signed before the next tender."},
+          {"lead": "Regulators:", "text": "require letters of credit and a path to cost-recovery tariffs."},
+          {"lead": "Development banks and donors:", "text": "guarantee the facility, not the loans; fund the donor account."}
+        ]
+      }
+    }
+  ]
 }

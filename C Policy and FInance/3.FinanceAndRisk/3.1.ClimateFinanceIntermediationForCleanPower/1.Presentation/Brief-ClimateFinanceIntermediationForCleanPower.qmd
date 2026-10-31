@@ -1,14 +1,16 @@
 ---
+# MASTER (policy brief) - this is the file to edit for the brief. The .docx beside it and the brief's web page are made
+# from it. The working paper is a separate master: ../ClimateFinanceIntermediationForCleanPower.qmd.
 title: "Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power"
 subtitle: "Removing offtaker risk at source in developing-country power markets"
 series: "Climate Fiscal Policy Brief No. 3.1"
-version: "0.1"
+version: "1.0"
 author:
   - name: "Stephen J. Stretton"
     note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
-  Solar power is cheap to build in developing countries but dear to finance, because investors price the risk that a state-owned distribution company will pay late or not at all. A payment intermediary facility buys power under one standard contract, pays generators in full and on time, and recovers arrears itself, behind a guarantee waterfall agreed in advance. In a stylized case, guaranteeing the contract cuts the tariff by five dollars for each dollar of expected cost to the guarantor; guaranteeing the debt saves less than it costs. India's Solar Energy Corporation shows the design works, and its arrears show it needs utility reform alongside.
+  Solar power is cheap to build in developing countries but dear to finance, because investors price the risk that a state-owned distribution company will pay late or not at all. A payment intermediary facility buys power under one standard contract, pays generators in full and on time, and collects arrears itself, behind a guarantee waterfall agreed in advance. Guaranteeing the contract removes the whole risk premium, about two dollars of saving per dollar of expected cost in a stylized case; guaranteeing project debt removes under a third of it. India's Solar Energy Corporation shows the design works, and its buyers' arrears show it needs utility reform.
 keywords: [cost of capital, offtaker risk, payment security, guarantees, power purchase agreements, contingent liabilities]
 bibliography: Brief-ClimateFinanceIntermediationForCleanPower.bib
 csl: https://www.zotero.org/styles/chicago-author-date
@@ -16,119 +18,110 @@ format:
   docx: default
 ---
 
-*Climate Fiscal Policy Brief No. 3.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The proposal builds on a policy brief on regional payment intermediary facilities written with Nils Zimmermann and on the solar payments intermediary proposal developed by Evie Davey.*
+*Climate Fiscal Policy Brief No. 3.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The proposal builds on a policy brief on regional payment intermediary facilities written with Nils Zimmermann and on the solar payments intermediary proposal developed by Evie Davey. The full analysis, with the model, proofs and calibration, is in the [working paper](wp:).*
 
-# Executive summary {.unnumbered}
+# Key messages {#sec-key-messages}
 
-*The problem.* Solar power has no fuel bill, so its price is mostly the cost of the money that built it. A plant that needs 3.9 US cents per kilowatt-hour when financed at 5 percent needs 6.5 cents at 12 percent. In developing economies financing was about half the cost of utility-scale solar in 2021, against 25–30 percent in advanced economies and China. Much of the premium is not about the plant but about the buyer of its power, usually a loss-making state distribution company that may pay late, in part or not at all.
+**Clean power in developing countries is cheap to build and dear to finance.** The same solar plant sells power 80 percent dearer when its capital costs 12 percent a year rather than 4, and the cost of capital for solar in emerging and developing economies is well over twice that in advanced economies.
 
-*The proposal.* Put a creditworthy payment intermediary facility between generators and distribution companies. It buys power from every project under one standard power purchase agreement, sells it on to the distribution companies, and pays generators in full and on time whatever they do. The facility collects arrears itself, behind a guarantee waterfall agreed before any plant is built: the distributor's owner, the national government through an intercept of its transfers, a multilateral agency and a donor contingency account.
+**The risk investors price most directly is the buyer.** A loss-making state distribution company that pays late and recovers little adds about 11 percent to the tariff in a stylized case.
 
-*Why guarantee the contract.* A guarantee on project debt protects lenders but leaves equity exposed, covers one deal at a time, and leaves the guarantor with a claim on an unpaid project company. A guarantee on the contract removes the payment risk itself, covers every project selling to the same buyer, and keeps the distributor's debt alive, owed to a repeat creditor with powers to collect. In a stylized 100-megawatt case the contract guarantee saves the buyer \$0.94 million a year at an expected cost of \$0.18 million; a debt guarantee saves \$0.30 million at an expected cost of \$0.40 million.
+**Put a creditworthy payment intermediary between generators and distribution companies.** It buys under one standard contract, pays generators whatever the buyer does, and collects arrears behind a guarantee waterfall agreed in advance.
 
-*The evidence.* India's Solar Energy Corporation, rated AAA, has sold about 60 gigawatts at an average Rs 2.93 per kilowatt-hour on a 7-paise margin, behind letters of credit, a payment security fund and the power to have the central bank debit a defaulting state's account. But distribution companies stayed weak, and the center had to fund a Rs 90,000 crore liquidity scheme in 2020 and reschedule Rs 1.4 lakh crore of arrears in 2022. Nigeria's bulk trader shows the failure case: a single buyer with no reliable revenue behind it.
+**Guarantee the contract, not the debt.** A contract guarantee removes the whole premium for about half its value in expected cost; a debt guarantee removes under a third of it and puts the whole loan at risk.
 
-*What it costs.* The state's exposure falls in size and becomes contingent, contracted and conditional on its own conduct. It does not vanish. In a stylized 2-gigawatt regional facility, the national government's expected calls are about 2 percent of contract payments, recoverable from its own utilities.
+**Pair the facility with utility reform, and record the guarantee.** Without better collection and fewer defaults the facility only moves risk to the state, as India's experience shows.
 
-*What to do.* Large countries should build national facilities and small ones should share regional facilities. Contract in local currency on tariffs that decline over time. Make utility reform a condition of entry, and record the guarantee at its expected cost with a published cap.
+# Clean power costs too much because its finance does {#sec-cost}
 
-# 1. The cost of capital, not technology, prices clean power
+**Solar power is a bond with panels attached.** Almost all of its cost is paid up front, and the tariff repays the capital. Table 1 shows a representative utility-scale plant costing \$800 per kilowatt, running at a 20 percent capacity factor for 25 years; only the cost of capital changes from column to column. At a 4 percent real weighted average cost of capital (WACC) the plant needs 3.6 US cents per kilowatt-hour. At 12 percent it needs 6.5 cents, 80 percent more for the same hardware.
 
-Solar power is a bond with panels attached: almost all of its cost is paid up front, and the tariff repays the capital. Table 1 shows a representative utility-scale plant costing \$800 per kilowatt, running at a 20 percent capacity factor for 25 years. Only the cost of capital changes from row to row. At a 4 percent real weighted average cost of capital (WACC) the plant needs 3.6 cents per kilowatt-hour. At 12 percent it needs 6.5 cents, 80 percent more for the same hardware. The return on capital rises from 30 to 61 percent of the price.
+| Cost of capital (real) | 4% | 5% | 8% | 10% | 12% | 15% |
+|---|---:|---:|---:|---:|---:|---:|
+| Levelized cost (US cents/kWh) | 3.61 | 3.92 | 4.96 | 5.72 | 6.51 | 7.75 |
+| Return on capital, share of cost | 30% | 36% | 49% | 56% | 61% | 68% |
 
-| WACC (real) | 4% | 5% | 6% | 8% | 10% | 12% | 15% |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| Levelized cost (US cents/kWh) | 3.61 | 3.92 | 4.26 | 4.96 | 5.72 | 6.51 | 7.75 |
-| Relative to 4% | 1.00 | 1.09 | 1.18 | 1.38 | 1.58 | 1.80 | 2.15 |
-| Return on capital, share of cost | 30% | 36% | 41% | 49% | 56% | 61% | 68% |
+: The same solar plant costs twice as much at 15 percent as at 4 percent (stylized). \$800/kW, capacity factor 20 percent, operation and maintenance \$12/kW a year, 25-year life, capital spent at commissioning. "Return on capital" is the capital charge above straight-line depreciation. Source: working paper, Table 1. {#tbl-lcoe}
 
-: Table 1. The same solar plant costs twice as much at 15 percent as at 4 percent (stylized). Capital cost \$800/kW, capacity factor 20 percent (1,752 kWh/kW a year), operation and maintenance \$12/kW a year, 25-year life. "Return on capital" is the capital charge above straight-line depreciation. Capital is spent at commissioning, with no interest during construction; Brief 3.2 adds two years of construction interest, which raises the cost at 10 percent from 5.72 to 6.2 cents [@CFPB32]. Code: `2.Source/model.py`.
+![Levelized cost of a stylized solar plant by cost of capital. Hardware and operation cost the same in every column; only the return on capital changes. Source: working paper, Table 1.](figures/fig1-lcoe-by-wacc.png){#fig-lcoe width=95%}
 
-![Figure 1. Levelized cost of a stylized solar plant by cost of capital. Hardware and operation cost the same in every column; only the return on capital changes.](figures/fig1-lcoe-by-wacc.png){width=95%}
+**Developing countries pay far more for capital than rich ones.** The International Energy Agency's survey of financiers finds that the cost of capital for utility-scale solar in emerging and developing economies is well over twice that in advanced economies, and that financing can be half or more of the cost of the power. It estimates that narrowing the gap by one percentage point would cut clean energy financing costs in these economies by about \$150 billion a year [@IEA2024].
 
-The gap between rich and poor countries sits in that table. The International Energy Agency's surveys found that in 2021 the cost of capital for utility-scale solar in key emerging economies was two to three times that in advanced economies, and that financing made up about half the levelized cost in emerging and developing economies against 25–30 percent in advanced economies and China [@IEA2022]. For projects reaching investment decision in 2022 the gap was still more than double, and the agency estimates that closing it by one percentage point would cut clean energy financing costs in these economies by about \$150 billion a year [@IEA2024]. Academic estimates agree that the cost of capital differs widely between countries and drives the cost of renewables [@Steffen2020; @Egli2018], and that the higher cost of finance in developing economies traps them in dearer, dirtier power [@Ameli2021; @Calcaterra2024].
+# The buyer of the power is the risk {#sec-buyer}
 
-# 2. The risk sits with the buyer of the power
+**A finished solar plant carries little operating risk; the company that buys its power carries a lot.** In most developing countries that buyer, the offtaker, is a state-owned distribution company that sells below cost and collects badly. A World Bank study of 39 Sub-Saharan African countries found only two, Seychelles and Uganda, with a financially viable electricity sector [@Trimble2016]. The IEA ranks payment risk among the three sector risks that investors price most in these economies [@IEA2024].
 
-A completed solar plant carries little operating risk; the buyer of its power carries a lot. In most developing countries that buyer, the offtaker, is a state-owned distribution company that sells below cost and collects badly. A World Bank study of 39 Sub-Saharan African countries found only two, Seychelles and Uganda, whose electricity sectors were financially viable [@Trimble2016]. When such a utility runs short of cash, it pays its generators last.
+**Long arrears and poor recovery cost far more than lateness.** Suppose a distribution company falls into a year of unpaid bills once every six or seven years and eventually pays back 60 percent of what it withheld, and investors charge for that risk at twice its expected loss. The generator then needs a tariff 11 percent above its cost, the same as 1.4 percentage points on the cost of capital. A buyer that is late as often but pays back 90 percent adds only 0.4 points; one that pays back 30 percent adds 2.6 (stylized; [working paper, the premium](wp:sec-cal-premium)).
 
-Investors price this payment risk into every project that sells to the utility. A simple model shows how much. Suppose the utility falls into a payment-default episode on average once every six or seven years, withholds payment for a year, and eventually pays 60 percent of what it withheld. Suppose investors price these episodes at twice their actual frequency, because default risk is partly undiversifiable and bond prices imply default rates above those actually observed [@Driessen2005]. Then the generator needs a tariff 11 percent above its cost to break even, worth 1.4 percentage points on the WACC (stylized). Longer episodes or poorer recovery push the premium to 2–4 percentage points. The premium is set by how long arrears last and how much is recovered, not by how often a utility is merely late.
+# A payment intermediary removes the risk at source {#sec-facility}
 
-# 3. The intermediary and its waterfall
+**The fix is to change whom the generator is exposed to.** A payment intermediary facility is a creditworthy institution that buys power from generators under one standard power purchase agreement, sells it on to distribution companies, and pays generators in full and on time whatever the distribution companies do. Their arrears become a debt to the facility, a repeat creditor with more patience and more leverage than any single developer.
 
-The fix is to change who the generator is exposed to. A payment intermediary facility is a creditworthy institution that buys power from generators under a standard power purchase agreement, on-sells it to distribution companies, and pays generators whatever the distribution companies do [@StrettonTC]. The generator's credit risk becomes the facility's. The distribution company's arrears become a debt to the facility, which is a repeat counterparty with more patience and more leverage than any single developer.
+**A guarantee waterfall, agreed before the first tender, stands behind the facility.** If a distribution company does not pay, the facility calls in turn on its state or provincial owner, on the national government through an intercept of its transfers to that owner, on a multilateral agency, and on a donor contingency account. The order is fixed in advance, and the first calls fall on the governments that control the utility.
 
-The facility is protected by a guarantee waterfall: a sequence of guarantors that each pay, in order, only if the layer above has not. The layers are agreed before the facility operates in a territory, so that in a crisis the sequence runs by contract rather than by negotiation:
+**Liquidity, not loss, is what can break the facility.** A devaluation or a fuel shock can push many distribution companies into arrears at once. In a stylized regional facility buying 2 gigawatts of solar power, with contract payments of \$174 million a year, a buffer of about \$57 million, a third of a year's payments, bridges a 1-in-200-year crisis until the national layer pays ([working paper, the waterfall](wp:sec-cal-waterfall)).
 
-1. The offtaker, which must open letters of credit and pays late-payment interest.
-2. Its subnational owner, a state or province, which agrees to stand behind its utility as a condition of entry.
-3. The national government, which authorizes an intercept of its transfers to the defaulting subnational government, as India's tripartite agreement does.
-4. A multilateral agency, for political risks the government will not cover.
-5. A donor contingency account for the remaining tail.
+# Guarantee the contract, not the debt {#sec-contract}
 
-Each layer is chosen because it can bear its risk cheaply or because bearing it disciplines the party that causes it. The facility itself holds a liquidity buffer to bridge arrears until the next layer pays. In a stylized regional facility buying 2 gigawatts of solar power, with contract payments of \$174 million a year, a buffer of about \$57 million covers the arrears it would face at the 99.5th percentile of a correlated crisis while the sovereign layer is called.
-
-# 4. Guarantee the contract, not the debt
-
-A guarantee can sit on the project's loan or on the buyer's promise to pay. The two look alike and behave differently. A debt guarantee pays lenders when the project cannot service its loan, whatever the cause. A contract guarantee pays the generator when the buyer does not.
-
-The contract guarantee wins on three counts when defaults are temporary and recoverable, as they usually are for state utilities.
-
-*Coverage.* The contract guarantee removes the payment risk from the whole project, equity included, so the whole premium leaves the tariff. A debt guarantee protects only lenders; the equity still bears the buyer's arrears and still demands a premium. One contract guarantee also covers every project that sells to the same buyer; debt guarantees are written one deal at a time.
-
-*Cost.* The contract guarantor pays arrears and recovers them, so its cost is the part of the arrears it never collects. A debt guarantor is exposed to the face value of the loan, and its claim runs against a project company that has itself not been paid.
-
-*Recourse.* Under a contract guarantee the distribution company still owes the money, now to the facility. That keeps the incentive to pay where it belongs.
+**A contract guarantee removes the whole premium; a debt guarantee removes only the lenders' share.** A debt guarantee pays lenders when the project cannot service its loan, whatever the cause, so equity still bears the buyer's arrears and still charges for them. A contract guarantee pays the generator when the buyer does not, so equity and debt are both paid.
 
 | Stylized 100 MW solar plant | No guarantee | Contract guarantee | Debt guarantee |
 |---|---:|---:|---:|
 | Tariff (US cents/kWh) | 5.50 | 4.96 | 5.33 |
 | Saving to the buyer (\$ million a year) | – | 0.94 | 0.30 |
-| Guarantor's expected cost (\$ million a year) | – | 0.18 | 0.40 |
-| Saving per dollar of expected cost | – | 5.3 | 0.8 |
+| Expected cost of the buyer's risk to guarantors (\$ million a year) | – | 0.48 | 0.22 |
+| Saving per dollar of that cost | – | 2.0 | 1.4 |
 | Largest exposure (\$ million) | – | 8.7 a year of arrears | 60 of debt |
 
-: Table 2. A contract guarantee buys more tariff reduction per dollar of risk (stylized). Base WACC 8 percent; offtaker default episodes of one year at 15 per 100 offtaker-years; 60 percent recovered by generators, 95 percent by the facility; debt is 75 percent of the \$80 million cost; 30 percent of the offtaker's losses fall on lenders; the debt guarantee also covers 1 percent a year of non-payment risks such as construction failure. The working paper states the conditions in full [@StrettonWP31].
+: A contract guarantee removes more of the premium per dollar of expected cost, at a fraction of the exposure (stylized). Base WACC 8 percent; one-year default episodes at 15 per 100 buyer-years; 60 percent of arrears recovered; debt is 75 percent of the \$80 million cost, and lenders bear 30 percent of the buyer's losses. The debt guarantee also covers construction and operating risks, at a further expected cost of \$0.18 million a year. Source: working paper, Table 3. {#tbl-guarantee}
 
-The reason is in the last line of Table 2. The facility's worst case is a year or two of unpaid bills, which it recovers in large part. The debt guarantor's worst case is the loan.
+**The contract guarantee is cheaper per dollar saved because its claim is better.** The facility keeps its claim on the distribution company, and in the stylized case recovers 58 cents of each dollar of arrears in present value; a debt guarantor's claim runs against a project company that has itself not been paid, and recovers 39 cents three years later. Its worst case in one episode is a year of unpaid bills, \$8.7 million, against the whole \$60 million loan ([working paper, the comparison](wp:sec-cal-guarantee)).
 
-Nigeria shows the debt-shaped alternative. For the 459-megawatt Azura-Edo gas plant, the government declined to give a sovereign guarantee and instead signed a put-and-call option that obliges it, if the power contract ends early, to buy the plant at a price that at least covers the outstanding debt; the World Bank Group described this as having "no negative impact" on the government's balance sheet [@WBGAzura]. A promise to repay a project's debt on termination is a debt guarantee with a delay, and it should be counted as one.
+**The saving is real only if the facility collects better or makes default rarer.** If investors charged nothing for risk and the facility collected no more than generators would, the guarantee would simply move the expected loss from investors to the state. Its value to society comes from better collection (at 80 percent recovery the saving rises to \$3.6 per dollar), from fewer defaults by a buyer that faces one creditor and reform conditions, and from the state bearing a risk more cheaply than investors, which fails when the utility and the treasury are in trouble together ([working paper, Proposition 2](wp:sec-guarantees)).
 
-# 5. What India's Solar Energy Corporation shows, good and bad
+**Small versions already work in Africa.** Under the World Bank Group's Scaling Solar program, a \$3.5 million IDA guarantee behind the Zambian utility's letter of credit supported a 47.5-megawatt plant financed with about \$60 million, at a tariff of 6.015 US cents per kilowatt-hour [@WBGZambia2018]. The African Trade Insurance Agency's liquidity facility covers independent producers for six months of late payment [@Wass2017RLSF]. The facility pools such guarantees behind one contract and one creditor.
 
-The Solar Energy Corporation of India (SECI) is the working model of a payment intermediary. It is wholly owned by the central government. It signs power purchase agreements with developers only after signing back-to-back power sale agreements with state distribution companies, earns a trading margin of Rs 0.07 per kilowatt-hour, and had about 60 gigawatts under sale agreements at a weighted average tariff of Rs 2.93 per kilowatt-hour in 2025 [@ICRA2025]. That margin is 2.4 percent of the tariff. In the model of Table 1 it pays for itself if it lowers the WACC by a third of a percentage point.
+# India shows the design works, and that the buyers must be fixed {#sec-india}
 
-Its protections are layered much as Section 3 proposes. Distribution companies must open letters of credit; since a Ministry of Power order of June 2019, grid operators may schedule power only after the letter of credit is in place [@Powerline2019]. A payment security fund, financed from the central budget, developer penalties and interest, covers older National Solar Mission capacity, and since 2019 developers deposit Rs 5 lakh per megawatt toward it for newer tenders [@ICRA2025]. Since October 2016 SECI has been a beneficiary of the tripartite agreement among the central government, the states and the Reserve Bank of India, under which the central bank can debit a defaulting state's account and credit the central utility [@ICRA2025; @Kenning2017]. SECI invoked it in 2020–22 against distribution companies in Andhra Pradesh and Karnataka. ICRA rates SECI AAA.
+**The Solar Energy Corporation of India is the working model of a payment intermediary.** It is wholly owned by the central government, signs contracts with developers only after back-to-back sales to state distribution companies, and earns a margin of Rs 0.07 per kilowatt-hour. In July 2025 it had sales of about 60 gigawatts at an average Rs 2.93 per kilowatt-hour, well below the distribution companies' average purchase cost, and was rated AAA [@ICRA2025]. Its margin, 2.4 percent of the tariff, pays for itself if it lowers the cost of capital by a third of a percentage point.
 
-The failure is that the buyers were never fixed. The same rating report records large past delays and letter-of-credit coverage of only 68 percent [@ICRA2025]. Across the sector, the central government announced a Rs 90,000 crore liquidity scheme in May 2020, lent through two public finance companies against state guarantees, so that distribution companies could pay generators [@CRISIL2020]. In June 2022 it allowed them to reschedule their arrears into up to 48 monthly installments [@Powerline2022]. Legacy arrears fell from Rs 1,39,947 crore in June 2022 to Rs 3,330 crore in March 2026 [@PTI2026]. The waterfall worked: generators were paid, and the arrears were in the end recovered. But the risk was moved to the central government, not removed, and the center paid twice to keep it moving.
+**Its protections are layered much as the waterfall proposes.** Distribution companies must open letters of credit, and since August 2019 grid operators may schedule power only once they have [@Powerline2019]. A payment security fund covers older capacity. Since October 2016 the corporation has been a beneficiary of an agreement among the central government, the states and the Reserve Bank of India under which the central bank can debit a defaulting state's account; the corporation used it against distribution companies in Andhra Pradesh and Karnataka in 2020–22 [@ICRA2025].
 
-Nigeria shows what happens without the waterfall. Its bulk trader, set up under the 2010 power sector roadmap as a single buyer [@WBGAzura], had no reliable revenue behind it. In 2017 the government arranged a central bank facility of up to N701 billion so it could pay generators, while it collected on average about a quarter of its invoices from distribution companies [@Okafor2017]. In 2020 the World Bank lent \$750 million to cut the sector's tariff shortfalls [@WorldBank2020PSRO]. An intermediary is only as good as the layer behind it and the reform beneath it.
+**But the buyers were never fixed, and the center paid twice.** Most state distribution companies remain financially weak, and their letter-of-credit coverage is only 68 percent [@ICRA2025]. In 2020 the central government organized Rs 90,000 crore of loans to distribution companies against state guarantees so they could pay generators [@CRISIL2020], and in 2022 it let them reschedule their arrears over up to four years [@Powerline2022]. Legacy arrears fell from Rs 1,39,947 crore in June 2022 to Rs 3,330 crore in March 2026 [@PTI2026]. The risk moved to the center; it was not removed.
 
-# 6. Design choices
+**Nigeria shows the failure.** Its bulk electricity trader, a single buyer, expected to collect about a quarter of its bills in 2017 and needed a central bank loan of up to N701 billion to pay generators [@Okafor2017]. It had no reliable revenue and no funded layer behind it. A single buyer of that kind invites weak payment discipline and hidden liabilities, as the World Bank warned long ago [@Lovei2000]; the facility avoids that by keeping procurement competitive, leaving the buyers' obligations alive and recording its guarantees ([working paper, objections](wp:sec-objections)).
 
-*Declining tariffs.* A flat 20-year contract signed when solar is dear locks the buyer into old prices as new plants get cheaper, which is when governments renegotiate. A tariff that starts at 7.7 cents and falls to 3.9 cents by year 7 has the same present value at 8 percent as a flat 5 cents. It cuts the value of the contract still outstanding after year 7 by about a quarter, and halves the part of it above the cost of new solar (stylized). It saves no money in present value, so the developer will not accept a lower starting price; what it buys is a contract the buyer is less tempted to break.
+# Design the facility so the risk stays small {#sec-design}
 
-*One currency rule.* Write contracts in the currency the buyer earns. A dollar tariff makes the utility and the state hold the devaluation risk, which is the risk they can least bear. If a project borrows in dollars, the currency hedge belongs with the financier or the facility, priced and visible, not hidden in the tariff.
+**Write contracts in the currency the buyer earns.** A dollar tariff hands the distribution company, and behind it the state, the devaluation risk of every contract, and that risk arrives in a balance of payments crisis, when every buyer is stressed at once. Where projects borrow in dollars, the facility should hold and price the mismatch in the open.
 
-*National or regional.* Large markets such as India, Nigeria and Brazil can support a national facility. Small states should share a regional one, for example in the Economic Community of West African States, which spreads fixed costs and diversifies across buyers. A regional facility lacks an intercept like India's across borders, so its multilateral layer must be stronger.
+**Let tariffs decline over the life of the contract.** A flat 20-year price signed when solar is dear becomes a target for renegotiation as new plants get cheaper. A tariff starting at 7.7 cents and falling to 3.9 cents by year 7 has the same present value at 8 percent as a flat 5 cents, but leaves 23 percent less owed after year 7 and nearly halves the part above the cost of new solar (stylized; [working paper, tariff profile](wp:sec-tariff)).
 
-*Countries in debt distress.* For a country that cannot borrow more, the facility can buy power from private plants and sell it as a service, so the state buys electricity rather than building plants. This changes the form of the obligation, not its existence: a long-term take-or-pay contract is a fiscal commitment and should be recorded as one. Its advantage is that it replaces an open-ended, foreign-currency fuel bill with a fixed and falling local-currency one.
+**Build national facilities in large markets and regional ones for small states.** India, Nigeria and Brazil can each diversify across many distribution companies. Small states should share a facility, for example in the Economic Community of West African States; it lacks a cross-border intercept like India's, so its multilateral layer must be stronger.
 
-*Conditionality on utility reform.* A guarantee makes the generator whole; it does not make the utility solvent. Entry should require a published path to cost-recovery tariffs, letters of credit, an intercept agreement and loss-reduction targets, with access widening as targets are met. A country that will not reform its utility is asking the guarantor to insure a certain loss.
+**Make utility reform a condition of entry.** A guarantee makes the generator whole; it does not make the utility solvent. Entry should require a published path to cost-recovery tariffs, letters of credit, an intercept agreement and loss-reduction targets, with access widening as targets are met.
 
-*Fiscal accounting.* Governments should record their layer at its expected cost. Under the IMF's statistical standard, calls expected under a scheme of many similar guarantees are recorded as a liability, while one-off guarantees are disclosed as contingent [@IMF2014GFSM]. A facility with one standard contract is such a scheme. The national layer should carry a statutory cap and be reported each year.
+# The state's exposure shrinks but does not vanish {#sec-fiscal}
 
-# 7. What to do
+**The facility turns an implicit liability into a smaller, contracted one.** States already bail out their utilities, as India did in 2020 and 2022 and Nigeria in 2017. The waterfall makes that exposure contingent on the state's own utility failing to pay, fixes its order and cap in advance, and, with reform, makes it smaller. In the stylized regional facility the national government expects to be called for about 2.2 percent of contract payments a year, before it recovers from its own utility.
 
-Finance ministries in countries where distribution companies are the main buyers of power should create, or join, a payment intermediary facility with one standard power purchase agreement and a guarantee waterfall signed before the first tender. They should route new utility-scale renewable procurement through it, in local currency, on declining tariffs. They should make distribution companies' entry conditional on letters of credit, an intercept agreement and a tariff path, and record the national guarantee at expected cost under a published cap. Development banks should guarantee the facility, not individual project loans, and stand behind regional facilities for small states. Donors should fund the contingency account at the bottom of the waterfall. Once contracts are standard and guaranteed, plants can be refinanced as a few homogeneous asset classes through two-stage finance and synthetic sovereign bonds [@CFPB32].
+**Record the guarantee at its expected cost under a published cap.** International statistical standards treat expected calls under a scheme of many similar guarantees as a liability [@IMF2014GFSM]; a facility with one standard contract is such a scheme. Countries in debt distress can buy power as a service under the facility's contracts, but a long-term take-or-pay contract is still a fiscal commitment and belongs in debt analysis, alongside the fuel bill it replaces ([working paper, fiscal accounting](wp:sec-fiscal)).
+
+# What to do {#sec-what-to-do}
+
+**Finance ministries: build or join a facility before the next tender.** Use one standard power purchase agreement and sign the guarantee waterfall first; route new utility-scale renewable procurement through it, in local currency, on declining tariffs; and record the national layer at expected cost under a published cap.
+
+**Regulators and utilities: make payment security a condition of supply.** Require letters of credit, enforce dispatch rules like India's, and put distribution companies on a published path to cost recovery as the price of entry.
+
+**Development banks and donors: guarantee the facility, not the loans.** Stand as the multilateral layer, pool payment guarantees of the Scaling Solar kind behind one facility, and fund the donor contingency account at the bottom of the waterfall. Once contracts are standard and guaranteed, the plants can be refinanced as a few standard securities ([Brief 3.2](paper:3.2)).
 
 # Related papers in this series {.unnumbered}
 
-- **3.0** *Make Clean Power an Asset Class: Standardized De-risking for Developing Countries*. The series overview: the risk stack and who should hold each layer.
-- **3.2** *From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power* [@CFPB32]. Refinances the contracts this facility makes safe as a few standard securities.
-- **4.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB41]. Guarantee capacity earned by climate policy, which can stand behind this facility's waterfall.
-- **4.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB42]. A source of loss-absorbing capital for the donor layer.
-- **4.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB43]. A way to pay for the utility reforms that make the guarantee affordable.
+- [Climate Fiscal Policy Brief No. 3.2](paper:3.2): two-stage finance and synthetic sovereign bonds, which refinance the contracts this facility makes safe [@CFPB32].
+- [No. 4.1](paper:4.1): guarantee capacity earned by climate policy, which can stand behind the facility's waterfall [@CFPB41].
+- [No. 4.2](paper:4.2): the Climate Investment Trust, a source of loss-absorbing capital for the donor layer [@CFPB42].
+- [No. 4.3](paper:4.3): sustainability-linked sovereign lending, a way to pay for the utility reforms that make the guarantee affordable [@CFPB43].
+- The [working paper](wp:) behind this brief: the model, proofs, calibration and the record in India, Nigeria and Zambia.
 
 # References {.unnumbered}
 

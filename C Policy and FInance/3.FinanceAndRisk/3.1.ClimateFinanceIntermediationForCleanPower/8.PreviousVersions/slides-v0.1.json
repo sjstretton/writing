@@ -1,0 +1,41 @@
+{
+  "series": "Climate Fiscal Policy Brief No. 3.1",
+  "title": "Guarantee the Contract, Not the Debt",
+  "subtitle": "A payment intermediary for clean power in developing countries",
+  "message": "Investors price the risk that a state distribution company will not pay. A payment intermediary buys power under one standard contract, pays generators in full and on time, and recovers arrears behind a guarantee waterfall agreed in advance.",
+  "problem": {
+    "title": "The buyer, not the plant, sets the price",
+    "stats": [
+      { "value": "+80%", "label": "cost of the same solar plant at a 12% cost of capital (6.5 c/kWh) against 4% (3.6 c/kWh)" },
+      { "value": "~50%", "label": "of solar cost was financing in developing economies in 2021; 25–30% in advanced economies" },
+      { "value": "+11%", "label": "tariff premium for offtaker payment risk, worth 1.4 points on the WACC (stylized)" }
+    ],
+    "text": "The buyer is usually a loss-making state distribution company: only two of 39 Sub-Saharan African power sectors were financially viable. Investors price how long its arrears last and how much is recovered into every project that sells to it."
+  },
+  "mechanism": {
+    "title": "Guarantee the contract, not the debt",
+    "image": "../2.Source/figures/fig3_contract_vs_debt.png",
+    "layout": "wide",
+    "imageHeight": 2.1,
+    "aspect": 2.29,
+    "caption": "Stylized 100 MW solar plant: saving to the buyer and the guarantor's expected cost, $ million a year.",
+    "points": [
+      "Coverage: removes payment risk for equity as well as debt, and for every project selling to the same buyer.",
+      "Cost: the guarantor pays arrears and recovers them. $5.3 saved per dollar of expected cost; a debt guarantee saves $0.8.",
+      "Waterfall, agreed in advance: offtaker, its state owner, a national transfer intercept, a multilateral agency, a donor account."
+    ]
+  },
+  "action": {
+    "title": "Build the intermediary, then fix the buyers",
+    "results": [
+      "India's SECI (AAA) sells about 60 GW at Rs 2.93/kWh on a 7-paise margin.",
+      "But weak distributors needed a Rs 90,000 crore liquidity scheme (2020) and rescheduling of Rs 1.4 lakh crore of arrears (2022).",
+      "The state's exposure shrinks but stays: national calls about 2% of contract payments in a 2 GW regional facility."
+    ],
+    "todo": [
+      "Create or join a facility with one standard PPA and a waterfall signed before the first tender.",
+      "Contract in local currency on declining tariffs; make utility reform a condition of entry.",
+      "Record the national guarantee at expected cost under a published cap."
+    ]
+  }
+}

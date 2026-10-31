@@ -84,6 +84,7 @@ WEB_PAPERS = [
     "1.2.FeebatesAndOutputBasedRebating",
     "1.3.CarbonConsumptionTax",
     "1.4.IronSteelCBAM",
+    "3.1.ClimateFinanceIntermediationForCleanPower",
 ]
 
 # Books that are also read on the site, one page per chapter, under <part dir>/books/<BookName>/
