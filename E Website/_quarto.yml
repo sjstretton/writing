@@ -4,6 +4,7 @@ project:
   render:
     - "*.qmd"
     - "research/*.qmd"
+    - "research/*/*/index.qmd"
   resources:
     - "papers/**"
 
@@ -20,15 +21,21 @@ website:
         text: About
       - href: contact.qmd
         text: Contact
+  bread-crumbs: true
   sidebar:
     - id: research
       title: "Research"
       style: docked
       collapse-level: 1
       contents:
+        # BEGIN sidebar contents - written by build_research_pages.py on every compile
         - text: "Research home"
           href: research.qmd
-        - research/1-carbon-pricing.qmd
+        - section: "1. Carbon Pricing"
+          href: research/1-carbon-pricing.qmd
+          contents:
+            - text: "1.1 Price Production and Consumption Separately"
+              href: research/1-carbon-pricing/OpenEconomyCarbonPricing/index.qmd
         - research/2-other-tax.qmd
         - research/3-finance-and-risk.qmd
         - research/4-sovereign-incentives.qmd
@@ -36,6 +43,7 @@ website:
         - research/6-modular-upgrades.qmd
         - research/7-analytics.qmd
         - research/more.qmd
+        # END sidebar contents
   page-footer:
     left: "© 2026"
     right: "Built with [Quarto](https://quarto.org)"
@@ -46,7 +54,10 @@ format:
       light: litera
       dark: darkly
     css: styles.css
-    toc: false
+    toc: true
+    toc-location: left
+    toc-title: "On this page"
+    toc-depth: 2
     mainfont: "Source Serif Pro"
     monofont: "JetBrains Mono"
     fontsize: 1.05em

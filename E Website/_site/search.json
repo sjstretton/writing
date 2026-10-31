@@ -143,66 +143,6 @@
     ]
   },
   {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
-    "section": "",
-    "text": "Papers on climate policy and climate finance for finance ministries and development banks, in seven series. Each series page gives the abstracts and the slides, policy brief and full paper for every paper. Older papers, books and essays are under More papers and books.\n\n1. Carbon Pricing\nPrice production and consumption separately: a feebate on emissions intensity and a destination-based charge on consumption.\n\n1.1 Price Production and Consumption Separately\n1.2 Feebates\n1.3 Credit the Price Signal, Not the Payment\n1.4 Carbon Consumption Tax\n\n\n\n2. Other Tax and Fiscal Policy\nTax rent, not effort: land and corporate taxes that hold up when capital and people can move.\n\n2.1 Taxing Rent, Not Effort\n\n\n\n3. Finance and Risk\nMake clean power an asset class: remove payment risk at source, then turn projects into standard securities.\n\n3.1 Guarantee the Contract, Not the Debt\n3.2 From Projects to Asset Classes\n\n\n\n4. Sovereign Incentives\nReward governments, not projects: guarantee capacity and held capital that pay for acting early.\n\n4.1 Reward the Stock as Well as the Flow\n4.2 The Climate Investment Trust\n4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale\n\n\n\n5. Modelling (CPAT)\nModels a finance ministry can audit: the Climate Policy Assessment Tool stated, rebuilt and validated.\n\n5.1 The CPAT Mitigation Module\n5.2 CPAT-AI\n5.3 Validating CPAT\n5.4 Are CPAT’s Price Elasticities Right?\n\n\n\n6. Modular Upgrades\nExtensions to CPAT where policy needs them: carbon-price equivalents, CBAM, public investment, activity and macro-fiscal scenarios.\n\n6.1 Measure Carbon Pricing by the Emissions It Cuts\n6.2 The CBAM Policy Tool\n6.3 Public Investment in CPAT\n6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT\n6.5 The Macro-Fiscal-Energy Scenario Tool\n\n\n\n7. Analytics Tools\nDiagnostics on data ministries already hold: excise systems and fiscal indicators.\n\n7.1 The Excise-Fiscal Diagnostic\n7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis\n\n\n\nMore papers and books\nThe tax book Screwed?!, Time and Chance, The Right Policy at the Wrong Time, earlier finance papers, and essays on philosophy and politics.",
-    "crumbs": [
-      "Research",
-      "Research home"
-    ]
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "For correspondence regarding research, writing, or potential collaboration:\nEmail: sjstretton@gmail.com\nWorking papers listed on the research page are available on request — please get in touch by email and I’ll be glad to share the relevant drafts.\nI am also reachable on LinkedIn."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I am an economist working on climate, fiscal policy, and finance. My research focuses on the design of effective carbon pricing instruments, green growth diagnostics, and the fiscal and financial architecture of climate transitions."
-  },
-  {
-    "objectID": "about.html#background",
-    "href": "about.html#background",
-    "title": "About",
-    "section": "Background",
-    "text": "Background\nI hold master’s degrees in philosophy, economics, and physics. My current work at the World Bank covers carbon pricing policy design, sustainability-linked sovereign lending, and country-level fiscal and climate policy engagements across Europe, Africa, and Asia."
-  },
-  {
-    "objectID": "about.html#research-interests",
-    "href": "about.html#research-interests",
-    "title": "About",
-    "section": "Research Interests",
-    "text": "Research Interests\nMy work sits at the intersection of climate, fiscal, and financial policy:\n\nEffective carbon pricing — measuring the total effective carbon price across direct and indirect policy instruments\nGreen growth diagnostics — frameworks for green structural transformation in developing economies\nSustainability-linked finance — the operational architecture of sustainability-linked sovereign lending\nFiscal policy for climate — carbon consumption taxes, border adjustments, and the political economy of climate fiscal reform\n\nAlongside the technical work, I write on institutional economics, cooperative system design, and the philosophy of policy — drawing on game theory, Indian and Western philosophy, and the broader question of how durable collective arrangements emerge and sustain themselves."
-  },
-  {
-    "objectID": "about.html#writing",
-    "href": "about.html#writing",
-    "title": "About",
-    "section": "Writing",
-    "text": "Writing\nIn addition to research papers, I write shorter pieces on policy, economics, and adjacent topics. Selected writing is collected in the research section."
-  },
-  {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "About",
-    "section": "Contact",
-    "text": "Contact\nFor correspondence, see contact."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Stephen Stretton",
-    "section": "",
-    "text": "Economist working on climate, fiscal policy, and finance. The research comes in seven sections: carbon pricing in open economies; other tax and fiscal policy; finance and risk for clean power; sovereign incentives for national climate policy; modelling with the Climate Policy Assessment Tool (CPAT); modular upgrades to CPAT; and analytics tools for climate-fiscal work. Most papers come with slides, and those on carbon pricing, finance and risk and sovereign incentives, and the Total Effective Carbon Price, also as a short policy brief.\nThree master’s degrees in philosophy, economics, and physics. Currently at the World Bank, working on climate policy instruments and country engagements.\nBrowse the research → | Get in touch →"
-  },
-  {
     "objectID": "research/1-carbon-pricing.html",
     "href": "research/1-carbon-pricing.html",
     "title": "1. Carbon Pricing",
@@ -218,7 +158,7 @@
     "href": "research/1-carbon-pricing.html#paper-1-1",
     "title": "1. Carbon Pricing",
     "section": "1.1 Price Production and Consumption Separately",
-    "text": "1.1 Price Production and Consumption Separately\nA Two-Track Architecture for Carbon Pricing in Open Economies\nA carbon tax on domestic production does two jobs at once: it rewards firms for cutting emissions per unit of output, and it charges for the carbon in what the economy consumes. In an open economy the second job undermines the first, because the charge falls on exports and spares imports. This paper separates the jobs. A revenue-neutral feebate prices production intensity; a destination-based charge, levied through the value-added tax and through forward-announced obligations on energy suppliers, prices consumption. I show that the two tracks together reproduce the Pigouvian allocation for domestic consumption without leakage, that the feebate’s residual cost is second order, that international payments above half the feebate rate make adoption a net gain, and that destination charges make each exporter’s most competitive feebate rate equal to the charge in its markets. A calibration to the EU’s default emission values for steel illustrates the magnitudes.\nSlides → · Policy brief → · Full paper →",
+    "text": "1.1 Price Production and Consumption Separately\nA Two-Track Architecture for Carbon Pricing in Open Economies\nA carbon tax on domestic production does two jobs at once: it rewards firms for cutting emissions per unit of output, and it charges for the carbon in what the economy consumes. In an open economy the second job undermines the first, because the charge falls on exports and spares imports. This paper separates the jobs. A revenue-neutral feebate prices production intensity; a destination-based charge, levied through the value-added tax and through forward-announced obligations on energy suppliers, prices consumption. I show that the two tracks together reproduce the Pigouvian allocation for domestic consumption without leakage, that the feebate’s residual cost is second order, that international payments above half the feebate rate make adoption a net gain, and that destination charges make each exporter’s most competitive feebate rate equal to the charge in its markets. A calibration to the EU’s default emission values for steel illustrates the magnitudes.\nRead online → · Slides → · Policy brief → · Full paper →",
     "crumbs": [
       "Research",
       "1. Carbon Pricing"
@@ -258,6 +198,186 @@
     ]
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Stephen Stretton",
+    "section": "",
+    "text": "Economist working on climate, fiscal policy, and finance. The research comes in seven sections: carbon pricing in open economies; other tax and fiscal policy; finance and risk for clean power; sovereign incentives for national climate policy; modelling with the Climate Policy Assessment Tool (CPAT); modular upgrades to CPAT; and analytics tools for climate-fiscal work. Most papers come with slides, and those on carbon pricing, finance and risk and sovereign incentives, and the Total Effective Carbon Price, also as a short policy brief.\nThree master’s degrees in philosophy, economics, and physics. Currently at the World Bank, working on climate policy instruments and country engagements.\nBrowse the research → | Get in touch →"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am an economist working on climate, fiscal policy, and finance. My research focuses on the design of effective carbon pricing instruments, green growth diagnostics, and the fiscal and financial architecture of climate transitions."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "Background",
+    "text": "Background\nI hold master’s degrees in philosophy, economics, and physics. My current work at the World Bank covers carbon pricing policy design, sustainability-linked sovereign lending, and country-level fiscal and climate policy engagements across Europe, Africa, and Asia."
+  },
+  {
+    "objectID": "about.html#research-interests",
+    "href": "about.html#research-interests",
+    "title": "About",
+    "section": "Research Interests",
+    "text": "Research Interests\nMy work sits at the intersection of climate, fiscal, and financial policy:\n\nEffective carbon pricing — measuring the total effective carbon price across direct and indirect policy instruments\nGreen growth diagnostics — frameworks for green structural transformation in developing economies\nSustainability-linked finance — the operational architecture of sustainability-linked sovereign lending\nFiscal policy for climate — carbon consumption taxes, border adjustments, and the political economy of climate fiscal reform\n\nAlongside the technical work, I write on institutional economics, cooperative system design, and the philosophy of policy — drawing on game theory, Indian and Western philosophy, and the broader question of how durable collective arrangements emerge and sustain themselves."
+  },
+  {
+    "objectID": "about.html#writing",
+    "href": "about.html#writing",
+    "title": "About",
+    "section": "Writing",
+    "text": "Writing\nIn addition to research papers, I write shorter pieces on policy, economics, and adjacent topics. Selected writing is collected in the research section."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About",
+    "section": "Contact",
+    "text": "Contact\nFor correspondence, see contact."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "For correspondence regarding research, writing, or potential collaboration:\nEmail: sjstretton@gmail.com\nWorking papers listed on the research page are available on request — please get in touch by email and I’ll be glad to share the relevant drafts.\nI am also reachable on LinkedIn."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Papers on climate policy and climate finance for finance ministries and development banks, in seven series. Each series page gives the abstracts and the slides, policy brief and full paper for every paper. Older papers, books and essays are under More papers and books.\n\n1. Carbon Pricing\nPrice production and consumption separately: a feebate on emissions intensity and a destination-based charge on consumption.\n\n1.1 Price Production and Consumption Separately\n1.2 Feebates\n1.3 Credit the Price Signal, Not the Payment\n1.4 Carbon Consumption Tax\n\n\n\n2. Other Tax and Fiscal Policy\nTax rent, not effort: land and corporate taxes that hold up when capital and people can move.\n\n2.1 Taxing Rent, Not Effort\n\n\n\n3. Finance and Risk\nMake clean power an asset class: remove payment risk at source, then turn projects into standard securities.\n\n3.1 Guarantee the Contract, Not the Debt\n3.2 From Projects to Asset Classes\n3.3 Book1-Time_and_Chance\n\n\n\n4. Sovereign Incentives\nReward governments, not projects: guarantee capacity and held capital that pay for acting early.\n\n4.1 Reward the Stock as Well as the Flow\n4.2 The Climate Investment Trust\n4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale\n\n\n\n5. Modelling (CPAT)\nModels a finance ministry can audit: the Climate Policy Assessment Tool stated, rebuilt and validated.\n\n5.1 The CPAT Mitigation Module\n5.2 CPAT-AI\n5.3 Validating CPAT\n5.4 Are CPAT’s Price Elasticities Right?\n\n\n\n6. Modular Upgrades\nExtensions to CPAT where policy needs them: carbon-price equivalents, CBAM, public investment, activity and macro-fiscal scenarios.\n\n6.1 Measure Carbon Pricing by the Emissions It Cuts\n6.2 The CBAM Policy Tool\n6.3 Public Investment in CPAT\n6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT\n6.5 The Macro-Fiscal-Energy Scenario Tool\n\n\n\n7. Analytics Tools\nDiagnostics on data ministries already hold: excise systems and fiscal indicators.\n\n7.1 The Excise-Fiscal Diagnostic\n7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis\n\n\n\nMore papers and books\nThe tax book Screwed?!, Time and Chance, The Right Policy at the Wrong Time, earlier finance papers, and essays on philosophy and politics.",
+    "crumbs": [
+      "Research",
+      "Research home"
+    ]
+  },
+  {
+    "objectID": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html",
+    "href": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html",
+    "title": "Price Production and Consumption Separately",
+    "section": "",
+    "text": "In brief\n\n\n\nCarbon prices stay low in open economies because one instrument does two jobs: it pushes producers to cut emissions per unit of output, and it makes consumers pay for the carbon they use. This brief separates the jobs. A revenue-neutral feebate prices production intensity at no cost to the treasury and with a small price effect. A carbon component of VAT and forward-announced obligations on energy suppliers price consumption, imports included. A carbon-price-equivalent metric measures both. International payments above half the feebate rate make adoption a net gain, and destination-based charges turn leakage into a race to the top.\nDownload: Working paper (Word) · Policy brief (Word) · Slides (PowerPoint)\nWorking paper, version 0.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No. 1.1.",
+    "crumbs": [
+      "Research",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.1-where-the-architecture-sits",
+    "href": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.1-where-the-architecture-sits",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.1 A.1 Where the architecture sits",
+    "text": "12.1 A.1 Where the architecture sits\nThe two-track architecture joins four bodies of work that have mostly developed apart: the theory of unilateral policy under leakage, border carbon adjustment, intensity-based instruments, and destination-based taxation.\nThe theory of the split is old. Markusen (1975) showed that with an international externality the best unilateral policy taxes both production and consumption. Hoel (1996) showed that without tariffs a carbon tax should be lower in trade-exposed sectors. Weisbach et al. (2023) restate the result in modern form and add an extraction leg. Most directly, Stephen P. Holland (2012) proves that an intensity standard combined with a consumption tax can reach the first best under leakage, while an emissions tax combined with a consumption tax sometimes cannot. Proposition 1 is therefore an implementable statement of a known allocation result, not a new theorem. Its revenue corollary, that the tracks differ by \\(t\\) times carbon in net exports, is the carbon analogue of the neutrality of origin and destination bases for a uniform tax (Lockwood and Whalley 2010; Lockwood et al. 1994).\nThe design has close European precedents. Grubb et al. (2022) list the separation of incentives at the point of production from a charge on the use of carbon-intensive materials as one of three trade-compatible options. Pollitt et al. (2020) simulate a consumption charge on basic materials equivalent to about €80/tCO₂: it cuts EU emissions by roughly 10 percent with no leakage. Ismer et al. (2016) give the legal design of such a charge as an excise at default intensity, applied equally to imports. Neuhoff et al. (2026) propose benchmark-based free allocation plus a standardized liability per tonne of material with export relief. Each is a production-plus-consumption architecture.\nWhat this paper adds is narrower: (i) a revenue-neutral feebate with an updated benchmark in place of free allocation, so the production track needs no emissions trading system and no auction revenue and can be adopted by a developing country alone; (ii) a consumption track that runs through VAT across all goods rather than an excise on a few materials; (iii) the closed-form residual cost \\(\\tfrac12 t\\Delta e\\) and its calibration to EU default intensities for steel; (iv) the exporter best response under intensity-based destination charges; and (v) the extension of Strand’s crediting threshold to feebates, with the best response \\(t = \\pi\\).",
+    "crumbs": [
+      "Research",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.2-leakage-and-competitiveness",
+    "href": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.2-leakage-and-competitiveness",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.2 A.2 Leakage and competitiveness",
+    "text": "12.2 A.2 Leakage and competitiveness\nModel-based estimates of leakage from unilateral carbon pricing range from 5 to 25 percent, with a central value of about 14 percent (Branger and Quirion 2014). Ex-post studies of the EU system find little or none at prices to date (Naegele and Zaklan 2019; Dechezleprêtre et al. 2022; Colmer et al. 2025), partly because free allocation shields industry and partly because prices were low; the evidence on relocation of investment is similar (Dechezleprêtre and Sato 2017). Pass-through of cost shocks is incomplete in EU trade-exposed sectors and about 70 percent in US manufacturing (Ganapati et al. 2020). The case for the architecture is therefore prospective: it concerns the rates of $80–100 that the range of the High-Level Commission implies (High-Level Commission on Carbon Prices 2017), not leakage already observed. A second leakage channel, through world fossil-fuel prices, survives any charge on goods (Branger and Quirion 2014; Weisbach et al. 2023); only supply-side measures or wider participation address it (Jakob et al. 2014).",
+    "crumbs": [
+      "Research",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.3-border-carbon-adjustment",
+    "href": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.3-border-carbon-adjustment",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.3 A.3 Border carbon adjustment",
+    "text": "12.3 A.3 Border carbon adjustment\nKeen et al. (2022) is the reference design paper: border adjustments are the most effective domestic response to leakage, design is critical, coverage should start with energy-intensive trade-exposed sectors, and charges should be benchmarked first on domestic intensities. Mehling et al. (2019) analyze border adjustments under GATT Articles I, II:2(a), III and XX and the subsidies agreement, and recommend default values with rebuttal and credit for foreign policies, which supports the recognition of non-price instruments argued here and in Stretton (2026b). Cosbey et al. (2019) give design guidance in the same direction. On distribution, Mattoo et al. (2009) find that charges on the carbon content of imports, if exporters do not respond, cut manufacturing exports from low- and middle-income countries by about 8 percent and China’s by about a fifth. The EU’s mechanism (European Parliament and Council 2023) as amended, with default values that carry deliberate mark-ups (European Commission 2025), deducts only carbon prices effectively paid, a choice examined in the companion paper (Stretton 2026b).",
+    "crumbs": [
+      "Research",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.4-intensity-based-instruments-and-feebates",
+    "href": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.4-intensity-based-instruments-and-feebates",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.4 A.4 Intensity-based instruments and feebates",
+    "text": "12.4 A.4 Intensity-based instruments and feebates\nCarolyn Fischer (2001) shows that tradable performance standards, taxes with output-based rebates and output-based permit allocation are all equivalent to an emissions tax plus an output subsidy: for a given target they lean too much on intensity and too little on output. That is Proposition 4. Stephen P. Holland et al. (2009) show that intensity standards can even raise emissions where the output subsidy dominates. C. Fischer and Fox (2007) and Carolyn Fischer and Fox (2012) compare output-based rebates with border adjustment: full adjustment is the most effective against leakage, but where it is limited a domestic rebate can do more. The evidence from feebates in use is mixed in the expected direction. The Swedish NOx charge, refunded on output, cut emission intensity substantially (Sterner and Höglund Isaksson 2006). The French bonus-malus on cars shifted purchases toward low-emission models but raised total emissions in the short run through higher sales (D’Haultfœuille et al. 2014). The IMF finds feebate packages achieve roughly 50–70 percent of the cuts of a carbon tax at the same rate (International Monetary Fund 2019).",
+    "crumbs": [
+      "Research",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.5-destination-and-origin",
+    "href": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.5-destination-and-origin",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.5 A.5 Destination and origin",
+    "text": "12.5 A.5 Destination and origin\nFor a uniform, broad-based tax, a switch between origin and destination bases changes price levels, not relative prices, and so has no real trade effects (Lockwood and Whalley 2010; Lockwood et al. 1994). Proposition 7 therefore rests on the non-uniformity of carbon charges across exporters’ intensities, not on the destination basis as such. VAT shows that a destination-based tax can spread without coordination (Keen and Lockwood 2010); proposals for destination-based corporate taxation rest on the same logic (Auerbach et al. 2017; Devereux et al. 2021). Consumption-based accounts show that the footprints of high-income countries exceed their territorial emissions (Peters and Hertwich 2008; Peters et al. 2011; Davis and Caldeira 2010).",
+    "crumbs": [
+      "Research",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.6-clubs-and-the-race-to-the-top",
+    "href": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.6-clubs-and-the-race-to-the-top",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.6 A.6 Clubs and the race to the top",
+    "text": "12.6 A.6 Clubs and the race to the top\nNordhaus (2015) shows that a club with a small uniform tariff on non-members can sustain a large coalition. The incentive in Proposition 7 differs: it comes from a charge that rises with each exporter’s intensity, not from a flat penalty. Böhringer et al. (2016) find the threat of carbon tariffs credible in a numerical game, and Helm et al. (2012) argue that border adjustments give exporters an incentive to price carbon themselves so as to keep the revenue.",
+    "crumbs": [
+      "Research",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.7-crediting-and-results-based-finance",
+    "href": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.7-crediting-and-results-based-finance",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.7 A.7 Crediting and results-based finance",
+    "text": "12.7 A.7 Crediting and results-based finance\nStrand (2020) derives, for a donor-supported carbon tax, a break-even payment of half the tax rate when the host keeps the reduction toward its own target, the same threshold as Proposition 6, rising to about one and a half times the rate when the credit is transferred with a corresponding adjustment under Article 6 (World Bank 2022). The case for crediting policy rather than projects rests on the poor record of project offsets: fewer than 16 percent of credits examined by Probst et al. (2024) represent real reductions, and Calel et al. (2025) find at least half of Indian wind credits non-additional. Baselines remain the hard part (Partnership for Market Readiness 2017; World Bank and Frankfurt School of Finance and Management 2017).",
+    "crumbs": [
+      "Research",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.8-credibility-and-forward-obligations",
+    "href": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.8-credibility-and-forward-obligations",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.8 A.8 Credibility and forward obligations",
+    "text": "12.8 A.8 Credibility and forward obligations\nA government that re-optimizes each period cannot commit, so a carbon price set annually will not be believed by investors in long-lived capital (Kydland and Prescott 1977). Once firms have sunk low-carbon investment, governments are tempted to lower the price, and firms anticipate this (Helm 2003; Brunner et al. 2012). A forward-announced legal obligation on the few large suppliers of fuel and electricity is a commitment device of the kind this literature recommends.",
+    "crumbs": [
+      "Research",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
+    "objectID": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.9-literature-that-challenges-a-proposition",
+    "href": "research/1-carbon-pricing/OpenEconomyCarbonPricing/index.html#a.9-literature-that-challenges-a-proposition",
+    "title": "Price Production and Consumption Separately",
+    "section": "12.9 A.9 Literature that challenges a proposition",
+    "text": "12.9 A.9 Literature that challenges a proposition\n\n\n\n\n\n\n\n\n\nProposition\nChallenge\nSource\nResponse in the paper\n\n\n\n\n1 (no leakage)\nLeakage through world fuel prices survives any charge on goods\nBranger and Quirion (2014); Weisbach et al. (2023)\nStated as the fourth qualification to Proposition 1\n\n\n1 (novelty)\nIntensity standard plus consumption tax already shown first best\nStephen P. Holland (2012)\nProposition 1 presented as an implementable statement of a known result\n\n\n4–5 (output margin)\nIntensity instruments can raise output and emissions\nStephen P. Holland et al. (2009); D’Haultfœuille et al. (2014)\nSign condition (Proposition 5); consumption track supplies the output margin\n\n\n6 (crediting)\nThreshold rises to about \\(1.5t\\) with a corresponding adjustment\nStrand (2020); World Bank (2022)\nProposition 6 restricted to crediting without transfer of attribution\n\n\n7 (race to the top)\nCharges on actual intensity invite shuffling; standardized values preferred\nNeuhoff et al. (2026); Bushnell et al. (2014)\nA sector-wide feebate lowers intensity on all output, leaving less to shuffle\n\n\n7 (development cost)\nCharges on the carbon content of imports cut developing-country exports if exporters do not respond\nMattoo et al. (2009)\nThe best response is to adopt the feebate, and recognition should rest on the price signal",
+    "crumbs": [
+      "Research",
+      "1. Carbon Pricing",
+      "1.1 Price Production and Consumption Separately"
+    ]
+  },
+  {
     "objectID": "research/3-finance-and-risk.html",
     "href": "research/3-finance-and-risk.html",
     "title": "3. Finance and Risk",
@@ -285,6 +405,17 @@
     "title": "3. Finance and Risk",
     "section": "3.2 From Projects to Asset Classes",
     "text": "3.2 From Projects to Asset Classes\nTwo-Stage Finance and Synthetic Sovereign Bonds for Clean Power\nSolar and wind plants in developing countries are financed one at a time, on bespoke terms, by investors who price construction, payment, currency and sovereign risk together. For a plant with no fuel bill, that cost of capital is most of the price of power. This paper proposes turning such projects into a few standard securities. Banks and development finance institutions finance construction against a contingent purchase contract; on completion, plants are pooled and refinanced through a first-loss equity tranche, a thin mezzanine and a senior synthetic sovereign bond, rated on the guaranteed contracts, the cushion beneath it and a co-guarantee from highly rated sovereigns. A one-factor portfolio model shows that 5 to 10 percent subordination makes the senior bond near-AAA at plausible default correlations, and that refinancing at the resulting blended cost cuts the levelized cost of solar power by about a quarter. Where no contract exists, as for transmission, a tiered and conditional bond guarantee plays the same role.\nSlides → · Policy brief → · Full paper →",
+    "crumbs": [
+      "Research",
+      "3. Finance and Risk"
+    ]
+  },
+  {
+    "objectID": "research/3-finance-and-risk.html#paper-3-3",
+    "href": "research/3-finance-and-risk.html#paper-3-3",
+    "title": "3. Finance and Risk",
+    "section": "3.3 Book1-Time_and_Chance",
+    "text": "3.3 Book1-Time_and_Chance\nFull paper →",
     "crumbs": [
       "Research",
       "3. Finance and Risk"
