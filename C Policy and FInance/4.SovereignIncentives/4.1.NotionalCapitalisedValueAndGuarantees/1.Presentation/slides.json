@@ -1,49 +1,123 @@
 {
-  "series": "Climate Fiscal Policy Brief No. 4.1",
+  "series": "Climate Fiscal Policy Brief No. 4.1 · October 2026",
   "title": "Reward the Stock as Well as the Flow",
-  "subtitle": "Notional capitalized value and guarantee-based climate incentives",
-  "message": "Credit each country with a balance opened by its carbon stock and debited for every tonne emitted above an allowance. Use it as guarantee capacity on green borrowing, not cash. On the development banks' loss record each donor dollar delivers about $80 of incentive; $2.70 in a stress case.",
-  "problem": {
-    "title": "Climate finance pays for flows, not stocks",
-    "stats": [
-      {
-        "value": "19.5 Gt",
-        "label": "of CO₂-equivalent stored in Guyana's forests"
+  "slides": [
+    {
+      "type": "title",
+      "title": "Reward the Stock as Well as the Flow",
+      "subtitle": "Notional capitalized value and guarantee-based climate incentives",
+      "message": "Credit each country with a balance opened by its carbon stock and debited for every tonne emitted above an allowance. Use it as guarantee capacity on green borrowing, not cash: on the development banks' record each dollar of expected loss buys about $80 of interest saving.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Climate finance pays for the flow of emissions and almost nothing for the stock",
+      "stats": [
+        {"value": "19.5 Gt", "label": "of CO₂-equivalent stored in Guyana's forests"},
+        {"value": "~$50m", "label": "a year: what Guyana earns from Hess for avoided emissions"},
+        {"value": "$13.5m", "label": "raised of the $3.6bn Ecuador sought to leave Yasuní oil unexploited"}
+      ],
+      "text": "Payments against baselines nobody can observe get gamed and arrive years after the political cost is paid. Donors will not vote cash on the scale stocks would justify.",
+      "source": "Government of Guyana (2022); DPI Guyana (2023); Hernández Rentería (2020); West et al. (2023)."
+    },
+    {
+      "type": "points",
+      "title": "The proposal: a climate balance that the stock opens and emissions draw down",
+      "points": [
+        {"lead": "Opening balance:", "text": "verified carbon stock × a low stock price."},
+        {"lead": "Each year:", "text": "debited at a uniform debit price for every tonne emitted above an agreed allowance; credited for every tonne below."},
+        {"lead": "Never paid out:", "text": "the balance caps the guarantees development banks provide on the country's green borrowing, backed by a buffer held in a trust."},
+        {"lead": "Enforceable:", "text": "no sovereign pays a fine for emitting, but it can lose part of a balance it counts as its own. Fixed at entry, the balance cannot be raised by threatening to clear."}
+      ],
+      "source": "Working paper 4.1, Section 4; Stretton, Time and Chance, ch. 21; Harstad (2016)."
+    },
+    {
+      "type": "figure",
+      "title": "A guarantee is worth many times what it costs the guarantor",
+      "image": "figures/fig2-incentive-cost-ratio.png",
+      "points": [
+        {"lead": "MDB record:", "text": "0.77% defaults a year, 95.1% recovered. At a 3-point spread, about $80 saved per $1 of expected loss."},
+        {"lead": "Net of the default option", "text": "the country gives up, about $27."},
+        {"lead": "Stress case", "text": "(no preferred-creditor status; 3% calls, 37% loss): 2.7, or 1.9 net."}
+      ],
+      "source": "GEMs (2025); Longstaff et al. (2011); Cruces and Trebesch (2013); working paper 4.1, Proposition 1."
+    },
+    {
+      "type": "points",
+      "title": "Use two prices: a low one sizes the balance, a uniform one prices each tonne",
+      "points": [
+        {"lead": "One price fails:", "text": "at $100/t Guyana's stock is a $1.95tn balance that never binds, so a tonne costs nothing; sized to $5bn of borrowing, a tonne costs 15 cents."},
+        {"lead": "Two prices work:", "text": "stock at $0.26/t opens $5bn; a $50 debit makes each tonne cost the country about $30 (= $50 × 3% ÷ 5%)."},
+        {"lead": "Baselines stop mattering at the margin:", "text": "the allowance changes how much a country gets, not how hard each tonne is rewarded."},
+        {"lead": "Conditions:", "text": "capacity must bind and the scheme must have no end date; surplus balance flows to a trust account."}
+      ],
+      "source": "Working paper 4.1, Proposition 2 and Section 4.3."
+    },
+    {
+      "type": "figure",
+      "title": "In a stylized forest country, business as usual drains the balance and action keeps it",
+      "image": "figures/fig1-balance-paths.png",
+      "points": [
+        {"lead": "$150m a year saved", "text": "while the $5bn balance lasts; each hectare cleared costs $32,500 against the TFFF's $400–800 deduction."},
+        {"lead": "Business as usual", "text": "exhausts the balance in 2042; acting is worth about $1bn."},
+        {"lead": "Donor cost:", "text": "$25m buffer and ~$2m a year, 40 cents per tonne ($11 stress)."}
+      ],
+      "source": "Author's calculation, Guyana's stock (19.5 GtCO₂e); TFFF Concept Note 3.0 (2025); working paper 4.1, Figure 1."
+    },
+    {
+      "type": "table",
+      "title": "Big incentives need borrowers, not big donations",
+      "header": ["Incentive to the country", "Capacity needed", "Buffer held: base (stress)", "Donor cost a year: base (stress)"],
+      "widths": [2.5, 2.0, 2.2, 2.4],
+      "rows": [
+        ["$0.1bn a year", "$3bn", "$0.02bn ($0.3bn)", "$1.3m ($37m)"],
+        ["$1bn a year", "$33bn", "$0.16bn ($3.1bn)", "$13m ($370m)"],
+        ["$5bn a year", "$167bn", "$0.8bn ($15.5bn)", "$63m ($1.85bn)"]
+      ],
+      "note": "At a 3-point spread saving. Strong for large, lower-rated borrowers; weak for investment-grade ones (1 point), who are better served by interest on the balance in a trust account. Multilateral forest funds pledged about $400m a year from 2008.",
+      "source": "Working paper 4.1, Table 5; GEMs (2025); TFFF Concept Note 3.0 (2025)."
+    },
+    {
+      "type": "figure",
+      "title": "Capacity that declines as technology gets cheaper pays for acting now, at half the cost",
+      "image": "../2.Source/figures/fig3-early-action.png",
+      "points": [
+        {"lead": "Waiting pays:", "text": "a $1bn reform cutting 5 Mt a year needs $20/t to act now ($32–37 with uncertainty)."},
+        {"lead": "Declining capacity", "text": "halves the donor cost: $25m to $13m on the record ($740m to $370m stress)."},
+        {"lead": "Paid in cash,", "text": "the same incentive would cost $1bn."}
+      ],
+      "source": "Author's calculation; Dixit and Pindyck (1994); working paper 4.1, Proposition 3 and Figure 2."
+    },
+    {
+      "type": "points",
+      "title": "The risks are real but can be bounded",
+      "points": [
+        {"lead": "Moral hazard:", "text": "capacity is capped, only green borrowing is covered, and a call becomes a debt to a development bank."},
+        {"lead": "Fiscal exposure:", "text": "the host's liability shrinks but stays its own, and other creditors may charge more. Size the buffer to stressed losses and publish it."},
+        {"lead": "MDB capital:", "text": "if guarantees consumed IBRD-style capital (18%) instead of a held buffer, the ratio would fall from 80 to about 7.5."},
+        {"lead": "Stocks never at risk:", "text": "worth a low price, not none: the balance is cheap capacity, makes the debit enforceable and leaves the margin to the debit price."}
+      ],
+      "source": "Working paper 4.1, Sections 6.7 and 8; Chamon et al. (2022); World Bank (2024)."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the analysis shows",
+        "items": [
+          {"lead": "Leverage:", "text": "about $80 of interest saving per $1 of expected loss on the MDB record ($27 net; 2.7 stress)."},
+          {"lead": "Two prices:", "text": "a low stock price, a uniform debit price; carbon-price equivalent = debit × spread ÷ discount rate."},
+          {"lead": "Timing:", "text": "declining capacity is the cheapest way to make acting now pay."}
+        ]
       },
-      {
-        "value": "~$50m",
-        "label": "a year: what Guyana earns for the flow, from its credit sales to Hess"
-      },
-      {
-        "value": "<$1",
-        "label": "per tonne released: the Tropical Forest Forever Facility's deduction for clearing"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {"lead": "MDB shareholders:", "text": "rules-based guarantee capacity outside country envelopes, allocated by notional capitalized value; debit $30–70/t."},
+          {"lead": "Donors:", "text": "fund the buffer, held in a trust, at the stress-case size until there is a record."},
+          {"lead": "Forest and coal countries:", "text": "negotiate allowances, not baselines; credit only legally retired reserves."}
+        ]
       }
-    ],
-    "text": "Payments against baselines nobody can observe get gamed and arrive years after the political cost is paid. A country that kept its forest has little to sell, and leaving coal in the ground earns nothing."
-  },
-  "mechanism": {
-    "title": "A guarantee is worth more than it costs",
-    "image": "figures/fig2-incentive-cost-ratio.png",
-    "imageWidth": 5.4,
-    "imageHeight": 3.04,
-    "caption": "Ratio of interest savings to the guarantor's expected loss, for three spread savings: base (MDB record), middle and stress cases marked.",
-    "points": [
-      "The balance opens at a low stock price; each tonne above the allowance is debited at a higher debit price.",
-      "It sets guarantee capacity on green borrowing and is never paid out.",
-      "Base case: the MDB record, 0.77% calls a year × 4.9% loss; ratio about 80 at a 3-point spread. MDBs are preferred creditors and a new facility may not be: middle case 10, stress case (3% × 37%) 2.7."
-    ]
-  },
-  "action": {
-    "title": "Fund the buffer, not the reward",
-    "results": [
-      "$5bn balance, $50 debit: each tonne costs the country about $30; it saves $150m a year.",
-      "Each $1bn a year of incentive needs $33bn of capacity and about $13m a year of expected loss on the MDB record ($370m in the stress case, with a $3.1bn buffer held).",
-      "Capacity that declines as clean technology gets cheaper halves the donor cost of acting now: $25m to $13m on the record ($740m to $370m in the stress case)."
-    ],
-    "todo": [
-      "MDB shareholders: create rules-based guarantee capacity allocated by notional capitalized value.",
-      "Donors: fund the buffer, held in a trust.",
-      "Forest and coal countries: negotiate allowances, not baselines."
-    ]
-  }
+    }
+  ]
 }

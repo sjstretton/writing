@@ -87,6 +87,8 @@ WEB_PAPERS = [
     "2.1.RentTax",
     "3.1.ClimateFinanceIntermediationForCleanPower",
     "3.2.CleanPowerAssetClasses",
+    "4.1.NotionalCapitalisedValueAndGuarantees",
+    "4.2.ClimateInvestmentTrust",
 ]
 
 # Books that are also read on the site, one page per chapter, under <part dir>/books/<BookName>/

@@ -1,50 +1,124 @@
 {
-  "series": "Climate Fiscal Policy Brief No. 4.2",
+  "series": "Climate Fiscal Policy Brief No. 4.2 · October 2026",
   "title": "The Climate Investment Trust",
-  "subtitle": "Hold capital, lend its strength",
-  "message": "Donors will not vote for large cash transfers. A trust that holds capital instead of spending it can take second loss behind policy guarantees. On the development banks' loss record each donor dollar delivers about 80 dollars of interest savings rather than one; in a stress case without their preferred-creditor status, 2.7.",
-  "problem": {
-    "title": "Climate money is spent once",
-    "stats": [
-      {
-        "value": "~$5tn",
-        "label": "a year raised by a $100 per tonne global carbon tax"
+  "slides": [
+    {
+      "type": "title",
+      "title": "The Climate Investment Trust: Hold Capital, Lend Its Strength",
+      "subtitle": "A buffer fund that insures policy guarantees, invests in clean energy and holds national climate accounts",
+      "message": "Donors will not vote for large cash rewards. A trust that holds capital behind policy guarantees delivers about 80 dollars of interest savings per donor dollar on the development banks' loss record, and 2.7 in a stress case without their preferred-creditor status.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Cash rewards for national climate policy are too large to be voted",
+      "stats": [
+        {"value": "~$380bn", "label": "a year to pay $100 per tonne for a 10% cut in fossil CO₂ (37.8 Gt in 2024)"},
+        {"value": "$6.7bn", "label": "pledged at launch (Nov 2025) to the Tropical Forest Forever Facility, against a $25bn sponsor target"},
+        {"value": "$1", "label": "of reward per donor dollar from a fund that pays out, and then it is gone"}
+      ],
+      "text": "A guarantee saves the borrower the whole credit spread but costs the guarantor only its expected loss. Someone has to hold the capital behind it.",
+      "source": "Global Carbon Budget 2025 (Friedlingstein et al. 2026); WRI (Barber et al. 2025)."
+    },
+    {
+      "type": "points",
+      "title": "A trust separates who pays, who decides and who benefits",
+      "points": [
+        {"lead": "Donors pay and vote;", "text": "a development bank manages the Trust under its trust fund rules."},
+        {"lead": "Future generations benefit:", "text": "each participating country has an account for its post-2050 population, drawn only after 2050."},
+        {"lead": "Accounts work now as collateral.", "text": "A country pledges its balance to cut the rate on its green borrowing."},
+        {"lead": "Deductions are enforceable.", "text": "Taxing a sovereign is not; deducting from a balance it does not yet control is. Accounts build a constituency for persistence."}
+      ],
+      "source": "Working paper 4.2, Section 3; Stretton, Time and Chance (manuscript), ch. 20."
+    },
+    {
+      "type": "table",
+      "title": "One pool does three jobs, and the buffer is kept apart from the investments",
+      "header": ["Job", "Who loses first", "Then", "Behind"],
+      "widths": [2.6, 2.4, 2.2, 2.0],
+      "rows": [
+        ["1. Insure policy guarantees", "The government, by indemnity", "The Trust's buffer, in high-grade bonds", "AAA backer: MDB or rated sovereign"],
+        ["2. Invest (separate function, regional funds)", "Regional fund holds the first-loss tranche of operating pools", "Mezzanine", "Senior bonds (Brief 3.2)"],
+        ["3. Allocate to accounts", "Base share for joining", "Feebate between accounts: credits and debits cancel", "Balances cap the deductions"]
+      ],
+      "note": "The buffer never holds clean power equity: it would lose value in the same crises that trigger guarantee calls.",
+      "source": "Working paper 4.2, Table 1; Brief 3.2."
+    },
+    {
+      "type": "figure",
+      "title": "Each dollar held delivers the spread saved divided by the expected loss: about 80 on the banks' record",
+      "image": "../2.Source/figures/fig2_incentive_per_dollar.png",
+      "points": [
+        {"lead": "Banks' record:", "text": "0.77% calls a year, 95.1% recovered. A 0.5% buffer keeps exhaustion at 1% a year; $5bn supports ~$1tn on paper."},
+        {"lead": "Stress case:", "text": "3% calls, 37% loss. A 9.25% buffer; $5bn supports $54bn; 2.7 per dollar."},
+        {"lead": "With a 2% carry:", "text": "63 and 2.3."}
+      ],
+      "source": "GEMs (EIB 2025); Cruces and Trebesch (2013); author's calculation, 20 programs, correlation 0.2, 3-point spread."
+    },
+    {
+      "type": "points",
+      "title": "Three conditions decide how much of the 80 the Trust delivers",
+      "points": [
+        {"lead": "Preferred creditor treatment.", "text": "Governments repay development banks first, but the practice is informal. Book the Trust's claims through a bank, or plan for the stress case."},
+        {"lead": "Prudence.", "text": "Holding the stress-case buffer while losses follow the record cuts the reward to ~13 per dollar (2% carry) until the Trust has its own record."},
+        {"lead": "Liquidity.", "text": "A call costs a year's debt service now, recovered later. Paying it from the buffer cuts $5bn's reach to ~$390bn; a liquidity line from the AAA backer restores it."}
+      ],
+      "source": "G20 capital adequacy review (2022); Schlegl, Trebesch and Wright (2019); working paper 4.2, Proposition 1."
+    },
+    {
+      "type": "figure",
+      "title": "Holding the cautious buffer, the Trust grows on its own yield if losses follow the banks' record",
+      "image": "../2.Source/figures/fig3_capital_paths.png",
+      "points": [
+        {"lead": "Record losses:", "text": "grows ~3% a year with no fee; with $95bn private co-investment, $34bn after 10 years."},
+        {"lead": "Stress losses:", "text": "shrinks 8.5% a year without fees; with $95bn co-investment, levels off near $28bn."},
+        {"lead": "$95bn is an upper case:", "text": "Climate Investor One raised $850m."}
+      ],
+      "source": "Author's calculation; fee 25% of a 10% return; FMO (2019)."
+    },
+    {
+      "type": "stats",
+      "title": "A feebate between accounts rewards performance at no net cost",
+      "stats": [
+        {"value": "$0", "label": "net cost: credits below the average intensity equal debits above it"},
+        {"value": "$8/t", "label": "highest feasible rate at launch ($5bn in ten accounts)"},
+        {"value": "$31–57/t", "label": "after 10 years of growth (stress case to banks' record)"}
+      ],
+      "text": "Delay forfeits credits every year, so waiting is never free. While the Trust holds the cautious buffer, high-intensity countries join only at low rates: give entrants a transitional benchmark that converges on a published schedule.",
+      "source": "Working paper 4.2, Proposition 3; stylized ten-country power sector, 0.3–0.9 tCO₂/MWh."
+    },
+    {
+      "type": "points",
+      "title": "Precedents show each piece works; none does all three jobs",
+      "points": [
+        {"lead": "Development bank capital:", "text": "the G20 review (2022) and SDR hybrid capital (up to SDR 15bn, May 2024) stretch it, inside the banks."},
+        {"lead": "IMF Resilience and Sustainability Trust:", "text": "loan, deposit and reserve accounts; $48.9bn pledged by July 2025; owed back to contributors."},
+        {"lead": "Tropical Forest Forever Facility:", "text": "$25bn sponsor capital, repaid over 30 years after 10 years' grace, beneath up to $100bn senior debt; about $4 a hectare; pays out, insures nothing."},
+        {"lead": "IFFIm (since 2006):", "text": "bonds against binding pledges, with a reserve held back."}
+      ],
+      "source": "IMF (2022, 2025); TFFF Concept Note 3.0 (2025); Plant (2024); IFFIm."
+    },
+    {
+      "type": "closing",
+      "title": "Launch the Trust as insurance first",
+      "left": {
+        "title": "What the analysis shows",
+        "items": [
+          {"lead": "Leverage:", "text": "about 80 per donor dollar on the banks' record; 2.7 in stress."},
+          {"lead": "Conditions:", "text": "carry, liquidity and preferred creditor treatment."},
+          {"lead": "Growth:", "text": "the loss record decides it; private fees speed it."},
+          {"lead": "Allocation:", "text": "a feebate between accounts costs nothing net."}
+        ]
       },
-      {
-        "value": "~$1tn",
-        "label": "a year that tax would move out of China alone"
-      },
-      {
-        "value": "$1",
-        "label": "of interest savings per donor dollar from a fund that pays out"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {"lead": "Donors and a development bank:", "text": "launch a buffer behind the guarantee capacity of Brief 4.1, with a liquidity line."},
+          {"lead": "Before raising money:", "text": "publish the allocation rule, the fee and the exhaustion target."},
+          {"lead": "At launch:", "text": "hold the stress-case buffer; release capacity as the record builds."},
+          {"lead": "Later:", "text": "investment and regional first-loss funds (Brief 3.2)."}
+        ]
       }
-    ],
-    "text": "Grants buy one project and are gone. Payments against counterfactual baselines reward delay. And sovereigns do not pay their peers, so an international feebate needs a trust to hold the pot."
-  },
-  "mechanism": {
-    "title": "One pool, three jobs",
-    "image": "figures/fig1-buffer-vs-payout.png",
-    "layout": "wide",
-    "imageHeight": 2.1,
-    "aspect": 2.35,
-    "caption": "A: interest savings per donor dollar, stress, middle and base (MDB record) cases. B: Trust capital over 25 years from $5bn at launch, base case.",
-    "points": [
-      "Second loss: the government first, the Trust second, a AAA entity last. A 0.5% buffer keeps exhaustion to 1% a year on the MDB record; 9.3% in the stress case.",
-      "Investment: co-invest for 25% of private returns; regional funds hold first-loss tranches (Brief 3.2).",
-      "Accounts: credited by performance, pledgeable as collateral now, drawn after 2050."
-    ]
-  },
-  "action": {
-    "title": "Launch it as insurance first",
-    "results": [
-      "$5bn ($1bn grants, $4bn country stakes): up to ~$1tn of guarantees on the MDB record; $54bn in the stress case, saving borrowers $1.6bn a year.",
-      "Insurance only, it must charge about 0.02% a year on exposure to hold steady (0.8% in the stress case).",
-      "$95bn of co-investment yields $2.4bn a year in fees: $23bn after 10 years, about $57bn in the long run ($28bn in the stress case)."
-    ],
-    "todo": [
-      "Launch the insurance function behind 4.1's guarantee capacity, in high-grade assets, holding the stress-case buffer until it has a record.",
-      "Publish allocation and deduction rules, fixed by super-majority; price second loss openly.",
-      "Add investment and regional funds once the buffer has a record."
-    ]
-  }
+    }
+  ]
 }

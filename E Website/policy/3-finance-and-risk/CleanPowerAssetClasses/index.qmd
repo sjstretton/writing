@@ -58,7 +58,7 @@ lightbox: auto
 
 # Pool the operating plants and tranche the pool {#sec-pool}
 
-**Operating plants' debt is pooled and refinanced through three securities, each for a different investor.** A first-loss tranche of equity absorbs losses before any debt does; its natural holder is a regional fund of the Climate Investment Trust ([Brief 4.2](../../../policy/4-sovereign-incentives.qmd#paper-4-2)). A thin mezzanine sits above it, held by development lenders or insurers, or replaced by a guarantee from highly rated sovereigns. The senior synthetic sovereign bond, backed by guaranteed contracts on operating plants, the cushion beneath it and that co-guarantee, is rated on the structure rather than on the host government, and is sold to pension funds and insurers.
+**Operating plants' debt is pooled and refinanced through three securities, each for a different investor.** A first-loss tranche of equity absorbs losses before any debt does; its natural holder is a regional fund of the Climate Investment Trust ([Brief 4.2](../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.qmd)). A thin mezzanine sits above it, held by development lenders or insurers, or replaced by a guarantee from highly rated sovereigns. The senior synthetic sovereign bond, backed by guaranteed contracts on operating plants, the cushion beneath it and that co-guarantee, is rated on the structure rather than on the host government, and is sold to pension funds and insurers.
 
 **In a large pool of operating plants, a cushion of 5 to 8 percent makes the senior bond near-AAA.** A standard portfolio model, the one behind the Basel bank capital rules, sizes the cushion from three numbers: how often operating plants default, how much is lost when they do, and how much they fail together. With a 5 percent chance of default over ten years and 80 percent recovery, a near-AAA senior bond needs 4.8 percent of losses absorbed beneath it if plants fail together a little (a correlation of 0.10) and 7.7 percent if they fail together more (0.20). Halving recovery doubles the cushion ([working paper, how much first loss](working-paper.qmd#sec-prop-firstloss)).
 
@@ -104,7 +104,7 @@ lightbox: auto
 
 **Development banks** should sponsor regional pools of operating clean power plants under one standard contract, size the first loss with a published model at the cautious end of plausible correlation and recovery, and expect the first issues to carry thick cushions that thin as a record builds. Keep each pool to one asset type, with no re-securitization.
 
-**The Climate Investment Trust's regional funds** should hold the first-loss tranches, priced explicitly and published, with the right to sell seasoned positions so the capital recycles ([Brief 4.2](../../../policy/4-sovereign-incentives.qmd#paper-4-2)).
+**The Climate Investment Trust's regional funds** should hold the first-loss tranches, priced explicitly and published, with the right to sell seasoned positions so the capital recycles ([Brief 4.2](../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.qmd)).
 
 **Highly rated sovereigns** should co-guarantee the mezzanine layer rather than fund it, and hold explicit reserves against the correlated tail.
 
@@ -115,8 +115,8 @@ lightbox: auto
 # Related papers in this series {#sec-related .unnumbered}
 
 - **3.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* ([Brief 3.1](../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.qmd); @CFPB31). Removes payment risk at source; this brief starts where it ends.
-- **4.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* ([Brief 4.2](../../../policy/4-sovereign-incentives.qmd#paper-4-2); @CFPB42). The natural provider of the first-loss tranche.
-- **4.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* ([Brief 4.1](../../../policy/4-sovereign-incentives.qmd#paper-4-1); @CFPB41). Guarantee capacity that can stand behind the donor tier of grid guarantees.
+- **4.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* ([Brief 4.2](../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.qmd); @CFPB42). The natural provider of the first-loss tranche.
+- **4.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* ([Brief 4.1](../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.qmd); @CFPB41). Guarantee capacity that can stand behind the donor tier of grid guarantees.
 - **4.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* ([Brief 4.3](../../../policy/4-sovereign-incentives.qmd#paper-4-3); @CFPB43). Lending that can reward the reforms the tiered guarantees require.
 - The full analysis of this brief: *From Projects to Asset Classes* ([working paper](working-paper.qmd); @StrettonWP32).
 

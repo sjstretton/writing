@@ -43,6 +43,10 @@ for share, col, lab in ((0.0, COL[0], "no guarantee fee"), (0.5, COL[2], "fee = 
     ax.plot(lams * 100, [incentive_per_donor_dollar(P["s"], x, share * x) for x in lams],
             color=col, lw=2, label=f"Buffer fund, {lab}")
 ax.axhline(1, color="grey", lw=1.5, ls="--", label="Payout fund")
+for i, (name, (p, L)) in enumerate(CASES.items()):
+    bL = buffer_ratio_mc(20, p, 0.2, L, 0.01)
+    ax.plot(p * L * 100, incentive_per_donor_dollar(P["s"], p * L, carry=0.02, b=bL), "o", color=COL[3],
+            ms=5, label="Each case's own buffer, 2% carry" if i == 0 else None)
 for (name, (p, L)), short in zip(CASES.items(), ("Base\n(MDB record)\n80", "Middle\n10", "Stress\n2.7")):
     ax.axvline(p * L * 100, color="grey", lw=0.8, ls=":")
     ax.text(p * L * 100 * 1.07, 0.35, short, fontsize=7.5, color="#444444", va="bottom")
@@ -52,21 +56,23 @@ ax.set_yticks([1, 3, 10, 30, 100]); ax.set_yticklabels(["1", "3", "10", "30", "1
 ax.set_ylim(0.3, 400)
 ax.set_xlabel("Trust's expected loss, % of exposure a year (log scale)")
 ax.set_ylabel("Spread savings per donor dollar (PV, log)")
-ax.set_title("Held capital delivers 3-80 times what spent capital does", fontsize=10, loc="left")
+ax.set_title("Held capital delivers 2.7-80 times what spent capital does", fontsize=10, loc="left")
 ax.legend(frameon=False, fontsize=8, loc="upper right")
 fig.tight_layout(); fig.savefig(os.path.join(OUT, "fig2_incentive_per_dollar.png"), dpi=200); plt.close(fig)
 
-# Figure 3: capital paths
+# Figure 3: capital paths with the stress-case buffer held (the launch policy recommended in the paper)
 T = 25
+b_st = buffer_ratio_mc(20, 0.03, 0.2, 0.37, 0.01)
+lam_st = 0.03 * 0.37
 fig, ax = plt.subplots(figsize=(6.2, 3.8))
-scen = [("$95bn private co-investment, fee = half of expected loss", 95, lam / 2),
-        ("$95bn private co-investment, no guarantee fee", 95, 0.0),
-        ("$10bn private co-investment, no guarantee fee", 10, 0.0),
-        ("Insurance only, fee = half of expected loss", 0, lam / 2)]
-for (lab, E_p, f), col in zip(scen, COL):
-    ax.plot(range(T + 1), capital_path(T=T, E_p=E_p, lam=lam, f=f, b=b0), color=col, lw=2, label=lab)
+scen = [("Losses at MDB record, $95bn private co-investment", 95, lam),
+        ("Losses at MDB record, insurance only", 0, lam),
+        ("Stress losses, $95bn private co-investment", 95, lam_st),
+        ("Stress losses, insurance only", 0, lam_st)]
+for (lab, E_p, l), col in zip(scen, COL):
+    ax.plot(range(T + 1), capital_path(T=T, E_p=E_p, lam=l, f=0.0, b=b_st), color=col, lw=2, label=lab)
 ax.set_xlabel("Years from launch"); ax.set_ylabel("Trust capital, $bn")
-ax.set_title("Fees on private returns, not the buffer's yield, make the Trust grow", fontsize=10, loc="left")
+ax.set_title("With the stress buffer held, the loss record decides whether the Trust grows", fontsize=10, loc="left")
 ax.legend(frameon=False, fontsize=8)
 fig.tight_layout(); fig.savefig(os.path.join(OUT, "fig3_capital_paths.png"), dpi=200); plt.close(fig)
 print("written to", OUT)

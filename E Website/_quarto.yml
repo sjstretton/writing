@@ -80,7 +80,19 @@ website:
               contents:
                 - text: "Working paper"
                   href: policy/3-finance-and-risk/CleanPowerAssetClasses/working-paper.qmd
-        - policy/4-sovereign-incentives.qmd
+        - section: "4. Sovereign Incentives"
+          href: policy/4-sovereign-incentives.qmd
+          contents:
+            - section: "4.1 Reward the Stock as Well as the Flow"
+              href: policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/working-paper.qmd
+            - section: "4.2 The Climate Investment Trust"
+              href: policy/4-sovereign-incentives/ClimateInvestmentTrust/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/4-sovereign-incentives/ClimateInvestmentTrust/working-paper.qmd
         - section: "Books and Other Papers"
           href: policy/more.qmd
           contents:
