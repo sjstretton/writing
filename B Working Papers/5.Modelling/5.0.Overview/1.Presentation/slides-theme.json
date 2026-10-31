@@ -1,11 +1,11 @@
 {
-  "series": "CPAT Companion Papers, Section 4: Modelling",
+  "series": "CPAT Companion Papers, Section 5: Modelling",
   "title": "Models a Finance Ministry Can Audit",
   "slides": [
     {
       "type": "title",
       "title": "Models a Finance Ministry Can Audit",
-      "subtitle": "The Climate Policy Assessment Tool, rebuilt, validated and extended: papers 4.1–4.7",
+      "subtitle": "The Climate Policy Assessment Tool, rebuilt, validated and extended: papers 5.1–5.4 and 6.2–6.4",
       "message": "A climate-fiscal model a ministry can use must be small enough to state on a few pages, built at least twice so every step can be tested, checked against data and other models, and extended only where policy needs it."
     },
     {
@@ -30,10 +30,10 @@
     {
       "type": "figure",
       "title": "What CPAT computes: about eighteen equations",
-      "image": "../4.1.CPATMitigationMethods/2.Source/figures/fig1_flow.png",
+      "image": "../../5.1.CPATMitigationMethods/2.Source/figures/fig1_flow.png",
       "imageWidth": 5.4,
       "imageHeight": 2.98,
-      "caption": "The mitigation module is a one-way chain; GDP and power prices feed back a year later (4.1).",
+      "caption": "The mitigation module is a one-way chain; GDP and power prices feed back a year later (5.1).",
       "points": [
         "Prices: supply cost, taxes, subsidies and the carbon charge.",
         "Demand: usage and efficiency elasticities, all long-run.",
@@ -45,10 +45,10 @@
     {
       "type": "figure",
       "title": "Rebuild it twice: bugs fixed, issues tracked",
-      "image": "../4.2.CPATAIImplementation/1.Presentation/figures/fig_register.png",
+      "image": "../../5.2.CPATAIImplementation/1.Presentation/figures/fig_register.png",
       "imageWidth": 5.4,
       "imageHeight": 2.48,
-      "caption": "CPAT-AI register at release 1.0.2, 29 October 2026 (4.2).",
+      "caption": "CPAT-AI register at release 1.0.2, 29 October 2026 (5.2).",
       "points": [
         "A bug is fixed, never copied: 228 found, 24 high priority.",
         "An issue is copied and logged: 135, plus 35 departures decided by the owner.",
@@ -59,10 +59,10 @@
     {
       "type": "figure",
       "title": "Validation: good for ranges, not point forecasts",
-      "image": "../4.3.CPATValidation/1.Presentation/figures/fig_backcast.png",
+      "image": "../../5.3.CPATValidation/1.Presentation/figures/fig_backcast.png",
       "imageWidth": 5.4,
       "imageHeight": 2.48,
-      "caption": "Back-cast from 2000 with no policy, normalized RMSE of GHG (4.3).",
+      "caption": "Back-cast from 2000 with no policy, normalized RMSE of GHG (5.3).",
       "points": [
         "Base year fits by calibration; trends fit for Australia and the US.",
         "Baselines and price responses of the same order as IEA, Enerdata and EPM.",
@@ -73,10 +73,10 @@
     {
       "type": "figure",
       "title": "Elasticities: most pass, timing does not",
-      "image": "../4.4.ElasticityValidation/2.Source/figures/fig1_cpat_vs_literature.png",
+      "image": "../../5.4.ElasticityValidation/2.Source/figures/fig1_cpat_vs_literature.png",
       "imageWidth": 3.9,
       "imageHeight": 3.12,
-      "caption": "CPAT defaults against published long-run estimates (4.4).",
+      "caption": "CPAT defaults against published long-run estimates (5.4).",
       "points": [
         "Seven of ten fuel-sector defaults lie in the published range.",
         "Industrial diesel, services gasoline and services electricity are too high.",
@@ -100,17 +100,17 @@
       ],
       "rows": [
         [
-          "CBAM Policy Tool (4.5)",
+          "CBAM Policy Tool (6.2)",
           "Exporters' exposure to the EU border charge, product by product, and what data and a domestic price do",
           "Turkish hot-rolled steel: €107/t in 2026, €252 at full phase-in. Egypt: verified data cut €595m to €177m a year"
         ],
         [
-          "Public investment (4.6)",
+          "Public investment (6.3)",
           "Investment needs priced at the cost of capital countries pay; a budget test for public money",
           "A stylized clean asset fails above 12.6%. Kenya, Uganda, St Lucia need 4–5% of GDP in 2030"
         ],
         [
-          "Activity layer (4.7)",
+          "Activity layer (6.4)",
           "One driver layer linking CPAT, SISEPUEDE, the CBAM tool and FTT",
           "Price response counted once; cars +64% while travel +41% in ten years (stylized)"
         ]
@@ -139,14 +139,14 @@
         "Add the EU rule for crediting a foreign carbon price to the CBAM tool."
       ],
       "papers": [
-        "4.0  Models a Finance Ministry Can Audit (overview)",
-        "4.1  The CPAT Mitigation Module",
-        "4.2  CPAT-AI: Rebuilding a Policy Model",
-        "4.3  Validating CPAT",
-        "4.4  Are CPAT's Price Elasticities Right?",
-        "4.5  The CBAM Policy Tool",
-        "4.6  Public Investment in CPAT",
-        "4.7  Activity Levels Across Four Models"
+        "5.0  Models a Finance Ministry Can Audit (overview)",
+        "5.1  The CPAT Mitigation Module",
+        "5.2  CPAT-AI: Rebuilding a Policy Model",
+        "5.3  Validating CPAT",
+        "5.4  Are CPAT's Price Elasticities Right?",
+        "6.2  The CBAM Policy Tool",
+        "6.3  Public Investment in CPAT",
+        "6.4  Activity Levels Across Four Models"
       ]
     }
   ]

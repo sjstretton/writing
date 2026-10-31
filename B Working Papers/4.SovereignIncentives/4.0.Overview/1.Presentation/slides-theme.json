@@ -1,11 +1,11 @@
 {
-  "series": "Climate Fiscal Policy Briefs, Section 3: Sovereign Incentives",
+  "series": "Climate Fiscal Policy Briefs, Section 4: Sovereign Incentives",
   "title": "Reward Governments, Not Projects",
   "slides": [
     {
       "type": "title",
       "title": "Reward Governments, Not Projects",
-      "subtitle": "International incentives for national climate policy: Briefs 3.1–3.3",
+      "subtitle": "International incentives for national climate policy: Briefs 4.1–4.3",
       "message": "Cash on the needed scale is politically impossible. Reward governments with what the international system supplies cheaply and they value highly: cheaper borrowing, through guarantees and collateral. On the development banks' loss record each donor dollar then delivers about 80 dollars of incentive; 2.7 in a stress case."
     },
     {
@@ -47,34 +47,34 @@
           "Carbon pricing and policy crediting",
           "Payment per tonne cut by a policy, as a carbon-price equivalent",
           "Cash, per tonne",
-          "1.1, 1.7"
+          "1.1, 6.1"
         ],
         [
           "Conditional de-risking",
           "An intermediary and guarantees for its clean power pipeline, on condition of reform",
           "Expected loss on contingent exposure",
-          "2.1, 2.2"
+          "3.1, 3.2"
         ],
         [
           "Sustainability-linked lending",
           "A lower interest rate if agreed indicators are met",
           "Forgone interest; small per loan",
-          "3.3"
+          "4.3"
         ],
         [
           "Notional capitalized value, backed by the Trust",
           "A balance credited for carbon stocks, usable as guarantee capacity",
           "Expected loss and buffer carry, held not paid out",
-          "3.1, 3.2"
+          "4.1, 4.2"
         ]
       ],
-      "note": "Policy crediting is the cleanest and dearest; de-risking is cheap but small. Section 3 aims for both size and low cost.",
+      "note": "Policy crediting is the cleanest and dearest; de-risking is cheap but small. Section 4 aims for both size and low cost.",
       "fontSize": 13
     },
     {
       "type": "figure",
       "title": "A guarantee is worth many times what it costs",
-      "image": "../3.1.NotionalCapitalisedValueAndGuarantees/1.Presentation/figures/fig2-incentive-cost-ratio.png",
+      "image": "../../4.1.NotionalCapitalisedValueAndGuarantees/1.Presentation/figures/fig2-incentive-cost-ratio.png",
       "imageWidth": 5.4,
       "imageHeight": 3.04,
       "caption": "Ratio of interest savings to the guarantor's expected loss, for three spread savings; base, middle and stress cases marked (log scales).",
@@ -87,7 +87,7 @@
     },
     {
       "type": "twocol",
-      "title": "Notional capitalized value (3.1)",
+      "title": "Notional capitalized value (4.1)",
       "left": {
         "heading": "Definition",
         "points": [
@@ -111,10 +111,10 @@
       "type": "figure",
       "layout": "wide",
       "title": "The Climate Investment Trust: hold, don't spend",
-      "image": "../3.2.ClimateInvestmentTrust/1.Presentation/figures/fig1-buffer-vs-payout.png",
+      "image": "../../4.2.ClimateInvestmentTrust/1.Presentation/figures/fig1-buffer-vs-payout.png",
       "imageHeight": 2.1,
       "aspect": 2.35,
-      "caption": "A: interest savings per donor dollar, stress, middle and base (MDB record). B: Trust capital over 25 years from $5bn at launch, base case (3.2).",
+      "caption": "A: interest savings per donor dollar, stress, middle and base (MDB record). B: Trust capital over 25 years from $5bn at launch, base case (4.2).",
       "points": [
         "On the MDB record a 0.5% buffer keeps exhaustion to 1% a year: $5bn could back up to ~$1tn on paper.",
         "Stress case: a 9.3% buffer; $5bn supports $54bn, saving borrowers $1.6bn a year. Hold that buffer until the Trust has a record.",
@@ -124,7 +124,7 @@
     {
       "type": "figure",
       "title": "Sustainability-linked lending is too small",
-      "image": "../3.3.SustainabilityLinkedLending/1.Presentation/figures/fig1-size-problem.png",
+      "image": "../../4.3.SustainabilityLinkedLending/1.Presentation/figures/fig1-size-problem.png",
       "imageWidth": 5.6,
       "imageHeight": 2.94,
       "caption": "Present value at 5% over ten years, US$ million, log scale. Hatched: cost to the funder on the MDB record.",
@@ -138,7 +138,7 @@
     {
       "type": "figure",
       "title": "Paying for acting now",
-      "image": "../3.1.NotionalCapitalisedValueAndGuarantees/2.Source/figures/fig3-early-action.png",
+      "image": "../../4.1.NotionalCapitalisedValueAndGuarantees/2.Source/figures/fig3-early-action.png",
       "imageWidth": 5.4,
       "imageHeight": 3.04,
       "caption": "Net present value of adopting a stylized $1bn reform, by year of adoption.",
@@ -151,20 +151,20 @@
     },
     {
       "type": "twocol",
-      "title": "How series 2 and 3 compose",
+      "title": "How series 3 and 4 compose",
       "left": {
-        "heading": "Section 2: who bears a loss",
+        "heading": "Section 3: who bears a loss",
         "points": [
-          "A payment intermediary and its guarantee waterfall (2.1).",
-          "Two-stage finance, pools and synthetic sovereign bonds (2.2).",
+          "A payment intermediary and its guarantee waterfall (3.1).",
+          "Two-stage finance, pools and synthetic sovereign bonds (3.2).",
           "Takes policy as given, and prices or conditions it."
         ]
       },
       "right": {
-        "heading": "Section 3: what the government chooses",
+        "heading": "Section 4: what the government chooses",
         "points": [
-          "Capacity earned under 3.1 can stand in 2.1's waterfall or behind 2.2's senior bonds.",
-          "The Trust's regional funds hold 2.2's first-loss tranche.",
+          "Capacity earned under 4.1 can stand in 3.1's waterfall or behind 3.2's senior bonds.",
+          "The Trust's regional funds hold 3.2's first-loss tranche.",
           "One verified indicator can trigger both a rebate and capacity."
         ]
       },
@@ -181,10 +181,10 @@
         "Forest and coal countries: negotiate allowances, not baselines."
       ],
       "papers": [
-        "3.0  Reward Governments, Not Projects (overview)",
-        "3.1  Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives",
-        "3.2  The Climate Investment Trust: Hold Capital, Lend Its Strength",
-        "3.3  Codify Sustainability-Linked Sovereign Lending, Then Give It Scale"
+        "4.0  Reward Governments, Not Projects (overview)",
+        "4.1  Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives",
+        "4.2  The Climate Investment Trust: Hold Capital, Lend Its Strength",
+        "4.3  Codify Sustainability-Linked Sovereign Lending, Then Give It Scale"
       ]
     }
   ]

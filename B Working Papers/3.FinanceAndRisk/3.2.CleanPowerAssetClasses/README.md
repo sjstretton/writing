@@ -1,6 +1,6 @@
-# 2.2 From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power
+# 3.2 From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power
 
-**Status:** first full draft, version 0.1 (29 October 2026). Working paper and Climate Fiscal Policy Brief No. 2.2. Awaiting Stephen's peer review. Series plan: `../SeriesArchitecture.md`.
+**Status:** first full draft, version 0.1 (29 October 2026). Working paper and Climate Fiscal Policy Brief No. 3.2. Awaiting Stephen's peer review. Series plan: `../3.0.Overview/SeriesArchitecture.md`.
 
 **Question.** Once payment risk is removed, how do individual clean power projects become standard securities that institutional and domestic savers will buy at low cost?
 
@@ -11,7 +11,7 @@
 | File | What |
 |---|---|
 | `CleanPowerAssetClasses.qmd` / `.docx` / `.bib` | Working paper master (version 0.1), rendered with pandoc |
-| `1.Presentation/Brief-CleanPowerAssetClasses.qmd` / `.docx` / `.bib` | Policy brief, Climate Fiscal Policy Brief No. 2.2 |
+| `1.Presentation/Brief-CleanPowerAssetClasses.qmd` / `.docx` / `.bib` | Policy brief, Climate Fiscal Policy Brief No. 3.2 |
 | `1.Presentation/figures/make_figures.py` | Brief figures (reuses the working-paper code) |
 | `2.Source/model.py` | LCOE, two-stage refinancing, Vasicek first-loss sizing, two-factor host-country model, tiered guarantee; prints every table |
 | `2.Source/make_wp_figures.py`, `2.Source/figures/` | Working-paper figures |
@@ -23,8 +23,8 @@ Regenerate: `python3 2.Source/model.py`, `python3 2.Source/make_wp_figures.py`, 
 
 - Two-stage finance, tiered bond guarantee and regional equity funds: "A Solar Economy Financing System" (Stephen Stretton and **Jasper Zimmermann**), `3.RelatedPiecesAndLinks/StandardizedTwoStage/`. Credited in the working paper's first footnote and the brief's small print.
 - Synthetic sovereign bonds: `3.RelatedPiecesAndLinks/Background-SyntheticSovereignBonds.qmd` and *Time and Chance* chs 7–8, 10, 14–15, 23.
-- First-loss provider: Equity De-risking for Clean Energy, now part of 3.2 (`3.SovereignIncentives/3.2.ClimateInvestmentTrust/8.PreviousVersions/EquityDeRiskingForCleanEnergy.qmd`).
-- Payment intermediary: paper 2.1 (cited, summarized in one paragraph).
+- First-loss provider: Equity De-risking for Clean Energy, now part of 4.2 (`4.SovereignIncentives/4.2.ClimateInvestmentTrust/8.PreviousVersions/EquityDeRiskingForCleanEnergy.qmd`).
+- Payment intermediary: paper 3.1 (cited, summarized in one paragraph).
 
 ## Open items
 

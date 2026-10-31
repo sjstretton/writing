@@ -1,4 +1,4 @@
-# 4.4 Are CPAT's Price Elasticities Right? A Check Against the Evidence
+# 5.4 Are CPAT's Price Elasticities Right? A Check Against the Evidence
 
 **Status:** working paper, version 0.1 (29 October 2026), first full draft for Stephen's review. About 5,600 words of body.
 
@@ -12,7 +12,7 @@
 | `ElasticityValidation.bib` | References; each entry's `note` says how it was verified |
 | `ElasticityValidation.docx` | Rendered with pandoc (see below) |
 | `2.Source/elasticity_check.py` | All analysis: CPAT totals, comparison and classification, income table, timing, TECP implications, both figures |
-| `2.Source/tecp_core.py` | Paper 1.7's TECP model, copied unchanged so this folder runs alone |
+| `2.Source/tecp_core.py` | Paper 6.1's TECP model, copied unchanged so this folder runs alone |
 | `2.Source/data/cpat_legacy_elasticities.csv` | CPAT default elasticities (legacy CPAT 1.0pre public release), copied from `cpat_ai/data/mvp_legacy_extracts/elasticities.csv` |
 | `2.Source/data/CPATPriceElasticities.xlsx` | The simplified by-fuel set kept with CPAT's TECP validation files (`cpat_ai/other/tecp_and_validation`) |
 | `2.Source/table_*.csv`, `2.Source/figures/` | Outputs of `elasticity_check.py` |
@@ -22,9 +22,9 @@ Run: `cd 2.Source && python3 elasticity_check.py` (numpy, matplotlib). Render: r
 ## Sources used
 
 - CPAT-AI repository (public): `docs/CPAT_full_documentation_qmd/03_Mitigation.qmd` (fuel consumption dynamics, income and price elasticities, rebound, panel estimation of energy demand, Tables A–C), `data/mvp_legacy_extracts/elasticities.csv`, `other/tecp_and_validation/` (`CPATPriceElasticities.xlsx`, `All_data_TCP.xlsx`, `Total_Effective_Carbon_Price.pdf`).
-- Paper 1.7 (Total Effective Carbon Price): CES demand system, partial adjustment, stylized economy and model code.
+- Paper 6.1 (Total Effective Carbon Price): CES demand system, partial adjustment, stylized economy and model code.
 - Published evidence, each verified via Crossref and the abstract or an open working-paper version: Labandeira, Labeaga and López-Otero (2017); Havranek, Irsova and Janda (2012); Brons et al. (2008); Huntington, Barrios and Arora (2019, MPRA version read); Burke and Yang (2016); Burke and Liao (2015); Stern (2012); Zhu et al. (2018); Dahl (2012).
-- Consistency with paper 4.3 (editor's note): panel estimates −0.19 (road gasoline) and −0.1 (residential electricity); ±2 SD elasticity sensitivity of the G20 cut from a $75 tax (29 percent; 7–39 percent). Default ranges from paper 4.1.
+- Consistency with paper 5.3 (editor's note): panel estimates −0.19 (road gasoline) and −0.1 (residential electricity); ±2 SD elasticity sensitivity of the G20 cut from a $75 tax (29 percent; 7–39 percent). Default ranges from paper 5.1.
 
 ## Caveats and open items
 

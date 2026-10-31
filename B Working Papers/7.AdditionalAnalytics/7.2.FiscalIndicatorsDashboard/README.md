@@ -1,4 +1,4 @@
-# 5.3 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis
+# 7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis
 
 **Status:** working paper, version 0.1, 29 October 2026 (first draft, for Stephen's peer review). Medium form, about 4,000 words of body. Companion paper to the Climate Fiscal AI Tools (private repository), dashboard version 1.3 (`TaxMacroFiscalDashboard/Global_fiscal_indicators_v1.3.xlsx`).
 
@@ -25,12 +25,12 @@ Not used: IMF GFS and OECD Revenue Statistics (WoRLD is the revenue source); UNU
 
 ## Country profile: checked 29 Oct 2026, nothing added
 
-Stephen cleared tool country results for use as illustrative results on 29 Oct 2026. The tool's only other country profile is the user guide's Kenya worked example (block verdicts: fiscal space 3.7, delivery 7.1, cost of capital 3.2, financing and risk 4.9, and the three context blocks). It was not added: the paper's four-country comparison (Table 2) is already built from the tool's own panel and is reproducible from `2.Source/`, whereas the guide's block scores cannot be traced to a stated panel version, and Kenya is now the country run in paper 5.2.
+Stephen cleared tool country results for use as illustrative results on 29 Oct 2026. The tool's only other country profile is the user guide's Kenya worked example (block verdicts: fiscal space 3.7, delivery 7.1, cost of capital 3.2, financing and risk 4.9, and the three context blocks). It was not added: the paper's four-country comparison (Table 2) is already built from the tool's own panel and is reproducible from `2.Source/`, whereas the guide's block scores cannot be traced to a stated panel version, and Kenya is now the country run in paper 6.5.
 
 ## Still held back
 
-- Every Appendix D value (model output from the scenario tool; Kenya's is reported in paper 5.2 instead).
-- The `upgrades/` folder: CBAM dashboard and the Egypt CBAM workbooks (Egypt emission factors are now used in paper 4.5, not here), the political economy note, and the World Bank Climate Fiscal Risk Dashboard v1.5 with its exemplars and statistical annex (internal-looking World Bank compilation). The paper says only that part of Appendix C and Appendix E are read from "a World Bank climate fiscal risk compilation" whose underlying series are public, and recommends reading those series directly in a public release.
+- Every Appendix D value (model output from the scenario tool; Kenya's is reported in paper 6.5 instead).
+- The `upgrades/` folder: CBAM dashboard and the Egypt CBAM workbooks (Egypt emission factors are now used in paper 6.2, not here), the political economy note, and the World Bank Climate Fiscal Risk Dashboard v1.5 with its exemplars and statistical annex (internal-looking World Bank compilation). The paper says only that part of Appendix C and Appendix E are read from "a World Bank climate fiscal risk compilation" whose underlying series are public, and recommends reading those series directly in a public release.
 - The private GitHub address in the user guide.
 
 ## Note for the editor

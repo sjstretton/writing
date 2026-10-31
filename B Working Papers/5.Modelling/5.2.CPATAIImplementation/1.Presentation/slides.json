@@ -1,5 +1,5 @@
 {
-  "series": "CPAT Companion Paper No. 4.2",
+  "series": "CPAT Companion Paper No. 5.2",
   "title": "CPAT-AI: Rebuilding a Policy Model",
   "subtitle": "Two AI-assisted rebuilds of the Climate Policy Assessment Tool, and what they found",
   "message": "Rebuilt twice in October 2026, as code-written Excel and as Python, under one rule (fix bugs, copy and track issues), legacy CPAT turned out to hold 228 bugs, 24 of high priority. Writing it a second time found seven bugs in the first rebuild.",

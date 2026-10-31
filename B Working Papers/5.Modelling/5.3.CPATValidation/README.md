@@ -1,4 +1,4 @@
-# 4.3 Validating CPAT: Baselines, Back-Casts and Model Comparisons
+# 5.3 Validating CPAT: Baselines, Back-Casts and Model Comparisons
 
 **Status:** first full draft, version 0.1 (29 October 2026). One medium-length working paper (about 5,100 words of body including five tables), companion paper to the CPAT-AI repository (https://github.com/cpmodelai/cpat_ai). Awaiting Stephen's peer review. Series plan: `../SeriesArchitecture.md`.
 
@@ -37,4 +37,4 @@ From the public CPAT-AI repository (read-only clone at `/home/user/cpmodelai/cpa
 - The paper reads CPAT's short-term semi-elasticity (−2.4 percent for $10/t) as "at or above the top" of Green's 0–2 percent per year range, where the documentation says "comparable". Check you agree with the stricter reading.
 - The validation chapter's comparisons with IEA STEPS, Enerdata and EPM report charts only; the paper says so and does not invent numbers from the charts.
 - The version used for the model comparisons is not stated in the documentation; only the back-cast's (CPAT 1.0pre_043).
-- Elasticities are summarized only as far as needed; full treatment is paper 4.4.
+- Elasticities are summarized only as far as needed; full treatment is paper 5.4.

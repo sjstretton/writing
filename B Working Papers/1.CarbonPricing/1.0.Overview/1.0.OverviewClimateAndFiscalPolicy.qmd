@@ -14,7 +14,7 @@ format:
   docx: default
 ---
 
-*Overview of section 1, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Version 0.1 is in `1.ClimateAndFiscalPolicy/8.PreviousVersions`.*
+*Overview of section 1, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Version 0.1 is in `1.CarbonPricing/1.0.Overview/8.PreviousVersions`.*
 
 # One instrument, two jobs {.unnumbered}
 
@@ -27,10 +27,10 @@ The papers in this section separate the jobs. Production, in the trade sense of 
 | Job | Instrument | What it prices | Who pays at the margin | Paper |
 |---|---|---|---|---|
 | Decarbonize production | Revenue-neutral feebate (or output-based rebating) | Emissions per unit of output above or below a sector benchmark | Every producer, at the full rate; the average producer pays nothing net | 1.1, 1.2 |
-| Price consumption of goods | Carbon component of VAT, with the value component cut | Carbon embodied in goods and services consumed at home, imported or domestic | Consumers; exports zero-rated | 1.1, 1.6 |
-| Price consumption of fuel | Legal obligation on fuel suppliers, fixed a decade ahead | Carbon in fuel burned in homes and vehicles | The few large suppliers of fuel | 1.1, 1.6 |
+| Price consumption of goods | Carbon component of VAT, with the value component cut | Carbon embodied in goods and services consumed at home, imported or domestic | Consumers; exports zero-rated | 1.1, 1.4 |
+| Price consumption of fuel | Legal obligation on fuel suppliers, fixed a decade ahead | Carbon in fuel burned in homes and vehicles | The few large suppliers of fuel | 1.1, 1.4 |
 | Recognize policy abroad | Carbon price recognition under CBAM, measured by country and sector | The price signal a trading partner's policy sends | Exporters with weak policy | 1.3 |
-| Measure all of it | Total Effective Carbon Price | Any mix of taxes, subsidies, standards and mandates, as one carbon-tax equivalent | Not an instrument: the scale for crediting and recognition | 1.7 |
+| Measure all of it | Total Effective Carbon Price | Any mix of taxes, subsidies, standards and mandates, as one carbon-tax equivalent | Not an instrument: the scale for crediting and recognition | 6.1 |
 
 : Table 1. The two-track architecture: which instrument does which job.
 
@@ -44,9 +44,9 @@ Power is where the feebate does most good. In coal-heavy grids a carbon tax near
 
 The feebate has a known weakness. It raises no revenue and does not discourage use of the product, so at the same rate it buys fewer tonnes than a tax. The consumption track restores that demand response, which is why the architecture, not the feebate alone, is the proposal. Benchmarks also need facility data and protection from lobbying, and dominant state utilities see only part of the rate unless the benchmark excludes their own output [@StrettonWP12].
 
-# Price consumption through VAT and a forward obligation (paper 1.6) {.unnumbered}
+# Price consumption through VAT and a forward obligation (paper 1.4) {.unnumbered}
 
-The carbon in what a country consumes is mostly unpriced, and much of it is emitted abroad. The EU prices the carbon its power plants and factories emit, but 40 percent of the carbon in what Europeans buy is emitted outside the Union [@StrettonWP14]. Paper 1.6 proposes a carbon consumption tax in two parts.
+The carbon in what a country consumes is mostly unpriced, and much of it is emitted abroad. The EU prices the carbon its power plants and factories emit, but 40 percent of the carbon in what Europeans buy is emitted outside the Union [@StrettonWP14]. Paper 1.4 proposes a carbon consumption tax in two parts.
 
 The first part is a carbon component inside VAT. Every good and service consumed in the Union, imported or domestic, pays a charge per tonne of embodied carbon through the ordinary VAT invoice, while the value component of VAT falls. Exports are zero-rated. Imports start on default intensities that are deliberately generous and the same for every origin, and an exporter can rebut them with verified data. With full input crediting, each firm pays the carbon price on the carbon it adds and the consumer bears it on the whole supply chain; deducting carbon prices already paid upstream gives every tonne one price [@StrettonWP14].
 
@@ -64,7 +64,7 @@ The second flaw is shuffling. A producer with both blast furnaces and scrap-fed 
 
 Measuring embodied carbon and the price signal by country and sector removes both flaws. A country-sector measure does not depend on which plant shipped the goods, so shuffling earns nothing, and a feebate earns credit for the signal it sends. Recognizing the signal halves the share of output an exporter must sell to the EU before a feebate pays for itself. Full recognition has a cost: an exporter with a feebate at the EU price would pay no charge while EU producers pay on all their emissions, which invites relocation. The paper therefore proposes that the Commission recognize the sector-wide signal alongside the price paid, phased in from 2027 to 2034 with relocation reviews [@StrettonWP13].
 
-# Measure policy by the emissions it cuts (paper 1.7) {.unnumbered}
+# Measure policy by the emissions it cuts (paper 6.1) {.unnumbered}
 
 Both tracks, and every recognition or crediting rule, need one scale, and the standard metrics do not provide it. The OECD's effective carbon rate and the World Bank's total carbon price add up explicit and indirect prices per tonne, weighted by emissions [@Agnolucci2024]. They measure the price signal, not what it achieves: a fuel standard or a revenue-neutral feebate scores zero, and a dollar on coal counts the same as a dollar on gasoline although it cuts far more.
 
@@ -86,7 +86,7 @@ Third, destination charges turn leakage into a race to the top. Once importers c
 
 The recommendations differ by who acts. Developing-country exporters should start with a production feebate, in power first and then in steel, cement and aluminum: it needs only sector intensity data and costs the treasury nothing [@CFPB11; @CFPB12]. The EU should recognize carbon-price equivalents at the border, including feebates and non-price instruments, measured by country and sector, and should begin moving part of VAT onto carbon, starting with a forward obligation on fuel suppliers as an amendment to its second emissions trading system [@CFPB13; @CFPB14]. Development banks and crediting facilities should pay for policies measured as Total Effective Carbon Prices, at a price per tonne above half the induced feebate rate [@CFPB61].
 
-The section sets the policy framework that sections 2 and 3 then finance and reward. Section 3's policy crediting pays for tonnes measured on the carbon-price-equivalent scale of paper 1.7.
+The section sets the policy framework that sections 3 and 4 then finance and reward. Section 4's policy crediting pays for tonnes measured on the carbon-price-equivalent scale of paper 6.1.
 
 # The papers in this section {.unnumbered}
 
@@ -95,10 +95,10 @@ The section sets the policy framework that sections 2 and 3 then finance and rew
 | 1.1 | Price Production and Consumption Separately | Two tracks: a production feebate and a destination-based consumption charge, on one measurement scale | Feebate raises a stylized steel price by \$15/t, a tax by \$85/t |
 | 1.2 | Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill | Feebates for coal-heavy power and trade-exposed industry | India, \$50/t: tariff +\$1/MWh under a feebate, +\$36 under a tax |
 | 1.3 | Credit the Price Signal, Not the Payment | Recognize the country-sector price signal under CBAM | Shuffling saves €100–600/t of steel across thirteen exporters at €80/t |
-| 1.6 | Carbon Consumption Tax | Carbon component of VAT and a forward obligation on fuel suppliers | Taxable basket 0.41 kg CO₂e per euro (2022); imports twice EU-made goods |
-| 1.7 | Measure Carbon Pricing by the Emissions It Cuts | The Total Effective Carbon Price | A mix rated \$21/t on explicit prices has an effective price of \$37/t |
+| 1.4 | Carbon Consumption Tax | Carbon component of VAT and a forward obligation on fuel suppliers | Taxable basket 0.41 kg CO₂e per euro (2022); imports twice EU-made goods |
+| 6.1 | Measure Carbon Pricing by the Emissions It Cuts | The Total Effective Carbon Price | A mix rated \$21/t on explicit prices has an effective price of \$37/t |
 
-: Table 2. The papers in section 1. Each comes as a Climate Fiscal Policy Brief and a longer working paper.
+: Table 2. The papers in section 1, with paper 6.1 (section 6), which supplies the common measure. Each comes as a Climate Fiscal Policy Brief and a longer working paper.
 
 **1.1 Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies.** The overarching paper. The two tracks together reproduce the Pigouvian allocation for domestic consumption without leakage; the feebate's residual cost is second order; payments above half the feebate rate make adoption a net gain; and destination charges set each exporter's best feebate rate at the charge in its markets. Brief: Climate Fiscal Policy Brief No. 1.1 [@CFPB11]. Working paper: [@StrettonWP11].
 
@@ -106,10 +106,10 @@ The section sets the policy framework that sections 2 and 3 then finance and rew
 
 **1.3 Credit the Price Signal, Not the Payment: Carbon Price Recognition and Scrap Shuffling under the EU's Carbon Border Adjustment Mechanism.** Plant-level crediting of prices paid ignores feebates and rewards shuffling; country-sector measurement fixes both, phased in from 2027 to 2034. Brief: Climate Fiscal Policy Brief No. 1.3 [@CFPB13]. Working paper: [@StrettonWP13].
 
-**1.6 Carbon Consumption Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers.** A destination-based carbon price for the European Union, kept revenue-neutral by a rule that cuts the value component by last year's carbon receipts. Brief: Climate Fiscal Policy Brief No. 1.6 [@CFPB14]. Working paper: [@StrettonWP14].
+**1.4 Carbon Consumption Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers.** A destination-based carbon price for the European Union, kept revenue-neutral by a rule that cuts the value component by last year's carbon receipts. Brief: Climate Fiscal Policy Brief No. 1.4 [@CFPB14]. Working paper: [@StrettonWP14].
 
-**1.7 Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price.** The uniform carbon tax that would cut emissions by as much as a given policy mix, with closed-form abatement weights and an uncertainty range. Brief: Climate Fiscal Policy Brief No. 1.7 [@CFPB61]. Working paper: [@StrettonWP61].
+**6.1 Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price.** The uniform carbon tax that would cut emissions by as much as a given policy mix, with closed-form abatement weights and an uncertainty range. Brief: Climate Fiscal Policy Brief No. 6.1 [@CFPB61]. Working paper: [@StrettonWP61].
 
-Two related fiscal papers that are not part of the series, Rent Tax (1.4) and Stranded by Contract on India's legacy coal power purchase agreements (1.5), are kept with the additional papers (`6.Additional/1.OtherFiscalPolicy`).
+Two related fiscal papers are not part of the series: Rent Tax (paper 2.1, in section 2, other tax and fiscal policy) and Stranded by Contract on India's legacy coal power purchase agreements (kept with the additional papers in section 8).
 
 # References {.unnumbered}

@@ -1,8 +1,8 @@
-# 4.2 CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool
+# 5.2 CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool
 
 **Status:** first full draft, version 0.1 (29 October 2026). One medium-length working paper (about 5,000 words of body), companion paper to the CPAT-AI repository (https://github.com/cpmodelai/cpat_ai). Awaiting Stephen's peer review. Series plan: `../SeriesArchitecture.md`.
 
-**Scope (new, 29 October 2026): implementation only.** How legacy CPAT was rebuilt twice (Excel-AI and Coded CPAT) with AI assistance, under the rule "bugs are never replicated; issues are replicated and tracked"; what the rebuild found; the testing regime; what AI did and did not do; lessons for building and maintaining policy models. The former strands of this folder move elsewhere: the CPAT architecture and power-investment equations go to 4.1 (Mitigation Methods); the fiscal-application strand (SiSePuede–CCDR–CPAT framing, investment, fiscal risk, debt sustainability) moves to the extensions 4.6 (Public Investment) and 4.7 (Activity Modelling); validation goes to 4.3.
+**Scope (new, 29 October 2026): implementation only.** How legacy CPAT was rebuilt twice (Excel-AI and Coded CPAT) with AI assistance, under the rule "bugs are never replicated; issues are replicated and tracked"; what the rebuild found; the testing regime; what AI did and did not do; lessons for building and maintaining policy models. The former strands of this folder move elsewhere: the CPAT architecture and power-investment equations go to 5.1 (Mitigation Methods); the fiscal-application strand (SiSePuede–CCDR–CPAT framing, investment, fiscal risk, debt sustainability) moves to the extensions 6.3 (Public Investment) and 6.4 (Activity Modelling); validation goes to 5.3.
 
 **Question.** Can a large spreadsheet policy model be rebuilt so that every step can be read and tested, and what does such a rebuild reveal?
 
@@ -13,7 +13,7 @@
 | File | What |
 |---|---|
 | `CPATAIImplementation.qmd` / `.docx` / `.bib` | Working paper master (version 0.1), rendered with pandoc (Chicago author-date) |
-| `3.BackgroundPapers/` | Older background material (AI-assisted recoding notes; WB models; CPAT modelling of ETS; fiscal long-term strategy concept, now for 4.6/4.7) |
+| `3.RelatedPiecesAndLinks/` | Older background material (AI-assisted recoding notes; WB models; CPAT modelling of ETS; fiscal long-term strategy concept, now for 6.3/6.4) |
 | `9.Archive/` | `CPAT_PricesModule_v1.10`, `v1.11` workbooks: the early prices-module record of the recoding |
 | `CPATArchitectureRecodingAndFiscalApplication.xlsx` | Planning workbook from the old three-strand scope (kept; not used by the paper) |
 

@@ -1,5 +1,5 @@
 {
-  "series": "Climate-Fiscal Analytics Paper No. 5.3",
+  "series": "Climate-Fiscal Analytics Paper No. 7.2",
   "title": "A Global Fiscal Indicators Dashboard",
   "subtitle": "Eighty public indicators, one country profile, and a build anyone can rerun",
   "message": "A one-page fiscal and energy profile for 217 economies from about twenty public datasets, rebuilt by a script that never imputes, records the year and source of every value and stops if configuration and output disagree.",
@@ -38,7 +38,7 @@
     "results": [
       "Every value carries its year and source file.",
       "Vintages run from 2013 to 2025; coverage is uneven.",
-      "The same panel feeds the scenario tool (5.2)."
+      "The same panel feeds the scenario tool (6.5)."
     ],
     "todo": [
       "Add carbon prices and effective carbon rates first.",

@@ -1,11 +1,11 @@
 {
-  "series": "Climate-Fiscal Analytics Papers, Section 5: Analytics",
+  "series": "Climate-Fiscal Analytics Papers, Section 7: Additional Analytics",
   "title": "Diagnostics on Data Ministries Already Hold",
   "slides": [
     {
       "type": "title",
       "title": "Diagnostics on Data Ministries Already Hold",
-      "subtitle": "Three climate-fiscal analytics tools: papers 5.1–5.3",
+      "subtitle": "Three climate-fiscal analytics tools: papers 7.1 and 7.2, with the scenario tool 6.5",
       "message": "Analysis changes policy only when the ministry that holds the budget can reproduce it. Each tool takes data the ministry already holds, puts it on a common scale and returns a sequenced answer."
     },
     {
@@ -21,10 +21,10 @@
     {
       "type": "figure",
       "title": "Excise: two countries, two different gaps",
-      "image": "../5.1.ExciseFiscalDiagnostic/1.Presentation/figures/fig_countries.png",
+      "image": "../../7.1.ExciseFiscalDiagnostic/1.Presentation/figures/fig_countries.png",
       "imageWidth": 5.4,
       "imageHeight": 2.48,
-      "caption": "Excise-Fiscal Diagnostic, 2026 runs on Sierra Leone and Liberia; illustrative results, not official estimates (5.1).",
+      "caption": "Excise-Fiscal Diagnostic, 2026 runs on Sierra Leone and Liberia; illustrative results, not official estimates (7.1).",
       "points": [
         "Any schedule mapped onto 30 standard lines and scaled three ways.",
         "Sierra Leone: excise 1.3% of GDP, about 90% from fuel at $0.23 per liter.",
@@ -35,10 +35,10 @@
     {
       "type": "figure",
       "title": "Scenario tool: financing beats size",
-      "image": "../5.2.MacroFiscalEnergyScenarioTool/1.Presentation/figures/fig_stylized_run.png",
+      "image": "../../../6.ModularUpgrades/6.5.MacroFiscalEnergyScenarioTool/1.Presentation/figures/fig_stylized_run.png",
       "imageWidth": 5.4,
       "imageHeight": 2.48,
-      "caption": "GIMF-lite, stylized program of 1% of GDP a year for ten years (5.2).",
+      "caption": "GIMF-lite, stylized program of 1% of GDP a year for ten years (6.5).",
       "points": [
         "One workbook for 186 countries: needs, pricing, lite macro models, debt test.",
         "Kenya: budget need 0.5% of GDP in 2030, mostly land use and non-CO₂.",
@@ -49,10 +49,10 @@
     {
       "type": "figure",
       "title": "Dashboard: a one-page profile from public data",
-      "image": "../5.3.FiscalIndicatorsDashboard/1.Presentation/figures/fig_profiles.png",
+      "image": "../../7.2.FiscalIndicatorsDashboard/1.Presentation/figures/fig_profiles.png",
       "imageWidth": 5.4,
       "imageHeight": 2.48,
-      "caption": "2024 values from IMF WoRLD and WEO, as compiled by the pipeline (5.3).",
+      "caption": "2024 values from IMF WoRLD and WEO, as compiled by the pipeline (7.2).",
       "points": [
         "80 indicators, 12 blocks, 217 economies, about twenty public datasets.",
         "Never imputes; stops if configuration and output disagree.",
@@ -70,10 +70,10 @@
         "Next: add carbon prices to the dashboard; run the excise diagnostic's externality spine on Sierra Leone and Liberia."
       ],
       "papers": [
-        "5.0  Diagnostics on Data Ministries Already Hold (overview)",
-        "5.1  The Excise-Fiscal Diagnostic",
-        "5.2  The Macro-Fiscal-Energy Scenario Tool",
-        "5.3  A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis"
+        "7.0  Diagnostics on Data Ministries Already Hold (overview)",
+        "7.1  The Excise-Fiscal Diagnostic",
+        "6.5  The Macro-Fiscal-Energy Scenario Tool (section 6)",
+        "7.2  A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis"
       ]
     }
   ]

@@ -1,4 +1,4 @@
-# 4.6 Public Investment in CPAT: Investment Needs and the Efficiency of Public Spending
+# 6.3 Public Investment in CPAT: Investment Needs and the Efficiency of Public Spending
 
 **Status:** first full draft, version 0.1 (29 October 2026). One medium-length working paper (about 6,000 words of body), companion to the CPAT-AI repository. Awaiting Stephen's peer review. Series plan: `../SeriesArchitecture.md`.
 

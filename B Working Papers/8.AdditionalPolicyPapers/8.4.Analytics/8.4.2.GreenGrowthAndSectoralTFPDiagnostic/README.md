@@ -1,4 +1,4 @@
-# 5.3 Green Growth and Sectoral TFP Diagnostic
+# 8.4.2 Green Growth and Sectoral TFP Diagnostic
 
 Status: no draft yet. Abstract in `research.qmd`.
 

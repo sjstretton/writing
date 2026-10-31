@@ -1,6 +1,6 @@
-# 3.1 Notional Capitalized Value and Guarantees
+# 4.1 Notional Capitalized Value and Guarantees
 
-**Status:** first full draft, version 0.1 (29 October 2026). Working paper and Climate Fiscal Policy Brief No. 3.1 written; awaiting Stephen's review. Flagship of series 3 (Sovereign Incentives).
+**Status:** first full draft, version 0.1 (29 October 2026). Working paper and Climate Fiscal Policy Brief No. 4.1 written; awaiting Stephen's review. Flagship of series 4 (Sovereign Incentives).
 
 **Title:** Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives.
 
@@ -14,7 +14,7 @@
 |---|---|
 | `NotionalCapitalisedValueAndGuarantees.qmd` | Working paper master, version 0.1 (about 10,000 words including appendices) |
 | `NotionalCapitalisedValueAndGuarantees.bib` / `.docx` | Bibliography; rendered Word file |
-| `1.Presentation/Brief-NotionalCapitalisedValueAndGuarantees.qmd` / `.bib` / `.docx` | Climate Fiscal Policy Brief No. 3.1, brief version 1.0 (about 2,900 words) |
+| `1.Presentation/Brief-NotionalCapitalisedValueAndGuarantees.qmd` / `.bib` / `.docx` | Climate Fiscal Policy Brief No. 4.1, brief version 1.0 (about 2,900 words) |
 | `1.Presentation/figures/make_figures.py` | Draws the brief's two figures (reuses `2.Source`) |
 | `2.Source/model.py` | All calibration numbers (prints them) |
 | `2.Source/make_wp_figures.py` | Working paper figures, written to `2.Source/figures/` |
@@ -29,6 +29,6 @@ Render: `python3 2.Source/render.py NotionalCapitalisedValueAndGuarantees.qmd No
 - *The Right Policy at the Wrong Time* chs 5–7 (international feebate needs a trust; forest valuation; an emission as a capital requirement).
 - Research page abstract (`A.Website/research.qmd`), and the Oxford DPhil proposal (three quantities; act-now incentives; climate allowance of guarantee capacity).
 - Supersedes the working title "Guarantee-Based International Incentives for the Delivery of Strong NDCs".
-- No co-authors. The guarantee loss and buffer parameters are shared with 3.2 (Climate Investment Trust) and 3.3 (Sustainability-Linked Lending). Since 29 Oct 2026 the base case is the MDB sovereign loss record (GEMs 2025: 0.77% annual calls, 4.9% loss, 0.5% buffer, ratio about 80); the middle case is 3% calls × 10% loss (2.5% buffer, ratio 10) and the stress case 3% calls × 37% loss (Cruces and Trebesch 2013; 9.3% buffer, ratio 2.7). All use 20 programs, correlation 0.2 and a 1% annual chance of exhausting the buffer.
+- No co-authors. The guarantee loss and buffer parameters are shared with 4.2 (Climate Investment Trust) and 4.3 (Sustainability-Linked Lending). Since 29 Oct 2026 the base case is the MDB sovereign loss record (GEMs 2025: 0.77% annual calls, 4.9% loss, 0.5% buffer, ratio about 80); the middle case is 3% calls × 10% loss (2.5% buffer, ratio 10) and the stress case 3% calls × 37% loss (Cruces and Trebesch 2013; 9.3% buffer, ratio 2.7). All use 20 programs, correlation 0.2 and a 1% annual chance of exhausting the buffer.
 
-Related: 3.0 series overview; 3.2 The Climate Investment Trust (the buffer fund); 3.3 Sustainability-Linked Lending (delivery channel); 2.1 and 2.2 (structures the guarantee capacity can stand behind). Cross-review of both series: `../CrossReview-Notes.md`.
+Related: 4.0 series overview; 4.2 The Climate Investment Trust (the buffer fund); 4.3 Sustainability-Linked Lending (delivery channel); 3.1 and 3.2 (structures the guarantee capacity can stand behind). Cross-review of both series: `../4.0.Overview/CrossReview-Notes.md`.

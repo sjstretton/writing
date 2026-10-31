@@ -17,7 +17,7 @@ format:
   docx: default
 ---
 
-*Working paper, version 0.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No. 2.2 [@CFPB32].*[^credit]
+*Working paper, version 0.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No. 3.2 [@CFPB32].*[^credit]
 
 [^credit]: The two-stage finance structure, the tiered bond guarantee and the regional equity funds developed here began in joint work with Jasper Zimmermann ("A Solar Economy Financing System"). The synthetic sovereign bond and the guarantee stack draw on the author's book manuscript *Time and Chance* [@TimeAndChance]. Errors are the author's own.
 
@@ -193,7 +193,7 @@ The proof is in Appendix A. Diversification across host countries removes the ho
 
 : Table 6. A three-tier bond guarantee: correlation moves the burden to the last tier (stylized). Ten-year default probabilities: tier 1 (regulating government) 15 percent, tier 2 (national government) 8 percent, tier 3 (donor-backed vehicle) 0.2 percent. Gaussian copula with equal pairwise correlation. Source: author's calculation (`2.Source/model.py`).
 
-**Conditionality is what makes the first two tiers worth having.** Guarantees should be offered only to governments that adopt a negotiated set of reforms: the standard power purchase agreement for generation, a path to cost-reflective tariffs, a schedule for retiring coal plants and a workable process for connecting new projects. Conditions lower the probability that the first tier fails, which in Table 6 is what reduces the call on everyone else. They also give a reforming government something concrete in return for hard decisions. That is where this paper meets the incentive instruments of series 3: guarantee capacity earned by climate policy can stand behind the third tier [@CFPB41], and a sustainability-linked loan can make the reforms its indicators [@CFPB43].
+**Conditionality is what makes the first two tiers worth having.** Guarantees should be offered only to governments that adopt a negotiated set of reforms: the standard power purchase agreement for generation, a path to cost-reflective tariffs, a schedule for retiring coal plants and a workable process for connecting new projects. Conditions lower the probability that the first tier fails, which in Table 6 is what reduces the call on everyone else. They also give a reforming government something concrete in return for hard decisions. That is where this paper meets the incentive instruments of series 4: guarantee capacity earned by climate policy can stand behind the third tier [@CFPB41], and a sustainability-linked loan can make the reforms its indicators [@CFPB43].
 
 # Currency and domestic savings {#sec-currency}
 

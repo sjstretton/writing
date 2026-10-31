@@ -1,5 +1,5 @@
 {
-  "series": "CPAT Companion Paper No. 4.3",
+  "series": "CPAT Companion Paper No. 5.3",
   "title": "Validating CPAT",
   "subtitle": "Baselines, back-casts and model comparisons: where the tool fits and where it does not",
   "message": "CPAT's published checks support it for ranges and policy comparisons, not point forecasts. It tracks emission trends in back-casts for Australia and the United States, misses China badly, and agrees with other models in order of magnitude. Every check predates the 228 bug fixes.",
@@ -44,7 +44,7 @@
       "Rerun back-casts, comparisons and sensitivity on Coded CPAT for every country.",
       "Report a measure of fit for every comparison.",
       "Back-cast against real carbon prices and subsidy reforms.",
-      "Settle the elasticities (paper 4.4)."
+      "Settle the elasticities (paper 5.4)."
     ]
   }
 }

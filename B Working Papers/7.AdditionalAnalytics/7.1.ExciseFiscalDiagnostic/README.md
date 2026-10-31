@@ -1,4 +1,4 @@
-# 5.1 The Excise-Fiscal Diagnostic: Reading an Excise System Against Its Externalities
+# 7.1 The Excise-Fiscal Diagnostic: Reading an Excise System Against Its Externalities
 
 **Status:** working paper, version 0.3, 30 October 2026 (draft for Stephen's peer review). Medium form, about 6,050 words of body. Version 0.3 adds Section 7, applications to Sierra Leone and Liberia, after Stephen cleared the diagnostic's own results for use (30 Oct 2026). Companion paper to the Climate Fiscal AI Tools (private repository).
 
@@ -13,13 +13,13 @@
 | `2.Source/country_metrics.py` | Extracts the Sierra Leone and Liberia figures in Section 7 (Table 5) from the diagnostic's cross-country workbook; output in `country_metrics_SLE_LBR.csv` |
 | `8.PreviousVersions/ExciseFiscalDiagnostic-v0.1.qmd/.docx` | The 24,800-word three-part draft (May 2026) |
 | `8.PreviousVersions/ExciseFiscalDiagnostic-v0.2.qmd/.docx` | Version 0.2 (29 Oct 2026), stylized example only |
-| `1.Presentation/`, `3.BackgroundPapers/`, `9.Archive/` | Earlier briefing, deck, background notes and archive, unchanged |
+| `1.Presentation/`, `3.RelatedPiecesAndLinks/`, `9.Archive/` | Earlier briefing, deck, background notes and archive, unchanged |
 
 ## Sources used
 
 - Previous master v0.1 (Parts A–C, especially A2–A3 measures, B1 key questions, B4–B5 data needs and valuation spine).
 - `climate-fiscal-ai-tools/ExciseDiagnostic/`: `Excise_Diagnostic_WorkingPaper_v0_9.docx` (Part I method: seven questions, typology, three measures, conversion rules, four levels, whole and sectoral runs, data step, lessons); `README.txt`; `process_files/excise_diagnostic_process.md` (standard schedule v1.0, quality rules, data-quality scale, comparator rule, workbook layout). Cross-country workbook: structure, and (from v0.3) the Sierra Leone and Liberia results in Section 7.
-- `3.BackgroundPapers/Background-PoliticalEconomyMetric.qmd` (six drivers, Section 8.3) and `Background-ExtenalityDiagnosticQuestions.qmd` (climate–health questions, Section 4.4).
+- `3.RelatedPiecesAndLinks/Background-PoliticalEconomyMetric.qmd` (six drivers, Section 8.3) and `Background-ExtenalityDiagnosticQuestions.qmd` (climate–health questions, Section 4.4).
 - Public references in the `.bib`.
 
 ## Now used (cleared by Stephen, 30 Oct 2026, as illustrative results from the diagnostic)

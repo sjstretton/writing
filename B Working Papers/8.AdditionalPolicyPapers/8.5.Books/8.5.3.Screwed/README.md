@@ -1,4 +1,4 @@
-# 6.3 Screwed?! Getting our future back with tax and benefit reform
+# 8.5.3 Screwed?! Getting our future back with tax and benefit reform
 
 Book manuscript by Stephen Stretton and Gordon Styles (2020), about 102,000 words in 14 chapters: a case for reforming UK tax and benefits (tax principles and practice, welfare and work, inequality, corporations, land and property, money and debt, environment and resources). Imported on 31 Oct 2026 from the private repository `sjstretton/screwed` (last edited Feb 2020).
 

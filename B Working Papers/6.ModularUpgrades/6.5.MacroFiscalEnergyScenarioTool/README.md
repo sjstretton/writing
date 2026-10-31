@@ -1,4 +1,4 @@
-# 5.2 The Macro-Fiscal-Energy Scenario Tool
+# 6.5 The Macro-Fiscal-Energy Scenario Tool
 
 **Status:** working paper, version 0.1, 29 October 2026 (first draft, for Stephen's peer review). Medium form, about 6,300 words of body after the Kenya run (Section 7, Table 5) was added on 29 Oct 2026. Companion paper to the Climate Fiscal AI Tools (private repository), tool version v0.7 (`Macro_Fiscal_Energy_Scenario_Tool_v0.7.xlsx`).
 
@@ -17,7 +17,7 @@
 - `README.md`, `VersionNotes.md`, `CAVEATS.md` (dashboard, levers, modules, build, caveats, checks).
 - `MacroFiscalModels/MacroFiscalModels_Method_v0_1.md` (GIMF-lite, DIGNAD-lite, DIGNAR-lite and LIC-DSF-lite equations, calibration, model choice, integration, validation, open issues); `gimf_lite.py`, `dignad_lite.py` (defaults and docstrings).
 - `PriceFeasibility/README.md` (abatement, feasibility metrics F1–F3, priors).
-- `InvestmentNeeds/national_model/NMIM_Method_v0_2.md` (structure, payer typology P1–P5, budget need). NMIM's own method belongs to paper 4.6.
+- `InvestmentNeeds/national_model/NMIM_Method_v0_2.md` (structure, payer typology P1–P5, budget need). NMIM's own method belongs to paper 6.3.
 - Public papers for the parent models (GIMF, DIG, DIGNAD, DIGNAR, LIC-DSF), cited in the `.bib`.
 
 ## Now used (cleared by Stephen, 29 Oct 2026, as illustrative tool results)
@@ -34,4 +34,4 @@
 ## Notes for the editor
 
 - The tool's LIC-DSF-lite coefficients are flagged in its own docs as "as recalled from the 2018 Guidance Note"; the paper quotes only the PV of external debt to GDP thresholds (30/40/55) and says the rest must be checked against the current note.
-- Paper 4.6 (Public Investment) describes the investment method; this paper only summarizes the payer typology and budget-need formula.
+- Paper 6.3 (Public Investment) describes the investment method; this paper only summarizes the payer typology and budget-need formula.

@@ -1,6 +1,6 @@
 ---
 title: "Reward Governments, Not Projects"
-subtitle: "International incentives for national climate policy: an overview of section 3"
+subtitle: "International incentives for national climate policy: an overview of section 4"
 author:
   - name: "Stephen J. Stretton"
     note: "Writing in a personal capacity."
@@ -8,13 +8,13 @@ date: "October 2026"
 version: "0.2"
 abstract: |
   The benefits of cutting emissions are global and the costs national, so incentives for national climate policy have to come from outside. Cash transfers on the scale needed are politically impossible. This section of papers argues that the international system should instead reward governments with what it can supply cheaply and they value highly: cheaper borrowing, delivered through guarantees and collateral. A guarantee saves the borrower the full credit spread but costs its provider only expected loss and the carry on a buffer, so on the development banks' own sovereign loss record each dollar of donor cost delivers about 80 dollars of incentive, and 2.7 in a stress case where a new facility does not inherit their preferred-creditor status. Three instruments follow: a notional capitalized value that turns a country's carbon stock into guarantee capacity, debited for every tonne emitted above an allowance; a Climate Investment Trust that holds the capital behind those guarantees instead of spending it; and codified sustainability-linked lending, which delivers the reward but is too small on its own. Capacity that declines as clean technology gets cheaper pays a premium for acting now.
-bibliography: 3.0.OverviewSovereignIncentives.bib
+bibliography: 4.0.OverviewSovereignIncentives.bib
 csl: https://www.zotero.org/styles/chicago-author-date
 format:
   docx: default
 ---
 
-*Overview of section 3, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Version 0.1 (September 2026) is in `8.PreviousVersions` at the section level.*
+*Overview of section 4, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Version 0.1 (September 2026) is in `8.PreviousVersions` at the section level.*
 
 # Incentives for national policy must come from outside {.unnumbered}
 
@@ -30,20 +30,20 @@ There are four ways to reward a government for climate policy from outside, and 
 
 | Route | What the government gets | What it costs the giver | Where |
 |---|---|---|---|
-| Carbon pricing and policy crediting | Payment per tonne cut by a policy, measured as a carbon-price equivalent | Cash, per tonne | Section 1 (1.1, 1.7) |
-| Conditional de-risking | An intermediary and guarantees for its clean power pipeline, on condition of utility and tariff reform | Expected loss on contingent exposure | Section 2 (2.1, 2.2) |
-| Sustainability-linked lending | A lower interest rate if agreed indicators are met | Forgone interest; small per loan | 3.3 |
-| Notional capitalized value, backed by the Climate Investment Trust | A balance, credited for carbon stocks, usable as guarantee capacity on green borrowing | Expected loss and buffer carry, held by a trust rather than paid out | 3.1, 3.2 |
+| Carbon pricing and policy crediting | Payment per tonne cut by a policy, measured as a carbon-price equivalent | Cash, per tonne | Section 1 (1.1, 6.1) |
+| Conditional de-risking | An intermediary and guarantees for its clean power pipeline, on condition of utility and tariff reform | Expected loss on contingent exposure | Section 3 (3.1, 3.2) |
+| Sustainability-linked lending | A lower interest rate if agreed indicators are met | Forgone interest; small per loan | 4.3 |
+| Notional capitalized value, backed by the Climate Investment Trust | A balance, credited for carbon stocks, usable as guarantee capacity on green borrowing | Expected loss and buffer carry, held by a trust rather than paid out | 4.1, 4.2 |
 
 : Table 1. International incentives for national climate policy, compared.
 
 Policy crediting pays the right thing and costs the most. Section 1 proposes paying for the tonnes a policy cuts, measured on one carbon-price-equivalent scale, rather than for individual projects [@CFPB11; @CFPB61]. It is the cleanest incentive and the dearest, because every tonne is paid in cash.
 
-Conditional de-risking is cheap but small. The guarantees in section 2 reward reform only indirectly, by making a reforming country's projects cheaper to finance [@CFPB31; @CFPB32].
+Conditional de-risking is cheap but small. The guarantees in section 3 reward reform only indirectly, by making a reforming country's projects cheaper to finance [@CFPB31; @CFPB32].
 
 The instruments in this section aim for both size and low cost. They pay in the currency the international system holds most of, balance-sheet strength, and they attach the reward to the government's own policy record.
 
-# Reward the stock as well as the flow (paper 3.1) {.unnumbered}
+# Reward the stock as well as the flow (paper 4.1) {.unnumbered}
 
 Climate finance pays for marginal cuts against counterfactuals nobody can observe, and pays almost nothing for carbon that was never released. A country that kept its forest standing for a century has earned nothing; one that cleared it and partly replanted can be paid for the replanting. Counterfactual baselines also reward weak plans and arrive years after the reform they pay for.
 
@@ -53,21 +53,21 @@ The reward is large because a guarantee is worth more than it costs. The series'
 
 The debit must be per tonne, and capacity must bind. If emissions do not reduce the capacity a country actually uses, an extra tonne costs it nothing and the incentive disappears. The working paper shows that this, not the size of the balance, is what gives the instrument a carbon-price equivalent.
 
-# Hold the capital, lend its strength (paper 3.2) {.unnumbered}
+# Hold the capital, lend its strength (paper 4.2) {.unnumbered}
 
 Guarantee capacity needs a holder of capital behind it, and grant money is spent once. A concessional loan to one solar plant supports one plant; a grant on results arrives after the spending it was meant to induce and leaves nothing behind.
 
-The proposal is a Climate Investment Trust that holds donor capital rather than spending it, and uses one pool three ways [@CFPB42]. It takes second loss on the guarantees that reward policy, behind the government's own first loss and ahead of a highly rated guarantor. It co-invests, for fees, in clean energy development and in regional first-loss funds that hold the equity tranche of section 2's asset classes. And it holds national beneficiary accounts, credited by performance, that countries can pledge as collateral now and draw only after 2050.
+The proposal is a Climate Investment Trust that holds donor capital rather than spending it, and uses one pool three ways [@CFPB42]. It takes second loss on the guarantees that reward policy, behind the government's own first loss and ahead of a highly rated guarantor. It co-invests, for fees, in clean energy development and in regional first-loss funds that hold the equity tranche of section 3's asset classes. And it holds national beneficiary accounts, credited by performance, that countries can pledge as collateral now and draw only after 2050.
 
 Holding beats spending by the ratio of the spread to the expected loss. On the development banks' loss record each donor dollar held delivers about 80 dollars of interest savings, and a buffer of 0.5 percent of exposure keeps the chance of exhaustion at 1 percent a year, so on paper \$5 billion could support about \$1 trillion of guarantees, far more than countries would borrow. In the stress case the buffer is about 9 percent, \$5 billion supports about \$54 billion, and each dollar delivers 2.7 [@StrettonWP42]. Because the buffer is held rather than spent, the Trust can afford to hold the stress-case buffer until it has a record of its own. The Trust grows without new donations only if it charges guarantee fees or takes a share of private returns, and an allocation rule built as a feebate between national accounts rewards early action at no net cost.
 
-# Codify sustainability-linked lending, then give it scale (paper 3.3) {.unnumbered}
+# Codify sustainability-linked lending, then give it scale (paper 4.3) {.unnumbered}
 
 Sustainability-linked lending is the working prototype, and it is too small. Uruguay's 2023 World Bank loan, the leading example, cuts its rate by up to 100 basis points a year if livestock methane targets are met, worth at most about \$12.5 million over the loan's life [@WorldBank2023Uruguay; @CFPB43].
 
 The instrument can be codified: standard indicators measured as outturns rather than process, baselines set by rule, verification from published data and a published pricing schedule. It works better when the investor's return is separated from the government's reward, so investors hold a fixed coupon and a trusted intermediary pays the performance reward [@StrettonWP43].
 
-An interest rebate can never exceed the interest bill, so on its own it is an order of magnitude too small for major reforms. The fix is to make guarantee capacity under 3.1, or access to the Trust's collateral under 3.2, the reward for meeting the indicators. Sustainability-linked lending then becomes the delivery channel, and notional capitalized value and the Trust supply the size.
+An interest rebate can never exceed the interest bill, so on its own it is an order of magnitude too small for major reforms. The fix is to make guarantee capacity under 4.1, or access to the Trust's collateral under 4.2, the reward for meeting the indicators. Sustainability-linked lending then becomes the delivery channel, and notional capitalized value and the Trust supply the size.
 
 # Pay a premium for acting now {.unnumbered}
 
@@ -75,20 +75,20 @@ Timing is the problem this section adds to the climate-finance debate. Clean tec
 
 An incentive that does not pay for earliness is an incentive to prepare, not to act. Both flagship instruments pay for earliness by design. A notional capitalized value debited for every tonne makes delay costly from the first year, and the working paper shows that the cheapest capacity schedule that still makes acting now optimal declines at the rate clean technology costs fall; in its example, that halves the donor cost of inducing early action [@StrettonWP41]. The Trust's periodic allocation to national accounts does the same, because a tonne cut this year earns allocations every year after.
 
-# The boundary with section 2 {.unnumbered}
+# The boundary with section 3 {.unnumbered}
 
-Section 2 decides who bears a loss once a project exists; this section changes whether the government chooses the policy and the pipeline. A risk mechanism fails when the guarantor cannot pay. An incentive fails when the reward is too small, too late or in the wrong form to be borrowed against.
+Section 3 decides who bears a loss once a project exists; this section changes whether the government chooses the policy and the pipeline. A risk mechanism fails when the guarantor cannot pay. An incentive fails when the reward is too small, too late or in the wrong form to be borrowed against.
 
-The two compose. Guarantee capacity earned under 3.1 can stand in the payment intermediary's guarantee waterfall in 2.1 or behind the senior bonds in 2.2. The Trust's regional funds are the natural holders of 2.2's first-loss tranche. The cleanest version of the programme uses the incentive instruments to build the capacity that the risk mechanisms then use.
+The two compose. Guarantee capacity earned under 4.1 can stand in the payment intermediary's guarantee waterfall in 3.1 or behind the senior bonds in 3.2. The Trust's regional funds are the natural holders of 3.2's first-loss tranche. The cleanest version of the programme uses the incentive instruments to build the capacity that the risk mechanisms then use.
 
 # The papers in this section {.unnumbered}
 
-**3.1 Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives.** A balance opened by a country's carbon stock, debited for every tonne emitted above an allowance, and used as guarantee capacity on green borrowing rather than paid as cash. Each dollar of donor cost delivers about 80 dollars of incentive on the development banks' loss record, and 2.7 in a stress case; capacity that declines as clean technology costs fall is the cheapest way to make acting now beat waiting. Brief: Climate Fiscal Policy Brief No. 3.1 [@CFPB41]. Working paper: [@StrettonWP41].
+**4.1 Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives.** A balance opened by a country's carbon stock, debited for every tonne emitted above an allowance, and used as guarantee capacity on green borrowing rather than paid as cash. Each dollar of donor cost delivers about 80 dollars of incentive on the development banks' loss record, and 2.7 in a stress case; capacity that declines as clean technology costs fall is the cheapest way to make acting now beat waiting. Brief: Climate Fiscal Policy Brief No. 4.1 [@CFPB41]. Working paper: [@StrettonWP41].
 
-**3.2 The Climate Investment Trust: Hold Capital, Lend Its Strength.** A trust that holds donor capital and uses it three ways: second-loss cover behind policy guarantees, fee-earning co-investment, and national beneficiary accounts pledgeable now and drawn after 2050. A held buffer delivers about 80 dollars of interest savings per donor dollar on the development banks' loss record, and 2.7 in a stress case, against one for a fund that pays out. Brief: Climate Fiscal Policy Brief No. 3.2 [@CFPB42]. Working paper: [@StrettonWP42].
+**4.2 The Climate Investment Trust: Hold Capital, Lend Its Strength.** A trust that holds donor capital and uses it three ways: second-loss cover behind policy guarantees, fee-earning co-investment, and national beneficiary accounts pledgeable now and drawn after 2050. A held buffer delivers about 80 dollars of interest savings per donor dollar on the development banks' loss record, and 2.7 in a stress case, against one for a fund that pays out. Brief: Climate Fiscal Policy Brief No. 4.2 [@CFPB42]. Working paper: [@StrettonWP42].
 
-**3.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale.** Standard indicators, verification and pricing make sustainability-linked lending replicable, and a fixed coupon with an intermediary-paid reward makes it cheaper. Interest rebates are bounded by the interest bill, so guarantee capacity or Trust collateral must be the main reward. Brief: Climate Fiscal Policy Brief No. 3.3 [@CFPB43]. Working paper: [@StrettonWP43].
+**4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale.** Standard indicators, verification and pricing make sustainability-linked lending replicable, and a fixed coupon with an intermediary-paid reward makes it cheaper. Interest rebates are bounded by the interest bill, so guarantee capacity or Trust collateral must be the main reward. Brief: Climate Fiscal Policy Brief No. 4.3 [@CFPB43]. Working paper: [@StrettonWP43].
 
-Two related papers on the development banks' mandate and balance sheets, the MDB climate envelope and Reforming MDBs, are kept with the additional papers (`6.Additional/3.SovereignIncentives`).
+A related paper on the development banks' mandate and balance sheets, Reforming MDBs, is kept with the additional papers in section 8 (paper 8.3.2).
 
 # References {.unnumbered}

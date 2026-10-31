@@ -1,7 +1,7 @@
 ---
 title: "From Projects to Asset Classes"
 subtitle: "Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power"
-series: "Climate Fiscal Policy Brief No. 2.2"
+series: "Climate Fiscal Policy Brief No. 3.2"
 version: "0.1"
 author:
   - name: "Stephen J. Stretton"
@@ -16,7 +16,7 @@ format:
   docx: default
 ---
 
-*Climate Fiscal Policy Brief No. 2.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The two-stage finance and tiered guarantee material was developed with Jasper Zimmermann. The full argument, proofs and code are in the working paper [@StrettonWP32].*
+*Climate Fiscal Policy Brief No. 3.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The two-stage finance and tiered guarantee material was developed with Jasper Zimmermann. The full argument, proofs and code are in the working paper [@StrettonWP32].*
 
 # Executive summary {.unnumbered}
 
@@ -39,7 +39,7 @@ The cost of capital, not the cost of panels, now sets the price of clean power i
 | Cost of power (US cents/kWh) | 3.6 | 4.3 | 5.0 | 5.7 | 6.5 |
 | Financing share of the price | 30% | 41% | 49% | 56% | 61% |
 
-: Table 1. The cost of capital is most of the price of solar power (stylized). \$800/kW, capacity factor 20 percent, operation and maintenance \$12/kW/yr, 25-year life, capital spent at commissioning with no interest during construction, the same basis as Brief 2.1 [@CFPB31]. Table 3 adds construction interest. Source: author's calculation [@StrettonWP32].
+: Table 1. The cost of capital is most of the price of solar power (stylized). \$800/kW, capacity factor 20 percent, operation and maintenance \$12/kW/yr, 25-year life, capital spent at commissioning with no interest during construction, the same basis as Brief 3.1 [@CFPB31]. Table 3 adds construction interest. Source: author's calculation [@StrettonWP32].
 
 Removing the risk that the buyer will not pay is the first step, and the companion brief proposes a payment intermediary facility to do it [@CFPB31]. The intermediary buys power from generators under one standard power purchase agreement, pays them in full and on time whatever the distribution company does, and is protected by a guarantee waterfall contracted in advance: the distribution company, its subnational owner, the national government, a multilateral agency and a donor contingency account.
 
@@ -134,11 +134,11 @@ The host government's exposure shrinks but does not vanish. The national governm
 
 # Related papers in this series {.unnumbered}
 
-- **2.0** *Make Clean Power an Asset Class: Standardized De-risking for Developing Countries*. The series overview.
-- **2.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* [@CFPB31]. Removes payment risk at source; this brief starts where it ends.
-- **3.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB42]. The natural provider of the first-loss tranche.
-- **3.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB41]. Guarantee capacity that can stand behind the donor tier of grid guarantees.
-- **3.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB43]. Sustainability-linked lending that can reward the reforms the tiered guarantees require.
+- **3.0** *Make Clean Power an Asset Class: Standardized De-risking for Developing Countries*. The series overview.
+- **3.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* [@CFPB31]. Removes payment risk at source; this brief starts where it ends.
+- **4.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB42]. The natural provider of the first-loss tranche.
+- **4.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB41]. Guarantee capacity that can stand behind the donor tier of grid guarantees.
+- **4.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB43]. Sustainability-linked lending that can reward the reforms the tiered guarantees require.
 
 # References {.unnumbered}
 

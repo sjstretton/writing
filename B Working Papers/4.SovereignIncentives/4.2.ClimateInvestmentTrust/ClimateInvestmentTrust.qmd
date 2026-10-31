@@ -22,7 +22,7 @@ format:
   docx: default
 ---
 
-*Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No. 3.2 [@CFPB42].*[^credit]
+*Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No. 4.2 [@CFPB42].*[^credit]
 
 [^credit]: The proposal was first written as the Climate Incentives Trust in May 2024 [@StrettonCIT2024] and developed in the book manuscript *Time and Chance* [@StrettonTC, chs. 14, 18–20]. The regional fund design in Section 6 and the design questions in Section 7 draw on joint work on two-stage clean energy project finance with Jasper Zimmermann. Errors are mine.
 
@@ -38,7 +38,7 @@ The paper makes three contributions, each a proposition with its conditions stat
 
 The closest institutions are the IMF's Resilience and Sustainability Trust, which channels reserve assets into long-term lending through loan, deposit and reserve accounts [@IMF_RSTFAQ], and the Tropical Forest Forever Facility, which puts sponsor capital in a first-loss position beneath private capital and pays forest countries from the spread [@Barber2025TFFF]. The Climate Investment Trust differs from both: it insures rather than lends or invests for a spread, and its accounts belong to beneficiaries who cannot yet draw them. Relative to the literature on climate clubs [@Nordhaus2015], which penalizes non-members, it rewards members, and it supplies the enforcement device that an international feebate lacks [@StrettonRPWT].
 
-The paper is the institutional half of a pair. Its companion proposes a notional capitalized value for each country, a climate balance credited for carbon stocks and low emissions and used as guarantee capacity on the country's green borrowing [@StrettonWP41; @CFPB41]. The Trust funds the buffer behind that capacity. It can also deliver the reward in sustainability-linked sovereign lending [@StrettonWP43; @CFPB43], and its regional funds supply the first-loss equity beneath the portfolio bonds of series 2 [@StrettonWP32; @CFPB32]. Section 2 reviews precedents, Section 3 sets out the Trust, Section 4 the model, Section 5 the calibration, Sections 6 and 7 the regional funds and design questions, and Section 8 the policy implications.
+The paper is the institutional half of a pair. Its companion proposes a notional capitalized value for each country, a climate balance credited for carbon stocks and low emissions and used as guarantee capacity on the country's green borrowing [@StrettonWP41; @CFPB41]. The Trust funds the buffer behind that capacity. It can also deliver the reward in sustainability-linked sovereign lending [@StrettonWP43; @CFPB43], and its regional funds supply the first-loss equity beneath the portfolio bonds of series 3 [@StrettonWP32; @CFPB32]. Section 2 reviews precedents, Section 3 sets out the Trust, Section 4 the model, Section 5 the calibration, Sections 6 and 7 the regional funds and design questions, and Section 8 the policy implications.
 
 # Precedents and literature
 
@@ -71,7 +71,7 @@ The paper is the institutional half of a pair. Its companion proposes a notional
 | Setting | First loss | Second loss | Behind |
 |---|---|---|---|
 | Policy guarantees (a government guarantees a contractual policy commitment, such as guaranteed-price auction contracts or a sustainability-linked bond) | The government, by indemnity to the guarantor, recorded as an obligation to it | The Trust's buffer: the global account and, where pledged, the country's own beneficiary account | A AAA-rated entity: a multilateral development bank or highly rated sovereign |
-| Portfolios of operating clean power plants (series 2) | A regional fund holds the first-loss tranche | Mezzanine | Senior bonds, co-guaranteed by highly rated sovereigns [@CFPB32] |
+| Portfolios of operating clean power plants (series 3) | A regional fund holds the first-loss tranche | Mezzanine | Senior bonds, co-guaranteed by highly rated sovereigns [@CFPB32] |
 
 : Table 1. Who loses first. For policy guarantees the Trust is second loss; for project portfolios the Trust's regional funds hold the first-loss tranche. Source: author, consolidating @StrettonTC, chs. 14 and 19.
 
@@ -237,7 +237,7 @@ a base allocation from the surplus $a$ the Trust distributes, plus a feebate at 
 
 **The price of second loss decides whether the Trust crowds in or subsidizes.** Proposition 2 makes the trade-off explicit. Every point of guarantee fee preserves capital and takes incentive back from the borrower; every point not charged is a subsidy that spends the buffer. The fee should be explicit, published and set by rule: for example, a fee equal to a fixed share of the modeled expected loss, with the share declining for countries that join early. For the regional funds' first-loss tranches the same applies: a tranche priced below its risk transfers value to senior lenders who would have lent anyway.
 
-**The recycling rule decides whether investment capital is used once or many times.** A fund that holds every construction-stage stake to maturity finances its portfolio once. A fund that sells seasoned operating assets into the secondary market, assets that are by then attractive to conventional investors, and reinvests in new construction recycles the same capital; with a two-year construction phase, each dollar finances a new project about every two years. Recycling needs a secondary market deep enough to absorb the sales, which the standard asset classes of series 2 are designed to create [@CFPB32]. The buffer is never recycled into projects.
+**The recycling rule decides whether investment capital is used once or many times.** A fund that holds every construction-stage stake to maturity finances its portfolio once. A fund that sells seasoned operating assets into the secondary market, assets that are by then attractive to conventional investors, and reinvests in new construction recycles the same capital; with a two-year construction phase, each dollar finances a new project about every two years. Recycling needs a secondary market deep enough to absorb the sales, which the standard asset classes of series 3 are designed to create [@CFPB32]. The buffer is never recycled into projects.
 
 **Private capital should have limited voting rights and a fee that respects its hurdle.** Private investors vote on the investment function only. Their fee, 25 percent of returns here, should be set so that their net return clears their required return (Proposition 2(c)); a fee above that bound raises nothing, because they do not come.
 
@@ -296,7 +296,7 @@ since $b(\gamma + \delta) = \lambda - f$. The integral diverges when $f \ge \lam
 
 **Fee rule and return.** One set: 25 percent of private investment returns; 10 percent gross return on construction-stage equity (Section 5.4).
 
-**Loss positions.** Policy guarantees: government first loss, Trust second loss, AAA entity behind. Project portfolios: regional fund holds the first-loss tranche, as in the series 2 asset classes [@CFPB32]. *Time and Chance* ch. 8 once called the equity fund a "first-loss fund" beneath bonds; chs. 14 and 19 place it second behind the sovereign. This paper follows chs. 14 and 19 for policy guarantees.
+**Loss positions.** Policy guarantees: government first loss, Trust second loss, AAA entity behind. Project portfolios: regional fund holds the first-loss tranche, as in the series 3 asset classes [@CFPB32]. *Time and Chance* ch. 8 once called the equity fund a "first-loss fund" beneath bonds; chs. 14 and 19 place it second behind the sovereign. This paper follows chs. 14 and 19 for policy guarantees.
 
 **Country stakes.** The $4 billion of developing-country co-investment is financed by long-term development policy lending, so it is borrowed; Section 4.3 states the carrying-cost condition.
 

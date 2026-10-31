@@ -1,5 +1,5 @@
 {
-  "series": "CPAT Companion Paper No. 4.1",
+  "series": "CPAT Companion Paper No. 5.1",
   "title": "The CPAT Mitigation Module: Methods in Brief",
   "subtitle": "How CPAT turns prices into fuel use, power investment, emissions and revenue",
   "message": "CPAT's mitigation module fits in about eighteen equations: a price identity, a two-margin demand equation, an engineering power model, emissions and revenue identities and a lagged GDP rule. A $50 carbon price cuts industrial coal by a third and road fuel by about 6 percent.",

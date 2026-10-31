@@ -1,6 +1,6 @@
 ---
 title: "Make Clean Power an Asset Class"
-subtitle: "Standardized de-risking for developing countries: an overview of section 2"
+subtitle: "Standardized de-risking for developing countries: an overview of section 3"
 author:
   - name: "Stephen J. Stretton"
     note: "Writing in a personal capacity."
@@ -8,13 +8,13 @@ date: "October 2026"
 version: "0.2"
 abstract: |
   Clean power is cheap to build in most developing countries and expensive to finance, because investors price risks the project cannot control: a distribution company that may not pay, a plant that may not be finished, a currency that may fall and a state that may change the rules. Each risk has a different cheapest holder. This section of papers argues for removing payment risk at its source with a payment intermediary that guarantees the power contract rather than the debt, and then turning projects into a few standard securities: construction loans held by development banks, and pooled operating plants refinanced through first-loss equity and senior synthetic sovereign bonds. In stylized calibrations, the payment premium adds about 11 percent to a solar tariff, and refinancing pooled operating plants cuts the levelized cost of solar power by about a quarter. The host state's exposure becomes smaller, contingent and contracted, but it does not disappear.
-bibliography: 2.0.OverviewMobilisingPrivateCapital.bib
+bibliography: 3.0.OverviewMobilisingPrivateCapital.bib
 csl: https://www.zotero.org/styles/chicago-author-date
 format:
   docx: default
 ---
 
-*Overview of section 2, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Version 0.1 (September 2026) is in `8.PreviousVersions` at the section level.*
+*Overview of section 3, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Version 0.1 (September 2026) is in `8.PreviousVersions` at the section level.*
 
 # The cost of capital, not technology, prices clean power {.unnumbered}
 
@@ -26,16 +26,16 @@ The cost of capital is a stack of separable risks, and each has a cheapest holde
 
 | Risk | What it is | Cheapest holder | Instrument | Paper |
 |---|---|---|---|---|
-| Payment (offtaker) risk | The buyer of the power pays late, partly or not at all | An intermediary that can wait for arrears and recover them | Payment intermediary facility with a guarantee waterfall | 2.1 |
-| Construction risk | The plant is late, over budget or never finished | Banks and development finance institutions that can supervise it | Construction loans against a contingent power purchase agreement | 2.2 |
-| Operating risk | A finished plant underperforms | Long-term bond investors, once pooled | Senior synthetic sovereign bonds on pooled operating plants | 2.2 |
-| Residual portfolio loss | The last losses after contracts and pooling | A dedicated equity layer | First-loss tranche held by a regional fund | 2.2, 3.2 |
-| Currency risk | Hard-currency obligations against local-currency revenue | Domestic savers, for local-currency instruments | Local-currency senior tranche; a deliberate denomination rule | 2.1, 2.2 |
-| Sovereign and policy risk | The state changes the rules or cannot stand behind its utilities | Nobody: it can be priced and conditioned, not transferred | Guarantees conditional on utility and tariff reform | 2.1, section 3 |
+| Payment (offtaker) risk | The buyer of the power pays late, partly or not at all | An intermediary that can wait for arrears and recover them | Payment intermediary facility with a guarantee waterfall | 3.1 |
+| Construction risk | The plant is late, over budget or never finished | Banks and development finance institutions that can supervise it | Construction loans against a contingent power purchase agreement | 3.2 |
+| Operating risk | A finished plant underperforms | Long-term bond investors, once pooled | Senior synthetic sovereign bonds on pooled operating plants | 3.2 |
+| Residual portfolio loss | The last losses after contracts and pooling | A dedicated equity layer | First-loss tranche held by a regional fund | 3.2, 4.2 |
+| Currency risk | Hard-currency obligations against local-currency revenue | Domestic savers, for local-currency instruments | Local-currency senior tranche; a deliberate denomination rule | 3.1, 3.2 |
+| Sovereign and policy risk | The state changes the rules or cannot stand behind its utilities | Nobody: it can be priced and conditioned, not transferred | Guarantees conditional on utility and tariff reform | 3.1, section 4 |
 
 : Table 1. The risk stack and who should hold each layer.
 
-# Remove payment risk where it starts (paper 2.1) {.unnumbered}
+# Remove payment risk where it starts (paper 3.1) {.unnumbered}
 
 Payment risk comes first because it prices everything downstream. A completed solar plant in a sunny place carries little operating risk. What lenders price is the chance that the state-owned distribution company on the other side of the power purchase agreement pays late or not at all. A weak utility therefore raises the cost of every project that sells to it, however good the project.
 
@@ -47,7 +47,7 @@ India's Solar Energy Corporation shows that the design works, and its distributo
 
 The state's exposure becomes smaller, contingent and contracted, but it does not vanish. Earlier drafts of this work said the structure consumes no host-country fiscal space; that was wrong. The national government stands in the waterfall, and its expected calls should be recorded, capped and reported as a contingent liability [@Irwin2007]. Two further design choices decide whether the structure reduces fiscal risk or stores it up: tariffs that decline over the contract term as technology costs fall, and a deliberate rule on currency denomination rather than a default to dollars.
 
-# Turn projects into asset classes (paper 2.2) {.unnumbered}
+# Turn projects into asset classes (paper 3.2) {.unnumbered}
 
 Once payment risk is removed, a project's life splits cleanly in two. Construction carries completion, overrun and delay risk, which banks and development finance institutions can supervise. A finished plant selling under a guaranteed contract carries little risk, which long-term bond investors can hold but cannot supervise. Financing both stages with the same money charges the bond investor for risks it cannot manage and the bank for a duration it does not want.
 
@@ -67,16 +67,16 @@ Each piece is weaker alone. A payment guarantee without an equity layer leaves t
 
 For countries already in debt distress the sequence needs a different end point. Where any new borrowing is the binding constraint, as for many small island states, the intermediary can sell energy as a service, so the country replaces imported fuel with domestic renewable supply. The payment obligation is still a contingent liability and should be accounted for as one [@StrettonWP31].
 
-# The boundary with section 3 {.unnumbered}
+# The boundary with section 4 {.unnumbered}
 
-Section 2 decides who bears a loss once a government has chosen to build; section 3 changes what the government chooses. The risk mechanisms here take policy as given and price or condition it. The sovereign incentive instruments in section 3 (a notional capitalized value used as guarantee capacity, a Climate Investment Trust that holds capital behind the guarantees, and codified sustainability-linked lending) reward the government for adopting and keeping climate policy [@CFPB41; @CFPB42; @CFPB43]. The two sections compose: guarantee capacity earned under section 3 can stand in the waterfall of 2.1 or behind the senior bonds of 2.2, and the Trust's regional funds are the natural holders of the first-loss tranche.
+Section 3 decides who bears a loss once a government has chosen to build; section 4 changes what the government chooses. The risk mechanisms here take policy as given and price or condition it. The sovereign incentive instruments in section 4 (a notional capitalized value used as guarantee capacity, a Climate Investment Trust that holds capital behind the guarantees, and codified sustainability-linked lending) reward the government for adopting and keeping climate policy [@CFPB41; @CFPB42; @CFPB43]. The two sections compose: guarantee capacity earned under section 4 can stand in the waterfall of 3.1 or behind the senior bonds of 3.2, and the Trust's regional funds are the natural holders of the first-loss tranche.
 
 # The papers in this section {.unnumbered}
 
-**2.1 Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power.** Solar and wind plants are cheap to build in most developing countries but expensive to finance, because lenders price the risk that a state-owned distribution company will not pay. The paper proposes a payment intermediary that buys under one standard contract, pays generators in full and on time, and recovers arrears behind a guarantee waterfall agreed in advance. Guaranteeing the contract removes the whole offtaker premium, about 11 percent of the tariff in a stylized calibration, and saves five dollars per dollar of expected guarantor cost; guaranteeing debt saves less than it costs. Brief: Climate Fiscal Policy Brief No. 2.1 [@CFPB31]. Working paper: [@StrettonWP31].
+**3.1 Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power.** Solar and wind plants are cheap to build in most developing countries but expensive to finance, because lenders price the risk that a state-owned distribution company will not pay. The paper proposes a payment intermediary that buys under one standard contract, pays generators in full and on time, and recovers arrears behind a guarantee waterfall agreed in advance. Guaranteeing the contract removes the whole offtaker premium, about 11 percent of the tariff in a stylized calibration, and saves five dollars per dollar of expected guarantor cost; guaranteeing debt saves less than it costs. Brief: Climate Fiscal Policy Brief No. 3.1 [@CFPB31]. Working paper: [@StrettonWP31].
 
-**2.2 From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power.** Projects financed one at a time on bespoke terms carry every risk to the same investors. The paper splits each project at commissioning, pools operating plants under one standard contract and refinances them through first-loss equity, a thin mezzanine and a senior synthetic sovereign bond. Subordination of 5 to 10 percent makes the senior bond near-AAA, and the refinancing cuts the levelized cost of solar power by about a quarter; tiered conditional bond guarantees cover assets with no contract. Brief: Climate Fiscal Policy Brief No. 2.2 [@CFPB32]. Working paper: [@StrettonWP32].
+**3.2 From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power.** Projects financed one at a time on bespoke terms carry every risk to the same investors. The paper splits each project at commissioning, pools operating plants under one standard contract and refinances them through first-loss equity, a thin mezzanine and a senior synthetic sovereign bond. Subordination of 5 to 10 percent makes the senior bond near-AAA, and the refinancing cuts the levelized cost of solar power by about a quarter; tiered conditional bond guarantees cover assets with no contract. Brief: Climate Fiscal Policy Brief No. 3.2 [@CFPB32]. Working paper: [@StrettonWP32].
 
-The Sollar, a proposal for a solar-backed savings unit that avoids the credit question altogether, is kept with the additional papers (`6.Additional/2.FinanceAndRisk/2.3.TheSollar`).
+The Sollar, a proposal for a solar-backed savings unit that avoids the credit question altogether, is kept with the additional papers in section 8 (paper 8.2.1).
 
 # References {.unnumbered}

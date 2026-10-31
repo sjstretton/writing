@@ -1,4 +1,4 @@
-# 4.1 The CPAT Mitigation Module: Methods in Brief
+# 5.1 The CPAT Mitigation Module: Methods in Brief
 
 **Status:** draft v0.1 (29 Oct 2026), written by an AI agent overnight for Stephen's review. Not yet peer reviewed; not for publication until reviewed.
 

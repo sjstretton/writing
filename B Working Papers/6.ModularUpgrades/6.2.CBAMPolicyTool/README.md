@@ -1,8 +1,8 @@
-# 4.5 The CBAM Policy Tool
+# 6.2 The CBAM Policy Tool
 
 **Status:** working paper, version 0.1 (29 October 2026), first full draft for Stephen's review. About 5,450 words of body. Egypt application added 29 Oct 2026, after Stephen cleared tool country results for use as illustrative results. Moved here from `6.Additional` (old number 4.3).
 
-**What the paper does.** Describes the CBAM Policy Tool (part of the Climate Fiscal AI Tools): what it computes (embedded emissions by component, the gap to EU default values, the CBAM charge per tonne and in total year by year, the capture price, the effect of a domestic carbon price split into abatement and credit), its method in five equations, its public data sources, a worked example with public data only: three Turkish exports to the EU (CN 7208, 7214 20 00, 7601), Commission default values and Eurostat 2025 trade; and a country application (section 7): the tool's Egypt emission factors for seven products against the Commission's default values, with the full-phase-in charge at €80 (about €595 million a year at default values, €177 million at the tool's estimates, 2024 volumes). Links to papers 1.1 (two-track architecture), 1.3 (carbon price recognition), 1.7 (TECP) and 4.4 (elasticities).
+**What the paper does.** Describes the CBAM Policy Tool (part of the Climate Fiscal AI Tools): what it computes (embedded emissions by component, the gap to EU default values, the CBAM charge per tonne and in total year by year, the capture price, the effect of a domestic carbon price split into abatement and credit), its method in five equations, its public data sources, a worked example with public data only: three Turkish exports to the EU (CN 7208, 7214 20 00, 7601), Commission default values and Eurostat 2025 trade; and a country application (section 7): the tool's Egypt emission factors for seven products against the Commission's default values, with the full-phase-in charge at €80 (about €595 million a year at default values, €177 million at the tool's estimates, 2024 volumes). Links to papers 1.1 (two-track architecture), 1.3 (carbon price recognition), 6.1 (TECP) and 5.4 (elasticities).
 
 ## Files
 
@@ -10,7 +10,7 @@
 |---|---|
 | `CBAMPolicyTool.qmd` | Master (v0.1) |
 | `CBAMPolicyTool.bib` | References (EU law entries copied from paper 1.3's verified bib) |
-| `CBAMPolicyTool.docx` | Rendered with pandoc after resolving cross-references (as in 4.4) |
+| `CBAMPolicyTool.docx` | Rendered with pandoc after resolving cross-references (as in 5.4) |
 | `2.Source/cbam_example.py` | Worked example: charge per tonne 2026–2034, aggregates, figure. `--refetch` re-queries Eurostat |
 | `2.Source/data/default_values_turkiye.csv` | Default values used (from the Commission's "DVs as adopted" workbook, 4 Feb 2026) |
 | `2.Source/data/eurostat_eu_imports_from_tr.csv` | EU imports from Türkiye, 2024–2025, Eurostat Comext DS-045409 (retrieved 29 Oct 2026) |

@@ -1,7 +1,7 @@
 ---
 title: "Codify Sustainability-Linked Sovereign Lending, Then Give It Scale"
 subtitle: "Standard indicators, verification and pricing, and why the reward must be bigger than an interest margin"
-series: "Climate Fiscal Policy Brief No. 3.3"
+series: "Climate Fiscal Policy Brief No. 4.3"
 version: "0.1"
 author:
   - name: "Stephen J. Stretton"
@@ -16,7 +16,7 @@ format:
   docx: default
 ---
 
-*Climate Fiscal Policy Brief No. 3.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The fixed-coupon, third-party-reward design in Section 4 comes from joint work with Marcello Estevão and Nils Zimmermann [@EstevaoStrettonZimmermann2024]; errors here are the author's.*
+*Climate Fiscal Policy Brief No. 4.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The fixed-coupon, third-party-reward design in Section 4 comes from joint work with Marcello Estevão and Nils Zimmermann [@EstevaoStrettonZimmermann2024]; errors here are the author's.*
 
 # Executive summary {.unnumbered}
 
@@ -107,9 +107,9 @@ Real reform bills are larger still. South Africa's Just Energy Transition Invest
 
 A guarantee delivers a large incentive at a small cost, because the borrower values it at the full spread saved while the guarantor pays only its expected loss. Spreads on risky debt are several times expected losses; the rest is a risk and liquidity premium a diversified guarantor need not charge [@HuangHuang2012; @CFPB41].
 
-The proposal is to make meeting the indicators earn guarantee capacity, the maximum outstanding guarantee exposure that multilateral development banks will provide on the country's eligible green borrowing. Under the notional capitalized value of Brief 3.1, a country's balance sets that capacity [@CFPB41]; meeting KPIs adds to the balance. Under the Climate Investment Trust of Brief 3.2, meeting KPIs credits the country's beneficiary account, which it can pledge as collateral now [@CFPB42].
+The proposal is to make meeting the indicators earn guarantee capacity, the maximum outstanding guarantee exposure that multilateral development banks will provide on the country's eligible green borrowing. Under the notional capitalized value of Brief 4.1, a country's balance sets that capacity [@CFPB41]; meeting KPIs adds to the balance. Under the Climate Investment Trust of Brief 4.2, meeting KPIs credits the country's beneficiary account, which it can pledge as collateral now [@CFPB42].
 
-In the stylized example, \$3.3 billion of guarantee capacity on borrowing that saves 300 basis points is worth \$772 million to the government, enough to pay for the reform. This brief uses the base case shared with Briefs 3.1 and 3.2, the development banks' own sovereign loss record: 0.77 percent of their sovereign loans defaulted each year over 1984–2024, and 95 percent was recovered [@GEMs2025]. The expected cost to the funder is then about \$10 million, with a buffer of \$16 million held in safe assets. Each dollar of funder cost buys about 80 dollars of incentive, against one for one under a rebate. That record reflects the banks' status as preferred creditors, which a guarantor of market debt might not inherit. In a stress case, governments fail to honor 3 percent of guarantee obligations a year and the guarantor loses 37 cents of each dollar called, the average creditor loss in sovereign restructurings [@CrucesTrebesch2013]. The expected cost is then about \$286 million, a buffer of \$310 million is held, and each dollar still buys 2.7 dollars of incentive; with a 10 percent loss per call, 10.
+In the stylized example, \$3.3 billion of guarantee capacity on borrowing that saves 300 basis points is worth \$772 million to the government, enough to pay for the reform. This brief uses the base case shared with Briefs 4.1 and 4.2, the development banks' own sovereign loss record: 0.77 percent of their sovereign loans defaulted each year over 1984–2024, and 95 percent was recovered [@GEMs2025]. The expected cost to the funder is then about \$10 million, with a buffer of \$16 million held in safe assets. Each dollar of funder cost buys about 80 dollars of incentive, against one for one under a rebate. That record reflects the banks' status as preferred creditors, which a guarantor of market debt might not inherit. In a stress case, governments fail to honor 3 percent of guarantee obligations a year and the guarantor loses 37 cents of each dollar called, the average creditor loss in sovereign restructurings [@CrucesTrebesch2013]. The expected cost is then about \$286 million, a buffer of \$310 million is held, and each dollar still buys 2.7 dollars of incentive; with a 10 percent loss per call, 10.
 
 The structure is not free, and its costs fall in the tail. The government's exposure does not disappear: it becomes smaller, contingent and contracted, because a guarantee called is a debt the country owes back to the guarantor [@CFPB31]. The guarantor's losses in a correlated crisis can far exceed the average, which is why the buffer exists. And guarantee capacity is worth most to a government that will actually borrow for clean investment; a country with no pipeline gains little.
 
@@ -125,12 +125,12 @@ Donors should make guarantee capacity, not the interest rebate, the main prize f
 
 # Related papers in this series {.unnumbered}
 
-- **3.0** *Reward Governments, Not Projects: International Incentives for National Climate Policy*. The series overview.
-- **3.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB41]. Sets guarantee capacity as the reward for carbon stocks and low emissions.
-- **3.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB42]. Holds the buffer and the national beneficiary accounts.
-- **2.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* [@CFPB31]. Conditional de-risking for clean power through a payment intermediary.
+- **4.0** *Reward Governments, Not Projects: International Incentives for National Climate Policy*. The series overview.
+- **4.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* [@CFPB41]. Sets guarantee capacity as the reward for carbon stocks and low emissions.
+- **4.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB42]. Holds the buffer and the national beneficiary accounts.
+- **3.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* [@CFPB31]. Conditional de-risking for clean power through a payment intermediary.
 - **1.1** *Price Production and Consumption Separately* [@CFPB11]. Carbon pricing and policy crediting.
-- **1.7** *Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price* [@CFPB61]. The unit for pricing indicators.
+- **6.1** *Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price* [@CFPB61]. The unit for pricing indicators.
 
 # References {.unnumbered}
 

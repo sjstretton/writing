@@ -1,7 +1,7 @@
 ---
 title: "Reward the Stock as Well as the Flow"
 subtitle: "Notional Capitalized Value and Guarantee-Based Climate Incentives"
-series: "Climate Fiscal Policy Brief No. 3.1"
+series: "Climate Fiscal Policy Brief No. 4.1"
 version: "0.1"
 author:
   - name: "Stephen J. Stretton"
@@ -16,7 +16,7 @@ format:
   docx: default
 ---
 
-*Climate Fiscal Policy Brief No. 3.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full argument, proofs and code are in the companion working paper.*
+*Climate Fiscal Policy Brief No. 4.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full argument, proofs and code are in the companion working paper.*
 
 # Executive summary {.unnumbered}
 
@@ -58,7 +58,7 @@ A guarantee is worth the full spread to the borrower and costs the guarantor onl
 
 The ratio of incentive to cost is the spread saved divided by the expected loss. This series takes the banks' record as its base case: a 0.77 percent annual chance that a guarantee is called and a 4.9 percent loss when it is. At a 3-point spread, each dollar of expected cost then buys about $80 of interest savings, and a buffer of 0.5 percent of exposure keeps the annual chance of exhausting it at 1 percent across 20 programs with correlation 0.2 [@StrettonWP42]. The record reflects preferred-creditor status: governments keep paying development banks while they restructure other debt. A new climate facility might not inherit that status, so the series also reports a middle case (3 percent calls, 10 percent loss; ratio 10) and a stress case (3 percent calls and 37 percent loss, the average sovereign haircut [@CrucesTrebesch2013]; ratio 2.7, buffer 9.3 percent).
 
-![A guarantee is worth many times what it costs. Ratio of interest savings to the guarantor's expected loss, for three spread savings, with the base (development bank record), middle and stress cases marked; log scales. Source: author's calculations; Brief 3.2; GEMs (2025).](figures/fig2-incentive-cost-ratio.png)
+![A guarantee is worth many times what it costs. Ratio of interest savings to the guarantor's expected loss, for three spread savings, with the base (development bank record), middle and stress cases marked; log scales. Source: author's calculations; Brief 4.2; GEMs (2025).](figures/fig2-incentive-cost-ratio.png)
 
 The original version of the proposal understated its own incentive tenfold. It valued a 100 MtCO₂ forest at $100 per tonne, a $10 billion balance, released "roughly $1 billion of capacity per year", and at a 3 percent saving found $30 million a year, $300 million over ten years [@StrettonTC, ch. 21]. Those figures hold only if $1 billion is a cap on total exposure, which leaves $9 billion of balance idle and makes an extra tonne cost nothing. Read as a cap on outstanding exposure equal to the whole balance, the incentive is $300 million a year, and each tonne emitted costs about $21 in lost savings.
 
@@ -116,11 +116,11 @@ The scheme fails if spreads saved are small, if capacity is so large that it nev
 
 # Related papers in this series {.unnumbered}
 
-- **3.0** *Reward Governments, Not Projects: International Incentives for National Climate Policy*. The series overview.
-- **3.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB42]. The buffer fund that stands behind the guarantees and holds beneficiary accounts.
-- **3.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB43]. The delivery channel for the allowance path.
-- **2.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* [@CFPB31]. A payment intermediary whose guarantees the capacity can back.
-- **1.7** *Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price* [@CFPB61]. The measure used for the carbon-price equivalent.
+- **4.0** *Reward Governments, Not Projects: International Incentives for National Climate Policy*. The series overview.
+- **4.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* [@CFPB42]. The buffer fund that stands behind the guarantees and holds beneficiary accounts.
+- **4.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* [@CFPB43]. The delivery channel for the allowance path.
+- **3.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* [@CFPB31]. A payment intermediary whose guarantees the capacity can back.
+- **6.1** *Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price* [@CFPB61]. The measure used for the carbon-price equivalent.
 
 # References {.unnumbered}
 

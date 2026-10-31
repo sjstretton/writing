@@ -1,4 +1,4 @@
-# 5.3 Instrument Diagnostic: A Six-Driver Framework
+# 8.4.3 Instrument Diagnostic: A Six-Driver Framework
 
 Status: no draft yet. Abstract in `research.qmd`.
 

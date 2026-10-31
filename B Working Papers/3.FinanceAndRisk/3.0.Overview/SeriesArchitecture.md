@@ -1,6 +1,6 @@
-# Series 2 architecture: Finance and Risk
+# Series 3 architecture: Finance and Risk
 
-The plan for section 2 as one coherent series: its argument, its papers, their abstracts and outlines, and the terms they share. Agreed with Stephen on 29 Oct 2026. Every brief and working paper in the series follows it. The format rules for briefs are in `A Writing Instructions/Writing Standards/briefing-series-spec.md`; working papers follow `paper-standard.md`.
+The plan for section 3 as one coherent series: its argument, its papers, their abstracts and outlines, and the terms they share. Agreed with Stephen on 29 Oct 2026. Every brief and working paper in the series follows it. The format rules for briefs are in `A Writing Instructions/Writing Standards/briefing-series-spec.md`; working papers follow `paper-standard.md`.
 
 ## The series argument
 
@@ -8,24 +8,24 @@ The plan for section 2 as one coherent series: its argument, its papers, their a
 
 1. The binding constraint is the cost of capital, not technology. Solar has no fuel cost, so its tariff is mostly the cost of the money that built it.
 2. That cost is a stack of separable risks: offtaker payment, construction, currency, sovereign and policy, and the scarcity of loss-absorbing equity. Each has a cheapest holder.
-3. Payment risk comes first because it prices everything downstream. A payment intermediary standing behind a standard power purchase agreement removes it at source (2.1).
-4. Once payment risk is gone, a project's life splits cleanly: a construction asset that banks and development finance institutions can supervise, and an operating asset that bond investors can hold. Pool the operating assets, tranche them, and put first-loss equity underneath, and the senior paper can be rated at near developed-sovereign level (2.2).
+3. Payment risk comes first because it prices everything downstream. A payment intermediary standing behind a standard power purchase agreement removes it at source (3.1).
+4. Once payment risk is gone, a project's life splits cleanly: a construction asset that banks and development finance institutions can supervise, and an operating asset that bond investors can hold. Pool the operating assets, tranche them, and put first-loss equity underneath, and the senior paper can be rated at near developed-sovereign level (3.2).
 5. Standardization is the multiplier: identical contracts make portfolios, portfolios make ratings, ratings make an asset class with a yield curve.
 6. None of this removes the host state's exposure entirely. It converts open-ended, project-by-project fiscal risk into a contingent liability that is contracted, layered and conditional on the government's own conduct. Say so; never claim the structures are free to the host.
 
-**Boundary with series 3.** Series 2 decides who bears a loss once a government has chosen to build. Series 3 changes what the government chooses. Conditional guarantees in series 2 are the point where the two meet; the large-scale incentive instruments (notional capitalized value, the Climate Investment Trust, sustainability-linked lending) belong to series 3. The Climate Investment Trust's regional funds are the natural provider of the first-loss equity tranche in 2.2; cite @CFPB42 for it.
+**Boundary with series 4.** Series 3 decides who bears a loss once a government has chosen to build. Series 4 changes what the government chooses. Conditional guarantees in series 3 are the point where the two meet; the large-scale incentive instruments (notional capitalized value, the Climate Investment Trust, sustainability-linked lending) belong to series 4. The Climate Investment Trust's regional funds are the natural provider of the first-loss equity tranche in 3.2; cite @CFPB42 for it.
 
-**Out of scope.** The Sollar (`6.Additional/2.FinanceAndRisk/2.3.TheSollar`) stays in Additional. The overview may mention it in one sentence as a non-credit alternative.
+**Out of scope.** The Sollar (`8.AdditionalPolicyPapers/8.2.FinanceAndRisk/8.2.1.TheSollar`) stays in section 8. The overview may mention it in one sentence as a non-credit alternative.
 
 ## Papers
 
 | No. | Folder | Role | Brief and working paper title |
 |---|---|---|---|
-| 2.0 | `2.0.OverviewMobilisingPrivateCapital.docx` (rewritten as `2.0.OverviewMobilisingPrivateCapital.qmd`) | Series overview | Make Clean Power an Asset Class: Standardized De-risking for Developing Countries |
-| 2.1 | `2.1.ClimateFinanceIntermediationForCleanPower` | **Flagship** | Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power |
-| 2.2 | `2.2.CleanPowerAssetClasses` (new) | Companion | From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power |
+| 3.0 | `3.0.OverviewMobilisingPrivateCapital.docx` (rewritten as `3.0.OverviewMobilisingPrivateCapital.qmd`) | Series overview | Make Clean Power an Asset Class: Standardized De-risking for Developing Countries |
+| 3.1 | `3.1.ClimateFinanceIntermediationForCleanPower` | **Flagship** | Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power |
+| 3.2 | `3.2.CleanPowerAssetClasses` (new) | Companion | From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power |
 
-### 2.1 Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power
+### 3.1 Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power
 
 *Subtitle: Removing offtaker risk at source in developing-country power markets.*
 
@@ -39,7 +39,7 @@ The plan for section 2 as one coherent series: its argument, its papers, their a
 
 **Working paper outline (6,000–10,000 words).** 1 Introduction. 2 Literature: renewable cost of capital (Steffen; Egli; Ameli et al.; Calcaterra et al.); de-risking frameworks (UNDP DREI); single-buyer and offtaker risk; payment security mechanisms. 3 Model: LCOE as a function of WACC; offtaker default as a hazard with partial, delayed recovery; Proposition 1 (offtaker risk premium in the tariff); Proposition 2 (contract guarantee vs debt guarantee: coverage, recovery, expected cost); Proposition 3 (expected loss of the facility under a layered waterfall; when it is insolvency-remote). 4 Calibration and illustration: stylized 100 MW solar plant at 5%, 8%, 12% WACC; India (SECI vs state-direct procurement, discom arrears from public sources); a regional facility example. 5 Precedents and failures: SECI (payment security fund, tripartite agreement, letters of credit; arrears and central liquidity schemes — check each from public sources), Nigeria's bulk trader NBET, others found. 6 Design: tariff profile, currency, national vs regional, energy-as-a-service for debt-distressed states, conditionality on utility reform. 7 Fiscal accounting: contingent liability, how to record and cap it. 8 Policy implications. 9 Conclusion. Appendices: proofs, calibration code.
 
-### 2.2 From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power
+### 3.2 From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power
 
 *Subtitle: Standard securities for construction, operation and first loss.*
 
@@ -53,11 +53,11 @@ The plan for section 2 as one coherent series: its argument, its papers, their a
 
 **Working paper outline.** 1 Introduction. 2 Literature: project finance and renewables (Steffen 2018), securitization and asset-backed infrastructure debt, blended finance mobilization evidence, construction vs operating risk premia, green bonds and local-currency markets. 3 Framework: the two stages and the five asset classes (construction loan; operating senior bond; mezzanine; first-loss equity; local-currency senior tranche); Proposition 1 (refinancing gain from separating construction and operating risk); Proposition 2 (one-factor Vasicek portfolio: first-loss size needed for a target senior default probability, as a function of default correlation and recovery); Proposition 3 (standardization lowers the correlation-adjusted capital needed because portfolios diversify only when contracts are identical). 4 Calibration: stylized solar portfolio; table of first-loss sizes vs correlation and target rating; LCOE saving. 5 System assets without a contract: tiered bond guarantee with policy conditions. 6 Currency and domestic savings. 7 Precedents (verify each): IFC Managed Co-Lending Portfolio Program, Climate Investor One, GuarantCo, Brookfield-style operating-asset holding companies and yieldcos, IDB/AIIB infrastructure securitisations, India's IREDA and NaBFID. 8 Risks: correlated shocks (the host sovereign's crisis), moral hazard, rating agency treatment. 9 Policy implications. 10 Conclusion. Appendices: model derivations, code.
 
-### 2.0 Overview (introductory paper, 3,000–4,000 words)
+### 3.0 Overview (introductory paper, 3,000–4,000 words)
 
-Rewritten last, after 2.1 and 2.2, so it states their results. Structure: the cost of capital is the barrier; the risk stack and who should hold each layer (table); the intermediary (2.1); the asset classes (2.2); how the pieces compose over a project's life; the boundary with series 3; the papers and their abstracts.
+Rewritten last, after 3.1 and 3.2, so it states their results. Structure: the cost of capital is the barrier; the risk stack and who should hold each layer (table); the intermediary (3.1); the asset classes (3.2); how the pieces compose over a project's life; the boundary with series 4; the papers and their abstracts.
 
-## Shared terms (series 2; use exactly these)
+## Shared terms (series 3; use exactly these)
 
 | Term | Meaning |
 |---|---|
@@ -79,11 +79,11 @@ Rewritten last, after 2.1 and 2.2, so it states their results. Structure: the co
 ```bibtex
 @techreport{CFPB31, author={Stretton, Stephen J.}, title={Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power}, institution={Climate Fiscal Policy Briefs}, number={3.1}, year={2026}}
 @techreport{CFPB32, author={Stretton, Stephen J.}, title={From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power}, institution={Climate Fiscal Policy Briefs}, number={3.2}, year={2026}}
-@unpublished{StrettonWP31, author={Stretton, Stephen J.}, title={Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power}, note={Working paper 3.1}, year={2026}}
-@unpublished{StrettonWP32, author={Stretton, Stephen J.}, title={From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power}, note={Working paper 3.2}, year={2026}}
+@unpublished{StrettonWP31, author={Stretton, Stephen J.}, title={Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power}, note={Working paper 4.1}, year={2026}}
+@unpublished{StrettonWP32, author={Stretton, Stephen J.}, title={From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power}, note={Working paper 4.2}, year={2026}}
 ```
 
-Titles checked against each paper's YAML in the 29 Oct 2026 cross-review. The 2.2 working paper's YAML splits the title ("From Projects to Asset Classes") from the subtitle; the bib entries join them with a colon. Series 3 keys are in `3.SovereignIncentives/SeriesArchitecture.md`; series 1 keys in `briefing-series-spec.md`.
+Titles checked against each paper's YAML in the 29 Oct 2026 cross-review. The 3.2 working paper's YAML splits the title ("From Projects to Asset Classes") from the subtitle; the bib entries join them with a colon. Series 4 keys are in `4.SovereignIncentives/4.0.Overview/SeriesArchitecture.md`; series 1 keys in `briefing-series-spec.md`.
 
 ## Facts to settle in the series (from the source audit, 29 Oct 2026)
 

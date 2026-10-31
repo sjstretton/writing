@@ -22,7 +22,7 @@ format:
   docx: default
 ---
 
-*Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No. 2.1 [@CFPB31].*[^credits]
+*Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No. 3.1 [@CFPB31].*[^credits]
 
 [^credits]: This paper consolidates and replaces earlier statements of the same architecture. The guarantee waterfall comes from a policy brief on regional renewable energy payment intermediary facilities written with Nils Zimmermann (2024). The treatment of small and debt-distressed states draws on the solar payments intermediary proposal developed by Evie Davey. Errors are mine.
 
@@ -60,7 +60,7 @@ A solar plant costs $I$ per kilowatt up front, costs $F$ per kilowatt a year to 
 $$
 \mathrm{LCOE}(r) = \frac{I\,a(r) + F}{E}, \qquad a(r) = \frac{r}{1 - (1+r)^{-T}},
 $$ {#eq-lcoe}
-where $a(r)$ is the capital recovery factor. Since $F$ is small, the tariff rises almost in proportion to $a(r)$. The plant is the stylized plant used throughout this series: $I = \$800$, a 20 percent capacity factor ($E = 1{,}752$), $F = \$12$ and $T = 25$, with capital spent at commissioning. Paper 2.2 adds interest during a two-year construction period [@StrettonWP32].
+where $a(r)$ is the capital recovery factor. Since $F$ is small, the tariff rises almost in proportion to $a(r)$. The plant is the stylized plant used throughout this series: $I = \$800$, a 20 percent capacity factor ($E = 1{,}752$), $F = \$12$ and $T = 25$, with capital spent at commissioning. Paper 3.2 adds interest during a two-year construction period [@StrettonWP32].
 
 ## Offtaker default and the premium in the tariff {#sec-premium}
 
@@ -111,7 +111,7 @@ $$ {#eq-efficiency}
 
 The conditions are the substance of the result. The recovery condition $\tilde R_G \ge \tilde R_D$ holds whenever the contract guarantor keeps a claim on the offtaker and the debt guarantor's claim runs against a project company whose only asset is an unpaid contract. It fails if the facility cannot enforce its claim, which is why the waterfall matters. The efficiency ratio in @eq-efficiency splits into two parts with different welfare meanings. The second factor, $(1-\tilde R)/(1-\tilde R_G)$, is a real resource gain: the facility recovers more than a dispersed set of generators would, because it is a repeat creditor with collection powers. The first factor, $\varphi(m\lambda)/\varphi(\lambda)$, is the market price of risk that investors no longer charge. That part is a gain to society only if the state is better placed to bear the risk than investors are. It is not when the offtaker's default is correlated with the state's own fiscal distress, as it often is, and @sec-fiscal returns to that point.
 
-A debt guarantee is not always worse. Where there is no contract to guarantee, as for transmission lines or factories, a guarantee on the bond is the only option, and the series treats it in Paper 2.2 [@CFPB32]. Where the offtaker is sound and the main risk is construction, a guarantee targeted on construction finance is better than either. The proposition says that where offtaker payment is the binding risk, the guarantee should attach to the payment.
+A debt guarantee is not always worse. Where there is no contract to guarantee, as for transmission lines or factories, a guarantee on the bond is the only option, and the series treats it in Paper 3.2 [@CFPB32]. Where the offtaker is sound and the main risk is construction, a guarantee targeted on construction finance is better than either. The proposition says that where offtaker payment is the binding risk, the guarantee should attach to the payment.
 
 ## The facility under a guarantee waterfall {#sec-waterfall}
 
@@ -143,7 +143,7 @@ The stylized 100-megawatt plant costs \$80 million and produces 175,200 megawatt
 | Relative to 4% | 1.00 | 1.09 | 1.18 | 1.38 | 1.58 | 1.80 | 2.15 |
 | Return on capital, share of cost | 30% | 36% | 41% | 49% | 56% | 61% | 68% |
 
-: The same solar plant costs twice as much at 15 percent as at 4 percent (stylized plant: \$800/kW, 20 percent capacity factor, \$12/kW-year operation and maintenance, 25 years, capital spent at commissioning with no interest during construction). Paper 2.2 adds a two-year construction period at the financing rate, which raises the cost at 10 percent from 5.72 to 6.22 cents [@StrettonWP32]. Source: `2.Source/model.py`. {#tbl-lcoe}
+: The same solar plant costs twice as much at 15 percent as at 4 percent (stylized plant: \$800/kW, 20 percent capacity factor, \$12/kW-year operation and maintenance, 25 years, capital spent at commissioning with no interest during construction). Paper 3.2 adds a two-year construction period at the financing rate, which raises the cost at 10 percent from 5.72 to 6.22 cents [@StrettonWP32]. Source: `2.Source/model.py`. {#tbl-lcoe}
 
 ![Levelized cost of the stylized solar plant by real WACC. The shaded band is the offtaker premium of the central case in @tbl-premium, added to an 8 percent WACC that prices every other risk. Source: `2.Source/make_wp_figures.py`.](2.Source/figures/fig1_lcoe_wacc.png){#fig-lcoe width=90%}
 
@@ -257,7 +257,7 @@ The declining tariff therefore saves nothing in present value. What it buys is a
 
 *Contract in the currency the offtaker earns.* A distribution company earns local currency. A tariff in dollars hands it, and behind it the state, the devaluation risk of every contract, and that risk arrives when the state can least bear it, in a balance of payments crisis. In the model it makes $\lambda$ and the offtakers' correlation $\rho$ rise together, which is the worst case for the buffer in @eq-buffer.
 
-Where projects are financed in foreign currency, the facility, not the offtaker, should decide how the mismatch is held, and it should be priced in the open. It can buy hedges from specialist providers such as the Currency Exchange Fund (TCX) where they exist; index only the share of the tariff that pays for imported equipment, for a limited period; or fund the contracts from domestic savings, which removes the mismatch at source. Paper 2.2 sets out a local-currency senior tranche for domestic savers [@CFPB32]. The rule excludes one practice: a hard-currency tariff whose currency risk is never priced because the state's guarantee hides it.
+Where projects are financed in foreign currency, the facility, not the offtaker, should decide how the mismatch is held, and it should be priced in the open. It can buy hedges from specialist providers such as the Currency Exchange Fund (TCX) where they exist; index only the share of the tariff that pays for imported equipment, for a limited period; or fund the contracts from domestic savings, which removes the mismatch at source. Paper 3.2 sets out a local-currency senior tranche for domestic savers [@CFPB32]. The rule excludes one practice: a hard-currency tariff whose currency risk is never priced because the state's guarantee hides it.
 
 ## National or regional {#sec-regional}
 
@@ -275,7 +275,7 @@ This changes the form of the state's obligation, not its existence. A long-term 
 
 A guarantee makes the generator whole; it does not make the utility solvent. India's arrears show what happens when the waterfall is not matched by reform: the national layer pays repeatedly, and a contingent liability becomes a recurrent one. A country that will not put its utility on a path to cost recovery is asking the guarantor to insure a certain loss rather than a risk.
 
-Entry to the facility should therefore be conditional, and access should widen as the conditions are met. The conditions follow from the model. A published path of tariffs toward cost recovery, and an explicit budget transfer for any subsidy that remains, lower the frequency of episodes $\lambda$. Letters of credit and an intercept agreement raise the recovery $R$ and the national layer's probability $q_2$. Targets for collection and loss reduction lower $\lambda$ over time. Because cheap solar lowers the utility's cost of supply, reform and the facility reinforce each other: the facility makes the tariff path shorter, and the tariff path makes the facility cheaper. Sustainability-linked sovereign lending, discussed in Paper 3.3 [@CFPB43], is one way to pay for the reforms.
+Entry to the facility should therefore be conditional, and access should widen as the conditions are met. The conditions follow from the model. A published path of tariffs toward cost recovery, and an explicit budget transfer for any subsidy that remains, lower the frequency of episodes $\lambda$. Letters of credit and an intercept agreement raise the recovery $R$ and the national layer's probability $q_2$. Targets for collection and loss reduction lower $\lambda$ over time. Because cheap solar lowers the utility's cost of supply, reform and the facility reinforce each other: the facility makes the tariff path shorter, and the tariff path makes the facility cheaper. Sustainability-linked sovereign lending, discussed in Paper 4.3 [@CFPB43], is one way to pay for the reforms.
 
 # Fiscal accounting of the contingent liability {#sec-fiscal}
 
@@ -324,7 +324,7 @@ The main limitation is that the calibration is stylized. The next step is empiri
 
 | Parameter | Value | Status |
 |---|---|---|
-| Plant cost; capacity factor; O&M; life | \$800/kW; 20%; \$12/kW-yr; 25 years | Stylized, series 2 common plant |
+| Plant cost; capacity factor; O&M; life | \$800/kW; 20%; \$12/kW-yr; 25 years | Stylized, series 3 common plant |
 | WACC excluding offtaker risk, $r_0$ | 8% real | Stylized |
 | Episode intensity $\lambda$; length $D$; recovery $R$ | 0.15/yr; 1 year; 60% | Stylized |
 | Price of default risk $m$ | 2 | Stylized; direction from @Driessen2005 |
