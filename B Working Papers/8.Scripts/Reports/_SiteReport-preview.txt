@@ -1,0 +1,117 @@
+﻿=== Publish site  [PREVIEW]   2026-10-30 08:50 ===
+Website : C:\Users\sjstr\Repos\planning_writing\B Working Papers\7.Website
+
+--- publish
+    -> papers\RentTax.docx
+1 file(s) copied, 42 paper(s) published in total.
+
+--- papers folder
+    STALE  : Brief-CarbonConsumptionTax.docx   (no paper publishes this any more)
+    STALE  : Brief-CleanPowerAssetClasses.docx   (no paper publishes this any more)
+    STALE  : Brief-ClimateFinanceIntermediationForCleanPower.docx   (no paper publishes this any more)
+    STALE  : Brief-ClimateInvestmentTrust.docx   (no paper publishes this any more)
+    STALE  : Brief-FeebatesAndOutputBasedRebating.docx   (no paper publishes this any more)
+    STALE  : Brief-IronSteelCBAM.docx   (no paper publishes this any more)
+    STALE  : Brief-NotionalCapitalisedValueAndGuarantees.docx   (no paper publishes this any more)
+    STALE  : Brief-OpenEconomyCarbonPricing.docx   (no paper publishes this any more)
+    STALE  : Brief-PolicyEquivalentCarbonPriceAndCES.docx   (no paper publishes this any more)
+    STALE  : Brief-SustainabilityLinkedLending.docx   (no paper publishes this any more)
+    STALE  : GeoprosperityIntro.docx   (no paper publishes this any more)
+    STALE  : Slides-ActivityModelling.pptx   (no paper publishes this any more)
+    STALE  : Slides-Analytics.pptx   (no paper publishes this any more)
+    STALE  : Slides-CarbonConsumptionTax.pptx   (no paper publishes this any more)
+    STALE  : Slides-CBAMPolicyTool.pptx   (no paper publishes this any more)
+    STALE  : Slides-CleanPowerAssetClasses.pptx   (no paper publishes this any more)
+    STALE  : Slides-ClimateFinanceIntermediationForCleanPower.pptx   (no paper publishes this any more)
+    STALE  : Slides-ClimateInvestmentTrust.pptx   (no paper publishes this any more)
+    STALE  : Slides-CPATAIImplementation.pptx   (no paper publishes this any more)
+    STALE  : Slides-CPATMitigationMethods.pptx   (no paper publishes this any more)
+    STALE  : Slides-CPATValidation.pptx   (no paper publishes this any more)
+    STALE  : Slides-ElasticityValidation.pptx   (no paper publishes this any more)
+    STALE  : Slides-ExciseFiscalDiagnostic.pptx   (no paper publishes this any more)
+    STALE  : Slides-FeebatesAndOutputBasedRebating.pptx   (no paper publishes this any more)
+    STALE  : Slides-FinanceAndRisk.pptx   (no paper publishes this any more)
+    STALE  : Slides-FiscalIndicatorsDashboard.pptx   (no paper publishes this any more)
+    STALE  : Slides-IronSteelCBAM.pptx   (no paper publishes this any more)
+    STALE  : Slides-MacroFiscalEnergyScenarioTool.pptx   (no paper publishes this any more)
+    STALE  : Slides-Modelling.pptx   (no paper publishes this any more)
+    STALE  : Slides-NotionalCapitalisedValueAndGuarantees.pptx   (no paper publishes this any more)
+    STALE  : Slides-OpenEconomyCarbonPricing.pptx   (no paper publishes this any more)
+    STALE  : Slides-PolicyEquivalentCarbonPriceAndCES.pptx   (no paper publishes this any more)
+    STALE  : Slides-PublicInvestment.pptx   (no paper publishes this any more)
+    STALE  : Slides-SovereignIncentives.pptx   (no paper publishes this any more)
+    STALE  : Slides-SustainabilityLinkedLending.pptx   (no paper publishes this any more)
+    STALE  : SLIDIs.docx   (no paper publishes this any more)
+    36 stale file(s) would be removed
+
+--- link targets
+    already correct
+
+--- research index
+    ResearchOverview.docx at the root of A Writing written, links pointing at https://climatefiscalfinance.org
+
+--- render
+    would run: quarto render
+
+--- link check
+    ok           : papers/Brief-OpenEconomyCarbonPricing.docx
+    ok           : papers/OpenEconomyCarbonPricing.docx
+    ok           : papers/Brief-FeebatesAndOutputBasedRebating.docx
+    ok           : papers/FeebatesAndOutputBasedRebating.docx
+    ok           : papers/Brief-IronSteelCBAM.docx
+    ok           : papers/IronSteelCBAM.docx
+    ok           : papers/Brief-CarbonConsumptionTax.docx
+    ok           : papers/CarbonConsumptionTax.docx
+    ok           : papers/Brief-PolicyEquivalentCarbonPriceAndCES.docx
+    ok           : papers/PolicyEquivalentCarbonPriceAndCES.docx
+    ok           : papers/OverviewMobilisingPrivateCapital.docx
+    ok           : papers/Brief-ClimateFinanceIntermediationForCleanPower.docx
+    ok           : papers/ClimateFinanceIntermediationForCleanPower.docx
+    ok           : papers/Brief-CleanPowerAssetClasses.docx
+    ok           : papers/CleanPowerAssetClasses.docx
+    ok           : papers/OverviewSovereignIncentives.docx
+    ok           : papers/Brief-NotionalCapitalisedValueAndGuarantees.docx
+    ok           : papers/NotionalCapitalisedValueAndGuarantees.docx
+    ok           : papers/Brief-ClimateInvestmentTrust.docx
+    ok           : papers/ClimateInvestmentTrust.docx
+    ok           : papers/Brief-SustainabilityLinkedLending.docx
+    ok           : papers/SustainabilityLinkedLending.docx
+    ok           : papers/OverviewModelling.docx
+    ok           : papers/CPATMitigationMethods.docx
+    ok           : papers/CPATAIImplementation.docx
+    ok           : papers/CPATValidation.docx
+    ok           : papers/ElasticityValidation.docx
+    ok           : papers/CBAMPolicyTool.docx
+    ok           : papers/PublicInvestment.docx
+    ok           : papers/ActivityModelling.docx
+    ok           : papers/OverviewAnalytics.docx
+    ok           : papers/ExciseFiscalDiagnostic.docx
+    ok           : papers/MacroFiscalEnergyScenarioTool.docx
+    ok           : papers/FiscalIndicatorsDashboard.docx
+34 link(s) checked, 0 broken.
+
+Published for a URL but not linked from the research page - expected:
+the convention is that every paper gets a file in papers\, whether or
+not the research page lists it.
+    CarbonPricingRightPolicyWrongTime.docx
+    CombinedOverview.docx
+    Manifesto.docx
+    MDBClimateEnvelope.docx
+    NineEleven.docx
+    OrderWithoutOrdinance.docx
+    OverviewAdditional.docx
+    OverviewBooks.docx
+    OverviewClimateAndFiscalPolicy.docx
+    OverviewPhilosophy.docx
+    OverviewPolitics.docx
+    ReformingMDBs.docx
+    RentTax.docx
+    ThePoliticsOfLifeLogic.docx
+    TheSollar.docx
+    TheVocativeCase.docx
+    TimeAndChance.docx
+    VotingPatterns.docx
+
+================================================================
+Published 42, links broken 0, papers with nothing to publish 0
+=== Done ===
