@@ -23,7 +23,7 @@ from site_config import PARTS, ARCHIVE, paper_folders, paper_name, section_folde
 BOOKS = [
     ("3.3.TimeAndChance", "TimeAndChance.docx", "TimeAndChance.docx"),
     ("8.5.2.CarbonPricingRightPolicyWrongTime", "CarbonPricingRightPolicyWrongTime.docx", "CarbonPricingRightPolicyWrongTime.docx"),
-    ("8.5.3.Screwed", "Screwed.docx", "Screwed.docx"),
+    ("8.5.3.Plucked", "Plucked.docx", "Plucked.docx"),
 ]
 
 

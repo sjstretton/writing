@@ -109,7 +109,7 @@ def home_page(part, index):
             out.append("\n".join(f"- [{p} {t}]({pre + w if w else f'{sp}#{a}'})" for p, t, a, w in titles) + "\n")
     if part["more"]:
         out.append(f"### [Books and other papers]({pre}{part['more']})\n")
-        out.append("Three books: *Time and Chance*, *The Right Policy at the Wrong Time* and the tax book *Screwed?!*; "
+        out.append("Three books: *Time and Chance*, *The Right Policy at the Wrong Time* and the tax book *Plucked!*; "
                    "and an earlier paper on sustainability-linked intermediated debt.\n")
     (SITE / page).parent.mkdir(exist_ok=True)
     (SITE / page).write_text("\n".join(out), encoding="utf-8")

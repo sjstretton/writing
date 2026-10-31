@@ -2,7 +2,7 @@
 
 ##  Contents
 
-This document contains the **overarching material** for *'Screwed?!'*. It contains:
+This document contains the **overarching material** for *'Plucked!'* (titled *'Screwed?!'* in 2020). It contains:
 - Quick Start Guide
 - Overview of Book 
 - Presentation of Book

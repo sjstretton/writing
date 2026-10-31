@@ -70,6 +70,7 @@ Details for each item: `B PhD Application/PhD-Application-Status.md`.
 
 ## Done
 
+- [x] 31 Oct 2026 — Tax book 8.5.3 retitled *Plucked! A guide to a fair, simple, efficient and politically feasible tax and benefits system* (was *Screwed?! Getting our future back with tax and benefit reform*): folder now `8.5.3.Plucked`, master `Plucked.qmd`/`.docx`/`.bib`; chapter files, overview 2.0, website pages and scripts, READMEs and `NUMBERING.md` updated; book text otherwise unchanged. Old `papers/Screwed.docx` must be deleted on the server by hand when deploying — A
 - [x] 31 Oct 2026 — Papers renumbered to the section folders (`NUMBERING.md`): paper folders, overview files, citation keys (CFPB/StrettonWP), series lines, related-paper lists, decks and the research page now use the new numbers; each section has one `<N>.0.Overview` folder; section 8 renumbered 8.1–8.7; new overviews 2.0 (Rent Tax), 6.0 (modular upgrades) and 8.0; 5.0 and 7.0 rescoped; docx and decks re-rendered; website ready to deploy — A
 
 - [x] 29 Oct 2026 — Abstracts of 1.3 (recommendation, relocation cost of full recognition) and 1.7 (IMF precedent, uses, headline $37) revised; 1.7 brief and deck aligned — A

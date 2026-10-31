@@ -1,4 +1,4 @@
-"""Build Screwed.qmd (the Quarto master) from the 2020 R Markdown chapters.
+"""Build Plucked.qmd (the Quarto master) from the 2020 R Markdown chapters.
 
 Run from the book folder:  python3 2.Source/build_qmd.py
 Converts knitr include_graphics chunks to Markdown images, replaces the one
@@ -33,23 +33,23 @@ def convert(t):
     return t.strip() + "\n"
 
 head = '''---
-title: "Screwed?!"
-subtitle: "Getting our future back with tax and benefit reform"
+title: "Plucked!"
+subtitle: "A guide to a fair, simple, efficient and politically feasible tax and benefits system"
 author:
   - name: "Stephen Stretton"
   - name: "Gordon Styles"
 date: "2020 manuscript; Quarto edition October 2026"
 version: "1.0-2020"
-bibliography: Screwed.bib
+bibliography: Plucked.bib
 csl: https://www.zotero.org/styles/chicago-author-date
 toc: true
 format:
   docx: default
 ---
 
-*Book manuscript, 2020, converted from R Markdown to Quarto in October 2026 without changes to the text. Original chapter files are in `2.Source/Chapters-Rmd`; the 2020 PDF is in `8.PreviousVersions`.*
+*Book manuscript, 2020, converted from R Markdown to Quarto in October 2026 without changes to the text. Retitled in October 2026; the 2020 title was 'Screwed?! Getting our future back with tax and benefit reform'. Original chapter files are in `2.Source/Chapters-Rmd`; the 2020 PDF is in `8.PreviousVersions`.*
 
 '''
 parts = [convert(open(f).read()) for f in sorted(glob.glob(f"{here}/[01]*.Rmd"))]
-open("Screwed.qmd", "w").write(head + "\n\n".join(parts))
-print("wrote Screwed.qmd", sum(len(p.split()) for p in parts), "words")
+open("Plucked.qmd", "w").write(head + "\n\n".join(parts))
+print("wrote Plucked.qmd", sum(len(p.split()) for p in parts), "words")
