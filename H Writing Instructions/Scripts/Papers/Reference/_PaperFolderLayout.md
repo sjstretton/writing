@@ -26,7 +26,7 @@ A slot exists only if something is in it. Most folders have two or three.
 ```
 1. Climate and Fiscal Policy      ->  1.ClimateAndFiscalPolicy
 1.1 Open Economy Carbon Pricing   ->  1.1.OpenEconomyCarbonPricing
-1.3 Iron, Steel, CBAM             ->  1.3.IronSteelCBAM
+1.3 Iron, Steel, CBAM             ->  1.4.IronSteelCBAM
 3. Background Papers              ->  3.BackgroundPapers
 Voting Patterns                   ->  VotingPatterns
 ```

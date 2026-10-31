@@ -1,7 +1,7 @@
 ---
-title: "Carbon Consumption Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers"
-subtitle: "A destination-based carbon price for the European Union"
-series: "Climate Fiscal Policy Brief No. 1.4"
+title: "Converting a VAT into a Destination Carbon Tax"
+subtitle: "A Carbon Component in VAT and a Forward Obligation on Energy Suppliers in the European Union"
+series: "Climate Fiscal Policy Brief No. 1.3"
 version: "1.0"
 author:
   - name: "Stephen J. Stretton"
@@ -16,7 +16,7 @@ format:
   docx: default
 ---
 
-*Climate Fiscal Policy Brief No. 1.4, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated.*
+*Climate Fiscal Policy Brief No. 1.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated.*
 
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
@@ -73,13 +73,13 @@ format:
 
 **A worked example shows the incentive (stylized, 2032).** Take three versions of a €100 good. At the default intensity of 0.25 kg per euro it embodies 25 kg CO₂ and pays €12.50 of value VAT plus €2.50 of carbon component: €15, as today. A version made with 0.40 kg per euro pays €12.50 plus €4.00, a total of €16.50. A supplier who verifies 0.10 kg per euro pays €12.50 plus €1.00, a total of €13.50. The €3 gap between the dirty and the clean version is the carbon price of €100 per tonne on the 30 kg that separates them.
 
-**One tonne should bear one price.** The carbon component should deduct any carbon price paid upstream on the same tonnes, measured as a carbon-price equivalent [@CFPB61], whether paid under the ETS, CBAM, the energy obligation below, or a recognized foreign scheme [@CFPB13]. Production feebates are revenue-neutral and need no deduction. The carbon component should apply on top of reduced VAT rates; whether it reaches zero-rated food is a choice for each member state.
+**One tonne should bear one price.** The carbon component should deduct any carbon price paid upstream on the same tonnes, measured as a carbon-price equivalent [@CFPB61], whether paid under the ETS, CBAM, the energy obligation below, or a recognized foreign scheme [@CFPB14]. Production feebates are revenue-neutral and need no deduction. The carbon component should apply on top of reduced VAT rates; whether it reaches zero-rated food is a choice for each member state.
 
 # 3. Imports: generous, rebuttable defaults
 
 **Imports should start on generous defaults: for each product category, the EU's own average production intensity, applied to every origin.** That treats like products alike whatever their source, the strongest position under the national-treatment rule for internal taxes in GATT Article III:2 [@IsmerNeuhoff2007; @KeenParryRoaf2022], and it gives trading partners no grievance to retaliate against. The cost is that high-carbon imports are undercharged at first. That is a price worth paying to avoid a trade war.
 
-**Rebuttal is what rewards clean exporters.** An exporter whose verified intensity is below the default pays on its own figure. Lower carbon then means a lower charge in the EU market, and once importers price embodied carbon, an exporter's most competitive policy at home is to price carbon too, which turns the race to the bottom into a race to the top [@CFPB11]. Defaults can tighten toward origin-specific values as measurement improves, with a deduction for carbon prices paid abroad, as CBAM already allows [@CBAMReg; @CFPB13].
+**Rebuttal is what rewards clean exporters.** An exporter whose verified intensity is below the default pays on its own figure. Lower carbon then means a lower charge in the EU market, and once importers price embodied carbon, an exporter's most competitive policy at home is to price carbon too, which turns the race to the bottom into a race to the top [@CFPB11]. Defaults can tighten toward origin-specific values as measurement improves, with a deduction for carbon prices paid abroad, as CBAM already allows [@CBAMReg; @CFPB14].
 
 **Country-level rates are illustrative only.** If EU goods fall from 0.20 to 0.15 kg per euro and Chinese exports from 0.40 to 0.25, the effective EU rate ends at 13.0 percent and the Chinese rate peaks at 15.75 percent in 2032, returning to 15.0. These intensities are assumptions, not estimates, and under product-category defaults no single country rate applies.
 
@@ -132,7 +132,7 @@ format:
 
 - Climate Fiscal Policy Brief No. 1.1: the two-track architecture [@CFPB11].
 - No. 1.2: feebates in power and industry, the production track [@CFPB12].
-- No. 1.3: carbon price recognition under CBAM [@CFPB13].
+- No. 1.4: carbon price recognition under CBAM [@CFPB14].
 - No. 6.1: the Total Effective Carbon Price, the measurement framework [@CFPB61].
 
 # References {.unnumbered}

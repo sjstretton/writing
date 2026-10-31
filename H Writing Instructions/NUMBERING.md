@@ -4,13 +4,15 @@ The paper numbers follow the section folders in `B Working Papers` (Stephen's re
 
 ## Map (old number → new number)
 
+On 31 Oct 2026 (later the same day) papers 1.3 and 1.4 swapped places so that the CBAM paper comes last in section 1: the consumption tax, retitled *Converting a VAT into a Destination Carbon Tax*, is now 1.3 (`1.3.CarbonConsumptionTax`, `CFPB13`, `StrettonWP13`) and CBAM recognition is 1.4 (`1.4.IronSteelCBAM`, `CFPB14`, `StrettonWP14`). The table shows the result.
+
 | Section folder | New no. | Paper | Old no. |
 |---|---|---|---|
 | `1.CarbonPricing` | 1.0 | Overview: carbon pricing in open economies | 1.0 |
 | | 1.1 | Price Production and Consumption Separately (two-track architecture) | 1.1 |
 | | 1.2 | Feebates: The Full Carbon Price at the Margin | 1.2 |
-| | 1.3 | Credit the Price Signal, Not the Payment (CBAM recognition) | 1.3 |
-| | 1.4 | Carbon Consumption Tax | 1.6 |
+| | 1.3 | Converting a VAT into a Destination Carbon Tax (carbon consumption tax) | 1.6, then 1.4 |
+| | 1.4 | Credit the Price Signal, Not the Payment (CBAM recognition) | 1.3 |
 | `2.OtherTaxAndFiscalPolicy` | 2.0 | Overview: Tax Rent, Not Effort (new) | – |
 | | 2.1 | Rent Tax | 1.4 |
 | `3.FinanceAndRisk` | 3.0 | Overview: Make Clean Power an Asset Class | 2.0 |

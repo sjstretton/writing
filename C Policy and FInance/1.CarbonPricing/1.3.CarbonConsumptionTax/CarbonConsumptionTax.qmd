@@ -1,6 +1,6 @@
 ---
-title: "Carbon Consumption Tax: A Carbon Component in VAT and a Forward Obligation on Energy Suppliers"
-subtitle: "A Destination-Based Carbon Price for the European Union"
+title: "Converting a VAT into a Destination Carbon Tax"
+subtitle: "A Carbon Component in VAT and a Forward Obligation on Energy Suppliers in the European Union"
 author:
   - name: "Stephen J. Stretton"
     note: "Writing in a personal capacity."
@@ -22,7 +22,7 @@ format:
   docx: default
 ---
 
-*Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No. 1.4. Version 0.1 (2026) proposed country-level intensity scores and adoption under Article 192 TFEU; this version replaces both.*
+*Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version is Climate Fiscal Policy Brief No. 1.3. Version 0.1 (2026) proposed country-level intensity scores and adoption under Article 192 TFEU; this version replaces both.*
 
 *Keywords:* carbon pricing; consumption-based emissions; value-added tax; destination basis; border carbon adjustment; EU law. *JEL:* H23, H25, F18, Q54, Q58.
 
@@ -43,7 +43,7 @@ The paper makes four contributions.
 
 The closest prior work is the proposal for a consumption charge on carbon-intensive materials [@Ismer2016; @PollittNeuhoffLin2020; @Neuhoff2026]. That charge covers a handful of basic materials, such as steel and cement, and is levied as an excise outside VAT. The carbon component covers every taxable good and service and runs through the VAT invoice chain with credit for input carbon, so each firm pays only on the carbon it adds and exports are relieved without separate machinery. It shares the materials charge's choice of standardized values, the same for every origin, and adds the rebuttal that rewards clean exporters.
 
-The paper is the consumption track of the series' two-track architecture [@CFPB11]. Production is priced separately by a revenue-neutral feebate on emissions intensity [@CFPB12]; recognition of foreign carbon prices at the border is developed in @CFPB13 and the measurement framework in @CFPB61. @sec-distribution reports the distributional effects, @sec-obligation the forward obligation, and @sec-admin administration and fraud.
+The paper is the consumption track of the series' two-track architecture [@CFPB11]. Production is priced separately by a revenue-neutral feebate on emissions intensity [@CFPB12]; recognition of foreign carbon prices at the border is developed in @CFPB14 and the measurement framework in @CFPB61. @sec-distribution reports the distributional effects, @sec-obligation the forward obligation, and @sec-admin administration and fraud.
 
 # Related literature {#sec-literature}
 
@@ -149,7 +149,7 @@ The calibration is a starting point, not a schedule ready to legislate. FIGARO's
 
 **Rebuttal turns the defaults into an incentive.** An importer or producer whose verified intensity is below the default pays on its own figure. Take a €100 phone imported in 2032, when the carbon price is €100 per tonne. The default for electronics at basic prices, the EU-made average, is 0.28 kg CO₂e per euro, so the importer pays €2.80. Electronics imported from outside the EU average 0.63 kg per euro, and Chinese-made electronics 0.84 (`2.Source/defaults_by_category.csv`), so the default undercharges the average import by €3.50 and the Chinese one by €5.60. An exporter that verifies 0.15 kg per euro pays €1.50 and gains €1.30 a phone over its rivals on the default; one at 0.84 has no reason to verify. The verification standard should be plant- or firm-wide intensity for the product, not consignment-level figures, so that a clean line cannot be reserved for EU buyers [@Neuhoff2026]. The verification infrastructure already exists for CBAM goods, whose monitoring rules and accredited verifiers could extend to other categories over time. Once importers charge embodied carbon at verified intensity, an exporter's most competitive policy at home is a production feebate at the same rate (Proposition 7 of @CFPB11), which turns competition toward lower carbon.
 
-**Tightening.** Defaults can move from the EU average toward origin-specific values, with a deduction for carbon prices paid abroad as CBAM allows [@CBAMReg; @CFPB13], once verified data cover enough of each category. @KeenParryRoaf2022 recommend the same sequence: domestic benchmarks first, country-specific values later.
+**Tightening.** Defaults can move from the EU average toward origin-specific values, with a deduction for carbon prices paid abroad as CBAM allows [@CBAMReg; @CFPB14], once verified data cover enough of each category. @KeenParryRoaf2022 recommend the same sequence: domestic benchmarks first, country-specific values later.
 
 **Governance.** The Commission would publish the schedule each year by implementing act under the amending Directive, on a published method and data, with intensities per euro indexed to prices and, where customs data allow, per physical unit. Member states would not set their own defaults: a lower default for a member state's own producers would be a covert subsidy, the problem v0.1's national scores created in reverse. A category's default should change only once a year and by a published formula, so that firms can invoice on it with certainty.
 

@@ -51,7 +51,7 @@ A feebate keeps the full carbon price at the margin without the carbon bill. It 
 
 **1.4 CBAM analysis and reform.** ● *(added)*
 The EU border carbon adjustment should "credit the price signal, not the payment". As drafted, it fails to recognize feebates and other implicit carbon prices, and it can be gamed by "scrap shuffling" in steel. The material includes a near-final consultation note and an Egypt emission-factor CBAM dashboard.
-*Sources:* 1.3 (`1.3.IronSteelCBAM/`), 6.2 (`6.2.CBAMPolicyTool/`).
+*Sources:* 1.4 (`1.4.IronSteelCBAM/`), 6.2 (`6.2.CBAMPolicyTool/`).
 
 **1.5 Excise and externality diagnostics.** ● *(added)*
 A ministry should read its excise system as a whole, against a common "externality spine" that puts carbon, air pollution, accidents, congestion and road damage on one scale. Diagnostics should run on data ministries already hold. The Sierra Leone report is the worked case (draft, 24,800 words).

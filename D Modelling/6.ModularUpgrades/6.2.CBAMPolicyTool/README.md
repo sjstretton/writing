@@ -9,7 +9,7 @@
 | File | What it is |
 |---|---|
 | `CBAMPolicyTool.qmd` | Master (v0.1) |
-| `CBAMPolicyTool.bib` | References (EU law entries copied from paper 1.3's verified bib) |
+| `CBAMPolicyTool.bib` | References (EU law entries copied from paper 1.4's verified bib) |
 | `CBAMPolicyTool.docx` | Rendered with pandoc after resolving cross-references (as in 5.4) |
 | `2.Source/cbam_example.py` | Worked example: charge per tonne 2026–2034, aggregates, figure. `--refetch` re-queries Eurostat |
 | `2.Source/data/default_values_turkiye.csv` | Default values used (from the Commission's "DVs as adopted" workbook, 4 Feb 2026) |

@@ -113,7 +113,7 @@ where $e_f$ is the emission factor, $p_{fs}$ the delivered price, $s_{fs}$ the f
 
 **Policy crediting needs a common unit, and the TECP supplies it.** Brief 1.1 shows that a payment per tonne above half the feebate rate makes a feebate a net gain for the adopting country, which justifies paying for policies rather than projects [@CFPB11, sec. 5]. The tonnes paid for are $\Lambda\,\Delta\tau^*$: the policy's change in TECP times the country's abatement per dollar. A country that adopts a fuel standard or a procurement rule then earns the same payment per tonne as one that adopts a tax. Payments should be settled against observed emissions, since the TECP is a forecast.
 
-**For CBAM, the sector's switching-margin price measures the price signal that border recognition should credit.** CBAM reduces an importer's charge only by the carbon price effectively paid in the country of origin [@EU2023, Art. 9]. A feebate, a rebated tax or an intensity standard pays almost nothing net, so it earns nothing. Brief 1.3 proposes recognizing the sector-wide price signal alongside the price paid [@CFPB13]. Computed for one sector, such as steel, the TECP's switching margin gives that signal in dollars per tonne: the $\Omega^{\mathrm{int}}$-weighted average of the intensive carbon prices. Where production routes make the same product, as steel routes do, a feebate at rate $t$ scores exactly $t$; fuel taxes net of subsidies, and standards through their shadow prices, score on the same scale. Border recognition should credit this price rather than the full TECP, because CBAM charges embodied carbon and leaves the demand margin to the importer's own price.
+**For CBAM, the sector's switching-margin price measures the price signal that border recognition should credit.** CBAM reduces an importer's charge only by the carbon price effectively paid in the country of origin [@EU2023, Art. 9]. A feebate, a rebated tax or an intensity standard pays almost nothing net, so it earns nothing. Brief 1.4 proposes recognizing the sector-wide price signal alongside the price paid [@CFPB14]. Computed for one sector, such as steel, the TECP's switching margin gives that signal in dollars per tonne: the $\Omega^{\mathrm{int}}$-weighted average of the intensive carbon prices. Where production routes make the same product, as steel routes do, a feebate at rate $t$ scores exactly $t$; fuel taxes net of subsidies, and standards through their shadow prices, score on the same scale. Border recognition should credit this price rather than the full TECP, because CBAM charges embodied carbon and leaves the demand margin to the importer's own price.
 
 **For country diagnostics, the decomposition is the product.** It shows which sectors and margins a package reaches and which it misses. In the example, extending the \$30 tax to road fuel would add only about \$1.6 to the TECP, because transport carries 6 percent of the abatement weight. The package's weak point is the low responsiveness of road transport to any price per tonne, not the tax's coverage. Computed each year, the TECP gives one trajectory for a country's effective carbon price against which any announced package can be checked [@StrettonTECP].
 
@@ -127,7 +127,7 @@ where $e_f$ is the emission factor, $p_{fs}$ the delivered price, $s_{fs}$ the f
 
 **Crediting facilities:** pay per tonne of $\Lambda\,\Delta\tau^*$, settled against observed emissions, so that standards, feebates and taxes earn on the same basis.
 
-**The European Commission:** in the default carbon price methodology, accept the sector-level switching-margin price as the measure of implicit and non-price pricing, phased in as Brief 1.3 proposes [@CFPB13].
+**The European Commission:** in the default carbon price methodology, accept the sector-level switching-margin price as the measure of implicit and non-price pricing, phased in as Brief 1.4 proposes [@CFPB14].
 
 **Regulators:** publish the shadow price of every binding standard, so that it can enter the TECP and be compared with a carbon price.
 
@@ -135,8 +135,8 @@ where $e_f$ is the emission factor, $p_{fs}$ the delivered price, $s_{fs}$ the f
 
 - Climate Fiscal Policy Brief No. 1.1: the two-track architecture for carbon pricing in open economies [@CFPB11].
 - No. 1.2: feebates in power and industry [@CFPB12].
-- No. 1.3: carbon price recognition under CBAM, and scrap shuffling [@CFPB13].
-- No. 1.4: a carbon consumption tax through VAT [@CFPB14].
+- No. 1.3: a carbon consumption tax through VAT [@CFPB13].
+- No. 1.4: carbon price recognition under CBAM, and scrap shuffling [@CFPB14].
 
 # References {.unnumbered}
 

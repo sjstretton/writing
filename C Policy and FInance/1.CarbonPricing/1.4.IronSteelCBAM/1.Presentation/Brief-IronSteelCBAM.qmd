@@ -1,7 +1,7 @@
 ---
 title: "Credit the Price Signal, Not the Payment"
 subtitle: "Carbon price recognition and scrap shuffling under the EU's Carbon Border Adjustment Mechanism"
-series: "Climate Fiscal Policy Brief No. 1.3"
+series: "Climate Fiscal Policy Brief No. 1.4"
 version: "1.0"
 author:
   - name: "Stephen J. Stretton"
@@ -16,7 +16,7 @@ format:
   docx: default
 ---
 
-*Climate Fiscal Policy Brief No. 1.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Legal texts as of 29 October 2026: Regulation (EU) 2023/956 as amended by Regulation (EU) 2025/2083 of 17 October 2025, and the Commission's draft implementing regulation of 13 May 2026.*
+*Climate Fiscal Policy Brief No. 1.4, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Legal texts as of 29 October 2026: Regulation (EU) 2023/956 as amended by Regulation (EU) 2025/2083 of 17 October 2025, and the Commission's draft implementing regulation of 13 May 2026.*
 
 # Executive summary {.unnumbered}
 
@@ -101,7 +101,7 @@ Shuffling cuts the charge by €102 million while emissions stay at 16.8 MtCO₂
 
 # Limits
 
-**The deepest tension cannot be fixed inside CBAM.** An economy-wide carbon price raises costs on all production, and CBAM can credit only the share sold to Europe. Exporters face a trilemma: equal carbon costs on all output, competitiveness in markets without a border adjustment, and WTO rules against destination-specific rebates cannot all hold under one instrument. The resolution is two instruments, a production feebate and a destination-based consumption charge [@CFPB11; @CFPB14].
+**The deepest tension cannot be fixed inside CBAM.** An economy-wide carbon price raises costs on all production, and CBAM can credit only the share sold to Europe. Exporters face a trilemma: equal carbon costs on all output, competitiveness in markets without a border adjustment, and WTO rules against destination-specific rebates cannot all hold under one instrument. The resolution is two instruments, a production feebate and a destination-based consumption charge [@CFPB11; @CFPB13].
 
 **Some changes need the Regulation amended.** Article 9(4) admits a default carbon price only where the exporting country has set one, and nets rebates from it [@EU2025Omnibus]. Recognizing subsidy reform or a feebate's signal needs a broad reading of "compensation" or an amendment. Country-specific treatment also raises most-favored-nation questions that need legal analysis [@Mehling2019; @IsmerNeuhoff2007]. Generous, rebuttable defaults, as @Cosbey2019 and @KeenParryRoaf2022 recommend, reduce that risk.
 
@@ -115,7 +115,7 @@ For exporting countries: a sector-wide feebate prices every tonne at a rate a ta
 
 - Climate Fiscal Policy Brief No. 1.1: the two-track architecture for carbon pricing in open economies [@CFPB11].
 - No. 1.2: feebates in power and industry [@CFPB12].
-- No. 1.4: a carbon consumption tax through VAT [@CFPB14].
+- No. 1.3: a carbon consumption tax through VAT [@CFPB13].
 - No. 6.1: the Total Effective Carbon Price, the measurement framework [@CFPB61].
 
 # References {.unnumbered}

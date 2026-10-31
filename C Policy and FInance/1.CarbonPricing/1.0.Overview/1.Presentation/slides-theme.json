@@ -48,8 +48,8 @@
     },
     {
       "type": "figure",
-      "title": "A consumption tax through VAT (1.4)",
-      "image": "../../1.4.CarbonConsumptionTax/1.Presentation/figures/fig1-effective-rates.png",
+      "title": "A consumption tax through VAT (1.3)",
+      "image": "../../1.3.CarbonConsumptionTax/1.Presentation/figures/fig1-effective-rates.png",
       "imageWidth": 4.9,
       "imageHeight": 2.93,
       "caption": "Effective VAT rate by embodied-carbon intensity, 2027–2037, stylized path.",
@@ -62,9 +62,9 @@
     },
     {
       "type": "figure",
-      "title": "CBAM: recognition and scrap shuffling (1.3)",
+      "title": "CBAM: recognition and scrap shuffling (1.4)",
       "layout": "wide",
-      "image": "../../1.3.IronSteelCBAM/1.Presentation/figures/fig1_scrap_shuffling.png",
+      "image": "../../1.4.IronSteelCBAM/1.Presentation/figures/fig1_scrap_shuffling.png",
       "imageHeight": 2.2,
       "aspect": 2.94,
       "caption": "Scrap shuffling in a stylized exporter: routing scrap-based steel to the EU cuts the embodied carbon the border sees.",
@@ -101,8 +101,8 @@
         "1.0  Price Production and Consumption Separately (overview)",
         "1.1  A Two-Track Architecture for Carbon Pricing in Open Economies",
         "1.2  Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill",
-        "1.3  Credit the Price Signal, Not the Payment (CBAM)",
-        "1.4  Carbon Consumption Tax",
+        "1.3  Converting a VAT into a Destination Carbon Tax",
+        "1.4  Credit the Price Signal, Not the Payment (CBAM)",
         "6.1  The Total Effective Carbon Price",
         "Each as a Climate Fiscal Policy Brief and a working paper."
       ]

@@ -1,4 +1,4 @@
-"""Figure for Climate Fiscal Policy Brief No. 1.3 (scrap shuffling).
+"""Figure for Climate Fiscal Policy Brief No. 1.4 (scrap shuffling).
 
 Stylized exporter: 10 Mt of crude steel a year, 8 Mt by blast furnace-basic
 oxygen furnace (BF-BOF) at 2.0 tCO2/t and 2 Mt by scrap-based electric arc

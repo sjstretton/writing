@@ -31,8 +31,8 @@ SERIES = Path("B Working Papers")  # folders below are relative to this (see NUM
 BIBS = {
     "1.CarbonPricing/1.1.OpenEconomyCarbonPricing": ["OpenEconomyCarbonPricing.bib", "1.Presentation/Brief-OpenEconomyCarbonPricing.bib"],
     "1.CarbonPricing/1.2.FeebatesAndOutputBasedRebating": ["FeebatesAndOutputBasedRebating.bib", "1.Presentation/Brief-FeebatesAndOutputBasedRebating.bib"],
-    "1.CarbonPricing/1.3.IronSteelCBAM": ["IronSteelCBAM.bib", "1.Presentation/Brief-IronSteelCBAM.bib"],
-    "1.CarbonPricing/1.4.CarbonConsumptionTax": ["CarbonConsumptionTax.bib", "1.Presentation/Brief-CarbonConsumptionTax.bib"],
+    "1.CarbonPricing/1.4.IronSteelCBAM": ["IronSteelCBAM.bib", "1.Presentation/Brief-IronSteelCBAM.bib"],
+    "1.CarbonPricing/1.3.CarbonConsumptionTax": ["CarbonConsumptionTax.bib", "1.Presentation/Brief-CarbonConsumptionTax.bib"],
     "6.ModularUpgrades/6.1.PolicyEquivalentCarbonPriceAndCES": ["PolicyEquivalentCarbonPriceAndCES.bib", "1.Presentation/Brief-PolicyEquivalentCarbonPriceAndCES.bib"],
 }
 # Key works the working papers still need (from the 1.1 review and the literature plan).
@@ -54,13 +54,13 @@ SUPPLEMENT = {
         ("GoulderHafsteadWilliams2016", "General equilibrium impacts of a federal clean energy standard", "Goulder Hafstead Williams"),
         ("FowlieReguantRyan2016", "Market-Based Emissions Regulation and Industry Dynamics", "Fowlie Reguant Ryan"),
     ],
-    "1.CarbonPricing/1.3.IronSteelCBAM": [
+    "1.CarbonPricing/1.4.IronSteelCBAM": [
         ("BushnellChenZaragozaWatkins2014", "Downstream regulation of CO2 emissions in California's electricity sector", "Bushnell Chen Zaragoza-Watkins"),
         ("CaronRausch2013", "A global general equilibrium analysis of the effects of the border carbon adjustment", "Caron"),
         ("Cosbey2019", "Developing Guidance for Implementing Border Carbon Adjustments: Lessons, Cautions, and Research Needs from the Literature", "Cosbey Droege Fischer Munnings"),
         ("Mehling2019", "Designing Border Carbon Adjustments for Enhanced Climate Action", "Mehling van Asselt"),
     ],
-    "1.CarbonPricing/1.4.CarbonConsumptionTax": [
+    "1.CarbonPricing/1.3.CarbonConsumptionTax": [
         ("KeenLockwood2010", "The value added tax: Its causes and consequences", "Keen Lockwood"),
         ("Neuhoff2016Inclusion", "Inclusion of consumption of carbon intensive materials in emissions trading", "Neuhoff"),
         ("PetersHertwich2008", "CO2 Embodied in International Trade with Implications for Global Climate Policy", "Peters Hertwich"),

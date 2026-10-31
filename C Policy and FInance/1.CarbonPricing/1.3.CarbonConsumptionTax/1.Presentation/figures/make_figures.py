@@ -1,4 +1,4 @@
-"""Figures and check calculations for Climate Fiscal Policy Brief No. 1.4.
+"""Figures and check calculations for Climate Fiscal Policy Brief No. 1.3.
 
 Run from any directory:  python3 make_figures.py
 Prints every number used in the brief's tables and writes fig1-effective-rates.png

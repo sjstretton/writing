@@ -31,8 +31,8 @@ def find(name):
 PAPERS = {
     "1.1.OpenEconomyCarbonPricing": "OpenEconomyCarbonPricing",
     "1.2.FeebatesAndOutputBasedRebating": "FeebatesAndOutputBasedRebating",
-    "1.3.IronSteelCBAM": "IronSteelCBAM",
-    "1.4.CarbonConsumptionTax": "CarbonConsumptionTax",
+    "1.4.IronSteelCBAM": "IronSteelCBAM",
+    "1.3.CarbonConsumptionTax": "CarbonConsumptionTax",
     "2.1.RentTax": "RentTax",
     "3.1.ClimateFinanceIntermediationForCleanPower": "ClimateFinanceIntermediationForCleanPower",
     "3.2.CleanPowerAssetClasses": "CleanPowerAssetClasses",

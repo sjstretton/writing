@@ -45,17 +45,17 @@ Follow `E Writing Instructions/NORMS.md`, `E Writing Instructions/Writing Standa
 |---|---|---|
 | 1.1 | Price Production and Consumption Separately (the two-track architecture) | `1.1.OpenEconomyCarbonPricing` |
 | 1.2 | Feebates (power and industry) | `1.2.FeebatesAndOutputBasedRebating` |
-| 1.3 | Carbon price recognition under CBAM, and scrap shuffling | `1.3.IronSteelCBAM` |
-| 1.4 | Carbon Consumption Tax through VAT | `1.4.CarbonConsumptionTax` |
+| 1.3 | Converting a VAT into a destination carbon tax | `1.3.CarbonConsumptionTax` |
+| 1.4 | Carbon price recognition under CBAM, and scrap shuffling | `1.4.IronSteelCBAM` |
 | 6.1 | The Total Effective Carbon Price | `6.ModularUpgrades/6.1.PolicyEquivalentCarbonPriceAndCES` |
 
-Cite sibling briefs as `@CFPB11`, `@CFPB12`, `@CFPB13`, `@CFPB14`, `@CFPB61`, with these bib entries (copy them into each brief's `.bib`):
+Cite sibling briefs as `@CFPB11`, `@CFPB12`, `@CFPB14`, `@CFPB13`, `@CFPB61`, with these bib entries (copy them into each brief's `.bib`):
 
 ```bibtex
 @techreport{CFPB11, author={Stretton, Stephen J.}, title={Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies}, institution={Climate Fiscal Policy Briefs}, number={1.1}, year={2026}}
 @techreport{CFPB12, author={Stretton, Stephen J.}, title={Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill}, institution={Climate Fiscal Policy Briefs}, number={1.2}, year={2026}}
-@techreport{CFPB13, author={Stretton, Stephen J.}, title={Credit the Price Signal, Not the Payment: Carbon Price Recognition and Scrap Shuffling under the {EU}'s Carbon Border Adjustment Mechanism}, institution={Climate Fiscal Policy Briefs}, number={1.3}, year={2026}}
-@techreport{CFPB14, author={Stretton, Stephen J.}, title={Carbon Consumption Tax: A Carbon Component in {VAT} and a Forward Obligation on Energy Suppliers}, institution={Climate Fiscal Policy Briefs}, number={1.4}, year={2026}}
+@techreport{CFPB14, author={Stretton, Stephen J.}, title={Credit the Price Signal, Not the Payment: Carbon Price Recognition and Scrap Shuffling under the {EU}'s Carbon Border Adjustment Mechanism}, institution={Climate Fiscal Policy Briefs}, number={1.4}, year={2026}}
+@techreport{CFPB13, author={Stretton, Stephen J.}, title={Converting a {VAT} into a Destination Carbon Tax: A Carbon Component in {VAT} and a Forward Obligation on Energy Suppliers in the {European Union}}, institution={Climate Fiscal Policy Briefs}, number={1.3}, year={2026}}
 @techreport{CFPB61, author={Stretton, Stephen J.}, title={Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price}, institution={Climate Fiscal Policy Briefs}, number={6.1}, year={2026}}
 ```
 
