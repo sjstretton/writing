@@ -1,4 +1,8 @@
-"""Figures for paper 4.1. Run: python3 make_figures.py (writes figures/*.png)."""
+"""Figures for paper 5.1 (working paper v0.2). Run: python3 make_figures.py (writes figures/*.png).
+
+Figure 1: the module's calculation chain. Figure 2: shares of new power investment under the CPAT logit
+rule and the velocity (quadratic-penalty) rule as the carbon price rises (numbers from worked_examples.py).
+"""
 import os
 import matplotlib
 matplotlib.use("Agg")
@@ -42,9 +46,9 @@ def flow_figure():
     box(X[0], TOP, "Inputs", "energy balances\nIMF price data\nGDP, population\nworld fuel prices\npolicy settings", grey)
     box(X[1], TOP, "1. Prices", "supply cost\n+ existing taxes\n- subsidies\n+ carbon charge\n(+ VAT)")
     box(X[2], TOP, "2. Fuel demand", "income, usage and\nefficiency elasticities;\nefficiency trend;\nleakage to biomass")
-    box(X[3], TOP, "4. Emissions", "fuel use x emission\nfactor, calibrated\nto inventory;\nother gases by driver")
+    box(X[3], TOP, "5. Emissions", "fuel use x emission\nfactor, calibrated\nto inventory;\nother gases by driver")
     box(X[0], BOT, "6. GDP", "change in revenue\nx fiscal multipliers\nby lag", grey)
-    box(X[1], BOT, "5. Revenues", "fuel use x tax rates;\nVAT; subsidies;\nauctioned ETS share")
+    box(X[1], BOT, "4. Revenues", "fuel use x tax rates;\nVAT; subsidies;\nauctioned ETS share")
     box(X[2], BOT, "3. Power", "electricity demand;\ndispatch; retirement;\ninvestment; storage;\ntariffs")
     box(X[3], BOT, "Outputs", "fuel use, prices,\nCO2 and GHGs,\nrevenue, generation,\nwelfare, GDP", grey)
     ym = TOP + H / 2
@@ -57,11 +61,13 @@ def flow_figure():
     arrow(X[2] + W + 0.5, yb, X[3] - 0.5, yb)          # power -> outputs
     arrow(X[1] + W / 2, TOP - 0.5, X[1] + W / 2, BOT + H + 0.5)   # prices -> revenues
     label(X[1] + W / 2 + 1, 30.5, "tax rates")
-    arrow(X[2] + W / 2, TOP - 0.5, X[2] + W / 2, BOT + H + 0.5)   # demand -> power
-    label(X[2] + W / 2 + 1, 30.5, "electricity\ndemand")
+    arrow(X[2] + W / 2 - 3, TOP - 0.5, X[2] + W / 2 - 3, BOT + H + 0.5)   # demand -> power
+    label(X[2] + W / 2 - 4, 30.5, "electricity\ndemand", ha="right")
+    arrow(X[2] + W / 2 + 3, BOT + H + 0.5, X[2] + W / 2 + 3, TOP - 0.5, dashed=True)  # tariff lag
+    label(X[2] + W / 2 + 4, 29.5, "tariff,\nlagged")
     arrow(X[3] + W / 2, TOP - 0.5, X[3] + W / 2, BOT + H + 0.5)   # emissions -> outputs
     arrow(X[2] + W + 0.5, BOT + H - 1, X[3] - 0.5, TOP + 1)       # power fuel -> emissions
-    label(X[2] + W + 1.5, 23.5 + 9, "power\nfuel use")
+    label(X[2] + W + 7.5, 37.5, "power\nfuel use", ha="right")
     arrow(X[0] + W / 2, BOT + H + 0.5, X[0] + W / 2, TOP - 0.5, dashed=True)  # GDP -> next year
     label(X[0] + W / 2 + 1, 30.5, "GDP,\nnext year")
     fig.savefig(os.path.join(OUT, "fig1_flow.png"), dpi=220, bbox_inches="tight")

@@ -1,0 +1,50 @@
+{
+  "series": "CPAT Companion Paper No. 5.1",
+  "title": "The CPAT Mitigation Module: Methods in Brief",
+  "subtitle": "How CPAT turns prices into fuel use, power investment, emissions and revenue",
+  "message": "CPAT's mitigation module fits in about eighteen equations: a price identity, a two-margin demand equation, an engineering power model, emissions and revenue identities and a lagged GDP rule. A $50 carbon price cuts industrial coal by a third and road fuel by about 6 percent.",
+  "problem": {
+    "title": "The method was hard to audit",
+    "stats": [
+      {
+        "value": "57,000",
+        "label": "words in the mitigation chapter of the documentation"
+      },
+      {
+        "value": "20",
+        "label": "errors found in the documentation by the rebuild"
+      },
+      {
+        "value": "228",
+        "label": "bugs found in the legacy workbook"
+      }
+    ],
+    "text": "CPAT covers more than 180 countries and informs carbon-tax and subsidy-reform advice. An economist who wants to know what it assumes had to assemble the method from tables, screenshots and equations that did not always match the spreadsheet."
+  },
+  "mechanism": {
+    "title": "A one-way chain with lagged feedback",
+    "image": "../2.Source/figures/fig1_flow.png",
+    "imageWidth": 5.6,
+    "imageHeight": 3.09,
+    "caption": "Blocks in calculation order; GDP and electricity prices feed back a year later.",
+    "points": [
+      "Prices: supply cost plus taxes, less subsidies, plus the carbon charge and VAT on it.",
+      "Demand: income, usage and efficiency elasticities, all long-run.",
+      "Power: logit dispatch and investment; default cost of capital 7.5–15% by income group.",
+      "Revenue moves GDP a year later through multipliers."
+    ]
+  },
+  "action": {
+    "title": "Read CPAT as a first estimate",
+    "results": [
+      "A $50/t price raises industrial coal 118% and cuts its use by 36%; road fuels fall about 6%.",
+      "No lags and almost no fuel switching outside power.",
+      "Road transport is described three times, and the three disagree."
+    ],
+    "todo": [
+      "Use CPAT for phased, medium-term reforms; check the base year against national data.",
+      "Test a penalty-based investment rule behind a switch.",
+      "Add partial adjustment and fuel switching, and extend the corrected model's data to all countries."
+    ]
+  }
+}

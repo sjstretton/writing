@@ -1,13 +1,41 @@
-% Bibliography for paper 4.1, The CPAT Mitigation Module: Methods in Brief (v0.1, Oct 2026).
-% Each entry was checked on 29 Oct 2026 (Crossref, publisher page or the public URL); see notes.
+% Bibliography for paper 5.1, The CPAT Mitigation Module: Methods in Brief (working paper v0.2, Oct 2026).
+% Every entry checked on 31 Oct 2026 against the source itself; each note says what was read. See 5.Notes/BibCheck-2026-10-31.md.
 
 @book{CPATTeam2024,
   author    = {{CPAT Team}},
   title     = {{CPAT} Documentation},
   publisher = {World Bank and International Monetary Fund},
+  address   = {Washington, DC},
   year      = {2024},
-  note      = {Public documentation of the Climate Policy Assessment Tool, published 23 January 2024; chapters 2 (Summary) and 3 (Mitigation module) used. Checked: site live 29 Oct 2026},
-  url       = {https://cpmodel.github.io/cpat_public/}
+  url       = {https://cpmodel.github.io/cpat_public/},
+  note      = {The CPAT team's 2023 text, published online 23 January 2024. verified 31 Oct 2026: site live, title, author and date read; chapters 2 (Summary), 3 (Mitigation) and 4 (Multipliers) read in the copy kept in the public CPAT-AI repository (docs/CPAT_full_documentation_qmd); every quotation and number in the paper checked against that text}
+}
+
+@misc{CPATMethodology2026,
+  author       = {{CPAT-AI Project}},
+  title        = {{CPAT} Methodology, Corrected Edition: The {CPAT} Team's 2023 Text with Errors Corrected},
+  year         = {2026},
+  howpublished = {CPAT-AI documentation website, Methodology tab, chapter ``Corrections''},
+  url          = {https://cpmodelai.github.io/cpat_ai/},
+  note         = {verified 31 Oct 2026: corrections chapter (docs/CPAT_full_documentation_qmd/08_Corrections.qmd) read; twenty documentation errors DOC1--DOC20 corrected on 31 Oct 2026, 14 in full and 6 in part; the downloadable PDF remains the 2023 edition}
+}
+
+@misc{CPATAI2026,
+  author       = {{CPAT-AI Project}},
+  title        = {{CPAT-AI}: Excel-{AI} and {CPAT} Python, with Documentation, Bug Register and Issue Register},
+  year         = {2026},
+  howpublished = {GitHub repository, Excel-AI release 1.2.1 (31 October 2026)},
+  url          = {https://github.com/cpmodelai/cpat_ai},
+  note         = {Public repository. verified 31 Oct 2026 from a clone (commit 108f976): docs/CPAT_model_documentation_qmd/A_Equations.qmd (equation list, ids M0--M8 and adjustments A1--A8), excel_ai/mitigation/docs/Equations.md and methods/Power.md, Prices.md, Emissions.md, excel_ai/core/CHANGELOG.md, data/Public01/tidy/xai_elasticities.csv}
+}
+
+@misc{CPATAIBugs,
+  author       = {{CPAT-AI Project}},
+  title        = {Legacy {CPAT} Bugs and Issues: {BUGS.md} and {ISSUES.md}, Register Version 1.1.0},
+  year         = {2026},
+  howpublished = {CPAT-AI repository, excel\_ai/core/BUGS.md and excel\_ai/core/ISSUES.md},
+  url          = {https://github.com/cpmodelai/cpat_ai/tree/main/excel_ai/core},
+  note         = {verified 31 Oct 2026: 231 legacy bugs, 22 prototype bugs, 20 documentation bugs; 135 issues (14 data problems), 35 departures, 14 upgrades; codes L1--L6, L14, L18, L24, L67, L87, L126, L170, L172, DOC1--DOC11, I62, I71, I97, I100 read}
 }
 
 @techreport{cpat2022technotes,
@@ -17,7 +45,7 @@
   address     = {Washington, DC},
   year        = {2022},
   url         = {http://documents.worldbank.org/curated/en/099062323105023013/pdf/P1703010ca4b8603e0886b06871f37b87b3.pdf},
-  note        = {Entry as verified for paper 1.7 (World Bank Documents record, 26 Aug 2022)}
+  note        = {verified 31 Oct 2026: PDF downloaded; dated 26 August 2022; foreword read (``a global tool covering more than 150 countries''; about 400 pages)}
 }
 
 @techreport{black2023cpat,
@@ -29,7 +57,7 @@
   address     = {Washington, DC},
   year        = {2023},
   doi         = {10.5089/9798400242342.001},
-  note        = {Checked: Crossref}
+  note        = {verified 31 Oct 2026: Crossref record (June 2023; Crossref lists ``Vernon-Lin''; the IMF page lists Nate Vernon); text read on the IMF site: CPAT ``evolved from an earlier IMF tool''; uses in Article IV reports, technical assistance and Climate Macro Assessment Programs; ``long-term'' elasticities; impacts of prices ``fully realized within one year''}
 }
 
 @techreport{black2022framework,
@@ -41,7 +69,7 @@
   address     = {Washington, DC},
   year        = {2022},
   doi         = {10.5089/9798400228285.001},
-  note        = {Entry as verified for paper 1.7 (Crossref)}
+  note        = {verified 31 Oct 2026: Crossref record (December 2022); as verified for paper 6.1 (carbon-price equivalents of non-price policies computed with CPAT)}
 }
 
 @techreport{IMF2019Paris,
@@ -53,16 +81,28 @@
   address     = {Washington, DC},
   year        = {2019},
   url         = {https://www.imf.org/en/Publications/Policy-Papers/Issues/2019/05/01/Fiscal-Policies-for-Paris-Climate-Strategies-from-Principle-to-Practice-46826},
-  note        = {Checked: IMF publication page live 29 Oct 2026}
+  note        = {verified 31 Oct 2026: IMF page read (1 May 2019, Policy Paper 2019/010; ``a unique and transparent tool laying out trade-offs among policy options''). The CPAT documentation (chapter 2) says CPAT evolved from the tool in its Appendix III}
 }
 
-@misc{CPATAI2026,
-  author       = {{CPAT-AI Project}},
-  title        = {{CPAT-AI}: Excel-AI and Coded {CPAT}, with Documentation, Bug Register and Issue Register},
-  year         = {2026},
-  howpublished = {GitHub repository, version 1.0.2},
-  url          = {https://github.com/cpmodelai/cpat_ai},
-  note         = {Files used: docs/CPAT_ai_documentation_qmd (Prices, Power, Emissions), docs/CPAT_coded_documentation_qmd (A_Equations, 08_Mitigation_blocks), excel_ai/BUGS.md, excel_ai/ISSUES.md}
+@misc{BlackFFS2023,
+  author       = {Black, Simon and Liu, Antung A. and Parry, Ian and Vernon, Nate},
+  title        = {{IMF} Fossil Fuel Subsidies Data: 2023 Update},
+  year         = {2023},
+  howpublished = {IMF Working Paper 23/169, International Monetary Fund, Washington, DC},
+  doi          = {10.5089/9798400249006.001},
+  note         = {verified 31 Oct 2026: Crossref record and abstract (country-level supply costs, efficient prices and explicit and implicit subsidies; \$7 trillion of subsidies in 2022)}
+}
+
+@techreport{Burns2019,
+  author      = {Burns, Andrew and Campagne, Benoit and Jooste, Charl and Stephan, David and Bui, Thi Thanh},
+  title       = {The {World Bank} Macro-Fiscal Model Technical Description},
+  institution = {World Bank},
+  type        = {Policy Research Working Paper},
+  number      = {8965},
+  address     = {Washington, DC},
+  year        = {2019},
+  doi         = {10.1596/1813-9450-8965},
+  note        = {verified 31 Oct 2026: Crossref record; abstract on IDEAS (country models for 181 countries with a common structure, used for forecasting and policy simulation). The CPAT documentation, chapter 4, takes its default multipliers from this model (MFMod)}
 }
 
 @techreport{CFPB61,
@@ -81,7 +121,7 @@
   pages   = {549--568},
   year    = {2017},
   doi     = {10.1016/j.enpol.2017.01.002},
-  note    = {Checked: Crossref}
+  note    = {verified 31 Oct 2026: Crossref record; abstract on IDEAS (meta-analysis of short- and long-term price elasticities for energy, electricity, natural gas, gasoline, diesel and heating oil). The abstract gives no count of estimates; the count in the text (about 2,000 from 430 studies) is the CPAT documentation's description and is attributed to it}
 }
 
 @article{Burke2016,
@@ -92,7 +132,7 @@
   pages   = {199--210},
   year    = {2016},
   doi     = {10.1016/j.eneco.2016.07.004},
-  note    = {Checked: Crossref}
+  note    = {verified 31 Oct 2026: Crossref record; abstract (per capita data for 132 countries, 1960--2010); CAMA working paper 45/2016 text read: ``The aggregate energy-GDP elasticity is 0.74''}
 }
 
 @article{Gertler2016,
@@ -104,7 +144,7 @@
   pages   = {1366--1401},
   year    = {2016},
   doi     = {10.1257/aer.20131455},
-  note    = {Checked: Crossref}
+  note    = {verified 31 Oct 2026: Crossref record and abstract (asset acquisition is nonlinear in income and depends on the pace of income growth, using Oportunidades in Mexico). The hump in CPAT's income adjustment is the CPAT team's inference from this work, and the text says so}
 }
 
 @article{Dimitropoulos2018,
@@ -115,7 +155,7 @@
   pages   = {163--179},
   year    = {2018},
   doi     = {10.1016/j.eneco.2018.07.021},
-  note    = {Checked: Crossref}
+  note    = {verified 31 Oct 2026: Crossref record; abstract on IDEAS (74 studies, 1,120 estimates; short-run rebound about 10--12 percent, long-run about 26--29 percent)}
 }
 
 @techreport{MallaTimilsina2014,
@@ -127,7 +167,7 @@
   address     = {Washington, DC},
   year        = {2014},
   doi         = {10.1596/1813-9450-6903},
-  note        = {Checked: Crossref}
+  note        = {verified 31 Oct 2026: Crossref record; abstract on IDEAS (review of cooking fuel choice and stove adoption). The stove efficiencies are cited from the CPAT documentation, which takes them from this review; the abstract does not give them}
 }
 
 @article{Bogdanov2019,
@@ -138,7 +178,7 @@
   pages   = {1077},
   year    = {2019},
   doi     = {10.1038/s41467-019-08855-1},
-  note    = {Checked: Crossref}
+  note    = {verified 31 Oct 2026: Crossref record and abstract (global 100 percent renewable electricity system by 2050). The quadratic storage fit is the CPAT documentation's, from this study's data}
 }
 
 @article{Ricke2018,
@@ -150,7 +190,7 @@
   pages   = {895--900},
   year    = {2018},
   doi     = {10.1038/s41558-018-0282-y},
-  note    = {Checked: Crossref}
+  note    = {verified 31 Oct 2026: Crossref record (title, volume, pages); cited only as the source of CPAT's optional country values, which the CPAT-AI equation list (M1.6) confirms}
 }
 
 @article{Mercure2012,
@@ -161,18 +201,42 @@
   pages   = {799--811},
   year    = {2012},
   doi     = {10.1016/j.enpol.2012.06.025},
-  note    = {Checked: Crossref. The background note's entry (vol. 39, DOI 10.1016/j.enpol.2011.12.036) is wrong}
+  note    = {verified 31 Oct 2026: Crossref record; abstract on IDEAS (technology transitions described by ``a dynamic coupled set of logistic differential equations'' rather than systems optimisation). The background note's entry (vol. 39, DOI 10.1016/j.enpol.2011.12.036) is wrong}
 }
 
-@article{Bauer2025,
-  author  = {Bauer, Alexander M. and Hallegatte, St{\'e}phane and McIsaac, Fiona},
-  title   = {Optimal Allocation of Abatement Effort Under Political Constraints: The Economic Cost of Delaying Sectoral and Economy-Wide Climate Policies},
-  journal = {Environmental and Resource Economics},
+@article{AndersonDePalmaThisse1988,
+  author  = {Anderson, Simon P. and de Palma, Andr{\'e} and Thisse, Jacques-Fran{\c{c}}ois},
+  title   = {A Representative Consumer Theory of the Logit Model},
+  journal = {International Economic Review},
+  volume  = {29},
+  number  = {3},
+  pages   = {461--466},
+  year    = {1988},
+  doi     = {10.2307/2526791},
+  note    = {verified 31 Oct 2026: Crossref record; abstract on IDEAS (logit demand ``may also be derived from the maximization of a deterministic, entropy-type utility'')}
+}
+
+@inproceedings{MartinsAstudillo2016,
+  author    = {Martins, Andr{\'e} F. T. and Astudillo, Ram{\'o}n Fernandez},
+  title     = {From Softmax to Sparsemax: A Sparse Model of Attention and Multi-Label Classification},
+  booktitle = {Proceedings of the 33rd International Conference on Machine Learning},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {48},
+  pages     = {1614--1623},
+  year      = {2016},
+  url       = {https://proceedings.mlr.press/v48/martins16.html},
+  note      = {verified 31 Oct 2026: PMLR page (authors, volume, pages, abstract: sparsemax outputs sparse probabilities); arXiv 1602.02068 text: ``sparsemax returns the Euclidean projection of the input vector onto the probability simplex''}
+}
+
+@article{Steffen2020,
+  author  = {Steffen, Bjarne},
+  title   = {Estimating the Cost of Capital for Renewable Energy Projects},
+  journal = {Energy Economics},
   volume  = {88},
-  pages   = {3431--3471},
-  year    = {2025},
-  doi     = {10.1007/s10640-025-01029-2},
-  note    = {Checked: Crossref. The background note's DOI (10.1007/s10640-025-00839-3) is wrong}
+  pages   = {104783},
+  year    = {2020},
+  doi     = {10.1016/j.eneco.2020.104783},
+  note    = {verified 31 Oct 2026: Crossref record. Cited as the source the CPAT documentation gives for its income-group cost of capital (about 7.5 percent in OECD and 10 percent in non-OECD countries)}
 }
 
 @incollection{IPCC2006,
@@ -184,10 +248,10 @@
   address   = {Hayama, Japan},
   year      = {2006},
   url       = {https://www.ipcc-nggip.iges.or.jp/public/2006gl/vol2.html},
-  note      = {Chapter 1, Tables 1.2 (net calorific values) and 1.4 (default CO2 emission factors). Checked: page live 29 Oct 2026}
+  note      = {verified 31 Oct 2026: chapter 1 PDF read. Table 1.2: net calorific values 44.3 (motor gasoline) and 43.0 (gas/diesel oil) TJ/Gg. Table 1.4: default CO2 factors 69,300 (motor gasoline), 74,100 (gas/diesel oil), 94,600 (other bituminous coal) and 56,100 (natural gas) kg/TJ}
 }
 
-% Sibling papers in sections 4 and 5 (standard entries, 29 Oct 2026)
+% Sibling papers in sections 5 and 6 (standard entries)
 @unpublished{StrettonWP51,
   author = {Stretton, Stephen J.},
   title = {The {CPAT} Mitigation Module: Methods in Brief},
@@ -237,17 +301,17 @@
   year = {2026}
 }
 
-@unpublished{StrettonWP71,
-  author = {Stretton, Stephen J.},
-  title = {The Excise-Fiscal Diagnostic},
-  note = {Working paper 7.1},
-  year = {2026}
-}
-
 @unpublished{StrettonWP65,
   author = {Stretton, Stephen J.},
   title = {The Macro-Fiscal-Energy Scenario Tool},
   note = {Working paper 6.5},
+  year = {2026}
+}
+
+@unpublished{StrettonWP71,
+  author = {Stretton, Stephen J.},
+  title = {The Excise-Fiscal Diagnostic},
+  note = {Working paper 7.1},
   year = {2026}
 }
 
@@ -257,5 +321,3 @@
   note = {Working paper 7.2},
   year = {2026}
 }
-
-@misc{CPATAIBugs, author={{CPAT-AI project}}, title={Legacy {CPAT} Bugs, Version 1.0.2; {BUGS.md} and {ISSUES.md} (Register {v1.0.2})}, year={2026}, howpublished={CPAT-AI repository, excel\_ai/Legacy\_CPAT\_Bugs\_v1.0.2.docx, excel\_ai/BUGS.md, excel\_ai/ISSUES.md}, url={https://github.com/cpmodelai/cpat_ai/tree/main/excel_ai}}

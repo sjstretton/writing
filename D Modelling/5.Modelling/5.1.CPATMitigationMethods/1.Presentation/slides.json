@@ -1,50 +1,126 @@
 {
-  "series": "CPAT Companion Paper No. 5.1",
+  "series": "Climate Fiscal Policy Brief No. 5.1 · October 2026",
   "title": "The CPAT Mitigation Module: Methods in Brief",
-  "subtitle": "How CPAT turns prices into fuel use, power investment, emissions and revenue",
-  "message": "CPAT's mitigation module fits in about eighteen equations: a price identity, a two-margin demand equation, an engineering power model, emissions and revenue identities and a lagged GDP rule. A $50 carbon price cuts industrial coal by a third and road fuel by about 6 percent.",
-  "problem": {
-    "title": "The method was hard to audit",
-    "stats": [
-      {
-        "value": "57,000",
-        "label": "words in the mitigation chapter of the documentation"
+  "slides": [
+    {
+      "type": "title",
+      "title": "The CPAT Mitigation Module: Methods in Brief",
+      "subtitle": "What a finance ministry's climate model computes, and how to read its results",
+      "message": "CPAT's mitigation module fits in fourteen equations. A carbon price bites on coal far more than on road fuel, and power-sector results rest on two judgment calls that ministries should know about.",
+      "author": "Stephen J. Stretton · writing in a personal capacity",
+      "notes": "The paper states the method of the World Bank-IMF Climate Policy Assessment Tool's mitigation module from the rebuilt and tested version (CPAT-AI)."
+    },
+    {
+      "type": "stats",
+      "title": "Ministries rely on CPAT, but its method was hard to check",
+      "stats": [
+        {"value": "180+", "label": "countries covered by the Climate Policy Assessment Tool"},
+        {"value": "57,000", "label": "words in the mitigation chapter of the documentation"},
+        {"value": "20", "label": "errors in the 2023 edition of the documentation, now corrected"},
+        {"value": "231", "label": "bugs found in the legacy workbook, none carried into the rebuild"}
+      ],
+      "text": "Rebuilding the model as a tested spreadsheet and in Python stated every equation once and checked it against a running model.",
+      "source": "CPAT documentation (2023 edition); CPAT-AI bug register v1.1.0 and corrected documentation (31 Oct 2026)."
+    },
+    {
+      "type": "figure",
+      "title": "The module is a one-way chain from prices to revenue, with lagged feedback",
+      "image": "../2.Source/figures/fig1_flow.png",
+      "points": [
+        {"lead": "Prices:", "text": "supply cost, plus taxes, less subsidies, plus the carbon charge and VAT on it."},
+        {"lead": "Demand:", "text": "income, an efficiency trend and two price margins: how much the stock is used, and how efficient it becomes."},
+        {"lead": "Power, emissions, revenue:", "text": "an engineering model, then accounting; revenue moves output a year later."}
+      ],
+      "source": "Working paper 5.1, Figure 1; CPAT documentation; CPAT-AI equation list."
+    },
+    {
+      "type": "table",
+      "title": "A $50 carbon price cuts industrial coal use by a third and road fuel by about 6%",
+      "header": ["Fuel and sector", "Price rise", "Fall in fuel use"],
+      "widths": [4.9, 2.0, 2.0],
+      "rows": [
+        ["Coal, industry", "+118%", "−36%"],
+        ["Natural gas, industry", "+35%", "−20%"],
+        ["Diesel, road transport", "+13%", "−6%"],
+        ["Gasoline, road transport", "+10%", "−6%"]
+      ],
+      "note": "A charge per tonne of CO₂ is large relative to cheap, carbon-rich coal and small relative to heavily taxed road fuel. Each fuel responds to its own price alone: no switching outside power, cooking and road vehicles.",
+      "source": "Working paper 5.1, Table 1. Stylized prices; IPCC (2006) emission factors; CPAT default elasticities, low- and middle-income countries."
+    },
+    {
+      "type": "points",
+      "title": "Every price and every response can be traced, and the rebuild made the rules explicit",
+      "points": [
+        {"lead": "Price controls are asymmetric.", "text": "A floating tax or subsidy absorbs world-price changes, but a positive tax never falls below its last level, so rises in taxed fuels reach consumers."},
+        {"lead": "Non-price policies act on efficiency only.", "text": "Standards and feebates enter as shadow prices that cut fuel use without raising the price paid."},
+        {"lead": "Responses are long-run but immediate.", "text": "A sudden price jump gets its full long-run response in one year; phased reforms are little affected."},
+        {"lead": "Population is treated as income.", "text": "Total GDP drives demand with one elasticity."}
+      ],
+      "source": "Working paper 5.1, sections on prices and demand; CPAT-AI equation list (M2.2, A2.1, M3.1); issues I62, I71."
+    },
+    {
+      "type": "points",
+      "title": "Power-sector results rest on two judgment calls",
+      "points": [
+        {"lead": "A logit shares new investment by cost.", "text": "Its curvature was \"set subjectively at 2\" and has never been estimated; every permitted technology always gets some share."},
+        {"lead": "Build rates are capped.", "text": "Wind and solar can each add about 2 percentage points of the system a year in most countries; under a large carbon price the cap often decides the answer."},
+        {"lead": "The cost of capital differs by source.", "text": "The documentation describes 7.5–15% by income group; the model uses a country rate plus a technology premium."}
+      ],
+      "source": "CPAT documentation (2023 edition); CPAT-AI methods notes (Power); working paper 5.1, power-sector section."
+    },
+    {
+      "type": "figure",
+      "title": "The logit is a penalized cost minimum; a quadratic penalty drops uncompetitive technologies to zero",
+      "image": "figures/fig1_investment_shares.png",
+      "caption": "Shares of new investment (%), stylized costs. Blue: CPAT logit. Orange: quadratic-penalty rule.",
+      "points": [
+        {"lead": "CPAT's K = 2", "text": "acts as an entropy penalty on concentration worth $22.5/MWh here."},
+        {"lead": "With no carbon price,", "text": "the logit gives oil 1.4% at more than 2.5 times the cost of solar; the alternative, nothing."},
+        {"lead": "Test it behind a switch:", "text": "a closed form a ministry can check by hand."}
+      ],
+      "source": "Working paper 5.1, Table 2 and Appendix B; Anderson, de Palma and Thisse (1988); Martins and Astudillo (2016)."
+    },
+    {
+      "type": "points",
+      "title": "The rebuild found errors that changed results, and fixed them",
+      "points": [
+        {"lead": "Growth effects compounded.", "text": "Legacy added a policy's one-off effect on output to the growth rate every year (bug L24)."},
+        {"lead": "Power plants arrived a year late.", "text": "New capacity was sized for this year's demand although it comes online next year (L67)."},
+        {"lead": "Regulations never acted.", "text": "Their shadow price was computed but not applied (L87)."},
+        {"lead": "The 2023 documentation had twenty errors,", "text": "including a wrong sign on the electricity markup and no equation for the output feedback; a corrected edition was published on 31 October 2026."}
+      ],
+      "source": "CPAT-AI bug register v1.1.0; CPAT-AI corrected methodology (31 Oct 2026); working paper 5.1, Appendix A."
+    },
+    {
+      "type": "points",
+      "title": "Read CPAT as a first estimate for phased, medium-term reforms",
+      "points": [
+        {"lead": "The strongest objection:", "text": "a model with no lags, little switching and a fixed world should not guide fiscal decisions."},
+        {"lead": "The answer:", "text": "its biases mostly have known signs, its elasticities are checked against meta-analyses (paper 5.4), and its responses against other models (paper 5.3)."},
+        {"lead": "Take most care with", "text": "sudden price shocks, coal-to-gas switching in industry, large economies that move world prices, and power paths under high carbon prices."}
+      ],
+      "source": "Working paper 5.1, limitations; papers 5.3 and 5.4."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the method shows",
+        "items": [
+          {"lead": "Fourteen equations:", "text": "the whole module, from prices to revenue and output."},
+          {"lead": "Coal bites, road fuel barely:", "text": "at $50/t, −36% against −6%."},
+          {"lead": "Power rests on judgment:", "text": "an unestimated logit and build-rate caps."},
+          {"lead": "Errors found and fixed:", "text": "231 legacy bugs, 20 documentation errors."}
+        ]
       },
-      {
-        "value": "20",
-        "label": "errors found in the documentation by the rebuild"
-      },
-      {
-        "value": "228",
-        "label": "bugs found in the legacy workbook"
+      "right": {
+        "title": "Actions",
+        "items": [
+          {"lead": "Finance ministries:", "text": "ask for the price changes before the quantities, and whether the caps bind."},
+          {"lead": "Teams running CPAT:", "text": "replace defaults with country evidence; use the corrected model and documentation."},
+          {"lead": "The CPAT team:", "text": "estimate or replace the investment rule, add gradual adjustment and fuel switching, extend the data to all countries."}
+        ]
       }
-    ],
-    "text": "CPAT covers more than 180 countries and informs carbon-tax and subsidy-reform advice. An economist who wants to know what it assumes had to assemble the method from tables, screenshots and equations that did not always match the spreadsheet."
-  },
-  "mechanism": {
-    "title": "A one-way chain with lagged feedback",
-    "image": "../2.Source/figures/fig1_flow.png",
-    "imageWidth": 5.6,
-    "imageHeight": 3.09,
-    "caption": "Blocks in calculation order; GDP and electricity prices feed back a year later.",
-    "points": [
-      "Prices: supply cost plus taxes, less subsidies, plus the carbon charge and VAT on it.",
-      "Demand: income, usage and efficiency elasticities, all long-run.",
-      "Power: logit dispatch and investment; default cost of capital 7.5–15% by income group.",
-      "Revenue moves GDP a year later through multipliers."
-    ]
-  },
-  "action": {
-    "title": "Read CPAT as a first estimate",
-    "results": [
-      "A $50/t price raises industrial coal 118% and cuts its use by 36%; road fuels fall about 6%.",
-      "No lags and almost no fuel switching outside power.",
-      "Road transport is described three times, and the three disagree."
-    ],
-    "todo": [
-      "Use CPAT for phased, medium-term reforms; check the base year against national data.",
-      "Test a penalty-based investment rule behind a switch.",
-      "Add partial adjustment and fuel switching, and extend the corrected model's data to all countries."
-    ]
-  }
+    }
+  ]
 }

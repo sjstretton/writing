@@ -1,11 +1,13 @@
-"""Worked examples for paper 4.1, The CPAT Mitigation Module: Methods in Brief.
+"""Worked examples for paper 5.1, The CPAT Mitigation Module: Methods in Brief (working paper v0.2).
 
 All prices and costs are stylized, labelled as such in the paper. Emission
 factors and net calorific values are IPCC (2006) defaults. Elasticities are the
-legacy CPAT defaults for lower- and upper-middle-income countries
-(cpat_ai/data/mvp_legacy_extracts/elasticities.csv).
+legacy CPAT defaults for low-, lower-middle- and upper-middle-income countries,
+which take the same values (cpat_ai/data/Public01/tidy/xai_elasticities.csv,
+checked 31 Oct 2026).
 
-Run: python3 worked_examples.py   (prints the two tables used in the paper)
+Run: python3 worked_examples.py   (prints Tables 1 and 2 of the paper and the checks
+quoted in the section on the penalty-based rule)
 """
 import math
 
@@ -35,9 +37,9 @@ def demand_table():
     for name, p0, efac, eu, ef in FUELS:
         tax = CARBON_PRICE * efac
         ratio, total, q = demand_response(p0, tax, eu, ef)
-        rebound = (eu * ef) / (eu + ef)  # share of the gross response offset
+        rebound = -(eu * ef) / (eu + ef)  # share of the gross response offset (positive)
         rows.append((name, p0, tax, 100 * (ratio - 1), total, 100 * (q - 1),
-                     -100 * rebound))
+                     100 * rebound))
     return rows
 
 
@@ -52,7 +54,10 @@ def costs(cp):
 
 
 def logit_shares(c, k=2.0):
-    """CPAT investment logit: weights exp(-K * C_i / C_min)."""
+    """CPAT investment logit: weights exp(-K * C_i / C_min).
+
+    Equivalently, the minimiser of sum(C_i s_i) + tau * sum(s_i ln s_i) on the simplex, with
+    tau = C_min / K (an entropy penalty in USD/MWh)."""
     cmin = min(c)
     w = [math.exp(-k * x / cmin) for x in c]
     s = sum(w)
@@ -108,3 +113,17 @@ if __name__ == "__main__":
     # background-paper example (stylized costs 20..100): exact vs proportional
     c = [20, 30, 40, 50, 100]
     print("background example exact:", [round(100 * x, 1) for x in velocity_shares(c)])
+    pos = [max(0.0, 1 / 5 + (sum(c) / 5 - x) / 100) for x in c]
+    print("background example, proportional rescaling:", [round(100 * x / sum(pos), 1) for x in pos])
+    # checks quoted in the text (no carbon price)
+    c0 = costs(0.0)
+    tau = min(c0) / 2.0
+    w = [math.exp(-x / tau) for x in c0]
+    print("entropy form, tau = %.1f USD/MWh:" % tau, [round(100 * x / sum(w), 1) for x in w])
+    print("irrelevant 6th technology at 300 (velocity):", [round(100 * x, 1) for x in velocity_shares(c0 + [300.0])])
+    dup = [c0[0]] + c0
+    print("solar listed twice: logit solar total %.1f, velocity solar total %.1f" % (
+        100 * sum(logit_shares(dup)[:2]), 100 * sum(velocity_shares(dup)[:2])))
+    two = [45.0, 55.0]
+    print("solar and wind only: logit solar %.1f, velocity solar %.1f" % (
+        100 * logit_shares(two)[0], 100 * velocity_shares(two)[0]))
