@@ -40,7 +40,7 @@ Plan: `C Policy and FInance/3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md`
 
 | No. | Paper | Status |
 |---|---|---|
-| 3.0 | Overview: Make Clean Power an Asset Class | v0.2 (29 Oct) |
+| 3.0 | Overview: Make Clean Power an Asset Class | v0.3 + 10-slide theme deck (31 Oct) |
 | 3.1 | Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power | working paper v0.3 + brief CFPB 3.1 v1.0 + 10-slide deck (31 Oct) |
 | 3.2 | From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power | working paper v0.2 + brief CFPB 3.2 v1.0 + 10-slide deck (31 Oct); peer-reviewed (saving corrected to about a fifth of the price of solar power, 14–19%), every citation checked; both on the web |
 
@@ -50,7 +50,7 @@ Plan: `C Policy and FInance/4.SovereignIncentives/4.0.Overview/SeriesArchitectur
 
 | No. | Paper | Status |
 |---|---|---|
-| 4.0 | Overview: Reward Governments, Not Projects | v0.2 (29 Oct) |
+| 4.0 | Overview: Reward Governments, Not Projects | v0.3 + 10-slide theme deck (31 Oct) |
 | 4.1 | Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives | working paper v0.2 + brief CFPB 4.1 v1.0 + 10-slide deck (31 Oct) |
 | 4.2 | The Climate Investment Trust: Hold Capital, Lend Its Strength | working paper v0.3 + brief CFPB 4.2 v1.0 + 10-slide deck (31 Oct) |
 | 4.3 | Codify Sustainability-Linked Sovereign Lending, Then Give It Scale | working paper v0.2 + brief CFPB 4.3 v1.0 + 10-slide deck (31 Oct); peer-reviewed, every citation checked, public sources only; both on the web |
@@ -61,6 +61,7 @@ Plan: `D Modelling/5.Modelling/5.0.Overview/SeriesArchitecture.md`. One medium-l
 
 | No. | Paper |
 |---|---|
+| 5.0 | Overview: Models a Finance Ministry Can Audit (v0.3, peer-reviewed, 10-slide theme deck, 31 Oct) |
 | 5.1 | The CPAT Mitigation Module: Methods in Brief (working paper v0.2, first brief and deck, 31 Oct; on the web) |
 | 5.2 | CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool (working paper v0.2, first brief and deck, 31 Oct; on the web) |
 | 5.3 | Validating CPAT: Baselines, Back-Casts and Model Comparisons (working paper v0.2, first brief and deck, 31 Oct; on the web) |

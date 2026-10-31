@@ -1,0 +1,120 @@
+{
+  "series": "Climate Fiscal Policy Briefs · Section 5: Modelling (CPAT) · October 2026",
+  "title": "Models a Finance Ministry Can Audit",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Models a Finance Ministry Can Audit",
+      "subtitle": "The Climate Policy Assessment Tool, rebuilt and validated: section 5 in ten slides",
+      "message": "A model a ministry can use must be small enough to state on a few pages, built at least twice, and tested against data and other models. CPAT now is: fourteen equations, two rebuilds, a public register of its errors, and a check of its elasticities.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Ministries rely on CPAT, but its method was hard to check",
+      "stats": [
+        {"value": "180+", "label": "countries covered by the Climate Policy Assessment Tool"},
+        {"value": "57,000", "label": "words in the mitigation documentation, which disagreed with the model in places"},
+        {"value": "231", "label": "legacy bugs in the public register (release 1.1.0); 24 of the 228 at release 1.0.2 were high priority"}
+      ],
+      "text": "A recommendation from a model nobody can audit is a recommendation taken on trust.",
+      "source": "CPAT Documentation (2023); papers 5.1 and 5.2; CPAT-AI register."
+    },
+    {
+      "type": "figure",
+      "title": "The mitigation module is a one-way chain of six blocks and fourteen equations",
+      "image": "../../5.1.CPATMitigationMethods/2.Source/figures/fig1_flow.png",
+      "points": [
+        {"lead": "Prices, demand, power, emissions, revenue, GDP:", "text": "each a few equations long."},
+        {"lead": "$50/t in the example:", "text": "industrial coal use falls about a third, road fuel about 6%."},
+        {"lead": "Two judgment calls", "text": "drive power results: an unestimated logit and caps on build rates."}
+      ],
+      "source": "Paper 5.1, Figure 1 and Table 1."
+    },
+    {
+      "type": "points",
+      "title": "Power-sector results rest on two judgment calls, and one has a fixable flaw",
+      "points": [
+        {"lead": "The logit is a penalized cost minimum:", "text": "its curvature is a penalty weight in $/MWh."},
+        {"lead": "Its flaw:", "text": "listing a technology twice changes the shares; solar listed twice rises from 36% to 58% of new investment."},
+        {"lead": "A quadratic penalty", "text": "lets uncompetitive technologies fall to zero."},
+        {"lead": "Cost of capital:", "text": "a country rate plus a technology premium by default; income-group rates are an option."}
+      ],
+      "source": "Paper 5.1, Section on investment."
+    },
+    {
+      "type": "figure",
+      "title": "Building the model twice found errors a single audit would not",
+      "image": "../../5.2.CPATAIImplementation/1.Presentation/figures/fig_register.png",
+      "points": [
+        {"lead": "One rule:", "text": "fix bugs, copy and log deliberate choices."},
+        {"lead": "228 legacy bugs at release 1.0.2", "text": "(24 high), 135 issues, 20 documentation errors."},
+        {"lead": "The second build", "text": "found seven bugs in the first."}
+      ],
+      "source": "Paper 5.2; CPAT-AI register."
+    },
+    {
+      "type": "figure",
+      "title": "Back-casts show a model good for ranges, not point forecasts",
+      "image": "../../5.3.CPATValidation/2.Source/figures/fig1_backcast.png",
+      "points": [
+        {"lead": "Level error from 2000:", "text": "5% of mean emissions for Australia, 92% for China."},
+        {"lead": "Every published check", "text": "predates the bug fixes and should be rerun."}
+      ],
+      "source": "Paper 5.3, Figure 1."
+    },
+    {
+      "type": "figure",
+      "title": "The price elasticities move the answer more than anything else",
+      "image": "../../5.3.CPATValidation/2.Source/figures/fig2_sensitivity.png",
+      "points": [
+        {"lead": "$75/t cuts G20 CO₂ 29% by 2030", "text": "by default, 7–39% as elasticities move."},
+        {"lead": "Against real carbon prices:", "text": "about 0.7–0.8% a year at $10/t, against 0.5% in the most comparable study (author's calculation)."}
+      ],
+      "source": "Paper 5.3, Figure 2 and Table 4."
+    },
+    {
+      "type": "figure",
+      "title": "Most elasticities pass; applying the long-run response in year one does not",
+      "image": "../../5.4.ElasticityValidation/2.Source/figures/fig2_timing.png",
+      "points": [
+        {"lead": "8 of 10 in range,", "text": "six cautious; diesel in industry and gasoline in services too high."},
+        {"lead": "Road gasoline −0.64:", "text": "twice the bias-corrected −0.31."},
+        {"lead": "Timing:", "text": "five-year responses overstated by 45–72%."}
+      ],
+      "source": "Paper 5.4, Tables 1 and 3, Figure 2."
+    },
+    {
+      "type": "points",
+      "title": "Extend the model outside its core, so the core stays small enough to audit",
+      "points": [
+        {"lead": "6.1:", "text": "the Total Effective Carbon Price, one scale for any policy mix."},
+        {"lead": "6.2:", "text": "the CBAM Policy Tool, exporters' exposure to the EU border charge."},
+        {"lead": "6.3:", "text": "public investment, priced at the cost of capital countries face."},
+        {"lead": "6.4 and 6.5:", "text": "one activity layer across models; growth, revenue and debt."}
+      ],
+      "source": "Section 6."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What section 5 shows",
+        "items": [
+          {"lead": "Legible:", "text": "fourteen equations, one page each block."},
+          {"lead": "Built twice:", "text": "231 legacy bugs registered and fixed."},
+          {"lead": "Good for ranges:", "text": "not point forecasts."},
+          {"lead": "Timing", "text": "matters more than any single elasticity."}
+        ]
+      },
+      "right": {
+        "title": "Actions",
+        "items": [
+          {"lead": "Ministries:", "text": "read CPAT results as ranges; ask for the elasticity case and the error register."},
+          {"lead": "The CPAT team:", "text": "rerun the published checks on the fixed model; add adjustment speeds and the quadratic investment rule."},
+          {"lead": "Funders:", "text": "pay for a second build of any model that sets policy."}
+        ]
+      }
+    }
+  ]
+}
