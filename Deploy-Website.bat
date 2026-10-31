@@ -1,5 +1,6 @@
 @echo off
-rem Deploy the website: compile it (Compile-Website.bat), upload the built site to the web server with WinSCP,
+rem Deploy the website: compile it (Compile-Website.bat), upload the built site to the web server (WinSCP if installed,
+rem otherwise Python's built-in FTP - nothing to install),
 rem then delete files that were retired from the site (upload never deletes them by itself).
 rem The FTP login is read from _ftp.txt (git-ignored; format in _ftp.txt.example):
 rem   E Writing Instructions\Scripts\Papers\Reference\_ftp.txt   (new place)
@@ -13,11 +14,11 @@ for /f "usebackq eol=# tokens=1,* delims== " %%A in ("%FTPCFG%") do set "FTP_%%A
 set "FTP_remote=/public_html"
 set "WINSCP=C:\Program Files (x86)\WinSCP\WinSCP.com"
 if not exist "%WINSCP%" set "WINSCP=C:\Program Files\WinSCP\WinSCP.com"
-if not exist "%WINSCP%" (echo WinSCP not found. & pause & exit /b 1)
 
 call "%~dp0Compile-Website.bat" <NUL
 echo.
-echo   Uploading B Working Papers\A.Website\_site to %FTP_remote% ...
+if not exist "%WINSCP%" goto python_upload
+echo   Uploading B Working Papers\A.Website\_site to %FTP_remote% with WinSCP ...
 "%WINSCP%" /command ^
     "open ftp://%FTP_user%:%FTP_password%@%FTP_host%/" ^
     "synchronize remote ""%~dp0B Working Papers\A.Website\_site"" %FTP_remote%" ^
@@ -29,4 +30,12 @@ echo   Uploading B Working Papers\A.Website\_site to %FTP_remote% ...
     "exit"
 echo.
 echo   Done. Errors from the rm lines just mean those retired files are already gone.
+pause
+exit /b 0
+
+:python_upload
+rem No WinSCP: upload with Python's built-in FTP (only changed files are sent).
+echo   Uploading B Working Papers\A.Website\_site to the server with Python ...
+python "%~dp0E Writing Instructions\Scripts\Website\deploy_ftp.py" "%FTPCFG%" "%~dp0B Working Papers\A.Website\_site"
+echo.
 pause
