@@ -2,11 +2,11 @@
 
 Writing worth imitating, grouped by the type of writing it models. For each piece, the note says what to copy. Read the original before imitating it: these notes are a guide to what to look for, not a substitute.
 
-> These references were listed from memory by an agent and are well known, but check the details before citing any of them in a paper. Copyrighted texts are not stored in this repo. Add PDFs you hold legitimately to `E Writing Instructions/Claude + Scripts/Setup Claude/_reference/`.
+> These references were listed from memory by an agent and are well known, but check the details before citing any of them in a paper. Copyrighted texts are not stored in this repo. Add PDFs you hold legitimately to `H Writing Instructions/Claude + Scripts/Setup Claude/_reference/`.
 
 ## Concept papers: ideas that entered the discourse
 
-These short pieces introduced a term that people still use. They are the models for the concept papers in `E Writing Instructions/PAPERS.md`.
+These short pieces introduced a term that people still use. They are the models for the concept papers in `H Writing Instructions/PAPERS.md`.
 
 - **Albert O. Hirschman, *Exit, Voice, and Loyalty* (Harvard University Press, 1970).** Three plain words that now organize a whole field. *Copy:* name the concept with ordinary words, then show it at work in very different settings.
 - **William Nordhaus, "Climate Clubs: Overcoming Free-Riding in International Climate Policy," *American Economic Review* 105(4), 2015.** A memorable name for a mechanism, with a model behind it. *Copy:* the title is the idea; the model supports a claim a policymaker can repeat.
@@ -38,7 +38,7 @@ The goal here is accessibility without loss of rigor.
 
 ## Stephen's own
 
-*(Stephen to add 2–3 pieces he considers representative. See `E Writing Instructions/TODO.md`.)*
+*(Stephen to add 2–3 pieces he considers representative. See `H Writing Instructions/TODO.md`.)*
 
-- "The Vocative Case" (`B Working Papers/8.AdditionalPolicyPapers/8.6.Philosophy/8.6.3.TheVocativeCase`): the reference piece for popular philosophy, per `voice.md`.
+- "The Vocative Case" (`F Other Writing/8.6.Philosophy/8.6.3.TheVocativeCase`): the reference piece for popular philosophy, per `voice.md`.
 - *TODO: a World Bank or policy piece.*

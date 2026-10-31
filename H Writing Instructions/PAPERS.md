@@ -7,7 +7,7 @@ The writing program: which papers to upgrade, in what order, and which new paper
 3. **Concept papers**: one concept each, written to enter World Bank discourse.
 4. **Position papers**: the overarching papers that justify Stephen's positions.
 
-Status key: `idea` · `notes` · `draft` · `upgrading` · `standard` (passes `E Writing Instructions/Writing Standards/paper-standard.md`) · `submitted` · `published`.
+Status key: `idea` · `notes` · `draft` · `upgrading` · `standard` (passes `H Writing Instructions/Writing Standards/paper-standard.md`) · `submitted` · `published`.
 
 > Paper numbers follow `NUMBERING.md` (renumbered 31 Oct 2026). Rankings and "main result" wording are an agent draft (29 Oct 2026) based on the website abstracts and `Writing-Status-Report.md`. Stephen to confirm.
 
@@ -29,7 +29,7 @@ Order of work. The reason column says why each paper is where it is.
 
 ### The finance-and-risk series (section 3)
 
-Plan: `B Working Papers/3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md`. 3.1 is the flagship.
+Plan: `C Policy and FInance/3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md`. 3.1 is the flagship.
 
 | No. | Paper | Status |
 |---|---|---|
@@ -39,7 +39,7 @@ Plan: `B Working Papers/3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md`. 3.
 
 ### The sovereign-incentives series (section 4)
 
-Plan: `B Working Papers/4.SovereignIncentives/4.0.Overview/SeriesArchitecture.md`. 4.1 and 4.2 are the flagships. Cross-review: `4.SovereignIncentives/4.0.Overview/CrossReview-Notes.md`.
+Plan: `C Policy and FInance/4.SovereignIncentives/4.0.Overview/SeriesArchitecture.md`. 4.1 and 4.2 are the flagships. Cross-review: `4.SovereignIncentives/4.0.Overview/CrossReview-Notes.md`.
 
 | No. | Paper | Status |
 |---|---|---|
@@ -50,7 +50,7 @@ Plan: `B Working Papers/4.SovereignIncentives/4.0.Overview/SeriesArchitecture.md
 
 ### The CPAT series (section 5), modular upgrades (section 6) and the analytics tools (section 7)
 
-Plan: `B Working Papers/5.Modelling/5.0.Overview/SeriesArchitecture.md`. One medium-length paper per item (about 4,000–6,000 words; 5.1 about 9,000), companions to the CPAT-AI repository and the Climate Fiscal AI Tools. All v0.1 drafts of 29 Oct except 7.1 (v0.3, 30 Oct). Country results from the private tools repository are used as illustrative results where cleared (see each README); PFR and not-for-citation or draft-for-discussion documents are excluded.
+Plan: `D Modelling/5.Modelling/5.0.Overview/SeriesArchitecture.md`. One medium-length paper per item (about 4,000–6,000 words; 5.1 about 9,000), companions to the CPAT-AI repository and the Climate Fiscal AI Tools. All v0.1 drafts of 29 Oct except 7.1 (v0.3, 30 Oct). Country results from the private tools repository are used as illustrative results where cleared (see each README); PFR and not-for-citation or draft-for-discussion documents are excluded.
 
 | No. | Paper |
 |---|---|

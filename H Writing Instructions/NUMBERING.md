@@ -1,6 +1,6 @@
 # NUMBERING.md
 
-The paper numbers follow the section folders in `B Working Papers` (Stephen's restructure of 31 Oct 2026). A paper's number is its section number plus its place in the section. Folder names, file names, titles, brief series lines, citation keys, decks and the website all use these numbers.
+The paper numbers follow the section folders in `C Policy and FInance` (sections 1–4) and `D Modelling` (5–7) (Stephen's restructures of 31 Oct 2026). A paper's number is its section number plus its place in the section. Folder names, file names, titles, brief series lines, citation keys, decks and the website all use these numbers.
 
 ## Map (old number → new number)
 
@@ -40,9 +40,9 @@ On 31 Oct 2026 (later the same day) papers 1.3 and 1.4 swapped places so that th
 | | 8.1–8.7 | Subsections: 8.1 other fiscal policy, 8.2 finance and risk, 8.3 sovereign incentives and MDBs, 8.4 analytics, 8.5 books, 8.6 philosophy, 8.7 politics; papers 8.x.y in folder names (e.g. `8.5.3.Screwed`). Their internal text keeps its old numbers | 1.5, 2.3, 3.4–3.5, 5.2–5.4, 6.x, 7.x, 8.x |
 | `9.ResearchTracking` | – | Source digests, trackers | – |
 
-Admin folders: `A.Website`, `B.Scripts`.
+The website is `E Website`; the scripts are in `H Writing Instructions/Scripts`. Writing outside the series is in `F Other Writing` (8.x).
 
-Each section folder (1–8) holds only its numbered paper folders and one overview folder, `<N>.0.Overview/`, which keeps the overview qmd/docx/bib under their numbered file names, the section theme deck (`1.Presentation/`), section-level `8.PreviousVersions/`, and notes such as `SeriesArchitecture.md`, `CrossReview-Notes.md` and `RelatedWork.md`. Paper folders use the standard slots (`E Writing Instructions/Scripts/Papers/Reference/_PaperFolderLayout.md`); `3.BackgroundPapers` folders were renamed `3.RelatedPiecesAndLinks` on 31 Oct 2026.
+Each section folder (1–8) holds only its numbered paper folders and one overview folder, `<N>.0.Overview/`, which keeps the overview qmd/docx/bib under their numbered file names, the section theme deck (`1.Presentation/`), section-level `8.PreviousVersions/`, and notes such as `SeriesArchitecture.md`, `CrossReview-Notes.md` and `RelatedWork.md`. Paper folders use the standard slots (`H Writing Instructions/Scripts/Papers/Reference/_PaperFolderLayout.md`); `3.BackgroundPapers` folders were renamed `3.RelatedPiecesAndLinks` on 31 Oct 2026.
 
 ## Citation keys
 

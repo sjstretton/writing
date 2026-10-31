@@ -1,6 +1,6 @@
 # Climate Fiscal Policy Briefs: series specification
 
-The briefing-paper series for the carbon-pricing papers in `B Working Papers/1.CarbonPricing` (and the Total Effective Carbon Price, now paper 6.1 in `6.ModularUpgrades`). Numbers follow `E Writing Instructions/NUMBERING.md`. Each brief is a 2,000–3,000-word policy paper that a busy official can act on. Each has a fuller academic working paper behind it. This file fixes the format, the shared terms and the files, so that the briefs read as one series.
+The briefing-paper series for the carbon-pricing papers in `C Policy and FInance/1.CarbonPricing` (and the Total Effective Carbon Price, now paper 6.1 in `6.ModularUpgrades`). Numbers follow `H Writing Instructions/NUMBERING.md`. Each brief is a 2,000–3,000-word policy paper that a busy official can act on. Each has a fuller academic working paper behind it. This file fixes the format, the shared terms and the files, so that the briefs read as one series.
 
 ## Format
 
@@ -19,7 +19,7 @@ The briefing-paper series for the carbon-pricing papers in `B Working Papers/1.C
 
 ## Style
 
-Follow `E Writing Instructions/NORMS.md`, `E Writing Instructions/Writing Standards/writing-principles.md` and `ai-tells.md`. In particular:
+Follow `H Writing Instructions/NORMS.md`, `H Writing Instructions/Writing Standards/writing-principles.md` and `ai-tells.md`. In particular:
 - US spelling.
 - Dense and economical. No throat-clearing, no roadmap paragraphs, no summary ending that repeats the executive summary.
 - Every factual claim cited. Never invent a citation. Unverified entries carry `note = {VERIFY: ...}` in the `.bib`; claims you cannot source are cut or marked `[VERIFY: ...]` in the text.
@@ -99,4 +99,4 @@ pandoc Brief-<PaperName>.qmd -f markdown --citeproc --bibliography=Brief-<PaperN
 
 ## Sections 3 and 4 (added 29 Oct 2026; renumbered 31 Oct 2026)
 
-The same series, format and files cover the finance-and-risk papers (3.1, 3.2) and the sovereign-incentives papers (4.1, 4.2, 4.3): `Climate Fiscal Policy Brief No. 3.1` and so on. Each section's plan, shared terms and citation keys (`CFPB31`, `CFPB32`, `CFPB41`, `CFPB42`, `CFPB43`; working papers `StrettonWP31` … `StrettonWP43`) are in `B Working Papers/3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md` and `B Working Papers/4.SovereignIncentives/4.0.Overview/SeriesArchitecture.md`. Shared terms there extend the table above; where a term appears in both, use one meaning across all three sections.
+The same series, format and files cover the finance-and-risk papers (3.1, 3.2) and the sovereign-incentives papers (4.1, 4.2, 4.3): `Climate Fiscal Policy Brief No. 3.1` and so on. Each section's plan, shared terms and citation keys (`CFPB31`, `CFPB32`, `CFPB41`, `CFPB42`, `CFPB43`; working papers `StrettonWP31` … `StrettonWP43`) are in `C Policy and FInance/3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md` and `C Policy and FInance/4.SovereignIncentives/4.0.Overview/SeriesArchitecture.md`. Shared terms there extend the table above; where a term appears in both, use one meaning across all three sections.

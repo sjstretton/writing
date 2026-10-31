@@ -26,7 +26,7 @@ These are the default for serious work. The World Bank form is the house standar
 
 ### Introductory, concept and position papers
 
-These are new forms for this repo (see `E Writing Instructions/PAPERS.md`). They exist to make Stephen's ideas easy to pick up and repeat. Keep the technical apparatus to a minimum and point to the full working paper for proofs and data. A concept paper succeeds when the term spreads; give it a name people will want to say.
+These are new forms for this repo (see `H Writing Instructions/PAPERS.md`). They exist to make Stephen's ideas easy to pick up and repeat. Keep the technical apparatus to a minimum and point to the full working paper for proofs and data. A concept paper succeeds when the term spreads; give it a name people will want to say.
 
 ### Research proposals
 
@@ -38,7 +38,7 @@ Here the goal is accessibility, and the rules relax. A narrative opening is allo
 
 ## Choosing the persona
 
-`E Writing Instructions/Claude + Scripts/Setup Claude/_admin/voice.md` defines two writing personas.
+`H Writing Instructions/Claude + Scripts/Setup Claude/_admin/voice.md` defines two writing personas.
 
 - **Dan** (short words, concise sentences, concrete examples) for briefs, concept papers, explainers and the body of working papers.
 - **Clarisa** (*The Economist* at its best; narrative arc, explicit reasoning, confident conclusion) for essays, position papers and introductions.

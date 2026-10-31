@@ -8,27 +8,28 @@ Format: `- [ ] Task — owner — due — notes`. Owner is **S** (Stephen) or **
 
 ### Priority 1: PhD in climate policy (proposal 1, send ASAP)
 
-Details for each item: `C PhD Application/PhD-Application-Status.md`.
+Details for each item: `B PhD Application/PhD-Application-Status.md`.
 
 - [ ] **Next step:** email Dr Shrimali the cleaned proposal; ask him to confirm supervision in writing and about a co-supervisor — S — today (15 min)
-- [ ] Settle the deadline on the live Oxford course page. Stephen's working deadline is Sat 31 Oct; the status notes found 13 Nov (early) and 26 Jan (final), unverified. Josh's information sheet (`C PhD Application/PhD-Information-Sheet.md`, 30 Oct) gives no Oxford date; "before start of November" there is UCL's February-intake rule, the likely source of 31 Oct. Also check whether a statement of purpose is needed (Josh's five Oxford inputs omit it) — S — 30 Oct — ox.ac.uk is blocked from cloud sessions
+- [ ] Settle the deadline on the live Oxford course page. Stephen's working deadline is Sat 31 Oct; the status notes found 13 Nov (early) and 26 Jan (final), unverified. Josh's information sheet (`B PhD Application/PhD-Information-Sheet.md`, 30 Oct) gives no Oxford date; "before start of November" there is UCL's February-intake rule, the likely source of 31 Oct. Also check whether a statement of purpose is needed (Josh's five Oxford inputs omit it) — S — 30 Oct — ox.ac.uk is blocked from cloud sessions
 - [ ] Find two academic referees: Josh's sheet lists Dirk and Carolyn (both World Bank) and no third — S — 13 Nov
 - [ ] Find the transcripts (possibly in a box in the UK); order official copies if not — S — 20 Nov
 - [ ] Choose and ask 3 referees (at least 2 academic) — S — 13 Nov — highest risk item
-- [ ] Proposal v2: drafted 31 Oct (`C PhD Application/Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking-v2.docx`; changes and open placeholders in `Proposal-v2-ChangeLog.md`). Review it and resolve the [STEPHEN TO DECIDE] and [VERIFY] notes — S — 27 Nov
-- [ ] Writing sample: drafted 31 Oct, 1,983 words, cut from 3.1 v0.2 (`C PhD Application/Oxford-WritingSample-ClimateFinanceIntermediation.docx`). Review it; check the Azura paraphrase and decide US or UK spelling — S — 4 Dec
+- [ ] Proposal v2: drafted 31 Oct (`B PhD Application/Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking-v2.docx`; changes and open placeholders in `Proposal-v2-ChangeLog.md`). Review it and resolve the [STEPHEN TO DECIDE] and [VERIFY] notes — S — 27 Nov
+- [ ] Writing sample: drafted 31 Oct, 1,983 words, cut from 3.1 v0.2 (`B PhD Application/Oxford-WritingSample-ClimateFinanceIntermediation.docx`). Review it; check the Azura paraphrase and decide US or UK spelling — S — 4 Dec
 - [ ] Statement of purpose — A drafts, S approves — 11 Dec
 - [ ] Submit — S — 8 Jan 2027
 
 ### Priority 2: PhD in systemic AI safety (proposal 3)
 
-- [ ] Answer the open questions in `C PhD Application/3-SystemicAISafety-Outline.md` (target programs, supervisors, core question) — S — 6 Nov
+- [ ] Answer the open questions in `B PhD Application/3-SystemicAISafety-Outline.md` (target programs, supervisors, core question) — S — 6 Nov
 - [ ] Literature scan on systemic AI risk; verified sources only — A — 13 Nov
 - [ ] First full draft of proposal 3 (~2,500 words) — A drafts, S revises — 27 Nov
 
 ### Housekeeping
 
-- [ ] **Website restructure on branch `claude/focused-bell-imj7si`:** check the 1.1 web page (`E Website/_site/policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html`) and the new tabs; resolve the two `[VERIFY]` markers in the 1.1 appendix; then merge, run Compile-Website.bat and Push-Website.bat — S — 7 Nov
+- [ ] **Website restructure (on main since 31 Oct):** check the 1.1 web page (`E Website/_site/policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html`) and the new tabs; resolve the two `[VERIFY]` markers in the 1.1 appendix; then run Compile-Website.bat and Push-Website.bat — S — 7 Nov
+- [ ] Change the website FTP password: it was committed in the 31 Oct "Restructure" commit (now untracked, but still in git history) — S — soon
 - [ ] If the 1.1 web page works, add the other papers to `WEB_PAPERS` in `H Writing Instructions/Scripts/Website/site_config.py` (one line each) — A — after S approves
 - [ ] Decks to about eight slides (new norm, `NORMS.md` §8) as each is next revised — A — ongoing
 
@@ -36,7 +37,7 @@ Details for each item: `C PhD Application/PhD-Application-Status.md`.
 
 ### Priority 3: paper upgrades
 
-- [ ] **Carbon-pricing papers (1.1, 1.2, 1.3, 1.4, and 6.1 the TECP): read and approve.** Done 29 Oct by agents: five Climate Fiscal Policy Briefs, five working papers (1.1 v0.3, 1.2 v0.3, 1.3 v0.3, 1.4 v0.2, 6.1 v0.3) with models, proofs, calibrations and literature appendices, five 4-slide decks, all in `B Working Papers/A.Website/papers/` — S reads, starting with 1.1 for Dirk — 5 Nov
+- [ ] **Carbon-pricing papers (1.1, 1.2, 1.3, 1.4, and 6.1 the TECP): read and approve.** Done 29 Oct by agents: five Climate Fiscal Policy Briefs, five working papers (1.1 v0.3, 1.2 v0.3, 1.3 v0.3, 1.4 v0.2, 6.1 v0.3) with models, proofs, calibrations and literature appendices, five 4-slide decks, all in `E Website/papers/` — S reads, starting with 1.1 for Dirk — 5 Nov
 - [ ] **Finance-and-risk and sovereign-incentives series (3.1, 3.2, 4.1, 4.2, 4.3): read and peer review.** Done 29 Oct by agents: five briefs (Climate Fiscal Policy Briefs 3.1–4.3) and five working papers with models and verified bibliographies; overviews 3.0 and 4.0 rewritten; CIT now 4.2, SLL 4.3. No peer-review notes yet. Start with 4.1 and 3.1 (proposal 1) — S reads, A peer-reviews and upgrades — 13 Nov
 - [ ] Decks for the five section 3–4 papers and two theme decks: done 29 Oct. Referee reports still to do — A — after Stephen's read
 - [ ] **Sections 5 (CPAT), 6 (modular upgrades) and 7 (analytics tools): read.** Done 29 Oct by agents: ten medium-length papers (5.1–5.4, 6.2–6.5, 7.1–7.2) and overviews 5.0, 7.0 (6.0 added 31 Oct). Decide whether any country results from the private tools repository may be used; answer the README questions (AI tools used, Egypt figures in 5.3, air-pollution module credit) — S — 13 Nov
@@ -56,15 +57,15 @@ Details for each item: `C PhD Application/PhD-Application-Status.md`.
 - [ ] H1: rotate the FTP password on the server. The old one is still in git history — S — now
 - [ ] H6: fix stale folder paths in `PaperTracker.xlsx` — A
 
-- [ ] Run `E Writing Instructions/Scripts/Papers/Run/Download-Literature.bat` on your PC (100 open-access papers the cloud session could not fetch, across all five working papers) — S — Fri 30 Oct (T59)
-- [ ] Manual downloads, for later: `E Writing Instructions/Scripts/Papers/Reference/Literature-Downloads.md` (125: library login, browser-only or not found) — S — later
+- [ ] Run `H Writing Instructions/Scripts/Papers/Run/Download-Literature.bat` on your PC (100 open-access papers the cloud session could not fetch, across all five working papers) — S — Fri 30 Oct (T59)
+- [ ] Manual downloads, for later: `H Writing Instructions/Scripts/Papers/Reference/Literature-Downloads.md` (125: library login, browser-only or not found) — S — later
 
 ## Decisions needed from Stephen
 
 - [ ] Confirm the specialisms and positioning paragraph in `STRATEGY.md`.
 - [ ] Confirm the rankings in `PAPERS.md` and the positions P1–P8.
 - [ ] Spelling: US for the carbon-pricing series (decided 29 Oct). Other papers: convert, or keep UK?
-- [ ] Add 2–3 pieces you are proud of to `E Writing Instructions/Writing Standards/exemplars.md` ("Stephen's own").
+- [ ] Add 2–3 pieces you are proud of to `H Writing Instructions/Writing Standards/exemplars.md` ("Stephen's own").
 - [ ] Is the fiscal unit's remit described correctly in `STRATEGY.md`?
 
 ## Done
@@ -78,7 +79,7 @@ Details for each item: `C PhD Application/PhD-Application-Status.md`.
 - [x] 29 Oct 2026 — 4.1 (TECP) moved into the series as 1.7; qmd is master (v0.2) — A
 - [x] 29 Oct 2026 — Section 1 reorganised: 1.6 created; `6.Additional/1.OtherFiscalPolicy` holds 1.4 and 1.5; every series folder has `8.PreviousVersions` with v0.1/v0.2 labels, `3.RelatedPiecesAndLinks` and `RelatedWork.md`; series map in `1.ClimateAndFiscalPolicy/RelatedWork.md` — A
 - [x] 29 Oct 2026 — Template paper for 1.1 read (Keen, Parry and Roaf 2021); notes in `1.1/5.Notes/Review-2026-10-29.md` §6 — A
-- [x] 29 Oct 2026 — Proposal 1 cleaned: drafting text and appendices B–E removed; original kept in `C Research Proposal/PreviousVersions/` — A
+- [x] 29 Oct 2026 — Proposal 1 cleaned: drafting text and appendices B–E removed; original kept in `B PhD Application/PreviousVersions/` — A
 - [x] 29 Oct 2026 — "Today" tab added to the master plan sheet (short daily view) — A
-- [x] 29 Oct 2026 — Agent infrastructure set up: `AGENTS.md`, `NORMS.md`, `STRATEGY.md`, `PAPERS.md`, `TODO.md`, `E Writing Instructions/Writing Standards/`, proposals index — A
+- [x] 29 Oct 2026 — Agent infrastructure set up: `AGENTS.md`, `NORMS.md`, `STRATEGY.md`, `PAPERS.md`, `TODO.md`, `H Writing Instructions/Writing Standards/`, proposals index — A
 - [x] 29 Oct 2026 — FTP login removed from deploy scripts (H1) — S
