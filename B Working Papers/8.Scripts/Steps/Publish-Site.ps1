@@ -378,7 +378,8 @@ if (-not (Test-Path -LiteralPath $srcQmd)) {
 } else {
     $pandoc = (Get-Command pandoc -EA SilentlyContinue).Source
     if (-not $pandoc) {
-        $roots = @('C:\Program Files\Quarto')
+        # RStudio ships its own Quarto (and pandoc), so a machine without Quarto installed can still render
+        $roots = @('C:\Program Files\Quarto', 'C:\Program Files\RStudio\resources\app\bin\quarto', 'C:\Program Files\RStudio\resources\app\quarto')
         if ($env:LOCALAPPDATA) { $roots = @((Join-Path $env:LOCALAPPDATA 'Programs\Quarto')) + $roots }
         foreach ($r in $roots) {
             if (Test-Path -LiteralPath $r -ErrorAction SilentlyContinue) {
@@ -437,17 +438,21 @@ Log ''
 Log '--- render'
 $quarto = (Get-Command quarto -EA SilentlyContinue).Source
 if (-not $quarto) {
-    $qroots = @('C:\Program Files\Quarto\bin')
+    # RStudio ships its own Quarto: the last two roots find it when Quarto itself is not installed
+    $qroots = @('C:\Program Files\Quarto\bin', 'C:\Program Files\RStudio\resources\app\bin\quarto\bin', 'C:\Program Files\RStudio\resources\app\quarto\bin')
     if ($env:LOCALAPPDATA) { $qroots = @((Join-Path $env:LOCALAPPDATA 'Programs\Quarto\bin')) + $qroots }
     foreach ($r in $qroots) {
-        # plain concatenation: Join-Path throws if the drive does not exist
-        $c = $r.TrimEnd('\') + '\quarto.cmd'
-        if (Test-Path -LiteralPath $c -ErrorAction SilentlyContinue) { $quarto = $c; break }
+        foreach ($exe in @('quarto.exe', 'quarto.cmd')) {
+            # plain concatenation: Join-Path throws if the drive does not exist
+            $c = $r.TrimEnd('\') + '\' + $exe
+            if (Test-Path -LiteralPath $c -ErrorAction SilentlyContinue) { $quarto = $c; break }
+        }
+        if ($quarto) { break }
     }
 }
 $rendered = $false
 if (-not $quarto) {
-    Log '    quarto not found on PATH - render skipped. Run render.bat in the website folder.'
+    Log '    quarto not found (on PATH, in Program Files or in RStudio) - render skipped.'
 } elseif ($SkipRender) {
     Log '    render skipped (-SkipRender)'
 } elseif (-not $Apply) {
