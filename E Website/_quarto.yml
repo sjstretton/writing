@@ -49,6 +49,16 @@ website:
               contents:
                 - text: "Working paper"
                   href: policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/working-paper.qmd
+            - section: "1.3 Converting a VAT into a Destination Carbon Tax"
+              href: policy/1-carbon-pricing/CarbonConsumptionTax/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/1-carbon-pricing/CarbonConsumptionTax/working-paper.qmd
+            - section: "1.4 Credit the Price Signal, Not the Payment"
+              href: policy/1-carbon-pricing/IronSteelCBAM/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/1-carbon-pricing/IronSteelCBAM/working-paper.qmd
         - policy/2-other-tax.qmd
         - policy/3-finance-and-risk.qmd
         - policy/4-sovereign-incentives.qmd
