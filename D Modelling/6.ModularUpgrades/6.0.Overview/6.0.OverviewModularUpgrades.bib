@@ -1,0 +1,120 @@
+@unpublished{StrettonWP51,
+  author = {Stretton, Stephen J.},
+  title  = {The {CPAT} Mitigation Module: Methods in Brief},
+  note   = {Working paper 5.1},
+  year   = {2026}
+}
+
+@misc{StrettonWP61,
+  author = {Stretton, Stephen J.},
+  title = {Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price},
+  howpublished = {Working paper, version 0.3, October 2026},
+  year = {2026},
+  note = {the author's working paper (repo paper 6.1); nested CES demand system, partial adjustment (demand speed 0.25--0.40, switching speed 0.04--0.10 a year) and the stylized three-sector economy used here; model code copied unchanged into 2.Source/tecp_core.py}
+}
+
+@unpublished{StrettonWP62,
+  author = {Stretton, Stephen J.},
+  title = {The {CBAM} Policy Tool},
+  note = {Working paper 6.2},
+  year = {2026}
+}
+
+@unpublished{StrettonWP63,
+  author = {Stretton, Stephen J.},
+  title = {Public Investment in {CPAT}: Investment Needs and the Efficiency of Public Spending},
+  note = {Working paper 6.3},
+  year = {2026}
+}
+
+@unpublished{StrettonWP64,
+  author = {Stretton, Stephen J.},
+  title = {Activity Levels Across {CPAT}, {SISEPUEDE}, {CBAM} and {FTT}},
+  note = {Working paper 6.4},
+  year = {2026}
+}
+
+@unpublished{StrettonWP65,
+  author = {Stretton, Stephen J.},
+  title = {The Macro-Fiscal-Energy Scenario Tool},
+  note = {Working paper 6.5},
+  year = {2026}
+}
+
+@book{CPATTeam2024,
+  author    = {{CPAT Team}},
+  title     = {{CPAT} Documentation},
+  publisher = {World Bank and International Monetary Fund},
+  address   = {Washington, DC},
+  year      = {2024},
+  url       = {https://cpmodel.github.io/cpat_public/},
+  note      = {The CPAT team's 2023 text, published online 23 January 2024. verified 31 Oct 2026 in the copy kept in the public CPAT-AI repository (docs/CPAT_full_documentation_qmd, commit 108f976): chapter 3 (Mitigation), power section: WACC ``by default income-dependent'' at 0.075, 0.100, 0.125, 0.150 (HIC, UMIC, LMIC, LIC), citing Steffen (2020); investment allocated by a logit on levelized cost, capped by scale-up limits; chapter 4 (Multipliers) and chapter 1 (User Guide): revenue can be recycled through tax cuts, transfers, public investment and current spending}
+}
+
+@misc{CPATAI2026,
+  author       = {{CPAT-AI Project}},
+  title        = {{CPAT-AI}: Excel-{AI} and {CPAT} Python, with Documentation, Bug Register and Issue Register},
+  year         = {2026},
+  howpublished = {GitHub repository, Excel-AI release 1.2.1 (31 October 2026)},
+  url          = {https://github.com/cpmodelai/cpat_ai},
+  note         = {Public repository. verified 31 Oct 2026 from a clone (commit 108f976): docs/CPAT_model_documentation_qmd/A_Equations.qmd (M3.1 fuel use, M4.1 electricity demand), 03_Energy_demand.qmd (income-level factor: quartic in log GDP per capita, constants IncfA--IncfE, divisor 0.74, cap at log 10), 04_Power.qmd (generation adds net exports, losses, statistical differences and own use at base-year shares), 05_Road_transport.qmd (elasticity model is the default; engineer model switched on by TrModel; Gompertz a = -5.897, b = -0.23 per 1,000 USD; income elasticity of distance 0.1 used, 0.05 the methodology note's unused alternative; distance responds with the road usage elasticity); data/Public01/tidy/xai_elasticities.csv (electricity income elasticity 0.8 residential and industry, 1.1 services, 1.2 transport; electricity usage -0.3, efficiency -0.2 for residential and industry, low and middle income; road gasoline usage -0.4)}
+}
+
+@techreport{black2022framework,
+  author      = {Black, Simon and Minnett, Danielle and Parry, Ian and Roaf, James and Zhunussova, Karlygash},
+  title       = {A Framework for Comparing Climate Mitigation Policies Across Countries},
+  institution = {International Monetary Fund},
+  type        = {IMF Working Paper},
+  number      = {22/254},
+  year        = {2022},
+  doi         = {10.5089/9798400228285.001},
+  note        = {verified 31 Oct 2026: IMF page (16 Dec 2022) and PDF read. Annex C: vehicle fleet turnover "6.7 percent a year based on an assumed 15-year life"; commercial and residential buildings "1.8 and 1.2 percent of these stocks replaced annually"; fuel and electricity price elasticities "over the longer term are generally between -0.5 and -0.8"; CPAT "parameterized to be approximately consistent with the mid-range of the empirical literature"}
+}
+
+@misc{EU2023,
+  author = {{European Parliament and Council of the European Union}},
+  title = {Regulation ({EU}) 2023/956 of 10 May 2023 Establishing a Carbon Border Adjustment Mechanism},
+  howpublished = {Official Journal of the European Union, L 130, 16.5.2023, p. 52},
+  year = {2023},
+  url = {http://data.europa.eu/eli/reg/2023/956/oj},
+  note = {verified 31 Oct 2026: full text from the Publications Office (CELEX 32023R0956); Art. 3(29) (carbon price: "monetary amount paid in a third country ... in the form of a tax, levy or fee or in the form of emission allowances"), Art. 30 (reports from 2028 on "international trade, including resource shuffling") and Annex II (direct emissions only for iron and steel and aluminium) read. Art. 9 replaced by Reg. (EU) 2025/2083}
+}
+
+@misc{EU2025Omnibus,
+  author = {{European Parliament and Council of the European Union}},
+  title = {Regulation ({EU}) 2025/2083 of 8 October 2025 Amending Regulation ({EU}) 2023/956 as Regards Simplifying and Strengthening the Carbon Border Adjustment Mechanism},
+  howpublished = {Official Journal of the European Union, L series, 2025/2083, 17.10.2025},
+  year = {2025},
+  url = {http://data.europa.eu/eli/reg/2025/2083/oj},
+  note = {verified 31 Oct 2026: full text from the Publications Office (CELEX 32025R2083); recital on the single mass-based threshold and Annex VII point 1 ("set at 50 tonnes of net mass") read this session; new Art. 9(1)-(5), recitals 20 and 35 and Annex IV point 4.1 as verified in paper 1.4's check of the same date}
+}
+
+@techreport{IMF2024KenyaDSA,
+  author = {{International Monetary Fund}},
+  title = {Kenya: 2023 Article {IV} Consultation, Sixth Reviews under the Extended Fund Facility and Extended Credit Facility Arrangements, and First Review under the Resilience and Sustainability Facility Arrangement},
+  institution = {International Monetary Fund},
+  type = {IMF Country Report},
+  number = {24/13},
+  address = {Washington, DC},
+  year = {2024},
+  doi = {10.5089/9798400264177.002},
+  note = {verified 31 Oct 2026: Crossref; full text of the joint IMF-IDA debt sustainability analysis (22 December 2023) read: risk of external and overall debt distress High, no judgment applied; medium capacity, Composite Indicator 3.01 (previous vintages 2.98 and 3.02); medium thresholds 40/180/15/18 and benchmark 55; PV of public debt above 55 through 2029, peaking at 68 percent of GDP in 2023; revisions reflect projected REER depreciation in 2023--2024 and higher interest costs}
+}
+
+@misc{SISEPUEDECode,
+  author       = {Syme, James and others},
+  title        = {{SISEPUEDE}: Simulating Sectoral Pathways and Uncertainty Exploration for Decarbonization},
+  year         = {2026},
+  howpublished = {GitHub repository, commit 9bf976c (23 September 2026), with documentation in docs/source},
+  url          = {https://github.com/jcsyme/sisepuede},
+  note         = {verified 31 Oct 2026 from a clone: utilities/_toolbox.py project\_growth\_scalar\_from\_elasticity (``standard'': growth 1 + r e; ``log'': (1 + r)\^{}e); models/energy\_consumption.py (passenger-km per capita to GDP per capita, two categories; megatonne-km to GDP; household heat and appliance energy per household to GDP per capita; demand scalars for transport, industrial energy, household heat and appliances); models/ippu.py (production to GDP); no price elasticity anywhere in the code; docs/source/energy\_production.rst (NemoMod, Stockholm Environment Institute); mathdoc\_energy.rst (losses and exports in electricity demand); ref/examples/input\_data\_frame.csv (Costa Rica from 2015: pkm elasticities 1.12 and 2.64, freight 1.0, held to 2050; industrial and household elasticities move to 1.0 by period 35; 2025 values cement 0.62, metals 0.75, chemicals -0.25, household heat 0.08)}
+}
+
+@misc{FTTStandAlone,
+  author       = {{Future Technology Transformations developers}},
+  title        = {{FTT\_StandAlone}: Future Technology Transformation Models in {Python}},
+  year         = {2026},
+  howpublished = {GitHub repository cpmodel/FTT\_StandAlone, commit 896a3ce (28 October 2026)},
+  url          = {https://github.com/cpmodel/FTT_StandAlone},
+  note         = {verified 31 Oct 2026 from a clone: README (modules Power, Heat, Industrial heat, Transport, Freight, Hydrogen under review; data years power 2022, heat 2020, transport 2022, freight 2023; E3ME ``informs some of the inputs''; steel only as a reference to Vercoulen et al. 2023); settings.ini (enabled FTT-P, FTT-H, FTT-Tr, FTT-Fr); Utilities/titles/classification\_titles.csv (71 regions); VariableListing.csv (MEWDX, RFLT, RVKM, RFLZ, RHUD); Inputs/S0 (MEWDX electricity equals summed MEWG in 2022 for BE, DE, US, IN, SA; RFLT zero in 2022 for 21 of 71 regions; no industrial heat inputs); ftt\_source/Freight/ftt\_fr\_main.py (tonne-km from vehicles, mileage and load); sector\_coupling/electricity\_demand.py (change against S0 baseline added to MEWDX); docs/source/mathematics.rst (heterogeneous agents, pairwise choice, logistic substitution)}
+}

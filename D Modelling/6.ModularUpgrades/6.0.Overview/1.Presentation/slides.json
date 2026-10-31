@@ -1,0 +1,126 @@
+{
+  "series": "Climate Fiscal Policy Briefs · Section 6: Modular Upgrades · October 2026",
+  "title": "Upgrade the Model Where Policy Needs It",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Upgrade the Model Where Policy Needs It",
+      "subtitle": "Five modular upgrades to the Climate Policy Assessment Tool: section 6 in ten slides",
+      "message": "Keep CPAT's core small enough to audit, and answer each new question with a module that reads its outputs: one carbon-price scale, the EU border charge, the cost of clean capital, one activity layer, and growth, revenue and debt.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "table",
+      "title": "Five questions the core cannot answer, five modules that can",
+      "header": ["Ministries ask", "Module", "Paper"],
+      "widths": [4.0, 3.9, 1.0],
+      "rows": [
+        ["What is our policy mix worth as a carbon price?", "Total Effective Carbon Price", "6.1"],
+        ["What will the EU border charge cost exporters?", "CBAM Policy Tool", "6.2"],
+        ["What will clean capital cost, and should the budget pay?", "Public investment extension", "6.3"],
+        ["How do we link CPAT to our other models?", "Common activity layer", "6.4"],
+        ["What does the program do to growth and debt?", "Macro-Fiscal-Energy Scenario Tool", "6.5"]
+      ],
+      "note": "Each reads CPAT's prices, fuel use, emissions and revenue, adds one piece of economics, and states its method in a few equations.",
+      "source": "Section 6 overview, Table 1."
+    },
+    {
+      "type": "stats",
+      "title": "Headline carbon prices understate a policy mix by almost half",
+      "stats": [
+        {"value": "$21", "label": "per tonne: explicit prices of a stylized mix of tax, subsidy and fuel standard"},
+        {"value": "$37", "label": "per tonne: the uniform tax that cuts as much, long run ($32–38 across the evidence)"},
+        {"value": "$28", "label": "per tonne after one year, before new capital replaces old"}
+      ],
+      "text": "The Total Effective Carbon Price scores standards, subsidies and feebates on one scale; not yet computed for a real country.",
+      "source": "Paper 6.1 (stylized three-sector economy); Black et al. (2022)."
+    },
+    {
+      "type": "figure",
+      "title": "The EU's border charge is large, and for dirty goods most of it arrives at once",
+      "image": "../../6.2.CBAMPolicyTool/1.Presentation/figures/fig1_charge_path.png",
+      "points": [
+        {"lead": "Turkish hot-rolled steel:", "text": "€107/t in 2026, €252/t at full phase-in, at €80/tCO₂."},
+        {"lead": "Three levers:", "text": "verified data (€58/t), cleaner production, a domestic price the EU deducts (€49/t at €20)."},
+        {"lead": "A domestic price", "text": "keeps the money at home."}
+      ],
+      "source": "Paper 6.2; Regulation (EU) 2023/956 as amended by 2025/2083."
+    },
+    {
+      "type": "figure",
+      "title": "For Egypt, data cut the steel charge by 90 percent but urea's by 13",
+      "image": "../../6.2.CBAMPolicyTool/1.Presentation/figures/fig2_egypt_charges.png",
+      "points": [
+        {"lead": "Total:", "text": "€793m a year at default values, €480m with verified data (2025 volumes)."},
+        {"lead": "Corrected:", "text": "urea's bound CO₂ counts as emitted; ammonium nitrate's ammonia counted in full."},
+        {"lead": "Earlier figures", "text": "(€595m and €177m) are superseded."}
+      ],
+      "source": "Paper 6.2 (illustrative tool results; Eurostat volumes)."
+    },
+    {
+      "type": "figure",
+      "title": "The cost of capital, not the size of the bill, decides whether clean capital pays",
+      "image": "../../6.3.PublicInvestment/1.Presentation/figures/fig_breakeven.png",
+      "points": [
+        {"lead": "Break-even at 12.6%:", "text": "a stylized clean asset pays handsomely at 6% and fails above that."},
+        {"lead": "CPAT's default:", "text": "each country's own rate plus a technology premium; income-group rates are an option."},
+        {"lead": "Each point off", "text": "is worth about $36bn a year of global clean energy investment."}
+      ],
+      "source": "Paper 6.3; CPAT documentation; CPAT-AI."
+    },
+    {
+      "type": "points",
+      "title": "A project can be worth building and still break the budget's cash flow",
+      "points": [
+        {"lead": "The test:", "text": "value per net budget dollar against the cost of raising a dollar of tax (about 1.2)."},
+        {"lead": "Stylized island:", "text": "a solar plant worth $108m leaves the budget $14.6m a year short on a seven-year loan."},
+        {"lead": "A guaranteed PPA", "text": "narrows the gap but adds a contract liability of 7.6% of GDP."},
+        {"lead": "So count", "text": "cash, debt and contract liabilities on one ledger."}
+      ],
+      "source": "Paper 6.3, worked example (stylized)."
+    },
+    {
+      "type": "figure",
+      "title": "Linked models need one baseline, a carbon price counted once, and a check on cars",
+      "image": "../../6.4.ActivityModelling/1.Presentation/figures/fig_activity.png",
+      "points": [
+        {"lead": "One layer:", "text": "ten activities, one rule, one forecast, one base year."},
+        {"lead": "Price response", "text": "only where the model has none (SISEPUEDE, FTT)."},
+        {"lead": "Cars +64%, travel +35%", "text": "in ten years; check every year that car travel fits."}
+      ],
+      "source": "Paper 6.4 (stylized: population +1%, income per person +2% a year)."
+    },
+    {
+      "type": "figure",
+      "title": "Financing and efficiency, not the size of the program, decide growth and debt",
+      "image": "../../6.5.MacroFiscalEnergyScenarioTool/1.Presentation/figures/fig_kenya_need.png",
+      "points": [
+        {"lead": "Kenya (illustrative):", "text": "budget need 0.5% of GDP in 2030, mostly land use and non-CO₂."},
+        {"lead": "Pricing pays ~5%:", "text": "a grid over 90% renewable leaves little to tax."},
+        {"lead": "Debt:", "text": "about +7 points of GDP by 2050, from high risk already (IMF–World Bank, 2023)."}
+      ],
+      "source": "Paper 6.5; IMF Country Report 24/13."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What section 6 shows",
+        "items": [
+          {"lead": "One scale:", "text": "a policy mix worth $37/t where prices say $21."},
+          {"lead": "Border charge:", "text": "the right lever differs by product."},
+          {"lead": "Capital:", "text": "its cost decides; cash can bind before value."},
+          {"lead": "Linking and macro:", "text": "one baseline; financing beats size."}
+        ]
+      },
+      "right": {
+        "title": "Actions",
+        "items": [
+          {"lead": "Finance ministries:", "text": "report the TECP; run the CBAM numbers per product; test spending on cash and contract liabilities."},
+          {"lead": "Teams running CPAT:", "text": "state the cost of capital used; link models through one activity layer."},
+          {"lead": "Development banks:", "text": "pay for verified policy, not projects; lower the cost of capital."}
+        ]
+      }
+    }
+  ]
+}

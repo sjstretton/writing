@@ -68,7 +68,7 @@ PARTS = [
              "OverviewModelling.docx", "Slides-Modelling.pptx"),
             ("6.ModularUpgrades", "6-modular-upgrades", "Modular Upgrades",
              "Extensions to CPAT where policy needs them: carbon-price equivalents, CBAM, public investment, activity and macro-fiscal scenarios.",
-             "OverviewModularUpgrades.docx", None),
+             "OverviewModularUpgrades.docx", "Slides-ModularUpgrades.pptx"),
             ("7.AdditionalAnalytics", "7-analytics", "Analytics Tools",
              "Diagnostics on data ministries already hold: excise systems and fiscal indicators.",
              "OverviewAnalytics.docx", "Slides-Analytics.pptx"),

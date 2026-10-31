@@ -4,9 +4,9 @@ aliases:
   - ../research/6-modular-upgrades.html
 ---
 
-The Climate Policy Assessment Tool (CPAT) tells a finance ministry what a carbon price raises and what it cuts, but ministries keep asking questions its core cannot answer. What is a mix of standards, subsidies and feebates worth as a carbon price? What will the EU carbon border adjustment cost our exporters? What will the clean capital cost, and should the budget pay for it? How do we link CPAT to the other models we use? What does a climate program do to growth and debt? This section answers each with one upgrade that bolts onto the rebuilt model without changing its core: the Total Effective Carbon Price, the CBAM Policy Tool, a public investment extension, a common activity layer, and the Macro-Fiscal-Energy Scenario Tool. Each takes CPAT's prices, fuel use and emissions as given, adds one piece of economics, and states its method in a few equations so that a ministry can check it.
+The Climate Policy Assessment Tool (CPAT) tells a finance ministry what a carbon price raises and what it cuts, but ministries keep asking questions its core cannot answer. What is a mix of standards, subsidies and feebates worth as a carbon price? What will the EU carbon border adjustment cost exporters? What will the clean capital cost, and should the budget pay for it? How can CPAT be linked to the other models ministries use? What does a climate program do to growth and debt? This section answers each with one upgrade that reads the rebuilt model's outputs without changing its core: the Total Effective Carbon Price, the CBAM Policy Tool, a public investment extension, a common activity layer, and the Macro-Fiscal-Energy Scenario Tool. Each states its method in a few equations so that a ministry can check it, and each peer review in October 2026 changed a result: the Egypt border charge, the cost of capital CPAT assumes, the island case, the ownership check and Kenya's debt comparison.
 
-[Section overview (docx) →](../papers/OverviewModularUpgrades.docx)
+[Section overview (docx) →](../papers/OverviewModularUpgrades.docx) · [Series slides (pptx) →](../papers/Slides-ModularUpgrades.pptx)
 
 ## 6.1 Measure Carbon Pricing by the Emissions It Cuts {#paper-6-1}
 
