@@ -54,3 +54,11 @@ You are upgrading ONE paper in Stephen Stretton's writing repo at /home/user/wri
 4. Word counts: working paper body, executive summary, brief. Deck: slide count; confirm you viewed the rendered slides.
 5. Any title change, any new CFPB key, anything the coordinator must update in shared files.
 6. The list of files you created, changed or moved.
+
+## Extra rules for the modelling papers (sections 5–7)
+
+- These papers have NO policy brief yet (except 6.1): create `1.Presentation/Brief-<Name>.qmd` and `.bib` (series line "Climate Fiscal Policy Brief No. X.Y", key CFPB<X><Y>; working paper key StrettonWP<X><Y>). On the website they sit in the Modelling and Analytics part (`modelling/`); cross-links to sibling papers use `paper:5.2` etc.
+- The brief for a methods or validation paper is still a policy brief: who should care (finance ministries, development-bank teams using CPAT), what the result means for decisions, what to do. Plain words, no equations, bold lead sentences.
+- CONFIDENTIALITY: CPAT is a World Bank/IMF tool. Use only public sources: the public CPAT documentation and papers, the public CPAT-AI repository (https://github.com/cpmodelai/cpat_ai, if public — check), published articles. Do not include anything marked confidential, internal, PFR (Public Finance Review), draft-for-discussion or not-for-citation, and follow each paper's README on which country results are cleared as illustrative. If unsure, leave it out and say so in your report.
+- Read the section overview and plan first: `D Modelling/5.Modelling/5.0.Overview/` (SeriesArchitecture.md if present) and PAPERS.md's section 5–7 table. Keep terms consistent with 6.1 (Total Effective Carbon Price) and across 5.1–5.4.
+- Each existing deck (`1.Presentation/`) should become about ten slides on the new builder (slides.json + make_deck.py).
