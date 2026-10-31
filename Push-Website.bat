@@ -8,7 +8,7 @@ rem After uploading it checks research.html on the server and, if FTP-Login.txt 
 setlocal
 cd /d "%~dp0"
 set "FTPCFG=%~dp0FTP-Login.txt"
-if not exist "%FTPCFG%" (echo FTP login not found. Copy FTP-Login.example.txt to FTP-Login.txt next to this file and type the password in. & pause & exit /b 1)
+if not exist "%FTPCFG%" (echo FTP login not found. Create FTP-Login.txt next to this file with lines host = , user = , password = , remote = /public_html. & pause & exit /b 1)
 for /f "usebackq eol=# tokens=1,* delims== " %%A in ("%FTPCFG%") do set "FTP_%%A=%%B"
 if not defined FTP_remote set "FTP_remote=/public_html"
 set "WINSCP=C:\Program Files (x86)\WinSCP\WinSCP.com"
