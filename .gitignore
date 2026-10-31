@@ -18,3 +18,6 @@ B Working Papers/_Purged/
 B Working Papers/8.Scripts/Reference/_ftp.txt
 
 __pycache__/
+
+# Written by Download-Literature.bat on each run
+B Working Papers/8.Scripts/Run/Literature-OpenInBrowser.html
