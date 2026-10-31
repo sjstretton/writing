@@ -29,6 +29,7 @@ Follow `H Writing Instructions/NORMS.md`, `H Writing Instructions/Writing Standa
 - US spelling.
 - Dense and economical. No throat-clearing, no roadmap paragraphs, no summary ending that repeats the executive summary.
 - Every factual claim cited. Never invent a citation. Check every cited source against the source itself (abstract at minimum, the passage for a specific number), record what was read in the entry's `note`, and keep a short record in `5.Notes/BibCheck-<date>.md`. Claims you cannot source are cut or marked `[VERIFY: ...]` in the text.
+- Any link to a document, deck or PDF says its file type in brackets inside the link text: `[Policy brief (docx)](...)`, `[Slides (pptx)](...)`, `[Report (pdf)](...)`. The website build does this for the links it makes.
 - Chicago author-date. The brief's `.bib` is copied from the working paper's verified `.bib` (only the keys the brief cites), so the two cannot drift apart.
 
 ## Shared terms (use exactly these)

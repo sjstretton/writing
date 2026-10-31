@@ -251,7 +251,7 @@ def build_book(folder_name, cfg):
     contents_yaml = drop_key(drop_key(contents_yaml, "toc"), "version")
     top = [cfg.get("blurb", "") + "\n"]
     if (ARCHIVE / f"{name}.docx").exists():
-        top.append(f"**Download:** [The whole book (Word)](../../../papers/{name}.docx)\n")
+        top.append(f"**Download:** [The whole book (docx)](../../../papers/{name}.docx)\n")
     if preface:
         top.append(preface + "\n")
     top.append("# Contents {.unnumbered}\n")
@@ -294,11 +294,12 @@ def build(folder_name):
     dest.mkdir(parents=True)
 
     def dl(label, f):
-        return f"[{label}](../../../papers/{f})" if (ARCHIVE / f).exists() else None
+        """A download link with its file type in brackets in the link text: 'Slides (pptx)'."""
+        return f"[{label} ({f.rsplit('.', 1)[-1].lower()})](../../../papers/{f})" if (ARCHIVE / f).exists() else None
 
-    slides = dl("Slides (PowerPoint)", f"Slides-{name}.pptx")
-    words = [l for l in (dl("Policy brief (Word)", f"Brief-{name}.docx"),
-                         dl("Working paper (Word)", f"{name}.docx")) if l]
+    slides = dl("Slides", f"Slides-{name}.pptx")
+    words = [l for l in (dl("Policy brief", f"Brief-{name}.docx"),
+                         dl("Working paper", f"{name}.docx")) if l]
     downloads = ("# Downloads {.unnumbered}\n\n" + " · ".join(words) + "\n") if words else None
 
     if has_brief:

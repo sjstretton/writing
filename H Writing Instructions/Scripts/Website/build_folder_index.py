@@ -40,9 +40,9 @@ def build(part):
         out.append(f"<h2>{num}. {html.escape(sec[2])}</h2>")
         ov = folder / f"{num}.0.Overview"
         ovq = next(iter(sorted(ov.glob("*.qmd"))), None) if ov.is_dir() else None
-        links = [a(root, ovq, "Overview (master .qmd)"),
-                 a(root, ovq.with_suffix(".docx") if ovq else None, "Overview (Word)"),
-                 a(root, ov / "1.Presentation" / sec[5] if sec[5] else None, "Section slides")]
+        links = [a(root, ovq, "Overview (master qmd)"),
+                 a(root, ovq.with_suffix(".docx") if ovq else None, "Overview (docx)"),
+                 a(root, ov / "1.Presentation" / sec[5] if sec[5] else None, "Section slides (pptx)")]
         links = [l for l in links if l]
         if links:
             out.append(f"<div class='l'>{''.join(links)}</div>")
@@ -52,10 +52,10 @@ def build(part):
             meta = front_matter(q) if q else {}
             pnum = ".".join(pf.name.split(".")[:2])
             pres = pf / "1.Presentation"
-            links = [a(root, q, "Master (.qmd)"), a(root, pf / f"{name}.docx", "Working paper (Word)"),
-                     a(root, pres / f"Brief-{name}.qmd", "Brief master (.qmd)"),
-                     a(root, pres / f"Brief-{name}.docx", "Brief (Word)"),
-                     a(root, pres / f"Slides-{name}.pptx", "Slides"), a(root, pf, "Folder")]
+            links = [a(root, q, "Master (qmd)"), a(root, pf / f"{name}.docx", "Working paper (docx)"),
+                     a(root, pres / f"Brief-{name}.qmd", "Brief master (qmd)"),
+                     a(root, pres / f"Brief-{name}.docx", "Brief (docx)"),
+                     a(root, pres / f"Slides-{name}.pptx", "Slides (pptx)"), a(root, pf, "Folder")]
             out.append(f"<div class='p'><div class='t'>{pnum} {html.escape(meta.get('title', name))}</div>"
                        + (f"<div class='s'>{html.escape(meta['subtitle'])}</div>" if meta.get("subtitle") else "")
                        + f"<div class='l'>{''.join(l for l in links if l)}</div></div>")

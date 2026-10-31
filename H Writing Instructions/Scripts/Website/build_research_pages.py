@@ -53,7 +53,9 @@ def up(page):
 
 
 def link(label, fname, page):
-    return f"[{label} →]({up(page)}papers/{fname})" if (ARCHIVE / fname).exists() else None
+    """A link to a file in papers/, its file type in brackets in the link text: 'Slides (pptx) →'."""
+    ext = fname.rsplit(".", 1)[-1].lower()
+    return f"[{label} ({ext}) →]({up(page)}papers/{fname})" if (ARCHIVE / fname).exists() else None
 
 
 def section_page(part, sec):
@@ -97,10 +99,11 @@ def section_page(part, sec):
             online = [f"[Read online →]({slug}/{stem}/index.qmd)"]
         else:
             online = []
-        words = [l for l in (link("brief", f"Brief-{stem}.docx", page), link("working paper", f"{stem}.docx", page)) if l]
+        words = [l for l in (link("Policy brief", f"Brief-{stem}.docx", page),
+                             link("Working paper", f"{stem}.docx", page)) if l]
         ls = online + [l for l in (link("Slides", f"Slides-{stem}.pptx", page),) if l]
         if words:
-            ls.append("Word: " + ", ".join(words))
+            ls += words
         if ls:
             out.append(" · ".join(ls) + "\n")
         titles.append((pnum, title.split(":")[0].strip(), anchor, web if has_web else None,

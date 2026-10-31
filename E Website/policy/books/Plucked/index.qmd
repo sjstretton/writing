@@ -12,7 +12,7 @@ toc: false
 
 A book-length case for reforming UK taxes and benefits, written with Gordon Styles in 2020. Its fourteen chapters run from the ideas behind taxation and the principles of a good tax system to welfare and work, inequality, corporations, land and property, money and debt, and the environment, and end with a set of proposals. The manuscript is kept as written in 2020; only the title has changed.
 
-**Download:** [The whole book (Word)](../../../papers/Plucked.docx)
+**Download:** [The whole book (docx)](../../../papers/Plucked.docx)
 
 *Book manuscript, 2020, converted from R Markdown to Quarto in October 2026 without changes to the text. Retitled in October 2026; the 2020 title was 'Screwed?! Getting our future back with tax and benefit reform'. Original chapter files are in `Chapters-Rmd`; the 2020 PDF is in `8.PreviousVersions`.*
 
