@@ -1,43 +1,129 @@
 {
-  "series": "Climate Fiscal Policy Brief No. 3.2",
+  "series": "Climate Fiscal Policy Brief No. 3.2 · October 2026",
   "title": "From Projects to Asset Classes",
-  "subtitle": "Two-stage finance and synthetic sovereign bonds for clean power",
-  "message": "Clean power plants are financed one at a time, on bespoke terms. Split each project at commissioning, pool operating plants under one standard contract and refinance them through first loss, a thin mezzanine and a senior synthetic sovereign bond. Standardization, not subsidy, lowers the price.",
-  "problem": {
-    "title": "Bespoke finance is expensive finance",
-    "stats": [
-      { "value": "56%", "label": "of the price of solar power is financing at a 10% cost of capital (5.7 c/kWh)" },
-      { "value": "$0.37", "label": "private money per development-finance dollar in low-income countries ($0.75 in all developing)" },
-      { "value": "Year 7", "label": "when project defaults fall from high speculative grade to single-A levels" }
-    ],
-    "text": "Once a payment intermediary removes buyer risk, the rest of the premium is packaging: each plant is financed alone, on bespoke documents, by a lender who carries its construction risk for twenty years and cannot sell the loan to a pension fund."
-  },
-  "mechanism": {
-    "title": "Split at commissioning, then pool and tranche",
-    "image": "figures/fig2-lcoe-two-stage.png",
-    "imageWidth": 5.4,
-    "imageHeight": 2.93,
-    "caption": "Cost of power from the stylized plant, US c/kWh, with two years of construction interest.",
-    "points": [
-      "Banks build against a contingent PPA; bond investors hold the operating plant.",
-      "Pool across countries; tranche into first loss, mezzanine and a senior bond.",
-      "4.8% subordination makes the senior bond near-AAA at correlation 0.10; 7.7% at 0.20.",
-      "A 5.65% blended cost gives 4.6 c/kWh against 6.2: 27% less."
-    ]
-  },
-  "action": {
-    "title": "Identical contracts make portfolios",
-    "results": [
-      "A ten-country pool needs 5.3% subordination; one country needs 9.2%.",
-      "Guaranteeing the $460m mezzanine of a $10bn pool costs about $6m over ten years, but it can be fully drawn in a crisis.",
-      "With twice the defaults and 72% recovery, power still costs 4.7 c/kWh.",
-      "The host keeps a contingent liability."
-    ],
-    "todo": [
-      "Write a contingent PPA and standard take-out into every auction.",
-      "Sponsor regional pools under one contract, with published first-loss sizing.",
-      "Regional funds hold first loss; highly rated sovereigns guarantee the mezzanine.",
-      "Tiered conditional guarantees for grids."
-    ]
-  }
+  "slides": [
+    {
+      "type": "title",
+      "title": "From Projects to Asset Classes",
+      "subtitle": "Two-stage finance and synthetic sovereign bonds for clean power",
+      "message": "Clean power plants are financed one at a time, on bespoke terms. Split each project at commissioning, pool operating plants under one standard contract and refinance them through first loss, a thin mezzanine and a senior synthetic sovereign bond. The price of solar power falls by about a fifth.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "In developing countries the price of solar power is mostly the price of money",
+      "stats": [
+        {"value": "+80%", "label": "cost of power from the same plant at a 12% cost of capital instead of 4% (3.6 to 6.5 US c/kWh)"},
+        {"value": ">2×", "label": "the cost of capital for utility-scale solar in emerging and developing economies, against advanced economies"},
+        {"value": "$0.37", "label": "private money mobilized per dollar of development finance in low-income countries, deal by deal ($0.75 in all developing countries)"}
+      ],
+      "text": "Payment risk is the first problem (Brief 3.1). Once it is removed, the rest of the premium is packaging: each plant is financed alone, on bespoke documents, by a lender who cannot sell the loan.",
+      "source": "Author's calculation (stylized plant: $800/kW, 20% capacity factor, 25 years); IEA (2024), Reducing the Cost of Capital; Attridge and Engen (2019), 2012–2015 data."
+    },
+    {
+      "type": "points",
+      "title": "A plant under construction and a plant in operation are different credits",
+      "points": [
+        {"lead": "Construction (about two years):", "text": "default rates like speculative-grade borrowers in the first three years after financial close."},
+        {"lead": "Operation (25 years):", "text": "default rates fall toward single-A levels by year seven. Loans that survived three years defaulted at under 3% over the next seven."},
+        {"lead": "Recovery is high:", "text": "lenders recovered 80% on average; in over 60% of defaults they lost nothing."},
+        {"lead": "Yet single-stage finance prices them together,", "text": "carrying the construction-era price of risk through 25 years of operation."}
+      ],
+      "source": "Moody's (2017), Default and Recovery Rates for Project Finance Bank Loans, 1983–2015 (6,389 projects); Sorge (2004)."
+    },
+    {
+      "type": "points",
+      "title": "Split each project at commissioning, and give each phase to the investor who prices it cheapest",
+      "points": [
+        {"lead": "Stage one:", "text": "banks and development finance institutions lend for the build, against a contingent power purchase agreement from the payment intermediary."},
+        {"lead": "Stage two:", "text": "the operating plant's senior debt (80% of its cost) is refinanced into a pool; the sponsor keeps the equity."},
+        {"lead": "The long phase decides the tariff:", "text": "a point off the operating cost of capital is worth nine to eleven times a point off the construction rate."},
+        {"lead": "Developers bid on the refinanced cost", "text": "only if the take-out is assured, so write it into the auction."}
+      ],
+      "source": "Working paper 3.2, Proposition 1."
+    },
+    {
+      "type": "figure",
+      "title": "In a large pool of operating plants, a 5–8% cushion makes the senior bond near-AAA",
+      "image": "figures/fig1-first-loss-vs-correlation.png",
+      "caption": "Subordination needed under the senior bond, % of pool, by default correlation. Solid: recovery 80%; dashed: 60%.",
+      "points": [
+        {"lead": "Three tranches:", "text": "first loss (3.1%, a regional fund), mezzanine (4.6%, or a sovereign co-guarantee), senior bond (92.3%)."},
+        {"lead": "Correlation drives the cushion:", "text": "4.8% at 0.10, 7.7% at 0.20. Halving recovery doubles it."},
+        {"lead": "Blended cost 5.65%,", "text": "with stylized returns of 12% (first loss), 8% (mezzanine), 5% (senior) and 0.3% fees."}
+      ],
+      "source": "Working paper 3.2, Proposition 2 and Tables 2–3; ten-year default probability 5%, senior target 0.1%."
+    },
+    {
+      "type": "figure",
+      "title": "The host government is the main source of correlation; pooling across countries removes it",
+      "image": "../2.Source/figures/fig3-host-countries.png",
+      "caption": "Subordination for a near-AAA senior bond, % of pool, by number of host countries in the pool.",
+      "points": [
+        {"lead": "One country: 9.1%.", "text": "A sovereign crisis hits every plant at once."},
+        {"lead": "Ten countries: 5.3%,", "text": "about 40% less. The global factor remains (limit 4.8%)."},
+        {"lead": "Only identical contracts pool:", "text": "a regional intermediary with one standard contract creates the pool."}
+      ],
+      "source": "Working paper 3.2, Proposition 3 and Table 5 (global correlation 0.10, host-country 0.15; stylized)."
+    },
+    {
+      "type": "table",
+      "title": "Refinancing into a tranched pool cuts the price of solar power by about a fifth",
+      "header": ["How the plant is financed", "Cost of operating plant's money", "US c/kWh", "Change"],
+      "widths": [4.6, 2.0, 1.1, 1.1],
+      "rows": [
+        ["Single-stage at 10%", "10.0%", "6.2", "—"],
+        ["Two-stage, debt into a project bond at 8%", "8.8%", "5.8", "−7%"],
+        ["Two-stage, debt into the pool at 5.65%", "6.9%", "5.0", "−19%"],
+        ["Pool in lower-middle-income stress case", "7.25%", "5.2", "−17%"],
+        ["Pool with a 30% cushion, as in real deals", "7.7%", "5.3", "−14%"]
+      ],
+      "note": "Two-year build at 12%; in two-stage cases 80% of the plant's cost is senior debt and 20% is equity at 12%. The saving beyond a project bond comes from tranching.",
+      "source": "Author's calculation; working paper 3.2, Tables 4 and 6."
+    },
+    {
+      "type": "points",
+      "title": "Real deals carry far thicker cushions, and the saving survives them",
+      "points": [
+        {"lead": "Bayfront 2018:", "text": "$458m of 37 Asian and Middle Eastern infrastructure loans; 30% of the notes sat below the top class."},
+        {"lead": "Why thicker:", "text": "a small pool, mixed sectors, a quarter still under construction, no record for agencies."},
+        {"lead": "Pool size alone:", "text": "40 loans need 8.5% at correlation 0.20, against 7.7% in a large pool."},
+        {"lead": "With a 30% cushion the saving is still 14%;", "text": "5–8% is where a standard pool with a record ends up, not where it starts. Bayfront's ninth deal (2026) had Aaa/AAA Class A notes."}
+      ],
+      "source": "Allen & Gledhill (2018); GTR (2018); Latham & Watkins (2026); working paper 3.2, Section 6."
+    },
+    {
+      "type": "points",
+      "title": "Where there is no contract, guarantee the bond; where savers are local, issue in local currency",
+      "points": [
+        {"lead": "Grids decide whether cheap power arrives:", "text": "Vietnam curtailed 364 GWh of solar in 2020; South Africa's 2022 auction awarded no wind for lack of grid in the Cape."},
+        {"lead": "Contract the wire first:", "text": "private transmission paid on availability raised over $24.5bn in Brazil, Chile, Peru and India (1998–2015)."},
+        {"lead": "Otherwise, a tiered bond guarantee,", "text": "conditional on reform: state, then national government, then a donor vehicle. Tiers fail together, so the donor tier is called three times as often at a correlation of 0.5."},
+        {"lead": "A local-currency senior tranche", "text": "gives domestic savers a safe asset, with a thicker cushion or a guarantor such as GuarantCo."}
+      ],
+      "source": "ETP (2023); pv magazine (2022); World Bank (2017), Linking Up; PIDG; working paper 3.2, Sections 7–8."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the analysis shows",
+        "items": [
+          {"lead": "Two stages:", "text": "the operating rate decides the tariff."},
+          {"lead": "Thin cushions:", "text": "5–8% in large standard pools; more at first."},
+          {"lead": "Pool across countries:", "text": "about 40% less cushion."},
+          {"lead": "The saving:", "text": "14–19% off the price of solar power. The host keeps a contingent liability."}
+        ]
+      },
+      "right": {
+        "title": "Actions",
+        "items": [
+          {"lead": "Payment intermediaries:", "text": "a contingent contract and a take-out in every auction."},
+          {"lead": "Development banks:", "text": "regional pools under one contract, with published first-loss sizing."},
+          {"lead": "Climate Investment Trust funds:", "text": "hold first loss; rated sovereigns guarantee the mezzanine and reserve for the tail."},
+          {"lead": "Host governments and regulators:", "text": "tiered guarantees for grids; local-currency tranches as eligible assets; record contingent liabilities."}
+        ]
+      }
+    }
+  ]
 }

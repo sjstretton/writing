@@ -35,7 +35,7 @@ Plan: `C Policy and FInance/3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md`
 |---|---|---|
 | 3.0 | Overview: Make Clean Power an Asset Class | v0.2 (29 Oct) |
 | 3.1 | Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power | working paper v0.3 + brief CFPB 3.1 v1.0 + 10-slide deck (31 Oct) |
-| 3.2 | From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power | working paper v0.1 + brief CFPB 3.2 (29 Oct) |
+| 3.2 | From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power | working paper v0.2 + brief CFPB 3.2 v1.0 + 10-slide deck (31 Oct); peer-reviewed (saving corrected to about a fifth of the price of solar power, 14–19%), every citation checked; both on the web |
 
 ### The sovereign-incentives series (section 4)
 

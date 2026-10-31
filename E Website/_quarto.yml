@@ -68,6 +68,11 @@ website:
               contents:
                 - text: "Working paper"
                   href: policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/working-paper.qmd
+            - section: "3.2 From Projects to Asset Classes"
+              href: policy/3-finance-and-risk/CleanPowerAssetClasses/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/3-finance-and-risk/CleanPowerAssetClasses/working-paper.qmd
         - policy/4-sovereign-incentives.qmd
         - section: "Books and Other Papers"
           href: policy/more.qmd

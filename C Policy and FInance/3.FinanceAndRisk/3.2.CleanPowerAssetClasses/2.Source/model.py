@@ -1,4 +1,4 @@
-"""Model and calibration for 'From Projects to Asset Classes' (paper 2.2).
+"""Model and calibration for 'From Projects to Asset Classes' (paper 3.2, working paper v0.2).
 
 Run:  python3 model.py          (prints every table used in the paper and brief)
 
@@ -11,6 +11,18 @@ Three pieces:
   3. Two-factor (global plus host-country) extension by Monte Carlo: how pooling
      operating assets across N host countries lowers the first loss needed.
   4. A tiered bond guarantee: probability that each tier is called, Gaussian copula.
+  5. Robustness (v0.2): finite pools, an agency-style capital structure, and the
+     project-equity layer that stays below the pool (the pool refinances senior debt).
+
+v0.2 change: the pool refinances each plant's senior debt (GEARING of its capitalized
+cost); the sponsor keeps the rest as project equity earning R_PROJ_EQ. The plant's
+operating-phase cost of capital is therefore GEARING * debt rate + (1 - GEARING) * R_PROJ_EQ,
+not the pool's blended cost alone (v0.1 applied the pool's cost to the whole plant).
+Loss given default (20%) is calibrated to project finance *loan* recoveries, which is
+only consistent with the pool holding loans.
+
+All rates are US dollar rates and stylized; the series reads them as real. Every
+comparison is between rates on the same basis.
 
 All parameters are stylized unless a source is given in the paper.
 """
@@ -118,6 +130,27 @@ TARGETS = [("near-AAA", 0.001), ("strong investment grade", 0.005), ("investment
 RHOS = [0.05, 0.10, 0.20, 0.30]
 R_E, R_M, R_S = 0.12, 0.08, 0.05        # stylized required returns, $ terms
 MEZZ_PD = 0.05                          # mezzanine attaches where P(loss > a) = 5%
+GEARING = 0.80                          # senior project debt refinanced by the pool, share of capitalized cost
+R_PROJ_EQ = 0.12                        # stylized return on the project equity that stays below the pool
+
+
+def operating_wacc(debt_rate, gearing=GEARING, r_eq=R_PROJ_EQ):
+    """Operating-phase cost of capital of a plant whose senior debt is refinanced at debt_rate."""
+    return gearing * debt_rate + (1 - gearing) * r_eq
+
+
+def finite_pool_subordination(p, rho, lgd, target_pd, n, sims=400_000, seed=1):
+    """Attachment point for a pool of n equal loans (one factor), by Monte Carlo."""
+    rng = np.random.default_rng(seed)
+    Z = rng.standard_normal(sims)
+    pz = norm.cdf((norm.ppf(p) - np.sqrt(rho) * Z) / np.sqrt(1 - rho))
+    L = lgd * rng.binomial(n, pz) / n
+    return float(np.quantile(L, 1 - target_pd))
+
+
+# Moody's (2017), Exhibit 11 (Basel II default definition): cumulative default rate of
+# project finance bank loans 4.01% by year 3 and 6.74% by year 10.
+MOODYS_CUM3, MOODYS_CUM10 = 0.0401, 0.0674
 
 
 def table_lcoe():
@@ -169,21 +202,48 @@ def main():
     print(f"  check senior PD: {tranche_default_prob(BASE['p'], 0.20, BASE['lgd'], e + m):.4f}")
 
     print("\nTable D. LCOE: single-stage vs two-stage (construction 2 yrs at 12%)")
-    cases = [("single-stage 10%", lcoe_staged(0.10, 0.10)),
-             ("single-stage 12%", lcoe_staged(0.12, 0.12)),
-             ("two-stage, refinance at 8% (project bond)", lcoe_staged(0.12, 0.08)),
-             (f"two-stage, refinance at pooled {w:.1%}", lcoe_staged(0.12, w)),
-             ("two-stage, refinance at 6%", lcoe_staged(0.12, 0.06))]
-    base = cases[0][1]
-    for n, c in cases:
-        print(f"  {n:45s} {c:4.2f} c/kWh  ({c/base-1:+5.0%} vs single-stage 10%)")
+    print(f"  pool refinances {GEARING:.0%} senior debt; project equity {1-GEARING:.0%} at {R_PROJ_EQ:.0%}")
+    w_op_bond, w_op_pool = operating_wacc(0.08), operating_wacc(w)
+    cases = [("single-stage 10%", 0.10, 0.10),
+             ("single-stage 12%", 0.12, 0.12),
+             ("two-stage, debt refinanced at 8% (project bond)", 0.12, w_op_bond),
+             (f"two-stage, debt refinanced into pool at {w:.2%}", 0.12, w_op_pool)]
+    base = lcoe_staged(0.10, 0.10)
+    for n, rc, ro in cases:
+        c = lcoe_staged(rc, ro)
+        print(f"  {n:50s} operating WACC {ro:6.2%}  {c:4.2f} c/kWh  ({c/base-1:+5.1%} vs single-stage 10%)")
+    for req in (0.10, 0.14):
+        c = lcoe_staged(0.12, operating_wacc(w, r_eq=req))
+        print(f"  sensitivity: project equity at {req:.0%}: pool case {c:4.2f} c/kWh ({c/base-1:+5.1%})")
+    c = lcoe_staged(0.12, w)
+    print(f"  v0.1 basis (pool cost applied to the whole plant): {c:4.2f} c/kWh ({c/base-1:+5.1%})")
+    # stress case
+    e2, m2, s2 = capital_structure(p=0.10, lgd=0.28)
+    w2 = structure_wacc(e2, m2, R_E, R_M, R_S)
+    c2 = lcoe_staged(0.12, operating_wacc(w2))
+    print(f"  LMIC stress: first loss {e2:5.1%} mezz {m2:5.1%} senior {s2:5.1%} pool cost {w2:5.2%} "
+          f"operating WACC {operating_wacc(w2):5.2%}  {c2:4.2f} c/kWh ({c2/base-1:+5.1%})")
+    # agency-style structure: senior 70%, as in Bayfront 2018 (Class A 320.6 of 458.0)
+    wa = structure_wacc(0.10, 0.20, R_E, R_M, R_S)
+    ca = lcoe_staged(0.12, operating_wacc(wa))
+    print(f"  agency-style (first loss 10%, mezz 20%, senior 70%): pool cost {wa:5.2%} "
+          f"operating WACC {operating_wacc(wa):5.2%}  {ca:4.2f} c/kWh ({ca/base-1:+5.1%})")
+    # value of a point
+    print(f"  one point off 10%: capital charge falls {1-crf(0.09)/crf(0.10):4.1%}; LCOE {lcoe(0.10):.2f} -> {lcoe(0.09):.2f}")
+
+    print("\nTable D2. Granularity: subordination for near-AAA, pool of n equal loans (p=5%, LGD=20%)")
+    for n in [20, 40, 100, 1000]:
+        ks = [finite_pool_subordination(BASE['p'], r, BASE['lgd'], 0.001, n) for r in (0.10, 0.20)]
+        print(f"  n={n:5d}  rho=0.10: {ks[0]:5.1%}   rho=0.20: {ks[1]:5.1%}")
+    cond = (MOODYS_CUM10 - MOODYS_CUM3) / (1 - MOODYS_CUM3)
+    print(f"  Moody's: default rate in years 4-10 for loans surviving year 3: {cond:5.2%}")
 
     print("\nTable E. Diversification across host countries (rho_g=0.10, rho_c=0.15, target 0.1%)")
-    for n in [1, 3, 5, 10, 20]:
+    print(f"  N=  1  subordination {subordination(BASE['p'], 0.25, BASE['lgd'], 0.001):5.1%}  (analytic, rho=0.25)")
+    for n in [3, 5, 10, 20]:
         k = mc_subordination(BASE['p'], 0.10, 0.15, BASE['lgd'], 0.001, n)
-        print(f"  N={n:3d}  subordination {k:5.1%}")
+        print(f"  N={n:3d}  subordination {k:5.1%}  (Monte Carlo)")
     print(f"  limit (single-factor, rho=0.10): {subordination(BASE['p'], 0.10, BASE['lgd'], 0.001):5.1%}")
-    print(f"  N=1 analytic (rho=0.25):          {subordination(BASE['p'], 0.25, BASE['lgd'], 0.001):5.1%}")
 
     print("\nTable F. Tiered bond guarantee: probability each tier is called (10-yr)")
     pds = [0.15, 0.08, 0.002]   # state utility regulator, national govt, donor-backed SPV
