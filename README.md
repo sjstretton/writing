@@ -8,10 +8,10 @@ Since 29 October 2026 the repo combines the former planning repo (`sjstretton/Pl
 
 | If you want to… | Open |
 |---|---|
-| See this morning's briefing | `1 Morning Briefing/3-OnePriority.txt`: the one priority (the PhD application) and its next steps only |
-| See the project plans | `1 Morning Briefing/4-HumanReadableProjectPlans.txt`: the priority project's plan, then the other projects, one line each |
-| See today's plan and next step | `1 Morning Briefing/1-NextStep.txt`, or the **Dashboard** and **Today** tabs of the [master Google Sheet](https://docs.google.com/spreadsheets/d/1WEHemG3x0kJ3yk-u1RcSheqYsX0T2aAXmiba9veaQag/edit) |
-| See every task, in every repo | `1 Morning Briefing/5-TaskContextAndProjectPlans.md` |
+| See this morning's briefing | `0A Daily and Weekly Task Lists/3-OnePriority.txt`: the one priority (the PhD application) and its next steps only |
+| See the project plans | `0A Daily and Weekly Task Lists/4-HumanReadableProjectPlans.txt`: the priority project's plan, then the other projects, one line each |
+| See today's plan and next step | `0A Daily and Weekly Task Lists/1-NextStep.txt`, or the **Dashboard** and **Today** tabs of the [master Google Sheet](https://docs.google.com/spreadsheets/d/1WEHemG3x0kJ3yk-u1RcSheqYsX0T2aAXmiba9veaQag/edit) |
+| See every task, in every repo | `0A Daily and Weekly Task Lists/5-TaskContextAndProjectPlans.md` |
 | See the strategic priorities | `H Writing Instructions/STRATEGY.md` (PhDs, papers, specialisms) and `2 Strategic Plans/` (work plan, master plan) |
 | See my specialisms and the order for nailing them down | `A Specialisms, Theory and Research Profile/SPECIALISMS.md` |
 | See which papers come next | `H Writing Instructions/PAPERS.md` and `H Writing Instructions/TODO.md` |
@@ -24,7 +24,8 @@ Since 29 October 2026 the repo combines the former planning repo (`sjstretton/Pl
 
 | Folder | Contents |
 |---|---|
-| `1 Morning Briefing` | The morning briefing (start here), next steps, day and week plan, the master task file, the printable tracker and the weekly update |
+| `0A Daily and Weekly Task Lists` | The morning briefing (start here), next steps, day and week plan, the master task file, the printable tracker and the weekly update |
+| `0B Quick Wins and Next Milestone` | The quick win list, the latest next-milestone plan (2A), the list of next milestones Stephen has chosen, and a link to the master Google Sheet; the other milestone plans are in `Other Milestones/` |
 | `4 Planning Instructions` | `README.md`, `AGENTS.md`, `NORMS.md` and `CLAUDE.md` for planning; `Scripts/` (`update.py`: sync with the Sheet, build the printable, check consistency, end of day; `make_printable.py`); `Context/` (routines, weekly log, repo directory, sync state); `CheckRepo.bat` |
 | `2 Strategic Plans` | FY27 work plan, master plan (link to the Sheet and the last Excel copy), planning templates, past years (FY24, FY26) |
 | `3 Archive` | Old versions and retired files, including printable versions |
@@ -46,6 +47,6 @@ Folders with their own `README.md` have local conventions; read it first.
 
 ## How the two parts connect
 
-- **Tasks live in planning.** Writing tasks appear in `1 Morning Briefing/5-TaskContextAndProjectPlans.md` and the Sheet's Context tab (for example T13 PhD application, T46 writing upgrade). `H Writing Instructions/TODO.md` is the detailed working list for the writing; when a writing task finishes, update both.
+- **Tasks live in planning.** Writing tasks appear in `0A Daily and Weekly Task Lists/5-TaskContextAndProjectPlans.md` and the Sheet's Context tab (for example T13 PhD application, T46 writing upgrade). `H Writing Instructions/TODO.md` is the detailed working list for the writing; when a writing task finishes, update both.
 - **Priorities are shared.** `H Writing Instructions/STRATEGY.md` and `2 Strategic Plans/Stephen_FY27_Work_Plan_v2.6_15thOct.docx` should agree; if they differ, ask Stephen.
 - **One master per item.** Planning's rule (one home for each thing, kept in step by `4 Planning Instructions/Scripts/update.py`) applies to planning files and the Sheet. Writing files are mastered in the repo, with the `.qmd` as the master for each paper.

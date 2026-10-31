@@ -1,4 +1,4 @@
-"""Build the printable tracker (0 Morning Briefing/Me-Printable-Tracker.docx) from the master lists.
+"""Build the printable tracker (0A Daily and Weekly Task Lists/Me-Printable-Tracker.docx) from the master lists.
 
 The root file never carries a version number, so links to it stay valid; a copy of each layout
 version goes to 3 Archive/Printable versions/. Normally run through Scripts/update.py build.
@@ -27,10 +27,10 @@ from docx.enum.text import WD_BREAK, WD_TAB_ALIGNMENT, WD_TAB_LEADER
 from docx.oxml import parse_xml
 from docx.shared import Pt, RGBColor, Inches
 
-ROOT = Path(__file__).resolve().parents[1]   # 1 Planning Instructions
+ROOT = Path(__file__).resolve().parents[1]   # 4 Planning Instructions
 REPO = ROOT.parent                           # combined repo root
 VERSION = "0.6"
-PLANS = REPO / "0 Morning Briefing"
+PLANS = REPO / "0A Daily and Weekly Task Lists"
 OUT = PLANS / "Me-Printable-Tracker.docx"
 ARCHIVE = REPO / "3 Archive" / "Printable versions"
 TASKS = "5-TaskContextAndProjectPlans.md"

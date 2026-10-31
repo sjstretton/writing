@@ -6,7 +6,7 @@ Instructions for AI agents, including Claude Code (`CLAUDE.md` points here), wor
 
 | Part | Folders | Read before working | What it is for |
 |---|---|---|---|
-| **Planning** | `1 Morning Briefing`, `4 Planning Instructions`, `2 Strategic Plans`, `3 Archive` | `4 Planning Instructions/AGENTS.md`, then its `NORMS.md` | Tasks for every repo, day and week plans, strategic plans, the printable tracker, and the master Google Sheet kept in step with the repo |
+| **Planning** | `0A Daily and Weekly Task Lists`, `0B Quick Wins and Next Milestone`, `4 Planning Instructions`, `2 Strategic Plans`, `3 Archive` | `4 Planning Instructions/AGENTS.md`, then its `NORMS.md` | Tasks for every repo, day and week plans, strategic plans, the printable tracker, and the master Google Sheet kept in step with the repo |
 | **Writing** | `A Specialisms, Theory and Research Profile`, `B PhD Application`, `C Policy and FInance` and `D Modelling` (the papers), `E Website`, `F Other Writing`, `G Climate Econ Course`, `H Writing Instructions` | `H Writing Instructions/AGENTS.md`, then its `NORMS.md` | Papers, briefs and decks, the website, PhD proposals, the course |
 
 `README.md` (this folder) maps the layout. Each part's `README.md` gives the detail.
@@ -26,7 +26,7 @@ Stephen is easily overwhelmed by volume, so planning output must stay short and 
 
 ## Connecting the two parts
 
-- **When you finish work in any part**, update the task in `1 Morning Briefing/5-TaskContextAndProjectPlans.md` (planning's rule). For writing work, also update `H Writing Instructions/TODO.md` and, for papers, `H Writing Instructions/PAPERS.md`.
+- **When you finish work in any part**, update the task in `0A Daily and Weekly Task Lists/5-TaskContextAndProjectPlans.md` (planning's rule). For writing work, also update `H Writing Instructions/TODO.md` and, for papers, `H Writing Instructions/PAPERS.md`.
 - **Before pushing a change to planning files**, follow the consistency procedure in `4 Planning Instructions/AGENTS.md` ("Before every push to main"), which keeps the repo and the master Google Sheet in step. A push that touches only writing files does not need it.
 - **Priorities.** `H Writing Instructions/STRATEGY.md` and the FY27 work plan in `2 Strategic Plans/` should agree. If they conflict, ask Stephen.
 
