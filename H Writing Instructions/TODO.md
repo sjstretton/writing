@@ -28,6 +28,10 @@ Details for each item: `C PhD Application/PhD-Application-Status.md`.
 
 ### Housekeeping
 
+- [ ] **Website restructure on branch `claude/focused-bell-imj7si`:** check the 1.1 web page (`E Website/_site/policy/1-carbon-pricing/OpenEconomyCarbonPricing/index.html`) and the new tabs; resolve the two `[VERIFY]` markers in the 1.1 appendix; then merge, run Compile-Website.bat and Push-Website.bat — S — 7 Nov
+- [ ] If the 1.1 web page works, add the other papers to `WEB_PAPERS` in `H Writing Instructions/Scripts/Website/site_config.py` (one line each) — A — after S approves
+- [ ] Decks to about eight slides (new norm, `NORMS.md` §8) as each is next revised — A — ongoing
+
 - [ ] Only one session syncs the master Sheet at a time (two did on 29 Oct and overwrote each other's tabs). Before any Sheet sync, check no other session is mid-sync; at the next sync, confirm Context still has T54-T62 and the Tracker still has C9_m1 — A — next sync
 
 ### Priority 3: paper upgrades
