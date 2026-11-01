@@ -28,6 +28,7 @@ On 31 Oct 2026 (later the same day) papers 1.3 and 1.4 swapped places so that th
 | | 5.2 | CPAT-AI: Rebuilding a Policy Model | 4.2 |
 | | 5.3 | Validating CPAT | 4.3 |
 | | 5.4 | Are CPAT's Price Elasticities Right? | 4.4 |
+| | 5.5 | Carbon Prices Cut Emissions: Evidence from Ten Natural Experiments (new, 1 Nov 2026) | – |
 | `6.ModularUpgrades` | 6.0 | Overview: modular upgrades to CPAT (new) | – |
 | | 6.1 | Measure Carbon Pricing by the Emissions It Cuts (Total Effective Carbon Price) | 1.7 |
 | | 6.2 | The CBAM Policy Tool | 4.5 |
