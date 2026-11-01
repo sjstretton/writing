@@ -1,0 +1,338 @@
+---
+# MASTER
+title: "Climate Fiscal Statecraft"
+subtitle: "A multidisciplinary syllabus for climate and tax policy"
+short-title: "Climate Fiscal Statecraft: Syllabus"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "November 2026"
+series: "Teaching syllabus"
+version: "0.1"
+abstract: |
+  Climate policy has been designed for a world that does not exist: one of benevolent planners, symmetric states and binding universal treaties. In the real world, states are rivals, voters punish visible costs, capital in developing countries costs two to three times what it costs in rich ones, and tax bases move when they are squeezed. This syllabus sets out a theory built for that world. Its core claim is that a less ambitious form of cooperation (narrow, self-enforcing deals among states and interest groups that each gain) will do more than ambitious universal designs that no one enforces. The course runs in seven units. It starts with the basic argument and the mismatch between legal norms and geopolitics. It then measures what is at stake (energy cost and risk exposure), sets out what the energy system needs (firm clean power and cross-sector incentives), and explains who wins and loses, now and over time, at home and abroad. Two units cover the financial machinery: how to price and allocate policy, currency and construction risk, and which products (future-flow securitization, payment guarantees, regulated asset bases) carry it. The last unit returns to tax theory: why the elasticity of a tax base decides both its revenue and its politics, and why an Olsonian state with an encompassing interest is the natural home of Pigouvian taxation.
+keywords: [climate policy, fiscal policy, political economy, international cooperation, risk allocation, tax incidence]
+jel: [H20, H23, F53, Q48, Q54, G32]
+bibliography: ClimateFiscalStatecraft-Syllabus.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+format:
+  docx: default
+---
+
+*Teaching syllabus, version 0.1, November 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Readings marked [VERIFY] need a bibliographic check before the syllabus is circulated.*
+
+# About this course {.unnumbered}
+
+**This course teaches one argument from seven angles: climate policy works when it is built for the world as it is.** Most climate economics starts from the first-best: put a uniform global price on carbon, let markets do the rest, and settle the distribution with transfers. That answer is correct and nearly useless. It assumes a global government that does not exist, voters who accept visible costs for invisible benefits, capital that costs the same everywhere and tax bases that sit still. Each unit takes one of those assumptions, shows where it fails and asks what a finance ministry or development bank can do instead.
+
+**The disciplines are chosen because each one explains a failure the others miss.** International relations explains why universal treaties stall. Energy systems engineering explains why a cheap kilowatt-hour is not the same as a reliable one. Political economy explains why good policies are reversed. Corporate finance explains why the same solar plant costs twice as much in Lagos as in Lisbon. Public finance explains why some taxes raise money for decades and others erode as they work. No single discipline can design a durable climate policy; together they can.
+
+**The course is written for practitioners and graduate students.** The reader is assumed to know basic microeconomics and public finance. Each unit opens with its core claim, then sets out the argument, the key concepts, questions for seminar discussion, core readings (about three hours of reading) and further readings for those writing on the topic. Where a paper in the author's own briefing series takes the argument further, it is listed under "In the series".
+
+| Unit | Question | Core claim | In the series |
+|---|---|---|---|
+| 1. The basic argument | Why has climate cooperation underdelivered? | Narrow, self-enforcing cooperation beats ambitious universal design | 1.1, 1.4 |
+| 2. Energy cost and risk | How exposed is each country? | Exposure has fiscal, external and household layers; no standard measure joins them | 6.5 |
+| 3. Energy policy and transition | What does the energy system need? | Firm clean power and incentives that cross sectors | 1.2, 3.2 |
+| 4. Political economy | Who wins, when, and where? | Policy lasts when it creates concentrated winners who defend it | 1.2, 2.3 |
+| 5. Risk management | Why is clean power expensive to finance? | The cost of capital is a stack of separable risks | 3.1, 3.2 |
+| 6. Financial products and techniques | Which instruments carry which risk? | Match each risk to its cheapest holder through a standard product | 3.1, 3.2 |
+| 7. The basis of taxation | Which bases should carry the fiscal load? | Tax what cannot move; use Pigouvian taxes to change behavior, not to fund the state | 1.3, 2.1 |
+
+: Table 1. The course at a glance. Series numbers refer to the author's briefing papers.
+
+**Assessment, if the course is taught for credit, is one policy memo and one research essay.** The memo (2,000 words) applies units 1 to 4 to one named country and one named instrument. The essay (6,000 words) takes one unit's open question, listed at its end, and makes progress on it.
+
+# The basic argument: a less ambitious form of cooperation {#sec-basic}
+
+**Core claim: climate cooperation has failed by aiming too high, and it will succeed by aiming lower in form and higher in effect.** The dominant design since 1992 has been universal and legal: every state at the table, obligations written in a treaty, and a single global target. The Kyoto Protocol tried binding targets and lost the largest emitters. The Paris Agreement kept everyone by making contributions voluntary, and so traded enforcement for participation. Barrett's result explains why: a self-enforcing treaty among many symmetric states can sustain a lot of cooperation only when cooperation is worth little, and when it is worth a lot the treaty can hold only a few members [@Barrett1994]. Universal ambition and real enforcement pull against each other.
+
+**The alternative is cooperation that each participant would keep even with no one watching.** That means narrower deals: clubs that admit members on terms and penalize outsiders [@Nordhaus2015], sectoral agreements in steel or shipping where a few firms and states dominate, mutual recognition of carbon prices at the border, and "experimentalist" arrangements that start small and ratchet up as members learn [@SabelVictor2022]. These are less ambitious as legal objects. They promise less, cover fewer states and bind more loosely. But because each member gains from staying, they deliver more.
+
+## Why our legal norms are wrong
+
+**Three norms of the climate regime and the trade regime make the less ambitious path harder than it should be.** The first is non-discrimination: the most-favored-nation rule of the World Trade Organization treats a tariff on carbon-intensive imports from a non-member as suspect, which blunts the main tool clubs have for keeping members in. The second is "common but differentiated responsibilities", which fixed the line between developed and developing countries in 1992 and has struggled to move since, although China is now the largest emitter and several "developing" states are richer per head than some "developed" ones. The third is the belief that legal form produces compliance.
+
+**The evidence on compliance points to incentives, not law.** Chayes and Chayes argued that states mostly comply with treaties, so the task is managing the few lapses [@ChayesChayes1993]. Downs, Rocke and Barsoom replied that high compliance mostly reflects shallow treaties, which ask states to do what they would do anyway [@DownsRockeBarsoom1996]. For climate the second reading fits better. A norm that requires every agreement to be universal and legally binding produces agreements that are either shallow or unratified. The norm to adopt instead is that cooperation should be judged by the emissions it changes, not by the number of signatures.
+
+## Climate fiscal statecraft
+
+**Climate fiscal statecraft is the use of a state's fiscal instruments to change other states' climate choices.** The term joins two traditions. "Economic statecraft" studies how states use trade, aid and finance as tools of influence [@Baldwin1985; @Hirschman1945]. Climate fiscal policy studies taxes, subsidies and public finance aimed at emissions. Put together, they show that a border carbon adjustment, a green industrial subsidy, a concessional guarantee and a recognition agreement for foreign carbon prices are all moves in the same game. The European Union's carbon border adjustment mechanism (CBAM) is the clearest case: a tax instrument whose largest effect may be to push trading partners to price their own carbon, so that the revenue stays at home [@ClausingWolfram2023].
+
+## Our theories are not matched to geopolitical realities
+
+**The standard model treats climate as a public-goods game among friendly states; the real game is played among rivals.** Since 2018 the United States, China and the European Union have each turned climate policy into industrial policy, competing for the industries of the transition rather than only cooperating to cut emissions [@AllanLewisOatley2021]. Supply chains for solar panels, batteries and critical minerals have become levers of power, the "weaponized interdependence" that Farrell and Newman describe for finance and data [@FarrellNewman2019]. Russia's 2022 invasion of Ukraine turned energy imports into a security question overnight.
+
+**Rivalry is not only a threat; it is also a motive.** States that would not cut emissions to save the climate will build clean industries to beat a rival or to stop buying gas from one. Aklin and Mildenberger argue that the binding constraint on climate policy was never free-riding abroad but distributive conflict at home [@AklinMildenberger2020]; Colgan, Green and Hale describe climate politics as a fight over which assets keep their value [@ColganGreenHale2021]. On either reading, theories built around the free-rider problem misdiagnose the obstacle, and the cure they prescribe (a binding universal treaty) targets the wrong disease.
+
+**Key concepts.** Self-enforcing agreement; climate club; most-favored-nation treatment; common but differentiated responsibilities; economic statecraft; weaponized interdependence; experimentalist governance; asset revaluation.
+
+**Questions for seminar.**
+
+1. Barrett's model implies that a large stable treaty must be shallow. What features of climate clubs, sectoral deals or border adjustments escape that result, and which do not?
+2. Is the WTO's non-discrimination principle compatible with a climate club? Draft the clause you would need.
+3. Does green industrial rivalry between the United States and China speed up or slow down global decarbonization? What evidence would settle it?
+4. Name one fiscal instrument a middle-income country could use as climate fiscal statecraft, and say whom it influences.
+
+**Core readings.**
+
+- @Barrett2003, introduction and the chapters on self-enforcing agreements.
+- @Nordhaus2015
+- @AklinMildenberger2020
+- @SabelVictor2022, opening chapters.
+- @ClausingWolfram2023
+
+**Further readings.** @Barrett1994; @Victor2011; @KeohaneVictor2011; @Hale2020; @Ostrom2010; @DownsRockeBarsoom1996; @ChayesChayes1993; @Baldwin1985; @Hirschman1945; @FarrellNewman2019; @AllanLewisOatley2021; @ColganGreenHale2021; @Rodrik2014.
+
+**In the series.** Paper 1.1 (a two-track architecture for carbon pricing in open economies) and paper 1.4 (recognizing foreign carbon prices under CBAM) develop the club and recognition designs.
+
+**Open question for research.** What is the smallest club, by share of world trade in an emissions-intensive good, that can sustain a common carbon price without a universal treaty?
+
+# Energy cost and risk {#sec-energy-risk}
+
+**Core claim: a country's stake in the energy transition is its exposure to energy prices and to energy policy, and that exposure has at least three layers that are rarely measured together.** The first layer is fiscal: revenue from fossil fuel royalties and excise, spending on energy subsidies, and the contingent liabilities of state utilities. The second is external: the fuel import bill or export earnings as a share of GDP, and the terms-of-trade swing when prices move. The third is household and firm: the share of spending that goes on energy, and how fast price changes pass through. A country can be safe on one layer and badly exposed on another. Germany in 2022 had a strong budget and a large exposure through imported gas; Nigeria earns from oil exports but spends heavily on fuel subsidies.
+
+**The macroeconomics of energy shocks is well studied; the fiscal mapping is not.** Hamilton showed that oil price shocks preceded most postwar US recessions [@Hamilton1983]. Kilian separated supply shocks from demand shocks and showed they have different effects [@Kilian2008], and Känzig used news about OPEC supply to identify their size [@Kanzig2021]. On the fiscal side, the IMF estimates explicit and implicit fossil fuel subsidies at about $7 trillion in 2022, roughly 7 percent of world GDP [@Black2023]. For fossil fuel exporters, the risk runs the other way: falling demand would strand reserves and the revenue that rests on them [@Mercure2018; @VanderPloegRezai2020; @Peszko2020].
+
+## Is there a standardized measure of exposure?
+
+**No single standard measure of energy exposure exists, and building one is a useful research task.** Agencies publish pieces of it: the International Energy Agency (IEA) tracks import dependence and supply diversity, the IMF tracks subsidies, and the World Bank tracks fossil rents as a share of GDP. Credit rating agencies fold some of this into sovereign ratings without publishing the weights. What is missing is a measure that adds the three layers in one unit, so that a finance ministry can compare its exposure with a neighbor's or track it over time.
+
+**A candidate measure is the fiscal and external cost of a standard shock.** Fix a shock (say, a 50 percent rise in oil and gas prices for one year, or a $50 per ton carbon price abroad) and compute its first-round effect on the budget balance, the current account and household real income, each as a share of GDP. The three numbers form an exposure profile; their weighted sum is an index. The method mirrors the stress tests that central banks run on banks. Its weakness is that first-round effects ignore behavior, so the measure overstates exposure for countries that can switch fuels quickly. Its strength is that it can be computed from public data for most countries.
+
+**Key concepts.** Fiscal, external and household exposure; pass-through; supply versus demand shocks; terms-of-trade shock; fossil fuel subsidy (explicit and implicit); stranded assets; stress test.
+
+**Questions for seminar.**
+
+1. Which of the three layers of exposure matters most for a small oil importer with a fixed exchange rate? For a large gas exporter?
+2. Is an implicit subsidy (an unpriced externality) a fiscal cost? Defend your answer to a finance minister.
+3. Propose weights for a single exposure index. What would make your weights wrong?
+4. How should a sovereign rating agency treat transition risk for a fossil fuel exporter?
+
+**Core readings.**
+
+- @Kilian2008
+- @Black2023
+- @Peszko2020, overview.
+- @Mercure2018
+
+**Further readings.** @Hamilton1983; @Hamilton2009; @Kanzig2021; @VanderPloegRezai2020; @Manley2017; @Bachmann2022; @IEA2024WEO.
+
+**In the series.** Paper 6.5 (the macro-fiscal-energy scenario tool) is a first attempt to compute the exposure profile across countries.
+
+**Open question for research.** Build the exposure index for twenty countries and test whether it predicts sovereign spreads after the 2022 energy shock.
+
+# Energy policy and transition {#sec-transition}
+
+**Core claim: the transition needs two things that carbon prices alone do not supply: clean power that is always on, and incentives that cross the boundaries between sectors.** A carbon price signals the cost of emissions within each market. It does not, by itself, build the firm capacity that keeps the lights on when the sun sets, and it does not connect the electricity sector to the transport, heat and industrial sectors whose decarbonization depends on cheap clean power.
+
+## Always-on renewables
+
+**A cheap kilowatt-hour from a solar panel is not the same product as a kilowatt-hour on demand.** The value of variable power falls as its share grows, because it all arrives at the same hours and pushes prices down when it does [@Hirth2013]. Comparisons of levelized cost therefore flatter variable sources against dispatchable ones [@Joskow2011]. Modeling of deep decarbonization finds that systems with some firm low-carbon capacity, such as geothermal, hydro, nuclear or long-duration storage, reach zero emissions at much lower cost than systems built on wind and solar alone [@Sepulveda2018].
+
+**"Always-on renewables" is the policy target that follows: clean supply that matches demand in every hour, not just on average over the year.** Falling battery costs have brought this within reach in sunny places: solar paired with enough storage can now supply a constant load around the clock at costs that compete with new fossil plants in some markets [@Ember2025]. Hourly-matched procurement, sometimes called 24/7 carbon-free energy, rewards the firm resources that annual matching ignores [@RiepinBrown2024]. Technology costs keep falling faster than most forecasts assumed, which argues for policies that buy capability rather than a fixed technology mix [@Way2022].
+
+## Cross-sectoral incentives
+
+**The cheapest emissions cuts often sit in one sector while the enabling investment sits in another.** An electric car cuts transport emissions only if the grid is clean; a heat pump saves money only if electricity is cheap relative to gas; green steel depends on clean hydrogen, which depends on cheap power. Policies set sector by sector miss these links. Sharpe and Lenton describe how progress in one sector can tip the next, as cheaper batteries in cars make grid storage cheaper [@SharpeLenton2021]. Induced innovation and learning by doing mean that early deployment lowers costs for everyone who follows [@Acemoglu2012; @Grubb2021].
+
+**Policy should therefore be sequenced and connected, not only priced.** Pahle and colleagues show how early policies create the constituencies and cost declines that make later, tougher policies possible [@Pahle2018; @Meckling2017]. Feebates (fees on high emitters that fund rebates to low emitters within a sector) and tradable performance standards shift incentives without large net costs to the sector, which makes them durable [@FischerNewell2008; @Durrmeyer2022]. Rosenbloom and coauthors argue that transition policy must actively build new systems rather than only price the old one [@Rosenbloom2020].
+
+**Key concepts.** Variable and firm capacity; value deflation; levelized cost versus system cost; hourly matching; learning curves; directed technical change; positive tipping points; policy sequencing; feebates; tradable performance standards.
+
+**Questions for seminar.**
+
+1. Why does the market value of solar power fall as its share rises? What does that imply for a feed-in tariff set at levelized cost?
+2. Should a developing country target annual or hourly matching of clean supply? What does each cost?
+3. Design a feebate that links two sectors (for example, power and transport). Who pays, who gains and what keeps it revenue-neutral?
+4. When is sequencing a strategy, and when is it an excuse for delay?
+
+**Core readings.**
+
+- @Sepulveda2018
+- @Hirth2013
+- @Pahle2018
+- @SharpeLenton2021
+- @FischerNewell2008
+
+**Further readings.** @Joskow2011; @Way2022; @RiepinBrown2024; @Ember2025; @Ziegler2019; @Acemoglu2012; @Grubb2021; @Meckling2017; @Rosenbloom2020; @Durrmeyer2022; @GrubbHourcadeNeuhoff2014.
+
+**In the series.** Paper 1.2 (feebates) develops the sector-neutral rebate design; paper 3.2 (clean power asset classes) addresses the financing of firm capacity.
+
+**Open question for research.** What carbon-free share of hourly demand minimizes system cost in a sunny middle-income country at current battery prices, and how fast does it rise as prices fall?
+
+# Political economy {#sec-political-economy}
+
+**Core claim: a climate policy survives when it creates winners who are concentrated, organized and present before the losers mobilize, and it fails when it does the reverse.** Olson showed that small groups with large stakes organize more easily than large groups with small stakes [@Olson1965]. Wilson turned this into a matrix: policies with concentrated costs and diffuse benefits, which is the shape of a carbon tax, face organized opposition and weak support [@Wilson1980]. The political economy of climate policy is the art of reshaping that matrix. It works along three dimensions: internal (who wins and loses at home), time (when they win and lose) and external (which interests abroad line up with which interests at home).
+
+## Internal: concentrated winners
+
+**The first task is to make the winners as visible and organized as the losers.** A carbon tax with revenue returned through general budget spending creates a few angry losers and millions of mildly better-off winners who never notice. A feebate, a renewable auction or a green industrial subsidy creates firms whose revenue depends on the policy and who will lobby to keep it [@Meckling2015; @BreetzMildenbergerStokes2018]. Stokes shows how US state clean-energy policies were weakened once incumbent utilities organized, and strengthened where clean-energy firms grew fast enough to fight back [@Stokes2020]. Mildenberger shows how carbon-intensive interests captured policy design in both left and right parties [@Mildenberger2020]. Visible dividends can help with public acceptance [@Klenert2018; @Carattini2018].
+
+## Time: the forgotten dimension
+
+**Climate policy asks for costs now and gives benefits later, so its political economy is mostly a problem of time.** Three mechanisms matter. The first is credibility: a government that cannot commit to future carbon prices will see firms delay investment, because the policy may be reversed [@KydlandPrescott1977; @HelmHepburnMash2003; @Brunner2012]. The second is lock-in: power plants, steel mills and buildings last forty years or more, so each year of delay commits decades of emissions. The third is the ratchet: early policies create the firms and the cost declines that make later policies cheaper and easier to pass, so the order of policies matters as much as their level [@Pahle2018]. Patashnik shows that reforms last when they destroy the coalitions that supported the old policy and create new ones [@Patashnik2008]; Jacobs shows when governments choose long-term investment over short-term consumption [@Jacobs2011].
+
+**The practical upshot is that durability is a design variable, like the tax rate.** A policy can be made harder to reverse by locking it into contracts (a power purchase agreement), by creating a constituency (rebate recipients), or by placing it in an independent body (a carbon price corridor set by a committee). Each choice has a cost in flexibility.
+
+## External: sub-coalitions of interest
+
+**Across borders, the relevant actors are not states but sub-coalitions of firms, sectors and ministries that gain from the same policy.** Kennard shows that firms support climate regulation when it hurts their rivals more than it hurts them, including foreign rivals [@Kennard2020]. Genovese shows that a country's position in climate negotiations tracks the interests of its polluting and trade-exposed sectors [@Genovese2019]. A low-emission steel producer in one country and a CBAM-minded ministry in another share an interest that their governments may not. Climate fiscal statecraft works by finding these sub-coalitions and giving them a deal that binds them together.
+
+## Win-win?
+
+**Some climate policies really are win-win, but most win-wins need a transfer to become politically real.** Porter and van der Linde argued that well-designed environmental regulation spurs innovation that pays for itself [@PorterVanderLinde1995]; Palmer, Oates and Portney replied that free lunches are rare and that most regulation has net costs to the regulated [@PalmerOatesPortney1995]. Both are right in part. Genuine win-wins exist: removing fossil fuel subsidies saves budget money, cheap solar beats imported diesel, and lower fuel imports improve energy security. But even a win-win in aggregate has losers, and if those losers are concentrated and the winners are not, the win-win will not pass. The question to ask is not "Is it win-win?" but "Who loses, and what do they get?"
+
+**Key concepts.** Collective action; concentrated and diffuse costs and benefits; regulatory capture; time inconsistency; credible commitment; lock-in; policy ratchet; policy feedback; sub-coalitions; the Porter hypothesis.
+
+**Questions for seminar.**
+
+1. Draw Wilson's matrix for a carbon tax, a feebate and a renewable auction. Which cell does each sit in, and how could design move it?
+2. Why did the EU Emissions Trading System survive a decade of low prices [@BayerAklin2020]? What does that say about durability versus stringency?
+3. Name a sub-coalition that crosses a border and would gain from a carbon club in steel. What would hold it together?
+4. Is fossil fuel subsidy reform a win-win? For whom, and when?
+
+**Core readings.**
+
+- @Olson1965, chapters 1 and 2.
+- @Meckling2015
+- @AklinMildenberger2020 (if not read in unit 1) or @Stokes2020, introduction.
+- @Patashnik2008, introduction.
+- @Kennard2020
+- @PorterVanderLinde1995 and @PalmerOatesPortney1995, read together.
+
+**Further readings.** @Wilson1980; @Stigler1971; @Olson1982; @BreetzMildenbergerStokes2018; @Mildenberger2020; @Rabe2018; @Klenert2018; @Carattini2018; @KydlandPrescott1977; @HelmHepburnMash2003; @Brunner2012; @Jacobs2011; @Levin2012; @Genovese2019; @BayerAklin2020.
+
+**In the series.** Paper 1.2 (feebates) applies the concentrated-winners logic to instrument design; note 2.3 (Olsonian political economy) sets out the phased sequence of reform.
+
+**Open question for research.** Can the durability of a climate policy be predicted from the size and concentration of the constituency it creates in its first three years?
+
+# Risk management {#sec-risk}
+
+**Core claim: clean power in developing countries is expensive to finance because investors price risks the project cannot control, and each risk has a different cheapest holder.** A solar plant has no fuel bill, so the price of its power is mostly the price of the capital that built it. In a stylized plant, raising the cost of capital from 4 to 12 percent raises the levelized cost of power by about 80 percent (series paper 3.1). Developing-country projects routinely face rates near the top of that range [@Steffen2020; @Ameli2021; @Calcaterra2024]. Engineering does not explain the gap; risk does [@Schmidt2014]. The cost of capital is best seen as a stack of separable risks. This unit covers three of them; unit 6 covers the products that carry them.
+
+## Policy risk
+
+**Policy risk is the chance that the state changes the rules after the investor has committed.** Tariffs are cut, contracts renegotiated, taxes added or permits withdrawn. Because the investment is sunk and the plant cannot move, the investor is exposed to "obsolescing bargains". Real-options theory shows that uncertainty about future policy raises the return investors demand and delays investment [@DixitPindyck1994]; Fabrizio finds that US states with less stable renewable policy attracted less investment [@Fabrizio2013]. Policy risk cannot be transferred away from the state that creates it. It can only be priced, reduced by credible commitment (unit 4) or backed by a third party with leverage over the state, such as a multilateral guarantor.
+
+## Currency risk
+
+**Currency risk arises when a project earns in local currency but borrows in dollars or euros.** Eichengreen and Hausmann called the inability of most developing countries to borrow abroad in their own currency "original sin" [@EichengreenHausmann1999; @EichengreenHausmannPanizza2007]. A devaluation then raises debt service just as local revenue loses value. Hedging markets for most developing-country currencies are thin and expensive over the twenty-year horizon of a power project [@IEA2021Financing]. The choices are to pass the risk to consumers through dollar-indexed tariffs (which shifts it to the utility and often the state), to hedge it, or to build local-currency finance from domestic savers. Each has a cost, and the cheapest holder differs by country.
+
+## Construction risk
+
+**Construction risk is the chance that a project is late, over budget or never finished, and it is largest for big, novel projects.** Flyvbjerg's work on megaprojects finds that most large infrastructure projects run over budget and over time, and that forecasts are systematically optimistic [@Flyvbjerg2003; @Flyvbjerg2014]. In electricity, overruns are largest for nuclear and hydro and smallest for solar and wind, which are modular and quick to build [@Sovacool2014; @Ansar2014]. Construction risk is best held by those who can supervise it: contractors, banks and development finance institutions. Once a plant is built and running, its risk falls sharply, and it can be refinanced at much lower cost. Separating the construction phase from the operating phase is the key move.
+
+**Key concepts.** Cost of capital; weighted average cost of capital; risk premium; obsolescing bargain; real options; original sin; currency mismatch; optimism bias; reference-class forecasting; cheapest risk holder.
+
+**Questions for seminar.**
+
+1. Decompose the cost of capital for a solar project in a country you know into its risk components. Which is largest?
+2. Who should bear currency risk in a power purchase agreement: the investor, the utility, consumers or the state? Argue for one.
+3. Why are solar and wind projects less prone to cost overruns than nuclear or hydro? What does that imply for how each should be financed?
+4. Can policy risk ever be insured? By whom, and at what price?
+
+**Core readings.**
+
+- @Schmidt2014
+- @Steffen2020
+- @Ameli2021
+- @EichengreenHausmannPanizza2007
+- @Flyvbjerg2014
+
+**Further readings.** @Egli2018; @Calcaterra2024; @DixitPindyck1994; @Fabrizio2013; @EichengreenHausmann1999; @IEA2021Financing; @Waissbein2013; @Flyvbjerg2003; @Sovacool2014; @Ansar2014.
+
+**In the series.** Paper 3.1 (climate finance intermediation for clean power) quantifies the payment risk premium; paper 3.2 (clean power asset classes) separates construction from operating risk.
+
+**Open question for research.** How much of the cost-of-capital gap between developing and advanced economies for solar power is policy risk, currency risk and construction risk respectively?
+
+# Financial products and techniques {#sec-finance}
+
+**Core claim: once the risks are separated, each can be moved to its cheapest holder through a standard financial product, and standardization is what makes the market deep.** Unit 5 showed that the cost of capital is a stack of risks. This unit covers three families of instruments that move them: securitization of future cash flows, guarantees of payment through an intermediary, and the techniques of public-private partnership, including the regulated asset base. Each has a long record outside the climate field, which is an advantage: investors already understand them.
+
+## Future cash flow securitization
+
+**Securitization turns a stream of future payments into a bond that can be sold today.** In a future-flow securitization, a borrower sells its rights to future receivables (export earnings, remittances, credit card payments) to a special purpose vehicle offshore, which issues bonds backed by them. Because the cash is captured before it reaches the home country, the bonds can be rated above the sovereign [@KetkarRatha2001; @KetkarRatha2009]. Applied to clean power, the same technique can pool the contracted revenues of many operating plants into a bond that long-term investors will buy. It can also refinance the remaining value of a coal plant retired early, using a ratepayer charge to service bonds at a far lower cost of capital than the plant's owners face [@GortonSouleles2007]. The risks are familiar from 2008: complexity, opacity and the temptation to tranche away risk that is really still there.
+
+## Intermediary and payment guarantees
+
+**A payment guarantee removes the risk that the buyer of power will not pay, and an intermediary makes the guarantee cheap.** In most developing countries the buyer is a state-owned distribution company in weak financial health. Investors price the chance of late or missed payment into every project that sells to it. A guarantee of the power contract, rather than of the debt, covers the payment directly. An intermediary facility that stands between the utility and many generators can pay generators on time, wait for arrears and recover them, and spread the risk across many contracts [@MatsukawaHabeck2007]. Irwin shows how governments should value and account for the guarantees they give, so that a cheap-looking promise does not hide a large fiscal liability [@Irwin2007]. The state's exposure does not disappear; it becomes contingent, contracted and visible.
+
+## Public-private partnership techniques, including the regulated asset base
+
+**Public-private partnerships (PPPs) are contracts that allocate the risks of an infrastructure project between the state and a private party, and they work only when each risk goes to the party best able to manage it.** Engel, Fischer and Galetovic set out when PPPs add value and when they simply move spending off the budget [@EngelFischerGaletovic2014]. Hart's incomplete-contracts analysis explains why bundling construction with operation helps when quality can be specified and hurts when it cannot [@Hart2003]. The practical risks are well catalogued [@GrimseyLewis2002; @WorldBankPPP2017].
+
+**The regulated asset base (RAB) model lets investors earn a regulated return on capital from the start of construction, paid by consumers.** It is the standard model for UK water and energy networks [@Helm2009]. It was used to finance London's Thames Tideway Tunnel and, under the Nuclear Energy (Financing) Act 2022, the Sizewell C nuclear plant [@UKNuclearFinancingAct2022]. The RAB lowers the cost of capital because consumers, not investors, bear much of the construction risk, and investors are paid during construction rather than only after it. That is also its weakness: consumers pay for overruns, so the model needs a strong regulator and a cap on the consumer's exposure. For developing countries the RAB is worth studying because it shows how to finance long, risky construction at a low cost of capital when the state cannot borrow cheaply itself.
+
+**Key concepts.** Special purpose vehicle; future-flow securitization; true sale; tranching; ratepayer-backed bond; payment guarantee; liquidity facility; contingent liability; bundling; value for money; regulated asset base; allowed return.
+
+**Questions for seminar.**
+
+1. Why can a future-flow bond be rated above the sovereign? Under what conditions does that break down?
+2. Compare a guarantee of debt with a guarantee of payment under a power purchase agreement. Which is cheaper for the state, and why?
+3. When does a PPP create value and when does it just hide public debt?
+4. Would a RAB model work for a large hydro project in a country with a weak regulator? What would you add?
+
+**Core readings.**
+
+- @KetkarRatha2001
+- @Irwin2007, opening chapters.
+- @MatsukawaHabeck2007
+- @EngelFischerGaletovic2014, opening chapters.
+- @Helm2009
+
+**Further readings.** @KetkarRatha2009; @GortonSouleles2007; @Hart2003; @GrimseyLewis2002; @WorldBankPPP2017; @UKNuclearFinancingAct2022.
+
+**In the series.** Paper 3.1 sets out the payment intermediary facility and its guarantee waterfall; paper 3.2 sets out construction loans and the refinancing of pooled operating plants through synthetic sovereign bonds.
+
+**Open question for research.** Under what governance conditions can a developing country's power sector adopt a RAB model without simply shifting construction risk onto poor consumers?
+
+# The basis of taxation and why it matters {#sec-tax-basis}
+
+**Core claim: the elasticity of a tax base decides both how much revenue it raises and how hard it is to defend, so the choice of base is the most important decision in tax design.** A base is elastic when it shrinks as the tax rises: firms move, workers work less, profits are shifted abroad. A base is inelastic when it stays put: land, natural resource rents and location-specific rents. Ramsey showed that, for a given revenue, taxes should fall most heavily on the least elastic goods [@Ramsey1927; @DiamondMirrlees1971]. Henry George made the same argument for land a half-century earlier [@George1879]. The modern case for taxing land and rents is set out in the Mirrlees Review [@Mirrlees2011].
+
+## Inelastic and elastic bases
+
+**Inelastic bases raise money cheaply; elastic bases invite competition among states.** Capital and profit are mobile, so states compete to tax them less, and tax rates fall [@ZodrowMieszkowski1986; @KeenKonrad2013]. The answer is either coordination, which is hard (unit 1), or a shift to bases that cannot move. A destination-based tax on cash flow, which taxes profit where goods are sold rather than where they are made, removes the incentive to relocate [@Devereux2021]. Land does not move at all. Fossil fuel rents in the ground do not move either, which is why supply-side climate policy, which taxes or buys up the deposits themselves, can work when demand-side taxes leak [@Sinn2008; @Harstad2012].
+
+**Pigouvian taxes are elastic by design.** A tax on carbon is meant to shrink its own base, so a state that relies on carbon revenue relies on a source that its policy is designed to destroy [@Pigou1920]. The revenue is real for a decade or two and then falls. The lesson is not to avoid carbon taxes but to treat their revenue as transitional, use it for transition costs (compensation, infrastructure, retiring old plants) and build the permanent fiscal base elsewhere. The literature on the "double dividend" asks whether carbon revenue can replace distorting taxes for free; the answer is usually no, because the carbon tax interacts with the existing tax system [@BovenbergDeMooij1994; @Goulder1995].
+
+## The Olsonian state and Pigouvian taxation
+
+**Olson's theory of the state explains which governments will tax wisely, and Pigou's theory of externalities explains what they should tax.** Olson argued that a ruler who expects to stay in power has an "encompassing interest" in the economy's output, and so taxes it at a moderate rate and provides public goods, like a stationary bandit rather than a roving one [@Olson1993; @McGuireOlson1996]. The broader and longer-lived the interest of whoever controls the state, the more it internalizes the costs of its own taxes. Levi and Besley and Persson add that states build the capacity to tax when they face common threats and expect to last [@Levi1988; @BesleyPersson2011; @BesleyPersson2014].
+
+**Put the two together and the conclusion follows: an encompassing state is the natural home of Pigouvian taxation.** A Pigouvian tax corrects an externality, a cost that one party imposes on others. A state with an encompassing interest internalizes externalities across its whole territory and over time, because it bears their cost. A state captured by narrow interests does the reverse: it exempts the polluters who fund it and taxes the diffuse majority. The fiscal design that follows has three parts. Fund the state from inelastic bases (land, rents, destination consumption) that do not erode and that narrow interests find hard to escape. Use Pigouvian taxes to change behavior, not to fund spending. And widen the coalition that controls fiscal policy, so the state's interest becomes more encompassing, which is the Olsonian point turned constructive (unit 4). Internationally, the same logic says that cooperation is easiest on inelastic bases, because there is nothing to compete for.
+
+**Key concepts.** Tax elasticity; Ramsey rule; production efficiency; land value tax; economic rent; tax competition; destination basis; supply-side climate policy; Pigouvian tax; double dividend; tax interaction effect; stationary and roving bandit; encompassing interest; fiscal capacity.
+
+**Questions for seminar.**
+
+1. Rank five tax bases (land, labor income, corporate profit, carbon, consumption) by elasticity. How does the ranking change between a small open economy and a large one?
+2. Should a finance ministry plan on carbon revenue lasting twenty years? What should it do with the revenue instead?
+3. Why does destination-based taxation reduce tax competition? What does it do to the incentive for international cooperation?
+4. Is a democracy more or less "encompassing" than an autocracy, in Olson's sense? What does your answer imply for carbon taxation?
+
+**Core readings.**
+
+- @Ramsey1927 (with a modern summary, @Mirrlees2011, chapters 1 and 16).
+- @Olson1993
+- @BesleyPersson2014
+- @Sandmo1975
+- @Harstad2012
+
+**Further readings.** @DiamondMirrlees1971; @George1879; @ZodrowMieszkowski1986; @KeenKonrad2013; @Devereux2021; @Sinn2008; @Pigou1920; @Buchanan1969; @BovenbergDeMooij1994; @Goulder1995; @McGuireOlson1996; @Levi1988; @BesleyPersson2011.
+
+**In the series.** Paper 1.3 (converting VAT into a destination carbon tax) and paper 2.1 (*Taxing Rent, Not Effort*) apply the base-elasticity argument.
+
+**Open question for research.** Can the share of revenue a country raises from inelastic bases be used as a measure of how "encompassing" its state is, and does it predict the durability of its climate policy?
+
+# Synthesis: from theory to a finance ministry's desk {.unnumbered}
+
+**The seven units add up to one practical rule: design each climate policy so that the parties who must keep it, at home and abroad, are better off keeping it.** Unit 1 says cooperation should be narrow and self-enforcing. Unit 2 says measure who is exposed before choosing an instrument. Unit 3 says buy firm clean power and link the sectors. Unit 4 says build concentrated winners, think about time and find allies abroad. Units 5 and 6 say break the cost of capital into its risks and move each to its cheapest holder through a standard product. Unit 7 says fund the state from bases that do not move and use Pigouvian taxes to steer, not to pay the bills.
+
+**The capstone exercise applies the rule to one case.** Choose one country and one sector (power in a middle-income importer, steel in an exporter, or fuel subsidies in an oil producer). Write a 3,000-word plan that names the instrument, the coalition that will defend it, the risks and who holds them, the financing product and the tax base that will carry the fiscal cost. Then name the most likely way it fails.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
