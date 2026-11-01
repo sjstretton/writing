@@ -13,7 +13,7 @@ copies the extension there, renders, and removes the copy. The masters' own YAML
 What it renders (everything the website offers for download; the site links PDFs only):
     each paper's master <PaperName>.qmd       ->  <PaperName>.pdf        (beside the master)
     1.Presentation/Brief-<PaperName>.qmd      ->  Brief-<PaperName>.pdf
-    each section overview <N>.0.Overview/*.qmd and each book in publish_series.BOOKS, the same way
+    each section overview <N>.0.Overview/*.qmd, each book and each earlier paper in publish_series, the same way
     each deck 1.Presentation/Slides-*.pptx    ->  Slides-*.pdf           (with LibreOffice, if installed;
                                                   otherwise save the deck as PDF from PowerPoint)
 With --docx it also writes the .docx beside each .qmd (overwriting the Word file, which is made from the master).
@@ -29,7 +29,7 @@ import subprocess
 import sys
 from pathlib import Path
 from site_config import REPO, SITE, PARTS, paper_name, master_qmd, paper_folders, section_folder
-from publish_series import BOOKS
+from publish_series import BOOKS, EARLIER_PAPERS
 
 EXT = REPO / "H Writing Instructions" / "Writing Standards" / "templates" / "_extensions" / "working-paper"
 CSL = SITE / "chicago-author-date.csl"   # local copy, so rendering needs no internet
@@ -129,7 +129,7 @@ def everything():
                 q, d = paper_targets(folder)
                 qmds += q
                 decks += d
-        for folder_name, fname, pub in BOOKS:
+        for folder_name, fname, pub in BOOKS + EARLIER_PAPERS:
             hits = [p for p in part["root"].rglob(folder_name) if p.is_dir() and "9.Archive" not in p.parts]
             if hits and (hits[0] / fname).with_suffix(".qmd").exists():
                 qmds.append((hits[0] / fname).with_suffix(".qmd"))

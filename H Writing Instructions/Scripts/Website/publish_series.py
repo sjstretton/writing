@@ -8,7 +8,7 @@ Stable names, one per paper and form, overwritten on each run:
     Brief-<PaperName>.docx     the Climate Fiscal Policy Brief, where there is one
     Slides-<PaperName>.pptx    the deck, where there is one
     Overview<Section>.docx     each section's overview, and Slides-<Section>.pptx its theme deck
-    books (BOOKS below)
+    books (BOOKS below) and earlier papers (EARLIER_PAPERS)
 Each file's PDF (made beside it by render_pdfs.py) is archived with it, under the same name with .pdf; the
 site links only the PDFs.
 
@@ -26,6 +26,10 @@ BOOKS = [
     ("3.3.TimeAndChance", "TimeAndChance.docx", "TimeAndChance.docx"),
     ("8.5.2.CarbonPricingRightPolicyWrongTime", "CarbonPricingRightPolicyWrongTime.docx", "CarbonPricingRightPolicyWrongTime.docx"),
     ("8.5.3.Plucked", "Plucked.docx", "Plucked.docx"),
+]
+
+# earlier papers listed at the end of a section (site_config.SECTION_EXTRAS), not part of the numbered series
+EARLIER_PAPERS = [
     ("SLIDIs", "SLIDIs.docx", "SLIDIs.docx"),
 ]
 
@@ -60,7 +64,7 @@ def main():
                         copy(folder / "1.Presentation" / f, ARCHIVE / f)
                     else:
                         print(f"none      {f}")
-        for folder_name, fname, pub in BOOKS:
+        for folder_name, fname, pub in BOOKS + EARLIER_PAPERS:
             hits = [p for p in part["root"].rglob(folder_name) if p.is_dir()]
             if hits:
                 copy(hits[0] / fname, ARCHIVE / pub)
