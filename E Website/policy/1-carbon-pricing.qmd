@@ -6,7 +6,7 @@ aliases:
 
 Carbon prices stay low in open economies because one instrument is asked to do two jobs: to make producers cut emissions per unit of output, and to make buyers pay for the carbon in what they consume. A tax on domestic production charges exporters and spares imports, so governments exempt industry and hold the rate down. The papers in this section give each job its own instrument. A revenue-neutral feebate prices production intensity at the full rate at the margin, at no cost to the treasury. A carbon component of VAT and a forward obligation on fuel suppliers price consumption, imports included. Recognition at the border should credit a trading partner's price signal, measured by country and sector, and the Total Effective Carbon Price puts every instrument on one scale. In hot-rolled steel at \$80 per tonne of CO₂, a feebate raises producer prices about a third as much as a tax; payments above half the feebate rate make adoption a gain; and once importers charge by country and sector, each exporter does best with a feebate at the importer's charge.
 
-[Section overview (docx) →](../papers/OverviewClimateAndFiscalPolicy.docx) · [Series slides (pptx) →](../papers/Slides-ClimateAndFiscalPolicy.pptx)
+[Section overview (pdf) →](../papers/OverviewClimateAndFiscalPolicy.pdf) · [Series slides (pdf) →](../papers/Slides-ClimateAndFiscalPolicy.pdf)
 
 ## 1.1 Price Production and Consumption Separately {#paper-1-1}
 
@@ -14,7 +14,7 @@ Carbon prices stay low in open economies because one instrument is asked to do t
 
 Carbon prices stay low in open economies because one instrument does two jobs: it pushes producers to cut emissions per unit of output, and it makes buyers pay for the carbon they use. The second job hurts exporters and spares imports. This brief gives each job its own instrument. A revenue-neutral feebate prices production at no cost to the treasury and with a small price effect. A carbon component of VAT, and forward obligations on fuel suppliers, price consumption, imports included. Climate finance above half the feebate rate makes adoption a gain, and border charges set by country turn leakage into a race to the top.
 
-[Policy brief →](1-carbon-pricing/OpenEconomyCarbonPricing/index.qmd) · [Working paper →](1-carbon-pricing/OpenEconomyCarbonPricing/working-paper.qmd) · [Slides (pptx) →](../papers/Slides-OpenEconomyCarbonPricing.pptx) · [Policy brief (pdf) →](../papers/Brief-OpenEconomyCarbonPricing.pdf) · [Working paper (pdf) →](../papers/OpenEconomyCarbonPricing.pdf)
+[Policy brief →](1-carbon-pricing/OpenEconomyCarbonPricing/index.qmd) · [Working paper →](1-carbon-pricing/OpenEconomyCarbonPricing/working-paper.qmd) · [Slides (pdf) →](../papers/Slides-OpenEconomyCarbonPricing.pdf) · [Policy brief (pdf) →](../papers/Brief-OpenEconomyCarbonPricing.pdf) · [Working paper (pdf) →](../papers/OpenEconomyCarbonPricing.pdf)
 
 ## 1.2 Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill {#paper-1-2}
 
@@ -22,7 +22,7 @@ Carbon prices stay low in open economies because one instrument does two jobs: i
 
 Carbon taxes stall where coal dominates power or industry competes abroad, because they charge producers for every tonne they still emit. A revenue-neutral feebate charges producers whose emissions per unit of output are above their sector's average and rebates those below it. It gives the same incentive to switch to cleaner plants as a tax at the same rate, at no cost to the treasury. At \$50 per tonne in India, Indonesia and South Africa, it raises regulated power tariffs by \$0–4 per megawatt-hour, against \$33–40 for a tax. In a wholesale market where coal sets the price the rise is \$7–18. The benchmark's design decides whether it works.
 
-[Policy brief →](1-carbon-pricing/FeebatesAndOutputBasedRebating/index.qmd) · [Working paper →](1-carbon-pricing/FeebatesAndOutputBasedRebating/working-paper.qmd) · [Slides (pptx) →](../papers/Slides-FeebatesAndOutputBasedRebating.pptx) · [Policy brief (docx) →](../papers/Brief-FeebatesAndOutputBasedRebating.docx) · [Working paper (docx) →](../papers/FeebatesAndOutputBasedRebating.docx)
+[Policy brief →](1-carbon-pricing/FeebatesAndOutputBasedRebating/index.qmd) · [Working paper →](1-carbon-pricing/FeebatesAndOutputBasedRebating/working-paper.qmd) · [Slides (pdf) →](../papers/Slides-FeebatesAndOutputBasedRebating.pdf) · [Policy brief (pdf) →](../papers/Brief-FeebatesAndOutputBasedRebating.pdf) · [Working paper (pdf) →](../papers/FeebatesAndOutputBasedRebating.pdf)
 
 ## 1.3 Converting a VAT into a Destination Carbon Tax {#paper-1-3}
 
@@ -30,7 +30,7 @@ Carbon taxes stall where coal dominates power or industry competes abroad, becau
 
 The EU prices the carbon its factories and power plants emit but not the carbon in most of what Europeans buy, 40 percent of which is emitted abroad. This brief proposes pricing consumption instead, through institutions the EU already has. A carbon component inside VAT charges every good for its embodied carbon, imports included and exports exempt, while the value part of VAT falls by a rule that keeps revenue unchanged. A legal obligation fixed a decade ahead makes the few suppliers of fuel for homes and vehicles pay for the carbon they sell. The obligation can pass by qualified majority now; the VAT component needs unanimity.
 
-[Policy brief →](1-carbon-pricing/CarbonConsumptionTax/index.qmd) · [Working paper →](1-carbon-pricing/CarbonConsumptionTax/working-paper.qmd) · [Slides (pptx) →](../papers/Slides-CarbonConsumptionTax.pptx) · [Policy brief (docx) →](../papers/Brief-CarbonConsumptionTax.docx) · [Working paper (docx) →](../papers/CarbonConsumptionTax.docx)
+[Policy brief →](1-carbon-pricing/CarbonConsumptionTax/index.qmd) · [Working paper →](1-carbon-pricing/CarbonConsumptionTax/working-paper.qmd) · [Slides (pdf) →](../papers/Slides-CarbonConsumptionTax.pdf) · [Policy brief (pdf) →](../papers/Brief-CarbonConsumptionTax.pdf) · [Working paper (pdf) →](../papers/CarbonConsumptionTax.pdf)
 
 ## 1.4 Credit the Price Signal, Not the Payment {#paper-1-4}
 
@@ -38,4 +38,12 @@ The EU prices the carbon its factories and power plants emit but not the carbon 
 
 The EU's Carbon Border Adjustment Mechanism charges imports for their embodied carbon, measured plant by plant, and credits only carbon prices effectively paid abroad. Both rules work against its aim of encouraging trading partners to decarbonize. Exporters can send scrap-based steel to Europe and blast-furnace steel elsewhere, saving €160–310 per tonne for Türkiye, China and India with no fall in emissions. A revenue-neutral feebate, which gives every producer the full carbon price at the margin, earns no credit. Measuring carbon by country and sector, and crediting the country's price signal, fixes both. Recognition should rise as free allocation is phased out.
 
-[Policy brief →](1-carbon-pricing/IronSteelCBAM/index.qmd) · [Working paper →](1-carbon-pricing/IronSteelCBAM/working-paper.qmd) · [Slides (pptx) →](../papers/Slides-IronSteelCBAM.pptx) · [Policy brief (docx) →](../papers/Brief-IronSteelCBAM.docx) · [Working paper (docx) →](../papers/IronSteelCBAM.docx)
+[Policy brief →](1-carbon-pricing/IronSteelCBAM/index.qmd) · [Working paper →](1-carbon-pricing/IronSteelCBAM/working-paper.qmd) · [Slides (pdf) →](../papers/Slides-IronSteelCBAM.pdf) · [Policy brief (pdf) →](../papers/Brief-IronSteelCBAM.pdf) · [Working paper (pdf) →](../papers/IronSteelCBAM.pdf)
+
+## The Right Policy at the Wrong Time {#extra-the-right-policy-at-the-wrong-time}
+
+*Book · Carbon Pricing and the Order of Things*
+
+The case for a carbon price was won intellectually and lost operationally. This book makes the case for feebates and for sequencing: price the margin first, and leave the carbon bill for later.
+
+[Book (pdf) →](../papers/CarbonPricingRightPolicyWrongTime.pdf)

@@ -75,6 +75,9 @@ def render(quarto, qmd, formats):
                 ok = False
                 print(f"FAILED    {qmd.relative_to(REPO)} ({fmt})\n{r.stderr[-2000:]}")
     finally:
+        typ = qmd.with_suffix(".typ")   # Quarto leaves the intermediate file behind when Typst fails
+        if typ.exists():
+            typ.unlink()
         shutil.rmtree(target, ignore_errors=True)
         if made_root:
             shutil.rmtree(ext_root, ignore_errors=True)

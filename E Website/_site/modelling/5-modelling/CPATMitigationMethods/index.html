@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -60,14 +63,14 @@ div.csl-indent {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -619,7 +622,7 @@ div.csl-indent {
 <p><em>Climate Fiscal Policy Brief No.&nbsp;5.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. The full method, with every equation, the corrections and the derivations, is in the <a href="../../../modelling/5-modelling/CPATMitigationMethods/working-paper.html">working paper</a>.</em></p>
 <section id="sec-key-messages" class="level1">
 <h1>Key messages</h1>
-<p><a href="../../../modelling/5-modelling/CPATMitigationMethods/working-paper.html"><strong>Read the full working paper →</strong></a> · <a href="../../../papers/Slides-CPATMitigationMethods.pptx">Slides (pptx)</a></p>
+<p><a href="../../../modelling/5-modelling/CPATMitigationMethods/working-paper.html"><strong>Read the full working paper →</strong></a> · <a href="../../../papers/Brief-CPATMitigationMethods.pdf">Download this brief (pdf)</a> · <a href="../../../papers/Slides-CPATMitigationMethods.pdf">Slides (pdf)</a></p>
 <p><strong>A finance ministry should be able to audit the climate model it relies on, and CPAT’s mitigation module is small enough to audit.</strong> The whole module fits in fourteen equations, from fuel prices to revenue and growth.</p>
 <p><strong>A carbon price bites where fuel is cheap and carbon-rich.</strong> At 50 dollars per tonne of CO₂, CPAT’s default responses cut industrial coal use by about a third and road fuel use by about 6 percent.</p>
 <p><strong>Power-sector results rest on two judgment calls.</strong> New investment is shared by a rule whose key setting was chosen “subjectively”, and the growth of wind and solar is capped; under a large carbon price the caps often decide the answer.</p>
@@ -736,7 +739,7 @@ Figure&nbsp;1: Shares of new power investment under CPAT’s logit rule and the 
 </section>
 <section id="downloads" class="level1 unnumbered">
 <h1 class="unnumbered">Downloads</h1>
-<p><a href="../../../papers/Brief-CPATMitigationMethods.docx">Policy brief (docx)</a> · <a href="../../../papers/CPATMitigationMethods.docx">Working paper (docx)</a></p>
+<p><a href="../../../papers/Brief-CPATMitigationMethods.pdf">Policy brief (pdf)</a> · <a href="../../../papers/CPATMitigationMethods.pdf">Working paper (pdf)</a></p>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>

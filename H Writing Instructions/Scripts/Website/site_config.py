@@ -30,11 +30,9 @@ PARTS = [
         "dir": "policy",
         "home": "index.qmd",
         "intro": ("Papers on climate and fiscal policy and on climate finance, written for finance ministries and "
-                  "development banks, in four sections. Each section page gives the abstract of every paper with its "
-                  "slides, policy brief and full paper; papers marked *Read online* can be read here in full. "
-                  "Books and earlier papers are under [Books and other papers](policy/more.qmd). The modelling and "
-                  "analytics work is under [Modelling and Analytics](modelling/index.qmd)."),
-        "more": "policy/more.qmd",
+                  "development banks, in four sections. The modelling and analytics work is under "
+                  "[Modelling and Analytics](modelling/index.qmd)."),
+        "more": None,
         "sections": [
             ("1.CarbonPricing", "1-carbon-pricing", "Carbon Pricing",
              "Price production and consumption separately: a feebate on emissions intensity, a destination carbon tax through VAT, and recognition of both at the border.",
@@ -58,8 +56,7 @@ PARTS = [
         "home": "modelling/index.qmd",
         "intro": ("Models and diagnostics a finance ministry can audit, in three sections: the Climate Policy "
                   "Assessment Tool (CPAT) stated, rebuilt and validated; modular upgrades to CPAT where policy needs "
-                  "them; and analytics on data ministries already hold. Each section page gives the abstract of every "
-                  "paper with its slides and full paper. The policy papers are under "
+                  "them; and analytics on data ministries already hold. The policy papers are under "
                   "[Policy and Finance](../index.qmd)."),
         "more": None,
         "sections": [
@@ -76,7 +73,43 @@ PARTS = [
     },
 ]
 
-# Folders inside a section that hold books, not papers: listed under Books (policy/more.qmd), not in the section.
+# Books and earlier papers, listed at the end of their section's page (and in the sidebar under the section).
+# Section folder -> list of entries: title, subtitle, by (co-authors, or None), one-paragraph description,
+# the published PDF in papers/ (from publish_series.BOOKS) and, for a book read on the site, its WEB_BOOKS folder.
+SECTION_EXTRAS = {
+    "1.CarbonPricing": [
+        {"title": "The Right Policy at the Wrong Time", "subtitle": "Carbon Pricing and the Order of Things",
+         "kind": "Book", "by": None,
+         "text": ("The case for a carbon price was won intellectually and lost operationally. This book makes the "
+                  "case for feebates and for sequencing: price the margin first, and leave the carbon bill for later."),
+         "pdf": "CarbonPricingRightPolicyWrongTime.pdf", "web": None},
+    ],
+    "2.OtherTaxAndFiscalPolicy": [
+        {"title": "Plucked!", "subtitle": "A Guide to a Fair, Simple, Efficient and Politically Feasible Tax and Benefits System",
+         "kind": "Book", "by": "with Gordon Styles, 2020",
+         "text": ("A case for reforming UK taxes and benefits, from the principles of a good tax system to welfare and "
+                  "work, inequality, corporations, land and property, money and debt, and the environment, ending "
+                  "with a set of proposals."),
+         "pdf": "Plucked.pdf", "web": "8.5.3.Plucked"},
+    ],
+    "3.FinanceAndRisk": [
+        {"title": "Time and Chance", "subtitle": "The Elements of Scale in the Green Transition",
+         "kind": "Book", "by": None,
+         "text": ("Why clean energy costs too much in the countries that need it most. The book works from the price of "
+                  "money through contracts and instruments to the institutions that would carry them."),
+         "pdf": "TimeAndChance.pdf", "web": None},
+    ],
+    "4.SovereignIncentives": [
+        {"title": "Sustainability-Linked Intermediated Debt Instruments (SLIDIs)", "subtitle": None,
+         "kind": "Earlier paper", "by": "with Marcello Estevão and Nils Zimmermann",
+         "text": ("Lowering developing countries' cost of borrowing while rewarding their governments for agreed "
+                  "environmental, social and governance progress, through sustainability-linked debt issued via an "
+                  "intermediary."),
+         "pdf": "SLIDIs.pdf", "web": None},
+    ],
+}
+
+# Folders inside a section that hold books, not papers: listed through SECTION_EXTRAS, not as numbered papers.
 BOOK_FOLDERS = {"3.3.TimeAndChance"}
 
 WEB_PAPERS = [
@@ -105,7 +138,7 @@ WEB_PAPERS = [
 ]
 
 # Books that are also read on the site, one page per chapter, under <part dir>/books/<BookName>/
-# (build_web_papers.py writes them; build_research_pages.py lists them in the sidebar under Books and other papers).
+# (build_web_papers.py writes them; build_research_pages.py lists them in the sidebar under their section).
 # Book folder -> the part it sits in and a one-paragraph description for the book's contents page.
 WEB_BOOKS = {
     "8.5.3.Plucked": {
@@ -113,8 +146,7 @@ WEB_BOOKS = {
         "blurb": ("A book-length case for reforming UK taxes and benefits, written with Gordon Styles in 2020. "
                   "Its fourteen chapters run from the ideas behind taxation and the principles of a good tax system "
                   "to welfare and work, inequality, corporations, land and property, money and debt, and the "
-                  "environment, and end with a set of proposals. The manuscript is kept as written in 2020; only the "
-                  "title has changed."),
+                  "environment, and end with a set of proposals."),
     },
 }
 

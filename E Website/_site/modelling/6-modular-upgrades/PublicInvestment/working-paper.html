@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -60,14 +63,14 @@ div.csl-indent {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -100,7 +103,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -660,7 +663,7 @@ window.Quarto = {
 <p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is <a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html">Climate Fiscal Policy Brief No.&nbsp;6.3</a>. Companion paper to the public CPAT-AI repository, <a href="https://github.com/cpmodelai/cpat_ai" class="uri">https://github.com/cpmodelai/cpat_ai</a>.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="sec-summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
-<p><a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-PublicInvestment.pptx">Slides (pptx)</a></p>
+<p><a href="../../../modelling/6-modular-upgrades/PublicInvestment/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/PublicInvestment.pdf">Download this paper (pdf)</a> · <a href="../../../papers/Slides-PublicInvestment.pdf">Slides (pdf)</a></p>
 <p><strong>A finance ministry that prices carbon also needs to price the clean capital the policy calls for.</strong> The Climate Policy Assessment Tool (CPAT), built by the World Bank and the International Monetary Fund (IMF), tells a ministry what a carbon tax raises and what it cuts in more than 180 countries. It does not say what the wind farms, grids and electric buses the policy calls for will cost to finance, who should pay, or whether public money spent on them beats money left with taxpayers. Developing countries other than China need $2.3 to 2.5 trillion a year of climate investment by 2030.</p>
 <p><strong>This paper adds two extensions to CPAT.</strong> The first turns the physical change CPAT already computes into investment needs by country and sector and prices that capital three ways: at the market cost of capital each country faces, at the World Bank’s 6 percent social rate, and at 6 percent with co-benefits such as cleaner air counted. The second scores each use of public money by what people get per dollar the budget really pays, and funds it when that ratio beats the cost of raising a dollar of tax, about 1.2 in African evidence.</p>
 <p><strong>The cost of capital, not the size of the bill, decides whether clean capital pays its way.</strong> A stylized asset that saves 13.3 cents a year in fuel and running costs per dollar of capital, over 25 years, pays its way only if it is financed below 12.6 percent. That is the rate CPAT’s optional income-group setting assigns to lower-middle-income countries (12.5 percent). CPAT’s default setting instead adds a technology premium of about 3 points for wind and solar to each country’s own cost of capital, so a lower-middle-income country’s solar asset crosses the line once its country rate passes about 9.7 percent. Applied at the scale of the expert group’s 2030 estimates, the same capital that earns developing countries $131 billion a year at 6 percent earns them only $45 billion at a 10.5 percent market rate.</p>
@@ -1080,7 +1083,7 @@ Table&nbsp;3: Climate investment needs and their incremental cost in 2030 for th
 </section>
 <section id="downloads" class="level1 unnumbered">
 <h1 class="unnumbered">Downloads</h1>
-<p><a href="../../../papers/Brief-PublicInvestment.docx">Policy brief (docx)</a> · <a href="../../../papers/PublicInvestment.docx">Working paper (docx)</a></p>
+<p><a href="../../../papers/Brief-PublicInvestment.pdf">Policy brief (pdf)</a> · <a href="../../../papers/PublicInvestment.pdf">Working paper (pdf)</a></p>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>

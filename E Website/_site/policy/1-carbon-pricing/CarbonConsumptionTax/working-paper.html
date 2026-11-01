@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -60,14 +63,14 @@ div.csl-indent {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -100,7 +103,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -430,6 +433,12 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/1-carbon-pricing.html#extra-the-right-policy-at-the-wrong-time" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Right Policy at the Wrong Time</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -464,133 +473,15 @@ window.Quarto = {
  <span class="menu-text">2.2 Let Land Pay for the City</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../policy/3-finance-and-risk.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3. Finance and Risk</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3.1 Guarantee the Contract, Not the Debt</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/working-paper.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Working paper</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../policy/3-finance-and-risk/CleanPowerAssetClasses/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3.2 From Projects to Asset Classes</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../policy/3-finance-and-risk/CleanPowerAssetClasses/working-paper.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Working paper</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../policy/4-sovereign-incentives.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4. Sovereign Incentives</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4.1 Reward the Stock as Well as the Flow</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/working-paper.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Working paper</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4.2 The Climate Investment Trust</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/working-paper.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Working paper</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../policy/4-sovereign-incentives/SustainabilityLinkedLending/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../policy/4-sovereign-incentives/SustainabilityLinkedLending/working-paper.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Working paper</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../policy/more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Books and Other Papers</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../policy/books/Plucked/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plucked!</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../policy/books/Plucked/01-facing-global-risks-head-on.html" class="sidebar-item-text sidebar-link">
@@ -679,6 +570,125 @@ window.Quarto = {
   </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/3-finance-and-risk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Finance and Risk</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.1 Guarantee the Contract, Not the Debt</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/3-finance-and-risk/CleanPowerAssetClasses/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.2 From Projects to Asset Classes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/3-finance-and-risk/CleanPowerAssetClasses/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/3-finance-and-risk.html#extra-time-and-chance" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Time and Chance</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Sovereign Incentives</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.1 Reward the Stock as Well as the Flow</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.2 The Climate Investment Trust</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../policy/4-sovereign-incentives/SustainabilityLinkedLending/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/4-sovereign-incentives/SustainabilityLinkedLending/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../policy/4-sovereign-incentives.html#extra-sustainability-linked-intermediated-debt-instruments-slidis" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sustainability-Linked Intermediated Debt Instruments (SLIDIs)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
     <nav id="TOC" role="doc-toc" class="toc-active">
@@ -760,7 +770,7 @@ window.Quarto = {
 <p><em>Working paper, version 0.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is <a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/index.html">Climate Fiscal Policy Brief No.&nbsp;1.3</a>.</em></p>
 <section id="sec-summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
-<p><a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-CarbonConsumptionTax.pptx">Slides (pptx)</a></p>
+<p><a href="../../../policy/1-carbon-pricing/CarbonConsumptionTax/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/CarbonConsumptionTax.pdf">Download this paper (pdf)</a> · <a href="../../../papers/Slides-CarbonConsumptionTax.pdf">Slides (pdf)</a></p>
 <p><strong>Europe prices the carbon it emits, not the carbon it consumes.</strong> The EU Emissions Trading System (ETS) prices power and heavy industry inside the Union, and the Carbon Border Adjustment Mechanism (CBAM) extends that price to imports of cement, steel, aluminum, fertilizers, electricity and hydrogen. Nothing prices the carbon in an imported shirt, phone or sofa. On this paper’s calculation, 40 percent of the carbon embodied in what EU households buy subject to VAT was emitted outside the Union in 2022, and imports from outside the EU carried about 1.7 times as much carbon per euro as the same goods made inside it. A price on production misses that carbon and makes producing in Europe dearer than producing elsewhere for sale in Europe.</p>
 <p><strong>The proposal is a carbon component inside VAT.</strong> Every registered business would charge, on its sales, a carbon price per tonne of the carbon embodied in what it sells, and credit the carbon component on its purchases, as it credits VAT. Embodied carbon is read from a published default intensity for each product category, the EU-made average, the same for every origin, unless the seller proves a lower figure. Imports pay at the border and exports leave free of it. As the carbon component rises, the existing value component of VAT falls, so the reform replaces part of a tax rather than adding one.</p>
 <p><strong>The VAT chain does the hard work.</strong> With full crediting, each firm pays the carbon price only on the carbon it adds, and the final buyer bears it on the whole supply chain, exactly as VAT taxes value added at each stage and the full price at the end. Where an upstream firm has already paid a carbon price under the ETS, CBAM or a foreign scheme, its invoice carries that payment and the carbon component deducts it, so every tonne bears one price. Electricity, a taxable supply, carries its generation carbon to the household this way. The weak points are VAT’s own: exempt sectors break the chain, and misclassification pays more.</p>
@@ -1417,7 +1427,7 @@ Figure&nbsp;3: Net change in taxes at €200/tCO₂e and 2022 intensities. A: by
 </section>
 <section id="downloads" class="level1 unnumbered">
 <h1 class="unnumbered">Downloads</h1>
-<p><a href="../../../papers/Brief-CarbonConsumptionTax.docx">Policy brief (docx)</a> · <a href="../../../papers/CarbonConsumptionTax.docx">Working paper (docx)</a></p>
+<p><a href="../../../papers/Brief-CarbonConsumptionTax.pdf">Policy brief (pdf)</a> · <a href="../../../papers/CarbonConsumptionTax.pdf">Working paper (pdf)</a></p>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>

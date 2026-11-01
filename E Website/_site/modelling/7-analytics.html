@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,14 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -559,18 +562,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Analysis changes policy only when the people who hold the budget can reproduce it. The two tools in this section each take data a finance ministry already holds or can download, put it on a common scale and return something sequenced enough to act on. The Excise-Fiscal Diagnostic reads a whole excise schedule against the damage taxed goods do; run on Sierra Leone and Liberia, it finds fuel taxed lightly, alcohol taxed inconsistently and health excises weakly collected. The Global Fiscal Indicators dashboard gives a one-page fiscal and energy profile for 217 economies, with the year and public source of every value; it separates a revenue problem from a debt-service problem. A third tool built to the same standard, the Macro-Fiscal-Energy Scenario Tool, extends the Climate Policy Assessment Tool and is described in section 6 (paper 6.5). The October 2026 reviews held both tools to their own standard and corrected a benchmark, a definition and a claim of reproducibility.</p>
-<p><a href="../papers/OverviewAnalytics.docx">Section overview (docx) →</a> · <a href="../papers/Slides-Analytics.pptx">Series slides (pptx) →</a></p>
+<p><a href="../papers/OverviewAnalytics.pdf">Section overview (pdf) →</a> · <a href="../papers/Slides-Analytics.pdf">Series slides (pdf) →</a></p>
 <section id="paper-7-1" class="level2">
 <h2 class="anchored" data-anchor-id="paper-7-1">7.1 The Excise-Fiscal Diagnostic</h2>
 <p><em>Reading an Excise System Against Its Externalities</em></p>
 <p>Excise schedules grow by amendment until no one can read them whole, so few finance ministries know whether their fuel, tobacco or alcohol taxes are high or low against the damage those goods do. The Excise-Fiscal Diagnostic is a short, repeatable report that maps every excise line onto a standard schedule, measures each rate three comparable ways and sets fuel taxes against one fixed set of damage values. Run on Sierra Leone and Liberia in 2026, it finds fuel taxed below or near the carbon cost alone, alcohol taxed inconsistently and health excises weakly collected. Ministries should index specific excises, book each line separately and rerun the diagnostic every budget.</p>
-<p><a href="../modelling/7-analytics/ExciseFiscalDiagnostic/index.html">Policy brief →</a> · <a href="../modelling/7-analytics/ExciseFiscalDiagnostic/working-paper.html">Working paper →</a> · <a href="../papers/Slides-ExciseFiscalDiagnostic.pptx">Slides (pptx) →</a> · <a href="../papers/Brief-ExciseFiscalDiagnostic.docx">Policy brief (docx) →</a> · <a href="../papers/ExciseFiscalDiagnostic.docx">Working paper (docx) →</a></p>
+<p><a href="../modelling/7-analytics/ExciseFiscalDiagnostic/index.html">Policy brief →</a> · <a href="../modelling/7-analytics/ExciseFiscalDiagnostic/working-paper.html">Working paper →</a> · <a href="../papers/Slides-ExciseFiscalDiagnostic.pdf">Slides (pdf) →</a> · <a href="../papers/Brief-ExciseFiscalDiagnostic.pdf">Policy brief (pdf) →</a> · <a href="../papers/ExciseFiscalDiagnostic.pdf">Working paper (pdf) →</a></p>
 </section>
 <section id="paper-7-2" class="level2">
 <h2 class="anchored" data-anchor-id="paper-7-2">7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis</h2>
 <p><em>Eighty Public Indicators, One Country Profile, and a Build That Traces Every Number to Its Source</em></p>
 <p>Climate-fiscal advice often starts from whichever number was easiest to find. The Global Fiscal Indicators dashboard puts the numbers that matter on one page for 217 economies: 80 public indicators in twelve blocks, each answering one question, scored 1 to 10, with the year and source of every value. Four middle-income economies show the payoff: Indonesia has a revenue problem and costly fuel subsidies, South Africa a debt-service problem and large unpriced pollution. A check against the IMF’s own files confirms most values and finds three compilation faults. Ministries and development banks should use such profiles to choose the next question, and should publish the builds behind them.</p>
-<p><a href="../modelling/7-analytics/FiscalIndicatorsDashboard/index.html">Policy brief →</a> · <a href="../modelling/7-analytics/FiscalIndicatorsDashboard/working-paper.html">Working paper →</a> · <a href="../papers/Slides-FiscalIndicatorsDashboard.pptx">Slides (pptx) →</a> · <a href="../papers/Brief-FiscalIndicatorsDashboard.docx">Policy brief (docx) →</a> · <a href="../papers/FiscalIndicatorsDashboard.docx">Working paper (docx) →</a></p>
+<p><a href="../modelling/7-analytics/FiscalIndicatorsDashboard/index.html">Policy brief →</a> · <a href="../modelling/7-analytics/FiscalIndicatorsDashboard/working-paper.html">Working paper →</a> · <a href="../papers/Slides-FiscalIndicatorsDashboard.pdf">Slides (pdf) →</a> · <a href="../papers/Brief-FiscalIndicatorsDashboard.pdf">Policy brief (pdf) →</a> · <a href="../papers/FiscalIndicatorsDashboard.pdf">Working paper (pdf) →</a></p>
 
 
 </section>

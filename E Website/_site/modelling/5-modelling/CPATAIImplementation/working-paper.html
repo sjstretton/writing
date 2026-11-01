@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -60,14 +63,14 @@ div.csl-indent {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -97,7 +100,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -651,7 +654,7 @@ window.Quarto = {
 <p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the public CPAT-AI repository, https://github.com/cpmodelai/cpat_ai. A short version for policy makers is <a href="../../../modelling/5-modelling/CPATAIImplementation/index.html">Climate Fiscal Policy Brief No.&nbsp;5.2</a>.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="sec-summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
-<p><a href="../../../modelling/5-modelling/CPATAIImplementation/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-CPATAIImplementation.pptx">Slides (pptx)</a></p>
+<p><a href="../../../modelling/5-modelling/CPATAIImplementation/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/CPATAIImplementation.pdf">Download this paper (pdf)</a> · <a href="../../../papers/Slides-CPATAIImplementation.pdf">Slides (pdf)</a></p>
 <p><strong>A climate-fiscal model that nobody can audit is a risk for every ministry that relies on it.</strong> The Climate Policy Assessment Tool (CPAT), built by the IMF and the World Bank, estimates what carbon taxes, fuel subsidy reform and related policies do to prices, fuel use, emissions, revenue, GDP and households, year by year, for more than 180 countries. It is a spreadsheet: the legacy workbook is over 21 megabytes, its main calculation sheet runs past row 18,000, and its methodology fills about 400 pages. Nobody had checked all of it against what it was meant to compute.</p>
 <p><strong>In October 2026 the model was rebuilt twice, with AI coding agents doing most of the construction.</strong> The first rebuild, Excel-AI, is a readable workbook written and checked by code, in which one short formula serves a whole block of cells. The second, Coded CPAT, is a Python model written from Excel-AI’s equation list; it reproduces every one of Excel-AI’s 7,458 stored outputs for each Egypt scenario tested, to a relative difference of one in a billion. Every input, variable and output carries one code, the same in all three models, so any two can be compared after every change.</p>
 <p><strong>One rule kept the rebuild faithful: bugs are never copied; issues are copied and tracked.</strong> A bug is a formula that does not compute what it means to, such as one pointing to the wrong row; it is fixed. An issue is a deliberate choice open to question, such as an old data vintage; it is reproduced exactly and logged. Any other departure needs a dated decision by the model owner, so every difference from the original has a code and a reason.</p>
@@ -892,7 +895,7 @@ Table&nbsp;2: Four levels of testing: each checks a number against something tha
 </section>
 <section id="downloads" class="level1 unnumbered">
 <h1 class="unnumbered">Downloads</h1>
-<p><a href="../../../papers/Brief-CPATAIImplementation.docx">Policy brief (docx)</a> · <a href="../../../papers/CPATAIImplementation.docx">Working paper (docx)</a></p>
+<p><a href="../../../papers/Brief-CPATAIImplementation.pdf">Policy brief (pdf)</a> · <a href="../../../papers/CPATAIImplementation.pdf">Working paper (pdf)</a></p>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>

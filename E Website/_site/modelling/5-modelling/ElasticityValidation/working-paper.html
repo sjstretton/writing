@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -60,14 +63,14 @@ div.csl-indent {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -100,7 +103,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -658,7 +661,7 @@ window.Quarto = {
 <p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is <a href="../../../modelling/5-modelling/ElasticityValidation/index.html">Climate Fiscal Policy Brief No.&nbsp;5.4</a>. Companion paper to the public CPAT-AI repository (https://github.com/cpmodelai/cpat_ai).</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="sec-summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
-<p><a href="../../../modelling/5-modelling/ElasticityValidation/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-ElasticityValidation.pptx">Slides (pptx)</a></p>
+<p><a href="../../../modelling/5-modelling/ElasticityValidation/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/ElasticityValidation.pdf">Download this paper (pdf)</a> · <a href="../../../papers/Slides-ElasticityValidation.pdf">Slides (pdf)</a></p>
 <p><strong>A carbon-pricing model’s answer is set mostly by its price elasticities.</strong> The Climate Policy Assessment Tool (CPAT), built by the International Monetary Fund (IMF) and the World Bank, tells finance ministries how much a carbon tax or a fuel subsidy reform will cut emissions and raise revenue. It does so by applying, to each fuel in each sector, a number saying how much use falls when the price rises: the price elasticity. Double the elasticity and the estimated cut doubles. CPAT’s own sensitivity tests show that the elasticities move its answers more than any other parameter: varying them by two standard deviations moves the cut in G20 emissions from a $75 carbon tax from 29 percent to anywhere between 7 and 39 percent.</p>
 <p><strong>This paper checks CPAT’s default elasticities against the published evidence, pair by pair.</strong> It compares the tool’s long-run elasticities for ten main fuel-sector pairs with meta-analyses (studies that pool hundreds of estimates), reviews of developing-economy evidence and well-identified single studies, every number checked against its source. It keeps apart the figures CPAT was calibrated to, so that the tool is not tested against itself.</p>
 <p><strong>Most defaults are consistent with the evidence, and most are on the cautious side.</strong> Eight of ten pairs lie inside the range of published estimates. For six, CPAT’s value is less elastic than the median estimate: electricity used by industry, for example, is −0.44 in CPAT against a median of −0.69. Two values are clearly too high. Diesel in industry (−1.06) and gasoline in services (−1.04) lie beyond every estimate for their fuels, which run from −0.25 to −0.84; both come from applying sector adjustments estimated on few studies to fuels with almost no sector evidence. Electricity in services (−0.70) sits at the elastic edge of the range.</p>
@@ -1113,7 +1116,7 @@ Table&nbsp;4: CPAT’s demand elasticities raise the estimated cut by about a th
 </section>
 <section id="downloads" class="level1 unnumbered">
 <h1 class="unnumbered">Downloads</h1>
-<p><a href="../../../papers/Brief-ElasticityValidation.docx">Policy brief (docx)</a> · <a href="../../../papers/ElasticityValidation.docx">Working paper (docx)</a></p>
+<p><a href="../../../papers/Brief-ElasticityValidation.pdf">Policy brief (pdf)</a> · <a href="../../../papers/ElasticityValidation.pdf">Working paper (pdf)</a></p>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>

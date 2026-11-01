@@ -40,7 +40,9 @@ $endif$
 $if(jel)$
   jel: ($for(jel)$"$jel$",$endfor$),
 $endif$
-$if(section-numbering)$
+$if(wp-unnumbered)$
+  sectionnumbering: none,
+$elseif(section-numbering)$
   sectionnumbering: "$section-numbering$",
 $endif$
 $if(toc)$

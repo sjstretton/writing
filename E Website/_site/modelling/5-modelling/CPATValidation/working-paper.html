@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -60,14 +63,14 @@ div.csl-indent {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -628,7 +631,7 @@ div.csl-indent {
 <p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is <a href="../../../modelling/5-modelling/CPATValidation/index.html">Climate Fiscal Policy Brief No.&nbsp;5.3</a>. Companion paper to the public CPAT-AI repository, https://github.com/cpmodelai/cpat_ai.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="sec-summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
-<p><a href="../../../modelling/5-modelling/CPATValidation/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-CPATValidation.pptx">Slides (pptx)</a></p>
+<p><a href="../../../modelling/5-modelling/CPATValidation/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/CPATValidation.pdf">Download this paper (pdf)</a> · <a href="../../../papers/Slides-CPATValidation.pdf">Slides (pdf)</a></p>
 <p><strong>A finance ministry that sets a carbon price on the strength of a model needs to know how wrong the model is likely to be.</strong> The Climate Policy Assessment Tool (CPAT), built by the World Bank and the International Monetary Fund, estimates the emissions, revenue, GDP and household effects of carbon pricing in more than 180 countries. A typical CPAT result is that a carbon tax rising to $75 per tonne of CO₂ cuts emissions in the G20 by 29 percent in 2030. If the baseline is off by a fifth, or the response to the price by half, the revenue estimate and the gap to a country’s pledge are off by as much. CPAT’s own checks exist, but they are scattered through a long methodology chapter, mostly as charts. This paper sets them side by side, recomputes what can be recomputed, adds the evidence from the 2026 rebuild of the model, and judges the whole against how energy models are evaluated elsewhere.</p>
 <p><strong>CPAT fits its base year because it is made to, so that fit proves little.</strong> Base-year emissions are scaled to each country’s inventory. The scaling can also carry a data break into every later year: Egypt’s inventory jumps 19.5 percent from 2021 to 2022, and the calibrated baseline ends up 16 to 32 percent below the inventory in 2022–2024.</p>
 <p><strong>Back-cast from 2000, CPAT gets the trend of emissions roughly right and the level right only where prices behave.</strong> With observed world energy prices fed in, the typical error in greenhouse gas emissions over 2000–2017 was 5 percent of mean emissions for Australia, 10 percent for the United States and 14 percent for South Africa, but 26 percent for Brazil, 33 percent for the United Kingdom and 92 percent for China. Most of the misses come from domestic prices that the model projected badly, as where governments regulate prices.</p>
@@ -1152,7 +1155,7 @@ Table&nbsp;5: Independent code reproduces legacy CPAT’s method to many decimal
 </section>
 <section id="downloads" class="level1 unnumbered">
 <h1 class="unnumbered">Downloads</h1>
-<p><a href="../../../papers/Brief-CPATValidation.docx">Policy brief (docx)</a> · <a href="../../../papers/CPATValidation.docx">Working paper (docx)</a></p>
+<p><a href="../../../papers/Brief-CPATValidation.pdf">Policy brief (pdf)</a> · <a href="../../../papers/CPATValidation.pdf">Working paper (pdf)</a></p>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>

@@ -19,7 +19,7 @@ What changes in the copies:
       (contents sidebar, hover citations and cross-references, figure lightbox);
     - csl: points at the site's local copy of the Chicago style, so the build needs no internet;
     - under the first heading (the executive summary): links to the other form, this form's PDF and the slides;
-    - at the end of the text, before the references: the downloads (PDF, or Word where there is no PDF yet);
+    - at the end of the text, before the references: the downloads (PDF only);
     - cross-links written in the masters as short targets become real links:
           [text](wp:)            the working paper          [text](wp:sec-crediting)    a section of it
           [text](brief:)         the policy brief           [text](brief:sec-what-to-do) a section of it
@@ -27,7 +27,7 @@ What changes in the copies:
       In the Word versions these show as plain text (Scripts/Website/web-links.lua, used when rendering).
 
 Books in WEB_BOOKS are split into one page per chapter, in E Website:
-    <part>/books/<BookName>/index.qmd          the book's contents page (title, description, download, chapters)
+    <part>/books/<BookName>/index.qmd          the book's contents page (title, description, PDF download, chapters)
     <part>/books/<BookName>/NN-<chapter>.qmd   one page per "# CHAPTER N: TITLE" heading in the master
     <part>/books/<BookName>/<BookName>.bib and the figures, as for papers
 Each chapter page ends with its own references and links to the previous and next chapters.
@@ -250,8 +250,8 @@ def build_book(folder_name, cfg):
     contents_yaml = drop_key(drop_key(drop_key(contents_yaml, "format"), "bibliography"), "csl")
     contents_yaml = drop_key(drop_key(contents_yaml, "toc"), "version")
     top = [cfg.get("blurb", "") + "\n"]
-    if (ARCHIVE / f"{name}.docx").exists():
-        top.append(f"**Download:** [The whole book (docx)](../../../papers/{name}.docx)\n")
+    if (ARCHIVE / f"{name}.pdf").exists():
+        top.append(f"**Download:** [The whole book (pdf)](../../../papers/{name}.pdf)\n")
     if preface:
         top.append(preface + "\n")
     top.append("# Contents {.unnumbered}\n")
@@ -297,10 +297,9 @@ def build(folder_name):
         """A download link with its file type in brackets in the link text: 'Slides (pptx)'."""
         return f"[{label} ({f.rsplit('.', 1)[-1].lower()})](../../../papers/{f})" if (ARCHIVE / f).exists() else None
 
-    slides = dl("Slides", f"Slides-{name}.pptx")
-    # documents are offered as PDF (render_pdfs.py); the Word file only where no PDF has been made yet
-    words = [l for l in (dl("Policy brief", f"Brief-{name}.pdf") or dl("Policy brief", f"Brief-{name}.docx"),
-                         dl("Working paper", f"{name}.pdf") or dl("Working paper", f"{name}.docx")) if l]
+    # the site offers PDFs only (render_pdfs.py makes them; publish_series.py archives them)
+    slides = dl("Slides", f"Slides-{name}.pdf")
+    words = [l for l in (dl("Policy brief", f"Brief-{name}.pdf"), dl("Working paper", f"{name}.pdf")) if l]
     downloads = ("# Downloads {.unnumbered}\n\n" + " · ".join(words) + "\n") if words else None
 
     brief_pdf = dl("Download this brief", f"Brief-{name}.pdf")

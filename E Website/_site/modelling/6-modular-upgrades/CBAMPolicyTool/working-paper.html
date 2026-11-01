@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -60,14 +63,14 @@ div.csl-indent {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -100,7 +103,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -656,7 +659,7 @@ window.Quarto = {
 <p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is <a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html">Climate Fiscal Policy Brief No.&nbsp;6.2</a>. Companion paper to the Climate Fiscal AI Tools.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="sec-summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
-<p><a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-CBAMPolicyTool.pptx">Slides (pptx)</a></p>
+<p><a href="../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/CBAMPolicyTool.pdf">Download this paper (pdf)</a> · <a href="../../../papers/Slides-CBAMPolicyTool.pdf">Slides (pdf)</a></p>
 <p><strong>The EU now charges importers for the carbon in steel, aluminum, cement and fertilizers, and the bill depends on decisions exporting governments control.</strong> Since January 2026, importers of these goods, and of hydrogen and electricity, have owed certificates for the emissions embedded in what they buy, priced in line with the EU’s emissions trading system. The charge rises each year to 2034 as the EU’s own producers lose their free allowances. How much an exporter pays depends on three things its government can influence: whether its plants file verified emissions data instead of the EU’s default values, whether they cut emissions, and whether the country levies a carbon price at home that the EU deducts.</p>
 <p><strong>The CBAM Policy Tool turns these rules into a product-by-product, year-by-year bill that a ministry can check.</strong> For each covered product of one exporting country it builds embedded emissions from energy use and process chemistry, compares them with the EU’s default values, applies the phase-in and the certificate price year by year, and deducts a domestic carbon price where the rules allow. A second module lets a domestic carbon price change output and emissions, and splits the fall in the border charge into the part from cleaner production and the part from the deduction.</p>
 <p><strong>For goods far dirtier than the EU’s benchmark, most of the charge arrives in the first year.</strong> At €80 per tonne of CO₂, Turkish hot-rolled steel declared at the default value owes about €107 per tonne in 2026, €196 in 2030 and €252 at full phase-in, close to half its 2025 import price of €549 per tonne. The 2026 charge is already 42 percent of the final one, because the phase-in only covers emissions up to the benchmark. A Commission proposal of July 2026, not yet adopted, would end free allocation in 2038 instead of 2034, lowering the 2034 charge to €236.</p>
@@ -1132,7 +1135,7 @@ Table&nbsp;4: CBAM charge on seven Egyptian exports to the EU at full phase-in (
 </section>
 <section id="downloads" class="level1 unnumbered">
 <h1 class="unnumbered">Downloads</h1>
-<p><a href="../../../papers/Brief-CBAMPolicyTool.docx">Policy brief (docx)</a> · <a href="../../../papers/CBAMPolicyTool.docx">Working paper (docx)</a></p>
+<p><a href="../../../papers/Brief-CBAMPolicyTool.pdf">Policy brief (pdf)</a> · <a href="../../../papers/CBAMPolicyTool.pdf">Working paper (pdf)</a></p>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>

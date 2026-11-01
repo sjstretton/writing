@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -60,14 +63,14 @@ div.csl-indent {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -100,7 +103,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -650,7 +653,7 @@ window.Quarto = {
 <p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the Climate Fiscal AI Tools. A short version for policy makers is <a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html">Climate Fiscal Policy Brief No.&nbsp;7.2</a>.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="sec-summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
-<p><a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-FiscalIndicatorsDashboard.pptx">Slides (pptx)</a></p>
+<p><a href="../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/FiscalIndicatorsDashboard.pdf">Download this paper (pdf)</a> · <a href="../../../papers/Slides-FiscalIndicatorsDashboard.pdf">Slides (pdf)</a></p>
 <p><strong>Climate-fiscal advice often starts with the wrong constraint because the numbers take days to gather.</strong> Asked whether a country can afford a climate investment program, or should reform fuel subsidies first, an economist needs its debt and interest bill, its tax take, how well it spends capital budgets, what investors charge it for capital, what it spends on fossil fuel subsidies, and how it makes electricity. Each number sits in a different database, with different country names, units and years. Assembling them takes a day for one country and a week for a region, and the next analyst starts again.</p>
 <p><strong>The Global Fiscal Indicators dashboard puts those numbers on one page for 217 economies.</strong> It reads about twenty public datasets, among them the IMF’s World Economic Outlook, its revenue database and its fossil fuel subsidy estimates, World Bank debt, budget and energy data, PEFA assessments of public financial management, and Ember’s electricity data. It arranges 80 indicators in twelve blocks, each answering one question: can the country pay for it, can it build it, what does capital cost, who finances it, how much fossil and climate money runs through the budget, does it sell or buy fossil fuels, how is power generated. Each value carries its year and source, and a score from 1 to 10 against all other economies.</p>
 <p><strong>The build is designed so that errors cannot hide.</strong> A script turns the raw downloads into one long table, one row per value, with the source file and year. Nothing is imputed: a missing value stays missing and is counted. The build stops if its configuration names an indicator that the data do not supply, a rule added after an earlier version lost indicators without anyone noticing. A Python and an R version of the pipeline matched on the original 53 indicators. The build itself is not yet public, but every input is.</p>
@@ -945,7 +948,7 @@ Figure&nbsp;2: Renewable share of electricity generation in 2024: the dashboard 
 </section>
 <section id="downloads" class="level1 unnumbered">
 <h1 class="unnumbered">Downloads</h1>
-<p><a href="../../../papers/Brief-FiscalIndicatorsDashboard.docx">Policy brief (docx)</a> · <a href="../../../papers/FiscalIndicatorsDashboard.docx">Working paper (docx)</a></p>
+<p><a href="../../../papers/Brief-FiscalIndicatorsDashboard.pdf">Policy brief (pdf)</a> · <a href="../../../papers/FiscalIndicatorsDashboard.pdf">Working paper (pdf)</a></p>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>

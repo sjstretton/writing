@@ -33,7 +33,7 @@ lightbox: auto
 
 # Executive summary {#sec-summary}
 
-[**Policy brief (short version) →**](index.qmd) · [Slides (pptx)](../../../papers/Slides-CPATMitigationMethods.pptx)
+[**Policy brief (short version) →**](index.qmd) · [Download this paper (pdf)](../../../papers/CPATMitigationMethods.pdf) · [Slides (pdf)](../../../papers/Slides-CPATMitigationMethods.pdf)
 
 
 **Finance ministries need a climate model they can audit, and CPAT's mitigation module is small enough to be one.** The Climate Policy Assessment Tool (CPAT), built by the World Bank and the International Monetary Fund (IMF), tells a ministry how much a carbon tax or a fuel subsidy reform would raise, what it would do to fuel prices, how far it would cut emissions and what it would do to growth, for more than 180 countries. Its core, the mitigation module, is simple. Its documentation is not: the mitigation chapter runs to 57,000 words, and its 2023 edition contains twenty errors that a careful reader would copy into their own understanding of the model.
@@ -372,7 +372,7 @@ Stating a model this briefly is a test of it. The documentation errors and legac
 
 # Downloads {.unnumbered}
 
-[Policy brief (docx)](../../../papers/Brief-CPATMitigationMethods.docx) · [Working paper (docx)](../../../papers/CPATMitigationMethods.docx)
+[Policy brief (pdf)](../../../papers/Brief-CPATMitigationMethods.pdf) · [Working paper (pdf)](../../../papers/CPATMitigationMethods.pdf)
 
 # References {.unnumbered}
 

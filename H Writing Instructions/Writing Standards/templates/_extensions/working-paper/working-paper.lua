@@ -42,16 +42,70 @@ end
 
 -- Page rules (H Writing Instructions/NORMS.md, section 11): new page for the executive summary (the first
 -- top-level section), for the section after it, for the references and for the appendices.
+-- Masters converted from Word can carry internal links to anchors that no longer exist (old contents
+-- lists, Word footnote anchors) and images whose files are missing. Typst refuses both, so a link to a
+-- missing anchor keeps only its text and a missing image is left out (with a warning).
+local function drop_broken(doc)
+  local ids = {}
+  local function note(el) if el.identifier and el.identifier ~= "" then ids[el.identifier] = true end end
+  doc:walk({ Header = note, Div = note, Span = note, Figure = note, Image = note, Table = note, CodeBlock = note })
+  return doc:walk({
+    Link = function(el)
+      local t = el.target:match("^#(.+)$")
+      if t and not ids[t] and not t:match("^sec%-") and not t:match("^fig%-") and not t:match("^tbl%-")
+         and not t:match("^eq%-") and t ~= "refs" and not t:match("^ref%-") then
+        return el.content
+      end
+    end,
+    Image = function(el)
+      local src = el.src
+      if not src:match("^https?:") and not src:match("^data:") then
+        local f = io.open(src, "rb")
+        if f then f:close() else
+          quarto.log.warning("working-paper: image not found, left out: " .. src)
+          return pandoc.Str("")
+        end
+      end
+    end,
+  })
+end
+
 function Pandoc(doc)
+  doc = drop_broken(doc)
+  -- books (series: "Book") start each chapter or part on a new page instead
+  local is_book = doc.meta.series and pandoc.utils.stringify(doc.meta.series):lower():match("^book") ~= nil
+  if doc.meta["number-sections"] == false then doc.meta["wp-unnumbered"] = true end
   local in_appendix = false
   local h1 = 0
+  -- a book whose chapters are "# CHAPTER n: ..." headings with its sub-sections also at level 1:
+  -- push everything else down a level so the chapters lead the contents
+  if is_book then
+    local chapters = false
+    for _, b in ipairs(doc.blocks) do
+      if b.t == "Header" and b.level == 1 and pandoc.utils.stringify(b.content):match("^CHAPTER") then chapters = true end
+    end
+    if chapters then
+      for _, b in ipairs(doc.blocks) do
+        if b.t == "Header" and not (b.level == 1 and pandoc.utils.stringify(b.content):match("^CHAPTER"))
+           and not b.classes:includes("unnumbered") or (b.t == "Header" and b.level > 1) then
+          if not (b.level == 1 and is_references(b)) then b.level = b.level + 1 end
+        end
+      end
+    end
+  end
   local blocks = pandoc.List()
   for _, b in ipairs(doc.blocks) do
     if b.t == "Header" then
       local brk = nil
       if b.level == 1 then
         h1 = h1 + 1
-        if h1 <= 2 or is_references(b) then brk = page_break() end
+        local txt = pandoc.utils.stringify(b.content)
+        if is_book then
+          if txt:match("^CHAPTER") or txt:match("^Chapter") or txt:match("^Part ") or txt:match("^PART ")
+             or h1 == 1 or is_references(b) then brk = page_break() end
+        elseif h1 <= 2 or is_references(b) then
+          brk = page_break()
+        end
       end
       if b.classes:includes("appendix") and not in_appendix then
         in_appendix = true
