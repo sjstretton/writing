@@ -9,6 +9,19 @@
 #let wp-serif = ("Source Serif 4", "Libertinus Serif")
 #let wp-sans = ("Source Sans 3", "DejaVu Sans")
 
+// Orphan rule (NORMS.md section 11): a section must not start with only about a paragraph of space left
+// on the page. Before each heading sits an invisible, unbreakable block of that height, pulled back up
+// straight after (LaTeX's needspace). If it does not fit, it and the heading move to the next page;
+// if it fits, it takes no space.
+#let wp-margin-top = 2.9cm
+#let wp-margin-bottom = 2.6cm
+#let wp-need = (5.2cm, 3.6cm)   // room needed below a level-1 and a level-2 heading: about a paragraph
+
+#let wp-needspace(h) = {
+  block(breakable: false, height: h, width: 100%, above: 0pt, below: 0pt)
+  v(-h)
+}
+
 // Called by the Lua filter where the appendices begin: letters for any numbered headings after it.
 #let appendix-start() = {
   counter(heading).update(0)
@@ -38,7 +51,7 @@
   // ---- page ----
   set page(
     paper: "a4",
-    margin: (x: 2.6cm, top: 2.9cm, bottom: 2.6cm),
+    margin: (x: 2.6cm, top: wp-margin-top, bottom: wp-margin-bottom),
     header: context {
       if counter(page).get().first() > 1 {
         set text(font: wp-sans, size: 8pt, fill: wp-grey)
@@ -59,6 +72,8 @@
   set text(font: wp-serif, size: 10.5pt, lang: "en", region: "GB", hyphenate: true,
            number-type: "lining")
   set par(justify: true, leading: 0.66em, spacing: 0.95em)
+  // no widows or orphans: never one line of a paragraph alone at the foot or head of a page
+  set text(costs: (widow: 1000%, orphan: 1000%))
   show math.equation: set text(font: ("New Computer Modern Math",))
   show link: set text(fill: wp-blue)
   show ref: set text(fill: wp-blue)
@@ -75,6 +90,7 @@
   show heading: set text(font: wp-sans, fill: wp-blue, hyphenate: false)
   show heading: set par(justify: false)
   show heading.where(level: 1): it => {
+    wp-needspace(wp-need.at(0))
     set text(size: 13pt, weight: "semibold")
     block(above: 1.9em, below: 0.9em, sticky: true, {
       if it.numbering != none {
@@ -84,6 +100,7 @@
     })
   }
   show heading.where(level: 2): it => {
+    wp-needspace(wp-need.at(1))
     set text(size: 11pt, weight: "semibold")
     block(above: 1.5em, below: 0.75em, sticky: true, {
       if it.numbering != none {

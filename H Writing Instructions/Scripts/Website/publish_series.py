@@ -5,11 +5,12 @@ papers/ only the files the site's pages actually link to, and papers/ is what go
 
 Stable names, one per paper and form, overwritten on each run:
     <PaperName>.docx           the working paper (current version), from the master's own .docx
-    <PaperName>.pdf            the working paper as a PDF, where render_pdfs.py has made one
-    Brief-<PaperName>.docx     the Climate Fiscal Policy Brief, where there is one (and Brief-<PaperName>.pdf)
+    Brief-<PaperName>.docx     the Climate Fiscal Policy Brief, where there is one
     Slides-<PaperName>.pptx    the deck, where there is one
     Overview<Section>.docx     each section's overview, and Slides-<Section>.pptx its theme deck
     books (BOOKS below)
+Each file's PDF (made beside it by render_pdfs.py) is archived with it, under the same name with .pdf; the
+site links only the PDFs.
 
 The papers are every numbered paper folder in the sections listed in site_config.py, so a new paper folder is
 picked up without editing this file. Missing briefs and decks are reported and skipped.
@@ -25,13 +26,18 @@ BOOKS = [
     ("3.3.TimeAndChance", "TimeAndChance.docx", "TimeAndChance.docx"),
     ("8.5.2.CarbonPricingRightPolicyWrongTime", "CarbonPricingRightPolicyWrongTime.docx", "CarbonPricingRightPolicyWrongTime.docx"),
     ("8.5.3.Plucked", "Plucked.docx", "Plucked.docx"),
+    ("SLIDIs", "SLIDIs.docx", "SLIDIs.docx"),
 ]
 
 
 def copy(src, dst):
+    """Copy a file into the archive, and its PDF (made by render_pdfs.py) beside it under the same stable name."""
     if src and src.exists():
         shutil.copy2(src, dst)
         print(f"archived  {dst.name}")
+        if src.with_suffix(".pdf").exists() and src.suffix != ".pdf":
+            shutil.copy2(src.with_suffix(".pdf"), dst.with_suffix(".pdf"))
+            print(f"archived  {dst.with_suffix('.pdf').name}")
     else:
         print(f"missing   {src}")
 
@@ -49,12 +55,10 @@ def main():
             for folder in paper_folders(part, sec):
                 name = paper_name(folder)
                 copy(folder / f"{name}.docx", ARCHIVE / f"{name}.docx")
-                if (folder / f"{name}.pdf").exists():
-                    copy(folder / f"{name}.pdf", ARCHIVE / f"{name}.pdf")
-                for f in (f"Brief-{name}.docx", f"Brief-{name}.pdf", f"Slides-{name}.pptx"):
+                for f in (f"Brief-{name}.docx", f"Slides-{name}.pptx"):
                     if (folder / "1.Presentation" / f).exists():
                         copy(folder / "1.Presentation" / f, ARCHIVE / f)
-                    elif not f.endswith(".pdf"):
+                    else:
                         print(f"none      {f}")
         for folder_name, fname, pub in BOOKS:
             hits = [p for p in part["root"].rglob(folder_name) if p.is_dir()]
