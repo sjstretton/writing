@@ -1,0 +1,232 @@
+---
+title: "Guarantee the Contract, Price the Policy, Pool the Risk"
+subtitle: "A Climate Reserve for Clean Power in Developing Countries, and a Model to Test It"
+author:
+  - name: "Stephen J. Stretton"
+    affiliation: "World Bank Group"
+date: "1 November 2026"
+version: "Draft v0.1"
+abstract: |
+  Clean power in developing countries is cheap to run and expensive to finance: the cost of capital for utility-scale solar is well over twice that in advanced economies, and a solar plant financed at 12 percent rather than 4 percent costs about 80 percent more per kilowatt-hour. The premium is set less by technology than by doubt that the buyer of the power will pay, and the institutions that could remove that doubt work apart. This paper joins them into one design. A climate reserve, capitalized by surplus sovereigns and holding its capital in safe assets, stands second in line behind guaranteed power contracts rather than behind debt; its support reaches each government as guarantee capacity that rises with credible policy and decays if unused; and operating plants are refinanced as standard, collateralized securities that pension funds can hold. Each layer lowers a named part of the cost of capital at a known expected cost. On the development banks' sovereign loss record, a dollar of expected loss buys about 80 dollars of interest saving; without their preferred-creditor treatment, under 3. Whether the reserve inherits the long-term relationships that give development banks that record is therefore the first design question. The paper sets out a global country-by-sector model to test the design.
+keywords: [cost of capital, guarantees, sovereign incentives, policy crediting, climate finance, carbon border adjustment]
+jel: [F34, F35, G28, H63, Q54, Q58]
+bibliography: references.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+format:
+  docx: default
+  pdf:
+    number-sections: true
+    linestretch: 1.3
+---
+
+*The findings, interpretations, and conclusions expressed in this paper are entirely those of the author. They do not necessarily represent the views of the World Bank and its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.*
+
+*Draft v0.1, 1 November 2026, for the author's review. Overview paper for the thesis plan "Sovereign Incentives for Decarbonisation" (`../Thesis-Plan-Sovereign-Incentives.md`). Figures from the author's working papers are from their current drafts; external figures marked [VERIFY] come from searches on 1 November 2026 and must be checked at source before the paper leaves draft.*
+
+<!--
+Question: How can developing countries' cost of capital for clean power be brought close to their sovereign's own, at an expected cost funders will bear, in a way that makes sustained decarbonization each government's best choice?
+Answer: Guarantee the contract, not the debt, through relationships no party can walk away from; price the support on the government's own policy and let it decay if unused; and hold the risk in a climate reserve capitalized by surplus sovereigns, refinancing operating plants as standard collateralized securities.
+-->
+
+# Introduction
+
+Developing countries pay the most for the capital they most need. The International Energy Agency finds that the cost of capital for utility-scale solar in emerging and developing economies is well over twice that in advanced economies, that financing can account for around half or more of the levelized cost of electricity, and that narrowing the gap by one percentage point would cut these economies' clean-energy financing costs by about \$150 billion a year [@IEA2024]. In a stylized solar plant, raising the cost of capital from 4 to 12 percent raises the levelized cost by about 80 percent, from 3.6 to 6.5 US cents per kilowatt-hour [@StrettonOV3]. Developing countries other than China need about \$2.3 to 2.5 trillion a year of climate investment by 2030, and each point off their cost of capital is worth about \$36 billion a year [@StrettonWP63].
+
+The question this paper answers is how to bring the cost of capital for clean power in developing countries close to the host sovereign's own, at an expected cost that funders will bear, in a way that makes sustained decarbonization each government's best choice.
+
+The answer has three parts. First, guarantee the contract, not the debt, and deliver the guarantee through relationships that no party can walk away from: a payer who expects to keep dealing with the guarantor pays. Second, price the support on the government's own policy, so that ambition earns cheaper finance, and let unused support decay, so that waiting stops paying. Third, hold the risk in a climate reserve capitalized by surplus sovereigns, which keeps its capital in safe assets and lends its strength, and refinance operating plants as standard, collateralized securities that pension funds and, where prudent, central banks can hold. Each part lowers a named premium in the cost of capital at a known expected cost.
+
+The contribution is integration, and the gap it fills is one of specialism. Ameli et al. [-@Ameli2021] show how higher financing costs trap developing economies in too little clean investment, and Calcaterra et al. [-@Calcaterra2024] show what lowering the cost of capital would achieve, but neither designs the instrument. The UNDP de-risking framework compares public instruments that reduce, transfer or compensate risk [@Waissbein2013] but takes national policy as given. Nordhaus [-@Nordhaus2015] shows how clubs can overcome free-riding but works through trade penalties, not finance. Grubb [-@Grubb2023FT] proposes that Norway's windfall underwrite investment in developing countries, and Sinha [-@Sinha2023] proposes a highly rated green bank capitalized by sovereign sponsors; neither says how support should be priced on the host's policy, how its risk should be measured or why each funder would join. This paper joins risk management, guaranteed contracts, sovereign incentives, coalition economics and macro-fiscal modeling, drawing on the author's working papers in each, and sets out a model that can test the result.
+
+Section 2 shows what each specialism contributes and what none provides; Section 3 sets out the framework as seven propositions; Section 4 gives practical examples and a worked example; Section 5 describes the model built to test the design and Section 6 what the evidence must show; Sections 7 and 8 give the policy implications and conclude.
+
+# Six specialisms, and the gap between them
+
+Each part of the remedy already has specialists, and their work rarely meets. This section takes them in turn and ends with what is missing.
+
+**Risk management lowers the cost of capital, mainly by removing payment risk.** Payment risk, the chance that a state-owned distribution company pays late or not at all, accounts for a large share of the premium: the IEA attributes 20 to 30 percent of the higher cost of capital in emerging economies to project- and sector-specific elements, including the offtaker's ability to pay, and recommends payment guarantees and creditworthy intermediaries such as India's Solar Energy Corporation [@IEA2024]. Paper 3.1 puts the offtaker premium in a stylized case at about 1.4 percentage points of the cost of capital, or 11 percent of the solar tariff [@StrettonWP31]. Financing costs also fall with deployment as lenders gain experience [@Egli2018], and a new global dataset now covers the cost of capital for renewables in 68 countries from 2010 to 2022 [@Steffen2025WACC].
+
+**Guaranteed contracts make revenue bankable, but only as far as the payer is credible.** Power purchase agreements, contracts for difference, regulated asset bases and availability payments all turn uncertain revenue into a defined payment stream. In every case the payment is only as good as the party behind it, which in most developing countries is a weak utility backed, implicitly or explicitly, by the state.
+
+**Sovereign incentives exist but are small, and some point the wrong way.** Results-based climate finance pays governments for predefined results, and the World Bank's Transformative Carbon Asset Facility has begun to credit policies rather than projects [@WorldBank2024Uzbekistan]. But crediting against national targets can reward weak targets: under Article 6 of the Paris Agreement, the more ambitious a host's national target, the higher the cost of the corresponding adjustment it must make when it sells credits [@WorldBank2023CA]. Sustainability-linked sovereign lending ties a margin to performance but its rewards are too small to move policy: a 100 basis point step-down on \$1 billion is worth \$77 million over ten years, against \$772 million for a stylized coal reform [@StrettonWP43].
+
+**Coalition economics explains why large economies might pay, but separately from finance.** The EU's carbon border adjustment entered its charging phase in January 2026 [@EC2026CBAM], and destination-based carbon pricing, which prices the carbon in what a country consumes, gives exporters a reason to price carbon at home [@StrettonWP11; @StrettonWP13]. China has roughly twice the solar module capacity that world demand absorbs [@Deluair2026], sold at export prices near \$0.11 per watt in October 2026 [@PVMag2026Prices], and since May 2026 has offered zero tariffs on imports from the African countries with which it has diplomatic relations [@GovCN2026ZeroTariff]. These facts are studied by trade analysts, not by those who design finance.
+
+**Collective action theory explains why concentrated losers block reform** [@Olson1965] and why policy is for sale to organized interests [@GrossmanHelpman1994], and the literature on clubs shows how to pay members at the margin [@Nordhaus2015]. It rarely asks how a cheaper cost of capital changes a government's payoff.
+
+**Macro-fiscal modeling counts investment needs and debt, but treats the cost of capital as an input.** Paper 6.5 finds that the financing mix and the efficiency of public investment move debt and growth more than the program's size [@StrettonWP65], and the IMF's fiscal risk tools value the contingent liabilities that guarantees create [@IMF2019PFRAM]. Neither asks what institution could change the financing mix.
+
+**The savings to finance the transition exist, in the wrong places.** Ageing societies need long-dated, safe assets to pay pensions, and the IMF finds that population ageing raises desired savings and pushes interest rates down [@IMF2025WEO]. Developing countries need long-term capital for energy and transport. The two needs meet only thinly: twenty European pension funds in one sample held on average 8.7 percent of their assets in emerging and developing economies [@ODI2023Pensions] [VERIFY]. A finance minister in an ageing country and one in a developing country face the same problem from two sides, invest to save and invest to develop, and a standard, guaranteed, collateralized security is the asset that would let one fund the other. Whether ageing in fact raises savings, or lowers them and raises real rates, is contested [VERIFY: Goodhart and Pradhan 2020]; in either case de-risking matters, because it is either the way to deploy spare savings or the way for developing countries to compete for scarce ones.
+
+**The gap is a design that joins these six.** No proposal sets out, in one framework, who guarantees what, how the guarantee is priced on the host's policy, who funds it and why, how its risk is measured on the guarantor's and the host's books, and what it does to growth and debt. That is what this paper provides.
+
+# Framework
+
+The framework rests on one unit and seven propositions. The unit is the guaranteed payment: a defined stream of payments under a long-term contract, backed by a party whose credit the market trusts. Four terms are used throughout. The **distance to the sovereign**, $\Delta^{sov} = w - r^{sov}$, is the gap between a project's cost of capital $w$ and the host government's own borrowing rate. A **binding relationship** is a long-term relationship between a payer and a creditor that the payer values more than the gain from walking away. **Guarantee capacity** is the maximum guarantee exposure a guarantor will provide on a country's eligible green borrowing. The **climate reserve** is a pool of capital, held in safe assets, that provides loss-absorbing cover on guaranteed contracts and is never paid out as grants. Notation follows the Global Incentives Model [@StrettonGIM] and is listed in Appendix A.
+
+## The cost of capital has named parts
+
+The cost of capital for technology $k$ in country $c$ can be split into premia that different instruments target:
+$$w_{k,c} = \frac{D}{V}\big(r^f + \pi^{ctry}_c + \pi^{off}_c + \pi^{fx}_c + \pi^{tech}_{k,c} + \pi^{pol}_c\big)(1 - t_c) + \frac{E}{V}\big(r^f + \pi^{eq} + \pi^{ctry}_c + \pi^{tech,E}_{k,c}\big),$$
+where $D/V$ and $E/V$ are the debt and equity shares, $r^f$ the risk-free rate, and the premia are for country risk, the offtaker, currency, technology experience and policy reversal. The host sovereign pays roughly $r^f + \pi^{ctry}_c$ on its own hard-currency debt, so the distance to the sovereign is mostly the offtaker, currency, technology and policy premia plus the equity premium. Each instrument below is scored by which premium it removes and at what expected cost.
+
+## Guarantee the contract, not the debt
+
+**Proposition 1 (contract guarantee).** *Where payment risk is the main premium, a guarantee on the power purchase contract, delivered through a creditworthy intermediary backed by a guarantee waterfall contracted in advance, removes more of the premium per dollar of expected cost than a guarantee on the project's debt.*
+
+The intuition is that a debt guarantee covers the lender only after the project fails, so it leaves the payment risk in the cash flow and exposes the guarantor to the whole loan, while a contract guarantee keeps the payments flowing [@StrettonWP31]. In paper 3.1's 100 MW case, the contract guarantee saves \$0.94 million a year at an expected cost of \$0.48 million to the guarantors, about \$2 of saving per dollar of cost (\$3.6 at an 80 percent recovery rate); a debt guarantee removes under a third of the offtaker premium. The waterfall runs from the offtaker to its subnational owner, the national government, a multilateral agency and a donor contingency account, so each layer is called only when the one before it fails.
+
+## Keep the parties together
+
+**Proposition 2 (binding relationships).** *A payer that expects to keep dealing with a creditor pays as long as the present value of the relationship exceeds the one-off gain from default, $\sum_t \delta^t v_t \geq G$. Default is therefore less likely, and the cost of capital lower, where the relationship is long, the payer depends on continued access, and the creditor can collect.*
+
+This is why development banks lose so little on sovereign loans. Governments treat them as preferred creditors, repaying them while restructuring other debt, even though the treatment is informal, with no binding statutory or contractual status [@G20CAF2022; @SchleglTrebeschWright2019]. Cordella and Powell [-@CordellaPowell2021] show that repaying preferred lenders can be the borrower's best choice because future access outweighs the cost [VERIFY: citation]. The same logic runs down a chain within countries: a distribution company to its state government, the state to the federal government, the government to its central bank or taxpayers. Each link lowers the risk the next creditor faces because the parties cannot walk away from each other. The implication for design is that a new guarantor gains little unless it enters such a relationship; a stand-alone fund that a government can default on without consequence will be priced as one.
+
+## Standardize, pool and collateralize
+
+**Proposition 3 (two-stage finance).** *Once payment risk is removed, refinancing operating plants as a pool across countries, split into a first-loss tranche, a thin mezzanine and a senior bond, lowers the cost of capital further, because the senior bond is rated on the guaranteed contracts and the cushion beneath it rather than on the host.*
+
+Paper 3.2 shows that with default correlations of 0.10 to 0.20, subordination of 5 to 8 percent makes the senior tranche near-AAA, that pooling across ten countries cuts the required cushion by about 40 percent, and that the levelized cost of solar falls by about a fifth (14 percent with a 30 percent cushion) [@StrettonWP32; @Vasicek2002]. The senior "synthetic sovereign bond" is the product pension funds and insurers can buy and, where prudent, central banks can accept as collateral. Collateral matters because most official and market lending to developing-country governments is unsecured, and where collateral is used it is often hidden: about half of China's official lending is effectively collateralized, mostly through cash held in accounts the lender controls [@Kiel2025Collateral; @Gelpern2021] [VERIFY]. Standard, transparent collateral (pledged contract receivables, reserve-backed buffers and beneficiary accounts) offers the same risk reduction without the seniority grab.
+
+## Carry the currency risk where it can be borne
+
+A hard-currency loan to a local-currency earner does not remove currency risk; it moves it to the borrower, and through the borrower to the state. Most clean-power revenue in developing countries is in local currency, while most long-term finance is in dollars or euros, so the currency premium $\pi^{fx}$ is part of the distance to the sovereign wherever the contract is indexed to a hard currency and part of the offtaker premium wherever it is not. Three instruments can carry it. A cross-currency swap lets a lender keep raising hard currency while the borrower holds local-currency debt; it is priced at roughly the interest differential plus a spread, so it converts the risk into a known cost rather than removing it. A local-currency power purchase agreement leaves the risk with the domestic economy and makes the senior tranche of Proposition 3 a local-currency asset that domestic pension funds and the central bank can hold. A partial credit guarantee to local banks, of the kind the ASEAN+3 Credit Guarantee and Investment Facility provides for local-currency bonds [@ADBCGIF], lengthens the tenor of local lending. Long hedges are scarce: tenors of 15 to 20 years, which power projects need, are offered by few providers at a viable cost [VERIFY]. Sinha [-@Sinha2023] proposes that a highly rated bank make a market in long-term hedges, holding capital against losses on its currency contracts; in this design the climate reserve could hold that capital alongside its credit buffer.
+
+The relationship argument of Proposition 2 applies to currency too. A government that pays a guarantor in local currency under a long-term relationship, and whose central bank stands behind its own payments, is a better counterparty than an arm's-length hedge provider can price. Part of the currency premium is therefore a premium on the sovereign's macroeconomic credibility, which the design can reward but cannot buy.
+
+## Price the support on the government's policy
+
+A government chooses when to adopt a policy package, and international support is meant to change that choice. Let $K$ be the government's cost of the package, falling at rate $g$ as technology gets cheaper, $H$ its domestic co-benefits, $M$ the international incentive and $r$ the government's discount rate. The government chooses the adoption date $T$ to maximize $e^{-rT}[M(T) + H - K e^{-gT}]$ [@StrettonUIOLI; @StrettonGIM].
+
+**Proposition 4 (decay beats a static reward).** *With a static incentive, immediate adoption requires $M \geq (1 + g/r)K - H$. An incentive that decays at the rate $g$ at which the cost of action falls removes the reward for waiting and cuts the incentive needed for immediate action by the factor $r/(r+g)$. Decay is credible only if forfeited amounts pass irrevocably to a common pool from which other countries are paid.*
+
+With $r = 6$ percent, $g = 7$ percent and no co-benefits, a static reward must be 2.2 times the cost of action, and a decaying one 46 percent of that [@StrettonUIOLI]. The credibility condition follows from the funder's incentive: if lapsed money returns to the funder and the funder still values the country's adoption, it extends the deadline, and the government, anticipating this, acts as if there were no decay. A ratcheting crediting baseline is itself a decaying incentive, at roughly two divided by the years until the norm binds, and keeps its full value only if it is indexed to peers or costs rather than the country's own record [@StrettonUIOLI].
+
+**Proposition 5 (policy crediting).** *If an outside buyer pays $\pi$ per tonne abated by a policy and the host keeps the reduction toward its own target, adopting a revenue-neutral feebate at rate $t$ is a net gain to the host when $\pi > t/2$, and the host's best response is $t = \pi$. If the host must transfer the reduction under Article 6, the break-even payment rises to about 1.5 times the rate.*
+
+This result, from paper 1.1 and in line with Strand [-@StrandRBP2020] for a donor-supported carbon tax, shows that paying for policies rather than projects is self-interested for the host as long as it keeps the reduction [@StrettonWP11]. Paper 1.4 adds that the EU's recognition of a partner's carbon price under its border adjustment is policy crediting paid in forgone border revenue [@StrettonWP14].
+
+The incentive need not be cash. Paper 4.1 delivers it as guarantee capacity set by a notional capitalized value: a balance opened by the country's carbon stock, debited for each tonne emitted above an agreed allowance and credited for each tonne below, never paid out [@StrettonWP41]. With no decline in capacity, each dollar of debit price is worth about 60 cents of carbon price at a 3 percent spread and a 5 percent discount rate. Capacity that declines, or lapses if unused, combines Propositions 4 and 5: in paper 4.1's coal case a declining schedule halves the donor cost of the same incentive, from \$25 million to \$13 million. The adoption condition in the presence of a financing incentive becomes $F(\Delta r) - C + H \geq K(1 + g/r)$ for a static offer, where $F(\Delta r)$ is the present value of the financing saving and $C$ the contingent liability the government takes on.
+
+## Make each member better off inside
+
+**Proposition 6 (participation).** *The arrangement is self-enforcing if each prospective member's payoff inside exceeds its payoff outside, $U_i^{in} \geq U_i^{out}$, and no member gains by leaving once others are in.*
+
+Each member's payoff has a concrete source. The EU, pricing carbon at the destination, gains partners who price carbon and a revenue stream: in paper 1.4's calibration, recognizing a partner's carbon price raises the exporter's best feebate rate from €8 to €21 per tonne [@StrettonWP14]. Paper 1.1 shows that when a border charge rises with each exporter's intensity, the exporter's best feebate rate equals the importer's price, a decentralized club that needs no tariff on non-members; in its eight-exporter steel simulation at \$100 per tonne, import intensity falls from 3.6 to 1.1 tonnes of CO₂ per tonne when exporters respond [@StrettonWP11]. China gains buyers for equipment it already makes, which guaranteed contracts in host countries turn into orders, and its trade liberalization and lending scale up the buyers. Surplus sovereigns such as Norway gain a safe, long-dated use for windfall savings [@Grubb2023FT]. Development banks extend their reach at small expected loss. Host governments gain $F(\Delta r)$ and keep their reductions.
+
+## Hold capital, lend its strength
+
+**Proposition 7 (reserve leverage).** *A climate reserve that holds capital in safe assets and provides second-loss cover on guaranteed contracts supports interest savings equal to a multiple of its expected loss. The multiple depends mainly on whether the reserve shares the development banks' preferred-creditor treatment.*
+
+Paper 4.2 sizes the reserve's buffer for a 1 percent annual chance of exhaustion [@StrettonWP42]. On the development banks' pooled sovereign record, 0.77 percent defaults a year with 95.1 percent recovered [@GEMs2025], each dollar of expected loss buys about 80 dollars of interest saving (63 at a 2 percent cost of carrying the buffer). In a stress case with calls of 3 percent a year and losses of 37 percent [@CrucesTrebesch2013], the kind of record a creditor without preferred status might face, the multiple falls to 2.7, and \$5 billion supports \$54 billion of guarantees [@StrettonWP41; @StrettonWP42]. The difference between 80 and 2.7 is the value of the binding relationship in Proposition 2, which is why the reserve's legal and institutional link to the development banks is its first design question.
+
+The reserve also decides who buys the paper. Its first-loss and second-loss layers let the senior tranche of Proposition 3 reach the rating that pension funds, insurers and sovereign wealth funds require, so the same pool of contracts draws on ageing countries' savings for its senior debt and on surplus sovereigns' capital for its cushion. Paper 4.2 allows pension funds and sovereign wealth funds to co-invest in construction-stage equity alongside the reserve for a fee of 25 percent of returns [@StrettonWP42].
+
+The reserve can be funded without new appropriations. Surplus sovereigns can commit windfall savings [@Grubb2023FT]. Reserve assets can become loss-absorbing capital: the IMF Board allowed Special Drawing Rights to buy hybrid capital in development banks in May 2024, up to SDR 15 billion [@Plant2024], and about \$108 billion of rechanneling pledges exceed the \$61 billion that existing IMF trusts can take [@FDL2024SDR] [VERIFY]. Border-adjustment revenue is a third source. National beneficiary accounts in the reserve, pledged as collateral now and drawn only after 2050, let countries benefit early through collateral rather than cash [@StrettonWP42].
+
+## Measure the cost and risk to the state on one basis
+
+Each instrument is reported on four numbers, so that a finance ministry and a funder can compare them. The first is the fall in the cost of capital and in the levelized cost. The second is the guarantor's cost: expected loss, the probability of a call times the loss given a call times the exposure, plus the cost of carrying the capital held against unexpected loss; this is the "expected loss and buffer" used throughout series 4. The third is the host's contingent liability, valued on the IMF's public-private partnership fiscal risk basis as guaranteed exposure weighted by the probability of a call, with a worst case [@IMF2019PFRAM]. The fourth is the effect on the debt path, using the IMF's idea of debt-at-risk, a high percentile of the projected debt distribution [@IMF2026FM]. Paper 6.3 adds a fifth lens for public money: value each investment at the market cost of capital, at a 6 percent social rate and at 6 percent plus co-benefits, and fund it publicly only if the marginal value of public funds exceeds their marginal cost, about 1.2 [@StrettonWP63]. In paper 6.3's stylized island, a power purchase agreement priced above the government's own borrowing rate is debt in disguise: commitments reach 7.6 to 8.9 percent of GDP. The four numbers make that visible before it is signed.
+
+# Practical examples and numbers
+
+Every layer of the design has a working precedent. The examples show what each achieves and where it breaks.
+
+**India's Solar Energy Corporation shows risk management through an intermediary, and the liability it moves.** The corporation buys power from solar developers and sells it to distribution companies, so developers face a AAA-rated counterparty rather than a weak utility. It has contracted about 60 GW at an average of Rs 2.93 per kWh, and a tripartite agreement lets the Reserve Bank of India debit a defaulting state's account [@StrettonWP31]. The IEA cites it as the model for managing offtaker risk [@IEA2024]. The risk did not vanish: it moved to the states, which needed a Rs 90,000 crore liquidity scheme in 2020 and the rescheduling of Rs 1.4 lakh crore of arrears in 2022 [@StrettonWP31]. It is the clearest example of a binding relationship chain lowering the cost of capital, and of the contingent liability that chain creates.
+
+**The development banks show the value of the relationship.** Their sovereign losses are small because governments keep paying them [@GEMs2025; @PerraudinPowellYang2016], and the G20's review found that shareholders and rating agencies overstate the risks they face [@G20CAF2022]. This is the record on which the 80-to-1 multiple in Proposition 7 rests.
+
+**East Asia already uses sovereign money as loss-absorbing capital.** The Asian Development Bank's Innovative Finance Facility for Climate in Asia and the Pacific lets partner governments cover payment defaults on a synthetic portfolio of ADB's existing sovereign loans; the guarantee releases capital that ADB lends again for climate, about \$4.5 of lending per \$1 of guarantee, with guarantees lasting 25 years [@ADB2024IFCAP] [VERIFY]. By end-2025, eight projects enabled by the facility had delivered about \$1.4 billion [@ADB2025IFCAPReport] [VERIFY]. The Credit Guarantee and Investment Facility, a trust fund of ADB set up in 2010 with the ASEAN+3 governments, including China, Japan and Korea, guarantees local-currency bonds issued in the region, with paid-in capital reported at about \$1.2 billion and leverage of about 2.5 [@ADBCGIF] [VERIFY]. Together they show that regional sovereigns will capitalize a shared risk-absorbing fund, that guarantees can carry local-currency risk, and that the guarantor's commitment can be contingent rather than disbursed.
+
+**China's collateralized lending is the cautionary contrast.** Collateral lowers the lender's risk, but secret escrow accounts also buy seniority over other creditors and keep debt out of collective restructuring [@Gelpern2021]. The design here seeks the same risk reduction transparently.
+
+**Policy crediting has begun at the World Bank.** Uzbekistan's program, the Bank Group's first policy-crediting operation, pays for verified reductions from energy tariff reform, with a first payment of \$7.5 million in June 2024 [@WorldBank2024Uzbekistan] [VERIFY]. The facility behind it sets baselines at the lower of the target and business-as-usual paths and requires a positive effect on national ambition [@TCAF2020].
+
+Table 1 puts the layers on one basis.
+
+| Layer | Premium removed | Expected cost to the guarantor | Effect, from the author's papers |
+|:--|:--|:--|:--|
+| Payment intermediary with guarantee waterfall | Offtaker, about 1.4 points | Expected loss on the contract guarantee | About \$2 saved per \$1 of expected cost (3.1) |
+| Two-stage refinancing and pooling | Technology and equity share | First-loss tranche | Levelized cost of solar down 14 to 19 percent (3.2) |
+| Guarantee capacity on a notional capitalized value | Country, on eligible borrowing | Expected loss plus buffer carry | About 60 cents of carbon price per \$1 of debit price (4.1) |
+| Decaying (use-it-or-lose-it) allocation | Reward for waiting | Lower allocation for the same timing | Required incentive cut by $r/(r+g)$, to 46 percent (use-it-or-lose-it paper) |
+| Climate reserve, second loss | Funds the layers above | Expected loss and buffer | About 80 per \$1 on the bank record; 2.7 in stress (4.1, 4.2) |
+
+: Table 1. Each layer lowers a named premium at a known expected cost. Source: the author's working papers as cited in the text.
+
+**A worked example shows how far the layers can move the price of power.** Take the stylized solar plant of the series 3 overview: \$800 per kilowatt, a 20 percent capacity factor and a 25-year life, which costs 6.5 US cents per kilowatt-hour at a 12 percent cost of capital and 3.6 cents at 4 percent [@StrettonOV3]; the two points imply operating costs of about 0.7 cents. Table 2 traces the plant through the layers, with an illustrative sovereign borrowing rate of 8 percent.
+
+| Step | Cost of capital | Levelized cost (US cents/kWh) | Change from start |
+|:--|:--|:--|:--|
+| Start: merchant risk, weak offtaker | 12.0% | 6.5 | – |
+| Contract guarantee removes the offtaker premium (1.4 points, paper 3.1) | 10.6% | 5.9 | −9% |
+| Remaining premia removed: financed at the sovereign's rate (illustrative 8%) | 8.0% | 5.0 | −24% |
+| For comparison: an advanced-economy rate | 4.0% | 3.6 | −45% |
+
+: Table 2. Each point off the cost of capital is worth about a third of a cent on solar power. Source: author's calculation from the stylized plant in the series 3 overview; the 8 percent sovereign rate is an assumption for illustration.
+
+The arithmetic makes two points. Bringing the plant to its sovereign's rate cuts its price by about a quarter, which is the prize the design competes for. The remaining gap to advanced economies is the sovereign's own premium, which only better macroeconomic credibility, or a guarantor whose credit the market prefers to the sovereign's, can close.
+
+**Kenya shows the fiscal side.** In paper 6.5's illustrative run, Kenya's climate budget need is 0.60 percent of GDP in 2030, a power-sector carbon tax at \$88 per tonne raises about 5 percent of it, and the country is at high risk of debt distress [@StrettonWP65]. A design that adds to Kenya's debt cannot work; one that lowers the interest rate on guaranteed borrowing and keeps the guarantee off the budget can, which is why the contingent liability $C$ must be counted.
+
+# A model to test the design
+
+The design needs a model that compares instruments acting through different channels on one basis, and none of the models available to a finance ministry does. The Global Incentives Model is planned for that purpose [@StrettonGIM]. It runs annually from 2024 to 2050 for 186 countries and reuses existing components: the national mitigation investment model, the CPAT mitigation module [@StrettonWP51], the nested constant-elasticity model and Total Effective Carbon Price of paper 6.1 [@StrettonWP61], the CBAM Policy Tool [@StrettonWP62] and the macro-fiscal models behind paper 6.5.
+
+Its five modules map onto this paper's framework. The cost-of-finance module implements the decomposition above, with the technology premium falling as national experience grows, so that early deployment lowers the future cost of capital. The investment taxonomy records who decides and who pays in each sector, and through what contract. The international incentives module pays governments, holds balances and records donor costs for policy crediting, use-it-or-lose-it funds, guarantee capacity, reserve accounts, sustainability-linked lending and recycled border revenue, and its country timing layer solves for each government's adoption date given the incentives and what other governments do. A trade module computes border charges on bilateral flows of steel, aluminum, cement, fertilizers, hydrogen and electricity, with substitution between origins, and consumption-based emissions from an input-output table; it should be extended to solar modules and cells to trace China's exports to host countries. The national objectives module values a package in money (output, fiscal balance, energy-import risk, health and losses to the poor and to incumbents) subject to a debt constraint.
+
+The model's limits are the design's limits. It is a set of linked partial models, not general equilibrium; trade responds only in the product tier; and exchange rates and capital flows enter only through the cost of capital [@StrettonGIM]. Its behavioral parameters are the largest uncertainty, so it should report ranges.
+
+# What the evidence must show
+
+The design rests on three claims that data can test, and on one that only cases can. Each is stated so that it can fail.
+
+**Contracts (H1).** The fall in the cost of capital associated with multilateral support should be larger where national policy already provides long-term contracted revenue through auctions, power purchase agreements or contracts for difference than where projects sell at merchant prices. The test joins country-technology cost-of-capital data [@Steffen2025WACC; @IEA2024] to the World Bank's database of private participation in infrastructure, which flags multilateral support, with each country coded for its contract type. The claim fails if the association is absent or reversed.
+
+**Binding relationships (H3).** For comparable projects and country risk, the cost of capital should be lower where the payment is backed by a party in a long-term relationship with the payer (a development bank with preferred-creditor treatment, a government standing behind its own utility, an intermediary such as SECI with a central-bank debiting mechanism) than where it is backed by an arm's-length guarantor. The test codes the relationship behind each payment and compares spreads. The claim fails if the difference vanishes once country risk is controlled for. With observational data these are associations, and should be reported as such.
+
+**Thresholds (H2).** A fall in the cost of capital should change a government's adoption decision only if the financing saving, net of the contingent liability, exceeds the threshold implied by the government's costs, co-benefits, concentrated losses and the value of waiting. The test calibrates that threshold with CPAT's sectoral and distributional estimates and bounds the political weight on concentrated losses from each country's history of adoption and delay. The claim fails if reforms followed support well below the threshold, or failed despite support well above it.
+
+**Participation.** Whether the EU, China, surplus sovereigns and development banks would in fact join cannot be estimated from history. It can be calibrated, member by member, with the trade and incentives modules of the Global Incentives Model, and examined in cases: Kenya, India and Indonesia, where the author's papers already hold calibrations, and Uzbekistan for policy crediting.
+
+# Policy implications
+
+**Finance ministries should guarantee contracts, not debt, and count what they guarantee.** A ministry that backs a payment intermediary should value its exposure on an accrual basis, with a probability of call and a worst case [@IMF2019PFRAM], and publish it. The SECI case shows that the liability does not disappear when it moves to a state.
+
+**Development banks should lend their relationships, not only their balance sheets.** The large multiple in Proposition 7 depends on governments treating the guarantor as a creditor they cannot walk away from. A climate reserve should therefore be housed with, or legally linked to, the development banks, so that calls on it are treated like calls on them. IF-CAP shows that donor guarantees on a bank's existing portfolio can release lending capacity at that bank's own credit standing.
+
+**Surplus sovereigns and reserve holders should commit capital, not grants.** Windfall savings and rechanneled reserve assets can be held in safe assets and pledged as loss-absorbing capital. On the bank record the expected cost is small; in the stress case it is not, and funders should be told both numbers.
+
+**The EU and China each have a reason to join, and the design should use it.** Destination-based pricing and recognition of partners' carbon prices give the EU partners and revenue; guaranteed contracts in host countries give China buyers. Recycling part of border revenue to the reserve, and opening its guaranteed pools to equipment from any supplier, would align both.
+
+**Support should decay, and lapsed money should go to the pool.** A use-it-or-lose-it rule cuts the incentive needed for early action by more than half, but only if forfeited amounts go to other countries with a claim on them rather than back to donors.
+
+The strongest objection is that guarantees socialize risk that governments should bear, and that cheap finance relieves pressure to reform utilities. The design answers it in two ways: support is priced on policy, so a government that backslides loses capacity, and the waterfall puts the government ahead of the reserve, so the reserve is called only after the host has paid. The design fails where credibility is weak enough that the host's first-loss layer is routinely exhausted, where there is no bankable pipeline, where concentrated losses exceed any feasible financing saving, or where the reserve fails to inherit preferred-creditor treatment and is priced on the stress case.
+
+# Conclusion
+
+The paper shows that the instruments needed to bring developing countries' cost of capital close to their sovereign's own already exist in separate pieces, and that they fit together into one design: guaranteed contracts, binding relationships, policy-priced and decaying support, a coalition in which each member gains, and a reserve that lends its strength. The main limitation is that the multiple on which the design's economics rest, about 80 to 1, depends on a relationship that is informal and that a new institution may not inherit. The next step is to estimate how far relationships and contract design explain observed financing costs once country risk is held fixed, and to build the cost-of-finance and timing modules of the Global Incentives Model so that the design can be tested country by country.
+
+# References {-}
+
+::: {#refs}
+:::
+
+# Appendix A. Notation {-}
+
+| Symbol | Meaning |
+|:--|:--|
+| $w$ | Cost of capital (weighted average) |
+| $r^{sov}$, $r^f$ | Host sovereign's borrowing rate; risk-free rate |
+| $\Delta^{sov} = w - r^{sov}$ | Distance to the sovereign |
+| $\pi^{ctry}, \pi^{off}, \pi^{fx}, \pi^{tech}, \pi^{pol}, \pi^{eq}$ | Premia for country, offtaker, currency, technology, policy reversal and equity |
+| $K$, $g$ | Government's cost of a policy package; rate at which it falls |
+| $H$ | Domestic co-benefits of the package |
+| $M$ | International incentive |
+| $r$, $\delta$ | Government's discount rate and factor |
+| $F(\Delta r)$ | Present value of the financing saving from a cut $\Delta r$ in the cost of capital |
+| $C$ | Contingent liability taken on by the government |
+| $\pi$, $t$ | Price paid per tonne under policy crediting; feebate rate |
+| $v_t$, $G$ | Value of continued access in period $t$; one-off gain from default |
+| $D/V$, $E/V$, $t_c$ | Debt and equity shares of financing; corporate tax rate |
+| $U_i^{in}, U_i^{out}$ | Member $i$'s payoff inside and outside the arrangement |
