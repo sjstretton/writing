@@ -1,0 +1,73 @@
+# Research notes: financing, sovereign incentives and contracts
+
+Written 1 Nov 2026 from web searches in one session. Search results were often trade press or advocacy, so check every figure against the primary source before using it in the proposal. "Memory" means named from model memory, not verified.
+
+## 1. Sovereign incentives and carbon markets
+
+- **Claim:** crediting rules can give a host government a reason to keep its target weak, because a stronger NDC makes each corresponding adjustment costlier.
+- Ambition coefficient approach (Climate Policy, 2022): <https://www.tandfonline.com/doi/pdf/10.1080/14693062.2022.2108366>. Excerpt only; read the paper.
+- "Caught in between" (Climate Policy, 2021): <https://www.tandfonline.com/doi/full/10.1080/14693062.2021.1948384>
+- World Bank, Corresponding Adjustment and Pricing of Mitigation Outcomes: <https://ppp.worldbank.org/public-private-partnership/sites/default/files/2023-10/Corresponding%20Adjustment%20and%20Pricing%20of%20Mitigation%20Outcomes.pdf>
+- Carbon Brief on Article 6: <https://www.carbonbrief.org/in-depth-q-and-a-how-article-6-carbon-markets-could-make-or-break-the-paris-agreement> (the 18 to 28 bn tonnes figure has no traced original source).
+- Cullenward and Victor, *Making Climate Policy Work* (2020). Only secondary summaries seen.
+- Counter-view: Verra and ICVCM say fears of frozen ambition are overblown (S&P Global, 2023).
+- Results-based climate finance: <https://www.tcafwb.org/sites/default/files/2023-05/WB_RBCF_Report_FINAL.pdf>. MDB joint report 2023 shows results-based financing about $4.3bn against about $10.7bn policy-based (check).
+- **Gap (unconfirmed):** no source found on guarantees or credit enhancement priced on credible national climate policy. Check Google Scholar for "conditional guarantee", "policy-contingent", "ambition-linked" before claiming novelty.
+- Memory, unverified: Scott Barrett and William Nordhaus (climate clubs, treaty incentives); Kevin Gallagher (debt and climate).
+
+## 2. De-risking and cost of capital: people (memory, verify)
+
+Nadia Ameli (UCL); Michael Grubb (UCL); Tobias Schmidt (ETH); Gireesh Shrimali and Ben Caldecott (Oxford); Ulrich Volz (SOAS); Mariana Mazzucato (UCL IIPP); Avinash Persaud; Nicholas Stern, Amar Bhattacharya and Vera Songwe; Barbara Buchner (CPI); Yannick Glemarec and Oliver Waissbein (UNDP 2013 derisking framework); Ian Parry (IMF); Jean Pisani-Ferry; Patrick Bolton.
+
+## 3. Cost of energy now (2025 data, 2026 reports)
+
+- IRENA: solar PV about $44/MWh; over 90% of new utility-scale renewables beat the cheapest new fossil plant; solar plus storage $54 to $82/MWh in strong regions. <https://www.pv-tech.org/solar-pv-lcoe-ticks-marginally-upwards-2025-irena/>
+- BloombergNEF: solar about $39, onshore wind about $40, new combined-cycle gas about $102 (record), four-hour storage $78/MWh. <https://pv-magazine-usa.com/2026/02/23/solar-lcoe-to-fall-30-by-2035-says-bloombergnef/>
+- Wood Mackenzie: four-hour storage beats gas peaking in many markets. Its $120/MWh storage figure is above BNEF's; definitions likely differ.
+- Lazard (US): solar $40 to $98/MWh, up on tariffs.
+- Finance minister's view: import bill and FX, price shocks, cost of capital and debt space, contingent liabilities, fuel revenue.
+
+## 4. Ageing, pensions and climate investment
+
+- IMF WEO April 2025 ch. 2 (ageing raises savings, lowers rates): <https://www.imf.org/-/media/files/publications/weo/2025/april/english/ch2.pdf>
+- OECD, role of pension funds in green growth (Della Croce, Kaminker, Stewart, 2011): <https://www.oecd.org/content/dam/oecd/en/publications/reports/2011/09/the-role-of-pension-funds-in-financing-green-growth-initiatives_g17a2011/5kg58j1lwdjd-en.pdf>
+- ODI, Trillions or billions: <https://media.odi.org/documents/Working_paper_-_trillions_or_billions-full_text_23.05.pdf> (20 funds averaged 8.7% in emerging markets).
+- ECDPM, pension fund capital for SDGs and climate: <https://ecdpm.org/work/unlocking-pension-fund-capital-sdgs-and-climate-emerging-markets>
+- Brookings 2016, intermediation failure: <https://www.brookings.edu/wp-content/uploads/2016/06/tt20_stern_investment.pdf>
+- **Tension:** memory says Goodhart and Pradhan (*The Great Demographic Reversal*) argue ageing lowers savings and raises real rates; the IMF says the opposite. Take a position.
+- **Gap:** no paper found joining the climate investment need with pension shortfalls as one policy package.
+
+## 5. Long-term contracts and grids
+
+- Fabra and Neuhoff, cited for government-issued long-term contracts, in the CfD design paper: <https://arxiv.org/pdf/2512.17508>
+- Brattle, long-term contracting: <https://www.brattle.com/wp-content/uploads/2017/10/7487_the_importance_of_long-term_contracting_for_facilitating_renewable_energy_project_development_weiss_sarro_may_7_2013.pdf>
+- European Parliament study on PPAs and CfDs (2026): <https://www.europarl.europa.eu/RegData/etudes/STUD/2026/780416/ECTI_STU(2026)780416_EN.pdf>
+- World Bank, Linking Up (PPPs in African transmission): <https://documents1.worldbank.org/curated/en/794221496411403495/pdf/115521-WP-P152573-PUBLIC-June-6-SUPTAEnglishReportWeb.pdf>
+- Models: availability-payment independent transmission projects; 20 to 30 year network concessions. Preconditions: legal framework, availability payments, creditworthy counterparty. Currency risk: payments in local currency.
+- Kenya Africa50 concession (about $311m, 30 years) is from partner content: check the contract.
+- **Not covered:** smart local grids, distribution, mini-grids, and the size of the grid investment need.
+- **Thesis link:** the counterparty guarantee is the sovereign credit problem.
+
+## 6. Clean vehicles
+
+Purchase subsidies in big markets (sources are blogs; verify against official sources):
+- China: purchase-tax relief halved for 2026 to 2027 (cap RMB15,000, from RMB30,000); an industry body proposes a gradual phase-out. <https://carcody.com/china-cuts-a-major-ev-tax-incentive-in-2026-but-not-all-subsidies-end/>
+- US: one 2026 source says federal consumer credits ended for vehicles acquired after 30 Sep 2025; US support has shifted to manufacturers (§45X). Another guide still lists up to $7,500, probably outdated.
+- India: PLI-Auto scheme and local-content conditions. Details thin.
+- EU: Battery Regulation and CBAM act as entry conditions, not purchase subsidies.
+- Compendium: <https://energyfactbook.com/world/ev-policy-by-country/>
+- Nothing found on battery swapping.
+
+Financing in emerging markets (stronger evidence):
+- UNEP Capital 2 Mobilize: financing cost differences mostly reflect macro and customer risk; China, India and Vietnam near petrol-vehicle terms; Latin America and Africa need concessional support; about $110bn needed 2026 to 2035; in very high-cost markets EV-specific de-risking does little. <https://www.unep.org/en/events/online-event/capital-2-mobilize-financing-electric-two-and-three-wheeler-transition-global>
+- RMI: interest on electric two- and three-wheelers about twice petrol equivalents; SIDBI and Shell Foundation $6m risk-sharing facility. <https://rmi.org/unlocking-low-cost-lending-for-electric-two-and-three-wheelers/>
+- IEA India e-buses: banks wary of resale value; pooled fund and first-loss guarantees. <https://www.iea.org/reports/india-case-study/electric-transportation-in-india-accelerating-the-deployment-of-e-buses>
+- OECD blended finance case study (BasiGo, Kenya and Rwanda): <https://www.oecd.org/en/publications/blended-finance-case-studies_2fb90b9a-en/using-flexible-debt-to-support-capital-intensive-e-mobility-businesses_992472ad-en.html>
+- India NBFC EV lease rates quoted at 18 to 28%: <https://changing-transport.org/financing-the-future-of-transport/>
+
+## Still to check
+1. Whether anyone has proposed policy-priced sovereign guarantees (ask Ameli and Grubb).
+2. Whether PhD by published works exists at UCL, Oxford or Cambridge for someone in Stephen's position.
+3. Oxford and Cambridge deadlines for October 2027 entry.
+4. Smart grid and distribution financing.
+5. IEA estimates of grid investment at net zero.
