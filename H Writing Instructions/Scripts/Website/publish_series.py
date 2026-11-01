@@ -8,7 +8,9 @@ Stable names, one per paper and form, overwritten on each run:
     Brief-<PaperName>.docx     the Climate Fiscal Policy Brief, where there is one
     Slides-<PaperName>.pptx    the deck, where there is one
     Overview<Section>.docx     each section's overview, and Slides-<Section>.pptx its theme deck
-    books (BOOKS below)
+    books (BOOKS below) and earlier papers (EARLIER_PAPERS)
+Each file's PDF (made beside it by render_pdfs.py) is archived with it, under the same name with .pdf; the
+site links only the PDFs.
 
 The papers are every numbered paper folder in the sections listed in site_config.py, so a new paper folder is
 picked up without editing this file. Missing briefs and decks are reported and skipped.
@@ -26,11 +28,20 @@ BOOKS = [
     ("8.5.3.Plucked", "Plucked.docx", "Plucked.docx"),
 ]
 
+# earlier papers listed at the end of a section (site_config.SECTION_EXTRAS), not part of the numbered series
+EARLIER_PAPERS = [
+    ("SLIDIs", "SLIDIs.docx", "SLIDIs.docx"),
+]
+
 
 def copy(src, dst):
+    """Copy a file into the archive, and its PDF (made by render_pdfs.py) beside it under the same stable name."""
     if src and src.exists():
         shutil.copy2(src, dst)
         print(f"archived  {dst.name}")
+        if src.with_suffix(".pdf").exists() and src.suffix != ".pdf":
+            shutil.copy2(src.with_suffix(".pdf"), dst.with_suffix(".pdf"))
+            print(f"archived  {dst.with_suffix('.pdf').name}")
     else:
         print(f"missing   {src}")
 
@@ -53,7 +64,7 @@ def main():
                         copy(folder / "1.Presentation" / f, ARCHIVE / f)
                     else:
                         print(f"none      {f}")
-        for folder_name, fname, pub in BOOKS:
+        for folder_name, fname, pub in BOOKS + EARLIER_PAPERS:
             hits = [p for p in part["root"].rglob(folder_name) if p.is_dir()]
             if hits:
                 copy(hits[0] / fname, ARCHIVE / pub)

@@ -33,7 +33,7 @@ lightbox: auto
 
 # Executive summary {#sec-summary}
 
-[**Policy brief (short version) →**](index.qmd) · [Slides (pptx)](../../../papers/Slides-ElasticityValidation.pptx)
+[**Policy brief (short version) →**](index.qmd) · [Download this paper (pdf)](../../../papers/ElasticityValidation.pdf) · [Slides (pdf)](../../../papers/Slides-ElasticityValidation.pdf)
 
 
 **A carbon-pricing model's answer is set mostly by its price elasticities.** The Climate Policy Assessment Tool (CPAT), built by the International Monetary Fund (IMF) and the World Bank, tells finance ministries how much a carbon tax or a fuel subsidy reform will cut emissions and raise revenue. It does so by applying, to each fuel in each sector, a number saying how much use falls when the price rises: the price elasticity. Double the elasticity and the estimated cut doubles. CPAT's own sensitivity tests show that the elasticities move its answers more than any other parameter: varying them by two standard deviations moves the cut in G20 emissions from a \$75 carbon tax from 29 percent to anywhere between 7 and 39 percent.
@@ -242,7 +242,7 @@ CPAT's default price elasticities are mostly consistent with the evidence and, a
 
 # Downloads {.unnumbered}
 
-[Policy brief (docx)](../../../papers/Brief-ElasticityValidation.docx) · [Working paper (docx)](../../../papers/ElasticityValidation.docx)
+[Policy brief (pdf)](../../../papers/Brief-ElasticityValidation.pdf) · [Working paper (pdf)](../../../papers/ElasticityValidation.pdf)
 
 # References {.unnumbered}
 

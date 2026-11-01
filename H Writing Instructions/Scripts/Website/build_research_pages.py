@@ -1,14 +1,16 @@
 """Build the website's research pages from the papers themselves, so the site is never out of date.
 
 For each part in site_config.PARTS (Policy and Finance; Modelling and Analytics) this writes, in E Website:
-    the part's home page (index.qmd, modelling/index.qmd)  a short intro and, per section, a line and its papers
+    the part's home page (policy/index.qmd, modelling/index.qmd)  a short intro and, per section, a line and its papers
     <part>/<n>-<slug>.qmd     one page per section: the overview abstract, then each paper's title, subtitle,
                               abstract (the policy brief's where there is one) and links: the brief and the
-                              working paper online, the slides, then the Word files
+                              working paper online, then the PDFs of the slides, brief and working paper
     the part's sidebar in _quarto.yml (between its BEGIN/END markers): sections; under each, the papers that
                               have a web version (the policy brief's page); under each paper, its working paper;
-                              under Books and other papers, each web book and its chapters
-policy/more.qmd (Books and other papers) is hand-written and left alone.
+                              then the section's books and earlier papers (site_config.SECTION_EXTRAS), a web book
+                              with its chapters
+Books and earlier papers are listed at the end of their section's page; there is no separate Books page.
+The site links PDFs only (render_pdfs.py makes them).
 
 Then it fills papers/ with exactly the files the site's pages link to, copied from PaperArchive/ (filled by
 publish_series.py). papers/ is uploaded; PaperArchive/ is not. A linked file missing from the archive is reported.
@@ -19,7 +21,7 @@ Compile-Website.bat runs this after publish_series.py and build_web_papers.py an
 """
 import re
 import shutil
-from site_config import (PARTS, SITE, ARCHIVE, PAPERS, WEB_BOOKS, paper_folders, paper_name, master_qmd, section_folder,
+from site_config import (PARTS, SITE, ARCHIVE, PAPERS, WEB_BOOKS, SECTION_EXTRAS, paper_folders, paper_name, master_qmd, section_folder,
                          web_page, book_dir, book_name)
 
 
@@ -68,7 +70,8 @@ def section_page(part, sec):
     out = [f"---\ntitle: \"{num}. {name}\"\naliases:\n  - ../research/{slug}.html\n---\n"]
     if ovm.get("abstract"):
         out.append(ovm["abstract"] + "\n")
-    links = [l for l in (link("Section overview", overview, page), link("Series slides", deck, page) if deck else None) if l]
+    pdf = lambda f: f.rsplit(".", 1)[0] + ".pdf"   # the site links PDFs only
+    links = [l for l in (link("Section overview", pdf(overview), page), link("Series slides", pdf(deck), page) if deck else None) if l]
     if links:
         out.append(" · ".join(links) + "\n")
     titles = []
@@ -99,36 +102,53 @@ def section_page(part, sec):
             online = [f"[Read online →]({slug}/{stem}/index.qmd)"]
         else:
             online = []
-        words = [l for l in (link("Policy brief", f"Brief-{stem}.docx", page),
-                             link("Working paper", f"{stem}.docx", page)) if l]
-        ls = online + [l for l in (link("Slides", f"Slides-{stem}.pptx", page),) if l]
+        words = [l for l in (link("Policy brief", f"Brief-{stem}.pdf", page),
+                             link("Working paper", f"{stem}.pdf", page)) if l]
+        ls = online + [l for l in (link("Slides", f"Slides-{stem}.pdf", page),) if l]
         if words:
             ls += words
         if ls:
             out.append(" · ".join(ls) + "\n")
         titles.append((pnum, title.split(":")[0].strip(), anchor, web if has_web else None,
                        wp_web if has_wp_web else None))
+    extras = []
+    for x in SECTION_EXTRAS.get(folder_name, []):
+        anchor = "extra-" + re.sub(r"[^a-z0-9]+", "-", x["title"].lower()).strip("-")
+        out.append(f"## {x['title']} {{#{anchor}}}\n")
+        sub = " · ".join(t for t in (x["kind"], x.get("subtitle"), x.get("by")) if t)
+        out.append(f"*{sub}*\n")
+        out.append(x["text"] + "\n")
+        web = None
+        if x.get("web"):
+            d = book_dir(part, book_name(x["web"]))
+            if (SITE / d / "index.qmd").exists():
+                web = f"{d}/index.qmd"
+        ls = [l for l in ((f"[Read online →]({up(page)}{web})" if web else None),
+                          link(x["kind"], x["pdf"], page)) if l]
+        if ls:
+            out.append(" · ".join(ls) + "\n")
+        extras.append((x["title"], anchor, web, x["kind"]))
     (SITE / part["dir"]).mkdir(exist_ok=True)
     (SITE / page).write_text("\n".join(out), encoding="utf-8")
-    return titles
+    return titles, extras
 
 
 def home_page(part, index):
     page = part["home"]
     pre = up(page)
-    aliases = "aliases:\n  - research.html\n" if page == "index.qmd" else ""
+    # old addresses of the Policy and Finance home (it was the site's index.html until 1 Nov 2026)
+    aliases = ("aliases:\n  - ../research.html\n  - more.html\n  - ../research/more.html\n"
+               if page == "policy/index.qmd" else "")
     out = [f"---\ntitle: \"{part['title']}\"\n{aliases}---\n", part["intro"] + "\n"]
-    for sec, titles in index:
+    for sec, (titles, extras) in index:
         num = sec[0].split(".")[0]
         sp = f"{pre}{part['dir']}/{sec[1]}.qmd"
         out.append(f"### [{num}. {sec[2]}]({sp})\n")
         out.append(sec[3] + "\n")
-        if titles:
-            out.append("\n".join(f"- [{p} {t}]({pre + w if w else f'{sp}#{a}'})" for p, t, a, w, _ in titles) + "\n")
-    if part["more"]:
-        out.append(f"### [Books and other papers]({pre}{part['more']})\n")
-        out.append("Three books: *Time and Chance*, *The Right Policy at the Wrong Time* and the tax book *Plucked!*; "
-                   "and an earlier paper on sustainability-linked intermediated debt.\n")
+        items = [f"- [{p} {t}]({pre + w if w else f'{sp}#{a}'})" for p, t, a, w, _ in titles]
+        items += [f"- [{t}]({pre + w if w else f'{sp}#{a}'}) ({k.lower()})" for t, a, w, k in extras]
+        if items:
+            out.append("\n".join(items) + "\n")
     (SITE / page).parent.mkdir(exist_ok=True)
     (SITE / page).write_text("\n".join(out), encoding="utf-8")
 
@@ -156,14 +176,16 @@ def web_books(part):
 
 def write_sidebar(part, index):
     """Rewrite this part's sidebar between its BEGIN/END markers in _quarto.yml: each section, and under it
-    the papers that have a web version, so the sidebar works like a book's table of contents."""
+    the papers that have a web version, then the section's books (a book read on the site with its chapters),
+    so the sidebar works like a book's table of contents."""
     ind = " " * 8
     lines = [f"{ind}- text: {yq(part['title'])}", f"{ind}  href: {part['home']}"]
-    for sec, titles in index:
+    books = {home: chapters for _, home, chapters in web_books(part)}
+    for sec, (titles, extras) in index:
         num = sec[0].split(".")[0]
         sp = f"{part['dir']}/{sec[1]}.qmd"
         web = [(p, t, w, wpw) for p, t, a, w, wpw in titles if w]
-        if web:
+        if web or extras:
             lines += [f"{ind}- section: {yq(f'{num}. {sec[2]}')}", f"{ind}  href: {sp}", f"{ind}  contents:"]
             for p, t, w, wpw in web:
                 if wpw:
@@ -172,19 +194,15 @@ def write_sidebar(part, index):
                               f"{ind}        - text: \"Working paper\"", f"{ind}          href: {wpw}"]
                 else:
                     lines += [f"{ind}    - text: {yq(f'{p} {t}')}", f"{ind}      href: {w}"]
+            for t, a, w, k in extras:
+                if w and books.get(w):
+                    lines += [f"{ind}    - section: {yq(t)}", f"{ind}      href: {w}", f"{ind}      contents:"]
+                    for ct, cp in books[w]:
+                        lines += [f"{ind}        - text: {yq(ct)}", f"{ind}          href: {cp}"]
+                else:
+                    lines += [f"{ind}    - text: {yq(t)}", f"{ind}      href: {w or sp + '#' + a}"]
         else:
             lines.append(f"{ind}- {sp}")
-    if part["more"]:
-        books = web_books(part)
-        if books:
-            lines += [f"{ind}- section: {yq(front_matter(SITE / part['more']).get('title', 'Books'))}",
-                      f"{ind}  href: {part['more']}", f"{ind}  contents:"]
-            for title, home, chapters in books:
-                lines += [f"{ind}    - section: {yq(title)}", f"{ind}      href: {home}", f"{ind}      contents:"]
-                for ct, cp in chapters:
-                    lines += [f"{ind}        - text: {yq(ct)}", f"{ind}          href: {cp}"]
-        else:
-            lines.append(f"{ind}- {part['more']}")
     cfg = SITE / "_quarto.yml"
     text = cfg.read_text(encoding="utf-8")
     b = text.index(f"# BEGIN {part['key']} sidebar")

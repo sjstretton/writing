@@ -32,7 +32,7 @@ lightbox: auto
 
 # Executive summary {#sec-summary}
 
-[**Policy brief (short version) →**](index.qmd) · [Slides (pptx)](../../../papers/Slides-CPATValidation.pptx)
+[**Policy brief (short version) →**](index.qmd) · [Download this paper (pdf)](../../../papers/CPATValidation.pdf) · [Slides (pdf)](../../../papers/Slides-CPATValidation.pdf)
 
 
 **A finance ministry that sets a carbon price on the strength of a model needs to know how wrong the model is likely to be.** The Climate Policy Assessment Tool (CPAT), built by the World Bank and the International Monetary Fund, estimates the emissions, revenue, GDP and household effects of carbon pricing in more than 180 countries. A typical CPAT result is that a carbon tax rising to \$75 per tonne of CO₂ cuts emissions in the G20 by 29 percent in 2030. If the baseline is off by a fifth, or the response to the price by half, the revenue estimate and the gap to a country's pledge are off by as much. CPAT's own checks exist, but they are scattered through a long methodology chapter, mostly as charts. This paper sets them side by side, recomputes what can be recomputed, adds the evidence from the 2026 rebuild of the model, and judges the whole against how energy models are evaluated elsewhere.
@@ -261,7 +261,7 @@ CPAT's published validation, read as a whole, supports its use for first estimat
 
 # Downloads {.unnumbered}
 
-[Policy brief (docx)](../../../papers/Brief-CPATValidation.docx) · [Working paper (docx)](../../../papers/CPATValidation.docx)
+[Policy brief (pdf)](../../../papers/Brief-CPATValidation.pdf) · [Working paper (pdf)](../../../papers/CPATValidation.pdf)
 
 # References {.unnumbered}
 

@@ -1,88 +1,16 @@
 ---
-title: "Book1-Time_and_Chance"
+# MASTER - this is the file to edit.
+title: "Time and Chance"
+subtitle: "The Elements of Scale in the Green Transition"
+author:
+  - name: "Stephen J. Stretton"
+series: "Book"
+toc: true
+toc-depth: 2
+number-sections: false
 ---
 
-# Time and Chance
-
-*The Elements of Scale in the Green Transition*
-
-# Table of Contents
-
-[Time and Chance [2](#time-and-chance)](#time-and-chance)
-
-[Preface [2](#preface)](#preface)
-
-[A Note on Terms [5](#a-note-on-terms)](#a-note-on-terms)
-
-[Part I — The Price of Money [6](#part-i-the-price-of-money)](#part-i-the-price-of-money)
-
-[1. Why Capital Costs Too Much [6](#why-capital-costs-too-much)](#why-capital-costs-too-much)
-
-[2. Financial Constraints as a Barrier to Renewable Uptake [12](#financial-constraints-as-a-barrier-to-renewable-uptake)](#financial-constraints-as-a-barrier-to-renewable-uptake)
-
-[3. Why Risk Matters: A Primer [15](#why-risk-matters-a-primer)](#why-risk-matters-a-primer)
-
-[Part II — Contracts: Making Revenue Bankable [17](#part-ii-contracts-making-revenue-bankable)](#part-ii-contracts-making-revenue-bankable)
-
-[4. Why Contracts Beat Prices [17](#why-contracts-beat-prices)](#why-contracts-beat-prices)
-
-[5. Commitment Devices: Contracts for Difference and Price Floors [19](#commitment-devices-contracts-for-difference-and-price-floors)](#commitment-devices-contracts-for-difference-and-price-floors)
-
-[6. The Power Sector and Carbon Pricing [21](#the-power-sector-and-carbon-pricing)](#the-power-sector-and-carbon-pricing)
-
-[Part III — The Instruments [22](#part-iii-the-instruments)](#part-iii-the-instruments)
-
-[7. Forms of Guarantees [22](#forms-of-guarantees)](#forms-of-guarantees)
-
-[8. Synthetic Sovereign Bonds for Green Energy Investment [25](#synthetic-sovereign-bonds-for-green-energy-investment)](#synthetic-sovereign-bonds-for-green-energy-investment)
-
-[9. What the Record Shows [32](#what-the-record-shows)](#what-the-record-shows)
-
-[10. Goals, Criteria, and a Worked Derisking Scheme [35](#goals-criteria-and-a-worked-derisking-scheme)](#goals-criteria-and-a-worked-derisking-scheme)
-
-[11. Procurement Auctions and a Clean Energy Equity Fund [40](#procurement-auctions-and-a-clean-energy-equity-fund)](#procurement-auctions-and-a-clean-energy-equity-fund)
-
-[12. Green Policy as Growth Policy [41](#green-policy-as-growth-policy)](#green-policy-as-growth-policy)
-
-[13. The Sollar: A Solar-Panel-Backed Currency [43](#the-sollar-a-solar-panel-backed-currency)](#the-sollar-a-solar-panel-backed-currency)
-
-[Part IV — Institutions and the Architecture of Concessionality [47](#part-iv-institutions-and-the-architecture-of-concessionality)](#part-iv-institutions-and-the-architecture-of-concessionality)
-
-[14. Where the Risk Goes [47](#where-the-risk-goes)](#where-the-risk-goes)
-
-[15. Overcoming the Balance Sheet Limit [56](#overcoming-the-balance-sheet-limit)](#overcoming-the-balance-sheet-limit)
-
-[16. The Safe Intermediary Strategy: Toward a Theory of Concessionality [63](#the-safe-intermediary-strategy-toward-a-theory-of-concessionality)](#the-safe-intermediary-strategy-toward-a-theory-of-concessionality)
-
-[17. Why the World Bank [65](#why-the-world-bank)](#why-the-world-bank)
-
-[18. Scaling Up Policy Lending [68](#scaling-up-policy-lending)](#scaling-up-policy-lending)
-
-[19. The Climate Investment and Insurance Fund [73](#the-climate-investment-and-insurance-fund)](#the-climate-investment-and-insurance-fund)
-
-[20. The Climate Incentives Trust [78](#the-climate-incentives-trust)](#the-climate-incentives-trust)
-
-[21. Rewarding National Carbon Stocks: The Notional Capitalized Carbon Value [89](#rewarding-national-carbon-stocks-the-notional-capitalized-carbon-value)](#rewarding-national-carbon-stocks-the-notional-capitalized-carbon-value)
-
-[Part V — The Hard Cases: Utilities, Grids, Debt, and Coal [91](#part-v-the-hard-cases-utilities-grids-debt-and-coal)](#part-v-the-hard-cases-utilities-grids-debt-and-coal)
-
-[22. The Offtaker’s Own Economics [91](#the-offtakers-own-economics)](#the-offtakers-own-economics)
-
-[23. The Other Half [93](#the-other-half)](#the-other-half)
-
-[24. Avoiding the Non-Renewable Energy Debt Trap [95](#avoiding-the-non-renewable-energy-debt-trap)](#avoiding-the-non-renewable-energy-debt-trap)
-
-[25. Debt Sustainability and Green Investment [97](#debt-sustainability-and-green-investment)](#debt-sustainability-and-green-investment)
-
-[26. Phasing Out Coal: New Investment [101](#phasing-out-coal-new-investment)](#phasing-out-coal-new-investment)
-
-[27. Retiring Existing Coal Assets [102](#retiring-existing-coal-assets)](#retiring-existing-coal-assets)
-
-[28. Vietnam: The Whole Argument in One Country [104](#vietnam-the-whole-argument-in-one-country)](#vietnam-the-whole-argument-in-one-country)
-
-[29. Two Worlds [106](#two-worlds)](#two-worlds)
-
-[References [109](#references)](#references)
+*The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated.*
 
 # Preface
 

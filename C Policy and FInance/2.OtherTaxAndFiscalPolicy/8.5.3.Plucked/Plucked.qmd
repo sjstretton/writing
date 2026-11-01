@@ -1,19 +1,24 @@
 ---
+# MASTER - this is the file to edit. History: written 2020 as R Markdown (Chapters-Rmd/), 2020 title 'Screwed?!',
+# converted to Quarto October 2026 without changes to the text; the 2020 PDF is in 8.PreviousVersions.
 title: "Plucked!"
 subtitle: "A guide to a fair, simple, efficient and politically feasible tax and benefits system"
 author:
   - name: "Stephen Stretton"
   - name: "Gordon Styles"
-date: "2020 manuscript; Quarto edition October 2026"
-version: "1.0-2020"
+date: "2020"
+date-format: "YYYY"
+toc-depth: 1
 bibliography: Plucked.bib
 csl: https://www.zotero.org/styles/chicago-author-date
 toc: true
+series: "Book"
+number-sections: false
 format:
   docx: default
 ---
 
-*Book manuscript, 2020, converted from R Markdown to Quarto in October 2026 without changes to the text. Retitled in October 2026; the 2020 title was 'Screwed?! Getting our future back with tax and benefit reform'. Original chapter files are in `Chapters-Rmd`; the 2020 PDF is in `8.PreviousVersions`.*
+*The views expressed are the authors' own.*
 
 # CHAPTER 1: FACING GLOBAL RISKS HEAD ON
 

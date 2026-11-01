@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -60,14 +63,14 @@ div.csl-indent {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -100,7 +103,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -313,15 +316,15 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../policy/index.html"> 
 <span class="menu-text">Policy and Finance</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../../../modelling/index.html" aria-current="page"> 
 <span class="menu-text">Modelling and Analytics</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../about.html"> 
-<span class="menu-text">About</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -682,7 +685,7 @@ window.Quarto = {
 <p><em>Working paper, version 0.4, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.html">Climate Fiscal Policy Brief No.&nbsp;7.1</a>. Companion paper to the Climate Fiscal AI Tools.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="sec-summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
-<p><a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-ExciseFiscalDiagnostic.pptx">Slides (pptx)</a></p>
+<p><a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/ExciseFiscalDiagnostic.pdf">Download this paper (pdf)</a> · <a href="../../../papers/Slides-ExciseFiscalDiagnostic.pdf">Slides (pdf)</a></p>
 <p><strong>Most finance ministries cannot say, on one page, what their excise system taxes, how hard, and against what.</strong> An excise schedule in a lower-income country typically began with a few goods easy to tax at the port, then grew by amendment almost every year: a tobacco increase here, a mobile-money levy there, a cut for local beer, a rate left in an old currency. Excises raise about 1.3 percent of GDP on average across 37 African countries (2023), and they are the main price instruments a government has for carbon, air pollution, road deaths, tobacco and alcohol. Yet few ministries know whether a given fuel or tobacco rate is high or low against the damage the good does.</p>
 <p><strong>The Excise-Fiscal Diagnostic is a fixed-format report that reads a schedule whole and puts every line on a comparable scale.</strong> It sorts each line by its purpose, maps it onto a standard schedule of 30 lines with fixed units, and measures each rate three ways: US dollars per standard unit (for international comparison), share of the consumer price (for domestic debate and health targets), and revenue as a share of GDP (for the budget). It records how much each fixed-amount rate has lost to inflation since it was last changed.</p>
 <p><strong>For fuels it adds a benchmark built from one fixed set of damage values.</strong> The “externality spine” values carbon, local air pollution, congestion, accidents and road damage in dollars per liter, with the same parameters for every country, following the method the International Monetary Fund (IMF) uses to compute efficient fuel prices. For tobacco, alcohol and sugary drinks it uses the World Health Organization’s (WHO) published targets instead. The report shows the gap between each rate and its benchmark with a range, and leaves the decision to government.</p>
@@ -1242,7 +1245,7 @@ Figure&nbsp;2: Sierra Leone and Liberia: revenue depends on what counts as an ex
 </section>
 <section id="downloads" class="level1 unnumbered">
 <h1 class="unnumbered">Downloads</h1>
-<p><a href="../../../papers/Brief-ExciseFiscalDiagnostic.docx">Policy brief (docx)</a> · <a href="../../../papers/ExciseFiscalDiagnostic.docx">Working paper (docx)</a></p>
+<p><a href="../../../papers/Brief-ExciseFiscalDiagnostic.pdf">Policy brief (pdf)</a> · <a href="../../../papers/ExciseFiscalDiagnostic.pdf">Working paper (pdf)</a></p>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>

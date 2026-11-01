@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,14 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -260,15 +263,15 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../policy/index.html"> 
 <span class="menu-text">Policy and Finance</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../modelling/index.html" aria-current="page"> 
 <span class="menu-text">Modelling and Analytics</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -562,36 +565,36 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>The Climate Policy Assessment Tool (CPAT) tells a finance ministry what a carbon price raises and what it cuts, but ministries keep asking questions its core cannot answer. What is a mix of standards, subsidies and feebates worth as a carbon price? What will the EU carbon border adjustment cost exporters? What will the clean capital cost, and should the budget pay for it? How can CPAT be linked to the other models ministries use? What does a climate program do to growth and debt? This section answers each with one upgrade that reads the rebuilt model’s outputs without changing its core: the Total Effective Carbon Price, the CBAM Policy Tool, a public investment extension, a common activity layer, and the Macro-Fiscal-Energy Scenario Tool. Each states its method in a few equations so that a ministry can check it, and each peer review in October 2026 changed a result: the Egypt border charge, the cost of capital CPAT assumes, the island case, the ownership check and Kenya’s debt comparison.</p>
-<p><a href="../papers/OverviewModularUpgrades.docx">Section overview (docx) →</a> · <a href="../papers/Slides-ModularUpgrades.pptx">Series slides (pptx) →</a></p>
+<p><a href="../papers/OverviewModularUpgrades.pdf">Section overview (pdf) →</a> · <a href="../papers/Slides-ModularUpgrades.pdf">Series slides (pdf) →</a></p>
 <section id="paper-6-1" class="level2">
 <h2 class="anchored" data-anchor-id="paper-6-1">6.1 Measure Carbon Pricing by the Emissions It Cuts</h2>
 <p><em>The Total Effective Carbon Price</em></p>
 <p>Countries cut emissions with taxes, subsidies, standards and mandates, yet the usual carbon-price measures add up explicit prices per tonne. A fuel standard or a revenue-neutral feebate scores zero, and a dollar on coal counts the same as a dollar on gasoline. The Total Effective Carbon Price is the single economy-wide carbon tax that would cut emissions as much as the actual policy mix. It can be computed from an energy balance, fuel prices and published elasticities. In a stylized economy it rates a mix at $37 per tonne in the long run and $28 after one year, where explicit prices show $21. Crediting, border recognition and country reviews can all use it.</p>
-<p><a href="../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html">Policy brief →</a> · <a href="../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/working-paper.html">Working paper →</a> · <a href="../papers/Slides-PolicyEquivalentCarbonPriceAndCES.pptx">Slides (pptx) →</a> · <a href="../papers/Brief-PolicyEquivalentCarbonPriceAndCES.docx">Policy brief (docx) →</a> · <a href="../papers/PolicyEquivalentCarbonPriceAndCES.docx">Working paper (docx) →</a></p>
+<p><a href="../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.html">Policy brief →</a> · <a href="../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/working-paper.html">Working paper →</a> · <a href="../papers/Slides-PolicyEquivalentCarbonPriceAndCES.pdf">Slides (pdf) →</a> · <a href="../papers/Brief-PolicyEquivalentCarbonPriceAndCES.pdf">Policy brief (pdf) →</a> · <a href="../papers/PolicyEquivalentCarbonPriceAndCES.pdf">Working paper (pdf) →</a></p>
 </section>
 <section id="paper-6-2" class="level2">
 <h2 class="anchored" data-anchor-id="paper-6-2">6.2 The CBAM Policy Tool</h2>
 <p><em>Measuring Exporters’ Exposure to the EU Carbon Border Adjustment and What Domestic Policy Can Do About It</em></p>
 <p>Since January 2026 the EU has charged importers for the carbon in steel, aluminum, cement and fertilizers. Exporting governments can cut the bill in three ways: by getting plants to file verified emissions data, by cutting emissions, and by pricing carbon at home so the EU deducts it. The CBAM Policy Tool computes the bill product by product and year by year. Turkish hot-rolled steel owes €107 a tonne in 2026 and €252 at full phase-in. For Egypt, verified data would cut the charge on steel by about 90 percent, but barely move it on urea, the largest exposure. The right lever differs by product, so ministries should run the numbers before choosing.</p>
-<p><a href="../modelling/6-modular-upgrades/CBAMPolicyTool/index.html">Policy brief →</a> · <a href="../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html">Working paper →</a> · <a href="../papers/Slides-CBAMPolicyTool.pptx">Slides (pptx) →</a> · <a href="../papers/Brief-CBAMPolicyTool.docx">Policy brief (docx) →</a> · <a href="../papers/CBAMPolicyTool.docx">Working paper (docx) →</a></p>
+<p><a href="../modelling/6-modular-upgrades/CBAMPolicyTool/index.html">Policy brief →</a> · <a href="../modelling/6-modular-upgrades/CBAMPolicyTool/working-paper.html">Working paper →</a> · <a href="../papers/Slides-CBAMPolicyTool.pdf">Slides (pdf) →</a> · <a href="../papers/Brief-CBAMPolicyTool.pdf">Policy brief (pdf) →</a> · <a href="../papers/CBAMPolicyTool.pdf">Working paper (pdf) →</a></p>
 </section>
 <section id="paper-6-3" class="level2">
 <h2 class="anchored" data-anchor-id="paper-6-3">6.3 Public Investment in CPAT</h2>
 <p><em>Investment Needs and the Efficiency of Public Spending</em></p>
 <p>Finance ministries use the Climate Policy Assessment Tool to see what a carbon price raises and cuts, but not what the clean capital it calls for costs to finance or whether the budget should pay. This brief proposes two extensions. The first prices investment needs at each country’s cost of capital and at a social rate: a typical clean asset that pays its way at 6 percent breaks even at 12.6 percent. The second tests each use of public money against the cost of raising tax and counts cash, debt and contract liabilities. Often the budget’s problem is cash and hidden liabilities, not value.</p>
-<p><a href="../modelling/6-modular-upgrades/PublicInvestment/index.html">Policy brief →</a> · <a href="../modelling/6-modular-upgrades/PublicInvestment/working-paper.html">Working paper →</a> · <a href="../papers/Slides-PublicInvestment.pptx">Slides (pptx) →</a> · <a href="../papers/Brief-PublicInvestment.docx">Policy brief (docx) →</a> · <a href="../papers/PublicInvestment.docx">Working paper (docx) →</a></p>
+<p><a href="../modelling/6-modular-upgrades/PublicInvestment/index.html">Policy brief →</a> · <a href="../modelling/6-modular-upgrades/PublicInvestment/working-paper.html">Working paper →</a> · <a href="../papers/Slides-PublicInvestment.pdf">Slides (pdf) →</a> · <a href="../papers/Brief-PublicInvestment.pdf">Policy brief (pdf) →</a> · <a href="../papers/PublicInvestment.pdf">Working paper (pdf) →</a></p>
 </section>
 <section id="paper-6-4" class="level2">
 <h2 class="anchored" data-anchor-id="paper-6-4">6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT</h2>
 <p><em>One Driver Layer So Four Climate Models Can Be Linked, With the Carbon-Price Response Counted Once</em></p>
 <p>Finance ministries increasingly ask several climate models the same question, and the models disagree before any policy is applied, because each starts from different levels of activity: electricity used, distance traveled, vehicles on the road, tonnes of steel and cement made. This brief shows how four models used in climate-fiscal work (CPAT, SISEPUEDE, the CBAM Policy Tool and FTT) can share one set of drivers and one growth rule, so that their baselines agree. It sets out where a carbon price’s effect on demand must be counted, and only once, and why every link needs a check that cars stay inside total travel.</p>
-<p><a href="../modelling/6-modular-upgrades/ActivityModelling/index.html">Policy brief →</a> · <a href="../modelling/6-modular-upgrades/ActivityModelling/working-paper.html">Working paper →</a> · <a href="../papers/Slides-ActivityModelling.pptx">Slides (pptx) →</a> · <a href="../papers/Brief-ActivityModelling.docx">Policy brief (docx) →</a> · <a href="../papers/ActivityModelling.docx">Working paper (docx) →</a></p>
+<p><a href="../modelling/6-modular-upgrades/ActivityModelling/index.html">Policy brief →</a> · <a href="../modelling/6-modular-upgrades/ActivityModelling/working-paper.html">Working paper →</a> · <a href="../papers/Slides-ActivityModelling.pdf">Slides (pdf) →</a> · <a href="../papers/Brief-ActivityModelling.pdf">Policy brief (pdf) →</a> · <a href="../papers/ActivityModelling.pdf">Working paper (pdf) →</a></p>
 </section>
 <section id="paper-6-5" class="level2">
 <h2 class="anchored" data-anchor-id="paper-6-5">6.5 The Macro-Fiscal-Energy Scenario Tool</h2>
 <p><em>Financing and Efficiency, Not the Size of the Program, Decide What Climate Investment Does to Growth and Debt</em></p>
 <p>Finance ministries weighing climate investment get the budget cost, the carbon tax revenue, the growth effect and the debt test from different teams and models. The Macro-Fiscal-Energy Scenario Tool runs all four in one open workbook for 186 countries. In a stylized run, how a program is financed and how well public money is spent move debt and growth more than the program’s size. For Kenya, a net zero program needs 0.5 percent of GDP a year from the budget; carbon pricing on a clean grid covers about 5 percent of it. Ministries should use the tool to compare financing packages, not to forecast debt.</p>
-<p><a href="../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html">Policy brief →</a> · <a href="../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/working-paper.html">Working paper →</a> · <a href="../papers/Slides-MacroFiscalEnergyScenarioTool.pptx">Slides (pptx) →</a> · <a href="../papers/Brief-MacroFiscalEnergyScenarioTool.docx">Policy brief (docx) →</a> · <a href="../papers/MacroFiscalEnergyScenarioTool.docx">Working paper (docx) →</a></p>
+<p><a href="../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html">Policy brief →</a> · <a href="../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/working-paper.html">Working paper →</a> · <a href="../papers/Slides-MacroFiscalEnergyScenarioTool.pdf">Slides (pdf) →</a> · <a href="../papers/Brief-MacroFiscalEnergyScenarioTool.pdf">Policy brief (pdf) →</a> · <a href="../papers/MacroFiscalEnergyScenarioTool.pdf">Working paper (pdf) →</a></p>
 
 
 </section>

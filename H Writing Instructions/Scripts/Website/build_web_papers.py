@@ -18,8 +18,8 @@ What changes in the copies:
     - format: docx is dropped (the site's own html format applies), and web settings are added
       (contents sidebar, hover citations and cross-references, figure lightbox);
     - csl: points at the site's local copy of the Chicago style, so the build needs no internet;
-    - under the first heading (the executive summary): links to the other form and to the slides;
-    - at the end of the text, before the references: the Word downloads;
+    - under the first heading (the executive summary): links to the other form, this form's PDF and the slides;
+    - at the end of the text, before the references: the downloads (PDF only);
     - cross-links written in the masters as short targets become real links:
           [text](wp:)            the working paper          [text](wp:sec-crediting)    a section of it
           [text](brief:)         the policy brief           [text](brief:sec-what-to-do) a section of it
@@ -27,7 +27,7 @@ What changes in the copies:
       In the Word versions these show as plain text (Scripts/Website/web-links.lua, used when rendering).
 
 Books in WEB_BOOKS are split into one page per chapter, in E Website:
-    <part>/books/<BookName>/index.qmd          the book's contents page (title, description, download, chapters)
+    <part>/books/<BookName>/index.qmd          the book's contents page (title, description, PDF download, chapters)
     <part>/books/<BookName>/NN-<chapter>.qmd   one page per "# CHAPTER N: TITLE" heading in the master
     <part>/books/<BookName>/<BookName>.bib and the figures, as for papers
 Each chapter page ends with its own references and links to the previous and next chapters.
@@ -250,8 +250,8 @@ def build_book(folder_name, cfg):
     contents_yaml = drop_key(drop_key(drop_key(contents_yaml, "format"), "bibliography"), "csl")
     contents_yaml = drop_key(drop_key(contents_yaml, "toc"), "version")
     top = [cfg.get("blurb", "") + "\n"]
-    if (ARCHIVE / f"{name}.docx").exists():
-        top.append(f"**Download:** [The whole book (docx)](../../../papers/{name}.docx)\n")
+    if (ARCHIVE / f"{name}.pdf").exists():
+        top.append(f"**Download:** [The whole book (pdf)](../../../papers/{name}.pdf)\n")
     if preface:
         top.append(preface + "\n")
     top.append("# Contents {.unnumbered}\n")
@@ -297,20 +297,23 @@ def build(folder_name):
         """A download link with its file type in brackets in the link text: 'Slides (pptx)'."""
         return f"[{label} ({f.rsplit('.', 1)[-1].lower()})](../../../papers/{f})" if (ARCHIVE / f).exists() else None
 
-    slides = dl("Slides", f"Slides-{name}.pptx")
-    words = [l for l in (dl("Policy brief", f"Brief-{name}.docx"),
-                         dl("Working paper", f"{name}.docx")) if l]
+    # the site offers PDFs only (render_pdfs.py makes them; publish_series.py archives them)
+    slides = dl("Slides", f"Slides-{name}.pdf")
+    words = [l for l in (dl("Policy brief", f"Brief-{name}.pdf"), dl("Working paper", f"{name}.pdf")) if l]
     downloads = ("# Downloads {.unnumbered}\n\n" + " · ".join(words) + "\n") if words else None
 
+    brief_pdf = dl("Download this brief", f"Brief-{name}.pdf")
+    wp_pdf = dl("Download this paper", f"{name}.pdf")
     if has_brief:
         to_wp = "[**Read the full working paper →**](working-paper.qmd)"
-        write_page(brief, dest / "index.qmd", " · ".join(l for l in (to_wp, slides) if l) + "\n",
+        write_page(brief, dest / "index.qmd", " · ".join(l for l in (to_wp, brief_pdf, slides) if l) + "\n",
                    downloads, True)
         to_brief = "[**Policy brief (short version) →**](index.qmd)"
-        write_page(wp, dest / "working-paper.qmd", " · ".join(l for l in (to_brief, slides) if l) + "\n",
+        write_page(wp, dest / "working-paper.qmd", " · ".join(l for l in (to_brief, wp_pdf, slides) if l) + "\n",
                    downloads, True)
     else:
-        write_page(wp, dest / "index.qmd", (slides + "\n") if slides else None, downloads, False)
+        top = " · ".join(l for l in (wp_pdf, slides) if l)
+        write_page(wp, dest / "index.qmd", (top + "\n") if top else None, downloads, False)
 
 
 def main():

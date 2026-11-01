@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,14 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -259,16 +262,16 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../policy/index.html" aria-current="page"> 
 <span class="menu-text">Policy and Finance</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../modelling/index.html"> 
 <span class="menu-text">Modelling and Analytics</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -296,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../policy/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Policy and Finance</span></a>
   </div>
 </li>
@@ -377,6 +380,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../policy/1-carbon-pricing.html#extra-the-right-policy-at-the-wrong-time" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Right Policy at the Wrong Time</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -411,133 +420,15 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">2.2 Let Land Pay for the City</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../policy/3-finance-and-risk.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3. Finance and Risk</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3.1 Guarantee the Contract, Not the Debt</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/working-paper.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Working paper</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../policy/3-finance-and-risk/CleanPowerAssetClasses/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3.2 From Projects to Asset Classes</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../policy/3-finance-and-risk/CleanPowerAssetClasses/working-paper.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Working paper</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../policy/4-sovereign-incentives.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">4. Sovereign Incentives</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4.1 Reward the Stock as Well as the Flow</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/working-paper.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Working paper</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4.2 The Climate Investment Trust</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../policy/4-sovereign-incentives/ClimateInvestmentTrust/working-paper.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Working paper</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../policy/4-sovereign-incentives/SustainabilityLinkedLending/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../policy/4-sovereign-incentives/SustainabilityLinkedLending/working-paper.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Working paper</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../policy/more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Books and Other Papers</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../policy/books/Plucked/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plucked!</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../policy/books/Plucked/01-facing-global-risks-head-on.html" class="sidebar-item-text sidebar-link">
@@ -626,6 +517,125 @@ ul.task-list li input[type="checkbox"] {
   </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../policy/3-finance-and-risk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Finance and Risk</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.1 Guarantee the Contract, Not the Debt</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../policy/3-finance-and-risk/CleanPowerAssetClasses/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.2 From Projects to Asset Classes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../policy/3-finance-and-risk/CleanPowerAssetClasses/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../policy/3-finance-and-risk.html#extra-time-and-chance" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Time and Chance</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../policy/4-sovereign-incentives.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">4. Sovereign Incentives</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.1 Reward the Stock as Well as the Flow</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.2 The Climate Investment Trust</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../policy/4-sovereign-incentives/ClimateInvestmentTrust/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../policy/4-sovereign-incentives/SustainabilityLinkedLending/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../policy/4-sovereign-incentives/SustainabilityLinkedLending/working-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../policy/4-sovereign-incentives.html#extra-sustainability-linked-intermediated-debt-instruments-slidis" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sustainability-Linked Intermediated Debt Instruments (SLIDIs)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
     <nav id="TOC" role="doc-toc" class="toc-active">
@@ -635,6 +645,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#paper-4-1" id="toc-paper-4-1" class="nav-link active" data-scroll-target="#paper-4-1">4.1 Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives</a></li>
   <li><a href="#paper-4-2" id="toc-paper-4-2" class="nav-link" data-scroll-target="#paper-4-2">4.2 The Climate Investment Trust: Hold Capital, Lend Its Strength</a></li>
   <li><a href="#paper-4-3" id="toc-paper-4-3" class="nav-link" data-scroll-target="#paper-4-3">4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale</a></li>
+  <li><a href="#extra-sustainability-linked-intermediated-debt-instruments-slidis" id="toc-extra-sustainability-linked-intermediated-debt-instruments-slidis" class="nav-link" data-scroll-target="#extra-sustainability-linked-intermediated-debt-instruments-slidis">Sustainability-Linked Intermediated Debt Instruments (SLIDIs)</a></li>
   </ul>
 </nav>
 </nav>
@@ -666,24 +677,30 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>The benefits of cutting emissions are global and the costs national, so incentives for national climate policy have to come from outside. Cash transfers on the scale needed are politically impossible. This section of papers argues that the international system should instead reward governments with what it can supply cheaply and they value highly: cheaper borrowing, delivered through guarantees and collateral. A guarantee saves the borrower the full credit spread but costs its provider only expected loss and the carry on a buffer, so on the development banks’ own sovereign loss record each dollar of donor cost delivers about 80 dollars of interest saving, and 2.7 in a stress case where a new facility does not inherit their preferred-creditor status. Net of the default option the borrower gives up, the country’s gain is about 27 per dollar (1.9 in the stress case), and the ratios fall when the guarantor’s capital carries a cost or calls must be met in cash, so the institution behind the guarantees matters. Three instruments follow: a notional capitalized value that turns a country’s carbon stock into guarantee capacity, debited for every tonne emitted above an allowance; a Climate Investment Trust that holds the capital behind those guarantees instead of spending it; and codified sustainability-linked lending, which delivers the reward but is too small on its own. Capacity that declines as clean technology gets cheaper pays a premium for acting now.</p>
-<p><a href="../papers/OverviewSovereignIncentives.docx">Section overview (docx) →</a> · <a href="../papers/Slides-SovereignIncentives.pptx">Series slides (pptx) →</a></p>
+<p><a href="../papers/OverviewSovereignIncentives.pdf">Section overview (pdf) →</a> · <a href="../papers/Slides-SovereignIncentives.pdf">Series slides (pdf) →</a></p>
 <section id="paper-4-1" class="level2">
 <h2 class="anchored" data-anchor-id="paper-4-1">4.1 Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives</h2>
 <p><em>Turning carbon stocks and low-emission paths into cheaper borrowing</em></p>
 <p>Climate finance pays for tonnes avoided against baselines nobody can observe, and almost nothing for carbon stocks never released. This brief proposes crediting each country with a notional capitalized value: a balance opened by its carbon stock, debited for every tonne emitted above an agreed allowance, and used as guarantee capacity on green borrowing rather than paid out. A guarantee is worth the full spread to the borrower but costs only the expected loss, so on the development banks’ record each dollar of expected loss buys about 80 dollars of interest saving (2.7 in a stress case). For a forest country with Guyana’s stock, a $5 billion balance prices emissions at about $30 a tonne.</p>
-<p><a href="../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.html">Policy brief →</a> · <a href="../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/working-paper.html">Working paper →</a> · <a href="../papers/Slides-NotionalCapitalisedValueAndGuarantees.pptx">Slides (pptx) →</a> · <a href="../papers/Brief-NotionalCapitalisedValueAndGuarantees.docx">Policy brief (docx) →</a> · <a href="../papers/NotionalCapitalisedValueAndGuarantees.docx">Working paper (docx) →</a></p>
+<p><a href="../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.html">Policy brief →</a> · <a href="../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/working-paper.html">Working paper →</a> · <a href="../papers/Slides-NotionalCapitalisedValueAndGuarantees.pdf">Slides (pdf) →</a> · <a href="../papers/Brief-NotionalCapitalisedValueAndGuarantees.pdf">Policy brief (pdf) →</a> · <a href="../papers/NotionalCapitalisedValueAndGuarantees.pdf">Working paper (pdf) →</a></p>
 </section>
 <section id="paper-4-2" class="level2">
 <h2 class="anchored" data-anchor-id="paper-4-2">4.2 The Climate Investment Trust: Hold Capital, Lend Its Strength</h2>
 <p><em>A buffer fund that insures policy guarantees, invests in clean energy and holds national climate accounts</em></p>
 <p>International rewards for national climate policy fail because donors will not vote for large cash transfers and governments cannot borrow against promises. This brief proposes a Climate Investment Trust that holds capital instead of spending it. One pool stands second behind the guarantees that reward policy, earns fees by co-investing in clean energy, and holds national accounts that countries pledge as collateral now and draw after 2050. On the development banks’ sovereign loss record, each donor dollar delivers about 80 dollars of interest savings; without their preferred-creditor status, 2.7. Holding the cautious buffer, the Trust grows on its own yield if losses follow the banks’ record.</p>
-<p><a href="../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.html">Policy brief →</a> · <a href="../policy/4-sovereign-incentives/ClimateInvestmentTrust/working-paper.html">Working paper →</a> · <a href="../papers/Slides-ClimateInvestmentTrust.pptx">Slides (pptx) →</a> · <a href="../papers/Brief-ClimateInvestmentTrust.docx">Policy brief (docx) →</a> · <a href="../papers/ClimateInvestmentTrust.docx">Working paper (docx) →</a></p>
+<p><a href="../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.html">Policy brief →</a> · <a href="../policy/4-sovereign-incentives/ClimateInvestmentTrust/working-paper.html">Working paper →</a> · <a href="../papers/Slides-ClimateInvestmentTrust.pdf">Slides (pdf) →</a> · <a href="../papers/Brief-ClimateInvestmentTrust.pdf">Policy brief (pdf) →</a> · <a href="../papers/ClimateInvestmentTrust.pdf">Working paper (pdf) →</a></p>
 </section>
 <section id="paper-4-3" class="level2">
 <h2 class="anchored" data-anchor-id="paper-4-3">4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale</h2>
 <p><em>Standard indicators, verification and pricing, and why the reward must be bigger than an interest margin</em></p>
 <p>Sustainability-linked debt lowers a government’s interest rate when it meets agreed climate targets, but it remains rare, bespoke and small: Uruguay’s 2023 World Bank loan, the first of its kind, can save the country at most $12.5 million. This brief proposes codifying the instrument, with standard indicators, verification from published data and a published price per tonne. The reward should come from outside, through an intermediary, because a bond whose coupon moves with results makes the government pay for its own reward. Even then an interest margin is too small to pay for major reforms. Guarantee capacity as the reward gives it scale.</p>
-<p><a href="../policy/4-sovereign-incentives/SustainabilityLinkedLending/index.html">Policy brief →</a> · <a href="../policy/4-sovereign-incentives/SustainabilityLinkedLending/working-paper.html">Working paper →</a> · <a href="../papers/Slides-SustainabilityLinkedLending.pptx">Slides (pptx) →</a> · <a href="../papers/Brief-SustainabilityLinkedLending.docx">Policy brief (docx) →</a> · <a href="../papers/SustainabilityLinkedLending.docx">Working paper (docx) →</a></p>
+<p><a href="../policy/4-sovereign-incentives/SustainabilityLinkedLending/index.html">Policy brief →</a> · <a href="../policy/4-sovereign-incentives/SustainabilityLinkedLending/working-paper.html">Working paper →</a> · <a href="../papers/Slides-SustainabilityLinkedLending.pdf">Slides (pdf) →</a> · <a href="../papers/Brief-SustainabilityLinkedLending.pdf">Policy brief (pdf) →</a> · <a href="../papers/SustainabilityLinkedLending.pdf">Working paper (pdf) →</a></p>
+</section>
+<section id="extra-sustainability-linked-intermediated-debt-instruments-slidis" class="level2">
+<h2 class="anchored" data-anchor-id="extra-sustainability-linked-intermediated-debt-instruments-slidis">Sustainability-Linked Intermediated Debt Instruments (SLIDIs)</h2>
+<p><em>Earlier paper · with Marcello Estevão and Nils Zimmermann</em></p>
+<p>Lowering developing countries’ cost of borrowing while rewarding their governments for agreed environmental, social and governance progress, through sustainability-linked debt issued via an intermediary.</p>
+<p><a href="../papers/SLIDIs.pdf">Earlier paper (pdf) →</a></p>
 
 
 </section>

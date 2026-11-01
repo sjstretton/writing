@@ -22,11 +22,11 @@ website:
   navbar:
     right:
       - href: index.qmd
+        text: Home
+      - href: policy/index.qmd
         text: Policy and Finance
       - href: modelling/index.qmd
         text: Modelling and Analytics
-      - href: about.qmd
-        text: About
   sidebar:
     - id: policy
       title: "Policy and Finance"
@@ -35,7 +35,7 @@ website:
       contents:
         # BEGIN policy sidebar
         - text: "Policy and Finance"
-          href: index.qmd
+          href: policy/index.qmd
         - section: "1. Carbon Pricing"
           href: policy/1-carbon-pricing.qmd
           contents:
@@ -59,6 +59,8 @@ website:
               contents:
                 - text: "Working paper"
                   href: policy/1-carbon-pricing/IronSteelCBAM/working-paper.qmd
+            - text: "The Right Policy at the Wrong Time"
+              href: policy/1-carbon-pricing.qmd#extra-the-right-policy-at-the-wrong-time
         - section: "2. Other Tax and Fiscal Policy"
           href: policy/2-other-tax.qmd
           contents:
@@ -69,40 +71,6 @@ website:
                   href: policy/2-other-tax/RentTax/working-paper.qmd
             - text: "2.2 Let Land Pay for the City"
               href: policy/2-other-tax/LandPaysForTheCity/index.qmd
-        - section: "3. Finance and Risk"
-          href: policy/3-finance-and-risk.qmd
-          contents:
-            - section: "3.1 Guarantee the Contract, Not the Debt"
-              href: policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.qmd
-              contents:
-                - text: "Working paper"
-                  href: policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/working-paper.qmd
-            - section: "3.2 From Projects to Asset Classes"
-              href: policy/3-finance-and-risk/CleanPowerAssetClasses/index.qmd
-              contents:
-                - text: "Working paper"
-                  href: policy/3-finance-and-risk/CleanPowerAssetClasses/working-paper.qmd
-        - section: "4. Sovereign Incentives"
-          href: policy/4-sovereign-incentives.qmd
-          contents:
-            - section: "4.1 Reward the Stock as Well as the Flow"
-              href: policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.qmd
-              contents:
-                - text: "Working paper"
-                  href: policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/working-paper.qmd
-            - section: "4.2 The Climate Investment Trust"
-              href: policy/4-sovereign-incentives/ClimateInvestmentTrust/index.qmd
-              contents:
-                - text: "Working paper"
-                  href: policy/4-sovereign-incentives/ClimateInvestmentTrust/working-paper.qmd
-            - section: "4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale"
-              href: policy/4-sovereign-incentives/SustainabilityLinkedLending/index.qmd
-              contents:
-                - text: "Working paper"
-                  href: policy/4-sovereign-incentives/SustainabilityLinkedLending/working-paper.qmd
-        - section: "Books and Other Papers"
-          href: policy/more.qmd
-          contents:
             - section: "Plucked!"
               href: policy/books/Plucked/index.qmd
               contents:
@@ -134,6 +102,41 @@ website:
                   href: policy/books/Plucked/13-the-global-perspective-climate-fiscal-policy-and-collective-action.qmd
                 - text: "13. Conclusions"
                   href: policy/books/Plucked/14-conclusions.qmd
+        - section: "3. Finance and Risk"
+          href: policy/3-finance-and-risk.qmd
+          contents:
+            - section: "3.1 Guarantee the Contract, Not the Debt"
+              href: policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/working-paper.qmd
+            - section: "3.2 From Projects to Asset Classes"
+              href: policy/3-finance-and-risk/CleanPowerAssetClasses/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/3-finance-and-risk/CleanPowerAssetClasses/working-paper.qmd
+            - text: "Time and Chance"
+              href: policy/3-finance-and-risk.qmd#extra-time-and-chance
+        - section: "4. Sovereign Incentives"
+          href: policy/4-sovereign-incentives.qmd
+          contents:
+            - section: "4.1 Reward the Stock as Well as the Flow"
+              href: policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/working-paper.qmd
+            - section: "4.2 The Climate Investment Trust"
+              href: policy/4-sovereign-incentives/ClimateInvestmentTrust/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/4-sovereign-incentives/ClimateInvestmentTrust/working-paper.qmd
+            - section: "4.3 Codify Sustainability-Linked Sovereign Lending, Then Give It Scale"
+              href: policy/4-sovereign-incentives/SustainabilityLinkedLending/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: policy/4-sovereign-incentives/SustainabilityLinkedLending/working-paper.qmd
+            - text: "Sustainability-Linked Intermediated Debt Instruments (SLIDIs)"
+              href: policy/4-sovereign-incentives.qmd#extra-sustainability-linked-intermediated-debt-instruments-slidis
         # END policy sidebar
     - id: modelling
       title: "Modelling and Analytics"

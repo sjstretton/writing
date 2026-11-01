@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -60,14 +63,14 @@ div.csl-indent {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -97,7 +100,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -310,15 +313,15 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../policy/index.html"> 
 <span class="menu-text">Policy and Finance</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../../../modelling/index.html" aria-current="page"> 
 <span class="menu-text">Modelling and Analytics</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../about.html"> 
-<span class="menu-text">About</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -660,7 +663,7 @@ window.Quarto = {
 <p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the Climate Fiscal AI Tools. A short version for policy makers is <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html">Climate Fiscal Policy Brief No.&nbsp;6.5</a>.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="sec-summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
-<p><a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/Slides-MacroFiscalEnergyScenarioTool.pptx">Slides (pptx)</a></p>
+<p><a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/MacroFiscalEnergyScenarioTool.pdf">Download this paper (pdf)</a> · <a href="../../../papers/Slides-MacroFiscalEnergyScenarioTool.pdf">Slides (pdf)</a></p>
 <p><strong>A finance ministry asked to commit to a climate investment program wants one answer: what does it do to our debt?</strong> The answer depends on four estimates that are usually made apart: the investment the program needs and how much of it falls on the budget; what carbon pricing could raise to pay for it; what the spending does to growth; and what all of that does to debt and the risk of debt distress. Different teams run these on different models and calibrations, and the numbers rarely add up.</p>
 <p><strong>The Macro-Fiscal-Energy Scenario Tool runs the four in one pass, for 186 countries, in one workbook.</strong> An investment model estimates what a net zero path needs to 2050 and splits it by who pays. A pricing screen finds the most abatement a power-sector carbon tax, a feebate or a mix can deliver without breaching three limits on political cost: the rise in household tariffs, the loss to poor households, and the loss to coal and oil generators. Simplified, open versions of three IMF and World Bank macro models turn the financed program into paths for GDP and debt, and a simplified Bank-Fund debt framework rates the risk of debt distress before and with the program. Every assumption is a visible cell.</p>
 <p><strong>A stylized run shows that how a program is financed and how well the money is spent matter more than its size.</strong> For public investment of 1 percent of GDP a year for ten years, earmarking carbon revenue of 0.5 percent of GDP cuts the debt peak from 57 to 53 percent of GDP at no cost to growth. Lowering the efficiency of public investment from 0.7 to 0.5 cuts the GDP gain by 30 to 40 percent at every horizon and leaves debt where it was. In the low-income model, financing 60 percent of the program with grants and concessional loans keeps debt 2.4 points of GDP lower at its peak and barely changes growth.</p>
@@ -1262,7 +1265,7 @@ Table&nbsp;5: Kenya’s net zero program needs 0.5 percent of GDP a year from th
 </section>
 <section id="downloads" class="level1 unnumbered">
 <h1 class="unnumbered">Downloads</h1>
-<p><a href="../../../papers/Brief-MacroFiscalEnergyScenarioTool.docx">Policy brief (docx)</a> · <a href="../../../papers/MacroFiscalEnergyScenarioTool.docx">Working paper (docx)</a></p>
+<p><a href="../../../papers/Brief-MacroFiscalEnergyScenarioTool.pdf">Policy brief (pdf)</a> · <a href="../../../papers/MacroFiscalEnergyScenarioTool.pdf">Working paper (pdf)</a></p>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>

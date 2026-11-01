@@ -54,6 +54,16 @@ Working papers follow `H Writing Instructions/Writing Standards/paper-standard.m
 
 Nothing marked confidential or World Bank internal goes outward. Anything published carries the standard disclaimer that the views are the author's own.
 
-## 11. Less, but finished
+## 11. Paginate for the reader
+
+PDFs and Word files of papers and briefs follow these page rules. The working-paper format (`Writing Standards/templates/_extensions/working-paper/`) applies them automatically; check them by eye before publishing.
+
+- The title, abstract and disclaimer have the first page to themselves.
+- The executive summary (or key messages) starts on a new page, ideally fitting on one page.
+- The first section after the executive summary starts on a new page.
+- The references (bibliography) and the appendices each start on a new page.
+- No orphaned headings: if only about a paragraph of space (roughly a fifth of a page) is left when a new section starts, start it on the next page. Never leave a heading, or a single line of a paragraph, at the foot of a page.
+
+## 12. Less, but finished
 
 A short, finished, excellent paper beats a long, ambitious, unfinished one. Cut scope before cutting quality.

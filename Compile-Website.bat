@@ -1,9 +1,13 @@
 @echo off
-rem Compile the website: copy every paper, brief, overview and deck into E Website\PaperArchive, build the web pages,
+rem Compile the website: render every paper, brief, overview, book and deck to PDF, copy every paper, brief, overview and deck into E Website\PaperArchive, build the web pages,
 rem put only the files the pages link to into E Website\papers, write the index.html in each paper folder,
 rem then build the site with Quarto. Nothing is uploaded. Run Deploy-Website.bat to put it online.
 setlocal
 cd /d "%~dp0"
+echo.
+echo   0/2  Rendering the PDF of every paper, brief, overview, book and deck (Quarto + Typst; LibreOffice for decks) ...
+python "%~dp0H Writing Instructions\Scripts\Website\render_pdfs.py"
+if errorlevel 1 (echo Some PDFs did not render - see above. The site links PDFs only, so those files will have no download link.)
 echo.
 echo   1/2  Copying papers into E Website\PaperArchive ...
 python "%~dp0H Writing Instructions\Scripts\Website\publish_series.py"
