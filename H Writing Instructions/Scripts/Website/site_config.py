@@ -2,10 +2,10 @@
 
 The site has two research parts, each with its own top tab, home page, folder and sidebar:
     Policy and Finance        papers in "C Policy and FInance" (sections 1-4), pages in E Website/policy/,
-                              home page index.qmd (the site's landing page)
+                              home page policy/index.qmd
     Modelling and Analytics   papers in "D Modelling" (sections 5-7), pages in E Website/modelling/,
                               home page modelling/index.qmd
-plus About (about.qmd).
+plus the site's home page, index.qmd (who Stephen is and what the research covers), written by hand.
 
 Modelling and Analytics is due to move to its own repository. When it does, delete its entry in PARTS
 (and its tab in _quarto.yml); nothing else depends on it.
@@ -28,10 +28,10 @@ PARTS = [
         "title": "Policy and Finance",
         "root": REPO / "C Policy and FInance",
         "dir": "policy",
-        "home": "index.qmd",
+        "home": "policy/index.qmd",
         "intro": ("Papers on climate and fiscal policy and on climate finance, written for finance ministries and "
                   "development banks, in four sections. The modelling and analytics work is under "
-                  "[Modelling and Analytics](modelling/index.qmd)."),
+                  "[Modelling and Analytics](../modelling/index.qmd)."),
         "more": None,
         "sections": [
             ("1.CarbonPricing", "1-carbon-pricing", "Carbon Pricing",
@@ -57,7 +57,7 @@ PARTS = [
         "intro": ("Models and diagnostics a finance ministry can audit, in three sections: the Climate Policy "
                   "Assessment Tool (CPAT) stated, rebuilt and validated; modular upgrades to CPAT where policy needs "
                   "them; and analytics on data ministries already hold. The policy papers are under "
-                  "[Policy and Finance](../index.qmd)."),
+                  "[Policy and Finance](../policy/index.qmd)."),
         "more": None,
         "sections": [
             ("5.Modelling", "5-modelling", "Modelling (CPAT)",

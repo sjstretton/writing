@@ -1,7 +1,7 @@
 """Build the website's research pages from the papers themselves, so the site is never out of date.
 
 For each part in site_config.PARTS (Policy and Finance; Modelling and Analytics) this writes, in E Website:
-    the part's home page (index.qmd, modelling/index.qmd)  a short intro and, per section, a line and its papers
+    the part's home page (policy/index.qmd, modelling/index.qmd)  a short intro and, per section, a line and its papers
     <part>/<n>-<slug>.qmd     one page per section: the overview abstract, then each paper's title, subtitle,
                               abstract (the policy brief's where there is one) and links: the brief and the
                               working paper online, then the PDFs of the slides, brief and working paper
@@ -136,8 +136,9 @@ def section_page(part, sec):
 def home_page(part, index):
     page = part["home"]
     pre = up(page)
-    aliases = ("aliases:\n  - research.html\n  - policy/more.html\n  - research/more.html\n"
-               if page == "index.qmd" else "")
+    # old addresses of the Policy and Finance home (it was the site's index.html until 1 Nov 2026)
+    aliases = ("aliases:\n  - ../research.html\n  - more.html\n  - ../research/more.html\n"
+               if page == "policy/index.qmd" else "")
     out = [f"---\ntitle: \"{part['title']}\"\n{aliases}---\n", part["intro"] + "\n"]
     for sec, (titles, extras) in index:
         num = sec[0].split(".")[0]

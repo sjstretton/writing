@@ -22,11 +22,11 @@ website:
   navbar:
     right:
       - href: index.qmd
+        text: Home
+      - href: policy/index.qmd
         text: Policy and Finance
       - href: modelling/index.qmd
         text: Modelling and Analytics
-      - href: about.qmd
-        text: About
   sidebar:
     - id: policy
       title: "Policy and Finance"
@@ -35,7 +35,7 @@ website:
       contents:
         # BEGIN policy sidebar
         - text: "Policy and Finance"
-          href: index.qmd
+          href: policy/index.qmd
         - section: "1. Carbon Pricing"
           href: policy/1-carbon-pricing.qmd
           contents:
