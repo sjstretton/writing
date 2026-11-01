@@ -1,10 +1,10 @@
 # PhD Information Sheet (from Josh's working doc)
 
-Copied 30 Oct 2026 from the "PhD Applications" sections of Josh Smith's *Geoprosperity Working Doc* (Google Drive) (task T60). The account details in that doc are left out on purpose. Nothing here has been checked on the live university pages; `PhD-Application-Status.md` holds the checked-against-search view and the checklist.
+Copied 30 Oct 2026 from the "PhD Applications" sections of Josh Smith's *Geoprosperity Working Doc* (Google Drive) (task T60). The account details in that doc are left out on purpose. Nothing here has been checked on the live university pages; `PhD-Application-Status.md` (Oxford folder) holds the checked-against-search view and the checklist.
 
 ## Where the two sources differ
 
-| Point | Josh's sheet | `PhD-Application-Status.md` |
+| Point | Josh's sheet | `PhD-Application-Status.md` (Oxford folder) |
 |---|---|---|
 | Oxford deadline | Not given | 13 Nov 2026 (early), 26 Jan 2027 (final); unverified |
 | "Apply before start of November" | UCL, February 2027 intake | Not covered. Probably the source of the 31 Oct working deadline |

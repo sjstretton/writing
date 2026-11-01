@@ -4,7 +4,7 @@ Stephen Stretton · draft of 31 Oct 2026 · proposed supervisor Dr Gireesh Shrim
 
 > **Notes for Stephen (delete before submitting).**
 >
-> - **Limit unverified.** ox.ac.uk pages are blocked from this session, and earlier searches found no course-specific limit for a statement of purpose (see `PhD-Application-Status.md`). Josh's sheet lists five inputs for this course and no statement of purpose, so one may not be needed at all. Check the course page and the form. This draft is about 500 words, a common Oxford length; cut it if the form sets a lower limit.
+> - **Limit unverified.** ox.ac.uk pages are blocked from this session, and earlier searches found no course-specific limit for a statement of purpose (see `PhD-Application-Status.md` (Oxford folder)). Josh's sheet lists five inputs for this course and no statement of purpose, so one may not be needed at all. Check the course page and the form. This draft is about 500 words, a common Oxford length; cut it if the form sets a lower limit.
 > - Claims about Dr Shrimali come from search results: his role as Head of Transition Finance Research at the Oxford Sustainable Finance Group ([OSF](https://sustainablefinance.ox.ac.uk/?p=4724)); his 2024 World Economic Forum piece with Christian Wilson on the cost of debt and low-carbon investment ([WEF](https://www.weforum.org/stories/2024/01/cost-of-capital-climate-net-zero-transition/)); and the group's India Transition Finance Programme ([OSF](https://sustainablefinance.ox.ac.uk/?p=11827)).
 > - CV facts come from `C PhD Application/UCL/Stretton-CV.md`. UK spelling. Remove every `[STEPHEN TO CONFIRM: …]` before submitting.
 

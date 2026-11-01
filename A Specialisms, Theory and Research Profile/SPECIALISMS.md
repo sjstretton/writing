@@ -164,7 +164,7 @@ A green safe asset steers cheap money into building rather than land. Supply-cha
 
 **4.8 Sovereign incentives and policy crediting.** ● *(added; this is the PhD topic)*
 Reward sovereigns, not projects. Pay governments with balances and guarantees they can borrow against, not cash transfers for counterfactuals no one can observe. Avoid perverse "wait to be paid" incentives. Notional capitalized value credits a country for its carbon stocks, and business-as-usual emissions use it up. Sustainability-linked instruments (SLIDIs, the original KPI-linked sovereign debt idea) tie the cost of debt to results. The PhD frames the trade-off as mitigation effect versus the incentive needed versus the cost to the MDB, with dynamic incentives to act now.
-*Sources:* 4.0, 4.1, SLIDIs (in `4.3.SustainabilityLinkedLending/3.RelatedPiecesAndLinks/`); `B PhD Application/Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking.docx`. (The World Bank discussion paper *Sustainability-Linked Lending*, in `4.3…/9.Archive`, is World Bank confidential: don't cite it outward.)
+*Sources:* 4.0, 4.1, SLIDIs (in `4.3.SustainabilityLinkedLending/3.RelatedPiecesAndLinks/`); `B PhD Application/Oxford/Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking.docx`. (The World Bank discussion paper *Sustainability-Linked Lending*, in `4.3…/9.Archive`, is World Bank confidential: don't cite it outward.)
 
 ---
 
@@ -178,7 +178,7 @@ Reward sovereigns, not projects. Pay governments with balances and guarantees th
 - **Hands-on practice.** The AI-assisted recoding of CPAT (5.2) is practical evidence of working with AI systems.
 
 **Proposed one-sentence position (agent draft):** AI risk is a systems problem as much as a model problem, and the tools that govern systemic financial risk (capital buffers, liability, insurance and incentive design) are the place to start. This matches position P7 in `PAPERS.md`.
-*Sources:* `B PhD Application/3-SystemicAISafety-Outline.md`; `2 Strategic Plans/Overall Pitch.pptx` (slide 7, internal); Drive: `systemic-risk.tex`, `A0-Writing100 Ideas.txt`.
+*Sources:* `B PhD Application/AI-Safety/3-SystemicAISafety-Outline.md`; `2 Strategic Plans/Overall Pitch.pptx` (slide 7, internal); Drive: `systemic-risk.tex`, `A0-Writing100 Ideas.txt`.
 
 ---
 

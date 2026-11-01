@@ -1,8 +1,8 @@
 # UCL full research proposal: notes
 
-Drafted 31 Oct 2026 from `C PhD Application/Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking-v2.docx` and its change log (`C PhD Application/Proposal-v2-ChangeLog.md`).
+Drafted 31 Oct 2026 from `B PhD Application/Oxford/Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking-v2.docx` and its change log (`B PhD Application/Oxford/Proposal-v2-ChangeLog.md`).
 
-- Output: `C PhD Application/UCL/UCL_PhD_Research_Proposal_Sovereign_Incentives_Derisking.docx`. Built with python-docx on the Oxford v2 file's styles and tables, with the page size changed to A4 and body text set to 11 pt.
+- Output: `B PhD Application/UCL/UCL_PhD_Research_Proposal_Sovereign_Incentives_Derisking.docx`. Built with python-docx on the Oxford v2 file's styles and tables, with the page size changed to A4 and body text set to 11 pt.
 - **Length:** 3,812 words for sections 1-8, including both tables. References are excluded. Without the bracketed placeholders the count is 3,687. A LibreOffice render gives 9 A4 pages: about 7.5 pages of main text and the rest references. Aptos is not installed in the build environment, so Word may paginate a little differently. Either way it clears UCL's "at least 6 pages". Update the line under the title once the placeholders are resolved.
 - **Title:** the same as the Oxford v2 title. I did not find the earlier 2-page UCL outline (see below), so I could not align the title with it.
 

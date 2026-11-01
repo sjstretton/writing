@@ -1,6 +1,6 @@
 # Referee request emails
 
-> Notes for Stephen: fill in every `[...]` before sending. UCL's system emails each referee a link once you submit the application; check the form for how long they have. The Oxford deadline is Tue 26 Jan 2027 (unverified; see `PhD-Application-Status.md`). Attach the proposal and the CV.
+> Notes for Stephen: fill in every `[...]` before sending. UCL's system emails each referee a link once you submit the application; check the form for how long they have. The Oxford deadline is Tue 26 Jan 2027 (unverified; see `../Oxford/PhD-Application-Status.md`). Attach the proposal and the CV.
 
 ## 1. Academic referee
 

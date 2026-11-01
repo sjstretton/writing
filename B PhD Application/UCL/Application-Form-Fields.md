@@ -87,7 +87,7 @@ Gaps a form may query: Jun 2003 – Oct 2004 (MA at Birkbeck began Sept 2003), S
 19. The Macro-Fiscal-Energy Scenario Tool
 20. A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis
 
-Not listed, on purpose: the World Bank's confidential Sustainability-Linked Lending discussion paper (its URL is still in `CV-UnpublishedWorks.docx`; do not use it) and the politics essays (kept off the academic profile, decision of 29 Oct 2026).
+Not listed, on purpose: the World Bank's confidential Sustainability-Linked Lending discussion paper (its URL is still in `../Shared/CV-UnpublishedWorks.docx`; do not use it) and the politics essays (kept off the academic profile, decision of 29 Oct 2026).
 
 ## Referees
 

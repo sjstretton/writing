@@ -20,7 +20,7 @@ Goal: UCL Sustainable Resources MPhil/PhD, part-time, February 2027 start. Requi
 | Gap | Why not today | Next step |
 |---|---|---|
 | Supervisor agreement | Needs Ameli or Grubb to reply | EOI + email today; follow up Wed 4 Nov |
-| Transcripts | Location unknown | Upload what you have; order official copies Mon 2 Nov |
+| Transcripts | Location unknown | Upload what you have; order official copies Mon 2 Nov (emails in `../Shared/Transcripts-Request-Emails.md`) |
 | Academic referee | Needs a yes | Ask today; name them on the form when they agree |
 | February 2027 still open? | Rolling; "3 months before" is advice, not a rule | The form will show it; if not, choose May 2027 |
 | Funding | Fees £3,200 a year part-time (home, 2026/27) | Self-funded or employer; scholarships mostly for October starts |

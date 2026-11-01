@@ -2,7 +2,7 @@
 
 Drafted 30 Oct 2026 against section 3 ("Proposal review") of `PhD-Application-Status.md`.
 
-- Source, unchanged: `Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking.docx`
+- Source, unchanged: `PreviousVersions/Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking.docx`
 - New draft: `Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking-v2.docx`
 
 **Word count:** 2,545 for the main text, from "Title" to the end of the Timeline paragraph, including the data table. It excludes the bibliography and Appendix A. Without the bracketed placeholders the count is 2,475. Update the figure under the title once the placeholders are resolved. The original stated 2,445, which measures to about 2,464 on the same basis.

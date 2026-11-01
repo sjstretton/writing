@@ -8,21 +8,21 @@ Format: `- [ ] Task — owner — due — notes`. Owner is **S** (Stephen) or **
 
 ### Priority 1: PhD in climate policy (proposal 1, send ASAP)
 
-Details for each item: `B PhD Application/PhD-Application-Status.md`.
+Details for each item: `B PhD Application/Oxford/PhD-Application-Status.md`.
 
 - [ ] **Next step:** email Dr Shrimali the cleaned proposal; ask him to confirm supervision in writing and about a co-supervisor — S — today (15 min)
-- [ ] Settle the deadline on the live Oxford course page. Stephen's working deadline is Sat 31 Oct; the status notes found 13 Nov (early) and 26 Jan (final), unverified. Josh's information sheet (`B PhD Application/PhD-Information-Sheet.md`, 30 Oct) gives no Oxford date; "before start of November" there is UCL's February-intake rule, the likely source of 31 Oct. Also check whether a statement of purpose is needed (Josh's five Oxford inputs omit it) — S — 30 Oct — ox.ac.uk is blocked from cloud sessions
+- [ ] Settle the deadline on the live Oxford course page. Stephen's working deadline is Sat 31 Oct; the status notes found 13 Nov (early) and 26 Jan (final), unverified. Josh's information sheet (`B PhD Application/Shared/PhD-Information-Sheet.md`, 30 Oct) gives no Oxford date; "before start of November" there is UCL's February-intake rule, the likely source of 31 Oct. Also check whether a statement of purpose is needed (Josh's five Oxford inputs omit it) — S — 30 Oct — ox.ac.uk is blocked from cloud sessions
 - [ ] Find two academic referees: Josh's sheet lists Dirk and Carolyn (both World Bank) and no third — S — 13 Nov
 - [ ] Find the transcripts (possibly in a box in the UK); order official copies if not — S — 20 Nov
 - [ ] Choose and ask 3 referees (at least 2 academic) — S — 13 Nov — highest risk item
-- [ ] Proposal v2: drafted 31 Oct (`B PhD Application/Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking-v2.docx`; changes and open placeholders in `Proposal-v2-ChangeLog.md`). Review it and resolve the [STEPHEN TO DECIDE] and [VERIFY] notes — S — 27 Nov
-- [ ] Writing sample: drafted 31 Oct, 1,983 words, cut from 3.1 v0.2 (`B PhD Application/Oxford-WritingSample-ClimateFinanceIntermediation.docx`). Review it; check the Azura paraphrase and decide US or UK spelling — S — 4 Dec
+- [ ] Proposal v2: drafted 31 Oct (`B PhD Application/Oxford/Oxford_DPhil_Research_Proposal_Sovereign_Incentives_Derisking-v2.docx`; changes and open placeholders in `Proposal-v2-ChangeLog.md`). Review it and resolve the [STEPHEN TO DECIDE] and [VERIFY] notes — S — 27 Nov
+- [ ] Writing sample: drafted 31 Oct, 1,983 words, cut from 3.1 v0.2 (`B PhD Application/Oxford/Oxford-WritingSample-ClimateFinanceIntermediation.docx`). Review it; check the Azura paraphrase and decide US or UK spelling — S — 4 Dec
 - [ ] Statement of purpose — A drafts, S approves — 11 Dec
 - [ ] Submit — S — 8 Jan 2027
 
 ### Priority 2: PhD in systemic AI safety (proposal 3)
 
-- [ ] Answer the open questions in `B PhD Application/3-SystemicAISafety-Outline.md` (target programs, supervisors, core question) — S — 6 Nov
+- [ ] Answer the open questions in `B PhD Application/AI-Safety/3-SystemicAISafety-Outline.md` (target programs, supervisors, core question) — S — 6 Nov
 - [ ] Literature scan on systemic AI risk; verified sources only — A — 13 Nov
 - [ ] First full draft of proposal 3 (~2,500 words) — A drafts, S revises — 27 Nov
 
@@ -96,7 +96,7 @@ Details for each item: `B PhD Application/PhD-Application-Status.md`.
 - [x] 31 Oct 2026 — 1.2 upgraded the same way (`5.Notes/PeerReview-2026-10-31.md`, `BibCheck-2026-10-31.md`): working paper v0.4 (dispatch proposition's condition stated, Fischer 2011 credited for the dominant-firm result, Burtraw et al. 2001 added, a section on why power belongs on the production track, Canada's May 2026 price path), brief v1.1, 10-slide deck; on the web — A
 - [x] 31 Oct 2026 — 1.1 upgraded: peer review (`5.Notes/PeerReview-2026-10-31.md`), every cited source checked (`5.Notes/BibCheck-2026-10-31.md`), working paper v0.4 with an executive summary as chapter 1, brief v1.1 rewritten short and plain, 10-slide deck; web build makes a brief page and a working-paper page for each paper — A
 - [x] 29 Oct 2026 — Template paper for 1.1 read (Keen, Parry and Roaf 2021); notes in `1.1/5.Notes/Review-2026-10-29.md` §6 — A
-- [x] 29 Oct 2026 — Proposal 1 cleaned: drafting text and appendices B–E removed; original kept in `B PhD Application/PreviousVersions/` — A
+- [x] 29 Oct 2026 — Proposal 1 cleaned: drafting text and appendices B–E removed; original kept in `B PhD Application/Oxford/PreviousVersions/` — A
 - [x] 29 Oct 2026 — "Today" tab added to the master plan sheet (short daily view) — A
 - [x] 29 Oct 2026 — Agent infrastructure set up: `AGENTS.md`, `NORMS.md`, `STRATEGY.md`, `PAPERS.md`, `TODO.md`, `H Writing Instructions/Writing Standards/`, proposals index — A
 - [x] 29 Oct 2026 — FTP login removed from deploy scripts (H1) — S
