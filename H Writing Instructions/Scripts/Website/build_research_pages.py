@@ -99,8 +99,8 @@ def section_page(part, sec):
             online = [f"[Read online →]({slug}/{stem}/index.qmd)"]
         else:
             online = []
-        words = [l for l in (link("Policy brief", f"Brief-{stem}.docx", page),
-                             link("Working paper", f"{stem}.docx", page)) if l]
+        words = [l for l in (link("Policy brief", f"Brief-{stem}.pdf", page) or link("Policy brief", f"Brief-{stem}.docx", page),
+                             link("Working paper", f"{stem}.pdf", page) or link("Working paper", f"{stem}.docx", page)) if l]
         ls = online + [l for l in (link("Slides", f"Slides-{stem}.pptx", page),) if l]
         if words:
             ls += words

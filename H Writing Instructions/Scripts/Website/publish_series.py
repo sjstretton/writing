@@ -5,7 +5,8 @@ papers/ only the files the site's pages actually link to, and papers/ is what go
 
 Stable names, one per paper and form, overwritten on each run:
     <PaperName>.docx           the working paper (current version), from the master's own .docx
-    Brief-<PaperName>.docx     the Climate Fiscal Policy Brief, where there is one
+    <PaperName>.pdf            the working paper as a PDF, where render_pdfs.py has made one
+    Brief-<PaperName>.docx     the Climate Fiscal Policy Brief, where there is one (and Brief-<PaperName>.pdf)
     Slides-<PaperName>.pptx    the deck, where there is one
     Overview<Section>.docx     each section's overview, and Slides-<Section>.pptx its theme deck
     books (BOOKS below)
@@ -48,10 +49,12 @@ def main():
             for folder in paper_folders(part, sec):
                 name = paper_name(folder)
                 copy(folder / f"{name}.docx", ARCHIVE / f"{name}.docx")
-                for f in (f"Brief-{name}.docx", f"Slides-{name}.pptx"):
+                if (folder / f"{name}.pdf").exists():
+                    copy(folder / f"{name}.pdf", ARCHIVE / f"{name}.pdf")
+                for f in (f"Brief-{name}.docx", f"Brief-{name}.pdf", f"Slides-{name}.pptx"):
                     if (folder / "1.Presentation" / f).exists():
                         copy(folder / "1.Presentation" / f, ARCHIVE / f)
-                    else:
+                    elif not f.endswith(".pdf"):
                         print(f"none      {f}")
         for folder_name, fname, pub in BOOKS:
             hits = [p for p in part["root"].rglob(folder_name) if p.is_dir()]

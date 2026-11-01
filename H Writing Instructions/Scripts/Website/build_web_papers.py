@@ -18,8 +18,8 @@ What changes in the copies:
     - format: docx is dropped (the site's own html format applies), and web settings are added
       (contents sidebar, hover citations and cross-references, figure lightbox);
     - csl: points at the site's local copy of the Chicago style, so the build needs no internet;
-    - under the first heading (the executive summary): links to the other form and to the slides;
-    - at the end of the text, before the references: the Word downloads;
+    - under the first heading (the executive summary): links to the other form, this form's PDF and the slides;
+    - at the end of the text, before the references: the downloads (PDF, or Word where there is no PDF yet);
     - cross-links written in the masters as short targets become real links:
           [text](wp:)            the working paper          [text](wp:sec-crediting)    a section of it
           [text](brief:)         the policy brief           [text](brief:sec-what-to-do) a section of it
@@ -298,19 +298,23 @@ def build(folder_name):
         return f"[{label} ({f.rsplit('.', 1)[-1].lower()})](../../../papers/{f})" if (ARCHIVE / f).exists() else None
 
     slides = dl("Slides", f"Slides-{name}.pptx")
-    words = [l for l in (dl("Policy brief", f"Brief-{name}.docx"),
-                         dl("Working paper", f"{name}.docx")) if l]
+    # documents are offered as PDF (render_pdfs.py); the Word file only where no PDF has been made yet
+    words = [l for l in (dl("Policy brief", f"Brief-{name}.pdf") or dl("Policy brief", f"Brief-{name}.docx"),
+                         dl("Working paper", f"{name}.pdf") or dl("Working paper", f"{name}.docx")) if l]
     downloads = ("# Downloads {.unnumbered}\n\n" + " · ".join(words) + "\n") if words else None
 
+    brief_pdf = dl("Download this brief", f"Brief-{name}.pdf")
+    wp_pdf = dl("Download this paper", f"{name}.pdf")
     if has_brief:
         to_wp = "[**Read the full working paper →**](working-paper.qmd)"
-        write_page(brief, dest / "index.qmd", " · ".join(l for l in (to_wp, slides) if l) + "\n",
+        write_page(brief, dest / "index.qmd", " · ".join(l for l in (to_wp, brief_pdf, slides) if l) + "\n",
                    downloads, True)
         to_brief = "[**Policy brief (short version) →**](index.qmd)"
-        write_page(wp, dest / "working-paper.qmd", " · ".join(l for l in (to_brief, slides) if l) + "\n",
+        write_page(wp, dest / "working-paper.qmd", " · ".join(l for l in (to_brief, wp_pdf, slides) if l) + "\n",
                    downloads, True)
     else:
-        write_page(wp, dest / "index.qmd", (slides + "\n") if slides else None, downloads, False)
+        top = " · ".join(l for l in (wp_pdf, slides) if l)
+        write_page(wp, dest / "index.qmd", (top + "\n") if top else None, downloads, False)
 
 
 def main():

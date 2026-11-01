@@ -5,6 +5,10 @@ rem then build the site with Quarto. Nothing is uploaded. Run Deploy-Website.bat
 setlocal
 cd /d "%~dp0"
 echo.
+echo   0/2  Rendering the PDF of each web paper and brief (working-paper format, Quarto + Typst) ...
+python "%~dp0H Writing Instructions\Scripts\Website\render_pdfs.py"
+if errorlevel 1 (echo Some PDFs did not render - see above. The site will link Word files for those papers.)
+echo.
 echo   1/2  Copying papers into E Website\PaperArchive ...
 python "%~dp0H Writing Instructions\Scripts\Website\publish_series.py"
 if errorlevel 1 (echo Copy step failed - is Python installed? & pause & exit /b 1)
