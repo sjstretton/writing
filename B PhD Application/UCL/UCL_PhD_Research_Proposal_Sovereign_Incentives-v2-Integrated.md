@@ -1,0 +1,175 @@
+---
+title: "Sovereign Incentives for Decarbonisation: How a Climate Reserve and Guaranteed Contracts Can Lower the Cost of Capital and Reward Climate Policy"
+subtitle: "UCL Institute for Sustainable Resources, MPhil/PhD: full research proposal (draft v2, level 3 of 4)"
+author: "Stephen Stretton"
+---
+
+*Drafting note for Stephen, delete before submission.* Level 3 of 4, written 1 Nov 2026 from the thesis plan (`../Shared/Thesis-Plan-Sovereign-Incentives.md`) and the overview paper (`../Shared/OverviewPaper/`). It follows UCL's section order from the earlier UCL draft (`UCL-Proposal-Notes.md`). Target at least six pages; about 3,900 words of main text excluding references. UK spelling; titles of my own papers keep their US spelling. Mode and start are open, so section 6 gives both timelines; keep the one you choose. Clear every `[VERIFY]` and `[STEPHEN TO CONFIRM]` before submission.
+
+Proposed supervisory team: Professor Nadia Ameli (principal), Professor Michael Grubb (subsidiary) `[STEPHEN TO CONFIRM: both have agreed in principle]`
+
+## 1. Proposal title
+
+Sovereign Incentives for Decarbonisation: How a Climate Reserve and Guaranteed Contracts Can Lower the Cost of Capital and Reward Climate Policy
+
+## 2. Research question and why it matters
+
+**The question.** Can a climate reserve funded by surplus sovereigns, lending its strength through guaranteed contracts whose capacity rises with credible policy and lapses if unused, bring the cost of capital for clean power in developing countries close to the host sovereign's own, at an expected cost the funders will bear, and make sustained decarbonisation each member's best choice?
+
+Three subsidiary questions make it answerable:
+
+1. **Risk.** How much of the gap between a clean-power project's cost of capital and its sovereign's can guaranteed contracts, binding long-term relationships, currency cover and collateralised refinancing remove, per dollar of expected loss and capital used by the guarantor?
+2. **Incentives.** What incentive makes a host government adopt and keep a decarbonisation policy once fiscal costs, contingent liabilities, political costs and the value of waiting are counted, and does support that is priced on policy and decays if unused (including policy crediting) supply it at lower expected cost than one-off support?
+3. **Coalition and reserve.** Under what conditions does each prospective member gain more inside the arrangement than outside it (the EU, pricing carbon at its border; China, selling solar equipment it has the capacity to make; surplus sovereigns such as Norway; development banks; host governments), and how large must the reserve be?
+
+**Why it matters.** Developing countries pay the most for the capital they most need. The International Energy Agency finds that the cost of capital for utility-scale solar in emerging and developing economies is well over twice that in advanced economies, that financing can be around half or more of the cost of the electricity, and that narrowing the gap by one percentage point would save these economies about \$150 billion a year (IEA 2024). In a stylised solar plant, moving from a 4 to a 12 percent cost of capital raises the price of power by about 80 percent (Stretton 2026a). Higher financing costs trap developing economies in too little clean investment (Ameli et al. 2021), and lowering them would cut the cost of the transition substantially (Calcaterra et al. 2024).
+
+The premium is set less by technology than by doubt that the buyer of the power will pay, and the institutions that could remove that doubt work apart. Development banks manage credit risk; energy regulators write the long-term contracts that make revenue bankable; results-based finance and policy crediting pay governments for policy; trade analysts study the EU's border adjustment and China's solar exports; game theorists model climate clubs (Nordhaus 2015); macroeconomists study debt, growth and the savings of ageing countries. Each explains part of the problem. None joins them into a design a finance ministry could act on. That specialism gap is what this thesis fills.
+
+The starting point is a proposal that has not been worked out. Professor Grubb has argued that Norway's windfall from the energy crisis should be used to underwrite investment in developing countries (Grubb 2023), and Sinha (2023) proposes a highly rated green bank capitalised by sovereign sponsors. Neither says how the support should be priced on the host's own policy, how its risk should be measured on the guarantor's and the host's books, or why each funder would join. My working papers supply most of the components (section 4.1), and a global model I have designed can test their combination (section 4.2).
+
+Existing incentives sometimes point the wrong way. Under Article 6 of the Paris Agreement, the more ambitious a host's national target, the costlier each corresponding adjustment when it sells credits (World Bank 2023), so the market can reward weak targets. The thesis designs support that rewards ambition instead.
+
+## 3. Hypotheses
+
+The central conjecture is that support lowers the cost of capital most, at least cost, when it guarantees the contract rather than the debt, is delivered through relationships the payer cannot walk away from, and is priced on the host's policy. Three hypotheses test it, and each can fail.
+
+- **H1 (contracts, estimated).** The fall in the cost of capital associated with multilateral support is larger where national policy already provides long-term contracted revenue (auctions, power purchase agreements, contracts for difference) than where projects sell at merchant prices. Rejected if the association is absent or reversed.
+- **H2 (threshold, simulated and tested against cases).** A fall in the cost of capital changes a government's adoption decision only if the financing saving, net of the contingent liability it creates, exceeds a threshold set by the policy's cost, its co-benefits, the losses concentrated on organised groups and the value of waiting. Rejected if reforms followed support well below the calibrated threshold, or failed despite support well above it.
+- **H3 (binding relationships, estimated).** For comparable projects and country risk, the cost of capital is lower where the payment is backed by a party in a long-term relationship with the payer (a development bank with preferred-creditor treatment; a government standing behind its own utility; an intermediary with a central-bank debiting mechanism) than where it is backed by an arm's-length guarantor. Rejected if the difference vanishes once country risk is controlled for.
+
+A fourth, exploratory claim is calibrated rather than tested: that a coalition reserve is self-enforcing, with every member's payoff inside exceeding its payoff outside, for plausible parameter ranges.
+
+## 4. Methodology
+
+### 4.1 Framework
+
+The unit of analysis is the guaranteed payment: a defined stream of payments under a long-term contract, backed by a party the market trusts. The framework has four parts, each with its own analytical model and each building on a working paper of mine.
+
+**Part I. The price of money.** The cost of capital is split into the risk-free rate and premia for country risk, the offtaker, currency, technology experience and policy reversal. The **distance to the sovereign** is the project's cost of capital less the host government's own borrowing rate; every instrument is scored by how much of it it removes. Each instrument is also costed on four numbers: the fall in the price of power; the guarantor's expected loss and capital; the host's contingent liability, valued with the IMF's PPP fiscal risk model (IMF 2019); and the effect on the debt path (debt-at-risk; IMF 2026). Paper 6.3's three lenses (market cost of capital, a 6 percent social rate, 6 percent plus co-benefits) frame the case for public support (Stretton 2026b).
+
+**Part II. Risk management.** First, a creditworthy payment intermediary, backed by a guarantee waterfall contracted in advance, guarantees the power contract rather than the debt; in my stylised case it saves about \$2 per dollar of expected cost, while a debt guarantee removes under a third of the offtaker premium (Stretton 2026c). Second, a relationship model explains why long-term relationships lower default: a payer keeps paying while the relationship is worth more than the gain from walking away. Development banks lose little on sovereign loans because governments treat them as preferred creditors, a custom rather than a contract term (G20 2022; Cordella and Powell 2021 `[VERIFY]`). The same logic runs from utility to state to federal government to central bank or taxpayer. Third, currency risk is carried by swaps, local-currency contracts or partial credit guarantees to local banks. Fourth, operating plants are refinanced as a pool across countries and split into tranches, so a senior "synthetic sovereign bond" is rated on the guaranteed contracts rather than the host; the price of solar power falls by about a fifth (Stretton 2026d). Transparent collateral is compared with the hidden escrow accounts that secure about half of China's official lending (Gelpern et al. 2021; Kiel Institute 2025 `[VERIFY]`).
+
+**Part III. Sovereign incentives.** A government chooses when to adopt a policy given its cost, its co-benefits and the incentive on offer. Because clean technology keeps getting cheaper, waiting pays: with a 6 percent discount rate and costs falling 7 percent a year, a static reward must be 2.2 times the cost of acting to stop a government postponing. A reward that decays at the rate costs fall needs only 46 percent of that, and decay is credible only if forfeited money goes to a common pool from which other countries are paid (Stretton 2026e). Policy crediting pays for policies rather than projects: if an outside buyer pays more than half the feebate rate per tonne and the host keeps the reduction, adopting the policy is a net gain (Stretton 2026f). The World Bank's first policy-crediting operation, in Uzbekistan, pays for verified reductions from energy tariff reform (World Bank 2025 `[VERIFY]`). Support can be delivered as guarantee capacity set by a notional capitalised value, a balance that rises with good performance and falls with bad (Stretton 2026g). A participation model then asks whether each coalition member gains: the EU through destination-based carbon pricing and recognition of partners' carbon prices (Stretton 2026f, 2026h); China through demand for solar equipment it has the capacity to make, at export prices near \$0.11 per watt in October 2026 and with zero tariffs on most African imports since May 2026 `[VERIFY]`; surplus sovereigns through a safe long-dated return; development banks through reach at small expected loss.
+
+**Part IV. The climate reserve.** A reserve holds capital in safe assets and provides second-loss cover behind the host government (Stretton 2026i). On the development banks' sovereign record (defaults of 0.77 percent a year, 95.1 percent recovered; EIB 2025) each dollar of expected loss buys about 80 dollars of interest saving; in a stress case without preferred-creditor treatment, about 2.7. Which case applies depends on whether the reserve inherits the banks' relationships, which H3 tests. Funding can come from windfall savings, from Special Drawing Rights rechannelled as hybrid capital (allowed by the IMF Board in May 2024), and from border-adjustment revenue. The macro chapter traces growth and debt effects, and asks whether pension funds in ageing countries will hold the senior paper: "invest to save" in one country as "invest to develop" in another.
+
+**Practical precedents.** Each layer has a working precedent that the thesis uses as a case or calibration point. India's Solar Energy Corporation shows an intermediary lowering the cost of capital, and the contingent liability it moves to the states. The development-bank model shows the value of preferred-creditor treatment. In East Asia, ADB's Innovative Finance Facility for Climate in Asia and the Pacific lets partner governments guarantee part of ADB's existing sovereign portfolio, freeing capital to lend about \$4.5 for each \$1 of guarantee (ADB 2024 `[VERIFY]`), and the ASEAN+3 Credit Guarantee and Investment Facility, capitalised by the region's governments including China, Japan and Korea, guarantees local-currency bonds (ADB 2026 `[VERIFY]`). Both use sovereign money as loss-absorbing capital rather than grants.
+
+### 4.2 Data, model and work packages
+
+The analysis runs on one model. The **Global Incentives Model**, which I have designed (modelling plan, draft October 2026), is a global model by country and sector, 2024 to 2050, for the 186 countries of the CPAT panel. It reuses existing tools: a national mitigation investment model, the CPAT mitigation module, a Total Effective Carbon Price model, a CBAM policy tool and simplified macro-fiscal models. Its modules match the thesis parts: a cost-of-finance module that decomposes the cost of capital and costs each intervention; an investment taxonomy recording who decides and pays in each sector and through what contract; an international incentives module with a country timing layer for policy crediting, use-it-or-lose-it funds and guarantee capacity; a trade module that computes border charges on bilateral trade flows (BACI) with substitution between origins and consumption-based emissions from input-output tables; and a national-objectives module with a simple macro and debt model. Its data plan lists 95 data needs, 45 of the 56 essential ones already in hand. The thesis uses only the parts it needs: the power core, finance, timing, trade and the reduced-form macro.
+
+**Work package 1 (data and H1, H3).** A country-technology panel of financing costs from the IEA's Cost of Capital Observatory, IRENA's survey and the new global dataset of Steffen et al. (2025), joined to the World Bank's Private Participation in Infrastructure database, which flags multilateral support. Each country is coded for contract type, payer and the relationship behind the payment. Regressions of the cost of capital on country risk, contract type, relationship type and their interactions test H1 and H3. These are associations, and will be reported as such. Default and recovery data come from the GEMs Consortium.
+
+**Work package 2 (core: guarantees, relationships and the reserve).** The cost-of-finance module and a transparent project-finance model of utility-scale solar and wind, with merchant, contracted and guaranteed revenue, currency cover and two-stage refinancing, plus a reserve module for expected loss, buffer and capital across loss cases. Output: for each instrument, the fall in the cost of capital per dollar of expected loss and the remaining distance to the sovereign.
+
+**Work package 3 (core: incentives and coalition).** The timing layer computes each government's adoption date under one-off, decaying and policy-credited support (H2), with costs and co-benefits from CPAT and concentrated losses bounded from case histories. The trade and incentives modules calibrate each coalition member's payoff.
+
+**Work package 4 (cases).** Two or three of Kenya, India and Indonesia, where my papers already hold calibrations, with Uzbekistan as an option for policy crediting. Each uses public documents and about 15 to 20 semi-structured interviews with finance ministry, utility, regulator and development-bank staff.
+
+### 4.3 Ethics and feasibility
+
+Interviews will need approval from the UCL Research Ethics Committee and will use informed consent, anonymised notes and secure storage, following UCL's risk-assessment procedures. All data are public; no World Bank internal or confidential material will be used. The project is feasible because its components exist: four working papers in my finance and sovereign-incentives series, a timing paper with seven propositions and code, a carbon-pricing series, and the model plan with its data catalogue. The thesis integrates, calibrates and tests them rather than building from nothing. If time runs short, the coalition work is reported as a calibrated illustration rather than an estimate.
+
+## 5. Supervisory team
+
+**Professor Nadia Ameli (principal).** The project starts from Ameli et al. (2021), which shows how higher financing costs trap developing economies in too little clean investment, and connects to her work on climate finance and institutional investors (Ameli et al. 2020) and to the ISR climate-finance team's research on risk evaluation and underwriting instruments for renewable energy in developing countries. The thesis asks what a coalition of funders and development banks can do about the trap, and how to price their support so that it rewards credible policy.
+
+**Professor Michael Grubb (subsidiary).** Professor Grubb's work on energy policy, market design and induced innovation (Grubb et al. 2021), and on the dynamic realism of climate-economy models (Grubb, Wieners and Yang 2021), covers the policy and modelling side. His proposal that Norway underwrite investment in developing countries (Grubb 2023) is the idea the thesis works out.
+
+The project fits ISR's research on the finance and economics of the low-carbon transition `[STEPHEN TO CONFIRM: any additional adviser]`.
+
+## 6. Research programme and timeline
+
+**Part-time (five years, from February 2027 if that intake is chosen).** Year 1: data panel; H1 and H3 estimates; project-finance and cost-of-finance model v1. Upgrade from MPhil to PhD at about month 15 (May 2028), with paper A and a full thesis plan `[VERIFY: upgrade timing on the live programme page]`. Year 2: relationship and reserve models; paper B. Year 3: timing and policy-crediting models; ethics approval; paper C. Year 4: coalition and trade calibration; cases and interviews; paper D. Year 5: macro chapter, synthesis and submission.
+
+**Full-time (three years, from October 2027 if that intake is chosen).** Year 1: data panel, H1 and H3, cost-of-finance model, case selection, upgrade. Year 2: papers B and C; coalition and reserve models; ethics approval. Year 3: paper D, cases and interviews, macro chapter, submission.
+
+The order follows the dependencies: the data and cost-of-finance model come first because every later quantity rests on them, and the cases come last because they test the calibrated threshold. `[STEPHEN TO CONFIRM: mode and start; and, if part-time, hours per week and employment arrangements]`
+
+## 7. Deliverables and potential publications
+
+The thesis is written as four papers plus framing chapters, with an open model and dataset:
+
+- **Paper A:** How far is clean power from its sovereign? Contracts, relationships and the cost of capital in developing countries (H1, H3).
+- **Paper B:** Guaranteed contracts, binding relationships and collateralised refinancing for clean power.
+- **Paper C:** Pay for policies, not projects: policy crediting, guarantee capacity and the value of acting now (H2).
+- **Paper D:** A climate reserve for the clean-power transition: coalition, collateral and the cost of capital.
+- **Open outputs:** the relevant modules of the Global Incentives Model and the coded cost-of-capital panel.
+
+Target journals are indicative, for example *Energy Policy*, *Climate Policy*, *Nature Energy* or *World Development*.
+
+## 8. Contributions
+
+**Academic.** A single framework that joins risk management, guaranteed contracts, sovereign incentives, coalition payoffs and macro-fiscal effects, which the literature treats separately; and tests, with public data, of whether contract design and binding relationships explain financing costs once country risk is held fixed.
+
+**Methodological.** A country-by-sector model that compares border adjustments, finance interventions, policy crediting and incentive funds on one basis, including governments' decisions about when to act.
+
+**Policy.** A costed design that a finance ministry, a development bank, the EU or a surplus sovereign could evaluate, which turns a proposal that exists only as an opinion piece into something that can be built.
+
+I bring a practitioner's knowledge of the instruments and the models: I work on climate-fiscal analysis, power-sector modelling and the Climate Policy Assessment Tool at the World Bank, and have worked on climate-policy design since 2005 `[STEPHEN TO CONFIRM: wording, given the contract end date]`.
+
+## References
+
+*Not included in the word count. Own working papers are unpublished drafts; check titles in `H Writing Instructions/PAPERS.md`.*
+
+ADB. 2024. "Q&A: Innovative Finance Facility for Climate in Asia and the Pacific (IF-CAP)." Manila: Asian Development Bank. `[VERIFY]`
+
+ADB. 2026. "Credit Guarantee and Investment Facility." Manila: Asian Development Bank. `[VERIFY]`
+
+Ameli, N., P. Drummond, A. Bisaro, M. Grubb and H. Chenet. 2020. "Climate Finance and Disclosure for Institutional Investors: Why Transparency Is Not Enough." *Climatic Change* 160 (4): 565–589.
+
+Ameli, N., O. Dessens, M. Winning, J. Cronin, H. Chenet, P. Drummond, A. Calzadilla, G. Anandarajah and M. Grubb. 2021. "Higher Cost of Finance Exacerbates a Climate Investment Trap in Developing Economies." *Nature Communications* 12: 4046.
+
+Calcaterra, M., L. Aleluia Reis, P. Fragkos, T. Briera, H. S. de Boer, F. Egli et al. 2024. "Reducing the Cost of Capital to Finance the Energy Transition in Developing Countries." *Nature Energy* 9: 1241–1251.
+
+Cordella, T., and A. Powell. 2021. "Preferred and Non-Preferred Creditors." *Journal of International Economics* 132: 103491. `[VERIFY]`
+
+EIB. 2025. "New Statistics from GEMs Consortium Show Risk of Investing in Emerging Markets Is Lower than Commonly Perceived." Press release 2025-366, 7 October. Luxembourg: European Investment Bank.
+
+G20. 2022. *Boosting MDBs' Investing Capacity: An Independent Review of Multilateral Development Banks' Capital Adequacy Frameworks.*
+
+Gelpern, A., S. Horn, S. Morris, B. Parks and C. Trebesch. 2021. *How China Lends: A Rare Look into 100 Debt Contracts with Foreign Governments.* AidData, Kiel Institute, CGD and PIIE.
+
+Grubb, M. 2023. "Norway Has a Chance to Transform Climate Finance." *Financial Times*, 24 August.
+
+Grubb, M., P. Drummond, A. Poncia, W. McDowall, D. Popp, S. Samadi, C. Peñasco et al. 2021. "Induced Innovation in Energy Technologies and Systems: A Review of Evidence and Potential Implications for CO2 Mitigation." *Environmental Research Letters* 16 (4): 043007.
+
+Grubb, M., C. Wieners and P. Yang. 2021. "Modeling Myths: On DICE and Dynamic Realism in Integrated Assessment Models of Climate Change Mitigation." *WIREs Climate Change* 12 (3): e698.
+
+IEA. 2024. *Reducing the Cost of Capital: Strategies to Unlock Clean Energy Investment in Emerging and Developing Economies.* Paris: International Energy Agency.
+
+IMF. 2019. *PPP Fiscal Risk Assessment Model (PFRAM 2.0): User Manual.* Washington, DC: International Monetary Fund.
+
+IMF. 2026. *Fiscal Monitor, April 2026.* Washington, DC: International Monetary Fund.
+
+Kiel Institute. 2025. "How China Collateralizes." `[VERIFY: authors and year]`
+
+Nordhaus, W. 2015. "Climate Clubs: Overcoming Free-Riding in International Climate Policy." *American Economic Review* 105 (4): 1339–1370.
+
+Sinha, J. 2023. "A Green Bank for Global South Climate Finance." ORF Issue Brief 678. New Delhi: Observer Research Foundation.
+
+Steffen, B., F. Egli, A. Gumber, M. Đukan and P. Waidelich. 2025. "A Global Dataset of the Cost of Capital for Renewable Energy Projects." *Scientific Data* 12: 1624.
+
+Stretton, S. 2026a. "Make Clean Power an Asset Class." Overview of section 3. Unpublished.
+
+Stretton, S. 2026b. "Public Investment in CPAT: Investment Needs and the Efficiency of Public Spending." Working paper 6.3. Unpublished.
+
+Stretton, S. 2026c. "Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power." Working paper 3.1. Unpublished.
+
+Stretton, S. 2026d. "From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power." Working paper 3.2. Unpublished.
+
+Stretton, S. 2026e. "Use It or Lose It: Decaying Incentives That Pay Governments to Act Now." Draft working paper. Unpublished.
+
+Stretton, S. 2026f. "Price Production and Consumption Separately: A Two-Track Architecture for Carbon Pricing in Open Economies." Working paper 1.1. Unpublished.
+
+Stretton, S. 2026g. "Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives." Working paper 4.1. Unpublished.
+
+Stretton, S. 2026h. "Credit the Price Signal, Not the Payment: Carbon Price Recognition and Scrap Shuffling under the EU's CBAM." Working paper 1.4. Unpublished.
+
+Stretton, S. 2026i. "The Climate Investment Trust: Hold Capital, Lend Its Strength." Working paper 4.2. Unpublished.
+
+World Bank. 2023. *Corresponding Adjustment and Pricing of Mitigation Outcomes.* Washington, DC: World Bank.
+
+World Bank. 2025. "Driving Innovation in Climate Finance." Feature story, 18 March. Washington, DC: World Bank. `[VERIFY]`
