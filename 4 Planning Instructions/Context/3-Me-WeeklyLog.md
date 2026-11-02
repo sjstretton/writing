@@ -8,6 +8,31 @@ Related: `1-Me-NextStep.txt`, `2-Me-DayWeekPlan.txt`, `2 Strategic Plans/Stephen
 
 ---
 
+## Week of 26 Oct 2026 (FY27 Q2, Wk5) -> plans for week of 2 Nov (Wk6)
+
+### Boss update
+Last week:
+- Excel-AI CPAT: found 240 bugs; fixing them in the old version stopped it working
+- So I built a new prototype: 5x faster, a bit smaller, no known bugs, more scenarios
+- Macro-fiscal prototype for Sebastian (20 Oct) is half of the CPAT-LTS deliverable; the Python work is done, six weeks early
+
+This week:
+- CPAT-LTS (main goal for November, due Fri 27 Nov): agree the close-out scope and methodology outline with Dirk and Sebastian; short updates to Klaus and Phil
+- MFMod: set up a meeting with the MFMod team; can MFMod-Python join the single Python platform with CPAT and FTT?
+- Policy crediting: read and respond to the concept notes
+
+### Plan for this week (2-6 Nov)
+1. Work: CPAT-LTS updates and agreements (T54, T53)
+2. Strategic: MFMod meeting (T50); single Python platform spec on the team agenda (T52)
+3. Family and relationships: more social (T08)
+4. Personal: policy crediting reading (T51)
+5. Rest and health: Kriya, gym, no evening work
+
+### Notes
+- PhD application: no action this week (Stephen, 2 Nov)
+
+---
+
 ## Week of 12 Oct 2026 (FY27 Q2, Wk3) -> plans for week of 19 Oct (Wk4)
 
 *Written up on Sat 17 Oct.*
