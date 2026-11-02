@@ -37,7 +37,7 @@ sys.path.insert(0, str(ROOT / "Scripts"))
 import make_printable as mp  # noqa: E402
 
 STATE = ROOT / "Context" / "sync-state.json"
-PLANS = REPO / "0A Daily and Weekly Task Lists"
+PLANS = REPO / "0 Daily and Weekly Task Lists"
 TASKS = PLANS / "5-TaskContextAndProjectPlans.md"
 NEXT = PLANS / "1-NextStep.txt"
 DAYWEEK = PLANS / "2-DayWeekPlan.txt"
@@ -878,7 +878,7 @@ def check():
             if not (ROOT / ref).exists() and not (REPO / ref).exists() and not list(REPO.glob(f"**/{Path(ref).name}")):
                 errors.append(f"{doc.relative_to(REPO)} refers to `{ref}`, which does not exist")
     if list(PLANS.glob("Me-Printable-Tracker_v*.docx")):
-        errors.append("A versioned printable is in 0A Daily and Weekly Task Lists; versions belong in 3 Archive/Printable versions/")
+        errors.append("A versioned printable is in 0 Daily and Weekly Task Lists; versions belong in 5 Archive/Printable versions/")
     state = load_state()
     pr = state.get("printable", {})
     if not mp.OUT.exists():

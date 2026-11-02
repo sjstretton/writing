@@ -1,7 +1,7 @@
-"""Build the printable tracker (0A Daily and Weekly Task Lists/Me-Printable-Tracker.docx) from the master lists.
+"""Build the printable tracker (0 Daily and Weekly Task Lists/Me-Printable-Tracker.docx) from the master lists.
 
 The root file never carries a version number, so links to it stay valid; a copy of each layout
-version goes to 3 Archive/Printable versions/. Normally run through Scripts/update.py build.
+version goes to 5 Archive/Printable versions/. Normally run through Scripts/update.py build.
 
 Changing lists come from 5-TaskContextAndProjectPlans.md, 1-NextStep.txt,
 2-DayWeekPlan.txt and Context/3-Me-WeeklyLog.md; the fixed routines from Context/routines.md.
@@ -30,9 +30,9 @@ from docx.shared import Pt, RGBColor, Inches
 ROOT = Path(__file__).resolve().parents[1]   # 4 Planning Instructions
 REPO = ROOT.parent                           # combined repo root
 VERSION = "0.6"
-PLANS = REPO / "0A Daily and Weekly Task Lists"
+PLANS = REPO / "0 Daily and Weekly Task Lists"
 OUT = PLANS / "Me-Printable-Tracker.docx"
-ARCHIVE = REPO / "3 Archive" / "Printable versions"
+ARCHIVE = REPO / "5 Archive" / "Printable versions"
 TASKS = "5-TaskContextAndProjectPlans.md"
 NAVY = RGBColor(0x1F, 0x4E, 0x79)
 GREY = RGBColor(0x59, 0x59, 0x59)
