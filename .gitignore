@@ -30,3 +30,16 @@ __pycache__/
 # Written by Download-Literature.bat on each run
 H Writing Instructions/Scripts/Papers/Run/Literature-OpenInBrowser.html
 FTP-Login.txt
+
+# Website build output. Compile-Website.bat makes all of this on Stephen's PC from the masters on every run,
+# so it is never edited by hand and is not tracked. Push-Website.bat uploads E Website/_site from the PC.
+E Website/_site/
+E Website/PaperArchive/
+E Website/papers/
+E Website/policy/
+E Website/modelling/
+E Website/new/
+B Theory and Research/index.html
+C Policy and FInance/index.html
+D Modelling/index.html
+*.web.pdf

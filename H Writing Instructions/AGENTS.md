@@ -79,7 +79,7 @@ Deployment needs the FTP credentials and WinSCP on Stephen's Windows machine (`P
 - Work on the branch you were assigned. Don't push to other branches.
 - Write clear, descriptive commit messages.
 - Don't open pull requests unless asked.
-- Don't commit generated output (`_site/`, `Scripts/Papers/Reports/`) unless the repo already tracks it.
+- Don't commit generated output (`_site/` and the other website build folders listed in `.gitignore`, `Scripts/Papers/Reports/`). It is built on Stephen's PC and git-ignored.
 
 ## Website and scripts
 

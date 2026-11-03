@@ -35,7 +35,7 @@ Stephen is easily overwhelmed by volume, so planning output must stay short and 
 - Push to `main` when Stephen asks for it (he has, for overnight writing runs); otherwise work on the branch you were assigned.
 - Write clear, descriptive commit messages.
 - Don't open pull requests unless asked.
-- Don't commit generated output unless the repo already tracks it (the website's `_site/` is tracked on purpose, because `deploy.bat` uploads it).
+- Don't commit generated output. The website build output (`E Website/_site/`, `PaperArchive/`, `papers/`, `policy/`, `modelling/`, `new/`, the folder `index.html` files and every `*.web.pdf`) is made on Stephen's PC by `Compile-Website.bat` and is git-ignored; see `.gitignore`.
 
 ## Publishing
 
