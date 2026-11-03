@@ -16,7 +16,7 @@ project:
 # Two research parts, each with its own tab and sidebar (H Writing Instructions/Scripts/Website/site_config.py).
 # The sidebar contents between the BEGIN/END markers are written by build_research_pages.py on every compile.
 website:
-  title: "Climate, Fiscal & Finance"
+  title: "Climate Fiscal and Finance Papers"
   description: "Research and writing on carbon pricing, fiscal policy, and climate finance."
   bread-crumbs: true
   navbar:

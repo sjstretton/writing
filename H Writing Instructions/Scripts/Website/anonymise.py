@@ -11,6 +11,7 @@ What changes:
     - the author block (author:) in the front matter is dropped
     - the byline "Stephen J. Stretton, writing in a personal capacity." is dropped
     - the World Bank's staff disclaimer becomes the plain personal one used elsewhere
+    - Plucked! loses its author field altogether and is cited by title, under the key Plucked2020
     - in .bib files the author's name becomes {Author}, the usual form for a blinded self-citation
     - any other "Stretton" (citation keys such as @StrettonWP53) becomes "Author", in the text and the .bib alike,
       so keys still match
@@ -43,6 +44,17 @@ BIB_SUBS = [
 
 CATCH_ALL = (re.compile(r"Stretton"), "Author")
 
+# Plucked! is cited with no author at all (its co-author's name would lead back to the author), under its own key
+PLUCKED_KEY = (re.compile(r"StrettonStyles(?=\d)"), "Plucked")
+PLUCKED_SUBS = [
+    (re.compile(r"Written with Gordon Styles in 2020, its"), "Its"),
+    (re.compile(r"\(with Gordon Styles, 2020\)(.*?), online chapter by chapter\."), r"(2020)\1."),
+    (re.compile(r"\(with Gordon Styles, 2020\)"), "(2020)"),
+    (re.compile(r"Stretton and Styles \(2020\)"), "Plucked! (2020)"),
+    (re.compile(r"(@(?:StrettonStyles|Plucked)2020) revive\b"), r"\1 revives"),
+]
+NO_AUTHOR = re.compile(r"^[ \t]*author\s*=\s*\{[^\n]*Styles, Gordon[^\n]*\},?[ \t]*\n", re.M)
+
 
 def drop_author_block(text):
     """Remove the author: key and its indented list from the front matter, if the text starts with one."""
@@ -54,6 +66,9 @@ def drop_author_block(text):
 
 
 def text(s):
+    for pat, rep in PLUCKED_SUBS:
+        s = pat.sub(rep, s)
+    s = PLUCKED_KEY[0].sub(PLUCKED_KEY[1], s)
     s = drop_author_block(s)
     for pat, rep in TEXT_SUBS:
         s = pat.sub(rep, s)
@@ -61,6 +76,7 @@ def text(s):
 
 
 def bib(s):
+    s = PLUCKED_KEY[0].sub(PLUCKED_KEY[1], NO_AUTHOR.sub("", s))
     for pat, rep in BIB_SUBS:
         s = pat.sub(rep, s)
     return CATCH_ALL[0].sub(CATCH_ALL[1], s)
@@ -114,9 +130,12 @@ def pptx_copy(pptx):
     def fix(tf):
         for para in tf.paragraphs:
             whole = "".join(r.text for r in para.runs)
-            if not re.search(r"Stretton|Stephen J", whole):
+            if not re.search(r"Stretton|Stephen J|Styles", whole):
                 continue
-            new = re.sub(r"Stephen (?:J\.? )?Stretton", "", whole)
+            new = whole
+            for pat, rep in PLUCKED_SUBS:
+                new = pat.sub(rep, new)
+            new = re.sub(r"Stephen (?:J\.? )?Stretton", "", new)
             new = re.sub(r"[,;:·•|–—-]?\s*writing in a personal capacity\.?", "", new, flags=re.I)
             new = CATCH_ALL[0].sub(CATCH_ALL[1], new).strip(" \t,;:·•|–—-")
             for i, run in enumerate(para.runs):
