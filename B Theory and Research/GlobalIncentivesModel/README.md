@@ -29,4 +29,4 @@ The masters still carry a World Bank affiliation and the World Bank disclaimer. 
 
 ## Modelling plan source (added 3 November 2026)
 
-`GlobalIncentivesModel_Plan.qmd` and `references.bib` are copies of the master in `cpmodelai/climate-fiscal-ai-tools`, `GlobalIncentivesModel/ModellingPlan/` (commit dd4ca59), which now opens with the central research question: zero-cost abatement at current interest rates, at World Bank rates, and with co-benefits. Edit the master there and re-copy. `GlobalIncentivesModel_Plan_v0.1.docx` is the original v0.1 render and predates that question.
+`GlobalIncentivesModel_Plan.qmd` and `references.bib` are copies of the master in `cpmodelai/climate-fiscal-ai-tools`, `GlobalIncentivesModel/ModellingPlan/` (commit dd4ca59), which now opens with the central research question: zero-cost abatement at current interest rates, at World Bank rates, and with co-benefits. Edit the master there and re-copy. `GlobalIncentivesModel_Plan.docx` was re-rendered from it on 3 November 2026 and includes the question.
