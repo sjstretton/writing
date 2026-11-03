@@ -1,14 +1,33 @@
-# Annotated bibliography: financing, sovereign incentives and net-zero infrastructure
+---
+# MASTER - this is the file to edit. The .docx beside it is made from it (house working-paper format).
+title: "Annotated Bibliography: Financing, Sovereign Incentives and Net-Zero Infrastructure"
+subtitle: "Sources behind the addendum and the thesis plan, with what was read and how reliable each is"
+series: "Theory and Research Note"
+version: "0.1"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "November 2026"
+abstract: |
+  Every source used in the addendum and the thesis plan, grouped by topic, with a one-line note on what it is, what it was used for, whether it was read in full, seen only as an excerpt or blocked, and a quality tag. Figures drawn from excerpts must be checked at source before they are cited.
+keywords: [bibliography, climate finance, de-risking, sovereign incentives]
+number-sections: false
+format:
+  docx: default
+---
 
-Companion to `Addendum-Finance-Contracts-and-Sovereign-Balance-Sheet.md`. Compiled 1 November 2026 from web searches and pages Stephen supplied. Each entry says what the source is and what it was used for. **Read** means the page loaded in full or in substantial part; **Excerpt** means only a search-result summary was seen, so check the source before citing; **Blocked** means the page could not be opened. Quality tags: **P** peer-reviewed or official institutional; **G** grey literature or think tank; **T** trade press, advocacy or commercial (use with care). Every `[VERIFY]` in the addendum applies to the figures drawn from these sources.
+*Theory and Research Note, November 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated.*
 
-## A. Supplied by Stephen
+
+Companion to `Addendum-FinanceContractsAndSovereignBalanceSheet.qmd`. Compiled 1 November 2026 from web searches and pages Stephen supplied. Each entry says what the source is and what it was used for. **Read** means the page loaded in full or in substantial part; **Excerpt** means only a search-result summary was seen, so check the source before citing; **Blocked** means the page could not be opened. Quality tags: **P** peer-reviewed or official institutional; **G** grey literature or think tank; **T** trade press, advocacy or commercial (use with care). Every `[VERIFY]` in the addendum applies to the figures drawn from these sources.
+
+# A. Supplied by Stephen
 
 - Grubb, M. (2023). [Norway has a chance to transform climate finance](https://www.ft.com/content/c4bf95e2-6868-448d-bfca-5871dd2fb492). *Financial Times*, 24 August 2023. Opinion. Standfirst: Norway's energy-crisis windfall should underwrite investments in developing countries. **Excerpt only** (headline, standfirst and date); the body was not seen. Key source for the guarantor-balance-sheet idea. **T/P** (opinion by a leading UCL academic).
 - Coalition of Finance Ministers for Climate Action (2023). [Strengthening the Role of Ministries of Finance in Driving Climate Action](https://www.financeministersforclimate.org/sites/default/files/inline-files/Full%20Report%20-%20Conference%20Draft%20-%20Strengthening%20the%20Role%20of%20MoF%2020230413.pdf). Conference draft, 13 April 2023. **Blocked** (HTTP 403); described via the LSE summary below. Framework of 15 actions for finance ministries. **G**.
 - Sinha, J. (2023). [A Green Bank for Global South Climate Finance](https://www.orfonline.org/research/a-green-bank-for-global-south-climate-finance). ORF Issue Brief 678, 7 December 2023. **Read.** Proposes a Global Green Bank with sovereign sponsors (Norway named), guarantees and a long-term currency hedging market maker. Claims about cost savings are not modelled. **G**.
 
-## B. Sovereign incentives and carbon markets
+# B. Sovereign incentives and carbon markets
 
 - World Bank (2023). [Corresponding Adjustment and Pricing of Mitigation Outcomes](https://ppp.worldbank.org/public-private-partnership/sites/default/files/2023-10/Corresponding%20Adjustment%20and%20Pricing%20of%20Mitigation%20Outcomes.pdf). Excerpt. States that a more ambitious national target makes the corresponding adjustment costlier. The clearest official statement of the perverse incentive. **P**.
 - *Climate Policy* (2022). [Ambition coefficient approach](https://www.tandfonline.com/doi/pdf/10.1080/14693062.2022.2108366). Excerpt. Argues target-linked baselines tempt hosts to set weaker targets; proposes a fix. **P**.
@@ -26,7 +45,7 @@ Companion to `Addendum-Finance-Contracts-and-Sovereign-Balance-Sheet.md`. Compil
 - OECD (2025). [Outcomes-based financing](https://one.oecd.org/document/DCD(2025)9/en/pdf). Excerpt. Payments linked to measurable results. **P**.
 - Center for Global Development. [What would the ideal development and climate MDB look like?](https://www.cgdev.org/publication/what-would-ideal-development-and-climate-mdb-look) Excerpt. Argues for more MDB guarantees and insurance. **G**.
 
-## C. De-risking, guarantees and cost of capital
+# C. De-risking, guarantees and cost of capital
 
 - Asian Development Bank (2018). [Economics Working Paper 564: risk mitigation and sovereign guarantees in PPPs](https://www.adb.org/sites/default/files/publication/468626/ewp-564-risk-mitigation-sovereign-guarantees-ppps.pdf). Excerpt. Source of the 125 basis point estimate for a partial risk guarantee. **P**.
 - IISD (2026). [Guide to guarantees for sovereign debtors](https://www.iisd.org/system/files/2026-08/guide-guarantees-sovereign-debtors.pdf). Excerpt. Guarantees can lengthen maturities and cut rates; limits on macro problems. **G**.
@@ -39,7 +58,7 @@ Companion to `Addendum-Finance-Contracts-and-Sovereign-Balance-Sheet.md`. Compil
 - Brazil transmission auctions: [Energy Solutions](https://energy-solutions.co/policy-intelligence/permitting-and-red-tape/brazil-transmission-auctions-aneel) (**T**, source of 40 to 50% discounts), [Barroso overview](https://africanschoolregulation.org/wp-content/uploads/2024/03/Luiz-Barroso-Brazilian-Transmission-Overview.pdf), [GWU study of 1999 to 2008 auctions](https://www2.gwu.edu/~ibi/minerva/Spring2009/Andre.pdf), [OSTI paper](https://www.osti.gov/etdeweb/servlets/purl/21423173). Excerpts. **G/P**.
 - India transmission bidding: [IIT Kanpur paper on tariff-based bidding](https://www.iitk.ac.in/npsc/Papers/NPSC2008/oral/p133.pdf) and the World Bank study of [renewable energy auctions in Brazil, China and India](https://openknowledge.worldbank.org/entities/publication/db100e62-db48-5a2e-a7ac-9f5bd49435aa/full). Excerpts. No cost-of-capital comparison with sovereign yields found. **P**.
 
-## D. Currency risk
+# D. Currency risk
 
 - OECD (2025). [Unlocking local currency financing in emerging markets and developing economies](https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/unlocking-local-currency-financing-in-emerging-markets-and-developing-economies_af15df6a/bc84fde7-en.pdf). Excerpt. Why MDB local-currency loans are unattractive. **P**.
 - OECD. [The Currency Exchange Fund (TCX) case study](https://www.oecd.org/en/publications/blended-finance-case-studies_2fb90b9a-en/the-currency-exchange-fund_321fe70e-en.html). Excerpt. How TCX uses swaps and forwards. **P**.
@@ -50,14 +69,14 @@ Companion to `Addendum-Finance-Contracts-and-Sovereign-Balance-Sheet.md`. Compil
 - Bretton Woods Project (2024). [Why local currency financing is part of the solution](https://www.brettonwoodsproject.org/2024/10/sustainable-development-requires-sustainable-finance-why-local-currency-financing-is-part-of-the-solution/). Excerpt. Civil-society view. **T/G**.
 - Energy Transition Africa. [Why currency risk is bigger than political risk for African energy projects](https://www.energytransitionafrica.com/insights/article/currency-risk-african-energy-projects-political-risk-mismatch-explained) and Council Fire's [guide to currency risk](https://www.councilfire.org/guides/currency-risk-vs-project-viability-in-emerging-markets/). Excerpts. Source of the claim that 15- to 20-year hedges are almost unavailable. **T**.
 
-## E. Contracts, PPAs and CfDs
+# E. Contracts, PPAs and CfDs
 
 - arXiv (2025). [Most certainly certain? CfD design and strike prices](https://arxiv.org/pdf/2512.17508). Excerpt. Cites Fabra and Neuhoff for government-issued long-term contracts. Preprint. **P/G**.
 - Brattle (2013). [Importance of long-term contracting for renewable project development](https://www.brattle.com/wp-content/uploads/2017/10/7487_the_importance_of_long-term_contracting_for_facilitating_renewable_energy_project_development_weiss_sarro_may_7_2013.pdf). Excerpt. Long contracts reduce financing cost. **G**.
 - European Parliament (2026). [Diffusion of PPAs and CfDs](https://www.europarl.europa.eu/RegData/etudes/STUD/2026/780416/ECTI_STU(2026)780416_EN.pdf). Excerpt. Policy study. **G**.
 - Background pages: [UK CfD (Wikipedia)](https://en.wikipedia.org/wiki/Contracts_for_Difference_(UK_energy)), [PPA (Wikipedia)](https://en.wikipedia.org/wiki/Power_purchase_agreement), and commercial explainers from [Black Ridge](https://www.blackridgeresearch.com/blog/what-is-cfd-contract-for-difference-its-role-in-ppa-power-purchase-agreement), [Homaio](https://www.homaio.com/glossary/ppa), [Council Fire](https://www.councilfire.org/resources/glossary/power-purchase-agreements) and [FlexiDAO](https://www.flexidao.com/resources/power-purchase-contracts-explained-the-key-to-affordable-and-reliable-energy). **T**; use only for orientation.
 
-## F. Regulated asset base and cap and floor
+# F. Regulated asset base and cap and floor
 
 - Slaughter and May. [Regulated asset base models in UK energy and infrastructure](https://www.slaughterandmay.com/media/zvffodno/regulated-asset-base-models-their-role-in-energy-and-infrastructure-investment-in-the-uk.pdf). Excerpt. Investability depends on regulator confidence. **G**.
 - Oxera (2018). [The regulatory asset base and regulatory commitment](https://www.oxera.com/wp-content/uploads/2018/07/The-regulatory-asset-base-and-regulatory-commitment-1.pdf-1.pdf). Excerpt. RAB as a commitment device. **G**.
@@ -66,7 +85,7 @@ Companion to `Addendum-Finance-Contracts-and-Sovereign-Balance-Sheet.md`. Compil
 - Developing-country RAB: [Uzbekistan Ministry of Energy](https://gov.uz/en/imv/news/view/159309), [Daryo](https://daryo.uz/en/2026/05/20/uzbekistan-prepares-rab-based-electricity-and-gas-pricing-reform-to-support-investment-in-energy-sector/), [ERRA Bhutan consultancy terms](https://erranet.org/wp-content/uploads/2018/07/RFP_BEA_Ad_Hoc_Consultancy_2018_FINAL.pdf), [Iberdrola explainer](https://www.iberdrola.com/about-us/networks/regulated-asset-base-rab). Excerpts. Early-stage cases only. **G/T**.
 - Ofgem. [Interconnector Cap and Floor Regime Handbook](https://www.ofgem.gov.uk/sites/default/files/2024-12/Interconnector_Cap_and_Floor_Regime_Handbook_Updated_Version.pdf), [2016 brochure](https://www.ofgem.gov.uk/system/files/docs/2016/05/cap_and_floor_brochure.pdf), and [New Power on the third window](https://www.newpower.info/2024/03/ofgem-rejects-cap-and-floor-regime-for-six-of-seven-interconnector-proposals/). Excerpts. Regime design and the controversy over the third window. **P/T**.
 
-## G. PPPs in developing countries
+# G. PPPs in developing countries
 
 - World Bank (2017). [Linking Up: PPPs in power transmission in Africa](https://documents1.worldbank.org/curated/en/794221496411403495/pdf/115521-WP-P152573-PUBLIC-June-6-SUPTAEnglishReportWeb.pdf) ([CIF copy](https://www.cif.org/sites/cif_enc/files/knowledge-documents/ppp_in_power_transmission_in_africa_1.pdf)). Excerpt. The main public reference on availability-payment transmission. **P**.
 - [Private investment in transmission: four business models for emerging markets](https://cldp.doc.gov/sites/default/files/2023-03/Consolidated%20Articles-SEAsia_ENG.pdf) and Hunton's [two](https://www.hunton.com/insights/legal/africa-projects-private-investment-in-transmission) [notes](https://www.hunton.com/insights/legal/the-renaissance-of-hvdc-for-a-low-carbon-future-part-two). Excerpts. Law-firm and agency summaries. **G/T**.
@@ -75,7 +94,7 @@ Companion to `Addendum-Finance-Contracts-and-Sovereign-Balance-Sheet.md`. Compil
 - ESMAP (2015). [Private sector participation in electricity T&D](https://www.esmap.org/sites/esmap.org/files/DocumentLibrary/FINAL_Private%20Sector%20in%20T&D_KS0023-15_web.pdf); CSEP. [Distribution ownership options](https://csep.org/working-paper/international-experience-with-distribution-ownership-options-in-developing-countries/); Auriol. [Infrastructure and utilities privatisation](https://www.tse-fr.eu/sites/default/files/medias/doc/by/auriol/developing.pdf); TSE. [Working paper 986 on PPP impact](https://www.tse-fr.eu/sites/default/files/TSE/documents/doc/wp/2019/wp_tse_986.pdf); [systematic review of private participation](https://www.researchgate.net/publication/259137861_Impact_of_Private_Sector_Participation_on_access_and_quality_in_provision_of_electricity_telecom_and_water_services_in_developing_countries_A_systematic_review). Excerpts. Evidence on management contracts, concessions and privatisation. **P/G**.
 - Water: World Bank on [water services and the private sector](https://ppp.worldbank.org/sites/default/files/2022-06/water-services-and-the-private-sector-in-developing-countries.pdf) and [PPPs for urban water utilities](https://ppp.worldbank.org/sites/default/files/2024-09/FINAL-PPPsforUrbanWaterUtilities-PhMarin.pdf); [USITC working paper](https://www.usitc.gov/publications/332/wp_id_08.pdf); [ADB PPP handbook](https://www.adb.org/sites/default/files/institutional-document/31484/public-private-partnership.pdf). Excerpts. Failure cases and design lessons. **P/G**.
 
-## H. Growth, ageing, pensions and public investment
+# H. Growth, ageing, pensions and public investment
 
 - IMF (2025). [World Economic Outlook, April, chapter 2: The Rise of the Silver Economy](https://www.imf.org/-/media/files/publications/weo/2025/april/english/ch2.pdf); [IMF G20 note on macroeconomics of ageing](https://www.imf.org/external/np/g20/pdf/2019/060519a.pdf); [IMF on pension system design and saving](https://www.imf.org/-/media/Files/Publications/SDN/2019/SDN1901.ashx); ECB. [Macroeconomic and fiscal impact of population ageing](https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op296~aaf209ffe5.en.pdf). Excerpts. Ageing raises desired savings and lowers rates. **P**.
 - Springer. [OECD countries' twin challenge: ageing and natural disasters](https://link.springer.com/article/10.1007/s10368-022-00539-4). Excerpt. Ageing and climate-sensitive saving. **P**.
@@ -84,13 +103,13 @@ Companion to `Addendum-Finance-Contracts-and-Sovereign-Balance-Sheet.md`. Compil
 - ECDPM. [Unlocking pension fund capital for the SDGs and climate](https://ecdpm.org/work/unlocking-pension-fund-capital-sdgs-and-climate-emerging-markets); ODI. [Trillions or billions?](https://media.odi.org/documents/Working_paper_-_trillions_or_billions-full_text_23.05.pdf); Climate Policy Initiative. [European pension funds' net-zero transition](https://www.climatepolicyinitiative.org/wp-content/uploads/2024/10/The-State-of-European-Pension-Funds-Net-Zero-Transition.pdf); Wharton. [Pension fund infrastructure investment](https://pensionresearchcouncil.wharton.upenn.edu/wp-content/uploads/2017/01/WP2015-22-Alonso-et-al..pdf); [IMF on pension funds and emerging markets (2004)](https://www.imf.org/external/pubs/ft/wp/2004/wp04181.pdf); [Janzwood on pension funds' greening](https://cascadeinstitute.org/wp-content/uploads/2020/12/Janzwood-Technical-Paper-2020-3-v1-Pension-Funds-Dec7.pdf). Excerpts. Allocations to emerging markets and barriers. **G/P**.
 - Public investment: IMF. [How to improve public investment management in low-income countries](https://www.elibrary.imf.org/view/journals/061/2025/001/article-A001-en.xml) (2025); [IMF 2015 board paper](https://www.imf.org/external/np/pp/eng/2015/061115.pdf); [IMF WP/24/232](https://www.imf.org/-/media/files/publications/wp/2024/english/wpiea2024232-print-pdf.pdf); [PIMA and Climate PIMA](https://cfrr.worldbank.org/sites/default/files/2024-06/9_15_3_Sage%20De%20Clerck.pdf); [What is PIMA](https://infrastructuregovern.imf.org/content/PIMA/Home/PimaTool/What-is-PIMA.html); [PIMA review](https://infrastructuregovern.imf.org/content/dam/PIMA/Knowledge-Hub/Publications/pubdocuments/PublicInvestmentManagementAssessment_Review&Update_May2018.pdf); [Portugal PIMA and C-PIMA (2026)](https://www.elibrary.imf.org/view/journals/019/2026/042/article-A001-en.xml). Excerpts. Efficiency losses of 34% and 53%; coverage of 82 countries. **P**.
 
-## I. Cost and risk of the energy system
+# I. Cost and risk of the energy system
 
 - Costs 2025/26: IRENA via [pv-tech](https://www.pv-tech.org/solar-pv-lcoe-ticks-marginally-upwards-2025-irena/), [SolarQuarter](https://solarquarter.com/2026/07/03/irena-report-over-90-of-new-renewable-power-added-in-2025-was-cheaper-than-fossil-fuels-saving-usd-480-billion-in-fuel-costs/), [Mercom](https://www.mercomindia.com/levelized-cost-of-solar-plus-storage-fell-to-54-82-mwh-in-2025-irena) and the [IRENA report PDF](https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2026/Jul/IRENA_TEC_RPGC_in_2025_2026.pdf); BloombergNEF via [pv magazine](https://pv-magazine-usa.com/2026/02/23/solar-lcoe-to-fall-30-by-2035-says-bloombergnef/) and [SolarQuarter](https://solarquarter.com/2026/03/05/battery-storage-costs-plunge-to-78-mwh-in-2025-amid-rising-renewable-costs/); [Wood Mackenzie](https://www.woodmac.com/ja/press-releases/four-hour-battery-storage-now-beats-gas-peaking-on-cost-globally/); [Solar Power World](https://www.solarpowerworldonline.com/2026/10/4-hour-battery-storage-is-cheaper-to-install-than-gas-turbines-all-across-globe/); [Lazard via pv magazine](https://pv-magazine-usa.com/2026/07/13/u-s-solar-lcoe-on-the-rise-lazard-says/). Excerpts and trade-press reports; the primary reports are the figures to cite. **T/P**.
 - Metrics: [CATF, Beyond LCOE](https://cdn.catf.us/wp-content/uploads/2025/06/12134742/beyond-lcoe.pdf); [OSTI review of system technology metrics](https://www.osti.gov/servlets/purl/1768300); [FTI on cost metrics](https://www.fticonsulting.com/insights/articles/beyond-cost-metrics-recognizing-value-nuclear-energy) (**T**); [CVaR planning model](https://arxiv.org/pdf/2104.10862) and [rolling-forecast risk paper](https://arxiv.org/pdf/2407.13626) (preprints); [LCOE (Wikipedia)](https://en.wikipedia.org/wiki/Levelized_cost_of_electricity). Excerpts. **G/P/T**.
 - Emissions outlook: [Nature Communications, sectoral GHG projections](https://www.nature.com/articles/s43247-024-01288-9), [Nature Communications, cement emissions](https://www.nature.com/articles/s41467-023-43660-x), [Indonesia projection](https://www.sciencedirect.com/science/article/pii/S2214785322022258), [Brookings, the world at 60 gigatonnes](https://www.brookings.edu/articles/the-world-at-60-gigatonnes-of-greenhouse-gas-emissions/), [Foreign Affairs, The Coming Carbon Tsunami](https://www.foreignaffairs.com/articles/world/2021-12-14/coming-carbon-tsunami). Excerpts. No ranked country list found. **P/G**.
 
-## J. Fiscal risk
+# J. Fiscal risk
 
 - IMF. [PFRAM 2.0 user manual](https://www.imf.org/external/np/fad/publicinvestment/pdf/PFRAM2.pdf) (2019) and [2016 user guide](https://www.imf.org/external/np/fad/publicinvestment/pdf/PFRAMmanual.pdf). Excerpts. Values a guarantee as guaranteed debt weighted by a probability, with a worst case. **P**.
 - IMF. [Analysing and managing fiscal risks: best practices](https://www.imf.org/external/np/pp/eng/2016/050416.pdf) and the [fiscal risk toolkit](https://thedocs.worldbank.org/en/doc/1a83da129072a0a6d1d7cce8f75278ad-0080012025/original/2-IMF-FAD-Fiscal-Risk-Toolkit-Jonas-Frank.pdf). Excerpts. The fiscal risk matrix. **P**.
@@ -98,13 +117,13 @@ Companion to `Addendum-Finance-Contracts-and-Sovereign-Balance-Sheet.md`. Compil
 - World Bank. [Assessing and managing credit risk from contingent liabilities: government guarantees](https://documents1.worldbank.org/curated/en/977351588579679239/pdf/Assessing-and-Managing-Credit-Risk-from-Contingent-Liabilities-A-Focus-on-Government-Guarantees.pdf) and the [Debt and Fiscal Risks Toolkit](https://www.worldbank.org/en/programs/debt-toolkit/fiscal-risk). Excerpts. Guarantee credit risk. **P**.
 - IMF (2026). [Fiscal Monitor, April: debt-at-risk](https://www.imf.org/-/media/files/publications/fiscal-monitor/2026/april/english/text.pdf). Excerpt. A tail measure of the debt path. **P**.
 
-## K. Electric vehicles
+# K. Electric vehicles
 
 - UNEP. [Capital 2 Mobilize](https://www.unep.org/en/events/online-event/capital-2-mobilize-financing-electric-two-and-three-wheeler-transition-global), its [technical highlight](https://www.unep.org/en/news-and-stories/technical-highlight/electric-mobility-gathers-speed-unep-tackles-two-major) and the [key insights PDF](https://sustmob.org/EMOB/EMOB_UNEP_Capital2MobilizeReport_Key%20Insights.pdf). Excerpts. Financing cost differences reflect macro and customer risk. **P/G**.
 - RMI. [Unlocking low-cost lending for electric two- and three-wheelers](https://rmi.org/unlocking-low-cost-lending-for-electric-two-and-three-wheelers/); IEA. [India case study on e-buses](https://www.iea.org/reports/india-case-study/electric-transportation-in-india-accelerating-the-deployment-of-e-buses); OECD. [Flexible debt for e-mobility (BasiGo)](https://www.oecd.org/en/publications/blended-finance-case-studies_2fb90b9a-en/using-flexible-debt-to-support-capital-intensive-e-mobility-businesses_992472ad-en.html); [Changing Transport on India](https://changing-transport.org/financing-the-future-of-transport/); [EV24.africa](https://www.ev24.africa/ev-financing-africa-leasing-loans-new-models-2026/); [project finance law note on charging](https://www.projectfinance.law/publications/2019/december/financing-ev-charging-infrastructure). Excerpts. Lease rates of 18 to 28% were quoted for India. **G/T**.
 - Purchase policy in the large markets: [Energy Fact Book](https://energyfactbook.com/world/ev-policy-by-country/), [CarCody on China](https://carcody.com/china-cuts-a-major-ev-tax-incentive-in-2026-but-not-all-subsidies-end/), [S&P Global on China](https://www.spglobal.com/energy/en/news-research/latest-news/metals/103025-lithium-markets-shrug-as-china-auto-body-urges-gradual-end-to-ev-tax-breaks), [Global Deal](https://globaldeal.io/finder/articles/global-ev-manufacturing-incentives), [EV Road Tax](https://www.evroadtax.com/ev-guide/global-ev-incentives-tax-credits-2026-country-guide), [YoCharge](https://yocharge.com/blog/electric-vehicle-incentives-by-country/), [LC Motorcycle](https://www.lcmotorcycle.com/government-incentives-for-electric-vehicles-country-by-country-guide-2026/), [Wikipedia](https://en.wikipedia.org/wiki/Government_incentives_for_plug-in_electric_vehicles). Excerpts. Blogs and vendor guides with conflicting dates; verify against official sources. **T**.
 
-## Not yet found or read
+# Not yet found or read
 
 - The body of the Grubb FT article and the full Finance Ministers for Climate guide (access error).
 - Any paper on guarantees priced on climate policy credibility.

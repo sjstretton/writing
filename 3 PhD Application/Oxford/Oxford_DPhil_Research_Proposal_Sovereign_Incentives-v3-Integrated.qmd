@@ -1,7 +1,16 @@
 ---
+# MASTER - this is the file to edit. The .docx beside it is made from it (house working-paper format).
 title: "Sovereign Incentives for Decarbonisation: How a Climate Reserve and Guaranteed Contracts Can Lower the Cost of Capital and Reward Climate Policy"
-author: "Stephen Stretton"
-subtitle: "DPhil in Geography and the Environment: research proposal (draft v3, level 2 of 4)"
+subtitle: "Research proposal"
+series: "Research proposal: DPhil in Geography and the Environment, University of Oxford"
+version: "3.0 (draft)"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "November 2026"
+number-sections: false
+format:
+  docx: default
 ---
 
 *Drafting note for Stephen, delete before submission.* Level 2 of 4, written 1 Nov 2026 from proposal v2, the addendum and the series papers. Target about 2,500 words of main text (this draft is close to that, excluding references). UK spelling; titles of my own working papers keep their US spelling. Every `[VERIFY]` and `[STEPHEN TO CONFIRM]` must be cleared before anyone at Oxford sees it.

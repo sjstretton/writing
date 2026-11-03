@@ -1,10 +1,29 @@
-# Addendum: guaranteed payments, sovereign incentives and the cost of net-zero infrastructure
+---
+# MASTER - this is the file to edit. The .docx beside it is made from it (house working-paper format).
+title: "Guaranteed Payments, Sovereign Incentives and the Cost of Net-Zero Infrastructure"
+subtitle: "Research note: an addendum to the sovereign-incentives research proposal"
+series: "Theory and Research Note"
+version: "0.1"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "November 2026"
+abstract: |
+  Net-zero infrastructure in developing countries is mainly a financing problem, and the financing problem is mainly about who guarantees the payment. This note reviews the evidence on sovereign incentives and carbon markets, de-risking and currency risk, long-term contracts and public-private structures for grids, the growth and fiscal case linking ageing countries' savings to developing countries' investment needs, and how cost, risk and fiscal risk are measured. It proposes an overall research question and shows where each idea attaches to the thesis.
+keywords: [cost of capital, guarantees, sovereign incentives, policy crediting, currency risk, public-private partnerships]
+number-sections: false
+format:
+  docx: default
+---
+
+*Theory and Research Note, November 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated.*
+
 
 Research note to accompany the proposal *Sovereign Incentives for Decarbonisation: How Multilateral Development Banks Can Use Financial De-risking to Lower the Cost of Capital and Reward Climate Policy*. Written 1 November 2026. Public sources only: no World Bank internal material is used.
 
-**Status.** Draft for Stephen's review, not for submission. Sources come from web searches run on 1 November 2026, many of them trade press, advocacy or policy summaries. Every figure marked `[VERIFY]` must be checked against the primary source before use. Names marked "memory" were not checked in any source. Links are inline; the full annotated bibliography is in `Annotated-Bibliography-Financing-and-Incentives.md`.
+**Status.** Draft for Stephen's review, not for submission. Sources come from web searches run on 1 November 2026, many of them trade press, advocacy or policy summaries. Every figure marked `[VERIFY]` must be checked against the primary source before use. Names marked "memory" were not checked in any source. Links are inline; the full annotated bibliography is in `AnnotatedBibliography-FinancingAndIncentives.qmd`.
 
-## 1. Summary and overall research question
+# 1. Summary and overall research question
 
 Net-zero infrastructure in emerging and developing economies (EMDEs) is mainly a financing problem, and the financing problem is mainly about who guarantees the payment. Solar, wind, grids and electric transport are almost all upfront cost, so what investors charge for capital sets what the service costs. Investors charge less when a creditworthy party stands behind a long-term payment. Every structure reviewed here, from power purchase agreements (PPAs) to regulated asset bases to management contracts, is a way of packaging that guaranteed payment. Each depends on a government's credibility, which is the sovereign's own choice.
 
@@ -14,7 +33,7 @@ The proposal already asks how multilateral development banks (MDBs) can lower th
 
 The question is deliberately narrower than "how do we finance net zero". It names one mechanism, the guaranteed payment, and one design variable, the link between its price and policy credibility.
 
-## 2. Sovereign incentives
+# 2. Sovereign incentives
 
 Carbon markets create sovereign incentives, but in the wrong direction. A host government that sells credits under Article 6 of the Paris Agreement must subtract the sold reductions from its own national count (a "corresponding adjustment"). The more ambitious its target, the costlier each sale, so a government earns more by keeping its target weak. The [World Bank's paper on corresponding adjustments](https://ppp.worldbank.org/public-private-partnership/sites/default/files/2023-10/Corresponding%20Adjustment%20and%20Pricing%20of%20Mitigation%20Outcomes.pdf) says the more ambitious the host's national target, the higher the cost of the adjustment. A [*Climate Policy* article (2022)](https://www.tandfonline.com/doi/pdf/10.1080/14693062.2022.2108366) argues that baselines tied to national targets give hosts a motive to set weaker targets. A [second article (2021)](https://www.tandfonline.com/doi/full/10.1080/14693062.2021.1948384) argues that crediting outside the national target, without adjustments, can give hosts perverse incentives not to extend their policies. The industry body IETA also treats the adjustment as [a sovereign risk](https://www.spglobal.com/energy/en/news-research/latest-news/energy-transition/060622-carbon-market-players-face-significant-sovereign-risk-from-article-6-activities-ieta), while Verra and the integrity council ICVCM [dispute that ambition will freeze](https://www.spglobal.com/energy/en/news-research/latest-news/energy-transition/060823-corresponding-adjustments-should-not-be-enforced-in-voluntary-market-verra-icvcm). Evidence on the size of the effect is thin: one preprint says the link between voluntary market transactions and national target delivery is largely unquantified `[VERIFY: preprint status]`. Cullenward and Victor's [*Making Climate Policy Work*](https://www.lowyinstitute.org/publications/david-victor-how-make-climate-policy-work) (2020) gives the wider critique that carbon markets are layered on regulation and are politically captured; only secondary summaries were read.
 
@@ -28,7 +47,7 @@ Jayant Sinha's ORF issue brief, ["A Green Bank for Global South Climate Finance"
 
 The link to the proposal's model is direct. The government adopts a package when S + F(Δr) − λL ≥ O, where F(Δr) is the financing saving from a lower cost of capital. Carbon-market crediting acts on the left side of that inequality in the wrong direction, because it lowers the payoff to a stronger target. A policy-priced guarantee raises F(Δr) for governments that keep their commitments. The two can be compared on the same formula.
 
-## 3. De-risking, including currency
+# 3. De-risking, including currency
 
 De-risking works by narrowing the gap between a project's cost of capital and the sovereign's, and it rarely closes it. The proposal cites an IEA estimate that a typical solar plant in EMDEs faced a cost of capital two to three times that in advanced economies and China in 2021 `[VERIFY: IEA Cost of Capital Observatory]`. Private project finance seldom beats its own sovereign. Brazil's transmission auctions show this: bidders compete hard (a [commercial source](https://energy-solutions.co/policy-intelligence/permitting-and-red-tape/brazil-transmission-auctions-aneel) reports discounts of 40 to 50% below the regulator's revenue cap `[VERIFY]`), yet the [IEA's Brazil case study](https://www.iea.org/reports/brazil-case-study/grids-in-brazil-mobilising-private-capital-through-a-robust-regulatory-framework) says the regulator builds its allowed return from US Treasury yields plus Brazil's emerging-market bond spread, which sits above Brazil's own cost of borrowing. The savings in these auctions come from competition and efficiency, not from cheaper money.
 
@@ -47,7 +66,7 @@ The limits matter. One analysis argues that hedges of 15 to 20 years, the tenor 
 
 Four implications follow for the thesis. First, the benchmark for any project structure is the sovereign's own cost of funds, so the target is the distance to the sovereign, not to an advanced-market rate. Second, the cost to the guarantor is expected loss and capital used, not face value, as the proposal's third quantity already says. Third, in the highest-risk countries de-risking one technology does little, and the sovereign's credibility is the binding constraint. Fourth, currency is a separate risk component that the project-finance model in work package 2 should carry explicitly, with the swap, the local-currency PPA and the guarantee compared on cost per dollar of risk removed.
 
-## 4. Policy and finance framework for investment
+# 4. Policy and finance framework for investment
 
 A guaranteed payment is the common unit, and the financial structure sits on top of it. Once a creditworthy party stands behind a defined payment stream, lenders and investors can price it, pool it, refinance it and sell it. The question for each asset is which structure creates that payment most simply.
 
@@ -67,7 +86,7 @@ For low-capacity, low-fiscal-space countries the practical rule is the simplest 
 
 This links to the proposal's first hypothesis. H1 predicts that the fall in the cost of capital from MDB support is larger where policy already provides long-term contracted revenue through auctions, PPAs or CfDs. The structures above are the ways that contracted revenue gets created, and the policy coding in work package 1 could record which each country uses.
 
-## 5. A growth and fiscal story
+# 5. A growth and fiscal story
 
 The finance ministry's case is that net-zero investment and savings policy are the same problem seen from two sides. Developing countries need long-term capital for energy and transport, and ageing countries need long-dated assets to pay pensions. [ECDPM](https://ecdpm.org/work/unlocking-pension-fund-capital-sdgs-and-climate-emerging-markets) puts the emerging-market funding gap for development and climate goals at about $4.2 trillion a year `[VERIFY: scope and year]`. The IMF's [2025 World Economic Outlook](https://www.imf.org/-/media/files/publications/weo/2025/april/english/ch2.pdf) finds that population ageing raises desired savings and pushes interest rates down, and the [ECB](https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op296~aaf209ffe5.en.pdf) links the same effect to a shortage of safe assets. Savings that cannot find safe, long-dated assets in rich countries could finance infrastructure in developing ones, which was the [OECD's argument](https://www.oecd.org/content/dam/oecd/en/publications/reports/2000/04/pensions-savings-and-capital-flows_g1gh1371/9789264181625-en.pdf) about pension funds around 2000. The [OECD's 2011 paper](https://www.oecd.org/content/dam/oecd/en/publications/reports/2011/09/the-role-of-pension-funds-in-financing-green-growth-initiatives_g17a2011/5kg58j1lwdjd-en.pdf) on pension funds and green growth is a good starting point.
 
@@ -77,7 +96,7 @@ The question of who funds the guarantor is where sovereign wealth funds enter. G
 
 The fiscal side limits the story. Public investment in EMDEs and low-income countries ran at about 6 to 7% of GDP in a [2015 IMF paper](https://www.imf.org/external/np/pp/eng/2015/061115.pdf) `[VERIFY: update]`. An [IMF working paper](https://www.imf.org/-/media/files/publications/wp/2024/english/wpiea2024232-print-pdf.pdf) using over 80 assessments estimates average efficiency losses of about 34%, and about 53% in low-income countries `[VERIFY]`. The IMF's [Public Investment Management Assessment](https://www.elibrary.imf.org/view/journals/061/2025/001/article-A001-en.xml) (PIMA) covers 82 countries, 37 of them low-income, and its [climate version](https://cfrr.worldbank.org/sites/default/files/2024-06/9_15_3_Sage%20De%20Clerck.pdf) (C-PIMA, launched 2021, over 40 assessments) looks at institutional design only, with no effectiveness scores. A guaranteed payment is a contingent liability for the sovereign, so a guarantee programme must be sized against what the state can absorb (section 7). For the thesis, the sovereign's gain F(Δr) has to be counted net of the contingent liability the guarantee creates.
 
-## 6. Cost and risk of the energy system to government and economy
+# 6. Cost and risk of the energy system to government and economy
 
 To a finance minister, cheap power means low system cost financed at a rate the country can bear, without new fiscal risk. The 2025 data support the first part. [IRENA](https://www.pv-tech.org/solar-pv-lcoe-ticks-marginally-upwards-2025-irena/) reports solar PV at about $44 per megawatt-hour and says [over 90%](https://solarquarter.com/2026/07/03/irena-report-over-90-of-new-renewable-power-added-in-2025-was-cheaper-than-fossil-fuels-saving-usd-480-billion-in-fuel-costs/) of utility-scale renewables commissioned in 2025 beat the cheapest new fossil plant; its solar-plus-storage firm power cost is [$54 to $82](https://www.mercomindia.com/levelized-cost-of-solar-plus-storage-fell-to-54-82-mwh-in-2025-irena) in strong regions. [BloombergNEF's benchmarks](https://pv-magazine-usa.com/2026/02/23/solar-lcoe-to-fall-30-by-2035-says-bloombergnef/) are about $39 for solar, about $40 for onshore wind and about $102 for new combined-cycle gas, a record high; four-hour battery storage fell 27% to $78. [Wood Mackenzie](https://www.woodmac.com/ja/press-releases/four-hour-battery-storage-now-beats-gas-peaking-on-cost-globally/) reports four-hour storage beating gas peaking plants in many markets, with a storage cost well above BloombergNEF's `[VERIFY: definitions]`. [Lazard's US solar range](https://pv-magazine-usa.com/2026/07/13/u-s-solar-lcoe-on-the-rise-lazard-says/) rose to $40 to $98 on tariffs.
 
@@ -87,7 +106,7 @@ Finance ministries now have a shared reference for this role. The Coalition of F
 
 Researchers who model costs and technology change include Doyne Farmer, Rupert Way and Penny Mealy at Oxford, Jesse Jenkins at Princeton, and the integrated assessment teams at the Potsdam Institute (Gunnar Luderer) and PBL (Detlef van Vuuren) (memory `[VERIFY]`). On finance and macroeconomics: Ameli, Schmidt, Shrimali, Caldecott, Volz, Persaud, Stern, Bhattacharya, Songwe, Ian Parry, Jean Pisani-Ferry, Patrick Bolton and Kevin Gallagher (memory). I found no author who joins system cost modelling with sovereign balance sheets and incentives. That gap suits the claim to think systemically about risk and finance, and the proposal's link to the Climate Policy Assessment Tool (CPAT) is the bridge, since S and L come from CPAT's sectoral and distributional modules.
 
-## 7. How energy cost, risk and fiscal risk are measured
+# 7. How energy cost, risk and fiscal risk are measured
 
 Standard metrics exist for each of the three, and they map onto the proposal's quantities. The table gives the metric, what it measures and where it comes from.
 
@@ -108,7 +127,7 @@ So yes, value at risk has a direct role. For the guarantor, expected loss and th
 
 For the thesis this suggests a simple discipline: every structure in section 4 is scored on the same three numbers. The first is its cost of capital (and hence cost per megawatt-hour). The second is its expected loss and capital charge to the guarantor. The third is its contingent liability to the sovereign, on a PFRAM-style basis. Currency adds a fourth item, the cost of the hedge or the unhedged exposure.
 
-## 8. How this fits the proposal
+# 8. How this fits the proposal
 
 The proposal keeps its three research questions and two hypotheses. This addendum adds an umbrella question (section 1), a longer asset menu, a currency component, a standard metric set and a fiscal cost. The table shows where each piece attaches.
 
@@ -124,13 +143,13 @@ The proposal keeps its three research questions and two hypotheses. This addendu
 
 A caution on scope. The earlier review of the proposal found that four work packages are too many for three years, and this addendum should not add any. The sensible use is as framing in the introduction and policy sections, one extra case in work package 4, and a policy note after the thesis.
 
-## 9. Appendix: target countries and public investment
+# 9. Appendix: target countries and public investment
 
 **Candidate countries (my judgement, not sourced).** Large emitters: China, India, Indonesia, Brazil, Iran, Saudi Arabia, Turkey, Mexico, South Africa. Fast-growing: Vietnam, Pakistan, Bangladesh, Egypt, Philippines, Thailand. Low base with large population growth: Nigeria, Ethiopia, DR Congo, Tanzania, Kenya. That makes 20, and the edge choices are arbitrary. The searches found only India (just under 9 Gt of greenhouse gases in 2050 under business as usual, up 95%) and Indonesia (about 3.5 Gt, up 63%) in a [sectoral projections paper](https://www.nature.com/articles/s43247-024-01288-9) `[VERIFY]`, and that growth in emerging Africa, South-East and Southern Asia and the Middle East will account for most global growth to 2050. A ranking needs country series from the IEA's current-policies scenario or Climate Action Tracker. Nigeria's net-zero target is 2070 and Pakistan's is 2050 (not legally binding); these are targets, not projections.
 
 **Assessing public investment.** PIMA and C-PIMA reports are public for many countries. A first screen for a target country is whether it has one, and what it scores on project appraisal, selection, and the management of state-owned utilities.
 
-## 10. Open items
+# 10. Open items
 
 1. Whether anyone has proposed guarantees priced on climate policy credibility (ask Ameli and Grubb; search Google Scholar).
 2. The body of Grubb's FT article: its mechanism, numbers and whether it addresses policy-linked pricing. Also the full text of the Finance Ministers for Climate guide, which returned an access error (paste the relevant sections, or download the PDF into the repo).

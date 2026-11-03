@@ -31,7 +31,7 @@ The writing part of the combined repo: papers, the Quarto website and its script
 | &nbsp;&nbsp;`7.AdditionalAnalytics` | 7.1 excise diagnostic, 7.2 fiscal indicators dashboard. |
 | `E Website` | The Quarto site: Policy and Finance (`index.qmd`, `policy/`), Modelling and Analytics (`modelling/`), About. `PaperArchive/` holds every published file, `papers/` only the linked ones. |
 | `F Other Writing` | Writing outside the series and not on the website (8.1–8.7). |
-| `B PhD Application` | PhD research proposals and application status (see its `README.md`). |
+| `B Theory and Research` | Thesis plan, overview paper, research notes and model documentation behind the PhD (see its `README.md`). The applications are in `3 PhD Application`. |
 | `G Climate Econ Course` | Materials for a climate-fiscal economics course, organized by topic (A–G). |
 
 Most subfolders that need extra explanation have their own `README.md` — check

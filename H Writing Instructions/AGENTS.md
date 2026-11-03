@@ -12,13 +12,14 @@ Read the file that matches your task before you start. Files in this folder (`H 
 
 | File or folder | Use it for |
 |---|---|
-| `NORMS.md` | The rules every piece of writing must meet. Short. Always applies. |
+| `NORMS.md` | The rules every piece of writing must meet. Short. Always applies. Norm 13: every document is written in the house working-paper format (`.qmd` master, house YAML, rendered with the house styles). |
 | `STRATEGY.md` | Stephen's strategic priorities and specialisms. Decides what matters. |
 | `TODO.md` | The live task list. Take work from the top. Update it when you finish. |
 | `PAPERS.md` | Prioritised papers, introductory papers, concept papers and position papers. |
 | `NUMBERING.md` | The canonical paper numbers (section folder plus place in the section), with the old-to-new map and citation-key rules. |
 | `H Writing Instructions/Writing Standards/` | Writing principles, writing types, the paper standard, AI tells to avoid, exemplars and templates. |
-| `B PhD Application/` | The PhD research proposals. Its `README.md` tracks their status. |
+| `B Theory and Research/` | The substantive research behind the PhD and the papers: thesis plan, overview paper, research notes, and documentation copies of the Global Incentives Model. Its `README.md` maps it. |
+| `3 PhD Application/` | The applications themselves: per-university proposals, statements, forms, referees, transcripts. Its `README.md` tracks their status. |
 | `C Policy and FInance/`, `D Modelling/` | The papers, numbered by section: 1.x to 4.x in `C Policy and FInance`, 5.x to 7.x in `D Modelling` (due to move to its own repo). Each section has one `<N>.0.Overview` folder. `index.html` at the top of each lists every paper with links to its files. |
 | `F Other Writing/` | Writing outside the series and not on the website (8.x: other fiscal policy, The Sollar, MDB papers, political economy, philosophy, politics). |
 | `E Website/` | The Quarto site. Layout and the list of papers with a web version: `Scripts/Website/site_config.py`. |
