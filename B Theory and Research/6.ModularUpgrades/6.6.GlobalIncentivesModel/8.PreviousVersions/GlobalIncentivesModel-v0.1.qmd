@@ -7,10 +7,10 @@ author:
 date: "31 October 2026"
 version: "Draft v0.1"
 abstract: |
-  International climate policy now relies on instruments that reach across borders: carbon border adjustments, payments for policies rather than projects, guarantees that lower the cost of capital, and funds that reward governments. No single model available to a finance ministry or development bank can compare them, because each acts through a different channel. This plan sets out a global model, by country and sector, that can. Its central research question is how much emissions can fall at zero cost at current interest rates, how much at World Bank interest rates, and how much when domestic co-benefits are counted. Its core models sectors in one of three ways. Nine sectors whose emissions are decided by a choice between a few long-lived technologies get an activity-and-technology model: power, steel, ammonia and hydrogen, and road passenger and freight transport in full; cement, aluminium, building heat and household cooking in stylized form. Each comes with a technical cost model, a cost-of-capital model and a behavioral rule: a cost-based logit with a diffusion limit, simpler than the Future Technology Transformations models. The rest use nested constant-elasticity substitution, marginal abatement curves or a carbon-stock model. A lookup table records who decides in each sector, whether the public budget, a regulated utility, a long-term contract or a private buyer. Around the core sit five modules: policy, cost of finance, destination carbon accounting with trade flows, international incentives, and national objectives with a simple macro model. The incentives module contains a country timing layer, so the model can test use-it-or-lose-it funds that decay. Most components exist already and are reused.
+  International climate policy now relies on instruments that reach across borders: carbon border adjustments, payments for policies rather than projects, guarantees that lower the cost of capital, and funds that reward governments. No single model available to a finance ministry or development bank can compare them, because each acts through a different channel. This plan sets out a global model, by country and sector, that can. Its core models sectors in one of three ways. Nine sectors whose emissions are decided by a choice between a few long-lived technologies get an activity-and-technology model: power, steel, ammonia and hydrogen, and road passenger and freight transport in full; cement, aluminium, building heat and household cooking in stylized form. Each comes with a technical cost model, a cost-of-capital model and a behavioral rule: a cost-based logit with a diffusion limit, simpler than the Future Technology Transformations models. The rest use nested constant-elasticity substitution, marginal abatement curves or a carbon-stock model. A lookup table records who decides in each sector, whether the public budget, a regulated utility, a long-term contract or a private buyer. Around the core sit five modules: policy, cost of finance, destination carbon accounting with trade flows, international incentives, and national objectives with a simple macro model. The incentives module contains a country timing layer, so the model can test use-it-or-lose-it funds that decay. Most components exist already and are reused.
 keywords: [integrated assessment, technology diffusion, cost of capital, carbon border adjustment, policy crediting, climate finance]
 jel: [C61, F18, H23, Q43, Q54, Q58]
-bibliography: references.bib
+bibliography: ../references.bib
 format:
   docx: default
   pdf:
@@ -26,19 +26,7 @@ format:
 
 The instruments of international climate policy now work across borders, and the models used to judge them do not. The European Union's carbon border adjustment mechanism prices the carbon in imported steel, aluminium, cement, fertilizers, hydrogen and electricity [@EU2023CBAM]. Development banks are being asked to lower the cost of capital for clean power, which varies widely: across the 43 economies with observed data, the real after-tax cost of capital for solar power in 2021 ranged from 2.5 percent in China to more than 13 percent in Argentina, Yemen and Lebanon, with a median of 6.7 percent (Global Fiscal Indicators v1.3, from IRENA data). Policy crediting would pay governments per tonne cut by their policies rather than by individual projects [@StrettonWP11; @StrettonWP61]. Funds that reward governments, through guarantees, trust accounts or sustainability-linked loans, are under design [@StrettonWP41; @StrettonWP42; @StrettonWP43]. A finance ministry asked to choose among these needs to know, for its own country and sectors, what each does to emissions, to the budget and to growth, and how its effects depend on what other countries do.
 
-The model's central research question is how much emissions can fall at zero cost, and how much more cheaper finance and co-benefits unlock. It answers the question three times from the same technology options, changing only the cost of capital and the benefits counted. An option is zero-cost when its net cost $K$ (capital annualized at the cost of capital $w$, plus running costs, less fuel savings) is not positive. Carbon is valued in none of the three cases, so each measures abatement that pays for itself.
-
-| Case | Cost of capital $w$ | Benefits counted | Zero-cost test |
-|:--|:--|:--|:--|
-| 1. Current interest rates | Each country's market cost of capital today, equation (7) | Energy-cost savings | $K \le 0$ |
-| 2. World Bank interest rates | The World Bank's lending rate to the host government [to confirm: the IBRD lending rate, or the World Bank's 6 percent social discount rate] | Energy-cost savings | $K \le 0$ |
-| 3. Including co-benefits | As in case 2 | Plus domestic co-benefits $H$ from equation (11), such as health and energy security | $K - H \le 0$ |
-
-: The central research question, answered three times. Source: author.
-
-The output is the tonnes of CO$_2$e cut each year in 2030, 2035 and 2050, and cumulatively to 2050, by country, sector and in total. The gaps between the cases carry the argument. The step from case 1 to case 2 is the abatement that cheaper finance alone unlocks, the prize for lowering the cost of capital. The step from case 2 to case 3 is what a government gains by acting in its own interest, before any international payment. Whatever still costs money after case 3 is what carbon pricing and international incentives must pay for.
-
-The question of design that follows is how to build a global model, by country and sector, that compares these instruments on one basis and can say what an optimal design looks like. The answer has three parts. First, model technology explicitly only where a choice between a few long-lived technologies decides emissions; nine sectors meet that test, and the rest are better modeled more simply. Second, record for every sector who makes the investment decision, because a carbon price acts on a private buyer, a contract price on a power purchase agreement, and a budget allocation on a public program. Third, put the government's own decision, when to adopt a policy, inside the model, so that international incentives can be designed to change it. The last part is what allows the model to test use-it-or-lose-it incentives: rewards that decay with delay, studied in the companion working paper.
+The question this plan answers is how to build a global model, by country and sector, that compares these instruments on one basis and can say what an optimal design looks like. The answer has three parts. First, model technology explicitly only where a choice between a few long-lived technologies decides emissions; nine sectors meet that test, and the rest are better modeled more simply. Second, record for every sector who makes the investment decision, because a carbon price acts on a private buyer, a contract price on a power purchase agreement, and a budget allocation on a public program. Third, put the government's own decision, when to adopt a policy, inside the model, so that international incentives can be designed to change it. The last part is what allows the model to test use-it-or-lose-it incentives: rewards that decay with delay, studied in the companion working paper.
 
 The plan builds on existing work rather than starting afresh. The national mitigation investment model already covers 186 countries from 2024 to 2050 with a who-pays typology [@NMIM2026]. The CPAT mitigation module has a power-sector technical cost model with dispatch and investment logits. Working paper 6.1 has a nested constant-elasticity model and the Total Effective Carbon Price, which converts any policy mix into an equivalent uniform carbon price [@StrettonWP61]. The CBAM Policy Tool has product emission factors for seven products. The macro-fiscal models chain a simplified global integrated monetary and fiscal model, a debt-investment-growth model and a debt sustainability framework. Section 2 lists what each supplies. The new work is the sector lookup, the diffusion rule, the cost-of-finance decomposition, bilateral trade and destination accounting, the incentives module and the country objective function.
 
@@ -281,15 +269,14 @@ where $\mu$ are CPAT's fiscal multipliers on spending and revenue changes $\Delt
 
 # Questions the model answers
 
-The model is built to answer a fixed set of questions, which also define its outputs. The first is the central research question of the Introduction.
+The model is built to answer a fixed set of questions, which also define its outputs:
 
-1. How many tonnes of emissions can be cut at zero cost in each country and sector at current interest rates, how many at World Bank interest rates, and how many when domestic co-benefits are included (see the Introduction)?
-2. For each country and sector, how far is the behavioral path from the national and global least-cost paths, and how much of the gap is policy, finance and externality?
-3. What do the EU border adjustment, its extension to other importers, and a destination carbon tax in major consumers do to each exporter's emissions, revenue, market share and output, and how much carbon price would the exporter need to recognize to avoid the charge?
-4. How many tonnes and years of early action does a dollar of donor money buy through each finance intervention, and how much of that comes from the learning dividend?
-5. What does policy crediting cost per tonne under each baseline rule, and how much of the payment is for action that would have happened anyway?
-6. Which use-it-or-lose-it design (decay rate, clock, ratchet, pool, delivery form) brings the most action forward for a given donor budget, and how does that depend on whether decay is credible?
-7. For each country archetype, which package of domestic policy and international incentives maximizes its objective while meeting its debt constraint?
+1. For each country and sector, how far is the behavioral path from the national and global least-cost paths, and how much of the gap is policy, finance and externality?
+2. What do the EU border adjustment, its extension to other importers, and a destination carbon tax in major consumers do to each exporter's emissions, revenue, market share and output, and how much carbon price would the exporter need to recognize to avoid the charge?
+3. How many tonnes and years of early action does a dollar of donor money buy through each finance intervention, and how much of that comes from the learning dividend?
+4. What does policy crediting cost per tonne under each baseline rule, and how much of the payment is for action that would have happened anyway?
+5. Which use-it-or-lose-it design (decay rate, clock, ratchet, pool, delivery form) brings the most action forward for a given donor budget, and how does that depend on whether decay is credible?
+6. For each country archetype, which package of domestic policy and international incentives maximizes its objective while meeting its debt constraint?
 
 # Data
 
@@ -321,7 +308,7 @@ The model is built in seven stages, each ending in a working version with a vali
 | 4 | v0.4 | Policy module with Total Effective Carbon Price and crediting baselines | Working paper 6.1 calibration cases |
 | 5 | v0.5 | Destination accounting and trade: product tier, then economy tier | Consumption-based emissions against published estimates; CBAM Policy Tool results for its seven products |
 | 6 | v0.6 | Incentives module and country timing layer, including the pool fixed point | Reproduce Tables 1–4 of the use-it-or-lose-it paper; NCV and Trust arithmetic of working papers 4.1 and 4.2 |
-| 7 | v1.0 | National objectives and macro-lite; funder optimization; global runs for the seven questions | Macro-lite against GIMF-lite and DIGNAD-lite multipliers for the integrated-run countries |
+| 7 | v1.0 | National objectives and macro-lite; funder optimization; global runs for the six questions | Macro-lite against GIMF-lite and DIGNAD-lite multipliers for the integrated-run countries |
 
 : Table 7. Seven stages, each ending in a validated version. Source: author.
 
