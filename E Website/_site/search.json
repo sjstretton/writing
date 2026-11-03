@@ -4545,6 +4545,17 @@
     ]
   },
   {
+    "objectID": "modelling/5-modelling.html#paper-5-5",
+    "href": "modelling/5-modelling.html#paper-5-5",
+    "title": "5. Modelling (CPAT)",
+    "section": "5.5 Carbon Prices Cut Emissions",
+    "text": "5.5 Carbon Prices Cut Emissions\nEvidence from Ten Natural Experiments in Fuel Taxes, Carbon Pricing and Subsidy Reform\nFinance ministries weighing a carbon tax need to know what it will do to emissions, and most of the numbers they are given come from models. This paper collects ten natural experiments in which a carbon tax, a fuel tax rise, an emissions trading price, a subsidy cut or a market shock raised fuel prices, and in which researchers later measured emissions or fuel use against a credible counterfactual. For each case it reports the fuels and sectors covered, how far the measure raised retail prices over time, the carbon price or its equivalent in dollars per tonne of carbon dioxide, and the estimated cut. Every case shows a cut. In road transport and home heating, prices of 20 to 125 dollars a tonne cut emissions from the covered fuels by roughly 5 to 15 percent over five to fifteen years, about 1 to 2 percent for each 10 dollars. Where power plants could switch from coal to gas, the cut per dollar was five to ten times larger: Britain’s carbon price floor cut power-sector emissions by about a fifth a year. Taxes moved demand more than equal market price changes, and exemptions and offsetting tax cuts weakened the effect. Models used for policy advice should be tested against these cases.\nWorking paper (pdf) →",
+    "crumbs": [
+      "Modelling and Analytics",
+      "5. Modelling (CPAT)"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Stephen Stretton",
@@ -5371,7 +5382,7 @@
     "href": "modelling/index.html",
     "title": "Modelling and Analytics",
     "section": "",
-    "text": "Models and diagnostics a finance ministry can audit, in three sections: the Climate Policy Assessment Tool (CPAT) stated, rebuilt and validated; modular upgrades to CPAT where policy needs them; and analytics on data ministries already hold. The policy papers are under Policy and Finance.\n\n5. Modelling (CPAT)\nModels a finance ministry can audit: the Climate Policy Assessment Tool stated, rebuilt and validated.\n\n5.1 The CPAT Mitigation Module\n5.2 CPAT-AI\n5.3 Validating CPAT\n5.4 Are CPAT’s Price Elasticities Right?\n\n\n\n6. Modular Upgrades\nExtensions to CPAT where policy needs them: carbon-price equivalents, CBAM, public investment, activity and macro-fiscal scenarios.\n\n6.1 Measure Carbon Pricing by the Emissions It Cuts\n6.2 The CBAM Policy Tool\n6.3 Public Investment in CPAT\n6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT\n6.5 The Macro-Fiscal-Energy Scenario Tool\n\n\n\n7. Analytics Tools\nDiagnostics on data ministries already hold: excise systems and fiscal indicators.\n\n7.1 The Excise-Fiscal Diagnostic\n7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis",
+    "text": "Models and diagnostics a finance ministry can audit, in three sections: the Climate Policy Assessment Tool (CPAT) stated, rebuilt and validated; modular upgrades to CPAT where policy needs them; and analytics on data ministries already hold. The policy papers are under Policy and Finance.\n\n5. Modelling (CPAT)\nModels a finance ministry can audit: the Climate Policy Assessment Tool stated, rebuilt and validated.\n\n5.1 The CPAT Mitigation Module\n5.2 CPAT-AI\n5.3 Validating CPAT\n5.4 Are CPAT’s Price Elasticities Right?\n5.5 Carbon Prices Cut Emissions\n\n\n\n6. Modular Upgrades\nExtensions to CPAT where policy needs them: carbon-price equivalents, CBAM, public investment, activity and macro-fiscal scenarios.\n\n6.1 Measure Carbon Pricing by the Emissions It Cuts\n6.2 The CBAM Policy Tool\n6.3 Public Investment in CPAT\n6.4 Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT\n6.5 The Macro-Fiscal-Energy Scenario Tool\n\n\n\n7. Analytics Tools\nDiagnostics on data ministries already hold: excise systems and fiscal indicators.\n\n7.1 The Excise-Fiscal Diagnostic\n7.2 A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis",
     "crumbs": [
       "Modelling and Analytics"
     ]

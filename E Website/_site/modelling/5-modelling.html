@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,13 +12,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,14 +39,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-852b6a5207aa690be7e6f4697b00e88a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-82a78666fecca1c606c7341b73173c0b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-852b6a5207aa690be7e6f4697b00e88a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-5df567e8ed90b9bd51cfee118cb5eb94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-3449822cad4968dfe20c7b9132b36b01.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -533,6 +530,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#paper-5-2" id="toc-paper-5-2" class="nav-link" data-scroll-target="#paper-5-2">5.2 CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool</a></li>
   <li><a href="#paper-5-3" id="toc-paper-5-3" class="nav-link" data-scroll-target="#paper-5-3">5.3 Validating CPAT: Baselines, Back-Casts and Model Comparisons</a></li>
   <li><a href="#paper-5-4" id="toc-paper-5-4" class="nav-link" data-scroll-target="#paper-5-4">5.4 Are CPAT’s Price Elasticities Right?</a></li>
+  <li><a href="#paper-5-5" id="toc-paper-5-5" class="nav-link" data-scroll-target="#paper-5-5">5.5 Carbon Prices Cut Emissions</a></li>
   </ul>
 </nav>
 </nav>
@@ -588,6 +586,12 @@ ul.task-list li input[type="checkbox"] {
 <p><em>A Check Against the Evidence</em></p>
 <p>The Climate Policy Assessment Tool, which the IMF and the World Bank use to estimate what carbon taxes and fuel subsidy reforms do, turns price changes into emission cuts through price elasticities. This brief reports a check of its defaults against the published evidence. Most are consistent, and many are cautious. Two are too high, and road gasoline is twice the estimate corrected for publication bias. The bigger problem is timing: the tool applies the full long-run response in the first year, so it overstates five-year cuts by about half and understates early revenue. Users should read near-term results as upper bounds and show a low-elasticity case.</p>
 <p><a href="../modelling/5-modelling/ElasticityValidation/index.html">Policy brief →</a> · <a href="../modelling/5-modelling/ElasticityValidation/working-paper.html">Working paper →</a> · <a href="../papers/Slides-ElasticityValidation.pdf">Slides (pdf) →</a> · <a href="../papers/Brief-ElasticityValidation.pdf">Policy brief (pdf) →</a> · <a href="../papers/ElasticityValidation.pdf">Working paper (pdf) →</a></p>
+</section>
+<section id="paper-5-5" class="level2">
+<h2 class="anchored" data-anchor-id="paper-5-5">5.5 Carbon Prices Cut Emissions</h2>
+<p><em>Evidence from Ten Natural Experiments in Fuel Taxes, Carbon Pricing and Subsidy Reform</em></p>
+<p>Finance ministries weighing a carbon tax need to know what it will do to emissions, and most of the numbers they are given come from models. This paper collects ten natural experiments in which a carbon tax, a fuel tax rise, an emissions trading price, a subsidy cut or a market shock raised fuel prices, and in which researchers later measured emissions or fuel use against a credible counterfactual. For each case it reports the fuels and sectors covered, how far the measure raised retail prices over time, the carbon price or its equivalent in dollars per tonne of carbon dioxide, and the estimated cut. Every case shows a cut. In road transport and home heating, prices of 20 to 125 dollars a tonne cut emissions from the covered fuels by roughly 5 to 15 percent over five to fifteen years, about 1 to 2 percent for each 10 dollars. Where power plants could switch from coal to gas, the cut per dollar was five to ten times larger: Britain’s carbon price floor cut power-sector emissions by about a fifth a year. Taxes moved demand more than equal market price changes, and exemptions and offsetting tax cuts weakened the effect. Models used for policy advice should be tested against these cases.</p>
+<p><a href="../papers/CarbonPriceNaturalExperiments.pdf">Working paper (pdf) →</a></p>
 
 
 </section>
