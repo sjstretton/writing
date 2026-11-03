@@ -1,8 +1,8 @@
 # 6.6 Global Incentives Model
 
-Paper 6.6, **Model Technology Where It Decides Emissions**: the modelling plan for the Global Incentives Model, the modelling backbone of the thesis (see `../../ThesisPlan/ThesisPlan-SovereignIncentives.qmd`, section 1a). Its central research question: how much emissions can fall at zero cost at current interest rates, at the IBRD lending rate, and when domestic co-benefits are counted. New research awaiting review; it will join `D Modelling/6.ModularUpgrades/` after review.
+Paper 6.6, **Model Technology Where It Decides Emissions**: the modelling plan for the Global Incentives Model, the modelling backbone of the thesis (see `../ThesisPlan/ThesisPlan-SovereignIncentives.qmd`, section 1a). Its central research question: how much emissions can fall at zero cost at current interest rates, at the IBRD lending rate, and when domestic co-benefits are counted. New research awaiting review; it will join `D Modelling/6.ModularUpgrades/` after review.
 
-- **Master:** `GlobalIncentivesModel.qmd` (v0.2, house format), with `GlobalIncentivesModel.bib`; `GlobalIncentivesModel.docx` is rendered from it with `../../render_docx.py`. Version 0.1 is in `8.PreviousVersions/`.
+- **Master:** `GlobalIncentivesModel.qmd` (v0.2, house format), with `GlobalIncentivesModel.bib`; `GlobalIncentivesModel.docx` is rendered from it with `../render_docx.py`. Version 0.1 is in `8.PreviousVersions/`.
 - **Model code and data:** `cpmodelai/climate-fiscal-ai-tools`, folder `GlobalIncentivesModel/`. Its `ModellingPlan/GlobalIncentivesModel_Plan.qmd` carries the same text in the old format; make content changes here and copy them across.
 - **Related documents** (`3.RelatedPiecesAndLinks/`): read-only Word copies of the model's other documents, whose masters are in `climate-fiscal-ai-tools`.
 
