@@ -1,10 +1,19 @@
 ---
+# MASTER - this is the file to edit. The .docx beside it is made from it (house working-paper format).
 title: "Sovereign Incentives for Decarbonisation: How a Climate Reserve and Guaranteed Contracts Can Lower the Cost of Capital and Reward Climate Policy"
-subtitle: "UCL Institute for Sustainable Resources, MPhil/PhD: full research proposal (draft v2, level 3 of 4)"
-author: "Stephen Stretton"
+subtitle: "Full research proposal"
+series: "Research proposal: MPhil/PhD, UCL Institute for Sustainable Resources"
+version: "2.0 (draft)"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "November 2026"
+number-sections: false
+format:
+  docx: default
 ---
 
-*Drafting note for Stephen, delete before submission.* Level 3 of 4, written 1 Nov 2026 from the thesis plan (`../Shared/Thesis-Plan-Sovereign-Incentives.md`) and the overview paper (`../Shared/OverviewPaper/`). It follows UCL's section order from the earlier UCL draft (`UCL-Proposal-Notes.md`). Target at least six pages; about 3,900 words of main text excluding references. UK spelling; titles of my own papers keep their US spelling. Mode and start are open, so section 6 gives both timelines; keep the one you choose. Clear every `[VERIFY]` and `[STEPHEN TO CONFIRM]` before submission.
+*Drafting note for Stephen, delete before submission.* Level 3 of 4, written 1 Nov 2026 from the thesis plan (`B Theory and Research/ThesisPlan/ThesisPlan-SovereignIncentives.qmd`) and the overview paper (`B Theory and Research/OverviewPaper/`). It follows UCL's section order from the earlier UCL draft (`UCL-Proposal-Notes.md`). Target at least six pages; about 3,900 words of main text excluding references. UK spelling; titles of my own papers keep their US spelling. Mode and start are open, so section 6 gives both timelines; keep the one you choose. Clear every `[VERIFY]` and `[STEPHEN TO CONFIRM]` before submission.
 
 Proposed supervisory team: Professor Nadia Ameli (principal), Professor Michael Grubb (subsidiary) `[STEPHEN TO CONFIRM: both have agreed in principle]`
 

@@ -1,8 +1,27 @@
-# Research notes: financing, sovereign incentives and contracts
+---
+# MASTER - this is the file to edit. The .docx beside it is made from it (house working-paper format).
+title: "Research Notes: Financing, Sovereign Incentives and Contracts"
+subtitle: "Raw notes from the first round of searches, 1 November 2026"
+series: "Theory and Research Note"
+version: "0.1"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "November 2026"
+abstract: |
+  Working notes from the first round of web searches on sovereign incentives in carbon markets, de-risking and the cost of capital, energy costs, ageing and pension savings, long-term contracts and grids, and finance for clean vehicles. Superseded by the addendum and the annotated bibliography, and kept as a record.
+keywords: [research notes, climate finance, cost of capital]
+number-sections: false
+format:
+  docx: default
+---
+
+*Theory and Research Note, November 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated.*
+
 
 Written 1 Nov 2026 from web searches in one session. Search results were often trade press or advocacy, so check every figure against the primary source before using it in the proposal. "Memory" means named from model memory, not verified.
 
-## 1. Sovereign incentives and carbon markets
+# 1. Sovereign incentives and carbon markets
 
 - **Claim:** crediting rules can give a host government a reason to keep its target weak, because a stronger NDC makes each corresponding adjustment costlier.
 - Ambition coefficient approach (Climate Policy, 2022): <https://www.tandfonline.com/doi/pdf/10.1080/14693062.2022.2108366>. Excerpt only; read the paper.
@@ -15,11 +34,11 @@ Written 1 Nov 2026 from web searches in one session. Search results were often t
 - **Gap (unconfirmed):** no source found on guarantees or credit enhancement priced on credible national climate policy. Check Google Scholar for "conditional guarantee", "policy-contingent", "ambition-linked" before claiming novelty.
 - Memory, unverified: Scott Barrett and William Nordhaus (climate clubs, treaty incentives); Kevin Gallagher (debt and climate).
 
-## 2. De-risking and cost of capital: people (memory, verify)
+# 2. De-risking and cost of capital: people (memory, verify)
 
 Nadia Ameli (UCL); Michael Grubb (UCL); Tobias Schmidt (ETH); Gireesh Shrimali and Ben Caldecott (Oxford); Ulrich Volz (SOAS); Mariana Mazzucato (UCL IIPP); Avinash Persaud; Nicholas Stern, Amar Bhattacharya and Vera Songwe; Barbara Buchner (CPI); Yannick Glemarec and Oliver Waissbein (UNDP 2013 derisking framework); Ian Parry (IMF); Jean Pisani-Ferry; Patrick Bolton.
 
-## 3. Cost of energy now (2025 data, 2026 reports)
+# 3. Cost of energy now (2025 data, 2026 reports)
 
 - IRENA: solar PV about $44/MWh; over 90% of new utility-scale renewables beat the cheapest new fossil plant; solar plus storage $54 to $82/MWh in strong regions. <https://www.pv-tech.org/solar-pv-lcoe-ticks-marginally-upwards-2025-irena/>
 - BloombergNEF: solar about $39, onshore wind about $40, new combined-cycle gas about $102 (record), four-hour storage $78/MWh. <https://pv-magazine-usa.com/2026/02/23/solar-lcoe-to-fall-30-by-2035-says-bloombergnef/>
@@ -27,7 +46,7 @@ Nadia Ameli (UCL); Michael Grubb (UCL); Tobias Schmidt (ETH); Gireesh Shrimali a
 - Lazard (US): solar $40 to $98/MWh, up on tariffs.
 - Finance minister's view: import bill and FX, price shocks, cost of capital and debt space, contingent liabilities, fuel revenue.
 
-## 4. Ageing, pensions and climate investment
+# 4. Ageing, pensions and climate investment
 
 - IMF WEO April 2025 ch. 2 (ageing raises savings, lowers rates): <https://www.imf.org/-/media/files/publications/weo/2025/april/english/ch2.pdf>
 - OECD, role of pension funds in green growth (Della Croce, Kaminker, Stewart, 2011): <https://www.oecd.org/content/dam/oecd/en/publications/reports/2011/09/the-role-of-pension-funds-in-financing-green-growth-initiatives_g17a2011/5kg58j1lwdjd-en.pdf>
@@ -37,7 +56,7 @@ Nadia Ameli (UCL); Michael Grubb (UCL); Tobias Schmidt (ETH); Gireesh Shrimali a
 - **Tension:** memory says Goodhart and Pradhan (*The Great Demographic Reversal*) argue ageing lowers savings and raises real rates; the IMF says the opposite. Take a position.
 - **Gap:** no paper found joining the climate investment need with pension shortfalls as one policy package.
 
-## 5. Long-term contracts and grids
+# 5. Long-term contracts and grids
 
 - Fabra and Neuhoff, cited for government-issued long-term contracts, in the CfD design paper: <https://arxiv.org/pdf/2512.17508>
 - Brattle, long-term contracting: <https://www.brattle.com/wp-content/uploads/2017/10/7487_the_importance_of_long-term_contracting_for_facilitating_renewable_energy_project_development_weiss_sarro_may_7_2013.pdf>
@@ -48,7 +67,7 @@ Nadia Ameli (UCL); Michael Grubb (UCL); Tobias Schmidt (ETH); Gireesh Shrimali a
 - **Not covered:** smart local grids, distribution, mini-grids, and the size of the grid investment need.
 - **Thesis link:** the counterparty guarantee is the sovereign credit problem.
 
-## 6. Clean vehicles
+# 6. Clean vehicles
 
 Purchase subsidies in big markets (sources are blogs; verify against official sources):
 - China: purchase-tax relief halved for 2026 to 2027 (cap RMB15,000, from RMB30,000); an industry body proposes a gradual phase-out. <https://carcody.com/china-cuts-a-major-ev-tax-incentive-in-2026-but-not-all-subsidies-end/>
@@ -65,7 +84,7 @@ Financing in emerging markets (stronger evidence):
 - OECD blended finance case study (BasiGo, Kenya and Rwanda): <https://www.oecd.org/en/publications/blended-finance-case-studies_2fb90b9a-en/using-flexible-debt-to-support-capital-intensive-e-mobility-businesses_992472ad-en.html>
 - India NBFC EV lease rates quoted at 18 to 28%: <https://changing-transport.org/financing-the-future-of-transport/>
 
-## Still to check
+# Still to check
 1. Whether anyone has proposed policy-priced sovereign guarantees (ask Ameli and Grubb).
 2. Whether PhD by published works exists at UCL, Oxford or Cambridge for someone in Stephen's position.
 3. Oxford and Cambridge deadlines for October 2027 entry.

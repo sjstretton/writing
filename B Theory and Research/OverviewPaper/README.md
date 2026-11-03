@@ -1,6 +1,6 @@
 # Overview paper: Guarantee the Contract, Price the Policy, Pool the Risk
 
-Draft v0.1, 1 November 2026. Level 4 of 4 in the PhD application set: the full working paper behind the thesis plan (`../Thesis-Plan-Sovereign-Incentives.md`). US spelling, World Bank working-paper form (`H Writing Instructions/Writing Standards/paper-standard.md`).
+Draft v0.1, 1 November 2026. Level 4 of 4 in the PhD application set: the full working paper behind the thesis plan (`../ThesisPlan/ThesisPlan-SovereignIncentives.qmd`). US spelling, house working-paper format, writing in a personal capacity (`H Writing Instructions/Writing Standards/paper-standard.md`).
 
 - `ClimateReserveOverview.qmd`: master. Render with `pandoc ClimateReserveOverview.qmd -f markdown --citeproc -o ClimateReserveOverview.docx` (or Quarto).
 - `references.bib`: entries reused from the series bibliographies (already verified there) plus new ones from 1 Nov 2026 searches; new entries carry a `note` saying what was checked and what still needs `VERIFY`.

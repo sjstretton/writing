@@ -1,8 +1,23 @@
 ---
-title: "Thesis plan: Sovereign Incentives for Decarbonisation"
+# MASTER - this is the file to edit. The .docx beside it is made from it (house working-paper format).
+title: "Sovereign Incentives for Decarbonisation: Thesis Plan"
 subtitle: "Guaranteed contracts, a climate reserve and the cost of capital in developing countries"
-author: "Stephen Stretton"
+series: "Theory and Research Note"
+version: "1.1"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "November 2026"
+abstract: |
+  Clean power in developing countries is cheap to run and expensive to finance, and the institutions that could lower its cost of capital work in separate specialisms. This plan sets out a PhD thesis that joins them: four parts (the price of money, risk management, sovereign incentives, and a climate reserve) with an analytical model in each, all run on one country-by-sector model, the Global Incentives Model. It gives the question, three testable hypotheses, ten chapters, practical precedents, a thesis-by-papers route, timelines and risks.
+keywords: [cost of capital, guarantees, sovereign incentives, policy crediting, climate finance, PhD thesis]
+number-sections: false
+format:
+  docx: default
 ---
+
+*Theory and Research Note, November 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated.*
+
 
 *Draft 1, 1 November 2026, for Stephen's review. It sets the structure that the expression of interest, the Oxford and UCL proposals and the overview working paper all draw from. UK spelling; titles of my own papers keep their US spelling. Figures from my working papers are taken from the current drafts (series 1, 3, 4, 5 and 6); external figures marked `[VERIFY]` came from web searches on 1 November 2026 and must be checked at source.*
 
@@ -228,4 +243,4 @@ Web sources consulted on 1 November 2026 (all to be checked at source):
 - EU: European Commission, [start of the CBAM definitive period](https://trade.ec.europa.eu/access-to-markets/en/news/start-definitive-period-cbam-eu); UEF, [use of CBAM revenues](https://sites.uef.fi/cceel/reflections-on-the-use-of-revenues-from-the-eu-cbam/).
 - SDRs: Finance for Development Lab, [state of play on SDRs](https://findevlab.org/wp-content/uploads/2024/01/FDL_ShortNote_SDR_State_of_Play_Paduano_Jan24.pdf); SAIIA, [G20 SDR rechannelling](https://saiia.org.za/wp-content/uploads/2024/12/SAIIA_PN_10_G20SDRRechannelling.pdf).
 - East Asia: ADB, [IF-CAP Q&A](https://www.adb.org/news/features/qa-innovative-finance-facility-climate-asia-pacific-if-cap); ADB [partnership report 2025 on IF-CAP](https://www.adb.org/multimedia/partnership-report2025/how-we-partner/financing-partnership-facilities/innovative-finance-facility-for-climate-in-asia-and-the-pacific/); OECD [IF-CAP case study](https://www.oecd.org/en/publications/blended-finance-case-studies_2fb90b9a-en/innovative-finance-facility-for-climate-in-asia-and-the-pacific_4a7545b5-en.html); CGD [IF-CAP recap](https://mdbreformaccelerator.cgdev.org/?p=1491); ADB, [Credit Guarantee and Investment Facility](https://www.adb.org/what-we-do/funds/credit-guarantee-and-investment-facility); The Asset, [CGIF's first blue bond](https://www.theasset.com/article/53341/cgif-guarantees-first-blue-bond-offering); CGIF, [payment announcement](https://www.cgif-abmi.org/storage/2026/06/ADCP-Payment-Announcement.pdf).
-- Everything else is in `Annotated-Bibliography-Financing-and-Incentives.md` and the series bibliographies.
+- Everything else is in `../ResearchNotes/AnnotatedBibliography-FinancingAndIncentives.qmd` and the series bibliographies.

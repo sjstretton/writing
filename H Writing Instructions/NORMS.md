@@ -67,3 +67,12 @@ PDFs and Word files of papers and briefs follow these page rules. The working-pa
 ## 12. Less, but finished
 
 A short, finished, excellent paper beats a long, ambitious, unfinished one. Cut scope before cutting quality.
+
+## 13. Write in the house template
+
+Every document is written in the house working-paper format, the one made for the Climate Fiscal Policy Briefs (decided by Stephen, 3 November 2026). That covers papers, briefs, overviews, research notes, thesis plans, research proposals and any other document meant to be read as a document.
+
+- **Master.** A `.qmd` file is the master; the Word and PDF files are made from it and never edited by hand. Start from `Writing Standards/templates/working-paper-template.qmd` (or a brief in series 1 as the model) and keep the house YAML: `title`, `subtitle`, `series` (for example "Climate Fiscal Policy Brief No. 1.1", "Theory and Research Note"), `version`, `author` (`name: "Stephen J. Stretton"`, `note: "Writing in a personal capacity."`, no institutional affiliation), `date`, `abstract`, `keywords` and, for papers, `jel`.
+- **Disclaimer.** The house line under the title: *The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated.*
+- **Rendering.** With Quarto: `python "H Writing Instructions/Scripts/Website/render_pdfs.py" <file.qmd> --docx`, which applies the extension in `Writing Standards/templates/_extensions/working-paper/`. Without Quarto (for example a cloud session): `python "B Theory and Research/render_docx.py" <file.qmd>`, which runs pandoc with the same `reference.docx` and filter.
+- **Exceptions.** Text that is pasted somewhere else (forms, emails, social posts), planning files, `README.md` files and agent instructions stay in plain Markdown.

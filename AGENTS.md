@@ -7,13 +7,13 @@ Instructions for AI agents, including Claude Code (`CLAUDE.md` points here), wor
 | Part | Folders | Read before working | What it is for |
 |---|---|---|---|
 | **Planning** | `0A Daily and Weekly Task Lists`, `0B Quick Wins and Next Milestone`, `4 Planning Instructions`, `2 Strategic Plans`, `3 Archive` | `4 Planning Instructions/AGENTS.md`, then its `NORMS.md` | Tasks for every repo, day and week plans, strategic plans, the printable tracker, and the master Google Sheet kept in step with the repo |
-| **Writing** | `A Specialisms and Research Profile`, `B Theory and Research` (new papers awaiting review), `C Policy and FInance` and `D Modelling` (the papers), `E Website`, `F Other Writing`, `G Climate Econ Course`, `H Writing Instructions` | `H Writing Instructions/AGENTS.md`, then its `NORMS.md` | Papers, briefs and decks, the website, PhD proposals, the course |
+| **Writing** | `A Specialisms and Research Profile`, `B Theory and Research` (new research awaiting review: new papers, the thesis and PhD research), `C Policy and FInance` and `D Modelling` (the papers), `E Website`, `F Other Writing`, `G Climate Econ Course`, `H Writing Instructions` | `H Writing Instructions/AGENTS.md`, then its `NORMS.md` | Papers, briefs and decks, the website, PhD proposals, the course |
 
 `README.md` (this folder) maps the layout. Each part's `README.md` gives the detail.
 
 ## Who this is for
 
-Stephen is easily overwhelmed by volume, so planning output must stay short and simple (see "Who this is for" and "Focus" in `4 Planning Instructions/NORMS.md`). Writing for outside readers follows `H Writing Instructions/NORMS.md`: for a busy reader, self-contained, the claim first in every paragraph, sourced.
+Stephen is easily overwhelmed by volume, so planning output must stay short and simple (see "Who this is for" and "Focus" in `4 Planning Instructions/NORMS.md`). Writing for outside readers follows `H Writing Instructions/NORMS.md`: for a busy reader, self-contained, the claim first in every paragraph, sourced, and always in the house working-paper template (norm 13). The PhD applications are in `3 PhD Application`; the research behind them is in `B Theory and Research`.
 
 ## Rules for both parts
 
