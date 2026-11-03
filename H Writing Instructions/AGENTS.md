@@ -18,7 +18,8 @@ Read the file that matches your task before you start. Files in this folder (`H 
 | `PAPERS.md` | Prioritised papers, introductory papers, concept papers and position papers. |
 | `NUMBERING.md` | The canonical paper numbers (section folder plus place in the section), with the old-to-new map and citation-key rules. |
 | `H Writing Instructions/Writing Standards/` | Writing principles, writing types, the paper standard, AI tells to avoid, exemplars and templates. |
-| `B PhD Application/` | The PhD research proposals. Its `README.md` tracks their status. |
+| `B Theory and Research/` | New papers awaiting Stephen's review (the website's New Research tab), in section folders named like the series; each keeps the number of the section it will join and moves to C or D once reviewed. Its `README.md` says how. |
+| `3 PhD Application/` | The PhD research proposals. Its `README.md` tracks their status. |
 | `C Policy and FInance/`, `D Modelling/` | The papers, numbered by section: 1.x to 4.x in `C Policy and FInance`, 5.x to 7.x in `D Modelling` (due to move to its own repo). Each section has one `<N>.0.Overview` folder. `index.html` at the top of each lists every paper with links to its files. |
 | `F Other Writing/` | Writing outside the series and not on the website (8.x: other fiscal policy, The Sollar, MDB papers, political economy, philosophy, politics). |
 | `E Website/` | The Quarto site. Layout and the list of papers with a web version: `Scripts/Website/site_config.py`. |

@@ -15,7 +15,7 @@ Since 29 October 2026 the repo combines the former planning repo (`sjstretton/Pl
 | See the strategic priorities | `H Writing Instructions/STRATEGY.md` (PhDs, papers, specialisms) and `2 Strategic Plans/` (work plan, master plan) |
 | See my specialisms and the order for nailing them down | `A Specialisms, Theory and Research Profile/SPECIALISMS.md` |
 | See which papers come next | `H Writing Instructions/PAPERS.md` and `H Writing Instructions/TODO.md` |
-| Browse the papers and their files | `C Policy and FInance/index.html` and `D Modelling/index.html` (open in a browser; rebuilt by `Compile-Website.bat`) |
+| Browse the papers and their files | `B Theory and Research/index.html` (new, awaiting review), `C Policy and FInance/index.html` and `D Modelling/index.html` (open in a browser; rebuilt by `Compile-Website.bat`) |
 | Work as an AI agent | `AGENTS.md` (this folder), then the part's own `AGENTS.md` |
 
 ## Layout
@@ -35,10 +35,10 @@ Since 29 October 2026 the repo combines the former planning repo (`sjstretton/Pl
 | Folder | Contents |
 |---|---|
 | `A Specialisms, Theory and Research Profile` | `SPECIALISMS.md`, the research overview and the paper tracker |
-| `B PhD Application` | PhD research proposals, writing samples and the application status |
+| `B Theory and Research` | New research awaiting Stephen's review; the website's New Research tab. Same layout as C and D (section folders, numbered paper folders), and each paper keeps the number of the section it will join: 5.5 *Carbon Prices Cut Emissions* is in `5.Modelling/`. Reviewed papers move to C or D (see its `README.md`). The PhD proposals are in `3 PhD Application` |
 | `C Policy and FInance` | Papers in sections 1–4, one folder per section with its numbered paper folders and one `<N>.0.Overview` folder (overview, theme deck, notes). 1 carbon pricing (1.1 two-track architecture, 1.2 feebates, 1.3 converting VAT into a destination carbon tax, 1.4 CBAM recognition); 2 other tax and fiscal policy (2.1 rent tax); 3 finance and risk; 4 sovereign incentives. Two books sit with their sections (`8.5.2` in 1, `8.5.3` *Plucked!* in 2) and *Time and Chance* is `3.3`. Paper numbers: `H Writing Instructions/NUMBERING.md` |
 | `D Modelling` | Papers in sections 5–7: 5 modelling (CPAT); 6 modular upgrades to CPAT (6.1 total effective carbon price, 6.2 CBAM tool, 6.3 public investment, 6.4 activity layer, 6.5 macro-fiscal-energy scenario tool); 7 additional analytics. Due to move to its own repo |
-| `E Website` | The Quarto site: tabs Policy and Finance (`index.qmd`, `policy/`), Modelling and Analytics (`modelling/`) and About. `PaperArchive/` holds every published file; `papers/` only the ones the pages link to. Run `Compile-Website.bat`, then `Push-Website.bat` (or `Deploy-Website.bat` for both), at the repo root |
+| `E Website` | The Quarto site: tabs Policy and Finance (`index.qmd`, `policy/`), Modelling and Analytics (`modelling/`), New Research (`new/`) and About. `PaperArchive/` holds every published file; `papers/` only the ones the pages link to. Run `Compile-Website.bat`, then `Push-Website.bat` (or `Deploy-Website.bat` for both), at the repo root |
 | `F Other Writing` | Writing outside the series, not on the website: other fiscal policy, The Sollar, MDB papers, political economy, philosophy and politics |
 | `G Climate Econ Course` | Climate-fiscal economics course materials, topics A–G |
 | `H Writing Instructions` | `README.md`, `AGENTS.md`, `CLAUDE.md`, `NORMS.md`, `STRATEGY.md`, `PAPERS.md`, `NUMBERING.md`, `TODO.md` and the paper status report; `Writing Standards/` (writing principles, writing types, the paper standard, AI tells, exemplars, the briefing-series specification, publishing log, templates); `Templates and Info/` (Word templates); `Claude + Scripts/` (`Setup Claude/_admin/about-me.md` and `voice.md`); `Scripts/` (website scripts and the paper automation engine; see its README) |

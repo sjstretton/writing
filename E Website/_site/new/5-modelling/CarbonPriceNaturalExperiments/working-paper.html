@@ -1,0 +1,2438 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="keywords" content="carbon tax, natural experiment, ex post evaluation, fuel prices, emissions trading, fossil fuel subsidy reform">
+
+<title>Carbon Prices Cut Emissions – Climate Fiscal and Finance Papers</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Climate Fiscal and Finance Papers</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../policy/index.html"> 
+<span class="menu-text">Policy and Finance</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../modelling/index.html"> 
+<span class="menu-text">Modelling and Analytics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../new/index.html" aria-current="page"> 
+<span class="menu-text">New Research</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../new/5-modelling.html">5. Modelling (CPAT)</a></li><li class="breadcrumb-item"><a href="../../../new/5-modelling/CarbonPriceNaturalExperiments/index.html">5.5 Carbon Prices Cut Emissions</a></li><li class="breadcrumb-item"><a href="../../../new/5-modelling/CarbonPriceNaturalExperiments/working-paper.html">Working paper</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../new/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">New Research</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../new/5-modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Modelling (CPAT)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../new/5-modelling/CarbonPriceNaturalExperiments/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.5 Carbon Prices Cut Emissions</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../new/5-modelling/CarbonPriceNaturalExperiments/working-paper.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Working paper</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link active" data-scroll-target="#sec-summary"><span class="header-section-number">1</span> Executive summary</a></li>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link" data-scroll-target="#sec-intro"><span class="header-section-number">2</span> Introduction</a></li>
+  <li><a href="#sec-method" id="toc-sec-method" class="nav-link" data-scroll-target="#sec-method"><span class="header-section-number">3</span> Method: what counts and how prices are compared</a></li>
+  <li><a href="#sec-cases" id="toc-sec-cases" class="nav-link" data-scroll-target="#sec-cases"><span class="header-section-number">4</span> Ten natural experiments</a>
+  <ul class="collapse">
+  <li><a href="#sec-sweden-transport" id="toc-sec-sweden-transport" class="nav-link" data-scroll-target="#sec-sweden-transport"><span class="header-section-number">4.1</span> Sweden, 1991: a carbon tax on motor fuels cut transport emissions by about 11 percent</a></li>
+  <li><a href="#sec-sweden-heating" id="toc-sec-sweden-heating" class="nav-link" data-scroll-target="#sec-sweden-heating"><span class="header-section-number">4.2</span> Sweden, 2001–2004: tripling the tax on heating fuels cut household emissions</a></li>
+  <li><a href="#sec-germany-ecotax" id="toc-sec-germany-ecotax" class="nav-link" data-scroll-target="#sec-germany-ecotax"><span class="header-section-number">4.3</span> Germany, 1999–2003: the eco-tax on road fuels cut transport emissions by 11 to 16 percent</a></li>
+  <li><a href="#sec-us" id="toc-sec-us" class="nav-link" data-scroll-target="#sec-us"><span class="header-section-number">4.4</span> United States, 1966–2008: state gasoline tax rises cut fuel use within a year</a></li>
+  <li><a href="#sec-bc" id="toc-sec-bc" class="nav-link" data-scroll-target="#sec-bc"><span class="header-section-number">4.5</span> British Columbia, 2008–2025: a revenue-neutral carbon tax cut gasoline use and transport emissions</a></li>
+  <li><a href="#sec-switzerland" id="toc-sec-switzerland" class="nav-link" data-scroll-target="#sec-switzerland"><span class="header-section-number">4.6</span> Switzerland, 2008–2025: a rising levy on heating fuels cut their emissions by about 4 to 10 percent by 2015</a></li>
+  <li><a href="#sec-euets" id="toc-sec-euets" class="nav-link" data-scroll-target="#sec-euets"><span class="header-section-number">4.7</span> European Union, 2005–2012: emissions trading cut emissions at regulated plants by about 10 percent at low prices</a></li>
+  <li><a href="#sec-uk" id="toc-sec-uk" class="nav-link" data-scroll-target="#sec-uk"><span class="header-section-number">4.8</span> Britain, 2013–2017: a carbon price floor drove coal out of power generation</a></li>
+  <li><a href="#sec-indonesia" id="toc-sec-indonesia" class="nav-link" data-scroll-target="#sec-indonesia"><span class="header-section-number">4.9</span> Indonesia, 2013–2015: cutting fuel and electricity subsidies cut electricity use by 7 percent and road traffic by 10 percent</a></li>
+  <li><a href="#sec-germany-gas" id="toc-sec-germany-gas" class="nav-link" data-scroll-target="#sec-germany-gas"><span class="header-section-number">4.10</span> Germany, 2022: a gas price shock cut gas use by a quarter but national emissions by only about 1 percent</a></li>
+  </ul></li>
+  <li><a href="#sec-synthesis" id="toc-sec-synthesis" class="nav-link" data-scroll-target="#sec-synthesis"><span class="header-section-number">5</span> What the ten cases show together</a>
+  <ul class="collapse">
+  <li><a href="#sec-others" id="toc-sec-others" class="nav-link" data-scroll-target="#sec-others"><span class="header-section-number">5.1</span> Cases left out, and why</a></li>
+  </ul></li>
+  <li><a href="#sec-objections" id="toc-sec-objections" class="nav-link" data-scroll-target="#sec-objections"><span class="header-section-number">6</span> The strongest objections</a></li>
+  <li><a href="#sec-models" id="toc-sec-models" class="nav-link" data-scroll-target="#sec-models"><span class="header-section-number">7</span> What the cases imply for models such as CPAT</a></li>
+  <li><a href="#sec-policy" id="toc-sec-policy" class="nav-link" data-scroll-target="#sec-policy"><span class="header-section-number">8</span> Policy implications</a></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">9</span> Conclusion</a></li>
+  <li><a href="#downloads" id="toc-downloads" class="nav-link" data-scroll-target="#downloads">Downloads</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  
+  
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../new/5-modelling.html">5. Modelling (CPAT)</a></li><li class="breadcrumb-item"><a href="../../../new/5-modelling/CarbonPriceNaturalExperiments/index.html">5.5 Carbon Prices Cut Emissions</a></li><li class="breadcrumb-item"><a href="../../../new/5-modelling/CarbonPriceNaturalExperiments/working-paper.html">Working paper</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Carbon Prices Cut Emissions</h1>
+<p class="subtitle lead">Evidence from Ten Natural Experiments in Fuel Taxes, Carbon Pricing and Subsidy Reform</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>Finance ministries weighing a carbon tax need to know what it will do to emissions, and most of the numbers they are given come from models. This paper collects ten natural experiments in which a carbon tax, a fuel tax rise, an emissions trading price, a subsidy cut or a market shock raised fuel prices, and in which researchers later measured emissions or fuel use against a credible counterfactual. For each case it reports the fuels and sectors covered, how far the measure raised retail prices over time, the carbon price or its equivalent in dollars per tonne of carbon dioxide, and the estimated cut. Every case shows a cut. In road transport and home heating, prices of 20 to 125 dollars a tonne cut emissions from the covered fuels by roughly 5 to 15 percent over five to fifteen years, about 1 to 2 percent for each 10 dollars. Where power plants could switch from coal to gas, the cut per dollar was five to ten times larger: Britain’s carbon price floor cut power-sector emissions by about a fifth a year. Taxes moved demand more than equal market price changes, and exemptions and offsetting tax cuts weakened the effect. Models used for policy advice should be tested against these cases.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>carbon tax, natural experiment, ex post evaluation, fuel prices, emissions trading, fossil fuel subsidy reform</p>
+  </div>
+</div>
+
+</header>
+
+
+<p><em>Working paper, version 0.1.1, November 2026. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. Companion to papers 5.3 (validating the Climate Policy Assessment Tool) and 5.4 (its price elasticities).</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<section id="sec-summary" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
+<p><a href="../../../new/5-modelling/CarbonPriceNaturalExperiments/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/CarbonPriceNaturalExperiments.pdf">Download this paper (pdf)</a></p>
+<p><strong>Carbon prices are usually judged by models; this paper judges them by what happened.</strong> Since 1990, governments and markets have raised fuel prices in ways that researchers could later evaluate as natural experiments, comparing emissions afterward with a credible estimate of what would have happened otherwise. This paper collects the ten best-documented cases and reports four facts for each: the fuels and sectors covered, the rise in retail prices over time, the carbon price or its dollar-per-tonne equivalent, and the measured cut in emissions or fuel use.</p>
+<p><strong>The ten cases span road transport, buildings, industry and power on three continents, at prices from about 11 to 800 dollars a tonne.</strong> They are Sweden (motor fuels from 1991, heating fuels 2001–2004), Germany (road fuels 1999–2003, the 2022 gas shock), United States state gasoline taxes, British Columbia, Switzerland’s heating levy, the European Union Emissions Trading System, Britain’s carbon price floor in power and Indonesia’s subsidy reform (<a href="#tbl-glance" class="quarto-xref">Table&nbsp;1</a>).</p>
+<p><strong>Every case shows a cut.</strong> Swedish transport emissions were about 11 percent below a synthetic counterfactual on average over 1990–2005, about 6 percent from the carbon tax alone; German transport emissions were 11 to 16 percent lower by 2005; Swiss heating-fuel emissions 4 to 10 percent lower by 2015; emissions at plants in the EU trading system about 10 percent lower by 2012; and Britain’s power-sector emissions 20 to 26 percent lower a year in 2013–2017. One synthetic-control study of British Columbia finds no cut, against several studies of the same province that do.</p>
+<p><strong>In transport and heating the response is about 1 to 2 percent for each 10 dollars a tonne, building up over five to fifteen years.</strong> Germany’s eco-tax, worth about 65 euros a tonne by 2003, added the equivalent of 22 percent of the 1998 petrol price and cut transport emissions by 11 to 16 percent: an implied price elasticity of about −0.4 to −0.7. Switzerland’s heating levy and British Columbia’s tax on natural gas imply elasticities of about −0.15 to −0.45.</p>
+<p><strong>Where a cleaner substitute was already standing by, the response per dollar was five to ten times larger.</strong> Britain’s carbon price floor, at a total carbon price of 14 to 36 dollars a tonne, raised the fuel cost of coal-fired power by 39 to 141 percent and of gas-fired power by only 7 to 30 percent. Coal’s share of generation fell from 39 percent in 2012 to 9 percent in 2016 and 2 percent in 2019. Plants in the EU trading system cut 10 to 16 percent at allowance prices averaging about 14 euros, more per dollar than any transport or heating case.</p>
+<p><strong>Design changed the result as much as the price did.</strong> Taxes moved demand two to three times more than equal market price changes, though buying ahead of announced rises explains part of the gap. Sweden offset its 2001–2004 motor-fuel tax rise with energy-tax cuts, and its transport gap barely widened. British Columbia’s tax cut transport emissions but not, measurably, total emissions. Germany’s 2022 gas shock cut gas use by 23 percent but national emissions by only about 1 percent, because power stations burned more coal and some industry moved abroad.</p>
+<p><strong>What to do.</strong> Plan on a sustained, broad carbon price cutting covered emissions by about 1 to 2 percent per 10 dollars a tonne in transport and buildings within a decade, and by much more in power where coal can give way to gas. Avoid offsetting tax cuts and exemptions, and publish a credible path. Modelers should back-cast these cases: on this evidence the long-run gasoline elasticity in the Climate Policy Assessment Tool (−0.64) is about right and its residential gas elasticity (−0.70) looks high (<a href="#sec-models" class="quarto-xref">Section&nbsp;7</a>).</p>
+</section>
+<section id="sec-intro" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
+<p>A finance ministry that asks what a carbon tax will do to its emissions is usually given a model’s answer, and the size of that answer rests mostly on assumed responses to price. The Climate Policy Assessment Tool (CPAT), which the International Monetary Fund and the World Bank use for this purpose, turns a carbon price into an emission cut through a table of price elasticities. Varying those elasticities by two standard deviations moves its estimated cut in G20 emissions from a US$75 tax from 29 percent to anywhere between 7 and 39 percent <span class="citation" data-cites="AuthorWP54">(<a href="#ref-AuthorWP54" role="doc-biblioref">Author 2026a</a>)</span>. A model is only as good as the response it assumes. The ex post literature, which measures what happened after real price changes, is the natural test, and paper 5.3 in this series recommends validating CPAT against it case by case <span class="citation" data-cites="AuthorWP53">(<a href="#ref-AuthorWP53" role="doc-biblioref">Author 2026b</a>)</span>.</p>
+<p>This paper asks a simple question: when governments or markets have raised fuel prices, what happened to emissions, and how much per dollar? The answer, from ten natural experiments, is that emissions from the covered fuels fell in every case. In road transport and buildings the cut was roughly 1 to 2 percent for each 10 dollars a tonne, building up over five to fifteen years. In power, where coal could be replaced by gas already on the system, it was five to ten times larger per dollar. Taxes moved demand more than equal market price changes, exemptions and offsetting tax cuts weakened the effect, and very large short-run shocks produced small cuts per dollar.</p>
+<p>The contribution is a case-level evidence base in one consistent format. The two closest pieces of work are reviews. <span class="citation" data-cites="Green2021">Green (<a href="#ref-Green2021" role="doc-biblioref">2021</a>)</span> reviews 37 ex post studies and concludes that carbon pricing has cut aggregate emissions by 0 to 2 percent a year. <span class="citation" data-cites="DobbelingHildebrandt2024">Döbbeling-Hildebrandt et al. (<a href="#ref-DobbelingHildebrandt2024" role="doc-biblioref">2024</a>)</span> pool 483 effect sizes from 80 causal evaluations of 21 schemes and find statistically significant cuts of 5 to 21 percent (4 to 15 percent after correcting for publication bias), averaging 10.4 percent, “despite the low level of prices in most instances”. Neither review reports, case by case, the size of the retail price increase or its carbon-price equivalent, and the meta-analysis lists the price elasticity of emissions as an evidence gap. This paper fills that gap for ten cases. Alongside carbon taxes and emissions trading, it includes fuel tax rises, a subsidy reform and a market shock, which raised fuel prices as much as carbon prices did or more: Germany’s eco-tax, United States state gasoline taxes, Indonesia’s subsidy reform and Germany’s 2022 gas shock. It converts every price change to the same two yardsticks, percent of the retail price and dollars per tonne of carbon dioxide (CO₂), so the cases can be compared with each other and with model elasticities.</p>
+<p><a href="#sec-method" class="quarto-xref">Section&nbsp;3</a> sets out what counts as a natural experiment here and how prices are converted. <a href="#sec-cases" class="quarto-xref">Section&nbsp;4</a> presents the ten cases. <a href="#sec-synthesis" class="quarto-xref">Section&nbsp;5</a> draws out what they show together, <a href="#sec-objections" class="quarto-xref">Section&nbsp;6</a> answers the strongest objections, <a href="#sec-models" class="quarto-xref">Section&nbsp;7</a> compares the evidence with CPAT, and <a href="#sec-policy" class="quarto-xref">Section&nbsp;8</a> turns it into advice.</p>
+</section>
+<section id="sec-method" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Method: what counts and how prices are compared</h1>
+<p><strong>A case qualifies if a price change was large, dated and evaluated after the fact against a counterfactual.</strong> The paper uses “natural experiment” for a fuel price increase that a government or market imposed for reasons largely independent of the emissions trend being studied, and that researchers later evaluated with observed data. Three designs dominate. Synthetic control builds a weighted average of untreated countries or provinces that tracked the treated unit before the change, and reads the effect as the gap after it <span class="citation" data-cites="Andersson2019 Leroutier2022">(<a href="#ref-Andersson2019" role="doc-biblioref">Andersson 2019</a>; <a href="#ref-Leroutier2022" role="doc-biblioref">Leroutier 2022</a>)</span>. Difference-in-differences compares regulated with similar unregulated plants or regions before and after <span class="citation" data-cites="Colmer2025">(<a href="#ref-Colmer2025" role="doc-biblioref">Colmer et al. 2025</a>)</span>. Panel and time-series methods use the timing of many tax changes, or temperature-adjusted baselines, to separate the price effect from other influences <span class="citation" data-cites="DavisKilian2011 Ruhnau2023">(<a href="#ref-DavisKilian2011" role="doc-biblioref">Davis and Kilian 2011</a>; <a href="#ref-Ruhnau2023" role="doc-biblioref">Ruhnau et al. 2023</a>)</span>. Simulations of hypothetical policies are excluded. Two cases, Switzerland and Indonesia, rest partly on counterfactuals built from estimated elasticities applied to observed prices; the text says so.</p>
+<p><strong>Selection favored identification, then breadth.</strong> Twenty-one episodes were documented, the ten here and the eleven in <a href="#tbl-others" class="quarto-xref">Table&nbsp;13</a>, and several more were searched without finding an ex post estimate. The ten chosen have at least one peer-reviewed ex post estimate of the effect on emissions or fuel use, and together they cover road transport, buildings, industry and power, carbon taxes, fuel taxes, emissions trading, subsidy reform and a market shock, and both high-income and developing economies. Australia’s 2012–2014 carbon price, Finland’s and Norway’s early carbon taxes, Britain’s fuel duty escalator, the Regional Greenhouse Gas Initiative, France’s carbon tax and Saudi Arabia’s price reforms were left out of the main set because their evidence is thinner or contested. They are summarized in <a href="#tbl-others" class="quarto-xref">Table&nbsp;13</a>.</p>
+<p><strong>Four facts are reported for each case.</strong> The <em>sector and fuel</em> are those the measure covered. The <em>retail price increase</em> is the measure’s per-unit amount, including any value added tax on it, as a percentage of the price that would have applied without it, assuming full pass-through to the final user. Where a source reports the measure’s share of the tax-inclusive price instead, the paper reports that share and says so. For industrial users under emissions trading, the increase is the marginal carbon cost as a percentage of the pre-carbon fuel price. The <em>carbon price</em> is the statutory price per tonne of CO₂. For measures that are not carbon prices, the <em>carbon-price equivalent</em> is the per-unit price increase divided by the CO₂ emitted per unit of fuel. Dollar figures use the annual average exchange rate of the year shown. The <em>emission cut</em> is the evaluated study’s own estimate, with its horizon and design. Appendix A lists the emission factors and exchange rates.</p>
+</section>
+<section id="sec-cases" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Ten natural experiments</h1>
+<p><a href="#tbl-glance" class="quarto-xref">Table&nbsp;1</a> summarizes the ten cases. The sections that follow give each case’s price path over time and its measured effect.</p>
+<div id="tbl-glance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-glance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: The ten natural experiments at a glance: every case shows a cut in emissions or fuel use from the covered fuels. VAT = value added tax; ETS = Emissions Trading System. US$ at the annual average exchange rate of the year shown. Retail price increases assume full pass-through and are the author’s calculations from the sources in each case section, except where stated. Sources: see <a href="#sec-sweden-transport" class="quarto-xref">Section&nbsp;4.1</a> to <a href="#sec-germany-gas" class="quarto-xref">Section&nbsp;4.10</a>.
+</figcaption>
+<div aria-describedby="tbl-glance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 16%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Case</th>
+<th>Sector and fuel</th>
+<th>Carbon price or equivalent</th>
+<th>Retail price increase</th>
+<th>Ex post cut (design, horizon)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Sweden, 1991</td>
+<td>Road transport; petrol and diesel</td>
+<td>SEK 250/t (US$41) in 1991; SEK 910 (US$124) by 2004</td>
+<td>Carbon tax with VAT: 21% of the petrol price in 2006 (+26% over the price without it)</td>
+<td>Transport CO₂ −10.9% on average 1990–2005 with the 1990 fuel VAT; about −6.3% from the carbon tax alone (synthetic control, 15 years)</td>
+</tr>
+<tr class="even">
+<td>2. Sweden, 2001–2004</td>
+<td>Buildings; heating oil</td>
+<td>SEK 370 to 910/t (US$40 to 124)</td>
+<td>Heating-oil tax up SEK 1.48/l before VAT; share of retail price not available</td>
+<td>Residential CO₂ 200–800 kg per person a year lower, roughly 11–46% (synthetic control, to 2010)</td>
+</tr>
+<tr class="odd">
+<td>3. Germany, 1999–2003</td>
+<td>Road transport; petrol and diesel</td>
+<td>Equivalent €65/t petrol, €57/t diesel by 2003 (US$74, 65)</td>
+<td>Cumulative tax equal to 22% of the 1998 petrol price, 30% of diesel</td>
+<td>Transport CO₂ −11.5% to −16% by 2005 (synthetic control, 6 years)</td>
+</tr>
+<tr class="even">
+<td>4. United States, 1966–2008</td>
+<td>Road transport; gasoline</td>
+<td>Typical rise of 5–10 cents/gallon = US$5.6–11.3/t</td>
+<td>3–6%</td>
+<td>Gasoline use −1.4% per 10 cents within a year (instrumental variables)</td>
+</tr>
+<tr class="odd">
+<td>5. British Columbia, 2008</td>
+<td>Transport, buildings; gasoline, diesel, natural gas</td>
+<td>C$10/t (2008) to C$30 (2012) and C$80 (2024); US$9 to 30 to 58</td>
+<td>Gasoline: 1.6% of pump price (2008), 4.8% (2012), 8.4% (2024)</td>
+<td>Household gasoline −8% per 5 cents/litre; transport CO₂ −5% short run, −19% long run; total CO₂ not significant (panel, synthetic control)</td>
+</tr>
+<tr class="even">
+<td>6. Switzerland, 2008</td>
+<td>Buildings, smaller firms; heating oil and gas</td>
+<td>CHF 12/t (2008) to CHF 60 (2014), 84 (2016), 120 (2022); US$11 to 66, 85, 126</td>
+<td>Heating oil: +3% (2008), +21–30% (2014–15), +40–65% (2016–21)</td>
+<td>Heating-fuel CO₂ −4.3% to −9.6% in 2015 (model-based counterfactual); house owners’ heating fuel −12% to −14% (survey)</td>
+</tr>
+<tr class="odd">
+<td>7. EU ETS, 2005</td>
+<td>Power and industry; coal, gas, oil</td>
+<td>Phase II mean €13.7/t (US$19)</td>
+<td>Marginal cost: gas +8–13%, coal +37–68% of fuel price (2008–2011)</td>
+<td>Emissions at regulated plants about −10% 2005–2012, −15% in phase II (matched difference-in-differences)</td>
+</tr>
+<tr class="even">
+<td>8. Britain, 2013</td>
+<td>Power; coal and gas</td>
+<td>Total carbon price €10.6/t (2013) to €32/t (2015); US$14 to 36</td>
+<td>Fuel cost of coal +39% to +141%; gas +7% to +30%</td>
+<td>Power-sector CO₂ −6% (dispatch only) to −20–26% a year (all channels), 2013–2017</td>
+</tr>
+<tr class="odd">
+<td>9. Indonesia, 2013–2015</td>
+<td>Transport, electricity; gasoline, diesel, power</td>
+<td>Gasoline equivalent US$88 (2013 step), US$72 (2014 step); US$143/t cumulative at 2014 exchange rates</td>
+<td>Gasoline +44%, then +31% (+89% in total)</td>
+<td>Electricity use −7% (about 13 Mt CO₂ a year); toll-road traffic −10% (panel, 2 years)</td>
+</tr>
+<tr class="even">
+<td>10. Germany, 2022</td>
+<td>Buildings, industry; natural gas</td>
+<td>Equivalent €150–900/t (US$160–950)</td>
+<td>Household gas +130%, industrial gas +480% at peak</td>
+<td>Gas use −23% against a temperature-adjusted baseline; national greenhouse gas emissions only −1.3% (regression, months)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<section id="sec-sweden-transport" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-sweden-transport"><span class="header-section-number">4.1</span> Sweden, 1991: a carbon tax on motor fuels cut transport emissions by about 11 percent</h2>
+<p><strong>Sweden taxed carbon in motor fuels from 1991 and raised the rate almost fourfold by 2004.</strong> The carbon tax started at SEK 250 per tonne of CO₂ on all major fossil fuels, as part of a reform that cut labor taxes; in March 1990 Sweden had also added 25 percent VAT to petrol and diesel for the first time <span class="citation" data-cites="HammarAkerfeldt2011 Andersson2017WP">(<a href="#ref-HammarAkerfeldt2011" role="doc-biblioref">Hammar and Åkerfeldt 2011</a>; <a href="#ref-Andersson2017WP" role="doc-biblioref">Andersson 2017</a>)</span>. The rate stayed at SEK 370 from 1996 to 2000, rose in steps to SEK 910 in 2004 and reached SEK 1,050 in 2009–2011. It was about SEK 1,330 in 2023, or US$119 at the Ministry of Finance’s 2022 exchange rate <span class="citation" data-cites="SwedenMoF2023">(<a href="#ref-SwedenMoF2023" role="doc-biblioref">Government Offices of Sweden, Ministry of Finance 2023</a>)</span>, and about SEK 1,450 (US$137) in 2024 on the author’s calculation from the tax agency’s per-unit rates. In petrol it added SEK 0.58 a litre in 1991, rising to SEK 2.11 in 2004–2005 before VAT (<a href="#tbl-sweden-transport" class="quarto-xref">Table&nbsp;2</a>). The tax passed fully into pump prices: a regression of pump prices on taxes gives a coefficient of 0.97 on the carbon tax (95 percent confidence interval 0.80 to 1.15) <span class="citation" data-cites="Andersson2017WP">(<a href="#ref-Andersson2017WP" role="doc-biblioref">Andersson 2017</a>)</span>.</p>
+<p><strong>By 2006 the carbon tax and the VAT on it made up a fifth of the petrol price.</strong> In April 2006 the carbon tax with VAT was SEK 2.53 of a pump price of SEK 12.22, or 21 percent, raising the price 26 percent above what it would have been without it. The share was the same in May 2024 (SEK 3.93 of 18.84). No source located for this paper gives the 1991 pump price, so the 1991 share is not reported. Two offsetting changes matter. Sweden cut energy taxes when the carbon tax began, and between 2000 and 2004 it cut the energy tax on petrol so far that the total tax on unleaded petrol rose only from SEK 4.47 to 4.79 a litre while the carbon tax more than doubled <span class="citation" data-cites="HammarAkerfeldt2011">(<a href="#ref-HammarAkerfeldt2011" role="doc-biblioref">Hammar and Åkerfeldt 2011</a>)</span>.</p>
+<div id="tbl-sweden-transport" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sweden-transport-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Sweden’s carbon tax on motor fuels rose almost fourfold and cut transport emissions by about a tenth. Petrol at 2.323 kg CO₂ per litre; VAT 25%. The 2006 amount is levied on 95% of the volume because of the ethanol blend. The 2024 rate is derived from Skatteverket’s per-unit rates. “Carbon tax alone” splits the synthetic-control gap using estimated demand elasticities. Sources: <span class="citation" data-cites="HammarAkerfeldt2011">Hammar and Åkerfeldt (<a href="#ref-HammarAkerfeldt2011" role="doc-biblioref">2011</a>)</span>, <span class="citation" data-cites="Andersson2017WP">Andersson (<a href="#ref-Andersson2017WP" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="Andersson2019">Andersson (<a href="#ref-Andersson2019" role="doc-biblioref">2019</a>)</span>; shares are the author’s calculation from Ekonomifakta (2006) and TT (2024) price reports in the research notes.
+</figcaption>
+<div aria-describedby="tbl-sweden-transport-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 18%">
+<col style="width: 15%">
+<col style="width: 18%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Carbon tax, SEK/t (US$/t)</th>
+<th>Carbon tax on petrol, SEK/l, with VAT</th>
+<th>Share of pump price (increase over price without it)</th>
+<th>Transport CO₂ against synthetic Sweden</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1991</td>
+<td>250 (41)</td>
+<td>0.73</td>
+<td>not available</td>
+<td>Average 1990–2005: −10.9% with the fuel VAT; −6.3% from the carbon tax alone</td>
+</tr>
+<tr class="even">
+<td>2000</td>
+<td>370 (40)</td>
+<td>1.07</td>
+<td>not available</td>
+<td>−11.5% with VAT; −5.5% carbon tax alone</td>
+</tr>
+<tr class="odd">
+<td>2004–05</td>
+<td>910 (122–124)</td>
+<td>2.64</td>
+<td>not available</td>
+<td>2005: −12.5% with VAT (−0.35 t per person, 3.2 Mt); −9.4% carbon tax alone</td>
+</tr>
+<tr class="even">
+<td>2006</td>
+<td>920 (125)</td>
+<td>2.53 (on 95% of volume)</td>
+<td>20.7% (+26.0%)</td>
+<td>Not evaluated</td>
+</tr>
+<tr class="odd">
+<td>2024</td>
+<td>about 1,450 (137)</td>
+<td>3.93</td>
+<td>20.8% (+26.3%)</td>
+<td>Not evaluated</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Against a synthetic Sweden built from other OECD countries, transport emissions fell about 11 percent.</strong> <span class="citation" data-cites="Andersson2019">Andersson (<a href="#ref-Andersson2019" role="doc-biblioref">2019</a>)</span> compares Swedish per-person CO₂ from transport with a weighted average of 14 OECD countries that tracked it closely from 1960 to 1989, mostly Denmark, Belgium and New Zealand. Emissions were 10.9 percent lower on average over 1990–2005 and 12.5 percent lower in 2005, a cumulative 40.5 million tonnes (Mt). Sweden’s gap is the largest of 15 placebo runs, the smallest p-value the design allows (1/15). The measured gap combines the 1990 VAT and the carbon tax. Splitting it with estimated demand elasticities attributes about 6.3 percent on average, and 9.4 percent in 2005, to the carbon tax alone. Those elasticities are the striking result: demand responded to the carbon tax with an elasticity of −1.57, three times its response to market price changes (−0.51).</p>
+<p><strong>The headline survives replication; the split between tax and price is less secure.</strong> An exact reproduction finds a median effect of −0.28 tonnes per person across 14 alternative specifications, against Andersson’s −0.29 <span class="citation" data-cites="Bonander2023">(<a href="#ref-Bonander2023" role="doc-biblioref">Bonander et al. 2023</a>)</span>. Dropping Denmark, itself a carbon-tax adopter in 1992, raises the combined effect to 12.9 percent and the carbon-tax share to 7.7 percent; a more efficient estimator halves both elasticity coefficients, though their ratio stays above two <span class="citation" data-cites="Yu2024">(<a href="#ref-Yu2024" role="doc-biblioref">Yu 2024</a>)</span>. The same method finds only a 2.4 percent, statistically insignificant, effect for Norway, whose carbon tax exempted much of its economy <span class="citation" data-cites="Yu2024">(<a href="#ref-Yu2024" role="doc-biblioref">Yu 2024</a>)</span>. The early 1990s recession is the main confounder; Andersson finds no rebound in emissions when Swedish output recovered.</p>
+</section>
+<section id="sec-sweden-heating" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-sweden-heating"><span class="header-section-number">4.2</span> Sweden, 2001–2004: tripling the tax on heating fuels cut household emissions</h2>
+<p><strong>Between 2000 and 2004 Sweden raised its carbon tax from SEK 370 to SEK 910 a tonne without offsetting cuts for households.</strong> Households and services paid the full rate. Unlike motor fuels, heating fuels used by households got no matching cut in energy tax, so the whole increase reached them <span class="citation" data-cites="HammarAkerfeldt2011">(<a href="#ref-HammarAkerfeldt2011" role="doc-biblioref">Hammar and Åkerfeldt 2011</a>)</span>. On heating oil, at 2.744 kg CO₂ a litre, the carbon tax rose from SEK 1.02 to SEK 2.50 a litre before VAT (<a href="#tbl-sweden-heating" class="quarto-xref">Table&nbsp;3</a>), SEK 1.85 a litre more with VAT. In dollars the rate tripled, from US$40 to US$124 a tonne. No Swedish heating-oil retail price series was found for these years, so the paper does not report the increase as a share of the retail price.</p>
+<div id="tbl-sweden-heating" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sweden-heating-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Sweden’s 2001–2004 increase reached household heating fuels in full and cut residential emissions. Per-litre amounts are the author’s calculation from the rates and the emission factor in <span class="citation" data-cites="HammarAkerfeldt2011">Hammar and Åkerfeldt (<a href="#ref-HammarAkerfeldt2011" role="doc-biblioref">2011</a>)</span>. Effect: <span class="citation" data-cites="RunstThonipara2020">Runst and Thonipara (<a href="#ref-RunstThonipara2020" role="doc-biblioref">2020</a>)</span>; 200 kg against countries with carbon taxes above €20 a tonne, 800 kg against countries without one.
+</figcaption>
+<div aria-describedby="tbl-sweden-heating-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 22%">
+<col style="width: 29%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Carbon tax, SEK/t (US$/t)</th>
+<th>Carbon tax on heating oil, SEK/l before VAT</th>
+<th>Residential CO₂ against synthetic Sweden</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1991</td>
+<td>250 (41)</td>
+<td>0.69 (energy tax cut 50%, total tax almost unchanged)</td>
+<td>Low dose: pre-period for this experiment</td>
+</tr>
+<tr class="even">
+<td>2000</td>
+<td>370 (40)</td>
+<td>1.02</td>
+<td>Pre-period</td>
+</tr>
+<tr class="odd">
+<td>2001</td>
+<td>530 (51)</td>
+<td>1.45</td>
+<td>Gap opens</td>
+</tr>
+<tr class="even">
+<td>2002</td>
+<td>630 (65)</td>
+<td>1.73</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2003</td>
+<td>760 (94)</td>
+<td>2.09</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2004</td>
+<td>910 (124)</td>
+<td>2.50</td>
+<td>2005–2007: largest gap; 200–800 kg per person a year lower</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Residential emissions fell by 200 to 800 kilograms per person a year relative to comparison countries.</strong> <span class="citation" data-cites="RunstThonipara2020">Runst and Thonipara (<a href="#ref-RunstThonipara2020" role="doc-biblioref">2020</a>)</span> apply synthetic control and difference-in-differences to residential CO₂ in 19 European countries over 1990–2016, controlling for heating degree days, income and fuel prices. The gap opens in 2001 and peaks in 2005–2007. It is 200 kg per person a year against countries that themselves taxed carbon at more than €20 a tonne and 800 kg against countries without a carbon tax. With average residential emissions of about 1.75 tonnes per person, that is roughly 11 to 46 percent, or about 2 to 7 Mt a year (the author’s arithmetic, an order of magnitude only). Oil use fell mainly in 2000–2007, and annual heat-pump sales rose from 18,000–23,000 in the 1990s to about 60,000.</p>
+<p><strong>The design is weaker than for transport, and the authors call the estimates lower bounds.</strong> Sweden already taxed carbon before 2001, so there is no untaxed pre-period; the difference-in-differences shows a significant gap in 1997; and Norway dominates two of the three synthetic controls. The case is still the cleanest “dose” experiment in the set: the same households, a known tripling of the rate, and no offsetting tax cut. Sweden’s fossil heating-fuel use has since fallen by more than 90 percent from 1990, helped by district heating and grants for switching <span class="citation" data-cites="SwedenMoF2023">(<a href="#ref-SwedenMoF2023" role="doc-biblioref">Government Offices of Sweden, Ministry of Finance 2023</a>)</span>.</p>
+</section>
+<section id="sec-germany-ecotax" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-germany-ecotax"><span class="header-section-number">4.3</span> Germany, 1999–2003: the eco-tax on road fuels cut transport emissions by 11 to 16 percent</h2>
+<p><strong>Germany raised its fuel tax by 3.07 cents a litre in each of five years, a cumulative carbon-price equivalent of about €65 a tonne.</strong> From April 1999 to 2003 the ecological tax reform added 6 pfennig (3.07 euro cents) a litre to petrol and diesel each year, 15.35 cents in all, or about 17.8 cents with 16 percent VAT <span class="citation" data-cites="Basaglia2023">(<a href="#ref-Basaglia2023" role="doc-biblioref">Basaglia et al. 2023</a>)</span>. Each step raised pump prices by 3.4 to 6.1 percent of the previous year’s average; the cumulative rise equaled 22 percent of the 1998 petrol price and 30 percent of the 1998 diesel price <span class="citation" data-cites="ADACFuelPrices">(<a href="#ref-ADACFuelPrices" role="doc-biblioref">ADAC, n.d.</a>)</span>. In carbon terms the tax was worth €66 a tonne on petrol and €58 on diesel by 2003, about US$74 and US$65 <span class="citation" data-cites="Basaglia2023">(<a href="#ref-Basaglia2023" role="doc-biblioref">Basaglia et al. 2023</a>)</span>. Crude oil moved pump prices at the same time: petrol rose 28 cents a litre between 1998 and 2003, of which the eco-tax explains about 18.</p>
+<div id="tbl-germany-ecotax" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-germany-ecotax-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Germany’s eco-tax raised road-fuel prices by a fifth to a third over five years and cut transport emissions by more than a tenth. Petrol at 2.348 and diesel at 2.676 kg CO₂ per litre. Step shares and equivalents are the author’s calculation from ADAC annual prices <span class="citation" data-cites="ADACFuelPrices">(<a href="#ref-ADACFuelPrices" role="doc-biblioref">ADAC, n.d.</a>)</span>. Effects: <span class="citation" data-cites="RunstHohle2022">Runst and Höhle (<a href="#ref-RunstHohle2022" role="doc-biblioref">2022</a>)</span> (2005) and <span class="citation" data-cites="Basaglia2023">Basaglia et al. (<a href="#ref-Basaglia2023" role="doc-biblioref">2023</a>)</span> (2007; working paper).
+</figcaption>
+<div aria-describedby="tbl-germany-ecotax-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Cumulative eco-tax, cents/litre (with VAT)</th>
+<th>Step as % of previous year’s price: petrol / diesel</th>
+<th>Carbon-price equivalent, €/t: petrol / diesel</th>
+<th>Transport CO₂ against synthetic Germany</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1999</td>
+<td>3.07 (3.56)</td>
+<td>4.4 / 6.1</td>
+<td>13 / 11</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2000</td>
+<td>6.14 (7.12)</td>
+<td>4.1 / 5.6</td>
+<td>26 / 23</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2001</td>
+<td>9.21 (10.7)</td>
+<td>3.5 / 4.4</td>
+<td>39 / 34</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2002</td>
+<td>12.28 (14.2)</td>
+<td>3.5 / 4.3</td>
+<td>52 / 46</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2003</td>
+<td>15.35 (17.8)</td>
+<td>3.4 / 4.3</td>
+<td>65 / 57 (US$74 / 65)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2005</td>
+<td>Total = 21.9% / 30.4% of 1998 prices</td>
+<td></td>
+<td></td>
+<td>−11.5% (−250 kg per person); −16% in alternative specifications; fuel use −9.6% to −14.7%</td>
+</tr>
+<tr class="odd">
+<td>2007</td>
+<td></td>
+<td></td>
+<td></td>
+<td>−19% (−0.42 t per person; working paper)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Two independent synthetic-control studies find transport emissions about 10 to 16 percent below the counterfactual.</strong> <span class="citation" data-cites="RunstHohle2022">Runst and Höhle (<a href="#ref-RunstHohle2022" role="doc-biblioref">2022</a>)</span> build a synthetic Germany, mainly from France, the Netherlands and Switzerland, and find transport CO₂ 0.2 to 0.35 tonnes per person a year lower; by 2005 the gap was 250 kg, 11.5 percent of 1999 transport emissions, and 16 percent in alternative specifications. Fuel use per person fell 9.6 to 14.7 percent by 2005, after a lag of three to four years, and the share of diesel cars rose. A working paper using a different donor pool and several estimators finds emissions 8.1 to 13.4 percent below the counterfactual on average over 1999–2009, 19 percent in 2007 and about 208 Mt in all; its generalized synthetic control gives −0.43 tonnes per person (95 percent confidence interval −0.53 to −0.34) <span class="citation" data-cites="Basaglia2023">(<a href="#ref-Basaglia2023" role="doc-biblioref">Basaglia et al. 2023</a>)</span>. The same paper estimates an elasticity of gasoline demand with respect to the eco-tax of −2.7, against −0.32 for the tax-exclusive price.</p>
+<p><strong>The main threats are fuel tourism and the shift to diesel.</strong> Drivers near borders may have bought fuel abroad, which country data count as abatement; <span class="citation" data-cites="Basaglia2023">Basaglia et al. (<a href="#ref-Basaglia2023" role="doc-biblioref">2023</a>)</span> exclude Austria and Luxembourg from the donor pool for that reason. Car makers’ voluntary efficiency commitments and the move to diesel cars also lowered emissions, though the diesel shift is itself partly a response to the tax. The gaps narrow after 2007 as the financial crisis hit all countries.</p>
+</section>
+<section id="sec-us" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-us"><span class="header-section-number">4.4</span> United States, 1966–2008: state gasoline tax rises cut fuel use within a year</h2>
+<p><strong>American states change their gasoline taxes often and by small amounts, which gives hundreds of small natural experiments.</strong> Between 1966 and 2008, state taxes rose in 488 state-years and fell in 44 <span class="citation" data-cites="LiLinnMuehlegger2014">(<a href="#ref-LiLinnMuehlegger2014" role="doc-biblioref">Li et al. 2014</a>)</span>. Most changes were under 10 cents a gallon. At 8.887 kg CO₂ a gallon, 10 cents is a carbon-price equivalent of about US$11 a tonne; it was 3.1 percent of the average pump price in March 2008 ($3.21) and 5.7 percent at December 2008’s $1.75 (<a href="#tbl-us" class="quarto-xref">Table&nbsp;5</a>). Taxes passed fully into prices: 113 percent of a state tax change reached the pump, with a standard error of 7 percent <span class="citation" data-cites="DavisKilian2011">(<a href="#ref-DavisKilian2011" role="doc-biblioref">Davis and Kilian 2011</a>)</span>.</p>
+<div id="tbl-us" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-us-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: In the United States a 10-cent state tax rise, worth about US$11 a tonne, cut gasoline use by about 1.4 percent within a year. Nominal averages from <span class="citation" data-cites="LiLinnMuehlegger2014">Li et al. (<a href="#ref-LiLinnMuehlegger2014" role="doc-biblioref">2014</a>)</span>, Table 1. Effects: <span class="citation" data-cites="DavisKilian2011">Davis and Kilian (<a href="#ref-DavisKilian2011" role="doc-biblioref">2011</a>)</span> (10 cents) and <span class="citation" data-cites="LiLinnMuehlegger2014">Li et al. (<a href="#ref-LiLinnMuehlegger2014" role="doc-biblioref">2014</a>)</span> (5 cents). Carbon-price equivalents are the author’s calculation.
+</figcaption>
+<div aria-describedby="tbl-us-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Period</th>
+<th>Average retail price, cents/gallon</th>
+<th>State tax</th>
+<th>Federal tax</th>
+<th>Taxes as % of retail price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1986–1990</td>
+<td>98.0</td>
+<td>15.1</td>
+<td>10.1</td>
+<td>25.7</td>
+</tr>
+<tr class="even">
+<td>1991–1995</td>
+<td>113.9</td>
+<td>19.1</td>
+<td>16.7</td>
+<td>31.4</td>
+</tr>
+<tr class="odd">
+<td>1996–2000</td>
+<td>125.0</td>
+<td>20.3</td>
+<td>18.4</td>
+<td>30.9</td>
+</tr>
+<tr class="even">
+<td>2001–2005</td>
+<td>163.3</td>
+<td>20.8</td>
+<td>18.4</td>
+<td>24.0</td>
+</tr>
+<tr class="odd">
+<td>2006–2008</td>
+<td>278.0</td>
+<td>21.8</td>
+<td>18.4</td>
+<td>14.5</td>
+</tr>
+<tr class="even">
+<td><em>Typical change</em></td>
+<td><em>5–10 cents = 3–6% of price</em></td>
+<td></td>
+<td></td>
+<td><em>= US$5.6–11.3/t; gasoline use −0.9% (5 cents) to −1.4% (10 cents) within a year</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>A 10-cent tax rise cut gasoline use by about 1.4 percent within a year, and taxes moved demand more than prices did.</strong> <span class="citation" data-cites="DavisKilian2011">Davis and Kilian (<a href="#ref-DavisKilian2011" role="doc-biblioref">2011</a>)</span> instrument the pump price with 210 nominal state tax increases between 1989 and 2008 and estimate a price elasticity of −0.46 (standard error 0.23), which they regard as the most credible estimate and a plausible upper bound. A 10-cent tax would cut gasoline use by 1.43 percent (standard error 0.72), about 1.5 percent of vehicle CO₂ and 0.48 percent of total United States CO₂; cuts above 1.0 percent of the total can be ruled out with 95 percent confidence. <span class="citation" data-cites="LiLinnMuehlegger2014">Li et al. (<a href="#ref-LiLinnMuehlegger2014" role="doc-biblioref">2014</a>)</span> separate the tax from the rest of the price over 1966–2008 and find a tax elasticity of −0.29 against −0.11 for the tax-exclusive price. A 5-cent tax rise cut consumption by 0.86 percent, three times the 0.29 percent from an equal market price rise.</p>
+<p><strong>Part of the tax effect may be buying ahead of announced rises.</strong> Drivers fill up before tax increases and delay purchases before cuts. Allowing for this lowers the elasticity estimated from tax changes from −1.14 to −0.37, with a standard error of 0.24 <span class="citation" data-cites="Coglianese2017">(<a href="#ref-Coglianese2017" role="doc-biblioref">Coglianese et al. 2017</a>)</span>. Even on that lower figure, a 10-cent tax cuts use by about 1.1 percent within a year. These are one-year effects of small changes, so they bound the short-run response rather than the long-run one.</p>
+</section>
+<section id="sec-bc" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="sec-bc"><span class="header-section-number">4.5</span> British Columbia, 2008–2025: a revenue-neutral carbon tax cut gasoline use and transport emissions</h2>
+<p><strong>British Columbia taxed almost all fossil fuels from July 2008 and returned the revenue through tax cuts.</strong> The rate started at C$10 a tonne of CO₂ and rose C$5 each July to C$30 in 2012. It was frozen until April 2018, then rose to C$35, C$40 (2019–2021), C$45 (2021), C$50 (2022), C$65 (2023) and C$80 (2024), and was set to zero from 1 April 2025 <span class="citation" data-cites="BCCarbonTaxRates">(<a href="#ref-BCCarbonTaxRates" role="doc-biblioref">Government of British Columbia 2025</a>)</span>. It covered roughly 70 to 75 percent of provincial greenhouse gas emissions <span class="citation" data-cites="MurrayRivers2015 Pretis2022">(<a href="#ref-MurrayRivers2015" role="doc-biblioref">B. Murray and Rivers 2015</a>; <a href="#ref-Pretis2022" role="doc-biblioref">Pretis 2022</a>)</span>. Until 2018 the revenue was returned through cuts in personal and corporate income tax and a low-income credit; in 2012/13 tax cuts worth C$1,375 million offset C$1,172 million of revenue (revised forecast).</p>
+<div id="tbl-bc" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-bc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6: British Columbia’s carbon tax reached 8 percent of the gasoline price before it was removed in 2025. Rates: <span class="citation" data-cites="BCCarbonTaxRates">Government of British Columbia (<a href="#ref-BCCarbonTaxRates" role="doc-biblioref">2025</a>)</span>. Vancouver self-serve prices: <span class="citation" data-cites="StatCan18100001">Statistics Canada (<a href="#ref-StatCan18100001" role="doc-biblioref">2026</a>)</span>. The increase includes the 5% GST on the tax. Shares and US$ are the author’s calculation.
+</figcaption>
+<div aria-describedby="tbl-bc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Effective date</th>
+<th>Carbon price, C$/t (US$/t)</th>
+<th>Gasoline, cents/litre</th>
+<th>Share of Vancouver pump price: gasoline / diesel</th>
+<th>Increase over price without the tax, gasoline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 July 2008</td>
+<td>10 (9)</td>
+<td>2.34</td>
+<td>1.6% / 1.8%</td>
+<td>1.7%</td>
+</tr>
+<tr class="even">
+<td>1 July 2010</td>
+<td>20 (19)</td>
+<td>4.45</td>
+<td>3.8% / –</td>
+<td>4.1%</td>
+</tr>
+<tr class="odd">
+<td>1 July 2012</td>
+<td>30 (30)</td>
+<td>6.67</td>
+<td>4.8% / 5.8%</td>
+<td>5.3%</td>
+</tr>
+<tr class="even">
+<td>1 April 2019</td>
+<td>40 (30)</td>
+<td>8.89</td>
+<td>5.3% / 7.4%</td>
+<td>5.9%</td>
+</tr>
+<tr class="odd">
+<td>1 April 2023</td>
+<td>65 (48)</td>
+<td>14.31</td>
+<td>7.6% / 9.2%</td>
+<td>8.6%</td>
+</tr>
+<tr class="even">
+<td>1 April 2024</td>
+<td>80 (58)</td>
+<td>17.61</td>
+<td>8.4% / 10.9%</td>
+<td>9.6%</td>
+</tr>
+<tr class="odd">
+<td>1 April 2025</td>
+<td>0</td>
+<td>0</td>
+<td>Pump price fell 17.2 cents/litre, against 18.5 predicted</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>At C$30 a tonne the tax was about 5 percent of the pump price of gasoline and about 15 percent of a household gas bill.</strong> In July 2012 the tax of 6.67 cents a litre was 4.8 percent of the Vancouver pump price, raising it 5.3 percent above the price without the tax, and diesel’s 7.67 cents was 5.8 percent (<a href="#tbl-bc" class="quarto-xref">Table&nbsp;6</a>). On residential natural gas, C$1.49 per gigajoule was roughly 15 percent of a typical bill, because British Columbia’s gas itself was cheap (the author’s estimate from a 2018 sample bill; see the research notes). When the tax was removed in April 2025 the Vancouver pump price fell by 17.2 cents a litre, close to the 18.5 cents that full pass-through predicts, though crude prices also fell that month.</p>
+<p><strong>The tax cut gasoline use by more than equal price rises would have.</strong> <span class="citation" data-cites="RiversSchaufele2015">Rivers and Schaufele (<a href="#ref-RiversSchaufele2015" role="doc-biblioref">2015</a>)</span> find the decline in short-run gasoline demand significantly larger than an equivalent market price increase would cause, and estimate 2.4 Mt of CO₂ avoided from gasoline in the tax’s first four years. Using household microdata, <span class="citation" data-cites="LawleyThivierge2018">Lawley and Thivierge (<a href="#ref-LawleyThivierge2018" role="doc-biblioref">2018</a>)</span> find that a 5-cent-a-litre tax (about C$22 a tonne) cut household gasoline use by 8 percent, with a conservative lower bound of 5 percent after allowing for cross-border buying and transit improvements. That is 2.9 times the response to an equal price change; households in Vancouver cut by about 12 percent, and rural households not at all. Diesel use fell 1.24 litres per person a month over 2008–2016, about 1.3 percent of 2008 diesel emissions a year <span class="citation" data-cites="BernardKichian2019">(<a href="#ref-BernardKichian2019" role="doc-biblioref">Bernard and Kichian 2019</a>)</span>. Residential natural gas use per person fell about 7 percent against a synthetic control <span class="citation" data-cites="XiangLawley2019">(<a href="#ref-XiangLawley2019" role="doc-biblioref">Xiang and Lawley 2019</a>)</span>.</p>
+<p><strong>Transport emissions fell; total emissions did not measurably fall.</strong> Using national inventory data for ten provinces over 1990–2016, <span class="citation" data-cites="Pretis2022">Pretis (<a href="#ref-Pretis2022" role="doc-biblioref">2022</a>)</span> finds transport CO₂ 5 percent lower in the short run (standard error 1 percent) and 19 percent lower in the long run (standard error 3 percent); for total emissions the estimates are −1 percent (standard error 1) and −5 percent (standard error 4), not significant. Emissions from stationary fuel combustion did not fall. Pooling seven British Columbia studies, <span class="citation" data-cites="DobbelingHildebrandt2024">Döbbeling-Hildebrandt et al. (<a href="#ref-DobbelingHildebrandt2024" role="doc-biblioref">2024</a>)</span> put the effect at −5.4 percent (95 percent confidence interval −9.6 to −1.2) at an average price of about US$18. One synthetic-control study finds emissions and gasoline use rose relative to its comparison group <span class="citation" data-cites="ArcilaBaker2022">(<a href="#ref-ArcilaBaker2022" role="doc-biblioref">Arcila and Baker 2022</a>)</span>, and another finds the extra response only in the tax’s first years <span class="citation" data-cites="ErutkuHildebrand2018">(<a href="#ref-ErutkuHildebrand2018" role="doc-biblioref">Erutku and Hildebrand 2018</a>)</span>. No ex post study yet covers the C$35–80 period or the 2025 removal.</p>
+</section>
+<section id="sec-switzerland" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="sec-switzerland"><span class="header-section-number">4.6</span> Switzerland, 2008–2025: a rising levy on heating fuels cut their emissions by about 4 to 10 percent by 2015</h2>
+<p><strong>Switzerland’s CO₂ levy on heating fuels rose tenfold in fourteen years because interim targets were missed.</strong> The levy applies to heating oil and natural gas, not motor fuels. It started at CHF 12 a tonne in 2008 and rose automatically when emissions exceeded legal milestones: to CHF 36 in 2010, 60 in 2014, 84 in 2016, 96 in 2018 and 120 from 2022 <span class="citation" data-cites="FOEN2018 OttWeber2022">(<a href="#ref-FOEN2018" role="doc-biblioref">Federal Office for the Environment 2018</a>; <a href="#ref-OttWeber2022" role="doc-biblioref">Ott and Weber 2022</a>)</span>. Large firms in the Swiss trading system or with reduction commitments are exempt. About two-thirds of the revenue is returned to households and firms, and one-third funds building renovation and a technology fund. On heating oil, at 2.65 kg CO₂ a litre, the levy rose from 3.18 to 31.80 Swiss centimes a litre (<a href="#tbl-switzerland" class="quarto-xref">Table&nbsp;7</a>).</p>
+<div id="tbl-switzerland" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-switzerland-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;7: Switzerland’s heating levy rose to a third of the price of heating oil, and measurable cuts appeared once it passed CHF 60 a tonne. Levy amounts: Swiss customs (BAZG) tables in the research notes. Shares: the author’s calculation against annual heating-oil prices for purchases of 3,001–6,000 litres from Liechtenstein’s statistics office, a proxy under the customs union; <span class="citation" data-cites="Francescutto2022">Francescutto and Mathys (<a href="#ref-Francescutto2022" role="doc-biblioref">2022</a>)</span> give 21% in 2015 before VAT. US$ at ECB annual rates. Effects: owners’ heating fuel from <span class="citation" data-cites="Francescutto2022">Francescutto and Mathys (<a href="#ref-Francescutto2022" role="doc-biblioref">2022</a>)</span>; 2015 emissions from <span class="citation" data-cites="FOEN2018">Federal Office for the Environment (<a href="#ref-FOEN2018" role="doc-biblioref">2018</a>)</span>.
+</figcaption>
+<div aria-describedby="tbl-switzerland-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Years</th>
+<th>Levy, CHF/t (US$/t)</th>
+<th>Levy on heating oil, centimes/litre</th>
+<th>Share of heating-oil retail price, with VAT</th>
+<th>Increase over price without the levy</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2008–09</td>
+<td>12 (11)</td>
+<td>3.18</td>
+<td>3–5%</td>
+<td>+3–5%</td>
+<td>No significant effect on owners’ heating fuel</td>
+</tr>
+<tr class="even">
+<td>2010–13</td>
+<td>36 (35–41)</td>
+<td>9.55</td>
+<td>10–12%</td>
+<td>+11–14%</td>
+<td>No significant effect on owners’ heating fuel</td>
+</tr>
+<tr class="odd">
+<td>2014–15</td>
+<td>60 (62–66)</td>
+<td>15.90</td>
+<td>17–23%</td>
+<td>+21–30%</td>
+<td>Owners −12%; 2015 heating-fuel CO₂ −4.3% to −9.6% (0.8–1.8 Mt)</td>
+</tr>
+<tr class="even">
+<td>2016–17</td>
+<td>84 (85)</td>
+<td>22.26</td>
+<td>31–34%</td>
+<td>+44–52%</td>
+<td>Owners −14%</td>
+</tr>
+<tr class="odd">
+<td>2018–21</td>
+<td>96 (97–105)</td>
+<td>25.44</td>
+<td>29–40%</td>
+<td>+40–65%</td>
+<td>Not evaluated</td>
+</tr>
+<tr class="even">
+<td>2022–25</td>
+<td>120 (126–145)</td>
+<td>31.80</td>
+<td>25–36%</td>
+<td>+33–56%</td>
+<td>Not evaluated</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>By 2016 the levy had raised the price of heating oil by about half.</strong> Including VAT, the levy was 3 percent of the retail price of heating oil in 2008, 10 to 12 percent in 2010–2013, 17 to 23 percent in 2014–2015 and 29 to 40 percent in 2016–2021, when it raised the price 40 to 65 percent above the levy-free price. The range in each period reflects swings in oil prices, not in the levy. At CHF 120 the levy on natural gas is about CHF 24 per megawatt-hour.</p>
+<p><strong>The official evaluation attributes a 4 to 10 percent cut in heating-fuel emissions by 2015.</strong> The Federal Office for the Environment’s evaluation, combining a time-series model with a general-equilibrium model on observed data, credits the levy with 0.8 to 1.8 Mt of CO₂ in 2015, 4.3 to 9.6 percent of the roughly 17 Mt of emissions it covered, and 4.1 to 8.6 Mt cumulatively over 2005–2015 <span class="citation" data-cites="FOEN2018">(<a href="#ref-FOEN2018" role="doc-biblioref">Federal Office for the Environment 2018</a>)</span>. Net of the building programme and target agreements, the 2015 effect is about 1.3 Mt. About three-quarters came from households, mainly by switching from oil to gas and renewables. Because the counterfactual is modeled, this is the least design-based estimate in the set.</p>
+<p><strong>Survey data agree that households responded once the levy was high enough.</strong> Using the Swiss Household Budget Survey for 2006–2017, <span class="citation" data-cites="Francescutto2022">Francescutto and Mathys (<a href="#ref-Francescutto2022" role="doc-biblioref">2022</a>)</span> find no significant effect on house owners’ heating-fuel demand at CHF 12 or 36, but cuts of 12 percent at CHF 60 and 14 percent at CHF 84 relative to 2006–2007; the levy moved demand almost twice as much per franc as the net oil price. A household panel finds no short-run response to the 2016 increase <span class="citation" data-cites="OttWeber2022">(<a href="#ref-OttWeber2022" role="doc-biblioref">Ott and Weber 2022</a>)</span>. A firm-level working paper finds emissions 3 percent lower in 2010–2012 and up to 8 percent lower in 2013–2015 <span class="citation" data-cites="Fauceglia2020">(<a href="#ref-Fauceglia2020" role="doc-biblioref">Fauceglia et al. 2020</a>)</span>.</p>
+</section>
+<section id="sec-euets" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="sec-euets"><span class="header-section-number">4.7</span> European Union, 2005–2012: emissions trading cut emissions at regulated plants by about 10 percent at low prices</h2>
+<p><strong>The EU Emissions Trading System put a price on carbon at power stations and heavy industry from 2005, mostly at 5 to 25 euros a tonne.</strong> Phase I (2005–2007) covered almost half of EU CO₂ emissions <span class="citation" data-cites="BayerAklin2020">(<a href="#ref-BayerAklin2020" role="doc-biblioref">Bayer and Aklin 2020</a>)</span>. Allowance prices averaged about €21 in 2005 and €17 in 2006 before expiring Phase I permits fell to near zero in 2007. Phase II (2008–2012) averaged €13.7 (US$19), and prices then sat at €4.5–7.7 from 2013 to 2017 before rising to about €25 in 2019–2020 and €53–86 from 2021 (<a href="#tbl-euets" class="quarto-xref">Table&nbsp;8</a>). Industrial plants received most allowances free, so the price raised the marginal cost of emitting, not the average energy bill.</p>
+<div id="tbl-euets" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-euets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;8: The EU trading system cut emissions at regulated plants by about a tenth in its first phases, at modest marginal cost increases for gas and oil. Annual means of ICAP daily secondary-market prices, the author’s averaging. Fuel prices: Eurostat industrial gas (large users, excluding taxes), EU Weekly Oil Bulletin heavy fuel oil, World Bank South African export coal (an upper bound, as freight is excluded); the author’s calculation. Effects: <span class="citation" data-cites="Dechezlepretre2023">Dechezleprêtre et al. (<a href="#ref-Dechezlepretre2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="Colmer2025">Colmer et al. (<a href="#ref-Colmer2025" role="doc-biblioref">2025</a>)</span>, <span class="citation" data-cites="BayerAklin2020">Bayer and Aklin (<a href="#ref-BayerAklin2020" role="doc-biblioref">2020</a>)</span>.
+</figcaption>
+<div aria-describedby="tbl-euets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Period</th>
+<th>Allowance price, €/t (US$/t)</th>
+<th>Marginal carbon cost as % of fuel price: gas / heavy fuel oil / coal</th>
+<th>Ex post effect on regulated plants</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Phase I, 2005–07</td>
+<td>12.3 mean (15.2); 21 in 2005, 0.7 in 2007</td>
+<td>– / 18–25% / 101–130% (2005–06)</td>
+<td>−6%, not significant (four countries); −14% (French manufacturing)</td>
+</tr>
+<tr class="even">
+<td>Phase II, 2008–12</td>
+<td>13.7 mean (19.0)</td>
+<td>4–13% / 4–17% / 24–68%</td>
+<td>−15% (four countries); −16.3% (French manufacturing); −11.5% in trading sectors, 2008–2016</td>
+</tr>
+<tr class="odd">
+<td>2013–17</td>
+<td>4.5–7.7</td>
+<td>3–5% / 3–7% / 18–36%</td>
+<td>No plant-level evaluation</td>
+</tr>
+<tr class="even">
+<td>2019–20</td>
+<td>24.5–24.9</td>
+<td>20–23% / 18–22% / 92–101%</td>
+<td>No plant-level evaluation</td>
+</tr>
+<tr class="odd">
+<td>2021–25</td>
+<td>53–86 (62–92)</td>
+<td>20–33% / 34–44% / 84–184%</td>
+<td>No plant-level evaluation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Matched comparisons of regulated and unregulated plants find cuts of about 10 to 16 percent, mostly in Phase II.</strong> <span class="citation" data-cites="Dechezlepretre2023">Dechezleprêtre et al. (<a href="#ref-Dechezlepretre2023" role="doc-biblioref">2023</a>)</span> match regulated plants in France, the Netherlands, Norway and the United Kingdom with similar unregulated plants and find emissions about 10 percent lower over 2005–2012 (sensitivity range −7 to −16 percent): −6 percent in Phase I, not significant, and −15 percent in Phase II. Regulated firms’ profits and employment were unaffected. <span class="citation" data-cites="Colmer2025">Colmer et al. (<a href="#ref-Colmer2025" role="doc-biblioref">2025</a>)</span> use French administrative data on 4,201 manufacturing firms and find emissions 14 percent lower in Phase I and 16.3 percent lower in Phase II, with no detectable fall in economic activity and no evidence of outsourcing. At the sector level, a generalized synthetic control finds emissions in trading sectors 8.1 percent (95 percent confidence interval −13.2 to −1.7) to 11.5 percent (−16.9 to −5.4) below the counterfactual, about 1.2 billion tonnes over 2008–2016 or 3.8 percent of total EU emissions <span class="citation" data-cites="BayerAklin2020">(<a href="#ref-BayerAklin2020" role="doc-biblioref">Bayer and Aklin 2020</a>)</span>. The meta-analysis puts the EU trading system’s average effect at −7.3 percent <span class="citation" data-cites="DobbelingHildebrandt2024">(<a href="#ref-DobbelingHildebrandt2024" role="doc-biblioref">Döbbeling-Hildebrandt et al. 2024</a>)</span>.</p>
+<p><strong>The cut was large for the price, which points to expectations rather than the spot price.</strong> Phase II prices raised the marginal cost of gas by 8 to 13 percent and of coal by 37 to 68 percent in 2008–2011, yet regulated plants cut emissions by about 15 percent. <span class="citation" data-cites="BayerAklin2020">Bayer and Aklin (<a href="#ref-BayerAklin2020" role="doc-biblioref">2020</a>)</span> argue that firms responded to the expected tightening of the cap, not to the current price, and that their estimates come on top of the effect of the 2008–2009 recession. No plant-level evaluation yet covers the much higher prices since 2021.</p>
+</section>
+<section id="sec-uk" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="sec-uk"><span class="header-section-number">4.8</span> Britain, 2013–2017: a carbon price floor drove coal out of power generation</h2>
+<p><strong>From April 2013 Britain taxed carbon in fuels for power generation on top of the EU allowance price.</strong> The tax, the Carbon Price Support, was £4.94 a tonne in 2013–14, £9.55 in 2014–15 and £18.08 in 2015–16, and has been frozen at £18 since 2016–17; in April 2026 the government announced its removal from April 2028 <span class="citation" data-cites="HMT2026CPS">(<a href="#ref-HMT2026CPS" role="doc-biblioref">HM Treasury 2026</a>)</span>. Added to the EU allowance price, generators faced a total carbon price of €10.6 a tonne in 2013, €18.4 in 2014, €32.0 in 2015 and €26.9 in 2016 <span class="citation" data-cites="Abrell2022">(<a href="#ref-Abrell2022" role="doc-biblioref">Abrell et al. 2022</a>)</span>, about US$14 to 36. Because a coal plant emits about 2.4 times as much CO₂ per unit of electricity as a gas plant, the tax raised its costs 2.4 times as much (<a href="#tbl-uk" class="quarto-xref">Table&nbsp;9</a>).</p>
+<div id="tbl-uk" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-uk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;9: Britain’s carbon price floor raised coal plants’ fuel costs by up to 141 percent, against 30 percent for gas, and cut power-sector emissions by a fifth or more. Total price and pre-carbon fuel prices from <span class="citation" data-cites="Abrell2022">Abrell et al. (<a href="#ref-Abrell2022" role="doc-biblioref">2022</a>)</span>, Table 1 (working-paper version); cost increases are the author’s calculation at 0.34 (coal) and 0.19 (gas) tCO₂ per MWh of heat. Coal shares: <span class="citation" data-cites="BEISDukes2017">Department for Business, Energy and Industrial Strategy (<a href="#ref-BEISDukes2017" role="doc-biblioref">2017</a>)</span> and <span class="citation" data-cites="Leroutier2022">Leroutier (<a href="#ref-Leroutier2022" role="doc-biblioref">2022</a>)</span>. Effects: dispatch-only by year from <span class="citation" data-cites="Abrell2022">Abrell et al. (<a href="#ref-Abrell2022" role="doc-biblioref">2022</a>)</span> (working paper, Table 5); three-year effect from <span class="citation" data-cites="Gugler2023">Gugler et al. (<a href="#ref-Gugler2023" role="doc-biblioref">2023</a>)</span>; all channels from <span class="citation" data-cites="Leroutier2022">Leroutier (<a href="#ref-Leroutier2022" role="doc-biblioref">2022</a>)</span>.
+</figcaption>
+<div aria-describedby="tbl-uk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Year (April–March)</th>
+<th>Carbon Price Support, £/t</th>
+<th>Total carbon price, €/t (US$/t)</th>
+<th>Fuel cost increase per MWh of heat: coal / gas</th>
+<th>Coal share of generation</th>
+<th>Estimated cut in power-sector CO₂</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2012</td>
+<td>–</td>
+<td>7.4 (EU allowance only)</td>
+<td>–</td>
+<td>39%</td>
+<td>Baseline</td>
+</tr>
+<tr class="even">
+<td>2013</td>
+<td>4.94</td>
+<td>10.6 (14)</td>
+<td>+39% / +7%</td>
+<td>–</td>
+<td>−1.7% (dispatch only)</td>
+</tr>
+<tr class="odd">
+<td>2014</td>
+<td>9.55</td>
+<td>18.4 (24)</td>
+<td>+73% / +17%</td>
+<td>–</td>
+<td>−4.2% (dispatch only)</td>
+</tr>
+<tr class="even">
+<td>2015</td>
+<td>18.08</td>
+<td>32.0 (36)</td>
+<td>+141% / +30%</td>
+<td>22%</td>
+<td>−11.9% (dispatch only); −26% within three years, 2013–15</td>
+</tr>
+<tr class="odd">
+<td>2016</td>
+<td>18.00</td>
+<td>26.9 (30)</td>
+<td>+112% / +35%</td>
+<td>9%</td>
+<td>−10.7% (dispatch only)</td>
+</tr>
+<tr class="even">
+<td>2017–19</td>
+<td>18.00</td>
+<td>–</td>
+<td>–</td>
+<td>7% (2017), 2.1% (2019)</td>
+<td>−20% to −26% a year over 2013–2017, all channels</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Coal’s share of generation fell from 39 percent in 2012 to 2 percent in 2019.</strong> The official statistics attribute the 2016 collapse, from 22 to 9 percent, to “the carbon price [making] coal generation more expensive than gas” <span class="citation" data-cites="BEISDukes2017">(<a href="#ref-BEISDukes2017" role="doc-biblioref">Department for Business, Energy and Industrial Strategy 2017</a>)</span>. Three peer-reviewed studies measure the effect and differ mainly in what they count. Counting only the switch from coal to gas at plants that stayed open, a machine-learning counterfactual finds a cut of 6.2 percent over 2013–2016 at an average cost of €18 a tonne <span class="citation" data-cites="Abrell2022">(<a href="#ref-Abrell2022" role="doc-biblioref">Abrell et al. 2022</a>)</span>. A regression discontinuity on hourly plant data finds a 26 percent cut (38.6 Mt) within three years <span class="citation" data-cites="Gugler2023">(<a href="#ref-Gugler2023" role="doc-biblioref">Gugler et al. 2023</a>)</span>. A synthetic control built from other European countries, which also counts closures, finds emissions 20 to 26 percent lower each year over 2013–2017 <span class="citation" data-cites="Leroutier2022">(<a href="#ref-Leroutier2022" role="doc-biblioref">Leroutier 2022</a>)</span>. Its working paper splits the effect roughly equally between plants that ran less, plants that closed or were not built, and older plants already scheduled to close under EU air-quality rules that closed sooner. It implies a cut of about 1.4 to 1.65 percent for each euro of the tax.</p>
+<p><strong>The British case shows how a modest price works when a substitute is standing by.</strong> Britain could switch quickly from coal to gas, and gas prices fell by almost half over 2013–2016 <span class="citation" data-cites="Abrell2022">(<a href="#ref-Abrell2022" role="doc-biblioref">Abrell et al. 2022</a>)</span>; <span class="citation" data-cites="Gugler2021">Gugler et al. (<a href="#ref-Gugler2021" role="doc-biblioref">2021</a>)</span> conclude that a carbon price of about €30 a tonne was enough for large, cheap abatement where gas could replace coal. Some emissions moved abroad: Leroutier’s working paper estimates about 6 Mt more in the Netherlands and 1 Mt in Ireland through electricity imports. None of the studies estimates the effect on retail electricity prices.</p>
+</section>
+<section id="sec-indonesia" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="sec-indonesia"><span class="header-section-number">4.9</span> Indonesia, 2013–2015: cutting fuel and electricity subsidies cut electricity use by 7 percent and road traffic by 10 percent</h2>
+<p><strong>Indonesia raised subsidized gasoline prices by 89 percent in two steps, a carbon-price equivalent of about US$143 a tonne.</strong> Before June 2013 subsidized gasoline sold for 4,500 rupiah a litre, about 47 US cents, below the cost of the crude oil in it <span class="citation" data-cites="Burke2017">(<a href="#ref-Burke2017" role="doc-biblioref">Burke et al. 2017</a>)</span>. The government raised it to 6,500 rupiah in June 2013 and 8,500 in November 2014, and raised diesel from 4,500 to 5,500 and then 7,500 (<a href="#tbl-indonesia" class="quarto-xref">Table&nbsp;10</a>). When world oil prices fell, gasoline prices were cut in early 2015 but stayed above their pre-reform level; in July 2017 gasoline was still 43 percent above it. Electricity tariffs rose quarterly from 2013, except for households with the smallest connections; average prices rose most for business in 2013 (16 percent), industry in 2014 (23 percent) and street lighting in 2015 (36 percent) <span class="citation" data-cites="BurkeKurniawati2018">(<a href="#ref-BurkeKurniawati2018" role="doc-biblioref">Burke and Kurniawati 2018</a>)</span>.</p>
+<div id="tbl-indonesia" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;10: Indonesia’s subsidy reform raised gasoline prices by up to 89 percent and cut electricity use and road traffic within two years. Prices: <span class="citation" data-cites="Burke2017">Burke et al. (<a href="#ref-Burke2017" role="doc-biblioref">2017</a>)</span>. Equivalents are the author’s calculation at 2.3 (gasoline) and 2.68 (diesel) kg CO₂ per litre and monthly exchange rates. Effects: <span class="citation" data-cites="Burke2017">Burke et al. (<a href="#ref-Burke2017" role="doc-biblioref">2017</a>)</span> (traffic) and <span class="citation" data-cites="BurkeKurniawati2018">Burke and Kurniawati (<a href="#ref-BurkeKurniawati2018" role="doc-biblioref">2018</a>)</span> (electricity).
+</figcaption>
+<div aria-describedby="tbl-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Date</th>
+<th>Gasoline, rupiah/litre (change)</th>
+<th>Diesel, rupiah/litre (change)</th>
+<th>Carbon-price equivalent, US$/t: gasoline / diesel</th>
+<th>Measured effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Before June 2013</td>
+<td>4,500</td>
+<td>4,500</td>
+<td>–</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>22 June 2013</td>
+<td>6,500 (+44%)</td>
+<td>5,500 (+22%)</td>
+<td>88 / 38</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>18 November 2014</td>
+<td>8,500 (+31%)</td>
+<td>7,500 (+36%)</td>
+<td>72 / 61</td>
+<td>Cumulative from 2013: 143 / 92</td>
+</tr>
+<tr class="even">
+<td>Early 2015</td>
+<td>Cut to about 6,700</td>
+<td>Fixed subsidy of 1,000/litre</td>
+<td></td>
+<td>Second half of 2015: toll-road traffic −10%; 2015: electricity use −7% (16 TWh, about 13 Mt CO₂ a year)</td>
+</tr>
+<tr class="odd">
+<td>July 2017</td>
+<td>6,450 (+43% on 2013)</td>
+<td></td>
+<td>64 (lasting increase)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Electricity use fell 7 percent and road traffic 10 percent below what would have happened without reform.</strong> <span class="citation" data-cites="BurkeKurniawati2018">Burke and Kurniawati (<a href="#ref-BurkeKurniawati2018" role="doc-biblioref">2018</a>)</span> estimate electricity price elasticities from a panel of six consumer groups in 16 regions over 1992–2015: about −0.15 to −0.2 in the same year and about −0.4 over four years. Applying them to the observed tariffs, they find electricity use in 2015 about 7 percent (16 TWh) below the no-reform path, avoiding about 13 Mt of CO₂ a year from the grid, with industry, households and business all contributing. Industry’s oil use and total energy use were also lower in 2015 than in 2013, so the cut does not seem to have been offset by switching to other fuels. On 19 toll roads, mostly on Java, traffic in the second half of 2015 was about 10 percent below the no-reform path, with a fuel price elasticity of about −0.1 at once and −0.2 after a year <span class="citation" data-cites="Burke2017">(<a href="#ref-Burke2017" role="doc-biblioref">Burke et al. 2017</a>)</span>.</p>
+<p><strong>The counterfactual rests on estimated elasticities, and the reform was partly reversed.</strong> Both studies identify the response from the timing of price changes, controlling for income, trends and road-specific factors, then apply it to the reform; neither has an untreated comparison group. Prices fell again in early 2016 with world oil prices, probably reversing part of the effect. The case matters because it is the only developing economy in the set, and it shows that consumers respond to large price rises even where incomes are low.</p>
+</section>
+<section id="sec-germany-gas" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="sec-germany-gas"><span class="header-section-number">4.10</span> Germany, 2022: a gas price shock cut gas use by a quarter but national emissions by only about 1 percent</h2>
+<p><strong>The gas crisis of 2021–2022, deepened by Russia’s invasion of Ukraine, raised German gas prices by the equivalent of several hundred dollars a tonne of CO₂.</strong> Wholesale gas, at €15–20 per megawatt-hour before the pandemic, traded at €100–200 in 2022, with spikes to €227 and €339 <span class="citation" data-cites="Ruhnau2023">(<a href="#ref-Ruhnau2023" role="doc-biblioref">Ruhnau et al. 2023</a>)</span>. Industrial purchase prices peaked in September 2022 at 580 percent of their pre-crisis level, and household prices in November 2022 were 130 percent above their 2019–2021 level. Averages over each half-year rose less because of long contracts: households in a typical consumption band paid 6.3 cents per kilowatt-hour on average in 2019–2021, 9.4 cents in the second half of 2022 and 12.3 cents in the first half of 2023 (<a href="#tbl-germany-gas" class="quarto-xref">Table&nbsp;11</a>). At 0.202 tonnes of CO₂ per megawatt-hour, these increases are worth about €150 to €900 a tonne. The government cut VAT on gas from 19 to 7 percent, and its gas price brake compensated households for 80 percent of past consumption while leaving the marginal price unchanged <span class="citation" data-cites="Moll2023">(<a href="#ref-Moll2023" role="doc-biblioref">Moll et al. 2023</a>)</span>.</p>
+<div id="tbl-germany-gas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-germany-gas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;11: Germany’s 2022 gas shock, worth hundreds of dollars a tonne, cut gas use by about a quarter within months. Prices and effects: <span class="citation" data-cites="Ruhnau2023">Ruhnau et al. (<a href="#ref-Ruhnau2023" role="doc-biblioref">2023</a>)</span>. Eurostat averages (households band D2 with all taxes; industry band I4 excluding VAT) and carbon-price equivalents are the author’s calculation at 0.202 tCO₂ per MWh.
+</figcaption>
+<div aria-describedby="tbl-germany-gas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 28%">
+<col style="width: 16%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Period</th>
+<th>Price measure</th>
+<th>Increase over 2019–2021</th>
+<th>Carbon-price equivalent, €/t (US$/t)</th>
+<th>Gas use against temperature-adjusted baseline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>September 2021</td>
+<td>Wholesale rising</td>
+<td>–</td>
+<td>–</td>
+<td>Industry −4%</td>
+</tr>
+<tr class="even">
+<td>March 2022</td>
+<td>Wholesale €100–200/MWh in 2022</td>
+<td>About ten times</td>
+<td>400–900 (420–950)</td>
+<td>Small consumers −10%</td>
+</tr>
+<tr class="odd">
+<td>September 2022</td>
+<td>Industrial price at 580% of pre-crisis</td>
+<td>+480%</td>
+<td>about 750 (790)</td>
+<td>Small consumers −28%</td>
+</tr>
+<tr class="even">
+<td>October 2022</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Industry −27%</td>
+</tr>
+<tr class="odd">
+<td>November 2022</td>
+<td>Household price index +130%</td>
+<td>+130%</td>
+<td>about 405 (430)</td>
+<td>Small consumers −21%</td>
+</tr>
+<tr class="even">
+<td>Second half of 2022</td>
+<td>Eurostat averages: households +50%, industry +94%</td>
+<td></td>
+<td>147–154 (155–162)</td>
+<td>All consumers −23%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Gas use fell 23 percent below a temperature-adjusted baseline in the second half of 2022.</strong> <span class="citation" data-cites="Ruhnau2023">Ruhnau et al. (<a href="#ref-Ruhnau2023" role="doc-biblioref">2023</a>)</span> regress monthly gas use on crisis-month indicators, seasonality, trend and a temperature-driven heating profile, separately for industry, small consumers and power. Industry began cutting in September 2021, as prices first rose, and was 27 percent below baseline by October 2022; small consumers, mostly on fixed-price contracts, cut 10 percent in March 2022 and 28 percent in September. Across all users the cut averaged 23 percent in the second half of 2022. The authors’ rough implied elasticities are small: −0.04 for industry and −0.16 to −0.27 for small consumers. They cannot separate price from public appeals and fear of shortage.</p>
+<p><strong>The fall in national emissions was much smaller than the fall in gas use.</strong> Not adjusted for temperature, gas use from July 2022 to March 2023 was 157 TWh below its 2019–2021 average <span class="citation" data-cites="Moll2023">(<a href="#ref-Moll2023" role="doc-biblioref">Moll et al. 2023</a>)</span>, which at 0.18–0.20 tonnes per megawatt-hour is about 29 to 32 Mt of CO₂ (the author’s arithmetic). But power stations replaced gas with coal: on the environment agency’s final figures, energy-sector emissions rose 11 Mt (4.5 percent) in 2022, industry’s fell 13.7 Mt (7.6 percent), and national greenhouse gas emissions fell only 9.6 Mt, or 1.3 percent <span class="citation" data-cites="UBA2024Emissions">(<a href="#ref-UBA2024Emissions" role="doc-biblioref">Umweltbundesamt 2024</a>)</span>. Output in energy-intensive industry fell close to 20 percent, and some production, such as ammonia, moved abroad <span class="citation" data-cites="Moll2023">(<a href="#ref-Moll2023" role="doc-biblioref">Moll et al. 2023</a>)</span>. A price on gas alone is not a carbon price: it can push power generation toward coal.</p>
+</section>
+</section>
+<section id="sec-synthesis" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> What the ten cases show together</h1>
+<p><strong>Every case shows a cut in emissions or fuel use from the covered fuels.</strong> The well-identified estimates in <a href="#tbl-glance" class="quarto-xref">Table&nbsp;1</a> range from 1.4 percent within a year (United States) to 26 percent a year within five years (British power). Where a study tests significance, most effects are distinguishable from zero, though synthetic-control inference with one treated unit cannot do better than p = 1/15 or so. The only contrary estimate in the set is one synthetic-control study of British Columbia <span class="citation" data-cites="ArcilaBaker2022">(<a href="#ref-ArcilaBaker2022" role="doc-biblioref">Arcila and Baker 2022</a>)</span>, against several studies of the same province that find cuts. <a href="#fig-effect" class="quarto-xref">Figure&nbsp;1</a> plots each estimate against its price.</p>
+<div id="fig-effect" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-effect-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="2.Source/figures/fig1_effect_vs_price.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Ex post cuts against the carbon price or carbon-price equivalent that produced them. Each point is one case and sector; vertical lines span the range of published estimates or specifications, horizontal lines the range of price measures. Gray curves mark constant effects of 1 and 10 percent per US$10 a tonne. Horizons differ, from a year (United States) to fifteen years (Sweden). The Sweden heating range is the author’s conversion of 200–800 kg per person into a share of residential emissions. Indonesia’s electricity effect is not shown because no carbon-price equivalent by consumer group was computed. Source: author’s calculation from the studies in Table&nbsp;1, 2.Source/natural_experiments.py."><img src="2.Source/figures/fig1_effect_vs_price.png" class="img-fluid figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-effect-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Ex post cuts against the carbon price or carbon-price equivalent that produced them. Each point is one case and sector; vertical lines span the range of published estimates or specifications, horizontal lines the range of price measures. Gray curves mark constant effects of 1 and 10 percent per US$10 a tonne. Horizons differ, from a year (United States) to fifteen years (Sweden). The Sweden heating range is the author’s conversion of 200–800 kg per person into a share of residential emissions. Indonesia’s electricity effect is not shown because no carbon-price equivalent by consumer group was computed. Source: author’s calculation from the studies in <a href="#tbl-glance" class="quarto-xref">Table&nbsp;1</a>, <code>2.Source/natural_experiments.py</code>.
+</figcaption>
+</figure>
+</div>
+<p><strong>Proposition 1. In road transport and buildings, a sustained carbon price cuts covered emissions by about 1 to 2 percent per US$10 a tonne within five to fifteen years.</strong> The condition is that the price reaches the user and is expected to last. <a href="#tbl-per10" class="quarto-xref">Table&nbsp;12</a> converts each case to this yardstick. Germany’s eco-tax (1.4 to 2.0 percent per US$10), Switzerland (0.7 to 1.6), Sweden’s transport tax (about 0.8, carbon tax alone) and British Columbia’s tax on natural gas (2.3) cluster in this band; the United States’ one-year response to small tax changes (1.0 to 1.3) does too. The yardstick is crude: a dollar is a bigger share of a cheap fuel, so it moves demand more where pre-tax prices are low, and it ignores differences in horizon. In elasticity terms, the transport cases imply about −0.4 to −0.7 and the heating cases about −0.15 to −0.45.</p>
+<div id="tbl-per10" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-per10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12: Per dollar, cuts were about 1–2 percent per US$10 a tonne in transport and heating and several times larger in power. Cut per US$10 = cut divided by price, times 10. Implied elasticities divide the cut by the retail price increase in the case tables; “estimated” marks elasticities reported by the study. All are rough and the author’s arithmetic except where marked. Source: <code>2.Source/natural_experiments.py</code>, <code>table_per10.csv</code>.
+</figcaption>
+<div aria-describedby="tbl-per10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 16%">
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Case</th>
+<th>Sector</th>
+<th>Price, US$/t</th>
+<th>Cut</th>
+<th>Cut per US$10/t</th>
+<th>Horizon</th>
+<th>Implied price elasticity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>United States</td>
+<td>Gasoline</td>
+<td>11</td>
+<td>1.2–1.4%</td>
+<td>1.0–1.3%</td>
+<td>1 year</td>
+<td>−0.37 to −0.46 (estimated)</td>
+</tr>
+<tr class="even">
+<td>British Columbia</td>
+<td>Household gasoline</td>
+<td>22</td>
+<td>5–8%</td>
+<td>2.3–3.6%</td>
+<td>2–4 years</td>
+<td>About −2, tax-specific</td>
+</tr>
+<tr class="odd">
+<td>British Columbia</td>
+<td>Transport CO₂</td>
+<td>30</td>
+<td>5% (19% long run)</td>
+<td>1.7% (6.3% long run)</td>
+<td>Short and long run</td>
+<td>About −1 short run</td>
+</tr>
+<tr class="even">
+<td>British Columbia</td>
+<td>Residential gas</td>
+<td>30</td>
+<td>7%</td>
+<td>2.3%</td>
+<td>About 6 years</td>
+<td>About −0.4</td>
+</tr>
+<tr class="odd">
+<td>Germany</td>
+<td>Transport CO₂</td>
+<td>81</td>
+<td>11.5–16%</td>
+<td>1.4–2.0%</td>
+<td>6 years</td>
+<td>−0.4 to −0.7</td>
+</tr>
+<tr class="even">
+<td>Sweden</td>
+<td>Transport CO₂, tax alone</td>
+<td>122</td>
+<td>9.4%</td>
+<td>0.8%</td>
+<td>14 years</td>
+<td>About −0.4</td>
+</tr>
+<tr class="odd">
+<td>Switzerland</td>
+<td>Heating-fuel CO₂</td>
+<td>62</td>
+<td>4.3–9.6%</td>
+<td>0.7–1.5%</td>
+<td>8 years</td>
+<td>−0.15 to −0.45</td>
+</tr>
+<tr class="even">
+<td>Switzerland</td>
+<td>Owners’ heating fuel</td>
+<td>85</td>
+<td>14%</td>
+<td>1.6%</td>
+<td>9 years</td>
+<td>About −0.3</td>
+</tr>
+<tr class="odd">
+<td>Sweden</td>
+<td>Residential CO₂</td>
+<td>124</td>
+<td>11–46%</td>
+<td>0.9–3.7%</td>
+<td>1–6 years after 2004</td>
+<td>n.a.</td>
+</tr>
+<tr class="even">
+<td>Indonesia</td>
+<td>Toll-road traffic</td>
+<td>64–143</td>
+<td>10%</td>
+<td>0.7–1.6%</td>
+<td>2 years</td>
+<td>−0.1 to −0.2 (estimated)</td>
+</tr>
+<tr class="odd">
+<td>Indonesia</td>
+<td>Electricity</td>
+<td>n.a.</td>
+<td>7%</td>
+<td>n.a.</td>
+<td>1–3 years</td>
+<td>−0.15 to −0.4 (estimated)</td>
+</tr>
+<tr class="even">
+<td>EU ETS, phase II</td>
+<td>Power and industry</td>
+<td>19</td>
+<td>8–16%</td>
+<td>4–9%</td>
+<td>1–5 years</td>
+<td>n.a.</td>
+</tr>
+<tr class="odd">
+<td>Britain</td>
+<td>Power</td>
+<td>26</td>
+<td>6–26%</td>
+<td>2.4–10%</td>
+<td>1–5 years</td>
+<td>n.a.</td>
+</tr>
+<tr class="even">
+<td>Germany, 2022</td>
+<td>Household gas</td>
+<td>160–475</td>
+<td>21–28%</td>
+<td>0.5–1.9%</td>
+<td>Months</td>
+<td>−0.16 to −0.27 (estimated)</td>
+</tr>
+<tr class="odd">
+<td>Germany, 2022</td>
+<td>Industrial gas</td>
+<td>155–970</td>
+<td>23–27%</td>
+<td>0.2–1.7%</td>
+<td>Months</td>
+<td>−0.04 (estimated)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Proposition 2. Where a lower-carbon substitute is already installed, the cut per dollar is five to ten times larger.</strong> The condition is spare capacity in the substitute and a price wedge large enough to reverse the order in which plants run. In Britain, spare gas plants and falling gas prices let a total carbon price of US$14 to 36 move coal from the top of the merit order to the bottom; the cut was 2.4 percent per US$10 counting dispatch alone and up to 10 percent counting closures. EU trading cut 4 to 9 percent per US$10 at Phase II prices. In transport and heating, by contrast, the substitutes, more efficient cars or a heat pump, arrive only as equipment is replaced, so the response builds over a decade.</p>
+<p><strong>Proposition 3. Taxes move demand more than equal market price changes, at least for a time.</strong> The ratio is 2.9 in British Columbia’s household data <span class="citation" data-cites="LawleyThivierge2018">(<a href="#ref-LawleyThivierge2018" role="doc-biblioref">Lawley and Thivierge 2018</a>)</span>, about 3 in Sweden <span class="citation" data-cites="Andersson2019">(<a href="#ref-Andersson2019" role="doc-biblioref">Andersson 2019</a>)</span> and the United States <span class="citation" data-cites="LiLinnMuehlegger2014">(<a href="#ref-LiLinnMuehlegger2014" role="doc-biblioref">Li et al. 2014</a>)</span>, about 8 in Germany’s eco-tax time series <span class="citation" data-cites="Basaglia2023">(<a href="#ref-Basaglia2023" role="doc-biblioref">Basaglia et al. 2023</a>)</span>, and about 2 in Switzerland <span class="citation" data-cites="Francescutto2022">(<a href="#ref-Francescutto2022" role="doc-biblioref">Francescutto and Mathys 2022</a>)</span>. Explanations include salience, the expectation that taxes persist while market prices revert, and publicity. Part of the gap is an artifact: buying ahead of announced tax rises inflates tax-based estimates <span class="citation" data-cites="Coglianese2017">(<a href="#ref-Coglianese2017" role="doc-biblioref">Coglianese et al. 2017</a>)</span>, and a more efficient estimator halves the Swedish coefficients <span class="citation" data-cites="Yu2024">(<a href="#ref-Yu2024" role="doc-biblioref">Yu 2024</a>)</span>. The gap also fades: British Columbia’s extra response appeared only in the tax’s first years <span class="citation" data-cites="ErutkuHildebrand2018">(<a href="#ref-ErutkuHildebrand2018" role="doc-biblioref">Erutku and Hildebrand 2018</a>)</span>.</p>
+<p><strong>Proposition 4. The cut per dollar is smallest for short, very large shocks and for prices too low to notice.</strong> Germany’s 2022 gas shock and Indonesia’s subsidy reform raised prices by 89 to 480 percent and cut use by 10 to 28 percent, under 2 percent per US$10. Over months or a year or two, households and firms can turn down thermostats and drive less but cannot yet replace boilers, cars or furnaces. At the other end, Switzerland’s levy had no measurable effect on owners’ heating fuel at CHF 12–36, when it was 3 to 12 percent of the price, and a clear one at CHF 60–84 <span class="citation" data-cites="Francescutto2022">(<a href="#ref-Francescutto2022" role="doc-biblioref">Francescutto and Mathys 2022</a>)</span>.</p>
+<p><strong>Proposition 5. Effects on total emissions are smaller than on covered fuels, because coverage is partial and design leaks.</strong> British Columbia cut transport emissions but not, measurably, the provincial total <span class="citation" data-cites="Pretis2022">(<a href="#ref-Pretis2022" role="doc-biblioref">Pretis 2022</a>)</span>. Sweden offset its 2001–2004 motor-fuel tax rise with energy-tax cuts, and the transport gap barely widened <span class="citation" data-cites="Andersson2019">(<a href="#ref-Andersson2019" role="doc-biblioref">Andersson 2019</a>)</span>. Germany’s 2022 gas cut was largely undone by coal in power and by imports of gas-intensive goods <span class="citation" data-cites="Moll2023 UBA2024Emissions">(<a href="#ref-Moll2023" role="doc-biblioref">Moll et al. 2023</a>; <a href="#ref-UBA2024Emissions" role="doc-biblioref">Umweltbundesamt 2024</a>)</span>. Britain’s cut was partly offset by electricity imports <span class="citation" data-cites="Leroutier2022">(<a href="#ref-Leroutier2022" role="doc-biblioref">Leroutier 2022</a>)</span>. Norway, where the tax covered about 64 percent of CO₂ and demand in the taxed sectors was inelastic, cut emissions by only about 2 percent (<a href="#tbl-others" class="quarto-xref">Table&nbsp;13</a>).</p>
+<section id="sec-others" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="sec-others"><span class="header-section-number">5.1</span> Cases left out, and why</h2>
+<p><strong>Eleven further episodes were examined and left out of the main set because their evidence is thinner, model-based or confounded.</strong> <a href="#tbl-others" class="quarto-xref">Table&nbsp;13</a> lists them with their numbers. Most point the same way as the ten. Australia’s carbon price (2012–2014) is the most informative omission: an unrefereed working paper credits it with a 3.2 to 5.6 percent annual cut in power-sector emissions, and emissions rose after it was repealed.</p>
+<div id="tbl-others" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-others-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;13: Eleven further episodes mostly point the same way but rest on weaker evidence. Iran and Nigeria figures are from administrative data reported in the press (research notes).
+</figcaption>
+<div aria-describedby="tbl-others-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 22%">
+<col style="width: 38%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Episode</th>
+<th>Sector and price</th>
+<th>Evidence</th>
+<th>Why not in the main set</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Finland, 1990 carbon tax</td>
+<td>Transport; US$1.75/t (1990) to US$23 (2005)</td>
+<td>Transport CO₂ 16% lower in 1995, 25% in 2000, 30% in 2004 <span class="citation" data-cites="Mideksa2024">(<a href="#ref-Mideksa2024" role="doc-biblioref">Mideksa 2024</a>)</span></td>
+<td>Replication finds the effect driven by one donor country and about a third as large without it <span class="citation" data-cites="Fernando2026">(<a href="#ref-Fernando2026" role="doc-biblioref">Fernando 2026</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Norway, 1991 carbon tax</td>
+<td>Most sectors; average US$21/t, US$51 on petrol (1999)</td>
+<td>CO₂ 2.3% lower in 1999 <span class="citation" data-cites="BruvollLarsen2004">(<a href="#ref-BruvollLarsen2004" role="doc-biblioref">Bruvoll and Larsen 2004</a>)</span>; transport about 2.4%, not significant <span class="citation" data-cites="Yu2024">(<a href="#ref-Yu2024" role="doc-biblioref">Yu 2024</a>)</span></td>
+<td>Model-based counterfactual; wide exemptions</td>
+</tr>
+<tr class="odd">
+<td>Australia, 2012–2014 carbon price</td>
+<td>Power and large industry; A$23–24.15/t</td>
+<td>Power-sector CO₂ 3.2–5.6% a year lower, 11–17 Mt over two years; household electricity prices +10%, wholesale +59% <span class="citation" data-cites="OGormanJotzo2014">(<a href="#ref-OGormanJotzo2014" role="doc-biblioref">O’Gorman and Jotzo 2014</a>)</span>; consumer electricity prices +15.3% in the quarter it began <span class="citation" data-cites="ABSCPISep2012">(<a href="#ref-ABSCPISep2012" role="doc-biblioref">Australian Bureau of Statistics 2012</a>)</span>; pass-through to spot prices largely complete <span class="citation" data-cites="Nazifi2021">(<a href="#ref-Nazifi2021" role="doc-biblioref">Nazifi et al. 2021</a>)</span></td>
+<td>Emission estimate from one unrefereed working paper</td>
+</tr>
+<tr class="even">
+<td>Britain, fuel duty escalator, 1993–1999</td>
+<td>Road transport</td>
+<td>Transport CO₂ 0.35 t per person a year lower; p about 0.07 <span class="citation" data-cites="BretschgerGrieg2024">(<a href="#ref-BretschgerGrieg2024" role="doc-biblioref">Bretschger and Grieg 2024</a>)</span></td>
+<td>One study; weak comparison group; duty rates not documented here</td>
+</tr>
+<tr class="odd">
+<td>Regional Greenhouse Gas Initiative, 2009</td>
+<td>Power, north-eastern United States; about US$2–4/t</td>
+<td>Emissions would have been 24% higher without it <span class="citation" data-cites="MurrayManiloff2015">(<a href="#ref-MurrayManiloff2015" role="doc-biblioref">B. C. Murray and Maniloff 2015</a>)</span></td>
+<td>Price too low to isolate a price effect; revenue spent on efficiency</td>
+</tr>
+<tr class="even">
+<td>France, 2014–2018 carbon tax</td>
+<td>Fossil fuels outside the EU ETS (road fuels from 2015); €7/t (2014) to €44.6 (2018)</td>
+<td>Manufacturing CO₂ about 5% lower over 2014–2018 <span class="citation" data-cites="Dussaux2020">(<a href="#ref-Dussaux2020" role="doc-biblioref">Dussaux 2020</a>)</span></td>
+<td>Working paper read only in summary; no ex post household study; oil price falls masked the signal</td>
+</tr>
+<tr class="odd">
+<td>Saudi Arabia, 2016 and 2018</td>
+<td>Gasoline, residential electricity; gasoline equivalent US$35–132/t</td>
+<td>2018 gasoline 2.0–2.8 billion litres lower (4.6–6.4 Mt CO₂); residential electricity 139 to 130 TWh <span class="citation" data-cites="AldubyanGasim2021">(<a href="#ref-AldubyanGasim2021" role="doc-biblioref">Aldubyan and Gasim 2021</a>)</span>; 164 Mt over 2016–2018 <span class="citation" data-cites="Gasim2023">(<a href="#ref-Gasim2023" role="doc-biblioref">Gasim et al. 2023</a>)</span></td>
+<td>Counterfactual from an estimated demand model</td>
+</tr>
+<tr class="even">
+<td>Iran, 2019 gasoline price rise</td>
+<td>Gasoline; price +50% within quota, +200% above</td>
+<td>Sales reportedly −22% in three weeks</td>
+<td>Administrative data only; rationing introduced at the same time</td>
+</tr>
+<tr class="odd">
+<td>Nigeria, 2023 subsidy removal</td>
+<td>Petrol; subsidy removed May 2023</td>
+<td>Depot loadings −30% to −35%</td>
+<td>Loadings, not use; reduced smuggling</td>
+</tr>
+<tr class="even">
+<td>Germany, 2021 national emissions trading</td>
+<td>Heating and transport fuels; €25/t (2021) to €55 (2025)</td>
+<td>None ex post</td>
+<td>The official evaluation calls an ex post estimate infeasible <span class="citation" data-cites="UBA2024BEHG">(<a href="#ref-UBA2024BEHG" role="doc-biblioref">Zerzawy et al. 2024</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Ireland, 2010 carbon tax</td>
+<td>Heating and transport fuels; €15–20/t</td>
+<td>None ex post found</td>
+<td>No counterfactual study; deep recession</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+</section>
+<section id="sec-objections" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> The strongest objections</h1>
+<p><strong>Objection: each case has one treated unit, so the effects could be chance.</strong> Synthetic-control studies of a single country cannot produce conventional confidence intervals, and their placebo p-values bottom out at about 0.07 <span class="citation" data-cites="Andersson2019 Leroutier2022">(<a href="#ref-Andersson2019" role="doc-biblioref">Andersson 2019</a>; <a href="#ref-Leroutier2022" role="doc-biblioref">Leroutier 2022</a>)</span>. The answer is replication across cases and methods. Ten cases in different sectors, countries and decades, analyzed with synthetic control, matched difference-in-differences, instrumental variables and regression discontinuity, all point the same way, which chance alone would rarely produce even if each estimate alone is marginal.</p>
+<p><strong>Objection: published estimates are biased toward large effects.</strong> They are. <span class="citation" data-cites="DobbelingHildebrandt2024">Döbbeling-Hildebrandt et al. (<a href="#ref-DobbelingHildebrandt2024" role="doc-biblioref">2024</a>)</span> find that correcting for publication bias lowers the range of significant scheme-level effects from 5–21 percent to 4–15 percent, and paper 5.4 shows that correction halves the average published long-run gasoline elasticity <span class="citation" data-cites="AuthorWP54">(<a href="#ref-AuthorWP54" role="doc-biblioref">Author 2026a</a>)</span>. The ranges here should be read as upper-middle estimates. The direction is unaffected, and the cases most exposed to the bias, single-country synthetic controls, have been reproduced independently <span class="citation" data-cites="Bonander2023 Yu2024">(<a href="#ref-Bonander2023" role="doc-biblioref">Bonander et al. 2023</a>; <a href="#ref-Yu2024" role="doc-biblioref">Yu 2024</a>)</span>.</p>
+<p><strong>Objection: something else happened at the same time.</strong> Recessions coincided with Sweden’s tax (1991–1993), the EU system’s Phase II (2008–2009) and British Columbia’s tax (2008–2009). Oil prices swung in all the transport cases, and other policies ran alongside the Swiss levy and Britain’s floor. The better studies address each: Andersson finds no rebound when Swedish output recovered; <span class="citation" data-cites="BayerAklin2020">Bayer and Aklin (<a href="#ref-BayerAklin2020" role="doc-biblioref">2020</a>)</span> estimate effects on top of the recession’s; <span class="citation" data-cites="Pretis2022">Pretis (<a href="#ref-Pretis2022" role="doc-biblioref">2022</a>)</span> controls for provincial output; the Swiss evaluation nets out the building programme <span class="citation" data-cites="FOEN2018">(<a href="#ref-FOEN2018" role="doc-biblioref">Federal Office for the Environment 2018</a>)</span>; and <span class="citation" data-cites="Leroutier2022">Leroutier (<a href="#ref-Leroutier2022" role="doc-biblioref">2022</a>)</span> subtracts biomass conversions, renewables support and imports. What remains is imprecise, not absent.</p>
+<p><strong>Objection: some counterfactuals are models, not experiments.</strong> Switzerland’s official estimate and Indonesia’s estimates apply estimated elasticities to observed prices. That is a weaker design. The paper keeps them because each is backed by a peer-reviewed micro study with a design-based result: survey evidence for Swiss owners <span class="citation" data-cites="Francescutto2022">(<a href="#ref-Francescutto2022" role="doc-biblioref">Francescutto and Mathys 2022</a>)</span> and a panel identified from the timing of price changes in Indonesia <span class="citation" data-cites="BurkeKurniawati2018 Burke2017">(<a href="#ref-BurkeKurniawati2018" role="doc-biblioref">Burke and Kurniawati 2018</a>; <a href="#ref-Burke2017" role="doc-biblioref">Burke et al. 2017</a>)</span>.</p>
+</section>
+<section id="sec-models" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> What the cases imply for models such as CPAT</h1>
+<p><strong>The ex post evidence supports CPAT’s long-run response for road fuels and suggests its response for home heating is too high.</strong> CPAT’s default long-run price elasticity is −0.64 for gasoline in transport and −0.70 for natural gas in homes in low- and middle-income countries <span class="citation" data-cites="AuthorWP54">(<a href="#ref-AuthorWP54" role="doc-biblioref">Author 2026a</a>)</span>. The transport cases imply about −0.4 to −0.7 over five to fifteen years, so CPAT sits inside the range. At a pump price of US$1.20 a litre and 2.3 kg of CO₂ a litre, a US$10 carbon price adds 1.9 percent, which at −0.64 cuts use by 1.2 percent, within the 0.8 to 2.0 percent per US$10 of the German, Swedish and United States cases. The heating cases imply −0.15 to −0.45 after eight to nine years in Switzerland and about −0.4 for natural gas in British Columbia, below CPAT’s −0.70. Heating equipment lasts decades, so the full long-run response may be larger than these horizons show; but the evidence gives no support for a higher value.</p>
+<p><strong>The timing of the response matters as much as its size.</strong> Paper 5.4 finds that CPAT applies the full long-run response in the first year <span class="citation" data-cites="AuthorWP54">(<a href="#ref-AuthorWP54" role="doc-biblioref">Author 2026a</a>)</span>. The natural experiments show responses that build over years: German fuel use fell only after three to four years, Swiss households responded only once the levy had risen and stayed up, and British Columbia’s long-run transport effect is four times its short-run effect. A model that front-loads the response will overstate early cuts and understate early revenue.</p>
+<p><strong>Coal-to-gas switching in power needs its own treatment.</strong> The British and EU cases show that a modest price can cut power emissions by a fifth when gas capacity is available. A model with only own-price demand elasticities will miss that, and a model that lets switching happen regardless of spare capacity will overstate it elsewhere. Each case in <a href="#sec-cases" class="quarto-xref">Section&nbsp;4</a> can serve as a back-cast test, the procedure paper 5.3 recommends <span class="citation" data-cites="AuthorWP53">(<a href="#ref-AuthorWP53" role="doc-biblioref">Author 2026b</a>)</span>: give the model the pre-policy data and the observed price path, and compare its predicted cut with the measured one.</p>
+</section>
+<section id="sec-policy" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Policy implications</h1>
+<p><strong>Plan on about 1 to 2 percent fewer emissions per US$10 a tonne in transport and buildings, building up over a decade.</strong> A sustained carbon price of US$50 a tonne on road fuels and heating should cut emissions from those fuels by roughly 5 to 10 percent within ten years. That is enough to matter and not enough on its own to reach net zero. Revenue erodes slowly, which helps the budget.</p>
+<p><strong>Expect much larger, faster cuts in power where cleaner capacity already exists.</strong> In a system with idle gas or renewable capacity and expensive coal, a price of US$20 to 40 a tonne can cut power-sector emissions by a fifth within five years, as in Britain. Where no substitute exists, the same price mostly raises tariffs.</p>
+<p><strong>Do not undo the price with the other hand.</strong> Sweden’s offsetting energy-tax cuts on petrol in 2001–2004, Germany’s switch to coal in power in 2022 and Norway’s exemptions all diluted the effect. The price should cover the fuels that can be substituted against each other: a price on gas without one on coal can raise emissions.</p>
+<p><strong>Make the path credible and visible.</strong> Responses were larger to taxes than to market prices, larger where the rise was expected to last, and absent where the price was too small to notice. A published, rising schedule, like Switzerland’s automatic increases, does more than an unannounced change of the same size. Subsidy reform counts too: Indonesia’s price rises cut electricity use and traffic within two years.</p>
+<p><strong>The conditions under which these numbers fail.</strong> They come from high- and upper-middle-income economies with mature fuel markets, plus one developing economy. In countries with weak pass-through, large informal fuel markets or heavy smuggling, measured cuts may overstate real ones, as the Nigerian and Iranian figures in <a href="#tbl-others" class="quarto-xref">Table&nbsp;13</a> show.</p>
+</section>
+<section id="sec-conclusion" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Conclusion</h1>
+<p><strong>Carbon prices have cut emissions wherever they have been properly measured, by amounts that a ministry can plan around.</strong> Ten natural experiments, from Sweden in 1991 to Germany in 2022, show cuts of about 1 to 2 percent per US$10 a tonne in transport and heating over five to fifteen years, and several times more in power where coal could give way to gas. The main limitation is that most cases are single countries with one treated unit, so each estimate is imprecise and the yardstick per dollar is rough. The next step is to back-cast these cases in CPAT and in other models used for policy advice. That would show, fuel by fuel, whether the models’ responses match what happened, and would extend the evidence to the much higher prices of the EU trading system since 2021, British Columbia’s C$80 tax and its 2025 removal, which no one has yet evaluated.</p>
+</section>
+<section id="downloads" class="level1 unnumbered">
+<h1 class="unnumbered">Downloads</h1>
+<p><a href="../../../papers/Brief-CarbonPriceNaturalExperiments.pdf">Policy brief (pdf)</a> · <a href="../../../papers/CarbonPriceNaturalExperiments.pdf">Working paper (pdf)</a></p>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Abrell2022" class="csl-entry" role="listitem">
+Abrell, Jan, Mirjam Kosch, and Sebastian Rausch. 2022. <span>“How Effective Is Carbon Pricing? <span>A</span> Machine Learning Approach to Policy Evaluation.”</span> <em>Journal of Environmental Economics and Management</em> 112: 102589. <a href="https://doi.org/10.1016/j.jeem.2021.102589">https://doi.org/10.1016/j.jeem.2021.102589</a>.
+</div>
+<div id="ref-ADACFuelPrices" class="csl-entry" role="listitem">
+ADAC. n.d. <em><span class="nocase">Entwicklung der Kraftstoffpreise</span> (Annual Average Pump Prices, 1950–2004)</em>. Table reproduced by Autoflotte.
+</div>
+<div id="ref-AldubyanGasim2021" class="csl-entry" role="listitem">
+Aldubyan, Mohammad, and Anwar Gasim. 2021. <span>“Energy Price Reform in <span>Saudi Arabia</span>: Modeling the Economic and Environmental Impacts and Understanding the Demand Response.”</span> <em>Energy Policy</em> 148: 111941. <a href="https://doi.org/10.1016/j.enpol.2020.111941">https://doi.org/10.1016/j.enpol.2020.111941</a>.
+</div>
+<div id="ref-Andersson2017WP" class="csl-entry" role="listitem">
+Andersson, Julius J. 2017. <em>Cars, Carbon Taxes and <span>CO2</span> Emissions</em>. Working Paper No. 212. Grantham Research Institute on Climate Change; the Environment.
+</div>
+<div id="ref-Andersson2019" class="csl-entry" role="listitem">
+Andersson, Julius J. 2019. <span>“Carbon Taxes and <span>CO2</span> Emissions: <span>Sweden</span> as a Case Study.”</span> <em>American Economic Journal: Economic Policy</em> 11 (4): 1–30. <a href="https://doi.org/10.1257/pol.20170144">https://doi.org/10.1257/pol.20170144</a>.
+</div>
+<div id="ref-ArcilaBaker2022" class="csl-entry" role="listitem">
+Arcila, Andres, and Justin D. Baker. 2022. <span>“Evaluating Carbon Tax Policy: A Methodological Reassessment of a Natural Experiment.”</span> <em>Energy Economics</em> 111: 106053. <a href="https://doi.org/10.1016/j.eneco.2022.106053">https://doi.org/10.1016/j.eneco.2022.106053</a>.
+</div>
+<div id="ref-ABSCPISep2012" class="csl-entry" role="listitem">
+Australian Bureau of Statistics. 2012. <em>Consumer Price Index, <span>Australia</span>, <span>September</span> Quarter 2012 (6401.0)</em>.
+</div>
+<div id="ref-AuthorWP54" class="csl-entry" role="listitem">
+Author. 2026a. <span>“Are <span>CPAT</span>’s Price Elasticities Right? A Check Against the Evidence.”</span> Unpublished manuscript.
+</div>
+<div id="ref-AuthorWP53" class="csl-entry" role="listitem">
+Author. 2026b. <span>“Validating <span>CPAT</span>: Baselines, Back-Casts and Model Comparisons.”</span> Unpublished manuscript.
+</div>
+<div id="ref-Basaglia2023" class="csl-entry" role="listitem">
+Basaglia, Pier, Sophie M. Behr, and Moritz A. Drupp. 2023. <em>De-Fueling Externalities: How Tax Salience and Fuel Substitution Mediate Climate and Health Benefits</em>. Discussion Paper No. 2041. DIW Berlin.
+</div>
+<div id="ref-BayerAklin2020" class="csl-entry" role="listitem">
+Bayer, Patrick, and Michaël Aklin. 2020. <span>“The <span>European Union</span> Emissions Trading System Reduced <span>CO2</span> Emissions Despite Low Prices.”</span> <em>Proceedings of the National Academy of Sciences</em> 117 (16): 8804–12. <a href="https://doi.org/10.1073/pnas.1918128117">https://doi.org/10.1073/pnas.1918128117</a>.
+</div>
+<div id="ref-BernardKichian2019" class="csl-entry" role="listitem">
+Bernard, Jean-Thomas, and Maral Kichian. 2019. <span>“The Long and Short Run Effects of <span>British Columbia</span>’s Carbon Tax on Diesel Demand.”</span> <em>Energy Policy</em> 131: 380–89. <a href="https://doi.org/10.1016/j.enpol.2019.04.021">https://doi.org/10.1016/j.enpol.2019.04.021</a>.
+</div>
+<div id="ref-Bonander2023" class="csl-entry" role="listitem">
+Bonander, Carl, Niklas Jakobsson, and Niclas Johansson. 2023. <em>Reproduction and Replication Analyses of <span>Andersson</span> (2019): A Replication Report from the <span>Toronto</span> Replication Games</em>. I4R Discussion Paper No. 26. Institute for Replication.
+</div>
+<div id="ref-BretschgerGrieg2024" class="csl-entry" role="listitem">
+Bretschger, Lucas, and Elise Grieg. 2024. <span>“Carbon Taxes, <span>CO2</span> Emissions, and the Economy: The Effects of Fuel Taxation in the <span>UK</span>.”</span> <em>Energy Policy</em> 195: 114359. <a href="https://doi.org/10.1016/j.enpol.2024.114359">https://doi.org/10.1016/j.enpol.2024.114359</a>.
+</div>
+<div id="ref-BruvollLarsen2004" class="csl-entry" role="listitem">
+Bruvoll, Annegrete, and Bodil Merethe Larsen. 2004. <span>“Greenhouse Gas Emissions in <span>Norway</span>: Do Carbon Taxes Work?”</span> <em>Energy Policy</em> 32 (4): 493–505. <a href="https://doi.org/10.1016/S0301-4215(03)00151-4">https://doi.org/10.1016/S0301-4215(03)00151-4</a>.
+</div>
+<div id="ref-Burke2017" class="csl-entry" role="listitem">
+Burke, Paul J., Telmen Batsuuri, and Muhammad Halley Yudhistira. 2017. <span>“Easing the Traffic: The Effects of <span>Indonesia</span>’s Fuel Subsidy Reforms on Toll-Road Travel.”</span> <em>Transportation Research Part A: Policy and Practice</em> 105: 167–80. <a href="https://doi.org/10.1016/j.tra.2017.08.003">https://doi.org/10.1016/j.tra.2017.08.003</a>.
+</div>
+<div id="ref-BurkeKurniawati2018" class="csl-entry" role="listitem">
+Burke, Paul J., and Sandra Kurniawati. 2018. <span>“Electricity Subsidy Reform in <span>Indonesia</span>: Demand-Side Effects on Electricity Use.”</span> <em>Energy Policy</em> 116: 410–21. <a href="https://doi.org/10.1016/j.enpol.2018.02.018">https://doi.org/10.1016/j.enpol.2018.02.018</a>.
+</div>
+<div id="ref-Coglianese2017" class="csl-entry" role="listitem">
+Coglianese, John, Lucas W. Davis, Lutz Kilian, and James H. Stock. 2017. <span>“Anticipation, Tax Avoidance, and the Price Elasticity of Gasoline Demand.”</span> <em>Journal of Applied Econometrics</em> 32 (1): 1–15. <a href="https://doi.org/10.1002/jae.2500">https://doi.org/10.1002/jae.2500</a>.
+</div>
+<div id="ref-Colmer2025" class="csl-entry" role="listitem">
+Colmer, Jonathan, Ralf Martin, Mirabelle Muûls, and Ulrich J. Wagner. 2025. <span>“Does Pricing Carbon Mitigate Climate Change? <span>Firm</span>-Level Evidence from the <span>European Union</span> Emissions Trading System.”</span> <em>Review of Economic Studies</em> 92 (3): 1625–60. <a href="https://doi.org/10.1093/restud/rdae055">https://doi.org/10.1093/restud/rdae055</a>.
+</div>
+<div id="ref-DavisKilian2011" class="csl-entry" role="listitem">
+Davis, Lucas W., and Lutz Kilian. 2011. <span>“Estimating the Effect of a Gasoline Tax on Carbon Emissions.”</span> <em>Journal of Applied Econometrics</em> 26 (7): 1187–214. <a href="https://doi.org/10.1002/jae.1156">https://doi.org/10.1002/jae.1156</a>.
+</div>
+<div id="ref-Dechezlepretre2023" class="csl-entry" role="listitem">
+Dechezleprêtre, Antoine, Daniel Nachtigall, and Frank Venmans. 2023. <span>“The Joint Impact of the <span>European Union</span> Emissions Trading System on Carbon Emissions and Economic Performance.”</span> <em>Journal of Environmental Economics and Management</em> 118: 102758. <a href="https://doi.org/10.1016/j.jeem.2022.102758">https://doi.org/10.1016/j.jeem.2022.102758</a>.
+</div>
+<div id="ref-BEISDukes2017" class="csl-entry" role="listitem">
+Department for Business, Energy and Industrial Strategy. 2017. <em>Digest of <span>UK</span> Energy Statistics 2017: Press Notice</em>.
+</div>
+<div id="ref-DobbelingHildebrandt2024" class="csl-entry" role="listitem">
+Döbbeling-Hildebrandt, Niklas, Klaas Miersch, Tarun M. Khanna, et al. 2024. <span>“Systematic Review and Meta-Analysis of Ex-Post Evaluations on the Effectiveness of Carbon Pricing.”</span> <em>Nature Communications</em> 15: 4147. <a href="https://doi.org/10.1038/s41467-024-48512-w">https://doi.org/10.1038/s41467-024-48512-w</a>.
+</div>
+<div id="ref-Dussaux2020" class="csl-entry" role="listitem">
+Dussaux, Damien. 2020. <em>The Joint Effects of Energy Prices and Carbon Taxes on Environmental and Economic Performance: Evidence from the <span>French</span> Manufacturing Sector</em>. OECD Environment Working Papers No. 154. OECD Publishing. <a href="https://doi.org/10.1787/b84b1b7d-en">https://doi.org/10.1787/b84b1b7d-en</a>.
+</div>
+<div id="ref-ErutkuHildebrand2018" class="csl-entry" role="listitem">
+Erutku, Can, and Vincent Hildebrand. 2018. <span>“Carbon Tax at the Pump in <span>British Columbia</span> and <span>Quebec</span>.”</span> <em>Canadian Public Policy</em> 44 (2): 126–33. <a href="https://doi.org/10.3138/cpp.2017-027">https://doi.org/10.3138/cpp.2017-027</a>.
+</div>
+<div id="ref-Fauceglia2020" class="csl-entry" role="listitem">
+Fauceglia, Dario, Tobias Müller, Thomas Leu, and Regina Betz. 2020. <em>How Do Firms Respond to a Rising Carbon Tax?</em> Working Paper WP3-2020/02. SCCER CREST.
+</div>
+<div id="ref-FOEN2018" class="csl-entry" role="listitem">
+Federal Office for the Environment. 2018. <em>Fact Sheet on the Impact Assessment and Evaluation of the <span>CO2</span> Levy on Thermal Fuels</em>. Federal Office for the Environment (FOEN).
+</div>
+<div id="ref-Fernando2026" class="csl-entry" role="listitem">
+Fernando, S. 2026. <em>Are the Effects of <span>Finland</span>’s Carbon Tax on Transport Emissions Robust to Donor Pool Composition?</em> I4R Discussion Paper No. 317. Institute for Replication.
+</div>
+<div id="ref-Francescutto2022" class="csl-entry" role="listitem">
+Francescutto, Nicola, and Nicole A. Mathys. 2022. <span>“The Effect of the <span>Swiss</span> <span>CO2</span> Levy on Heating Fuel Demand of Private Real Estate Owners.”</span> <em>Energies</em> 15 (9): 3019. <a href="https://doi.org/10.3390/en15093019">https://doi.org/10.3390/en15093019</a>.
+</div>
+<div id="ref-Gasim2023" class="csl-entry" role="listitem">
+Gasim, Anwar A., Paolo Agnolucci, Paul Ekins, and Vincenzo De Lipsis. 2023. <span>“Modeling Final Energy Demand and the Impacts of Energy Price Reform in <span>Saudi Arabia</span>.”</span> <em>Energy Economics</em> 120: 106589. <a href="https://doi.org/10.1016/j.eneco.2023.106589">https://doi.org/10.1016/j.eneco.2023.106589</a>.
+</div>
+<div id="ref-BCCarbonTaxRates" class="csl-entry" role="listitem">
+Government of British Columbia. 2025. <em>Carbon Tax Rates by Fuel Type; Past Carbon Tax Rates</em>. Ministry of Finance web pages.
+</div>
+<div id="ref-SwedenMoF2023" class="csl-entry" role="listitem">
+Government Offices of Sweden, Ministry of Finance. 2023. <em>Carbon Taxation in <span>Sweden</span></em>. Presentation slides.
+</div>
+<div id="ref-Green2021" class="csl-entry" role="listitem">
+Green, Jessica F. 2021. <span>“Does Carbon Pricing Reduce Emissions? A Review of Ex-Post Analyses.”</span> <em>Environmental Research Letters</em> 16 (4): 043004. <a href="https://doi.org/10.1088/1748-9326/abdae9">https://doi.org/10.1088/1748-9326/abdae9</a>.
+</div>
+<div id="ref-Gugler2021" class="csl-entry" role="listitem">
+Gugler, Klaus, Adhurim Haxhimusa, and Mario Liebensteiner. 2021. <span>“Effectiveness of Climate Policies: Carbon Pricing Vs. Subsidizing Renewables.”</span> <em>Journal of Environmental Economics and Management</em> 106: 102405. <a href="https://doi.org/10.1016/j.jeem.2020.102405">https://doi.org/10.1016/j.jeem.2020.102405</a>.
+</div>
+<div id="ref-Gugler2023" class="csl-entry" role="listitem">
+Gugler, Klaus, Adhurim Haxhimusa, and Mario Liebensteiner. 2023. <span>“Carbon Pricing and Emissions: Causal Effects of <span>Britain</span>’s Carbon Tax.”</span> <em>Energy Economics</em> 121: 106655. <a href="https://doi.org/10.1016/j.eneco.2023.106655">https://doi.org/10.1016/j.eneco.2023.106655</a>.
+</div>
+<div id="ref-HammarAkerfeldt2011" class="csl-entry" role="listitem">
+Hammar, Henrik, and Susanne Åkerfeldt. 2011. <em><span>CO2</span> Taxation in <span>Sweden</span>: 20 Years of Experience and Looking Ahead</em>. Swedish Ministry of Finance.
+</div>
+<div id="ref-HMT2026CPS" class="csl-entry" role="listitem">
+HM Treasury. 2026. <em>Carbon Price Support</em>. Written ministerial statement, House of Commons, 16 April 2026.
+</div>
+<div id="ref-LawleyThivierge2018" class="csl-entry" role="listitem">
+Lawley, Chad, and Vincent Thivierge. 2018. <span>“Refining the Evidence: <span>British Columbia</span>’s Carbon Tax and Household Gasoline Consumption.”</span> <em>The Energy Journal</em> 39 (2): 147–72. <a href="https://doi.org/10.5547/01956574.39.2.claw">https://doi.org/10.5547/01956574.39.2.claw</a>.
+</div>
+<div id="ref-Leroutier2022" class="csl-entry" role="listitem">
+Leroutier, Marion. 2022. <span>“Carbon Pricing and Power Sector Decarbonization: Evidence from the <span>UK</span>.”</span> <em>Journal of Environmental Economics and Management</em> 111: 102580. <a href="https://doi.org/10.1016/j.jeem.2021.102580">https://doi.org/10.1016/j.jeem.2021.102580</a>.
+</div>
+<div id="ref-LiLinnMuehlegger2014" class="csl-entry" role="listitem">
+Li, Shanjun, Joshua Linn, and Erich Muehlegger. 2014. <span>“Gasoline Taxes and Consumer Behavior.”</span> <em>American Economic Journal: Economic Policy</em> 6 (4): 302–42. <a href="https://doi.org/10.1257/pol.6.4.302">https://doi.org/10.1257/pol.6.4.302</a>.
+</div>
+<div id="ref-Mideksa2024" class="csl-entry" role="listitem">
+Mideksa, Torben K. 2024. <span>“Pricing for a Cooler Planet: An Empirical Analysis of the Effect of Taxing Carbon.”</span> <em>Journal of Environmental Economics and Management</em> 127: 103034. <a href="https://doi.org/10.1016/j.jeem.2024.103034">https://doi.org/10.1016/j.jeem.2024.103034</a>.
+</div>
+<div id="ref-Moll2023" class="csl-entry" role="listitem">
+Moll, Benjamin, Moritz Schularick, and Georg Zachmann. 2023. <span>“The Power of Substitution: The Great <span>German</span> Gas Debate in Retrospect.”</span> <em>Brookings Papers on Economic Activity</em> 2023 (Fall).
+</div>
+<div id="ref-MurrayManiloff2015" class="csl-entry" role="listitem">
+Murray, Brian C., and Peter T. Maniloff. 2015. <span>“Why Have Greenhouse Emissions in <span>RGGI</span> States Declined? <span>An</span> Econometric Attribution to Economic, Energy Market, and Policy Factors.”</span> <em>Energy Economics</em> 51: 581–89. <a href="https://doi.org/10.1016/j.eneco.2015.07.013">https://doi.org/10.1016/j.eneco.2015.07.013</a>.
+</div>
+<div id="ref-MurrayRivers2015" class="csl-entry" role="listitem">
+Murray, Brian, and Nicholas Rivers. 2015. <span>“<span>British Columbia</span>’s Revenue-Neutral Carbon Tax: A Review of the Latest <span>‘Grand Experiment’</span> in Environmental Policy.”</span> <em>Energy Policy</em> 86: 674–83. <a href="https://doi.org/10.1016/j.enpol.2015.08.011">https://doi.org/10.1016/j.enpol.2015.08.011</a>.
+</div>
+<div id="ref-Nazifi2021" class="csl-entry" role="listitem">
+Nazifi, Fatemeh, Stefan Trück, and Liangxu Zhu. 2021. <span>“Carbon Pass-Through Rates on Spot Electricity Prices in <span>Australia</span>.”</span> <em>Energy Economics</em> 96: 105178. <a href="https://doi.org/10.1016/j.eneco.2021.105178">https://doi.org/10.1016/j.eneco.2021.105178</a>.
+</div>
+<div id="ref-OGormanJotzo2014" class="csl-entry" role="listitem">
+O’Gorman, Marianna, and Frank Jotzo. 2014. <em>Impact of the Carbon Price on <span>Australia</span>’s Electricity Demand, Supply and Emissions</em>. CCEP Working Paper No. 1411. Centre for Climate Economics; Policy, Australian National University.
+</div>
+<div id="ref-OttWeber2022" class="csl-entry" role="listitem">
+Ott, Laurent, and Sylvain Weber. 2022. <span>“How Effective Is Carbon Taxation on Residential Heating Demand? <span>A</span> Household-Level Analysis.”</span> <em>Energy Policy</em> 160: 112698. <a href="https://doi.org/10.1016/j.enpol.2021.112698">https://doi.org/10.1016/j.enpol.2021.112698</a>.
+</div>
+<div id="ref-Pretis2022" class="csl-entry" role="listitem">
+Pretis, Felix. 2022. <span>“Does a Carbon Tax Reduce <span>CO2</span> Emissions? Evidence from <span>British Columbia</span>.”</span> <em>Environmental and Resource Economics</em> 83 (1): 115–44. <a href="https://doi.org/10.1007/s10640-022-00679-w">https://doi.org/10.1007/s10640-022-00679-w</a>.
+</div>
+<div id="ref-RiversSchaufele2015" class="csl-entry" role="listitem">
+Rivers, Nicholas, and Brandon Schaufele. 2015. <span>“Salience of Carbon Taxes in the Gasoline Market.”</span> <em>Journal of Environmental Economics and Management</em> 74: 23–36. <a href="https://doi.org/10.1016/j.jeem.2015.07.002">https://doi.org/10.1016/j.jeem.2015.07.002</a>.
+</div>
+<div id="ref-Ruhnau2023" class="csl-entry" role="listitem">
+Ruhnau, Oliver, Clemens Stiewe, Jarusch Muessel, and Lion Hirth. 2023. <span>“Natural Gas Savings in <span>Germany</span> During the 2022 Energy Crisis.”</span> <em>Nature Energy</em> 8 (6): 621–28. <a href="https://doi.org/10.1038/s41560-023-01260-5">https://doi.org/10.1038/s41560-023-01260-5</a>.
+</div>
+<div id="ref-RunstHohle2022" class="csl-entry" role="listitem">
+Runst, Petrik, and David Höhle. 2022. <span>“The <span>German</span> Eco Tax and Its Impact on <span>CO2</span> Emissions.”</span> <em>Energy Policy</em> 160: 112655. <a href="https://doi.org/10.1016/j.enpol.2021.112655">https://doi.org/10.1016/j.enpol.2021.112655</a>.
+</div>
+<div id="ref-RunstThonipara2020" class="csl-entry" role="listitem">
+Runst, Petrik, and Anita Thonipara. 2020. <span>“Dosis Facit Effectum: Why the Size of the Carbon Tax Matters: Evidence from the <span>Swedish</span> Residential Sector.”</span> <em>Energy Economics</em> 91: 104898. <a href="https://doi.org/10.1016/j.eneco.2020.104898">https://doi.org/10.1016/j.eneco.2020.104898</a>.
+</div>
+<div id="ref-StatCan18100001" class="csl-entry" role="listitem">
+Statistics Canada. 2026. <em>Monthly Average Retail Prices for Gasoline and Fuel Oil, by Geography (<span>Table</span> 18-10-0001-01)</em>. Data table.
+</div>
+<div id="ref-UBA2024Emissions" class="csl-entry" role="listitem">
+Umweltbundesamt. 2024. <em>Detaillierte <span>Treibhausgas-Emissionsbilanz</span> 2022</em>. Press release No. 02/2024. <a href="https://www.umweltbundesamt.de/presse/pressemitteilungen/detaillierte-treibhausgas-emissionsbilanz-2022">https://www.umweltbundesamt.de/presse/pressemitteilungen/detaillierte-treibhausgas-emissionsbilanz-2022</a>.
+</div>
+<div id="ref-XiangLawley2019" class="csl-entry" role="listitem">
+Xiang, Di, and Chad Lawley. 2019. <span>“The Impact of <span>British Columbia</span>’s Carbon Tax on Residential Natural Gas Consumption.”</span> <em>Energy Economics</em> 80: 206–18. <a href="https://doi.org/10.1016/j.eneco.2018.12.004">https://doi.org/10.1016/j.eneco.2018.12.004</a>.
+</div>
+<div id="ref-Yu2024" class="csl-entry" role="listitem">
+Yu, Yihan. 2024. <span>“Carbon Taxes and <span>CO2</span> Emissions: A Replication of <span>Andersson</span> (<span>American Economic Journal: Economic Policy</span>, 2019).”</span> <em>Economics: The Open-Access, Open-Assessment Journal</em> 18 (1): 20220109. <a href="https://doi.org/10.1515/econ-2022-0109">https://doi.org/10.1515/econ-2022-0109</a>.
+</div>
+<div id="ref-UBA2024BEHG" class="csl-entry" role="listitem">
+Zerzawy, Florian, Matthias Runkel, Hannah van Loock, et al. 2024. <em><span class="nocase">Wirkung des nationalen Brennstoffemissionshandels – 2. Teilbericht</span></em>. Climate Change 59/2024. Umweltbundesamt.
+</div>
+</div>
+</section>
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="sec-appendix-conversions" class="level1 appendix" data-number="10"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">10</span> Appendix A: Conversions</h2><div class="quarto-appendix-contents">
+
+<p><strong>Emission factors.</strong> Petrol: 2.323 kg CO₂ per litre (Sweden, Swedish Ministry of Finance), 2.348 kg per litre or 8.887 kg per US gallon (Germany and United States, US EPA), 2.22 kg per litre (British Columbia, implied by its own rates, which exempt the ethanol blend), 2.3 kg per litre (Indonesia). Diesel: 2.676 kg per litre (Germany, Umweltbundesamt), 2.56 kg per litre (British Columbia, implied by its rates), 2.68 kg per litre (Indonesia). Heating oil: 2.744 kg per litre (Sweden), 2.65 kg per litre (Switzerland, Swiss customs). Natural gas: 0.202 tonnes per megawatt-hour on a net calorific basis (0.182 on a gross basis); British Columbia 49.7 kg per gigajoule. Coal: 0.34 tonnes per megawatt-hour of heat. Power plants: coal about 0.9 and gas about 0.37 tonnes per megawatt-hour of electricity at the efficiencies in <span class="citation" data-cites="Abrell2022">Abrell et al. (<a href="#ref-Abrell2022" role="doc-biblioref">2022</a>)</span> (38 and 51 percent).</p>
+<p><strong>Exchange rates.</strong> Annual averages from the Federal Reserve’s H.10 release (FRED series AEXSDUS, AEXUSEU, AEXCAUS, AEXUSUK, AEXSZUS), except: Swiss and EU ETS conversions at European Central Bank annual rates or ICAP’s daily dollar values; Indonesian conversions at monthly OECD rates; Sweden’s 2023 figure at the Ministry of Finance’s rate of 3 October 2022.</p>
+<p><strong>Retail price increase.</strong> Per-unit amount, plus VAT where the final user pays it, divided by the tax-inclusive retail price minus that amount, assuming full pass-through. A share of the price is that amount divided by the full tax-inclusive price.</p>
+<p><strong>Cut per US$10 a tonne.</strong> The study’s estimated percentage cut divided by the carbon price or equivalent in US$ a tonne, times ten. It is a rough semi-elasticity; it ignores differences in horizon, coverage and pre-tax prices.</p>
+</div></section><section id="sec-appendix-register" class="level1 appendix" data-number="11"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">11</span> Appendix B: Evidence register</h2><div class="quarto-appendix-contents">
+
+<div id="tbl-register" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-register-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;14: Evidence register for the ten cases. Research notes with page references: <code>5.Notes/research/</code>.
+</figcaption>
+<div aria-describedby="tbl-register-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 20%">
+<col style="width: 26%">
+<col style="width: 14%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Case</th>
+<th>Study</th>
+<th>Design and data</th>
+<th>Status</th>
+<th>What was read</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sweden transport</td>
+<td><span class="citation" data-cites="Andersson2019">Andersson (<a href="#ref-Andersson2019" role="doc-biblioref">2019</a>)</span></td>
+<td>Synthetic control, 25 OECD countries, 1960–2005</td>
+<td>Peer-reviewed</td>
+<td>Abstract, online appendix, 2017 working paper; numbers checked against two replications</td>
+</tr>
+<tr class="even">
+<td>Sweden transport</td>
+<td><span class="citation" data-cites="Bonander2023">Bonander et al. (<a href="#ref-Bonander2023" role="doc-biblioref">2023</a>)</span>; <span class="citation" data-cites="Yu2024">Yu (<a href="#ref-Yu2024" role="doc-biblioref">2024</a>)</span></td>
+<td>Reproduction and replication</td>
+<td>Discussion paper; peer-reviewed</td>
+<td>Full text (working-paper versions)</td>
+</tr>
+<tr class="odd">
+<td>Sweden heating</td>
+<td><span class="citation" data-cites="RunstThonipara2020">Runst and Thonipara (<a href="#ref-RunstThonipara2020" role="doc-biblioref">2020</a>)</span></td>
+<td>Synthetic control and difference-in-differences, 19 countries, 1990–2016</td>
+<td>Peer-reviewed</td>
+<td>Abstract; full working paper</td>
+</tr>
+<tr class="even">
+<td>Germany eco-tax</td>
+<td><span class="citation" data-cites="RunstHohle2022">Runst and Höhle (<a href="#ref-RunstHohle2022" role="doc-biblioref">2022</a>)</span></td>
+<td>Synthetic control, 23–25 countries</td>
+<td>Peer-reviewed</td>
+<td>Abstract; full working paper</td>
+</tr>
+<tr class="odd">
+<td>Germany eco-tax</td>
+<td><span class="citation" data-cites="Basaglia2023">Basaglia et al. (<a href="#ref-Basaglia2023" role="doc-biblioref">2023</a>)</span></td>
+<td>Synthetic control, generalized synthetic control, time series</td>
+<td>Working paper</td>
+<td>Full text</td>
+</tr>
+<tr class="even">
+<td>United States</td>
+<td><span class="citation" data-cites="DavisKilian2011">Davis and Kilian (<a href="#ref-DavisKilian2011" role="doc-biblioref">2011</a>)</span>; <span class="citation" data-cites="LiLinnMuehlegger2014">Li et al. (<a href="#ref-LiLinnMuehlegger2014" role="doc-biblioref">2014</a>)</span>; <span class="citation" data-cites="Coglianese2017">Coglianese et al. (<a href="#ref-Coglianese2017" role="doc-biblioref">2017</a>)</span></td>
+<td>State panels, instrumental variables, 1966–2008</td>
+<td>Peer-reviewed</td>
+<td>Abstracts; full working papers</td>
+</tr>
+<tr class="odd">
+<td>British Columbia</td>
+<td><span class="citation" data-cites="RiversSchaufele2015">Rivers and Schaufele (<a href="#ref-RiversSchaufele2015" role="doc-biblioref">2015</a>)</span>; <span class="citation" data-cites="LawleyThivierge2018">Lawley and Thivierge (<a href="#ref-LawleyThivierge2018" role="doc-biblioref">2018</a>)</span>; <span class="citation" data-cites="BernardKichian2019">Bernard and Kichian (<a href="#ref-BernardKichian2019" role="doc-biblioref">2019</a>)</span>; <span class="citation" data-cites="XiangLawley2019">Xiang and Lawley (<a href="#ref-XiangLawley2019" role="doc-biblioref">2019</a>)</span></td>
+<td>Province and household panels, cointegration, synthetic control</td>
+<td>Peer-reviewed</td>
+<td>Abstracts; working papers where available</td>
+</tr>
+<tr class="even">
+<td>British Columbia</td>
+<td><span class="citation" data-cites="Pretis2022">Pretis (<a href="#ref-Pretis2022" role="doc-biblioref">2022</a>)</span></td>
+<td>Difference-in-differences and synthetic control, 10 provinces, 1990–2016</td>
+<td>Peer-reviewed</td>
+<td>Full text</td>
+</tr>
+<tr class="odd">
+<td>Switzerland</td>
+<td><span class="citation" data-cites="FOEN2018">Federal Office for the Environment (<a href="#ref-FOEN2018" role="doc-biblioref">2018</a>)</span></td>
+<td>Time-series and general-equilibrium models on observed data</td>
+<td>Official evaluation</td>
+<td>Full text of fact sheet</td>
+</tr>
+<tr class="even">
+<td>Switzerland</td>
+<td><span class="citation" data-cites="Francescutto2022">Francescutto and Mathys (<a href="#ref-Francescutto2022" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="OttWeber2022">Ott and Weber (<a href="#ref-OttWeber2022" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="Fauceglia2020">Fauceglia et al. (<a href="#ref-Fauceglia2020" role="doc-biblioref">2020</a>)</span></td>
+<td>Household survey; household panel; firm panel</td>
+<td>Peer-reviewed; peer-reviewed; working paper</td>
+<td>Full text; working paper; abstract and introduction</td>
+</tr>
+<tr class="odd">
+<td>EU ETS</td>
+<td><span class="citation" data-cites="Dechezlepretre2023">Dechezleprêtre et al. (<a href="#ref-Dechezlepretre2023" role="doc-biblioref">2023</a>)</span>; <span class="citation" data-cites="Colmer2025">Colmer et al. (<a href="#ref-Colmer2025" role="doc-biblioref">2025</a>)</span>; <span class="citation" data-cites="BayerAklin2020">Bayer and Aklin (<a href="#ref-BayerAklin2020" role="doc-biblioref">2020</a>)</span></td>
+<td>Matched difference-in-differences; generalized synthetic control</td>
+<td>Peer-reviewed</td>
+<td>Full texts (Colmer et al.: 2023 discussion paper)</td>
+</tr>
+<tr class="even">
+<td>Britain</td>
+<td><span class="citation" data-cites="Leroutier2022">Leroutier (<a href="#ref-Leroutier2022" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="Abrell2022">Abrell et al. (<a href="#ref-Abrell2022" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="Gugler2023">Gugler et al. (<a href="#ref-Gugler2023" role="doc-biblioref">2023</a>)</span></td>
+<td>Synthetic control; machine-learning counterfactual; regression discontinuity in time</td>
+<td>Peer-reviewed</td>
+<td>Published abstracts; full working papers (Leroutier, Abrell et al.)</td>
+</tr>
+<tr class="odd">
+<td>Indonesia</td>
+<td><span class="citation" data-cites="BurkeKurniawati2018">Burke and Kurniawati (<a href="#ref-BurkeKurniawati2018" role="doc-biblioref">2018</a>)</span>; <span class="citation" data-cites="Burke2017">Burke et al. (<a href="#ref-Burke2017" role="doc-biblioref">2017</a>)</span></td>
+<td>Panel elasticities applied to observed prices</td>
+<td>Peer-reviewed</td>
+<td>Full working papers</td>
+</tr>
+<tr class="even">
+<td>Germany gas</td>
+<td><span class="citation" data-cites="Ruhnau2023">Ruhnau et al. (<a href="#ref-Ruhnau2023" role="doc-biblioref">2023</a>)</span></td>
+<td>Regression on temperature-adjusted baseline, monthly</td>
+<td>Peer-reviewed</td>
+<td>Full accepted manuscript</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+
+
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Every estimate reported here is the work of the authors cited. Conversions to dollars per tonne and to percentages of retail prices are the author’s, from the sources and conventions in Appendix A. Errors are the author’s own.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

@@ -58,7 +58,8 @@ def main():
             num = sec[0].split(".")[0]
             ov_dir = section_folder(part, sec) / f"{num}.0.Overview"
             ov = next(iter(sorted(ov_dir.glob(f"{num}.0.Overview*.docx"))), None) if ov_dir.is_dir() else None
-            copy(ov, ARCHIVE / sec[4])
+            if sec[4]:                      # New Research sections have no overview of their own
+                copy(ov, ARCHIVE / sec[4])
             if sec[5]:
                 copy(ov_dir / "1.Presentation" / sec[5], ARCHIVE / sec[5])
             for folder in paper_folders(part, sec):

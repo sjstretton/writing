@@ -34,6 +34,7 @@
 
     WHERE THINGS LIVE
         The papers are in the paper roots at the top of the repository:
+            B Theory and Research\  new papers awaiting review, section folders named like C and D
             C Policy and FInance\   sections 1-4
             D Modelling\            sections 5-7
             F Other Writing\        papers outside the series (8.x), no section level
@@ -89,7 +90,7 @@ if ($PSScriptRoot -match '[\\/](_superseded|_Scripts)([\\/]|$)') {
 # Find the repository root, then the paper roots under it.
 # The paper roots, from the repository root: sections 1-4, sections 5-7, and the writing outside the
 # series (8.x). The one place to change them in this script: D Modelling is due to move to its own repository.
-$PaperRootNames = @('C Policy and FInance', 'D Modelling', 'F Other Writing')
+$PaperRootNames = @('B Theory and Research', 'C Policy and FInance', 'D Modelling', 'F Other Writing')
 
 # The paper roots that exist, as full paths under the repository root.
 function Get-PaperRoots([string]$repo) {

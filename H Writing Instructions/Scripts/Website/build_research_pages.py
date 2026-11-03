@@ -1,7 +1,7 @@
 """Build the website's research pages from the papers themselves, so the site is never out of date.
 
-For each part in site_config.PARTS (Policy and Finance; Modelling and Analytics) this writes, in E Website:
-    the part's home page (policy/index.qmd, modelling/index.qmd)  a short intro and, per section, a line and its papers
+For each part in site_config.PARTS (Policy and Finance; Modelling and Analytics; New Research) this writes, in E Website:
+    the part's home page (policy/index.qmd, modelling/index.qmd, new/index.qmd)  a short intro and, per section, a line and its papers
     <part>/<n>-<slug>.qmd     one page per section: the overview abstract, then each paper's title, subtitle,
                               abstract (the policy brief's where there is one) and links: the brief and the
                               working paper online, then the PDFs of the slides, brief and working paper
@@ -67,11 +67,13 @@ def section_page(part, sec):
     page = f"{part['dir']}/{slug}.qmd"
     ov = next(iter(sorted((folder / f"{num}.0.Overview").glob("*.qmd"))), None) if folder.is_dir() else None
     ovm = front_matter(ov) if ov else {}
-    out = [f"---\ntitle: \"{num}. {name}\"\naliases:\n  - ../research/{slug}.html\n---\n"]
+    aliases = f"aliases:\n  - ../research/{slug}.html\n" if part.get("aliases", True) else ""
+    out = [f"---\ntitle: \"{num}. {name}\"\n{aliases}---\n"]
     if ovm.get("abstract"):
         out.append(ovm["abstract"] + "\n")
     pdf = lambda f: f.rsplit(".", 1)[0] + ".pdf"   # the site links PDFs only
-    links = [l for l in (link("Section overview", pdf(overview), page), link("Series slides", pdf(deck), page) if deck else None) if l]
+    links = [l for l in (link("Section overview", pdf(overview), page) if overview else None,
+                         link("Series slides", pdf(deck), page) if deck else None) if l]
     if links:
         out.append(" · ".join(links) + "\n")
     titles = []

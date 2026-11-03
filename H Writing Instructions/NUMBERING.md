@@ -2,6 +2,8 @@
 
 The paper numbers follow the section folders in `C Policy and FInance` (sections 1–4) and `D Modelling` (5–7) (Stephen's restructures of 31 Oct 2026). A paper's number is its section number plus its place in the section. Folder names, file names, titles, brief series lines, citation keys, decks and the website all use these numbers.
 
+New papers awaiting Stephen's review sit in `B Theory and Research` (the website's New Research tab), in section folders named like those in C and D. They take the next free number in the section they will join and keep it when they move there after review: 5.5 is in `B Theory and Research/5.Modelling/` until then.
+
 ## Map (old number → new number)
 
 On 31 Oct 2026 (later the same day) papers 1.3 and 1.4 swapped places so that the CBAM paper comes last in section 1: the consumption tax, retitled *Converting a VAT into a Destination Carbon Tax*, is now 1.3 (`1.3.CarbonConsumptionTax`, `CFPB13`, `StrettonWP13`) and CBAM recognition is 1.4 (`1.4.IronSteelCBAM`, `CFPB14`, `StrettonWP14`). The table shows the result.
@@ -28,7 +30,7 @@ On 31 Oct 2026 (later the same day) papers 1.3 and 1.4 swapped places so that th
 | | 5.2 | CPAT-AI: Rebuilding a Policy Model | 4.2 |
 | | 5.3 | Validating CPAT | 4.3 |
 | | 5.4 | Are CPAT's Price Elasticities Right? | 4.4 |
-| | 5.5 | Carbon Prices Cut Emissions: Evidence from Ten Natural Experiments (new, 1 Nov 2026) | – |
+| | 5.5 | Carbon Prices Cut Emissions: Evidence from Ten Natural Experiments (new, 1 Nov 2026; awaiting review in `B Theory and Research/5.Modelling/`, see below) | – |
 | `6.ModularUpgrades` | 6.0 | Overview: modular upgrades to CPAT (new) | – |
 | | 6.1 | Measure Carbon Pricing by the Emissions It Cuts (Total Effective Carbon Price) | 1.7 |
 | | 6.2 | The CBAM Policy Tool | 4.5 |

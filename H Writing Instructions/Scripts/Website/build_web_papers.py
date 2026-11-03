@@ -39,7 +39,7 @@ import re
 import shutil
 from pathlib import Path
 import anonymise
-from site_config import (ANONYMOUS, REPO, PARTS, SITE, ARCHIVE, WEB_PAPERS, WEB_BOOKS, part_of_section, part_by_key,
+from site_config import (ANONYMOUS, REPO, PARTS, SITE, ARCHIVE, WEB_PAPERS, WEB_BOOKS, locate, find_paper, part_by_key,
                          paper_name, master_qmd, paper_folders, book_dir, book_name)
 
 WEB_SETTINGS = ("toc: true\ndate-format: \"MMMM YYYY\"\ncitations-hover: true\ncrossrefs-hover: true\n"
@@ -86,16 +86,13 @@ def yaml_value(yaml, key):
 def paper_page(num, depth):
     """Relative link from a paper page `depth` folders below the site root to paper `num` (e.g. '1.2')."""
     up = "../" * depth
-    part, sec = part_of_section(num.split(".")[0])
+    part, sec, pf = find_paper(num)        # searches every part: a paper may sit in New Research
     if not part:
         return None
-    for pf in paper_folders(part, sec):
-        if ".".join(pf.name.split(".")[:2]) == num:
-            name = paper_name(pf)
-            if (SITE / part["dir"] / sec[1] / name / "index.qmd").exists() or pf.name in WEB_PAPERS:
-                return f"{up}{part['dir']}/{sec[1]}/{name}/index.qmd"
-            return f"{up}{part['dir']}/{sec[1]}.qmd#paper-{num.replace('.', '-')}"
-    return None
+    name = paper_name(pf)
+    if (SITE / part["dir"] / sec[1] / name / "index.qmd").exists() or pf.name in WEB_PAPERS:
+        return f"{up}{part['dir']}/{sec[1]}/{name}/index.qmd"
+    return f"{up}{part['dir']}/{sec[1]}.qmd#paper-{num.replace('.', '-')}"
 
 
 def web_links(body, has_brief):
@@ -283,7 +280,7 @@ def build(folder_name):
     if not folder:
         print(f"missing   {folder_name}")
         return
-    part, sec = part_of_section(folder_name.split(".")[0])
+    part, sec = locate(folder)              # the part the folder sits in (section numbers repeat across parts)
     name = paper_name(folder)
     wp = master_qmd(folder)
     brief = folder / "1.Presentation" / f"Brief-{name}.qmd"

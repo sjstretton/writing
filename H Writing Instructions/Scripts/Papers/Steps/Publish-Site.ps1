@@ -78,7 +78,7 @@ function Is-ExcludedTheme([string]$name) {
 
 # The paper roots, from the repository root: sections 1-4, sections 5-7, and the writing outside the
 # series (8.x). The one place to change them in this script: D Modelling is due to move to its own repository.
-$PaperRootNames = @('C Policy and FInance', 'D Modelling', 'F Other Writing')
+$PaperRootNames = @('B Theory and Research', 'C Policy and FInance', 'D Modelling', 'F Other Writing')
 
 # The paper roots that exist, as full paths under the repository root.
 function Get-PaperRoots([string]$repo) {

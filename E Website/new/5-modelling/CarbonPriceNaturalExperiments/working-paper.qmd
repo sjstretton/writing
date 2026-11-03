@@ -1,31 +1,29 @@
 ---
-# MASTER - this is the file to edit. The .docx beside it is made from it.
-# v0.1 (1 Nov 2026): first draft. Ten ex post natural experiments, each with the price path over time,
-# the retail price increase, the carbon price or carbon-price equivalent and the ex post emission cut.
-# Research notes behind every number: 5.Notes/research/. Figure and Table 3 arithmetic: 2.Source/natural_experiments.py.
+# GENERATED - NOT THE MASTER. Made from B Theory and Research/5.Modelling/5.5.CarbonPriceNaturalExperiments/CarbonPriceNaturalExperiments.qmd by build_web_papers.py
+# on every compile; edits here are lost. Edit the master instead.
 title: "Carbon Prices Cut Emissions"
 subtitle: "Evidence from Ten Natural Experiments in Fuel Taxes, Carbon Pricing and Subsidy Reform"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "November 2026"
-version: "0.1"
+version: "0.1.1"
 abstract: |
   Finance ministries weighing a carbon tax need to know what it will do to emissions, and most of the numbers they are given come from models. This paper collects ten natural experiments in which a carbon tax, a fuel tax rise, an emissions trading price, a subsidy cut or a market shock raised fuel prices, and in which researchers later measured emissions or fuel use against a credible counterfactual. For each case it reports the fuels and sectors covered, how far the measure raised retail prices over time, the carbon price or its equivalent in dollars per tonne of carbon dioxide, and the estimated cut. Every case shows a cut. In road transport and home heating, prices of 20 to 125 dollars a tonne cut emissions from the covered fuels by roughly 5 to 15 percent over five to fifteen years, about 1 to 2 percent for each 10 dollars. Where power plants could switch from coal to gas, the cut per dollar was five to ten times larger: Britain's carbon price floor cut power-sector emissions by about a fifth a year. Taxes moved demand more than equal market price changes, and exemptions and offsetting tax cuts weakened the effect. Models used for policy advice should be tested against these cases.
 keywords: [carbon tax, natural experiment, ex post evaluation, fuel prices, emissions trading, fossil fuel subsidy reform]
 jel: [Q54, Q58, H23, Q41]
 bibliography: CarbonPriceNaturalExperiments.bib
-csl: https://www.zotero.org/styles/chicago-author-date
+csl: ../../../chicago-author-date.csl
 number-sections: true
 crossref:
   fig-prefix: Figure
   tbl-prefix: Table
   sec-prefix: Section
-format:
-  docx: default
+toc: true
+date-format: "MMMM YYYY"
+citations-hover: true
+crossrefs-hover: true
+lightbox: auto
 ---
 
-*Working paper, version 0.1, November 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion to papers 5.3 (validating the Climate Policy Assessment Tool) and 5.4 (its price elasticities).*[^credit]
+*Working paper, version 0.1.1, November 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion to papers 5.3 (validating the Climate Policy Assessment Tool) and 5.4 (its price elasticities).*[^credit]
 
 [^credit]: Every estimate reported here is the work of the authors cited. Conversions to dollars per tonne and to percentages of retail prices are the author's, from the sources and conventions in Appendix A. Errors are the author's own.
 
@@ -35,6 +33,9 @@ format:
 ```
 
 # Executive summary {#sec-summary}
+
+[**Policy brief (short version) →**](index.qmd) · [Download this paper (pdf)](../../../papers/CarbonPriceNaturalExperiments.pdf)
+
 
 **Carbon prices are usually judged by models; this paper judges them by what happened.** Since 1990, governments and markets have raised fuel prices in ways that researchers could later evaluate as natural experiments, comparing emissions afterward with a credible estimate of what would have happened otherwise. This paper collects the ten best-documented cases and reports four facts for each: the fuels and sectors covered, the rise in retail prices over time, the carbon price or its dollar-per-tonne equivalent, and the measured cut in emissions or fuel use.
 
@@ -46,13 +47,13 @@ format:
 
 **Where a cleaner substitute was already standing by, the response per dollar was five to ten times larger.** Britain's carbon price floor, at a total carbon price of 14 to 36 dollars a tonne, raised the fuel cost of coal-fired power by 39 to 141 percent and of gas-fired power by only 7 to 30 percent. Coal's share of generation fell from 39 percent in 2012 to 9 percent in 2016 and 2 percent in 2019. Plants in the EU trading system cut 10 to 16 percent at allowance prices averaging about 14 euros, more per dollar than any transport or heating case.
 
-**Design changed the result as much as the price did.** Taxes moved demand two to three times more than equal market price changes, though buying ahead of announced rises explains part of the gap. Sweden offset its 2001–2004 motor-fuel tax rise with energy-tax cuts, and its transport gap barely widened. British Columbia's tax cut transport emissions but not, measurably, total emissions. Germany's 2022 gas shock cut gas use by 23 percent but national emissions by only about 2 percent, because power stations burned more coal and some industry moved abroad.
+**Design changed the result as much as the price did.** Taxes moved demand two to three times more than equal market price changes, though buying ahead of announced rises explains part of the gap. Sweden offset its 2001–2004 motor-fuel tax rise with energy-tax cuts, and its transport gap barely widened. British Columbia's tax cut transport emissions but not, measurably, total emissions. Germany's 2022 gas shock cut gas use by 23 percent but national emissions by only about 1 percent, because power stations burned more coal and some industry moved abroad.
 
 **What to do.** Plan on a sustained, broad carbon price cutting covered emissions by about 1 to 2 percent per 10 dollars a tonne in transport and buildings within a decade, and by much more in power where coal can give way to gas. Avoid offsetting tax cuts and exemptions, and publish a credible path. Modelers should back-cast these cases: on this evidence the long-run gasoline elasticity in the Climate Policy Assessment Tool (−0.64) is about right and its residential gas elasticity (−0.70) looks high (@sec-models).
 
 # Introduction {#sec-intro}
 
-A finance ministry that asks what a carbon tax will do to its emissions is usually given a model's answer, and the size of that answer rests mostly on assumed responses to price. The Climate Policy Assessment Tool (CPAT), which the International Monetary Fund and the World Bank use for this purpose, turns a carbon price into an emission cut through a table of price elasticities. Varying those elasticities by two standard deviations moves its estimated cut in G20 emissions from a US\$75 tax from 29 percent to anywhere between 7 and 39 percent [@StrettonWP54]. A model is only as good as the response it assumes. The ex post literature, which measures what happened after real price changes, is the natural test, and paper 5.3 in this series recommends validating CPAT against it case by case [@StrettonWP53].
+A finance ministry that asks what a carbon tax will do to its emissions is usually given a model's answer, and the size of that answer rests mostly on assumed responses to price. The Climate Policy Assessment Tool (CPAT), which the International Monetary Fund and the World Bank use for this purpose, turns a carbon price into an emission cut through a table of price elasticities. Varying those elasticities by two standard deviations moves its estimated cut in G20 emissions from a US\$75 tax from 29 percent to anywhere between 7 and 39 percent [@AuthorWP54]. A model is only as good as the response it assumes. The ex post literature, which measures what happened after real price changes, is the natural test, and paper 5.3 in this series recommends validating CPAT against it case by case [@AuthorWP53].
 
 This paper asks a simple question: when governments or markets have raised fuel prices, what happened to emissions, and how much per dollar? The answer, from ten natural experiments, is that emissions from the covered fuels fell in every case. In road transport and buildings the cut was roughly 1 to 2 percent for each 10 dollars a tonne, building up over five to fifteen years. In power, where coal could be replaced by gas already on the system, it was five to ten times larger per dollar. Taxes moved demand more than equal market price changes, exemptions and offsetting tax cuts weakened the effect, and very large short-run shocks produced small cuts per dollar.
 
@@ -83,7 +84,7 @@ The contribution is a case-level evidence base in one consistent format. The two
 | 7. EU ETS, 2005 | Power and industry; coal, gas, oil | Phase II mean €13.7/t (US\$19) | Marginal cost: gas +8–13%, coal +37–68% of fuel price (2008–2011) | Emissions at regulated plants about −10% 2005–2012, −15% in phase II (matched difference-in-differences) |
 | 8. Britain, 2013 | Power; coal and gas | Total carbon price €10.6/t (2013) to €32/t (2015); US\$14 to 36 | Fuel cost of coal +39% to +141%; gas +7% to +30% | Power-sector CO₂ −6% (dispatch only) to −20–26% a year (all channels), 2013–2017 |
 | 9. Indonesia, 2013–2015 | Transport, electricity; gasoline, diesel, power | Gasoline equivalent US\$88 (2013 step), US\$72 (2014 step); US\$143/t cumulative at 2014 exchange rates | Gasoline +44%, then +31% (+89% in total) | Electricity use −7% (about 13 Mt CO₂ a year); toll-road traffic −10% (panel, 2 years) |
-| 10. Germany, 2022 | Buildings, industry; natural gas | Equivalent €150–900/t (US\$160–950) | Household gas +130%, industrial gas +480% at peak | Gas use −23% against a temperature-adjusted baseline; national CO₂ only about −2% (regression, months) |
+| 10. Germany, 2022 | Buildings, industry; natural gas | Equivalent €150–900/t (US\$160–950) | Household gas +130%, industrial gas +480% at peak | Gas use −23% against a temperature-adjusted baseline; national greenhouse gas emissions only −1.3% (regression, months) |
 
 : The ten natural experiments at a glance: every case shows a cut in emissions or fuel use from the covered fuels. VAT = value added tax; ETS = Emissions Trading System. US\$ at the annual average exchange rate of the year shown. Retail price increases assume full pass-through and are the author's calculations from the sources in each case section, except where stated. Sources: see @sec-sweden-transport to @sec-germany-gas. {#tbl-glance}
 
@@ -228,7 +229,7 @@ The contribution is a case-level evidence base in one consistent format. The two
 
 ## Britain, 2013–2017: a carbon price floor drove coal out of power generation {#sec-uk}
 
-**From April 2013 Britain taxed carbon in fuels for power generation on top of the EU allowance price.** The tax, the Carbon Price Support, was £4.94 a tonne in 2013–14, £9.55 in 2014–15 and £18.08 in 2015–16, and has been frozen at £18 since 2016–17; in April 2026 the government announced its removal from April 2028 [@CPSRemoval2026]. Added to the EU allowance price, generators faced a total carbon price of €10.6 a tonne in 2013, €18.4 in 2014, €32.0 in 2015 and €26.9 in 2016 [@Abrell2022], about US\$14 to 36. Because a coal plant emits about 2.4 times as much CO₂ per unit of electricity as a gas plant, the tax raised its costs 2.4 times as much (@tbl-uk).
+**From April 2013 Britain taxed carbon in fuels for power generation on top of the EU allowance price.** The tax, the Carbon Price Support, was £4.94 a tonne in 2013–14, £9.55 in 2014–15 and £18.08 in 2015–16, and has been frozen at £18 since 2016–17; in April 2026 the government announced its removal from April 2028 [@HMT2026CPS]. Added to the EU allowance price, generators faced a total carbon price of €10.6 a tonne in 2013, €18.4 in 2014, €32.0 in 2015 and €26.9 in 2016 [@Abrell2022], about US\$14 to 36. Because a coal plant emits about 2.4 times as much CO₂ per unit of electricity as a gas plant, the tax raised its costs 2.4 times as much (@tbl-uk).
 
 | Year (April–March) | Carbon Price Support, £/t | Total carbon price, €/t (US\$/t) | Fuel cost increase per MWh of heat: coal / gas | Coal share of generation | Estimated cut in power-sector CO₂ |
 |----|----|-----|-----|----|---------|
@@ -263,7 +264,7 @@ The contribution is a case-level evidence base in one consistent format. The two
 
 **The counterfactual rests on estimated elasticities, and the reform was partly reversed.** Both studies identify the response from the timing of price changes, controlling for income, trends and road-specific factors, then apply it to the reform; neither has an untreated comparison group. Prices fell again in early 2016 with world oil prices, probably reversing part of the effect. The case matters because it is the only developing economy in the set, and it shows that consumers respond to large price rises even where incomes are low.
 
-## Germany, 2022: a gas price shock cut gas use by a quarter but national emissions by only about 2 percent {#sec-germany-gas}
+## Germany, 2022: a gas price shock cut gas use by a quarter but national emissions by only about 1 percent {#sec-germany-gas}
 
 **The gas crisis of 2021–2022, deepened by Russia's invasion of Ukraine, raised German gas prices by the equivalent of several hundred dollars a tonne of CO₂.** Wholesale gas, at €15–20 per megawatt-hour before the pandemic, traded at €100–200 in 2022, with spikes to €227 and €339 [@Ruhnau2023]. Industrial purchase prices peaked in September 2022 at 580 percent of their pre-crisis level, and household prices in November 2022 were 130 percent above their 2019–2021 level. Averages over each half-year rose less because of long contracts: households in a typical consumption band paid 6.3 cents per kilowatt-hour on average in 2019–2021, 9.4 cents in the second half of 2022 and 12.3 cents in the first half of 2023 (@tbl-germany-gas). At 0.202 tonnes of CO₂ per megawatt-hour, these increases are worth about €150 to €900 a tonne. The government cut VAT on gas from 19 to 7 percent, and its gas price brake compensated households for 80 percent of past consumption while leaving the marginal price unchanged [@Moll2023].
 
@@ -280,7 +281,7 @@ The contribution is a case-level evidence base in one consistent format. The two
 
 **Gas use fell 23 percent below a temperature-adjusted baseline in the second half of 2022.** @Ruhnau2023 regress monthly gas use on crisis-month indicators, seasonality, trend and a temperature-driven heating profile, separately for industry, small consumers and power. Industry began cutting in September 2021, as prices first rose, and was 27 percent below baseline by October 2022; small consumers, mostly on fixed-price contracts, cut 10 percent in March 2022 and 28 percent in September. Across all users the cut averaged 23 percent in the second half of 2022. The authors' rough implied elasticities are small: −0.04 for industry and −0.16 to −0.27 for small consumers. They cannot separate price from public appeals and fear of shortage.
 
-**The fall in national emissions was much smaller than the fall in gas use.** Not adjusted for temperature, gas use from July 2022 to March 2023 was 157 TWh below its 2019–2021 average [@Moll2023], which at 0.18–0.20 tonnes per megawatt-hour is about 29 to 32 Mt of CO₂ (the author's arithmetic). But power stations replaced gas with coal: by the environment agency's early estimate, energy-sector emissions rose about 10.7 Mt in 2022 and national emissions fell only about 15 Mt, or 1.9 percent [@UBA2023Emissions] [VERIFY: early estimate seen only in summary; check the final inventory]. Output in energy-intensive industry fell close to 20 percent, and some production, such as ammonia, moved abroad [@Moll2023]. A price on gas alone is not a carbon price: it can push power generation toward coal.
+**The fall in national emissions was much smaller than the fall in gas use.** Not adjusted for temperature, gas use from July 2022 to March 2023 was 157 TWh below its 2019–2021 average [@Moll2023], which at 0.18–0.20 tonnes per megawatt-hour is about 29 to 32 Mt of CO₂ (the author's arithmetic). But power stations replaced gas with coal: on the environment agency's final figures, energy-sector emissions rose 11 Mt (4.5 percent) in 2022, industry's fell 13.7 Mt (7.6 percent), and national greenhouse gas emissions fell only 9.6 Mt, or 1.3 percent [@UBA2024Emissions]. Output in energy-intensive industry fell close to 20 percent, and some production, such as ammonia, moved abroad [@Moll2023]. A price on gas alone is not a carbon price: it can push power generation toward coal.
 
 # What the ten cases show together {#sec-synthesis}
 
@@ -316,7 +317,7 @@ The contribution is a case-level evidence base in one consistent format. The two
 
 **Proposition 4. The cut per dollar is smallest for short, very large shocks and for prices too low to notice.** Germany's 2022 gas shock and Indonesia's subsidy reform raised prices by 89 to 480 percent and cut use by 10 to 28 percent, under 2 percent per US\$10. Over months or a year or two, households and firms can turn down thermostats and drive less but cannot yet replace boilers, cars or furnaces. At the other end, Switzerland's levy had no measurable effect on owners' heating fuel at CHF 12–36, when it was 3 to 12 percent of the price, and a clear one at CHF 60–84 [@Francescutto2022].
 
-**Proposition 5. Effects on total emissions are smaller than on covered fuels, because coverage is partial and design leaks.** British Columbia cut transport emissions but not, measurably, the provincial total [@Pretis2022]. Sweden offset its 2001–2004 motor-fuel tax rise with energy-tax cuts, and the transport gap barely widened [@Andersson2019]. Germany's 2022 gas cut was largely undone by coal in power and by imports of gas-intensive goods [@Moll2023; @UBA2023Emissions]. Britain's cut was partly offset by electricity imports [@Leroutier2022]. Norway, where the tax covered about 64 percent of CO₂ and demand in the taxed sectors was inelastic, cut emissions by only about 2 percent (@tbl-others).
+**Proposition 5. Effects on total emissions are smaller than on covered fuels, because coverage is partial and design leaks.** British Columbia cut transport emissions but not, measurably, the provincial total [@Pretis2022]. Sweden offset its 2001–2004 motor-fuel tax rise with energy-tax cuts, and the transport gap barely widened [@Andersson2019]. Germany's 2022 gas cut was largely undone by coal in power and by imports of gas-intensive goods [@Moll2023; @UBA2024Emissions]. Britain's cut was partly offset by electricity imports [@Leroutier2022]. Norway, where the tax covered about 64 percent of CO₂ and demand in the taxed sectors was inelastic, cut emissions by only about 2 percent (@tbl-others).
 
 ## Cases left out, and why {#sec-others}
 
@@ -342,7 +343,7 @@ The contribution is a case-level evidence base in one consistent format. The two
 
 **Objection: each case has one treated unit, so the effects could be chance.** Synthetic-control studies of a single country cannot produce conventional confidence intervals, and their placebo p-values bottom out at about 0.07 [@Andersson2019; @Leroutier2022]. The answer is replication across cases and methods. Ten cases in different sectors, countries and decades, analyzed with synthetic control, matched difference-in-differences, instrumental variables and regression discontinuity, all point the same way, which chance alone would rarely produce even if each estimate alone is marginal.
 
-**Objection: published estimates are biased toward large effects.** They are. @DobbelingHildebrandt2024 find that correcting for publication bias lowers the range of significant scheme-level effects from 5–21 percent to 4–15 percent, and paper 5.4 shows that correction halves the average published long-run gasoline elasticity [@StrettonWP54]. The ranges here should be read as upper-middle estimates. The direction is unaffected, and the cases most exposed to the bias, single-country synthetic controls, have been reproduced independently [@Bonander2023; @Yu2024].
+**Objection: published estimates are biased toward large effects.** They are. @DobbelingHildebrandt2024 find that correcting for publication bias lowers the range of significant scheme-level effects from 5–21 percent to 4–15 percent, and paper 5.4 shows that correction halves the average published long-run gasoline elasticity [@AuthorWP54]. The ranges here should be read as upper-middle estimates. The direction is unaffected, and the cases most exposed to the bias, single-country synthetic controls, have been reproduced independently [@Bonander2023; @Yu2024].
 
 **Objection: something else happened at the same time.** Recessions coincided with Sweden's tax (1991–1993), the EU system's Phase II (2008–2009) and British Columbia's tax (2008–2009). Oil prices swung in all the transport cases, and other policies ran alongside the Swiss levy and Britain's floor. The better studies address each: Andersson finds no rebound when Swedish output recovered; @BayerAklin2020 estimate effects on top of the recession's; @Pretis2022 controls for provincial output; the Swiss evaluation nets out the building programme [@FOEN2018]; and @Leroutier2022 subtracts biomass conversions, renewables support and imports. What remains is imprecise, not absent.
 
@@ -350,11 +351,11 @@ The contribution is a case-level evidence base in one consistent format. The two
 
 # What the cases imply for models such as CPAT {#sec-models}
 
-**The ex post evidence supports CPAT's long-run response for road fuels and suggests its response for home heating is too high.** CPAT's default long-run price elasticity is −0.64 for gasoline in transport and −0.70 for natural gas in homes in low- and middle-income countries [@StrettonWP54]. The transport cases imply about −0.4 to −0.7 over five to fifteen years, so CPAT sits inside the range. At a pump price of US\$1.20 a litre and 2.3 kg of CO₂ a litre, a US\$10 carbon price adds 1.9 percent, which at −0.64 cuts use by 1.2 percent, within the 0.8 to 2.0 percent per US\$10 of the German, Swedish and United States cases. The heating cases imply −0.15 to −0.45 after eight to nine years in Switzerland and about −0.4 for natural gas in British Columbia, below CPAT's −0.70. Heating equipment lasts decades, so the full long-run response may be larger than these horizons show; but the evidence gives no support for a higher value.
+**The ex post evidence supports CPAT's long-run response for road fuels and suggests its response for home heating is too high.** CPAT's default long-run price elasticity is −0.64 for gasoline in transport and −0.70 for natural gas in homes in low- and middle-income countries [@AuthorWP54]. The transport cases imply about −0.4 to −0.7 over five to fifteen years, so CPAT sits inside the range. At a pump price of US\$1.20 a litre and 2.3 kg of CO₂ a litre, a US\$10 carbon price adds 1.9 percent, which at −0.64 cuts use by 1.2 percent, within the 0.8 to 2.0 percent per US\$10 of the German, Swedish and United States cases. The heating cases imply −0.15 to −0.45 after eight to nine years in Switzerland and about −0.4 for natural gas in British Columbia, below CPAT's −0.70. Heating equipment lasts decades, so the full long-run response may be larger than these horizons show; but the evidence gives no support for a higher value.
 
-**The timing of the response matters as much as its size.** Paper 5.4 finds that CPAT applies the full long-run response in the first year [@StrettonWP54]. The natural experiments show responses that build over years: German fuel use fell only after three to four years, Swiss households responded only once the levy had risen and stayed up, and British Columbia's long-run transport effect is four times its short-run effect. A model that front-loads the response will overstate early cuts and understate early revenue.
+**The timing of the response matters as much as its size.** Paper 5.4 finds that CPAT applies the full long-run response in the first year [@AuthorWP54]. The natural experiments show responses that build over years: German fuel use fell only after three to four years, Swiss households responded only once the levy had risen and stayed up, and British Columbia's long-run transport effect is four times its short-run effect. A model that front-loads the response will overstate early cuts and understate early revenue.
 
-**Coal-to-gas switching in power needs its own treatment.** The British and EU cases show that a modest price can cut power emissions by a fifth when gas capacity is available. A model with only own-price demand elasticities will miss that, and a model that lets switching happen regardless of spare capacity will overstate it elsewhere. Each case in @sec-cases can serve as a back-cast test, the procedure paper 5.3 recommends [@StrettonWP53]: give the model the pre-policy data and the observed price path, and compare its predicted cut with the measured one.
+**Coal-to-gas switching in power needs its own treatment.** The British and EU cases show that a modest price can cut power emissions by a fifth when gas capacity is available. A model with only own-price demand elasticities will miss that, and a model that lets switching happen regardless of spare capacity will overstate it elsewhere. Each case in @sec-cases can serve as a back-cast test, the procedure paper 5.3 recommends [@AuthorWP53]: give the model the pre-policy data and the observed price path, and compare its predicted cut with the measured one.
 
 # Policy implications {#sec-policy}
 
@@ -371,6 +372,10 @@ The contribution is a case-level evidence base in one consistent format. The two
 # Conclusion {#sec-conclusion}
 
 **Carbon prices have cut emissions wherever they have been properly measured, by amounts that a ministry can plan around.** Ten natural experiments, from Sweden in 1991 to Germany in 2022, show cuts of about 1 to 2 percent per US\$10 a tonne in transport and heating over five to fifteen years, and several times more in power where coal could give way to gas. The main limitation is that most cases are single countries with one treated unit, so each estimate is imprecise and the yardstick per dollar is rough. The next step is to back-cast these cases in CPAT and in other models used for policy advice. That would show, fuel by fuel, whether the models' responses match what happened, and would extend the evidence to the much higher prices of the EU trading system since 2021, British Columbia's C\$80 tax and its 2025 removal, which no one has yet evaluated.
+
+# Downloads {.unnumbered}
+
+[Policy brief (pdf)](../../../papers/Brief-CarbonPriceNaturalExperiments.pdf) · [Working paper (pdf)](../../../papers/CarbonPriceNaturalExperiments.pdf)
 
 # References {.unnumbered}
 

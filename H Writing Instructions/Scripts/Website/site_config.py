@@ -1,11 +1,17 @@
 """One place that says how the website is laid out. The other website scripts import it.
 
-The site has two research parts, each with its own top tab, home page, folder and sidebar:
+The site has three research parts, each with its own top tab, home page, folder and sidebar:
     Policy and Finance        papers in "C Policy and FInance" (sections 1-4), pages in E Website/policy/,
                               home page policy/index.qmd
     Modelling and Analytics   papers in "D Modelling" (sections 5-7), pages in E Website/modelling/,
                               home page modelling/index.qmd
+    New Research              papers in "B Theory and Research": new work awaiting Stephen's review, in section
+                              folders named like the series (B Theory and Research/5.Modelling/5.5.<Name>), so each
+                              paper keeps the number of the section it will join. Pages in E Website/new/,
+                              home page new/index.qmd. Once reviewed, a paper moves to its section in C or D.
 plus the site's home page, index.qmd (what the research covers), written by hand.
+A section number can appear in more than one part (5 in Modelling and Analytics and in New Research), so scripts
+find a paper's part and section from where its folder sits (locate) or by its number across all parts (find_paper).
 
 Modelling and Analytics is due to move to its own repository. When it does, delete its entry in PARTS
 (and its tab in _quarto.yml); nothing else depends on it.
@@ -26,7 +32,8 @@ SITE = REPO / "E Website"
 ARCHIVE = SITE / "PaperArchive"   # every paper, brief, deck and overview, copied by publish_series.py; never uploaded
 PAPERS = SITE / "papers"          # only the files the pages link to; uploaded
 
-# section folder, page slug, name, one-line description, published overview file, published series deck (or None)
+# section folder, page slug, name, one-line description, published overview file (or None), published series deck (or None)
+# "aliases": False leaves out the redirects from the old research/ addresses (only the first two parts had them).
 PARTS = [
     {
         "key": "policy",
@@ -76,6 +83,24 @@ PARTS = [
              "OverviewAnalytics.docx", "Slides-Analytics.pptx"),
         ],
     },
+    {
+        "key": "new",
+        "title": "New Research",
+        "root": REPO / "B Theory and Research",
+        "dir": "new",
+        "home": "new/index.qmd",
+        "aliases": False,
+        "intro": ("Recent papers, not yet reviewed. Each keeps the number of the section it will join, and moves "
+                  "there once it has been reviewed; each has a short policy brief as its page and the full working "
+                  "paper one level below. The reviewed papers are under [Policy and Finance](../policy/index.qmd) "
+                  "and [Modelling and Analytics](../modelling/index.qmd)."),
+        "more": None,
+        "sections": [
+            ("5.Modelling", "5-modelling", "Modelling (CPAT)",
+             "Evidence a carbon-pricing model should match: what real carbon taxes, fuel taxes and price shocks did to emissions.",
+             None, None),
+        ],
+    },
 ]
 
 # Books and earlier papers, listed at the end of their section's page (and in the sidebar under the section).
@@ -114,8 +139,9 @@ SECTION_EXTRAS = {
     ],
 }
 
-# Paper folders kept off the site for now (drafts not yet read); delete a name to publish it on the next compile.
-HOLD = {"5.5.CarbonPriceNaturalExperiments"}
+# Paper folders kept off the site for now; delete a name to publish it on the next compile. (Drafts awaiting review
+# go to "B Theory and Research" and the New Research tab instead.)
+HOLD = set()
 
 # Folders inside a section that hold books, not papers: listed through SECTION_EXTRAS, not as numbered papers.
 BOOK_FOLDERS = {"3.3.TimeAndChance"}
@@ -136,6 +162,7 @@ WEB_PAPERS = [
     "5.2.CPATAIImplementation",
     "5.3.CPATValidation",
     "5.4.ElasticityValidation",
+    "5.5.CarbonPriceNaturalExperiments",
     "6.1.PolicyEquivalentCarbonPriceAndCES",
     "6.2.CBAMPolicyTool",
     "6.3.PublicInvestment",
@@ -165,12 +192,35 @@ if ANONYMOUS:
 
 
 def part_of_section(num):
-    """The part and section tuple for a section number such as '1'."""
+    """The first part and section tuple for a section number such as '1'. A number can be in more than one part
+    (5 is in Modelling and Analytics and in New Research): to place a paper, use locate() or find_paper()."""
     for part in PARTS:
         for sec in part["sections"]:
             if sec[0].split(".")[0] == str(num):
                 return part, sec
     return None, None
+
+
+def locate(folder):
+    """The part and section a paper folder sits in, from its path."""
+    folder = Path(folder).resolve()
+    for part in PARTS:
+        for sec in part["sections"]:
+            if folder.parent == section_folder(part, sec).resolve():
+                return part, sec
+    return None, None
+
+
+def find_paper(num):
+    """(part, section, folder) for paper number num (e.g. '5.5'), searching every part."""
+    for part in PARTS:
+        for sec in part["sections"]:
+            if sec[0].split(".")[0] != str(num).split(".")[0]:
+                continue
+            for pf in paper_folders(part, sec):
+                if ".".join(pf.name.split(".")[:2]) == num:
+                    return part, sec, pf
+    return None, None, None
 
 
 def section_folder(part, sec):

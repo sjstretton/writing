@@ -9,13 +9,15 @@ Run from this folder:  python3 natural_experiments.py
    (FRED H.10 series AEXSDUS, AEXUSEU, AEXCAUS, AEXUSUK) unless the note says otherwise.
 2. Computes a common yardstick: the effect per US$10 per tonne of CO2, a rough
    semi-elasticity, with the horizon stated. Writes table_per10.csv.
-3. Draws Figure 1 (effect against price, log price axis): figures/fig1_effect_vs_price.png.
+3. Draws Figure 1 (effect against price, log price axis): figures/fig1_effect_vs_price.png, and copies it
+   to ../1.Presentation/figures/ for the policy brief.
 
 The yardstick is the author's arithmetic, not a published estimate: percent effect
 divided by the price in US$/t, times 10. It ignores differences in horizon, coverage,
 baseline and design, which the paper discusses.
 """
 import csv
+import shutil
 from pathlib import Path
 
 HERE = Path(__file__).parent
@@ -172,6 +174,10 @@ def draw_figure():
     out = FIG / "fig1_effect_vs_price.png"
     fig.savefig(out, facecolor=surface)
     print("wrote", out)
+    brief_fig = HERE.parent / "1.Presentation" / "figures"   # the policy brief uses the same figure
+    brief_fig.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(out, brief_fig / out.name)
+    print("copied to", brief_fig / out.name)
 
 
 if __name__ == "__main__":

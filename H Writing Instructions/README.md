@@ -29,9 +29,9 @@ The writing part of the combined repo: papers, the Quarto website and its script
 | &nbsp;&nbsp;`5.Modelling` | Companion papers to CPAT-AI: 5.1 methods, 5.2 implementation, 5.3 validation, 5.4 elasticities. |
 | &nbsp;&nbsp;`6.ModularUpgrades` | 6.1 total effective carbon price, 6.2 CBAM tool, 6.3 public investment, 6.4 activity layer, 6.5 macro-fiscal-energy scenario tool. |
 | &nbsp;&nbsp;`7.AdditionalAnalytics` | 7.1 excise diagnostic, 7.2 fiscal indicators dashboard. |
-| `E Website` | The Quarto site: Policy and Finance (`index.qmd`, `policy/`), Modelling and Analytics (`modelling/`), About. `PaperArchive/` holds every published file, `papers/` only the linked ones. |
+| `E Website` | The Quarto site: Policy and Finance (`index.qmd`, `policy/`), Modelling and Analytics (`modelling/`), New Research (`new/`), About. `PaperArchive/` holds every published file, `papers/` only the linked ones. |
 | `F Other Writing` | Writing outside the series and not on the website (8.1–8.7). |
-| `B PhD Application` | PhD research proposals and application status (see its `README.md`). |
+| `B Theory and Research` | New papers awaiting review, the site's New Research tab: 5.5 *Carbon Prices Cut Emissions* in `5.Modelling/`. Papers keep their section number and move to C or D once reviewed (see its `README.md`). The PhD proposals are now in `3 PhD Application`. |
 | `G Climate Econ Course` | Materials for a climate-fiscal economics course, organized by topic (A–G). |
 
 Most subfolders that need extra explanation have their own `README.md` — check

@@ -10,10 +10,13 @@ project:
     - "modelling/*.qmd"
     - "modelling/*/*/index.qmd"
     - "modelling/*/*/working-paper.qmd"
+    - "new/*.qmd"
+    - "new/*/*/index.qmd"
+    - "new/*/*/working-paper.qmd"
   resources:
     - "papers/**"
 
-# Two research parts, each with its own tab and sidebar (H Writing Instructions/Scripts/Website/site_config.py).
+# Three research parts, each with its own tab and sidebar (H Writing Instructions/Scripts/Website/site_config.py).
 # The sidebar contents between the BEGIN/END markers are written by build_research_pages.py on every compile.
 website:
   title: "Climate Fiscal and Finance Papers"
@@ -27,6 +30,8 @@ website:
         text: Policy and Finance
       - href: modelling/index.qmd
         text: Modelling and Analytics
+      - href: new/index.qmd
+        text: New Research
   sidebar:
     - id: policy
       title: "Policy and Finance"
@@ -178,6 +183,23 @@ website:
                 - text: "Working paper"
                   href: modelling/7-analytics/FiscalIndicatorsDashboard/working-paper.qmd
         # END modelling sidebar
+    - id: new
+      title: "New Research"
+      style: docked
+      collapse-level: 1
+      contents:
+        # BEGIN new sidebar
+        - text: "New Research"
+          href: new/index.qmd
+        - section: "5. Modelling (CPAT)"
+          href: new/5-modelling.qmd
+          contents:
+            - section: "5.5 Carbon Prices Cut Emissions"
+              href: new/5-modelling/CarbonPriceNaturalExperiments/index.qmd
+              contents:
+                - text: "Working paper"
+                  href: new/5-modelling/CarbonPriceNaturalExperiments/working-paper.qmd
+        # END new sidebar
   page-footer:
     left: "© 2026"
     right: "Built with [Quarto](https://quarto.org)"
