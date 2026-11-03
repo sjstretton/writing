@@ -1,0 +1,305 @@
+{
+  "series": "Climate Fiscal Policy Brief No. 5.5 · November 2026",
+  "title": "Carbon Prices Cut Emissions",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Carbon Prices Cut Emissions",
+      "subtitle": "What ten natural experiments show about fuel taxes, carbon prices and subsidy reform",
+      "message": "Every well-measured case shows a cut. In transport and heating, about 1–2% less use per $10 a tonne, building up over five to fifteen years; in power, where gas could replace coal, five to ten times more per dollar. Design matters as much as the price.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Models set carbon-tax plans; these ten cases show what real price rises did",
+      "stats": [
+        {
+          "value": "10",
+          "label": "natural experiments, 1991–2022: carbon taxes, fuel taxes, emissions trading, a subsidy reform and a price shock"
+        },
+        {
+          "value": "$11–950",
+          "label": "carbon price, or the dollar-per-tonne equivalent of the price rise, per tonne of CO₂"
+        },
+        {
+          "value": "10 of 10",
+          "label": "show a cut in emissions or use of the fuels that were priced"
+        }
+      ],
+      "text": "Each case has a credible counterfactual: similar countries, provinces or plants without the policy, or tax changes timed independently of the trend. For each: the fuels covered, the rise in retail prices, its carbon price and the measured cut.",
+      "source": "Working paper 5.5, Sections 3 and 4."
+    },
+    {
+      "type": "table",
+      "title": "In transport and heating, every case shows a cut that builds over years",
+      "header": [
+        "Case",
+        "Price rise",
+        "$/t",
+        "Measured cut"
+      ],
+      "widths": [
+        2.4,
+        2.6,
+        1.1,
+        2.8
+      ],
+      "rows": [
+        [
+          "Sweden 1991, motor fuels",
+          "Tax = 21% of petrol price (2006)",
+          "41–124",
+          "Transport CO₂ −11%; tax alone −6%"
+        ],
+        [
+          "Sweden 2001–04, heating",
+          "Heating-oil tax +SEK 1.48/l",
+          "40–124",
+          "200–800 kg CO₂ per person a year"
+        ],
+        [
+          "Germany 1999–2003, road fuels",
+          "= 22% of 1998 petrol price",
+          "74",
+          "Transport CO₂ −11.5% to −16%"
+        ],
+        [
+          "US state gasoline taxes",
+          "10¢ a gallon, 3–6%",
+          "11",
+          "Gasoline −1.4% within a year"
+        ],
+        [
+          "British Columbia 2008–25",
+          "4.8% of pump price (2012)",
+          "9–58",
+          "Transport CO₂ −5% short run, −19% long run"
+        ],
+        [
+          "Switzerland 2008, heating",
+          "Heating oil +21% to +65%",
+          "11–126",
+          "Heating CO₂ −4% to −10% by 2015"
+        ]
+      ],
+      "source": "Andersson (2019); Runst and Thonipara (2020); Runst and Höhle (2022); Davis and Kilian (2011); Pretis (2022); FOEN (2018). Working paper 5.5, Table 1."
+    },
+    {
+      "type": "table",
+      "title": "In power and industry the cuts were larger for the price; short shocks bought less",
+      "header": [
+        "Case",
+        "Price rise",
+        "$/t",
+        "Measured cut"
+      ],
+      "widths": [
+        2.2,
+        3.1,
+        0.9,
+        2.7
+      ],
+      "rows": [
+        [
+          "EU trading 2005–12",
+          "Gas +8–13%, coal +37–68% (marginal)",
+          "19",
+          "Regulated plants −10% to −16%"
+        ],
+        [
+          "UK price floor 2013",
+          "Coal fuel +141%, gas +30% (2015)",
+          "14–36",
+          "Power CO₂ −20% to −26% a year"
+        ],
+        [
+          "Indonesia 2013–15",
+          "Gasoline +89%",
+          "143",
+          "Electricity −7%; traffic −10%"
+        ],
+        [
+          "Germany 2022 gas",
+          "Homes +130%, industry +480%",
+          "160–950",
+          "Gas −23%; all emissions −1.3%"
+        ]
+      ],
+      "note": "Eleven further episodes, among them Australia 2012–14, Finland 1990 and France 2014–18, point the same way on thinner evidence.",
+      "source": "Dechezleprêtre et al. (2023); Colmer et al. (2025); Leroutier (2022); Burke and Kurniawati (2018); Burke et al. (2017); Ruhnau et al. (2023); UBA (2024)."
+    },
+    {
+      "type": "figure",
+      "title": "About 1–2% per $10 a tonne in transport and heating; several times more in power",
+      "image": "figures/fig1_effect_vs_price.png",
+      "caption": "Measured cuts against the carbon price or equivalent (log scale); gray curves mark 1% and 10% per $10 a tonne.",
+      "points": [
+        {
+          "lead": "Transport and heating:",
+          "text": "Germany 1.4–2.0% per $10, Switzerland 0.7–1.6%, Sweden about 0.8%, US 1.0–1.3% in one year."
+        },
+        {
+          "lead": "Power and industry:",
+          "text": "Britain 2.4% (switching only) to 10%; EU trading 4–9%."
+        },
+        {
+          "lead": "Big, short shocks:",
+          "text": "German gas and Indonesian fuel under 2% per $10."
+        }
+      ],
+      "source": "Author's calculation; working paper 5.5, Figure 1 and Table 12."
+    },
+    {
+      "type": "points",
+      "title": "Transport and heating respond slowly, because cars and boilers last",
+      "points": [
+        {
+          "lead": "Germany:",
+          "text": "fuel use per person fell only after three to four years, then 10–15% by 2005."
+        },
+        {
+          "lead": "British Columbia:",
+          "text": "transport CO₂ −5% in the short run and −19% in the long run."
+        },
+        {
+          "lead": "Switzerland:",
+          "text": "no measurable response at CHF 12–36 a tonne; house owners cut heating fuel 12–14% at CHF 60–84."
+        },
+        {
+          "lead": "Price shocks:",
+          "text": "German household gas +130% cut use by a fifth to a quarter within months; people turn the heating down before they replace the boiler."
+        }
+      ],
+      "source": "Runst and Höhle (2022); Pretis (2022); Francescutto and Mathys (2022); Ruhnau et al. (2023)."
+    },
+    {
+      "type": "stats",
+      "title": "Britain's carbon price floor drove coal out of power, because gas plants stood ready",
+      "stats": [
+        {
+          "value": "39% → 2%",
+          "label": "coal's share of British electricity generation, 2012 to 2019"
+        },
+        {
+          "value": "+141%",
+          "label": "rise in coal plants' fuel cost from the carbon price in 2015, against +30% for gas"
+        },
+        {
+          "value": "−20 to −26%",
+          "label": "power-sector CO₂ a year over 2013–2017, against a synthetic Britain"
+        }
+      ],
+      "text": "A total carbon price of $14–36 a tonne reversed the order in which coal and gas plants ran, then closed coal plants. Counting only switching at existing plants, the cut was 6% at about €18 a tonne.",
+      "source": "BEIS (2017); Abrell, Kosch and Rausch (2022); Leroutier (2022); Gugler, Haxhimusa and Liebensteiner (2023)."
+    },
+    {
+      "type": "points",
+      "title": "Design mattered as much as the price",
+      "points": [
+        {
+          "lead": "Taxes bite harder:",
+          "text": "demand fell 2–3 times more than for equal market price rises (British Columbia 2.9×, Sweden and the US about 3×), though part is buying ahead of announced rises."
+        },
+        {
+          "lead": "Offsets undo it:",
+          "text": "Sweden cut its energy tax on petrol as the carbon tax more than doubled in 2001–04, and the transport gap barely widened."
+        },
+        {
+          "lead": "Coverage limits it:",
+          "text": "British Columbia cut transport emissions but not, measurably, the total."
+        },
+        {
+          "lead": "Price the substitutes together:",
+          "text": "Germany's 2022 gas cut of 23% became a 1.3% fall in national emissions as power stations burned more coal."
+        }
+      ],
+      "source": "Lawley and Thivierge (2018); Andersson (2019); Li, Linn and Muehlegger (2014); Coglianese et al. (2017); Pretis (2022); UBA (2024)."
+    },
+    {
+      "type": "table",
+      "title": "The cases support CPAT's gasoline response; its home-heating response looks too high",
+      "header": [
+        "Fuel, sector",
+        "CPAT long run",
+        "Natural experiments",
+        "Verdict"
+      ],
+      "widths": [
+        2.4,
+        1.5,
+        3.0,
+        2.0
+      ],
+      "rows": [
+        [
+          "Gasoline, transport",
+          "−0.64",
+          "−0.4 to −0.7 over 5–15 years",
+          "Consistent"
+        ],
+        [
+          "Natural gas, homes",
+          "−0.70",
+          "−0.15 to −0.45 (Switzerland, BC)",
+          "Too high"
+        ],
+        [
+          "Electricity",
+          "−0.44",
+          "−0.4 over four years (Indonesia)",
+          "Consistent"
+        ],
+        [
+          "Timing",
+          "All in year 1",
+          "Builds over 5–15 years",
+          "Front-loaded"
+        ]
+      ],
+      "note": "Back-cast each case: give a model the data from before the policy and the prices that followed, and compare its predicted cut with the measured one.",
+      "source": "CPAT defaults for developing countries (Brief 5.4); working paper 5.5, Table 12 and Section 7."
+    },
+    {
+      "type": "closing",
+      "title": "What to do",
+      "left": {
+        "title": "What the cases show",
+        "items": [
+          {
+            "lead": "Direction:",
+            "text": "every well-measured carbon price or fuel price rise cut emissions from the priced fuels."
+          },
+          {
+            "lead": "Size:",
+            "text": "about 1–2% per $10 a tonne in transport and heating, over five to fifteen years."
+          },
+          {
+            "lead": "Power:",
+            "text": "five to ten times more per dollar where gas could replace coal."
+          },
+          {
+            "lead": "Design:",
+            "text": "taxes bite harder; offsets, exemptions and unpriced coal leak."
+          }
+        ]
+      },
+      "right": {
+        "title": "Actions",
+        "items": [
+          {
+            "lead": "Ministries:",
+            "text": "plan on 5–10% less from road fuels and heating within a decade at $50 a tonne; a fifth less from power where gas or renewables stand ready."
+          },
+          {
+            "lead": "Design:",
+            "text": "price coal with gas; no offsetting tax cuts; a published, rising schedule."
+          },
+          {
+            "lead": "Modelers:",
+            "text": "back-cast these ten cases; lower home-heating responses; phase the response in."
+          }
+        ]
+      }
+    }
+  ]
+}

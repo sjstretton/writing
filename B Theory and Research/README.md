@@ -8,7 +8,7 @@ Every document here is written in the house working-paper format (norm 13 in `H 
 
 | Folder | What it holds | Status |
 |---|---|---|
-| `5.5.CarbonPriceNaturalExperiments` | **Carbon Prices Cut Emissions: Evidence from Ten Natural Experiments** (paper 5.5). Ten ex post cases, each with the price path over time, the retail price increase, the carbon price or its US$ equivalent and the measured cut; working paper v0.1.1 and Climate Fiscal Policy Brief No. 5.5 v0.1 (the paper's page on the site) | Awaiting review; on the New Research tab |
+| `5.5.CarbonPriceNaturalExperiments` | **Carbon Prices Cut Emissions: Evidence from Ten Natural Experiments** (paper 5.5). Ten ex post cases, each with the price path over time, the retail price increase, the carbon price or its US$ equivalent and the measured cut; working paper v0.1.1, Climate Fiscal Policy Brief No. 5.5 v0.1 (the paper's page on the site) and a ten-slide deck | Awaiting review; on the New Research tab |
 | `ThesisPlan/` | **Sovereign Incentives for Decarbonisation: Thesis Plan.** The question, the specialism gap, the Global Incentives Model as backbone, practical precedents (SECI, the MDB model, ADB's IF-CAP, CGIF, China's collateral), ten chapters in four parts with an analytical model each, the thesis-by-papers route, timelines and risks | v1.1, 3 Nov 2026 |
 | `OverviewPaper/` | **Guarantee the Contract, Price the Policy, Pool the Risk.** The full overview paper (about 6,000 words, seven propositions), with its verified `references.bib` | v0.1; [VERIFY] markers to clear |
 | `ResearchNotes/` | The addendum to the proposal (guaranteed payments, sovereign incentives, de-risking, currency, metrics, growth and fiscal story), the annotated bibliography, and the first raw research notes | v0.1 |
