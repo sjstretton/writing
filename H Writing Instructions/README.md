@@ -31,7 +31,7 @@ The writing part of the combined repo: papers, the Quarto website and its script
 | &nbsp;&nbsp;`7.AdditionalAnalytics` | 7.1 excise diagnostic, 7.2 fiscal indicators dashboard. |
 | `E Website` | The Quarto site: Policy and Finance (`index.qmd`, `policy/`), Modelling and Analytics (`modelling/`), New Research (`new/`), About. `PaperArchive/` holds every published file, `papers/` only the linked ones. |
 | `F Other Writing` | Writing outside the series and not on the website (8.1–8.7). |
-| `B Theory and Research` | New research awaiting review: new papers on the site's New Research tab (5.5 *Carbon Prices Cut Emissions* in `5.Modelling/`; papers keep their section number and move to C or D once reviewed), and the thesis plan, overview paper, research notes and model documentation behind the PhD (see its `README.md`). The applications are in `3 PhD Application`. |
+| `B Theory and Research` | New research awaiting review: new papers on the site's New Research tab (5.5 *Carbon Prices Cut Emissions* in `5.5.CarbonPriceNaturalExperiments/`, with no section folder; papers keep their section number and move into their section folder in C or D once reviewed), and the thesis plan, overview paper, research notes and model documentation behind the PhD (see its `README.md`). The applications are in `3 PhD Application`. |
 | `G Climate Econ Course` | Materials for a climate-fiscal economics course, organized by topic (A–G). |
 
 Most subfolders that need extra explanation have their own `README.md` — check

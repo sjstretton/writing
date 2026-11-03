@@ -5,10 +5,11 @@ The site has three research parts, each with its own top tab, home page, folder 
                               home page policy/index.qmd
     Modelling and Analytics   papers in "D Modelling" (sections 5-7), pages in E Website/modelling/,
                               home page modelling/index.qmd
-    New Research              papers in "B Theory and Research": new work awaiting Stephen's review, in section
-                              folders named like the series (B Theory and Research/5.Modelling/5.5.<Name>), so each
-                              paper keeps the number of the section it will join. Pages in E Website/new/,
-                              home page new/index.qmd. Once reviewed, a paper moves to its section in C or D.
+    New Research              papers in "B Theory and Research": new work awaiting Stephen's review, directly in
+                              the folder with no section level (B Theory and Research/5.5.<Name>; "flat": True), each
+                              keeping the number of the section it will join. The site still groups them by that
+                              section. Pages in E Website/new/, home page new/index.qmd. Once reviewed, a paper
+                              moves into its section folder in C or D (only the final folders have section folders).
 plus the site's home page, index.qmd (what the research covers), written by hand.
 A section number can appear in more than one part (5 in Modelling and Analytics and in New Research), so scripts
 find a paper's part and section from where its folder sits (locate) or by its number across all parts (find_paper).
@@ -34,6 +35,8 @@ PAPERS = SITE / "papers"          # only the files the pages link to; uploaded
 
 # section folder, page slug, name, one-line description, published overview file (or None), published series deck (or None)
 # "aliases": False leaves out the redirects from the old research/ addresses (only the first two parts had them).
+# "flat": True means the part's papers sit directly in its root, with no section folders; its sections then only
+# group the papers on the site, by the first number of each paper folder.
 PARTS = [
     {
         "key": "policy",
@@ -90,6 +93,7 @@ PARTS = [
         "dir": "new",
         "home": "new/index.qmd",
         "aliases": False,
+        "flat": True,
         "intro": ("Recent papers, not yet reviewed. Each keeps the number of the section it will join, and moves "
                   "there once it has been reviewed; each has a short policy brief as its page and the full working "
                   "paper one level below. The reviewed papers are under [Policy and Finance](../policy/index.qmd) "
@@ -206,7 +210,8 @@ def locate(folder):
     folder = Path(folder).resolve()
     for part in PARTS:
         for sec in part["sections"]:
-            if folder.parent == section_folder(part, sec).resolve():
+            if (folder.parent == section_folder(part, sec).resolve()
+                    and folder.name.split(".")[0] == sec[0].split(".")[0]):
                 return part, sec
     return None, None
 
@@ -224,7 +229,8 @@ def find_paper(num):
 
 
 def section_folder(part, sec):
-    return part["root"] / sec[0]
+    """The folder holding a section's papers: the section folder, or the part's root for a flat part."""
+    return part["root"] if part.get("flat") else part["root"] / sec[0]
 
 
 def paper_folders(part, sec):

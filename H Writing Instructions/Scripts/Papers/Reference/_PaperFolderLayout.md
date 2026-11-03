@@ -1,7 +1,10 @@
 # Paper folder layout
 
-The standard shape for every paper folder: `<paper root>\<section>\<paper>`, or
-`F Other Writing\<paper>`.
+The standard shape for every paper folder: `<paper root>\<section>\<paper>` in the final
+folders (`C Policy and FInance`, `D Modelling`), or `<paper root>\<paper>` with no section
+level in `B Theory and Research` (new research awaiting review) and `F Other Writing`.
+Section folders exist only in the final folders: a paper in B keeps the number of the
+section it will join and moves into that section folder once reviewed.
 
 ```
 <PaperName>.<ext>          the core paper, alone at root

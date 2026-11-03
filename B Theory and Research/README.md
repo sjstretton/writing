@@ -8,22 +8,22 @@ Every document here is written in the house working-paper format (norm 13 in `H 
 
 | Folder | What it holds | Status |
 |---|---|---|
-| `5.Modelling/5.5.CarbonPriceNaturalExperiments` | **Carbon Prices Cut Emissions: Evidence from Ten Natural Experiments** (paper 5.5). Ten ex post cases, each with the price path over time, the retail price increase, the carbon price or its US$ equivalent and the measured cut; working paper v0.1.1 and Climate Fiscal Policy Brief No. 5.5 v0.1 (the paper's page on the site) | Awaiting review; on the New Research tab |
+| `5.5.CarbonPriceNaturalExperiments` | **Carbon Prices Cut Emissions: Evidence from Ten Natural Experiments** (paper 5.5). Ten ex post cases, each with the price path over time, the retail price increase, the carbon price or its US$ equivalent and the measured cut; working paper v0.1.1 and Climate Fiscal Policy Brief No. 5.5 v0.1 (the paper's page on the site) | Awaiting review; on the New Research tab |
 | `ThesisPlan/` | **Sovereign Incentives for Decarbonisation: Thesis Plan.** The question, the specialism gap, the Global Incentives Model as backbone, practical precedents (SECI, the MDB model, ADB's IF-CAP, CGIF, China's collateral), ten chapters in four parts with an analytical model each, the thesis-by-papers route, timelines and risks | v1.1, 3 Nov 2026 |
 | `OverviewPaper/` | **Guarantee the Contract, Price the Policy, Pool the Risk.** The full overview paper (about 6,000 words, seven propositions), with its verified `references.bib` | v0.1; [VERIFY] markers to clear |
 | `ResearchNotes/` | The addendum to the proposal (guaranteed payments, sovereign incentives, de-risking, currency, metrics, growth and fiscal story), the annotated bibliography, and the first raw research notes | v0.1 |
 | `GlobalIncentivesModel/` | Read-only copies of the model's documentation (plan, use-it-or-lose-it paper, data plan, November roadmap), with a map onto the thesis. Masters are in `cpmodelai/climate-fiscal-ai-tools` | Copies of 3 Nov 2026 |
 
-`index.html` lists the numbered papers with links to their files; `build_folder_index.py` rewrites it on every compile.
+`index.html` lists the numbered papers with links to their files, grouped by the section each will join; `build_folder_index.py` rewrites it on every compile.
 
 ## New papers: layout, and how a paper gets here and leaves
 
-New papers use the same layout as `C Policy and FInance` and `D Modelling`: section folders named like the series, each holding numbered paper folders in the standard layout (`H Writing Instructions/Scripts/Papers/Reference/_PaperFolderLayout.md`). A paper keeps the number of the section it will join, so it needs no renumbering when it moves.
+New papers sit directly in this folder, with no section level: section folders (`5.Modelling` and so on) exist only in the final folders, `C Policy and FInance` and `D Modelling`. Each paper folder has the standard layout (`H Writing Instructions/Scripts/Papers/Reference/_PaperFolderLayout.md`) and keeps the number of the section it will join, so it needs no renumbering when it moves.
 
-- **In:** a new paper starts here, in `<N>.<Section>/<N>.<k>.<Name>/`, where `<N>.<k>` is the next free number in the section it belongs to (`H Writing Instructions/NUMBERING.md`). Same masters as everywhere: the `.qmd` working paper and, for the web page, `1.Presentation/Brief-<Name>.qmd`. Add the folder to `WEB_PAPERS` in `H Writing Instructions/Scripts/Website/site_config.py` to put it on the site.
-- **Out:** once Stephen has reviewed it, `git mv` the paper folder into the same section folder in `C Policy and FInance` or `D Modelling`, then run `Compile-Website.bat`. The site pages move from `new/` to the section's tab by themselves, and the paper's number and file names stay the same. Add the section to `site_config.py` (New Research part) when the first paper for a new section arrives here, and remove it when the last one leaves.
+- **In:** a new paper starts here, in `<N>.<k>.<Name>/`, where `<N>.<k>` is the next free number in the section it will join (`H Writing Instructions/NUMBERING.md`). Same masters as everywhere: the `.qmd` working paper and, for the web page, `1.Presentation/Brief-<Name>.qmd`. Add the folder to `WEB_PAPERS` in `H Writing Instructions/Scripts/Website/site_config.py` to put it on the site.
+- **Out:** once Stephen has reviewed it, `git mv` the paper folder into its section folder in `C Policy and FInance` or `D Modelling` (for 5.5: `D Modelling/5.Modelling/`), then run `Compile-Website.bat`. The site pages move from `new/` to the section's tab by themselves, and the paper's number and file names stay the same. On the site, New Research groups its papers by the section they will join: add that section to the New Research part in `site_config.py` when the first paper for it arrives here, and remove it when the last one leaves.
 
-Section overviews and theme decks stay with their sections in C and D; sections here have none.
+Section overviews and theme decks stay with their sections in C and D.
 
 ## How the PhD research connects
 

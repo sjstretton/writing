@@ -18,7 +18,7 @@ Read the file that matches your task before you start. Files in this folder (`H 
 | `PAPERS.md` | Prioritised papers, introductory papers, concept papers and position papers. |
 | `NUMBERING.md` | The canonical paper numbers (section folder plus place in the section), with the old-to-new map and citation-key rules. |
 | `H Writing Instructions/Writing Standards/` | Writing principles, writing types, the paper standard, AI tells to avoid, exemplars and templates. |
-| `B Theory and Research/` | New research awaiting Stephen's review. New papers in the series (the website's New Research tab), in section folders named like C and D: each keeps the number of the section it will join and moves to C or D once reviewed. And the substantive research behind the PhD and the papers: thesis plan, overview paper, research notes, and documentation copies of the Global Incentives Model. Its `README.md` maps it. |
+| `B Theory and Research/` | New research awaiting Stephen's review. New papers in the series (the website's New Research tab), directly in the folder with no section level: each keeps the number of the section it will join and moves into that section folder in C or D once reviewed. And the substantive research behind the PhD and the papers: thesis plan, overview paper, research notes, and documentation copies of the Global Incentives Model. Its `README.md` maps it. |
 | `3 PhD Application/` | The applications themselves: per-university proposals, statements, forms, referees, transcripts. Its `README.md` tracks their status. |
 | `C Policy and FInance/`, `D Modelling/` | The papers, numbered by section: 1.x to 4.x in `C Policy and FInance`, 5.x to 7.x in `D Modelling` (due to move to its own repo). Each section has one `<N>.0.Overview` folder. `index.html` at the top of each lists every paper with links to its files. |
 | `F Other Writing/` | Writing outside the series and not on the website (8.x: other fiscal policy, The Sollar, MDB papers, political economy, philosophy, politics). |
@@ -53,6 +53,7 @@ Follow these steps in order. A paper is not finished until it passes the checkli
 
 ## Files
 
+- Section folders (`1.CarbonPricing`, `5.Modelling` and so on) exist only in the final folders, `C Policy and FInance` and `D Modelling`. New research in `B Theory and Research` sits directly in that folder, numbered for the section it will join (`B Theory and Research/5.5.CarbonPriceNaturalExperiments`), and moves into the section folder once Stephen has reviewed it.
 - Keep the paper folder layout: `1.Presentation`, `2.Source`, `3.RelatedPiecesAndLinks` (older folders still say `3.BackgroundPapers`), `5.Notes`, `8.PreviousVersions`, `9.Archive`, plus `RelatedWork.md` for related pieces that live in other main folders. Convention: `H Writing Instructions/Scripts/Papers/Reference/_PaperFolderLayout.md`.
 - The `.qmd` file at the paper's root is the master unless its README says otherwise. Where qmd and docx disagree (status report H13), ask which is the master before editing.
 - Versions: the master carries `version:` in its YAML; older versions go in `8.PreviousVersions/` as `<Name>-v0.1.<ext>`, `<Name>-v0.2.<ext>`. Before a major rewrite, move the current master there under its version number and bump the master.

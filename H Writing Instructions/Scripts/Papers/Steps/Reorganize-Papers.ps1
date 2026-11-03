@@ -34,7 +34,7 @@
 
     WHERE THINGS LIVE
         The papers are in the paper roots at the top of the repository:
-            B Theory and Research\  new papers awaiting review, section folders named like C and D
+            B Theory and Research\  new papers awaiting review, no section level (like F)
             C Policy and FInance\   sections 1-4
             D Modelling\            sections 5-7
             F Other Writing\        papers outside the series (8.x), no section level
