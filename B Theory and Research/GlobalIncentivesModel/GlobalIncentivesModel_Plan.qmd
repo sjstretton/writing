@@ -1,0 +1,372 @@
+---
+title: "Model Technology Where It Decides Emissions"
+subtitle: "A Plan for a Global Model of Climate Incentives: Sectors, Finance, Destination Carbon Pricing, Policy Crediting and Use-It-or-Lose-It Funds"
+author:
+  - name: "Stephen J. Stretton"
+    affiliation: "World Bank Group"
+date: "31 October 2026"
+version: "Draft v0.1"
+abstract: |
+  International climate policy now relies on instruments that reach across borders: carbon border adjustments, payments for policies rather than projects, guarantees that lower the cost of capital, and funds that reward governments. No single model available to a finance ministry or development bank can compare them, because each acts through a different channel. This plan sets out a global model, by country and sector, that can. Its central research question is how much emissions can fall at zero cost at current interest rates, how much at World Bank interest rates, and how much when domestic co-benefits are counted. Its core models sectors in one of three ways. Nine sectors whose emissions are decided by a choice between a few long-lived technologies get an activity-and-technology model: power, steel, ammonia and hydrogen, and road passenger and freight transport in full; cement, aluminium, building heat and household cooking in stylized form. Each comes with a technical cost model, a cost-of-capital model and a behavioral rule: a cost-based logit with a diffusion limit, simpler than the Future Technology Transformations models. The rest use nested constant-elasticity substitution, marginal abatement curves or a carbon-stock model. A lookup table records who decides in each sector, whether the public budget, a regulated utility, a long-term contract or a private buyer. Around the core sit five modules: policy, cost of finance, destination carbon accounting with trade flows, international incentives, and national objectives with a simple macro model. The incentives module contains a country timing layer, so the model can test use-it-or-lose-it funds that decay. Most components exist already and are reused.
+keywords: [integrated assessment, technology diffusion, cost of capital, carbon border adjustment, policy crediting, climate finance]
+jel: [C61, F18, H23, Q43, Q54, Q58]
+bibliography: references.bib
+format:
+  docx: default
+  pdf:
+    number-sections: true
+    linestretch: 1.3
+---
+
+*The findings, interpretations, and conclusions expressed in this paper are entirely those of the author. They do not necessarily represent the views of the World Bank and its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.*
+
+*Draft v0.1, 31 October 2026. Modelling plan for the GlobalIncentivesModel project. Companion working paper: "Use It or Lose It: Decaying Incentives That Pay Governments to Act Now" (`../UseItOrLoseIt/`).*
+
+# Introduction
+
+The instruments of international climate policy now work across borders, and the models used to judge them do not. The European Union's carbon border adjustment mechanism prices the carbon in imported steel, aluminium, cement, fertilizers, hydrogen and electricity [@EU2023CBAM]. Development banks are being asked to lower the cost of capital for clean power, which varies widely: across the 43 economies with observed data, the real after-tax cost of capital for solar power in 2021 ranged from 2.5 percent in China to more than 13 percent in Argentina, Yemen and Lebanon, with a median of 6.7 percent (Global Fiscal Indicators v1.3, from IRENA data). Policy crediting would pay governments per tonne cut by their policies rather than by individual projects [@StrettonWP11; @StrettonWP61]. Funds that reward governments, through guarantees, trust accounts or sustainability-linked loans, are under design [@StrettonWP41; @StrettonWP42; @StrettonWP43]. A finance ministry asked to choose among these needs to know, for its own country and sectors, what each does to emissions, to the budget and to growth, and how its effects depend on what other countries do.
+
+The model's central research question is how much emissions can fall at zero cost, and how much more cheaper finance and co-benefits unlock. It answers the question three times from the same technology options, changing only the cost of capital and the benefits counted. An option is zero-cost when its net cost $K$ (capital annualized at the cost of capital $w$, plus running costs, less fuel savings) is not positive. Carbon is valued in none of the three cases, so each measures abatement that pays for itself.
+
+| Case | Cost of capital $w$ | Benefits counted | Zero-cost test |
+|:--|:--|:--|:--|
+| 1. Current interest rates | Each country's market cost of capital today, equation (7) | Energy-cost savings | $K \le 0$ |
+| 2. World Bank interest rates | The World Bank's lending rate to the host government [to confirm: the IBRD lending rate, or the World Bank's 6 percent social discount rate] | Energy-cost savings | $K \le 0$ |
+| 3. Including co-benefits | As in case 2 | Plus domestic co-benefits $H$ from equation (11), such as health and energy security | $K - H \le 0$ |
+
+: The central research question, answered three times. Source: author.
+
+The output is the tonnes of CO$_2$e cut each year in 2030, 2035 and 2050, and cumulatively to 2050, by country, sector and in total. The gaps between the cases carry the argument. The step from case 1 to case 2 is the abatement that cheaper finance alone unlocks, the prize for lowering the cost of capital. The step from case 2 to case 3 is what a government gains by acting in its own interest, before any international payment. Whatever still costs money after case 3 is what carbon pricing and international incentives must pay for.
+
+The question of design that follows is how to build a global model, by country and sector, that compares these instruments on one basis and can say what an optimal design looks like. The answer has three parts. First, model technology explicitly only where a choice between a few long-lived technologies decides emissions; nine sectors meet that test, and the rest are better modeled more simply. Second, record for every sector who makes the investment decision, because a carbon price acts on a private buyer, a contract price on a power purchase agreement, and a budget allocation on a public program. Third, put the government's own decision, when to adopt a policy, inside the model, so that international incentives can be designed to change it. The last part is what allows the model to test use-it-or-lose-it incentives: rewards that decay with delay, studied in the companion working paper.
+
+The plan builds on existing work rather than starting afresh. The national mitigation investment model already covers 186 countries from 2024 to 2050 with a who-pays typology [@NMIM2026]. The CPAT mitigation module has a power-sector technical cost model with dispatch and investment logits. Working paper 6.1 has a nested constant-elasticity model and the Total Effective Carbon Price, which converts any policy mix into an equivalent uniform carbon price [@StrettonWP61]. The CBAM Policy Tool has product emission factors for seven products. The macro-fiscal models chain a simplified global integrated monetary and fiscal model, a debt-investment-growth model and a debt sustainability framework. Section 2 lists what each supplies. The new work is the sector lookup, the diffusion rule, the cost-of-finance decomposition, bilateral trade and destination accounting, the incentives module and the country objective function.
+
+# What exists and what is missing
+
+Table 1 lists the components that already exist, with their location and what the new model reuses. Paths are relative to the root of the `climate-fiscal-ai-tools` repository unless they name the `writing` or `cpat_ai` repository.
+
+| Component | Location | What it supplies | Reused for |
+|:--|:--|:--|:--|
+| National Mitigation Investment Model (NMIM) v0.2 | `MacFiscEnergyScenarioProto/InvestmentNeeds/national_model/` | 186 countries, 2024–2050, baseline and net zero; activity equation; road, buildings, industry, power modules; incremental cost under three cost-of-capital lenses; who-pays typology P1–P5 by power market structure | Activity layer, country panel, who-pays lookup, investment accounting |
+| CPAT mitigation module v0.6.4 | `cpat_ai/excel_ai/mitigation/` and `cpat_ai/coded/` | Demand equation with price and shadow-price terms; power levelized costs; dispatch and investment logits with scale-up limits; road ownership and electric-vehicle logit; fiscal multipliers | Behavioral rule for power and road; technical cost equations; macro-lite multipliers |
+| Working paper 6.1, Total Effective Carbon Price | `writing/D Modelling/6.ModularUpgrades/6.1.PolicyEquivalentCarbonPriceAndCES/` | Nested CES by sector with partial adjustment; policy-equivalent carbon price for taxes, feebates, standards and mandates | Behavior for aggregated sectors; policy-to-price conversion; crediting metric |
+| Working paper 6.3, public investment | `writing/D Modelling/6.ModularUpgrades/6.3.PublicInvestment/` | Investment from physical change with learning; country-technology cost of capital; power purchase agreement liability; financing routes | Cost-of-finance module; contingent liabilities |
+| Working paper 6.4, activity layer | `writing/D Modelling/6.ModularUpgrades/6.4.ActivityModelling/` | Common activity drivers for ten activities; concordance across CPAT, SISEPUEDE, CBAM tool and FTT | Activity module |
+| CBAM Policy Tool global v1.0 | `CBAMPolicyTool/` | Seven products; EU default emission factors; output and emissions responses to carbon cost; recognition of origin carbon prices | Product tier of destination accounting |
+| PriceFeasibility v0.1 | `MacFiscEnergyScenarioProto/PriceFeasibility/` | Power carbon tax, feebate and hybrids under tariff, distribution and incumbent-loss limits | Political-feasibility constraints in country objectives |
+| Macro-fiscal models | `MacFiscEnergyScenarioProto/MacroFiscalModels/` | GIMF-lite, DIGNAD-lite, DIGNAR-lite, LIC-DSF-lite and the integrated chain | Country deep-dive macro; debt sustainability |
+| Global Fiscal Indicators v1.3 | `TaxMacroFiscalDashboard/` | 80 indicators for 217 economies, including observed cost of capital, power market structure and macro-model inputs | Country data panel |
+| Series 3 and 4 papers | `writing/C Policy and FInance/` | Payment intermediary and offtaker premium; asset-class refinancing; guarantee loss cases; notional capitalized value; Climate Investment Trust; sustainability-linked lending | Calibration of finance interventions and international incentives |
+
+: Table 1. Most building blocks exist. Existing components and what the global incentives model reuses. Source: repository review, 31 October 2026.
+
+Six things are missing. No component chooses technology in heavy industry by cost; steel routes exist only in the CBAM tool, as fixed shares. The cost of capital does not change the technology mix in NMIM, and the Damodaran sheet that would extend observed cost-of-capital data is empty. There are no bilateral trade flows and no consumption-based emissions accounting, so destination carbon pricing and leakage cannot be modeled. There is no model of an international incentive paid to a government, nor of a government's decision of when to adopt a policy. There is no statement of what a government is maximizing. And global learning, the channel through which one country's deployment lowers another's costs, is exogenous everywhere.
+
+# Architecture
+
+The model has a sector core and five modules around it, matching the five parts of the brief. Table 2 summarizes them; Figure 1 in Appendix C sketches the data flow in words.
+
+| Module | Inputs | Outputs | Status |
+|:--|:--|:--|:--|
+| Core: activity, technology and cost | Activity drivers, unit costs, learning rates, cost of capital, policy wedges | Technology shares, stocks, emissions, investment, unit costs by country, sector and year | Extend NMIM and CPAT |
+| (a) Policy | Instrument settings by country, sector and year | Price and shadow-price wedges; Total Effective Carbon Price; revenue; fiscal cost | Reuse 6.1, CPAT; add ratchet paths |
+| (b) Investment taxonomy | Sector, power market structure, cost recovery, fiscal space | Who decides and who pays (P1–P5); contract form; public budget need; contingent liabilities | Extend NMIM typology to all sectors |
+| (c) Cost of finance | Risk-free rate, country risk, offtaker risk, technology experience, policy credibility, interventions | Cost of capital by country, technology and year; donor cost of each intervention | New, from 6.3 and series 3 |
+| (d) International incentives | Fund rules, crediting rules, guarantee capacity, CBAM and destination charges | Payments, balances, guarantee exposure, donor cost; country adoption dates | New |
+| (e) National objectives and macro | Core and module outputs; objective weights | Growth, fiscal balance, debt, energy security, health, distribution; national payoff of each package | Reuse macro-fiscal models; add objective function |
+| Destination accounting and trade (part of (a) and (d)) | Bilateral trade, product intensities, input-output tables | Embodied emissions; border and destination charges; leakage; terms of trade | New |
+
+: Table 2. A sector core with five modules. Source: author.
+
+The model runs annually from a 2024 base year to 2050, for the 186 countries of the CPAT and NMIM panel, using the CPAT variable codes and units (PJ, TWh, GW, US dollars of 2024, MtCO₂e). It is written in Python as one equation specification, with an Excel front end built from it, the pattern NMIM already uses. It solves in two loops. The inner loop runs the sector core for all countries given policies, the cost of capital and incentives; global learning couples countries within it. The outer loop solves the country timing layer: each government chooses when to adopt each policy package, given the incentives on offer and what other governments do.
+
+# Which sectors get an activity-and-technology model
+
+## Five tests
+
+An activity-and-technology model, the structure used for electricity, represents a sector as a demand for a service (megawatt-hours, tonnes of steel, passenger-kilometers) met by a stock of competing technologies, each with its own cost and emission factor. It is worth its data cost where five conditions hold:
+
+1. **A measurable service.** The sector produces one dominant, homogeneous service with a physical activity measure.
+2. **Discrete technologies.** A small set of technologies substitute for one another, with known capital and operating costs.
+3. **Long-lived capital.** Assets last 15 years or more, so vintages, lock-in and early retirement matter.
+4. **Concentrated emissions.** The technology choice decides a large share of national or traded emissions.
+5. **Policy acts on the choice.** Contracts, standards, border adjustments or finance terms target the technology rather than the fuel.
+
+A sector that passes all five tests gets a full activity-and-technology model. One that passes three or four gets a stylized version with two to four technologies, unless the technology choice is made elsewhere (grids follow the power mix, coal supply follows power and steel) or is set by mandate (aviation and shipping fuels). The rest are modeled by nested constant-elasticity substitution between fuels [@StrettonWP61], by marginal abatement cost curves, or, for forests, by a carbon-stock model.
+
+## The sector lookup
+
+Table 3 applies the tests. Nine sectors get an activity-and-technology model: power, iron and steel, ammonia and hydrogen, road passenger transport and road freight in full; cement, aluminium, building heat and household cooking in stylized form. Grids and storage are derived from the power mix rather than chosen.
+
+| Sector | Tests passed | Model | Activity (unit) | Technologies |
+|:--|:-:|:--|:--|:--|
+| Power generation | 5 | Full A+T: stock, dispatch, investment | Electricity (TWh) | Coal, gas combined cycle and peaking, oil, hydro, nuclear, solar, onshore and offshore wind, bioenergy, storage |
+| Grids and storage | 3 | Derived from power mix | Network investment per unit of new generation; storage by variable renewable share | n.a. |
+| Iron and steel | 5 | Full A+T: route choice | Crude steel (t) | Blast furnace–oxygen, with carbon capture, gas direct reduction–electric arc, hydrogen direct reduction, scrap electric arc |
+| Ammonia, fertilizers, hydrogen | 5 | Full A+T | Ammonia and hydrogen (t) | Gas reforming, with capture, coal gasification, electrolysis |
+| Cement and clinker | 4 | Stylized A+T | Cement (t) | Clinker ratio, kiln fuel, carbon capture |
+| Aluminium | 4 | Stylized A+T | Primary aluminium (t) | Smelter power source: grid, captive coal, captive clean |
+| Other industry | 2 | Nested CES fuel switch plus electrification cost | Energy use or value added | Fuels and electricity; heat pumps for low-temperature heat |
+| Road passenger | 5 | Full A+T: fleet stock, cost-of-ownership logit | Cars and passenger-km | Internal combustion, hybrid, battery electric |
+| Road freight | 5 | Full A+T | Tonne-km | Diesel, battery electric, fuel cell, gas |
+| Rail and urban transit | 2 | Activity and public investment | Mode share of passenger- and tonne-km | n.a. |
+| Aviation and shipping | 3 | Fuel blending under mandates | Fuel use, including bunkers | Fossil fuel versus sustainable aviation fuel, ammonia, methanol |
+| Building heat and cooling | 4 | Stylized A+T for heat; efficiency tiers for cooling | Useful heat; cooling demand | Gas and oil boilers, heat pumps, resistive; appliance efficiency tiers |
+| Household cooking | 3 | Stylized A+T | Households | Traditional biomass, charcoal, liquefied petroleum gas, electric |
+| Oil and gas supply | 2 | Marginal abatement curve (methane) | Production | Leak detection and repair, flaring and venting controls |
+| Coal supply | 3 | Retirement schedule linked to power and steel | Capacity and output | n.a. |
+| Forests and land use | 2 | Carbon-stock model, as in working paper 4.1 | Forest carbon stock; deforestation rate | Enforcement, payments |
+| Agriculture | 1 | Marginal abatement curve (methane, nitrous oxide) | Livestock, rice area, fertilizer | Feed additives, water management |
+| Waste | 2 | Marginal abatement curve | Waste generated | Landfill gas capture, diversion |
+
+: Table 3. Nine sectors need an activity-and-technology (A+T) model; the rest are modeled more simply. Tests: measurable service, discrete technologies, long-lived capital, concentrated emissions, policy acts on the choice. Source: author's assessment.
+
+## Who decides, who pays and through what contract
+
+The same carbon price does different things in different sectors because different agents decide. Table 4 records, for each sector, the decision regime in the NMIM typology: P1 pure public, repaid by taxes; P2 regulated utility, repaid by tariffs on a regulated asset base; P3 contracted revenue, repaid under a long-term contract such as a power purchase agreement, a contract for difference or a concession; P4 viability gap, market revenue plus a public top-up; and P5 pure private, repaid from the investor's own sales [@NMIM2026]. It also records the contract form, the sensitivity of the sector's costs to the cost of capital, its exposure to destination carbon pricing, and how well policy crediting fits.
+
+| Sector | Decision regime (default) | Contract form | Cost-of-capital sensitivity | Destination pricing exposure | Policy crediting fit |
+|:--|:--|:--|:--|:--|:--|
+| Power generation | P2, P3, P5 by market structure | Power purchase agreement, contract for difference, auction | Very high: capital is most of the cost of renewables | Low; electricity is in CBAM scope | High: power-sector carbon-price equivalent; coal retirement |
+| Grids and storage | P1, P2 | Regulated asset base; transmission concession | Very high | None | Enabler; credit through power |
+| Iron and steel | P5; P1 or P2 where state-owned | Offtake and green-premium contracts; carbon contracts for difference | Medium to high | High (CBAM) | Medium to high |
+| Ammonia and hydrogen | P5; P3 for electrolytic hydrogen | Long-term offtake; hydrogen auctions | High for electrolysis | High (CBAM) | Medium to high |
+| Cement | P5 | Contracts needed only for carbon capture | Medium | Medium; trade mostly regional | Medium |
+| Aluminium | P5 with P3 power supply | Long-term power contracts | Medium | High (CBAM) | Medium |
+| Other industry | P5 | None | Medium | Through input-output accounting only | Low to medium |
+| Road passenger | P5 households; P3 or P4 for charging | Consumer credit; charging concessions | Medium | Low | Medium: vehicle standards are measurable |
+| Road freight | P5 firms | Leasing | Medium to high | Low | Medium |
+| Rail and urban transit | P1, P4 | Availability-payment concessions | High | None | Low |
+| Aviation and shipping | P5 under mandates | Fuel offtake | Medium | International bunkers: no agreed destination | Low |
+| Building heat and cooling | P5 households, split incentives; P1 public buildings | On-bill finance | Medium | Low | Medium: appliance standards |
+| Household cooking | P5 with P1 programs | Program subsidies | Low | None | Medium through programs |
+| Oil and gas methane | P5; P2 for national oil companies | None | Low | Importer methane rules | High: satellite-verifiable |
+| Coal supply and retirement | P1, P2 state-owned | Buyouts, transition mechanisms | High | Coal exports | High |
+| Forests and land use | P1 enforcement | Jurisdictional programs | Low | Commodity-driven deforestation through trade | High, as stocks [@StrettonWP41] |
+| Agriculture | P5 smallholders | None | Low | Agricultural trade | Low |
+| Waste | P1 municipal; P3 concessions | Concessions | Medium | None | Medium |
+
+: Table 4. The decision regime decides which instrument works. Sector lookup of decision regimes (NMIM types P1–P5), contracts, sensitivity to the cost of capital, exposure to destination carbon pricing and fit with policy crediting. Defaults to be overridden by country data where available. Source: author's assessment; P1–P5 typology from NMIM v0.2.
+
+The lookup has three uses in the model. It routes each policy to the margin it acts on: a carbon price enters the private cost of P5 investors, a contract price enters P3 tariffs and the state's contingent liabilities, and P1 investment enters the budget. It allocates financing need between the budget, utilities, contracts and private balance sheets, as NMIM does for power, and so tells the macro module what enters public debt. And it decides which cost of capital applies: the sovereign's for P1, the utility's for P2, the contract's for P3, the firm's or household's for P5. For power the default regime depends on market structure: vertically integrated, single-buyer or wholesale, from the power sector reform data in NMIM. For other sectors the defaults in Table 4 are judgements, to be replaced where national data on state ownership and contracting exist.
+
+# The sector core
+
+## Activity
+
+Activity follows the common activity layer of working paper 6.4 [@StrettonWP64]:
+$$A_{j,c,t} = A_{j,c,0}\left(\frac{P_{c,t}}{P_{c,0}}\right)^{\beta_j}\left(\frac{y_{c,t}}{y_{c,0}}\right)^{\varepsilon_j}\left(\frac{c_{j,c,t}}{c^{\text{base}}_{j,c,t}}\right)^{\eta_j}, \qquad (1)$$
+where $A$ is the activity level of service $j$ in country $c$, $P$ population, $y$ income per head, and $c$ the cost of the service relative to its baseline path, so that policy raises or lowers demand with elasticity $\eta_j$. The price response is applied once, in this equation, and not again in the technology choice [@StrettonWP64]. Industrial activity for traded products is split between domestic use and exports using the product tier of the trade module (Section 8), so that a border adjustment abroad changes domestic production.
+
+## Technical cost
+
+Each technology $k$ has a levelized cost of the service it delivers. For power and industrial plant:
+$$LC_{k,c,t} = \frac{I_{k,t}\,\mathrm{CRF}(w_{k,c,t}, n_k) + F_k}{u_k} + v_k + h_k\,p^{\text{fuel}}_{c,t} + e_k\,\tau^{\text{eff}}_{s,c,t}, \qquad (2)$$
+where $I$ is overnight capital cost per unit of capacity, $\mathrm{CRF}(w,n) = w/[1-(1+w)^{-n}]$ the capital recovery factor at cost of capital $w$ over life $n$, $F$ fixed operating cost, $u$ annual output per unit of capacity, $v$ variable cost, $h$ the fuel input per unit of output, $p^{\text{fuel}}$ the fuel price, $e$ the emission factor and $\tau^{\text{eff}}$ the policy wedge per tonne from the policy module. The power version reuses CPAT's levelized fixed cost with its own capital recovery form, its system-cost terms for variable renewables, and its storage costs. Vehicles use total cost of ownership per kilometer and buildings the annualized cost per unit of useful heat.
+
+Capital costs learn from global cumulative capacity:
+$$I_{k,t} = I_{k,0}\left(\frac{X_{k,t}}{X_{k,0}}\right)^{-b_k}, \qquad X_{k,t} = \sum_c \sum_{\tau \leq t} N_{k,c,\tau}, \qquad (3)$$
+with $N$ new capacity and learning rate $1 - 2^{-b_k}$, from published reviews [@Rubin2015; @Way2022]. Equation (3) is the channel through which one country's deployment lowers another's cost, and so the source of the cost decline that, in the use-it-or-lose-it paper, makes governments wait. The model computes it rather than assuming it. A country's cost of capital also falls with its own experience (Section 6), the national counterpart of global learning.
+
+## Behavior
+
+Two behavioral rules are available, and each sector uses one.
+
+**Nested constant-elasticity substitution** for sectors without discrete technologies. Fuel and electricity shares within each sector follow working paper 6.1:
+$$\frac{q'_{fs}}{q_{fs}} = P_{fs}^{-\sigma_s}\left(\frac{C'_s}{C_s}\right)^{\sigma_s - \eta_s}, \qquad (4)$$
+with switching elasticity $\sigma_s$, service elasticity $\eta_s$ and partial adjustment toward the long run at different speeds for switching and demand [@StrettonWP61]. Its advantage is that the Total Effective Carbon Price follows directly.
+
+**A cost-based logit with a diffusion limit** for activity-and-technology sectors. New investment is shared among technologies by
+$$s^{\text{new}}_{k,c,t} = \frac{\omega_{k,c}\exp(-\kappa_s\,LC_{k,c,t}/LC^{\min}_{c,t})}{\sum_{k'}\omega_{k',c}\exp(-\kappa_s\,LC_{k',c,t}/LC^{\min}_{c,t})}, \qquad s^{\text{new}}_{k,c,t} \leq (1+\gamma_k)\,s^{\text{new}}_{k,c,t-1} + \underline{s}_k, \qquad (5)$$
+where $\kappa_s$ measures how sharply investors respond to cost differences (high when costs are known and the product homogeneous), $\omega_{k,c}$ captures non-cost preferences and barriers, calibrated so that the model reproduces base-year investment shares, and the inequality limits how fast a technology's share can grow, with a seed share $\underline{s}_k$ so that a new technology can start. Stocks follow vintages: $K_{k,c,t} = K_{k,c,t-1} - D_{k,c,t} + s^{\text{new}}_{k,c,t}N_{c,t}$, where retirements $D$ follow asset lives and total new capacity $N$ meets activity growth plus retirements. Power adds CPAT's dispatch logit on variable costs for the use of existing plant, and early retirement where policy makes running costs exceed the levelized cost of replacement.
+
+This rule is deliberately simpler than the Future Technology Transformations (FTT) models, which use pairwise comparisons between technologies with cost distributions and replicator dynamics [@Mercure2014]. The growth limit produces the same S-shaped diffusion with two parameters per technology, it is the form CPAT already uses for its scale-up limits, and it can be calibrated by backcasting from 2015 to 2023 data. Where FTT results exist for a sector, the model's parameters should be tuned to reproduce them in a common scenario.
+
+Both rules give a Total Effective Carbon Price for any policy mix, by solving for the uniform carbon price that gives the same emission cut, as working paper 6.1 does for the constant-elasticity case [@StrettonWP61]. For the logit sectors the solution is numerical.
+
+## Optimality
+
+Questions about optimal policy need a benchmark, and the model defines three, all solved with the same engine.
+
+- **Behavioral equilibrium.** Equations (1)–(5) under current or proposed policies, private costs of capital and calibrated preferences $\omega$. This is the forecast.
+- **National least cost.** The path that minimizes the present value of the country's system cost plus the domestic value of co-benefits, at the national cost of capital. The engine approximates it by setting $\kappa_s$ high and $\omega_{k,c}$ equal, so that investment follows cost, while keeping the diffusion limits, which represent real supply-chain and institutional constraints.
+- **Global least cost.** The same, with emissions valued at a global social cost of carbon and capital priced at a common social rate (risk-free plus a technology premium only).
+
+The gaps between them define the policy questions. The gap between behavioral equilibrium and national least cost is the policy and barrier gap that domestic policy should close. The gap between national and global least cost has two parts: the externality gap, closed by carbon pricing or incentives, and the finance gap, closed by lowering the cost of capital. Each instrument the model compares can be scored by how much of which gap it closes per dollar of public or donor money. For power, the least-cost approximation should be validated against a full optimization model such as OSeMOSYS Global [@Barnes2022] for a sample of countries.
+
+# The policy module
+
+The policy module converts instrument settings into the wedges the sector core uses, and reports revenue, fiscal cost and the policy-equivalent carbon price. It covers carbon taxes and emissions trading, feebates, intensity standards, technology mandates, capital and production subsidies, fossil fuel subsidies, contracts for difference, public investment and border measures. Prices enter equation (2) as $\tau^{\text{eff}}$. Feebates and tradable standards enter as a marginal price at the margin of technology choice, with a rebate that leaves average costs nearly unchanged [@StrettonWP12]. Non-tradable standards and mandates enter as a shadow price on the constrained choice, the term CPAT already carries in its demand equation. Contracts for difference enter the P3 tariff and the state's contingent liability.
+
+Every policy mix is summarized by its Total Effective Carbon Price by sector and economy-wide [@StrettonWP61]. That number is the metric for policy crediting, for recognition of an exporter's carbon price under a border adjustment [@StrettonWP14], and for activating a use-it-or-lose-it allocation.
+
+Policy crediting is modeled in this module and paid in the incentives module. Credits for country $c$ in year $t$ are
+$$\mathrm{Cr}_{c,t} = p^{\text{cr}}_t\,\max\{0,\; b_{c,t} - E_{c,t}\}, \qquad (6)$$
+where $E$ is modeled emissions in the credited sectors and $b$ the crediting baseline. The baseline is a path chosen by the user from three families: fixed historical, ratcheting toward a norm set from the cost model or from peers, and own-indexed. The use-it-or-lose-it paper shows that the second creates an incentive to act early and the third destroys most of the incentive to act at all, so the model reports both. The policy-equivalent carbon price gives an alternative crediting rule that does not need a baseline: credits equal to the emission cut implied by the change in the price [@StrettonWP61].
+
+# The cost-of-finance module
+
+The cost of capital for technology $k$ in country $c$ is decomposed into premiums that interventions can target:
+$$w_{k,c,t} = \frac{D}{V}\left(r^f + \pi^{\text{ctry}}_c + \pi^{\text{off}}_{c} + \pi^{\text{tech}}_{k,c,t} + \pi^{\text{pol}}_{c,t}\right)(1 - t^{\text{tax}}_c) + \frac{E}{V}\left(r^f + \pi^{\text{eq}} + \pi^{\text{ctry}}_c + \pi^{\text{tech},E}_{k,c,t}\right). \qquad (7)$$
+The country premium $\pi^{\text{ctry}}$ comes from sovereign spreads or the Damodaran country risk premium. The offtaker premium $\pi^{\text{off}}$ is the cost of payment risk on a contract with a distribution company; working paper 3.1 puts it at about 1.4 percentage points [@StrettonWP31]. The technology premium $\pi^{\text{tech}}$ falls as the country gains experience with the technology, in line with the evidence that financing costs for renewables fall with deployment [@EgliSteffenSchmidt2018]:
+$$\pi^{\text{tech}}_{k,c,t} = \pi^{\text{tech}}_{k,0}\left(\frac{X_{k,c,t}}{X^{\text{ref}}_{k}}\right)^{-\phi_k}, \qquad (8)$$
+with $X_{k,c,t}$ national cumulative capacity. The policy premium $\pi^{\text{pol}}$ reflects the risk that support is withdrawn, and falls when the country commits to a no-backsliding floor. The equation follows working paper 6.3 and is calibrated to the observed cost-of-capital indicators in the Global Fiscal Indicators panel, which come from IRENA and from Steffen's estimates [@Steffen2020].
+
+Interventions act on named premiums, and each has a donor cost:
+
+| Intervention | Premium affected | Donor cost | Source |
+|:--|:--|:--|:--|
+| Payment intermediary with guarantee waterfall | $\pi^{\text{off}}$ removed for covered contracts | Expected loss on the guarantee plus buffer carry | Working paper 3.1 |
+| Asset-class refinancing of operating plants | $\pi^{\text{tech}}$ and equity share fall at refinancing | First-loss tranche | Working paper 3.2 |
+| Guarantee capacity earned on a notional capitalized value | $\pi^{\text{ctry}}$ reduced on eligible borrowing | Expected loss and buffer, three loss cases | Working paper 4.1 |
+| Concessional blending | Debt rate on part of the debt | Interest subsidy | Working paper 6.3 |
+| Credible policy floor | $\pi^{\text{pol}}$ | None directly | This plan |
+
+: Table 5. Each finance intervention lowers a named premium at a known donor cost. Source: author, from the papers cited.
+
+The donor cost of a guarantee is its expected loss, the probability of a call times the loss given a call times the exposure, plus the carry on the buffer held against it. The model uses the three loss cases fixed across series 4: the base case of the multilateral development banks' sovereign record, a middle case and a stress case [@StrettonWP41]. Because the cost of capital enters equation (2) through the capital recovery factor, a lower premium changes the technology mix, not just the bill, which NMIM cannot yet show. Through equation (8), early deployment lowers the future cost of capital, so a cost-of-capital intervention has a learning dividend that the model counts.
+
+# Destination carbon accounting and trade
+
+Destination carbon pricing charges the carbon in goods where they are consumed: a border adjustment charges imports at the importer's carbon price less any recognized price paid at origin; a destination carbon tax, administered like value-added tax, charges all domestic consumption by carbon content and zero-rates exports [@StrettonWP11; @StrettonWP13]. Modeling either needs two things the existing tools lack: bilateral trade flows and the carbon content of what is consumed. The module has two tiers.
+
+**Product tier, for goods covered by border adjustments.** For steel, aluminium, cement, fertilizers, hydrogen and electricity, bilateral flows by six-digit product come from the BACI database [@GaulierZignago2010]. The carbon intensity of each exporter's product comes from the sector core, which models production routes, and falls back on the default values of the EU's implementing rules where the core has no route data [@EU2023CBAMImpl]. The border charge on product $h$ from origin $o$ to destination $d$ is
+$$\mathrm{BC}_{o,d,h,t} = \max\left\{0,\; \tau^{\text{dest}}_{d,t} - \rho_{d}\,\tau^{\text{rec}}_{o,h,t}\right\} e_{o,h,t}\,X_{o,d,h,t}, \qquad (9)$$
+where $\tau^{\text{dest}}$ is the destination's carbon price, $\tau^{\text{rec}}$ the origin's recognized carbon price and $\rho_d$ the share the destination recognizes. The CBAM tool's recognition rules carry over, including the rule that a revenue-neutral feebate earns no credit under current EU rules [@StrettonWP14]. Trade shares respond to the charge through an Armington demand system with an elasticity of substitution between origins, which gives leakage and the change in each exporter's market share. The modeling of border adjustments in general equilibrium supplies the range of elasticities and results to compare against [@Bohringer2012].
+
+**Economy tier, for consumption-based accounting.** For all goods and services, embodied emissions in each country's final demand come from a multi-regional input-output table, $\mathbf{f}(\mathbf{I} - \mathbf{A})^{-1}\mathbf{y}$, using either the OECD's inter-country input-output tables with their embodied-carbon estimates [@OECDTECO2] or EXIOBASE 3 for more sector detail [@Stadler2018]. The method is standard [@PetersHertwich2008; @DavisCaldeira2010]. Emission intensities $\mathbf{f}$ are scaled each year to match the sector core's production emissions by country and sector, so that a change in technology in the core changes the carbon content of trade. The destination tax of working paper 1.3 is applied to final consumption by carbon content, with exports zero-rated.
+
+The module returns revenue by country under each border or destination measure, the cost to each exporter, leakage, and the terms-of-trade change that enters the macro module. It also returns the recognized carbon price each exporter would need to avoid the charge, the quantity working paper 1.4 shows should be credited.
+
+# The international incentives module
+
+## Instruments
+
+The module pays governments, holds balances and records donor costs for six instruments: policy crediting at a price per tonne against a chosen baseline (equation 6); a use-it-or-lose-it fund with decaying allocations and a common pool; guarantee capacity earned on a notional capitalized value [@StrettonWP41]; national accounts in the Climate Investment Trust [@StrettonWP42]; sustainability-linked lending with a margin step-down [@StrettonWP43]; and recycling of border-adjustment revenue to exporting countries. Each instrument is specified by its payment rule, its form (cash, guarantee capacity or account credit) and its donor cost rule.
+
+## The country timing layer
+
+The module contains the government's decision of when to adopt a policy, because that is the decision international incentives are meant to change. Each country has a menu of policy packages $j$: a coal-retirement program, steps in the carbon price, an electric-vehicle mandate, a switch of steel routes, a forest-enforcement regime. For each package and each candidate adoption date $T$, the model computes from the core and macro modules the cost to the government $K_{c,j}(T)$, the domestic co-benefits $H_{c,j}(T)$ valued by the objective function of Section 10, and the emission cut $\Delta E_{c,j}(T)$. The incentive schedule $M_{c,j}(T)$ is computed from the rules of each instrument. The government chooses
+$$T^*_{c,j} = \arg\max_{T \in \{0,1,\dots,T^{\max}\}} \; \delta_c^{\,T}\left[M_{c,j}(T) + H_{c,j}(T) - K_{c,j}(T)\right], \qquad (10)$$
+where $\delta_c$ is the government's discount factor, which may be lower than the social one. Equation (10) is equation (1) of the use-it-or-lose-it paper with computed paths in place of exponential ones. The costs fall over time because of global learning (equation 3) and national experience (equation 8), so the model generates the reason to wait rather than assuming it.
+
+## How the module represents use-it-or-lose-it rules
+
+The rules of the use-it-or-lose-it fund map onto the incentive schedule:
+
+- **Decaying allocation.** $M_{c,j}(T) = a_{c,j}\,e^{-\theta(T - T^{\text{clock}}_c)}$ for $T \geq T^{\text{clock}}_c$, where $a$ is the indicative allocation, $\theta$ the decay rate and $T^{\text{clock}}_c$ the clock start: launch, or certified readiness with a maximum readiness period.
+- **Readiness.** A country cannot adopt before its readiness date $R_c$, which can be brought forward by a readiness grant at a cost.
+- **Ratcheting baseline.** Where the reward is paid as credits, $M(T)$ is the present value of the credit stream from equation (6) against the chosen baseline path, so the ratchet's own decay is computed, not assumed.
+- **Common pool and declining price.** Decayed amounts flow to a pool, $\mathrm{Pool}_t = \mathrm{Pool}_{t-1} + \sum_c \text{decay}_{c,t} - \text{payouts}_t$, which pays a price per credited tonne that falls with cumulative claims, $p(Q_t)$. Because each country's reward then depends on others' adoption dates, the layer solves for a fixed point: given all other countries' dates, each country chooses its date by equation (10), and the model iterates until no country changes its date. Convergence is checked; where several equilibria exist, the model reports the earliest and latest.
+- **Credibility.** A switch lets the user make decay non-credible, so that lapsed amounts revert to donors and governments expect extensions. In that case the layer sets $\theta = 0$, reproducing Proposition 7 of the paper.
+- **Delivery and floor.** Rewards are credited as guarantee capacity or account balances, with a no-backsliding floor; a reversal debits the balance.
+
+The funder's problem is solved in an outer loop: choose the decay rate, clock rule, ratchet path and price schedule to minimize donor cost subject to a target, such as global cumulative emissions to 2035 or total years of adoption brought forward. Donor cost uses the delivery form: cash at face value, guarantee capacity at expected loss plus buffer carry. The layer's simplest case, one country with exponential paths, reproduces Tables 1 to 4 of the use-it-or-lose-it paper exactly; that is its first unit test.
+
+# National objectives and the macro model
+
+## What governments care about
+
+A government's payoff from a policy package is the present value of its effects on things governments care about, each valued in money:
+$$H_{c,j} - K_{c,j} = \sum_t \delta_c^{\,t}\Big[\Delta Y_{c,t} + \lambda^F_c\,\Delta \mathrm{FB}_{c,t} - \Delta \mathrm{IM}_{c,t}^{\text{risk}} + \Delta \mathrm{HEALTH}_{c,t} - \lambda^D_c\,\Delta \mathrm{LOSS}^{B40}_{c,t} - \lambda^P_c\,\Delta \mathrm{LOSS}^{\text{inc}}_{c,t}\Big], \qquad (11)$$
+where $\Delta Y$ is the change in output, $\Delta \mathrm{FB}$ the change in the fiscal balance weighted by the marginal cost of public funds $\lambda^F$, $\Delta \mathrm{IM}^{\text{risk}}$ the change in the fuel-import bill weighted for price risk (energy security), $\Delta \mathrm{HEALTH}$ the value of avoided air-pollution deaths, $\Delta\mathrm{LOSS}^{B40}$ losses to the poorest 40 percent and $\Delta\mathrm{LOSS}^{\text{inc}}$ losses to incumbent producers such as coal generators and their regions. A constraint requires that the package does not worsen the country's debt-distress rating. Health effects and distributional losses come from CPAT; incumbent losses and tariff limits from PriceFeasibility; output and debt from the macro model. The weights $\lambda$ are user inputs with four default archetypes: a fiscally constrained low-income country, a fossil fuel exporter, an industrial exporter exposed to border adjustments, and a high-income country. The archetypes are a way to report results, not estimates of any government's preferences.
+
+## A simple macro model
+
+Global runs use a reduced-form macro model that is cheap enough to evaluate for every country, package and adoption date:
+$$\Delta Y_{c,t} = \sum_{l=0}^{L}\mu_{c,l}\,\Delta G_{c,t-l} + \alpha_c\,\Delta \mathrm{KI}_{c,t} - \Delta\mathrm{EB}_{c,t} + \chi_c\,\Delta \mathrm{ToT}_{c,t}, \qquad (12)$$
+$$d_{c,t} = d_{c,t-1}\frac{1 + i_{c,t}}{1 + \gamma_{c,t}} - \mathrm{pb}_{c,t}, \qquad (13)$$
+where $\mu$ are CPAT's fiscal multipliers on spending and revenue changes $\Delta G$, $\Delta\mathrm{KI}$ is clean investment net of crowding out with productivity effect $\alpha$, $\Delta\mathrm{EB}$ is the change in net energy imports, $\Delta\mathrm{ToT}$ the terms-of-trade effect of border and destination measures from Section 8, $d$ public debt to GDP, $i$ the effective interest rate, which the cost-of-finance module lowers for guaranteed borrowing, $\gamma$ nominal growth and $\mathrm{pb}$ the primary balance. P1 investment and contingent liabilities called from P3 contracts enter the primary balance; P2 utility debt is reported separately, an open issue the macro-fiscal models also flag. Country deep dives replace equations (12) and (13) with the existing GIMF-lite, DIGNAD-lite and LIC-DSF-lite chain through `integrated.py`, and the reduced form is calibrated to match their multipliers.
+
+# Questions the model answers
+
+The model is built to answer a fixed set of questions, which also define its outputs. The first is the central research question of the Introduction.
+
+1. How many tonnes of emissions can be cut at zero cost in each country and sector at current interest rates, how many at World Bank interest rates, and how many when domestic co-benefits are included (see the Introduction)?
+2. For each country and sector, how far is the behavioral path from the national and global least-cost paths, and how much of the gap is policy, finance and externality?
+3. What do the EU border adjustment, its extension to other importers, and a destination carbon tax in major consumers do to each exporter's emissions, revenue, market share and output, and how much carbon price would the exporter need to recognize to avoid the charge?
+4. How many tonnes and years of early action does a dollar of donor money buy through each finance intervention, and how much of that comes from the learning dividend?
+5. What does policy crediting cost per tonne under each baseline rule, and how much of the payment is for action that would have happened anyway?
+6. Which use-it-or-lose-it design (decay rate, clock, ratchet, pool, delivery form) brings the most action forward for a given donor budget, and how does that depend on whether decay is credible?
+7. For each country archetype, which package of domestic policy and international incentives maximizes its objective while meeting its debt constraint?
+
+# Data
+
+| Data | Source | Status |
+|:--|:--|:--|
+| Base-year energy, emissions, activity, 186 countries | CPAT panel via NMIM v0.2 | Exists |
+| Power plant stock and generation | NMIM calibration; Ember | Exists for generation; plant vintages needed |
+| Technology costs and learning rates | NMIM unit costs; CPAT; IRENA [@IRENA2024Costs]; learning reviews [@Rubin2015; @Way2022] | Partly exists; industrial routes needed |
+| Steel, cement, ammonia, aluminium production by route | CBAM Policy Tool (worldsteel, USGS 2024); industry roadmaps in `_research/` | Production exists; route shares needed |
+| Cost of capital | Global Fiscal Indicators Finance block (IRENA, Steffen); Damodaran country risk premiums | Observed for 84 economies; Damodaran sheet to load |
+| Power market structure and contracts | NMIM `power_market.csv` (power sector reform data, private participation data) | Exists |
+| Bilateral trade by product | BACI [@GaulierZignago2010] | To acquire |
+| Input-output tables and embodied carbon | OECD inter-country input-output and embodied carbon [@OECDTECO2]; EXIOBASE 3 [@Stadler2018] | To acquire |
+| Default emission factors | EU implementing rules [@EU2023CBAMImpl]; CBAM Policy Tool | Exists |
+| Macro and fiscal | Global Fiscal Indicators; macro-fiscal model calibrations | Exists |
+| Guarantee loss cases | Series 4 settled cases [@StrettonWP41] | Exists |
+
+: Table 6. Most data exist; trade, input-output and industrial routes must be added. Source: author.
+
+# Build sequence
+
+The model is built in seven stages, each ending in a working version with a validation check, so that something usable exists after each.
+
+| Stage | Version | Content | Validation check |
+|:--|:--|:--|:--|
+| 1 | v0.1 | Sector lookup (Tables 3 and 4) as data; activity layer; power core with logit, diffusion limit and global learning, from CPAT and NMIM | Reproduce NMIM base year; backcast power shares 2015–2023 |
+| 2 | v0.2 | Steel, ammonia and hydrogen, road and building heat cores; cement, aluminium, cooking stylized; CES for other sectors | Base-year production and emissions by route; electric-vehicle sales shares 2018–2024 |
+| 3 | v0.3 | Cost-of-finance module, equations (7) and (8), with the interventions of Table 5 | Observed cost of capital for 84 economies; working paper 3.1 offtaker result |
+| 4 | v0.4 | Policy module with Total Effective Carbon Price and crediting baselines | Working paper 6.1 calibration cases |
+| 5 | v0.5 | Destination accounting and trade: product tier, then economy tier | Consumption-based emissions against published estimates; CBAM Policy Tool results for its seven products |
+| 6 | v0.6 | Incentives module and country timing layer, including the pool fixed point | Reproduce Tables 1–4 of the use-it-or-lose-it paper; NCV and Trust arithmetic of working papers 4.1 and 4.2 |
+| 7 | v1.0 | National objectives and macro-lite; funder optimization; global runs for the seven questions | Macro-lite against GIMF-lite and DIGNAD-lite multipliers for the integrated-run countries |
+
+: Table 7. Seven stages, each ending in a validated version. Source: author.
+
+The code goes in `GlobalIncentivesModel/engine/`, one module per row of Table 2, with one equation specification that both the Python engine and the Excel front end use, the NMIM pattern. Stage 6 can start in parallel with stages 2 to 5 using stylized cost paths, because the timing layer needs only $K$, $H$ and $\Delta E$ paths from the core; the use-it-or-lose-it paper's code is its prototype.
+
+# Limits and risks
+
+The model is a set of linked partial models, not a general equilibrium model. Trade responds only in the product tier; the economy tier holds input-output coefficients fixed except for emission intensities. Exchange rates and capital flows are outside it except through the cost of capital. These limits matter most for large border measures and for fossil fuel exporters, where general equilibrium effects are large [@Bohringer2012].
+
+Behavioral parameters are the largest source of uncertainty. The logit sharpness $\kappa$, the preference terms $\omega$ and the diffusion limits $\gamma$ are calibrated to history, and history may be a poor guide to responses to new instruments. The model should report ranges across parameter sets, not single numbers.
+
+The objective function is a modeling device. Real governments weigh things the model cannot see, and the archetype weights should be presented as scenarios. The country timing layer assumes that governments choose adoption dates optimally given incentives; in practice inertia and politics also delay action, which makes the timing layer an optimistic guide to the effect of incentives on fast movers and a pessimistic one on laggards.
+
+Data on industrial production routes, plant vintages and contract structures are thin for many developing countries. The lookup defaults in Tables 3 and 4 are judgements and should be replaced country by country as data allow.
+
+# Conclusion
+
+A model that compares border adjustments, finance interventions, policy crediting and incentive funds needs three features that existing models lack together: technology choice where it decides emissions, a record of who decides in each sector, and the government's own decision of when to act. This plan supplies all three, mostly by connecting components that already exist. The test of the model is whether it can say, for a given donor budget, which combination of instruments brings the most emission cuts forward, and the first instrument it will test is the use-it-or-lose-it fund. The next step is stage 1: the sector lookup as data and the power core with global learning.
+
+# References {-}
+
+::: {#refs}
+:::
+
+# Appendix A. Variables and codes {-}
+
+Variables follow the CPAT code pattern `<block>.<indicator>.<fuel or technology>.<sector>.<scenario>`, as in NMIM. New blocks: `fin` (cost of finance: `fin.wacc`, `fin.prem.ctry`, `fin.prem.off`, `fin.prem.tech`, `fin.prem.pol`), `trd` (trade and destination: `trd.flow`, `trd.int`, `trd.bc`, `trd.emb`), `inc` (incentives: `inc.alloc`, `inc.decay`, `inc.pool`, `inc.cr`, `inc.gcap`, `inc.adopt`) and `obj` (objectives: `obj.dy`, `obj.dfb`, `obj.health`, `obj.b40`, `obj.inc`). Units follow NMIM.
+
+# Appendix B. Parameters to calibrate {-}
+
+| Parameter | Symbol | Calibration |
+|:--|:--|:--|
+| Activity elasticities | $\beta, \varepsilon, \eta$ | Working paper 6.4, Table 2 |
+| Switching and service elasticities | $\sigma_s, \eta_s$ | Working paper 6.1 |
+| Logit sharpness | $\kappa_s$ | Backcast of investment shares |
+| Preference terms | $\omega_{k,c}$ | Base-year investment shares |
+| Diffusion limit and seed | $\gamma_k, \underline{s}_k$ | Historical maximum growth of shares |
+| Learning exponents | $b_k$ | Published learning rates [@Rubin2015; @Way2022] |
+| Experience effect on finance | $\phi_k$ | Financing-cost evidence [@EgliSteffenSchmidt2018] |
+| Armington elasticity | $\sigma^A$ | Range from border-adjustment studies [@Bohringer2012] |
+| Objective weights | $\lambda^F, \lambda^D, \lambda^P$ | Archetypes; marginal cost of public funds about 1.2 as in working paper 6.3 |
+| Government discount factor | $\delta_c$ | Scenario: 6 percent and a higher political rate |
+
+: Table B1. Parameters and how they are calibrated. Source: author.
+
+# Appendix C. Data flow {-}
+
+The flow in each year runs as follows. Activity drivers (population, income) and the previous year's costs give activity by service (equation 1). The policy module turns instrument settings into wedges; the cost-of-finance module gives the cost of capital by country and technology (equations 7 and 8), with interventions applied. The technical cost model gives levelized costs (equation 2), using capital costs from global learning (equation 3). The behavioral rule allocates new investment and updates stocks (equations 4 and 5). Emissions, investment and fiscal flows follow, routed by the decision regime of Table 4. The trade module computes embodied carbon, border and destination charges and terms of trade (equation 9). The macro-lite model gives output and debt (equations 12 and 13). The objective function values each country's outcome (equation 11). Across years and packages, the country timing layer chooses adoption dates given incentive schedules (equation 10), iterating with the core because adoption changes global learning, and the funder's outer loop chooses the rules of the incentive.
