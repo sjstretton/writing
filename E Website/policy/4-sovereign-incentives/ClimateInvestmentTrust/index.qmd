@@ -5,9 +5,6 @@ title: "The Climate Investment Trust: Hold Capital, Lend Its Strength"
 subtitle: "A buffer fund that insures policy guarantees, invests in clean energy and holds national climate accounts"
 series: "Climate Fiscal Policy Brief No. 4.2"
 version: "1.0"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   International rewards for national climate policy fail because donors will not vote for large cash transfers and governments cannot borrow against promises. This brief proposes a Climate Investment Trust that holds capital instead of spending it. One pool stands second behind the guarantees that reward policy, earns fees by co-investing in clean energy, and holds national accounts that countries pledge as collateral now and draw after 2050. On the development banks' sovereign loss record, each donor dollar delivers about 80 dollars of interest savings; without their preferred-creditor status, 2.7. Holding the cautious buffer, the Trust grows on its own yield if losses follow the banks' record.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 4.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The regional fund design draws on joint work on two-stage clean energy finance with Jasper Zimmermann. The full analysis, with the model, proofs and calibration, is in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 4.2, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The regional fund design draws on joint work on two-stage clean energy finance with Jasper Zimmermann. The full analysis, with the model, proofs and calibration, is in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 
@@ -50,7 +47,7 @@ lightbox: auto
 
 **Countries benefit long before 2050, because an account is an asset.** A balance that cannot yet be drawn can still be pledged as collateral, which lowers the rate a country pays on green borrowing.
 
-**A deduction from an account can be enforced where a charge on a sovereign cannot.** The Trust credits accounts for policy kept and deducts for policy reversed. A payment to a government can be reversed by the next government; an account held for the country's future population, which grows when it acts and shrinks when it retreats, builds a constituency for persistence [@StrettonTC].
+**A deduction from an account can be enforced where a charge on a sovereign cannot.** The Trust credits accounts for policy kept and deducts for policy reversed. A payment to a government can be reversed by the next government; an account held for the country's future population, which grows when it acts and shrinks when it retreats, builds a constituency for persistence [@AuthorTC].
 
 # One pool does three jobs {#sec-jobs}
 
@@ -130,7 +127,7 @@ lightbox: auto
 - **3.1** *Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power* ([Brief 3.1](../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.qmd); @CFPB31). The payment guarantee that makes clean power contracts bankable.
 - **1.2** *Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill* ([Brief 1.2](../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.qmd); @CFPB12). The instrument the Trust's accounts let countries apply to each other.
 - **4.0** *Reward Governments, Not Projects: International Incentives for National Climate Policy* (series overview).
-- The full analysis of this brief: *The Climate Investment Trust* ([working paper](working-paper.qmd); @StrettonWP42).
+- The full analysis of this brief: *The Climate Investment Trust* ([working paper](working-paper.qmd); @AuthorWP42).
 
 # Downloads {.unnumbered}
 

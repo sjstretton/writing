@@ -5,9 +5,6 @@ title: "Codify Sustainability-Linked Sovereign Lending, Then Give It Scale"
 subtitle: "Standard indicators, verification and pricing, and why the reward must be bigger than an interest margin"
 series: "Climate Fiscal Policy Brief No. 4.3"
 version: "1.0"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Sustainability-linked debt lowers a government's interest rate when it meets agreed climate targets, but it remains rare, bespoke and small: Uruguay's 2023 World Bank loan, the first of its kind, can save the country at most \$12.5 million. This brief proposes codifying the instrument, with standard indicators, verification from published data and a published price per tonne. The reward should come from outside, through an intermediary, because a bond whose coupon moves with results makes the government pay for its own reward. Even then an interest margin is too small to pay for major reforms. Guarantee capacity as the reward gives it scale.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 4.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The design that pays the reward through an intermediary comes from joint work with Marcello Estevão and Nils Zimmermann [@EstevaoStrettonZimmermann2024]. The full analysis, with the model, proofs and calibration, is in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 4.3, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The design that pays the reward through an intermediary comes from joint work with Marcello Estevão and Nils Zimmermann [@EstevaoAuthorZimmermann2024]. The full analysis, with the model, proofs and calibration, is in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 
@@ -72,7 +69,7 @@ lightbox: auto
 
 # Pay the reward from outside {#sec-separate}
 
-**Investors should hold a fixed coupon, and a public partner should pay the reward.** In the design developed with Marcello Estevão and Nils Zimmermann, a trusted intermediary backed by guarantees from a coalition of advanced economies issues fixed-coupon bonds at a low rate and lends the money to governments as sustainability-linked loans at a somewhat higher fixed rate [@EstevaoStrettonZimmermann2024]. When verified indicators are met, it refunds part of the interest already paid. Development agencies monitor the indicators and give technical help.
+**Investors should hold a fixed coupon, and a public partner should pay the reward.** In the design developed with Marcello Estevão and Nils Zimmermann, a trusted intermediary backed by guarantees from a coalition of advanced economies issues fixed-coupon bonds at a low rate and lends the money to governments as sustainability-linked loans at a somewhat higher fixed rate [@EstevaoAuthorZimmermann2024]. When verified indicators are met, it refunds part of the interest already paid. Development agencies monitor the indicators and give technical help.
 
 **The government gets money from outside, and the risk lands where it is cheapest to bear.** A pension fund charges a premium to hold a coupon that moves with a country's methane statistics. An intermediary lending to many countries diversifies that risk and can bear it near cost ([working paper, Proposition 2](working-paper.qmd#sec-who-pays)).
 

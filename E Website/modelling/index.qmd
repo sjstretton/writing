@@ -12,7 +12,6 @@ Models a finance ministry can audit: the Climate Policy Assessment Tool stated, 
 - [5.2 CPAT-AI](../modelling/5-modelling/CPATAIImplementation/index.qmd)
 - [5.3 Validating CPAT](../modelling/5-modelling/CPATValidation/index.qmd)
 - [5.4 Are CPAT's Price Elasticities Right?](../modelling/5-modelling/ElasticityValidation/index.qmd)
-- [5.5 Carbon Prices Cut Emissions](../modelling/5-modelling.qmd#paper-5-5)
 
 ### [6. Modular Upgrades](../modelling/6-modular-upgrades.qmd)
 

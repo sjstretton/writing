@@ -3,9 +3,6 @@
 # on every compile; edits here are lost. Edit the master instead.
 title: "The Excise-Fiscal Diagnostic"
 subtitle: "Reading an Excise System Against Its Externalities"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 version: "0.4"
 abstract: |
@@ -27,7 +24,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Working paper, version 0.4, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is [Climate Fiscal Policy Brief No. 7.1](index.qmd). Companion paper to the Climate Fiscal AI Tools.*[^credit]
+*Working paper, version 0.4, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is [Climate Fiscal Policy Brief No. 7.1](index.qmd). Companion paper to the Climate Fiscal AI Tools.*[^credit]
 
 [^credit]: This version condenses and replaces a 24,800-word draft (version 0.1, kept in the paper's folder). The method was developed and piloted with country economists on three sub-Saharan African excise schedules; @sec-countries reports the two pilots that were peer reviewed, Sierra Leone and Liberia, as illustrative results from the diagnostic, not official estimates. Errors are the author's own.
 
@@ -318,7 +315,7 @@ The diagnostic's default takes an OECD-based ratio of 100 times income per head 
 
 ## What it cannot do {#sec-cannot}
 
-**The diagnostic is static.** It does not model pass-through, demand response beyond a first-order correction, cross-border fuel smuggling or tobacco illicit trade. A ministry that wants revenue and emission projections should take the diagnostic's rates and gaps into a model that has those responses, such as the Climate Policy Assessment Tool for fuels [@StrettonWP51], with the caution on its elasticities in [Brief 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd).
+**The diagnostic is static.** It does not model pass-through, demand response beyond a first-order correction, cross-border fuel smuggling or tobacco illicit trade. A ministry that wants revenue and emission projections should take the diagnostic's rates and gaps into a model that has those responses, such as the Climate Policy Assessment Tool for fuels [@AuthorWP51], with the caution on its elasticities in [Brief 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd).
 
 **Implied revenue is approximate.** Line-level volumes are the weakest input. Prevalence-based volumes include untaxed supply and overstate the base, and shares of consumer price move with the reference price. The data-quality score on each implied figure says how much to trust it.
 
@@ -334,7 +331,7 @@ The diagnostic's default takes an OECD-based ratio of 100 times income per head 
 
 **The findings feed a reform sequence, which is a separate exercise.** The sequence turns the diagnostic's gaps into steps: what can be done by administrative indexation this year, what needs legislation, and what needs a compensation package first. Sequencing depends on political economy as much as on the size of each gap. Where a fuel tax is too salient to raise, other instruments can price part of the same damage: a feebate on new vehicles, as France has run since 2008, charges high emitters and rebates low ones without moving the pump price [@Durrmeyer2022; @CFPB12]. The diagnostic's contribution to that discussion is narrower and harder to argue with: it says where the system stands, against what, and how sure anyone can be.
 
-**The next step is a common regional table.** Because every report maps onto the same 30 rows and uses the same spine, a set of country diagnostics stacks into a regional comparison with no further work, which a fiscal profile such as the indicators dashboard of paper 7.2 can then place in context [@StrettonWP72]. Each new country makes the others more useful.
+**The next step is a common regional table.** Because every report maps onto the same 30 rows and uses the same spine, a set of country diagnostics stacks into a regional comparison with no further work, which a fiscal profile such as the indicators dashboard of paper 7.2 can then place in context [@AuthorWP72]. Each new country makes the others more useful.
 
 # Conclusion {#sec-conclusion}
 

@@ -5,9 +5,6 @@ title: "From Projects to Asset Classes"
 subtitle: "Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power"
 series: "Climate Fiscal Policy Brief No. 3.2"
 version: "1.0"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Clean power plants in developing countries are financed one at a time, on bespoke terms, so each lender prices construction, payment, currency and sovereign risk together for the life of the loan. This brief proposes turning them into a few standard securities. Banks finance construction against a contingent purchase contract; once plants operate, their debt is refinanced into pools that issue first-loss equity, a thin mezzanine and a senior synthetic sovereign bond. Pooling across countries under one contract keeps the cushion thin, and refinancing cuts the price of solar power by about a fifth. Standardization, not subsidy, lowers the price.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 3.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The two-stage finance and tiered guarantee material was developed with Jasper Zimmermann. The full analysis, with the model, proofs and robustness checks, is in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 3.2, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The two-stage finance and tiered guarantee material was developed with Jasper Zimmermann. The full analysis, with the model, proofs and robustness checks, is in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 
@@ -118,7 +115,7 @@ lightbox: auto
 - **4.2** *The Climate Investment Trust: Hold Capital, Lend Its Strength* ([Brief 4.2](../../../policy/4-sovereign-incentives/ClimateInvestmentTrust/index.qmd); @CFPB42). The natural provider of the first-loss tranche.
 - **4.1** *Reward the Stock as Well as the Flow: Notional Capitalized Value and Guarantee-Based Climate Incentives* ([Brief 4.1](../../../policy/4-sovereign-incentives/NotionalCapitalisedValueAndGuarantees/index.qmd); @CFPB41). Guarantee capacity that can stand behind the donor tier of grid guarantees.
 - **4.3** *Codify Sustainability-Linked Sovereign Lending, Then Give It Scale* ([Brief 4.3](../../../policy/4-sovereign-incentives/SustainabilityLinkedLending/index.qmd); @CFPB43). Lending that can reward the reforms the tiered guarantees require.
-- The full analysis of this brief: *From Projects to Asset Classes* ([working paper](working-paper.qmd); @StrettonWP32).
+- The full analysis of this brief: *From Projects to Asset Classes* ([working paper](working-paper.qmd); @AuthorWP32).
 
 # Downloads {.unnumbered}
 

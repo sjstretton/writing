@@ -5,9 +5,6 @@ title: "The Macro-Fiscal-Energy Scenario Tool"
 subtitle: "Financing and efficiency, not the size of the program, decide what climate investment does to growth and debt"
 series: "Climate Fiscal Policy Brief No. 6.5"
 version: "1.0"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Finance ministries weighing climate investment get the budget cost, the carbon tax revenue, the growth effect and the debt test from different teams and models. The Macro-Fiscal-Energy Scenario Tool runs all four in one open workbook for 186 countries. In a stylized run, how a program is financed and how well public money is spent move debt and growth more than the program's size. For Kenya, a net zero program needs 0.5 percent of GDP a year from the budget; carbon pricing on a clean grid covers about 5 percent of it. Ministries should use the tool to compare financing packages, not to forecast debt.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 6.5, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full account, with the equations, the checks and the sources, is in the [working paper](working-paper.qmd). Country results are illustrative results from the tool, not official estimates.*
+*Climate Fiscal Policy Brief No. 6.5, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full account, with the equations, the checks and the sources, is in the [working paper](working-paper.qmd). Country results are illustrative results from the tool, not official estimates.*
 
 # Key messages {#sec-key-messages}
 
@@ -117,9 +114,9 @@ lightbox: auto
 
 - [Brief 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, which puts a feebate and a tax on one scale [@CFPB61].
 - [Brief 1.2](../../../policy/1-carbon-pricing/FeebatesAndOutputBasedRebating/index.qmd): feebates, the full carbon price at the margin without the carbon bill [@CFPB12].
-- [Paper 6.3](../../../modelling/6-modular-upgrades/PublicInvestment/index.qmd): investment needs and the efficiency of public spending [@StrettonWP63].
-- [Paper 7.2](../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.qmd): the global fiscal indicators dashboard that supplies the tool's data [@StrettonWP72].
-- [Paper 5.1](../../../modelling/5-modelling/CPATMitigationMethods/index.qmd): the CPAT mitigation module, whose data and conventions the investment model follows [@StrettonWP51].
+- [Paper 6.3](../../../modelling/6-modular-upgrades/PublicInvestment/index.qmd): investment needs and the efficiency of public spending [@AuthorWP63].
+- [Paper 7.2](../../../modelling/7-analytics/FiscalIndicatorsDashboard/index.qmd): the global fiscal indicators dashboard that supplies the tool's data [@AuthorWP72].
+- [Paper 5.1](../../../modelling/5-modelling/CPATMitigationMethods/index.qmd): the CPAT mitigation module, whose data and conventions the investment model follows [@AuthorWP51].
 - The [working paper](working-paper.qmd) behind this brief: the equations, the checks against theory, the full Kenya table and the sources.
 
 # Downloads {.unnumbered}

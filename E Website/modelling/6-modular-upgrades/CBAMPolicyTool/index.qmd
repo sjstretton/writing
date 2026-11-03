@@ -5,9 +5,6 @@ title: "The CBAM Policy Tool"
 subtitle: "What the EU's Carbon Border Charge Will Cost Exporters, and Which Lever Cuts It"
 series: "Climate Fiscal Policy Brief No. 6.2"
 version: "1.0"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Since January 2026 the EU has charged importers for the carbon in steel, aluminum, cement and fertilizers. Exporting governments can cut the bill in three ways: by getting plants to file verified emissions data, by cutting emissions, and by pricing carbon at home so the EU deducts it. The CBAM Policy Tool computes the bill product by product and year by year. Turkish hot-rolled steel owes €107 a tonne in 2026 and €252 at full phase-in. For Egypt, verified data would cut the charge on steel by about 90 percent, but barely move it on urea, the largest exposure. The right lever differs by product, so ministries should run the numbers before choosing.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 6.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Legal texts as of 31 October 2026. All amounts are at a stylized certificate price of €80 per tonne of CO₂. The Egypt results are illustrative tool results, not official estimates. The method, the equations and the data are in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 6.2, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Legal texts as of 31 October 2026. All amounts are at a stylized certificate price of €80 per tonne of CO₂. The Egypt results are illustrative tool results, not official estimates. The method, the equations and the data are in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 

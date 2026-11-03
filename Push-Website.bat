@@ -22,9 +22,11 @@ echo   Uploading E Website\_site to %FTP_remote% with WinSCP ...
     "open ftp://%FTP_user%:%FTP_password%@%FTP_host%/" ^
     "synchronize remote ""%~dp0E Website\_site"" %FTP_remote%" ^
     "synchronize remote -delete ""%~dp0E Website\_site\papers"" %FTP_remote%/papers" ^
+    "synchronize remote -delete ""%~dp0E Website\_site\policy"" %FTP_remote%/policy" ^
+    "synchronize remote -delete ""%~dp0E Website\_site\modelling"" %FTP_remote%/modelling" ^
     "exit"
 echo.
-echo   Done. The server's papers folder now holds only the files the site links to.
+echo   Done. The server's papers, policy and modelling folders now hold only what the site has.
 echo.
 echo   Checking that the server and the live website have the new pages ...
 python "%~dp0H Writing Instructions\Scripts\Website\deploy_ftp.py" "%FTPCFG%" "%~dp0E Website\_site" --check

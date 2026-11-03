@@ -5,9 +5,6 @@ title: "Price Production and Consumption Separately"
 subtitle: "A Two-Track Architecture for Carbon Pricing in Open Economies"
 series: "Climate Fiscal Policy Brief No. 1.1"
 version: "1.1"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Carbon prices stay low in open economies because one instrument does two jobs: it pushes producers to cut emissions per unit of output, and it makes buyers pay for the carbon they use. The second job hurts exporters and spares imports. This brief gives each job its own instrument. A revenue-neutral feebate prices production at no cost to the treasury and with a small price effect. A carbon component of VAT, and forward obligations on fuel suppliers, price consumption, imports included. Climate finance above half the feebate rate makes adoption a gain, and border charges set by country turn leakage into a race to the top.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 1.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with the model, proofs and calibration, is in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 1.1, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with the model, proofs and calibration, is in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 

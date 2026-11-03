@@ -5,9 +5,6 @@ title: "Reward the Stock as Well as the Flow"
 subtitle: "Notional Capitalized Value and Guarantee-Based Climate Incentives"
 series: "Climate Fiscal Policy Brief No. 4.1"
 version: "1.0"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Climate finance pays for tonnes avoided against baselines nobody can observe, and almost nothing for carbon stocks never released. This brief proposes crediting each country with a notional capitalized value: a balance opened by its carbon stock, debited for every tonne emitted above an agreed allowance, and used as guarantee capacity on green borrowing rather than paid out. A guarantee is worth the full spread to the borrower but costs only the expected loss, so on the development banks' record each dollar of expected loss buys about 80 dollars of interest saving (2.7 in a stress case). For a forest country with Guyana's stock, a $5 billion balance prices emissions at about $30 a tonne.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 4.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with the model, proofs, calibration and code, is in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 4.1, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with the model, proofs, calibration and code, is in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 
@@ -54,7 +51,7 @@ lightbox: auto
 
 **Every tonne emitted shrinks the balance, so the incentive acts from the first year.** The debit must follow actual emissions; a draw-down set by a forecast would change nothing at the margin ([working paper, Proposition 2](working-paper.qmd#sec-p2)).
 
-**The opening balance is what makes the debit enforceable.** No sovereign will pay a fine for exceeding a benchmark, but it can lose part of a balance it already counts as its own [@StrettonRPWT, ch. 5]. Because the balance is fixed at entry from a verified stock, a country cannot raise it by threatening to clear, the weakness of paying owners to conserve [@Harstad2016].
+**The opening balance is what makes the debit enforceable.** No sovereign will pay a fine for exceeding a benchmark, but it can lose part of a balance it already counts as its own [@AuthorRPWT, ch. 5]. Because the balance is fixed at entry from a verified stock, a country cannot raise it by threatening to clear, the weakness of paying owners to conserve [@Harstad2016].
 
 # A guarantee is worth far more than it costs {#sec-guarantee}
 

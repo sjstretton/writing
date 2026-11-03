@@ -16,7 +16,7 @@ project:
 # Two research parts, each with its own tab and sidebar (H Writing Instructions/Scripts/Website/site_config.py).
 # The sidebar contents between the BEGIN/END markers are written by build_research_pages.py on every compile.
 website:
-  title: "Climate, Fiscal & Finance"
+  title: "Climate Fiscal and Finance Papers"
   description: "Research and writing on carbon pricing, fiscal policy, and climate finance."
   bread-crumbs: true
   navbar:
@@ -71,37 +71,6 @@ website:
                   href: policy/2-other-tax/RentTax/working-paper.qmd
             - text: "2.2 Let Land Pay for the City"
               href: policy/2-other-tax/LandPaysForTheCity/index.qmd
-            - section: "Plucked!"
-              href: policy/books/Plucked/index.qmd
-              contents:
-                - text: "1. Facing Global Risks Head On"
-                  href: policy/books/Plucked/01-facing-global-risks-head-on.qmd
-                - text: "2. Revolutions in the Minds of Men"
-                  href: policy/books/Plucked/02-revolutions-in-the-minds-of-men.qmd
-                - text: "3. Desert Island Economics"
-                  href: policy/books/Plucked/03-desert-island-economics.qmd
-                - text: "4. The Questions Posed by This Book"
-                  href: policy/books/Plucked/04-the-questions-posed-by-this-book.qmd
-                - text: "5. Tax in Principle"
-                  href: policy/books/Plucked/05-tax-in-principle.qmd
-                - text: "6. Tax in Practice"
-                  href: policy/books/Plucked/06-tax-in-practice.qmd
-                - text: "7. Welfare and Work"
-                  href: policy/books/Plucked/07-welfare-and-work.qmd
-                - text: "8. Income, Wealth and Inequality"
-                  href: policy/books/Plucked/08-income-wealth-and-inequality.qmd
-                - text: "9. Corporations"
-                  href: policy/books/Plucked/09-corporations.qmd
-                - text: "10. Land and Property"
-                  href: policy/books/Plucked/10-land-and-property.qmd
-                - text: "11. Money, Debt, and Finance"
-                  href: policy/books/Plucked/11-money-debt-and-finance.qmd
-                - text: "12. Environment, Health, and Resources"
-                  href: policy/books/Plucked/12-environment-health-and-resources.qmd
-                - text: "13. The Global Perspective: Climate, Fiscal Policy and Collective Action"
-                  href: policy/books/Plucked/13-the-global-perspective-climate-fiscal-policy-and-collective-action.qmd
-                - text: "13. Conclusions"
-                  href: policy/books/Plucked/14-conclusions.qmd
         - section: "3. Finance and Risk"
           href: policy/3-finance-and-risk.qmd
           contents:
@@ -135,8 +104,6 @@ website:
               contents:
                 - text: "Working paper"
                   href: policy/4-sovereign-incentives/SustainabilityLinkedLending/working-paper.qmd
-            - text: "Sustainability-Linked Intermediated Debt Instruments (SLIDIs)"
-              href: policy/4-sovereign-incentives.qmd#extra-sustainability-linked-intermediated-debt-instruments-slidis
         # END policy sidebar
     - id: modelling
       title: "Modelling and Analytics"

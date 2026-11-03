@@ -5,9 +5,6 @@ title: "Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean P
 subtitle: "Removing offtaker risk at source in developing-country power markets"
 series: "Climate Fiscal Policy Brief No. 3.1"
 version: "1.0"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Solar power is cheap to build in developing countries but dear to finance, because investors price the risk that a state-owned distribution company will pay late or not at all. A payment intermediary facility buys power under one standard contract, pays generators in full and on time, and collects arrears itself, behind a guarantee waterfall agreed in advance. Guaranteeing the contract removes the whole risk premium, about two dollars of saving per dollar of expected cost in a stylized case; guaranteeing project debt removes under a third of it. India's Solar Energy Corporation shows the design works, and its buyers' arrears show it needs utility reform.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 3.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The proposal builds on a policy brief on regional payment intermediary facilities written with Nils Zimmermann and on the solar payments intermediary proposal developed by Evie Davey. The full analysis, with the model, proofs and calibration, is in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 3.1, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The proposal builds on a policy brief on regional payment intermediary facilities written with Nils Zimmermann and on the solar payments intermediary proposal developed by Evie Davey. The full analysis, with the model, proofs and calibration, is in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 

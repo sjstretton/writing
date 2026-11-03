@@ -5,9 +5,6 @@ title: "CPAT-AI: Rebuilding a Policy Model as a Transparent, Testable Tool"
 subtitle: "What two AI-assisted rebuilds of the Climate Policy Assessment Tool found, and what ministries should ask of the models they use"
 series: "Climate Fiscal Policy Brief No. 5.2"
 version: "1.0"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Finance ministries use the Climate Policy Assessment Tool, a large spreadsheet built by the IMF and the World Bank, to judge carbon taxes and fuel subsidy reforms. Nobody had checked all of it. In October 2026 it was rebuilt twice, as a readable workbook and as a Python model, mostly by AI coding agents, under one rule: fix bugs, copy and log deliberate choices. The rebuild found 228 bugs, 24 serious enough to change standard results; the second rebuild found seven bugs in the first. Ministries should require shared variable codes, one register of known problems, a second implementation, and a named owner of every judgment.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 5.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full account, with the register, the tests and the sources, is in the [working paper](working-paper.qmd); the rebuilt models are public at https://github.com/cpmodelai/cpat_ai.*
+*Climate Fiscal Policy Brief No. 5.2, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full account, with the register, the tests and the sources, is in the [working paper](working-paper.qmd); the rebuilt models are public at https://github.com/cpmodelai/cpat_ai.*
 
 # Key messages {#sec-key-messages}
 
@@ -90,7 +87,7 @@ lightbox: auto
 
 **Versions built from the same reading can share the same error.** Software engineers have known this for forty years: in a classic experiment, 27 programs written independently to one specification failed together far more often than chance predicts [@KnightLeveson1986]. A 2026 repeat with programs written by AI agents found the same, though voting across three versions still cut failures by about two thirds [@Ron2026]. CPAT-AI limits the risk by tying every block to the original's own stored results, which no agent wrote, and by sending every fix to the CPAT team ([working paper, what AI did and did not do](working-paper.qmd#sec-ai)).
 
-**Agreement between models is not proof that the model is right.** The tests show that three implementations compute the same thing; they do not show that CPAT's price elasticities are right or that its baseline fits history. That is validation, the subject of [Brief 5.3](../../../modelling/5-modelling/CPATValidation/index.qmd) and [Brief 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd) [@StrettonWP53; @StrettonWP54].
+**Agreement between models is not proof that the model is right.** The tests show that three implementations compute the same thing; they do not show that CPAT's price elasticities are right or that its baseline fits history. That is validation, the subject of [Brief 5.3](../../../modelling/5-modelling/CPATValidation/index.qmd) and [Brief 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd) [@AuthorWP53; @AuthorWP54].
 
 # AI agents built; a named owner decided {#sec-ai}
 
@@ -118,9 +115,9 @@ lightbox: auto
 
 # Related papers in this series {.unnumbered}
 
-- [Brief 5.1](../../../modelling/5-modelling/CPATMitigationMethods/index.qmd): the CPAT mitigation module, its methods in brief [@StrettonWP51].
-- [Brief 5.3](../../../modelling/5-modelling/CPATValidation/index.qmd): validating CPAT against data and other models [@StrettonWP53].
-- [Brief 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd): are CPAT's price elasticities right? [@StrettonWP54].
+- [Brief 5.1](../../../modelling/5-modelling/CPATMitigationMethods/index.qmd): the CPAT mitigation module, its methods in brief [@AuthorWP51].
+- [Brief 5.3](../../../modelling/5-modelling/CPATValidation/index.qmd): validating CPAT against data and other models [@AuthorWP53].
+- [Brief 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd): are CPAT's price elasticities right? [@AuthorWP54].
 - [Brief 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, which uses the same demand system [@CFPB61].
 - The [working paper](working-paper.qmd) behind this brief: the register in full, the replication rule, the four test levels and the sources.
 

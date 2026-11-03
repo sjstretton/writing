@@ -38,7 +38,8 @@ To put another paper on the web, add its folder to WEB_PAPERS in site_config.py;
 import re
 import shutil
 from pathlib import Path
-from site_config import (REPO, PARTS, SITE, ARCHIVE, WEB_PAPERS, WEB_BOOKS, part_of_section, part_by_key,
+import anonymise
+from site_config import (ANONYMOUS, REPO, PARTS, SITE, ARCHIVE, WEB_PAPERS, WEB_BOOKS, part_of_section, part_by_key,
                          paper_name, master_qmd, paper_folders, book_dir, book_name)
 
 WEB_SETTINGS = ("toc: true\ndate-format: \"MMMM YYYY\"\ncitations-hover: true\ncrossrefs-hover: true\n"
@@ -337,6 +338,10 @@ def main():
         build(folder_name)
     for folder_name, cfg in WEB_BOOKS.items():
         build_book(folder_name, cfg)
+    if ANONYMOUS:   # take the author's name and affiliation out of every web copy (.qmd and .bib)
+        for part in PARTS:
+            if (SITE / part["dir"]).is_dir():
+                anonymise.folder(SITE / part["dir"])
 
 
 if __name__ == "__main__":

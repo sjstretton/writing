@@ -5,9 +5,6 @@ title: "Measure Carbon Pricing by the Emissions It Cuts"
 subtitle: "The Total Effective Carbon Price: one carbon-tax equivalent for any mix of taxes, subsidies and standards"
 series: "Climate Fiscal Policy Brief No. 6.1"
 version: "1.1"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Countries cut emissions with taxes, subsidies, standards and mandates, yet the usual carbon-price measures add up explicit prices per tonne. A fuel standard or a revenue-neutral feebate scores zero, and a dollar on coal counts the same as a dollar on gasoline. The Total Effective Carbon Price is the single economy-wide carbon tax that would cut emissions as much as the actual policy mix. It can be computed from an energy balance, fuel prices and published elasticities. In a stylized economy it rates a mix at \$37 per tonne in the long run and \$28 after one year, where explicit prices show \$21. Crediting, border recognition and country reviews can all use it.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 6.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with the model, proofs, calibration and literature, is in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 6.1, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with the model, proofs, calibration and literature, is in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 
@@ -122,7 +119,7 @@ lightbox: auto
 - [No. 1.3](../../../policy/1-carbon-pricing/CarbonConsumptionTax/index.qmd): a carbon component in VAT and a forward obligation on energy suppliers [@CFPB13].
 - [No. 1.4](../../../policy/1-carbon-pricing/IronSteelCBAM/index.qmd): carbon price recognition under the CBAM, and scrap shuffling [@CFPB14].
 - [No. 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd): a check of CPAT's price elasticities against the evidence, and what it does to the TECP [@CFPB54].
-- The [working paper](working-paper.qmd) behind this brief: the model, propositions, calibration, uncertainty and literature [@StrettonWP61].
+- The [working paper](working-paper.qmd) behind this brief: the model, propositions, calibration, uncertainty and literature [@AuthorWP61].
 
 # Downloads {.unnumbered}
 
