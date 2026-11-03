@@ -5,9 +5,6 @@ title: "Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT"
 subtitle: "Put Four Climate Models on One Baseline, and Count the Carbon Price Once"
 series: "Climate Fiscal Policy Brief No. 6.4"
 version: "1.0"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Finance ministries increasingly ask several climate models the same question, and the models disagree before any policy is applied, because each starts from different levels of activity: electricity used, distance traveled, vehicles on the road, tonnes of steel and cement made. This brief shows how four models used in climate-fiscal work (CPAT, SISEPUEDE, the CBAM Policy Tool and FTT) can share one set of drivers and one growth rule, so that their baselines agree. It sets out where a carbon price's effect on demand must be counted, and only once, and why every link needs a check that cars stay inside total travel.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 6.4, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full method, with the equations, the parameter sources and the proofs, is in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 6.4, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full method, with the equations, the parameter sources and the proofs, is in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 
@@ -40,7 +37,7 @@ lightbox: auto
 
 # Linked models disagree before any policy is applied {#sec-problem}
 
-**A ministry that asks four models about a carbon price gets four different starting points.** The Climate Policy Assessment Tool (CPAT), built by the World Bank and the International Monetary Fund (IMF), grows fuel use with total GDP and prices for more than 180 countries [@black2023cpat]. SISEPUEDE, an open model developed by RAND and the Inter-American Development Bank, grows travel, freight, household energy and industrial output with income and population [@Kalra2023]. The CBAM Policy Tool grows output of the steel, aluminum, fertilizer and cement that the European Union's carbon border adjustment covers ([Brief 6.2](../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.qmd)) [@StrettonWP62]. The Future Technology Transformations (FTT) models decide which technologies win in power, cars, freight and heating, but take the size of each market as given [@Mercure2012; @FTTStandAlone]. Each is good at its job.
+**A ministry that asks four models about a carbon price gets four different starting points.** The Climate Policy Assessment Tool (CPAT), built by the World Bank and the International Monetary Fund (IMF), grows fuel use with total GDP and prices for more than 180 countries [@black2023cpat]. SISEPUEDE, an open model developed by RAND and the Inter-American Development Bank, grows travel, freight, household energy and industrial output with income and population [@Kalra2023]. The CBAM Policy Tool grows output of the steel, aluminum, fertilizer and cement that the European Union's carbon border adjustment covers ([Brief 6.2](../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.qmd)) [@AuthorWP62]. The Future Technology Transformations (FTT) models decide which technologies win in power, cars, freight and heating, but take the size of each market as given [@Mercure2012; @FTTStandAlone]. Each is good at its job.
 
 **The differences are in the drivers, not just in the numbers.** CPAT does not separate population from income: a country whose population grows fast gets the same fuel growth as one getting richer ([working paper, CPAT](working-paper.qmd#sec-cpat)). SISEPUEDE never lets prices change demand; a carbon tax changes its emissions only if the analyst writes a change into the scenario ([working paper, SISEPUEDE](working-paper.qmd#sec-sisepuede)). FTT's demand is a fixed input file that ends in different years for different sectors ([working paper, FTT](working-paper.qmd#sec-ftt)). So two models can disagree about the effect of a carbon tax simply because they disagree about how much driving or steelmaking there would have been without it.
 
@@ -105,11 +102,11 @@ lightbox: auto
 
 # Related papers in this series {.unnumbered}
 
-- [Climate Fiscal Policy Brief No. 5.1](../../../modelling/5-modelling/CPATMitigationMethods/index.qmd): what CPAT's mitigation module computes [@StrettonWP51].
-- [No. 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd): whether CPAT's price elasticities are right [@StrettonWP54].
+- [Climate Fiscal Policy Brief No. 5.1](../../../modelling/5-modelling/CPATMitigationMethods/index.qmd): what CPAT's mitigation module computes [@AuthorWP51].
+- [No. 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd): whether CPAT's price elasticities are right [@AuthorWP54].
 - [No. 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, and a demand system with fuel switching [@CFPB61].
-- [No. 6.2](../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.qmd): the CBAM Policy Tool [@StrettonWP62].
-- [No. 6.3](../../../modelling/6-modular-upgrades/PublicInvestment/index.qmd): public investment needs in CPAT [@StrettonWP63].
+- [No. 6.2](../../../modelling/6-modular-upgrades/CBAMPolicyTool/index.qmd): the CBAM Policy Tool [@AuthorWP62].
+- [No. 6.3](../../../modelling/6-modular-upgrades/PublicInvestment/index.qmd): public investment needs in CPAT [@AuthorWP63].
 - The [working paper](working-paper.qmd) behind this brief: the concordance, the rule, the parameter sources and the proofs.
 
 # Downloads {.unnumbered}

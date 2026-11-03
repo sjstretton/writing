@@ -5,7 +5,7 @@ The site has two research parts, each with its own top tab, home page, folder an
                               home page policy/index.qmd
     Modelling and Analytics   papers in "D Modelling" (sections 5-7), pages in E Website/modelling/,
                               home page modelling/index.qmd
-plus the site's home page, index.qmd (who Stephen is and what the research covers), written by hand.
+plus the site's home page, index.qmd (what the research covers), written by hand.
 
 Modelling and Analytics is due to move to its own repository. When it does, delete its entry in PARTS
 (and its tab in _quarto.yml); nothing else depends on it.
@@ -15,6 +15,11 @@ WEB_PAPERS lists the papers that also get a web version, read on the site with a
 WEB_BOOKS does the same for books, one web page per chapter.
 """
 from pathlib import Path
+
+# True: the site carries no author name or institutional affiliation (anonymise.py). The masters keep both;
+# only the web pages, the PDFs and the slide PDFs made for the site are anonymised, and the books and earlier
+# papers marked "named": True below (already published under the author's name) are left off the site.
+ANONYMOUS = True
 
 REPO = Path(__file__).resolve().parents[3]
 SITE = REPO / "E Website"
@@ -86,7 +91,7 @@ SECTION_EXTRAS = {
     ],
     "2.OtherTaxAndFiscalPolicy": [
         {"title": "Plucked!", "subtitle": "A Guide to a Fair, Simple, Efficient and Politically Feasible Tax and Benefits System",
-         "kind": "Book", "by": "with Gordon Styles, 2020",
+         "kind": "Book", "by": "with Gordon Styles, 2020", "named": True,
          "text": ("A case for reforming UK taxes and benefits, from the principles of a good tax system to welfare and "
                   "work, inequality, corporations, land and property, money and debt, and the environment, ending "
                   "with a set of proposals."),
@@ -101,13 +106,16 @@ SECTION_EXTRAS = {
     ],
     "4.SovereignIncentives": [
         {"title": "Sustainability-Linked Intermediated Debt Instruments (SLIDIs)", "subtitle": None,
-         "kind": "Earlier paper", "by": "with Marcello Estevão and Nils Zimmermann",
+         "kind": "Earlier paper", "by": "with Marcello Estevão and Nils Zimmermann", "named": True,
          "text": ("Lowering developing countries' cost of borrowing while rewarding their governments for agreed "
                   "environmental, social and governance progress, through sustainability-linked debt issued via an "
                   "intermediary."),
          "pdf": "SLIDIs.pdf", "web": None},
     ],
 }
+
+# Paper folders kept off the site for now (drafts not yet read); delete a name to publish it on the next compile.
+HOLD = {"5.5.CarbonPriceNaturalExperiments"}
 
 # Folders inside a section that hold books, not papers: listed through SECTION_EXTRAS, not as numbered papers.
 BOOK_FOLDERS = {"3.3.TimeAndChance"}
@@ -143,12 +151,17 @@ WEB_PAPERS = [
 WEB_BOOKS = {
     "8.5.3.Plucked": {
         "part": "policy",
+        "named": True,
         "blurb": ("A book-length case for reforming UK taxes and benefits, written with Gordon Styles in 2020. "
                   "Its fourteen chapters run from the ideas behind taxation and the principles of a good tax system "
                   "to welfare and work, inequality, corporations, land and property, money and debt, and the "
                   "environment, and end with a set of proposals."),
     },
 }
+
+if ANONYMOUS:
+    SECTION_EXTRAS = {k: [x for x in v if not x.get("named")] for k, v in SECTION_EXTRAS.items()}
+    WEB_BOOKS = {k: v for k, v in WEB_BOOKS.items() if not v.get("named")}
 
 
 def part_of_section(num):
@@ -172,7 +185,7 @@ def paper_folders(part, sec):
     if not folder.is_dir():
         return []
     fs = [p for p in folder.iterdir()
-          if p.is_dir() and re.match(rf"^{num}\.[1-9]", p.name) and p.name not in BOOK_FOLDERS]
+          if p.is_dir() and re.match(rf"^{num}\.[1-9]", p.name) and p.name not in BOOK_FOLDERS | HOLD]
     return sorted(fs, key=lambda p: [int(x) for x in p.name.split(".")[:2]])
 
 

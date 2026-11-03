@@ -3,9 +3,6 @@
 # on every compile; edits here are lost. Edit the master instead.
 title: "Price Production and Consumption Separately"
 subtitle: "A Two-Track Architecture for Carbon Pricing in Open Economies"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 version: "0.4"
 abstract: |
@@ -27,7 +24,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Working paper, version 0.4, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is [Climate Fiscal Policy Brief No. 1.1](index.qmd).*
+*Working paper, version 0.4, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is [Climate Fiscal Policy Brief No. 1.1](index.qmd).*
 
 # Executive summary {#sec-summary}
 

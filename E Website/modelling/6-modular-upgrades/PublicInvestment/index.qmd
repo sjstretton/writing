@@ -5,9 +5,6 @@ title: "Price the Capital, Then Test the Budget"
 subtitle: "Climate Investment Needs, the Cost of Capital and Public Spending in CPAT"
 series: "Climate Fiscal Policy Brief No. 6.3"
 version: "1.0"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Finance ministries use the Climate Policy Assessment Tool to see what a carbon price raises and cuts, but not what the clean capital it calls for costs to finance or whether the budget should pay. This brief proposes two extensions. The first prices investment needs at each country's cost of capital and at a social rate: a typical clean asset that pays its way at 6 percent breaks even at 12.6 percent. The second tests each use of public money against the cost of raising tax and counts cash, debt and contract liabilities. Often the budget's problem is cash and hidden liabilities, not value.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 6.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The equations, proofs, worked example and country runs are in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 6.3, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The equations, proofs, worked example and country runs are in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 
@@ -109,9 +106,9 @@ lightbox: auto
 
 - [Climate Fiscal Policy Brief No. 3.1](../../../policy/3-finance-and-risk/ClimateFinanceIntermediationForCleanPower/index.qmd): guarantee the power contract, not the debt [@CFPB31].
 - [No. 3.2](../../../policy/3-finance-and-risk/CleanPowerAssetClasses/index.qmd): refinance clean power as an asset class [@CFPB32].
-- [No. 5.1](../../../modelling/5-modelling/CPATMitigationMethods/index.qmd): the CPAT mitigation module, including its cost-of-capital settings [@StrettonWP51].
+- [No. 5.1](../../../modelling/5-modelling/CPATMitigationMethods/index.qmd): the CPAT mitigation module, including its cost-of-capital settings [@AuthorWP51].
 - [No. 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price [@CFPB61].
-- [No. 6.5](../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.qmd): the macro-fiscal model that returns the affordable envelope [@StrettonWP65].
+- [No. 6.5](../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.qmd): the macro-fiscal model that returns the affordable envelope [@AuthorWP65].
 - The [working paper](working-paper.qmd) behind this brief: the equations, the four propositions, the worked example and the country runs.
 
 # Downloads {.unnumbered}

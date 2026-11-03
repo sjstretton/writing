@@ -18,6 +18,11 @@ What it renders (everything the website offers for download; the site links PDFs
                                                   otherwise save the deck as PDF from PowerPoint)
 With --docx it also writes the .docx beside each .qmd (overwriting the Word file, which is made from the master).
 
+When site_config.ANONYMOUS is on, the PDFs are for the site and carry no author name or affiliation
+(anonymise.py): each is rendered from an anonymised copy of its master, and each deck converted from an
+anonymised copy, and written as <Name>.web.pdf beside the master. The named <Name>.pdf is left as it was, and
+publish_series.py archives the .web.pdf in its place. --docx always renders the master itself, with the name.
+
 Run from anywhere:
     python "H Writing Instructions/Scripts/Website/render_pdfs.py"                       everything
     python "H Writing Instructions/Scripts/Website/render_pdfs.py" 1.1.OpenEconomyCarbonPricing --docx
@@ -28,7 +33,8 @@ import shutil
 import subprocess
 import sys
 from pathlib import Path
-from site_config import REPO, SITE, PARTS, paper_name, master_qmd, paper_folders, section_folder
+import anonymise
+from site_config import ANONYMOUS, REPO, SITE, PARTS, paper_name, master_qmd, paper_folders, section_folder
 from publish_series import BOOKS, EARLIER_PAPERS
 
 EXT = REPO / "H Writing Instructions" / "Writing Standards" / "templates" / "_extensions" / "working-paper"
@@ -57,6 +63,35 @@ def find_folder(folder_name):
 
 def render(quarto, qmd, formats):
     """Render one .qmd to each format, with the extension copied beside it for the duration."""
+    if ANONYMOUS and "typst" in formats:
+        ok = render_anonymous(quarto, qmd)
+        rest = [f for f in formats if f != "typst"]
+        return (render_named(quarto, qmd, rest) if rest else True) and ok
+    return render_named(quarto, qmd, formats)
+
+
+def render_anonymous(quarto, qmd):
+    """<Name>.web.pdf beside the master, rendered from an anonymised copy of it."""
+    copy, made = anonymise.qmd_copy(qmd)
+    try:
+        ok = render_named(quarto, copy, ["typst"], quiet=True)
+        out = copy.with_suffix(".pdf")
+        web = qmd.with_suffix(".web.pdf")
+        if ok and out.exists():
+            out.replace(web)
+            print(f"rendered  {web.relative_to(REPO)} (anonymous)")
+        else:
+            ok = False
+            print(f"FAILED    {qmd.relative_to(REPO)} (anonymous)")
+    finally:
+        for f in made + [copy.with_suffix(".pdf")]:
+            if f.exists():
+                f.unlink()
+        shutil.rmtree(copy.parent / f"{copy.stem}_files", ignore_errors=True)
+    return ok
+
+
+def render_named(quarto, qmd, formats, quiet=False):
     ext_root = qmd.parent / "_extensions"
     made_root = not ext_root.exists()
     target = ext_root / "working-paper"
@@ -70,7 +105,8 @@ def render(quarto, qmd, formats):
             r = subprocess.run(cmd, cwd=qmd.parent, capture_output=True, text=True)
             out = qmd.with_suffix(".pdf" if fmt == "typst" else ".docx")
             if r.returncode == 0 and out.exists():
-                print(f"rendered  {out.relative_to(REPO)}")
+                if not quiet:
+                    print(f"rendered  {out.relative_to(REPO)}")
             else:
                 ok = False
                 print(f"FAILED    {qmd.relative_to(REPO)} ({fmt})\n{r.stderr[-2000:]}")
@@ -97,6 +133,8 @@ def find_soffice():
 
 def deck_to_pdf(soffice, pptx):
     """Save a deck as PDF beside it, unless the PDF is already newer than the deck."""
+    if ANONYMOUS:
+        return deck_to_web_pdf(soffice, pptx)
     pdf = pptx.with_suffix(".pdf")
     if pdf.exists() and pdf.stat().st_mtime >= pptx.stat().st_mtime:
         return True
@@ -104,6 +142,27 @@ def deck_to_pdf(soffice, pptx):
                        capture_output=True, text=True)
     ok = r.returncode == 0 and pdf.exists()
     print(f"{'converted' if ok else 'FAILED   '} {pdf.relative_to(REPO)}")
+    return ok
+
+
+def deck_to_web_pdf(soffice, pptx):
+    """<Deck>.web.pdf beside the deck, converted from an anonymised copy, unless it is already newer than the deck
+    and than anonymise.py."""
+    pdf = pptx.with_suffix(".web.pdf")
+    newest = max(pptx.stat().st_mtime, Path(anonymise.__file__).stat().st_mtime)
+    if pdf.exists() and pdf.stat().st_mtime >= newest:
+        return True
+    copy = anonymise.pptx_copy(pptx)
+    try:
+        r = subprocess.run([soffice, "--headless", "--convert-to", "pdf", "--outdir", str(copy.parent), str(copy)],
+                           capture_output=True, text=True)
+        out = copy.with_suffix(".pdf")
+        ok = r.returncode == 0 and out.exists()
+        if ok:
+            shutil.move(str(out), str(pdf))
+    finally:
+        shutil.rmtree(copy.parent, ignore_errors=True)
+    print(f"{'converted' if ok else 'FAILED   '} {pdf.relative_to(REPO)} (anonymous)")
     return ok
 
 

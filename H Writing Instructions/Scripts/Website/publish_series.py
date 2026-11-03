@@ -10,7 +10,8 @@ Stable names, one per paper and form, overwritten on each run:
     Overview<Section>.docx     each section's overview, and Slides-<Section>.pptx its theme deck
     books (BOOKS below) and earlier papers (EARLIER_PAPERS)
 Each file's PDF (made beside it by render_pdfs.py) is archived with it, under the same name with .pdf; the
-site links only the PDFs.
+site links only the PDFs. With site_config.ANONYMOUS on, the anonymous <Name>.web.pdf is archived instead; a file
+with no .web.pdf gets no PDF in the archive, so the site never offers a PDF with the author's name.
 
 The papers are every numbered paper folder in the sections listed in site_config.py, so a new paper folder is
 picked up without editing this file. Missing briefs and decks are reported and skipped.
@@ -19,7 +20,7 @@ Run from anywhere:  python "H Writing Instructions/Scripts/Website/publish_serie
 Log every publish in H Writing Instructions/Writing Standards/publishing-log.md.
 """
 import shutil
-from site_config import PARTS, ARCHIVE, paper_folders, paper_name, section_folder
+from site_config import ANONYMOUS, PARTS, ARCHIVE, paper_folders, paper_name, section_folder
 
 # book folder (anywhere under a part's root), file inside it, published name
 BOOKS = [
@@ -39,9 +40,13 @@ def copy(src, dst):
     if src and src.exists():
         shutil.copy2(src, dst)
         print(f"archived  {dst.name}")
-        if src.with_suffix(".pdf").exists() and src.suffix != ".pdf":
-            shutil.copy2(src.with_suffix(".pdf"), dst.with_suffix(".pdf"))
+        pdf = src.with_suffix(".web.pdf") if ANONYMOUS else src.with_suffix(".pdf")
+        if pdf.exists() and src.suffix != ".pdf":
+            shutil.copy2(pdf, dst.with_suffix(".pdf"))
             print(f"archived  {dst.with_suffix('.pdf').name}")
+        elif ANONYMOUS and dst.with_suffix(".pdf").exists() and src.suffix != ".pdf":
+            dst.with_suffix(".pdf").unlink()      # an older, named PDF: not for the site
+            print(f"removed   {dst.with_suffix('.pdf').name} (no anonymous PDF)")
     else:
         print(f"missing   {src}")
 

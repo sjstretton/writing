@@ -3,9 +3,6 @@
 # on every compile; edits here are lost. Edit the master instead.
 title: "Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power"
 subtitle: "Removing offtaker risk at source in developing-country power markets"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 version: "0.3"
 abstract: |
@@ -27,7 +24,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Working paper, version 0.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is [Climate Fiscal Policy Brief No. 3.1](index.qmd).*[^credits]
+*Working paper, version 0.3, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is [Climate Fiscal Policy Brief No. 3.1](index.qmd).*[^credits]
 
 [^credits]: This paper consolidates and replaces earlier statements of the same architecture. The guarantee waterfall comes from a policy brief on regional renewable energy payment intermediary facilities written with Nils Zimmermann (2024). The treatment of small and debt-distressed states draws on the solar payments intermediary proposal developed by Evie Davey. The two-stage refinancing that Paper 3.2 develops came with Jasper Zimmermann. Errors are mine.
 
@@ -74,7 +71,7 @@ The idea is not new in practice, and the paper's contribution is to give it a mo
 
 *Credit risk.* The model of offtaker default borrows from reduced-form credit models, in which defaults arrive at a random intensity and the value of a risky claim is found by discounting at a rate that adds the intensity times the loss on default [@DuffieSingleton1999]. Default risk is priced above its actuarial cost: corporate bond prices embed significant premia on common default-intensity factors, and a positive, if imprecisely estimated, premium on the default event itself [@Driessen2005]. For a portfolio of correlated offtakers, the one-factor model of Vasicek [-@Vasicek2002] gives the distribution of losses.
 
-*The gap.* The literature establishes that the cost of capital matters, that de-risking lowers it and that payment guarantees work in practice, but it has not compared contract guarantees with debt guarantees formally, separated the transfer in a guarantee from its real gain, or modeled an intermediary with a layered waterfall and its fiscal cost. Earlier versions of this argument asserted the advantages of guaranteeing the offtaker rather than the loan [@StrettonTC]. This paper supplies the model, the conditions and a calibration.
+*The gap.* The literature establishes that the cost of capital matters, that de-risking lowers it and that payment guarantees work in practice, but it has not compared contract guarantees with debt guarantees formally, separated the transfer in a guarantee from its real gain, or modeled an intermediary with a layered waterfall and its fiscal cost. Earlier versions of this argument asserted the advantages of guaranteeing the offtaker rather than the loan [@AuthorTC]. This paper supplies the model, the conditions and a calibration.
 
 # A model of offtaker risk and its guarantee {#sec-model}
 
@@ -84,7 +81,7 @@ A solar plant costs $I$ per kilowatt up front, costs $F$ per kilowatt a year to 
 $$
 \mathrm{LCOE}(r) = \frac{I\,a(r) + F}{E}, \qquad a(r) = \frac{r}{1 - (1+r)^{-T}},
 $$ {#eq-lcoe}
-where $a(r)$ is the capital recovery factor. Since $F$ is small, the tariff rises almost in proportion to $a(r)$. The plant is the stylized plant used throughout this series: $I = \$800$, a 20 percent capacity factor ($E = 1{,}752$), $F = \$12$ and $T = 25$, with capital spent at commissioning. Paper 3.2 adds interest during a two-year construction period [@StrettonWP32].
+where $a(r)$ is the capital recovery factor. Since $F$ is small, the tariff rises almost in proportion to $a(r)$. The plant is the stylized plant used throughout this series: $I = \$800$, a 20 percent capacity factor ($E = 1{,}752$), $F = \$12$ and $T = 25$, with capital spent at commissioning. Paper 3.2 adds interest during a two-year construction period [@AuthorWP32].
 
 ## Offtaker default and the premium in the tariff {#sec-premium}
 
@@ -171,7 +168,7 @@ The stylized 100-megawatt plant costs \$80 million and produces 175,200 megawatt
 | Relative to 4% | 1.00 | 1.09 | 1.18 | 1.38 | 1.58 | 1.80 | 2.15 |
 | Return on capital, share of cost | 30% | 36% | 41% | 49% | 56% | 61% | 68% |
 
-: The same solar plant costs twice as much at 15 percent as at 4 percent (stylized plant: \$800/kW, 20 percent capacity factor, \$12/kW-year operation and maintenance, 25 years, capital spent at commissioning with no interest during construction). Paper 3.2 adds a two-year construction period at the financing rate, which raises the cost at 10 percent from 5.72 to 6.22 cents [@StrettonWP32]. Source: author's calculation, `2.Source/model.py`. {#tbl-lcoe}
+: The same solar plant costs twice as much at 15 percent as at 4 percent (stylized plant: \$800/kW, 20 percent capacity factor, \$12/kW-year operation and maintenance, 25 years, capital spent at commissioning with no interest during construction). Paper 3.2 adds a two-year construction period at the financing rate, which raises the cost at 10 percent from 5.72 to 6.22 cents [@AuthorWP32]. Source: author's calculation, `2.Source/model.py`. {#tbl-lcoe}
 
 ![Levelized cost of the stylized solar plant by real WACC. The shaded band is the offtaker premium of the central case in @tbl-premium, added to an 8 percent WACC that prices every other risk. Source: author's calculation, `2.Source/make_wp_figures.py`.](2.Source/figures/fig1_lcoe_wacc.png){#fig-lcoe width=90%}
 
@@ -342,7 +339,7 @@ The model's efficiency ratio carries a fiscal caveat. In the central case all of
 
 *What it costs.* In the stylized calibration the facility needs a margin of a few percent of contract payments, like India's 2.4 percent, and a liquidity buffer of about a third of a year's payments. The layers behind it expect to be called for about 5.5 percent of payments a year, mostly by the offtakers' own owners and partly recoverable. Against this, the contract guarantee removes an offtaker premium worth about 11 percent of the tariff in the central case, about two dollars of saving per dollar of expected cost, and more if the facility collects well.
 
-*Who should do what.* Finance ministries should sign the intercept, set the reform conditions and record their layer at expected cost under a published cap. Regulators should require letters of credit and enforce dispatch rules like India's. Development banks should guarantee the facility, or stand as its multilateral layer, rather than guaranteeing individual project loans; IDA payment guarantees of the Scaling Solar kind can be pooled behind a facility instead of written plant by plant. Donors should fund the contingency account at the bottom of the waterfall. Once the contracts are standard and guaranteed, the plants they support can be refinanced as a few homogeneous asset classes through two-stage finance and synthetic sovereign bonds [@CFPB32; @StrettonWP32], with first-loss capital from the regional funds of a Climate Investment Trust [@CFPB42].
+*Who should do what.* Finance ministries should sign the intercept, set the reform conditions and record their layer at expected cost under a published cap. Regulators should require letters of credit and enforce dispatch rules like India's. Development banks should guarantee the facility, or stand as its multilateral layer, rather than guaranteeing individual project loans; IDA payment guarantees of the Scaling Solar kind can be pooled behind a facility instead of written plant by plant. Donors should fund the contingency account at the bottom of the waterfall. Once the contracts are standard and guaranteed, the plants they support can be refinanced as a few homogeneous asset classes through two-stage finance and synthetic sovereign bonds [@CFPB32; @AuthorWP32], with first-loss capital from the regional funds of a Climate Investment Trust [@CFPB42].
 
 *When it fails.* The recommendation fails under four conditions. If utility losses are structural and reform does not come, the waterfall becomes a channel for a permanent subsidy, and the honest instrument is an explicit budget transfer. If the national layer cannot or will not pay, as in a regional facility without an intercept, the cost shifts to multilateral and donor layers that may not be willing to bear it. If a common shock drives most offtakers into arrears together, the buffer in @eq-buffer must be large, and an underfunded facility fails exactly when it is needed. And if the facility is captured, signing contracts above cost for favored developers, it spreads the cost of bad contracts across the whole system; separating procurement from payment is the safeguard.
 

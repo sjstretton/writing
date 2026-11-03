@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Stephen J. Stretton">
 <meta name="keywords" content="climate finance, public investment, debt sustainability, carbon pricing, feebates, macro-fiscal modeling">
 
 <title>The Macro-Fiscal-Energy Scenario Tool – Climate, Fiscal &amp; Finance</title>
@@ -68,9 +67,9 @@ div.csl-indent {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-852b6a5207aa690be7e6f4697b00e88a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-82a78666fecca1c606c7341b73173c0b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-852b6a5207aa690be7e6f4697b00e88a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -626,12 +625,6 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Stephen J. Stretton </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
@@ -660,7 +653,7 @@ window.Quarto = {
 </header>
 
 
-<p><em>Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the Climate Fiscal AI Tools. A short version for policy makers is <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html">Climate Fiscal Policy Brief No.&nbsp;6.5</a>.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p><em>Working paper, version 0.2, October 2026. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the Climate Fiscal AI Tools. A short version for policy makers is <a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html">Climate Fiscal Policy Brief No.&nbsp;6.5</a>.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="sec-summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
 <p><a href="../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/MacroFiscalEnergyScenarioTool.pdf">Download this paper (pdf)</a> · <a href="../../../papers/Slides-MacroFiscalEnergyScenarioTool.pdf">Slides (pdf)</a></p>
@@ -682,7 +675,7 @@ window.Quarto = {
 <h1 data-number="3"><span class="header-section-number">3</span> The tool</h1>
 <p><strong>The tool is one workbook with one driving tab.</strong> The Dashboard holds the country selector, the main levers and the headline results for 2030 and 2050, with six charts: public debt, revenue and expenditure, GDP against a no-new-measures baseline, green investment, the carbon price in force, and debt sustainability. The main levers are a revenue increase (percentage points of GDP a year, up to a ceiling), a public investment increase, the climate investment program on or off, and a carbon pricing mode (none, a manual tax and feebate, or the best feasible tax, feebate or mix). Secondary levers sit on a Policy settings tab: start years and ramp-up, the share of new taxes falling on capital, other new spending, the strength of the fiscal rule, the three feasibility limits, the phase-in of carbon pricing, and how carbon revenue is used (rebated to the bottom 40 percent, spent on green public investment, or kept by the budget). Behind the Dashboard sit detail tabs for the fiscal outlook item by item to 2050, the macro and debt results, green investment, carbon pricing and the model engines.</p>
 <p><strong>The scenario is a baseline plus levers, and the baseline is a reference point, not a forecast.</strong> The baseline holds the country’s 2024 fiscal position (debt, revenue and spending ratios) fixed, except that fossil fuel rents fall on a global net zero path; growth is reported above or below trend. A user who switches the climate program on adds the country’s incremental budget need for mitigation, financed by grants, concessional loans and commercial borrowing in shares set on the assumptions tab. A user who chooses a carbon pricing mode adds the revenue it raises and can earmark it for the program. Every result is therefore a difference from a flat reference, which is what makes packages comparable and what makes the levels unsuitable as projections (<a href="#sec-kenya" class="quarto-xref">Section&nbsp;8</a>).</p>
-<p><strong>Four source models feed it, each a separate, documented module.</strong> <a href="#tbl-modules" class="quarto-xref">Table&nbsp;1</a> lists them. They share one data layer: the Global Fiscal Indicators panel described in paper 7.2 <span class="citation" data-cites="StrettonWP72">(<a href="#ref-StrettonWP72" role="doc-biblioref">Stretton 2026a</a>)</span>, which supplies each country’s debt, revenue, public investment, efficiency score, creditor mix and energy data from public sources.</p>
+<p><strong>Four source models feed it, each a separate, documented module.</strong> <a href="#tbl-modules" class="quarto-xref">Table&nbsp;1</a> lists them. They share one data layer: the Global Fiscal Indicators panel described in paper 7.2 <span class="citation" data-cites="AuthorWP72">(<a href="#ref-AuthorWP72" role="doc-biblioref">Author 2026a</a>)</span>, which supplies each country’s debt, revenue, public investment, efficiency score, creditor mix and energy data from public sources.</p>
 <div id="tbl-modules" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-modules-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -740,7 +733,7 @@ Table&nbsp;1: The tool chains four modules on one data layer. Source: the tool�
 <h1 data-number="4"><span class="header-section-number">4</span> The energy side</h1>
 <section id="sec-investment" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="sec-investment"><span class="header-section-number">4.1</span> Investment needs and who pays</h2>
-<p><strong>The investment model estimates, for each country and year to 2050, what a net zero path needs and who pays for it.</strong> It is a stock-and-flow model built to CPAT conventions: it uses CPAT’s energy data and its activity equation <span class="citation" data-cites="StrettonWP51">(<a href="#ref-StrettonWP51" role="doc-biblioref">Stretton 2026e</a>)</span>, projected with income elasticities and autonomous efficiency improvement at real 2024 prices, and builds investment bottom up for road transport, buildings, industry and power, with spending lines for non-CO₂ gases, land use and other energy emissions. Paper 6.3 treats investment needs and the efficiency of public spending in depth, with a different method that shares a global estimate of all climate investment among countries <span class="citation" data-cites="StrettonWP63">(<a href="#ref-StrettonWP63" role="doc-biblioref">Stretton 2026d</a>)</span>; the two answer different questions and their country totals should not be compared. Here what matters is the investment model’s output: an investment path in two scenarios and its split by payer.</p>
+<p><strong>The investment model estimates, for each country and year to 2050, what a net zero path needs and who pays for it.</strong> It is a stock-and-flow model built to CPAT conventions: it uses CPAT’s energy data and its activity equation <span class="citation" data-cites="AuthorWP51">(<a href="#ref-AuthorWP51" role="doc-biblioref">Author 2026e</a>)</span>, projected with income elasticities and autonomous efficiency improvement at real 2024 prices, and builds investment bottom up for road transport, buildings, industry and power, with spending lines for non-CO₂ gases, land use and other energy emissions. Paper 6.3 treats investment needs and the efficiency of public spending in depth, with a different method that shares a global estimate of all climate investment among countries <span class="citation" data-cites="AuthorWP63">(<a href="#ref-AuthorWP63" role="doc-biblioref">Author 2026d</a>)</span>; the two answer different questions and their country totals should not be compared. Here what matters is the investment model’s output: an investment path in two scenarios and its split by payer.</p>
 <p><strong>Every investment line is split into five payer types, and the split decides the fiscal cost.</strong> The types run from pure public (P1, repaid by taxes: public buildings, access grids, land use), through regulated utility (P2, repaid by tariffs), contracted revenue (P3, repaid under a long-term contract with a public or regulated buyer), and viability gap (P4, market revenue plus a public top-up), to pure private (P5). The starting split of power investment comes from the country’s power market structure, coded from the power sector reform data of <span class="citation" data-cites="UrpelainenYang2019">Urpelainen and Yang (<a href="#ref-UrpelainenYang2019" role="doc-biblioref">2019</a>)</span>, which end in 2013, and updated where they are out of date. Three pressure indices then move investment toward the budget: one for poor utility cost recovery, one for a high cost of capital, one for large explicit fossil fuel subsidies. The direct budget need in year <span class="math inline">\(t\)</span> is</p>
 <p><span id="eq-need"><span class="math display">\[
 N_t = I^{P1}_t + \gamma \, I^{P4}_t,
@@ -750,7 +743,7 @@ N_t = I^{P1}_t + \gamma \, I^{P4}_t,
 </section>
 <section id="sec-pricing" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="sec-pricing"><span class="header-section-number">4.2</span> Carbon pricing under feasibility limits</h2>
-<p><strong>The pricing screen asks how much abatement pricing can deliver without breaching limits on political cost.</strong> It covers the power sector only, and compares a carbon tax, a feebate (a charge on generation above a benchmark emissions intensity and a rebate below it, equivalent in this sector to output-based allocation or a tradable performance standard) and a mix of the two. The distinction that drives the screen is between the marginal and the average price. Fuel switching responds to the marginal price, which a tax and a feebate raise equally. Electricity demand responds to the average tariff, which only the tax raises, because a feebate’s charges and rebates cancel at the benchmark <span class="citation" data-cites="CFPB12">(<a href="#ref-CFPB12" role="doc-biblioref">Stretton 2026b</a>)</span>. A feebate is a price-based instrument whose carbon-price equivalent is its rate at the margin, in the sense of the Total Effective Carbon Price <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Stretton 2026c</a>)</span>.</p>
+<p><strong>The pricing screen asks how much abatement pricing can deliver without breaching limits on political cost.</strong> It covers the power sector only, and compares a carbon tax, a feebate (a charge on generation above a benchmark emissions intensity and a rebate below it, equivalent in this sector to output-based allocation or a tradable performance standard) and a mix of the two. The distinction that drives the screen is between the marginal and the average price. Fuel switching responds to the marginal price, which a tax and a feebate raise equally. Electricity demand responds to the average tariff, which only the tax raises, because a feebate’s charges and rebates cancel at the benchmark <span class="citation" data-cites="CFPB12">(<a href="#ref-CFPB12" role="doc-biblioref">Author 2026b</a>)</span>. A feebate is a price-based instrument whose carbon-price equivalent is its rate at the margin, in the sense of the Total Effective Carbon Price <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Author 2026c</a>)</span>.</p>
 <p><strong>Abatement has a substitution part and a demand part.</strong> With a tax <span class="math inline">\(\tau_t\)</span> and a feebate rate <span class="math inline">\(\tau_f\)</span> in US dollars per tonne of CO₂,</p>
 <p><span id="eq-abatement"><span class="math display">\[
 A^{\text{sub}} = s_{\max}\left(1 - e^{-(\tau_t + \tau_f)/\tau_{s}}\right), \qquad
@@ -1276,6 +1269,21 @@ Abiad, Abdul, Davide Furceri, and Petia Topalova. 2016. <span>“The Macroeconom
 <div id="ref-Anderson2013GIMF" class="csl-entry" role="listitem">
 Anderson, Derek, Benjamin Hunt, Mika Kortelainen, et al. 2013. <em>Getting to Know <span>GIMF</span>: The Simulation Properties of the Global Integrated Monetary and Fiscal Model</em>. IMF Working Paper 13/55. International Monetary Fund. <a href="https://doi.org/10.5089/9781475559415.001">https://doi.org/10.5089/9781475559415.001</a>.
 </div>
+<div id="ref-AuthorWP72" class="csl-entry" role="listitem">
+Author. 2026a. <span>“A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis.”</span> Unpublished manuscript.
+</div>
+<div id="ref-CFPB12" class="csl-entry" role="listitem">
+Author. 2026b. <em>Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill</em>. 1.2. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB61" class="csl-entry" role="listitem">
+Author. 2026c. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-AuthorWP63" class="csl-entry" role="listitem">
+Author. 2026d. <span>“Public Investment in <span>CPAT</span>.”</span> Unpublished manuscript.
+</div>
+<div id="ref-AuthorWP51" class="csl-entry" role="listitem">
+Author. 2026e. <span>“The <span>CPAT</span> Mitigation Module: Methods in Brief.”</span> Unpublished manuscript.
+</div>
 <div id="ref-Black2023CPAT" class="csl-entry" role="listitem">
 Black, Simon, Ian Parry, Victor Mylonas, Nate Vernon-Lin, and Karlygash Zhunussova. 2023. <em>The <span>IMF-World Bank</span> Climate Policy Assessment Tool (<span>CPAT</span>): A Model to Help Countries Mitigate Climate Change</em>. IMF Working Paper 2023/128. International Monetary Fund. <a href="https://doi.org/10.5089/9798400242342.001">https://doi.org/10.5089/9798400242342.001</a>.
 </div>
@@ -1335,21 +1343,6 @@ Melina, Giovanni, Shu-Chun S. Yang, and Luis-Felipe Zanna. 2016. <span>“Debt S
 </div>
 <div id="ref-KenyaNDC2020" class="csl-entry" role="listitem">
 Republic of Kenya. 2020. <em>Submission of <span>Kenya</span>’s Updated Nationally Determined Contribution</em>. Ministry of Environment and Forestry, letter to the UNFCCC Executive Secretary with the updated NDC, 24 December 2020. <a href="https://unfccc.int/NDCREG">https://unfccc.int/NDCREG</a>.
-</div>
-<div id="ref-StrettonWP72" class="csl-entry" role="listitem">
-Stretton, Stephen J. 2026a. <span>“A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis.”</span> Unpublished manuscript.
-</div>
-<div id="ref-CFPB12" class="csl-entry" role="listitem">
-Stretton, Stephen J. 2026b. <em>Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill</em>. 1.2. Climate Fiscal Policy Briefs.
-</div>
-<div id="ref-CFPB61" class="csl-entry" role="listitem">
-Stretton, Stephen J. 2026c. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
-</div>
-<div id="ref-StrettonWP63" class="csl-entry" role="listitem">
-Stretton, Stephen J. 2026d. <span>“Public Investment in <span>CPAT</span>.”</span> Unpublished manuscript.
-</div>
-<div id="ref-StrettonWP51" class="csl-entry" role="listitem">
-Stretton, Stephen J. 2026e. <span>“The <span>CPAT</span> Mitigation Module: Methods in Brief.”</span> Unpublished manuscript.
 </div>
 <div id="ref-UrpelainenYang2019" class="csl-entry" role="listitem">
 Urpelainen, Johannes, and Joonseok Yang. 2019. <span>“Global Patterns of Power Sector Reform, 1982–2013.”</span> <em>Energy Strategy Reviews</em> 23: 152–62. <a href="https://doi.org/10.1016/j.esr.2018.12.001">https://doi.org/10.1016/j.esr.2018.12.001</a>.

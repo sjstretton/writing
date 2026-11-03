@@ -5,9 +5,6 @@ title: "Validating CPAT: Baselines, Back-Casts and Model Comparisons"
 subtitle: "How far a finance ministry can trust the Climate Policy Assessment Tool, and how to read its numbers"
 series: "Climate Fiscal Policy Brief No. 5.3"
 version: "1.0"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Finance ministries use the Climate Policy Assessment Tool (CPAT) to estimate what a carbon tax does to emissions and revenue. This brief sets out what the tool's published checks show. CPAT fits its base year by construction, follows the trend of emissions in back-casts for large economies, and agrees in order of magnitude with other energy models and with the wide range of evidence on real carbon prices. Its results move most with its price elasticities: a G20 emissions cut of 29 percent can be anywhere from 7 to 39 percent. Ministries should read CPAT results as ranges, use them to compare policies, and ask for the checks to be rerun on the corrected model.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 5.3, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with every table, source and recomputation, is in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 5.3, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with every table, source and recomputation, is in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 

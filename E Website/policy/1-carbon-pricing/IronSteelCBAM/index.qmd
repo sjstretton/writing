@@ -5,9 +5,6 @@ title: "Credit the Price Signal, Not the Payment"
 subtitle: "Carbon Price Recognition and Scrap Shuffling under the EU's Carbon Border Adjustment Mechanism"
 series: "Climate Fiscal Policy Brief No. 1.4"
 version: "1.1"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   The EU's Carbon Border Adjustment Mechanism charges imports for their embodied carbon, measured plant by plant, and credits only carbon prices effectively paid abroad. Both rules work against its aim of encouraging trading partners to decarbonize. Exporters can send scrap-based steel to Europe and blast-furnace steel elsewhere, saving €160–310 per tonne for Türkiye, China and India with no fall in emissions. A revenue-neutral feebate, which gives every producer the full carbon price at the margin, earns no credit. Measuring carbon by country and sector, and crediting the country's price signal, fixes both. Recognition should rise as free allocation is phased out.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 1.4, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Legal texts as of 31 October 2026. All CBAM amounts are in euros. The full analysis, with the model, proofs, calibration and legal texts, is in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 1.4, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Legal texts as of 31 October 2026. All CBAM amounts are in euros. The full analysis, with the model, proofs, calibration and legal texts, is in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 

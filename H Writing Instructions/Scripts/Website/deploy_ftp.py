@@ -4,7 +4,8 @@ Push-Website.bat runs this when WinSCP is not installed. It reads the login from
 FTP-Login.txt at the top of the repository (host, user, password, remote, protocol = ftp or ftps), uploads every file in
 E Website/_site whose size differs from the server copy (or is missing
 there), creating folders as needed. Then it makes the server's papers/ folder an exact copy of
-the built one: any file there that the site no longer links to is deleted.
+the built one: any file there that the site no longer links to is deleted. The generated page folders
+(MIRRORED: policy/, modelling/) are mirrored the same way, so a page taken off the site goes from the server too.
 Web pages (.html, .css, .js, .json, .xml) are always uploaded: an edited page can keep
 the same size, and a size check alone would skip it.
 
@@ -26,6 +27,7 @@ from pathlib import Path
 
 ALWAYS = {".html", ".css", ".js", ".json", ".xml"}
 PROBE = "index.html"
+MIRRORED = ("papers", "policy", "modelling")   # server folders kept an exact copy of the built ones
 
 
 
@@ -78,6 +80,32 @@ def ensure_dir(ftp, path, made):
         except ftplib.error_perm:
             pass  # already exists
         made.add(cur)
+
+
+def mirror_delete(ftp, local_dir, remote_dir, rel=""):
+    """Delete files and folders under remote_dir that local_dir does not have."""
+    try:
+        names = [n.rsplit("/", 1)[-1] for n in ftp.nlst(remote_dir)]
+    except ftplib.all_errors:
+        return
+    for n in names:
+        if n in (".", ".."):
+            continue
+        target, here = f"{remote_dir}/{n}", local_dir / n
+        if is_dir(ftp, target):
+            mirror_delete(ftp, here, target, f"{rel}{n}/")
+            if not here.is_dir():
+                try:
+                    ftp.rmd(target)
+                    print(f"  deleted {rel}{n}/ (no longer on the site)")
+                except ftplib.all_errors:
+                    pass
+        elif not here.is_file():
+            try:
+                ftp.delete(target)
+                print(f"  deleted {rel}{n} (no longer on the site)")
+            except ftplib.all_errors:
+                pass
 
 
 def is_dir(ftp, path):
@@ -180,19 +208,10 @@ def main():
         print(f"  uploaded {rel}")
     print(f"Uploaded {sent} files; {same} already up to date.")
 
-    # papers/ on the server mirrors the built papers/: delete anything the site no longer links to
-    local = {f.name for f in (site / "papers").iterdir() if f.is_file()}
-    try:
-        names = [n.rsplit("/", 1)[-1] for n in ftp.nlst(f"{remote}/papers")]
-    except ftplib.error_perm:
-        names = []
-    for n in names:
-        if n not in (".", "..") and n not in local:
-            try:
-                ftp.delete(f"{remote}/papers/{n}")
-                print(f"  deleted papers/{n} (no longer linked)")
-            except ftplib.error_perm:
-                pass
+    # papers/, policy/ and modelling/ on the server mirror the built ones: delete what the site no longer has
+    for d in MIRRORED:
+        if (site / d).is_dir():
+            mirror_delete(ftp, site / d, f"{remote}/{d}", f"{d}/")
     print("Checking the result:")
     check(ftp, cfg, site, remote)
     ftp.quit()

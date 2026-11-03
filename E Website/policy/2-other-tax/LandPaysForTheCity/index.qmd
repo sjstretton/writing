@@ -3,9 +3,6 @@
 # on every compile; edits here are lost. Edit the master instead.
 title: "Let Land Pay for the City"
 subtitle: "Property Taxes, Public Land and Land Value Capture to Fund Green Urban Infrastructure in Developing Countries"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 version: "0.1"
 abstract: |
@@ -25,7 +22,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Working paper, version 0.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. This is paper 2.2 in the section "Tax Rent, Not Effort"; its companion, paper 2.1, sets out a land value tax above a household allowance [@StrettonWP21].*
+*Working paper, version 0.1, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. This is paper 2.2 in the section "Tax Rent, Not Effort"; its companion, paper 2.1, sets out a land value tax above a household allowance [@AuthorWP21].*
 
 # Introduction {#sec-intro}
 
@@ -254,7 +251,7 @@ The fiscal cadastre should cover every occupied parcel, whether or not it has a 
 
 ## Keep exemptions few, explicit and costed {.unnumbered}
 
-Exemptions should be limited to a small household allowance and to land used directly by government and recognized public-benefit bodies, and every exemption should be listed and costed each year. A basic allowance, a slice of land value exempt for every owner-occupied home, protects poor households better than a list of exempt categories and keeps the base broad [@StrettonWP21]. Blanket exemptions for agricultural land inside urban boundaries, for religious or political bodies' commercial property, and for new buildings for many years should be removed.
+Exemptions should be limited to a small household allowance and to land used directly by government and recognized public-benefit bodies, and every exemption should be listed and costed each year. A basic allowance, a slice of land value exempt for every owner-occupied home, protects poor households better than a list of exempt categories and keeps the base broad [@AuthorWP21]. Blanket exemptions for agricultural land inside urban boundaries, for religious or political bodies' commercial property, and for new buildings for many years should be removed.
 
 ## Make collection easy and non-payment costly {.unnumbered}
 
@@ -291,7 +288,7 @@ The code should send one-off capture revenues, which are lumpy and cyclical, to 
 
 ## "The poor will lose their homes" {.unnumbered}
 
-The most serious objection is that a land tax can force poor households off valuable land they cannot afford to be taxed on. The answer lies in design. A basic household allowance exempts the land value of an ordinary home, so most poor households pay nothing [@StrettonWP21]. Deferral lets cash-poor owners accumulate the tax as a charge settled on sale or inheritance, so no one is forced to sell to pay it. And without a property tax, the same metro raises rents for tenants, often the poorest residents, while landlords keep the whole gain. A land tax with an allowance is more progressive than the status quo.
+The most serious objection is that a land tax can force poor households off valuable land they cannot afford to be taxed on. The answer lies in design. A basic household allowance exempts the land value of an ordinary home, so most poor households pay nothing [@AuthorWP21]. Deferral lets cash-poor owners accumulate the tax as a charge settled on sale or inheritance, so no one is forced to sell to pay it. And without a property tax, the same metro raises rents for tenants, often the poorest residents, while landlords keep the whole gain. A land tax with an allowance is more progressive than the status quo.
 
 ## "Informal tenure makes it impossible" {.unnumbered}
 

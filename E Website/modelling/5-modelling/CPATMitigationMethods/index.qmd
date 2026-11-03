@@ -5,9 +5,6 @@ title: "The CPAT Mitigation Module: Methods in Brief"
 subtitle: "What a Finance Ministry's Climate Model Computes, and How to Read Its Results"
 series: "Climate Fiscal Policy Brief No. 5.1"
 version: "1.0"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Finance ministries use the Climate Policy Assessment Tool, built by the World Bank and the IMF, to estimate what carbon taxes and fuel subsidy reform would raise, cost and cut. Its mitigation module is simple, but its documentation runs to 57,000 words and its 2023 edition contains twenty errors. A rebuild of the model states the whole method in fourteen equations. This brief explains what the model does, why a carbon price bites on coal far more than on road fuel, why power-sector results rest on two judgment calls, and how ministries and the teams who serve them should read and improve the results.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 5.1, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full method, with every equation, the corrections and the derivations, is in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 5.1, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full method, with every equation, the corrections and the derivations, is in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 
@@ -109,9 +106,9 @@ lightbox: auto
 
 # Related papers in this series {.unnumbered}
 
-- [Climate Fiscal Policy Brief No. 5.2](../../../modelling/5-modelling/CPATAIImplementation/index.qmd): how CPAT was rebuilt as a transparent, testable tool [@StrettonWP52].
-- [No. 5.3](../../../modelling/5-modelling/CPATValidation/index.qmd): validating CPAT against data and other models [@StrettonWP53].
-- [No. 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd): whether CPAT's price elasticities are right [@StrettonWP54].
+- [Climate Fiscal Policy Brief No. 5.2](../../../modelling/5-modelling/CPATAIImplementation/index.qmd): how CPAT was rebuilt as a transparent, testable tool [@AuthorWP52].
+- [No. 5.3](../../../modelling/5-modelling/CPATValidation/index.qmd): validating CPAT against data and other models [@AuthorWP53].
+- [No. 5.4](../../../modelling/5-modelling/ElasticityValidation/index.qmd): whether CPAT's price elasticities are right [@AuthorWP54].
 - [No. 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, and a demand system with fuel switching [@CFPB61].
 - The [working paper](working-paper.qmd) behind this brief: every equation, the corrections and the derivations.
 

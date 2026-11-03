@@ -5,9 +5,6 @@ title: "Are CPAT's Price Elasticities Right?"
 subtitle: "A Check Against the Evidence, and What It Means for Carbon-Pricing Estimates"
 series: "Climate Fiscal Policy Brief No. 5.4"
 version: "1.0"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   The Climate Policy Assessment Tool, which the IMF and the World Bank use to estimate what carbon taxes and fuel subsidy reforms do, turns price changes into emission cuts through price elasticities. This brief reports a check of its defaults against the published evidence. Most are consistent, and many are cautious. Two are too high, and road gasoline is twice the estimate corrected for publication bias. The bigger problem is timing: the tool applies the full long-run response in the first year, so it overstates five-year cuts by about half and understates early revenue. Users should read near-term results as upper bounds and show a low-elasticity case.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 5.4, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with the evidence register, the calculations and the validation protocol, is in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 5.4, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with the evidence register, the calculations and the validation protocol, is in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 

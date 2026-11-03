@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Stephen J. Stretton">
 <meta name="keywords" content="excise taxation, corrective taxes, fuel taxes, health taxes, tax diagnostics, artificial intelligence">
 
 <title>The Excise-Fiscal Diagnostic – Climate, Fiscal &amp; Finance</title>
@@ -68,9 +67,9 @@ div.csl-indent {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-852b6a5207aa690be7e6f4697b00e88a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-82a78666fecca1c606c7341b73173c0b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-852b6a5207aa690be7e6f4697b00e88a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-620ef5188d260b6b43b76108cc587a92.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-08a5c116803f6e1c70d887aa52644b4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -648,12 +647,6 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Stephen J. Stretton </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
@@ -682,7 +675,7 @@ window.Quarto = {
 </header>
 
 
-<p><em>Working paper, version 0.4, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.html">Climate Fiscal Policy Brief No.&nbsp;7.1</a>. Companion paper to the Climate Fiscal AI Tools.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p><em>Working paper, version 0.4, October 2026. The views expressed are the author’s own and do not represent those of any institution with which he is or has been affiliated. A short version for policy makers is <a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.html">Climate Fiscal Policy Brief No.&nbsp;7.1</a>. Companion paper to the Climate Fiscal AI Tools.</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="sec-summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Executive summary</h1>
 <p><a href="../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.html"><strong>Policy brief (short version) →</strong></a> · <a href="../../../papers/ExciseFiscalDiagnostic.pdf">Download this paper (pdf)</a> · <a href="../../../papers/Slides-ExciseFiscalDiagnostic.pdf">Slides (pdf)</a></p>
@@ -837,7 +830,7 @@ Table&nbsp;1: The externality spine: default valuation parameters.
 <section id="sec-health" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="sec-health"><span class="header-section-number">5.4</span> Health benchmarks</h2>
 <p><strong>For tobacco, alcohol and sugar-sweetened beverages, the diagnostic uses published targets instead of computing externalities.</strong> The external and internal costs of these goods (health care paid by others, harm to others, and harm to consumers who misjudge addiction or their own self-control) are harder to value per unit than fuel damages and are contested <span class="citation" data-cites="Allcott2019 Chaloupka2019">(<a href="#ref-Allcott2019" role="doc-biblioref">Allcott et al. 2019</a>; <a href="#ref-Chaloupka2019" role="doc-biblioref">Chaloupka et al. 2019</a>)</span>. The health literature has instead settled on targets that ministries recognize. WHO’s technical manual recommends that excise make up at least 70 percent of the retail price of tobacco products, with specific or mixed structures and regular adjustment for inflation; WHO’s monitoring indicator rates a total tax share of at least 75 percent as best practice <span class="citation" data-cites="WHO2021Tobacco">(<a href="#ref-WHO2021Tobacco" role="doc-biblioref">World Health Organization 2021</a>)</span>. The diagnostic uses the excise target because it isolates the excise. For sugar-sweetened beverages, WHO finds that taxes that raise retail prices by 20 percent or more cut consumption roughly in proportion <span class="citation" data-cites="WHO2016Fiscal">(<a href="#ref-WHO2016Fiscal" role="doc-biblioref">World Health Organization 2016</a>)</span>.</p>
-<p><strong>For alcohol the diagnostic tests consistency rather than level.</strong> Expressing every alcohol line per liter of pure alcohol shows whether a country taxes the same harmful content at very different rates across beer, wine and spirits, just as expressing fuel taxes per tonne of carbon shows inconsistent carbon pricing across fuels <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Stretton 2026c</a>)</span>. WHO considers specific taxes based on alcohol content the best design for reducing harm <span class="citation" data-cites="WHO2023Alcohol">(<a href="#ref-WHO2023Alcohol" role="doc-biblioref">World Health Organization 2023a</a>)</span>. Consistency is a test, not a rule: where heavy drinkers favor particular products, differentiated rates can do better than a uniform rate per liter of alcohol <span class="citation" data-cites="Griffith2019">(<a href="#ref-Griffith2019" role="doc-biblioref">Griffith et al. 2019</a>)</span>. An inversion in which the strongest drink pays least per liter of alcohol has no such defense, and the report flags it.</p>
+<p><strong>For alcohol the diagnostic tests consistency rather than level.</strong> Expressing every alcohol line per liter of pure alcohol shows whether a country taxes the same harmful content at very different rates across beer, wine and spirits, just as expressing fuel taxes per tonne of carbon shows inconsistent carbon pricing across fuels <span class="citation" data-cites="CFPB61">(<a href="#ref-CFPB61" role="doc-biblioref">Author 2026c</a>)</span>. WHO considers specific taxes based on alcohol content the best design for reducing harm <span class="citation" data-cites="WHO2023Alcohol">(<a href="#ref-WHO2023Alcohol" role="doc-biblioref">World Health Organization 2023a</a>)</span>. Consistency is a test, not a rule: where heavy drinkers favor particular products, differentiated rates can do better than a uniform rate per liter of alcohol <span class="citation" data-cites="Griffith2019">(<a href="#ref-Griffith2019" role="doc-biblioref">Griffith et al. 2019</a>)</span>. An inversion in which the strongest drink pays least per liter of alcohol has no such defense, and the report flags it.</p>
 <p><strong>The health and energy lines are read on one page because they share a design question.</strong> Health and climate practitioners both favor specific rather than ad valorem rates for corrective excises, since the damage depends on quantity, not price, and both favor automatic indexation so that real rates do not erode between finance acts <span class="citation" data-cites="WHO2021Tobacco WHO2023Alcohol">(<a href="#ref-WHO2021Tobacco" role="doc-biblioref">World Health Organization 2021</a>, <a href="#ref-WHO2023Alcohol" role="doc-biblioref">2023a</a>)</span>. A diagnostic that finds unindexed specific rates on fuel, tobacco and alcohol can recommend one indexation rule that covers all three, which is cheaper politically than three separate fights.</p>
 </section>
 <section id="sec-depth" class="level2" data-number="5.5">
@@ -1226,7 +1219,7 @@ Figure&nbsp;2: Sierra Leone and Liberia: revenue depends on what counts as an ex
 </section>
 <section id="sec-cannot" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="sec-cannot"><span class="header-section-number">10.2</span> What it cannot do</h2>
-<p><strong>The diagnostic is static.</strong> It does not model pass-through, demand response beyond a first-order correction, cross-border fuel smuggling or tobacco illicit trade. A ministry that wants revenue and emission projections should take the diagnostic’s rates and gaps into a model that has those responses, such as the Climate Policy Assessment Tool for fuels <span class="citation" data-cites="StrettonWP51">(<a href="#ref-StrettonWP51" role="doc-biblioref">Stretton 2026d</a>)</span>, with the caution on its elasticities in <a href="../../../modelling/5-modelling/ElasticityValidation/index.html">Brief 5.4</a>.</p>
+<p><strong>The diagnostic is static.</strong> It does not model pass-through, demand response beyond a first-order correction, cross-border fuel smuggling or tobacco illicit trade. A ministry that wants revenue and emission projections should take the diagnostic’s rates and gaps into a model that has those responses, such as the Climate Policy Assessment Tool for fuels <span class="citation" data-cites="AuthorWP51">(<a href="#ref-AuthorWP51" role="doc-biblioref">Author 2026d</a>)</span>, with the caution on its elasticities in <a href="../../../modelling/5-modelling/ElasticityValidation/index.html">Brief 5.4</a>.</p>
 <p><strong>Implied revenue is approximate.</strong> Line-level volumes are the weakest input. Prevalence-based volumes include untaxed supply and overstate the base, and shares of consumer price move with the reference price. The data-quality score on each implied figure says how much to trust it.</p>
 <p><strong>Informal and home-produced goods sit outside the formal base.</strong> Opaque beer, home-distilled spirits and informally traded fuel are large in many lower-income countries. The diagnostic describes the formal base accurately and understates total consumption.</p>
 <p><strong>The externality spine is only as good as its weakest component.</strong> Air pollution exposure data at the spatial detail needed to attribute deaths to transport are missing in most low-income countries. Police accident records undercount road deaths, which is why WHO publishes modeled estimates by country <span class="citation" data-cites="WHO2023Road">(<a href="#ref-WHO2023Road" role="doc-biblioref">World Health Organization 2023b</a>)</span>; the accident component should start from those estimates, not from police counts. Credible local fuel-price elasticities are rare, and the mileage share <span class="math inline">\(\beta\)</span> is rarely estimated at all. The report surfaces these uncertainties as ranges and data-quality scores instead of burying them.</p>
@@ -1235,8 +1228,8 @@ Figure&nbsp;2: Sierra Leone and Liberia: revenue depends on what counts as an ex
 <section id="sec-use" class="level2" data-number="10.3">
 <h2 data-number="10.3" class="anchored" data-anchor-id="sec-use"><span class="header-section-number">10.3</span> How a ministry uses it</h2>
 <p><strong>The diagnostic is built to be run every year and read in a meeting.</strong> A tax policy unit can run it at each budget cycle, with the same standard schedule and the same spine, so that the change from last year shows on one page. It supplies what any budget or tax policy review needs on excise: the tax structure, the effective rates and their erosion, benchmarks against peers and targets, and the issues for policy dialogue.</p>
-<p><strong>The findings feed a reform sequence, which is a separate exercise.</strong> The sequence turns the diagnostic’s gaps into steps: what can be done by administrative indexation this year, what needs legislation, and what needs a compensation package first. Sequencing depends on political economy as much as on the size of each gap. Where a fuel tax is too salient to raise, other instruments can price part of the same damage: a feebate on new vehicles, as France has run since 2008, charges high emitters and rebates low ones without moving the pump price <span class="citation" data-cites="Durrmeyer2022 CFPB12">(<a href="#ref-Durrmeyer2022" role="doc-biblioref">Durrmeyer 2022</a>; <a href="#ref-CFPB12" role="doc-biblioref">Stretton 2026b</a>)</span>. The diagnostic’s contribution to that discussion is narrower and harder to argue with: it says where the system stands, against what, and how sure anyone can be.</p>
-<p><strong>The next step is a common regional table.</strong> Because every report maps onto the same 30 rows and uses the same spine, a set of country diagnostics stacks into a regional comparison with no further work, which a fiscal profile such as the indicators dashboard of paper 7.2 can then place in context <span class="citation" data-cites="StrettonWP72">(<a href="#ref-StrettonWP72" role="doc-biblioref">Stretton 2026a</a>)</span>. Each new country makes the others more useful.</p>
+<p><strong>The findings feed a reform sequence, which is a separate exercise.</strong> The sequence turns the diagnostic’s gaps into steps: what can be done by administrative indexation this year, what needs legislation, and what needs a compensation package first. Sequencing depends on political economy as much as on the size of each gap. Where a fuel tax is too salient to raise, other instruments can price part of the same damage: a feebate on new vehicles, as France has run since 2008, charges high emitters and rebates low ones without moving the pump price <span class="citation" data-cites="Durrmeyer2022 CFPB12">(<a href="#ref-Durrmeyer2022" role="doc-biblioref">Durrmeyer 2022</a>; <a href="#ref-CFPB12" role="doc-biblioref">Author 2026b</a>)</span>. The diagnostic’s contribution to that discussion is narrower and harder to argue with: it says where the system stands, against what, and how sure anyone can be.</p>
+<p><strong>The next step is a common regional table.</strong> Because every report maps onto the same 30 rows and uses the same spine, a set of country diagnostics stacks into a regional comparison with no further work, which a fiscal profile such as the indicators dashboard of paper 7.2 can then place in context <span class="citation" data-cites="AuthorWP72">(<a href="#ref-AuthorWP72" role="doc-biblioref">Author 2026a</a>)</span>. Each new country makes the others more useful.</p>
 </section>
 </section>
 <section id="sec-conclusion" class="level1" data-number="11">
@@ -1252,6 +1245,18 @@ Figure&nbsp;2: Sierra Leone and Liberia: revenue depends on what counts as an ex
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-Allcott2019" class="csl-entry" role="listitem">
 Allcott, Hunt, Benjamin B. Lockwood, and Dmitry Taubinsky. 2019. <span>“Should We Tax Sugar-Sweetened Beverages? An Overview of Theory and Evidence.”</span> <em>Journal of Economic Perspectives</em> 33 (3): 202–27. <a href="https://doi.org/10.1257/jep.33.3.202">https://doi.org/10.1257/jep.33.3.202</a>.
+</div>
+<div id="ref-AuthorWP72" class="csl-entry" role="listitem">
+Author. 2026a. <span>“A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis.”</span> Unpublished manuscript.
+</div>
+<div id="ref-CFPB12" class="csl-entry" role="listitem">
+Author. 2026b. <em>Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill</em>. 1.2. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-CFPB61" class="csl-entry" role="listitem">
+Author. 2026c. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
+</div>
+<div id="ref-AuthorWP51" class="csl-entry" role="listitem">
+Author. 2026d. <span>“The <span>CPAT</span> Mitigation Module: Methods in Brief.”</span> Unpublished manuscript.
 </div>
 <div id="ref-Black2023FFS" class="csl-entry" role="listitem">
 Black, Simon, Antung A. Liu, Ian Parry, and Nate Vernon. 2023. <em><span>IMF</span> Fossil Fuel Subsidies Data: 2023 Update</em>. IMF Working Paper 23/169. International Monetary Fund. <a href="https://doi.org/10.5089/9798400249006.001">https://doi.org/10.5089/9798400249006.001</a>.
@@ -1318,18 +1323,6 @@ Sandmo, Agnar. 1975. <span>“Optimal Taxation in the Presence of Externalities.
 </div>
 <div id="ref-EC2019Handbook" class="csl-entry" role="listitem">
 Schroten, Arno, Huib van Essen, Lisanne van Wijngaarden, et al. 2019. <em>Handbook on the External Costs of Transport: Version 2019</em>. European Commission, Directorate-General for Mobility; Transport; Publications Office of the European Union. <a href="https://doi.org/10.2832/27212">https://doi.org/10.2832/27212</a>.
-</div>
-<div id="ref-StrettonWP72" class="csl-entry" role="listitem">
-Stretton, Stephen J. 2026a. <span>“A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis.”</span> Unpublished manuscript.
-</div>
-<div id="ref-CFPB12" class="csl-entry" role="listitem">
-Stretton, Stephen J. 2026b. <em>Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill</em>. 1.2. Climate Fiscal Policy Briefs.
-</div>
-<div id="ref-CFPB61" class="csl-entry" role="listitem">
-Stretton, Stephen J. 2026c. <em>Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price</em>. 6.1. Climate Fiscal Policy Briefs.
-</div>
-<div id="ref-StrettonWP51" class="csl-entry" role="listitem">
-Stretton, Stephen J. 2026d. <span>“The <span>CPAT</span> Mitigation Module: Methods in Brief.”</span> Unpublished manuscript.
 </div>
 <div id="ref-WHO2016Fiscal" class="csl-entry" role="listitem">
 World Health Organization. 2016. <em>Fiscal Policies for Diet and the Prevention of Noncommunicable Diseases: Technical Meeting Report, 5–6 May 2015, Geneva, Switzerland</em>. World Health Organization. <a href="https://www.who.int/publications/i/item/9789241511247">https://www.who.int/publications/i/item/9789241511247</a>.

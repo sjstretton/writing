@@ -3,9 +3,6 @@
 # on every compile; edits here are lost. Edit the master instead.
 title: "The Macro-Fiscal-Energy Scenario Tool"
 subtitle: "Financing and Efficiency, Not the Size of the Program, Decide What Climate Investment Does to Growth and Debt"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 version: "0.2"
 abstract: |
@@ -27,7 +24,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Working paper, version 0.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the Climate Fiscal AI Tools. A short version for policy makers is [Climate Fiscal Policy Brief No. 6.5](index.qmd).*[^credit]
+*Working paper, version 0.2, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion paper to the Climate Fiscal AI Tools. A short version for policy makers is [Climate Fiscal Policy Brief No. 6.5](index.qmd).*[^credit]
 
 [^credit]: The lite models are simplified re-implementations written from the published descriptions of the parent models cited in the text; they are not endorsed by, and do not reproduce, the IMF or World Bank tools. The stylized run uses the tool's default illustrative calibrations. The Kenya run reports illustrative results from the tool, with income-group defaults where country data are missing; they are not forecasts or official estimates, and the public figures quoted beside them are from the sources cited. Errors are the author's own.
 
@@ -64,7 +61,7 @@ lightbox: auto
 
 **The scenario is a baseline plus levers, and the baseline is a reference point, not a forecast.** The baseline holds the country's 2024 fiscal position (debt, revenue and spending ratios) fixed, except that fossil fuel rents fall on a global net zero path; growth is reported above or below trend. A user who switches the climate program on adds the country's incremental budget need for mitigation, financed by grants, concessional loans and commercial borrowing in shares set on the assumptions tab. A user who chooses a carbon pricing mode adds the revenue it raises and can earmark it for the program. Every result is therefore a difference from a flat reference, which is what makes packages comparable and what makes the levels unsuitable as projections (@sec-kenya).
 
-**Four source models feed it, each a separate, documented module.** @tbl-modules lists them. They share one data layer: the Global Fiscal Indicators panel described in paper 7.2 [@StrettonWP72], which supplies each country's debt, revenue, public investment, efficiency score, creditor mix and energy data from public sources.
+**Four source models feed it, each a separate, documented module.** @tbl-modules lists them. They share one data layer: the Global Fiscal Indicators panel described in paper 7.2 [@AuthorWP72], which supplies each country's debt, revenue, public investment, efficiency score, creditor mix and energy data from public sources.
 
 | Module | What it computes | Parent or basis | Coverage |
 |---|---|---|---|
@@ -81,7 +78,7 @@ lightbox: auto
 
 ## Investment needs and who pays {#sec-investment}
 
-**The investment model estimates, for each country and year to 2050, what a net zero path needs and who pays for it.** It is a stock-and-flow model built to CPAT conventions: it uses CPAT's energy data and its activity equation [@StrettonWP51], projected with income elasticities and autonomous efficiency improvement at real 2024 prices, and builds investment bottom up for road transport, buildings, industry and power, with spending lines for non-CO₂ gases, land use and other energy emissions. Paper 6.3 treats investment needs and the efficiency of public spending in depth, with a different method that shares a global estimate of all climate investment among countries [@StrettonWP63]; the two answer different questions and their country totals should not be compared. Here what matters is the investment model's output: an investment path in two scenarios and its split by payer.
+**The investment model estimates, for each country and year to 2050, what a net zero path needs and who pays for it.** It is a stock-and-flow model built to CPAT conventions: it uses CPAT's energy data and its activity equation [@AuthorWP51], projected with income elasticities and autonomous efficiency improvement at real 2024 prices, and builds investment bottom up for road transport, buildings, industry and power, with spending lines for non-CO₂ gases, land use and other energy emissions. Paper 6.3 treats investment needs and the efficiency of public spending in depth, with a different method that shares a global estimate of all climate investment among countries [@AuthorWP63]; the two answer different questions and their country totals should not be compared. Here what matters is the investment model's output: an investment path in two scenarios and its split by payer.
 
 **Every investment line is split into five payer types, and the split decides the fiscal cost.** The types run from pure public (P1, repaid by taxes: public buildings, access grids, land use), through regulated utility (P2, repaid by tariffs), contracted revenue (P3, repaid under a long-term contract with a public or regulated buyer), and viability gap (P4, market revenue plus a public top-up), to pure private (P5). The starting split of power investment comes from the country's power market structure, coded from the power sector reform data of @UrpelainenYang2019, which end in 2013, and updated where they are out of date. Three pressure indices then move investment toward the budget: one for poor utility cost recovery, one for a high cost of capital, one for large explicit fossil fuel subsidies. The direct budget need in year $t$ is
 

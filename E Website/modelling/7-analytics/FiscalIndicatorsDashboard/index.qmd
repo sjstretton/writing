@@ -5,9 +5,6 @@ title: "A Global Fiscal Indicators Dashboard for Climate-Fiscal Analysis"
 subtitle: "Find the binding constraint before choosing the climate-fiscal lever"
 series: "Climate Fiscal Policy Brief No. 7.2"
 version: "1.0"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Climate-fiscal advice often starts from whichever number was easiest to find. The Global Fiscal Indicators dashboard puts the numbers that matter on one page for 217 economies: 80 public indicators in twelve blocks, each answering one question, scored 1 to 10, with the year and source of every value. Four middle-income economies show the payoff: Indonesia has a revenue problem and costly fuel subsidies, South Africa a debt-service problem and large unpriced pollution. A check against the IMF's own files confirms most values and finds three compilation faults. Ministries and development banks should use such profiles to choose the next question, and should publish the builds behind them.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 7.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full account, with the build rules, the scoring, the check against the publishers and the sources, is in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 7.2, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full account, with the build rules, the scoring, the check against the publishers and the sources, is in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 
@@ -54,7 +51,7 @@ lightbox: auto
 
 **Scores rank each country against all others, and there is deliberately no overall index.** Each indicator is rescaled from 1 to 10 between the 5th and 95th percentile of all economies, so that a few extreme values do not squeeze everyone else into the middle. Scores of 7 and above read Good, below 4 Bad. There is no defensible way to weigh fiscal space against delivery capacity, and the standard handbook on composite indicators warns that a single index "may disguise serious failings in some dimensions" [@OECDJRC2008]. Within each block the dashboard shows a simple average, which is a reading aid only: the analyst should look at the weakest indicator and the count of missing values ([working paper, scoring](working-paper.qmd#sec-scoring)).
 
-**The same data feed the scenario tool, so the profile and the model agree.** The Macro-Fiscal-Energy Scenario Tool, which links a climate investment program and carbon pricing to growth, revenue and debt, reads the same panel ([paper 6.5](../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.qmd)) [@StrettonWP65]. A correction in one reaches the other on the next build.
+**The same data feed the scenario tool, so the profile and the model agree.** The Macro-Fiscal-Energy Scenario Tool, which links a climate investment program and carbon pricing to growth, revenue and debt, reads the same panel ([paper 6.5](../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.qmd)) [@AuthorWP65]. A correction in one reaches the other on the next build.
 
 # Four economies, four different problems {#sec-four}
 
@@ -78,7 +75,7 @@ lightbox: auto
 
 **South Africa's problem is debt service, and its largest climate-fiscal lever is pricing pollution.** It collects the most tax of the four, 25.2 percent of GDP, but net interest takes 18.9 percent of revenue, the most of the four. It pays no explicit fuel subsidies, but its unpriced environmental costs from fossil fuels, which the IMF calls implicit subsidies, are 12.9 percent of GDP, the largest of the four; 84 percent of its electricity comes from fossil fuels [@Ember2025]. The lever is pricing those costs; the constraint is that debt service limits how much public money can go into the transition at the same time.
 
-**Morocco and Colombia sit in between, for different reasons.** Morocco pays the least interest relative to revenue, 7.9 percent, yet spends 1.9 percent of GDP on explicit subsidies while charging the highest gasoline price of the four, so its subsidies sit on other fuels. Colombia's fiscal position is moderate, and its excises, at 1.06 percent of GDP, are as small as Indonesia's, which an excise diagnostic could examine line by line ([Brief 7.1](../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.qmd)) [@StrettonWP71].
+**Morocco and Colombia sit in between, for different reasons.** Morocco pays the least interest relative to revenue, 7.9 percent, yet spends 1.9 percent of GDP on explicit subsidies while charging the highest gasoline price of the four, so its subsidies sit on other fuels. Colombia's fiscal position is moderate, and its excises, at 1.06 percent of GDP, are as small as Indonesia's, which an excise diagnostic could examine line by line ([Brief 7.1](../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.qmd)) [@AuthorWP71].
 
 # A first view is only as good as its compilation {#sec-check}
 
@@ -107,8 +104,8 @@ lightbox: auto
 # Related papers in this series {.unnumbered}
 
 - [Brief 6.1](../../../modelling/6-modular-upgrades/PolicyEquivalentCarbonPriceAndCES/index.qmd): the Total Effective Carbon Price, the yardstick the carbon-pricing block should carry [@CFPB61].
-- [Paper 6.5](../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.qmd): the Macro-Fiscal-Energy Scenario Tool, which reads the same panel [@StrettonWP65].
-- [Paper 7.1](../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.qmd): the Excise-Fiscal Diagnostic, which reads a country's excise schedule line by line [@StrettonWP71].
+- [Paper 6.5](../../../modelling/6-modular-upgrades/MacroFiscalEnergyScenarioTool/index.qmd): the Macro-Fiscal-Energy Scenario Tool, which reads the same panel [@AuthorWP65].
+- [Paper 7.1](../../../modelling/7-analytics/ExciseFiscalDiagnostic/index.qmd): the Excise-Fiscal Diagnostic, which reads a country's excise schedule line by line [@AuthorWP71].
 - [Brief 5.2](../../../modelling/5-modelling/CPATAIImplementation/index.qmd): rebuilding a policy model so that every number can be checked [@CFPB52].
 - The [working paper](working-paper.qmd) behind this brief: the blocks and sources, the build rules, the scoring, the four-country comparison and the check against the publishers.
 

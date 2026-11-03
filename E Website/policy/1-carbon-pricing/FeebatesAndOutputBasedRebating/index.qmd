@@ -5,9 +5,6 @@ title: "Feebates: The Full Carbon Price at the Margin, Without the Carbon Bill"
 subtitle: "Decarbonizing Coal-Heavy Power and Trade-Exposed Industry"
 series: "Climate Fiscal Policy Brief No. 1.2"
 version: "1.1"
-author:
-  - name: "Stephen J. Stretton"
-    note: "Writing in a personal capacity."
 date: "October 2026"
 abstract: |
   Carbon taxes stall where coal dominates power or industry competes abroad, because they charge producers for every tonne they still emit. A revenue-neutral feebate charges producers whose emissions per unit of output are above their sector's average and rebates those below it. It gives the same incentive to switch to cleaner plants as a tax at the same rate, at no cost to the treasury. At \$50 per tonne in India, Indonesia and South Africa, it raises regulated power tariffs by \$0–4 per megawatt-hour, against \$33–40 for a tax. In a wholesale market where coal sets the price the rise is \$7–18. The benchmark's design decides whether it works.
@@ -21,7 +18,7 @@ crossrefs-hover: true
 lightbox: auto
 ---
 
-*Climate Fiscal Policy Brief No. 1.2, October 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with the model, proofs and calibration, is in the [working paper](working-paper.qmd).*
+*Climate Fiscal Policy Brief No. 1.2, October 2026. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The full analysis, with the model, proofs and calibration, is in the [working paper](working-paper.qmd).*
 
 # Key messages {#sec-key-messages}
 
