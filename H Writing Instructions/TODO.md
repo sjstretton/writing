@@ -40,6 +40,7 @@ Details for each item: `B PhD Application/Oxford/PhD-Application-Status.md`.
 
 ### Priority 3: paper upgrades
 
+- [ ] **Send the SISEPUEDE issues note** (8 bugs, 12 documentation-database differences, 6 method issues, 20 questions; in `cpmodelai/CPAT-CDPM`, `0b. MethodologyReview/SISEPUEDE_Issues_Bugs_Questions.docx`). Decide first whether question 15 (a country run's land-use gap) may be shared; offer pull requests for B1–B4, B6, B7 — S sends, A drafts fixes if accepted
 - [ ] **Note 6.8 (Pricing the Measures: investment needs, abatement costs and public money in CPAT): review v0.3** (peer-reviewed; interim defaults accepted 18 Nov). In `B Theory and Research/6.8.InvestmentAndAbatementCosts/`. Still open: align the price-level treatment of 6.3 and 6.5 with legacy CPAT (no scaling; country unit costs where data exist), as 6.8 now does — A, when 6.3 and 6.5 are next revised
 
 - [ ] **Paper 5.5 (Carbon Prices Cut Emissions: Ten Natural Experiments): review v0.1.1 and brief v0.1.** Now in `B Theory and Research/5.5.CarbonPriceNaturalExperiments/` (new research awaiting review; on the site's New Research tab once deployed). Ten-slide deck made 3 Nov. Then: peer review; move the folder to `D Modelling/5.Modelling` when approved (`B Theory and Research/README.md`) — S reviews, A peer-reviews — after the PhD application
