@@ -1,0 +1,213 @@
+@techreport{Kalra2023,
+  author      = {Kalra, Nidhi and Molina-Pérez, Edmundo and Syme, James and Esteves, Fernando and Cortés, Hermilio and Rodríguez-Cervantes, Mateo Tonatiuh and Espinoza-Juárez, Víctor Manuel and Jaramillo, Marcela and Baron, Richard and Alatorre, Claudio and Buttazzoni, Marco and Vogt-Schilb, Adrien},
+  title       = {The Benefits and Costs of Reaching Net Zero Emissions in {Latin America} and the {Caribbean}},
+  institution = {Inter-American Development Bank and RAND Corporation},
+  type        = {IDB Monograph},
+  number      = {IDB-MG-01159},
+  address     = {Washington, DC},
+  year        = {2023},
+  doi         = {10.18235/0005330},
+  note        = {verified 31 Oct 2026: Crossref record (12 authors, 7 Dec 2023) and report PDF read: SiSePuede open-source toolkit; All Actions vs Traditional Development 2025--2050, 2019 US dollars, ``discounted using a 7\% discount rate''; net benefits \$2.7 trillion; fuel savings \$900 billion, avoided pollution \$500 billion, other health, safety and productivity gains \$1 trillion, additional investment \$1.3 trillion; financial costs and benefits only: net benefits \$700 billion; median across scenarios about \$1 trillion}
+}
+
+@book{CPATTeam2024,
+  author    = {{CPAT Team}},
+  title     = {{CPAT} Documentation},
+  publisher = {World Bank and International Monetary Fund},
+  address   = {Washington, DC},
+  year      = {2024},
+  url       = {https://cpmodel.github.io/cpat_public/},
+  note      = {The CPAT team's 2023 text, published online 23 January 2024. verified 31 Oct 2026 in the copy kept in the public CPAT-AI repository (docs/CPAT_full_documentation_qmd, commit 108f976): chapter 3 (Mitigation), power section: WACC ``by default income-dependent'' at 0.075, 0.100, 0.125, 0.150 (HIC, UMIC, LMIC, LIC), citing Steffen (2020); investment allocated by a logit on levelized cost, capped by scale-up limits; chapter 4 (Multipliers) and chapter 1 (User Guide): revenue can be recycled through tax cuts, transfers, public investment and current spending}
+}
+
+@misc{CPATAI2026,
+  author       = {{CPAT-AI Project}},
+  title        = {{CPAT-AI}: Excel-{AI} and {CPAT} Python, with Documentation, Bug Register and Issue Register},
+  year         = {2026},
+  howpublished = {GitHub repository, Excel-AI release 1.2.1 (31 October 2026)},
+  url          = {https://github.com/cpmodelai/cpat_ai},
+  note         = {Public repository. verified 31 Oct 2026 from a clone (commit 108f976): excel_ai/mitigation/docs/methods/Power.md sections 1.4, 1.5, 2.5 and 6: WACC setting D\_WACCSource = ``Tech'' (country real WACC for 2022 from the CoC calculator, 7.5 percent where missing, plus a technology adjustment by income group; LMIC adjustments 2.465 points for gas, coal and oil, 2.935 for wind and solar, 4.425 for other renewables); income-group rates used only under the ``Income*'' option; discounted lifetime summed from year 0, (1-(1+wacc)^-N)/(1-(1+wacc)^-1)}
+}
+
+@unpublished{StrettonWP51,
+  author = {Stretton, Stephen J.},
+  title = {The {CPAT} Mitigation Module: Methods in Brief},
+  note = {Working paper 5.1},
+  year = {2026}
+}
+
+@unpublished{StrettonWP63,
+  author = {Stretton, Stephen J.},
+  title = {Public Investment in {CPAT}},
+  note = {Working paper 6.3},
+  year = {2026}
+}
+
+@unpublished{StrettonWP64,
+  author = {Stretton, Stephen J.},
+  title = {Activity Levels Across {CPAT}, {SISEPUEDE}, {CBAM} and {FTT}},
+  note = {Working paper 6.4},
+  year = {2026}
+}
+
+@unpublished{StrettonWP65,
+  author = {Stretton, Stephen J.},
+  title = {The Macro-Fiscal-Energy Scenario Tool},
+  note = {Working paper 6.5},
+  year = {2026}
+}
+
+@techreport{CFPB61, author={Stretton, Stephen J.}, title={Measure Carbon Pricing by the Emissions It Cuts: The Total Effective Carbon Price}, institution={Climate Fiscal Policy Briefs}, number={6.1}, year={2026}}
+
+@misc{InvNeedsTool2026,
+  author = {{Mitigation Investment Needs Model}},
+  title = {Country Results: Investment Needs and Incremental Cost in 2030, Version 1.1},
+  howpublished = {Climate Fiscal AI Tools, Macro-Fiscal-Energy Scenario Tool, workbook Mitigation\_Investment\_Needs\_v1.1.xlsx, sheet Results\_Country (Kenya, Uganda, St. Lucia)},
+  year = {2026},
+  note = {Illustrative results from the tool, not official estimates}
+}
+
+@misc{SISEPUEDECode,
+  author       = {Syme, James and others},
+  title        = {{SISEPUEDE}: Simulating Sectoral Pathways and Uncertainty Exploration for Decarbonization},
+  year         = {2026},
+  howpublished = {GitHub repository, commit 9bf976c (23 September 2026), with documentation in docs/source},
+  url          = {https://github.com/jcsyme/sisepuede},
+  note         = {verified 31 Oct 2026 from a clone: utilities/_toolbox.py project\_growth\_scalar\_from\_elasticity (``standard'': growth 1 + r e; ``log'': (1 + r)\^{}e); models/energy\_consumption.py (passenger-km per capita to GDP per capita, two categories; megatonne-km to GDP; household heat and appliance energy per household to GDP per capita; demand scalars for transport, industrial energy, household heat and appliances); models/ippu.py (production to GDP); no price elasticity anywhere in the code; docs/source/energy\_production.rst (NemoMod, Stockholm Environment Institute); mathdoc\_energy.rst (losses and exports in electricity demand); ref/examples/input\_data\_frame.csv (Costa Rica from 2015: pkm elasticities 1.12 and 2.64, freight 1.0, held to 2050; industrial and household elasticities move to 1.0 by period 35; 2025 values cement 0.62, metals 0.75, chemicals -0.25, household heat 0.08)}
+}
+
+@incollection{IPCC2006,
+  author    = {{Intergovernmental Panel on Climate Change}},
+  title     = {Volume 2: Energy},
+  booktitle = {2006 {IPCC} Guidelines for National Greenhouse Gas Inventories},
+  editor    = {Eggleston, H. S. and Buendia, L. and Miwa, K. and Ngara, T. and Tanabe, K.},
+  publisher = {Institute for Global Environmental Strategies},
+  address   = {Hayama, Japan},
+  year      = {2006},
+  url       = {https://www.ipcc-nggip.iges.or.jp/public/2006gl/vol2.html},
+  note      = {verified 31 Oct 2026: chapter 1 PDF read. Table 1.2: net calorific values 44.3 (motor gasoline) and 43.0 (gas/diesel oil) TJ/Gg. Table 1.4: default CO2 factors 69,300 (motor gasoline), 74,100 (gas/diesel oil), 94,600 (other bituminous coal) and 56,100 (natural gas) kg/TJ}
+}
+
+@article{HendrenSprungKeyser2020, author={Hendren, Nathaniel and Sprung-Keyser, Ben}, title={A Unified Welfare Analysis of Government Policies}, journal={Quarterly Journal of Economics}, volume={135}, number={3}, pages={1209--1318}, year={2020}, doi={10.1093/qje/qjaa006},
+  note={verified 31 Oct 2026: Crossref record; abstract: the marginal value of public funds, the ratio of beneficiaries' willingness to pay to the net cost to government, applied to 133 US policy changes}}
+
+@article{AuriolWarlters2012, author={Auriol, Emmanuelle and Warlters, Michael}, title={The Marginal Cost of Public Funds and Tax Reform in {Africa}}, journal={Journal of Development Economics}, volume={97}, number={1}, pages={58--72}, year={2012}, doi={10.1016/j.jdeveco.2011.01.003},
+  note={verified 31 Oct 2026: Crossref record; abstract (IDEAS): 38 African countries; base-case average MCF across five tax instruments 1.2; 1.1 if each country uses its cheapest instrument, often but not always VAT; the model accounts for the informal sector}}
+
+@techreport{IMF2015PIM, author={{International Monetary Fund}}, title={Making Public Investment More Efficient}, institution={International Monetary Fund}, type={IMF Policy Paper}, address={Washington, DC}, year={2015}, url={https://www.imf.org/external/pp/longres.aspx?id=4959},
+  note={verified 31 Oct 2026: IMF Survey article and IMF presentation on the paper: 134 countries; average public investment efficiency gap about 30 percent; 40 percent in low-income developing countries, 27 percent in emerging markets, 13 percent in advanced economies; strengthening public investment management institutions could close up to two-thirds of the gap}}
+
+@techreport{IMFWB2017LICDSF, author={{International Monetary Fund and World Bank}}, title={Guidance Note on the Bank-Fund Debt Sustainability Framework for Low Income Countries}, institution={International Monetary Fund and World Bank}, address={Washington, DC}, year={2017}, url={https://www.imf.org/en/Publications/Policy-Papers/Issues/2018/02/14/pp122617guidance-note-on-lic-dsf},
+  note={verified 31 Oct 2026: IMF summary of the reform and the World Bank's LIC DSF template documentation: PPP shock is a permanent increase in public debt equal to 35 percent of the PPP capital stock, applied when the stock exceeds 3 percent of GDP; guidance note dated 26 December 2017}}
+
+@article{EngelFischerGaletovic2013, author={Engel, Eduardo and Fischer, Ronald and Galetovic, Alexander}, title={The Basic Public Finance of Public-Private Partnerships}, journal={Journal of the European Economic Association}, volume={11}, number={1}, pages={83--111}, year={2013}, doi={10.1111/j.1542-4774.2012.01105.x},
+  note={verified 31 Oct 2026: Crossref record; abstract (IDEAS): PPPs ``cannot be justified because they free public funds''; when justified on efficiency grounds, the optimal contract has a minimum revenue guarantee and a revenue cap}}
+
+@inproceedings{MartinsAstudillo2016,
+  author    = {Martins, Andr{\'e} F. T. and Astudillo, Ram{\'o}n Fernandez},
+  title     = {From Softmax to Sparsemax: A Sparse Model of Attention and Multi-Label Classification},
+  booktitle = {Proceedings of the 33rd International Conference on Machine Learning},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {48},
+  pages     = {1614--1623},
+  year      = {2016},
+  url       = {https://proceedings.mlr.press/v48/martins16.html},
+  note      = {verified 31 Oct 2026: PMLR page (authors, volume, pages, abstract: sparsemax outputs sparse probabilities); arXiv 1602.02068 text: ``sparsemax returns the Euclidean projection of the input vector onto the probability simplex''}
+}
+
+@article{Mercure2012,
+  author  = {Mercure, Jean-Fran{\c{c}}ois},
+  title   = {{FTT:Power}: A Global Model of the Power Sector with Induced Technological Change and Natural Resource Depletion},
+  journal = {Energy Policy},
+  volume  = {48},
+  pages   = {799--811},
+  year    = {2012},
+  doi     = {10.1016/j.enpol.2012.06.025},
+  note    = {verified 31 Oct 2026: Crossref record; abstract on IDEAS (technology transitions described by ``a dynamic coupled set of logistic differential equations'' rather than systems optimisation). The background note's entry (vol. 39, DOI 10.1016/j.enpol.2011.12.036) is wrong}
+}
+
+@book{RozenbergFay2019,
+  editor    = {Rozenberg, Julie and Fay, Marianne},
+  title     = {Beyond the Gap: How Countries Can Afford the Infrastructure They Need while Protecting the Planet},
+  publisher = {World Bank},
+  address   = {Washington, DC},
+  year      = {2019},
+  doi       = {10.1596/978-1-4648-1363-4},
+  note      = {verified 31 Oct 2026: Crossref record; World Bank press release of 19 Feb 2019 and the report's catalogue summary: needs of 2 to 8 percent of GDP a year to 2030 in low- and middle-income countries, 4.5 percent in the preferred scenario, plus 2.7 percent of GDP a year for operations and maintenance}
+}
+
+@techreport{WorldBank2016Discount, author={{World Bank}}, title={Discounting Costs and Benefits in Economic Analysis of {World Bank} Projects}, institution={World Bank}, type={Guidance note}, address={Washington, DC}, year={2016}, url={https://documents1.worldbank.org/curated/en/099610503022315638/pdf/IDU02e978a2a023f704c140bb1b082595e67e593.pdf},
+  note={verified 31 Oct 2026: PDF read (dated 9 May 2016): a 3 percent per capita growth rate translates into a 6 percent discount rate; using the 25--75 percentile range ``the discount rate lies between 2 and 10 percent''; recommends sensitivity analysis}}
+
+@techreport{WorldBank2024SPC, author={{World Bank}}, title={2024 Guidance Note on Shadow Price of Carbon in Economic Analysis}, institution={World Bank}, address={Washington, DC}, year={2024}, url={https://policycommons.net/artifacts/11755508/2024-guidance-note-on-shadow-price-of-carbon-in-economic-analysis-english/12646796/},
+  note={verified 31 Oct 2026: catalogue record (14 March 2024) and summaries: shadow prices of carbon are a corporate commitment for IBRD and IDA investment project financing; the note follows the High-Level Commission's price range. The full text was not reachable (HTTP 403), so the paper cites it only for that}}
+
+@article{AndersonDePalmaThisse1988,
+  author  = {Anderson, Simon P. and de Palma, Andr{\'e} and Thisse, Jacques-Fran{\c{c}}ois},
+  title   = {A Representative Consumer Theory of the Logit Model},
+  journal = {International Economic Review},
+  volume  = {29},
+  number  = {3},
+  pages   = {461--466},
+  year    = {1988},
+  doi     = {10.2307/2526791},
+  note    = {verified 31 Oct 2026: Crossref record; abstract on IDEAS (logit demand ``may also be derived from the maximization of a deterministic, entropy-type utility'')}
+}
+
+@article{Ameli2021, author={Ameli, Nadia and Dessens, Olivier and Winning, Matthew and Cronin, Jennifer and Chenet, Hugues and Drummond, Paul and Calzadilla, Alvaro and Anandarajah, Gabrial and Grubb, Michael}, title={Higher Cost of Finance Exacerbates a Climate Investment Trap in Developing Economies}, journal={Nature Communications}, volume={12}, pages={4046}, year={2021}, doi={10.1038/s41467-021-24305-3},
+  note={verified 31 Oct 2026: Crossref record; abstract: higher financing costs in developing economies make low-carbon investment dearer relative to fossil investment and create a climate investment trap}}
+
+@article{HirthSteckel2016, author={Hirth, Lion and Steckel, Jan Christoph}, title={The Role of Capital Costs in Decarbonizing the Electricity Sector}, journal={Environmental Research Letters}, volume={11}, number={11}, pages={114010}, year={2016}, doi={10.1088/1748-9326/11/11/114010},
+  note={verified 31 Oct 2026: Crossref record; abstract (via TU Berlin and PIK repository records): low-carbon technologies are more capital-intensive than fossil plants, so high WACC tends to encourage fossil fuels and countries with expensive capital need a higher carbon price for the same decarbonization; at USD 50/t and a 3 percent WACC the cost-optimal mix is 40 percent renewable}}
+
+@techreport{IHLEG2024,
+  author      = {Bhattacharya, Amar and Songwe, Vera and Soubeyran, Eléonore and Stern, Nicholas},
+  title       = {Raising Ambition and Accelerating Delivery of Climate Finance: Third Report of the Independent High-Level Expert Group on Climate Finance},
+  institution = {Grantham Research Institute on Climate Change and the Environment, London School of Economics and Political Science},
+  address     = {London},
+  year        = {2024},
+  url         = {https://www.lse.ac.uk/granthaminstitute/wp-content/uploads/2024/11/Raising-ambition-and-accelerating-delivery-of-climate-finance_Third-IHLEG-report.pdf},
+  note        = {verified 31 Oct 2026: report PDF read: climate investment of ``around \$6.3--6.7 trillion per year by 2030, of which \$2.7--2.8 trillion is in advanced economies, \$1.3--\$1.4 trillion in China, and \$2.3--2.5 trillion in EMDCs other than China''; clean energy transition ``around \$4.8 trillion per year by 2030''; avoided costs and co-benefits ``about 15--18\% of global GDP in 2030''. The report gives no share of GDP for EMDCs other than China}
+}
+
+@article{Steffen2020, author={Steffen, Bjarne}, title={Estimating the Cost of Capital for Renewable Energy Projects}, journal={Energy Economics}, volume={88}, pages={104783}, year={2020}, doi={10.1016/j.eneco.2020.104783},
+  note={verified 31 Oct 2026: Crossref record; abstract (as in papers 3.1 and 5.1): cost of capital for renewable projects from 46 countries, significantly higher on average in developing countries; the CPAT documentation cites it for about 7.5 percent in OECD and 10 percent in non-OECD countries}}
+
+@incollection{IPCC2006AFOLU,
+  author    = {{Intergovernmental Panel on Climate Change}},
+  title     = {Volume 4: Agriculture, Forestry and Other Land Use, Chapter 10: Emissions from Livestock and Manure Management},
+  booktitle = {2006 {IPCC} Guidelines for National Greenhouse Gas Inventories},
+  editor    = {Eggleston, H. S. and Buendia, L. and Miwa, K. and Ngara, T. and Tanabe, K.},
+  publisher = {Institute for Global Environmental Strategies},
+  address   = {Hayama, Japan},
+  year      = {2006},
+  url       = {https://www.ipcc-nggip.iges.or.jp/public/2006gl/vol4.html},
+  note      = {Table 10.11, Tier 1 enteric fermentation emission factors for cattle: Latin America, other cattle, 56 kg CH4 per head a year (value used from memory of the table; to be checked against the table before outside use)}
+}
+
+@misc{SSPCBDocs,
+  author       = {Cortés, Hermilio and others},
+  title        = {Costs and Benefits for {SISEPUEDE}: Documentation},
+  year         = {2025},
+  howpublished = {Read the Docs, latest version: index, quick start, and sector pages for agriculture, buildings, energy production, forests and land use, industry, transport and waste},
+  url          = {https://costs-benefits-ssp.readthedocs.io/en/latest/index.html},
+  note         = {Read in full on 18 Nov 2026. Unit factors in 2019 US dollars, Latin American and Caribbean average}
+}
+
+@misc{CBSSPCode,
+  author       = {Cortés, Hermilio and others},
+  title        = {costs\_benefits\_ssp: Cost-Benefit Module for {SISEPUEDE}},
+  year         = {2025},
+  howpublished = {GitHub repository milocortes/costs\_benefits\_ssp, commit adc22ba (8 August 2025): cb\_calculate.py, config/cb\_config.py and the factor database tmp\_cb\_data.db},
+  url          = {https://github.com/milocortes/costs_benefits_ssp},
+  note         = {Read 18 Nov 2026}
+}
+
+@misc{SISEPUEDEDocs,
+  author       = {Syme, James and others},
+  title        = {{SISEPUEDE} Documentation},
+  year         = {2026},
+  howpublished = {Read the Docs, latest version: transformers, transformations, strategies and analytical parameters pages},
+  url          = {https://sisepuede.readthedocs.io/en/latest/},
+  note         = {Read 18 Nov 2026. The analytical parameter discount\_rate defaults to 0.05}
+}

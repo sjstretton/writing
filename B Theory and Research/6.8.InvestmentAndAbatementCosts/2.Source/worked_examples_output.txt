@@ -1,0 +1,49 @@
+== Electric car, Latin American premium (0.039/vkm x 15,000 km x 12 yr)
+  premium_2030                       3357.644
+  tco2_per_year                         1.206
+  resource_MAC_6pct                  -153.023
+  private_MAC_10.5pct                -420.967
+  subsidy_per_car                    1007.293
+  budget_per_t_subsidy                199.287
+  budget_per_t_net_tax                354.546
+  budget_per_t_total                  553.833
+  public_MAC_lambda                   -42.256
+== Electric car, US premium stress case (USD 13,000; US maintenance USD 949/yr)
+  premium_2030                       6217.860
+  tco2_per_year                         1.206
+  resource_MAC_6pct                  -507.853
+  private_MAC_10.5pct                -702.025
+  subsidy_per_car                    1865.358
+  budget_per_t_subsidy                369.050
+  budget_per_t_net_tax                354.546
+  budget_per_t_total                  723.597
+  public_MAC_lambda                  -363.134
+== Enteric fermentation, results-based payment
+  tco2e_per_head                        0.392
+  cost_per_t                          102.041
+  uptake_at_75                          0.000
+  emissions_left_at_75                  1.000
+  uptake_at_120                         0.287
+  emissions_left_at_120                 0.928
+  uptake_at_135                         0.527
+  emissions_left_at_135                 0.868
+== Partnership conversion
+  availability_payment                 12.955
+  pv_ap_at_ig                         148.589
+  pv_public                           122.940
+  premium_pct                          20.863
+  eta_star_n10                         12.805
+  eta_star_n15                         17.005
+  eta_star_n20                         20.413
+  eta_star_n25                         23.161
+  eta_star_s0.6_ppp_same               20.413
+  eta_star_s0.6_ppp_full              -32.645
+  eta_star_s0.73_ppp_same              20.413
+  eta_star_s0.73_ppp_full              -9.023
+  eta_star_s0.87_ppp_same              20.413
+  eta_star_s0.87_ppp_full               8.521
+== Combined penalty rule, active-set check
+  share_solar                           0.467
+  share_wind                            0.367
+  share_gas                             0.167
+  sum                                   1.000

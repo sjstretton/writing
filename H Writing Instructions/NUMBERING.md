@@ -38,6 +38,7 @@ On 31 Oct 2026 (later the same day) papers 1.3 and 1.4 swapped places so that th
 | | 6.4 | Activity Levels Across CPAT, SISEPUEDE, CBAM and FTT | 4.7 |
 | | 6.5 | The Macro-Fiscal-Energy Scenario Tool | 5.2 |
 | | 6.6 | Model Technology Where It Decides Emissions (Global Incentives Model plan; new, 3 Nov 2026; awaiting review in `B Theory and Research/`) | – |
+| | 6.8 | Pricing the Measures: Investment Needs, Abatement Costs and Public Money in CPAT (methodology note; new, 18 Nov 2026; awaiting review in `B Theory and Research/`) | – |
 | `7.AdditionalAnalytics` | 7.0 | Overview: Diagnostics on Data Ministries Already Hold | 5.0 |
 | | 7.1 | The Excise-Fiscal Diagnostic | 5.1 |
 | | 7.2 | A Global Fiscal Indicators Dashboard | 5.3 |
