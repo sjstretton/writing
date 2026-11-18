@@ -40,7 +40,7 @@ Details for each item: `B PhD Application/Oxford/PhD-Application-Status.md`.
 
 ### Priority 3: paper upgrades
 
-- [ ] **Note 6.8 (Pricing the Measures: investment needs, abatement costs and public money in CPAT): review v0.2** (peer-reviewed 18 Nov; all points taken in). In `B Theory and Research/6.8.InvestmentAndAbatementCosts/`. Decide the assumption defaults (partnership risk premium, uptake ramp, permanence) and the price-level pass-through across 6.3, 6.5 and 6.8; fix the active-set error in 5.1 Appendix B (corrected form is 6.8 eq. 26) — S reviews and decides, A fixes 5.1 — after the PhD application
+- [ ] **Note 6.8 (Pricing the Measures: investment needs, abatement costs and public money in CPAT): review v0.3** (peer-reviewed; interim defaults accepted 18 Nov). In `B Theory and Research/6.8.InvestmentAndAbatementCosts/`. Still open: align the price-level treatment of 6.3 and 6.5 with legacy CPAT (no scaling; country unit costs where data exist), as 6.8 now does — A, when 6.3 and 6.5 are next revised
 
 - [ ] **Paper 5.5 (Carbon Prices Cut Emissions: Ten Natural Experiments): review v0.1.1 and brief v0.1.** Now in `B Theory and Research/5.5.CarbonPriceNaturalExperiments/` (new research awaiting review; on the site's New Research tab once deployed). Ten-slide deck made 3 Nov. Then: peer review; move the folder to `D Modelling/5.Modelling` when approved (`B Theory and Research/README.md`) — S reviews, A peer-reviews — after the PhD application
 - [ ] **Deploy the New Research tab:** source and pages on main since 3 Nov; run `Compile-Website.bat`, then `Push-Website.bat` — S
@@ -80,6 +80,7 @@ Details for each item: `B PhD Application/Oxford/PhD-Application-Status.md`.
 
 ## Done
 
+- [x] 18 Nov 2026 — Paper 5.1 v0.3: Appendix B's active-set rule for the acceleration and combined rules corrected (lost share term; new equation; code computes and checks the exact minimizer); v0.2 archived. Note 6.8 v0.3: capital costs follow legacy CPAT (no price-level scaling), CPAT's price pass-through stated, interim defaults accepted; CPAT-CDPM copy refreshed — A
 - [x] 18 Nov 2026 — Note 6.8 peer-reviewed (`5.Notes/PeerReview-2026-11-18.md`: 11 major, 23 minor points) and revised to v0.2: viability gap and public-money cost corrected, examples on one price basis, non-energy subsidy ledger fixed, partnership efficiency added, power plug-in aligned with 5.1 (caps kept; active-set error corrected), notation table, cost cards to an appendix, confidentiality cleanup of the README; copy placed in CPAT-CDPM `0b. MethodologyReview/` — A
 - [x] 18 Nov 2026 — New methodology note 6.8 *Pricing the Measures* (v0.1): investment need, capex and four abatement costs per measure from the SISEPUEDE cost factors; public need by payer type with viability gap tied to the TECP; green subsidies; fees and subsidies outside energy (linear uptake rule); capital/running taxonomy and PPP switch; CPAT-to-CDPM mapping; six double-counting rules; power plug-in to the soft-constraint rule; three worked examples. `PAPERS.md`, `NUMBERING.md` and the B README updated — A
 

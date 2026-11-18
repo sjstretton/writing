@@ -82,11 +82,30 @@ def velocity_shares(c, lam=100.0):
 
 
 def acceleration_update(c, s_prev, lam_v=100.0, lam_a=0.0):
-    """Combined velocity-acceleration rule (interior, before clipping)."""
-    n = len(c)
-    cbar = sum(c) / n
-    return [(lam_a * sp + lam_v / n) / (lam_v + lam_a) + (cbar - ci) / (lam_v + lam_a)
-            for ci, sp in zip(c, s_prev)]
+    """Combined velocity-acceleration rule, exact minimizer with the active set (v0.3).
+
+    On the active set A: s_i = [lam_a s_prev_i + (lam_v + lam_a (1 - S_A))/|A| + Cbar_A - C_i] / (lam_v + lam_a),
+    with S_A the sum of last year's shares over A. v0.2 used lam_v/|A| alone, which does not sum to one
+    when a technology with a share last year drops out.
+    """
+    active = list(range(len(c)))
+    while True:
+        n = len(active)
+        cbar = sum(c[i] for i in active) / n
+        sa = sum(s_prev[i] for i in active)
+        s = {i: (lam_a * s_prev[i] + (lam_v + lam_a * (1 - sa)) / n + cbar - c[i]) / (lam_v + lam_a) for i in active}
+        neg = [i for i in active if s[i] < 0]
+        if not neg:
+            return [s.get(i, 0.0) for i in range(len(c))]
+        active = [i for i in active if s[i] >= 0]
+
+
+def check_combined_active_set():
+    """Check (v0.3): costs at USD 75/t, last year's velocity shares at zero carbon price, lam_v = lam_a = 100."""
+    s_prev = velocity_shares(costs(0.0))
+    s = acceleration_update(costs(75.0), s_prev, 100.0, 100.0)
+    assert abs(sum(s) - 1) < 1e-9
+    return s
 
 
 def investment_table(prices=(0.0, 75.0)):
@@ -127,3 +146,6 @@ if __name__ == "__main__":
     two = [45.0, 55.0]
     print("solar and wind only: logit solar %.1f, velocity solar %.1f" % (
         100 * logit_shares(two)[0], 100 * velocity_shares(two)[0]))
+    # combined rule on an active set that drops a technology with a share last year (v0.3 check)
+    print("combined rule, USD 75/t, last year's velocity shares at 0, lam_v = lam_a = 100:",
+          [round(100 * x, 1) for x in check_combined_active_set()])

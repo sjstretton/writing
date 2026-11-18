@@ -1,6 +1,6 @@
 # 6.8 Pricing the Measures: Investment Needs, Abatement Costs and Public Money in CPAT
 
-**Status:** methodology note v0.2 (Theory and Research Note No. 6.8), 18 Nov 2026, after a referee-style peer review (`5.Notes/PeerReview-2026-11-18.md`). New research awaiting Stephen's review; not on the website; no brief or deck. v0.1 is in `8.PreviousVersions/`. Joins `D Modelling/6.ModularUpgrades/` once reviewed.
+**Status:** methodology note v0.3 (Theory and Research Note No. 6.8), 18 Nov 2026. v0.2 took in a referee-style peer review (`5.Notes/PeerReview-2026-11-18.md`). v0.3 (Stephen, 18 Nov): capital costs follow legacy CPAT (country unit costs where data exist, else the source value, no price-level scaling); a paragraph on CPAT's price pass-through (new policies in full for fuels; price controls only on supply-cost changes, by a global setting; electricity by the power pass-through setting); interim assumption defaults accepted. New research awaiting Stephen's review; not on the website; no brief or deck. v0.1 and v0.2 are in `8.PreviousVersions/`. Joins `D Modelling/6.ModularUpgrades/` once reviewed.
 
 **Question.** How should CPAT estimate the investment each mitigation measure needs, what each tonne it abates costs, and how much of that falls on the budget, through public investment, green subsidies, fees outside energy and public-private partnerships?
 
@@ -28,12 +28,12 @@ A viability gap is the investor's loss at retail prices. Energy measures enter C
 
 | File | What |
 |---|---|
-| `InvestmentAndAbatementCosts.qmd` | Master (v0.2) |
+| `InvestmentAndAbatementCosts.qmd` | Master (v0.3) |
 | `InvestmentAndAbatementCosts.bib` | References. Entries reused from papers 5.1, 6.3 and 6.4 were checked there. Added here: the SISEPUEDE cost-benefit documentation and code, the SISEPUEDE docs, and IPCC 2006 Vol. 4 |
 | `InvestmentAndAbatementCosts.docx` | Rendered in the house format |
 | `2.Source/worked_examples.py`, `worked_examples_output.txt` | Section 11 examples (electric-car subsidy, cattle methane payment, partnership conversion) and the partnership table, plus a check of the corrected active-set rule |
 | `5.Notes/PeerReview-2026-11-18.md` | The peer review of v0.1 |
-| `8.PreviousVersions/` | v0.1 (qmd, docx, code) |
+| `8.PreviousVersions/` | v0.1 (qmd, docx, code), v0.2 (qmd, docx) |
 
 Render from the repository root. Equation and table numbers need the cross-reference filter as well as the house filter:
 
@@ -86,15 +86,8 @@ All eleven major and 23 minor points were accepted. The main changes:
 
 ## Open items for review
 
-- **Decisions across papers:**
-  - Price-level pass-through: 1 in papers 6.3 and 6.8, 0.5 in paper 6.5's tool.
-  - Paper 5.1's Appendix B has the active-set error corrected here in equation (26) and should be fixed there.
-- **Assumptions to calibrate:**
-  - Partnership risk premium (3 points), contract length (20 years) and delivery efficiency.
-  - Uptake ramp width (50 dollars per tonne).
-  - Permanence discount (0.8).
-  - χ (0.6).
-  - The lives marked "a" in Appendix A.
-- **SISEPUEDE factors to settle before use:** the nine documentation–database differences, the unit of the industrial capture factors, and the undocumented levelization rates of the heat and efficiency factors.
-- **To check against the source:** the IPCC Tier 1 enteric factor (56 kg CH4 per head a year, Latin America, other cattle), used from memory of Table 10.11.
-- **Length:** the body runs to about 10,900 words including tables, against the reviewer's target of 9,000 for prose. No brief or deck yet.
+- Interim defaults, accepted by Stephen on 18 Nov 2026 until calibrated: partnership risk premium (3 points), contract length (20 years) and delivery efficiency (equal to public); uptake ramp width (50 dollars per tonne); permanence discount (0.8); χ (0.6); lives marked "a" in Appendix A.
+- Price level: this note follows legacy CPAT (no price-level scaling; country unit costs where data exist). Papers 6.3 (full price level) and 6.5's tool (half) differ and should be aligned when next revised.
+- SISEPUEDE factors to settle before use: the nine documentation–database differences, the unit of the industrial capture factors, and the undocumented levelization rates of the heat and efficiency factors.
+- The IPCC Tier 1 enteric factor (56 kg CH4 per head a year, Latin America, other cattle) is used from memory of Table 10.11; check against the table.
+- Length: the body is about 11,000 words including tables. No brief or deck yet.

@@ -4,10 +4,12 @@
 # Joins D Modelling/6.ModularUpgrades once reviewed.
 # v0.1 (18 Nov 2026): first draft. v0.2 (18 Nov 2026): every point of the peer review of 18 Nov 2026
 # (5.Notes/PeerReview-2026-11-18.md) taken in; v0.1 in 8.PreviousVersions/.
+# v0.3 (18 Nov 2026): capital costs follow legacy CPAT (country data, else the source value, no price-level scaling);
+# price pass-through as in legacy CPAT stated; paper 5.1 v0.3 cited for the active-set rule.
 title: "Pricing the Measures: Investment Needs, Abatement Costs and Public Money in CPAT"
 subtitle: "A Methodology for Public Investment, Green Subsidies and Fees, Built on the SISEPUEDE Cost Factors"
 series: "Theory and Research Note No. 6.8"
-version: "0.2"
+version: "0.3"
 author:
   - name: "Stephen J. Stretton"
     note: "Writing in a personal capacity."
@@ -31,7 +33,7 @@ format:
     linestretch: 1.3
 ---
 
-*Theory and Research Note No. 6.8, version 0.2, November 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion to papers 5.1 (the CPAT mitigation module), 6.3 (public investment in CPAT), 6.4 (a common activity layer for CPAT and SISEPUEDE) and 6.5 (the macro-fiscal-energy scenario tool). Unit cost factors are from the public documentation and code of SISEPUEDE's cost-benefit module; no country result is reported.*
+*Theory and Research Note No. 6.8, version 0.3, November 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion to papers 5.1 (the CPAT mitigation module), 6.3 (public investment in CPAT), 6.4 (a common activity layer for CPAT and SISEPUEDE) and 6.5 (the macro-fiscal-energy scenario tool). Unit cost factors are from the public documentation and code of SISEPUEDE's cost-benefit module; no country result is reported.*
 
 # Executive summary {#sec-summary .unnumbered}
 
@@ -99,7 +101,7 @@ $$
 V_{k,t} = \left(x^{S}_{k,t} - x^{B}_{k,t}\right) u_{k,t}, \qquad u_{k,t} = u_{k,0}\; g_k^{\max(0,\, t - 2023)}\; p_c^{\varphi}\; d_{2019 \to b},
 $$ {#eq-cost}
 
-where $u_{k,0}$ is the 2019 unit factor, $g_k$ its annual change, $p_c$ the country's price level for investment goods relative to the factor's source, $\varphi$ the pass-through of that price level and $d$ a deflator to the base year $b$. This is SISEPUEDE's calculation, in which cost changes begin in 2023 [@CBSSPCode, `cb_calculate.py`]. The annual change is 0.9 for vehicle capital, about 0.887 for heat pumps, 0.96 for direct air capture and 1 otherwise. It is geometric with no floor, so the electric-car premium falls to 6 percent of its 2023 value by 2050. The price level follows paper 6.3, which uses it in full ($\varphi = 1$); half pass-through, on the ground that much clean-energy equipment is traded, is a sensitivity [@StrettonWP63]. SISEPUEDE has two variants that the note keeps. A *level* variant, $V = x^S u$, prices a level, as for maritime fuel switch and industrial capture. A *fraction* variant, for efficiency, avoids $x^S(1 - f^S/f^B)$ for an efficiency ratio $f$.
+where $u_{k,0}$ is the 2019 unit factor, $g_k$ its annual change, $p_c$ the country's price level for investment goods relative to the factor's source, $\varphi$ the share of that price level carried into the factor and $d$ a deflator to the base year $b$. This is SISEPUEDE's calculation, in which cost changes begin in 2023 [@CBSSPCode, `cb_calculate.py`]. The annual change is 0.9 for vehicle capital, about 0.887 for heat pumps, 0.96 for direct air capture and 1 otherwise. It is geometric with no floor, so the electric-car premium falls to 6 percent of its 2023 value by 2050. Capital costs follow CPAT's own rule for power: a country's own unit cost where the data have one, and otherwise the source value with no price-level adjustment [@CPATAI2026, `Power.md`]. So the default is $\varphi = 0$, with country data replacing $u_{k,0}$ where they exist. Scaling by the full price level ($\varphi = 1$, as paper 6.3 does) or by half of it (on the ground that much clean-energy equipment is traded) is a sensitivity [@StrettonWP63]. SISEPUEDE has two variants that the note keeps. A *level* variant, $V = x^S u$, prices a level, as for maritime fuel switch and industrial capture. A *fraction* variant, for efficiency, avoids $x^S(1 - f^S/f^B)$ for an efficiency ratio $f$.
 
 **A positive value is a cost.** SISEPUEDE's database stores costs as negative and benefits as positive numbers, and a few multipliers break that convention [@CBSSPCode]. The note uses costs positive throughout, flips signs on import and checks each against the documentation.
 
@@ -205,6 +207,8 @@ V_m = \max\!\big(0,\; \mathrm{MAC}^{priv}_m\big) \sum_t \delta_t(r^{priv})\, \De
 $$ {#eq-gap}
 
 which is paper 6.3's first correction [@StrettonWP63]. The private cost is computed at retail prices, which already carry every fuel tax and the carbon price, so nothing is subtracted a second time. A carbon price shrinks the gap because it raises the retail price of the fuel the measure saves. Per tonne abated, it cuts the gap by the charge on that fuel net of the charge on any fuel the measure adds. When CPAT's carbon price changes, retail prices change and the gap is recomputed. A measure with $\mathrm{MAC}^{priv}_m \le 0$ needs no subsidy and is flagged "price first". Where the private cost is not yet computed, $\gamma = 0.3$ stands in, as in paper 6.5, where it is an assumption [@StrettonWP65].
+
+**The retail prices are CPAT's, with its price controls, and the carbon price reaches them in full except in power.** In CPAT a new carbon tax, ETS cost or excise passes into fuel prices in full, with VAT, whatever the price controls. Price controls govern only changes in supply cost. A global setting passes them through in full, half or not at all by fuel, bucketed from the price data, or takes manual values [@CPATAI2026, `Prices.md`]. Electricity is different. The carbon cost reaches tariffs only in the share set by the power pass-through setting, and not at all where an output-based rebate returns it [@CPATAI2026, `Power.md`]. So a carbon price shrinks the viability gap of a measure that saves fuel, but not of one that saves electricity under a regulated tariff or a rebate. The public investment need computed by @eq-pubneed is larger in those cases. That follows from the tariff rule, not from the measure, and the fix is a tariff reform.
 
 ## The budget ledger {#sec-ledger}
 
@@ -455,7 +459,7 @@ $$
 s_{i,t} = \frac{\lambda_a s_{i,t-1} + \big[\lambda_v + \lambda_a(1 - S_A)\big]/|A| + \bar C^{e}_{A,t} - C^{e}_{i,t}}{\lambda_v + \lambda_a}, \qquad i \in A,
 $$ {#eq-softsol}
 
-recomputed with any technology whose share comes out negative removed from $A$, until none does. When every technology is active, $S_A = 1$ and @eq-softsol is paper 5.1's combined rule. When a technology that had a share last year drops out, the term $\lambda_a(1 - S_A)$ restores adding-up. The version in paper 5.1's Appendix B omits it and gives shares that sum to less than one. In paper 5.1's example at 75 dollars per tonne, with $\lambda_v = \lambda_a = 100$, the exact shares are 46.7, 36.7 and 16.7 percent for solar, wind and gas (`2.Source/worked_examples.py`). Uncompetitive technologies drop to exactly zero, as in sparsemax [@MartinsAstudillo2016]. As in paper 5.1, the rule replaces the logit and leaves dispatch, retirement and the build caps as they are; $\lambda_a$ adds a continuous cost of change within the caps.
+recomputed with any technology whose share comes out negative removed from $A$, until none does. When every technology is active, $S_A = 1$ and @eq-softsol is paper 5.1's combined rule. When a technology that had a share last year drops out, the term $\lambda_a(1 - S_A)$ restores adding-up; without it, as in version 0.2 of paper 5.1, the shares sum to less than one. Paper 5.1 now uses this form [@StrettonWP51]. In paper 5.1's example at 75 dollars per tonne, with $\lambda_v = \lambda_a = 100$, the exact shares are 46.7, 36.7 and 16.7 percent for solar, wind and gas (`2.Source/worked_examples.py`). Uncompetitive technologies drop to exactly zero, as in sparsemax [@MartinsAstudillo2016]. As in paper 5.1, the rule replaces the logit and leaves dispatch, retirement and the build caps as they are; $\lambda_a$ adds a continuous cost of change within the caps.
 
 **Because the rule is linear in dollar costs, a public measure enters as a change in $C^e$ or as an extra penalty.** A technology whose effective cost falls by $\Delta C$ gains $(1 - 1/|A|)\,\Delta C/(\lambda_v + \lambda_a)$ in share, and each other active technology loses $\Delta C/[|A|(\lambda_v+\lambda_a)]$.
 
@@ -521,7 +525,7 @@ Gasoline emits 2.27 kilograms of CO$_2$ per liter, from the IPCC default factor 
 | Market cost of capital | $\mathrm{WACC}_{c,j}$ | Country WACC equation of paper 6.3; group defaults 5.5% advanced, 6% China, 10.5% other developing | @StrettonWP63; @IHLEG2024 |
 | Marginal cost of public funds | $\lambda$ | 1.2 (1.1 where VAT is the marginal tax; 1.5–2.0 stress) | @AuriolWarlters2012; @StrettonWP63 |
 | Shadow price of carbon | $P^C$ | World Bank guidance path | @WorldBank2024SPC |
-| Price-level pass-through | $\varphi$ | 1 (0.5 as sensitivity) | @StrettonWP63 |
+| Share of the country price level carried into unit costs | $\varphi$ | 0, with country unit costs where data exist (as CPAT's power data); 1 and 0.5 as sensitivities | @CPATAI2026; @StrettonWP63 |
 | Public investment efficiency | $s^{PIM}_c$ | 0.60 low-income, 0.73 emerging, 0.87 advanced; country score where available | @IMF2015PIM; @StrettonWP65 |
 | Partnership delivery efficiency | $s^{PPP}_c$ | $= s^{PIM}_c$ | Assumption |
 | Viability-gap share (until @eq-gap is computed) | $\gamma$ | 0.30 | @StrettonWP65 (an assumption there) |
@@ -637,4 +641,4 @@ Gasoline emits 2.27 kilograms of CO$_2$ per liter, from the IPCC default factor 
 
 : Waste and wastewater costs are annualized in SISEPUEDE; splitting them into capital and running cost needs the assumed lives shown. {#tbl-app-waste}
 
-**Four corrections apply before the factors are used outside Latin America.** First, every factor is rescaled by the country price level (@eq-cost). Second, levelized capital factors are de-levelized by @eq-delev. Third, the nine documentation–database differences are settled against the source each cites. The two heat factors and the gas air-pollution factor for power, ten times smaller in the database, matter most. Fourth, mode-shift infrastructure gets a capital line from national project data: rail, metro and bus-rapid-transit capital per passenger-kilometer of new capacity, public (P1).
+**Four corrections apply before the factors are used outside Latin America.** First, country unit costs replace the factors where data exist; otherwise the factors are used as they are, with the country price level as a sensitivity (@eq-cost). Second, levelized capital factors are de-levelized by @eq-delev. Third, the nine documentation–database differences are settled against the source each cites. The two heat factors and the gas air-pollution factor for power, ten times smaller in the database, matter most. Fourth, mode-shift infrastructure gets a capital line from national project data: rail, metro and bus-rapid-transit capital per passenger-kilometer of new capacity, public (P1).
