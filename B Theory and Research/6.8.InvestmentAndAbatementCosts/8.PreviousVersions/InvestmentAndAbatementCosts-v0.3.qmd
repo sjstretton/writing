@@ -1,0 +1,644 @@
+---
+# MASTER - this is the file to edit. The .docx beside it is made from it (house working-paper format).
+# Note 6.8, new research awaiting review in B Theory and Research. Companion to 5.1, 6.1, 6.3, 6.4 and 6.5.
+# Joins D Modelling/6.ModularUpgrades once reviewed.
+# v0.1 (18 Nov 2026): first draft. v0.2 (18 Nov 2026): every point of the peer review of 18 Nov 2026
+# (5.Notes/PeerReview-2026-11-18.md) taken in; v0.1 in 8.PreviousVersions/.
+# v0.3 (18 Nov 2026): capital costs follow legacy CPAT (country data, else the source value, no price-level scaling);
+# price pass-through as in legacy CPAT stated; paper 5.1 v0.3 cited for the active-set rule.
+title: "Pricing the Measures: Investment Needs, Abatement Costs and Public Money in CPAT"
+subtitle: "A Methodology for Public Investment, Green Subsidies and Fees, Built on the SISEPUEDE Cost Factors"
+series: "Theory and Research Note No. 6.8"
+version: "0.3"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "November 2026"
+abstract: |
+  The Climate Policy Assessment Tool (CPAT) shows a finance ministry what carbon prices do to emissions and revenue. It cannot show what non-price measures cost, who pays for them or what a tonne abated with public money costs. This note sets out a method that adds those three things. Each cost is one physical change times one unit cost factor, taken from the cost-benefit module of SISEPUEDE, an open sector model, then localized and discounted once. Capital is separated from running cost and split by who repays it. Each measure gets a private, a resource, a social and a public-money abatement cost; the last adds the cost of raising the budget's share and reproduces a standard funding rule. Energy measures enter CPAT's fuel-use equation, non-energy measures and fees act on emissions through one uptake rule, and power measures change the inputs to a penalty-based investment rule. A public asset converts to a partnership by one annuity. In a stylized case, an electric-car subsidy costs the budget about 550 dollars per tonne, though the cars cost the economy nothing.
+keywords: [public investment, marginal abatement cost, green subsidies, public-private partnerships, CPAT, SISEPUEDE, cost-benefit analysis]
+jel: [H43, H54, Q52, Q54, Q58]
+bibliography: InvestmentAndAbatementCosts.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+number-sections: true
+crossref:
+  fig-prefix: Figure
+  tbl-prefix: Table
+  sec-prefix: Section
+  eq-prefix: equation
+format:
+  docx: default
+  pdf:
+    number-sections: true
+    linestretch: 1.3
+---
+
+*Theory and Research Note No. 6.8, version 0.3, November 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion to papers 5.1 (the CPAT mitigation module), 6.3 (public investment in CPAT), 6.4 (a common activity layer for CPAT and SISEPUEDE) and 6.5 (the macro-fiscal-energy scenario tool). Unit cost factors are from the public documentation and code of SISEPUEDE's cost-benefit module; no country result is reported.*
+
+# Executive summary {#sec-summary .unnumbered}
+
+**CPAT prices policies but not measures.** The Climate Policy Assessment Tool computes what carbon taxes, fuel subsidy reform, feebates and standards do to fuel use, emissions, revenue and output in more than 180 countries [@CPATTeam2024; @StrettonWP51]. Outside power it has no capital: an electric car, a retrofitted school or a biogas digester appears only as lower fuel use, or not at all. It cannot say what a measure costs, how much of that cost falls on the budget, or what a tonne abated through public investment or a subsidy costs. A ministry choosing between a tax and a spending programme needs all three.
+
+**Every cost is a physical change times a unit cost factor.** The method adopts the accounting of the cost-benefit module of SISEPUEDE, an open model of every emitting sector built by RAND and the Inter-American Development Bank [@Kalra2023]. For each item it takes the difference between a policy run and a baseline in one physical driver, such as vehicle-kilometers, hectares, tonnes or petajoules, and multiplies it by a unit factor in 2019 dollars [@SSPCBDocs; @CBSSPCode]. The module holds about 200 such factors. The note adopts them, converts the levelized ones back into capital, localizes them and discounts every flow once at a stated rate (@sec-core; the factors are in Appendix A).
+
+**Four abatement costs answer four questions.** For each measure the note computes a *private* cost at the investor's cost of capital and retail prices, a *resource* cost at 6 percent and supply-cost prices, and a *social* cost, which is the resource cost less local co-benefits. It also computes a *public-money* cost: the social cost plus $(\lambda - 1)$ times the budget's cost per tonne, where $\lambda$, the marginal cost of public funds, defaults to 1.2. The public-money cost is paper 6.3's funding rule per tonne: a measure passes that rule exactly when its public-money cost is below the shadow price of carbon (@sec-mac).
+
+**The public investment need is the budget's share of each measure.** Investment is split into five payer types, as in paper 6.5: pure public, regulated utility, contracted revenue, viability gap and pure private [@StrettonWP65]. The public investment need is the capital of pure public assets plus the grants that close viability gaps; utility investment is reported separately as public-sector investment. A viability gap is the investor's loss at retail prices, so a carbon price shrinks it by raising the value of the fuel the measure saves (@sec-public).
+
+**A subsidy's cost per tonne depends mostly on who would have acted anyway.** A subsidy at rate $\sigma$ costs the budget $\sigma k/(a\,e)$ per tonne, where $k$ is the capital cost of the subsidized unit, $e$ the tonnes it abates and $a$ the share of subsidized units the subsidy induced. In a stylized case on SISEPUEDE's Latin American factors, an electric car bought in 2030 already saves money at retail prices, so the measure is flagged "price first". A 30 percent purchase subsidy with half the cars additional still costs the budget about 200 dollars per tonne in subsidy and 350 in net fuel tax lost, about 550 in all (@sec-subsidy; @sec-examples).
+
+**Fees and payments outside energy act on emissions through one uptake rule.** Each measure in agriculture, land use and waste has a cost per tonne and a potential from its SISEPUEDE factors. Uptake rises linearly with the fee or payment per tonne above the cost of the cheapest adopters, up to a cap. The rule comes from the same quadratic penalty as paper 5.1's power proposal. Fees raise revenue on the emissions that remain; payments go to every adopter, including those who would have adopted anyway. A fee works only if its base rewards the measure: a fee per head of cattle does not reward a feed additive (@sec-nonenergy).
+
+**Every item is either capital or running, and a partnership converts one into the other.** Capital outlays are annualized over their life; running costs are booked each year. A pure public asset can be switched to a public-private partnership, which replaces its capital outlay with an availability payment. That payment recovers the capital over the contract at the government's rate plus a risk premium, and adds contracted running cost. A utility asset switched to a contract becomes a contracted-revenue asset with a contingent liability. In a stylized case with a three-point premium over 20 years, the partnership costs 21 percent more in present value and must build 20 percent more cheaply to break even; the break-even rises with contract length (@sec-taxonomy).
+
+**CPAT's policies map to SISEPUEDE's transformations many-to-many, with real gaps.** CPAT's levers are instruments; SISEPUEDE's transformations are outcomes. A price induces partial uptake of several transformations; a public programme buys one. Agriculture, land use, waste and industrial processes are one sector each in CPAT and seven to fifteen transformations in SISEPUEDE. Demand-side food measures, wastewater, direct air capture and grid losses have no CPAT counterpart. Fuel subsidy reform, excises and feebates have no SISEPUEDE counterpart beyond a fuel-price adjustment (@sec-mapping).
+
+**Measures enter CPAT where it has hooks, and each tonne and dollar is counted once.** Efficiency measures scale fuel use by sector and fuel, with CPAT's rebound. Fuel switching moves fuel out of one row and adds electricity to power demand. A capital subsidy on efficient equipment enters as a shadow price on the efficiency margin, $p\,\sigma/(1-\sigma)$. Non-energy measures scale emissions. Six rules keep this consistent with paper 6.3: prices first, one ledger, savings and co-benefits from CPAT's own accounts, physical capital before any share-of-GDP fallback, power measures inside the allocation, and baseline programmes excluded (@sec-integration).
+
+**In power, measures change costs and constraints inside the combined penalty rule.** The current module allocates investment by a logit that never drops a technology. It also has no financing route and treats grids as charges, not assets. Paper 5.1 proposes a rule that minimizes cost plus quadratic penalties on concentration and change; this note calls it the combined penalty rule. Subsidies and finance change a technology's cost inside it, public builds come off the need, targets become one-sided penalties with a visible price, and public grid investment lowers the cost of integrating renewables while staying in the system's cost (@sec-power).
+
+**Two parts are not yet deliverable from the factors.** SISEPUEDE's factors for buildings and industry are levelized at undocumented rates, so their upfront capital cannot yet be recovered. Most factors are premiums over the baseline technology, so outside power they give incremental investment, not total investment. Both are fixed by re-deriving the factors from capital costs (@sec-limits).
+
+# Introduction {#sec-intro}
+
+**Finance ministries are asked to fund climate measures they cannot yet cost.** The Independent High-Level Expert Group on Climate Finance puts the climate investment needed in emerging and developing economies other than China at about 2.4 trillion dollars a year by 2030, including adaptation and natural capital [@IHLEG2024]. A ministry deciding what share of that its budget should carry, and whether a subsidy or a tax is the cheaper route, needs a tool that sees both the price instruments it controls and the spending it is asked to make. CPAT does the first well [@StrettonWP51]. This note sets out how to add the second.
+
+**The question is how to estimate, in CPAT, the investment each measure needs, what each tonne it abates costs, and how much of that falls on the budget.** The answer is a chain of five steps, each one an equation. Start from a physical change and a unit cost factor. Split the result into capital and running cost, then by who pays. Divide by the tonnes abated. Energy measures change CPAT's fuel-use equation; non-energy measures change emissions; power measures change the inputs to a penalty-based investment rule. One budget ledger records it all.
+
+**The note joins four pieces of work at the level of the single measure.** SISEPUEDE costs about 70 transformations against a baseline, using literature unit costs; its cost database has 68 transformation codes, 34 of them with cost lines. The module returns undiscounted flows, with no cost of capital and no account of who pays [@Kalra2023; @SSPCBDocs]. Paper 6.3 prices investment at three costs of capital and tests public spending against the marginal cost of public funds [@StrettonWP63]. Paper 6.5 splits investment by payer type [@StrettonWP65]. Paper 6.4 gives CPAT and SISEPUEDE one activity layer [@StrettonWP64]. This note adds the abatement cost of public money and of subsidies, fees outside energy, the partnership switch, the policy mapping and the link to paper 5.1's power rule.
+
+**The method is deliberately simple.** Each measure is a physical change and a few unit costs, and there is one behavioral rule, for uptake outside energy. Every parameter has a default, a unit and a source or the label "assumption" (@tbl-params). The stylized examples (@sec-examples) are computed in `2.Source/worked_examples.py`; they illustrate the equations and are not estimates for any country.
+
+# One accounting rule {#sec-core}
+
+## Notation {#sec-notation}
+
+**The unit of analysis is a measure in one country.** A *measure* $m$ is one SISEPUEDE transformation, or a public programme defined the same way: a change in a physical driver from a start year, along a ramp. All money is in constant US dollars of a stated base year. @tbl-notation lists the symbols; each has one meaning.
+
+| Symbol | Meaning | Symbol | Meaning |
+|:--|:--|:--|:--|
+| $m, j, i$ | measure, asset class, power technology | $s, f, o, t$ | CPAT sector, fuel, non-energy source, year |
+| $S, B$ | policy scenario, baseline | $x_k$, $u_k$, $g_k$ | driver, unit factor, annual change of item $k$ |
+| $p_c$, $\varphi$ | country price level for investment goods, its pass-through | $k_j$, $n_j$, $q_j$ | unit capital cost, life, annual activity per unit |
+| $Q_j$, $N_j$ | stock in service, new units | $r$, $\delta_t$ | discount or financing rate, discount factor |
+| $\Delta I$, $\Delta O$, $\Delta F$ | incremental investment, running cost change, fuel saved | $NC$, $\Delta E$, $CB$ | net cost, tonnes abated, co-benefits |
+| $\lambda$, $P^C$ | marginal cost of public funds, shadow price of carbon | $F^{bud}$ | budget cost (present value; $F^{bud}_t$ a year) |
+| $\pi_{m,P}$ | share of measure $m$ in payer type $P$ | $s^{PIM}_c$ | public investment efficiency of country $c$ |
+| $V_m$, $\gamma_m$ | viability gap, its share of capital | $\sigma$, $a$, $e$ | subsidy rate, additionality, tonnes per unit |
+| $d_m$, $\omega_{m,o}$ | reduction per unit treated, share of source reached | $\ell_m$, $\bar\ell_m$, $h_m$ | uptake, maximum uptake, ramp width |
+| $c_m$, $\bar b_m$ | cost per tonne of cheapest adopters, reward per tonne | $\tau_o$, $b_m$, $\beta_o$ | fee, payment per tonne, fee coverage |
+| $n_c$, $\rho$, $\eta$ | contract length, risk premium, construction saving | $i_g$, $w$, $AP$ | government rate, partner's rate, availability payment |
+| $\psi$, $\zeta$, $\nu_f$ | share of fuel saved, share switched, end-use efficiency | $sh$ | shadow price on CPAT's efficiency margin |
+| $s_{i,t}$, $C^e_i$ | power investment share, effective levelized cost | $\lambda_v$, $\lambda_a$ | penalty weights on concentration and change (dollars per MWh) |
+
+: The note uses each symbol for one thing. Subscripted $\lambda_v$ and $\lambda_a$ are paper 5.1's penalty weights; unsubscripted $\lambda$ is the marginal cost of public funds, as in paper 6.3. {#tbl-notation}
+
+## The cost equation {#sec-costeq}
+
+**Every cost and benefit is a change in one driver times one unit factor.** For item $k$ of measure $m$ in year $t$,
+
+$$
+V_{k,t} = \left(x^{S}_{k,t} - x^{B}_{k,t}\right) u_{k,t}, \qquad u_{k,t} = u_{k,0}\; g_k^{\max(0,\, t - 2023)}\; p_c^{\varphi}\; d_{2019 \to b},
+$$ {#eq-cost}
+
+where $u_{k,0}$ is the 2019 unit factor, $g_k$ its annual change, $p_c$ the country's price level for investment goods relative to the factor's source, $\varphi$ the share of that price level carried into the factor and $d$ a deflator to the base year $b$. This is SISEPUEDE's calculation, in which cost changes begin in 2023 [@CBSSPCode, `cb_calculate.py`]. The annual change is 0.9 for vehicle capital, about 0.887 for heat pumps, 0.96 for direct air capture and 1 otherwise. It is geometric with no floor, so the electric-car premium falls to 6 percent of its 2023 value by 2050. Capital costs follow CPAT's own rule for power: a country's own unit cost where the data have one, and otherwise the source value with no price-level adjustment [@CPATAI2026, `Power.md`]. So the default is $\varphi = 0$, with country data replacing $u_{k,0}$ where they exist. Scaling by the full price level ($\varphi = 1$, as paper 6.3 does) or by half of it (on the ground that much clean-energy equipment is traded) is a sensitivity [@StrettonWP63]. SISEPUEDE has two variants that the note keeps. A *level* variant, $V = x^S u$, prices a level, as for maritime fuel switch and industrial capture. A *fraction* variant, for efficiency, avoids $x^S(1 - f^S/f^B)$ for an efficiency ratio $f$.
+
+**A positive value is a cost.** SISEPUEDE's database stores costs as negative and benefits as positive numbers, and a few multipliers break that convention [@CBSSPCode]. The note uses costs positive throughout, flips signs on import and checks each against the documentation.
+
+**Overlapping measures share costs by fixed weights and combine effects by multiplication.** When several measures change one driver, SISEPUEDE scales each measure's cost by its relative effect over the sum for the measures present. For buildings the weights are 0.9 for appliances and 0.05 each for building shell and heat pumps [@CBSSPCode, `cb_process_interactions`]. The note keeps those weights for costs; physical effects multiply (@sec-integration).
+
+## Capital, running cost and discounting {#sec-discount}
+
+**Capital is annualized once, at a stated rate, from the year after the outlay.** An outlay $I$ on an asset of life $n$ costs
+
+$$
+A = I\, \mathrm{CRF}(r, n), \qquad \mathrm{CRF}(r,n) = \frac{r}{1-(1+r)^{-n}}
+$$ {#eq-crf}
+
+a year for $n$ years. CPAT's power model counts the first year's output at the time of the outlay, which divides the factor by $1+r$ and moves a break-even cost of capital by about two points [@StrettonWP63]. The extension uses @eq-crf everywhere, and the power module should move to it when the combined penalty rule is implemented.
+
+**Every flow is discounted once, after the physical run.** SISEPUEDE's module returns undiscounted annual flows; its Latin American study discounts at 7 percent and its default analytical rate is 5 percent [@Kalra2023; @SISEPUEDEDocs]. Its power capital and operating costs, however, arrive already discounted by its energy optimizer [@CBSSPCode]. The extension takes power costs from CPAT instead, and discounts every flow at the rate of @tbl-macs.
+
+**Levelized factors are converted back into capital before use.** Some factors spread a capital cost over activity. The electric-car factor, 0.039 dollars per vehicle-kilometer, is a United States premium of 12,000 dollars plus 1,000 for charging, over 15,000 kilometers a year and 12 years with no interest, scaled to Latin American prices [@SSPCBDocs, transport]. For such a factor the capital cost per unit is
+
+$$
+k_j = \frac{u^{lev}_j\, q_j}{\mathrm{CRF}(r_0, n_j)},
+$$ {#eq-delev}
+
+with $q_j$ the unit's annual activity and $r_0$ the rate implicit in the factor. With $r_0 = 0$, $k_j = u^{lev}_j q_j n_j$: 7,020 dollars per car at Latin American prices. The capital is then annualized again at the lens rate. At 6 and 12 percent over 12 years, the capital recovery charge is 43 and 94 percent higher than the straight-line charge. Factors whose implicit rate is undocumented are flagged in Appendix A. Until they are re-derived, they are used as running-cost equivalents.
+
+# Investment need and abatement cost {#sec-mac}
+
+## Investment need {#sec-capex}
+
+**Upfront capital is new units of each asset times their unit cost.** For measure $m$, asset class $j$ and year $t$,
+
+$$
+I_{m,t} = \sum_{j} N_{j,t}\, k_{j,t}, \qquad N_{j,t} = \max\!\Big(0,\; Q_{j,t} - Q_{j,t-1} + \frac{Q_{j,t-1}}{n_j}\Big), \qquad Q_{j,t} = \frac{x_{j,t}}{q_j},
+$$ {#eq-capex}
+
+with $Q_{j,t}$ the stock in service, $N_{j,t}$ new units including replacements and $k_{j,t}$ the localized unit capital cost. This is paper 6.3's investment equation for one measure [@StrettonWP63]. Because most SISEPUEDE factors are premiums over the baseline technology, @eq-capex run on them gives incremental investment, $\Delta I_{m,t} = I^S_{m,t} - I^B_{m,t}$, directly. Total investment needs full unit costs, which CPAT has only for power and road vehicles.
+
+**The *investment need* of a scenario is the sum of incremental investment over measures and the power module.** Where a sector has no physical measure, paper 6.3's fallback, a share of GDP by sector and income group, fills the gap until measures replace it (@sec-integration).
+
+**A measure's annual net cost is its capital charge plus running cost less fuel saved.** With the vintages of capital still in service,
+
+$$
+NC_{m,t}(r, \mathbf{p}) = \sum_{j}\sum_{\tau = t-n_j+1}^{t} \Delta I_{m,j,\tau}\, \mathrm{CRF}(r, n_j) + \Delta O_{m,t} - \sum_f \Delta F_{m,f,t}\, p_{f,t},
+$$ {#eq-netcost}
+
+where $\Delta O$ is the change in non-fuel running cost, $\Delta F_{m,f,t}$ the fuel saved (negative for fuel added, such as electricity) and $p_{f,t}$ the price at which fuel is valued.
+
+## Four abatement costs {#sec-fourmacs}
+
+**Each abatement cost is a discounted net cost over discounted tonnes.** With $\Delta E_{m,t}$ the tonnes of CO$_2$-equivalent abated (@sec-integration), $\delta_t(r) = (1+r)^{-(t-t_0)}$ and $\sum_t \delta_t \Delta E_{m,t} > 0$,
+
+$$
+\mathrm{MAC}_m(r,\mathbf{p}) = \frac{\sum_t \delta_t(r)\, NC_{m,t}(r,\mathbf{p})}{\sum_t \delta_t(r)\, \Delta E_{m,t}}.
+$$ {#eq-mac}
+
+Discounting tonnes at the same rate as dollars makes @eq-mac the constant carbon price that would just pay for the measure. A measure that raises emissions is reported as such, not as a negative cost.
+
+| Abatement cost | Rate | Fuel valued at | Counted | Question it answers |
+|:--|:--|:--|:--|:--|
+| Private, $\mathrm{MAC}^{priv}$ | Investor's WACC, $r_{c,j}$ | Retail price, with every tax, subsidy and carbon charge | Savings to the investor | Will a household, firm or producer do it unaided? |
+| Resource, $\mathrm{MAC}^{res}$ | 6% | Supply cost | Fuel and running savings | What does it cost the economy? |
+| Social, $\mathrm{MAC}^{soc}$ | 6% | Supply cost | Less local co-benefits | What does society gain, before carbon? |
+| Public money, $\mathrm{MAC}^{\lambda}$ | 6% | Supply cost | Social cost plus $(\lambda-1)$ times the budget's cost per tonne | Is it worth buying with taxes? |
+
+: The four abatement costs differ only in rate, prices and what counts. The private rate follows paper 6.3's WACC equation; 6 percent is World Bank guidance [@WorldBank2016Discount]. {#tbl-macs}
+
+**The social cost subtracts co-benefits that CPAT computes.** $\mathrm{MAC}^{soc}_m = \mathrm{MAC}^{res}_m - \sum_t \delta_t CB_{m,t}/\sum_t \delta_t \Delta E_{m,t}$, where $CB$ is the change in local co-benefits. CPAT values air pollution, crashes and congestion from its own fuel accounts [@StrettonWP51]. Taking them from there keeps them from being counted twice. SISEPUEDE's factors are used only for co-benefits CPAT lacks: ecosystem services, soil health, water quality, sanitation and diet.
+
+**The public-money cost adds the cost of raising the budget's share.** With $F^{bud}_m$ the present value at 6 percent of the measure's net cost to the budget (@eq-ledger),
+
+$$
+\mathrm{MAC}^{\lambda}_m = \mathrm{MAC}^{soc}_m + (\lambda - 1)\,\frac{F^{bud}_m}{\sum_t \delta_t \Delta E_{m,t}}.
+$$ {#eq-maclambda}
+
+**Proposition 1 (the public-money cost is paper 6.3's funding rule per tonne).** *Let $W_m$ be the present value of the measure's benefits to everyone other than the budget, net of their costs and excluding carbon, so that $W_m - F^{bud}_m = -\sum_t\delta_t NC_{m,t} + \sum_t \delta_t CB_{m,t}$ at supply-cost prices and 6 percent. Let $\sum_t\delta_t\Delta E_{m,t} > 0$. Then paper 6.3's rule with carbon valued at $P^C$, $NB_\lambda = W_m - \lambda F^{bud}_m + P^C\sum_t\delta_t\Delta E_{m,t} > 0$, holds if and only if $\mathrm{MAC}^{\lambda}_m < P^C$.* The proof divides $-NB_\lambda$ by the discounted tonnes, which are positive. So measures can be ranked on one curve whose height is $\mathrm{MAC}^\lambda$ and whose width is tonnes. The budget envelope cuts that curve where cumulative $F^{bud}$ reaches it, which is paper 6.3's portfolio rule drawn as an abatement cost curve [@StrettonWP63]. The default $\lambda$ is 1.2, from estimates for 38 African countries [@AuriolWarlters2012]; the shadow price of carbon follows World Bank guidance [@WorldBank2024SPC]. If the budget gains from a measure ($F^{bud}_m < 0$), @eq-maclambda subtracts $(\lambda - 1)$ times the gain per tonne: a dollar the budget recovers saves $\lambda$ dollars of tax.
+
+# Public investment need {#sec-public}
+
+**The budget's share of a measure depends on where repayment comes from.** Paper 6.5 sorts mitigation investment into five payer types, and the extension applies them measure by measure [@StrettonWP65]:
+
+| Type | Repaid from | Budget pays up front | Budget carries later | Typical measures |
+|:--|:--|:--|:--|:--|
+| P1 Pure public | Taxes | All capital | Running cost | Forest protection, rail and transit, public buildings, access grids, sanitation |
+| P2 Regulated utility | Regulated tariffs | Nothing if tariffs recover cost | Contingent: tariff shortfall, arrears, guarantees | Transmission, distribution, utility hydro, water utilities |
+| P3 Contracted revenue | A long-term contract with a public or regulated buyer | Nothing | Contingent: payment guarantee | Utility solar and wind, landfill gas to power |
+| P4 Viability gap | Market revenue plus a public top-up | The gap, as a grant | Running subsidy, if chosen instead | Green steel and cement, heavy-duty electrification, farm methane |
+| P5 Pure private | The investor's own savings | Nothing | Nothing | Cars, rooftop solar, industrial efficiency |
+
+: Who repays decides what the budget pays: all of a pure public asset, the gap of a viability-gap asset and, for utility and contracted assets, only contingent liabilities. Source: paper 6.5 [@StrettonWP65]. {#tbl-types}
+
+**The public investment need is pure public capital, scaled for delivery, plus viability-gap grants.** With $\pi_{m,P}$ the share of measure $m$ in type $P$,
+
+$$
+I^{pub}_{m,t} = \frac{\pi_{m,P1}\, \Delta I_{m,t}}{s^{PIM}_c} + \pi_{m,P4}\,\gamma_{m}\,\Delta I_{m,t},
+$$ {#eq-pubneed}
+
+where $s^{PIM}_c$ is the country's public investment efficiency and $\gamma_m$ the gap's share of the measure's capital. The efficiency is one minus the efficiency gap, which the IMF puts at 40 percent in low-income developing countries, 27 percent in emerging markets and 13 percent in advanced economies [@IMF2015PIM]. As in paper 6.5, a country score from public investment management assessments replaces the income-group average where one exists [@StrettonWP65]. The haircut applies to assets the state builds, not to grants paid to private builders, and never to unit costs taken from the country's own outturns [@StrettonWP63]. The *public investment need* is the general government's need; utility investment (P2) is reported beside it as public-sector investment. The shares $\pi_{m,P}$ follow paper 6.5's rules, with the starting split set by power market structure and sector [@StrettonWP65]. Three pressures then move investment toward the budget: weak utility cost recovery, a high cost of capital and large fossil subsidies. Country plans can overwrite them.
+
+**A viability gap is the investor's loss at the prices the investor faces.** For a P4 measure,
+
+$$
+V_m = \max\!\big(0,\; \mathrm{MAC}^{priv}_m\big) \sum_t \delta_t(r^{priv})\, \Delta E_{m,t} = \max\big(0,\, -NPV^{priv}_m\big), \qquad \gamma_m = \frac{V_m}{\sum_t \delta_t(r^{priv})\, \Delta I_{m,t}},
+$$ {#eq-gap}
+
+which is paper 6.3's first correction [@StrettonWP63]. The private cost is computed at retail prices, which already carry every fuel tax and the carbon price, so nothing is subtracted a second time. A carbon price shrinks the gap because it raises the retail price of the fuel the measure saves. Per tonne abated, it cuts the gap by the charge on that fuel net of the charge on any fuel the measure adds. When CPAT's carbon price changes, retail prices change and the gap is recomputed. A measure with $\mathrm{MAC}^{priv}_m \le 0$ needs no subsidy and is flagged "price first". Where the private cost is not yet computed, $\gamma = 0.3$ stands in, as in paper 6.5, where it is an assumption [@StrettonWP65].
+
+**The retail prices are CPAT's, with its price controls, and the carbon price reaches them in full except in power.** In CPAT a new carbon tax, ETS cost or excise passes into fuel prices in full, with VAT, whatever the price controls. Price controls govern only changes in supply cost. A global setting passes them through in full, half or not at all by fuel, bucketed from the price data, or takes manual values [@CPATAI2026, `Prices.md`]. Electricity is different. The carbon cost reaches tariffs only in the share set by the power pass-through setting, and not at all where an output-based rebate returns it [@CPATAI2026, `Power.md`]. So a carbon price shrinks the viability gap of a measure that saves fuel, but not of one that saves electricity under a regulated tariff or a rebate. The public investment need computed by @eq-pubneed is larger in those cases. That follows from the tariff rule, not from the measure, and the fix is a tariff reform.
+
+## The budget ledger {#sec-ledger}
+
+**The ledger records each flow once.** The yearly net cost to the budget of measure $m$ is paper 6.3's ledger [@StrettonWP63]:
+
+$$
+F^{bud}_{m,t} = \mathrm{capex}^{pub}_{m,t} - \mathrm{loans}_{m,t} + DS_{m,t} + O^{pub}_{m,t} + AP_{m,t} + SUB_{m,t} - FEE_{m,t} - \theta\, SAV_{m,t} + XL_{m,t} + \mathbb{E}[\mathrm{CALL}_{m,t}].
+$$ {#eq-ledger}
+
+The terms are public capital spending on P1 assets; loans and their debt service; public running cost; availability payments; subsidies, including viability-gap grants; fees; the share $\theta$ of avoided fuel cost the budget or a state utility keeps; fuel tax lost net of tax gained on fuel added; and expected guarantee calls. Paper 6.3's term for earmarked carbon revenue is left out on purpose. CPAT's revenue block keeps the price instruments' revenue, and the second rule of @sec-rules records which measures it pays for. Two conventions matter. Grants to private builders are always $SUB$, never $\mathrm{capex}^{pub}$. And $F^{bud}_m$ discounts at 6 percent while debt service runs at $i_g$, so a loan's present value is not zero unless $i_g$ is 6 percent: paper 6.3's Proposition 3 [@StrettonWP63].
+
+# Green subsidies {#sec-subsidy}
+
+**A subsidy pays for every unit bought but abates only through the units it induced.** Let a subsidy at rate $\sigma$ of unit capital $k$ be paid on $N^\sigma$ units, of which $N^0$ would have been bought anyway. The induced units are $\Delta N = N^\sigma - N^0$, and additionality is $a = \Delta N/N^\sigma$. Each induced unit abates $e$ discounted tonnes and has social cost $c$ over its life, net of savings and co-benefits, so $c/e = \mathrm{MAC}^{soc}$. The subsidy is a transfer: it changes who pays, not what the economy spends. So
+
+$$
+\frac{F^{bud}}{\Delta E} = \frac{\sigma k}{a\,e} + \frac{PV(XL)}{e}, \qquad \mathrm{MAC}^{\lambda}_{\sigma} = \mathrm{MAC}^{soc} + (\lambda - 1)\Big(\frac{\sigma k}{a\,e} + \frac{PV(XL)}{e}\Big),
+$$ {#eq-subsidy}
+
+where $PV(XL)$ is the present value of fuel tax lost, net of tax gained on fuel added, per induced unit. A running subsidy $z$ per unit of output $y$ a year works the same way, with $\sigma k$ replaced by $z\,y$ times the annuity factor.
+
+**Additionality comes from CPAT's own response wherever CPAT has one.** In road transport, a purchase subsidy lowers the electric car's total cost of ownership in CPAT's optional vehicle-choice logit, and $\Delta N$ is the change in electric sales [@StrettonWP51]. A subsidy for efficient equipment enters CPAT's efficiency margin as a shadow price (@eq-shsub). In power it lowers a technology's levelized cost (@sec-power), and outside energy it moves the uptake ramp (@sec-nonenergy). Where no response is modeled, additionality is an assumption, 0.5 to 0.9, with 0.5 for technologies near parity.
+
+**A subsidy for a measure that already pays at retail prices is flagged "price first".** If $\mathrm{MAC}^{priv}_m \le 0$, households and firms gain from the measure at the prices they face, and a subsidy mainly pays them to do what they would do anyway. A price, credit or information measure is cheaper. With costly public funds, the best subsidy is smaller than the gap between social and private returns, and smaller still when additionality is low [@StrettonWP63].
+
+# Fees and payments outside energy {#sec-nonenergy}
+
+**Outside energy CPAT has emissions but no activity, so fees and payments must act through measures.** CPAT grows agricultural emissions with output and population and waste with population, and lets land-use emissions decline exogenously. A methane fee cuts an emission factor along a power-law curve, $red = A\,\tau^{B}$ [@StrettonWP51]. CPAT has no technology, cost or subsidy for these sources. The method gives each non-energy source $o$ a short list of SISEPUEDE measures, each with a cost and a potential, and lets fees and payments buy them.
+
+**Each measure has a cost per tonne for its cheapest adopters and a potential.** For source $o$ (enteric fermentation, manure, rice, fertilizer, landfill, wastewater, deforestation and others) and measure $m$, the potential is
+
+$$
+\bar E_{m,o,t} = d_m\, \bar\ell_m\, \omega_{m,o}\, E^{CPAT}_{o,t},
+$$ {#eq-potential}
+
+where $d_m$ is the reduction per unit treated, $\bar\ell_m$ the maximum uptake, $\omega_{m,o}$ the share of the source the measure can reach and $E^{CPAT}_{o,t}$ CPAT's emissions from the source. SISEPUEDE's enteric transformation, for example, cuts methane by 25 percent per head of cattle and 35 percent per sheep or goat, with maximum application 0.8 [@CBSSPCode]. The cost $c_m$ is the resource cost per tonne from @eq-mac with the factors of Appendix A.
+
+**Uptake rises linearly with the reward per tonne above the cheapest adopters' cost, up to a cap.** Let $\bar b_m = \tau_o + b_m$ be the reward per tonne an adopter receives: a fee $\tau_o$ avoided, a payment $b_m$ per tonne abated, or both. Then
+
+$$
+\ell_{m,t} = \bar\ell_m\, \min\!\Big(1,\; \max\!\Big(0,\; \frac{\bar b_{m,t} - c_m}{h_m}\Big)\Big),
+$$ {#eq-uptake}
+
+with a ramp limit $\ell_{m,t} - \ell_{m,t-1} \le \Delta\ell^{\max}_m$ for the time it takes to reach farms and sites. The ramp width $h_m$, in dollars per tonne, is the spread of adopters' costs: uptake starts at $c_m$ and reaches its maximum at $c_m + h_m$. If $c_m$ is SISEPUEDE's average cost rather than the cheapest adopters', the ramp is centered on it: replace $(\bar b - c_m)/h_m$ by $(\bar b - c_m)/h_m + 1/2$.
+
+**Proposition 2 (uptake uses the same quadratic penalty as paper 5.1's rule).** *Suppose adopters choose the uptake share $\ell$ to maximize $(\bar b - c)\,\ell - \tfrac{h}{2}\,\ell^2$, where the quadratic term is the rising cost of reaching less suitable farms and sites, per tonne of potential. The maximizer is $(\bar b - c)/h$; clipped to $[0,1]$ and scaled by $\bar\ell$, it is @eq-uptake.* The proof is the first-order condition. The penalty is the one paper 5.1 proposes for power investment [@StrettonWP51]: responses linear in cost differences, exact zeros below cost and a weight in dollars that can be stated and calibrated. The power rule also has an adding-up constraint across technologies; adoption has none. @eq-uptake replaces CPAT's power-law fee curve wherever measures are modeled. The curve stays as the fallback for sources without measures, and the two are never applied to one source.
+
+**Emissions follow from uptake, and fees are paid on what remains.** For source $o$,
+
+$$
+E^{S}_{o,t} = E^{CPAT}_{o,t}\, \prod_{m \in o} \big(1 - d_m\, \omega_{m,o}\, \ell_{m,t}\big), \qquad FEE_{o,t} = \tau_{o,t}\, \beta_o\, E^S_{o,t},
+$$ {#eq-nonenergy}
+
+with $\beta_o$ the share of the source the fee covers. A fee needs a measurable base, so it is usually levied on a proxy: nitrogen fertilizer sold, head of livestock, tonnes landfilled, hectares cleared. A fee on a proxy rewards only measures that change the proxy. A fee per head does not reward a feed additive that cuts methane per head; only a fee on estimated emissions that credits the additive does. So for each source the note records which measures the fee base can reach. Only those measures get $\tau_o$ in $\bar b_m$.
+
+**Payments go to every adopter, including those who would have adopted anyway.** The budget's payment for source $o$ is
+
+$$
+SUB_{o,t} = \sum_{m \in o} b_{m,t}\, d_m\, \omega_{m,o}\, E^{CPAT}_{o,t}\, \ell_{m,t}.
+$$ {#eq-nonenergy-fiscal}
+
+The share of payments that buys nothing is $\ell^0_{m,t}/\ell_{m,t}$, where $\ell^0_{m,t}$ is uptake at the fee alone, $\ell_{m,t}(\bar b = \tau_{o,t})$, or at the baseline trend. Paying per tonne verified does not by itself remove that leakage. A baseline or additionality test, or a reverse auction that pays each adopter its own cost, does. A *feebate* charges $\tau$ on emissions above a pivot intensity and pays $\tau$ per tonne below it. It gives the same reward as a fee and returns the revenue to the sector; it is revenue-neutral when the pivot equals the average intensity of the covered base. The flows enter @eq-ledger as $SUB$ and $FEE$.
+
+**Land use needs one more rule, because its carbon is a stock.** Avoided deforestation keeps carbon that would otherwise be released once; reforestation sequesters over decades and can be reversed. The extension books sequestration and avoided emissions from SISEPUEDE's or CPAT's carbon-stock path, and amortizes the planting cost separately, over SISEPUEDE's 15 years. Payments for both carry a permanence discount set by the user (an assumption, 0.8 by default) until a buffer rule is agreed.
+
+# Capital or running: the taxonomy and the partnership switch {#sec-taxonomy}
+
+## The taxonomy {#sec-classes}
+
+**Every cost item is either a capital outlay or a running cost, and the class decides how it is booked and financed.** A *capital outlay* creates an asset that lasts more than a year. It enters @eq-capex and the public investment need, is annualized by @eq-crf, can be financed by a loan and can be switched to a partnership. A *running cost* is spent within the year: operation and maintenance, fuel, feed additives, programme staff and subsidies per unit of output. It enters @eq-netcost each year and is paid from the current budget. Appendix A classifies every SISEPUEDE item; @tbl-classes gives the families.
+
+| Item family | Class | Life (years) | Recurrent cost (share of capital a year) | Partnership possible? |
+|:--|:-:|--:|:--|:-:|
+| Power generation | Capital | 25 | 1.5% (renewables) | Yes (power purchase agreement) |
+| Transmission, distribution, storage | Capital | 40 | 1–2% (assumption) | Yes |
+| Electric vehicles and chargers | Capital | 12 | Negative (maintenance saving) | Leasing only |
+| Rail, metro, bus rapid transit, mode-shift infrastructure | Capital | 30–40 (assumption) | 2–4% (assumption) | Yes |
+| Building efficiency, heat pumps | Capital | 25 | About 0 | Energy-service contracts |
+| Industrial efficiency, electrified heat, capture | Capital | 25 | Capture: running cost per tonne | Rarely |
+| Reforestation, rehabilitation, silvopasture | Capital | 15 | Maintenance (assumption) | Results-based contracts |
+| Landfills, digesters, treatment plants, sewers | Capital | 20–30 (assumption) | Treatment cost per tonne or m$^3$ | Yes |
+| Feed additives, fertilizer and rice management | Running | – | – | No |
+| Waste collection, programmes, extension, research | Running | – | – | Service contracts |
+| Leak repair, flaring, F-gas and N$_2$O abatement | Running | – | – | No |
+| Running subsidies (per kWh, tonne or hectare a year) | Running | – | – | – |
+| Viability-gap grants | Capital (budget's share of a private asset) | Asset life | – | – |
+
+: Most mitigation spending is capital; farm, waste-collection and abatement programmes are running costs. Lives for generation, grids, vehicles, buildings and industry follow paper 6.5's tool; the solar recurrent cost follows paper 6.3 [@StrettonWP65; @StrettonWP63]. Values marked "assumption" are the author's, to be replaced by country data. {#tbl-classes}
+
+**Capital and running costs compare through the equivalent annual cost.** Paper 6.3's rule applies [@StrettonWP63]:
+
+$$
+\mathrm{EAC}_j = k_j\, \mathrm{CRF}(r, n_j) + r^{rc}_j\, k_j,
+$$ {#eq-eac}
+
+with $r^{rc}_j$ the recurrent cost per dollar of capital a year and $r$ at 6 percent for the economic view, $i_g$ for the fiscal view and the market WACC for private and contracted routes. A sewer and a programme cutting food waste are compared by their equivalent annual cost per tonne.
+
+## The partnership switch {#sec-ppp}
+
+**A partnership turns a capital outlay into a stream of availability payments.** Any pure public (P1) capital item can be switched to a public-private partnership. The partner builds and finances the asset, runs it for a contract of length $n_c \le n_j$, and is paid
+
+$$
+AP = \Big[(1 - \eta)\, k + PV_{w}(\mathrm{rep})\Big]\, \mathrm{CRF}(w, n_c) + O^{c}, \qquad w = i_g + \rho,
+$$ {#eq-ap}
+
+a year from the year after completion. Here $\eta$ is the partnership's saving on construction cost, $PV_w(\mathrm{rep})$ the present value of replacements due within the contract, $O^c$ the contracted running cost, $w$ the partner's cost of capital and $\rho$ its premium over the government's rate $i_g$. At the end of the contract the asset reverts to the government, which bears its running cost for the remaining $n_j - n_c$ years. A utility (P2) asset switched to a contract becomes contracted revenue (P3): the utility pays the contract and the budget records a contingent liability, not an availability payment.
+
+**Three inputs set the conversion.**
+
+- **Contract length** $n_c$: 20 years by default, never more than the asset's life. It is a cost lever as well as a timing one: at the government's rate, the financing premium rises with contract length (@tbl-ppp).
+- **Risk premium** $\rho$: the partner's weighted cost of debt and equity over $i_g$. The default, 3 percentage points, is an assumption to be calibrated on partnership project data by income group. For a power purchase agreement, $w$ is the producer's WACC from paper 6.3 [@StrettonWP63].
+- **Construction saving** $\eta$: zero by default. A positive value must be argued: any case for partnerships rests on efficiency gains large enough to beat the financing premium, and the evidence for them is mixed [@EngelFischerGaletovic2013].
+
+**The switch changes the ledger, the debt and the liabilities, but not the asset or its emissions.** With the switch on, $\mathrm{capex}^{pub}$ in @eq-ledger is zero and $AP$ enters for $n_c$ years. The asset, its abatement and the investment need are unchanged. The contract creates a liability equal to the payments discounted at the government's rate,
+
+$$
+L^{PPP} = \sum_{t=1}^{n_c} \frac{AP}{(1+i_g)^t},
+$$ {#eq-pppliab}
+
+which the debt module records. In the joint IMF and World Bank framework for low-income countries, partnership capital above 3 percent of GDP triggers a stress test that adds 35 percent of the stock to public debt [@IMFWB2017LICDSF]. In CPAT, output responds through fiscal multipliers on uses of revenue. The public investment multiplier therefore applies to publicly financed capital in the year it is spent. A partnership's capital is private and, like other private capital, has no output channel in CPAT, which is a limit of the model. Availability payments are financing flows, like debt service, and get no multiplier.
+
+**Proposition 3 (the partnership's break-even saving).** *Let public delivery turn a dollar into $s^{PIM}_c$ dollars of asset and partnership delivery into $s^{PPP}_c$, with replacements and running costs equal under both routes. The partnership costs the budget no more in present value at $i_g$ than public delivery if and only if*
+
+$$
+\eta \ge \eta^* = 1 - \frac{s^{PPP}_c\, \mathrm{CRF}(i_g, n_c)}{s^{PIM}_c\, \mathrm{CRF}(i_g+\rho, n_c)}.
+$$ {#eq-pppbe}
+
+*The proof sets the present value at $i_g$ of the payments' capital part, $(1-\eta)\,k\,\mathrm{CRF}(w,n_c)/[s^{PPP}_c\,\mathrm{CRF}(i_g,n_c)]$, against the public route's cost, $k/s^{PIM}_c$.* By default $s^{PPP}_c = s^{PIM}_c$. Weaknesses in appraisal, selection and management affect partnerships too, and public investment management assessments cover partnership management. With equal efficiencies, @eq-pppbe is paper 6.3's financing-premium test, a power purchase agreement as debt in disguise [@StrettonWP63]. The interface reports $\eta^*$ next to the switch.
+
+| | 10 years | 15 years | 20 years | 25 years |
+|:--|--:|--:|--:|--:|
+| Break-even construction saving $\eta^*$, equal efficiencies | 12.8% | 17.0% | 20.4% | 23.2% |
+| Same, 20-year contract, if partnerships had full efficiency ($s^{PPP} = 1$) | | | LIC −32.6%, EM −9.0%, AE 8.5% | |
+
+: A partnership must build its asset 13 to 23 percent more cheaply to beat public delivery, and more the longer the contract. Government rate 6 percent, risk premium 3 points. If partnerships were assumed free of the public efficiency gap, the test would favor them in every low-income (LIC) and emerging (EM) country whatever they cost, which is why the default sets the two efficiencies equal. Source: author's calculation (`2.Source/worked_examples.py`). {#tbl-ppp}
+
+**A capital grant and a running subsidy convert by the same annuity.** A grant at rate $\sigma$ of capital and a running subsidy $z$ per unit of output $y$ a year over a support period of $n$ years cost the budget the same in present value at $i_g$ when
+
+$$
+z = \frac{\sigma\, k\, \mathrm{CRF}(i_g, n)}{y}.
+$$ {#eq-grantsub}
+
+Contracts for difference, feed-in premiums and results-based payments are running subsidies of this kind. The switch lets a user move a P4 measure's support from an upfront grant to a payment per unit.
+
+# Mapping CPAT to SISEPUEDE {#sec-mapping}
+
+**CPAT's policies are instruments and SISEPUEDE's transformations are outcomes, so the map is many-to-many.** A carbon tax induces partial uptake of many transformations at once, whereas a public programme or subsidy buys one transformation to a stated level. The two models also cut the economy differently. SISEPUEDE's industry, buildings and transport subsectors each map to several CPAT sectors. CPAT's agriculture, land-use, waste and industrial-process sectors each receive several SISEPUEDE subsectors. Where one SISEPUEDE subsector feeds several CPAT sectors, splits by activity or proxy data are needed; paper 6.4 gives the sector concordance and the activity layer [@StrettonWP64]. @tbl-mapping maps CPAT's policy sectors and levers to SISEPUEDE's transformations and flags many-to-one matches (M), one-to-many matches (O) and gaps (G).
+
+| CPAT sector | CPAT levers | SISEPUEDE transformations | Flags and notes |
+|:--|:--|:--|:--|
+| Power | Carbon tax, ETS, electricity emissions tax and excise; renewable feed-in subsidy; power feebate; power purchase agreements as must-run shares; public investment | ENTC:TARGET_RENEWABLE_ELEC, ENTC:LEAST_COST_SOLUTION, ENTC:DEC_LOSSES, ENTC:TARGET_CLEAN_HYDROGEN | **M**: one CPAT power model against SISEPUEDE's optimizer. **G**: CPAT holds losses at base-year proportions, so DEC_LOSSES has no CPAT driver, and CPAT has no grid capital. A renewable target is an outcome; in CPAT it becomes a one-sided penalty (@sec-power) |
+| Road transport | Carbon tax, road fuel taxes, subsidy reform, vehicle feebates, fuel-economy standards, purchase subsidies | TRNS:SHIFT_FUEL_LIGHT_DUTY, SHIFT_FUEL_MEDIUM_DUTY, INC_EFFICIENCY_NON_ELECTRIC, INC_EFFICIENCY_ELECTRIC, INC_OCCUPANCY_LIGHT_DUTY, SHIFT_MODE_PASSENGER, SHIFT_MODE_REGIONAL, SHIFT_MODE_FREIGHT; TRDE:DEC_DEMAND | **M**: nine transformations to one fuel equation plus an optional fleet model. **G**: CPAT has no mode choice; SISEPUEDE has no mode-shift capital |
+| Rail, aviation, navigation | Carbon tax, fuel taxes | TRNS:SHIFT_FUEL_RAIL, SHIFT_FUEL_MARITIME; mode shifts into rail | **G**: no aviation fuel switch in SISEPUEDE; domestic or international aviation is ambiguous in the concordance |
+| Residential, services | Carbon tax, subsidy reform (LPG, kerosene, electricity), efficiency regulations | SCOE:INC_EFFICIENCY_APPLIANCE, DEC_DEMAND_HEAT, INC_EFFICIENCY_HEAT, SHIFT_FUEL_HEAT | **O**: one subsector to residential, services and "other", split by energy use. **G**: clean cooking, central to CPAT's household analysis, is not a transformation |
+| Industry, energy use (eight CPAT sectors, from chemicals and mining to food and forestry) | Carbon tax, ETS, coal excise, industrial efficiency regulations | INEN:INC_EFFICIENCY_ENERGY, INC_EFFICIENCY_PRODUCTION, SHIFT_FUEL_HEAT; PFLO:INC_IND_CCS | **O**: one subsector to eight CPAT sectors, split by fuel use; metals map to iron and steel *or* non-ferrous |
+| Industrial processes | Carbon tax or ETS on process emissions (option); exposure to border adjustments | IPPU:DEC_CLINKER, DEC_HFCS, DEC_PFCS, DEC_OTHER_FCS, DEC_N2O, DEC_DEMAND; PFLO:INC_IND_CCS | **M**: seven transformations to one sector whose emissions scale with industrial energy CO$_2$. **G**: no CPAT lever for F-gases short of a tax on process emissions |
+| Fuel supply, other energy | Methane fee (extractives), carbon tax, producer subsidy reform | FGTV:DEC_LEAKS, FGTV:INC_FLARE; ENFU:ADJ_PRICES, ENFU:ADJ_EXPORTS | One-to-one in effect; CPAT's fee curve is replaced by the two measures (@sec-nonenergy) |
+| Agriculture | Methane fee (livestock, rice); additional non-energy effort | LVST:DEC_ENTERIC_FERMENTATION, INC_PRODUCTIVITY, DEC_EXPORTS; LSMM:INC_MANAGEMENT_CATTLE_PIGS, _OTHER, _POULTRY, INC_CAPTURE_BIOGAS; AGRC:DEC_CH4_RICE, INC_CONSERVATION_AGRICULTURE, INC_PRODUCTIVITY, DEC_LOSSES_SUPPLY_CHAIN, DEC_EXPORTS; SOIL:DEC_N_APPLIED, DEC_LIME_APPLIED; PFLO:INC_HEALTHIER_DIETS | **M**: fifteen transformations to one sector. **G**: diets, exports and losses are demand measures with no CPAT lever. Soils are assigned to agriculture here |
+| Land use, land-use change and forestry | Additional non-energy effort | LNDU:DEC_DEFORESTATION, INC_REFORESTATION, INC_SILVOPASTURE, INC_LAND_REHABILITIATION, DEC_SOC_LOSS_PASTURES, PLUR, BOUND_CLASSES, DEC_CLASS_LOSS; FRST:INCREASE_SEQUESTRATION | **M**: nine transformations to one sector with an exogenous decline. **G**: base-year land-use emissions can differ widely between the models (organic soils); reconcile the baseline first |
+| Waste | Methane fee (waste); additional effort | WASO:INC_LANDFILLING, INC_RECYCLING, INC_ANAEROBIC_AND_COMPOST, INC_CAPTURE_BIOGAS, INC_ENERGY_FROM_BIOGAS, INC_ENERGY_FROM_INCINERATION, DEC_CONSUMER_FOOD_WASTE; TRWW:INC_CAPTURE_BIOGAS, INC_COMPLIANCE_SEPTIC; WALI:INC_TREATMENT_INDUSTRIAL, _RURAL, _URBAN | **M**: twelve transformations to one sector that grows with population. **G**: liquid waste is outside the sector concordance |
+| None | – | CCSQ:INC_CAPTURE (direct air capture) | **G**: no CPAT sector |
+| All sectors | Fuel subsidy reform, VAT, excises, price controls, feebates | ENFU:ADJ_PRICES only | **G**: SISEPUEDE has no price instruments; CPAT's price response reaches it only as demand scalars |
+| All sectors | Revenue recycling: public investment, current spending, transfers, tax cuts | What each use can buy (@sec-rules) | Public investment buys P1 capital; current spending buys running programmes; transfers and tax cuts fund P5 and P4 adopters |
+
+: CPAT's levers reach SISEPUEDE's transformations many-to-many, and four non-energy CPAT sectors each stand for seven to fifteen transformations. M: many transformations to one CPAT sector; O: one SISEPUEDE subsector to several CPAT sectors; G: gap. Codes as in the SISEPUEDE documentation, without the TFR: prefix [@SISEPUEDEDocs]. {#tbl-mapping}
+
+**Three gaps matter most for fiscal questions.** First, SISEPUEDE has no price instruments, so the linked system needs CPAT for prices and SISEPUEDE for measures, the division of labor this note adopts. Second, CPAT has no physical capital outside power and road vehicles, so SISEPUEDE's measures are the only source of physical investment in buildings, industry, agriculture, land use and waste. Third, neither model splits a measure's cost between the state, households and firms; the payer types of @sec-public fill that gap.
+
+# Integration into CPAT {#sec-integration}
+
+## Energy sectors: measures change fuel use {#sec-energyhooks}
+
+**CPAT's fuel-use equation has a hook for efficiency and one for non-price policy, but the efficiency hook is too coarse for measures.** For sector $s$ and fuel $f$,
+
+$$
+\frac{F_{sf,t}}{F_{sf,t-1}} = \Big(\frac{1}{1 + \alpha_{sf} + \alpha^{+}}\Big)^{1 + \epsilon_{U}} \Psi_t \Big(\frac{Y_t}{Y_{t-1}}\Big)^{\epsilon_{Y} inc_t} \Big(\frac{p_{sf,t}}{p_{sf,t-1}}\Big)^{\epsilon_{U}} \Big(\frac{p_{sf,t} + sh_{sf,t}}{p_{sf,t-1} + sh_{sf,t-1}}\Big)^{\epsilon_{F}(1 + \epsilon_{U})},
+$$ {#eq-cpat}
+
+where $\alpha$ is the autonomous efficiency gain, $\alpha^+$ an extra gain reserved for policy and $sh$ the shadow price through which CPAT models standards and feebates [@StrettonWP51]. In CPAT's implementation $\alpha^+$ is one value per scenario for each of three groups (road and other transport, residential, and everything else), and it also enters power demand [@CPATAI2026, `Equations.md` E53, E69]. A residential gas retrofit entered through $\alpha^+$ would therefore cut residential electricity, LPG and kerosene as well. The extension uses level scalars by sector and fuel instead, with CPAT's rebound applied explicitly, and uses $sh$ for subsidies.
+
+**Efficiency measures scale fuel use by sector and fuel, with CPAT's rebound.** Let $\tilde F_{sf,t}$ be CPAT's fuel use from @eq-cpat, run on its own path with no measures, and $\psi_{sf,t}$ the cumulative share of it saved by the efficiency measures in service, before rebound. Then
+
+$$
+F^{S}_{sf,t} = \tilde F_{sf,t}\, \big(1 - \psi_{sf,t}\big)^{1+\epsilon_U}\Big(1 - \sum_m \zeta_{m,sf,t}\Big),
+$$ {#eq-measures}
+
+where the exponent $1+\epsilon_U$ is CPAT's rebound on efficiency gains and $\zeta$ is the switched share of @eq-switch. $\psi$ is units in service times saving per unit over reference use. A retrofit programme saving 5 percent of residential gas before rebound saves $1 - 0.95^{1+\epsilon_U}$ after it. If CPAT's $\alpha^+$ is later extended to sector, fuel and year, the equivalent hook is $\alpha^+_{sf,t} = (1+\alpha_{sf})\big[(1-\psi_{sf,t-1})/(1-\psi_{sf,t}) - 1\big]$.
+
+**Fuel switching moves fuel out of one row and adds electricity to another.** For an electrification measure with switched share $\zeta_{m,sf,t}$ of reference fuel use,
+
+$$
+\Delta EL_{s,t} = \sum_m \sum_f \zeta_{m,sf,t}\, \tilde F_{sf,t}\, \frac{\nu_{f}}{\nu_{el}},
+$$ {#eq-switch}
+
+where $\nu_f/\nu_{el}$ is the ratio of end-use efficiencies and $\Delta EL$ the electricity added to sector $s$'s demand. The ratio is about 0.25 for an electric car against gasoline, as in paper 6.5's tool, and 0.33 for a heat pump against a boiler. The added electricity enters CPAT's power demand and so the generation the power module must supply. $\zeta$ is cumulative and is applied to the unswitched path $\tilde F$, never to last year's switched path, so switches do not compound. Measures on one fuel are capped so that $\sum_m \zeta_m \le 1$. $\zeta$ comes from the measure: SISEPUEDE's transformation magnitude and ramp, or units bought times their fuel use.
+
+**A capital subsidy on efficient equipment is a shadow price on the efficiency margin.** If the energy service is produced with constant returns from fuel and efficiency capital, the cost-minimizing mix depends only on the ratio of their prices. Lowering the price of efficiency capital by a share $\sigma$ is then exactly equivalent to raising the fuel price on that margin by the factor $1/(1-\sigma)$, whatever the elasticity of substitution. In @eq-cpat,
+
+$$
+sh^{\sigma}_{sf,t} = p_{sf,t}\,\frac{\sigma_{s,t}}{1-\sigma_{s,t}},
+$$ {#eq-shsub}
+
+added to any existing shadow price and scaled by the share of the sector's stock eligible. Three approximations remain. The subsidy reaches new purchases, not the stock; it reaches only eligible equipment; and CPAT's $\epsilon_F$ is a reduced-form elasticity, not a structural one. A 30 percent subsidy acts like a 43 percent higher fuel price on the efficiency margin. Purchase subsidies for fuel switching, such as for electric cars, enter through the vehicle-choice logit or @eq-switch, not through @eq-shsub. The budget cost comes from @eq-subsidy, not from $sh$.
+
+## Non-energy sectors: measures change emissions {#sec-nonenergyhooks}
+
+**Outside energy, measures and fees scale CPAT's emissions directly, by @eq-nonenergy.** Industrial process measures (clinker, F-gases, nitrous oxide, capture) act the same way on CPAT's process emissions, after CPAT scales those emissions with industrial energy CO$_2$. If CPAT's carbon tax already covers process emissions, the tax enters $\bar b_m$ in @eq-uptake and is not applied a second time.
+
+## Six rules against double counting {#sec-rules}
+
+**Rule 1: prices first, measures on the residual path, effects multiplied.** CPAT computes the price response; measures act on what remains, by @eq-measures and @eq-nonenergy, so two measures on one source never remove more than all of it. A subsidized private measure carries an additionality factor for overlap on the same margin: retrofits that the price would have induced and retrofits that the subsidy pays for are the same retrofits. The factor is not a second discount for the price response, which the residual path already takes out. Public assets carry a factor of 1. Abatement is attributed in sequence, prices first and then measures in the order of their public-money cost; the cost of each measure left out of the full package is reported beside it.
+
+**Rule 2: one ledger, and recycled revenue pays for measures once.** CPAT lets the user send carbon revenue to public investment, current spending, transfers or tax cuts, each with a fiscal multiplier [@StrettonWP51]. With measures on, revenue sent to public investment pays the P1 capital in @eq-ledger, and revenue sent to current spending pays running programmes. Transfers and tax cuts can be tied to P5 and P4 adopters. Each multiplier applies to the measures its revenue pays for, once. Spending beyond recycled revenue is borrowed and recorded in @eq-ledger. CPAT's green public investment block reports the share of a net zero investment requirement that recycled revenue funds, and books that share of the public part of the required emission reduction as abatement. It is report-only and feeds neither output nor emissions, so it creates no double count [@CPATAI2026, `Equations_addendum.md` R5]. The measures supersede it as a report.
+
+**Rule 3: savings and co-benefits come from CPAT's accounts.** Fuel savings are the change in CPAT's fuel bills; air pollution, crash and congestion benefits come from CPAT's co-benefit modules; tax lost and gained, $XL$ in @eq-ledger, comes from CPAT's revenue equation. SISEPUEDE's per-unit externality factors are not used for fuels CPAT tracks.
+
+**Rule 4: physical capital replaces the share-of-GDP fallback.** Paper 6.3's fallback is switched off in every sector where measures supply physical investment. Investment is never the sum of the two.
+
+**Rule 5: power measures act inside the power allocation.** Public builds, subsidies, finance and targets change the costs and constraints of the investment rule (@sec-power). Power investment comes only from the power module.
+
+**Rule 6: programmes already in the baseline are excluded.** A measure counts only for its change from the baseline run. Existing subsidies and programmes, including CPAT's renewable subsidy unless the user changes it, are part of $x^B$ in @eq-cost.
+
+# The power sector {#sec-power}
+
+## What the current module cannot do {#sec-powerlimits}
+
+**CPAT allocates new power investment by a logit on levelized cost, within build caps.** Retirement, dispatch and capacity follow engineering rules. New capacity is shared among permitted technologies by a logit whose curvature, 2, is set by judgment, and each technology's additions are capped at a share of effective capacity [@StrettonWP51; @CPATTeam2024]. For public investment and subsidies the module has seven limits:
+
+1. **The logit never gives a technology zero, and it responds to cost ratios.** Oil-fired power at 120 dollars per megawatt-hour still gets 1.4 percent of new investment against solar at 45. A subsidy that cuts every renewable's cost by the same amount moves shares through ratios, not dollar differences [@StrettonWP51].
+2. **Build caps are hard limits with no price.** A public programme or target that needs faster growth hits the cap, and the model cannot say what relaxing it is worth.
+3. **There is one cost of capital per country and technology, and no financing route.** The same solar plant costs the same whether a utility builds it with concessional loans, an independent producer builds it under a power purchase agreement or a merchant investor builds it [@StrettonWP63]. Power purchase agreements enter only as must-run shares of coal and gas.
+4. **Grids and storage are costs per megawatt-hour, not assets.** Transmission enters the levelized investment cost and the tariff as a cost per megawatt-hour, and integration enters as a storage charge on variable renewables that rises with their share. Neither is capital the public sector can build.
+5. **Investment spending is not split by payer.** Capacity additions are computed by technology but not by who builds them.
+6. **The capital recovery convention starts in year zero.** It differs from the convention of public appraisal (@sec-discount).
+7. **State utilities are assumed to treat the carbon price as a shadow price,** so a utility that answers to a ministry invests as a private market would [@CPATTeam2024].
+
+## The combined penalty rule {#sec-softrule}
+
+**Paper 5.1 proposes allocating investment by minimizing cost plus quadratic penalties on concentration and change.** The shares solve
+
+$$
+\min_{s_t} \sum_i \Big( C^{e}_{i,t}\, s_{i,t} + \frac{\lambda_v}{2} s_{i,t}^2 + \frac{\lambda_a}{2}\big(s_{i,t} - s_{i,t-1}\big)^2 \Big) \quad \text{s.t.} \quad \sum_i s_{i,t} = 1,\; s_{i,t} \ge 0,
+$$ {#eq-soft}
+
+where $C^e_i = C_i + C^{sys}_i$ is a technology's levelized cost plus its system cost, evaluated at last year's shares, and $\lambda_v$ and $\lambda_a$ are the weights, in dollars per megawatt-hour [@StrettonWP51]. This is the soft-constraint approach. Let $A$ be the set of technologies with positive shares, $|A|$ their number, $S_A = \sum_{j \in A} s_{j,t-1}$ their combined share last year and $\bar C^e_{A,t}$ their mean cost. The solution is
+
+$$
+s_{i,t} = \frac{\lambda_a s_{i,t-1} + \big[\lambda_v + \lambda_a(1 - S_A)\big]/|A| + \bar C^{e}_{A,t} - C^{e}_{i,t}}{\lambda_v + \lambda_a}, \qquad i \in A,
+$$ {#eq-softsol}
+
+recomputed with any technology whose share comes out negative removed from $A$, until none does. When every technology is active, $S_A = 1$ and @eq-softsol is paper 5.1's combined rule. When a technology that had a share last year drops out, the term $\lambda_a(1 - S_A)$ restores adding-up; without it, as in version 0.2 of paper 5.1, the shares sum to less than one. Paper 5.1 now uses this form [@StrettonWP51]. In paper 5.1's example at 75 dollars per tonne, with $\lambda_v = \lambda_a = 100$, the exact shares are 46.7, 36.7 and 16.7 percent for solar, wind and gas (`2.Source/worked_examples.py`). Uncompetitive technologies drop to exactly zero, as in sparsemax [@MartinsAstudillo2016]. As in paper 5.1, the rule replaces the logit and leaves dispatch, retirement and the build caps as they are; $\lambda_a$ adds a continuous cost of change within the caps.
+
+**Because the rule is linear in dollar costs, a public measure enters as a change in $C^e$ or as an extra penalty.** A technology whose effective cost falls by $\Delta C$ gains $(1 - 1/|A|)\,\Delta C/(\lambda_v + \lambda_a)$ in share, and each other active technology loses $\Delta C/[|A|(\lambda_v+\lambda_a)]$.
+
+## How public money, subsidies and partnerships plug in {#sec-powerplug}
+
+**Financing routes and subsidies change terms inside CPAT's investment cost.** CPAT's investment cost $tic_i$ is forward-looking: the discounted average of future variable cost, with foresight of the announced carbon price, plus levelized capital, decommissioning, fixed operation and maintenance, transmission and the marginal cost of storage [@StrettonWP51]. The extension keeps $tic_i$ and changes three of its terms:
+
+$$
+C_{i,t} = tic_{i,t}\Big|_{\;k_i \to (1-\sigma_{i,t})k_i,\;\; \mathrm{CRF} \to \overline{\mathrm{CRF}}_{i},\;\; -\,z^{prod}_{i,t}}, \qquad \overline{\mathrm{CRF}}_{i} = \sum_{P} \pi_{i,P}\, \mathrm{CRF}(r_{P,i}, n_i),
+$$ {#eq-lcoe}
+
+with capital $k_i$ in dollars per kilowatt cut by a capital subsidy at rate $\sigma$, the capital recovery factor replaced by its average over financing routes, and a production subsidy $z^{prod}$ (a feed-in premium, in dollars per megawatt-hour) subtracted. The capital charge per megawatt-hour is $k_i\,\overline{\mathrm{CRF}}_i/(8.76\,CF_i)$, with $CF_i$ the capacity factor. The fuel term uses fuel prices before carbon charges, and the carbon term is the explicit carbon price times the plant's emission intensity, as in CPAT, so taxes are counted once. The route rates are the government's (possibly concessional) borrowing rate for P1, the regulated return for P2 and the producer's WACC less the effect of any payment guarantee for P3. For P4 and P5 they are the investor's WACC; the P4 grant enters as $\sigma$. Averaging capital recovery factors rather than rates matters because the factor is nonlinear in the rate. A concessional loan, a guarantee or a grant lowers $C_i$, and the share responds as above. A high cost of capital shifts the mix away from capital-intensive renewables, as the evidence says it does [@Ameli2021; @HirthSteckel2016].
+
+**A public build programme is removed from the need, not added to it.** If the government commits to build $B_{i,t}$ megawatts of technology $i$, then
+
+$$
+Need^{alloc}_t = \max\!\Big(0,\; Need_t - \sum_i 8.76\, CF_i\, B_{i,t}\Big), \qquad N_{i,t} = B_{i,t} + \frac{s_{i,t}\, Need^{alloc}_t}{8.76\, CF_i},
+$$ {#eq-publicbuild}
+
+with $Need$ in gigawatt-hours a year and $N$ and $B$ in megawatts. Next year's $s_{i,t-1}$ is the realized share including public builds, $8.76\,CF_i\,N_{i,t}/Need_t$; otherwise the change penalty would pull the mix back toward what the public build displaced. CPAT recommends that hydro and nuclear be set as exogenous plans in the same way [@StrettonWP51].
+
+**A target becomes a one-sided penalty with a visible price.** A target for generation shares is first translated into a path of investment shares: the share of next year's need that technology $i$ must take to reach its target generation, given its existing capacity and retirements,
+
+$$
+\bar s_{i,t} = \min\!\Big(1,\, \max\!\Big(0,\; \frac{\bar g_{i,t+1}\, Gen_{t+1} - (Gen_{i,t} - Ret_{i,t})}{Need_t}\Big)\Big),
+$$ {#eq-target}
+
+where $\bar g$ is the target generation share, $Gen$ generation and $Ret$ the generation lost to retirement. A floor adds $\tfrac{\mu}{2}\max(0, \bar s_{i,t} - s_{i,t})^2$ to @eq-soft, and a ceiling (a coal phase-out) adds $\tfrac{\mu}{2}\max(0, s_{i,t} - \bar s_{i,t})^2$. In the solution the target acts as a subsidy of $\mu\max(0, \bar s - s)$ per megawatt-hour, or a charge for a ceiling. As $\mu$ grows, the target is met exactly and that amount converges to the target's shadow price. It can be reported as the subsidy or carbon price that would meet the target.
+
+**Public grid and storage investment shifts integration cost to the budget without removing it from the system's cost.** In the allocation, CPAT's storage charge on variable renewables is part of $C^{sys}$ [@StrettonWP51]. If the state builds grids and storage worth $G_t$ against a requirement $G^{req}$, the charge investors see falls:
+
+$$
+C^{sys}_{VRE,t} = c^{int}(v_{t-1})\,\Big(1 - \frac{G_{t-1}}{G^{req}_{t-1}}\Big), \qquad G^{req}_{t-1} = \chi\, I^{VRE}_{t-1},
+$$ {#eq-grid}
+
+with $c^{int}(v)$ the integration cost per megawatt-hour at variable renewable share $v$, $\chi$ grid and storage dollars per dollar of variable renewable investment, and last year's values, to avoid a circular reference. The default $\chi = 0.6$ is an assumption taken from paper 6.5's tool. The grid capital is a P2 or P1 item in @eq-ledger. Two conventions prevent double counting. Investment need is $\sum_i N_{i,t} k_{i,t} + G^{req}_t$ with $k_i$ excluding storage, so storage capital is counted once. And $C^{sys}$ serves the allocation only: the resource cost of a power measure includes the public grid capital, so public grids do not make renewables look free.
+
+**Power investment, its public share and its abatement cost follow from the allocation.** Capacity additions from @eq-publicbuild give power capital by @eq-capex. Its public investment need is the P1 share plus P1 grid capital; P2 and P3 add contingent liabilities, valued by paper 6.3's liability equation for power purchase agreements [@StrettonWP63]. The abatement cost of a power measure comes from running the power module with and without it. It is the change in annualized system cost (capital including grids, operation and maintenance, and fuel) divided by the change in power emissions, by @eq-mac.
+
+**Calibration carries over.** $\lambda_v$ is calibrated to observed investment shares, as paper 5.1 proposes [@StrettonWP51]. $\lambda_a$ is calibrated to observed year-to-year changes in investment shares. It cannot be read off the build caps, which limit capacity growth as a share of effective capacity, not changes in investment shares. Until both are estimated, measures are run under the logit and the combined rule, and the difference is reported.
+
+# Worked examples {#sec-examples}
+
+**Three stylized examples show the equations at work.** Inputs are SISEPUEDE factors or labelled assumptions; the code is `2.Source/worked_examples.py` and its output `2.Source/worked_examples_output.txt`. Co-benefits are left out, so the social cost equals the resource cost in the first example.
+
+**An electric-car subsidy shows that a subsidy for a measure that already pays is mostly a transfer.** The car is bought in 2030 at SISEPUEDE's Latin American factor: a premium of 7,020 dollars (@eq-delev) falling 10 percent a year from 2023, or 3,360 dollars in 2030. It drives 15,000 kilometers a year for 12 years and saves 0.012 dollars per kilometer in maintenance [@SSPCBDocs; @CBSSPCode]. The remaining inputs are assumptions:
+
+- Fuel and electricity use: a gasoline car uses 7.5 liters per 100 kilometers; the electric car uses 0.18 kilowatt-hours per kilometer.
+- Prices: gasoline costs 0.60 dollars a liter at supply and 1.10 at retail; electricity costs 0.10 and 0.15 dollars a kilowatt-hour.
+- Grid emissions: 0.5 tonnes per megawatt-hour.
+
+Gasoline emits 2.27 kilograms of CO$_2$ per liter, from the IPCC default factor and calorific value [@IPCC2006]. Each car then abates 1.2 tonnes a year. Its resource cost is about −150 dollars per tonne at 6 percent, and its private cost about −420 dollars per tonne at 10.5 percent and retail prices: the measure is "price first". A subsidy of 30 percent of the premium, about 1,000 dollars, with half the subsidized cars additional (an assumption), costs the budget about 200 dollars per tonne in subsidy. Fuel tax lost, net of electricity tax gained, adds about 350 more; that is an upper bound, since it treats the whole gap between retail and supply prices as tax. In all, the budget pays about 550 dollars per tonne for abatement that costs the economy nothing. The public-money cost is −40 dollars per tonne: the measure passes the funding rule because the cars save money, but the subsidy adds 110 dollars per tonne of pure cost of raising funds. Using the United States premium with the United States maintenance saving of 949 dollars a year makes the car cheaper still.
+
+**A cattle methane payment shows the uptake rule.** SISEPUEDE costs a feed additive at 40 dollars per head a year, cutting enteric methane by 25 percent per head with maximum uptake 0.8 [@SSPCBDocs; @CBSSPCode]. With the IPCC Tier 1 factor for "other cattle" in Latin America, 56 kilograms of methane per head a year [@IPCC2006AFOLU], and a global warming potential of 28 (IPCC Fifth Assessment, without climate-carbon feedback; implementation should use CPAT's own), each head treated abates 0.39 tonnes of CO$_2$-equivalent a year at 102 dollars per tonne. With a ramp width of 50 dollars (an assumption), a payment of 75 dollars per verified tonne buys nothing. A payment of 120 dollars brings 29 percent of eligible cattle into the measure and leaves 93 percent of enteric emissions; 135 dollars brings 53 percent and leaves 87 percent (@eq-uptake, @eq-nonenergy). A fee per head would buy nothing at any rate, because it does not reward the additive. Only a fee on estimated emissions that credits the additive acts like the payment, and then raises revenue on the 87 to 100 percent of emissions that remain.
+
+**A partnership conversion shows the financing premium.** A public asset costs 100, lasts 25 years and costs 2 a year to run; the government borrows at 6 percent (an assumption). Switched to a 20-year partnership with a 3-point premium and no construction saving, the availability payment is 12.96 a year (@eq-ap). Its present value at 6 percent is 148.6, against 122.9 for building and running the asset publicly over the same years: 21 percent more. With equal delivery efficiency, the partnership breaks even only if it builds 20.4 percent more cheaply (@tbl-ppp).
+
+# Parameters {#sec-parameters}
+
+| Parameter | Symbol | Default | Source |
+|:--|:--|:--|:--|
+| Social discount rate | $r$ | 6% | @WorldBank2016Discount |
+| Market cost of capital | $\mathrm{WACC}_{c,j}$ | Country WACC equation of paper 6.3; group defaults 5.5% advanced, 6% China, 10.5% other developing | @StrettonWP63; @IHLEG2024 |
+| Marginal cost of public funds | $\lambda$ | 1.2 (1.1 where VAT is the marginal tax; 1.5–2.0 stress) | @AuriolWarlters2012; @StrettonWP63 |
+| Shadow price of carbon | $P^C$ | World Bank guidance path | @WorldBank2024SPC |
+| Share of the country price level carried into unit costs | $\varphi$ | 0, with country unit costs where data exist (as CPAT's power data); 1 and 0.5 as sensitivities | @CPATAI2026; @StrettonWP63 |
+| Public investment efficiency | $s^{PIM}_c$ | 0.60 low-income, 0.73 emerging, 0.87 advanced; country score where available | @IMF2015PIM; @StrettonWP65 |
+| Partnership delivery efficiency | $s^{PPP}_c$ | $= s^{PIM}_c$ | Assumption |
+| Viability-gap share (until @eq-gap is computed) | $\gamma$ | 0.30 | @StrettonWP65 (an assumption there) |
+| Subsidy additionality (where not modeled) | $a$ | 0.5–0.9 | Assumption |
+| Budget's share of fuel savings | $\theta$ | 0 to 1 by ownership; 0.5 central | Assumption |
+| Partnership contract length | $n_c$ | 20 years, at most asset life | Assumption |
+| Partnership risk premium | $\rho$ | 3 points over $i_g$ | Assumption; calibrate on project data |
+| Partnership construction saving | $\eta$ | 0 | Assumption; @EngelFischerGaletovic2013 |
+| Uptake ramp width | $h_m$ | 50 dollars per tonne | Assumption; calibrate |
+| Permanence discount (land use) | – | 0.8 | Assumption |
+| Grid and storage per dollar of variable renewables | $\chi$ | 0.6 | Assumption (paper 6.5's tool) |
+| Combined-rule weights | $\lambda_v$, $\lambda_a$ | Calibrated to observed shares and their changes | @StrettonWP51 |
+| Unit cost factors and lives | $u_k$, $g_k$, $n_j$ | Appendix A | @SSPCBDocs; @CBSSPCode |
+
+: Every parameter has a default, and those without a published source are labelled as assumptions. {#tbl-params}
+
+# Limits and next steps {#sec-limits}
+
+**The unit costs are Latin American averages from mostly United States literature.** SISEPUEDE converts United States sources to Latin America with one scaling, and in nine places its documentation and code database disagree (Appendix A). The country price level corrects the level of costs but not their structure. Localizing the largest factors from national project data matters more than any other refinement: vehicle premiums, building and industrial efficiency, and treatment plants [@Kalra2023].
+
+**Upfront capital for buildings and industry is not yet deliverable, and outside power and vehicles only incremental investment is.** SISEPUEDE's heat-pump, industrial-heat and building-efficiency factors are levelized costs "as presented", with no rate. They are used as running-cost equivalents until they are re-derived from capital costs, which understates their capital and their public need where the public share is large. Most factors are premiums over the baseline technology, so total investment needs full unit costs.
+
+**Uptake, additionality and the penalty weights are judgments until calibrated.** The ramp width can be fitted to uptake under results-based payment schemes. Additionality outside modeled sectors can be fitted to evaluations of purchase subsidies, and the power weights to investment shares across countries and years [@StrettonWP51].
+
+**Private capital has no output channel in CPAT.** A partnership's capital, like a household's car, raises no output in CPAT's multiplier rule. The macro-fiscal models of paper 6.5 can add it [@StrettonWP65].
+
+**Prices outside the measures are fixed.** Measures do not change world fuel prices or technology costs; learning enters only through the fixed annual change in unit factors.
+
+**Four things should be built first.** The first is the cost cards for transport, buildings and agriculture, the sectors where CPAT's fiscal questions and SISEPUEDE's coverage meet. Then the level scalars of @eq-measures, since CPAT's $\alpha^+$ cannot carry measures by sector and fuel. Then the ledger and the partnership switch, which reuse paper 6.3's equations. Last comes the power plug-in, once the combined penalty rule, with the active-set correction of @eq-softsol, is in CPAT as a switchable alternative.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+# Appendix A: The SISEPUEDE cost factors {#sec-appendix-factors .appendix}
+
+**Each measure has a card: its driver, its capital and running items, its unit factor, its class, its life and its typical payer.** The tables give the factors from the SISEPUEDE documentation in 2019 dollars at Latin American average prices. The "Database" column gives the value in the module's factor database where it differs from the documentation, or a note on how the database applies it [@SSPCBDocs; @CBSSPCode]. Lives are paper 6.5's where it has one, otherwise SISEPUEDE's amortization period, otherwise marked "a" for assumption. Payer types follow @tbl-types for a middle-income country. Co-benefit factors for fuels CPAT tracks (air pollution from power, road and industrial fuel; road crashes and congestion) are not listed: under Rule 3 they come from CPAT.
+
+**Power and fuel supply are costed mainly from CPAT.** SISEPUEDE takes power capital and operating cost from its optimizer; the extension takes them from CPAT and adopts SISEPUEDE's factors only for items CPAT lacks.
+
+| Measure (code) | Driver | Item | Factor (2019 USD) | Database | Class | Life | Payer |
+|:--|:--|:--|:--|:--|:--|--:|:-:|
+| Renewable target, least-cost expansion (ENTC:TARGET_RENEWABLE_ELEC, LEAST_COST_SOLUTION) | Capacity additions by technology | Generation capital and running cost | CPAT power module | – | Capital; running | 25 | P2/P3 |
+| — | Electricity generated | New transmission | 2.70/MWh | Sign reversed | Running (levelized) | 40 | P2 |
+| Reduce transmission losses (ENTC:DEC_LOSSES) | Loss rate | Grid upgrades | Annual amount by country | Entered as positive | Capital | 40 | P2/P1 |
+| Clean hydrogen (ENTC:TARGET_CLEAN_HYDROGEN) | Electrolytic hydrogen | Electrolyzers and power | From the power model | – | Capital; running | 20 | P4 |
+| Fix fugitive leaks (FGTV:DEC_LEAKS) | Fugitive CO$_2$e abated, net of lower fuel output | Abatement | 20/tCO$_2$e | 10 | Running | – | P5 |
+| Flare vented gas (FGTV:INC_FLARE) | As above | Abatement | 2/tCO$_2$e | 10 | Running | – | P5 |
+| Direct air capture (CCSQ:INC_CAPTURE) | CO$_2$ captured | Capture | Not documented | 500/t, falling 4% a year | Running | – | P4 |
+
+: Power is costed from CPAT; SISEPUEDE supplies only transmission, grid upgrades and fugitive-emission factors, two of which disagree between documentation and database. {#tbl-app-power}
+
+| Measure (code) | Driver | Item | Factor (2019 USD) | Database | Class | Life | Payer |
+|:--|:--|:--|:--|:--|:--|--:|:-:|
+| Electrify light-duty vehicles (TRNS:SHIFT_FUEL_LIGHT_DUTY) | Electric vehicle-km | Premium and charger | 0.039/vkm (7,020 per car, @eq-delev), "declining over time" | Falls 10% a year | Capital | 12 | P5/P4 |
+| — | — | Maintenance | −0.012/vkm | – | Running | – | – |
+| Electrify medium and heavy duty (TRNS:SHIFT_FUEL_MEDIUM_DUTY) | Electric vehicle-km, heavy and public | Vehicle and charging | 0.042/vkm + 0.011/kWh | Falls 10% a year | Capital | 12 | P4/P3 |
+| — | — | Maintenance | −0.02/vkm | – | Running | – | – |
+| Electrify rail (TRNS:SHIFT_FUEL_RAIL) | Rail tonne- or passenger-km | Electrification | 0.0013/tkm or pkm | Per PJ of rail electricity | Capital | 30 a | P1 |
+| — | — | Maintenance | −0.0002/tkm or pkm | – | Running | – | – |
+| Maritime fuel switch (TRNS:SHIFT_FUEL_MARITIME) | Water-borne tonne-km (level) | Ships and fuel | 0.0005/tkm | 351 per million tkm | Running | – | P4 |
+| Vehicle efficiency (TRNS:INC_EFFICIENCY_NON_ELECTRIC, _ELECTRIC) | Energy avoided (fraction) | Technology | 0.88 million/PJ (about 0.002/vkm) | – | Capital | 12 | P5 |
+| Occupancy and mode shift (TRNS:INC_OCCUPANCY_LIGHT_DUTY, SHIFT_MODE_*) | Vehicle- and tonne-km by mode | System cost of service, excluding fuel | Car 0.17, motorcycle 0.017, bus 5.20, rail 14 per vkm; freight air 0.41, truck 0.053, rail 0.014, water 0.01 per tkm | Aviation 0.06 per pkm (documentation 1,067 per vkm) | Running | – | – |
+| — | — | Infrastructure for mode shift | Not costed by SISEPUEDE | – | Capital | 40 a | P1 |
+
+: Transport capital is the vehicle premium; mode-shift infrastructure, the largest public item, is not costed by SISEPUEDE and needs national data. {#tbl-app-transport}
+
+| Measure (code) | Driver | Item | Factor (2019 USD) | Database | Class | Life | Payer |
+|:--|:--|:--|:--|:--|:--|--:|:-:|
+| Appliance and building efficiency (SCOE:INC_EFFICIENCY_APPLIANCE, DEC_DEMAND_HEAT) | Building energy saved | Measures | 0.02/kWh saved (5.56 million/PJ) | – | Running equivalent (rate undocumented) | 25 | P5/P4; public buildings P1 |
+| Heat pumps (SCOE:SHIFT_FUEL_HEAT) | Heat switched | Capital | 5/MWh$_{th}$, "reaching cost parity in 10 years" | 1.67/MWh$_{th}$, applied to total building energy; falls 11.3% a year | Running equivalent (rate undocumented) | 25 | P5/P4 |
+| — | — | Non-fuel running cost | −0.90/MWh$_{th}$ | – | Running | – | – |
+| Industrial efficiency (INEN:INC_EFFICIENCY_ENERGY) | Industrial energy saved | Capital | 10/GJ | – | Running equivalent (levelized) | 25 | P5 |
+| Low-temperature heat to electricity (INEN:SHIFT_FUEL_HEAT) | Heat switched | Capital; running | 5/MWh$_{th}$; −0.90/MWh$_{th}$ | 1.67/MWh$_{th}$ | Running equivalent; running | 25 | P5/P4 |
+| High-temperature heat to electricity or hydrogen (same) | Heat switched | Capital; running | 15/MWh$_{th}$; −0.90/MWh$_{th}$ | 5.0/MWh$_{th}$; combined line 2.34 | Running equivalent; running | 25 | P4 |
+| Material efficiency (IPPU:DEC_DEMAND, INEN:INC_EFFICIENCY_PRODUCTION) | Cement and steel avoided | Material saved | −85/t cement, −370/t steel | – | Running (saving) | – | P5 |
+| Clinker substitution (IPPU:DEC_CLINKER) | Clinker replaced | Saving | −47/t cement | – | Running (saving) | – | P5 |
+| F-gases (IPPU:DEC_HFCS, _PFCS, _OTHER_FCS) | CO$_2$e abated | Abatement | 63/tCO$_2$e | – | Running | – | P5/P4 |
+| N$_2$O in adipic and nitric acid (IPPU:DEC_N2O) | CO$_2$e abated | Abatement | 13/tCO$_2$e | – | Running | – | P5 |
+| Industrial capture (PFLO:INC_IND_CCS) | Product made with capture (level) | Capture | Cement 40, steel 50, chemicals 100, documented "per ton CO$_2$" | Per tonne of product; annual change 0, so check the function before reuse | Capital and running | 25 | P4 |
+| Cement process air pollution | Cement made | Benefit | 45/t cement | – | Benefit | – | – |
+
+: Building and industry factors are levelized at undocumented rates, and the database holds heat factors a third of the documented values, so upfront capital here must be re-derived. {#tbl-app-buildings}
+
+| Measure (code) | Driver | Item | Factor (2019 USD) | Database | Class | Life | Payer |
+|:--|:--|:--|:--|:--|:--|--:|:-:|
+| Precise fertilizer use (SOIL:DEC_N_APPLIED) | Nitrogen applied | Input saved; leaching avoided | −200/t; benefit 60/t | – | Running (saving); benefit | – | P5 |
+| Conservation agriculture (AGRC:INC_CONSERVATION_AGRICULTURE) | Area improved | Saving; soil health | −20/ha; benefit 350/ha | −41/ha | Running (saving); benefit | – | P4/P5 |
+| Rice management (AGRC:DEC_CH4_RICE) | Rice area managed | Saving | −30/ha | −31, stored per acre | Running (saving) | – | P4/P5 |
+| Enteric fermentation (LVST:DEC_ENTERIC_FERMENTATION) | Head treated | Feed additive | 40/head | Maximum application 0.8; cut 25% (cattle), 35% (sheep, goats) | Running | – | P4 |
+| Manure management (LSMM:INC_MANAGEMENT_*) | Livestock units treated | Treatment | 10/livestock unit | Sign reversed | Running (with digester capital) | 15 a | P4 |
+| Manure and wastewater biogas (LSMM:INC_CAPTURE_BIOGAS, TRWW:INC_CAPTURE_BIOGAS) | Biogas recovered | Capture; gas value | 17/MBtu; gas value 323.5/t | 500/t biogas (same cost in tonnes) | Capital and running | 20 a | P4 |
+| Supply-chain losses (AGRC:DEC_LOSSES_SUPPLY_CHAIN) | Food waste avoided | Cost; saving | 400/t; −500/t | – | Running | – | P5 |
+| Productivity (AGRC:INC_PRODUCTIVITY, LVST:INC_PRODUCTIVITY) | GDP | Research and extension | About 0.02% of GDP, 20% more outside the OECD | – | Running | – | P1 |
+| Healthier diets (PFLO:INC_HEALTHIER_DIETS) | People shifting diet | Grocery saving; health | −385/person; benefit 1,750/person | Health 350/person | Running (saving); benefit | – | P5 |
+| Halt deforestation (LNDU:DEC_DEFORESTATION) | Forest kept | Farm output forgone | Crop and livestock value | – | Running | – | P1/P4 |
+| Reforestation, rehabilitation, silvopasture (LNDU:INC_REFORESTATION, INC_LAND_REHABILITIATION, INC_SILVOPASTURE) | Secondary forest area | Planting | 45/ha a year (1,262/ha in the United States amortized over 15 years) | – | Capital | 15 | P1/P4 |
+| Forest ecosystem services | Forest area | Benefit | Not documented | Primary 500/ha, secondary 300/ha | Benefit | – | – |
+
+: Farm measures are running costs, most of them savings; only digesters and planting are capital. {#tbl-app-afolu}
+
+| Measure (code) | Driver | Item | Factor (2019 USD) | Database | Class | Life | Payer |
+|:--|:--|:--|:--|:--|:--|--:|:-:|
+| Collection (all solid-waste pathways) | Waste collected | Collection | 86/t | 60.2/t for open dump and recycling | Running | – | P1 |
+| Landfill, compost, digestion, recycling, incineration (WASO:INC_LANDFILLING, INC_ANAEROBIC_AND_COMPOST, INC_RECYCLING, INC_ENERGY_FROM_INCINERATION) | Waste by pathway | Management, annualized | Open dump 10, landfill 57, compost 61, digester 86, recycling 72, incineration 70 per t | Open dump 7 | Capital and running | 20 a | P1/P3 |
+| Ending open dumping | Waste moved off dumps | Benefit (health and environment) | 115/t | – | Benefit | – | – |
+| Landfill and digester gas (WASO:INC_CAPTURE_BIOGAS, INC_ENERGY_FROM_BIOGAS) | Gas recovered | Recovery; gas value; incineration energy | 500/t gas; value 323.5/t; 170/t feedstock | – | Capital and running | 20 a | P3/P4 |
+| Consumer food waste (WASO:DEC_CONSUMER_FOOD_WASTE) | Food waste avoided | Programme; value | 100/t; −700/t | – | Running | – | P1/P5 |
+| Sanitation (WALI:INC_TREATMENT_RURAL, _URBAN; TRWW:INC_COMPLIANCE_SEPTIC) | People by pathway | Per person a year | Rural improved 68.1, safely managed 102.1; urban improved 34.1, safely managed 66.2 | – | Capital and running | 30 a | P1/P2 |
+| Wastewater treatment (WALI:INC_TREATMENT_INDUSTRIAL and urban) | Cubic meters treated | Per m$^3$, cumulative | Sewerage 0.06, primary 0.64, secondary 1.44, tertiary 3.04 | – | Capital and running | 30 a | P2/P1 |
+| Sanitation and water-quality benefits | People; pollutants | Health; water quality | 200/person to safe sanitation; 51/kg P, 20/kg N, 0.13/kg COD, 0.06/kg BOD | – | Benefit | – | – |
+
+: Waste and wastewater costs are annualized in SISEPUEDE; splitting them into capital and running cost needs the assumed lives shown. {#tbl-app-waste}
+
+**Four corrections apply before the factors are used outside Latin America.** First, country unit costs replace the factors where data exist; otherwise the factors are used as they are, with the country price level as a sensitivity (@eq-cost). Second, levelized capital factors are de-levelized by @eq-delev. Third, the nine documentation–database differences are settled against the source each cites. The two heat factors and the gas air-pollution factor for power, ten times smaller in the database, matter most. Fourth, mode-shift infrastructure gets a capital line from national project data: rail, metro and bus-rapid-transit capital per passenger-kilometer of new capacity, public (P1).

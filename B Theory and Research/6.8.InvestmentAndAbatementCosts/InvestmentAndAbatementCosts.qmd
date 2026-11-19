@@ -6,10 +6,12 @@
 # (5.Notes/PeerReview-2026-11-18.md) taken in; v0.1 in 8.PreviousVersions/.
 # v0.3 (18 Nov 2026): capital costs follow legacy CPAT (country data, else the source value, no price-level scaling);
 # price pass-through as in legacy CPAT stated; paper 5.1 v0.3 cited for the active-set rule.
+# v0.4 (19 Nov 2026): Appendix B, every SISEPUEDE transformation mapped to CPAT with its base size and the
+# abatement-cost-curve method (made by 2.Source/make_appendix_b.py; country-run results only in the internal edition).
 title: "Pricing the Measures: Investment Needs, Abatement Costs and Public Money in CPAT"
 subtitle: "A Methodology for Public Investment, Green Subsidies and Fees, Built on the SISEPUEDE Cost Factors"
 series: "Theory and Research Note No. 6.8"
-version: "0.3"
+version: "0.4"
 author:
   - name: "Stephen J. Stretton"
     note: "Writing in a personal capacity."
@@ -33,7 +35,7 @@ format:
     linestretch: 1.3
 ---
 
-*Theory and Research Note No. 6.8, version 0.3, November 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion to papers 5.1 (the CPAT mitigation module), 6.3 (public investment in CPAT), 6.4 (a common activity layer for CPAT and SISEPUEDE) and 6.5 (the macro-fiscal-energy scenario tool). Unit cost factors are from the public documentation and code of SISEPUEDE's cost-benefit module; no country result is reported.*
+*Theory and Research Note No. 6.8, version 0.4, November 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. Companion to papers 5.1 (the CPAT mitigation module), 6.3 (public investment in CPAT), 6.4 (a common activity layer for CPAT and SISEPUEDE) and 6.5 (the macro-fiscal-energy scenario tool). Unit cost factors are from the public documentation and code of SISEPUEDE's cost-benefit module; no country result is reported.*
 
 # Executive summary {#sec-summary .unnumbered}
 
@@ -375,7 +377,7 @@ Contracts for difference, feed-in premiums and results-based payments are runnin
 
 : CPAT's levers reach SISEPUEDE's transformations many-to-many, and four non-energy CPAT sectors each stand for seven to fifteen transformations. M: many transformations to one CPAT sector; O: one SISEPUEDE subsector to several CPAT sectors; G: gap. Codes as in the SISEPUEDE documentation, without the TFR: prefix [@SISEPUEDEDocs]. {#tbl-mapping}
 
-**Three gaps matter most for fiscal questions.** First, SISEPUEDE has no price instruments, so the linked system needs CPAT for prices and SISEPUEDE for measures, the division of labor this note adopts. Second, CPAT has no physical capital outside power and road vehicles, so SISEPUEDE's measures are the only source of physical investment in buildings, industry, agriculture, land use and waste. Third, neither model splits a measure's cost between the state, households and firms; the payer types of @sec-public fill that gap.
+**Three gaps matter most for fiscal questions.** First, SISEPUEDE has no price instruments, so the linked system needs CPAT for prices and SISEPUEDE for measures, the division of labor this note adopts. Second, CPAT has no physical capital outside power and road vehicles, so SISEPUEDE's measures are the only source of physical investment in buildings, industry, agriculture, land use and waste. Third, neither model splits a measure's cost between the state, households and firms; the payer types of @sec-public fill that gap. Appendix B lists all 74 SISEPUEDE transformations with their CPAT sector, the size of the base each acts on in CPAT, the method for an abatement cost curve, and a semi-elasticity model in which taxes, fees and payments per tonne all add to a sectoral carbon price and taxes and fees also cut demand.
 
 # Integration into CPAT {#sec-integration}
 
@@ -642,3 +644,111 @@ Gasoline emits 2.27 kilograms of CO$_2$ per liter, from the IPCC default factor 
 : Waste and wastewater costs are annualized in SISEPUEDE; splitting them into capital and running cost needs the assumed lives shown. {#tbl-app-waste}
 
 **Four corrections apply before the factors are used outside Latin America.** First, country unit costs replace the factors where data exist; otherwise the factors are used as they are, with the country price level as a sensitivity (@eq-cost). Second, levelized capital factors are de-levelized by @eq-delev. Third, the nine documentation–database differences are settled against the source each cites. The two heat factors and the gas air-pollution factor for power, ten times smaller in the database, matter most. Fourth, mode-shift infrastructure gets a capital line from national project data: rail, metro and bus-rapid-transit capital per passenger-kilometer of new capacity, public (P1).
+
+# Appendix B: SISEPUEDE transformations mapped to CPAT {#sec-appendix-transformations .appendix}
+
+**Every SISEPUEDE transformation has a CPAT sector, a base in CPAT whose size can be measured, and a place on an abatement cost curve.** @tbl-app-transformations lists the 74 transformations in SISEPUEDE's own list (`attributes/attribute_transformer_code.csv` in the SISEPUEDE repository, commit 9bf976c; the baseline is left out) [@SISEPUEDECode]. For each it gives the CPAT sector it maps to and the type of match (@tbl-mapping), the part of CPAT's energy use or emissions it acts on, and how big that base is: the median share across countries of national energy use (2022) or of national emissions excluding land use (2024), from CPAT's public data [@CPATAI2026]. Energy use is end-use non-electric fuel plus all inputs to power. The table also gives the transformation's default magnitude in SISEPUEDE's code (`transformers/transformers.py`) and the number of cost lines the cost-benefit module holds for it (Appendix A gives the factors) [@CBSSPCode].
+
+**An abatement cost curve follows from running each transformation alone.** Each transformation is run on its own against the baseline, and also left out of the full package. Its abatement cost is @eq-mac on the run's costs and tonnes, and its potential is the tonnes it abates. Under the uptake rule of @eq-uptake, half of a measure's potential is taken up at its *half-potential carbon price*, its abatement cost plus half the ramp width ($c_m + h_m/2$, 25 dollars per tonne at the default). For a group of measures, the potential taken up at carbon price $\tau$ is $\sum_m \bar E_m\,\ell_m(\tau)$; the group's half-potential price is where that sum reaches half the group's potential, and the slope there is the share of potential added per dollar. Measures run alone overlap, so their potentials describe relative size and are not added for policy totals; the leave-one-out run shows where the overlaps are.
+
+**A semi-elasticity model turns the curve into a response to taxes, fees and subsidies.** A carbon tax $\tau$, a sector fee $f_g$ (the $\tau_o$ of @sec-nonenergy) and a sector payment $b_g$ per tonne abated all add to the price that a sector's measures respond to. The tax and the fee also raise the price of the sector's output and so cut demand; the payment does not. For sector group $g$, measure $m$ and CPAT base $b$:
+
+$$
+\pi_g = \tau + f_g + b_g, \qquad \ell_m = \min\!\Big(1, \max\!\Big(0, \frac{\pi_g - \max(c_m, \underline{c})}{h}\Big)\Big), \qquad d_m = M_m\,\omega_m,
+$$ {#eq-semi-uptake}
+
+where $c_m$ is the measure's standalone abatement cost, $\underline{c}$ a floor (zero by default, so that no measure is taken up without a price), $M_m$ SISEPUEDE's default magnitude and $\omega_m$ the share of the CPAT base it reaches. Measures on one base combine multiplicatively, bases add up within the group, and demand responds to the priced instruments only:
+
+$$
+A_g = \min\!\Big(1, \frac{1}{S_g}\sum_{b \in g} s_b\Big[1 - \prod_{m \in b}(1 - d_m \ell_m)\Big]\Big), \qquad E_g = E^{B}_g\,(1 - A_g)\,e^{\varepsilon^{D}_g(\tau + f_g)},
+$$ {#eq-semi-emissions}
+
+where $s_b$ is the size of base $b$ in CPAT, $S_g$ that of the group, $E^B_g$ baseline emissions and $\varepsilon^D_g$ the demand semi-elasticity. The semi-elasticities of the sector's emissions follow:
+
+$$
+\frac{\partial \ln E_g}{\partial \tau} = \frac{\partial \ln E_g}{\partial f_g} = -\frac{\partial A_g/\partial \pi_g}{1 - A_g} + \varepsilon^{D}_g, \qquad \frac{\partial \ln E_g}{\partial b_g} = -\frac{\partial A_g/\partial \pi_g}{1 - A_g},
+$$ {#eq-semi}
+
+with $\partial A_g/\partial\pi_g = S_g^{-1}\sum_b s_b R_b \sum_{m\in b} d_m\,\mathbb{1}[\text{$m$ in its ramp}]/[h(1 - d_m\ell_m)]$ and $R_b = \prod_{m\in b}(1 - d_m\ell_m)$. Revenue is $(\tau + f_g)E_g$ and the payment costs $b_g A_g E^B_g$, paid on every adopter as in @eq-nonenergy-fiscal. A payment buys abatement only through the technology term, so per dollar it cuts less than a tax wherever demand responds; but it raises no prices. The model is implemented as a workbook with every input editable; the reach $\omega_m$ and the demand semi-elasticities are labelled assumptions.
+
+**Results of a country run are held separately.** The method has been applied to one SISEPUEDE country run; its abatement costs are not reported here, in line with this note's rule of reporting no country results.
+
+| Transformation | CPAT sector | Map | Base in CPAT | Default magnitude | Cost lines |
+|:--|:--|:--|:--|:--|--:|
+| AGRC:DEC\_CH4\_RICE | Agriculture (agr) | M:1 | 0.0% GHG | magnitude=0.45 | 1 |
+| AGRC:DEC\_DEMAND\_FOR\_UNHEALTHY\_CROPS | Agriculture (agr) | M:1 (gap: demand)) | 14.7% GHG | – | 0 |
+| AGRC:DEC\_EXPORTS | Agriculture (agr) | M:1 (gap: demand)) | 14.7% GHG | magnitude=0.5 | 0 |
+| AGRC:DEC\_LOSSES\_SUPPLY\_CHAIN | Agriculture (agr) | M:1 (gap: demand)) | 14.7% GHG | magnitude=0.3 | 2 |
+| AGRC:INC\_CONSERVATION\_AGRICULTURE | LULUCF (lucf) / agriculture | M:1 | 0.0% GHG | magnitude\_burned=0.0; magnitude\_remove… | 2 |
+| AGRC:INC\_PRODUCTIVITY | Agriculture (agr) | M:1 | 14.7% GHG | magnitude=0.2 | 1 |
+| AGRC:INC\_RESIDUE\_REMOVAL | Agriculture (agr) | M:1 | 4.2% GHG | – | 0 |
+| FRST:INCREASE\_SEQUESTRATION | LULUCF (lucf) | M:1 | 0.0% GHG | magnitude=0.05 | 0 |
+| LNDU:BOUND\_CLASSES | LULUCF (lucf) | M:1 | 0.0% GHG | – | 0 |
+| LNDU:DEC\_DEFORESTATION | LULUCF (lucf) | M:1 | 0.0% GHG | magnitude=0.99999 | 0 |
+| LNDU:DEC\_CLASS\_LOSS | LULUCF (lucf) | M:1 | 0.0% GHG | magnitude=0.99999 | 0 |
+| LNDU:DEC\_SOC\_LOSS\_PASTURES | LULUCF (lucf) | M:1 | 0.0% GHG | magnitude=0.95 | 0 |
+| LNDU:INC\_LAND\_REHABILITIATION | LULUCF (lucf) | M:1 | 0.0% GHG | – | 1 |
+| LNDU:INC\_REFORESTATION | LULUCF (lucf) | M:1 | 0.0% GHG | magnitude=0.2 | 0 |
+| LNDU:INC\_SILVOPASTURE | LULUCF (lucf) | M:1 | 0.0% GHG | magnitude=0.1 | 1 |
+| LNDU:PLUR | LULUCF (lucf) | M:1 | 0.0% GHG | magnitude=0.5 | 0 |
+| LSMM:INC\_CAPTURE\_BIOGAS | Agriculture (agr) | M:1 | 8.1% GHG | magnitude=0.9 | 0 |
+| LSMM:INC\_MANAGEMENT\_CATTLE\_PIGS | Agriculture (agr) | M:1 | 8.1% GHG | – | 1 |
+| LSMM:INC\_MANAGEMENT\_OTHER | Agriculture (agr) | M:1 | 8.1% GHG | – | 0 |
+| LSMM:INC\_MANAGEMENT\_POULTRY | Agriculture (agr) | M:1 | 8.1% GHG | – | 0 |
+| LVST:DEC\_ENTERIC\_FERMENTATION | Agriculture (agr) | M:1 | 8.1% GHG | – | 1 |
+| LVST:DEC\_EXPORTS | Agriculture (agr) | M:1 (gap: demand)) | 8.1% GHG | magnitude=0.5 | 0 |
+| LVST:INC\_PRODUCTIVITY | Agriculture (agr) | M:1 | 8.1% GHG | magnitude=0.3 | 1 |
+| SOIL:DEC\_LIME\_APPLIED | Agriculture (agr) | M:1 | 14.7% GHG | magnitude=0.2 | 0 |
+| SOIL:DEC\_N\_APPLIED | Agriculture (agr) | M:1 | 4.2% GHG | magnitude=0.2 | 0 |
+| TRWW:INC\_CAPTURE\_BIOGAS | Waste (wst) | M:1 (gap: liquid waste)) | 6.0% GHG | magnitude=0.85 | 0 |
+| TRWW:INC\_COMPLIANCE\_SEPTIC | Waste (wst) | M:1 (gap: liquid waste)) | 6.0% GHG | magnitude=0.9 | 0 |
+| WALI:INC\_TREATMENT\_INDUSTRIAL | Waste (wst) | M:1 (gap: liquid waste)) | 6.0% GHG | – | 0 |
+| WALI:INC\_TREATMENT\_RURAL | Waste (wst) | M:1 (gap: liquid waste)) | 6.0% GHG | – | 0 |
+| WALI:INC\_TREATMENT\_URBAN | Waste (wst) | M:1 (gap: liquid waste)) | 6.0% GHG | – | 0 |
+| WASO:DEC\_CONSUMER\_FOOD\_WASTE | Waste (wst) | M:1 | 6.0% GHG | magnitude=0.3 | 2 |
+| WASO:DEC\_MCF\_LANDFILLS | Waste (wst) | M:1 | 6.0% GHG | – | 0 |
+| WASO:INC\_ANAEROBIC\_AND\_COMPOST | Waste (wst) | M:1 | 6.0% GHG | magnitude\_biogas=0.475; magnitude\_comp… | 0 |
+| WASO:INC\_CAPTURE\_BIOGAS | Waste (wst) | M:1 | 6.0% GHG | magnitude=0.85 | 0 |
+| WASO:INC\_ENERGY\_FROM\_BIOGAS | Waste (wst); power (pow) | M:1 | 6.0% GHG | magnitude=0.85 | 0 |
+| WASO:INC\_ENERGY\_FROM\_INCINERATION | Waste (wst); power (pow) | M:1 | 6.0% GHG | magnitude=0.85 | 0 |
+| WASO:INC\_LANDFILLING | Waste (wst) | M:1 | 6.0% GHG | magnitude=1.0 | 0 |
+| WASO:INC\_RECYCLING | Waste (wst) | M:1 | 6.0% GHG | magnitude=0.95 | 0 |
+| CCSQ:INC\_CAPTURE | None (gap) | Gap | – | magnitude=50 | 1 |
+| ENFU:ADJ\_EXPORTS | Fuel supply (oen / ftr) | 1:1 | – | magnitude=1.5 | 0 |
+| ENFU:ADJ\_PRICES | All energy sectors | 1:M; CPAT is the price model | 100.0% energy | magnitude=1.2 | 0 |
+| ENTC:DEC\_LOSSES | Power (pow) | Gap (CPAT losses fixed) | 18.9% energy | magnitude=0.06; min\_loss=0.02 | 1 |
+| ENTC:LEAST\_COST\_SOLUTION | Power (pow) | M:1 | 18.9% energy | acceleration\_factor=2.0 | 0 |
+| ENTC:TARGET\_CLEAN\_HYDROGEN | Fuel transformation (ftr) / power | 1:M | – | magnitude=0.95 | 0 |
+| ENTC:TARGET\_RENEWABLE\_ELEC | Power (pow) | M:1 | 18.9% energy | magnitude=0.95 | 0 |
+| FGTV:DEC\_LEAKS | Fuel supply (oen); methane fee | 1:1 | 3.1% GHG | magnitude=0.8 | 1 |
+| FGTV:DEC\_VENTING | Fuel supply (oen); methane fee | 1:1 | 3.1% GHG | magnitude=0.2 | 0 |
+| FGTV:INC\_FLARE | Fuel supply (oen); methane fee | 1:1 | 3.1% GHG | magnitude=0.8 | 1 |
+| INEN:INC\_EFFICIENCY\_ENERGY | Industry (8 sectors) | 1:M | 18.1% energy | magnitude=0.3 | 1 |
+| INEN:INC\_EFFICIENCY\_PRODUCTION | Industry (8 sectors) | 1:M | 18.1% energy | magnitude=0.4 | 0 |
+| INEN:SHIFT\_FUEL\_HEAT | Industry (8 sectors) | 1:M | 9.4% energy | frac\_switchable=0.9; frac\_high\_given\_h… | 6 |
+| SCOE:DEC\_DEMAND\_HEAT | Residential, services | 1:M | 19.9% energy | magnitude=0.5 | 1 |
+| SCOE:INC\_EFFICIENCY\_APPLIANCE | Residential, services | 1:M | 7.5% energy | magnitude=0.5; magnitude=0.75 | 1 |
+| SCOE:INC\_EFFICIENCY\_HEAT | Residential, services | 1:M | 19.9% energy | dict\_cats\_to\_magnitude=0.2 | 0 |
+| SCOE:SHIFT\_FUEL\_HEAT | Residential, services | 1:M | 4.9% energy | magnitude=0.95 | 2 |
+| TRDE:DEC\_DEMAND | Road, rail, aviation, navigation | 1:M | 22.0% energy | magnitude=0.25 | 0 |
+| TRNS:INC\_EFFICIENCY\_ELECTRIC | Road transport (rod) | M:1 | 0.0% energy | magnitude=0.25 | 1 |
+| TRNS:INC\_EFFICIENCY\_NON\_ELECTRIC | Road transport (rod) | M:1 | 19.8% energy | magnitude=0.25 | 2 |
+| TRNS:INC\_OCCUPANCY\_LIGHT\_DUTY | Road transport (rod) | M:1 | 6.9% energy | magnitude=0.25 | 0 |
+| TRNS:SHIFT\_FUEL\_LIGHT\_DUTY | Road transport (rod) | M:1 | 6.9% energy | magnitude=0.7 | 2 |
+| TRNS:SHIFT\_FUEL\_MARITIME | Navigation (nav) | 1:1 | 0.0% energy | magnitude=0.7 | 1 |
+| TRNS:SHIFT\_FUEL\_MEDIUM\_DUTY | Road transport (rod) | M:1 | 9.0% energy | magnitude=0.7 | 3 |
+| TRNS:SHIFT\_FUEL\_RAIL | Rail (ral) | 1:1 | 0.0% energy | magnitude=0.25 | 2 |
+| TRNS:SHIFT\_MODE\_FREIGHT | Road, aviation to rail | M:1 (gap: no mode choice in CPAT)) | 9.0% energy | magnitude=0.2 | 0 |
+| TRNS:SHIFT\_MODE\_PASSENGER | Road transport (rod) | M:1 (gap: no mode choice in CPAT)) | 6.9% energy | magnitude=0.3 | 0 |
+| TRNS:SHIFT\_MODE\_REGIONAL | Road, aviation | M:1 (gap: no mode choice in CPAT)) | 20.1% energy | – | 0 |
+| IPPU:DEC\_CLINKER | Industrial processes (ipr) | M:1 | 4.2% GHG | magnitude=0.5 | 1 |
+| IPPU:DEC\_DEMAND | Industrial processes (ipr) | M:1 | 6.8% GHG | magnitude=0.3 | 0 |
+| IPPU:DEC\_HFCS | Industrial processes (ipr) | M:1 (gap: no F-gas lever)) | 1.4% GHG | magnitude=0.1 | 1 |
+| IPPU:DEC\_N2O | Industrial processes (ipr) | M:1 | 0.0% GHG | magnitude=0.1 | 1 |
+| IPPU:DEC\_OTHER\_FCS | Industrial processes (ipr) | M:1 (gap: no F-gas lever)) | 1.4% GHG | magnitude=0.1 | 1 |
+| IPPU:DEC\_PFCS | Industrial processes (ipr) | M:1 (gap: no F-gas lever)) | 1.4% GHG | magnitude=0.1 | 1 |
+| PFLO:INC\_HEALTHIER\_DIETS | Agriculture (agr) | Gap (demand) | 14.7% GHG | magnitude\_red\_meat=0.5 | 2 |
+| PFLO:INC\_IND\_CCS | Industry, industrial processes | 1:M | 2.0% energy | dict\_magnitude\_eff=0.9 | 1 |
+
+: Every SISEPUEDE transformation maps to a CPAT sector whose base can be sized from CPAT's data; four non-energy sectors take most transformations. Base in CPAT: median share across countries of national energy use (energy) or of emissions excluding land use (GHG). Map: M:1 many transformations to one CPAT sector; 1:M one to several; gap as in @tbl-mapping. Cost lines: transformation-cost rows in the cost-benefit module. Sources: SISEPUEDE repository (commit 9bf976c); cost-benefit module (commit adc22ba); CPAT public data. {#tbl-app-transformations}
+

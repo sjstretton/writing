@@ -1,6 +1,6 @@
 # 6.8 Pricing the Measures: Investment Needs, Abatement Costs and Public Money in CPAT
 
-**Status:** methodology note v0.3 (Theory and Research Note No. 6.8), 18 Nov 2026. v0.2 took in a referee-style peer review (`5.Notes/PeerReview-2026-11-18.md`). v0.3 (Stephen, 18 Nov): capital costs follow legacy CPAT (country unit costs where data exist, else the source value, no price-level scaling); a paragraph on CPAT's price pass-through (new policies in full for fuels; price controls only on supply-cost changes, by a global setting; electricity by the power pass-through setting); interim assumption defaults accepted. New research awaiting Stephen's review; not on the website; no brief or deck. v0.1 and v0.2 are in `8.PreviousVersions/`. Joins `D Modelling/6.ModularUpgrades/` once reviewed.
+**Status:** methodology note v0.4 (19 Nov 2026: Appendix B, every SISEPUEDE transformation mapped to CPAT with the size of its base, the abatement-cost-curve method and a semi-elasticity model in which taxes, fees and payments per tonne all add to a sectoral carbon price and taxes and fees also cut demand; made by `2.Source/make_appendix_b.py` from the public subset `2.Source/transformations_public.csv`. An internal edition with one country run's results is kept with the project files). Earlier: v0.3 (Theory and Research Note No. 6.8), 18 Nov 2026. v0.2 took in a referee-style peer review (`5.Notes/PeerReview-2026-11-18.md`). v0.3 (Stephen, 18 Nov): capital costs follow legacy CPAT (country unit costs where data exist, else the source value, no price-level scaling); a paragraph on CPAT's price pass-through (new policies in full for fuels; price controls only on supply-cost changes, by a global setting; electricity by the power pass-through setting); interim assumption defaults accepted. New research awaiting Stephen's review; not on the website; no brief or deck. v0.1 and v0.2 are in `8.PreviousVersions/`. Joins `D Modelling/6.ModularUpgrades/` once reviewed.
 
 **Question.** How should CPAT estimate the investment each mitigation measure needs, what each tonne it abates costs, and how much of that falls on the budget, through public investment, green subsidies, fees outside energy and public-private partnerships?
 
@@ -28,12 +28,12 @@ A viability gap is the investor's loss at retail prices. Energy measures enter C
 
 | File | What |
 |---|---|
-| `InvestmentAndAbatementCosts.qmd` | Master (v0.3) |
+| `InvestmentAndAbatementCosts.qmd` | Master (v0.4) |
 | `InvestmentAndAbatementCosts.bib` | References. Entries reused from papers 5.1, 6.3 and 6.4 were checked there. Added here: the SISEPUEDE cost-benefit documentation and code, the SISEPUEDE docs, and IPCC 2006 Vol. 4 |
 | `InvestmentAndAbatementCosts.docx` | Rendered in the house format |
 | `2.Source/worked_examples.py`, `worked_examples_output.txt` | Section 11 examples (electric-car subsidy, cattle methane payment, partnership conversion) and the partnership table, plus a check of the corrected active-set rule |
 | `5.Notes/PeerReview-2026-11-18.md` | The peer review of v0.1 |
-| `8.PreviousVersions/` | v0.1 (qmd, docx, code), v0.2 (qmd, docx) |
+| `8.PreviousVersions/` | v0.1 (qmd, docx, code), v0.2 and v0.3 (qmd, docx) |
 
 Render from the repository root. Equation and table numbers need the cross-reference filter as well as the house filter:
 
