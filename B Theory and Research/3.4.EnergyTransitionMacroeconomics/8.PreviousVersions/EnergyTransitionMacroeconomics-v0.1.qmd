@@ -1,0 +1,295 @@
+---
+# MASTER - this is the file to edit. The .docx and .pdf beside it are made from it (house working-paper format).
+# Note 3.4, new research awaiting review in B Theory and Research. Joins C Policy and FInance/3.FinanceAndRisk once reviewed.
+# v0.1 (20 Nov 2026): first full draft. Egypt numbers: 2.Source/egypt_estimates.py (illustrative tool results, public data).
+# Evidence record: 5.Notes/EvidenceCheck-2026-11-20-*.md.
+title: "The Energy Transition Swaps a Fuel Bill for a Capital Bill"
+subtitle: "Thirty Stylized Facts, What They Mean for Macroeconomic Policy, and Five Simple World Bank Products, with First Estimates for Egypt"
+short-title: "A Fuel Bill for a Capital Bill"
+series: "Theory and Research Note No. 3.4"
+version: "0.1"
+author:
+  - name: "Stephen J. Stretton"
+    note: "Writing in a personal capacity."
+date: "November 2026"
+abstract: |
+  A fuel-based energy system is paid for every day; an electric one is paid for when it is built. This note states thirty stylized facts of the energy transition, checks each against the evidence, and draws their implications for macroeconomic policy. Five follow. The cost of capital becomes the price of energy. Energy price rises have diminishing returns, while deployment has increasing returns. The fiscal question moves from subsidies to guarantees. The external accounts worsen before they improve. And a high cost of capital makes waiting look free, while the capacity to move fast must come from outside. First estimates for Egypt give the orders of magnitude: a rapid transition costs a net 1.8 percent of GDP a year by 2035 at the local cost of capital and 0.2 percent at a de-risked rate. Five simple products that the World Bank could offer would close most of that gap: a payment guarantee, a refinancing bond, a grid loan, a reform-linked guarantee line and a currency window. The note is a lead-in to work on a global green deal.
+keywords: [energy transition, cost of capital, de-risking, guarantees, carbon pricing, increasing returns, Egypt]
+jel: [E22, H54, H63, O13, Q43, Q48]
+bibliography: EnergyTransitionMacroeconomics.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+number-sections: true
+crossref:
+  fig-prefix: Figure
+  tbl-prefix: Table
+  sec-prefix: Section
+format:
+  docx: default
+---
+
+*Theory and Research Note No. 3.4, November 2026. Stephen J. Stretton, writing in a personal capacity. The views expressed are the author's own and do not represent those of any institution with which he is or has been affiliated. The Egypt results are illustrative results from the author's tools, built on public data; they are not official estimates.*
+
+# Executive summary {.unnumbered}
+
+**A fuel-based energy system is paid for every day; an electric one is paid for when it is built.** In the International Energy Agency's net zero pathway, electricity rises from a fifth of final energy use to a half by 2050, and capital from under 60 percent of the cost of supplying it to about 80 percent. Wind and solar have no fuel. What a country pays for energy then depends on what it pays for capital and on who stands behind the payment. This note asks what that change means for macroeconomic policy. It states thirty stylized facts of the transition, checks each against the evidence and draws five implications.
+
+**First, the cost of capital becomes the price of energy.** Wind and solar now undercut new fossil plants, but their cost is almost all capital. In Egypt solar power costs \$29 per megawatt-hour when capital costs 6 percent, \$39 at 10 percent and \$52 at 15, against \$66 for the gas alone in a gas plant. Fuel-price shocks fade from the balance of payments; interest-rate, refinancing and currency risk take their place.
+
+**Second, energy price rises have diminishing returns, while deployment has increasing returns.** Each \$50 step in a carbon price cuts road fuel use by less than the step before, and governments postpone or reverse the steps: 41 countries saw fuel riots between 2005 and 2018. Each doubling of deployment makes the next unit cheaper: battery storage costs fell 93 percent between 2010 and 2024. A strategy led by prices buys less abatement with each unit of inflation and political capital. A strategy led by investment gets cheaper as it grows. Prices still do one job well, which is to change which plants run.
+
+**Third, the fiscal question moves from subsidies to guarantees.** Assets that last 25 years are built against long contracts, and investors price the buyer, which is usually a state company. Development banks have lost almost nothing on sovereign lending, because they are paid first. A guarantee that lends that standing saves the borrower the whole spread and costs the guarantor the expected loss. It is cheap, not free: it is a contingent liability for the host, and it uses the guarantor's capital as a loan does.
+
+**Fourth, the external accounts worsen before they improve.** The investment is several percent of GDP a year, it arrives before the fuel savings, and about half of it is imported equipment, most of it Chinese.
+
+**Fifth, waiting looks free at a high cost of capital, and the capacity to move fast must come from outside.** A high discount rate hides the cost of delay. The pace required is several times what developing countries build and save today, so the engineering and the finance must come largely from international consortia.
+
+**First estimates for Egypt give the orders of magnitude.** A rapid transition raises energy investment to 6 percent of GDP a year. At the local cost of capital, 10.3 percent, it costs a net 1.8 percent of GDP a year by 2035. At a de-risked 6 percent, about what the World Bank's longest loans cost today, it costs 0.2 percent. The difference, 1.6 percent of GDP a year, is the cost of capital itself. Power and transport pay for themselves at either rate; industry does not at any rate a lender would offer. De-risking lowers the bill, and cost-recovery tariffs decide who pays it: they cut the budget's share from 2.0 to 0.9 percent of GDP. If every milestone slips five years, the present value of the program's cost falls by \$10 billion at the local rate and rises by \$9 billion at the de-risked one. Egypt's recent solar and wind contracts are priced at about 2.5 US cents a kilowatt-hour, because the state carries their risk in dollars. That model cannot carry thirty billion dollars a year.
+
+**Five simple products would carry it.** A payment guarantee commits the Bank to see that the buyer of the power pays on time. A refinancing bond pools plants that are running and refinances them with a Bank-backed bond, part of it in local currency. A grid loan is long money for grids built ahead of demand. A reform-linked guarantee line grows as a government keeps its reforms. A currency window finances imported equipment in the supplier's currency. Behind them stands a buffer fund of donor capital that takes losses second, so that the Bank's capital goes further. All five are sold through program tenders that bring outside consortia to build and finance at scale.
+
+**Together they outline a global green deal.** Its parts are capital at the de-risked rate in exchange for policy kept, tenders at program scale, a reward to governments for the climate benefit that national accounts do not count, and capital held behind the guarantees. For one middle-income country the gap between two costs of capital is worth 1.6 percent of GDP a year. Moving that gap across the developing world would be the largest climate transfer available, and most of it would not be a transfer.
+
+# Energy is becoming a capital good {#sec-intro}
+
+**The energy transition replaces fuel with machines.** In the IEA's net zero pathway the share of electricity in final energy use rises from 20 percent in 2020 to 50 percent in 2050, and the share of capital in the cost of supplying electricity rises from under 60 percent to about 80 percent [@IEA2021]. On stated policies the share of electricity reaches only 31 percent, so the change is a choice, not a forecast [@IEA2025WEO]. Where it is made, a country stops buying energy by the tanker and starts buying it by the loan.
+
+**Egypt shows what the fuel system costs a finance ministry.** In the first half of 2026 Egypt spent \$6.0 billion on imported gas, 73 percent more than a year earlier, after a regional war raised prices [@Enterprise2026Cost]. The state oil company's debts carry government guarantees worth 18 percent of GDP, and interest absorbs about 73 percent of government revenue [@IMF2026Egypt56]. A country in that position cannot price its way out through dearer energy, and it cannot borrow at 10 percent to build assets that pay at 6.
+
+**This note asks what the stylized facts of the transition imply for macroeconomic policy.** It states thirty facts and checks each against published evidence. Most are familiar; four are stated here as facts in their own right: the diminishing returns of price rises, the increasing returns of deployment, the hidden cost of waiting and the need for outside capacity. @sec-facts draws the implications in five groups. @sec-egypt puts first numbers on them for Egypt, with the author's own tools. @sec-products sets out five simple financial products that the World Bank could offer, each from an earlier paper in this series. @sec-deal reads the result as the outline of a global green deal. The cost-of-capital literature has shown that developing countries pay more for clean energy capital [@IEA2024; @Ameli2021]. What this note adds is the macroeconomic reading of the facts taken together, and a first estimate by sector of what the gap is worth to one country.
+
+# Thirty stylized facts and what they imply {#sec-facts}
+
+**The facts fall into five groups, and each group changes one part of macroeconomic policy.** @tbl-facts lists them with the implication of each and a verdict on the evidence. Appendix A gives the evidence and sources fact by fact. Twenty are supported as stated, eight hold with a caveat that matters, and two rest on an assumption or could not be checked.
+
+| # | Stylized fact | What it means for macroeconomic policy | Evidence |
+|:-----|:-----------------------------|:-----------------------------------|:-----------|
+| | **A. Energy becomes capital** | | |
+| 1 | The transition electrifies a system that ran on fuel | Energy spending moves from fuel, bought every year, to capital, bought once and financed | Holds on net zero paths |
+| 2 | Electric machines need a quarter to a half of the energy of the engines and boilers they replace | Final energy use falls while electricity demand doubles; the power sector becomes macro-critical | Supported |
+| 3 | Emissions fall because technology is switched, not because people use less | Policy must finance the turnover of the capital stock; it cannot ration its way there | Supported |
+| 4 | Wind and solar are the cheapest new power and, with no fuel, run first | Fuel imports fall first; gas plant runs less and its fixed costs stay with the utility | Supported; curtailed where grids lag |
+| 5 | Storage adds about three-quarters to the cost of solar when half the output is stored, and doubles it for round-the-clock supply | The second half of the transition is dearer than the first | Supported |
+| 6 | Grids are slow to build, and every other saving waits on them | Networks are the critical path; delay has a price | Supported |
+| 7 | A clean system's costs are fixed on the day it is financed | Commodity-price risk becomes interest-rate, refinancing and currency risk | Supported |
+| | **B. Prices and technology** | | |
+| 8 | Carbon pricing changes which plants run within months | Use it for dispatch and fuel choice; do not expect it alone to finance 25-year assets | Supported |
+| 9 | Carbon prices are volatile, and governments postpone and reverse them | Investors discount the price; it cannot be collateral for long-term finance | Supported; coverage still grows |
+| 10 | Fuel price rises are unpopular | The fiscal gain from pricing is uncertain; reform needs sequencing | Supported |
+| 11 | Each step in the energy price cuts less than the one before | Price-led abatement has diminishing returns and rising inflation and political cost | Supported |
+| 12 | Each doubling of deployment makes the next unit cheaper | Investment-led abatement has increasing returns; early scale is a public good | Supported |
+| 13 | Feasible policy is second best: what politics and budgets can carry | Start with instruments that carry no visible bill; add prices later | Supported |
+| 14 | Fuel one country saves is partly burned by another | The national return is fiscal and external; the climate return needs a reward from outside | Partly: about half for oil |
+| | **C. Contracts and guarantees** | | |
+| 15 | Assets that last 25 years are built against long contracts | The contract, and who stands behind it, sets the price of power | Supported |
+| 16 | Capital costs twice as much in developing countries, and budgets have no room | The binding constraint is the sovereign balance sheet, not technology | Supported |
+| 17 | State-owned enterprises own the sector | Fiscal risk sits in their accounts; instruments must work through them | Supported |
+| 18 | Development banks lose very little on sovereign lending, because they are paid first | Their standing is the scarce asset | Supported |
+| 19 | De-risking the payment cuts the cost of capital for little expected loss | A guarantee is cheap, not free: a contingent liability for the host, and capital for the guarantor | Supported, with limits |
+| 20 | Revenues are in local currency; equipment is priced in the supplier's | Match the currency of finance to the cash flow and to the import | Thin evidence |
+| 21 | Young countries will build pension savings | Funded pensions are natural holders of operating clean assets | Not checked |
+| | **D. The macroeconomic profile** | | |
+| 22 | Energy costs and risks are large enough to move the budget and the external accounts | Energy policy is macroeconomic policy | Supported |
+| 23 | The investment is several percent of GDP a year | Demand now and supply later; growth effects are positive, their size uncertain | Supported |
+| 24 | About half the spending is local and half imported equipment, mostly Chinese | Half the demand leaks abroad; the import bill needs foreign finance | Assumption |
+| 25 | Spending comes first, savings later | A J-curve in the external and fiscal accounts that long finance must bridge | Supported |
+| 26 | Much of the transition has a negative net cost, more of it when de-risked | The cost of capital decides how much of the program pays for itself | Holds for power and transport |
+| | **E. Time and capacity** | | |
+| 27 | Plants take one to five years; grids take five to fifteen | The slowest asset sets the pace: plan and finance it first | Supported |
+| 28 | Returns in one sector depend on the others and on policy that can be reversed | Credibility is a macroeconomic variable; supply it with contracts | Supported |
+| 29 | Waiting has a cost, and a high discount rate hides it | At local rates delay looks prudent; at de-risked rates it is expensive | Supported |
+| 30 | The engineering and the finance must come largely from outside | Program-scale tenders to consortia; capital inflows become a macro question | Supported for Egypt |
+
+: Thirty stylized facts of the energy transition and what each means for macroeconomic policy. Evidence and sources for each fact: Appendix A. {#tbl-facts}
+
+## Energy becomes capital, so the cost of capital becomes the price of energy {#sec-system}
+
+**Clean power is cheap to build and priced by its finance.** In 2024, 91 percent of new renewable capacity produced power more cheaply than the cheapest new fossil plant; onshore wind averaged 3.4 US cents a kilowatt-hour and solar 4.3 [@IRENA2025]. But a solar plant is a bond with panels attached: the same plant sells power 80 percent dearer when its capital costs 12 percent than when it costs 4 [@CFPB31]. Capital for solar costs well over twice as much in emerging and developing economies as in advanced ones, and financing is half or more of the cost of their power [@IEA2024]. Onshore wind costs the same per kilowatt-hour in Africa as in Europe, and most of the African cost is financing [@IRENA2025]. A two-point rise in interest rates raises the cost of renewable power by up to 20 percent, against 11 percent for a gas plant [@WoodMac2024]. A central bank's rate, a sovereign's spread and a utility's credit now set the price of electricity as the oil market once did.
+
+**Fuel-price risk becomes balance-sheet risk.** A plant's costs are fixed on the day it is financed. Renewables avoided \$467 billion of fuel costs worldwide in 2024 [@IRENA2025], and each megawatt-hour they supply no longer moves with the price of gas. Debt service takes its place, often in dollars. The terms of trade matter less to such an economy; refinancing, interest rates and the exchange rate matter more.
+
+**The second half of the transition is dearer and slower than the first.** Wind and solar run first when the grid can take them. Where grids lag, 5 to 15 percent of their output is thrown away, as in Chile, and China curtailed about 9 percent in early 2026 [@IEA2024Renewables; @Reuters2026Curtailment]. Batteries have fallen 93 percent in cost since 2010 [@IRENA2025]. Even so, storing half of a solar plant's output adds about three-quarters to its cost, and solar that supplies power round the clock costs two to two-and-a-half times as much as plain solar [@Ember2025Storage; @Ember2025Solar24]. Grids take 5 to 15 years to plan, permit and build, against 1 to 5 for the plants they connect [@IEA2023Grids]. Storage and grids are the long-lived, capital-heavy part, where a high cost of capital does most harm.
+
+**Emissions fall because machines are replaced.** Behavior change supplies about 4 percent of the cuts in the IEA's pathway; the rest is equipment that someone must buy [@IEA2021]. Electric cars are two to four times as efficient as combustion cars, and heat pumps three to five times as efficient as boilers [@IEA2025WEO]. Policy therefore has to finance the turnover of the capital stock.
+
+## Price rises have diminishing returns; deployment has increasing returns {#sec-returns}
+
+**Each step in the energy price cuts less than the one before.** In ten natural experiments, carbon prices of \$20 to \$125 a tonne cut emissions from road fuel and heating by 1 to 2 percent for each \$10 [@StrettonWP55]. With a response of that size, the first \$50 a tonne cuts road fuel use by 6.7 percent and the sixth \$50 by 3.0 (@fig-returns). A price of \$300 a tonne, which nearly doubles the cost of gasoline, cuts its use by a little over a quarter.
+
+![Each step in a carbon price cuts less fuel use than the one before; each doubling of deployment makes the next unit cheaper. Left: gasoline at a supply cost of \$0.80 a liter and a long-run price elasticity of −0.5. Right: a learning rate of 20 percent for each doubling, below the 25 to 34 percent reported for the installed cost of onshore wind and solar. Illustrative. Source: author's calculations.](2.Source/figures/fig1-returns.png){#fig-returns width=92%}
+
+**Each doubling of deployment makes the next unit cheaper.** The installed cost of solar power has fallen by a third with each doubling of capacity, and that of onshore wind by a quarter; battery storage fell from \$2,571 to \$192 a kilowatt-hour between 2010 and 2024 [@IRENA2025]. Costs fall with cumulative deployment for almost every energy technology studied, and the causation runs mainly from deployment to cost [@Grubb2021]. Fossil fuel prices show no trend over 140 years [@Way2022]. Learning is shared across borders, so a country that deploys early lowers the price for every country that follows. That is an increasing return, and no single buyer is paid for it.
+
+**The two shapes call for different instruments.** A strategy led by prices meets rising resistance: each step buys less abatement, adds to inflation and spends political capital. A strategy led by investment meets falling costs. Prices do one job well, which is to change which plants run: Britain's carbon price floor cut power-sector emissions by 20 to 26 percent a year between 2013 and 2017 [@Leroutier2022]. Reviews of the evidence find fuel switching in existing plants, a small positive effect on innovation and no measured effect on zero-carbon investment [@Lilliestam2021; @vandenBergh2021]. A price also works through investment only when capital is cheap. At \$50 a tonne and a 3 percent cost of capital the least-cost power mix is 40 percent renewable; where capital is dear the same result needs a much higher price [@HirthSteckel2016].
+
+**Prices are also what politics takes back.** Carbon pricing covers 29 percent of global emissions at an average of \$21 a tonne [@WorldBank2026Carbon]. In 2026 the European Union postponed its carbon price on heating and road fuel to 2028 and proposed to slow the tightening of its main carbon market [@ICAP2026; @CarbonBrief2026]. Forty-one countries had fuel riots between 2005 and 2018 [@McCulloch2022], and governments still spent \$725 billion on explicit fuel subsidies in 2024 [@Black2025FFS]. The economics literature has moved the same way, toward mixes of price and non-price measures that politics can carry [@Stiglitz2019; @BlanchardGollierTirole2023].
+
+**Fuel saved in one country is partly burned in another.** A fall in one country's demand lowers the world price, and others consume more [@Sinn2008; @Harstad2012]. One estimate puts the offset for oil supply at about half [@Prest2022]; for traded industrial goods the measured effect is small [@IPCC2022Ch13]. A government's own return on the transition is therefore fiscal and external. The climate return is partly lost unless someone outside rewards it.
+
+## The fiscal question moves from subsidies to guarantees {#sec-finance}
+
+**Long assets are built against long contracts, and a contract is only as good as the buyer.** Policy schemes, mostly auctions for long-term contracts, are expected to drive 84 percent of utility-scale renewable growth to 2030; plants that sell at market prices are under 1 percent [@IEA2024Renewables]. The buyer is usually the state. Public entities finance about half of clean energy investment in emerging and developing economies, and state-owned companies hold nearly two-thirds of the world's generating capacity [@IEAIFC2023; @Benoit2022]. A long contract with such a buyer is a claim on the treasury. Countries that are home to 3.7 billion people already spend more on interest than on health or education [@UNCTAD2026], so that claim is costly to make credible.
+
+**The scarce asset is the standing of those who are paid first.** On sovereign lending by development banks the annual default rate averaged 0.77 percent and recoveries 95.1 percent over 1984–2024 [@GEMs2025]. The World Bank's main lending arm has never lost contractual principal or interest in a default [@IBRD2024Defaults]. That record implies an expected loss of about 0.04 percent of exposure a year, against a spread of some four points between a developing country's cost of capital and a de-risked one. On it, each dollar of expected loss buys about \$80 of interest saving [@CFPB41].
+
+**De-risking is cheap, not free, for three reasons.** The guarantee is a contingent liability of the host and belongs on its books [@CFPB31]. The loss record depends on preferred creditor treatment, which rating agencies treat as conditional; on market-like losses a dollar of expected loss buys \$2.7 [@SP2026IBRD; @CFPB41]. And development banks hold capital against a guarantee as against a loan, so a guarantee alone does not stretch a balance sheet. Outside capital placed behind it does: \$1 of donor guarantees lets the Asian Development Bank lend \$5 more [@HumphreyPrizzon2014; @ADB2023IFCAP].
+
+**India's solar intermediary shows the gain and the limit.** It stands between generators and state distributors, is rated AAA, and has signed sales of 66 gigawatts at an average of Rs 2.74 a unit. But about 42 gigawatts more have been awarded with no distributor signing, and the agreements that let it collect from states in default come up for renewal [@ICRA2026; @JMK2025]. A guarantee makes the generator whole; it does not make the utility solvent.
+
+**Currency and domestic savings are the least settled part.** Revenues are in local currency, and equipment is priced in its supplier's. Local money is dear where inflation is high: Egypt's one-year Treasury bills pay 26 percent [@Enterprise2026CBE]. Supplier-currency money can be cheap with a guarantee: Egypt's yen bonds of June 2026, partly guaranteed by the African Development Bank, pay 2.9 to 3.5 percent [@Enterprise2026Samurai]. Funded pension systems would be natural holders of operating plants in local currency, but no evidence on their size was found for this note, and the point remains a hypothesis.
+
+## The external accounts worsen before they improve {#sec-macro}
+
+**Energy is already a macroeconomic variable.** Consumers spend about \$9 trillion a year on energy, a tenth of world GDP [@IEA2025WEO]. One person in four lives in a country that spends at least 5 percent of GDP on imported fossil fuel [@Ember2025Security]. For such a country the bill arrives in foreign currency and moves with wars.
+
+**The investment is large, and its effect on growth is positive but uncertain in size.** Emerging and developing countries other than China need about \$2.4 trillion a year of climate investment by 2030, \$1 trillion of it from abroad [@IHLEG2024]. The IEA, in joint work with the IMF, put world GDP 4 percent higher in 2030 on a net zero path than on current trends [@IEA2021]. An IMF study estimates multipliers of 1.1 to 1.5 for renewable energy investment and 0.5 to 0.6 for fossil fuel investment [@Batini2021]. These are the demand effects of an investment boom, and they depend on spare capacity and on how the boom is financed. The two models run for Egypt in @sec-egypt differ by a factor of six.
+
+**Spending comes first, savings come later, and about half the spending is imported.** China produces over 75 percent of the world's batteries and most of its solar panels [@IRENA2025]. This note assumes that half of capital spending is imported equipment; no published split was found, and the share is higher for power plants than for grids and buildings. The external account then follows a J-curve: equipment is imported at the start, and fuel imports fall as the capital stock builds. Fossil plant is also imported, but its fuel is imported for ever. The gap in the early years must be financed in foreign currency at long maturities, which is the macroeconomic case for external finance in the supplier's currency.
+
+## Waiting looks free, and the capacity to move must come from outside {#sec-time}
+
+**The slowest asset sets the pace.** At least 3,000 gigawatts of renewable projects are waiting for a grid connection worldwide, and grid investment has fallen to under \$0.40 for each dollar spent on generation, from \$0.60 in 2016 [@IEA2023Grids; @IEA2025WEI]. In the IEA's delay case, late grids add 58 billion tonnes of carbon dioxide by 2050. Networks have to be planned and financed before the plants that will use them.
+
+**Investors need confidence at two levels, and governments can undo both.** A project needs its contract honored. It also needs the system around it: the grid, the tariff path, the vehicles and factories that will use the power. Each depends on policy that a later government can reverse, which holds investment back [@HelmHepburnMash2003; @Brunner2012]. Credibility is therefore a macroeconomic variable, and contracts and guarantees supply it where announcements do not.
+
+**A high discount rate hides the cost of waiting.** Delay postpones spending and loses savings. At a developing country's cost of capital the first effect dominates, and uncertainty adds a further reason to wait [@DixitPindyck1994]. At a de-risked rate the second dominates. @sec-egypt puts numbers on both.
+
+**The capacity to build and finance must come largely from outside.** Clean energy investment in emerging and developing economies has to rise from \$770 billion in 2022 to \$2.2–2.8 trillion a year by the early 2030s [@IEAIFC2023]. Of the 692 gigawatts of renewable capacity the world added in 2025, Africa added 11, and China about two-thirds of the wind and solar [@IRENA2026Capacity]. No developing country can supply the increase from its own savings and its own engineering firms. The work goes to international consortia of developers, equipment makers and lenders, and the host's task is to make their tenders large, regular and bankable. For macroeconomic policy this means capital inflows on the scale of several percent of GDP, and a limit on speed set by what the economy can absorb.
+
+# What the facts add up to in one country: Egypt {#sec-egypt}
+
+**The estimates price one program at two costs of capital.** The program is a rapid transition path from the investment model in the author's Climate Fiscal AI Tools [@StrettonWP63; @StrettonWP65]: fossil-free power by 2045, every new vehicle electric by 2040, and 80 percent of industrial fuel use abated by 2050. It reaches 38 percent renewable electricity in 2030, from 14 percent in 2025; the government's own target is 42 percent, which it advanced in 2026 from 2030 to 2028 [@Ember2026Data; @IMF2026Egypt7]. The local cost of capital is 10.3 percent, the rate financiers reported for solar power in Egypt before the 2022–24 currency crisis [@IRENA2023Finance]. The de-risked cost of capital is 6 percent, the World Bank rate used across this series; an IBRD loan of the longest maturity costs 5.4 to 6.0 percent today [@IBRD2026Rates]. The inputs are public data, and the results are illustrative, not official estimates [@InvModelEgypt2026]. Appendix B gives the method.
+
+**At the local cost of capital the program costs 1.8 percent of GDP a year by 2035; de-risked, it costs 0.2 percent.** The program raises energy investment from under 1 percent of GDP to 6 percent, and by 2035 puts \$266 billion of extra capital in service. At 10.3 percent that capital costs \$30.4 billion a year against \$21.0 billion of fuel saved; at 6 percent it costs \$21.0 billion (@tbl-sector, @fig-sector). The \$9.4 billion between the two charges, 1.6 percent of GDP, is what the cost of capital itself costs Egypt. It is nearly nine-tenths of the program's whole net cost at the local rate.
+
+| US\$ billion a year, 2035 | Extra capital in service | Capital charge at 10.3% | at 6% | Fuel saved | Net cost at 10.3% | at 6% |
+|:------------------------------|-------:|-------:|-----:|-----:|-------:|-----:|
+| Power, grids and storage | 123 | 13.5 | 9.0 | 7.0 | −0.6 | −2.7 |
+| Transport | 21 | 3.2 | 2.5 | 4.8 | −1.6 | −2.6 |
+| Buildings | 27 | 3.1 | 2.1 | 2.6 | +1.3 | +0.1 |
+| Industry | 94 | 10.6 | 7.4 | 6.6 | +9.3 | +4.2 |
+| Methane, land use and other | – | – | – | – | +2.3 | +2.3 |
+| **All sectors** | **266** | **30.4** | **21.0** | **21.0** | **+10.7** | **+1.3** |
+| Percent of GDP | 44 | 5.1 | 3.5 | 3.5 | +1.8 | +0.2 |
+
+: De-risking cuts the net cost of the program from \$10.7 billion to \$1.3 billion a year (illustrative, 2035). Net cost is the capital charge plus running costs less fuel saved at supply cost. Electricity bought by electrified end uses is charged to them and credited to power, so the lines add up. Negative is a net saving. Source: @InvModelEgypt2026. {#tbl-sector}
+
+![Net cost by sector in 2035 at the local and the de-risked cost of capital. Source: @InvModelEgypt2026.](2.Source/figures/fig2-net-cost-by-sector.png){#fig-sector width=92%}
+
+**Power and transport pay for themselves; industry does not at any rate a lender would offer.** Solar power costs \$39 per megawatt-hour at the local rate and \$29 de-risked, against \$66 for the fuel alone in a gas plant. Power with its grids and storage breaks even at a cost of capital of about 11 percent, so it pays at 10.3 percent and stops paying a point or two higher. Transport pays from the early 2030s. Buildings break even just below 6 percent. Industry, on an assumed \$150 of capital for each gigajoule a year of fuel abated, breaks even only below 2 percent. A finance ministry should read the program as two programs: an investment in power and transport that it would want on cost grounds, and an abatement cost in industry that needs a carbon price, a border charge or a payment from outside.
+
+**Egypt already shows what de-risking does, and why its present form cannot scale.** A solar plant at Kom Ombo sells power at 2.47 US cents a kilowatt-hour, and a 2-gigawatt wind farm at 2.4 cents [@ACWA2024KomOmbo; @Zawya2026RedSea]. The Obelisk solar and storage project holds a 25-year contract in dollars backed by a sovereign guarantee, and development banks lent four-fifths of its \$590 million cost [@pvmag2026Obelisk]. These prices are below the model's de-risked cost of solar. Each such contract is also a 25-year dollar obligation of a state whose oil company's guaranteed debts already stand at 18 percent of GDP [@IMF2026Egypt56]. Lending by a few development banks and case-by-case sovereign guarantees can carry the first gigawatts. They cannot carry \$30 billion a year.
+
+**Tariffs decide who pays what de-risking does not save.** With electricity tariffs covering 45 percent of supply cost, as the IMF data put it for 2024, the direct budget need of the program is 2.2 percent of GDP in 2030. De-risking alone lowers it to 2.0 percent. Tariffs that recover costs, with fuel subsidies gone, lower it to 0.9 percent, because grids and utility plants then repay themselves. The fuel saved is gas that Egypt would otherwise import: 7 billion cubic meters in power stations in 2030 and 19 billion in 2035, against imports of 22 billion in 2025 [@Enterprise2026Gas].
+
+**The program is front-loaded, and half of it is imported.** Extra investment runs at 4 to 6 percent of GDP a year from the start, while fuel savings reach 1.8 percent of GDP only in year six (@fig-path). With half of capital spending imported, the equipment bill exceeds the fuel saved until 2033 and widens the external deficit by 1.6 percent of GDP in 2026 and 0.7 percent in 2030. Two macroeconomic models run on the same program put GDP in 2030 above its no-program level by 0.9 percent and 5.2 percent. They agree on the sign and differ on whether private investment and energy savings are counted [@StrettonWP65].
+
+![The time path of the program, percent of GDP. Imported equipment is taken as half of capital spending. Source: @InvModelEgypt2026.](2.Source/figures/fig3-time-path.png){#fig-path width=92%}
+
+**Waiting five years looks free at the local rate and costs \$9 billion at the de-risked one.** If every milestone slips five years, the present value of the program's net cost falls by \$10 billion at 10.3 percent, because the sectors that do not pay are postponed. At 6 percent it rises by \$9 billion, and by \$20 billion in power and transport alone. Either way Egypt burns 217 billion cubic meters more gas in power stations by 2050 and emits about 1 billion tonnes more. A high cost of capital makes delay look prudent.
+
+**Egypt cannot build or finance this alone, and does not try to.** The path adds 7.5 gigawatts of wind and solar a year. Egypt had 6.3 gigawatts in total at the end of 2025, and the most it has added in a year is 1.5 gigawatts [@IRENA2026Capacity]. Program investment in 2030 is 6.2 percent of GDP. The whole economy invested 13 percent of GDP in 2024/25 and saved 8 percent, and its current account deficit is 4 to 5 percent [@WDI2026]. The large projects under contract come from foreign-led developers and are financed mostly by development banks, and agreements signed or in preparation would add 17.4 gigawatts in 2027 and 2028 [@IMF2026Egypt7].
+
+**Three assumptions carry these results.** Capital is priced at world prices, which Egyptian contracts match; at the tool's default, which scales capital by Egypt's price level, the program is a net saving at either rate. The current-trends path builds no new gas plant, because Egypt has 61 gigawatts of capacity against a peak load of 40 [@Enterprise2026Blackout; @Zawya2026Peak]; if it had to build, as it will once demand catches up, the de-risked program pays for itself by 2035. And fuel is valued at 2024 supply costs; with gas at \$12 per million British thermal units the de-risked program also pays by 2035. Industry and buildings rest on assumed unit costs and are upper bounds.
+
+# Five simple products the World Bank can offer {#sec-products}
+
+**The facts call for products that make long payments safe and cheap, sold as a package.** Each product in @tbl-products answers one group of facts, comes from an earlier paper in this series, and can be stated in a sentence. Each can start inside the Bank's existing guarantee and lending instruments.
+
+| Product | What the Bank does, in one sentence | What it replaces | What the country does | Paper |
+|:------------|:----------------------------|:-------------------|:-------------------|:-------|
+| 1. Payment guarantee | Guarantees that the buyer of the power pays generators on time, under one standard contract | Case-by-case sovereign guarantees, and the risk premium in every tariff | Routes new wind and solar through one buyer and one contract; records the guarantee | 3.1 |
+| 2. Refinancing bond | Backs a bond that refinances plants once they run, part of it in local currency | Bank loans held to maturity at construction-risk prices | Lets pension funds and banks buy the bond | 3.2 |
+| 3. Grid loan | Lends long, or guarantees a bond, for grids built ahead of demand and repaid from regulated tariffs | Grids financed late, from a utility's short borrowing | Sets tariffs that repay the grid | 3.2 |
+| 4. Reform-linked guarantee line | Enlarges a country's guarantee line as it keeps agreed reforms | One-off policy loans and cash rewards | Keeps a published path for tariffs, subsidies and a feebate | 4.1, 4.3 |
+| 5. Currency window | Stands in the middle of a swap, so that imported equipment is financed in its supplier's currency | Dollar tariffs that load devaluation risk on the state | Writes power contracts in the currency the buyer earns | 3.1 |
+
+: Five products, each one sentence long. A buffer fund of donor capital stands behind them (the Climate Investment Trust of paper 4.2). Sources: @CFPB31; @CFPB32; @CFPB41; @CFPB43; @CFPB42. {#tbl-products}
+
+**The payment guarantee comes first, because the buyer is the risk.** A guarantee on the contract removes the whole risk premium and costs the guarantor the expected loss on late payment: about two dollars of saving for each dollar of expected cost in a stylized case. A guarantee on project debt removes under a third of the premium [@CFPB31]. In Egypt it would replace sovereign guarantees given one project at a time with one recorded, capped facility behind the transmission company, which is the sole buyer.
+
+**The refinancing bond and the grid loan turn safe contracts into cheap capital.** Refinancing operating plants into pooled bonds cuts the price of solar power by about a fifth in a stylized case [@CFPB32]. The grid has no power contract to guarantee, so it needs the Bank's long maturities directly. In Egypt each year's additions of wind and solar save \$1.3 billion of gas a year, so a grid that arrives a year late costs that much for every year of plants left waiting.
+
+**The guarantee line is the reward that scales.** An interest margin is too small to pay for reform: a step-down of one percentage point on \$1 billion is worth \$77 million over ten years. Guarantee capacity of \$3.3 billion is worth ten times that to the government and costs the funder about \$10 million on the development banks' loss record [@CFPB43]. A line that grows with tariff and subsidy reform kept puts the two halves of the Egypt result in one instrument: de-risking lowers the bill, and reform moves it off the budget. A feebate, which charges plants dirtier than the sector average and rebates cleaner ones, is the form of carbon pricing that such a path can include without a visible bill [@CFPB12].
+
+**The currency window is the least proven of the five.** Egypt has used its sovereign form: the guaranteed yen bonds of 2026, a yuan bond in 2023 with guarantees from two development banks, and a swap line with China's central bank that was enlarged to 30 billion yuan in 2026 [@Enterprise2026Samurai; @AIIB2023Panda; @Xinhua2026Swap]. No use at project level was found. A swap moves currency risk and does not remove it, and no evidence was found for rupee finance on the same model.
+
+**The buffer fund is what makes the five add to the Bank's lending.** The Bank holds capital against a guarantee as against a loan, and Egypt already owes its main lending arm about \$12 billion against a limit of \$22.6 billion for one borrower [@IBRD2026FS]. A fund of donor capital that takes losses second lets each dollar of the Bank's capital support more guarantees [@CFPB42].
+
+**All five should be sold through program tenders.** A country that must add more than its whole installed wind and solar capacity every year cannot procure plant by plant. One tender a year, for a block of capacity with its grid connection, under the standard contract and the payment guarantee, lets international consortia bring the engineering and the finance together.
+
+# From the facts to a global green deal {#sec-deal}
+
+**A transition that pays can still arrive late.** The facts give the reasons. The money is needed before the savings. The cost of capital falls only when someone creditworthy stands behind the payment, and that standing is limited. The grid, the slowest asset, has no contract that pays anyone to build it early. The sectors that pay do not carry the sectors that do not, and prices are what politics takes back. Fuel saved at home is partly burned abroad. And at a developing country's cost of capital, waiting looks free.
+
+**Each reason is a missing institution, and together they describe a deal.** A global green deal built on these facts would have four parts. The first is capital at the de-risked rate, through guarantees priced at expected loss, in exchange for policy kept. This is where the largest number in this note sits: 1.6 percent of GDP a year for Egypt by 2035. The second is tenders at program scale, which bring outside consortia to build and finance at the pace the path needs. The third is a reward to governments for what national cost-benefit does not count, because saved fuel is partly burned elsewhere: guarantee capacity earned by policy and by carbon kept in the ground [@CFPB41]. The fourth is capital held behind the guarantees, so that the development banks' record of being repaid is used and not used up [@CFPB42].
+
+**The order of magnitude is the argument.** For one middle-income country the difference between two costs of capital is worth nine-tenths of what its program costs. A deal that moved that difference across the developing world would be the largest climate transfer available, and most of it would not be a transfer at all. Three checks should come before these estimates are used: Egyptian plant data in place of the assumed unit costs in industry and buildings, an hourly model of the power system to size storage and grids, and a reconciliation of the fiscal numbers with the budget and the accounts of the state energy companies.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+# Appendix A: The evidence behind each fact {#sec-appa .appendix}
+
+Each row gives the strongest evidence found for the fact with that number in @tbl-facts. The full record of what was read, with links, is in the note's evidence files.
+
+| # | What the evidence shows | Source |
+|:-----|:--------------------------------------------------------|:--------------------|
+| 1 | Electricity is 21 percent of final energy use (2024); 50–55 percent in 2050 on net zero paths, 31 percent on stated policies. Capital rises from under 60 to about 80 percent of electricity supply costs | @IEA2021; @IEA2025WEO |
+| 2 | Electric cars are two to four times as efficient as combustion cars; heat pumps three to five times as efficient as boilers | @IEA2025WEO |
+| 3 | Behavior change gives about 4 percent of cumulative cuts in the net zero pathway; the rest needs equipment | @IEA2021 |
+| 4 | 91 percent of renewable capacity added in 2024 undercut the cheapest new fossil plant. Curtailment of 5–15 percent in Chile, Ireland and the United Kingdom; about 9 percent in China in early 2026 | @IRENA2025; @IEA2024Renewables; @Reuters2026Curtailment |
+| 5 | Shifting half of solar output adds \$33 to \$43 per megawatt-hour; round-the-clock solar \$104. The shorthand that storage doubles the cost fits round-the-clock supply, not evening shifting | @Ember2025Storage; @Ember2025Solar24 |
+| 6 | Grid investment must nearly double to over \$600 billion a year by 2030; in Europe each euro invested in networks saves over two in system costs (the operators' own estimate) | @IEA2023Grids; @ENTSOE2025 |
+| 7 | Renewables avoided \$467 billion of fuel costs in 2024; a two-point rise in interest rates raises the cost of renewable power by up to 20 percent, against 11 percent for gas | @IRENA2025; @WoodMac2024 |
+| 8 | Britain's carbon price floor cut power emissions by 20–26 percent a year (2013–17); reviews find fuel switching and no measured effect on zero-carbon investment | @Leroutier2022; @Lilliestam2021 |
+| 9 | The EU postponed its second carbon market to 2028 and proposed to slow its main market's cap (2026). Against the fact: coverage rose to 29 percent of emissions and revenue to \$107 billion | @ICAP2026; @CarbonBrief2026; @WorldBank2026Carbon |
+| 10 | 41 countries had fuel riots in 2005–18; the French would largely reject a carbon tax with a dividend | @McCulloch2022; @DouenneFabre2022 |
+| 11 | Carbon prices cut road fuel and heating emissions by 1–2 percent per \$10 a tonne; a constant elasticity makes each equal step smaller | @StrettonWP55 |
+| 12 | Installed cost falls 34 percent per doubling of capacity for solar and 25 percent for onshore wind; battery storage fell 93 percent in 2010–24; deployment at scale causes most of the fall | @IRENA2025; @Grubb2021 |
+| 13 | Sectoral measures allow lower carbon prices elsewhere; standards and subsidies "have a role to play" beside pricing | @Stiglitz2019; @BlanchardGollierTirole2023 |
+| 14 | Demand cuts lower world prices and others consume more; about half of an oil supply cut is offset. No consistent evidence of leakage in industry after the fact | @Sinn2008; @Prest2022; @IPCC2022Ch13 |
+| 15 | 84 percent of utility-scale renewable growth to 2030 is expected under policy schemes; merchant plants under 1 percent | @IEA2024Renewables |
+| 16 | Capital for solar costs well over twice as much in emerging and developing economies; developing countries paid a record \$415 billion of interest on external debt in 2024 | @IEA2024; @WorldBank2025IDR |
+| 17 | Public entities finance about half of clean energy investment in emerging and developing economies; state companies hold nearly two-thirds of generating capacity | @IEAIFC2023; @Benoit2022 |
+| 18 | Sovereign default rate 0.77 percent a year, recovery 95.1 percent (1984–2024); no loss of contractual principal or interest at IBRD | @GEMs2025; @IBRD2024Defaults |
+| 19 | \$80 of interest saved per dollar of expected loss on that record; 2.7 on market-like losses. Guarantees are booked against capital like loans | @CFPB41; @HumphreyPrizzon2014 |
+| 20 | Egypt's guaranteed yen bonds pay 2.9–3.5 percent; pound Treasury bills 26 percent. No project-level evidence; swaps between developing countries' currencies are untested | @Enterprise2026Samurai; @Enterprise2026CBE |
+| 21 | No evidence was found for this note | – |
+| 22 | Energy costs consumers about \$9 trillion a year, 10 percent of world GDP; Egypt's gas imports cost \$6.0 billion in the first half of 2026 | @IEA2025WEO; @Enterprise2026Cost |
+| 23 | \$2.4 trillion a year needed by 2030 in emerging and developing countries other than China; world GDP 4 percent higher in 2030 on a net zero path | @IHLEG2024; @IEA2021 |
+| 24 | China makes over 75 percent of batteries. The half-and-half split of spending is this note's assumption; no published split was found | @IRENA2025 |
+| 25 | Egypt: extra investment 4–6 percent of GDP from the first year; fuel savings 1.8 percent in year six | @InvModelEgypt2026 |
+| 26 | A fast global transition saves about \$12 trillion against continuing with fossil fuels. Egypt: power and transport have a negative net cost at either rate; buildings break even de-risked; industry pays at neither | @Way2022; @InvModelEgypt2026 |
+| 27 | Grids take 5–15 years to plan, permit and build; renewables 1–5; chargers under 2 | @IEA2023Grids |
+| 28 | Irreversible investment and the scope for reneging hold investment back | @HelmHepburnMash2003; @Brunner2012 |
+| 29 | Egypt: five years' delay lowers the program's present-value cost by \$10 billion at 10.3 percent and raises it by \$9 billion at 6 percent | @InvModelEgypt2026 |
+| 30 | Africa added 11 of the world's 692 gigawatts in 2025. Egypt: largest annual addition 1.5 gigawatts against 7.5 needed; development banks lent four-fifths of the cost of its largest solar and storage project | @IRENA2026Capacity; @pvmag2026Obelisk |
+
+: The evidence behind each stylized fact. {#tbl-appa}
+
+# Appendix B: How the Egypt estimates are made {#sec-appb .appendix}
+
+**The model.** The estimates come from the national investment model of the author's Climate Fiscal AI Tools, a stock-and-flow model of energy use, power capacity and vehicles for 186 countries, 2024–2050 [@StrettonWP63; @StrettonWP65]. It projects end-use energy at constant 2024 prices, builds the capital each path needs, and values fuel at supply cost. The script `2.Source/egypt_estimates.py` runs it for Egypt and writes every number in @sec-egypt to `egypt_estimates_output.txt`. The model's clock starts in 2025; a program that starts in 2027 shifts each date by two years.
+
+**The two paths.** On current trends the fossil share of generation falls 0.4 points a year, electric vehicles reach 15 percent of sales by 2035, and buildings and industry do not change fuel. On the rapid transition the fossil share falls in a straight line to zero in 2045, electric vehicles reach all sales in 2040, fossil heat in buildings is replaced by 2050, industrial fuel use is abated by 80 percent by 2050, methane and other non-CO₂ gases fall 30 percent by 2030, and wind and solar fill the gap in generation.
+
+**Unit costs.** Solar \$760 per kilowatt and wind \$1,160 in 2024, falling 3 and 1.5 percent a year; the world averages for 2024 were \$691 and \$1,041 [@IRENA2025], and Egyptian projects have cost \$536 to \$815 per kilowatt for solar [@pvmag2026Obelisk; @ACWA2024KomOmbo]. Batteries \$250 per kilowatt-hour falling 3 percent a year; grids at \$0.60 for each dollar of generation investment; electric vehicles at a premium of \$10,000 in 2024 falling to zero in 2032; buildings \$200 and industry \$150 for each gigajoule a year of fuel displaced. The last two are assumptions. Fuel is valued at 2024 supply costs from the IMF's dataset: gas for power at \$8.8 per million British thermal units, gasoline at \$0.80 a liter [@Black2023].
+
+**Net cost.** For each sector: the extra capital in service times a capital recovery factor at the cost of capital over the asset's life (25 years for generation, buildings and industry, 40 for grids, 12 for vehicles), plus the change in running cost, less fuel saved. The sector lines sum to the model's own total, which the script checks. The direct budget need is the pure public part of investment plus 30 percent of investment that needs a public top-up; the split uses Egypt's power market structure, tariff cost recovery and fuel subsidies, and its shares are judgments [@StrettonWP65].
+
+**Two changes to the tool's defaults.** Capital is priced at world prices; the tool scales it by the local price level, which for Egypt after the 2024 float gives 41 percent of world prices. And neither path builds new gas plant, because Egypt has surplus capacity; the tool would have current trends build 36 gigawatts in ten years and credit the transition with avoiding them. @tbl-sens shows what each choice does.
+
+| Net cost, US\$ billion a year | 2030 at 10.3% | 2030 at 6% | 2035 at 10.3% | 2035 at 6% |
+|:--------------------------------------------|------:|------:|------:|------:|
+| Central case | +6.9 | +2.6 | +10.7 | +1.3 |
+| Local cost of capital at 14.8 percent | +11.8 | – | +21.5 | – |
+| Current trends must build gas plant | +4.7 | +1.2 | +4.6 | −2.8 |
+| Tool defaults: capital at 41 percent of world prices, gas plant built | −2.3 | −3.8 | −9.6 | −12.7 |
+| Gas at \$12 per million British thermal units | +5.8 | +1.5 | +7.9 | −1.5 |
+| Faster: fossil-free power by 2040 | +7.0 | +1.8 | +9.9 | −1.7 |
+
+: The program is a net cost at the local rate unless capital is priced below world prices; de-risking improves every case (illustrative). Source: @InvModelEgypt2026. {#tbl-sens}
+
+**What is not public.** The tools repository is private. The Egypt inputs are public data: the IMF's fossil fuel subsidies dataset, Ember's generation data, the IMF's World Economic Outlook and IRENA's cost surveys. No World Bank internal material and no result from proprietary data is used.

@@ -1,0 +1,11 @@
+year,sector,abatement_mt,cost_per_t_local,cost_per_t_derisked
+2030,"Power generation, grids and storage",16.86,-63.78,-107.55
+2030,Transport,5.31,94.76,-6.17
+2030,Buildings,4.31,153.12,6.68
+2030,Industry,18.86,210.14,85.37
+2030,All sectors and gases,82.77,69.8,18.36
+2035,"Power generation, grids and storage",45.34,-58.3,-105.2
+2035,Transport,15.91,-102.03,-164.22
+2035,Buildings,8.36,157.63,9.17
+2035,Industry,39.65,214.85,87.88
+2035,All sectors and gases,160.81,49.01,-9.39
