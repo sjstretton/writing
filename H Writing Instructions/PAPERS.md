@@ -43,6 +43,7 @@ Plan: `C Policy and FInance/3.FinanceAndRisk/3.0.Overview/SeriesArchitecture.md`
 | 3.0 | Overview: Make Clean Power an Asset Class | v0.3 + 10-slide theme deck (31 Oct) |
 | 3.1 | Guarantee the Contract, Not the Debt: A Payment Intermediary for Clean Power | working paper v0.3 + brief CFPB 3.1 v1.0 + 10-slide deck (31 Oct) |
 | 3.2 | From Projects to Asset Classes: Two-Stage Finance and Synthetic Sovereign Bonds for Clean Power | working paper v0.2 + brief CFPB 3.2 v1.0 + 10-slide deck (31 Oct); peer-reviewed (saving corrected to about a fifth of the price of solar power, 14–19%), every citation checked; both on the web |
+| 3.4 | The Energy Transition Swaps a Fuel Bill for a Capital Bill: Thirty Stylized Facts, What They Mean for Macroeconomic Policy, and Five Simple World Bank Products, with First Estimates for Egypt | note v0.2 (20 Nov 2026), peer-reviewed; new research awaiting Stephen's review, in `B Theory and Research/3.4.EnergyTransitionMacroeconomics/`; not on the site; no brief or deck. Two-page executive summary and twelve-page report. Egypt (illustrative tool results on public data, not yet cleared for publication): a rapid transition costs a net 1.8% of GDP a year by 2035 at a 10.3% cost of capital and 0.2% at 6%. Lead-in to the global green deal work |
 
 ### The sovereign-incentives series (section 4)
 
