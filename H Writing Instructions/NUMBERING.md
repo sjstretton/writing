@@ -21,7 +21,7 @@ On 31 Oct 2026 (later the same day) papers 1.3 and 1.4 swapped places so that th
 | `3.FinanceAndRisk` | 3.0 | Overview: Make Clean Power an Asset Class | 2.0 |
 | | 3.1 | Guarantee the Contract, Not the Debt (payment intermediary) | 2.1 |
 | | 3.2 | From Projects to Asset Classes | 2.2 |
-| | 3.4 | The Energy Transition Swaps a Fuel Bill for a Capital Bill (stylized facts, macroeconomic implications, five World Bank products, Egypt estimates; new, 20 Nov 2026; awaiting review in `B Theory and Research/`; 3.3 is *Time and Chance*) | – |
+| | 3.4 | The Energy Transition Swaps a Fuel Bill for a Capital Bill (a review of the literature on 32 stylized facts and what they mean for macroeconomic policy, carbon pricing and development finance; Egypt estimates in an appendix; new, 20 Nov 2026; awaiting review in `B Theory and Research/`; 3.3 is *Time and Chance*) | – |
 | `4.SovereignIncentives` | 4.0 | Overview: Reward Governments, Not Projects | 3.0 |
 | | 4.1 | Reward the Stock as Well as the Flow (notional capitalized value) | 3.1 |
 | | 4.2 | The Climate Investment Trust | 3.2 |
