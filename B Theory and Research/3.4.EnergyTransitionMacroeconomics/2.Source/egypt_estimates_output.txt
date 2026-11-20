@@ -162,6 +162,27 @@ present value 2025-2050 of net cost, USD bn, discounted at 6% whatever the finan
   renewable share 2030: on time 38%, late 33%
   (the tool's replacement rule would have current trends build 36 GW of gas plant in 2026-2035, USD 47 bn; switched off in the central case)
 
+8b2. FURTHER CHECKS ASKED FOR BY THE SECOND REFEREE
+  capital at par (financed and discounted at 6% real): present value of net cost on time -51, five years late -31, cost of waiting +20; power and transport -127 | -98 | +29
+  cost of waiting when the discount rate is 3.9%: financed locally +8, de-risked +44
+  cost of waiting when the discount rate is 8.2%: financed locally +5, de-risked +23
+  timing rule, 2030 additions (9.3 GW, 24 TWh): cost generation 6.2 + grids and storage 4.6 bn; first-year saving of fuel and running cost 2.47 bn against (r + price fall) x cost = (8.2% + 2.4%) x 10.8 = 1.14 bn (local); ratio 2.2
+  timing rule, 2030 additions (9.3 GW, 24 TWh): cost generation 6.2 + grids and storage 4.6 bn; first-year saving of fuel and running cost 2.47 bn against (r + price fall) x cost = (3.9% + 2.4%) x 10.8 = 0.68 bn (de-risked); ratio 3.6
+  grids (local): grids and storage for the 2030 additions cost 4.6 bn, 0.39 bn a year; a year's delay in connecting them burns 2.21 bn of gas: 5.7 to 1
+  grids (de-risked): grids and storage for the 2030 additions cost 4.6 bn, 0.23 bn a year; a year's delay in connecting them burns 2.21 bn of gas: 9.7 to 1
+  wind and solar added 2026-2030: 7.5 GW a year
+  wind and solar added 2031-2035: 12.7 GW a year
+  wind and solar added 2036-2040: 19.8 GW a year
+  wind and solar added 2041-2045: 28.9 GW a year
+  gas saved in power and industry 2030: 10 bcm (net imports 21 bcm and output 42 bcm in 2025)
+  gas saved in power and industry 2035: 26 bcm (net imports 21 bcm and output 42 bcm in 2025)
+  gas saved in power and industry 2040: 51 bcm (net imports 21 bcm and output 42 bcm in 2025)
+  gas saved in power and industry 2045: 88 bcm (net imports 21 bcm and output 42 bcm in 2025)
+  external account, all extra investment financed abroad (local, 8.2%): positive from after 2045; program debt peaks at 67% of GDP in 2045; extra investment to 2035 282 bn, interest on all of it 23.1 bn a year against fuel saved 23.9
+  external account, all extra investment financed abroad (derisked, 3.9%): positive from after 2045; program debt peaks at 39% of GDP in 2041; extra investment to 2035 282 bn, interest on all of it 11.1 bn a year against fuel saved 23.9
+  2035 net cost as % of GDP: local 0.51; payment guarantee on power 0.27; all power de-risked -0.18; whole program de-risked -0.91
+  carbon-price equivalent of a payment guarantee alone on clean power, 2035: USD 16/tCO2
+
 8c. SCALE: what must be built and financed, against what Egypt builds and saves today
   wind and solar additions 2026-2030: 7.5 GW a year; installed at the start (Ember, 2025): solar 3.3 GW, wind 3.0 GW
   2030: transition investment 6.2% of GDP = 48% of the 2024 investment rate (13.0% of GDP); extra investment 5.3% of GDP = 41% of it; imported equipment 2.5% of GDP against a current account balance of -5.4% of GDP in 2024

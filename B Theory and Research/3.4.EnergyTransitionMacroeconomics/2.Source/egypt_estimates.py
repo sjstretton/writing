@@ -8,8 +8,10 @@ What it does
      IMF WEO, IRENA, Steffen et al.). Two paths, 2025-2050: current trends and a rapid transition
      (fossil-free power by 2045, all new vehicles electric by 2040, 80 percent of industrial fuel abated by 2050).
   2. Prices the incremental capital of the rapid transition, sector by sector, at
-       (a) the local cost of capital: the observed market WACC for Egypt, 10.3 percent, and a high case, 14.8 percent;
-       (b) the de-risked cost of capital: 6 percent, the World Bank rate used across papers 6.3, 6.5 and 6.8.
+       (a) the local cost of capital: 8.2 percent real (10.3 percent nominal less 2 percent inflation), and a high
+           case, 12.6 percent real;
+       (b) the de-risked cost of capital: 3.9 percent real (6 percent nominal, the upper end of an IBRD loan of the
+           longest maturity in November 2026). Present values use one real discount rate of 6 percent.
      Net cost = capital charge + other spending + change in running cost - fuel saved (at supply cost).
      Electricity bought by electrified end uses is charged to them at the average cost of the incremental
      clean power (capital charge on generation, grids and storage per MWh of extra wind and solar), and
@@ -601,6 +603,69 @@ with open(HERE / "egypt_waiting.csv", "w", newline="") as f:
     w.writeheader()
     for r_ in wait_rows:
         w.writerow({k: (round(x, 2) if isinstance(x, float) else x) for k, x in r_.items()})
+
+say("\n8b2. FURTHER CHECKS ASKED FOR BY THE SECOND REFEREE")
+# (i) capital at par: financed and discounted at the same 6 percent real
+a_par, b_par = pv(V, d, R_SOCIAL), pv(VL, dl, R_SOCIAL)
+a_par2, b_par2 = pv(V, d, R_SOCIAL, ("power", "trn")), pv(VL, dl, R_SOCIAL, ("power", "trn"))
+say(f"  capital at par (financed and discounted at {100 * R_SOCIAL:.0f}% real): present value of net cost on time {a_par:.0f}, "
+    f"five years late {b_par:.0f}, cost of waiting {b_par - a_par:+.0f}; power and transport {a_par2:.0f} | {b_par2:.0f} | {b_par2 - a_par2:+.0f}")
+for disc in (R_DERISKED, R_LOCAL):
+    say(f"  cost of waiting when the discount rate is {100 * disc:.1f}%: financed locally "
+        f"{pv(VL, dl, R_LOCAL, None, disc=disc) - pv(V, d, R_LOCAL, None, disc=disc):+.0f}, de-risked "
+        f"{pv(VL, dl, R_DERISKED, None, disc=disc) - pv(V, d, R_DERISKED, None, disc=disc):+.0f}")
+# (ii) the timing rule: build now if the first year's saving exceeds (r + rate of price fall) x cost
+y = 2030
+inv_gen = v(V, "mit.inv.gen.2", y) - v(V, "mit.inv.gen.1", y)
+inv_grid = v(V, "mit.inv.grid.2", y) - v(V, "mit.inv.grid.1", y)
+gw = v(V, "mit.add.sol.2", y) + v(V, "mit.add.wnd.2", y)
+twh = gw * twh_per_gw
+saving = twh * (gas_fuel + 1000 * m.P["om_fos"]) / 1000
+fall = 0.6 * 0.03 + 0.4 * 0.015
+for lab, r in (("local", R_LOCAL), ("de-risked", R_DERISKED)):
+    say(f"  timing rule, {y} additions ({gw:.1f} GW, {twh:.0f} TWh): cost generation {inv_gen:.1f} + grids and storage {inv_grid:.1f} bn; "
+        f"first-year saving of fuel and running cost {saving:.2f} bn against (r + price fall) x cost = "
+        f"({100 * r:.1f}% + {100 * fall:.1f}%) x {inv_gen + inv_grid:.1f} = {(r + fall) * (inv_gen + inv_grid):.2f} bn ({lab}); "
+        f"ratio {saving / ((r + fall) * (inv_gen + inv_grid)):.1f}")
+# (iii) grids: annual cost of the grid and storage for one year's additions against the gas burned if they wait a year
+for lab, r in (("local", R_LOCAL), ("de-risked", R_DERISKED)):
+    gc = inv_grid * crf(r, LIFE["grid"]) if "grid" in LIFE else float("nan")
+    say(f"  grids ({lab}): grids and storage for the {y} additions cost {inv_grid:.1f} bn, {gc:.2f} bn a year; a year's delay in "
+        f"connecting them burns {twh * gas_fuel / 1000:.2f} bn of gas: {twh * gas_fuel / 1000 / gc:.1f} to 1")
+# (iv) the build rate by period, and capacity
+for a, b in ((2026, 2030), (2031, 2035), (2036, 2040), (2041, 2045)):
+    say(f"  wind and solar added {a}-{b}: {sum(v(V, 'mit.add.sol.2', yy) + v(V, 'mit.add.wnd.2', yy) for yy in range(a, b + 1)) / (b - a + 1):.1f} GW a year")
+# (v) gas saved in power and industry against imports
+for yy in (2030, 2035, 2040, 2045):
+    g = sum(v(V, f"mit.con.nga.{sec}.1", yy) - v(V, f"mit.con.nga.{sec}.2", yy) for sec in ("pow", "ind")) / 36.0
+    say(f"  gas saved in power and industry {yy}: {g:.0f} bcm (net imports 21 bcm and output 42 bcm in 2025)")
+# (vi) external account if all extra capital spending is financed abroad and fuel savings repay it
+for lab, r in (("local", R_LOCAL), ("derisked", R_DERISKED)):
+    F, peak, pos = 0.0, (0.0, None), None
+    for row in path_rows:
+        interest = r * max(F, 0.0)
+        capex_all = row["incremental_investment"]
+        eff = row["fuel_saved"] - capex_all - interest
+        F = F + interest + capex_all - row["fuel_saved"]
+        if 100 * F / row["gdp"] > peak[0]:
+            peak = (100 * F / row["gdp"], row["year"])
+        if pos is None and eff > 0:
+            pos = row["year"]
+    cum35 = sum(r_["incremental_investment"] for r_ in path_rows if r_["year"] <= 2035)
+    say(f"  external account, all extra investment financed abroad ({lab}, {100 * r:.1f}%): positive from {pos if pos else 'after 2045'}; "
+        f"program debt peaks at {peak[0]:.0f}% of GDP in {peak[1]}; extra investment to 2035 {cum35:.0f} bn, interest on all of it "
+        f"{r * cum35:.1f} bn a year against fuel saved {next(r_['fuel_saved'] for r_ in path_rows if r_['year'] == 2035):.1f}")
+# (vii) the reachable cases as a share of GDP, 2035
+g35 = gdp(2035)
+rows_a = sector_costs(V, d, 2035, R_LOCAL)[0]; rows_b = sector_costs(V, d, 2035, R_DERISKED)[0]
+rows_g = sector_costs(V, d, 2035, real(NOM_LOCAL - 0.014))[0]
+tot_a = sum(x["net"] for x in rows_a.values())
+say(f"  2035 net cost as % of GDP: local {100 * tot_a / g35:.2f}; payment guarantee on power "
+    f"{100 * (tot_a - (rows_a['power']['charge'] - rows_g['power']['charge'])) / g35:.2f}; all power de-risked "
+    f"{100 * (tot_a - (rows_a['power']['charge'] - rows_b['power']['charge'])) / g35:.2f}; whole program de-risked "
+    f"{100 * sum(x['net'] for x in rows_b.values()) / g35:.2f}")
+say(f"  carbon-price equivalent of a payment guarantee alone on clean power, 2035: USD "
+    f"{(sector_costs(V, d, 2035, R_LOCAL)[1]['c_el'] - sector_costs(V, d, 2035, real(NOM_LOCAL - 0.014))[1]['c_el']) / co2_mwh:.0f}/tCO2")
 
 say("\n8c. SCALE: what must be built and financed, against what Egypt builds and saves today")
 say(f"  wind and solar additions 2026-2030: {add5:.1f} GW a year; installed at the start (Ember, 2025): "

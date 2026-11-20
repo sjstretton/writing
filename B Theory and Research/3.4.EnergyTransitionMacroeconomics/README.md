@@ -4,9 +4,9 @@
 
 **Question.** What do the stylized facts of the energy transition imply for macroeconomic policy, for carbon pricing and for development finance?
 
-**Answer.** The transition swaps a fuel bill for a capital bill, so energy moves from the current account to the balance sheet and the cost of capital becomes the price of energy. Investment follows the relative price that is expected to last, and policy uncertainty makes waiting valuable. Price rises have diminishing returns; deployment has increasing returns. The first-best carbon price is a benchmark; the pragmatic price is one part of a package that also lowers the cost of capital and turns promises into contracts (seven rules in Section 5). Finance is the binding constraint in developing countries. Three simple products the World Bank could offer follow, from papers 3.1, 3.2 and 4.1–4.3: a payment guarantee on the power contract, a refinancing guarantee, and a guarantee line that grows with reform, with a buffer fund of donor capital behind them. Ten indicators track an economy that is moving from a fuel bill to a capital bill.
+**Answer.** The transition swaps a fuel bill for a capital bill, so energy moves from the trade balance to the balance sheet and the cost of capital becomes the largest part of the price of energy. Investment follows the relative price that is expected to last, and policy uncertainty makes waiting valuable. With technology fixed, each further cut needs a higher price; with deployment, clean technology gets cheaper, mostly for later buyers everywhere. The first-best carbon price is a benchmark; the pragmatic price is one part of a package that also lowers the cost of capital and turns promises into contracts (seven rules in Section 5, each with the condition under which it fails). Finance is the binding constraint in developing countries. Three simple products the World Bank could offer follow, from papers 3.1, 3.2 and 4.1–4.3: a payment guarantee on the power contract, a refinancing guarantee, and a guarantee line that grows with reform, with a buffer fund of donor capital behind them. A table of indicators, with definitions and Egypt's values, tracks an economy that is moving from a fuel bill to a capital bill.
 
-**Form.** Executive summary two pages; report twelve pages (eight sections); references; Appendix A (the 32 facts with evidence and a verdict on each); Appendix B (first estimates for Egypt by sector at a local and a de-risked cost of capital). The modeling is in Appendix B only.
+**Form.** Executive summary two pages; report twelve pages (eight sections); references; Appendix A (the 32 facts, what each means for macroeconomic policy, the evidence and a verdict); Appendix B (first estimates for Egypt by sector at a local and a de-risked cost of capital). The modeling is in Appendix B only.
 
 ## Files
 
@@ -18,7 +18,8 @@
 | `2.Source/egypt_estimates.py`, `egypt_estimates_output.txt`, `egypt_*.csv`, `returns_illustration.csv` | The Egypt estimates and the price-versus-deployment illustration. Reads the investment model and the macro models of the Climate Fiscal AI Tools read-only (`--tools` path); public data only. Every Egypt number in the note is in the output file |
 | `2.Source/make_figures.py`, `2.Source/figures/` | Figures made from the CSVs (Figures 1 to 3 are used; the power unit-cost figure is spare) |
 | `5.Notes/EvidenceCheck-2026-11-20-*.md` | What each cited data source says: stylized facts, Egypt, development finance, learning rates and scale. Items tagged [S] were seen only in search summaries and are not relied on |
-| `5.Notes/LiteratureCheck-2026-11-20-*.md` | What each cited paper says, from its abstract or text: carbon pricing theory (40 items); expectations, investment under uncertainty and macroeconomic effects (55 items) |
+| `5.Notes/LiteratureCheck-2026-11-20-*.md` | What each cited paper says, from its abstract or text: carbon pricing theory (40 items); expectations, investment under uncertainty and macroeconomic effects (55 items); works named by the second referee (26 items) |
+| `5.Notes/EvidenceCheck-2026-11-20-Addendum.md` | Passages read in full source texts after the evidence files were written (equipment cost shares, and what stays unverified at first hand) |
 | `5.Notes/PeerReview-2026-11-20.md`, `PeerReview2-2026-11-20.md`, `ResponseToReviews-2026-11-20.md` | The two referee reports and what was done about each point |
 | `8.PreviousVersions/` | v0.1 (first draft, advocacy and modeling in the body) and v0.2 (the literature-review rewrite, before the second review) |
 
@@ -38,9 +39,9 @@ Regenerate the numbers and figures: `cd 2.Source && python3 egypt_estimates.py -
 
 ## Egypt results: status and sources
 
-The author's illustrative calculations on public data (the IMF's fossil fuel subsidies dataset, Ember, the IMF World Economic Outlook, IRENA). Not official estimates of any institution. **Not yet cleared by Stephen for publication**: the note is on a working branch of a public repository and is not on the website. No World Bank internal material is used, and no result from the Climate Policy Assessment Tool's proprietary data (its Egypt run sits on a proprietary data edition and was left out for that reason).
+The author's illustrative calculations on public data (the IMF's fossil fuel subsidies dataset, Ember, the IMF World Economic Outlook, IRENA). Not official estimates of any institution. A working draft: the estimates are illustrative, have not been reviewed by Stephen, and are not on the website. No internal or proprietary material of any institution is used. The model that makes them is not yet public; the script and its full output are in `2.Source/`.
 
-Both costs of capital are in real terms: local 8.2 percent (10.3 percent in nominal dollars, from two IRENA figures for solar in Egypt, less 2 percent inflation) and de-risked 3.9 percent (6 percent nominal, the upper end of an IBRD loan of the longest maturity in November 2026). The de-risked rate is a bound, not a forecast.
+Both costs of capital are in real terms: local 8.2 percent (10.3 percent nominal, from two IRENA figures for solar in Egypt in 2020 as transcribed in a published database, less 2 percent inflation) and de-risked 3.9 percent (6 percent nominal, the upper end of an IBRD loan of the longest maturity in November 2026). The de-risked rate is a bound, not a forecast: no product finances factories, boilers and cars on those terms. Headline results (2035): net cost 0.5 percent of GDP at the local rate; 0.3 percent with a payment guarantee on power; a saving of 0.2 percent with all power de-risked; a saving of 0.9 percent if the whole program is de-risked. Present values use one real discount rate of 6 percent.
 
 Three choices differ from the tool's defaults, each reported as a sensitivity in Appendix B:
 
@@ -57,3 +58,5 @@ Three choices differ from the tool's defaults, each reported as a sensitivity in
 - The import share of one-half is an assumption; a published split would replace it.
 - Three checks before the estimates are used: Egyptian plant data for industry and buildings; an hourly power model for storage and grids; reconciliation with the budget and the state energy companies' accounts.
 - The claims that rest on working-paper versions of published articles are marked in the bibliography notes (Aghion et al. 2016; Li, Linn and Muehlegger 2014; Labandeira et al. 2017). Check the published numbers before the note goes further.
+- Points from the second referee left open are listed at the end of `5.Notes/ResponseToReviews-2026-11-20.md`: carbon-price reversals outside the EU (not verified at source), the saving per dollar of guarantee capital and the size of a buffer fund for Egypt, Egypt's effective carbon price, and a gas balance to 2050.
+- The model is described as "the author's model" and "not yet public". If the tools repository is opened, say so in Appendix B.
