@@ -69,7 +69,22 @@ CENTRAL = {"phi": 0.0, "capex_gas": 0.0}
 # (USD 8.8) is kept as a sensitivity.
 GAS_IMPORT_USD_MMBTU = 12.0
 GJ_PER_MMBTU = 1.055
-R_LOCAL, R_HIGH, R_DERISKED = 0.10343, 0.14843, 0.06   # (a) observed market WACC, (a) high case, (b) de-risked
+# Costs of capital. The model runs at constant prices, so both rates are stated in real terms:
+#   (a) local: 10.3 percent in nominal dollars (the author's blend of two IRENA figures for solar in Egypt:
+#       9.7 percent nominal from its survey of financiers, financing year 2020, and a benchmark of 8.8 percent real),
+#       less 2 percent dollar inflation = 8.2 percent real; high case 14.8 percent nominal = 12.6 percent real;
+#   (b) de-risked: 6 percent in nominal dollars, the upper end of what an IBRD loan of the longest maturity
+#       costs in November 2026 (5.4 to 6.0 percent), = 3.9 percent real.
+INFL = 0.02
+NOM_LOCAL, NOM_HIGH, NOM_DERISKED = 0.10343, 0.14843, 0.06
+
+
+def real(r):
+    return (1 + r) / (1 + INFL) - 1
+
+
+R_LOCAL, R_HIGH, R_DERISKED = real(NOM_LOCAL), real(NOM_HIGH), real(NOM_DERISKED)
+R_SOCIAL = 0.06                                          # one discount rate for comparing paths over time
 IMPORT_SHARE = 0.5                                      # share of capital spending that is imported equipment
 YEARS = m.YEARS
 YI = {y: i for i, y in enumerate(YEARS)}
@@ -184,7 +199,8 @@ def budget_by_sector(S, V, y):
 S, V, d = run()
 gdp = lambda y: v(V, "mit.gdp.lvl", y)
 say("EGYPT: a rapid transition by sector at two costs of capital (illustrative tool results; USD bn, 2024 prices)")
-say(f"Costs of capital: (a) local {100 * R_LOCAL:.1f}% (high case {100 * R_HIGH:.1f}%); (b) de-risked {100 * R_DERISKED:.0f}%")
+say(f"Costs of capital, real: (a) local {100 * R_LOCAL:.1f}% (high case {100 * R_HIGH:.1f}%); (b) de-risked {100 * R_DERISKED:.1f}%. "
+    f"Nominal dollars: {100 * NOM_LOCAL:.1f}%, {100 * NOM_HIGH:.1f}%, {100 * NOM_DERISKED:.0f}%; dollar inflation {100 * INFL:.0f}%")
 say(f"Capital at world prices (price factor {S['pf']:.2f}); no new gas plant on either path; gas for power and industry at USD {GAS_IMPORT_USD_MMBTU:.0f}/MMBtu. GDP 2024 USD {gdp(2024):.0f} bn; "
     f"2030 {gdp(2030):.0f}; 2035 {gdp(2035):.0f}; 2040 {gdp(2040):.0f}")
 
@@ -246,10 +262,14 @@ for y in (2030, 2035, 2040):
     say(f"  as % of GDP: net (a) {100 * tot['na'] / gdp(y):.2f}, net (a) high {100 * tot['nh'] / gdp(y):.2f}, "
         f"net (b) {100 * tot['nb'] / gdp(y):.2f}; saving from de-risking {100 * (tot['ca'] - tot['cb']) / gdp(y):.2f}; "
         f"fuel saved {100 * tot['fuel'] / gdp(y):.2f}")
-    say(f"  check against the model's own totals: (a) {v(V, 'mit.ic.a', y):.2f}, (b) {v(V, 'mit.ic.b', y):.2f}; "
+    # the model's own totals use the nominal rates (its market rate and 6 percent): check the sector split against them
+    chk_a = sum(x["net"] for x in sector_costs(V, d, y, NOM_LOCAL)[0].values())
+    chk_b = sum(x["net"] for x in sector_costs(V, d, y, NOM_DERISKED)[0].values())
+    say(f"  check: sector split at the nominal rates {chk_a:.2f}, {chk_b:.2f} = the model's own totals "
+        f"{v(V, 'mit.ic.a', y):.2f}, {v(V, 'mit.ic.b', y):.2f}; "
         f"air pollution avoided {v(V, 'mit.dap', y):.1f}; GHG abated {v(V, 'mit.ghg.abt', y):.0f} Mt "
         f"-> USD {1000 * tot['na'] / v(V, 'mit.ghg.abt', y):.0f}/t at (a), {1000 * tot['nb'] / v(V, 'mit.ghg.abt', y):.0f}/t at (b)")
-    assert abs(tot["na"] - v(V, "mit.ic.a", y)) < 1e-6 and abs(tot["nb"] - v(V, "mit.ic.b", y)) < 1e-6
+    assert abs(chk_a - v(V, "mit.ic.a", y)) < 1e-6 and abs(chk_b - v(V, "mit.ic.b", y)) < 1e-6
     say(f"  clean power for end uses charged at USD {xa['c_el']:.0f}/MWh (a), {xb['c_el']:.0f}/MWh (b); "
         f"extra wind and solar {xa['vre']:.0f} TWh, of which sold to transport {xa['el']['trn']:.0f}, "
         f"buildings {xa['el']['bld']:.0f}, industry {xa['el']['ind']:.0f} TWh")
@@ -259,10 +279,11 @@ with open(HERE / "egypt_sector_table.csv", "w", newline="") as f:
     for r_ in table:
         w.writerow({k: (round(x, 4) if isinstance(x, float) else x) for k, x in r_.items()})
 
-say("\n   Present value 2025-2050 of the net cost (USD bn; negative = net saving), discounted at each lens rate:")
+say(f"\n   Present value 2025-2050 of the net cost (USD bn; negative = net saving), financed at each rate and "
+    f"discounted at {100 * R_SOCIAL:.0f}%:")
 for lab, r in (("(a) local", R_LOCAL), ("(a) high", R_HIGH), ("(b) de-risked", R_DERISKED)):
-    pv = sum(sum(x["net"] for x in sector_costs(V, d, y, r)[0].values()) * (1 + r) ** -(y - 2024) for y in range(2025, 2051))
-    say(f"   {lab}: {pv:.0f}")
+    pv0 = sum(sum(x["net"] for x in sector_costs(V, d, y, r)[0].values()) * (1 + R_SOCIAL) ** -(y - 2024) for y in range(2025, 2051))
+    say(f"   {lab}: {pv0:.0f}")
 say("   Break-even cost of capital (net cost = 0) by sector and year:")
 for y in (2030, 2035):
     res = []
@@ -296,9 +317,9 @@ say(f"gas heat rate {S['hr_nga']:.2f} GJ/MWh -> fuel cost of gas power USD {S['h
     f"capacity factors: solar {100 * S['cf_sol']:.1f}%, wind {100 * S['cf_wnd']:.1f}%")
 
 say("\n5. WHO PAYS (transition path, USD bn; direct budget need = pure public + 30% of viability-gap investment)")
-cases = [("(a) local cost of capital, tariffs and subsidies as today", dict(wacc=R_LOCAL)),
-         ("(b) de-risked cost of capital, tariffs and subsidies as today", dict(wacc=R_DERISKED)),
-         ("(b) de-risked, cost-recovery tariffs and no fuel subsidies", dict(wacc=R_DERISKED, cr=1.0, ffs=0.0))]
+cases = [("(a) local cost of capital, tariffs and subsidies as in the 2024 data", dict(wacc=NOM_LOCAL)),
+         ("(b) de-risked cost of capital, tariffs and subsidies as in the 2024 data", dict(wacc=NOM_DERISKED)),
+         ("(b) de-risked, cost-recovery tariffs and no fuel subsidies", dict(wacc=NOM_DERISKED, cr=1.0, ffs=0.0))]
 payer_rows = []
 for lab, kw in cases:
     S_, V_, d_ = run(**kw)
@@ -338,7 +359,7 @@ def storage_adder(r, capex_kwh, share, life=15, om=0.02, eff=0.88, cycles=350):
 sol26, wnd26 = v(V, "mit.cap.sol.cost", 2026), v(V, "mit.cap.wnd.cost", 2026)
 gas_fuel = S["hr_nga"] * d["sp_nga_pow"]
 say(f"capital costs 2026: solar USD {sol26:.0f}/kW, wind USD {wnd26:.0f}/kW; battery USD 125-250/kWh installed (range)")
-for lab, r in (("(a) local 10.3%", R_LOCAL), ("(a) high 14.8%", R_HIGH), ("(b) de-risked 6%", R_DERISKED)):
+for lab, r in (("(a) local 8.2% real", R_LOCAL), ("(a) high 12.6% real", R_HIGH), ("(b) de-risked 3.9% real", R_DERISKED)):
     ls, lw = lcoe(sol26, S["cf_sol"], r), lcoe(wnd26, S["cf_wnd"], r)
     add_lo, lcos_lo = storage_adder(r, 125, 0.5)
     add_hi, lcos_hi = storage_adder(r, 250, 0.5)
@@ -383,7 +404,8 @@ for y in range(2025, 2046):
     capex = di - v(V, "mit.dinv.nco", y) - v(V, "mit.dinv.oth", y)
     imp = IMPORT_SHARE * capex
     fs = v(V, "mit.dfuel", y)
-    na, nb = v(V, "mit.ic.a", y), v(V, "mit.ic.b", y)
+    na = sum(x["net"] for x in sector_costs(V, d, y, R_LOCAL)[0].values())
+    nb = sum(x["net"] for x in sector_costs(V, d, y, R_DERISKED)[0].values())
     path_rows.append(dict(year=y, gdp=g, incremental_investment=di, imported_equipment=imp, spent_locally=di - imp,
                           fuel_saved=fs, net_cost_local=na, net_cost_derisked=nb,
                           transition_investment=v(V, "mit.inv.tot.2", y), trends_investment=v(V, "mit.inv.tot.1", y)))
@@ -393,6 +415,31 @@ for y in range(2025, 2046):
 first = next((r_["year"] for r_ in path_rows if r_["fuel_saved"] > r_["imported_equipment"]), None)
 first2 = next((r_["year"] for r_ in path_rows if r_["fuel_saved"] > r_["incremental_investment"]), None)
 say(f"fuel saved exceeds imported equipment from {first}; exceeds all incremental investment from {first2}")
+# The external account with interest: the imported equipment is financed abroad; the net foreign debt of the program
+# F(t) = F(t-1)(1+r) + imported equipment - fuel saved. External balance effect = fuel saved - imports - interest.
+say("external account with interest on the foreign finance (real rates): year the effect on the external balance turns "
+    "positive | peak net foreign debt of the program | year it is repaid")
+ext = {}
+for lab, r in (("local", R_LOCAL), ("derisked", R_DERISKED)):
+    F, peak, pos, repaid = 0.0, (0.0, None), None, None
+    for row in path_rows:
+        interest = r * max(F, 0.0)
+        eff = row["fuel_saved"] - row["imported_equipment"] - interest
+        F = F + interest + row["imported_equipment"] - row["fuel_saved"]
+        row[f"external_effect_{lab}"] = eff
+        row[f"foreign_debt_{lab}"] = F
+        if 100 * F / row["gdp"] > peak[0]:
+            peak = (100 * F / row["gdp"], row["year"])
+        if pos is None and eff > 0:
+            pos = row["year"]
+        if repaid is None and pos is not None and F <= 0:
+            repaid = row["year"]
+    ext[lab] = (pos, peak, repaid)
+    y30 = next(r_ for r_ in path_rows if r_["year"] == 2030)
+    y26 = next(r_ for r_ in path_rows if r_["year"] == 2026)
+    say(f"  ({lab}, {100 * r:.1f}%): positive from {pos}; peak debt {peak[0]:.1f}% of GDP in {peak[1]}; repaid "
+        f"{repaid if repaid else 'after 2045'}; effect on the external balance {100 * y26[f'external_effect_{lab}'] / y26['gdp']:+.2f}% of GDP in 2026, "
+        f"{100 * y30[f'external_effect_{lab}'] / y30['gdp']:+.2f}% in 2030")
 with open(HERE / "egypt_paths.csv", "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(path_rows[0]))
     w.writeheader()
@@ -426,17 +473,29 @@ S1, V1 = m.run_country(d1, params={**CENTRAL, "pow_T_emdc": 2040, "ev_T_emdc": 2
 sens("faster (fossil-free power by 2040, all new vehicles electric by 2035)", S1, V1, d1)
 Sp, Vp, dgas = run(import_gas=False)
 sens("gas at the IMF 2024 supply cost (USD 8.8/MMBtu), not the import price", Sp, Vp, dgas)
-say("\n8a. RATES IN REAL TERMS, AND THE CARBON-PRICE EQUIVALENT OF DE-RISKING")
-INFL = 0.02
+say("\n8a. RATES IN NOMINAL TERMS, AND THE CARBON-PRICE EQUIVALENT OF DE-RISKING")
 for y in (2030, 2035):
-    ra, rb = (1 + R_LOCAL) / (1 + INFL) - 1, (1 + R_DERISKED) / (1 + INFL) - 1
+    ra, rb = NOM_LOCAL, NOM_DERISKED
     ta = sum(x["net"] for x in sector_costs(V, d, y, ra)[0].values())
     tb = sum(x["net"] for x in sector_costs(V, d, y, rb)[0].values())
-    say(f"  {y}: both rates deflated by {100 * INFL:.0f}% dollar inflation ({100 * ra:.1f}% and {100 * rb:.1f}%): "
+    say(f"  {y}: nominal rates applied to constant-price flows ({100 * ra:.1f}% and {100 * rb:.1f}%): "
         f"net cost (a) {ta:+.1f}, (b) {tb:+.1f}; gap {ta - tb:.1f} = {100 * (ta - tb) / gdp(y):.2f}% of GDP")
-    sens_rows.append(dict(case="both rates in real terms", year=y, net_local=ta, net_derisked=tb,
+    sens_rows.append(dict(case="nominal rates on constant-price flows", year=y, net_local=ta, net_derisked=tb,
                           power_local=sector_costs(V, d, y, ra)[0]["power"]["net"],
                           power_derisked=sector_costs(V, d, y, rb)[0]["power"]["net"]))
+    rg = real(NOM_LOCAL - 0.014)        # a payment guarantee alone: 1.4 points off the local rate (paper 3.1, stylized)
+    rows_g = sector_costs(V, d, y, rg)[0]
+    rows_a = sector_costs(V, d, y, R_LOCAL)[0]
+    rows_b = sector_costs(V, d, y, R_DERISKED)[0]
+    say(f"  {y}: a payment guarantee alone ({100 * (NOM_LOCAL - 0.014):.1f}% nominal = {100 * rg:.1f}% real): net cost all sectors "
+        f"{sum(x['net'] for x in rows_g.values()):+.1f}; power {rows_g['power']['net']:+.1f} against {rows_a['power']['net']:+.1f} (a) and "
+        f"{rows_b['power']['net']:+.1f} (b): the guarantee closes {100 * (rows_a['power']['net'] - rows_g['power']['net']) / (rows_a['power']['net'] - rows_b['power']['net']):.0f}% of the gap in power")
+    sens_rows.append(dict(case="payment guarantee alone, 1.4 points off the local rate", year=y,
+                          net_local=sum(x["net"] for x in rows_g.values()), net_derisked=float("nan"),
+                          power_local=rows_g["power"]["net"], power_derisked=float("nan")))
+    r6 = 0.06
+    t6 = sum(x["net"] for x in sector_costs(V, d, y, r6)[0].values())
+    say(f"  {y}: de-risked rate at 6% real (the World Bank's social rate): net cost {t6:+.1f}; gap to (a) {sum(x['net'] for x in sector_costs(V, d, y, R_LOCAL)[0].values()) - t6:.1f}")
 co2_mwh = S["hr_nga"] * m.P["ef_nga"]                      # tCO2 per MWh of gas-fired power displaced
 say(f"  gas-fired power emits {co2_mwh:.3f} tCO2/MWh (heat rate {S['hr_nga']:.2f} GJ/MWh)")
 ls_a, ls_b = lcoe(v(V, "mit.cap.sol.cost", 2026), S["cf_sol"], R_LOCAL), lcoe(v(V, "mit.cap.sol.cost", 2026), S["cf_sol"], R_DERISKED)
@@ -486,27 +545,35 @@ with open(HERE / "egypt_abatement_costs.csv", "w", newline="") as f:
     for r_ in mac_rows:
         w.writerow({k: (round(x, 2) if isinstance(x, float) else x) for k, x in r_.items()})
 
-say("\n8b. THE COST OF WAITING: every milestone reached five years later (world prices)")
+say("\n8b. THE COST OF WAITING: every milestone reached five years later")
 dl = base_data()
 SL, VL = m.run_country(dl, params={**CENTRAL, "pow_T_emdc": 2050, "ev_T_emdc": 2045, "bld_T_emdc": 2055,
                                     "ind_a_emdc": 0.8 * 26 / 31})
 
 
-def pv(Vx, dx, r, keys=None, y0=2025, y1=2050):
+def pv(Vx, dx, r, keys=None, y0=2025, y1=2050, disc=None):
+    """Present value of net cost at financing rate r, discounted at `disc` (default: the social rate)."""
+    disc = R_SOCIAL if disc is None else disc
     tot = 0.0
     for y in range(y0, y1 + 1):
         rows, _ = sector_costs(Vx, dx, y, r)
-        tot += sum(x["net"] for k, x in rows.items() if keys is None or k in keys) * (1 + r) ** -(y - 2024)
+        tot += sum(x["net"] for k, x in rows.items() if keys is None or k in keys) * (1 + disc) ** -(y - 2024)
     return tot
 
 
-say("present value 2025-2050 of net cost, USD bn (negative = net saving): on time | five years late | cost of waiting")
+say(f"present value 2025-2050 of net cost, USD bn, discounted at {100 * R_SOCIAL:.0f}% whatever the financing rate "
+    "(negative = net saving): on time | five years late | cost of waiting")
 wait_rows = []
-for lab, r in (("(a) local 10.3%", R_LOCAL), ("(b) de-risked 6%", R_DERISKED)):
+for lab, r in (("(a) financed at the local rate", R_LOCAL), ("(b) financed at the de-risked rate", R_DERISKED)):
     for keys, nm in ((None, "all sectors"), (("power", "trn"), "power and transport"), (("bld", "ind", "oth"), "buildings, industry, other")):
         a, b = pv(V, d, r, keys), pv(VL, dl, r, keys)
         say(f"  {lab}, {nm}: {a:.0f} | {b:.0f} | {b - a:+.0f}  (per year of delay {(b - a) / 5:+.1f})")
         wait_rows.append(dict(lens=lab, sectors=nm, pv_on_time=a, pv_five_years_late=b, cost_of_waiting=b - a))
+say("  same, discounting at the financing rate itself (as an investor would):")
+for lab, r in (("(a)", R_LOCAL), ("(b)", R_DERISKED)):
+    a, b = pv(V, d, r, None, disc=r), pv(VL, dl, r, None, disc=r)
+    a2, b2 = pv(V, d, r, ("power", "trn"), disc=r), pv(VL, dl, r, ("power", "trn"), disc=r)
+    say(f"  {lab} all sectors: {a:.0f} | {b:.0f} | {b - a:+.0f}; power and transport: {a2:.0f} | {b2:.0f} | {b2 - a2:+.0f}")
 cum = lambda Vx, c: sum(v(Vx, c, y) for y in range(2025, 2051))
 gas_on = cum(V, "mit.con.nga.pow.2"); gas_late = cum(VL, "mit.con.nga.pow.2")
 say(f"  extra gas burned in power 2025-2050: {(gas_late - gas_on) / 36.0:.0f} bcm; extra fuel bill "
@@ -549,11 +616,16 @@ for tau in (50, 100, 150, 200, 250, 300):
         f"(this step {100 * (cut - prev):.1f} points)")
     ret_rows.append(dict(kind="price", x=tau, value=100 * cut, step=100 * (cut - prev)))
     prev = cut
-for lr, nm in ((0.20, "learning rate 20%"),):
+# the carbon price needed for a further cut: invert the constant-elasticity demand curve
+say("  carbon price needed to cut road fuel use by x% through the price alone (USD/tCO2): "
+    + ", ".join(f"{x}%: {p0 * ((1 - x / 100) ** (1 / EPS) - 1) / (co2_l / 1000):.0f}" for x in (5, 10, 15, 20, 25, 30)))
+for x in range(0, 31):
+    ret_rows.append(dict(kind="mac", x=x, value=p0 * ((1 - x / 100) ** (1 / EPS) - 1) / (co2_l / 1000), step=0.0))
+# installed cost against cumulative capacity at the learning rates IRENA estimates for 2010-2024 (Table 1.1, world)
+for lr, kind, nm in ((0.338, "learning_solar", "solar, 33.8% a doubling"), (0.250, "learning_wind", "onshore wind, 25.0% a doubling")):
     for n in range(0, 7):
-        c = 100 * (1 - lr) ** n
-        ret_rows.append(dict(kind="learning", x=n, value=c, step=(100 * (1 - lr) ** (n - 1) - c) if n else 0.0))
-    say(f"  {nm}: cost index after 0..6 doublings of cumulative deployment: "
+        ret_rows.append(dict(kind=kind, x=n, value=100 * (1 - lr) ** n, step=0.0))
+    say(f"  {nm}: installed-cost index after 0..6 doublings of cumulative capacity: "
         + ", ".join(f"{100 * (1 - lr) ** n:.0f}" for n in range(0, 7)))
 with open(HERE / "returns_illustration.csv", "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(ret_rows[0]))

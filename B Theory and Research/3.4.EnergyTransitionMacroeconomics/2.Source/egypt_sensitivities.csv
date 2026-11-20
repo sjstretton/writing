@@ -1,13 +1,15 @@
 case,year,net_local,net_derisked,power_local,power_derisked
-"central (world prices, no new gas plant, gas at the import price)",2030,5.777,1.519,-1.075,-1.814
-"central (world prices, no new gas plant, gas at the import price)",2035,7.882,-1.51,-2.644,-4.77
-current trends must build gas plant (tool treatment),2030,3.571,0.042,-1.999,-2.432
-current trends must build gas plant (tool treatment),2035,1.758,-5.61,-5.523,-6.698
-"tool defaults (capital at 41% of world prices, gas plant built)",2030,-3.421,-4.883,-2.761,-2.94
-"tool defaults (capital at 41% of world prices, gas plant built)",2035,-12.474,-15.528,-7.562,-8.049
-"faster (fossil-free power by 2040, all new vehicles electric by 2035)",2030,5.304,0.162,-1.909,-3.204
-"faster (fossil-free power by 2040, all new vehicles electric by 2035)",2035,5.733,-5.858,-4.218,-7.874
-"gas at the IMF 2024 supply cost (USD 8.8/MMBtu), not the import price",2030,6.903,2.645,-0.299,-1.037
-"gas at the IMF 2024 supply cost (USD 8.8/MMBtu), not the import price",2035,10.714,1.322,-0.555,-2.681
-both rates in real terms,2030,3.587,-0.29,-1.455,-2.126
-both rates in real terms,2035,3.049,-5.495,-3.737,-5.67
+"central (world prices, no new gas plant, gas at the import price)",2030,3.587,-0.29,-1.455,-2.126
+"central (world prices, no new gas plant, gas at the import price)",2035,3.049,-5.495,-3.737,-5.67
+current trends must build gas plant (tool treatment),2030,1.755,-1.459,-2.221,-2.615
+current trends must build gas plant (tool treatment),2035,-2.034,-8.739,-6.127,-7.195
+"tool defaults (capital at 41% of world prices, gas plant built)",2030,-4.173,-5.505,-2.853,-3.016
+"tool defaults (capital at 41% of world prices, gas plant built)",2035,-14.045,-16.825,-7.812,-8.255
+"faster (fossil-free power by 2040, all new vehicles electric by 2035)",2030,2.659,-2.025,-2.575,-3.752
+"faster (fossil-free power by 2040, all new vehicles electric by 2035)",2035,-0.229,-10.779,-6.097,-9.421
+"gas at the IMF 2024 supply cost (USD 8.8/MMBtu), not the import price",2030,4.712,0.836,-0.678,-1.349
+"gas at the IMF 2024 supply cost (USD 8.8/MMBtu), not the import price",2035,5.882,-2.662,-1.648,-3.581
+nominal rates on constant-price flows,2030,5.777,1.519,-1.075,-1.814
+"payment guarantee alone, 1.4 points off the local rate",2030,2.266,nan,-1.684,nan
+nominal rates on constant-price flows,2035,7.882,-1.51,-2.644,-4.77
+"payment guarantee alone, 1.4 points off the local rate",2035,0.137,nan,-4.397,nan

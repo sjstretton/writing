@@ -1,7 +1,7 @@
 lens,sectors,pv_on_time,pv_five_years_late,cost_of_waiting
-(a) local 10.3%,all sectors,50.57,46.37,-4.2
-(a) local 10.3%,power and transport,-38.37,-30.06,8.3
-(a) local 10.3%,"buildings, industry, other",88.94,76.44,-12.5
-(b) de-risked 6%,all sectors,-50.89,-31.11,19.78
-(b) de-risked 6%,power and transport,-127.36,-98.22,29.15
-(b) de-risked 6%,"buildings, industry, other",76.47,67.11,-9.37
+(a) financed at the local rate,all sectors,14.5,20.76,6.26
+(a) financed at the local rate,power and transport,-103.93,-81.36,22.58
+(a) financed at the local rate,"buildings, industry, other",118.43,102.11,-16.32
+(b) financed at the de-risked rate,all sectors,-107.99,-76.4,31.59
+(b) financed at the de-risked rate,power and transport,-147.87,-112.98,34.89
+(b) financed at the de-risked rate,"buildings, industry, other",39.88,36.57,-3.31

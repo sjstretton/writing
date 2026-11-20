@@ -1,8 +1,8 @@
 """Figures for paper 3.4. Reads the CSVs written by egypt_estimates.py. Run: python3 make_figures.py
 
-fig1-returns.png              Each carbon-price step cuts less fuel; each doubling of deployment cuts cost
+fig1-returns.png              The price needed for a further cut rises; the cost of clean equipment falls with deployment
 fig2-net-cost-by-sector.png   Net cost by sector in 2035 at the local and the de-risked cost of capital
-fig3-time-path.png            Investment arrives first, fuel savings later (% of GDP, 2025-2040)
+fig3-time-path.png            Investment first, fuel savings later; the external balance traces a J (% of GDP)
 fig4-power-unit-costs.png     Solar, wind and solar with storage against the fuel cost of gas power
 
 Colors: the house palette (blue, orange, aqua; one-hue light-to-dark pair for local and de-risked),
@@ -59,38 +59,44 @@ def dumbbell(ax, rows, lo_key, hi_key, labels, fmt="{:+.1f}", pad=0.35):
 
 
 def legend_pair(ax, loc="lower right"):
-    h = [plt.Line2D([], [], marker="o", ls="", color=LIGHT, markersize=8, label="Local cost of capital, 10.3%"),
-         plt.Line2D([], [], marker="o", ls="", color=DARK, markersize=8, label="De-risked, 6%")]
+    h = [plt.Line2D([], [], marker="o", ls="", color=LIGHT, markersize=8, label="Local cost of capital, 8.2% real"),
+         plt.Line2D([], [], marker="o", ls="", color=DARK, markersize=8, label="De-risked, 3.9% real")]
     ax.legend(handles=h, frameon=False, fontsize=8.5, loc=loc, handletextpad=0.3, borderaxespad=0.2)
 
 
-# ---- Figure 1: diminishing returns of price, increasing returns of deployment -----------------------
+# ---- Figure 1: the price needed rises with the cut; the cost of equipment falls with deployment -------
 rr = read("returns_illustration.csv")
-pr = [r for r in rr if r["kind"] == "price"]
-lr = [r for r in rr if r["kind"] == "learning"]
-fig, (a1, a2) = plt.subplots(1, 2, figsize=(6.8, 2.9), gridspec_kw={"wspace": 0.38})
-xs = range(len(pr))
-a1.bar(xs, [float(r["step"]) for r in pr], color=BLUE, width=0.5)
-for i, r in enumerate(pr):
-    a1.text(i, float(r["step"]) + 0.15, f'{float(r["step"]):.1f}', ha="center", fontsize=8.5, color=INK)
-a1.set_xticks(list(xs), [f'{int(r["x"])}' for r in pr])
-a1.set_xlabel("Carbon price reached, US\\$ per tonne of CO$_2$,\nin steps of \\$50", fontsize=9)
-a1.set_ylabel("Extra cut in fuel use,\npercentage points", fontsize=9)
-a1.set_ylim(0, 8.2)
+mac = [r for r in rr if r["kind"] == "mac"]
+fig, (a1, a2) = plt.subplots(1, 2, figsize=(6.8, 2.9), gridspec_kw={"wspace": 0.36})
+xs = [float(r["x"]) for r in mac]
+ys = [float(r["value"]) for r in mac]
+a1.plot(xs, ys, color=BLUE, lw=2, solid_capstyle="round")
+for x_ in (10, 20, 30):
+    y_ = ys[xs.index(float(x_))]
+    a1.scatter([x_], [y_], s=40, color=BLUE, edgecolor="white", linewidth=1.5, zorder=3)
+    a1.text(x_ - 1.0, y_ + 14, f"\\${y_:.0f}", ha="right", va="bottom", fontsize=8.5, color=INK)
+a1.set_xlim(0, 31.5)
+a1.set_ylim(0, 400)
+a1.set_xticks([0, 10, 20, 30], ["0", "10%", "20%", "30%"])
+a1.set_xlabel("Cut in road fuel use from the price alone", fontsize=9)
+a1.set_ylabel("Carbon price needed,\nUS\\$ per tonne of CO$_2$", fontsize=9)
 a1.grid(axis="x", visible=False)
-a1.set_title("Each price step cuts less", fontsize=10, color=INK, loc="left")
-ns = [int(r["x"]) for r in lr]
-a2.plot(ns, [float(r["value"]) for r in lr], color=BLUE, lw=2, marker="o", markersize=6, markeredgecolor="white",
-        markeredgewidth=1.2)
-for n_, r in zip(ns, lr):
-    if n_ in (0, 3, 6):
-        a2.text(n_, float(r["value"]) + 6, f'{float(r["value"]):.0f}', ha="center", fontsize=8.5, color=INK)
-a2.set_xticks(ns)
-a2.set_xlabel("Doublings of cumulative deployment\n(learning rate 20 percent)", fontsize=9)
-a2.set_ylabel("Unit cost, start = 100", fontsize=9)
-a2.set_ylim(0, 115)
+a1.set_title("Price: each further cut needs\na higher price", fontsize=9.5, color=INK, loc="left")
+for kind, lab, col, dy in (("learning_wind", "Onshore wind", ORANGE, 7), ("learning_solar", "Solar", BLUE, -9)):
+    lr = [r for r in rr if r["kind"] == kind]
+    ns = [int(r["x"]) for r in lr]
+    vs = [float(r["value"]) for r in lr]
+    a2.plot(ns, vs, color=col, lw=2, solid_capstyle="round")
+    a2.scatter([ns[-1]], [vs[-1]], s=40, color=col, edgecolor="white", linewidth=1.5, zorder=3)
+    a2.text(ns[-1] + 0.2, vs[-1] + (5 if kind == "learning_wind" else 1), f"{lab}, {vs[-1]:.0f}", va="center", ha="left",
+            fontsize=8.5, color=INK)
+a2.set_xlim(0, 9.4)
+a2.set_xticks(range(0, 7))
+a2.set_xlabel("Doublings of cumulative capacity", fontsize=9)
+a2.set_ylabel("Installed cost, start = 100", fontsize=9)
+a2.set_ylim(0, 105)
 a2.grid(axis="x", visible=False)
-a2.set_title("Each doubling makes the next unit cheaper", fontsize=10, color=INK, loc="left")
+a2.set_title("Deployment: each doubling makes\nthe next plant cheaper", fontsize=9.5, color=INK, loc="left")
 fig.savefig(OUT / "fig1-returns.png")
 plt.close(fig)
 
@@ -105,33 +111,46 @@ fig, ax = plt.subplots(figsize=(6.6, 3.7))
 dumbbell(ax, rows + [tot], "net_local", "net_derisked", [short[r["sector"]] for r in rows] + ["All sectors"])
 ax.axvline(0, color=INK2, lw=0.8, zorder=1)
 ax.axhline(0.5, color=GRID, lw=0.8)
-ax.set_xlim(-8.5, 13.5)
+ax.set_xlim(-8.6, 8.6)
 ax.set_xlabel("Net cost in 2035, US\\$ billion a year (2024 prices). Left of zero: the sector pays for itself")
 legend_pair(ax, loc="upper right")
 fig.savefig(OUT / "fig2-net-cost-by-sector.png")
 plt.close(fig)
 
-# ---- Figure 3: the time path -----------------------------------------------------------------------
+# ---- Figure 3: the time path and the J in the external balance --------------------------------------
 p = [r for r in read("egypt_paths.csv") if 2025 <= int(r["year"]) <= 2040]
 yrs = [int(r["year"]) for r in p]
 pct = lambda k: [100 * float(r[k]) / float(r["gdp"]) for r in p]
-series = [("incremental_investment", "Extra investment", BLUE), ("imported_equipment", "of which imported\nequipment (half)", ORANGE),
-          ("fuel_saved", "Fuel saved", AQUA)]
-fig, ax = plt.subplots(figsize=(6.6, 3.5))
-for k, lab, col in series:
+series = [("incremental_investment", "Extra\ninvestment", BLUE, 0.0), ("imported_equipment", "Imported\nequipment", ORANGE, 0.0),
+          ("fuel_saved", "Fuel saved", AQUA, 0.0)]
+fig, (ax, bx) = plt.subplots(1, 2, figsize=(7.0, 3.0), gridspec_kw={"wspace": 0.8, "width_ratios": [1.0, 1.0]})
+for k, lab, col, dy in series:
     ys = pct(k)
-    ax.plot(yrs, ys, color=col, lw=2, solid_capstyle="round", label=lab.replace("\n", " "))
+    ax.plot(yrs, ys, color=col, lw=2, solid_capstyle="round")
     ax.scatter([yrs[-1]], [ys[-1]], s=40, color=col, edgecolor="white", linewidth=1.5, zorder=3)
-    dy = {"incremental_investment": 0.45, "fuel_saved": -0.45, "imported_equipment": 0.0}[k]
-    ax.text(yrs[-1] + 0.35, ys[-1] + dy, f"{lab}\n{ys[-1]:.1f}%", va="center", ha="left", fontsize=8.5, color=INK,
-            linespacing=1.15)
+    dy = {"incremental_investment": 0.45, "fuel_saved": -0.75, "imported_equipment": 0.0}[k]
+    ax.text(yrs[-1] + 0.5, ys[-1] + dy, f"{lab}, {ys[-1]:.1f}", va="center", ha="left", fontsize=8, color=INK, linespacing=1.15)
 ax.set_xlim(2025, 2040)
 ax.set_ylim(0, 7.6)
 ax.set_xticks([2025, 2030, 2035, 2040])
-ax.set_ylabel("Percent of GDP")
+ax.set_ylabel("Percent of GDP", fontsize=9)
 ax.grid(axis="x", visible=False)
-ax.legend(frameon=False, fontsize=8.5, loc="upper left", ncol=3, columnspacing=1.2, handlelength=1.4,
-          bbox_to_anchor=(0.0, 1.12))
+ax.set_title("Spending first, savings later", fontsize=9.5, color=INK, loc="left")
+bx.axhline(0, color=INK2, lw=0.8, zorder=1)
+for k, lab, col, xy, ha in (("external_effect_local", "Local cost\nof capital", LIGHT, (2034.6, -0.75), "left"),
+                            ("external_effect_derisked", "De-risked", DARK, (2031.2, 0.75), "right")):
+    ys = pct(k)
+    bx.plot(yrs, ys, color=col, lw=2, solid_capstyle="round")
+    bx.text(xy[0], xy[1], lab, va="center", ha=ha, fontsize=8, color=INK, linespacing=1.15)
+bx.scatter([yrs[-1]], [ys[-1]], s=40, color=DARK, edgecolor="white", linewidth=1.5, zorder=3)
+bx.text(yrs[-1] + 0.5, ys[-1], f"{ys[-1]:+.1f}", va="center", ha="left", fontsize=8, color=INK)
+bx.text(2025.4, pct("external_effect_derisked")[0] + 0.42, f'{pct("external_effect_derisked")[0]:+.1f}'.replace("-", "\u2212"), va="center", ha="left",
+        fontsize=8, color=INK)
+bx.set_xlim(2025, 2040)
+bx.set_xticks([2025, 2030, 2035, 2040])
+bx.set_ylabel("Percent of GDP", fontsize=9)
+bx.grid(axis="x", visible=False)
+bx.set_title("Effect on the external balance", fontsize=9.5, color=INK, loc="left")
 fig.savefig(OUT / "fig3-time-path.png")
 plt.close(fig)
 
