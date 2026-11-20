@@ -1,0 +1,4 @@
+lens,solar,wind,solar_plus_storage_low,solar_plus_storage_high,storage_per_mwh_low,storage_per_mwh_high,gas_fuel_only
+(a) local 10.3%,39.36,46.97,70.62,101.88,62.52,125.05,66.4
+(a) high 14.8%,51.7,61.69,90.2,128.69,77.0,153.99,66.4
+(b) de-risked 6%,28.65,34.18,53.6,78.55,49.9,99.81,66.4
