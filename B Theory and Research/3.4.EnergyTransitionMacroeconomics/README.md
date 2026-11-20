@@ -1,6 +1,6 @@
 # 3.4 The Energy Transition Swaps a Fuel Bill for a Capital Bill
 
-**Status:** Theory and Research Note No. 3.4, v0.3 (20 November 2026). A review of the literature on 32 stylized facts of the energy transition and what they mean for macroeconomic policy. Peer-reviewed twice by an independent referee (v0.1 and v0.2; reports and responses in `5.Notes/`). New research awaiting Stephen's review; not on the website; no brief or deck. Joins `C Policy and FInance/3.FinanceAndRisk/` once reviewed. A lead-in to the work on a global green deal.
+**Status:** Theory and Research Note No. 3.4, v0.3 (20 November 2026). A review of the literature on 32 stylized facts of the energy transition and what they mean for macroeconomic policy. Peer-reviewed twice by an independent referee (v0.1 and v0.2; reports and responses in `5.Notes/`). New research awaiting Stephen's review; not on the website; a nine-slide deck is in `1.Presentation/`; no brief. Joins `C Policy and FInance/3.FinanceAndRisk/` once reviewed. A lead-in to the work on a global green deal.
 
 **Question.** What do the stylized facts of the energy transition imply for macroeconomic policy, for carbon pricing and for development finance?
 
@@ -21,6 +21,7 @@
 | `5.Notes/LiteratureCheck-2026-11-20-*.md` | What each cited paper says, from its abstract or text: carbon pricing theory (40 items); expectations, investment under uncertainty and macroeconomic effects (55 items); works named by the second referee (26 items) |
 | `5.Notes/EvidenceCheck-2026-11-20-Addendum.md` | Passages read in full source texts after the evidence files were written (equipment cost shares, and what stays unverified at first hand) |
 | `5.Notes/PeerReview-2026-11-20.md`, `PeerReview2-2026-11-20.md`, `ResponseToReviews-2026-11-20.md` | The two referee reports and what was done about each point |
+| `1.Presentation/slides.json`, `Slides-EnergyTransitionMacroeconomics.pptx`, `.pdf` | Nine-slide deck, built with `H Writing Instructions/Writing Standards/templates/make_deck.py` from `slides.json` |
 | `8.PreviousVersions/` | v0.1 (first draft, advocacy and modeling in the body) and v0.2 (the literature-review rewrite, before the second review) |
 
 ## Render

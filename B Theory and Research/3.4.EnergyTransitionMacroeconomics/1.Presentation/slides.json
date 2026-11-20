@@ -1,0 +1,119 @@
+{
+  "series": "Theory and Research Note No. 3.4 · November 2026",
+  "title": "The Energy Transition Swaps a Fuel Bill for a Capital Bill",
+  "slides": [
+    {
+      "type": "title",
+      "title": "The Energy Transition Swaps a Fuel Bill for a Capital Bill",
+      "subtitle": "Stylized facts, the literature behind them, and what they mean for macroeconomic policy, carbon pricing and development finance",
+      "message": "A fuel-based energy system is paid for every day; an electric one is paid for when it is built. Energy moves from the trade balance to the balance sheet, so finance and credibility matter as much as the carbon price.",
+      "author": "Stephen J. Stretton · writing in a personal capacity"
+    },
+    {
+      "type": "stats",
+      "title": "Energy becomes capital, and the cost of capital becomes the largest part of its price",
+      "stats": [
+        {"value": "60 → 80%", "label": "share of capital in the cost of supplying electricity on the IEA's net zero path"},
+        {"value": "1.8%", "label": "of world GDP spent on net fossil fuel imports in 2022: the bill that capital replaces"},
+        {"value": ">2×", "label": "the cost of capital for solar in emerging and developing economies, against advanced economies"}
+      ],
+      "text": "The note reviews the literature on 32 stylized facts in five groups. Fuel-price risk fades; interest-rate, refinancing and currency risks take its place.",
+      "source": "IEA (2021), Net Zero by 2050; Ember (2025); IEA (2024), Reducing the Cost of Capital."
+    },
+    {
+      "type": "points",
+      "title": "Investment follows the price that is expected to last, and uncertainty makes waiting valuable",
+      "points": [
+        {"lead": "The response is in machines:", "text": "the price elasticity of energy demand is −0.22 in the short run and −0.65 in the long run."},
+        {"lead": "Buyers respond to what they expect to stay:", "text": "about three times as much to a fuel tax change as to an equal price change."},
+        {"lead": "A price that may be repealed is discounted:", "text": "with a one-in-ten chance of repeal each year it is worth 44 cents on the dollar to an investor."},
+        {"lead": "Expectations must hold at two levels:", "text": "that policy will last, and that the grid, the chargers and the clean power will be there."}
+      ],
+      "source": "Labandeira et al. (2017); Li, Linn and Muehlegger (2014); Andersson (2019); Dixit and Pindyck (1994); author's calculation."
+    },
+    {
+      "type": "figure",
+      "title": "With technology fixed, each further cut needs a higher price; with deployment, clean technology gets cheaper",
+      "image": "figures/fig1-returns.png",
+      "caption": "Left: carbon price needed to cut road fuel use (assumed elasticity −0.5). Right: installed cost by doubling of capacity, 2010–24.",
+      "points": [
+        {"lead": "Price alone:", "text": "about $80 a tonne for a 10% cut, $350 for 30%."},
+        {"lead": "Deployment:", "text": "cost falls 34% per doubling for solar, 25% for wind; how much deployment causes is disputed."},
+        {"lead": "The gain spills over", "text": "to later buyers everywhere, so each country alone deploys too little."}
+      ],
+      "source": "Author's calculations; IRENA (2025); Grubb et al. (2021); Nordhaus (2014)."
+    },
+    {
+      "type": "table",
+      "title": "The first-best carbon price is a benchmark; each of its failures has its own instrument",
+      "header": ["Where the benchmark fails", "What the literature finds", "Instrument"],
+      "rows": [
+        ["Knowledge and learning spill over", "A tax alone has significant welfare costs", "Support for deployment and research"],
+        ["Capital markets fail", "Costly capital needs a higher carbon price for the same result", "Guarantees that lower the cost of capital"],
+        ["Governments cannot commit", "An announced tax is discounted", "Price floors; the price written into contracts"],
+        ["Voters and incumbents resist", "Standards and feebates cost more but avoid stranded assets", "Feebates on new equipment; sequencing"],
+        ["Other prices are wrong", "Fuel subsidies are a negative price", "Subsidy and tariff reform first"]
+      ],
+      "note": "A price is still the best single instrument. The average price in force is about $21 a tonne on 29% of emissions, against at least $50–100 by 2030 for the Paris goals.",
+      "source": "Acemoglu et al. (2012, 2016); Hirth and Steckel (2016); Kalkuhl et al. (2020); Rozenberg et al. (2020); World Bank (2026); High-Level Commission on Carbon Prices (2017)."
+    },
+    {
+      "type": "points",
+      "title": "Finance is the binding constraint, and three simple guarantees answer it: cheap, but not free",
+      "points": [
+        {"lead": "1. Payment guarantee:", "text": "guarantee that the public buyer pays generators on time, under one standard contract for many plants, as India's SECI does."},
+        {"lead": "2. Refinancing guarantee:", "text": "guarantee part of a bond that refinances plants and grids once they run."},
+        {"lead": "3. Reform-linked guarantee line:", "text": "enlarge a country's guarantee line as it keeps agreed reforms."},
+        {"lead": "Behind all three, a buffer fund", "text": "of donor capital, because a guarantee uses capital as a loan does."},
+        {"lead": "The costs:", "text": "each is a liability of the state; being paid first shifts risk to other creditors; a guarantee does not make the utility solvent."}
+      ],
+      "source": "Papers 3.1, 3.2, 4.1, 4.2 and 4.3 in this series; GEMs (2025); Gabor (2021); Cordella and Powell (2021)."
+    },
+    {
+      "type": "figure",
+      "title": "In Egypt, the cost of capital decides whether a rapid transition costs or saves",
+      "image": "figures/fig2-net-cost-by-sector.png",
+      "caption": "Net cost by sector in 2035, US$ billion a year. Illustrative: the author's calculations on public data, not official estimates.",
+      "points": [
+        {"lead": "At the local rate (8.2% real):", "text": "a net cost of 0.5% of GDP in 2035; 0.3% with a payment guarantee on power."},
+        {"lead": "All power de-risked:", "text": "a saving of 0.2% of GDP (0.9% if the whole program were, an upper bound)."},
+        {"lead": "Power and transport pay", "text": "at either rate; industry at neither."}
+      ],
+      "source": "Author's calculations (Appendix B of the note). Gas valued at the import price of $12 per million British thermal units."
+    },
+    {
+      "type": "stats",
+      "title": "Spending comes first and savings later, so waiting is costly and capacity must come from outside",
+      "stats": [
+        {"value": "5.3%", "label": "of GDP a year: Egypt's extra investment over 2026–35, about half of it imported equipment"},
+        {"value": "−1.7%", "label": "of GDP: effect on the external balance at the start; positive from 2032–34"},
+        {"value": "$20 bn", "label": "present-value cost of waiting five years, plus 217 billion cubic meters more gas"},
+        {"value": "13 GW", "label": "of wind and solar a year needed in 2031–35, against a record of 1.5"}
+      ],
+      "text": "If all the investment is financed abroad at the local rate, interest by 2035 equals the fuel saved: a fuel bill swapped for a capital bill of the same size.",
+      "source": "Author's calculations (illustrative); IRENA (2026); IMF (2026)."
+    },
+    {
+      "type": "closing",
+      "title": "A transition that pays may still come too late, which is the case for a global green deal",
+      "left": {
+        "title": "What the facts imply",
+        "items": [
+          "Report the cost of capital as an energy price",
+          "Judge carbon pricing by the whole effective price and by whether it is believed",
+          "Put commitments in contracts, and count the liabilities",
+          "Watch guarantees, state companies and fuel tax erosion, not only subsidies"
+        ]
+      },
+      "right": {
+        "title": "What one country cannot do alone",
+        "items": [
+          "Capture the fall in cost that its deployment causes",
+          "Stop fuel it saves from being burned elsewhere",
+          "Create more of the standing of lenders who are paid first",
+          "Next paper: finance and market access in exchange for verified cuts"
+        ]
+      }
+    }
+  ]
+}
