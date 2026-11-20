@@ -113,7 +113,9 @@ year | incremental investment | of which imported equipment (50%) | spent in Egy
 2045 | 6.86 | 3.24 | 3.63 | 8.12 | 4.88 | -0.59 | -3.21
 fuel saved exceeds imported equipment from 2032; exceeds all incremental investment from 2042
 external account with interest on the foreign finance (real rates): year the effect on the external balance turns positive | peak net foreign debt of the program | year it is repaid
+  (local) gross view: imported equipment bought to 2035 USD 133 bn; interest on all of it at 8.2% USD 10.9 bn a year, against fuel saved of 23.9 in 2035
   (local, 8.2%): positive from 2034; peak debt 8.2% of GDP in 2032; repaid 2039; effect on the external balance -1.65% of GDP in 2026, -1.04% in 2030
+  (derisked) gross view: imported equipment bought to 2035 USD 133 bn; interest on all of it at 3.9% USD 5.2 bn a year, against fuel saved of 23.9 in 2035
   (derisked, 3.9%): positive from 2032; peak debt 6.9% of GDP in 2031; repaid 2038; effect on the external balance -1.58% of GDP in 2026, -0.73% in 2030
 
 8. SENSITIVITIES (net cost, USD bn a year; all sectors unless stated)
@@ -131,9 +133,11 @@ external account with interest on the foreign finance (real rates): year the eff
 8a. RATES IN NOMINAL TERMS, AND THE CARBON-PRICE EQUIVALENT OF DE-RISKING
   2030: nominal rates applied to constant-price flows (10.3% and 6.0%): net cost (a) +5.8, (b) +1.5; gap 4.3 = 0.87% of GDP
   2030: a payment guarantee alone (8.9% nominal = 6.8% real): net cost all sectors +2.3; power -1.7 against -1.5 (a) and -2.1 (b): the guarantee closes 34% of the gap in power
+  2030: power capital charge 4.41 (a), 3.86 (guarantee alone), 2.81 (b). Net cost, all sectors, with only power de-risked: +2.0; with only a payment guarantee on power: +3.0
   2030: de-risked rate at 6% real (the World Bank's social rate): net cost +1.5; gap to (a) 2.1
   2035: nominal rates applied to constant-price flows (10.3% and 6.0%): net cost (a) +7.9, (b) -1.5; gap 9.4 = 1.56% of GDP
   2035: a payment guarantee alone (8.9% nominal = 6.8% real): net cost all sectors +0.1; power -4.4 against -3.7 (a) and -5.7 (b): the guarantee closes 34% of the gap in power
+  2035: power capital charge 11.21 (a), 9.80 (guarantee alone), 7.09 (b). Net cost, all sectors, with only power de-risked: -1.1; with only a payment guarantee on power: +1.6
   2035: de-risked rate at 6% real (the World Bank's social rate): net cost -1.5; gap to (a) 4.6
   gas-fired power emits 0.446 tCO2/MWh (heat rate 7.95 GJ/MWh)
   plain solar: USD 34/MWh at (a), 24 at (b): de-risking is worth USD 10/MWh = a carbon price of USD 22/tCO2 on the gas it displaces

@@ -435,6 +435,9 @@ for lab, r in (("local", R_LOCAL), ("derisked", R_DERISKED)):
         if repaid is None and pos is not None and F <= 0:
             repaid = row["year"]
     ext[lab] = (pos, peak, repaid)
+    cum35 = sum(r_["imported_equipment"] for r_ in path_rows if r_["year"] <= 2035)
+    say(f"  ({lab}) gross view: imported equipment bought to 2035 USD {cum35:.0f} bn; interest on all of it at {100 * r:.1f}% "
+        f"USD {r * cum35:.1f} bn a year, against fuel saved of {next(r_['fuel_saved'] for r_ in path_rows if r_['year'] == 2035):.1f} in 2035")
     y30 = next(r_ for r_ in path_rows if r_["year"] == 2030)
     y26 = next(r_ for r_ in path_rows if r_["year"] == 2026)
     say(f"  ({lab}, {100 * r:.1f}%): positive from {pos}; peak debt {peak[0]:.1f}% of GDP in {peak[1]}; repaid "
@@ -493,6 +496,15 @@ for y in (2030, 2035):
     sens_rows.append(dict(case="payment guarantee alone, 1.4 points off the local rate", year=y,
                           net_local=sum(x["net"] for x in rows_g.values()), net_derisked=float("nan"),
                           power_local=rows_g["power"]["net"], power_derisked=float("nan")))
+    # only the power sector's capital (generation, grids, storage) at the lower rate; other sectors at the local rate
+    tot_a = sum(x["net"] for x in rows_a.values())
+    pw_a, pw_b, pw_g = rows_a["power"]["charge"], rows_b["power"]["charge"], rows_g["power"]["charge"]
+    say(f"  {y}: power capital charge {pw_a:.2f} (a), {pw_g:.2f} (guarantee alone), {pw_b:.2f} (b). Net cost, all sectors, with only "
+        f"power de-risked: {tot_a - (pw_a - pw_b):+.1f}; with only a payment guarantee on power: {tot_a - (pw_a - pw_g):+.1f}")
+    sens_rows.append(dict(case="only power de-risked", year=y, net_local=tot_a - (pw_a - pw_b), net_derisked=float("nan"),
+                          power_local=float("nan"), power_derisked=float("nan")))
+    sens_rows.append(dict(case="only a payment guarantee on power", year=y, net_local=tot_a - (pw_a - pw_g), net_derisked=float("nan"),
+                          power_local=float("nan"), power_derisked=float("nan")))
     r6 = 0.06
     t6 = sum(x["net"] for x in sector_costs(V, d, y, r6)[0].values())
     say(f"  {y}: de-risked rate at 6% real (the World Bank's social rate): net cost {t6:+.1f}; gap to (a) {sum(x['net'] for x in sector_costs(V, d, y, R_LOCAL)[0].values()) - t6:.1f}")
