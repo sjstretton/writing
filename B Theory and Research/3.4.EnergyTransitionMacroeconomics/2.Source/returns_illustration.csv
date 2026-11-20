@@ -1,0 +1,14 @@
+kind,x,value,step
+price,50,6.653,6.653
+price,100,12.133,5.48
+price,150,16.75,4.616
+price,200,20.707,3.958
+price,250,24.149,3.442
+price,300,27.179,3.029
+learning,0,100.0,0.0
+learning,1,80.0,20.0
+learning,2,64.0,16.0
+learning,3,51.2,12.8
+learning,4,40.96,10.24
+learning,5,32.768,8.192
+learning,6,26.214,6.554

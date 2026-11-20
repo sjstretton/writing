@@ -21,14 +21,17 @@ What it does
   5. The time path: investment (local and imported parts) against fuel saved, as shares of GDP.
   6. The macro models of the tools (a GIMF-type and a DIG-type model) on the same program.
 
-One change to the tool's default. The tool scales capital costs by the local price level to the power 0.5
-(for Egypt 0.41 after the 2024 float). Note 6.8 (v0.3) drops price-level scaling, and Egyptian contract
-prices agree with world prices, not 41 percent of them. The central case here uses world prices (phi = 0);
-the tool default is reported as a sensitivity.
+Two changes to the tool's defaults, both from Egyptian facts; the tool's own treatment is reported as a sensitivity.
+  1. Capital at world prices. The tool scales capital costs by the local price level to the power 0.5 (for
+     Egypt 0.41 after the 2024 float). Note 6.8 (v0.3) drops price-level scaling, and Egyptian contract prices
+     agree with world prices, not 41 percent of them.
+  2. No new gas plant on either path. The tool replaces a thirtieth of the fossil fleet each year and adds
+     plant as demand grows; Egypt has surplus gas-fired capacity, so on current trends that plant is not
+     needed in the years covered, and counting it would credit the transition with a saving it does not make.
 
 Run:  python3 egypt_estimates.py [--tools /home/user/climate-fiscal-ai-tools] [--no-macro]
 Writes: egypt_estimates_output.txt, egypt_sector_table.csv, egypt_paths.csv, egypt_payer_table.csv,
-        egypt_power_unit_costs.csv
+        egypt_power_unit_costs.csv, egypt_waiting.csv, egypt_sensitivities.csv, returns_illustration.csv
 """
 import argparse
 import contextlib
@@ -51,6 +54,12 @@ sys.path.insert(0, str(ROOT / "MacroFiscalModels"))
 import nmim_v0_2 as m  # noqa: E402  (the investment model's engine)
 
 ISO = "EGY"
+GAS_CAPEX_TOOL = m.P["capex_gas"]
+# Central case: two changes to the tool's defaults, both from Egyptian facts.
+#   phi = 0        capital at world prices (the tool scales by the local price level, 0.41 for Egypt)
+#   capex_gas = 0  no new gas plant on either path: Egypt has surplus gas-fired capacity, so the tool's
+#                  replacement builds on the current-trends path would credit the transition with plant not needed
+CENTRAL = {"phi": 0.0, "capex_gas": 0.0}
 R_LOCAL, R_HIGH, R_DERISKED = 0.10343, 0.14843, 0.06   # (a) observed market WACC, (a) high case, (b) de-risked
 IMPORT_SHARE = 0.5                                      # share of capital spending that is imported equipment
 YEARS = m.YEARS
@@ -77,7 +86,7 @@ with contextlib.redirect_stdout(io.StringIO()):
     D, _cal = m.load_calibrated()
 
 
-def run(phi=0.0, wacc=None, cr=None, ffs=None):
+def run(params=None, wacc=None, cr=None, ffs=None):
     d = dict(D[ISO])
     if wacc is not None:
         d["wacc"] = wacc
@@ -85,7 +94,7 @@ def run(phi=0.0, wacc=None, cr=None, ffs=None):
         d["cr_ecy"] = cr
     if ffs is not None:
         d["ffs_exp"] = ffs
-    return m.run_country(d, params={"phi": phi}) + (d,)
+    return m.run_country(d, params={**CENTRAL, **(params or {})}) + (d,)
 
 
 def v(V, code, y):
@@ -153,11 +162,11 @@ def budget_by_sector(S, V, y):
 
 
 # ----------------------------------------------------------------------------------------------------
-S, V, d = run(phi=0.0)
+S, V, d = run()
 gdp = lambda y: v(V, "mit.gdp.lvl", y)
 say("EGYPT: a rapid transition by sector at two costs of capital (illustrative tool results; USD bn, 2024 prices)")
 say(f"Costs of capital: (a) local {100 * R_LOCAL:.1f}% (high case {100 * R_HIGH:.1f}%); (b) de-risked {100 * R_DERISKED:.0f}%")
-say(f"Capital at world prices (phi = 0; price factor {S['pf']:.2f}). GDP 2024 USD {gdp(2024):.0f} bn; "
+say(f"Capital at world prices (price factor {S['pf']:.2f}); no new gas plant on either path. GDP 2024 USD {gdp(2024):.0f} bn; "
     f"2030 {gdp(2030):.0f}; 2035 {gdp(2035):.0f}; 2040 {gdp(2040):.0f}")
 
 say("\n1. THE PATHS")
@@ -273,7 +282,7 @@ cases = [("(a) local cost of capital, tariffs and subsidies as today", dict(wacc
          ("(b) de-risked, cost-recovery tariffs and no fuel subsidies", dict(wacc=R_DERISKED, cr=1.0, ffs=0.0))]
 payer_rows = []
 for lab, kw in cases:
-    S_, V_, d_ = run(phi=0.0, **kw)
+    S_, V_, d_ = run(**kw)
     for y in (2030, 2035):
         typ = [v(V_, f"mit.typ.p{k}.2", y) for k in range(1, 6)]
         bud, dbud = v(V_, "mit.typ.bud.2", y), v(V_, "mit.dtyp.bud", y)
@@ -371,30 +380,123 @@ with open(HERE / "egypt_paths.csv", "w", newline="") as f:
     for r_ in path_rows:
         w.writerow({k: (round(x, 4) if isinstance(x, float) else x) for k, x in r_.items()})
 
-say("\n8. SENSITIVITY: the tool's default price factor (capital at 41% of world prices)")
-S0, V0, d0 = run(phi=0.5)
-for y in (2030, 2035):
-    say(f"{y}: price factor {S0['pf']:.2f}; transition investment {v(V0, 'mit.inv.tot.2', y):.1f} "
-        f"({100 * v(V0, 'mit.inv.tot.2', y) / gdp(y):.1f}% of GDP), incremental {v(V0, 'mit.dinv.tot', y):.1f}; "
-        f"net cost (a) {v(V0, 'mit.ic.a', y):.1f}, (b) {v(V0, 'mit.ic.b', y):.1f}; budget need {v(V0, 'mit.typ.bud.2', y):.1f}")
-say("    and a faster path (fossil-free power by 2040, all new vehicles electric by 2035), world prices:")
+say("\n8. SENSITIVITIES (net cost, USD bn a year; all sectors unless stated)")
+sens_rows = []
+
+
+def sens(lab, Sx, Vx, dx):
+    for y in (2030, 2035):
+        A, _ = sector_costs(Vx, dx, y, R_LOCAL)
+        B, _ = sector_costs(Vx, dx, y, R_DERISKED)
+        ta, tb = sum(x["net"] for x in A.values()), sum(x["net"] for x in B.values())
+        say(f"  {lab}, {y}: all sectors (a) {ta:+.1f}, (b) {tb:+.1f}; power (a) {A['power']['net']:+.1f}, (b) {B['power']['net']:+.1f}; "
+            f"transition investment {v(Vx, 'mit.inv.tot.2', y):.1f} ({100 * v(Vx, 'mit.inv.tot.2', y) / gdp(y):.1f}% of GDP), "
+            f"extra {v(Vx, 'mit.dinv.tot', y):.1f}; renewable share {100 * (1 - v(Vx, 'mit.gen.fsh.2', y)):.0f}%; "
+            f"budget need {v(Vx, 'mit.typ.bud.2', y):.1f}")
+        sens_rows.append(dict(case=lab, year=y, net_local=ta, net_derisked=tb, power_local=A["power"]["net"],
+                              power_derisked=B["power"]["net"]))
+
+
+sens("central (world prices, no new gas plant)", S, V, d)
+Sg, Vg, dg = run(params={"capex_gas": GAS_CAPEX_TOOL})
+sens("current trends must build gas plant (tool treatment)", Sg, Vg, dg)
+S0, V0, d0 = run(params={"phi": 0.5, "capex_gas": GAS_CAPEX_TOOL})
+sens("tool defaults (capital at 41% of world prices, gas plant built)", S0, V0, d0)
 d1 = dict(D[ISO])
-S1, V1 = m.run_country(d1, params={"phi": 0.0, "pow_T_emdc": 2040, "ev_T_emdc": 2035})
+S1, V1 = m.run_country(d1, params={**CENTRAL, "pow_T_emdc": 2040, "ev_T_emdc": 2035})
+sens("faster (fossil-free power by 2040, all new vehicles electric by 2035)", S1, V1, d1)
+dgas = dict(D[ISO]); dgas["sp_nga_pow"] = 12 / 1.055; dgas["sp_nga_ind"] = dgas["sp_nga_ind"] + (12 / 1.055 - D[ISO]["sp_nga_pow"])
+Sp, Vp = m.run_country(dgas, params=dict(CENTRAL))
+sens("gas at USD 12/MMBtu (imported LNG) in power and industry", Sp, Vp, dgas)
+with open(HERE / "egypt_sensitivities.csv", "w", newline="") as f:
+    w = csv.DictWriter(f, fieldnames=list(sens_rows[0]))
+    w.writeheader()
+    for r_ in sens_rows:
+        w.writerow({k: (round(x, 3) if isinstance(x, float) else x) for k, x in r_.items()})
+
+say("\n8b. THE COST OF WAITING: every milestone reached five years later (world prices)")
+dl = dict(D[ISO])
+SL, VL = m.run_country(dl, params={**CENTRAL, "pow_T_emdc": 2050, "ev_T_emdc": 2045, "bld_T_emdc": 2055,
+                                    "ind_a_emdc": 0.8 * 26 / 31})
+
+
+def pv(Vx, dx, r, keys=None, y0=2025, y1=2050):
+    tot = 0.0
+    for y in range(y0, y1 + 1):
+        rows, _ = sector_costs(Vx, dx, y, r)
+        tot += sum(x["net"] for k, x in rows.items() if keys is None or k in keys) * (1 + r) ** -(y - 2024)
+    return tot
+
+
+say("present value 2025-2050 of net cost, USD bn (negative = net saving): on time | five years late | cost of waiting")
+wait_rows = []
+for lab, r in (("(a) local 10.3%", R_LOCAL), ("(b) de-risked 6%", R_DERISKED)):
+    for keys, nm in ((None, "all sectors"), (("power", "trn"), "power and transport"), (("bld", "ind", "oth"), "buildings, industry, other")):
+        a, b = pv(V, d, r, keys), pv(VL, dl, r, keys)
+        say(f"  {lab}, {nm}: {a:.0f} | {b:.0f} | {b - a:+.0f}  (per year of delay {(b - a) / 5:+.1f})")
+        wait_rows.append(dict(lens=lab, sectors=nm, pv_on_time=a, pv_five_years_late=b, cost_of_waiting=b - a))
+cum = lambda Vx, c: sum(v(Vx, c, y) for y in range(2025, 2051))
+gas_on = cum(V, "mit.con.nga.pow.2"); gas_late = cum(VL, "mit.con.nga.pow.2")
+say(f"  extra gas burned in power 2025-2050: {(gas_late - gas_on) / 36.0:.0f} bcm; extra fuel bill "
+    f"{cum(VL, 'mit.fuel.bill.2') - cum(V, 'mit.fuel.bill.2'):.0f} bn (undiscounted); extra emissions "
+    f"{cum(VL, 'mit.ghg.tot.2') - cum(V, 'mit.ghg.tot.2'):.0f} MtCO2e; extra air pollution cost "
+    f"{cum(VL, 'mit.airpol.2') - cum(V, 'mit.airpol.2'):.0f} bn")
+say(f"  renewable share 2030: on time {100 * (1 - v(V, 'mit.gen.fsh.2', 2030)):.0f}%, late {100 * (1 - v(VL, 'mit.gen.fsh.2', 2030)):.0f}%")
+gas_lock = sum(v(V, "mit.add.fos.1", y) for y in range(2026, 2036))
+say(f"  (the tool's replacement rule would have current trends build {gas_lock:.0f} GW of gas plant in 2026-2035, "
+    f"USD {gas_lock * GAS_CAPEX_TOOL / 1000:.0f} bn; switched off in the central case)")
+with open(HERE / "egypt_waiting.csv", "w", newline="") as f:
+    w = csv.DictWriter(f, fieldnames=list(wait_rows[0]))
+    w.writeheader()
+    for r_ in wait_rows:
+        w.writerow({k: (round(x, 2) if isinstance(x, float) else x) for k, x in r_.items()})
+
+say("\n8c. SCALE: what must be built and financed, against what Egypt builds and saves today")
+say(f"  wind and solar additions 2026-2030: {add5:.1f} GW a year; installed at the start (Ember, 2025): "
+    f"solar {d['cap_sol']:.1f} GW, wind {d['cap_wnd']:.1f} GW")
+GCF = 12.997      # gross capital formation, % of GDP, 2024 (World Bank WDI, via the fiscal indicators panel)
+CAB = -5.431      # current account balance, % of GDP, 2024 (IMF WEO, via the panel)
 for y in (2030, 2035):
-    tot_a = sum(x["net"] for x in sector_costs(V1, d1, y, R_LOCAL)[0].values())
-    tot_b = sum(x["net"] for x in sector_costs(V1, d1, y, R_DERISKED)[0].values())
-    say(f"{y}: renewable share {100 * (1 - v(V1, 'mit.gen.fsh.2', y)):.0f}%; transition investment "
-        f"{v(V1, 'mit.inv.tot.2', y):.1f} ({100 * v(V1, 'mit.inv.tot.2', y) / gdp(y):.1f}% of GDP); "
-        f"net cost (a) {tot_a:.1f}, (b) {tot_b:.1f}")
+    i2, di = v(V, "mit.inv.tot.2", y), v(V, "mit.dinv.tot", y)
+    say(f"  {y}: transition investment {100 * i2 / gdp(y):.1f}% of GDP = {100 * (i2 / gdp(y)) / (GCF / 100):.0f}% of the 2024 "
+        f"investment rate ({GCF:.1f}% of GDP); extra investment {100 * di / gdp(y):.1f}% of GDP = "
+        f"{100 * (di / gdp(y)) / (GCF / 100):.0f}% of it; imported equipment {100 * IMPORT_SHARE * (di - v(V, 'mit.dinv.nco', y) - v(V, 'mit.dinv.oth', y)) / gdp(y):.1f}% of GDP "
+        f"against a current account balance of {CAB:.1f}% of GDP in 2024")
+say(f"  generation: {v(V, 'mit.gen.tot.2', 2024):.0f} TWh in 2024 -> {v(V, 'mit.gen.tot.2', 2030):.0f} (2030) -> "
+    f"{v(V, 'mit.gen.tot.2', 2040):.0f} (2040) on the transition path; current trends {v(V, 'mit.gen.tot.1', 2040):.0f} in 2040")
+
+say("\n8e. DIMINISHING RETURNS OF PRICE, INCREASING RETURNS OF DEPLOYMENT (illustration)")
+EPS = -0.5                                  # long-run price elasticity of road fuel demand (illustrative)
+p0 = d["sp_gso_rod"] * 34.2 / 1000          # gasoline supply cost, USD per litre
+co2_l = m.P["ef_gso"] * 34.2                # kg CO2 per litre
+ret_rows = []
+prev = 0.0
+for tau in (50, 100, 150, 200, 250, 300):
+    cut = 1 - ((p0 + tau * co2_l / 1000) / p0) ** EPS
+    say(f"  carbon price USD {tau}/t: gasoline {p0:.2f} -> {p0 + tau * co2_l / 1000:.2f} USD/l; cut in fuel use {100 * cut:.1f}% "
+        f"(this step {100 * (cut - prev):.1f} points)")
+    ret_rows.append(dict(kind="price", x=tau, value=100 * cut, step=100 * (cut - prev)))
+    prev = cut
+for lr, nm in ((0.20, "learning rate 20%"),):
+    for n in range(0, 7):
+        c = 100 * (1 - lr) ** n
+        ret_rows.append(dict(kind="learning", x=n, value=c, step=(100 * (1 - lr) ** (n - 1) - c) if n else 0.0))
+    say(f"  {nm}: cost index after 0..6 doublings of cumulative deployment: "
+        + ", ".join(f"{100 * (1 - lr) ** n:.0f}" for n in range(0, 7)))
+with open(HERE / "returns_illustration.csv", "w", newline="") as f:
+    w = csv.DictWriter(f, fieldnames=list(ret_rows[0]))
+    w.writeheader()
+    for r_ in ret_rows:
+        w.writerow({k: (round(x, 3) if isinstance(x, float) else x) for k, x in r_.items()})
 
 if not args.no_macro:
     say("\n9. MACRO MODELS on the same program (illustrative calibrations; % deviation of GDP from no program)")
     try:
         import integrated as it  # noqa: E402
         from nmim_bridge import _nmim
-        for lab, phi in (("world prices", 0.0), ("tool default price factor", 0.5)):
+        for lab, phi, cg in (("central", 0.0, 0.0), ("tool defaults", 0.5, GAS_CAPEX_TOOL)):
             mm, _D = _nmim()
-            mm.P["phi"] = phi
+            mm.P["phi"], mm.P["capex_gas"] = phi, cg
             with contextlib.redirect_stdout(io.StringIO()):
                 p = {}
                 r_ = it.run(ISO, paths=p)
@@ -410,7 +512,7 @@ if not args.no_macro:
                 f"status {r_.get('alt_status')}")
             if "gdp_dev_pct" in p:
                 say("   GDP path, first model: " + ", ".join(f"{y}: {p['gdp_dev_pct'][y - 2025]:+.1f}" for y in (2026, 2028, 2030, 2035, 2040)))
-        mm.P["phi"] = 0.5
+        mm.P["phi"], mm.P["capex_gas"] = 0.5, GAS_CAPEX_TOOL
     except Exception as e:  # the macro models are optional for the tables above
         say(f"macro models not run: {type(e).__name__}: {e}")
 

@@ -1,0 +1,11 @@
+case,year,net_local,net_derisked,power_local,power_derisked
+"central (world prices, no new gas plant)",2030,6.903,2.645,-0.299,-1.037
+"central (world prices, no new gas plant)",2035,10.714,1.322,-0.555,-2.681
+current trends must build gas plant (tool treatment),2030,4.696,1.167,-1.222,-1.655
+current trends must build gas plant (tool treatment),2035,4.59,-2.778,-3.434,-4.609
+"tool defaults (capital at 41% of world prices, gas plant built)",2030,-2.295,-3.758,-1.984,-2.164
+"tool defaults (capital at 41% of world prices, gas plant built)",2035,-9.641,-12.695,-5.473,-5.96
+"faster (fossil-free power by 2040, all new vehicles electric by 2035)",2030,6.978,1.837,-0.582,-1.877
+"faster (fossil-free power by 2040, all new vehicles electric by 2035)",2035,9.907,-1.683,-0.787,-4.443
+gas at USD 12/MMBtu (imported LNG) in power and industry,2030,5.777,1.519,-1.075,-1.814
+gas at USD 12/MMBtu (imported LNG) in power and industry,2035,7.882,-1.51,-2.644,-4.77

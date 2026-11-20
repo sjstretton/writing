@@ -1,6 +1,6 @@
 EGYPT: a rapid transition by sector at two costs of capital (illustrative tool results; USD bn, 2024 prices)
 Costs of capital: (a) local 10.3% (high case 14.8%); (b) de-risked 6%
-Capital at world prices (phi = 0; price factor 1.00). GDP 2024 USD 383 bn; 2030 491; 2035 601; 2040 733
+Capital at world prices (price factor 1.00); no new gas plant on either path. GDP 2024 USD 383 bn; 2030 491; 2035 601; 2040 733
 
 1. THE PATHS
 year | fossil share of generation: trends, transition | solar GW, wind GW (transition) | EV share of sales | GHG Mt: trends, transition
@@ -12,63 +12,63 @@ year | fossil share of generation: trends, transition | solar GW, wind GW (trans
 renewable share of generation in 2030 on the transition path: 38% (wind and solar additions 2026-2030: 7.5 GW a year)
 
 2. INVESTMENT (USD bn a year; % of GDP)
-2030: current trends 11.9 (2.4%), transition 33.3 (6.8%), incremental 21.4 (4.4%)
-2035: current trends 13.0 (2.2%), transition 40.0 (6.7%), incremental 27.0 (4.5%)
-2040: current trends 14.5 (2.0%), transition 54.5 (7.4%), incremental 40.0 (5.5%)
+2030: current trends 4.4 (0.9%), transition 30.6 (6.2%), incremental 26.2 (5.3%)
+2035: current trends 4.7 (0.8%), transition 40.0 (6.7%), incremental 35.3 (5.9%)
+2040: current trends 5.5 (0.7%), transition 54.5 (7.4%), incremental 49.1 (6.7%)
 cumulative 2026-2035 by sector: sector | current trends | transition | incremental
-  Power generation, grids and storage | 93 | 157 | 64
+  Power generation, grids and storage | 17 | 135 | 118
   Transport | 7 | 27 | 20
   Buildings | 0 | 25 | 25
   Industry | 0 | 88 | 88
   Methane, land use and other | 0 | 16 | 16
   Other clean investment, same on both paths | 19 | 19 | 0
-  TOTAL | 119 | 332 | 213  = 4.2% of 2026-2035 GDP (transition 6.6%)
-  of power, generation: current trends 58, transition 90, incremental 32
-  of power, grids and storage: current trends 35, transition 67, incremental 32
-  share of industry in the increment 41%; current trends 2.4% of GDP
+  TOTAL | 44 | 310 | 266  = 5.3% of 2026-2035 GDP (transition 6.1%)
+  of power, generation: current trends 11, transition 76, incremental 66
+  of power, grids and storage: current trends 7, transition 58, incremental 52
+  share of industry in the increment 33%; current trends 0.9% of GDP
 
 3. NET COST BY SECTOR (USD bn a year): capital charge + other - fuel saved
 -- 2030 (GDP 491) --
 sector | capital in service | charge (a) | charge (b) | saving from de-risking | fuel saved | other (a) | net (a) | net (a) high | net (b)
-  Power generation, grids and storage | 28.3 | 3.11 | 2.08 | 1.03 | 2.59 | -1.74 | -1.22 | -0.73 | -1.66
-  Transport | 14.2 | 2.12 | 1.69 | 0.43 | 1.60 | -0.15 | 0.37 | 0.92 | -0.12
-  Buildings | 14.1 | 1.60 | 1.11 | 0.49 | 1.36 | 0.25 | 0.49 | 1.15 | -0.09
-  Industry | 45.2 | 5.11 | 3.54 | 1.58 | 3.14 | 1.37 | 3.34 | 5.67 | 1.31
+  Power generation, grids and storage | 48.3 | 5.32 | 3.55 | 1.76 | 2.59 | -3.02 | -0.30 | 0.54 | -1.04
+  Transport | 14.2 | 2.12 | 1.69 | 0.43 | 1.60 | -0.01 | 0.50 | 1.11 | -0.03
+  Buildings | 14.1 | 1.60 | 1.11 | 0.49 | 1.36 | 0.42 | 0.66 | 1.39 | 0.03
+  Industry | 45.2 | 5.11 | 3.54 | 1.58 | 3.14 | 2.34 | 4.31 | 7.01 | 1.96
   Methane, land use and other | 0.0 | 0.00 | 0.00 | 0.00 | 0.00 | 1.73 | 1.73 | 1.73 | 1.73
-  TOTAL | 101.8 | 11.94 | 8.41 | 3.53 | 8.70 | 1.45 | 4.70 | 8.74 | 1.17
-  as % of GDP: net (a) 0.96, net (a) high 1.78, net (b) 0.24; saving from de-risking 0.72; fuel saved 1.77
-  check against the model's own totals: (a) 4.70, (b) 1.17; air pollution avoided 6.8; GHG abated 83 Mt -> USD 57/t at (a), 14/t at (b)
-  clean power for end uses charged at USD 37/MWh (a), 25/MWh (b); extra wind and solar 85 TWh, of which sold to transport 5, buildings 7, industry 37 TWh
+  TOTAL | 121.9 | 14.15 | 9.89 | 4.26 | 8.70 | 1.45 | 6.90 | 11.77 | 2.64
+  as % of GDP: net (a) 1.40, net (a) high 2.40, net (b) 0.54; saving from de-risking 0.87; fuel saved 1.77
+  check against the model's own totals: (a) 6.90, (b) 2.64; air pollution avoided 6.8; GHG abated 83 Mt -> USD 83/t at (a), 32/t at (b)
+  clean power for end uses charged at USD 63/MWh (a), 42/MWh (b); extra wind and solar 85 TWh, of which sold to transport 5, buildings 7, industry 37 TWh
 -- 2035 (GDP 601) --
 sector | capital in service | charge (a) | charge (b) | saving from de-risking | fuel saved | other (a) | net (a) | net (a) high | net (b)
-  Power generation, grids and storage | 67.7 | 7.41 | 4.91 | 2.50 | 6.97 | -3.87 | -3.43 | -2.10 | -4.61
-  Transport | 21.2 | 3.17 | 2.53 | 0.64 | 4.81 | -0.46 | -2.10 | -1.16 | -2.93
-  Buildings | 27.3 | 3.09 | 2.14 | 0.95 | 2.64 | 0.47 | 0.93 | 2.21 | -0.18
-  Industry | 94.1 | 10.64 | 7.36 | 3.28 | 6.63 | 2.87 | 6.89 | 11.76 | 2.64
+  Power generation, grids and storage | 123.3 | 13.53 | 9.01 | 4.52 | 6.97 | -7.11 | -0.56 | 1.86 | -2.68
+  Transport | 21.2 | 3.17 | 2.53 | 0.64 | 4.81 | 0.02 | -1.62 | -0.50 | -2.61
+  Buildings | 27.3 | 3.09 | 2.14 | 0.95 | 2.64 | 0.86 | 1.32 | 2.74 | 0.08
+  Industry | 94.1 | 10.64 | 7.36 | 3.28 | 6.63 | 5.25 | 9.26 | 15.03 | 4.23
   Methane, land use and other | 0.0 | 0.00 | 0.00 | 0.00 | 0.00 | 2.31 | 2.31 | 2.31 | 2.31
-  TOTAL | 210.4 | 24.31 | 16.94 | 7.37 | 21.05 | 1.33 | 4.59 | 13.02 | -2.78
-  as % of GDP: net (a) 0.76, net (a) high 2.17, net (b) -0.46; saving from de-risking 1.23; fuel saved 3.50
-  check against the model's own totals: (a) 4.59, (b) -2.78; air pollution avoided 15.6; GHG abated 161 Mt -> USD 29/t at (a), -17/t at (b)
-  clean power for end uses charged at USD 37/MWh (a), 24/MWh (b); extra wind and solar 202 TWh, of which sold to transport 16, buildings 13, industry 78 TWh
+  TOTAL | 265.9 | 30.43 | 21.04 | 9.39 | 21.05 | 1.33 | 10.71 | 21.45 | 1.32
+  as % of GDP: net (a) 1.78, net (a) high 3.57, net (b) 0.22; saving from de-risking 1.56; fuel saved 3.50
+  check against the model's own totals: (a) 10.71, (b) 1.32; air pollution avoided 15.6; GHG abated 161 Mt -> USD 67/t at (a), 8/t at (b)
+  clean power for end uses charged at USD 67/MWh (a), 45/MWh (b); extra wind and solar 202 TWh, of which sold to transport 16, buildings 13, industry 78 TWh
 -- 2040 (GDP 733) --
 sector | capital in service | charge (a) | charge (b) | saving from de-risking | fuel saved | other (a) | net (a) | net (a) high | net (b)
-  Power generation, grids and storage | 141.5 | 15.42 | 10.16 | 5.26 | 14.31 | -7.54 | -6.43 | -3.36 | -9.14
-  Transport | 23.0 | 3.43 | 2.74 | 0.69 | 9.84 | -0.80 | -7.21 | -5.93 | -8.35
-  Buildings | 41.9 | 4.74 | 3.28 | 1.46 | 4.06 | 0.81 | 1.49 | 3.48 | -0.25
-  Industry | 155.1 | 17.54 | 12.13 | 5.41 | 11.05 | 5.34 | 11.83 | 20.12 | 4.61
+  Power generation, grids and storage | 240.8 | 26.36 | 17.49 | 8.87 | 14.31 | -12.84 | -0.78 | 4.42 | -5.36
+  Transport | 23.0 | 3.43 | 2.74 | 0.69 | 9.84 | 0.14 | -6.28 | -4.64 | -7.73
+  Buildings | 41.9 | 4.74 | 3.28 | 1.46 | 4.06 | 1.38 | 2.06 | 4.27 | 0.14
+  Industry | 155.1 | 17.54 | 12.13 | 5.41 | 11.05 | 9.13 | 15.62 | 25.33 | 7.14
   Methane, land use and other | 0.0 | 0.00 | 0.00 | 0.00 | 0.00 | 2.90 | 2.90 | 2.90 | 2.90
-  TOTAL | 361.5 | 41.13 | 28.31 | 12.81 | 39.25 | 0.70 | 2.57 | 17.21 | -10.24
-  as % of GDP: net (a) 0.35, net (a) high 2.35, net (b) -1.40; saving from de-risking 1.75; fuel saved 5.36
-  check against the model's own totals: (a) 2.57, (b) -10.24; air pollution avoided 27.9; GHG abated 270 Mt -> USD 10/t at (a), -38/t at (b)
-  clean power for end uses charged at USD 41/MWh (a), 27/MWh (b); extra wind and solar 378 TWh, of which sold to transport 32, buildings 20, industry 131 TWh
+  TOTAL | 460.8 | 52.07 | 35.64 | 16.43 | 39.25 | 0.70 | 13.52 | 32.27 | -2.91
+  as % of GDP: net (a) 1.85, net (a) high 4.40, net (b) -0.40; saving from de-risking 2.24; fuel saved 5.36
+  check against the model's own totals: (a) 13.52, (b) -2.91; air pollution avoided 27.9; GHG abated 270 Mt -> USD 50/t at (a), -11/t at (b)
+  clean power for end uses charged at USD 70/MWh (a), 46/MWh (b); extra wind and solar 378 TWh, of which sold to transport 32, buildings 20, industry 131 TWh
 
    Present value 2025-2050 of the net cost (USD bn; negative = net saving), discounted at each lens rate:
-   (a) local: 29
-   (a) high: 58
-   (b) de-risked: -64
+   (a) local: 73
+   (a) high: 92
+   (b) de-risked: -7
    Break-even cost of capital (net cost = 0) by sector and year:
-   2030: Power generation, grids and storage: 21.2%; Transport: 7.2%; Buildings: 6.7%; Industry: 2.7%
-   2035: Power generation, grids and storage: 21.6%; Transport: 20.0%; Buildings: 6.8%; Industry: 2.9%
+   2030: Power generation, grids and storage: 12.0%; Transport: 6.3%; Buildings: 5.8%; Industry: 1.7%
+   2035: Power generation, grids and storage: 11.4%; Transport: 16.8%; Buildings: 5.7%; Industry: 1.6%
 
 4. WHAT GAS, WHAT FUEL
 2030: gas saved in power 257 PJ = 7.1 bcm (at 36 MJ/m3) = 244 mn MMBtu; fuel oil in power 31 PJ; fuel saved by sector: power 2.6, trn 1.6, bld 1.4, ind 3.1; total 8.7 = 1.8% of GDP
@@ -78,14 +78,14 @@ supply costs used (USD/GJ): gas for power 8.36 (= USD 8.8/MMBtu), fuel oil 14.1,
 gas heat rate 7.95 GJ/MWh -> fuel cost of gas power USD 66/MWh; capacity factors: solar 26.6%, wind 35.0%
 
 5. WHO PAYS (transition path, USD bn; direct budget need = pure public + 30% of viability-gap investment)
-(a) local cost of capital, tariffs and subsidies as today, 2030: P1 7.9, P2 3.5, P3 3.9, P4 12.5, P5 5.4 (sum 33.3); budget need 11.7 = 2.38% of GDP (incremental 7.1 = 1.44%); by sector: power 6.33, trn 0.82, bld 1.25, ind 1.87, oth 0.71, cal 0.70
-(a) local cost of capital, tariffs and subsidies as today, 2035: P1 10.6, P2 4.8, P3 4.5, P4 14.3, P5 5.9 (sum 40.0); budget need 14.9 = 2.47% of GDP (incremental 9.8 = 1.62%); by sector: power 8.94, trn 0.45, bld 1.38, ind 2.30, oth 0.93, cal 0.86
+(a) local cost of capital, tariffs and subsidies as today, 2030: P1 7.0, P2 2.9, P3 3.3, P4 12.1, P5 5.3 (sum 30.6); budget need 10.6 = 2.16% of GDP (incremental 9.0 = 1.84%); by sector: power 5.27, trn 0.82, bld 1.25, ind 1.87, oth 0.71, cal 0.70
+(a) local cost of capital, tariffs and subsidies as today, 2035: P1 10.6, P2 4.8, P3 4.5, P4 14.3, P5 5.9 (sum 40.0); budget need 14.9 = 2.47% of GDP (incremental 13.1 = 2.18%); by sector: power 8.94, trn 0.45, bld 1.38, ind 2.30, oth 0.93, cal 0.86
    pressure indices: utility 1.00, cost of capital 0.54, subsidies 1.00
-(b) de-risked cost of capital, tariffs and subsidies as today, 2030: P1 7.9, P2 3.5, P3 3.9, P4 9.9, P5 8.0 (sum 33.3); budget need 10.9 = 2.22% of GDP (incremental 6.4 = 1.31%); by sector: power 6.27, trn 0.64, bld 1.15, ind 1.52, oth 0.68, cal 0.66
-(b) de-risked cost of capital, tariffs and subsidies as today, 2035: P1 10.6, P2 4.8, P3 4.5, P4 11.5, P5 8.6 (sum 40.0); budget need 14.0 = 2.34% of GDP (incremental 9.0 = 1.50%); by sector: power 8.88, trn 0.35, bld 1.27, ind 1.85, oth 0.89, cal 0.81
+(b) de-risked cost of capital, tariffs and subsidies as today, 2030: P1 7.0, P2 2.9, P3 3.3, P4 9.6, P5 7.8 (sum 30.6); budget need 9.9 = 2.01% of GDP (incremental 8.4 = 1.70%); by sector: power 5.22, trn 0.64, bld 1.15, ind 1.52, oth 0.68, cal 0.66
+(b) de-risked cost of capital, tariffs and subsidies as today, 2035: P1 10.6, P2 4.8, P3 4.5, P4 11.5, P5 8.6 (sum 40.0); budget need 14.0 = 2.34% of GDP (incremental 12.4 = 2.06%); by sector: power 8.88, trn 0.35, bld 1.27, ind 1.85, oth 0.89, cal 0.81
    pressure indices: utility 1.00, cost of capital 0.00, subsidies 1.00
-(b) de-risked, cost-recovery tariffs and no fuel subsidies, 2030: P1 2.7, P2 8.7, P3 6.1, P4 5.6, P5 10.1 (sum 33.3); budget need 4.4 = 0.89% of GDP (incremental 3.5 = 0.72%); by sector: power 0.59, trn 0.47, bld 1.06, ind 1.20, oth 0.65, cal 0.40
-(b) de-risked, cost-recovery tariffs and no fuel subsidies, 2035: P1 3.1, P2 12.2, P3 7.1, P4 6.7, P5 10.9 (sum 40.0); budget need 5.1 = 0.85% of GDP (incremental 4.2 = 0.70%); by sector: power 0.90, trn 0.26, bld 1.17, ind 1.43, oth 0.85, cal 0.49
+(b) de-risked, cost-recovery tariffs and no fuel subsidies, 2030: P1 2.6, P2 7.3, P3 5.1, P4 5.6, P5 10.0 (sum 30.6); budget need 4.3 = 0.87% of GDP (incremental 3.7 = 0.75%); by sector: power 0.50, trn 0.47, bld 1.06, ind 1.20, oth 0.65, cal 0.40
+(b) de-risked, cost-recovery tariffs and no fuel subsidies, 2035: P1 3.1, P2 12.2, P3 7.1, P4 6.7, P5 10.9 (sum 40.0); budget need 5.1 = 0.85% of GDP (incremental 4.5 = 0.75%); by sector: power 0.90, trn 0.26, bld 1.17, ind 1.43, oth 0.85, cal 0.49
    pressure indices: utility 0.00, cost of capital 0.00, subsidies 0.00
 
 6. UNIT COSTS IN POWER (USD/MWh, 2024 prices)
@@ -95,27 +95,69 @@ capital costs 2026: solar USD 715/kW, wind USD 1125/kW; battery USD 125-250/kWh 
 (b) de-risked 6%: solar 29, wind 34; storage per MWh discharged 50-100; solar with half its output stored 54-79 (x1.9-2.7 of plain solar)
 gas-fired power, fuel only: USD 66/MWh at USD 8.8/MMBtu; at USD 12/MMBtu (LNG) 90; at USD 6/MMBtu 45; plus running cost USD 10.5/MWh
 grids and storage (incremental capital in service, annual charge, per MWh of extra wind and solar):
-  2030: capital 11.7 bn; charge (a) 1.23, (b) 0.78 bn; per MWh of extra wind and solar USD 15 (a), 9 (b); fuel and running cost saved per MWh displaced USD 77; break-even: the grid pays if it carries 39% (a) / 19% (b) of that output's net saving
-  2035: capital 33.2 bn; charge (a) 3.51, (b) 2.21 bn; per MWh of extra wind and solar USD 17 (a), 11 (b); fuel and running cost saved per MWh displaced USD 77; break-even: the grid pays if it carries 46% (a) / 23% (b) of that output's net saving
+  2030: capital 19.2 bn; charge (a) 2.02, (b) 1.27 bn; per MWh of extra wind and solar USD 24 (a), 15 (b); fuel and running cost saved per MWh displaced USD 77; break-even: the grid pays if it carries 64% (a) / 31% (b) of that output's net saving
+  2035: capital 54.1 bn; charge (a) 5.70, (b) 3.59 bn; per MWh of extra wind and solar USD 28 (a), 18 (b); fuel and running cost saved per MWh displaced USD 77; break-even: the grid pays if it carries 75% (a) / 37% (b) of that output's net saving
   cost of delay: a year's additions (7.5 GW, 20 TWh a year) left unconnected for one year burn gas worth USD 1.31 bn
 
 7. THE TIME PATH (% of GDP): investment arrives first, fuel savings later
 year | incremental investment | of which imported equipment (50%) | spent in Egypt | fuel saved | fuel saved less imported equipment | net cost (a) | net cost (b)
-2025 | 3.47 | 1.70 | 1.77 | 0.26 | -1.44 | 0.20 | 0.08
-2026 | 3.79 | 1.82 | 1.96 | 0.54 | -1.29 | 0.40 | 0.16
-2027 | 4.01 | 1.91 | 2.11 | 0.83 | -1.08 | 0.58 | 0.22
-2028 | 4.20 | 1.98 | 2.23 | 1.13 | -0.85 | 0.74 | 0.25
-2029 | 4.32 | 2.01 | 2.31 | 1.44 | -0.56 | 0.86 | 0.26
-2030 | 4.35 | 2.00 | 2.35 | 1.77 | -0.23 | 0.96 | 0.24
-2032 | 4.13 | 1.88 | 2.25 | 2.44 | 0.56 | 0.93 | 0.00
-2035 | 4.49 | 2.05 | 2.44 | 3.50 | 1.45 | 0.76 | -0.46
-2040 | 5.46 | 2.53 | 2.93 | 5.36 | 2.82 | 0.35 | -1.40
-2045 | 5.74 | 2.68 | 3.07 | 7.04 | 4.37 | 0.14 | -2.14
-fuel saved exceeds imported equipment from 2031; exceeds all incremental investment from 2041
+2025 | 3.99 | 1.96 | 2.03 | 0.26 | -1.70 | 0.26 | 0.12
+2026 | 4.39 | 2.12 | 2.26 | 0.54 | -1.59 | 0.52 | 0.24
+2027 | 4.70 | 2.25 | 2.45 | 0.83 | -1.42 | 0.77 | 0.35
+2028 | 4.98 | 2.36 | 2.62 | 1.13 | -1.23 | 1.01 | 0.43
+2029 | 5.19 | 2.44 | 2.75 | 1.44 | -1.00 | 1.22 | 0.50
+2030 | 5.33 | 2.49 | 2.84 | 1.77 | -0.72 | 1.40 | 0.54
+2032 | 5.32 | 2.48 | 2.84 | 2.44 | -0.03 | 1.59 | 0.44
+2035 | 5.87 | 2.74 | 3.13 | 3.50 | 0.76 | 1.78 | 0.22
+2040 | 6.70 | 3.15 | 3.55 | 5.36 | 2.21 | 1.85 | -0.40
+2045 | 6.86 | 3.24 | 3.63 | 7.04 | 3.81 | 1.97 | -0.92
+fuel saved exceeds imported equipment from 2033; exceeds all incremental investment from 2045
 
-8. SENSITIVITY: the tool's default price factor (capital at 41% of world prices)
-2030: price factor 0.41; transition investment 15.9 (3.2% of GDP), incremental 9.9; net cost (a) -2.3, (b) -3.8; budget need 5.7
-2035: price factor 0.41; transition investment 19.3 (3.2% of GDP), incremental 12.6; net cost (a) -9.6, (b) -12.7; budget need 7.2
-    and a faster path (fossil-free power by 2040, all new vehicles electric by 2035), world prices:
-2030: renewable share 46%; transition investment 36.3 (7.4% of GDP); net cost (a) 3.3, (b) -0.7
-2035: renewable share 73%; transition investment 48.9 (8.1% of GDP); net cost (a) 1.8, (b) -7.1
+8. SENSITIVITIES (net cost, USD bn a year; all sectors unless stated)
+  central (world prices, no new gas plant), 2030: all sectors (a) +6.9, (b) +2.6; power (a) -0.3, (b) -1.0; transition investment 30.6 (6.2% of GDP), extra 26.2; renewable share 38%; budget need 10.6
+  central (world prices, no new gas plant), 2035: all sectors (a) +10.7, (b) +1.3; power (a) -0.6, (b) -2.7; transition investment 40.0 (6.7% of GDP), extra 35.3; renewable share 59%; budget need 14.9
+  current trends must build gas plant (tool treatment), 2030: all sectors (a) +4.7, (b) +1.2; power (a) -1.2, (b) -1.7; transition investment 33.3 (6.8% of GDP), extra 21.4; renewable share 38%; budget need 11.7
+  current trends must build gas plant (tool treatment), 2035: all sectors (a) +4.6, (b) -2.8; power (a) -3.4, (b) -4.6; transition investment 40.0 (6.7% of GDP), extra 27.0; renewable share 59%; budget need 14.9
+  tool defaults (capital at 41% of world prices, gas plant built), 2030: all sectors (a) -2.3, (b) -3.8; power (a) -2.0, (b) -2.2; transition investment 15.9 (3.2% of GDP), extra 9.9; renewable share 38%; budget need 5.7
+  tool defaults (capital at 41% of world prices, gas plant built), 2035: all sectors (a) -9.6, (b) -12.7; power (a) -5.5, (b) -6.0; transition investment 19.3 (3.2% of GDP), extra 12.6; renewable share 59%; budget need 7.2
+  faster (fossil-free power by 2040, all new vehicles electric by 2035), 2030: all sectors (a) +7.0, (b) +1.8; power (a) -0.6, (b) -1.9; transition investment 36.3 (7.4% of GDP), extra 31.9; renewable share 46%; budget need 12.9
+  faster (fossil-free power by 2040, all new vehicles electric by 2035), 2035: all sectors (a) +9.9, (b) -1.7; power (a) -0.8, (b) -4.4; transition investment 48.9 (8.1% of GDP), extra 44.2; renewable share 73%; budget need 19.0
+  gas at USD 12/MMBtu (imported LNG) in power and industry, 2030: all sectors (a) +5.8, (b) +1.5; power (a) -1.1, (b) -1.8; transition investment 30.6 (6.2% of GDP), extra 26.2; renewable share 38%; budget need 10.6
+  gas at USD 12/MMBtu (imported LNG) in power and industry, 2035: all sectors (a) +7.9, (b) -1.5; power (a) -2.6, (b) -4.8; transition investment 40.0 (6.7% of GDP), extra 35.3; renewable share 59%; budget need 14.9
+
+8b. THE COST OF WAITING: every milestone reached five years later (world prices)
+present value 2025-2050 of net cost, USD bn (negative = net saving): on time | five years late | cost of waiting
+  (a) local 10.3%, all sectors: 73 | 64 | -10  (per year of delay -2.0)
+  (a) local 10.3%, power and transport: -21 | -18 | +4  (per year of delay +0.7)
+  (a) local 10.3%, buildings, industry, other: 95 | 81 | -13  (per year of delay -2.7)
+  (b) de-risked 6%, all sectors: -7 | 3 | +9  (per year of delay +1.9)
+  (b) de-risked 6%, power and transport: -94 | -73 | +20  (per year of delay +4.1)
+  (b) de-risked 6%, buildings, industry, other: 87 | 76 | -11  (per year of delay -2.2)
+  extra gas burned in power 2025-2050: 217 bcm; extra fuel bill 178 bn (undiscounted); extra emissions 972 MtCO2e; extra air pollution cost 117 bn
+  renewable share 2030: on time 38%, late 33%
+  (the tool's replacement rule would have current trends build 36 GW of gas plant in 2026-2035, USD 47 bn; switched off in the central case)
+
+8c. SCALE: what must be built and financed, against what Egypt builds and saves today
+  wind and solar additions 2026-2030: 7.5 GW a year; installed at the start (Ember, 2025): solar 3.3 GW, wind 3.0 GW
+  2030: transition investment 6.2% of GDP = 48% of the 2024 investment rate (13.0% of GDP); extra investment 5.3% of GDP = 41% of it; imported equipment 2.5% of GDP against a current account balance of -5.4% of GDP in 2024
+  2035: transition investment 6.7% of GDP = 51% of the 2024 investment rate (13.0% of GDP); extra investment 5.9% of GDP = 45% of it; imported equipment 2.7% of GDP against a current account balance of -5.4% of GDP in 2024
+  generation: 246 TWh in 2024 -> 343 (2030) -> 572 (2040) on the transition path; current trends 389 in 2040
+
+8e. DIMINISHING RETURNS OF PRICE, INCREASING RETURNS OF DEPLOYMENT (illustration)
+  carbon price USD 50/t: gasoline 0.80 -> 0.92 USD/l; cut in fuel use 6.7% (this step 6.7 points)
+  carbon price USD 100/t: gasoline 0.80 -> 1.04 USD/l; cut in fuel use 12.1% (this step 5.5 points)
+  carbon price USD 150/t: gasoline 0.80 -> 1.16 USD/l; cut in fuel use 16.7% (this step 4.6 points)
+  carbon price USD 200/t: gasoline 0.80 -> 1.28 USD/l; cut in fuel use 20.7% (this step 4.0 points)
+  carbon price USD 250/t: gasoline 0.80 -> 1.40 USD/l; cut in fuel use 24.1% (this step 3.4 points)
+  carbon price USD 300/t: gasoline 0.80 -> 1.51 USD/l; cut in fuel use 27.2% (this step 3.0 points)
+  learning rate 20%: cost index after 0..6 doublings of cumulative deployment: 100, 80, 64, 51, 41, 33, 26
+
+9. MACRO MODELS on the same program (illustrative calibrations; % deviation of GDP from no program)
+central: program in 2030: budget 1.84% of GDP, private 3.49%; energy saving 2050 7.6% of GDP
+   GIMF-lite: GDP +5.2% (2030), +29.6% (2050); debt 91% -> 94% (2030), 94% (2050); status ok
+   DIGNAD-lite: GDP +0.9% (2030), +4.6% (2050); debt 94% (2030), 101% (2050); status ok, fiscal rule tightened to 0.2
+   GDP path, first model: 2026: +1.7, 2028: +3.0, 2030: +5.2, 2035: +11.0, 2040: +18.4
+tool defaults: program in 2030: budget 0.68% of GDP, private 1.33%; energy saving 2050 7.6% of GDP
+   GIMF-lite: GDP +4.1% (2030), +23.2% (2050); debt 91% -> 90% (2030), 83% (2050); status ok
+   DIGNAD-lite: GDP +0.3% (2030), +1.6% (2050); debt 92% (2030), 100% (2050); status ok
+   GDP path, first model: 2026: +1.5, 2028: +2.4, 2030: +4.1, 2035: +8.7, 2040: +14.6
